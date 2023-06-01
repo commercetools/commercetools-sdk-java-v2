@@ -195,6 +195,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.MissingTaxRateForCountryErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.MoneyOverflowErrorBuilder moneyOverflowBuilder() {
+        return com.commercetools.api.models.error.MoneyOverflowErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorBuilder noMatchingProductDiscountFoundBuilder() {
         return com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorBuilder.of();
     }

@@ -232,7 +232,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The Buyer who raised the request.</p>
+     *  <p>The Buyer who owns the request.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -240,7 +240,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote Request creation. Used for Product Variant price selection.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {

@@ -675,6 +675,14 @@ public class MessagePayloadQueryBuilderDsl {
             MessagePayloadQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asQuoteCustomerChanged(
+            Function<com.commercetools.api.predicates.query.message.QuoteCustomerChangedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.QuoteCustomerChangedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.QuoteCustomerChangedMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asQuoteDeleted(
             Function<com.commercetools.api.predicates.query.message.QuoteDeletedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.QuoteDeletedMessagePayloadQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -687,6 +695,14 @@ public class MessagePayloadQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.message.QuoteRequestCreatedMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asQuoteRequestCustomerChanged(
+            Function<com.commercetools.api.predicates.query.message.QuoteRequestCustomerChangedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.QuoteRequestCustomerChangedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.QuoteRequestCustomerChangedMessagePayloadQueryBuilderDsl
+                    .of()),
             MessagePayloadQueryBuilderDsl::of);
     }
 

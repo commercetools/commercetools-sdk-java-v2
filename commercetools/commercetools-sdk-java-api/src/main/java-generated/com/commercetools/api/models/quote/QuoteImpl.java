@@ -248,7 +248,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The Buyer who owns the Quote.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -256,7 +256,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote creation. Used for Product Variant price selection.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {

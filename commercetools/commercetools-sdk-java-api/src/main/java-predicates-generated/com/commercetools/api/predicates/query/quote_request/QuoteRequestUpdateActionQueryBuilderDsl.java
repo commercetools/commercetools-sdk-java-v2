@@ -19,6 +19,13 @@ public class QuoteRequestUpdateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, QuoteRequestUpdateActionQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<QuoteRequestUpdateActionQueryBuilderDsl> asChangeCustomer(
+            Function<com.commercetools.api.predicates.query.quote_request.QuoteRequestChangeCustomerActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.quote_request.QuoteRequestChangeCustomerActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.quote_request.QuoteRequestChangeCustomerActionQueryBuilderDsl.of()),
+            QuoteRequestUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<QuoteRequestUpdateActionQueryBuilderDsl> asChangeQuoteRequestState(
             Function<com.commercetools.api.predicates.query.quote_request.QuoteRequestChangeQuoteRequestStateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.quote_request.QuoteRequestChangeQuoteRequestStateActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

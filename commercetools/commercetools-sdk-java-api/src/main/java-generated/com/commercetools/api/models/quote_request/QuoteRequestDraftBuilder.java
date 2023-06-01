@@ -148,7 +148,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     }
 
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     }
 
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -172,7 +172,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     }
 
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -241,7 +241,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     }
 
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
 

@@ -356,6 +356,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asMoneyOverflow(
+            Function<com.commercetools.api.predicates.query.error.GraphQLMoneyOverflowErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLMoneyOverflowErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.GraphQLMoneyOverflowErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asNoMatchingProductDiscountFound(
             Function<com.commercetools.api.predicates.query.error.GraphQLNoMatchingProductDiscountFoundErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLNoMatchingProductDiscountFoundErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

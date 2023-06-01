@@ -157,6 +157,16 @@ public interface Permission extends JsonEnum {
     */
     Permission RENEGOTIATE_OTHERS_QUOTES = PermissionEnum.RENEGOTIATE_OTHERS_QUOTES;
     /**
+    	<p>An Associate can reassign their own B2B Quotes to a different Associate.</p>
+
+    */
+    Permission REASSIGN_MY_QUOTES = PermissionEnum.REASSIGN_MY_QUOTES;
+    /**
+    	<p>An Associate can reassign B2B Quotes that belong to other Associates.</p>
+
+    */
+    Permission REASSIGN_OTHERS_QUOTES = PermissionEnum.REASSIGN_OTHERS_QUOTES;
+    /**
     	<p>An Associate can view their own B2B Quote Requests.</p>
 
     */
@@ -330,6 +340,16 @@ public interface Permission extends JsonEnum {
          * RenegotiateOthersQuotes
          */
         RENEGOTIATE_OTHERS_QUOTES("RenegotiateOthersQuotes"),
+
+        /**
+         * ReassignMyQuotes
+         */
+        REASSIGN_MY_QUOTES("ReassignMyQuotes"),
+
+        /**
+         * ReassignOthersQuotes
+         */
+        REASSIGN_OTHERS_QUOTES("ReassignOthersQuotes"),
 
         /**
          * ViewMyQuoteRequests

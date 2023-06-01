@@ -74,6 +74,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxResourceLimitExceededErrorImpl.class, name = MaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingRoleOnChannelErrorImpl.class, name = MissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingTaxRateForCountryErrorImpl.class, name = MissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MoneyOverflowErrorImpl.class, name = MoneyOverflowError.MONEY_OVERFLOW),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorImpl.class, name = NoMatchingProductDiscountFoundError.NO_MATCHING_PRODUCT_DISCOUNT_FOUND),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.NotEnabledErrorImpl.class, name = NotEnabledError.NOT_ENABLED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ObjectNotFoundErrorImpl.class, name = ObjectNotFoundError.OBJECT_NOT_FOUND),
@@ -337,6 +338,10 @@ public interface ErrorObject {
         if (template instanceof com.commercetools.api.models.error.MissingTaxRateForCountryError) {
             return com.commercetools.api.models.error.MissingTaxRateForCountryError
                     .deepCopy((com.commercetools.api.models.error.MissingTaxRateForCountryError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.MoneyOverflowError) {
+            return com.commercetools.api.models.error.MoneyOverflowError
+                    .deepCopy((com.commercetools.api.models.error.MoneyOverflowError) template);
         }
         if (template instanceof com.commercetools.api.models.error.NoMatchingProductDiscountFoundError) {
             return com.commercetools.api.models.error.NoMatchingProductDiscountFoundError
@@ -810,6 +815,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.MissingTaxRateForCountryErrorBuilder missingTaxRateForCountryBuilder() {
         return com.commercetools.api.models.error.MissingTaxRateForCountryErrorBuilder.of();
+    }
+
+    /**
+     * builder for moneyOverflow subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.MoneyOverflowErrorBuilder moneyOverflowBuilder() {
+        return com.commercetools.api.models.error.MoneyOverflowErrorBuilder.of();
     }
 
     /**

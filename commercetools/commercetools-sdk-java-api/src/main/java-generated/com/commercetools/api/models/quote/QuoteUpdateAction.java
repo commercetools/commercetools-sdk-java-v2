@@ -20,13 +20,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     QuoteUpdateAction quoteUpdateAction = QuoteUpdateAction.changeQuoteStateBuilder()
- *             quoteState(QuoteState.PENDING)
+ *     QuoteUpdateAction quoteUpdateAction = QuoteUpdateAction.changeCustomerBuilder()
+ *             customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteChangeCustomerActionImpl.class, name = QuoteChangeCustomerAction.CHANGE_CUSTOMER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteChangeQuoteStateActionImpl.class, name = QuoteChangeQuoteStateAction.CHANGE_QUOTE_STATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationActionImpl.class, name = QuoteRequestQuoteRenegotiationAction.REQUEST_QUOTE_RENEGOTIATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteSetCustomFieldActionImpl.class, name = QuoteSetCustomFieldAction.SET_CUSTOM_FIELD),
@@ -55,6 +56,10 @@ public interface QuoteUpdateAction extends com.commercetools.api.models.Resource
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.quote.QuoteChangeCustomerAction) {
+            return com.commercetools.api.models.quote.QuoteChangeCustomerAction
+                    .deepCopy((com.commercetools.api.models.quote.QuoteChangeCustomerAction) template);
+        }
         if (template instanceof com.commercetools.api.models.quote.QuoteChangeQuoteStateAction) {
             return com.commercetools.api.models.quote.QuoteChangeQuoteStateAction
                     .deepCopy((com.commercetools.api.models.quote.QuoteChangeQuoteStateAction) template);
@@ -77,6 +82,14 @@ public interface QuoteUpdateAction extends com.commercetools.api.models.Resource
         }
         QuoteUpdateActionImpl instance = new QuoteUpdateActionImpl();
         return instance;
+    }
+
+    /**
+     * builder for changeCustomer subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.quote.QuoteChangeCustomerActionBuilder changeCustomerBuilder() {
+        return com.commercetools.api.models.quote.QuoteChangeCustomerActionBuilder.of();
     }
 
     /**

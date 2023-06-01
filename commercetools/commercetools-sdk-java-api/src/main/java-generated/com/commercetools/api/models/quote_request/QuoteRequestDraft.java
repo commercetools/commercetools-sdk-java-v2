@@ -79,7 +79,7 @@ public interface QuoteRequestDraft
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @return state
      */
     @Valid
@@ -130,7 +130,7 @@ public interface QuoteRequestDraft
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
      * @param state value to be set
      */
 

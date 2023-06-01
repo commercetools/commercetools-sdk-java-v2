@@ -352,6 +352,13 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMoneyOverflow(
+            Function<com.commercetools.api.predicates.query.error.MoneyOverflowErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.MoneyOverflowErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.MoneyOverflowErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asNoMatchingProductDiscountFound(
             Function<com.commercetools.api.predicates.query.error.NoMatchingProductDiscountFoundErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.NoMatchingProductDiscountFoundErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

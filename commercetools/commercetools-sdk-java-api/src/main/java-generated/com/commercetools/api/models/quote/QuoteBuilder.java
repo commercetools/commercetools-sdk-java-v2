@@ -331,7 +331,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The Buyer who owns the Quote.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -343,7 +343,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The Buyer who owns the Quote.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -355,7 +355,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The Buyer who owns the Quote.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -366,7 +366,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote creation. Used for Product Variant price selection.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -380,7 +380,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote creation. Used for Product Variant price selection.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -393,7 +393,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote creation. Used for Product Variant price selection.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -1317,7 +1317,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The Buyer who requested the Quote.</p>
+     *  <p>The Buyer who owns the Quote.</p>
      * @return customer
      */
 
@@ -1327,7 +1327,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote creation. Used for Product Variant price selection.</p>
      * @return customerGroup
      */
 

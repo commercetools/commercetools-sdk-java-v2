@@ -511,12 +511,20 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.QuoteCreatedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.QuoteCustomerChangedMessagePayloadBuilder quoteCustomerChangedBuilder() {
+        return com.commercetools.api.models.message.QuoteCustomerChangedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.QuoteDeletedMessagePayloadBuilder quoteDeletedBuilder() {
         return com.commercetools.api.models.message.QuoteDeletedMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadBuilder quoteRequestCreatedBuilder() {
         return com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.QuoteRequestCustomerChangedMessagePayloadBuilder quoteRequestCustomerChangedBuilder() {
+        return com.commercetools.api.models.message.QuoteRequestCustomerChangedMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.QuoteRequestDeletedMessagePayloadBuilder quoteRequestDeletedBuilder() {

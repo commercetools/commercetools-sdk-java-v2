@@ -57,4 +57,9 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
             apiHttpClient, projectKey, associateId, businessUnitKey, ID);
     }
 
+    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsReplicateRequestBuilder replicate() {
+        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsReplicateRequestBuilder(
+            apiHttpClient, projectKey, associateId, businessUnitKey);
+    }
+
 }

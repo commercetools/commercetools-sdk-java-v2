@@ -195,6 +195,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLMissingTaxRateForCountryErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLMoneyOverflowErrorBuilder moneyOverflowBuilder() {
+        return com.commercetools.api.models.error.GraphQLMoneyOverflowErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundErrorBuilder noMatchingProductDiscountFoundBuilder() {
         return com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundErrorBuilder.of();
     }

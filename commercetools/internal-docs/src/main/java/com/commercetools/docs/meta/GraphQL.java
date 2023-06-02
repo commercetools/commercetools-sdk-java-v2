@@ -3,6 +3,8 @@ package com.commercetools.docs.meta;
 
 /**
  * {@include.toc}
+ *
+ * <h2 id=graphql-endpoint>GraphQL endpoint</h2>
  * <p>The SDK provides support for the usage of the GraphQL endpoint.</p>
  *
  * {@include.example example.GraphQLTest#graphql(com.commercetools.api.models.product.Product)}
@@ -12,7 +14,7 @@ package com.commercetools.docs.meta;
  *
  * {@include.example example.GraphQLTest#graphqlMapToClass(com.commercetools.api.models.product.Product)}
  *
- * <h2>GraphQL module</h2>
+ * <h2 id=graphql-module>GraphQL module</h2>
  *
  * <p>The SDK comes with a module for enhanced GraphQL support. With the help of the <a href="https://netflix.github.io/dgs/generating-code-from-schema/">DGS codegen</a>
  * we generate a type safe query and projection builder. The results will be mapped to the correct response type.</p>

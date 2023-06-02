@@ -223,6 +223,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartSetLineItemDistributionChannelActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartSetLineItemInventoryModeActionBuilder setLineItemInventoryModeBuilder() {
+        return com.commercetools.api.models.cart.CartSetLineItemInventoryModeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartSetLineItemPriceActionBuilder setLineItemPriceBuilder() {
         return com.commercetools.api.models.cart.CartSetLineItemPriceActionBuilder.of();
     }

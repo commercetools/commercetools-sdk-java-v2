@@ -46,6 +46,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetCustomTypeActionImpl.class, name = MyCartSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetCustomerEmailActionImpl.class, name = MyCartSetCustomerEmailAction.SET_CUSTOMER_EMAIL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetDeleteDaysAfterLastModificationActionImpl.class, name = MyCartSetDeleteDaysAfterLastModificationAction.SET_DELETE_DAYS_AFTER_LAST_MODIFICATION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetDirectDiscountsActionImpl.class, name = MyCartSetDirectDiscountsAction.SET_DIRECT_DISCOUNTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetLineItemCustomFieldActionImpl.class, name = MyCartSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetLineItemCustomTypeActionImpl.class, name = MyCartSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartSetLineItemDistributionChannelActionImpl.class, name = MyCartSetLineItemDistributionChannelAction.SET_LINE_ITEM_DISTRIBUTION_CHANNEL),
@@ -153,6 +154,10 @@ public interface MyCartUpdateAction extends com.commercetools.api.models.Resourc
         if (template instanceof com.commercetools.api.models.me.MyCartSetDeleteDaysAfterLastModificationAction) {
             return com.commercetools.api.models.me.MyCartSetDeleteDaysAfterLastModificationAction.deepCopy(
                 (com.commercetools.api.models.me.MyCartSetDeleteDaysAfterLastModificationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyCartSetDirectDiscountsAction) {
+            return com.commercetools.api.models.me.MyCartSetDirectDiscountsAction
+                    .deepCopy((com.commercetools.api.models.me.MyCartSetDirectDiscountsAction) template);
         }
         if (template instanceof com.commercetools.api.models.me.MyCartSetLineItemCustomFieldAction) {
             return com.commercetools.api.models.me.MyCartSetLineItemCustomFieldAction
@@ -344,6 +349,14 @@ public interface MyCartUpdateAction extends com.commercetools.api.models.Resourc
      */
     public static com.commercetools.api.models.me.MyCartSetDeleteDaysAfterLastModificationActionBuilder setDeleteDaysAfterLastModificationBuilder() {
         return com.commercetools.api.models.me.MyCartSetDeleteDaysAfterLastModificationActionBuilder.of();
+    }
+
+    /**
+     * builder for setDirectDiscounts subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.me.MyCartSetDirectDiscountsActionBuilder setDirectDiscountsBuilder() {
+        return com.commercetools.api.models.me.MyCartSetDirectDiscountsActionBuilder.of();
     }
 
     /**

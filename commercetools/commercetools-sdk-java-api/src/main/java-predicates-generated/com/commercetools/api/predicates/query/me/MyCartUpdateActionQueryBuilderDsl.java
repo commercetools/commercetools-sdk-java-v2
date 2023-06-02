@@ -155,6 +155,13 @@ public class MyCartUpdateActionQueryBuilderDsl {
             MyCartUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> asSetDirectDiscounts(
+            Function<com.commercetools.api.predicates.query.me.MyCartSetDirectDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyCartSetDirectDiscountsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetDirectDiscountsActionQueryBuilderDsl.of()),
+            MyCartUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> asSetLineItemCustomField(
             Function<com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

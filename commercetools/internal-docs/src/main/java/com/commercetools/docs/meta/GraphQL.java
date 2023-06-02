@@ -2,6 +2,7 @@
 package com.commercetools.docs.meta;
 
 /**
+ * {@include.toc}
  * <p>The SDK provides support for the usage of the GraphQL endpoint.</p>
  *
  * {@include.example example.GraphQLTest#graphql(com.commercetools.api.models.product.Product)}

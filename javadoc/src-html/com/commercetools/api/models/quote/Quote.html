@@ -159,7 +159,7 @@
 <span class="source-line-no">146</span><span id="line.146">    public StagedQuoteReference getStagedQuote();</span>
 <span class="source-line-no">147</span><span id="line.147"></span>
 <span class="source-line-no">148</span><span id="line.148">    /**</span>
-<span class="source-line-no">149</span><span id="line.149">     *  &lt;p&gt;The Buyer who requested the Quote.&lt;/p&gt;</span>
+<span class="source-line-no">149</span><span id="line.149">     *  &lt;p&gt;The Buyer who owns the Quote.&lt;/p&gt;</span>
 <span class="source-line-no">150</span><span id="line.150">     * @return customer</span>
 <span class="source-line-no">151</span><span id="line.151">     */</span>
 <span class="source-line-no">152</span><span id="line.152">    @Valid</span>
@@ -167,7 +167,7 @@
 <span class="source-line-no">154</span><span id="line.154">    public CustomerReference getCustomer();</span>
 <span class="source-line-no">155</span><span id="line.155"></span>
 <span class="source-line-no">156</span><span id="line.156">    /**</span>
-<span class="source-line-no">157</span><span id="line.157">     *  &lt;p&gt;Set automatically when &lt;code&gt;customer&lt;/code&gt; is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.&lt;/p&gt;</span>
+<span class="source-line-no">157</span><span id="line.157">     *  &lt;p&gt;Set automatically when &lt;code&gt;customer&lt;/code&gt; is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote creation. Used for Product Variant price selection.&lt;/p&gt;</span>
 <span class="source-line-no">158</span><span id="line.158">     * @return customerGroup</span>
 <span class="source-line-no">159</span><span id="line.159">     */</span>
 <span class="source-line-no">160</span><span id="line.160">    @Valid</span>
@@ -441,14 +441,14 @@
 <span class="source-line-no">428</span><span id="line.428">    public void setStagedQuote(final StagedQuoteReference stagedQuote);</span>
 <span class="source-line-no">429</span><span id="line.429"></span>
 <span class="source-line-no">430</span><span id="line.430">    /**</span>
-<span class="source-line-no">431</span><span id="line.431">     *  &lt;p&gt;The Buyer who requested the Quote.&lt;/p&gt;</span>
+<span class="source-line-no">431</span><span id="line.431">     *  &lt;p&gt;The Buyer who owns the Quote.&lt;/p&gt;</span>
 <span class="source-line-no">432</span><span id="line.432">     * @param customer value to be set</span>
 <span class="source-line-no">433</span><span id="line.433">     */</span>
 <span class="source-line-no">434</span><span id="line.434"></span>
 <span class="source-line-no">435</span><span id="line.435">    public void setCustomer(final CustomerReference customer);</span>
 <span class="source-line-no">436</span><span id="line.436"></span>
 <span class="source-line-no">437</span><span id="line.437">    /**</span>
-<span class="source-line-no">438</span><span id="line.438">     *  &lt;p&gt;Set automatically when &lt;code&gt;customer&lt;/code&gt; is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.&lt;/p&gt;</span>
+<span class="source-line-no">438</span><span id="line.438">     *  &lt;p&gt;Set automatically when &lt;code&gt;customer&lt;/code&gt; is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote creation. Used for Product Variant price selection.&lt;/p&gt;</span>
 <span class="source-line-no">439</span><span id="line.439">     * @param customerGroup value to be set</span>
 <span class="source-line-no">440</span><span id="line.440">     */</span>
 <span class="source-line-no">441</span><span id="line.441"></span>

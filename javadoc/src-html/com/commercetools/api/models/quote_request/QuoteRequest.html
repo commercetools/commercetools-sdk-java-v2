@@ -152,7 +152,7 @@
 <span class="source-line-no">139</span><span id="line.139">    public String getComment();</span>
 <span class="source-line-no">140</span><span id="line.140"></span>
 <span class="source-line-no">141</span><span id="line.141">    /**</span>
-<span class="source-line-no">142</span><span id="line.142">     *  &lt;p&gt;The Buyer who raised the request.&lt;/p&gt;</span>
+<span class="source-line-no">142</span><span id="line.142">     *  &lt;p&gt;The Buyer who owns the request.&lt;/p&gt;</span>
 <span class="source-line-no">143</span><span id="line.143">     * @return customer</span>
 <span class="source-line-no">144</span><span id="line.144">     */</span>
 <span class="source-line-no">145</span><span id="line.145">    @NotNull</span>
@@ -161,7 +161,7 @@
 <span class="source-line-no">148</span><span id="line.148">    public CustomerReference getCustomer();</span>
 <span class="source-line-no">149</span><span id="line.149"></span>
 <span class="source-line-no">150</span><span id="line.150">    /**</span>
-<span class="source-line-no">151</span><span id="line.151">     *  &lt;p&gt;Set automatically when &lt;code&gt;customer&lt;/code&gt; is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.&lt;/p&gt;</span>
+<span class="source-line-no">151</span><span id="line.151">     *  &lt;p&gt;Set automatically when &lt;code&gt;customer&lt;/code&gt; is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote Request creation. Used for Product Variant price selection.&lt;/p&gt;</span>
 <span class="source-line-no">152</span><span id="line.152">     * @return customerGroup</span>
 <span class="source-line-no">153</span><span id="line.153">     */</span>
 <span class="source-line-no">154</span><span id="line.154">    @Valid</span>
@@ -403,14 +403,14 @@
 <span class="source-line-no">390</span><span id="line.390">    public void setComment(final String comment);</span>
 <span class="source-line-no">391</span><span id="line.391"></span>
 <span class="source-line-no">392</span><span id="line.392">    /**</span>
-<span class="source-line-no">393</span><span id="line.393">     *  &lt;p&gt;The Buyer who raised the request.&lt;/p&gt;</span>
+<span class="source-line-no">393</span><span id="line.393">     *  &lt;p&gt;The Buyer who owns the request.&lt;/p&gt;</span>
 <span class="source-line-no">394</span><span id="line.394">     * @param customer value to be set</span>
 <span class="source-line-no">395</span><span id="line.395">     */</span>
 <span class="source-line-no">396</span><span id="line.396"></span>
 <span class="source-line-no">397</span><span id="line.397">    public void setCustomer(final CustomerReference customer);</span>
 <span class="source-line-no">398</span><span id="line.398"></span>
 <span class="source-line-no">399</span><span id="line.399">    /**</span>
-<span class="source-line-no">400</span><span id="line.400">     *  &lt;p&gt;Set automatically when &lt;code&gt;customer&lt;/code&gt; is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.&lt;/p&gt;</span>
+<span class="source-line-no">400</span><span id="line.400">     *  &lt;p&gt;Set automatically when &lt;code&gt;customer&lt;/code&gt; is set and the Customer is a member of a Customer Group. Not updated if Customer is changed after Quote Request creation. Used for Product Variant price selection.&lt;/p&gt;</span>
 <span class="source-line-no">401</span><span id="line.401">     * @param customerGroup value to be set</span>
 <span class="source-line-no">402</span><span id="line.402">     */</span>
 <span class="source-line-no">403</span><span id="line.403"></span>

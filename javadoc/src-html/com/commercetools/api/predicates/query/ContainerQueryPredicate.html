@@ -78,7 +78,7 @@
 <span class="source-line-no">065</span><span id="line.65">    public String render() {</span>
 <span class="source-line-no">066</span><span id="line.66">        if (this.renderInnerWithOutParentheses()) {</span>
 <span class="source-line-no">067</span><span id="line.67">            return this.parent() != null</span>
-<span class="source-line-no">068</span><span id="line.68">                    ? String.format("%s%s", parent().render(),</span>
+<span class="source-line-no">068</span><span id="line.68">                    ? String.format("%s %s", parent().render(),</span>
 <span class="source-line-no">069</span><span id="line.69">                        Optional.ofNullable(inner()).map(Predicate::render).orElse(""))</span>
 <span class="source-line-no">070</span><span id="line.70">                    : Optional.ofNullable(inner()).map(Predicate::render).orElse("");</span>
 <span class="source-line-no">071</span><span id="line.71">        }</span>

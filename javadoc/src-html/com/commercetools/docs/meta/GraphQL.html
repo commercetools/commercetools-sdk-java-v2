@@ -15,45 +15,46 @@
 <span class="source-line-no">002</span><span id="line.2">package com.commercetools.docs.meta;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
 <span class="source-line-no">004</span><span id="line.4">/**</span>
-<span class="source-line-no">005</span><span id="line.5"> * &lt;p&gt;The SDK provides support for the usage of the GraphQL endpoint.&lt;/p&gt;</span>
-<span class="source-line-no">006</span><span id="line.6"> *</span>
-<span class="source-line-no">007</span><span id="line.7"> * {@include.example example.GraphQLTest#graphql(com.commercetools.api.models.product.Product)}</span>
-<span class="source-line-no">008</span><span id="line.8"> *</span>
-<span class="source-line-no">009</span><span id="line.9"> * &lt;p&gt;In case a result model class exists the class reference can be given to the execute method so that</span>
-<span class="source-line-no">010</span><span id="line.10"> * the response will be mapped accordingly.&lt;/p&gt;</span>
-<span class="source-line-no">011</span><span id="line.11"> *</span>
-<span class="source-line-no">012</span><span id="line.12"> * {@include.example example.GraphQLTest#graphqlMapToClass(com.commercetools.api.models.product.Product)}</span>
-<span class="source-line-no">013</span><span id="line.13"> *</span>
-<span class="source-line-no">014</span><span id="line.14"> * &lt;h2&gt;GraphQL module&lt;/h2&gt;</span>
-<span class="source-line-no">015</span><span id="line.15"> *</span>
-<span class="source-line-no">016</span><span id="line.16"> * &lt;p&gt;The SDK comes with a module for enhanced GraphQL support. With the help of the &lt;a href="https://netflix.github.io/dgs/generating-code-from-schema/"&gt;DGS codegen&lt;/a&gt;</span>
-<span class="source-line-no">017</span><span id="line.17"> * we generate a type safe query and projection builder. The results will be mapped to the correct response type.&lt;/p&gt;</span>
-<span class="source-line-no">018</span><span id="line.18"> *</span>
-<span class="source-line-no">019</span><span id="line.19"> * &lt;p&gt;The response types will have all available fields, but only the projected will be filled with a value.&lt;/p&gt;</span>
-<span class="source-line-no">020</span><span id="line.20"> *</span>
-<span class="source-line-no">021</span><span id="line.21"> * &lt;p&gt;The {@link com.commercetools.graphql.api.GraphQL} class has factory methods for all available operations in the &lt;a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/fdf750aeec3a33cbee463f5f3f14afd44b559c20/commercetools/commercetools-graphql-api/src/main/resources/graphql/schema.graphqls"&gt;GraphQL schema&lt;/a&gt;&lt;/p&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> *</span>
-<span class="source-line-no">023</span><span id="line.23"> * {@include.example example.GraphQLModuleTest#queryBuilding}</span>
-<span class="source-line-no">024</span><span id="line.24"> *</span>
-<span class="source-line-no">025</span><span id="line.25"> * &lt;p&gt;The module provides a {@link com.commercetools.graphql.api.GraphQLModule Jackson module}. It's configured</span>
-<span class="source-line-no">026</span><span id="line.26"> * as SPI and gets automatically registered to the SDKs {@link com.fasterxml.jackson.databind.ObjectMapper}. This module</span>
-<span class="source-line-no">027</span><span id="line.27"> * will configure the ObjectMapper to deserialize the response data object as {@link com.commercetools.graphql.api.GraphQLData}</span>
-<span class="source-line-no">028</span><span id="line.28"> * instance too and can access it's methods by casting it.&lt;/p&gt;</span>
-<span class="source-line-no">029</span><span id="line.29"> *</span>
-<span class="source-line-no">030</span><span id="line.30"> * {@include.example example.GraphQLModuleTest#graphQLJacksonModule}</span>
-<span class="source-line-no">031</span><span id="line.31"></span>
-<span class="source-line-no">032</span><span id="line.32"> * &lt;p&gt;Additionally for retrieving the result data it can be explicitly mapped to the {@link com.commercetools.graphql.api.GraphQLDataResponse} class which</span>
-<span class="source-line-no">033</span><span id="line.33"> * uses the schema generated models.&lt;/p&gt;</span>
-<span class="source-line-no">034</span><span id="line.34"> *</span>
-<span class="source-line-no">035</span><span id="line.35"> * {@include.example example.GraphQLModuleTest#responseData}</span>
-<span class="source-line-no">036</span><span id="line.36"> *</span>
-<span class="source-line-no">037</span><span id="line.37"> * &lt;p&gt;The GraphQLDataResponse provides a method to retrieve the operations result data&lt;/p&gt;</span>
-<span class="source-line-no">038</span><span id="line.38"> *</span>
-<span class="source-line-no">039</span><span id="line.39"> * {@include.example example.GraphQLModuleTest#resultData}</span>
-<span class="source-line-no">040</span><span id="line.40"> *</span>
-<span class="source-line-no">041</span><span id="line.41"> */</span>
-<span class="source-line-no">042</span><span id="line.42">public class GraphQL {</span>
-<span class="source-line-no">043</span><span id="line.43">}</span>
+<span class="source-line-no">005</span><span id="line.5"> * {@include.toc}</span>
+<span class="source-line-no">006</span><span id="line.6"> * &lt;p&gt;The SDK provides support for the usage of the GraphQL endpoint.&lt;/p&gt;</span>
+<span class="source-line-no">007</span><span id="line.7"> *</span>
+<span class="source-line-no">008</span><span id="line.8"> * {@include.example example.GraphQLTest#graphql(com.commercetools.api.models.product.Product)}</span>
+<span class="source-line-no">009</span><span id="line.9"> *</span>
+<span class="source-line-no">010</span><span id="line.10"> * &lt;p&gt;In case a result model class exists the class reference can be given to the execute method so that</span>
+<span class="source-line-no">011</span><span id="line.11"> * the response will be mapped accordingly.&lt;/p&gt;</span>
+<span class="source-line-no">012</span><span id="line.12"> *</span>
+<span class="source-line-no">013</span><span id="line.13"> * {@include.example example.GraphQLTest#graphqlMapToClass(com.commercetools.api.models.product.Product)}</span>
+<span class="source-line-no">014</span><span id="line.14"> *</span>
+<span class="source-line-no">015</span><span id="line.15"> * &lt;h2&gt;GraphQL module&lt;/h2&gt;</span>
+<span class="source-line-no">016</span><span id="line.16"> *</span>
+<span class="source-line-no">017</span><span id="line.17"> * &lt;p&gt;The SDK comes with a module for enhanced GraphQL support. With the help of the &lt;a href="https://netflix.github.io/dgs/generating-code-from-schema/"&gt;DGS codegen&lt;/a&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> * we generate a type safe query and projection builder. The results will be mapped to the correct response type.&lt;/p&gt;</span>
+<span class="source-line-no">019</span><span id="line.19"> *</span>
+<span class="source-line-no">020</span><span id="line.20"> * &lt;p&gt;The response types will have all available fields, but only the projected will be filled with a value.&lt;/p&gt;</span>
+<span class="source-line-no">021</span><span id="line.21"> *</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;p&gt;The {@link com.commercetools.graphql.api.GraphQL} class has factory methods for all available operations in the &lt;a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/fdf750aeec3a33cbee463f5f3f14afd44b559c20/commercetools/commercetools-graphql-api/src/main/resources/graphql/schema.graphqls"&gt;GraphQL schema&lt;/a&gt;&lt;/p&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> *</span>
+<span class="source-line-no">024</span><span id="line.24"> * {@include.example example.GraphQLModuleTest#queryBuilding}</span>
+<span class="source-line-no">025</span><span id="line.25"> *</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;p&gt;The module provides a {@link com.commercetools.graphql.api.GraphQLModule Jackson module}. It's configured</span>
+<span class="source-line-no">027</span><span id="line.27"> * as SPI and gets automatically registered to the SDKs {@link com.fasterxml.jackson.databind.ObjectMapper}. This module</span>
+<span class="source-line-no">028</span><span id="line.28"> * will configure the ObjectMapper to deserialize the response data object as {@link com.commercetools.graphql.api.GraphQLData}</span>
+<span class="source-line-no">029</span><span id="line.29"> * instance too and can access it's methods by casting it.&lt;/p&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> *</span>
+<span class="source-line-no">031</span><span id="line.31"> * {@include.example example.GraphQLModuleTest#graphQLJacksonModule}</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33"> * &lt;p&gt;Additionally for retrieving the result data it can be explicitly mapped to the {@link com.commercetools.graphql.api.GraphQLDataResponse} class which</span>
+<span class="source-line-no">034</span><span id="line.34"> * uses the schema generated models.&lt;/p&gt;</span>
+<span class="source-line-no">035</span><span id="line.35"> *</span>
+<span class="source-line-no">036</span><span id="line.36"> * {@include.example example.GraphQLModuleTest#responseData}</span>
+<span class="source-line-no">037</span><span id="line.37"> *</span>
+<span class="source-line-no">038</span><span id="line.38"> * &lt;p&gt;The GraphQLDataResponse provides a method to retrieve the operations result data&lt;/p&gt;</span>
+<span class="source-line-no">039</span><span id="line.39"> *</span>
+<span class="source-line-no">040</span><span id="line.40"> * {@include.example example.GraphQLModuleTest#resultData}</span>
+<span class="source-line-no">041</span><span id="line.41"> *</span>
+<span class="source-line-no">042</span><span id="line.42"> */</span>
+<span class="source-line-no">043</span><span id="line.43">public class GraphQL {</span>
+<span class="source-line-no">044</span><span id="line.44">}</span>
 
 
 

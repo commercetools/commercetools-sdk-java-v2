@@ -59,8 +59,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
-     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -72,8 +71,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
-     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -85,8 +83,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
-     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -98,7 +95,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -112,7 +109,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -125,7 +122,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -156,8 +153,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
-     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @return externalPrice
      */
 
@@ -167,7 +163,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @return externalTotalPrice
      */
 

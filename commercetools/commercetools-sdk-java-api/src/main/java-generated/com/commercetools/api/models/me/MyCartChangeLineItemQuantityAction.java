@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 /**
  *  <p>When multiple shipping addresses are set for a Line Item, use the Remove LineItem and Add LineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Line Item quantity should be distributed over the sub-quantities, the <code>shippingDetails</code> field is kept in its current state to avoid data loss.</p>
  *  <p>To change the Line Item quantity and shipping details together, use this update action in combination with the Set LineItemShippingDetails update action in a single Cart update command.</p>
- *  <p>The LineItem price is set as described in LineItem Price selection.</p>
+ *  <p>When the action applies to LineItems with <code>ExternalTotal</code> LineItemPriceMode, it will be changed to <code>ExternalPrice</code> and the existing <code>externalPrice</code> value, i.e. <code>LineItem.price</code>, will be retained. The LineItem total will be calculated by the system instead, so that the <code>externalTotalPrice</code> will be dropped.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -59,8 +59,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     public Long getQuantity();
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
-     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @return externalPrice
      */
     @Valid
@@ -68,7 +67,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     public Money getExternalPrice();
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @return externalTotalPrice
      */
     @Valid
@@ -91,15 +90,14 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
-     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @param externalPrice value to be set
      */
 
     public void setExternalPrice(final Money externalPrice);
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Deprecated. Will be ignored.</p>
      * @param externalTotalPrice value to be set
      */
 

@@ -1,16 +1,16 @@
 **Api changes**
 
 <details>
-<summary>Added Type(s)</summary>
+<summary>Added Enum(s)</summary>
 
-- added type `CartSetLineItemInventoryModeAction`
-- added type `MyCartSetDirectDiscountsAction`
+- added enum `RenegotiationAddressed` to type `QuoteState`
 </details>
 
 
 <details>
-<summary>Added Enum(s)</summary>
+<summary>Added Type(s)</summary>
 
-- added enum `RenegotiationAddressed` to type `QuoteState`
+- added type `CartSetLineItemInventoryModeAction`
+- added type `MyCartSetDirectDiscountsAction`
 </details>
 

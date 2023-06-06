@@ -23,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetParcelItemsAction orderSetParcelItemsAction = OrderSetParcelItemsAction.builder()
- *             .parcelId("{parcelId}")
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .build()
  * </code></pre>
@@ -39,12 +38,20 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     String SET_PARCEL_ITEMS = "setParcelItems";
 
     /**
-     *
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      * @return parcelId
      */
-    @NotNull
+
     @JsonProperty("parcelId")
     public String getParcelId();
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * @return parcelKey
+     */
+
+    @JsonProperty("parcelKey")
+    public String getParcelKey();
 
     /**
      *
@@ -56,11 +63,18 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     public List<DeliveryItem> getItems();
 
     /**
-     * set parcelId
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * @param parcelKey value to be set
+     */
+
+    public void setParcelKey(final String parcelKey);
 
     /**
      * set items
@@ -93,6 +107,7 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     public static OrderSetParcelItemsAction of(final OrderSetParcelItemsAction template) {
         OrderSetParcelItemsActionImpl instance = new OrderSetParcelItemsActionImpl();
         instance.setParcelId(template.getParcelId());
+        instance.setParcelKey(template.getParcelKey());
         instance.setItems(template.getItems());
         return instance;
     }
@@ -109,6 +124,7 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
         }
         OrderSetParcelItemsActionImpl instance = new OrderSetParcelItemsActionImpl();
         instance.setParcelId(template.getParcelId());
+        instance.setParcelKey(template.getParcelKey());
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)

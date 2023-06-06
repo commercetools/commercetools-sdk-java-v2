@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetParcelCustomTypeAction orderSetParcelCustomTypeAction = OrderSetParcelCustomTypeAction.builder()
- *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetParcelCustomTypeAction> {
 
+    @Nullable
     private String parcelId;
+
+    @Nullable
+    private String parcelKey;
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -33,13 +36,24 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     * set the value to the parcelId
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      * @param parcelId value to be set
      * @return Builder
      */
 
-    public OrderSetParcelCustomTypeActionBuilder parcelId(final String parcelId) {
+    public OrderSetParcelCustomTypeActionBuilder parcelId(@Nullable final String parcelId) {
         this.parcelId = parcelId;
+        return this;
+    }
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * @param parcelKey value to be set
+     * @return Builder
+     */
+
+    public OrderSetParcelCustomTypeActionBuilder parcelKey(@Nullable final String parcelKey) {
+        this.parcelKey = parcelKey;
         return this;
     }
 
@@ -116,12 +130,23 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
     }
 
     /**
-     * value of parcelId}
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      * @return parcelId
      */
 
+    @Nullable
     public String getParcelId() {
         return this.parcelId;
+    }
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * @return parcelKey
+     */
+
+    @Nullable
+    public String getParcelKey() {
+        return this.parcelKey;
     }
 
     /**
@@ -149,8 +174,7 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
      * @return OrderSetParcelCustomTypeAction
      */
     public OrderSetParcelCustomTypeAction build() {
-        Objects.requireNonNull(parcelId, OrderSetParcelCustomTypeAction.class + ": parcelId is missing");
-        return new OrderSetParcelCustomTypeActionImpl(parcelId, type, fields);
+        return new OrderSetParcelCustomTypeActionImpl(parcelId, parcelKey, type, fields);
     }
 
     /**
@@ -158,7 +182,7 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
      * @return OrderSetParcelCustomTypeAction
      */
     public OrderSetParcelCustomTypeAction buildUnchecked() {
-        return new OrderSetParcelCustomTypeActionImpl(parcelId, type, fields);
+        return new OrderSetParcelCustomTypeActionImpl(parcelId, parcelKey, type, fields);
     }
 
     /**
@@ -177,6 +201,7 @@ public class OrderSetParcelCustomTypeActionBuilder implements Builder<OrderSetPa
     public static OrderSetParcelCustomTypeActionBuilder of(final OrderSetParcelCustomTypeAction template) {
         OrderSetParcelCustomTypeActionBuilder builder = new OrderSetParcelCustomTypeActionBuilder();
         builder.parcelId = template.getParcelId();
+        builder.parcelKey = template.getParcelKey();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

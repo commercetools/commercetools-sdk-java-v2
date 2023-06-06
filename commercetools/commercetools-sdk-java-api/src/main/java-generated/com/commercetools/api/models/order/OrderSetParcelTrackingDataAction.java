@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -22,7 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetParcelTrackingDataAction orderSetParcelTrackingDataAction = OrderSetParcelTrackingDataAction.builder()
- *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -37,12 +35,20 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     String SET_PARCEL_TRACKING_DATA = "setParcelTrackingData";
 
     /**
-     *
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      * @return parcelId
      */
-    @NotNull
+
     @JsonProperty("parcelId")
     public String getParcelId();
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * @return parcelKey
+     */
+
+    @JsonProperty("parcelKey")
+    public String getParcelKey();
 
     /**
      *
@@ -53,11 +59,18 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public TrackingData getTrackingData();
 
     /**
-     * set parcelId
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * @param parcelKey value to be set
+     */
+
+    public void setParcelKey(final String parcelKey);
 
     /**
      * set trackingData
@@ -82,6 +95,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public static OrderSetParcelTrackingDataAction of(final OrderSetParcelTrackingDataAction template) {
         OrderSetParcelTrackingDataActionImpl instance = new OrderSetParcelTrackingDataActionImpl();
         instance.setParcelId(template.getParcelId());
+        instance.setParcelKey(template.getParcelKey());
         instance.setTrackingData(template.getTrackingData());
         return instance;
     }
@@ -98,6 +112,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
         }
         OrderSetParcelTrackingDataActionImpl instance = new OrderSetParcelTrackingDataActionImpl();
         instance.setParcelId(template.getParcelId());
+        instance.setParcelKey(template.getParcelKey());
         instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));
         return instance;
     }

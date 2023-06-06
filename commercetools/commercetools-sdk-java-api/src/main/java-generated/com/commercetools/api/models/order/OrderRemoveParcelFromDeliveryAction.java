@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -21,7 +20,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderRemoveParcelFromDeliveryAction orderRemoveParcelFromDeliveryAction = OrderRemoveParcelFromDeliveryAction.builder()
- *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -36,19 +34,34 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
     String REMOVE_PARCEL_FROM_DELIVERY = "removeParcelFromDelivery";
 
     /**
-     *
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      * @return parcelId
      */
-    @NotNull
+
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     * set parcelId
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * @return parcelKey
+     */
+
+    @JsonProperty("parcelKey")
+    public String getParcelKey();
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * @param parcelKey value to be set
+     */
+
+    public void setParcelKey(final String parcelKey);
 
     /**
      * factory method
@@ -66,6 +79,7 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
     public static OrderRemoveParcelFromDeliveryAction of(final OrderRemoveParcelFromDeliveryAction template) {
         OrderRemoveParcelFromDeliveryActionImpl instance = new OrderRemoveParcelFromDeliveryActionImpl();
         instance.setParcelId(template.getParcelId());
+        instance.setParcelKey(template.getParcelKey());
         return instance;
     }
 
@@ -82,6 +96,7 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
         }
         OrderRemoveParcelFromDeliveryActionImpl instance = new OrderRemoveParcelFromDeliveryActionImpl();
         instance.setParcelId(template.getParcelId());
+        instance.setParcelKey(template.getParcelKey());
         return instance;
     }
 

@@ -53,6 +53,14 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
 
     /**
      *
+     * @return parcelKey
+     */
+
+    @JsonProperty("parcelKey")
+    public String getParcelKey();
+
+    /**
+     *
      * @return measurements
      */
     @Valid
@@ -88,6 +96,13 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
      */
 
     public void setDeliveryKey(final String deliveryKey);
+
+    /**
+     * set parcelKey
+     * @param parcelKey value to be set
+     */
+
+    public void setParcelKey(final String parcelKey);
 
     /**
      * set measurements
@@ -135,6 +150,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
         OrderAddParcelToDeliveryActionImpl instance = new OrderAddParcelToDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setDeliveryKey(template.getDeliveryKey());
+        instance.setParcelKey(template.getParcelKey());
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
@@ -154,6 +170,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
         OrderAddParcelToDeliveryActionImpl instance = new OrderAddParcelToDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setDeliveryKey(template.getDeliveryKey());
+        instance.setParcelKey(template.getParcelKey());
         instance.setMeasurements(
             com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));

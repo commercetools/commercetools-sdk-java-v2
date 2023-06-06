@@ -30,6 +30,9 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     private String deliveryKey;
 
     @Nullable
+    private String parcelKey;
+
+    @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
     @Nullable
@@ -57,6 +60,17 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
 
     public OrderAddParcelToDeliveryActionBuilder deliveryKey(@Nullable final String deliveryKey) {
         this.deliveryKey = deliveryKey;
+        return this;
+    }
+
+    /**
+     * set the value to the parcelKey
+     * @param parcelKey value to be set
+     * @return Builder
+     */
+
+    public OrderAddParcelToDeliveryActionBuilder parcelKey(@Nullable final String parcelKey) {
+        this.parcelKey = parcelKey;
         return this;
     }
 
@@ -242,6 +256,16 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
+     * value of parcelKey}
+     * @return parcelKey
+     */
+
+    @Nullable
+    public String getParcelKey() {
+        return this.parcelKey;
+    }
+
+    /**
      * value of measurements}
      * @return measurements
      */
@@ -276,7 +300,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
      * @return OrderAddParcelToDeliveryAction
      */
     public OrderAddParcelToDeliveryAction build() {
-        return new OrderAddParcelToDeliveryActionImpl(deliveryId, deliveryKey, measurements, trackingData, items);
+        return new OrderAddParcelToDeliveryActionImpl(deliveryId, deliveryKey, parcelKey, measurements, trackingData,
+            items);
     }
 
     /**
@@ -284,7 +309,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
      * @return OrderAddParcelToDeliveryAction
      */
     public OrderAddParcelToDeliveryAction buildUnchecked() {
-        return new OrderAddParcelToDeliveryActionImpl(deliveryId, deliveryKey, measurements, trackingData, items);
+        return new OrderAddParcelToDeliveryActionImpl(deliveryId, deliveryKey, parcelKey, measurements, trackingData,
+            items);
     }
 
     /**
@@ -304,6 +330,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
         OrderAddParcelToDeliveryActionBuilder builder = new OrderAddParcelToDeliveryActionBuilder();
         builder.deliveryId = template.getDeliveryId();
         builder.deliveryKey = template.getDeliveryKey();
+        builder.parcelKey = template.getParcelKey();
         builder.measurements = template.getMeasurements();
         builder.trackingData = template.getTrackingData();
         builder.items = template.getItems();

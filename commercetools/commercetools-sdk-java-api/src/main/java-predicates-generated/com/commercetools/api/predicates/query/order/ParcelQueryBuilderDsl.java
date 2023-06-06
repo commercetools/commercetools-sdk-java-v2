@@ -18,6 +18,11 @@ public class ParcelQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ParcelQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<ParcelQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, ParcelQueryBuilderDsl::of));
+    }
+
     public DateTimeComparisonPredicateBuilder<ParcelQueryBuilderDsl> createdAt() {
         return new DateTimeComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("createdAt")),

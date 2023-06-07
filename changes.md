@@ -52,6 +52,8 @@
 <summary>Added Enum(s)</summary>
 
 - added enum `RenegotiationAddressed` to type `QuoteState`
+- added enum `associate-role` to type `CustomFieldReferenceValue`
+- added enum `business-unit` to type `CustomFieldReferenceValue`
 </details>
 
 
@@ -61,5 +63,14 @@
 - added type `CartSetLineItemInventoryModeAction`
 - added type `MyCartSetDirectDiscountsAction`
 - added type `ConfluentCloudDestination`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `associate-role` to type `CustomFieldReferenceValue`
+- added enum `business-unit` to type `CustomFieldReferenceValue`
 </details>
 

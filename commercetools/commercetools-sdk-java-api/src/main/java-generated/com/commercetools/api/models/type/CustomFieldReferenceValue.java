@@ -17,6 +17,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomFieldReferenceValue extends JsonEnum {
 
     /**
+    	<p><a href="ctp:api:type:AssociateRole">AssociateRole</a></p>
+
+    */
+    CustomFieldReferenceValue ASSOCIATE_ROLE = CustomFieldReferenceValueEnum.ASSOCIATE_ROLE;
+    /**
+    	<p><a href="ctp:api:type:BusinessUnit">BusinessUnit</a></p>
+
+    */
+    CustomFieldReferenceValue BUSINESS_UNIT = CustomFieldReferenceValueEnum.BUSINESS_UNIT;
+    /**
     	<p><a href="ctp:api:type:Cart">Cart</a></p>
 
     */
@@ -81,6 +91,16 @@ public interface CustomFieldReferenceValue extends JsonEnum {
      * possible values of CustomFieldReferenceValue
      */
     enum CustomFieldReferenceValueEnum implements CustomFieldReferenceValue {
+        /**
+         * associate-role
+         */
+        ASSOCIATE_ROLE("associate-role"),
+
+        /**
+         * business-unit
+         */
+        BUSINESS_UNIT("business-unit"),
+
         /**
          * cart
          */

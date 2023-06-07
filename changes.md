@@ -60,5 +60,6 @@
 
 - added type `CartSetLineItemInventoryModeAction`
 - added type `MyCartSetDirectDiscountsAction`
+- added type `ConfluentCloudDestination`
 </details>
 

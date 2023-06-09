@@ -39,6 +39,9 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     private String id;
 
+    @Nullable
+    private String key;
+
     private String productId;
 
     @Nullable
@@ -99,13 +102,24 @@ public class LineItemBuilder implements Builder<LineItem> {
     private java.time.ZonedDateTime lastModifiedAt;
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the LineItem.</p>
      * @param id value to be set
      * @return Builder
      */
 
     public LineItemBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public LineItemBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -1002,12 +1016,22 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the LineItem.</p>
      * @return id
      */
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -1266,10 +1290,10 @@ public class LineItemBuilder implements Builder<LineItem> {
         Objects.requireNonNull(perMethodTaxRate, LineItem.class + ": perMethodTaxRate is missing");
         Objects.requireNonNull(priceMode, LineItem.class + ": priceMode is missing");
         Objects.requireNonNull(lineItemMode, LineItem.class + ": lineItemMode is missing");
-        return new LineItemImpl(id, productId, productKey, name, productSlug, productType, variant, price, quantity,
-            totalPrice, discountedPricePerQuantity, taxedPrice, taxedPricePortions, state, taxRate, perMethodTaxRate,
-            supplyChannel, distributionChannel, priceMode, lineItemMode, inventoryMode, shippingDetails, custom,
-            addedAt, lastModifiedAt);
+        return new LineItemImpl(id, key, productId, productKey, name, productSlug, productType, variant, price,
+            quantity, totalPrice, discountedPricePerQuantity, taxedPrice, taxedPricePortions, state, taxRate,
+            perMethodTaxRate, supplyChannel, distributionChannel, priceMode, lineItemMode, inventoryMode,
+            shippingDetails, custom, addedAt, lastModifiedAt);
     }
 
     /**
@@ -1277,10 +1301,10 @@ public class LineItemBuilder implements Builder<LineItem> {
      * @return LineItem
      */
     public LineItem buildUnchecked() {
-        return new LineItemImpl(id, productId, productKey, name, productSlug, productType, variant, price, quantity,
-            totalPrice, discountedPricePerQuantity, taxedPrice, taxedPricePortions, state, taxRate, perMethodTaxRate,
-            supplyChannel, distributionChannel, priceMode, lineItemMode, inventoryMode, shippingDetails, custom,
-            addedAt, lastModifiedAt);
+        return new LineItemImpl(id, key, productId, productKey, name, productSlug, productType, variant, price,
+            quantity, totalPrice, discountedPricePerQuantity, taxedPrice, taxedPricePortions, state, taxRate,
+            perMethodTaxRate, supplyChannel, distributionChannel, priceMode, lineItemMode, inventoryMode,
+            shippingDetails, custom, addedAt, lastModifiedAt);
     }
 
     /**
@@ -1299,6 +1323,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     public static LineItemBuilder of(final LineItem template) {
         LineItemBuilder builder = new LineItemBuilder();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.productId = template.getProductId();
         builder.productKey = template.getProductKey();
         builder.name = template.getName();

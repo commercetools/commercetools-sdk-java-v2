@@ -22,6 +22,8 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     private String id;
 
+    private String key;
+
     private String productId;
 
     private String productKey;
@@ -74,8 +76,8 @@ public class LineItemImpl implements LineItem, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    LineItemImpl(@JsonProperty("id") final String id, @JsonProperty("productId") final String productId,
-            @JsonProperty("productKey") final String productKey,
+    LineItemImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
+            @JsonProperty("productId") final String productId, @JsonProperty("productKey") final String productKey,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug,
             @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType,
@@ -99,6 +101,7 @@ public class LineItemImpl implements LineItem, ModelBase {
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
         this.id = id;
+        this.key = key;
         this.productId = productId;
         this.productKey = productKey;
         this.name = name;
@@ -132,11 +135,19 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the LineItem.</p>
      */
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -345,6 +356,10 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.id = id;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setProductId(final String productId) {
         this.productId = productId;
     }
@@ -473,6 +488,7 @@ public class LineItemImpl implements LineItem, ModelBase {
         LineItemImpl that = (LineItemImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(productId, that.productId)
                 .append(productKey, that.productKey)
                 .append(name, that.name)
@@ -503,6 +519,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(productId)
                 .append(productKey)
                 .append(name)

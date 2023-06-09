@@ -56,12 +56,20 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItem extends com.commercetools.api.models.Customizable<LineItem> {
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the LineItem.</p>
      * @return id
      */
     @NotNull
     @JsonProperty("id")
     public String getId();
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
 
     /**
      *  <p><code>id</code> of the Product the Line Item is based on.</p>
@@ -275,11 +283,18 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Unique identifier of the Line Item.</p>
+     *  <p>Unique identifier of the LineItem.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p><code>id</code> of the Product the Line Item is based on.</p>
@@ -508,6 +523,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public static LineItem of(final LineItem template) {
         LineItemImpl instance = new LineItemImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setProductId(template.getProductId());
         instance.setProductKey(template.getProductKey());
         instance.setName(template.getName());
@@ -547,6 +563,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
         }
         LineItemImpl instance = new LineItemImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setProductId(template.getProductId());
         instance.setProductKey(template.getProductKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));

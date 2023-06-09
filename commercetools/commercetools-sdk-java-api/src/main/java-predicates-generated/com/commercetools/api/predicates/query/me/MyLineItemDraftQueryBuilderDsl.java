@@ -13,6 +13,11 @@ public class MyLineItemDraftQueryBuilderDsl {
         return new MyLineItemDraftQueryBuilderDsl();
     }
 
+    public StringComparisonPredicateBuilder<MyLineItemDraftQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, MyLineItemDraftQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<MyLineItemDraftQueryBuilderDsl> productId() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("productId")),

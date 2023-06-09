@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemAction> {
 
     @Nullable
+    private String key;
+
+    @Nullable
     private String productId;
 
     @Nullable
@@ -61,6 +64,17 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p><code>id</code> of the published Product.</p>
@@ -395,6 +409,16 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p><code>id</code> of the published Product.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      * @return productId
@@ -533,7 +557,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
      * @return CartAddLineItemAction
      */
     public CartAddLineItemAction build() {
-        return new CartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
+        return new CartAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
             supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
     }
 
@@ -542,7 +566,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
      * @return CartAddLineItemAction
      */
     public CartAddLineItemAction buildUnchecked() {
-        return new CartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
+        return new CartAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
             supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
     }
 
@@ -561,6 +585,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
      */
     public static CartAddLineItemActionBuilder of(final CartAddLineItemAction template) {
         CartAddLineItemActionBuilder builder = new CartAddLineItemActionBuilder();
+        builder.key = template.getKey();
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();

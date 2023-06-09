@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     @Nullable
+    private String key;
+
+    @Nullable
     private String productId;
 
     @Nullable
@@ -49,6 +52,17 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public MyLineItemDraftBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p><code>id</code> of the Product.</p>
@@ -258,6 +272,16 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p><code>id</code> of the Product.</p>
      * @return productId
      */
@@ -354,8 +378,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
      * @return MyLineItemDraft
      */
     public MyLineItemDraft build() {
-        return new MyLineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel,
-            shippingDetails, custom);
+        return new MyLineItemDraftImpl(key, productId, variantId, sku, quantity, addedAt, supplyChannel,
+            distributionChannel, shippingDetails, custom);
     }
 
     /**
@@ -363,8 +387,8 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
      * @return MyLineItemDraft
      */
     public MyLineItemDraft buildUnchecked() {
-        return new MyLineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel,
-            shippingDetails, custom);
+        return new MyLineItemDraftImpl(key, productId, variantId, sku, quantity, addedAt, supplyChannel,
+            distributionChannel, shippingDetails, custom);
     }
 
     /**
@@ -382,6 +406,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
      */
     public static MyLineItemDraftBuilder of(final MyLineItemDraft template) {
         MyLineItemDraftBuilder builder = new MyLineItemDraftBuilder();
+        builder.key = template.getKey();
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();

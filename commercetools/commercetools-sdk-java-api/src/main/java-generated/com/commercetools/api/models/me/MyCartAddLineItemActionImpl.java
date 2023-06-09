@@ -24,6 +24,8 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
 
     private String action;
 
+    private String key;
+
     private String productId;
 
     private Long variantId;
@@ -46,14 +48,15 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
      * create instance with all properties
      */
     @JsonCreator
-    MyCartAddLineItemActionImpl(@JsonProperty("productId") final String productId,
-            @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
-            @JsonProperty("quantity") final Long quantity,
+    MyCartAddLineItemActionImpl(@JsonProperty("key") final String key,
+            @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId,
+            @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.key = key;
         this.productId = productId;
         this.variantId = variantId;
         this.sku = sku;
@@ -79,6 +82,14 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
 
     public String getAction() {
         return this.action;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -158,6 +169,10 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
         return this.custom;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setProductId(final String productId) {
         this.productId = productId;
     }
@@ -206,6 +221,7 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
         MyCartAddLineItemActionImpl that = (MyCartAddLineItemActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(key, that.key)
                 .append(productId, that.productId)
                 .append(variantId, that.variantId)
                 .append(sku, that.sku)
@@ -221,6 +237,7 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
+                .append(key)
                 .append(productId)
                 .append(variantId)
                 .append(sku)

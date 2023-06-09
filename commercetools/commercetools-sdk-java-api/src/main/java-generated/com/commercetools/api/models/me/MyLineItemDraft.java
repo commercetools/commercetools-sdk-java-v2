@@ -35,6 +35,14 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
         io.vrap.rmf.base.client.Draft<MyLineItemDraft> {
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p><code>id</code> of the Product.</p>
      * @return productId
      */
@@ -107,6 +115,13 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p><code>id</code> of the Product.</p>
@@ -188,6 +203,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
      */
     public static MyLineItemDraft of(final MyLineItemDraft template) {
         MyLineItemDraftImpl instance = new MyLineItemDraftImpl();
+        instance.setKey(template.getKey());
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -211,6 +227,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
             return null;
         }
         MyLineItemDraftImpl instance = new MyLineItemDraftImpl();
+        instance.setKey(template.getKey());
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());

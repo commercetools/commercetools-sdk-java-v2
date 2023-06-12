@@ -73,4 +73,28 @@ public class StandalonePriceUpdateActionQueryBuilderDsl {
             com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetKeyActionQueryBuilderDsl.of()),
             StandalonePriceUpdateActionQueryBuilderDsl::of);
     }
+
+    public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> asSetValidFrom(
+            Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetValidFromActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetValidFromActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetValidFromActionQueryBuilderDsl
+                    .of()),
+            StandalonePriceUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> asSetValidFromAndUntil(
+            Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetValidFromAndUntilActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetValidFromAndUntilActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetValidFromAndUntilActionQueryBuilderDsl
+                    .of()),
+            StandalonePriceUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> asSetValidUntil(
+            Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetValidUntilActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetValidUntilActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetValidUntilActionQueryBuilderDsl
+                    .of()),
+            StandalonePriceUpdateActionQueryBuilderDsl::of);
+    }
 }

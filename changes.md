@@ -68,6 +68,15 @@
 
 - added type `CartSetLineItemInventoryModeAction`
 - added type `MyCartSetDirectDiscountsAction`
+- added type `StandalonePriceValidFromAndUntilSetMessage`
+- added type `StandalonePriceValidFromSetMessage`
+- added type `StandalonePriceValidUntilSetMessage`
+- added type `StandalonePriceValidFromAndUntilSetMessagePayload`
+- added type `StandalonePriceValidFromSetMessagePayload`
+- added type `StandalonePriceValidUntilSetMessagePayload`
+- added type `StandalonePriceSetValidFromAction`
+- added type `StandalonePriceSetValidFromAndUntilAction`
+- added type `StandalonePriceSetValidUntilAction`
 - added type `ConfluentCloudDestination`
 </details>
 

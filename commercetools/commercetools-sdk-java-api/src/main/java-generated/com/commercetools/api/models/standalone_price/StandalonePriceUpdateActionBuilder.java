@@ -39,6 +39,18 @@ public class StandalonePriceUpdateActionBuilder {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder.of();
     }
 
+    public com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromActionBuilder setValidFromBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilActionBuilder setValidFromAndUntilBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilActionBuilder setValidUntilBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilActionBuilder.of();
+    }
+
     /**
      * factory method for an instance of StandalonePriceUpdateActionBuilder
      * @return builder

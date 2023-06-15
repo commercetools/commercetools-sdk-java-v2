@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * RemoveAssetChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Remove Asset on Categories.</li>
+ *   <li>Remove Asset on Products.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +43,7 @@ public interface RemoveAssetChange extends Change {
     String REMOVE_ASSET_CHANGE = "RemoveAssetChange";
 
     /**
-     *  <p>Update action for <code>removeAsset</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -55,7 +59,7 @@ public interface RemoveAssetChange extends Change {
     public String getType();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -64,14 +68,14 @@ public interface RemoveAssetChange extends Change {
     public Asset getPreviousValue();
 
     /**
-     *  <p>Update action for <code>removeAsset</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 

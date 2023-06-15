@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveCustomLineItemChange
+ *  <p>Change triggered by the Remove CustomLineItem update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveCustomLineItemChangeImpl implements RemoveCustomLineItemChange, ModelBase {
@@ -24,20 +24,20 @@ public class RemoveCustomLineItemChangeImpl implements RemoveCustomLineItemChang
 
     private String change;
 
-    private com.commercetools.history.models.common.CustomLineItem nextValue;
-
     private com.commercetools.history.models.common.CustomLineItem previousValue;
+
+    private com.commercetools.history.models.common.CustomLineItem nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveCustomLineItemChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomLineItem nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomLineItem previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomLineItem previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomLineItem nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = REMOVE_CUSTOM_LINE_ITEM_CHANGE;
     }
 
@@ -57,7 +57,7 @@ public class RemoveCustomLineItemChangeImpl implements RemoveCustomLineItemChang
     }
 
     /**
-     *  <p>Update action for adding and removing custom line items</p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +65,31 @@ public class RemoveCustomLineItemChangeImpl implements RemoveCustomLineItemChang
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.CustomLineItem getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.CustomLineItem getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.CustomLineItem getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.CustomLineItem nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.CustomLineItem previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.CustomLineItem nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +104,8 @@ public class RemoveCustomLineItemChangeImpl implements RemoveCustomLineItemChang
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +113,8 @@ public class RemoveCustomLineItemChangeImpl implements RemoveCustomLineItemChang
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

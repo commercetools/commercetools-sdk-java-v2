@@ -31,7 +31,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     private com.commercetools.history.models.common.TaxRate nextValue;
 
     /**
-     *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-     *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
+     * value of change}
      * @return change
      */
 
@@ -122,7 +122,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -131,7 +131,7 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

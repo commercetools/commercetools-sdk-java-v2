@@ -30,7 +30,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
     private String nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setFirstName</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
     }
 
     /**
-     *  <p>Shape of the action for <code>setFirstName</code></p>
+     * value of change}
      * @return change
      */
 
@@ -72,7 +72,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -81,7 +81,7 @@ public class SetFirstNameChangeBuilder implements Builder<SetFirstNameChange> {
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

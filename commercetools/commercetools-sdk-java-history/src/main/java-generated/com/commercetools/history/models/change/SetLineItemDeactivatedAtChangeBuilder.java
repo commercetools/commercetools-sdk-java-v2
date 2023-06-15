@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemDeactivatedAtChange setLineItemDeactivatedAtChange = SetLineItemDeactivatedAtChange.builder()
  *             .change("{change}")
- *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .previousValue("{previousValue}")
  *             .nextValue("{nextValue}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
 
     private String change;
 
-    private com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem;
-
     private String previousValue;
 
     private String nextValue;
 
+    private com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem;
+
     /**
-     *  <p>Update action for <code>setLineItemDeactivatedAt</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,7 +45,29 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
     }
 
     /**
-     * set the value to the lineItem using the builder function
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public SetLineItemDeactivatedAtChangeBuilder previousValue(final String previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetLineItemDeactivatedAtChangeBuilder nextValue(final String nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -59,7 +81,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
     }
 
     /**
-     * set the value to the lineItem using the builder function
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -72,7 +94,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
     }
 
     /**
-     * set the value to the lineItem
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -84,29 +106,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
     }
 
     /**
-     * set the value to the previousValue
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public SetLineItemDeactivatedAtChangeBuilder previousValue(final String previousValue) {
-        this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetLineItemDeactivatedAtChangeBuilder nextValue(final String nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     *  <p>Update action for <code>setLineItemDeactivatedAt</code></p>
+     * value of change}
      * @return change
      */
 
@@ -115,16 +115,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
     }
 
     /**
-     * value of lineItem}
-     * @return lineItem
-     */
-
-    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
-        return this.lineItem;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -133,7 +124,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -142,15 +133,24 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
     }
 
     /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
+     * @return lineItem
+     */
+
+    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
      * builds SetLineItemDeactivatedAtChange with checking for non-null required values
      * @return SetLineItemDeactivatedAtChange
      */
     public SetLineItemDeactivatedAtChange build() {
         Objects.requireNonNull(change, SetLineItemDeactivatedAtChange.class + ": change is missing");
-        Objects.requireNonNull(lineItem, SetLineItemDeactivatedAtChange.class + ": lineItem is missing");
         Objects.requireNonNull(previousValue, SetLineItemDeactivatedAtChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetLineItemDeactivatedAtChange.class + ": nextValue is missing");
-        return new SetLineItemDeactivatedAtChangeImpl(change, lineItem, previousValue, nextValue);
+        Objects.requireNonNull(lineItem, SetLineItemDeactivatedAtChange.class + ": lineItem is missing");
+        return new SetLineItemDeactivatedAtChangeImpl(change, previousValue, nextValue, lineItem);
     }
 
     /**
@@ -158,7 +158,7 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
      * @return SetLineItemDeactivatedAtChange
      */
     public SetLineItemDeactivatedAtChange buildUnchecked() {
-        return new SetLineItemDeactivatedAtChangeImpl(change, lineItem, previousValue, nextValue);
+        return new SetLineItemDeactivatedAtChangeImpl(change, previousValue, nextValue, lineItem);
     }
 
     /**
@@ -177,9 +177,9 @@ public class SetLineItemDeactivatedAtChangeBuilder implements Builder<SetLineIte
     public static SetLineItemDeactivatedAtChangeBuilder of(final SetLineItemDeactivatedAtChange template) {
         SetLineItemDeactivatedAtChangeBuilder builder = new SetLineItemDeactivatedAtChangeBuilder();
         builder.change = template.getChange();
-        builder.lineItem = template.getLineItem();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.lineItem = template.getLineItem();
         return builder;
     }
 

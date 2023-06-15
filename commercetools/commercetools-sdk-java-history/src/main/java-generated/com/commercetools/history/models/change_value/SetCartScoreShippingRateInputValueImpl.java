@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Shape of the cart score shipping input rate value.</p>
+ * SetCartScoreShippingRateInputValue
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCartScoreShippingRateInputValueImpl implements SetCartScoreShippingRateInputValue, ModelBase {
@@ -49,7 +49,7 @@ public class SetCartScoreShippingRateInputValueImpl implements SetCartScoreShipp
     }
 
     /**
-     *
+     *  <p>Abstract value for categorizing a Cart.</p>
      */
 
     public Integer getScore() {

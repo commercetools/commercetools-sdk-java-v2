@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetImageLabelChange setImageLabelChange = SetImageLabelChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
 
     private String change;
 
-    private String catalogData;
-
     private com.commercetools.history.models.common.Image previousValue;
 
     private com.commercetools.history.models.common.Image nextValue;
 
+    private String catalogData;
+
     /**
-     *  <p>Update action for <code>setImageLabel</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,18 +45,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public SetImageLabelChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -68,7 +57,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -80,7 +69,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -91,7 +80,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -103,7 +92,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -115,7 +104,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -126,7 +115,21 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     *  <p>Update action for <code>setImageLabel</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetImageLabelChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -135,16 +138,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -153,7 +147,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -162,15 +156,27 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
      * builds SetImageLabelChange with checking for non-null required values
      * @return SetImageLabelChange
      */
     public SetImageLabelChange build() {
         Objects.requireNonNull(change, SetImageLabelChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, SetImageLabelChange.class + ": catalogData is missing");
         Objects.requireNonNull(previousValue, SetImageLabelChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetImageLabelChange.class + ": nextValue is missing");
-        return new SetImageLabelChangeImpl(change, catalogData, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, SetImageLabelChange.class + ": catalogData is missing");
+        return new SetImageLabelChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -178,7 +184,7 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
      * @return SetImageLabelChange
      */
     public SetImageLabelChange buildUnchecked() {
-        return new SetImageLabelChangeImpl(change, catalogData, previousValue, nextValue);
+        return new SetImageLabelChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -197,9 +203,9 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     public static SetImageLabelChangeBuilder of(final SetImageLabelChange template) {
         SetImageLabelChangeBuilder builder = new SetImageLabelChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
         return builder;
     }
 

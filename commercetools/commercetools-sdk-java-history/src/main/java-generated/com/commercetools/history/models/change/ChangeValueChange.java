@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeValueChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Value on Cart Discounts.</li>
+ *   <li>Change Value on Product Discounts.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +28,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeValueChange changeValueChange = ChangeValueChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -40,7 +44,7 @@ public interface ChangeValueChange extends Change {
     String CHANGE_VALUE_CHANGE = "ChangeValueChange";
 
     /**
-     *  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +60,7 @@ public interface ChangeValueChange extends Change {
     public String getType();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public ChangeValueChangeValue getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +69,34 @@ public interface ChangeValueChange extends Change {
     public ChangeValueChangeValue getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public ChangeValueChangeValue getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final ChangeValueChangeValue nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final ChangeValueChangeValue previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final ChangeValueChangeValue nextValue);
 
     /**
      * factory method
@@ -110,8 +114,8 @@ public interface ChangeValueChange extends Change {
     public static ChangeValueChange of(final ChangeValueChange template) {
         ChangeValueChangeImpl instance = new ChangeValueChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,10 +131,10 @@ public interface ChangeValueChange extends Change {
         }
         ChangeValueChangeImpl instance = new ChangeValueChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.ChangeValueChangeValue.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.change_value.ChangeValueChangeValue.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.ChangeValueChangeValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

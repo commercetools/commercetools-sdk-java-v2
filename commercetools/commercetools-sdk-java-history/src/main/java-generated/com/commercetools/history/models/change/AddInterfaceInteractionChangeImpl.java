@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddInterfaceInteractionChange
+ *  <p>Change triggered by the Add InterfaceInteraction update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractionChange, ModelBase {
@@ -53,7 +53,7 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
     }
 
     /**
-     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     *
      */
 
     public String getChange() {
@@ -61,7 +61,7 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
     }
 
     /**
-     *  <p>Only available if <code>expand</code> is set to true</p>
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.change_value.CustomFieldExpandedValue getNextValue() {

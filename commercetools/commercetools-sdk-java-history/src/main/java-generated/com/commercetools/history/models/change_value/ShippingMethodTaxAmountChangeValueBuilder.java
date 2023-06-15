@@ -28,7 +28,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     private com.commercetools.history.models.common.TaxRate taxRate;
 
     /**
-     * set the value to the taxedPrice using the builder function
+     *  <p>Taxed price for the Shipping Method based on <code>taxRate</code>.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     * set the value to the taxedPrice using the builder function
+     *  <p>Taxed price for the Shipping Method based on <code>taxRate</code>.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     * set the value to the taxedPrice
+     *  <p>Taxed price for the Shipping Method based on <code>taxRate</code>.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Tax rate set externally for the Shipping Method.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Tax rate set externally for the Shipping Method.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Tax rate set externally for the Shipping Method.</p>
      * @param taxRate value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     * value of taxedPrice}
+     *  <p>Taxed price for the Shipping Method based on <code>taxRate</code>.</p>
      * @return taxedPrice
      */
 
@@ -109,7 +109,7 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Tax rate set externally for the Shipping Method.</p>
      * @return taxRate
      */
 

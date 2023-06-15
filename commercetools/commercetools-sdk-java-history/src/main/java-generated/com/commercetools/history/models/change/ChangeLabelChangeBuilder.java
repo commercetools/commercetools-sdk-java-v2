@@ -15,10 +15,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeLabelChange changeLabelChange = ChangeLabelChange.builder()
  *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .fieldName("{fieldName}")
  *             .attributeName("{attributeName}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,16 +28,16 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
 
     private String change;
 
+    private com.commercetools.history.models.common.LocalizedString previousValue;
+
+    private com.commercetools.history.models.common.LocalizedString nextValue;
+
     private String fieldName;
 
     private String attributeName;
 
-    private com.commercetools.history.models.common.LocalizedString nextValue;
-
-    private com.commercetools.history.models.common.LocalizedString previousValue;
-
     /**
-     *  <p>Update action for <code>changeLabel</code> on product types and types</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -48,64 +48,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     }
 
     /**
-     *  <p>The name of the field definition to update (types).</p>
-     * @param fieldName value to be set
-     * @return Builder
-     */
-
-    public ChangeLabelChangeBuilder fieldName(final String fieldName) {
-        this.fieldName = fieldName;
-        return this;
-    }
-
-    /**
-     *  <p>The name of the attribute definition to update (product-type).</p>
-     * @param attributeName value to be set
-     * @return Builder
-     */
-
-    public ChangeLabelChangeBuilder attributeName(final String attributeName) {
-        this.attributeName = attributeName;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeLabelChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeLabelChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeLabelChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -117,7 +60,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -129,7 +72,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -141,7 +84,64 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     }
 
     /**
-     *  <p>Update action for <code>changeLabel</code> on product types and types</p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeLabelChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeLabelChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeLabelChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types).</p>
+     * @param fieldName value to be set
+     * @return Builder
+     */
+
+    public ChangeLabelChangeBuilder fieldName(final String fieldName) {
+        this.fieldName = fieldName;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     * @param attributeName value to be set
+     * @return Builder
+     */
+
+    public ChangeLabelChangeBuilder attributeName(final String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -150,34 +150,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     }
 
     /**
-     *  <p>The name of the field definition to update (types).</p>
-     * @return fieldName
-     */
-
-    public String getFieldName() {
-        return this.fieldName;
-    }
-
-    /**
-     *  <p>The name of the attribute definition to update (product-type).</p>
-     * @return attributeName
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.LocalizedString getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -186,16 +159,43 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types).</p>
+     * @return fieldName
+     */
+
+    public String getFieldName() {
+        return this.fieldName;
+    }
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     * @return attributeName
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
+    /**
      * builds ChangeLabelChange with checking for non-null required values
      * @return ChangeLabelChange
      */
     public ChangeLabelChange build() {
         Objects.requireNonNull(change, ChangeLabelChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeLabelChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeLabelChange.class + ": nextValue is missing");
         Objects.requireNonNull(fieldName, ChangeLabelChange.class + ": fieldName is missing");
         Objects.requireNonNull(attributeName, ChangeLabelChange.class + ": attributeName is missing");
-        Objects.requireNonNull(nextValue, ChangeLabelChange.class + ": nextValue is missing");
-        Objects.requireNonNull(previousValue, ChangeLabelChange.class + ": previousValue is missing");
-        return new ChangeLabelChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
+        return new ChangeLabelChangeImpl(change, previousValue, nextValue, fieldName, attributeName);
     }
 
     /**
@@ -203,7 +203,7 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
      * @return ChangeLabelChange
      */
     public ChangeLabelChange buildUnchecked() {
-        return new ChangeLabelChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
+        return new ChangeLabelChangeImpl(change, previousValue, nextValue, fieldName, attributeName);
     }
 
     /**
@@ -222,10 +222,10 @@ public class ChangeLabelChangeBuilder implements Builder<ChangeLabelChange> {
     public static ChangeLabelChangeBuilder of(final ChangeLabelChange template) {
         ChangeLabelChangeBuilder builder = new ChangeLabelChangeBuilder();
         builder.change = template.getChange();
+        builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.fieldName = template.getFieldName();
         builder.attributeName = template.getAttributeName();
-        builder.nextValue = template.getNextValue();
-        builder.previousValue = template.getPreviousValue();
         return builder;
     }
 

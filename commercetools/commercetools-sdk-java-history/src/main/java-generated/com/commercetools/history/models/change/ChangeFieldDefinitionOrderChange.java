@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeFieldDefinitionOrderChange
+ *  <p>Change triggered by the Change the order of FieldDefinitions update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
+     *
      * @return change
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
     public List<FieldDefinitionOrderValue> getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -75,14 +75,14 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
     public List<FieldDefinitionOrderValue> getNextValue();
 
     /**
-     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -90,14 +90,14 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
     public void setPreviousValue(final FieldDefinitionOrderValue... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<FieldDefinitionOrderValue> previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
@@ -105,7 +105,7 @@ public interface ChangeFieldDefinitionOrderChange extends Change {
     public void setNextValue(final FieldDefinitionOrderValue... nextValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 

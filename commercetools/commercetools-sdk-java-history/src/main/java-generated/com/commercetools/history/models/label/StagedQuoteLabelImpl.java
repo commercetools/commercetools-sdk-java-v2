@@ -57,7 +57,7 @@ public class StagedQuoteLabelImpl implements StagedQuoteLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Staged Quote.</p>
      */
 
     public String getKey() {
@@ -65,7 +65,7 @@ public class StagedQuoteLabelImpl implements StagedQuoteLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>The Buyer who requested the Quote.</p>
      */
 
     public com.commercetools.history.models.common.Reference getCustomer() {
@@ -73,7 +73,7 @@ public class StagedQuoteLabelImpl implements StagedQuoteLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Quote Request related to the Staged Quote.</p>
      */
 
     public com.commercetools.history.models.common.Reference getQuoteRequest() {

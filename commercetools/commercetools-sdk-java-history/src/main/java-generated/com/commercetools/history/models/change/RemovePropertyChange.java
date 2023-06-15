@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * RemovePropertyChange
+ *  <p>Change triggered by the Update CustomObject request when an existing property is removed.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface RemovePropertyChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>removeProperty</code> on custom objects</p>
+     *
      * @return change
      */
     @NotNull
@@ -53,15 +53,7 @@ public interface RemovePropertyChange extends Change {
     public String getChange();
 
     /**
-     *  <p>Value path to the property that was removed</p>
-     * @return path
-     */
-    @NotNull
-    @JsonProperty("path")
-    public String getPath();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -69,25 +61,33 @@ public interface RemovePropertyChange extends Change {
     public Object getPreviousValue();
 
     /**
-     *  <p>Update action for <code>removeProperty</code> on custom objects</p>
+     *  <p>Path to the property that was removed.</p>
+     * @return path
+     */
+    @NotNull
+    @JsonProperty("path")
+    public String getPath();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>Value path to the property that was removed</p>
-     * @param path value to be set
-     */
-
-    public void setPath(final String path);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Object previousValue);
+
+    /**
+     *  <p>Path to the property that was removed.</p>
+     * @param path value to be set
+     */
+
+    public void setPath(final String path);
 
     /**
      * factory method
@@ -105,8 +105,8 @@ public interface RemovePropertyChange extends Change {
     public static RemovePropertyChange of(final RemovePropertyChange template) {
         RemovePropertyChangeImpl instance = new RemovePropertyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPath(template.getPath());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setPath(template.getPath());
         return instance;
     }
 
@@ -122,8 +122,8 @@ public interface RemovePropertyChange extends Change {
         }
         RemovePropertyChangeImpl instance = new RemovePropertyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPath(template.getPath());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setPath(template.getPath());
         return instance;
     }
 

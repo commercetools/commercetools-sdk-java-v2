@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeShoppingListLineItemQuantityChange
+ *  <p>Change triggered by the Change ShoppingListLineItem Quantity update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeShoppingListLineItemQuantityChangeImpl
@@ -25,24 +25,24 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
 
     private String change;
 
-    private com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem;
-
     private Integer previousValue;
 
     private Integer nextValue;
+
+    private com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeShoppingListLineItemQuantityChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("lineItem") final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem,
             @JsonProperty("previousValue") final Integer previousValue,
-            @JsonProperty("nextValue") final Integer nextValue) {
+            @JsonProperty("nextValue") final Integer nextValue,
+            @JsonProperty("lineItem") final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
         this.change = change;
-        this.lineItem = lineItem;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.lineItem = lineItem;
         this.type = CHANGE_SHOPPING_LIST_LINE_ITEM_QUANTITY_CHANGE;
     }
 
@@ -70,15 +70,7 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
-        return this.lineItem;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public Integer getPreviousValue() {
@@ -86,19 +78,23 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public Integer getNextValue() {
         return this.nextValue;
     }
 
-    public void setChange(final String change) {
-        this.change = change;
+    /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
+     */
+
+    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
+        return this.lineItem;
     }
 
-    public void setLineItem(final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
-        this.lineItem = lineItem;
+    public void setChange(final String change) {
+        this.change = change;
     }
 
     public void setPreviousValue(final Integer previousValue) {
@@ -107,6 +103,10 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
 
     public void setNextValue(final Integer nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setLineItem(final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
+        this.lineItem = lineItem;
     }
 
     @Override
@@ -121,9 +121,9 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(lineItem, that.lineItem)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(lineItem, that.lineItem)
                 .isEquals();
     }
 
@@ -131,9 +131,9 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(lineItem)
                 .append(previousValue)
                 .append(nextValue)
+                .append(lineItem)
                 .toHashCode();
     }
 

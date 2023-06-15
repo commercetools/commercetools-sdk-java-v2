@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddAssetChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Add Asset on Categories.</li>
+ *   <li>Add Asset on Products.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +28,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddAssetChange addAssetChange = AddAssetChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -40,7 +44,7 @@ public interface AddAssetChange extends Change {
     String ADD_ASSET_CHANGE = "AddAssetChange";
 
     /**
-     *  <p>Update action for <code>addAsset</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +60,7 @@ public interface AddAssetChange extends Change {
     public String getType();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public Asset getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +69,34 @@ public interface AddAssetChange extends Change {
     public Asset getPreviousValue();
 
     /**
-     *  <p>Update action for <code>addAsset</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public Asset getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final Asset nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Asset previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final Asset nextValue);
 
     /**
      * factory method
@@ -110,8 +114,8 @@ public interface AddAssetChange extends Change {
     public static AddAssetChange of(final AddAssetChange template) {
         AddAssetChangeImpl instance = new AddAssetChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,8 +131,8 @@ public interface AddAssetChange extends Change {
         }
         AddAssetChangeImpl instance = new AddAssetChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(com.commercetools.history.models.common.Asset.deepCopy(template.getNextValue()));
         instance.setPreviousValue(com.commercetools.history.models.common.Asset.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Asset.deepCopy(template.getNextValue()));
         return instance;
     }
 

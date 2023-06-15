@@ -28,7 +28,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
     private com.commercetools.history.models.change_value.CustomFieldExpandedValue nextValue;
 
     /**
-     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
     }
 
     /**
-     *  <p>Only available if <code>expand</code> is set to true</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
     }
 
     /**
-     *  <p>Only available if <code>expand</code> is set to true</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
     }
 
     /**
-     *  <p>Only available if <code>expand</code> is set to true</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
     }
 
     /**
-     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     * value of change}
      * @return change
      */
 
@@ -87,7 +87,7 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
     }
 
     /**
-     *  <p>Only available if <code>expand</code> is set to true</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetLineItemShippingDetailsChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set LineItemShippingDetails on Orders.</li>
+ *   <li>Set LineItemShippingDetails on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShippingDetailsChange, ModelBase {
@@ -24,24 +28,24 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
 
     private String change;
 
-    private String lineItemId;
+    private com.commercetools.history.models.common.ItemShippingDetails previousValue;
 
     private com.commercetools.history.models.common.ItemShippingDetails nextValue;
 
-    private com.commercetools.history.models.common.ItemShippingDetails previousValue;
+    private String lineItemId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetLineItemShippingDetailsChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.ItemShippingDetails previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.ItemShippingDetails nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.ItemShippingDetails previousValue) {
+            @JsonProperty("lineItemId") final String lineItemId) {
         this.change = change;
-        this.lineItemId = lineItemId;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.lineItemId = lineItemId;
         this.type = SET_LINE_ITEM_SHIPPING_DETAILS_CHANGE;
     }
 
@@ -61,7 +65,7 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
     }
 
     /**
-     *  <p>Update action for <code>setLineItemShippingDetails</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +73,15 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public String getLineItemId() {
-        return this.lineItemId;
+    public com.commercetools.history.models.common.ItemShippingDetails getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.ItemShippingDetails getNextValue() {
@@ -85,27 +89,27 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
     }
 
     /**
-     *
+     *  <p><code>id</code> of the updated LineItem.</p>
      */
 
-    public com.commercetools.history.models.common.ItemShippingDetails getPreviousValue() {
-        return this.previousValue;
+    public String getLineItemId() {
+        return this.lineItemId;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setLineItemId(final String lineItemId) {
-        this.lineItemId = lineItemId;
+    public void setPreviousValue(final com.commercetools.history.models.common.ItemShippingDetails previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.ItemShippingDetails nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.ItemShippingDetails previousValue) {
-        this.previousValue = previousValue;
+    public void setLineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
     }
 
     @Override
@@ -120,9 +124,9 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(lineItemId, that.lineItemId)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(lineItemId, that.lineItemId)
                 .isEquals();
     }
 
@@ -130,9 +134,9 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(lineItemId)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(lineItemId)
                 .toHashCode();
     }
 

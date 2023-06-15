@@ -28,7 +28,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     private com.commercetools.history.models.common.Delivery previousValue;
 
     /**
-     *  <p>Update action for <code>removeDelivery</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     }
 
     /**
-     *  <p>Update action for <code>removeDelivery</code></p>
+     * value of change}
      * @return change
      */
 
@@ -84,7 +84,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 

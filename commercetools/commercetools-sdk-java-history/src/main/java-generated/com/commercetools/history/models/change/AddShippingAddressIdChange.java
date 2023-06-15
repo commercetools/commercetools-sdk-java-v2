@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddShippingAddressIdChange
+ *  <p>Change triggered by the Add Shipping Address ID update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddShippingAddressIdChange addShippingAddressIdChange = AddShippingAddressIdChange.builder()
  *             .change("{change}")
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
@@ -41,7 +41,7 @@ public interface AddShippingAddressIdChange extends Change {
     String ADD_SHIPPING_ADDRESS_ID_CHANGE = "AddShippingAddressIdChange";
 
     /**
-     *  <p>Update action for <code>addShippingAddressId</code> action on customers.</p>
+     *
      * @return change
      */
     @NotNull
@@ -57,15 +57,7 @@ public interface AddShippingAddressIdChange extends Change {
     public String getType();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public List<String> getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -73,7 +65,15 @@ public interface AddShippingAddressIdChange extends Change {
     public List<String> getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public List<String> getNextValue();
+
+    /**
+     *  <p>Address added to <code>shippingAddressIds</code>.</p>
      * @return address
      */
     @NotNull
@@ -82,29 +82,14 @@ public interface AddShippingAddressIdChange extends Change {
     public Address getAddress();
 
     /**
-     *  <p>Update action for <code>addShippingAddressId</code> action on customers.</p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    @JsonIgnore
-    public void setNextValue(final String... nextValue);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    public void setNextValue(final List<String> nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -112,14 +97,29 @@ public interface AddShippingAddressIdChange extends Change {
     public void setPreviousValue(final String... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<String> previousValue);
 
     /**
-     * set address
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    @JsonIgnore
+    public void setNextValue(final String... nextValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    public void setNextValue(final List<String> nextValue);
+
+    /**
+     *  <p>Address added to <code>shippingAddressIds</code>.</p>
      * @param address value to be set
      */
 
@@ -141,8 +141,8 @@ public interface AddShippingAddressIdChange extends Change {
     public static AddShippingAddressIdChange of(final AddShippingAddressIdChange template) {
         AddShippingAddressIdChangeImpl instance = new AddShippingAddressIdChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setAddress(template.getAddress());
         return instance;
     }
@@ -159,8 +159,8 @@ public interface AddShippingAddressIdChange extends Change {
         }
         AddShippingAddressIdChangeImpl instance = new AddShippingAddressIdChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
         instance.setAddress(com.commercetools.history.models.common.Address.deepCopy(template.getAddress()));
         return instance;
     }

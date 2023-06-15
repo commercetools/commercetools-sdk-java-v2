@@ -45,7 +45,7 @@ public interface OrderLabel extends Label {
     public String getType();
 
     /**
-     *
+     *  <p>Email address of the Customer that the Order belongs to.</p>
      * @return customerEmail
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface OrderLabel extends Label {
     public String getCustomerEmail();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Order that is unique across a Project.</p>
      * @return orderNumber
      */
     @NotNull
@@ -61,14 +61,14 @@ public interface OrderLabel extends Label {
     public String getOrderNumber();
 
     /**
-     * set customerEmail
+     *  <p>Email address of the Customer that the Order belongs to.</p>
      * @param customerEmail value to be set
      */
 
     public void setCustomerEmail(final String customerEmail);
 
     /**
-     * set orderNumber
+     *  <p>User-defined unique identifier of the Order that is unique across a Project.</p>
      * @param orderNumber value to be set
      */
 

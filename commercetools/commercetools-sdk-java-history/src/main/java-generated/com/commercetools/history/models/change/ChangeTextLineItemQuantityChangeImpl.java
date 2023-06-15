@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeTextLineItemQuantityChange
+ *  <p>Change triggered by the Change TextLineItem Quantity update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTextLineItemQuantityChangeImpl implements ChangeTextLineItemQuantityChange, ModelBase {
@@ -24,24 +24,24 @@ public class ChangeTextLineItemQuantityChangeImpl implements ChangeTextLineItemQ
 
     private String change;
 
-    private com.commercetools.history.models.change_value.TextLineItemValue textLineItem;
-
     private Integer previousValue;
 
     private Integer nextValue;
+
+    private com.commercetools.history.models.change_value.TextLineItemValue textLineItem;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeTextLineItemQuantityChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem,
             @JsonProperty("previousValue") final Integer previousValue,
-            @JsonProperty("nextValue") final Integer nextValue) {
+            @JsonProperty("nextValue") final Integer nextValue,
+            @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
         this.change = change;
-        this.textLineItem = textLineItem;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.textLineItem = textLineItem;
         this.type = CHANGE_TEXT_LINE_ITEM_QUANTITY_CHANGE;
     }
 
@@ -69,15 +69,7 @@ public class ChangeTextLineItemQuantityChangeImpl implements ChangeTextLineItemQ
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
-        return this.textLineItem;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public Integer getPreviousValue() {
@@ -85,19 +77,23 @@ public class ChangeTextLineItemQuantityChangeImpl implements ChangeTextLineItemQ
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public Integer getNextValue() {
         return this.nextValue;
     }
 
-    public void setChange(final String change) {
-        this.change = change;
+    /**
+     *  <p>Holds information about the updated Text Line Item.</p>
+     */
+
+    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
+        return this.textLineItem;
     }
 
-    public void setTextLineItem(final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
-        this.textLineItem = textLineItem;
+    public void setChange(final String change) {
+        this.change = change;
     }
 
     public void setPreviousValue(final Integer previousValue) {
@@ -106,6 +102,10 @@ public class ChangeTextLineItemQuantityChangeImpl implements ChangeTextLineItemQ
 
     public void setNextValue(final Integer nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setTextLineItem(final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
+        this.textLineItem = textLineItem;
     }
 
     @Override
@@ -120,9 +120,9 @@ public class ChangeTextLineItemQuantityChangeImpl implements ChangeTextLineItemQ
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(textLineItem, that.textLineItem)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(textLineItem, that.textLineItem)
                 .isEquals();
     }
 
@@ -130,9 +130,9 @@ public class ChangeTextLineItemQuantityChangeImpl implements ChangeTextLineItemQ
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(textLineItem)
                 .append(previousValue)
                 .append(nextValue)
+                .append(textLineItem)
                 .toHashCode();
     }
 

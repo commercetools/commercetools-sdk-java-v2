@@ -28,7 +28,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     private com.commercetools.history.models.common.Money totalGross;
 
     /**
-     * set the value to the totalNet using the builder function
+     *  <p>Total net price of the Order.</p>
      * @param builder function to build the totalNet value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     * set the value to the totalNet using the builder function
+     *  <p>Total net price of the Order.</p>
      * @param builder function to build the totalNet value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     * set the value to the totalNet
+     *  <p>Total net price of the Order.</p>
      * @param totalNet value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     * set the value to the totalGross using the builder function
+     *  <p>Total gross price of the Order.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     * set the value to the totalGross using the builder function
+     *  <p>Total gross price of the Order.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     * set the value to the totalGross
+     *  <p>Total gross price of the Order.</p>
      * @param totalGross value to be set
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     * value of totalNet}
+     *  <p>Total net price of the Order.</p>
      * @return totalNet
      */
 
@@ -107,7 +107,7 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     }
 
     /**
-     * value of totalGross}
+     *  <p>Total gross price of the Order.</p>
      * @return totalGross
      */
 

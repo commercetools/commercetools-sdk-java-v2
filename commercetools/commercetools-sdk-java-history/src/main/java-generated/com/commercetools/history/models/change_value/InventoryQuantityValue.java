@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InventoryQuantityValue {
 
     /**
-     *
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
      * @return quantityOnStock
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface InventoryQuantityValue {
     public Integer getQuantityOnStock();
 
     /**
-     *
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
      * @return availableQuantity
      */
     @NotNull
@@ -48,14 +48,14 @@ public interface InventoryQuantityValue {
     public Integer getAvailableQuantity();
 
     /**
-     * set quantityOnStock
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
      * @param quantityOnStock value to be set
      */
 
     public void setQuantityOnStock(final Integer quantityOnStock);
 
     /**
-     * set availableQuantity
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
      * @param availableQuantity value to be set
      */
 

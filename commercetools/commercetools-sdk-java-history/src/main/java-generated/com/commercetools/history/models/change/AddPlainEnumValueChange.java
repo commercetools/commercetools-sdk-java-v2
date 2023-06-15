@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddPlainEnumValueChange
+ *  <p>Change triggered by the Add PlainEnumValue to AttributeDefinition update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddPlainEnumValueChange addPlainEnumValueChange = AddPlainEnumValueChange.builder()
  *             .change("{change}")
- *             .attributeName("{attributeName}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +48,7 @@ public interface AddPlainEnumValueChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+     *
      * @return change
      */
     @NotNull
@@ -56,15 +56,7 @@ public interface AddPlainEnumValueChange extends Change {
     public String getChange();
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @return attributeName
-     */
-    @NotNull
-    @JsonProperty("attributeName")
-    public String getAttributeName();
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -73,25 +65,33 @@ public interface AddPlainEnumValueChange extends Change {
     public EnumValue getNextValue();
 
     /**
-     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @param attributeName value to be set
-     */
-
-    public void setAttributeName(final String attributeName);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final EnumValue nextValue);
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @param attributeName value to be set
+     */
+
+    public void setAttributeName(final String attributeName);
 
     /**
      * factory method
@@ -109,8 +109,8 @@ public interface AddPlainEnumValueChange extends Change {
     public static AddPlainEnumValueChange of(final AddPlainEnumValueChange template) {
         AddPlainEnumValueChangeImpl instance = new AddPlainEnumValueChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
         instance.setNextValue(template.getNextValue());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 
@@ -126,9 +126,9 @@ public interface AddPlainEnumValueChange extends Change {
         }
         AddPlainEnumValueChangeImpl instance = new AddPlainEnumValueChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
         instance.setNextValue(
             com.commercetools.history.models.change_value.EnumValue.deepCopy(template.getNextValue()));
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 

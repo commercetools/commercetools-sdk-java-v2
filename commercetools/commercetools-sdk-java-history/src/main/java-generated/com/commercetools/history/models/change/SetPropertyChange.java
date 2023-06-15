@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetPropertyChange
+ *  <p>Change triggered by the Update CustomObject request when an existing property is updated.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface SetPropertyChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setProperty</code> on custom objects</p>
+     *
      * @return change
      */
     @NotNull
@@ -53,23 +53,7 @@ public interface SetPropertyChange extends Change {
     public String getChange();
 
     /**
-     *  <p>Value path to the property that was changed</p>
-     * @return path
-     */
-    @NotNull
-    @JsonProperty("path")
-    public String getPath();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public Object getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -77,32 +61,48 @@ public interface SetPropertyChange extends Change {
     public Object getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setProperty</code> on custom objects</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public Object getNextValue();
+
+    /**
+     *  <p>Path to the property that was updated.</p>
+     * @return path
+     */
+    @NotNull
+    @JsonProperty("path")
+    public String getPath();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>Value path to the property that was changed</p>
-     * @param path value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setPath(final String path);
+    public void setPreviousValue(final Object previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Object nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Path to the property that was updated.</p>
+     * @param path value to be set
      */
 
-    public void setPreviousValue(final Object previousValue);
+    public void setPath(final String path);
 
     /**
      * factory method
@@ -120,9 +120,9 @@ public interface SetPropertyChange extends Change {
     public static SetPropertyChange of(final SetPropertyChange template) {
         SetPropertyChangeImpl instance = new SetPropertyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPath(template.getPath());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setPath(template.getPath());
         return instance;
     }
 
@@ -138,9 +138,9 @@ public interface SetPropertyChange extends Change {
         }
         SetPropertyChangeImpl instance = new SetPropertyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPath(template.getPath());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setPath(template.getPath());
         return instance;
     }
 

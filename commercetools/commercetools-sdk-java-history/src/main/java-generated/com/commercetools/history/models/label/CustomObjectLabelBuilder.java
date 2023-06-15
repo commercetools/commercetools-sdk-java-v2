@@ -27,7 +27,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
     private String container;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
     }
 
     /**
-     * set the value to the container
+     *  <p>Namespace to group Custom Objects.</p>
      * @param container value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      * @return key
      */
 
@@ -58,7 +58,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
     }
 
     /**
-     * value of container}
+     *  <p>Namespace to group Custom Objects.</p>
      * @return container
      */
 

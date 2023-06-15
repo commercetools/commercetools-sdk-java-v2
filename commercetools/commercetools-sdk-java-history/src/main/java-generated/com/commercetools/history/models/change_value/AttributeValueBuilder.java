@@ -26,7 +26,7 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
     private java.lang.Object value;
 
     /**
-     * set the value to the name
+     *  <p>Name of the Attribute set.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -37,7 +37,15 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
     }
 
     /**
-     * set the value to the value
+     *  <p>Value set for the Attribute determined by the AttributeType:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, <code>value</code> is the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects.</li>
+     *   <li>For Localizable Text Type, <code>value</code> is the LocalizedString object.</li>
+     *   <li>For Money Type Attributes, <code>value</code> is the Money object.</li>
+     *   <li>For Set Type Attributes, <code>value</code> is the entire <code>set</code> object.</li>
+     *   <li>For Nested Type Attributes, <code>value</code> is the list of values of all Attributes of the nested Product.</li>
+     *   <li>For Reference Type Attributes, <code>value</code> is the Reference object.</li>
+     *  </ul>
      * @param value value to be set
      * @return Builder
      */
@@ -48,7 +56,7 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
     }
 
     /**
-     * value of name}
+     *  <p>Name of the Attribute set.</p>
      * @return name
      */
 
@@ -57,7 +65,15 @@ public class AttributeValueBuilder implements Builder<AttributeValue> {
     }
 
     /**
-     * value of value}
+     *  <p>Value set for the Attribute determined by the AttributeType:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, <code>value</code> is the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects.</li>
+     *   <li>For Localizable Text Type, <code>value</code> is the LocalizedString object.</li>
+     *   <li>For Money Type Attributes, <code>value</code> is the Money object.</li>
+     *   <li>For Set Type Attributes, <code>value</code> is the entire <code>set</code> object.</li>
+     *   <li>For Nested Type Attributes, <code>value</code> is the list of values of all Attributes of the nested Product.</li>
+     *   <li>For Reference Type Attributes, <code>value</code> is the Reference object.</li>
+     *  </ul>
      * @return value
      */
 

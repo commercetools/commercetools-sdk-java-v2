@@ -25,10 +25,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemDiscountedPricePerQuantityChange setLineItemDiscountedPricePerQuantityChange = SetLineItemDiscountedPricePerQuantityChange.builder()
  *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .variant("{variant}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -51,7 +51,7 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -59,33 +59,7 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return lineItem
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("lineItem")
-    public LocalizedString getLineItem();
-
-    /**
-     *
-     * @return variant
-     */
-    @NotNull
-    @JsonProperty("variant")
-    public String getVariant();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public DiscountedLineItemPriceForQuantity getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -94,39 +68,65 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
     public DiscountedLineItemPriceForQuantity getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setLineItemDiscountedPricePerQuantity</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public DiscountedLineItemPriceForQuantity getNextValue();
+
+    /**
+     *  <p>Name of the Product the Line Item is based on.</p>
+     * @return lineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("lineItem")
+    public LocalizedString getLineItem();
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set lineItem
-     * @param lineItem value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setLineItem(final LocalizedString lineItem);
+    public void setPreviousValue(final DiscountedLineItemPriceForQuantity previousValue);
 
     /**
-     * set variant
-     * @param variant value to be set
-     */
-
-    public void setVariant(final String variant);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final DiscountedLineItemPriceForQuantity nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the Product the Line Item is based on.</p>
+     * @param lineItem value to be set
      */
 
-    public void setPreviousValue(final DiscountedLineItemPriceForQuantity previousValue);
+    public void setLineItem(final LocalizedString lineItem);
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -145,10 +145,10 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
             final SetLineItemDiscountedPricePerQuantityChange template) {
         SetLineItemDiscountedPricePerQuantityChangeImpl instance = new SetLineItemDiscountedPricePerQuantityChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setLineItem(template.getLineItem());
         instance.setVariant(template.getVariant());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -165,12 +165,12 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
         }
         SetLineItemDiscountedPricePerQuantityChangeImpl instance = new SetLineItemDiscountedPricePerQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
-        instance.setVariant(template.getVariant());
-        instance.setNextValue(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity
-                .deepCopy(template.getNextValue()));
         instance.setPreviousValue(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity
                 .deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity
+                .deepCopy(template.getNextValue()));
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

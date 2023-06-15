@@ -24,7 +24,7 @@ public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShi
     private String name;
 
     /**
-     * set the value to the name
+     *  <p>Name of the Custom ShippingMethod.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShi
     }
 
     /**
-     * value of name}
+     *  <p>Name of the Custom ShippingMethod.</p>
      * @return name
      */
 

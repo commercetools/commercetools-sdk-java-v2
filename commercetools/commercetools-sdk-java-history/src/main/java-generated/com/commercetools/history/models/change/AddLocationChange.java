@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddLocationChange
+ *  <p>Change triggered by the Add Location update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface AddLocationChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addLocation</code> on zones</p>
+     *
      * @return change
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface AddLocationChange extends Change {
     public String getChange();
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -65,7 +65,7 @@ public interface AddLocationChange extends Change {
     public Location getPreviousValue();
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -74,21 +74,21 @@ public interface AddLocationChange extends Change {
     public Location getNextValue();
 
     /**
-     *  <p>Update action for <code>addLocation</code> on zones</p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Location previousValue);
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

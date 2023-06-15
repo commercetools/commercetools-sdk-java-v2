@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Update action for <code>changeQuantity</code> on inventories</p>
+ *  <p>Change triggered by the Change Quantity update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase {
@@ -24,20 +24,20 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
 
     private String change;
 
-    private com.commercetools.history.models.change_value.InventoryQuantityValue nextValue;
-
     private com.commercetools.history.models.change_value.InventoryQuantityValue previousValue;
+
+    private com.commercetools.history.models.change_value.InventoryQuantityValue nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeQuantityChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.InventoryQuantityValue nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.InventoryQuantityValue previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.InventoryQuantityValue previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.InventoryQuantityValue nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = CHANGE_QUANTITY_CHANGE;
     }
 
@@ -65,32 +65,32 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.change_value.InventoryQuantityValue getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.change_value.InventoryQuantityValue getPreviousValue() {
         return this.previousValue;
     }
 
-    public void setChange(final String change) {
-        this.change = change;
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.change_value.InventoryQuantityValue getNextValue() {
+        return this.nextValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.change_value.InventoryQuantityValue nextValue) {
-        this.nextValue = nextValue;
+    public void setChange(final String change) {
+        this.change = change;
     }
 
     public void setPreviousValue(
             final com.commercetools.history.models.change_value.InventoryQuantityValue previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.change_value.InventoryQuantityValue nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -105,8 +105,8 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -114,8 +114,8 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

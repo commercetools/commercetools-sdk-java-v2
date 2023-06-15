@@ -16,7 +16,19 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetLocalizedDescriptionChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Description on Cart Discounts.</li>
+ *   <li>Set Description on Categories.</li>
+ *   <li>Set Description on Discount Codes.</li>
+ *   <li>Set Description on Products.</li>
+ *   <li>Set Description on Product Discounts.</li>
+ *   <li>Set Description on Shopping Lists.</li>
+ *   <li>Set Description on States.</li>
+ *   <li>Set Description on Tax Categories.</li>
+ *   <li>Set Description on Types.</li>
+ *   <li>Set Description on Zones.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +60,7 @@ public interface SetLocalizedDescriptionChange extends Change {
     public String getType();
 
     /**
-     *  <p>Shape of the action for <code>setDescription</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,7 +68,7 @@ public interface SetLocalizedDescriptionChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -65,7 +77,7 @@ public interface SetLocalizedDescriptionChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -74,21 +86,21 @@ public interface SetLocalizedDescriptionChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     *  <p>Shape of the action for <code>setDescription</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final LocalizedString previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

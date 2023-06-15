@@ -42,7 +42,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -137,7 +137,7 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

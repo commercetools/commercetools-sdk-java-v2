@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddTextLineItemChange
+ *  <p>Change triggered by the Add TextLineItem update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -55,7 +55,7 @@ public interface AddTextLineItemChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -71,7 +71,7 @@ public interface AddTextLineItemChange extends Change {
     public void setChange(final String change);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

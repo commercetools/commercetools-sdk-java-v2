@@ -20,7 +20,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>A Record captures the differences in a resource between one version and the next. (Recall that the version number is not always incremented by one; see Optimistic Concurrency Control.)</p>
+ *  <p>Captures the differences between the previous and next version of a resource.</p>
+ *  <p>The maximum number of Records that can be stored and their retention period are subject to a limit.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,6 +49,7 @@ public interface Record {
 
     /**
      *  <p>Version of the resource after the change.</p>
+     *  <p>For more information on how the version is incremented, see Optimistic Concurrency Control.</p>
      * @return version
      */
     @NotNull
@@ -63,7 +65,7 @@ public interface Record {
     public Integer getPreviousVersion();
 
     /**
-     *  <p>Type of the change (creation, update or deletion).</p>
+     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      * @return type
      */
     @NotNull
@@ -71,7 +73,7 @@ public interface Record {
     public String getType();
 
     /**
-     *  <p>Information about the user or the API client who performed the change.</p>
+     *  <p>Information about the user or API Client who performed the change.</p>
      * @return modifiedBy
      */
     @NotNull
@@ -80,7 +82,7 @@ public interface Record {
     public ModifiedBy getModifiedBy();
 
     /**
-     *  <p>Date and time when the change was made.</p>
+     *  <p>Date and time (UTC) when the change was made.</p>
      * @return modifiedAt
      */
     @NotNull
@@ -106,7 +108,8 @@ public interface Record {
     public Label getPreviousLabel();
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @return changes
      */
     @NotNull
@@ -124,7 +127,7 @@ public interface Record {
     public Reference getResource();
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      * @return stores
      */
     @NotNull
@@ -133,7 +136,8 @@ public interface Record {
     public List<KeyReference> getStores();
 
     /**
-     *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     *  <p><code>true</code> if no change was detected.</p>
+     *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      * @return withoutChanges
      */
     @NotNull
@@ -142,6 +146,7 @@ public interface Record {
 
     /**
      *  <p>Version of the resource after the change.</p>
+     *  <p>For more information on how the version is incremented, see Optimistic Concurrency Control.</p>
      * @param version value to be set
      */
 
@@ -155,21 +160,21 @@ public interface Record {
     public void setPreviousVersion(final Integer previousVersion);
 
     /**
-     *  <p>Type of the change (creation, update or deletion).</p>
+     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      * @param type value to be set
      */
 
     public void setType(final String type);
 
     /**
-     *  <p>Information about the user or the API client who performed the change.</p>
+     *  <p>Information about the user or API Client who performed the change.</p>
      * @param modifiedBy value to be set
      */
 
     public void setModifiedBy(final ModifiedBy modifiedBy);
 
     /**
-     *  <p>Date and time when the change was made.</p>
+     *  <p>Date and time (UTC) when the change was made.</p>
      * @param modifiedAt value to be set
      */
 
@@ -190,7 +195,8 @@ public interface Record {
     public void setPreviousLabel(final Label previousLabel);
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param changes values to be set
      */
 
@@ -198,7 +204,8 @@ public interface Record {
     public void setChanges(final Change... changes);
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param changes values to be set
      */
 
@@ -212,7 +219,7 @@ public interface Record {
     public void setResource(final Reference resource);
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      * @param stores values to be set
      */
 
@@ -220,14 +227,15 @@ public interface Record {
     public void setStores(final KeyReference... stores);
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      * @param stores values to be set
      */
 
     public void setStores(final List<KeyReference> stores);
 
     /**
-     *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     *  <p><code>true</code> if no change was detected.</p>
+     *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      * @param withoutChanges value to be set
      */
 

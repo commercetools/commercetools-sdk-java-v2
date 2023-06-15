@@ -15,10 +15,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     RemovePriceChange removePriceChange = RemovePriceChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
- *             .priceId("{priceId}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .priceId("{priceId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -28,16 +28,16 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
 
     private String change;
 
-    private String catalogData;
-
-    private String priceId;
-
     private com.commercetools.history.models.common.Price previousValue;
 
     private com.commercetools.history.models.common.Price nextValue;
 
+    private String catalogData;
+
+    private String priceId;
+
     /**
-     *  <p>Update action for removing prices</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -48,29 +48,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public RemovePriceChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the priceId
-     * @param priceId value to be set
-     * @return Builder
-     */
-
-    public RemovePriceChangeBuilder priceId(final String priceId) {
-        this.priceId = priceId;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -82,7 +60,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -94,7 +72,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -105,7 +83,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -117,7 +95,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -129,7 +107,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -140,7 +118,32 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     *  <p>Update action for removing prices</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public RemovePriceChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded Price.</p>
+     * @param priceId value to be set
+     * @return Builder
+     */
+
+    public RemovePriceChangeBuilder priceId(final String priceId) {
+        this.priceId = priceId;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -149,25 +152,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of priceId}
-     * @return priceId
-     */
-
-    public String getPriceId() {
-        return this.priceId;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -176,7 +161,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -185,16 +170,37 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded Price.</p>
+     * @return priceId
+     */
+
+    public String getPriceId() {
+        return this.priceId;
+    }
+
+    /**
      * builds RemovePriceChange with checking for non-null required values
      * @return RemovePriceChange
      */
     public RemovePriceChange build() {
         Objects.requireNonNull(change, RemovePriceChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, RemovePriceChange.class + ": catalogData is missing");
-        Objects.requireNonNull(priceId, RemovePriceChange.class + ": priceId is missing");
         Objects.requireNonNull(previousValue, RemovePriceChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, RemovePriceChange.class + ": nextValue is missing");
-        return new RemovePriceChangeImpl(change, catalogData, priceId, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, RemovePriceChange.class + ": catalogData is missing");
+        Objects.requireNonNull(priceId, RemovePriceChange.class + ": priceId is missing");
+        return new RemovePriceChangeImpl(change, previousValue, nextValue, catalogData, priceId);
     }
 
     /**
@@ -202,7 +208,7 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
      * @return RemovePriceChange
      */
     public RemovePriceChange buildUnchecked() {
-        return new RemovePriceChangeImpl(change, catalogData, priceId, previousValue, nextValue);
+        return new RemovePriceChangeImpl(change, previousValue, nextValue, catalogData, priceId);
     }
 
     /**
@@ -221,10 +227,10 @@ public class RemovePriceChangeBuilder implements Builder<RemovePriceChange> {
     public static RemovePriceChangeBuilder of(final RemovePriceChange template) {
         RemovePriceChangeBuilder builder = new RemovePriceChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
-        builder.priceId = template.getPriceId();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
+        builder.priceId = template.getPriceId();
         return builder;
     }
 

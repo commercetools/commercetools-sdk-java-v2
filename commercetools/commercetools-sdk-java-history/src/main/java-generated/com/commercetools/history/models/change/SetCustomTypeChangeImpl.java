@@ -15,7 +15,27 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetCustomTypeChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Custom Type on Cart Discounts.</li>
+ *   <li>Set Custom Type on Categories.</li>
+ *   <li>Set Custom Type on Channels.</li>
+ *   <li>Set Custom Type on Customers.</li>
+ *   <li>Set Custom Type on Customer Groups.</li>
+ *   <li>Set Custom Type on Discount Codes.</li>
+ *   <li>Set Custom Type on Inventories.</li>
+ *   <li>Set Custom Type on Orders.</li>
+ *   <li>Set Custom Type on Order Edits.</li>
+ *   <li>Set Custom Type on Staged Orders.</li>
+ *   <li>Set Custom Type on Payments.</li>
+ *   <li>Set Custom Type on Product Selections.</li>
+ *   <li>Set Custom Type on Quotes.</li>
+ *   <li>Set Custom Type on Staged Quotes.</li>
+ *   <li>Set Custom Type on Quote Requests.</li>
+ *   <li>Set Custom Type on Reviews.</li>
+ *   <li>Set Custom Type on Shopping Lists.</li>
+ *   <li>Set Custom Type on Stores.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
@@ -24,20 +44,20 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.common.CustomFields nextValue;
-
     private com.commercetools.history.models.common.CustomFields previousValue;
+
+    private com.commercetools.history.models.common.CustomFields nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetCustomTypeChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = SET_CUSTOM_TYPE_CHANGE;
     }
 
@@ -57,7 +77,7 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for setting a custom type</p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +85,31 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.CustomFields getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.CustomFields getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.CustomFields nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.CustomFields previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.CustomFields nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +124,8 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +133,8 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

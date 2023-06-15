@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddToCategoryChange
+ *  <p>Change triggered by the Add to Category update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
@@ -24,24 +24,24 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.common.Reference category;
-
     private java.util.List<com.commercetools.history.models.common.Reference> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
+
+    private com.commercetools.history.models.common.Reference category;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddToCategoryChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("category") final com.commercetools.history.models.common.Reference category,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Reference> previousValue,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Reference> nextValue) {
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Reference> nextValue,
+            @JsonProperty("category") final com.commercetools.history.models.common.Reference category) {
         this.change = change;
-        this.category = category;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.category = category;
         this.type = ADD_TO_CATEGORY_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>addToCategory</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,7 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.Reference getCategory() {
-        return this.category;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getPreviousValue() {
@@ -85,19 +77,23 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getNextValue() {
         return this.nextValue;
     }
 
-    public void setChange(final String change) {
-        this.change = change;
+    /**
+     *  <p>Category to which the Product was added.</p>
+     */
+
+    public com.commercetools.history.models.common.Reference getCategory() {
+        return this.category;
     }
 
-    public void setCategory(final com.commercetools.history.models.common.Reference category) {
-        this.category = category;
+    public void setChange(final String change) {
+        this.change = change;
     }
 
     public void setPreviousValue(final com.commercetools.history.models.common.Reference... previousValue) {
@@ -117,6 +113,10 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
         this.nextValue = nextValue;
     }
 
+    public void setCategory(final com.commercetools.history.models.common.Reference category) {
+        this.category = category;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -129,9 +129,9 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(category, that.category)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(category, that.category)
                 .isEquals();
     }
 
@@ -139,9 +139,9 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(category)
                 .append(previousValue)
                 .append(nextValue)
+                .append(category)
                 .toHashCode();
     }
 

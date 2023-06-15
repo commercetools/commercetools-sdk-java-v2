@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeEnumValueOrderChange changeEnumValueOrderChange = ChangeEnumValueOrderChange.builder()
  *             .change("{change}")
- *             .fieldName("{fieldName}")
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .fieldName("{fieldName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
 
     private String change;
 
-    private String fieldName;
+    private java.util.List<com.commercetools.history.models.change_value.EnumValue> previousValue;
 
     private java.util.List<com.commercetools.history.models.change_value.EnumValue> nextValue;
 
-    private java.util.List<com.commercetools.history.models.change_value.EnumValue> previousValue;
+    private String fieldName;
 
     /**
-     *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,107 +45,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *  <p>The name of the field/attribute definition updated.</p>
-     * @param fieldName value to be set
-     * @return Builder
-     */
-
-    public ChangeEnumValueOrderChangeBuilder fieldName(final String fieldName) {
-        this.fieldName = fieldName;
-        return this;
-    }
-
-    /**
-     * set values to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeEnumValueOrderChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.EnumValue... nextValue) {
-        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
-        return this;
-    }
-
-    /**
-     * set value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeEnumValueOrderChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.change_value.EnumValue> nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * add values to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeEnumValueOrderChangeBuilder plusNextValue(
-            final com.commercetools.history.models.change_value.EnumValue... nextValue) {
-        if (this.nextValue == null) {
-            this.nextValue = new ArrayList<>();
-        }
-        this.nextValue.addAll(Arrays.asList(nextValue));
-        return this;
-    }
-
-    /**
-     * add the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeEnumValueOrderChangeBuilder plusNextValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
-        if (this.nextValue == null) {
-            this.nextValue = new ArrayList<>();
-        }
-        this.nextValue.add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeEnumValueOrderChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     * add the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeEnumValueOrderChangeBuilder addNextValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
-        return plusNextValue(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()));
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeEnumValueOrderChangeBuilder setNextValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
-        return nextValue(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()));
-    }
-
-    /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -157,7 +57,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -169,7 +69,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -184,7 +84,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -200,7 +100,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -214,7 +114,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -225,7 +125,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -236,7 +136,107 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder nextValue(
+            final com.commercetools.history.models.change_value.EnumValue... nextValue) {
+        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.change_value.EnumValue> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder plusNextValue(
+            final com.commercetools.history.models.change_value.EnumValue... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>Name of the updated FieldDefinition.</p>
+     * @param fieldName value to be set
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder fieldName(final String fieldName) {
+        this.fieldName = fieldName;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -245,25 +245,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *  <p>The name of the field/attribute definition updated.</p>
-     * @return fieldName
-     */
-
-    public String getFieldName() {
-        return this.fieldName;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.util.List<com.commercetools.history.models.change_value.EnumValue> getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -272,15 +254,33 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.util.List<com.commercetools.history.models.change_value.EnumValue> getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the updated FieldDefinition.</p>
+     * @return fieldName
+     */
+
+    public String getFieldName() {
+        return this.fieldName;
+    }
+
+    /**
      * builds ChangeEnumValueOrderChange with checking for non-null required values
      * @return ChangeEnumValueOrderChange
      */
     public ChangeEnumValueOrderChange build() {
         Objects.requireNonNull(change, ChangeEnumValueOrderChange.class + ": change is missing");
-        Objects.requireNonNull(fieldName, ChangeEnumValueOrderChange.class + ": fieldName is missing");
-        Objects.requireNonNull(nextValue, ChangeEnumValueOrderChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeEnumValueOrderChange.class + ": previousValue is missing");
-        return new ChangeEnumValueOrderChangeImpl(change, fieldName, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeEnumValueOrderChange.class + ": nextValue is missing");
+        Objects.requireNonNull(fieldName, ChangeEnumValueOrderChange.class + ": fieldName is missing");
+        return new ChangeEnumValueOrderChangeImpl(change, previousValue, nextValue, fieldName);
     }
 
     /**
@@ -288,7 +288,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
      * @return ChangeEnumValueOrderChange
      */
     public ChangeEnumValueOrderChange buildUnchecked() {
-        return new ChangeEnumValueOrderChangeImpl(change, fieldName, nextValue, previousValue);
+        return new ChangeEnumValueOrderChangeImpl(change, previousValue, nextValue, fieldName);
     }
 
     /**
@@ -307,9 +307,9 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     public static ChangeEnumValueOrderChangeBuilder of(final ChangeEnumValueOrderChange template) {
         ChangeEnumValueOrderChangeBuilder builder = new ChangeEnumValueOrderChangeBuilder();
         builder.change = template.getChange();
-        builder.fieldName = template.getFieldName();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.fieldName = template.getFieldName();
         return builder;
     }
 

@@ -15,11 +15,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemProductKeyChange setLineItemProductKeyChange = SetLineItemProductKeyChange.builder()
  *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .lineItemId("{lineItemId}")
  *             .variant("{variant}")
- *             .previousValue("{previousValue}")
- *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
  * </div>
@@ -29,18 +29,18 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
 
     private String change;
 
+    private String previousValue;
+
+    private String nextValue;
+
     private com.commercetools.history.models.common.LocalizedString lineItem;
 
     private String lineItemId;
 
     private String variant;
 
-    private String previousValue;
-
-    private String nextValue;
-
     /**
-     *  <p>Update action for <code>setLineItemProductKey</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -51,7 +51,29 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
     }
 
     /**
-     * set the value to the lineItem using the builder function
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public SetLineItemProductKeyChangeBuilder previousValue(final String previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetLineItemProductKeyChangeBuilder nextValue(final String nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Product the Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -63,7 +85,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
     }
 
     /**
-     * set the value to the lineItem using the builder function
+     *  <p>Name of the Product the Line Item is based on.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -75,7 +97,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
     }
 
     /**
-     * set the value to the lineItem
+     *  <p>Name of the Product the Line Item is based on.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -87,7 +109,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
     }
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the updated LineItem.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -98,7 +120,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
     }
 
     /**
-     * set the value to the variant
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -109,29 +131,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
     }
 
     /**
-     * set the value to the previousValue
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public SetLineItemProductKeyChangeBuilder previousValue(final String previousValue) {
-        this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetLineItemProductKeyChangeBuilder nextValue(final String nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     *  <p>Update action for <code>setLineItemProductKey</code></p>
+     * value of change}
      * @return change
      */
 
@@ -140,34 +140,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
     }
 
     /**
-     * value of lineItem}
-     * @return lineItem
-     */
-
-    public com.commercetools.history.models.common.LocalizedString getLineItem() {
-        return this.lineItem;
-    }
-
-    /**
-     * value of lineItemId}
-     * @return lineItemId
-     */
-
-    public String getLineItemId() {
-        return this.lineItemId;
-    }
-
-    /**
-     * value of variant}
-     * @return variant
-     */
-
-    public String getVariant() {
-        return this.variant;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -176,7 +149,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -185,17 +158,44 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
     }
 
     /**
+     *  <p>Name of the Product the Line Item is based on.</p>
+     * @return lineItem
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated LineItem.</p>
+     * @return lineItemId
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetLineItemProductKeyChange with checking for non-null required values
      * @return SetLineItemProductKeyChange
      */
     public SetLineItemProductKeyChange build() {
         Objects.requireNonNull(change, SetLineItemProductKeyChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetLineItemProductKeyChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetLineItemProductKeyChange.class + ": nextValue is missing");
         Objects.requireNonNull(lineItem, SetLineItemProductKeyChange.class + ": lineItem is missing");
         Objects.requireNonNull(lineItemId, SetLineItemProductKeyChange.class + ": lineItemId is missing");
         Objects.requireNonNull(variant, SetLineItemProductKeyChange.class + ": variant is missing");
-        Objects.requireNonNull(previousValue, SetLineItemProductKeyChange.class + ": previousValue is missing");
-        Objects.requireNonNull(nextValue, SetLineItemProductKeyChange.class + ": nextValue is missing");
-        return new SetLineItemProductKeyChangeImpl(change, lineItem, lineItemId, variant, previousValue, nextValue);
+        return new SetLineItemProductKeyChangeImpl(change, previousValue, nextValue, lineItem, lineItemId, variant);
     }
 
     /**
@@ -203,7 +203,7 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
      * @return SetLineItemProductKeyChange
      */
     public SetLineItemProductKeyChange buildUnchecked() {
-        return new SetLineItemProductKeyChangeImpl(change, lineItem, lineItemId, variant, previousValue, nextValue);
+        return new SetLineItemProductKeyChangeImpl(change, previousValue, nextValue, lineItem, lineItemId, variant);
     }
 
     /**
@@ -222,11 +222,11 @@ public class SetLineItemProductKeyChangeBuilder implements Builder<SetLineItemPr
     public static SetLineItemProductKeyChangeBuilder of(final SetLineItemProductKeyChange template) {
         SetLineItemProductKeyChangeBuilder builder = new SetLineItemProductKeyChangeBuilder();
         builder.change = template.getChange();
+        builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.lineItem = template.getLineItem();
         builder.lineItemId = template.getLineItemId();
         builder.variant = template.getVariant();
-        builder.previousValue = template.getPreviousValue();
-        builder.nextValue = template.getNextValue();
         return builder;
     }
 

@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetOrderNumberChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Order Number on Orders.</li>
+ *   <li>Set Order Number on Staged Order.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetOrderNumberChangeImpl implements SetOrderNumberChange, ModelBase {
@@ -57,7 +61,7 @@ public class SetOrderNumberChangeImpl implements SetOrderNumberChange, ModelBase
     }
 
     /**
-     *  <p>Shape of the action for <code>setOrderNumber</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +69,7 @@ public class SetOrderNumberChangeImpl implements SetOrderNumberChange, ModelBase
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +77,7 @@ public class SetOrderNumberChangeImpl implements SetOrderNumberChange, ModelBase
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

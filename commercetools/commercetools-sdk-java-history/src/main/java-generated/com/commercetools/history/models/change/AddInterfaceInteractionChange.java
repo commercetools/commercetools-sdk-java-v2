@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddInterfaceInteractionChange
+ *  <p>Change triggered by the Add InterfaceInteraction update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface AddInterfaceInteractionChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     *
      * @return change
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface AddInterfaceInteractionChange extends Change {
     public String getChange();
 
     /**
-     *  <p>Only available if <code>expand</code> is set to true</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -64,14 +64,14 @@ public interface AddInterfaceInteractionChange extends Change {
     public CustomFieldExpandedValue getNextValue();
 
     /**
-     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>Only available if <code>expand</code> is set to true</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

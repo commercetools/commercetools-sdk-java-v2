@@ -17,7 +17,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeAssetOrderChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Asset Order on Categories.</li>
+ *   <li>Change Asset Order on Products.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -57,7 +61,7 @@ public interface ChangeAssetOrderChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -66,7 +70,7 @@ public interface ChangeAssetOrderChange extends Change {
     public List<LocalizedString> getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -82,7 +86,7 @@ public interface ChangeAssetOrderChange extends Change {
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -90,14 +94,14 @@ public interface ChangeAssetOrderChange extends Change {
     public void setPreviousValue(final LocalizedString... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<LocalizedString> previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
@@ -105,7 +109,7 @@ public interface ChangeAssetOrderChange extends Change {
     public void setNextValue(final LocalizedString... nextValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 

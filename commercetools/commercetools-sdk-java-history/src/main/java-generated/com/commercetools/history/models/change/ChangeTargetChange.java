@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeTargetChange
+ *  <p>Change triggered by the Change Target update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeTargetChange changeTargetChange = ChangeTargetChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -40,7 +40,7 @@ public interface ChangeTargetChange extends Change {
     String CHANGE_TARGET_CHANGE = "ChangeTargetChange";
 
     /**
-     *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +56,7 @@ public interface ChangeTargetChange extends Change {
     public String getType();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public ChangeTargetChangeValue getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +65,34 @@ public interface ChangeTargetChange extends Change {
     public ChangeTargetChangeValue getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public ChangeTargetChangeValue getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final ChangeTargetChangeValue nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final ChangeTargetChangeValue previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final ChangeTargetChangeValue nextValue);
 
     /**
      * factory method
@@ -110,8 +110,8 @@ public interface ChangeTargetChange extends Change {
     public static ChangeTargetChange of(final ChangeTargetChange template) {
         ChangeTargetChangeImpl instance = new ChangeTargetChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,10 +127,10 @@ public interface ChangeTargetChange extends Change {
         }
         ChangeTargetChangeImpl instance = new ChangeTargetChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.ChangeTargetChangeValue.deepCopy(template.getNextValue()));
         instance.setPreviousValue(com.commercetools.history.models.change_value.ChangeTargetChangeValue
                 .deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.ChangeTargetChangeValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

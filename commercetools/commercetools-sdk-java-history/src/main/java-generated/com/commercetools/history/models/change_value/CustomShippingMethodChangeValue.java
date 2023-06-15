@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomShippingMethodChangeValue {
 
     /**
-     *
+     *  <p>Name of the Custom ShippingMethod.</p>
      * @return name
      */
     @NotNull
@@ -39,7 +39,7 @@ public interface CustomShippingMethodChangeValue {
     public String getName();
 
     /**
-     * set name
+     *  <p>Name of the Custom ShippingMethod.</p>
      * @param name value to be set
      */
 

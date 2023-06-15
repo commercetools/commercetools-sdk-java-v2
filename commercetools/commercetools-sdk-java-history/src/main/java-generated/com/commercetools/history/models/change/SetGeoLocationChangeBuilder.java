@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetGeoLocationChange setGeoLocationChange = SetGeoLocationChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
 
     private String change;
 
-    private com.commercetools.history.models.common.GeoLocation nextValue;
-
     private com.commercetools.history.models.common.GeoLocation previousValue;
 
+    private com.commercetools.history.models.common.GeoLocation nextValue;
+
     /**
-     *  <p>Update action for <code>setGeoLocation</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,42 +42,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     }
 
     /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetGeoLocationChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.GeoLocationBuilder, com.commercetools.history.models.common.GeoLocationBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.GeoLocationBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetGeoLocationChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.GeoLocationBuilder, com.commercetools.history.models.common.GeoLocation> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.GeoLocationBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetGeoLocationChangeBuilder nextValue(final com.commercetools.history.models.common.GeoLocation nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -89,7 +54,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -101,7 +66,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -113,7 +78,42 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     }
 
     /**
-     *  <p>Update action for <code>setGeoLocation</code></p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetGeoLocationChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.GeoLocationBuilder, com.commercetools.history.models.common.GeoLocationBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.GeoLocationBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetGeoLocationChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.GeoLocationBuilder, com.commercetools.history.models.common.GeoLocation> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.GeoLocationBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetGeoLocationChangeBuilder nextValue(final com.commercetools.history.models.common.GeoLocation nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -122,16 +122,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.GeoLocation getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -140,14 +131,23 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.GeoLocation getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds SetGeoLocationChange with checking for non-null required values
      * @return SetGeoLocationChange
      */
     public SetGeoLocationChange build() {
         Objects.requireNonNull(change, SetGeoLocationChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, SetGeoLocationChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetGeoLocationChange.class + ": previousValue is missing");
-        return new SetGeoLocationChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetGeoLocationChange.class + ": nextValue is missing");
+        return new SetGeoLocationChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -155,7 +155,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
      * @return SetGeoLocationChange
      */
     public SetGeoLocationChange buildUnchecked() {
-        return new SetGeoLocationChangeImpl(change, nextValue, previousValue);
+        return new SetGeoLocationChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -174,8 +174,8 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     public static SetGeoLocationChangeBuilder of(final SetGeoLocationChange template) {
         SetGeoLocationChangeBuilder builder = new SetGeoLocationChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

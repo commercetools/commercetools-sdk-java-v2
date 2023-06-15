@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetParcelMeasurementsChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>SetParcelMeasurements on Orders.</li>
+ *   <li>SetParcelMeasurements on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsChange, ModelBase {
@@ -24,24 +28,24 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
 
     private String change;
 
-    private com.commercetools.history.models.change_value.ParcelChangeValue parcel;
+    private com.commercetools.history.models.common.ParcelMeasurements previousValue;
 
     private com.commercetools.history.models.common.ParcelMeasurements nextValue;
 
-    private com.commercetools.history.models.common.ParcelMeasurements previousValue;
+    private com.commercetools.history.models.change_value.ParcelChangeValue parcel;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetParcelMeasurementsChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.ParcelMeasurements previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.ParcelMeasurements nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.ParcelMeasurements previousValue) {
+            @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
         this.change = change;
-        this.parcel = parcel;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.parcel = parcel;
         this.type = SET_PARCEL_MEASUREMENTS_CHANGE;
     }
 
@@ -61,7 +65,7 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
     }
 
     /**
-     *  <p>Update action for <code>setParcelMeasurements</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +73,15 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
-        return this.parcel;
+    public com.commercetools.history.models.common.ParcelMeasurements getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.ParcelMeasurements getNextValue() {
@@ -85,27 +89,27 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
     }
 
     /**
-     *
+     *  <p>Information about the updated Parcel.</p>
      */
 
-    public com.commercetools.history.models.common.ParcelMeasurements getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
+        return this.parcel;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setParcel(final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
-        this.parcel = parcel;
+    public void setPreviousValue(final com.commercetools.history.models.common.ParcelMeasurements previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.ParcelMeasurements nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.ParcelMeasurements previousValue) {
-        this.previousValue = previousValue;
+    public void setParcel(final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
+        this.parcel = parcel;
     }
 
     @Override
@@ -120,9 +124,9 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(parcel, that.parcel)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(parcel, that.parcel)
                 .isEquals();
     }
 
@@ -130,9 +134,9 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(parcel)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(parcel)
                 .toHashCode();
     }
 

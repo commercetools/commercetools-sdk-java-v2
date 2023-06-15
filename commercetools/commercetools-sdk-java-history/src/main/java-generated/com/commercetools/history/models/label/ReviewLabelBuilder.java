@@ -27,7 +27,7 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
     private String title;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the Review.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
     }
 
     /**
-     * set the value to the title
+     *  <p>Title of the Review.</p>
      * @param title value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the Review.</p>
      * @return key
      */
 
@@ -58,7 +58,7 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
     }
 
     /**
-     * value of title}
+     *  <p>Title of the Review.</p>
      * @return title
      */
 

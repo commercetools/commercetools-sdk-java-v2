@@ -41,7 +41,7 @@ public class LocalizedEnumValueImpl implements LocalizedEnumValue, ModelBase {
     }
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier.</p>
      */
 
     public String getKey() {
@@ -49,7 +49,7 @@ public class LocalizedEnumValueImpl implements LocalizedEnumValue, ModelBase {
     }
 
     /**
-     *
+     *  <p>Descriptive localized label of the value.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {

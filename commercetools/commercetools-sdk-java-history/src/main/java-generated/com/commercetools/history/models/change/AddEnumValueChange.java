@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddEnumValueChange
+ *  <p>Change triggered by the Add EnumValue to FieldDefinition update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddEnumValueChange addEnumValueChange = AddEnumValueChange.builder()
  *             .change("{change}")
- *             .fieldName("{fieldName}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .fieldName("{fieldName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +48,7 @@ public interface AddEnumValueChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addEnumValue</code> on types</p>
+     *
      * @return change
      */
     @NotNull
@@ -56,15 +56,7 @@ public interface AddEnumValueChange extends Change {
     public String getChange();
 
     /**
-     *  <p>The name of the field/attribute definition updated.</p>
-     * @return fieldName
-     */
-    @NotNull
-    @JsonProperty("fieldName")
-    public String getFieldName();
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -73,25 +65,33 @@ public interface AddEnumValueChange extends Change {
     public EnumValue getNextValue();
 
     /**
-     *  <p>Update action for <code>addEnumValue</code> on types</p>
+     *  <p>Name of the updated FieldDefinition.</p>
+     * @return fieldName
+     */
+    @NotNull
+    @JsonProperty("fieldName")
+    public String getFieldName();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>The name of the field/attribute definition updated.</p>
-     * @param fieldName value to be set
-     */
-
-    public void setFieldName(final String fieldName);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final EnumValue nextValue);
+
+    /**
+     *  <p>Name of the updated FieldDefinition.</p>
+     * @param fieldName value to be set
+     */
+
+    public void setFieldName(final String fieldName);
 
     /**
      * factory method
@@ -109,8 +109,8 @@ public interface AddEnumValueChange extends Change {
     public static AddEnumValueChange of(final AddEnumValueChange template) {
         AddEnumValueChangeImpl instance = new AddEnumValueChangeImpl();
         instance.setChange(template.getChange());
-        instance.setFieldName(template.getFieldName());
         instance.setNextValue(template.getNextValue());
+        instance.setFieldName(template.getFieldName());
         return instance;
     }
 
@@ -126,9 +126,9 @@ public interface AddEnumValueChange extends Change {
         }
         AddEnumValueChangeImpl instance = new AddEnumValueChangeImpl();
         instance.setChange(template.getChange());
-        instance.setFieldName(template.getFieldName());
         instance.setNextValue(
             com.commercetools.history.models.change_value.EnumValue.deepCopy(template.getNextValue()));
+        instance.setFieldName(template.getFieldName());
         return instance;
     }
 

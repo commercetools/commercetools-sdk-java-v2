@@ -45,7 +45,7 @@ public interface CustomObjectLabel extends Label {
     public String getType();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      * @return key
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface CustomObjectLabel extends Label {
     public String getKey();
 
     /**
-     *
+     *  <p>Namespace to group Custom Objects.</p>
      * @return container
      */
     @NotNull
@@ -61,14 +61,14 @@ public interface CustomObjectLabel extends Label {
     public String getContainer();
 
     /**
-     * set key
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     * set container
+     *  <p>Namespace to group Custom Objects.</p>
      * @param container value to be set
      */
 

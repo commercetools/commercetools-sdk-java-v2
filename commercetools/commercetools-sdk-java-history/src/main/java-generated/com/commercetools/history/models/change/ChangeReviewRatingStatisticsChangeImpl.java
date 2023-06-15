@@ -24,20 +24,20 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
 
     private String change;
 
-    private com.commercetools.history.models.common.ReviewRatingStatistics nextValue;
-
     private com.commercetools.history.models.common.ReviewRatingStatistics previousValue;
+
+    private com.commercetools.history.models.common.ReviewRatingStatistics nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeReviewRatingStatisticsChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.ReviewRatingStatistics nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.ReviewRatingStatistics previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.ReviewRatingStatistics previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.ReviewRatingStatistics nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = CHANGE_REVIEW_RATING_STATISTICS_CHANGE;
     }
 
@@ -57,7 +57,7 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
     }
 
     /**
-     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +65,31 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.ReviewRatingStatistics getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.ReviewRatingStatistics getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.ReviewRatingStatistics getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.ReviewRatingStatistics nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.ReviewRatingStatistics previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.ReviewRatingStatistics nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +104,8 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +113,8 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

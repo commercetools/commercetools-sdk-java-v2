@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddPlainEnumValueChange
+ *  <p>Change triggered by the Add PlainEnumValue to AttributeDefinition update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, ModelBase {
@@ -24,20 +24,20 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
 
     private String change;
 
-    private String attributeName;
-
     private com.commercetools.history.models.change_value.EnumValue nextValue;
+
+    private String attributeName;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddPlainEnumValueChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("attributeName") final String attributeName,
-            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.EnumValue nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.EnumValue nextValue,
+            @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
-        this.attributeName = attributeName;
         this.nextValue = nextValue;
+        this.attributeName = attributeName;
         this.type = ADD_PLAIN_ENUM_VALUE_CHANGE;
     }
 
@@ -57,7 +57,7 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
     }
 
     /**
-     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +65,31 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.change_value.EnumValue getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setAttributeName(final String attributeName) {
-        this.attributeName = attributeName;
-    }
-
     public void setNextValue(final com.commercetools.history.models.change_value.EnumValue nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setAttributeName(final String attributeName) {
+        this.attributeName = attributeName;
     }
 
     @Override
@@ -104,8 +104,8 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(attributeName, that.attributeName)
                 .append(nextValue, that.nextValue)
+                .append(attributeName, that.attributeName)
                 .isEquals();
     }
 
@@ -113,8 +113,8 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(attributeName)
                 .append(nextValue)
+                .append(attributeName)
                 .toHashCode();
     }
 

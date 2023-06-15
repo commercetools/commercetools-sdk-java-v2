@@ -24,31 +24,31 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
 
     private String change;
 
+    private String previousValue;
+
+    private String nextValue;
+
     private com.commercetools.history.models.common.LocalizedString lineItem;
 
     private String lineItemId;
 
     private String variant;
 
-    private String previousValue;
-
-    private String nextValue;
-
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetLineItemProductKeyChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
-            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("variant") final String variant,
             @JsonProperty("previousValue") final String previousValue,
-            @JsonProperty("nextValue") final String nextValue) {
+            @JsonProperty("nextValue") final String nextValue,
+            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
+            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("variant") final String variant) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.lineItem = lineItem;
         this.lineItemId = lineItemId;
         this.variant = variant;
-        this.previousValue = previousValue;
-        this.nextValue = nextValue;
         this.type = SET_LINE_ITEM_PRODUCT_KEY_CHANGE;
     }
 
@@ -68,7 +68,7 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
     }
 
     /**
-     *  <p>Update action for <code>setLineItemProductKey</code></p>
+     *
      */
 
     public String getChange() {
@@ -76,31 +76,7 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.LocalizedString getLineItem() {
-        return this.lineItem;
-    }
-
-    /**
-     *
-     */
-
-    public String getLineItemId() {
-        return this.lineItemId;
-    }
-
-    /**
-     *
-     */
-
-    public String getVariant() {
-        return this.variant;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -108,15 +84,47 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <p>Name of the Product the Line Item is based on.</p>
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated LineItem.</p>
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final String previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final String nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setLineItem(final com.commercetools.history.models.common.LocalizedString lineItem) {
@@ -131,14 +139,6 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
         this.variant = variant;
     }
 
-    public void setPreviousValue(final String previousValue) {
-        this.previousValue = previousValue;
-    }
-
-    public void setNextValue(final String nextValue) {
-        this.nextValue = nextValue;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -151,11 +151,11 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(lineItemId, that.lineItemId)
                 .append(variant, that.variant)
-                .append(previousValue, that.previousValue)
-                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -163,11 +163,11 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(lineItem)
                 .append(lineItemId)
                 .append(variant)
-                .append(previousValue)
-                .append(nextValue)
                 .toHashCode();
     }
 

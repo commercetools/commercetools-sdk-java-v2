@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddParcelToDeliveryChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Add Parcel on Orders.</li>
+ *   <li>Add Parcel on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +28,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddParcelToDeliveryChange addParcelToDeliveryChange = AddParcelToDeliveryChange.builder()
  *             .change("{change}")
- *             .deliveryId("{deliveryId}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +52,7 @@ public interface AddParcelToDeliveryChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addParcelToDelivery</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,15 +60,7 @@ public interface AddParcelToDeliveryChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return deliveryId
-     */
-    @NotNull
-    @JsonProperty("deliveryId")
-    public String getDeliveryId();
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -73,25 +69,33 @@ public interface AddParcelToDeliveryChange extends Change {
     public Parcel getNextValue();
 
     /**
-     *  <p>Update action for <code>addParcelToDelivery</code></p>
+     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     * @return deliveryId
+     */
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set deliveryId
-     * @param deliveryId value to be set
-     */
-
-    public void setDeliveryId(final String deliveryId);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Parcel nextValue);
+
+    /**
+     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     * @param deliveryId value to be set
+     */
+
+    public void setDeliveryId(final String deliveryId);
 
     /**
      * factory method
@@ -109,8 +113,8 @@ public interface AddParcelToDeliveryChange extends Change {
     public static AddParcelToDeliveryChange of(final AddParcelToDeliveryChange template) {
         AddParcelToDeliveryChangeImpl instance = new AddParcelToDeliveryChangeImpl();
         instance.setChange(template.getChange());
-        instance.setDeliveryId(template.getDeliveryId());
         instance.setNextValue(template.getNextValue());
+        instance.setDeliveryId(template.getDeliveryId());
         return instance;
     }
 
@@ -126,8 +130,8 @@ public interface AddParcelToDeliveryChange extends Change {
         }
         AddParcelToDeliveryChangeImpl instance = new AddParcelToDeliveryChangeImpl();
         instance.setChange(template.getChange());
-        instance.setDeliveryId(template.getDeliveryId());
         instance.setNextValue(com.commercetools.history.models.common.Parcel.deepCopy(template.getNextValue()));
+        instance.setDeliveryId(template.getDeliveryId());
         return instance;
     }
 

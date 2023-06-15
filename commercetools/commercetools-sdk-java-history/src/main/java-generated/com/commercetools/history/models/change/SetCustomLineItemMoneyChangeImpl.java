@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetCustomLineItemMoneyChange
+ *  <p>Change triggered by the Set CustomLineItem Money update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemMoneyChangeImpl implements SetCustomLineItemMoneyChange, ModelBase {
@@ -24,28 +24,28 @@ public class SetCustomLineItemMoneyChangeImpl implements SetCustomLineItemMoneyC
 
     private String change;
 
-    private com.commercetools.history.models.common.LocalizedString customLineItem;
-
-    private String customLineItemId;
+    private com.commercetools.history.models.common.Money previousValue;
 
     private com.commercetools.history.models.common.Money nextValue;
 
-    private com.commercetools.history.models.common.Money previousValue;
+    private com.commercetools.history.models.common.LocalizedString customLineItem;
+
+    private String customLineItemId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetCustomLineItemMoneyChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
-            @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.Money previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Money nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Money previousValue) {
+            @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
+            @JsonProperty("customLineItemId") final String customLineItemId) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.customLineItem = customLineItem;
         this.customLineItemId = customLineItemId;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = SET_CUSTOM_LINE_ITEM_MONEY_CHANGE;
     }
 
@@ -65,7 +65,7 @@ public class SetCustomLineItemMoneyChangeImpl implements SetCustomLineItemMoneyC
     }
 
     /**
-     *  <p>Update action for <code>setCustomLineItemMoney</code></p>
+     *
      */
 
     public String getChange() {
@@ -73,23 +73,15 @@ public class SetCustomLineItemMoneyChangeImpl implements SetCustomLineItemMoneyC
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
-        return this.customLineItem;
+    public com.commercetools.history.models.common.Money getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getCustomLineItemId() {
-        return this.customLineItemId;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Money getNextValue() {
@@ -97,15 +89,31 @@ public class SetCustomLineItemMoneyChangeImpl implements SetCustomLineItemMoneyC
     }
 
     /**
-     *
+     *  <p>Name of the updated CustomLineItem.</p>
      */
 
-    public com.commercetools.history.models.common.Money getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
+        return this.customLineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     */
+
+    public String getCustomLineItemId() {
+        return this.customLineItemId;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final com.commercetools.history.models.common.Money previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.Money nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setCustomLineItem(final com.commercetools.history.models.common.LocalizedString customLineItem) {
@@ -114,14 +122,6 @@ public class SetCustomLineItemMoneyChangeImpl implements SetCustomLineItemMoneyC
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.common.Money nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final com.commercetools.history.models.common.Money previousValue) {
-        this.previousValue = previousValue;
     }
 
     @Override
@@ -136,10 +136,10 @@ public class SetCustomLineItemMoneyChangeImpl implements SetCustomLineItemMoneyC
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(customLineItem, that.customLineItem)
                 .append(customLineItemId, that.customLineItemId)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -147,10 +147,10 @@ public class SetCustomLineItemMoneyChangeImpl implements SetCustomLineItemMoneyC
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(customLineItem)
                 .append(customLineItemId)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

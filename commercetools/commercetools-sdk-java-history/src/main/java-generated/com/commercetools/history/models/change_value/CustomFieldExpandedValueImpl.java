@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Only available if <code>expand</code> is set to true</p>
+ *  <p>Only present if <code>expand</code> is set to <code>true</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, ModelBase {
@@ -45,7 +45,7 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
     }
 
     /**
-     *  <p>Name of a custom field.</p>
+     *  <p>Name of the Custom Field.</p>
      */
 
     public String getName() {
@@ -53,7 +53,7 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
     }
 
     /**
-     *
+     *  <p>CustomFieldValue based on the FieldType.</p>
      */
 
     public java.lang.Object getValue() {
@@ -61,7 +61,7 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
     }
 
     /**
-     *
+     *  <p>User-defined label of the Custom Field.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {

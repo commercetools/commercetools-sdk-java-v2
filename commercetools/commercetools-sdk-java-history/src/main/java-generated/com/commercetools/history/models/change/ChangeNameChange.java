@@ -14,7 +14,21 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeNameChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Name on Cart Discounts.</li>
+ *   <li>Change Name on Categories.</li>
+ *   <li>Change Name on Channels.</li>
+ *   <li>Change Name on Customer Groups.</li>
+ *   <li>Change Name on Products.</li>
+ *   <li>Change Name on Product Discounts.</li>
+ *   <li>Change Name on Product Selections.</li>
+ *   <li>Change Name on Product Types.</li>
+ *   <li>Change Name on Shopping Lists.</li>
+ *   <li>Change Name on Tax Categories.</li>
+ *   <li>Change Name on Types.</li>
+ *   <li>Change Name on Zones.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +60,7 @@ public interface ChangeNameChange extends Change {
     public String getType();
 
     /**
-     *  <p>Shape of the action for <code>changeName</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -54,7 +68,7 @@ public interface ChangeNameChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -62,7 +76,7 @@ public interface ChangeNameChange extends Change {
     public String getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -70,21 +84,21 @@ public interface ChangeNameChange extends Change {
     public String getNextValue();
 
     /**
-     *  <p>Shape of the action for <code>changeName</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final String previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

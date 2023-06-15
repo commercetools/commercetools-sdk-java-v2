@@ -30,7 +30,7 @@ public class SetPurchaseOrderNumberChangeBuilder implements Builder<SetPurchaseO
     private String nextValue;
 
     /**
-     *  <p>Update action for <code>setPurchaseOrderNumber</code>.</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class SetPurchaseOrderNumberChangeBuilder implements Builder<SetPurchaseO
     }
 
     /**
-     *  <p>Purchase Order number prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetPurchaseOrderNumberChangeBuilder implements Builder<SetPurchaseO
     }
 
     /**
-     *  <p>Purchase Order number after the update action.</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SetPurchaseOrderNumberChangeBuilder implements Builder<SetPurchaseO
     }
 
     /**
-     *  <p>Update action for <code>setPurchaseOrderNumber</code>.</p>
+     * value of change}
      * @return change
      */
 
@@ -72,7 +72,7 @@ public class SetPurchaseOrderNumberChangeBuilder implements Builder<SetPurchaseO
     }
 
     /**
-     *  <p>Purchase Order number prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -81,7 +81,7 @@ public class SetPurchaseOrderNumberChangeBuilder implements Builder<SetPurchaseO
     }
 
     /**
-     *  <p>Purchase Order number after the update action.</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

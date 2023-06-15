@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddPriceChange
+ *  <p>Change triggered by the Add Price update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,9 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddPriceChange addPriceChange = AddPriceChange.builder()
  *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
  *             .priceId("{priceId}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +49,7 @@ public interface AddPriceChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for adding prices</p>
+     *
      * @return change
      */
     @NotNull
@@ -57,23 +57,7 @@ public interface AddPriceChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return catalogData
-     */
-    @NotNull
-    @JsonProperty("catalogData")
-    public String getCatalogData();
-
-    /**
-     *
-     * @return priceId
-     */
-    @NotNull
-    @JsonProperty("priceId")
-    public String getPriceId();
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -82,32 +66,54 @@ public interface AddPriceChange extends Change {
     public Price getNextValue();
 
     /**
-     *  <p>Update action for adding prices</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
+     *  <p><code>id</code> of the Embedded Price.</p>
+     * @return priceId
+     */
+    @NotNull
+    @JsonProperty("priceId")
+    public String getPriceId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set catalogData
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final Price nextValue);
+
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
      * @param catalogData value to be set
      */
 
     public void setCatalogData(final String catalogData);
 
     /**
-     * set priceId
+     *  <p><code>id</code> of the Embedded Price.</p>
      * @param priceId value to be set
      */
 
     public void setPriceId(final String priceId);
-
-    /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final Price nextValue);
 
     /**
      * factory method
@@ -125,9 +131,9 @@ public interface AddPriceChange extends Change {
     public static AddPriceChange of(final AddPriceChange template) {
         AddPriceChangeImpl instance = new AddPriceChangeImpl();
         instance.setChange(template.getChange());
+        instance.setNextValue(template.getNextValue());
         instance.setCatalogData(template.getCatalogData());
         instance.setPriceId(template.getPriceId());
-        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -143,9 +149,9 @@ public interface AddPriceChange extends Change {
         }
         AddPriceChangeImpl instance = new AddPriceChangeImpl();
         instance.setChange(template.getChange());
+        instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
         instance.setCatalogData(template.getCatalogData());
         instance.setPriceId(template.getPriceId());
-        instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
         return instance;
     }
 

@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeLabelChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change AttributeDefinition Label on Product Types.</li>
+ *   <li>Change FieldDefinition Label on Types.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
@@ -24,28 +28,28 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
 
     private String change;
 
-    private String fieldName;
-
-    private String attributeName;
+    private com.commercetools.history.models.common.LocalizedString previousValue;
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
-    private com.commercetools.history.models.common.LocalizedString previousValue;
+    private String fieldName;
+
+    private String attributeName;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeLabelChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("fieldName") final String fieldName,
-            @JsonProperty("attributeName") final String attributeName,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue) {
+            @JsonProperty("fieldName") final String fieldName,
+            @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.fieldName = fieldName;
         this.attributeName = attributeName;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = CHANGE_LABEL_CHANGE;
     }
 
@@ -65,7 +69,7 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>changeLabel</code> on product types and types</p>
+     *
      */
 
     public String getChange() {
@@ -73,23 +77,15 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
     }
 
     /**
-     *  <p>The name of the field definition to update (types).</p>
+     *  <p>Value before the change.</p>
      */
 
-    public String getFieldName() {
-        return this.fieldName;
+    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *  <p>The name of the attribute definition to update (product-type).</p>
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
@@ -97,15 +93,31 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types).</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
-        return this.previousValue;
+    public String getFieldName() {
+        return this.fieldName;
+    }
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final com.commercetools.history.models.common.LocalizedString previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setFieldName(final String fieldName) {
@@ -114,14 +126,6 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
 
     public void setAttributeName(final String attributeName) {
         this.attributeName = attributeName;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final com.commercetools.history.models.common.LocalizedString previousValue) {
-        this.previousValue = previousValue;
     }
 
     @Override
@@ -136,10 +140,10 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
                 .append(attributeName, that.attributeName)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -147,10 +151,10 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(fieldName)
                 .append(attributeName)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

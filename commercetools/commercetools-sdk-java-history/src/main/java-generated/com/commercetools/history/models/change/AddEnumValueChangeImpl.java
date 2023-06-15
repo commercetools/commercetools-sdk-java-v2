@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddEnumValueChange
+ *  <p>Change triggered by the Add EnumValue to FieldDefinition update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
@@ -24,20 +24,20 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
 
     private String change;
 
-    private String fieldName;
-
     private com.commercetools.history.models.change_value.EnumValue nextValue;
+
+    private String fieldName;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddEnumValueChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("fieldName") final String fieldName,
-            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.EnumValue nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.EnumValue nextValue,
+            @JsonProperty("fieldName") final String fieldName) {
         this.change = change;
-        this.fieldName = fieldName;
         this.nextValue = nextValue;
+        this.fieldName = fieldName;
         this.type = ADD_ENUM_VALUE_CHANGE;
     }
 
@@ -57,7 +57,7 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>addEnumValue</code> on types</p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +65,31 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
     }
 
     /**
-     *  <p>The name of the field/attribute definition updated.</p>
-     */
-
-    public String getFieldName() {
-        return this.fieldName;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.change_value.EnumValue getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <p>Name of the updated FieldDefinition.</p>
+     */
+
+    public String getFieldName() {
+        return this.fieldName;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setFieldName(final String fieldName) {
-        this.fieldName = fieldName;
-    }
-
     public void setNextValue(final com.commercetools.history.models.change_value.EnumValue nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setFieldName(final String fieldName) {
+        this.fieldName = fieldName;
     }
 
     @Override
@@ -104,14 +104,14 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(fieldName, that.fieldName)
                 .append(nextValue, that.nextValue)
+                .append(fieldName, that.fieldName)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(fieldName).append(nextValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(change).append(nextValue).append(fieldName).toHashCode();
     }
 
 }

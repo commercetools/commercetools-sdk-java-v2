@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveDiscountCodeChange
+ *  <p>Change triggered by the Remove DiscountCode update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveDiscountCodeChangeImpl implements RemoveDiscountCodeChange, ModelBase {
@@ -53,7 +53,7 @@ public class RemoveDiscountCodeChangeImpl implements RemoveDiscountCodeChange, M
     }
 
     /**
-     *  <p>Update action for <code>removeDiscountCode</code></p>
+     *
      */
 
     public String getChange() {
@@ -61,7 +61,7 @@ public class RemoveDiscountCodeChangeImpl implements RemoveDiscountCodeChange, M
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.DiscountCodeInfo getPreviousValue() {

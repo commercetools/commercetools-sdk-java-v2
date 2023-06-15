@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetChannelRolesChange
+ *  <p>Change triggered by the Set Roles update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -55,7 +55,7 @@ public interface SetChannelRolesChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface SetChannelRolesChange extends Change {
     public List<ChannelRole> getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -78,7 +78,7 @@ public interface SetChannelRolesChange extends Change {
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -86,14 +86,14 @@ public interface SetChannelRolesChange extends Change {
     public void setPreviousValue(final ChannelRole... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<ChannelRole> previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
@@ -101,7 +101,7 @@ public interface SetChannelRolesChange extends Change {
     public void setNextValue(final ChannelRole... nextValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 

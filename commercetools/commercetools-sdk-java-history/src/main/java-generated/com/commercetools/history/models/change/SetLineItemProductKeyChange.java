@@ -24,11 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemProductKeyChange setLineItemProductKeyChange = SetLineItemProductKeyChange.builder()
  *             .change("{change}")
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .lineItemId("{lineItemId}")
  *             .variant("{variant}")
- *             .previousValue("{previousValue}")
- *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
  * </div>
@@ -51,7 +51,7 @@ public interface SetLineItemProductKeyChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setLineItemProductKey</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -59,7 +59,23 @@ public interface SetLineItemProductKeyChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @JsonProperty("previousValue")
+    public String getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public String getNextValue();
+
+    /**
+     *  <p>Name of the Product the Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -68,7 +84,7 @@ public interface SetLineItemProductKeyChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *
+     *  <p><code>id</code> of the updated LineItem.</p>
      * @return lineItemId
      */
     @NotNull
@@ -76,7 +92,7 @@ public interface SetLineItemProductKeyChange extends Change {
     public String getLineItemId();
 
     /**
-     *
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
      * @return variant
      */
     @NotNull
@@ -84,62 +100,46 @@ public interface SetLineItemProductKeyChange extends Change {
     public String getVariant();
 
     /**
-     *
-     * @return previousValue
-     */
-    @NotNull
-    @JsonProperty("previousValue")
-    public String getPreviousValue();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public String getNextValue();
-
-    /**
-     *  <p>Update action for <code>setLineItemProductKey</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set lineItem
-     * @param lineItem value to be set
-     */
-
-    public void setLineItem(final LocalizedString lineItem);
-
-    /**
-     * set lineItemId
-     * @param lineItemId value to be set
-     */
-
-    public void setLineItemId(final String lineItemId);
-
-    /**
-     * set variant
-     * @param variant value to be set
-     */
-
-    public void setVariant(final String variant);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final String previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final String nextValue);
+
+    /**
+     *  <p>Name of the Product the Line Item is based on.</p>
+     * @param lineItem value to be set
+     */
+
+    public void setLineItem(final LocalizedString lineItem);
+
+    /**
+     *  <p><code>id</code> of the updated LineItem.</p>
+     * @param lineItemId value to be set
+     */
+
+    public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -157,11 +157,11 @@ public interface SetLineItemProductKeyChange extends Change {
     public static SetLineItemProductKeyChange of(final SetLineItemProductKeyChange template) {
         SetLineItemProductKeyChangeImpl instance = new SetLineItemProductKeyChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setLineItem(template.getLineItem());
         instance.setLineItemId(template.getLineItemId());
         instance.setVariant(template.getVariant());
-        instance.setPreviousValue(template.getPreviousValue());
-        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -177,11 +177,11 @@ public interface SetLineItemProductKeyChange extends Change {
         }
         SetLineItemProductKeyChangeImpl instance = new SetLineItemProductKeyChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setLineItemId(template.getLineItemId());
         instance.setVariant(template.getVariant());
-        instance.setPreviousValue(template.getPreviousValue());
-        instance.setNextValue(template.getNextValue());
         return instance;
     }
 

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Shape of the value for product discounts external value.</p>
+ * ChangeValueExternalChangeValue
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * RemoveCustomLineItemChange
+ *  <p>Change triggered by the Remove CustomLineItem update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     RemoveCustomLineItemChange removeCustomLineItemChange = RemoveCustomLineItemChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +48,7 @@ public interface RemoveCustomLineItemChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for adding and removing custom line items</p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +56,7 @@ public interface RemoveCustomLineItemChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public CustomLineItem getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +65,34 @@ public interface RemoveCustomLineItemChange extends Change {
     public CustomLineItem getPreviousValue();
 
     /**
-     *  <p>Update action for adding and removing custom line items</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public CustomLineItem getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final CustomLineItem nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final CustomLineItem previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final CustomLineItem nextValue);
 
     /**
      * factory method
@@ -110,8 +110,8 @@ public interface RemoveCustomLineItemChange extends Change {
     public static RemoveCustomLineItemChange of(final RemoveCustomLineItemChange template) {
         RemoveCustomLineItemChangeImpl instance = new RemoveCustomLineItemChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,9 +127,9 @@ public interface RemoveCustomLineItemChange extends Change {
         }
         RemoveCustomLineItemChangeImpl instance = new RemoveCustomLineItemChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(com.commercetools.history.models.common.CustomLineItem.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.CustomLineItem.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.CustomLineItem.deepCopy(template.getNextValue()));
         return instance;
     }
 

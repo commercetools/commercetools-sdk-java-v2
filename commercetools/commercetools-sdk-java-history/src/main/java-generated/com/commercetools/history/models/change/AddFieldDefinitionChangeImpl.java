@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddFieldDefinitionChange
+ *  <p>Change triggered by the Add FieldDefinition update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddFieldDefinitionChangeImpl implements AddFieldDefinitionChange, ModelBase {
@@ -53,7 +53,7 @@ public class AddFieldDefinitionChangeImpl implements AddFieldDefinitionChange, M
     }
 
     /**
-     *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
+     *
      */
 
     public String getChange() {
@@ -61,7 +61,7 @@ public class AddFieldDefinitionChangeImpl implements AddFieldDefinitionChange, M
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.FieldDefinition getNextValue() {

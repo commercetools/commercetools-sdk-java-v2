@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangePlainEnumValueLabelChange
+ *  <p>Change triggered by the Change the label of an EnumValue update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -22,10 +22,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangePlainEnumValueLabelChange changePlainEnumValueLabelChange = ChangePlainEnumValueLabelChange.builder()
  *             .change("{change}")
- *             .attributeName("{attributeName}")
- *             .valueKey("{valueKey}")
  *             .previousValue("{previousValue}")
  *             .nextValue("{nextValue}")
+ *             .attributeName("{attributeName}")
+ *             .valueKey("{valueKey}")
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +48,7 @@ public interface ChangePlainEnumValueLabelChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
+     *
      * @return change
      */
     @NotNull
@@ -56,23 +56,7 @@ public interface ChangePlainEnumValueLabelChange extends Change {
     public String getChange();
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @return attributeName
-     */
-    @NotNull
-    @JsonProperty("attributeName")
-    public String getAttributeName();
-
-    /**
-     *  <p>Key of the values that was updated</p>
-     * @return valueKey
-     */
-    @NotNull
-    @JsonProperty("valueKey")
-    public String getValueKey();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -80,7 +64,7 @@ public interface ChangePlainEnumValueLabelChange extends Change {
     public String getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -88,39 +72,55 @@ public interface ChangePlainEnumValueLabelChange extends Change {
     public String getNextValue();
 
     /**
-     *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+
+    /**
+     *  <p>Key of the updated values.</p>
+     * @return valueKey
+     */
+    @NotNull
+    @JsonProperty("valueKey")
+    public String getValueKey();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @param attributeName value to be set
-     */
-
-    public void setAttributeName(final String attributeName);
-
-    /**
-     *  <p>Key of the values that was updated</p>
-     * @param valueKey value to be set
-     */
-
-    public void setValueKey(final String valueKey);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final String previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final String nextValue);
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @param attributeName value to be set
+     */
+
+    public void setAttributeName(final String attributeName);
+
+    /**
+     *  <p>Key of the updated values.</p>
+     * @param valueKey value to be set
+     */
+
+    public void setValueKey(final String valueKey);
 
     /**
      * factory method
@@ -138,10 +138,10 @@ public interface ChangePlainEnumValueLabelChange extends Change {
     public static ChangePlainEnumValueLabelChange of(final ChangePlainEnumValueLabelChange template) {
         ChangePlainEnumValueLabelChangeImpl instance = new ChangePlainEnumValueLabelChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
-        instance.setValueKey(template.getValueKey());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setAttributeName(template.getAttributeName());
+        instance.setValueKey(template.getValueKey());
         return instance;
     }
 
@@ -157,10 +157,10 @@ public interface ChangePlainEnumValueLabelChange extends Change {
         }
         ChangePlainEnumValueLabelChangeImpl instance = new ChangePlainEnumValueLabelChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
-        instance.setValueKey(template.getValueKey());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setAttributeName(template.getAttributeName());
+        instance.setValueKey(template.getValueKey());
         return instance;
     }
 

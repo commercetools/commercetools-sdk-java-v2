@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeSortOrderChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Sort Order on Cart Discounts.</li>
+ *   <li>Change Sort Order on Product Discounts.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeSortOrderChangeImpl implements ChangeSortOrderChange, ModelBase {
@@ -57,7 +61,7 @@ public class ChangeSortOrderChangeImpl implements ChangeSortOrderChange, ModelBa
     }
 
     /**
-     *  <p>Shape of the action for <code>changeSortOrder</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +69,7 @@ public class ChangeSortOrderChangeImpl implements ChangeSortOrderChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +77,7 @@ public class ChangeSortOrderChangeImpl implements ChangeSortOrderChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

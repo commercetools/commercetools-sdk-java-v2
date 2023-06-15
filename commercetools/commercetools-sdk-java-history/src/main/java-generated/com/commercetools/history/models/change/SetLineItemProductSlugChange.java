@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetLineItemProductSlugChange
+ *  <p>Change triggered automatically due to a user-initiated change.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,10 +24,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemProductSlugChange setLineItemProductSlugChange = SetLineItemProductSlugChange.builder()
  *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .variant("{variant}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface SetLineItemProductSlugChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setLineItemProductSlug</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,33 +58,7 @@ public interface SetLineItemProductSlugChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return lineItem
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("lineItem")
-    public LocalizedString getLineItem();
-
-    /**
-     *
-     * @return variant
-     */
-    @NotNull
-    @JsonProperty("variant")
-    public String getVariant();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public LocalizedString getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -93,39 +67,65 @@ public interface SetLineItemProductSlugChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setLineItemProductSlug</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public LocalizedString getNextValue();
+
+    /**
+     *  <p>Name of the Product the updated Line Item is based on.</p>
+     * @return lineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("lineItem")
+    public LocalizedString getLineItem();
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set lineItem
-     * @param lineItem value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setLineItem(final LocalizedString lineItem);
+    public void setPreviousValue(final LocalizedString previousValue);
 
     /**
-     * set variant
-     * @param variant value to be set
-     */
-
-    public void setVariant(final String variant);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final LocalizedString nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the Product the updated Line Item is based on.</p>
+     * @param lineItem value to be set
      */
 
-    public void setPreviousValue(final LocalizedString previousValue);
+    public void setLineItem(final LocalizedString lineItem);
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -143,10 +143,10 @@ public interface SetLineItemProductSlugChange extends Change {
     public static SetLineItemProductSlugChange of(final SetLineItemProductSlugChange template) {
         SetLineItemProductSlugChangeImpl instance = new SetLineItemProductSlugChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setLineItem(template.getLineItem());
         instance.setVariant(template.getVariant());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -162,12 +162,12 @@ public interface SetLineItemProductSlugChange extends Change {
         }
         SetLineItemProductSlugChangeImpl instance = new SetLineItemProductSlugChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
-        instance.setVariant(template.getVariant());
-        instance.setNextValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

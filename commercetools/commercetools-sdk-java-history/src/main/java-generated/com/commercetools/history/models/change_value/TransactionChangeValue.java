@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TransactionChangeValue {
 
     /**
-     *
+     *  <p><code>id</code> of the Transaction.</p>
      * @return id
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface TransactionChangeValue {
     public String getId();
 
     /**
-     *
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP).</p>
      * @return interactionId
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface TransactionChangeValue {
     public String getInteractionId();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      * @return timestamp
      */
     @NotNull
@@ -57,21 +57,21 @@ public interface TransactionChangeValue {
     public String getTimestamp();
 
     /**
-     * set id
+     *  <p><code>id</code> of the Transaction.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set interactionId
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP).</p>
      * @param interactionId value to be set
      */
 
     public void setInteractionId(final String interactionId);
 
     /**
-     * set timestamp
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      * @param timestamp value to be set
      */
 

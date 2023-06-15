@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddExternalImageChange addExternalImageChange = AddExternalImageChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
 
     private String change;
 
-    private String catalogData;
-
     private java.util.List<com.commercetools.history.models.common.Image> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
+    private String catalogData;
+
     /**
-     *  <p>Update actions for adding an external image</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,18 +45,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public AddExternalImageChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -68,7 +57,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +69,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -95,7 +84,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -110,7 +99,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -123,7 +112,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -134,7 +123,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -145,7 +134,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * set values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -156,7 +145,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * set value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -168,7 +157,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * add values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -183,7 +172,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * add the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -198,7 +187,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -211,7 +200,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * add the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -222,7 +211,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -233,7 +222,21 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     *  <p>Update actions for adding an external image</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public AddExternalImageChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -242,16 +245,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -260,7 +254,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -269,15 +263,27 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
      * builds AddExternalImageChange with checking for non-null required values
      * @return AddExternalImageChange
      */
     public AddExternalImageChange build() {
         Objects.requireNonNull(change, AddExternalImageChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, AddExternalImageChange.class + ": catalogData is missing");
         Objects.requireNonNull(previousValue, AddExternalImageChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, AddExternalImageChange.class + ": nextValue is missing");
-        return new AddExternalImageChangeImpl(change, catalogData, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, AddExternalImageChange.class + ": catalogData is missing");
+        return new AddExternalImageChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -285,7 +291,7 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
      * @return AddExternalImageChange
      */
     public AddExternalImageChange buildUnchecked() {
-        return new AddExternalImageChangeImpl(change, catalogData, previousValue, nextValue);
+        return new AddExternalImageChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -304,9 +310,9 @@ public class AddExternalImageChangeBuilder implements Builder<AddExternalImageCh
     public static AddExternalImageChangeBuilder of(final AddExternalImageChange template) {
         AddExternalImageChangeBuilder builder = new AddExternalImageChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
         return builder;
     }
 

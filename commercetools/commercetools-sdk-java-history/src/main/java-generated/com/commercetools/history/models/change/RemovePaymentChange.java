@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * RemovePaymentChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Remove Payment on Orders.</li>
+ *   <li>Remove Payment on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +28,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     RemovePaymentChange removePaymentChange = RemovePaymentChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +52,7 @@ public interface RemovePaymentChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +60,7 @@ public interface RemovePaymentChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public PaymentInfo getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +69,34 @@ public interface RemovePaymentChange extends Change {
     public PaymentInfo getPreviousValue();
 
     /**
-     *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public PaymentInfo getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final PaymentInfo nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final PaymentInfo previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final PaymentInfo nextValue);
 
     /**
      * factory method
@@ -110,8 +114,8 @@ public interface RemovePaymentChange extends Change {
     public static RemovePaymentChange of(final RemovePaymentChange template) {
         RemovePaymentChangeImpl instance = new RemovePaymentChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,9 +131,9 @@ public interface RemovePaymentChange extends Change {
         }
         RemovePaymentChangeImpl instance = new RemovePaymentChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(com.commercetools.history.models.common.PaymentInfo.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.PaymentInfo.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.PaymentInfo.deepCopy(template.getNextValue()));
         return instance;
     }
 

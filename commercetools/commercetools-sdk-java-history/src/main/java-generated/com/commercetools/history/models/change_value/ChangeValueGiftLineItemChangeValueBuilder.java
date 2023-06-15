@@ -36,7 +36,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     private com.commercetools.history.models.common.Reference distributionChannel;
 
     /**
-     * set the value to the product using the builder function
+     *  <p>Reference to a Product.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the product using the builder function
+     *  <p>Reference to a Product.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the product
+     *  <p>Reference to a Product.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the variantId
+     *  <p><code>id</code> of the ProductVariant.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the supplyChannel using the builder function
+     *  <p>Channel with ChannelRoleEnum <code>InventorySupply</code>.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the supplyChannel using the builder function
+     *  <p>Channel with ChannelRoleEnum <code>InventorySupply</code>.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the supplyChannel
+     *  <p>Channel with ChannelRoleEnum <code>InventorySupply</code>.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the distributionChannel using the builder function
+     *  <p>Channel with ChannelRoleEnum <code>ProductDistribution</code>.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the distributionChannel using the builder function
+     *  <p>Channel with ChannelRoleEnum <code>ProductDistribution</code>.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the distributionChannel
+     *  <p>Channel with ChannelRoleEnum <code>ProductDistribution</code>.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * value of product}
+     *  <p>Reference to a Product.</p>
      * @return product
      */
 
@@ -164,7 +164,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * value of variantId}
+     *  <p><code>id</code> of the ProductVariant.</p>
      * @return variantId
      */
 
@@ -173,7 +173,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * value of supplyChannel}
+     *  <p>Channel with ChannelRoleEnum <code>InventorySupply</code>.</p>
      * @return supplyChannel
      */
 
@@ -183,7 +183,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     * value of distributionChannel}
+     *  <p>Channel with ChannelRoleEnum <code>ProductDistribution</code>.</p>
      * @return distributionChannel
      */
 

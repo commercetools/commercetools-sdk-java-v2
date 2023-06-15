@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeTextLineItemNameChange
+ *  <p>Change triggered by the Change TextLineItem Name update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameChange, ModelBase {
@@ -24,24 +24,24 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
 
     private String change;
 
-    private com.commercetools.history.models.change_value.TextLineItemValue textLineItem;
+    private com.commercetools.history.models.common.LocalizedString previousValue;
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
-    private com.commercetools.history.models.common.LocalizedString previousValue;
+    private com.commercetools.history.models.change_value.TextLineItemValue textLineItem;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeTextLineItemNameChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue) {
+            @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
         this.change = change;
-        this.textLineItem = textLineItem;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.textLineItem = textLineItem;
         this.type = CHANGE_TEXT_LINE_ITEM_NAME_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
     }
 
     /**
-     *  <p>Update action for <code>changeTextLineItemName</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,15 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
-        return this.textLineItem;
+    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
@@ -85,27 +85,27 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
     }
 
     /**
-     *
+     *  <p>Holds information about the updated Text Line Item.</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
+        return this.textLineItem;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setTextLineItem(final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
-        this.textLineItem = textLineItem;
+    public void setPreviousValue(final com.commercetools.history.models.common.LocalizedString previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.LocalizedString previousValue) {
-        this.previousValue = previousValue;
+    public void setTextLineItem(final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
+        this.textLineItem = textLineItem;
     }
 
     @Override
@@ -120,9 +120,9 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(textLineItem, that.textLineItem)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(textLineItem, that.textLineItem)
                 .isEquals();
     }
 
@@ -130,9 +130,9 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(textLineItem)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(textLineItem)
                 .toHashCode();
     }
 

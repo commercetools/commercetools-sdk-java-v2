@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeShoppingListLineItemQuantityChange
+ *  <p>Change triggered by the Change ShoppingListLineItem Quantity update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,9 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeShoppingListLineItemQuantityChange changeShoppingListLineItemQuantityChange = ChangeShoppingListLineItemQuantityChange.builder()
  *             .change("{change}")
- *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .previousValue(1)
  *             .nextValue(1)
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -57,16 +57,7 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return lineItem
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("lineItem")
-    public ShoppingListLineItemValue getLineItem();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,12 +65,21 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     public Integer getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
     public Integer getNextValue();
+
+    /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
+     * @return lineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("lineItem")
+    public ShoppingListLineItemValue getLineItem();
 
     /**
      * set change
@@ -89,25 +89,25 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     public void setChange(final String change);
 
     /**
-     * set lineItem
-     * @param lineItem value to be set
-     */
-
-    public void setLineItem(final ShoppingListLineItemValue lineItem);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Integer previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Integer nextValue);
+
+    /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
+     * @param lineItem value to be set
+     */
+
+    public void setLineItem(final ShoppingListLineItemValue lineItem);
 
     /**
      * factory method
@@ -125,9 +125,9 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     public static ChangeShoppingListLineItemQuantityChange of(final ChangeShoppingListLineItemQuantityChange template) {
         ChangeShoppingListLineItemQuantityChangeImpl instance = new ChangeShoppingListLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(template.getLineItem());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setLineItem(template.getLineItem());
         return instance;
     }
 
@@ -144,10 +144,10 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
         }
         ChangeShoppingListLineItemQuantityChangeImpl instance = new ChangeShoppingListLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(
-            com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setLineItem(
+            com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
         return instance;
     }
 

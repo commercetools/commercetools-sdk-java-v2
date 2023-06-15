@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddParcelToDeliveryChange addParcelToDeliveryChange = AddParcelToDeliveryChange.builder()
  *             .change("{change}")
- *             .deliveryId("{deliveryId}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
 
     private String change;
 
-    private String deliveryId;
-
     private com.commercetools.history.models.common.Parcel nextValue;
 
+    private String deliveryId;
+
     /**
-     *  <p>Update action for <code>addParcelToDelivery</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,18 +42,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     * set the value to the deliveryId
-     * @param deliveryId value to be set
-     * @return Builder
-     */
-
-    public AddParcelToDeliveryChangeBuilder deliveryId(final String deliveryId) {
-        this.deliveryId = deliveryId;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -65,7 +54,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -77,7 +66,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -88,7 +77,18 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     *  <p>Update action for <code>addParcelToDelivery</code></p>
+     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     * @param deliveryId value to be set
+     * @return Builder
+     */
+
+    public AddParcelToDeliveryChangeBuilder deliveryId(final String deliveryId) {
+        this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -97,16 +97,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     * value of deliveryId}
-     * @return deliveryId
-     */
-
-    public String getDeliveryId() {
-        return this.deliveryId;
-    }
-
-    /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -115,14 +106,23 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
+     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     * @return deliveryId
+     */
+
+    public String getDeliveryId() {
+        return this.deliveryId;
+    }
+
+    /**
      * builds AddParcelToDeliveryChange with checking for non-null required values
      * @return AddParcelToDeliveryChange
      */
     public AddParcelToDeliveryChange build() {
         Objects.requireNonNull(change, AddParcelToDeliveryChange.class + ": change is missing");
-        Objects.requireNonNull(deliveryId, AddParcelToDeliveryChange.class + ": deliveryId is missing");
         Objects.requireNonNull(nextValue, AddParcelToDeliveryChange.class + ": nextValue is missing");
-        return new AddParcelToDeliveryChangeImpl(change, deliveryId, nextValue);
+        Objects.requireNonNull(deliveryId, AddParcelToDeliveryChange.class + ": deliveryId is missing");
+        return new AddParcelToDeliveryChangeImpl(change, nextValue, deliveryId);
     }
 
     /**
@@ -130,7 +130,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
      * @return AddParcelToDeliveryChange
      */
     public AddParcelToDeliveryChange buildUnchecked() {
-        return new AddParcelToDeliveryChangeImpl(change, deliveryId, nextValue);
+        return new AddParcelToDeliveryChangeImpl(change, nextValue, deliveryId);
     }
 
     /**
@@ -149,8 +149,8 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     public static AddParcelToDeliveryChangeBuilder of(final AddParcelToDeliveryChange template) {
         AddParcelToDeliveryChangeBuilder builder = new AddParcelToDeliveryChangeBuilder();
         builder.change = template.getChange();
-        builder.deliveryId = template.getDeliveryId();
         builder.nextValue = template.getNextValue();
+        builder.deliveryId = template.getDeliveryId();
         return builder;
     }
 

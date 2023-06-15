@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeRequiresDiscountCodeChange
+ *  <p>Change triggered by the Change Requires DiscountCode update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDiscountCodeChange, ModelBase {
@@ -57,7 +57,7 @@ public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDisco
     }
 
     /**
-     *  <p>Shape of the action for <code>changeRequiresDiscountCode</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDisco
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public Boolean getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDisco
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public Boolean getNextValue() {

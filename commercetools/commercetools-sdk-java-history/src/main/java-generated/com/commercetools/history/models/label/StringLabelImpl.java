@@ -49,7 +49,7 @@ public class StringLabelImpl implements StringLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Changed value.</p>
      */
 
     public String getValue() {

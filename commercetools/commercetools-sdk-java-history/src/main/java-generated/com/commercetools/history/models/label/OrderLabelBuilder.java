@@ -27,7 +27,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
     private String orderNumber;
 
     /**
-     * set the value to the customerEmail
+     *  <p>Email address of the Customer that the Order belongs to.</p>
      * @param customerEmail value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
     }
 
     /**
-     * set the value to the orderNumber
+     *  <p>User-defined unique identifier of the Order that is unique across a Project.</p>
      * @param orderNumber value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
     }
 
     /**
-     * value of customerEmail}
+     *  <p>Email address of the Customer that the Order belongs to.</p>
      * @return customerEmail
      */
 
@@ -58,7 +58,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
     }
 
     /**
-     * value of orderNumber}
+     *  <p>User-defined unique identifier of the Order that is unique across a Project.</p>
      * @return orderNumber
      */
 

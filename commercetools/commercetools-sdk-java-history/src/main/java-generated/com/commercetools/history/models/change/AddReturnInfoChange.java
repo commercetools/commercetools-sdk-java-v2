@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddReturnInfoChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Add ReturnInfo on Orders.</li>
+ *   <li>Add ReturnInfo on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +51,7 @@ public interface AddReturnInfoChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addReturnInfo</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -55,7 +59,7 @@ public interface AddReturnInfoChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -64,14 +68,14 @@ public interface AddReturnInfoChange extends Change {
     public ReturnInfo getNextValue();
 
     /**
-     *  <p>Update action for <code>addReturnInfo</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

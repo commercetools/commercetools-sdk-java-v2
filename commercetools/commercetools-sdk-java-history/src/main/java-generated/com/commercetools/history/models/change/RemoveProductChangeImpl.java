@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveProductChange
+ *  <p>Change triggered by the Remove Product update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveProductChangeImpl implements RemoveProductChange, ModelBase {
@@ -53,7 +53,7 @@ public class RemoveProductChangeImpl implements RemoveProductChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for when a product is unassigned from a product selection</p>
+     *
      */
 
     public String getChange() {
@@ -61,7 +61,7 @@ public class RemoveProductChangeImpl implements RemoveProductChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Reference getPreviousValue() {

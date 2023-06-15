@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddAttributeDefinitionChange
+ *  <p>Change triggered by the Add Attribute Definition update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddAttributeDefinitionChangeImpl implements AddAttributeDefinitionChange, ModelBase {
@@ -53,7 +53,7 @@ public class AddAttributeDefinitionChangeImpl implements AddAttributeDefinitionC
     }
 
     /**
-     *  <p>Update action for <code>addAttributeDefinition</code> on product types</p>
+     *
      */
 
     public String getChange() {
@@ -61,7 +61,7 @@ public class AddAttributeDefinitionChangeImpl implements AddAttributeDefinitionC
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.AttributeDefinition getNextValue() {

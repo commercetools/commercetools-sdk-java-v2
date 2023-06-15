@@ -53,7 +53,7 @@ public class ProductLabelImpl implements ProductLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined identifier used in a deep-link URL for the Product.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getSlug() {
@@ -61,7 +61,7 @@ public class ProductLabelImpl implements ProductLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the Product.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getName() {

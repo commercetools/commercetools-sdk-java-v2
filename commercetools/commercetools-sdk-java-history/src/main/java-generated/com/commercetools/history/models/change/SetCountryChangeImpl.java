@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetCountryChange
+ *  <p>Change triggered by the Set Country update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>setCountry</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
     }
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

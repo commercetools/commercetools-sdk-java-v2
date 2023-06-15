@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetExternalIdChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set External ID on Categories.</li>
+ *   <li>Set External ID on Customers.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetExternalIdChangeImpl implements SetExternalIdChange, ModelBase {
@@ -57,7 +61,7 @@ public class SetExternalIdChangeImpl implements SetExternalIdChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>setExternalId</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +69,7 @@ public class SetExternalIdChangeImpl implements SetExternalIdChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +77,7 @@ public class SetExternalIdChangeImpl implements SetExternalIdChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

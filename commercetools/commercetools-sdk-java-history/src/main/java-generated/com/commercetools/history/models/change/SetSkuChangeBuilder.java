@@ -14,9 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetSkuChange setSkuChange = SetSkuChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
  *             .previousValue("{previousValue}")
  *             .nextValue("{nextValue}")
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,14 +26,14 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
 
     private String change;
 
-    private String catalogData;
-
     private String previousValue;
 
     private String nextValue;
 
+    private String catalogData;
+
     /**
-     *  <p>Update action for <code>setSku</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -44,18 +44,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public SetSkuChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +55,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -77,7 +66,21 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     }
 
     /**
-     *  <p>Update action for <code>setSku</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetSkuChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -86,16 +89,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -104,7 +98,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -113,15 +107,27 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
      * builds SetSkuChange with checking for non-null required values
      * @return SetSkuChange
      */
     public SetSkuChange build() {
         Objects.requireNonNull(change, SetSkuChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, SetSkuChange.class + ": catalogData is missing");
         Objects.requireNonNull(previousValue, SetSkuChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetSkuChange.class + ": nextValue is missing");
-        return new SetSkuChangeImpl(change, catalogData, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, SetSkuChange.class + ": catalogData is missing");
+        return new SetSkuChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -129,7 +135,7 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
      * @return SetSkuChange
      */
     public SetSkuChange buildUnchecked() {
-        return new SetSkuChangeImpl(change, catalogData, previousValue, nextValue);
+        return new SetSkuChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -148,9 +154,9 @@ public class SetSkuChangeBuilder implements Builder<SetSkuChange> {
     public static SetSkuChangeBuilder of(final SetSkuChange template) {
         SetSkuChangeBuilder builder = new SetSkuChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
         return builder;
     }
 

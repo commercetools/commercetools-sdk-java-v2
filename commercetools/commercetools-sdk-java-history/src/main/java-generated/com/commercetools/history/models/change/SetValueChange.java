@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetValueChange
+ *  <p>Change triggered by the Update CustomObject request when a value of a property is updated.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,7 +44,7 @@ public interface SetValueChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setValue</code> on custom objects</p>
+     *
      * @return change
      */
     @NotNull
@@ -52,15 +52,7 @@ public interface SetValueChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public Object getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -68,25 +60,33 @@ public interface SetValueChange extends Change {
     public Object getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setValue</code> on custom objects</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public Object getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final Object nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Object previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final Object nextValue);
 
     /**
      * factory method
@@ -104,8 +104,8 @@ public interface SetValueChange extends Change {
     public static SetValueChange of(final SetValueChange template) {
         SetValueChangeImpl instance = new SetValueChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -121,8 +121,8 @@ public interface SetValueChange extends Change {
         }
         SetValueChangeImpl instance = new SetValueChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 

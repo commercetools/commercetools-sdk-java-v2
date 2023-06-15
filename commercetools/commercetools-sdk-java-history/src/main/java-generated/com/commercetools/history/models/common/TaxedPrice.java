@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxedPrice {
 
     /**
-     *
+     *  <p>Total net price of the Order.</p>
      * @return totalNet
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface TaxedPrice {
     public Money getTotalNet();
 
     /**
-     *
+     *  <p>Total gross price of the Order.</p>
      * @return totalGross
      */
     @NotNull
@@ -51,14 +51,14 @@ public interface TaxedPrice {
     public Money getTotalGross();
 
     /**
-     * set totalNet
+     *  <p>Total net price of the Order.</p>
      * @param totalNet value to be set
      */
 
     public void setTotalNet(final Money totalNet);
 
     /**
-     * set totalGross
+     *  <p>Total gross price of the Order.</p>
      * @param totalGross value to be set
      */
 

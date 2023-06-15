@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveAttributeDefinitionChange
+ *  <p>Change triggered by the Remove AttributeDefinition update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveAttributeDefinitionChangeImpl implements RemoveAttributeDefinitionChange, ModelBase {
@@ -53,7 +53,7 @@ public class RemoveAttributeDefinitionChangeImpl implements RemoveAttributeDefin
     }
 
     /**
-     *  <p>Update action for <code>removeAttributeDefinition</code> on product types</p>
+     *
      */
 
     public String getChange() {
@@ -61,7 +61,7 @@ public class RemoveAttributeDefinitionChangeImpl implements RemoveAttributeDefin
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.AttributeDefinition getPreviousValue() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeAmountPlannedChange
+ *  <p>Change triggered by the Change AmountPlanned update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAmountPlannedChangeImpl implements ChangeAmountPlannedChange, ModelBase {
@@ -65,7 +65,7 @@ public class ChangeAmountPlannedChangeImpl implements ChangeAmountPlannedChange,
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeAmountPlannedChangeImpl implements ChangeAmountPlannedChange,
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Money getNextValue() {

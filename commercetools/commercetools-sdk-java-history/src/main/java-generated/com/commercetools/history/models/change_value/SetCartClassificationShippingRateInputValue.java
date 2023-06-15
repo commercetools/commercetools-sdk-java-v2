@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Shape of the cart classification shipping input rate value.</p>
+ * SetCartClassificationShippingRateInputValue
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +43,7 @@ public interface SetCartClassificationShippingRateInputValue {
     public String getType();
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier.</p>
      * @return key
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface SetCartClassificationShippingRateInputValue {
     public String getKey();
 
     /**
-     *
+     *  <p>Descriptive localized label of the value.</p>
      * @return label
      */
     @NotNull
@@ -67,14 +67,14 @@ public interface SetCartClassificationShippingRateInputValue {
     public void setType(final String type);
 
     /**
-     * set key
+     *  <p>Key of the value used as a programmatic identifier.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     * set label
+     *  <p>Descriptive localized label of the value.</p>
      * @param label value to be set
      */
 

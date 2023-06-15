@@ -15,7 +15,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeInputHintChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change AttributeDefinition InputHint on Product Types.</li>
+ *   <li>Change InputHint on Types.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,10 +27,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeInputHintChange changeInputHintChange = ChangeInputHintChange.builder()
  *             .change("{change}")
+ *             .previousValue(TextInputHint.SINGLE_LINE)
+ *             .nextValue(TextInputHint.SINGLE_LINE)
  *             .fieldName("{fieldName}")
  *             .attributeName("{attributeName}")
- *             .nextValue(TextInputHint.SINGLE_LINE)
- *             .previousValue(TextInputHint.SINGLE_LINE)
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +53,7 @@ public interface ChangeInputHintChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeInputHint</code> on product types and types</p>
+     *
      * @return change
      */
     @NotNull
@@ -57,31 +61,7 @@ public interface ChangeInputHintChange extends Change {
     public String getChange();
 
     /**
-     *  <p>The name of the field definition updated.</p>
-     * @return fieldName
-     */
-    @NotNull
-    @JsonProperty("fieldName")
-    public String getFieldName();
-
-    /**
-     *  <p>The name of the attribute updated.</p>
-     * @return attributeName
-     */
-    @NotNull
-    @JsonProperty("attributeName")
-    public String getAttributeName();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public TextInputHint getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -89,39 +69,63 @@ public interface ChangeInputHintChange extends Change {
     public TextInputHint getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changeInputHint</code> on product types and types</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public TextInputHint getNextValue();
+
+    /**
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     * @return fieldName
+     */
+    @NotNull
+    @JsonProperty("fieldName")
+    public String getFieldName();
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>The name of the field definition updated.</p>
-     * @param fieldName value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setFieldName(final String fieldName);
+    public void setPreviousValue(final TextInputHint previousValue);
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @param attributeName value to be set
-     */
-
-    public void setAttributeName(final String attributeName);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final TextInputHint nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     * @param fieldName value to be set
      */
 
-    public void setPreviousValue(final TextInputHint previousValue);
+    public void setFieldName(final String fieldName);
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     * @param attributeName value to be set
+     */
+
+    public void setAttributeName(final String attributeName);
 
     /**
      * factory method
@@ -139,10 +143,10 @@ public interface ChangeInputHintChange extends Change {
     public static ChangeInputHintChange of(final ChangeInputHintChange template) {
         ChangeInputHintChangeImpl instance = new ChangeInputHintChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setFieldName(template.getFieldName());
         instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -158,10 +162,10 @@ public interface ChangeInputHintChange extends Change {
         }
         ChangeInputHintChangeImpl instance = new ChangeInputHintChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setFieldName(template.getFieldName());
         instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 

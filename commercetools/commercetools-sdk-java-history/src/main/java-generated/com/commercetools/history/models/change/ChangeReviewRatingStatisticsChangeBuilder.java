@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeReviewRatingStatisticsChange changeReviewRatingStatisticsChange = ChangeReviewRatingStatisticsChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
 
     private String change;
 
-    private com.commercetools.history.models.common.ReviewRatingStatistics nextValue;
-
     private com.commercetools.history.models.common.ReviewRatingStatistics previousValue;
 
+    private com.commercetools.history.models.common.ReviewRatingStatistics nextValue;
+
     /**
-     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,44 +42,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeReviewRatingStatisticsChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.ReviewRatingStatisticsBuilder, com.commercetools.history.models.common.ReviewRatingStatisticsBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ReviewRatingStatisticsBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeReviewRatingStatisticsChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ReviewRatingStatisticsBuilder, com.commercetools.history.models.common.ReviewRatingStatistics> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ReviewRatingStatisticsBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeReviewRatingStatisticsChangeBuilder nextValue(
-            final com.commercetools.history.models.common.ReviewRatingStatistics nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -92,7 +55,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -104,7 +67,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -116,7 +79,44 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     }
 
     /**
-     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeReviewRatingStatisticsChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ReviewRatingStatisticsBuilder, com.commercetools.history.models.common.ReviewRatingStatisticsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReviewRatingStatisticsBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeReviewRatingStatisticsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ReviewRatingStatisticsBuilder, com.commercetools.history.models.common.ReviewRatingStatistics> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReviewRatingStatisticsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeReviewRatingStatisticsChangeBuilder nextValue(
+            final com.commercetools.history.models.common.ReviewRatingStatistics nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -125,16 +125,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.ReviewRatingStatistics getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -143,14 +134,23 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.ReviewRatingStatistics getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds ChangeReviewRatingStatisticsChange with checking for non-null required values
      * @return ChangeReviewRatingStatisticsChange
      */
     public ChangeReviewRatingStatisticsChange build() {
         Objects.requireNonNull(change, ChangeReviewRatingStatisticsChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, ChangeReviewRatingStatisticsChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeReviewRatingStatisticsChange.class + ": previousValue is missing");
-        return new ChangeReviewRatingStatisticsChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeReviewRatingStatisticsChange.class + ": nextValue is missing");
+        return new ChangeReviewRatingStatisticsChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -158,7 +158,7 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
      * @return ChangeReviewRatingStatisticsChange
      */
     public ChangeReviewRatingStatisticsChange buildUnchecked() {
-        return new ChangeReviewRatingStatisticsChangeImpl(change, nextValue, previousValue);
+        return new ChangeReviewRatingStatisticsChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -177,8 +177,8 @@ public class ChangeReviewRatingStatisticsChangeBuilder implements Builder<Change
     public static ChangeReviewRatingStatisticsChangeBuilder of(final ChangeReviewRatingStatisticsChange template) {
         ChangeReviewRatingStatisticsChangeBuilder builder = new ChangeReviewRatingStatisticsChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

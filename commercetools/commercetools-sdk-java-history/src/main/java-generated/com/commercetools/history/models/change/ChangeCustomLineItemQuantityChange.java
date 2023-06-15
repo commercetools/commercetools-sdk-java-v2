@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeCustomLineItemQuantityChange
+ *  <p>Change triggered by the Change CustomLineItem Quantity update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,10 +24,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeCustomLineItemQuantityChange changeCustomLineItemQuantityChange = ChangeCustomLineItemQuantityChange.builder()
  *             .change("{change}")
+ *             .previousValue(1)
+ *             .nextValue(1)
  *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .customLineItemId("{customLineItemId}")
- *             .nextValue(1)
- *             .previousValue(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,7 +58,23 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @JsonProperty("previousValue")
+    public Integer getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public Integer getNextValue();
+
+    /**
+     *  <p>Name of the CustomLineItem.</p>
      * @return customLineItem
      */
     @NotNull
@@ -67,7 +83,7 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     public LocalizedString getCustomLineItem();
 
     /**
-     *
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -75,55 +91,39 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     public String getCustomLineItemId();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public Integer getNextValue();
-
-    /**
-     *
-     * @return previousValue
-     */
-    @NotNull
-    @JsonProperty("previousValue")
-    public Integer getPreviousValue();
-
-    /**
-     *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set customLineItem
-     * @param customLineItem value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setCustomLineItem(final LocalizedString customLineItem);
+    public void setPreviousValue(final Integer previousValue);
 
     /**
-     * set customLineItemId
-     * @param customLineItemId value to be set
-     */
-
-    public void setCustomLineItemId(final String customLineItemId);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Integer nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the CustomLineItem.</p>
+     * @param customLineItem value to be set
      */
 
-    public void setPreviousValue(final Integer previousValue);
+    public void setCustomLineItem(final LocalizedString customLineItem);
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @param customLineItemId value to be set
+     */
+
+    public void setCustomLineItemId(final String customLineItemId);
 
     /**
      * factory method
@@ -141,10 +141,10 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
     public static ChangeCustomLineItemQuantityChange of(final ChangeCustomLineItemQuantityChange template) {
         ChangeCustomLineItemQuantityChangeImpl instance = new ChangeCustomLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setCustomLineItem(template.getCustomLineItem());
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -161,11 +161,11 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
         }
         ChangeCustomLineItemQuantityChangeImpl instance = new ChangeCustomLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setCustomLineItem(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 

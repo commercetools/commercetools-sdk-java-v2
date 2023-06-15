@@ -28,7 +28,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
     private com.commercetools.history.models.common.Money amountPlanned;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the Payment.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
     }
 
     /**
-     * set the value to the amountPlanned using the builder function
+     *  <p>Money value the Payment intends to receive from the Customer.</p>
      * @param builder function to build the amountPlanned value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
     }
 
     /**
-     * set the value to the amountPlanned using the builder function
+     *  <p>Money value the Payment intends to receive from the Customer.</p>
      * @param builder function to build the amountPlanned value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
     }
 
     /**
-     * set the value to the amountPlanned
+     *  <p>Money value the Payment intends to receive from the Customer.</p>
      * @param amountPlanned value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the Payment.</p>
      * @return key
      */
 
@@ -83,7 +83,7 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
     }
 
     /**
-     * value of amountPlanned}
+     *  <p>Money value the Payment intends to receive from the Customer.</p>
      * @return amountPlanned
      */
 

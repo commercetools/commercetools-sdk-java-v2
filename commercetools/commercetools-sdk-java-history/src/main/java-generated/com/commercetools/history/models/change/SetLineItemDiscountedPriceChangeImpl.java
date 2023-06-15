@@ -24,28 +24,28 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
 
     private String change;
 
-    private com.commercetools.history.models.common.LocalizedString lineItem;
-
-    private String variant;
+    private com.commercetools.history.models.common.DiscountedLineItemPrice previousValue;
 
     private com.commercetools.history.models.common.DiscountedLineItemPrice nextValue;
 
-    private com.commercetools.history.models.common.DiscountedLineItemPrice previousValue;
+    private com.commercetools.history.models.common.LocalizedString lineItem;
+
+    private String variant;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetLineItemDiscountedPriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
-            @JsonProperty("variant") final String variant,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.DiscountedLineItemPrice previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.DiscountedLineItemPrice nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.DiscountedLineItemPrice previousValue) {
+            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
+            @JsonProperty("variant") final String variant) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.lineItem = lineItem;
         this.variant = variant;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = SET_LINE_ITEM_DISCOUNTED_PRICE_CHANGE;
     }
 
@@ -65,7 +65,7 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     }
 
     /**
-     *  <p>Update action for <code>setLineItemDiscountedPrice</code></p>
+     *
      */
 
     public String getChange() {
@@ -73,23 +73,15 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getLineItem() {
-        return this.lineItem;
+    public com.commercetools.history.models.common.DiscountedLineItemPrice getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getVariant() {
-        return this.variant;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.DiscountedLineItemPrice getNextValue() {
@@ -97,15 +89,31 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     }
 
     /**
-     *
+     *  <p>Name of the Product the Line Item is based on.</p>
      */
 
-    public com.commercetools.history.models.common.DiscountedLineItemPrice getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final com.commercetools.history.models.common.DiscountedLineItemPrice previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.DiscountedLineItemPrice nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setLineItem(final com.commercetools.history.models.common.LocalizedString lineItem) {
@@ -114,14 +122,6 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
 
     public void setVariant(final String variant) {
         this.variant = variant;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.common.DiscountedLineItemPrice nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final com.commercetools.history.models.common.DiscountedLineItemPrice previousValue) {
-        this.previousValue = previousValue;
     }
 
     @Override
@@ -136,10 +136,10 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(variant, that.variant)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -147,10 +147,10 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(lineItem)
                 .append(variant)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

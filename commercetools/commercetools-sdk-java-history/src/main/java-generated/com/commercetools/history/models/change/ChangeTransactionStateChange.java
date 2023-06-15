@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeTransactionStateChange
+ *  <p>Change triggered by the Change TransactionState update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,9 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeTransactionStateChange changeTransactionStateChange = ChangeTransactionStateChange.builder()
  *             .change("{change}")
- *             .transaction(transactionBuilder -> transactionBuilder)
- *             .nextValue(TransactionState.INITIAL)
  *             .previousValue(TransactionState.INITIAL)
+ *             .nextValue(TransactionState.INITIAL)
+ *             .transaction(transactionBuilder -> transactionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -42,7 +42,7 @@ public interface ChangeTransactionStateChange extends Change {
     String CHANGE_TRANSACTION_STATE_CHANGE = "ChangeTransactionStateChange";
 
     /**
-     *  <p>Update action for <code>changeTransactionState</code> on payments</p>
+     *
      * @return change
      */
     @NotNull
@@ -58,7 +58,23 @@ public interface ChangeTransactionStateChange extends Change {
     public String getType();
 
     /**
-     *
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @JsonProperty("previousValue")
+    public TransactionState getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public TransactionState getNextValue();
+
+    /**
+     *  <p>Holds information about the updated Transaction.</p>
      * @return transaction
      */
     @NotNull
@@ -67,48 +83,32 @@ public interface ChangeTransactionStateChange extends Change {
     public TransactionChangeValue getTransaction();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public TransactionState getNextValue();
-
-    /**
-     *
-     * @return previousValue
-     */
-    @NotNull
-    @JsonProperty("previousValue")
-    public TransactionState getPreviousValue();
-
-    /**
-     *  <p>Update action for <code>changeTransactionState</code> on payments</p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set transaction
-     * @param transaction value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setTransaction(final TransactionChangeValue transaction);
+    public void setPreviousValue(final TransactionState previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final TransactionState nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Holds information about the updated Transaction.</p>
+     * @param transaction value to be set
      */
 
-    public void setPreviousValue(final TransactionState previousValue);
+    public void setTransaction(final TransactionChangeValue transaction);
 
     /**
      * factory method
@@ -126,9 +126,9 @@ public interface ChangeTransactionStateChange extends Change {
     public static ChangeTransactionStateChange of(final ChangeTransactionStateChange template) {
         ChangeTransactionStateChangeImpl instance = new ChangeTransactionStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTransaction(template.getTransaction());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setTransaction(template.getTransaction());
         return instance;
     }
 
@@ -144,10 +144,10 @@ public interface ChangeTransactionStateChange extends Change {
         }
         ChangeTransactionStateChangeImpl instance = new ChangeTransactionStateChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setTransaction(
             com.commercetools.history.models.change_value.TransactionChangeValue.deepCopy(template.getTransaction()));
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 

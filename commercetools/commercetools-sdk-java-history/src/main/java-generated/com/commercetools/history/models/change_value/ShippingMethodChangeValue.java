@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingMethodChangeValue {
 
     /**
-     *
+     *  <p><code>id</code> of the ShippingMethod.</p>
      * @return id
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface ShippingMethodChangeValue {
     public String getId();
 
     /**
-     *
+     *  <p>Name of the ShippingMethod.</p>
      * @return name
      */
     @NotNull
@@ -48,14 +48,14 @@ public interface ShippingMethodChangeValue {
     public String getName();
 
     /**
-     * set id
+     *  <p><code>id</code> of the ShippingMethod.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set name
+     *  <p>Name of the ShippingMethod.</p>
      * @param name value to be set
      */
 

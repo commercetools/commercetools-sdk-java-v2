@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeValue {
 
     /**
-     *
+     *  <p>Name of the Attribute set.</p>
      * @return name
      */
     @NotNull
@@ -39,7 +39,15 @@ public interface AttributeValue {
     public String getName();
 
     /**
-     *
+     *  <p>Value set for the Attribute determined by the AttributeType:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, <code>value</code> is the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects.</li>
+     *   <li>For Localizable Text Type, <code>value</code> is the LocalizedString object.</li>
+     *   <li>For Money Type Attributes, <code>value</code> is the Money object.</li>
+     *   <li>For Set Type Attributes, <code>value</code> is the entire <code>set</code> object.</li>
+     *   <li>For Nested Type Attributes, <code>value</code> is the list of values of all Attributes of the nested Product.</li>
+     *   <li>For Reference Type Attributes, <code>value</code> is the Reference object.</li>
+     *  </ul>
      * @return value
      */
     @NotNull
@@ -47,14 +55,22 @@ public interface AttributeValue {
     public Object getValue();
 
     /**
-     * set name
+     *  <p>Name of the Attribute set.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     * set value
+     *  <p>Value set for the Attribute determined by the AttributeType:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, <code>value</code> is the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects.</li>
+     *   <li>For Localizable Text Type, <code>value</code> is the LocalizedString object.</li>
+     *   <li>For Money Type Attributes, <code>value</code> is the Money object.</li>
+     *   <li>For Set Type Attributes, <code>value</code> is the entire <code>set</code> object.</li>
+     *   <li>For Nested Type Attributes, <code>value</code> is the list of values of all Attributes of the nested Product.</li>
+     *   <li>For Reference Type Attributes, <code>value</code> is the Reference object.</li>
+     *  </ul>
      * @param value value to be set
      */
 

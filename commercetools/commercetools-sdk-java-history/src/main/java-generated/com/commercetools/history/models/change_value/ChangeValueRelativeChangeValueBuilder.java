@@ -24,7 +24,7 @@ public class ChangeValueRelativeChangeValueBuilder implements Builder<ChangeValu
     private Integer permyriad;
 
     /**
-     * set the value to the permyriad
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, 1000 results in a 10% price reduction.</p>
      * @param permyriad value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class ChangeValueRelativeChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     * value of permyriad}
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, 1000 results in a 10% price reduction.</p>
      * @return permyriad
      */
 

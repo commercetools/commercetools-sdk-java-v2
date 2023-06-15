@@ -24,12 +24,12 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
 
     private String change;
 
-    private String path;
-
     private java.lang.Object nextValue;
 
+    private String path;
+
     /**
-     *  <p>Update action for <code>addProperty</code> on custom objects</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -40,18 +40,7 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
     }
 
     /**
-     *  <p>Value path to the property that was added</p>
-     * @param path value to be set
-     * @return Builder
-     */
-
-    public AddPropertyChangeBuilder path(final String path) {
-        this.path = path;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,7 +51,18 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
     }
 
     /**
-     *  <p>Update action for <code>addProperty</code> on custom objects</p>
+     *  <p>Path to the new property that was added.</p>
+     * @param path value to be set
+     * @return Builder
+     */
+
+    public AddPropertyChangeBuilder path(final String path) {
+        this.path = path;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -71,16 +71,7 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
     }
 
     /**
-     *  <p>Value path to the property that was added</p>
-     * @return path
-     */
-
-    public String getPath() {
-        return this.path;
-    }
-
-    /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -89,14 +80,23 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
     }
 
     /**
+     *  <p>Path to the new property that was added.</p>
+     * @return path
+     */
+
+    public String getPath() {
+        return this.path;
+    }
+
+    /**
      * builds AddPropertyChange with checking for non-null required values
      * @return AddPropertyChange
      */
     public AddPropertyChange build() {
         Objects.requireNonNull(change, AddPropertyChange.class + ": change is missing");
-        Objects.requireNonNull(path, AddPropertyChange.class + ": path is missing");
         Objects.requireNonNull(nextValue, AddPropertyChange.class + ": nextValue is missing");
-        return new AddPropertyChangeImpl(change, path, nextValue);
+        Objects.requireNonNull(path, AddPropertyChange.class + ": path is missing");
+        return new AddPropertyChangeImpl(change, nextValue, path);
     }
 
     /**
@@ -104,7 +104,7 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
      * @return AddPropertyChange
      */
     public AddPropertyChange buildUnchecked() {
-        return new AddPropertyChangeImpl(change, path, nextValue);
+        return new AddPropertyChangeImpl(change, nextValue, path);
     }
 
     /**
@@ -123,8 +123,8 @@ public class AddPropertyChangeBuilder implements Builder<AddPropertyChange> {
     public static AddPropertyChangeBuilder of(final AddPropertyChange template) {
         AddPropertyChangeBuilder builder = new AddPropertyChangeBuilder();
         builder.change = template.getChange();
-        builder.path = template.getPath();
         builder.nextValue = template.getNextValue();
+        builder.path = template.getPath();
         return builder;
     }
 

@@ -81,7 +81,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     * set values to the results
+     *  <p>Records matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     * set value to the results
+     *  <p>Records matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     * add values to the results
+     *  <p>Records matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     * add the value to the results using the builder function
+     *  <p>Records matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     * set the value to the results using the builder function
+     *  <p>Records matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -148,7 +148,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     * add the value to the results using the builder function
+     *  <p>Records matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -159,7 +159,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     * set the value to the results using the builder function
+     *  <p>Records matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -206,7 +206,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     * value of results}
+     *  <p>Records matching the query.</p>
      * @return results
      */
 

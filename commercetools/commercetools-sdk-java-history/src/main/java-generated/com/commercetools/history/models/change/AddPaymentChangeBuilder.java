@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddPaymentChange addPaymentChange = AddPaymentChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
 
     private String change;
 
-    private com.commercetools.history.models.common.PaymentInfo nextValue;
-
     private com.commercetools.history.models.common.PaymentInfo previousValue;
 
+    private com.commercetools.history.models.common.PaymentInfo nextValue;
+
     /**
-     *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,42 +42,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public AddPaymentChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.PaymentInfoBuilder, com.commercetools.history.models.common.PaymentInfoBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.PaymentInfoBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public AddPaymentChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.PaymentInfoBuilder, com.commercetools.history.models.common.PaymentInfo> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.PaymentInfoBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public AddPaymentChangeBuilder nextValue(final com.commercetools.history.models.common.PaymentInfo nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -89,7 +54,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -101,7 +66,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -113,7 +78,42 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
     }
 
     /**
-     *  <p>Update action for <code>addPayment</code> &amp; <code>removePayment</code></p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddPaymentChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.PaymentInfoBuilder, com.commercetools.history.models.common.PaymentInfoBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.PaymentInfoBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddPaymentChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.PaymentInfoBuilder, com.commercetools.history.models.common.PaymentInfo> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.PaymentInfoBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public AddPaymentChangeBuilder nextValue(final com.commercetools.history.models.common.PaymentInfo nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -122,16 +122,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.PaymentInfo getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -140,14 +131,23 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.PaymentInfo getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds AddPaymentChange with checking for non-null required values
      * @return AddPaymentChange
      */
     public AddPaymentChange build() {
         Objects.requireNonNull(change, AddPaymentChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, AddPaymentChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, AddPaymentChange.class + ": previousValue is missing");
-        return new AddPaymentChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, AddPaymentChange.class + ": nextValue is missing");
+        return new AddPaymentChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -155,7 +155,7 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
      * @return AddPaymentChange
      */
     public AddPaymentChange buildUnchecked() {
-        return new AddPaymentChangeImpl(change, nextValue, previousValue);
+        return new AddPaymentChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -174,8 +174,8 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
     public static AddPaymentChangeBuilder of(final AddPaymentChange template) {
         AddPaymentChangeBuilder builder = new AddPaymentChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

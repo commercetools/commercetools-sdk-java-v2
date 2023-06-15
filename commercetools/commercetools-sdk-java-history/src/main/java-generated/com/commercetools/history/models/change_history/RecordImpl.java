@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>A Record captures the differences in a resource between one version and the next. (Recall that the version number is not always incremented by one; see Optimistic Concurrency Control.)</p>
+ *  <p>Captures the differences between the previous and next version of a resource.</p>
+ *  <p>The maximum number of Records that can be stored and their retention period are subject to a limit.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecordImpl implements Record, ModelBase {
@@ -77,6 +78,7 @@ public class RecordImpl implements Record, ModelBase {
 
     /**
      *  <p>Version of the resource after the change.</p>
+     *  <p>For more information on how the version is incremented, see Optimistic Concurrency Control.</p>
      */
 
     public Integer getVersion() {
@@ -92,7 +94,7 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p>Type of the change (creation, update or deletion).</p>
+     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      */
 
     public String getType() {
@@ -100,7 +102,7 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p>Information about the user or the API client who performed the change.</p>
+     *  <p>Information about the user or API Client who performed the change.</p>
      */
 
     public com.commercetools.history.models.change_history.ModifiedBy getModifiedBy() {
@@ -108,7 +110,7 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p>Date and time when the change was made.</p>
+     *  <p>Date and time (UTC) when the change was made.</p>
      */
 
     public String getModifiedAt() {
@@ -132,7 +134,8 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      */
 
     public java.util.List<com.commercetools.history.models.change.Change> getChanges() {
@@ -148,7 +151,7 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.KeyReference> getStores() {
@@ -156,7 +159,8 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     *  <p><code>true</code> if no change was detected.</p>
+     *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      */
 
     public Boolean getWithoutChanges() {

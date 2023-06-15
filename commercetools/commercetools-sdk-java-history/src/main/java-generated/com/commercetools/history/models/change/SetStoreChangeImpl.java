@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetStoreChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Store on Orders.</li>
+ *   <li>Set Store on Shopping Lists.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
@@ -57,7 +61,7 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>setStore</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +69,7 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Reference getPreviousValue() {
@@ -73,7 +77,7 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Reference getNextValue() {

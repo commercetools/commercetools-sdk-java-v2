@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddTextLineItemChange
+ *  <p>Change triggered by the Add TextLineItem update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddTextLineItemChangeImpl implements AddTextLineItemChange, ModelBase {
@@ -61,7 +61,7 @@ public class AddTextLineItemChangeImpl implements AddTextLineItemChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.TextLineItem getNextValue() {

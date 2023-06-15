@@ -30,7 +30,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     private java.util.List<String> nextValue;
 
     /**
-     *  <p>Update action for <code>setLanguages</code> on stores</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     * set values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     * set value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     * add values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     *  <p>Update action for <code>setLanguages</code> on stores</p>
+     * value of change}
      * @return change
      */
 
@@ -122,7 +122,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -131,7 +131,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

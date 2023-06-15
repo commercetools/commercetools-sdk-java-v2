@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Only available if <code>expand</code> is set to true</p>
+ *  <p>Only present if <code>expand</code> is set to <code>true</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomFieldExpandedValue {
 
     /**
-     *  <p>Name of a custom field.</p>
+     *  <p>Name of the Custom Field.</p>
      * @return name
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface CustomFieldExpandedValue {
     public String getName();
 
     /**
-     *
+     *  <p>CustomFieldValue based on the FieldType.</p>
      * @return value
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface CustomFieldExpandedValue {
     public Object getValue();
 
     /**
-     *
+     *  <p>User-defined label of the Custom Field.</p>
      * @return label
      */
     @NotNull
@@ -59,21 +59,21 @@ public interface CustomFieldExpandedValue {
     public LocalizedString getLabel();
 
     /**
-     *  <p>Name of a custom field.</p>
+     *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     * set value
+     *  <p>CustomFieldValue based on the FieldType.</p>
      * @param value value to be set
      */
 
     public void setValue(final Object value);
 
     /**
-     * set label
+     *  <p>User-defined label of the Custom Field.</p>
      * @param label value to be set
      */
 

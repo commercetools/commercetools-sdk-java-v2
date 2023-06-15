@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeQuantityChange changeQuantityChange = ChangeQuantityChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,9 +26,9 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
 
     private String change;
 
-    private com.commercetools.history.models.change_value.InventoryQuantityValue nextValue;
-
     private com.commercetools.history.models.change_value.InventoryQuantityValue previousValue;
+
+    private com.commercetools.history.models.change_value.InventoryQuantityValue nextValue;
 
     /**
      * set the value to the change
@@ -42,45 +42,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     }
 
     /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeQuantityChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.InventoryQuantityValueBuilder, com.commercetools.history.models.change_value.InventoryQuantityValueBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.change_value.InventoryQuantityValueBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeQuantityChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.InventoryQuantityValueBuilder, com.commercetools.history.models.change_value.InventoryQuantityValue> builder) {
-        this.nextValue = builder
-                .apply(com.commercetools.history.models.change_value.InventoryQuantityValueBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeQuantityChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.InventoryQuantityValue nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -94,7 +56,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -107,7 +69,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -115,6 +77,44 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     public ChangeQuantityChangeBuilder previousValue(
             final com.commercetools.history.models.change_value.InventoryQuantityValue previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeQuantityChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.InventoryQuantityValueBuilder, com.commercetools.history.models.change_value.InventoryQuantityValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.InventoryQuantityValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeQuantityChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.InventoryQuantityValueBuilder, com.commercetools.history.models.change_value.InventoryQuantityValue> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.change_value.InventoryQuantityValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeQuantityChangeBuilder nextValue(
+            final com.commercetools.history.models.change_value.InventoryQuantityValue nextValue) {
+        this.nextValue = nextValue;
         return this;
     }
 
@@ -128,16 +128,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.change_value.InventoryQuantityValue getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -146,14 +137,23 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.change_value.InventoryQuantityValue getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds ChangeQuantityChange with checking for non-null required values
      * @return ChangeQuantityChange
      */
     public ChangeQuantityChange build() {
         Objects.requireNonNull(change, ChangeQuantityChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, ChangeQuantityChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeQuantityChange.class + ": previousValue is missing");
-        return new ChangeQuantityChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeQuantityChange.class + ": nextValue is missing");
+        return new ChangeQuantityChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -161,7 +161,7 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
      * @return ChangeQuantityChange
      */
     public ChangeQuantityChange buildUnchecked() {
-        return new ChangeQuantityChangeImpl(change, nextValue, previousValue);
+        return new ChangeQuantityChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -180,8 +180,8 @@ public class ChangeQuantityChangeBuilder implements Builder<ChangeQuantityChange
     public static ChangeQuantityChangeBuilder of(final ChangeQuantityChange template) {
         ChangeQuantityChangeBuilder builder = new ChangeQuantityChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

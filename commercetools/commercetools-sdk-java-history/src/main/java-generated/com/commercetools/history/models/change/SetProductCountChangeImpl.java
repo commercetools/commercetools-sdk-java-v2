@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetProductCountChange
+ *  <p>Change triggered automatically by the Add Product or Remove Product update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetProductCountChangeImpl implements SetProductCountChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetProductCountChangeImpl implements SetProductCountChange, ModelBa
     }
 
     /**
-     *  <p>Update action for <code>setProductCount</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetProductCountChangeImpl implements SetProductCountChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public Integer getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetProductCountChangeImpl implements SetProductCountChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public Integer getNextValue() {

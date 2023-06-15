@@ -14,8 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeQuoteRequestStateChange changeQuoteRequestStateChange = ChangeQuoteRequestStateChange.builder()
  *             .change("{change}")
- *             .nextValue(QuoteRequestState.SUBMITTED)
  *             .previousValue(QuoteRequestState.SUBMITTED)
+ *             .nextValue(QuoteRequestState.SUBMITTED)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,9 +25,9 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
 
     private String change;
 
-    private com.commercetools.history.models.common.QuoteRequestState nextValue;
-
     private com.commercetools.history.models.common.QuoteRequestState previousValue;
+
+    private com.commercetools.history.models.common.QuoteRequestState nextValue;
 
     /**
      * set the value to the change
@@ -41,19 +41,7 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeQuoteRequestStateChangeBuilder nextValue(
-            final com.commercetools.history.models.common.QuoteRequestState nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -61,6 +49,18 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
     public ChangeQuoteRequestStateChangeBuilder previousValue(
             final com.commercetools.history.models.common.QuoteRequestState previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeQuoteRequestStateChangeBuilder nextValue(
+            final com.commercetools.history.models.common.QuoteRequestState nextValue) {
+        this.nextValue = nextValue;
         return this;
     }
 
@@ -74,16 +74,7 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.QuoteRequestState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -92,14 +83,23 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.QuoteRequestState getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds ChangeQuoteRequestStateChange with checking for non-null required values
      * @return ChangeQuoteRequestStateChange
      */
     public ChangeQuoteRequestStateChange build() {
         Objects.requireNonNull(change, ChangeQuoteRequestStateChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, ChangeQuoteRequestStateChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeQuoteRequestStateChange.class + ": previousValue is missing");
-        return new ChangeQuoteRequestStateChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeQuoteRequestStateChange.class + ": nextValue is missing");
+        return new ChangeQuoteRequestStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -107,7 +107,7 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
      * @return ChangeQuoteRequestStateChange
      */
     public ChangeQuoteRequestStateChange buildUnchecked() {
-        return new ChangeQuoteRequestStateChangeImpl(change, nextValue, previousValue);
+        return new ChangeQuoteRequestStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -126,8 +126,8 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
     public static ChangeQuoteRequestStateChangeBuilder of(final ChangeQuoteRequestStateChange template) {
         ChangeQuoteRequestStateChangeBuilder builder = new ChangeQuoteRequestStateChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

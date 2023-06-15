@@ -47,7 +47,7 @@ public interface PaymentLabel extends Label {
     public String getType();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Payment.</p>
      * @return key
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface PaymentLabel extends Label {
     public String getKey();
 
     /**
-     *
+     *  <p>Money value the Payment intends to receive from the Customer.</p>
      * @return amountPlanned
      */
     @NotNull
@@ -64,14 +64,14 @@ public interface PaymentLabel extends Label {
     public Money getAmountPlanned();
 
     /**
-     * set key
+     *  <p>User-defined unique identifier of the Payment.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     * set amountPlanned
+     *  <p>Money value the Payment intends to receive from the Customer.</p>
      * @param amountPlanned value to be set
      */
 

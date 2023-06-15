@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeTransactionStateChange changeTransactionStateChange = ChangeTransactionStateChange.builder()
  *             .change("{change}")
- *             .transaction(transactionBuilder -> transactionBuilder)
- *             .nextValue(TransactionState.INITIAL)
  *             .previousValue(TransactionState.INITIAL)
+ *             .nextValue(TransactionState.INITIAL)
+ *             .transaction(transactionBuilder -> transactionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
 
     private String change;
 
-    private com.commercetools.history.models.change_value.TransactionChangeValue transaction;
+    private com.commercetools.history.models.common.TransactionState previousValue;
 
     private com.commercetools.history.models.common.TransactionState nextValue;
 
-    private com.commercetools.history.models.common.TransactionState previousValue;
+    private com.commercetools.history.models.change_value.TransactionChangeValue transaction;
 
     /**
-     *  <p>Update action for <code>changeTransactionState</code> on payments</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,7 +45,31 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
     }
 
     /**
-     * set the value to the transaction using the builder function
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public ChangeTransactionStateChangeBuilder previousValue(
+            final com.commercetools.history.models.common.TransactionState previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeTransactionStateChangeBuilder nextValue(
+            final com.commercetools.history.models.common.TransactionState nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Holds information about the updated Transaction.</p>
      * @param builder function to build the transaction value
      * @return Builder
      */
@@ -59,7 +83,7 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
     }
 
     /**
-     * set the value to the transaction using the builder function
+     *  <p>Holds information about the updated Transaction.</p>
      * @param builder function to build the transaction value
      * @return Builder
      */
@@ -72,7 +96,7 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
     }
 
     /**
-     * set the value to the transaction
+     *  <p>Holds information about the updated Transaction.</p>
      * @param transaction value to be set
      * @return Builder
      */
@@ -84,31 +108,7 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeTransactionStateChangeBuilder nextValue(
-            final com.commercetools.history.models.common.TransactionState nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public ChangeTransactionStateChangeBuilder previousValue(
-            final com.commercetools.history.models.common.TransactionState previousValue) {
-        this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     *  <p>Update action for <code>changeTransactionState</code> on payments</p>
+     * value of change}
      * @return change
      */
 
@@ -117,25 +117,7 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
     }
 
     /**
-     * value of transaction}
-     * @return transaction
-     */
-
-    public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
-        return this.transaction;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.TransactionState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -144,15 +126,33 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.TransactionState getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Holds information about the updated Transaction.</p>
+     * @return transaction
+     */
+
+    public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
+        return this.transaction;
+    }
+
+    /**
      * builds ChangeTransactionStateChange with checking for non-null required values
      * @return ChangeTransactionStateChange
      */
     public ChangeTransactionStateChange build() {
         Objects.requireNonNull(change, ChangeTransactionStateChange.class + ": change is missing");
-        Objects.requireNonNull(transaction, ChangeTransactionStateChange.class + ": transaction is missing");
-        Objects.requireNonNull(nextValue, ChangeTransactionStateChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeTransactionStateChange.class + ": previousValue is missing");
-        return new ChangeTransactionStateChangeImpl(change, transaction, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeTransactionStateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(transaction, ChangeTransactionStateChange.class + ": transaction is missing");
+        return new ChangeTransactionStateChangeImpl(change, previousValue, nextValue, transaction);
     }
 
     /**
@@ -160,7 +160,7 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
      * @return ChangeTransactionStateChange
      */
     public ChangeTransactionStateChange buildUnchecked() {
-        return new ChangeTransactionStateChangeImpl(change, transaction, nextValue, previousValue);
+        return new ChangeTransactionStateChangeImpl(change, previousValue, nextValue, transaction);
     }
 
     /**
@@ -179,9 +179,9 @@ public class ChangeTransactionStateChangeBuilder implements Builder<ChangeTransa
     public static ChangeTransactionStateChangeBuilder of(final ChangeTransactionStateChange template) {
         ChangeTransactionStateChangeBuilder builder = new ChangeTransactionStateChangeBuilder();
         builder.change = template.getChange();
-        builder.transaction = template.getTransaction();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.transaction = template.getTransaction();
         return builder;
     }
 

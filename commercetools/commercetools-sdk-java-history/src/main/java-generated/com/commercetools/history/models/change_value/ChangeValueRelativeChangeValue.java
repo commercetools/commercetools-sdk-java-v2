@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Shape of the value for cart discounts relative value.</p>
+ * ChangeValueRelativeChangeValue
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,7 +44,7 @@ public interface ChangeValueRelativeChangeValue extends ChangeValueChangeValue {
     public String getType();
 
     /**
-     *
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, 1000 results in a 10% price reduction.</p>
      * @return permyriad
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface ChangeValueRelativeChangeValue extends ChangeValueChangeValue {
     public Integer getPermyriad();
 
     /**
-     * set permyriad
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, 1000 results in a 10% price reduction.</p>
      * @param permyriad value to be set
      */
 

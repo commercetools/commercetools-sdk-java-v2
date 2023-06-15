@@ -27,18 +27,18 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
 
     private String change;
 
+    private java.lang.Object previousValue;
+
+    private java.lang.Object nextValue;
+
     private String name;
 
     private String customTypeId;
 
     private com.commercetools.history.models.change_value.TextLineItemValue textLineItem;
 
-    private java.lang.Object nextValue;
-
-    private java.lang.Object previousValue;
-
     /**
-     *  <p>Update action for <code>setTextLineItemCustomField</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -49,7 +49,29 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     * set the value to the name
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public SetTextLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetTextLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -60,7 +82,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     * set the value to the customTypeId
+     *  <p><code>id</code> of the referenced Type.</p>
      * @param customTypeId value to be set
      * @return Builder
      */
@@ -71,7 +93,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     * set the value to the textLineItem using the builder function
+     *  <p>Holds information about the updated Text Line Item.</p>
      * @param builder function to build the textLineItem value
      * @return Builder
      */
@@ -84,7 +106,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     * set the value to the textLineItem using the builder function
+     *  <p>Holds information about the updated Text Line Item.</p>
      * @param builder function to build the textLineItem value
      * @return Builder
      */
@@ -96,7 +118,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     * set the value to the textLineItem
+     *  <p>Holds information about the updated Text Line Item.</p>
      * @param textLineItem value to be set
      * @return Builder
      */
@@ -108,29 +130,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetTextLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public SetTextLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
-        this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     *  <p>Update action for <code>setTextLineItemCustomField</code></p>
+     * value of change}
      * @return change
      */
 
@@ -139,43 +139,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     * value of name}
-     * @return name
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * value of customTypeId}
-     * @return customTypeId
-     */
-
-    public String getCustomTypeId() {
-        return this.customTypeId;
-    }
-
-    /**
-     * value of textLineItem}
-     * @return textLineItem
-     */
-
-    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
-        return this.textLineItem;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.lang.Object getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -184,18 +148,54 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.lang.Object getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @return name
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
+     * @return customTypeId
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
+    }
+
+    /**
+     *  <p>Holds information about the updated Text Line Item.</p>
+     * @return textLineItem
+     */
+
+    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
+        return this.textLineItem;
+    }
+
+    /**
      * builds SetTextLineItemCustomFieldChange with checking for non-null required values
      * @return SetTextLineItemCustomFieldChange
      */
     public SetTextLineItemCustomFieldChange build() {
         Objects.requireNonNull(change, SetTextLineItemCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetTextLineItemCustomFieldChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetTextLineItemCustomFieldChange.class + ": nextValue is missing");
         Objects.requireNonNull(name, SetTextLineItemCustomFieldChange.class + ": name is missing");
         Objects.requireNonNull(customTypeId, SetTextLineItemCustomFieldChange.class + ": customTypeId is missing");
         Objects.requireNonNull(textLineItem, SetTextLineItemCustomFieldChange.class + ": textLineItem is missing");
-        Objects.requireNonNull(nextValue, SetTextLineItemCustomFieldChange.class + ": nextValue is missing");
-        Objects.requireNonNull(previousValue, SetTextLineItemCustomFieldChange.class + ": previousValue is missing");
-        return new SetTextLineItemCustomFieldChangeImpl(change, name, customTypeId, textLineItem, nextValue,
-            previousValue);
+        return new SetTextLineItemCustomFieldChangeImpl(change, previousValue, nextValue, name, customTypeId,
+            textLineItem);
     }
 
     /**
@@ -203,8 +203,8 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
      * @return SetTextLineItemCustomFieldChange
      */
     public SetTextLineItemCustomFieldChange buildUnchecked() {
-        return new SetTextLineItemCustomFieldChangeImpl(change, name, customTypeId, textLineItem, nextValue,
-            previousValue);
+        return new SetTextLineItemCustomFieldChangeImpl(change, previousValue, nextValue, name, customTypeId,
+            textLineItem);
     }
 
     /**
@@ -223,11 +223,11 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     public static SetTextLineItemCustomFieldChangeBuilder of(final SetTextLineItemCustomFieldChange template) {
         SetTextLineItemCustomFieldChangeBuilder builder = new SetTextLineItemCustomFieldChangeBuilder();
         builder.change = template.getChange();
+        builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.name = template.getName();
         builder.customTypeId = template.getCustomTypeId();
         builder.textLineItem = template.getTextLineItem();
-        builder.nextValue = template.getNextValue();
-        builder.previousValue = template.getPreviousValue();
         return builder;
     }
 

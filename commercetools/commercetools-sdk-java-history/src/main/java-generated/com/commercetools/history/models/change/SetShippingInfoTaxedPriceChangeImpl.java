@@ -24,20 +24,20 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
 
     private String change;
 
-    private com.commercetools.history.models.common.TaxedPrice nextValue;
-
     private com.commercetools.history.models.common.TaxedPrice previousValue;
+
+    private com.commercetools.history.models.common.TaxedPrice nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetShippingInfoTaxedPriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedPrice nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedPrice previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedPrice previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedPrice nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = SET_SHIPPING_INFO_TAXED_PRICE_CHANGE;
     }
 
@@ -57,7 +57,7 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
     }
 
     /**
-     *  <p>Update action for <code>setShippingInfoTaxedPrice</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +65,31 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.TaxedPrice getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.TaxedPrice getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.TaxedPrice getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.TaxedPrice nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.TaxedPrice previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.TaxedPrice nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +104,8 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +113,8 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

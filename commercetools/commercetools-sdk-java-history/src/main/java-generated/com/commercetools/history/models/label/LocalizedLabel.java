@@ -46,7 +46,7 @@ public interface LocalizedLabel extends Label {
     public String getType();
 
     /**
-     *
+     *  <p>Changed value.</p>
      * @return value
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface LocalizedLabel extends Label {
     public LocalizedString getValue();
 
     /**
-     * set value
+     *  <p>Changed value.</p>
      * @param value value to be set
      */
 

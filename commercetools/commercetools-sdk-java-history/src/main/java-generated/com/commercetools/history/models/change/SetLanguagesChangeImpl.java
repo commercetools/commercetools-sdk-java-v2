@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetLanguagesChange
+ *  <p>Change triggered by Set Languages update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>setLanguages</code> on stores</p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<String> getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<String> getNextValue() {

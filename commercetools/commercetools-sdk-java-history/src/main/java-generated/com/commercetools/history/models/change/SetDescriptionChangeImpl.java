@@ -15,7 +15,19 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetDescriptionChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Description on Cart Discounts.</li>
+ *   <li>Set Description on Categories.</li>
+ *   <li>Set Description on Discount Codes.</li>
+ *   <li>Set Description on Products.</li>
+ *   <li>Set Description on Product Discounts.</li>
+ *   <li>Set Description on Shopping Lists.</li>
+ *   <li>Set Description on States.</li>
+ *   <li>Set Description on Tax Categories.</li>
+ *   <li>Set Description on Types.</li>
+ *   <li>Set Description on Zones.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase {
@@ -57,7 +69,7 @@ public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase
     }
 
     /**
-     *  <p>Shape of the action for <code>setDescription</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +77,7 @@ public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +85,7 @@ public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

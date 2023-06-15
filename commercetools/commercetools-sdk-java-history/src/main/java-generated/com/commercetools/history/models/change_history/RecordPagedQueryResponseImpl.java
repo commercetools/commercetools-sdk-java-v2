@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Response to a query request for Record.</p>
+ *  <p>PagedQueryResult with <code>results</code> containing an array of Record.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, ModelBase {
@@ -83,7 +83,7 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
     }
 
     /**
-     *
+     *  <p>Records matching the query.</p>
      */
 
     public java.util.List<com.commercetools.history.models.change_history.Record> getResults() {

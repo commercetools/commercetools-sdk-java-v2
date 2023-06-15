@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeInputHintChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change AttributeDefinition InputHint on Product Types.</li>
+ *   <li>Change InputHint on Types.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBase {
@@ -24,28 +28,28 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
 
     private String change;
 
-    private String fieldName;
-
-    private String attributeName;
+    private com.commercetools.history.models.common.TextInputHint previousValue;
 
     private com.commercetools.history.models.common.TextInputHint nextValue;
 
-    private com.commercetools.history.models.common.TextInputHint previousValue;
+    private String fieldName;
+
+    private String attributeName;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeInputHintChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("fieldName") final String fieldName,
-            @JsonProperty("attributeName") final String attributeName,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.TextInputHint previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TextInputHint nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.TextInputHint previousValue) {
+            @JsonProperty("fieldName") final String fieldName,
+            @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.fieldName = fieldName;
         this.attributeName = attributeName;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = CHANGE_INPUT_HINT_CHANGE;
     }
 
@@ -65,7 +69,7 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
     }
 
     /**
-     *  <p>Update action for <code>changeInputHint</code> on product types and types</p>
+     *
      */
 
     public String getChange() {
@@ -73,23 +77,15 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
     }
 
     /**
-     *  <p>The name of the field definition updated.</p>
+     *  <p>Value before the change.</p>
      */
 
-    public String getFieldName() {
-        return this.fieldName;
+    public com.commercetools.history.models.common.TextInputHint getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.TextInputHint getNextValue() {
@@ -97,15 +93,31 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
      */
 
-    public com.commercetools.history.models.common.TextInputHint getPreviousValue() {
-        return this.previousValue;
+    public String getFieldName() {
+        return this.fieldName;
+    }
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final com.commercetools.history.models.common.TextInputHint previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.TextInputHint nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setFieldName(final String fieldName) {
@@ -114,14 +126,6 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
 
     public void setAttributeName(final String attributeName) {
         this.attributeName = attributeName;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.common.TextInputHint nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final com.commercetools.history.models.common.TextInputHint previousValue) {
-        this.previousValue = previousValue;
     }
 
     @Override
@@ -136,10 +140,10 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
                 .append(attributeName, that.attributeName)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -147,10 +151,10 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(fieldName)
                 .append(attributeName)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

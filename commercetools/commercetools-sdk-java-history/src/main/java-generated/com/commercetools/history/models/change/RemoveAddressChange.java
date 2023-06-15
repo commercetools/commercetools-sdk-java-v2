@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * RemoveAddressChange
+ *  <p>Change triggered by the Remove Address update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface RemoveAddressChange extends Change {
     String REMOVE_ADDRESS_CHANGE = "RemoveAddressChange";
 
     /**
-     *  <p>Update action for <code>removeAddress</code> action.</p>
+     *
      * @return change
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface RemoveAddressChange extends Change {
     public String getType();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -64,14 +64,14 @@ public interface RemoveAddressChange extends Change {
     public Address getPreviousValue();
 
     /**
-     *  <p>Update action for <code>removeAddress</code> action.</p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 

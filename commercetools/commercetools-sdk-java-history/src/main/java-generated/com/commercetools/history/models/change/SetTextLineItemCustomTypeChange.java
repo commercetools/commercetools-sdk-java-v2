@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetTextLineItemCustomTypeChange
+ *  <p>Change triggered by the Set TextLineItem Custom Type update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,9 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetTextLineItemCustomTypeChange setTextLineItemCustomTypeChange = SetTextLineItemCustomTypeChange.builder()
  *             .change("{change}")
- *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setTextLineItemCustomType</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,25 +58,7 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return textLineItem
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("textLineItem")
-    public TextLineItemValue getTextLineItem();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public CustomFields getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -85,32 +67,50 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     public CustomFields getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setTextLineItemCustomType</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public CustomFields getNextValue();
+
+    /**
+     *  <p>Holds information about the updated Text Line Item.</p>
+     * @return textLineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("textLineItem")
+    public TextLineItemValue getTextLineItem();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set textLineItem
-     * @param textLineItem value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setTextLineItem(final TextLineItemValue textLineItem);
+    public void setPreviousValue(final CustomFields previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final CustomFields nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Holds information about the updated Text Line Item.</p>
+     * @param textLineItem value to be set
      */
 
-    public void setPreviousValue(final CustomFields previousValue);
+    public void setTextLineItem(final TextLineItemValue textLineItem);
 
     /**
      * factory method
@@ -128,9 +128,9 @@ public interface SetTextLineItemCustomTypeChange extends Change {
     public static SetTextLineItemCustomTypeChange of(final SetTextLineItemCustomTypeChange template) {
         SetTextLineItemCustomTypeChangeImpl instance = new SetTextLineItemCustomTypeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTextLineItem(template.getTextLineItem());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setTextLineItem(template.getTextLineItem());
         return instance;
     }
 
@@ -146,11 +146,11 @@ public interface SetTextLineItemCustomTypeChange extends Change {
         }
         SetTextLineItemCustomTypeChangeImpl instance = new SetTextLineItemCustomTypeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTextLineItem(
-            com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
-        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
+        instance.setTextLineItem(
+            com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
         return instance;
     }
 

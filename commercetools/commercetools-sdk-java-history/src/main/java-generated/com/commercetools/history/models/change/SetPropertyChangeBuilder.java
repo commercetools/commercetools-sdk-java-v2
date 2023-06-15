@@ -24,14 +24,14 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
 
     private String change;
 
-    private String path;
+    private java.lang.Object previousValue;
 
     private java.lang.Object nextValue;
 
-    private java.lang.Object previousValue;
+    private String path;
 
     /**
-     *  <p>Update action for <code>setProperty</code> on custom objects</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,29 +42,7 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     }
 
     /**
-     *  <p>Value path to the property that was changed</p>
-     * @param path value to be set
-     * @return Builder
-     */
-
-    public SetPropertyChangeBuilder path(final String path) {
-        this.path = path;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetPropertyChangeBuilder nextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -75,7 +53,29 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     }
 
     /**
-     *  <p>Update action for <code>setProperty</code> on custom objects</p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetPropertyChangeBuilder nextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Path to the property that was updated.</p>
+     * @param path value to be set
+     * @return Builder
+     */
+
+    public SetPropertyChangeBuilder path(final String path) {
+        this.path = path;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -84,25 +84,7 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     }
 
     /**
-     *  <p>Value path to the property that was changed</p>
-     * @return path
-     */
-
-    public String getPath() {
-        return this.path;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.lang.Object getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -111,15 +93,33 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.lang.Object getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Path to the property that was updated.</p>
+     * @return path
+     */
+
+    public String getPath() {
+        return this.path;
+    }
+
+    /**
      * builds SetPropertyChange with checking for non-null required values
      * @return SetPropertyChange
      */
     public SetPropertyChange build() {
         Objects.requireNonNull(change, SetPropertyChange.class + ": change is missing");
-        Objects.requireNonNull(path, SetPropertyChange.class + ": path is missing");
-        Objects.requireNonNull(nextValue, SetPropertyChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetPropertyChange.class + ": previousValue is missing");
-        return new SetPropertyChangeImpl(change, path, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetPropertyChange.class + ": nextValue is missing");
+        Objects.requireNonNull(path, SetPropertyChange.class + ": path is missing");
+        return new SetPropertyChangeImpl(change, previousValue, nextValue, path);
     }
 
     /**
@@ -127,7 +127,7 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
      * @return SetPropertyChange
      */
     public SetPropertyChange buildUnchecked() {
-        return new SetPropertyChangeImpl(change, path, nextValue, previousValue);
+        return new SetPropertyChangeImpl(change, previousValue, nextValue, path);
     }
 
     /**
@@ -146,9 +146,9 @@ public class SetPropertyChangeBuilder implements Builder<SetPropertyChange> {
     public static SetPropertyChangeBuilder of(final SetPropertyChange template) {
         SetPropertyChangeBuilder builder = new SetPropertyChangeBuilder();
         builder.change = template.getChange();
-        builder.path = template.getPath();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.path = template.getPath();
         return builder;
     }
 

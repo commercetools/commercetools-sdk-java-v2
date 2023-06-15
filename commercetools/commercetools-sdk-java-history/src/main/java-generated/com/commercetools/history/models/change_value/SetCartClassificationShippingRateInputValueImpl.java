@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Shape of the cart classification shipping input rate value.</p>
+ * SetCartClassificationShippingRateInputValue
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCartClassificationShippingRateInputValueImpl
@@ -54,7 +54,7 @@ public class SetCartClassificationShippingRateInputValueImpl
     }
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier.</p>
      */
 
     public String getKey() {
@@ -62,7 +62,7 @@ public class SetCartClassificationShippingRateInputValueImpl
     }
 
     /**
-     *
+     *  <p>Descriptive localized label of the value.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {

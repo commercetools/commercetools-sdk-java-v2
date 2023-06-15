@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetCountriesChange
+ *  <p>Change triggered by the Set Countries update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface SetCountriesChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setCountries</code>.</p>
+     *
      * @return change
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface SetCountriesChange extends Change {
     public String getChange();
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface SetCountriesChange extends Change {
     public List<StoreCountry> getPreviousValue();
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -75,14 +75,14 @@ public interface SetCountriesChange extends Change {
     public List<StoreCountry> getNextValue();
 
     /**
-     *  <p>Update action for <code>setCountries</code>.</p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -90,14 +90,14 @@ public interface SetCountriesChange extends Change {
     public void setPreviousValue(final StoreCountry... previousValue);
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<StoreCountry> previousValue);
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
@@ -105,7 +105,7 @@ public interface SetCountriesChange extends Change {
     public void setNextValue(final StoreCountry... nextValue);
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 

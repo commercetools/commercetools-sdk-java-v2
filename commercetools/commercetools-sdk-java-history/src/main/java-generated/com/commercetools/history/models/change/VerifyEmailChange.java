@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * VerifyEmailChange
+ *  <p>Change triggered by a Customer email verification.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

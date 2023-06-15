@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Shape of the value for cart discounts absolute value.</p>
+ * ChangeValueAbsoluteChangeValue
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeValueAbsoluteChangeValueImpl implements ChangeValueAbsoluteChangeValue, ModelBase {
@@ -50,7 +50,7 @@ public class ChangeValueAbsoluteChangeValueImpl implements ChangeValueAbsoluteCh
     }
 
     /**
-     *
+     *  <p>Money values in different currencies.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Money> getMoney() {

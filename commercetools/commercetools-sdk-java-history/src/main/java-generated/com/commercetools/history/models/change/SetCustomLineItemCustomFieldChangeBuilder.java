@@ -27,18 +27,18 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
 
     private String change;
 
+    private java.lang.Object previousValue;
+
+    private java.lang.Object nextValue;
+
     private String name;
 
     private com.commercetools.history.models.common.LocalizedString customLineItem;
 
     private String customLineItemId;
 
-    private java.lang.Object nextValue;
-
-    private java.lang.Object previousValue;
-
     /**
-     *  <p>Update action for <code>setCustomLineItemCustomField</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -49,7 +49,29 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     * set the value to the name
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public SetCustomLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetCustomLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -60,7 +82,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     * set the value to the customLineItem using the builder function
+     *  <p>Name of the updated CustomLineItem.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -73,7 +95,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     * set the value to the customLineItem using the builder function
+     *  <p>Name of the updated CustomLineItem.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -85,7 +107,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     * set the value to the customLineItem
+     *  <p>Name of the updated CustomLineItem.</p>
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -97,7 +119,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -108,29 +130,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetCustomLineItemCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public SetCustomLineItemCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
-        this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     *  <p>Update action for <code>setCustomLineItemCustomField</code></p>
+     * value of change}
      * @return change
      */
 
@@ -139,43 +139,7 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
-     * value of name}
-     * @return name
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * value of customLineItem}
-     * @return customLineItem
-     */
-
-    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
-        return this.customLineItem;
-    }
-
-    /**
-     * value of customLineItemId}
-     * @return customLineItemId
-     */
-
-    public String getCustomLineItemId() {
-        return this.customLineItemId;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.lang.Object getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -184,20 +148,56 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.lang.Object getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @return name
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     *  <p>Name of the updated CustomLineItem.</p>
+     * @return customLineItem
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
+        return this.customLineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @return customLineItemId
+     */
+
+    public String getCustomLineItemId() {
+        return this.customLineItemId;
+    }
+
+    /**
      * builds SetCustomLineItemCustomFieldChange with checking for non-null required values
      * @return SetCustomLineItemCustomFieldChange
      */
     public SetCustomLineItemCustomFieldChange build() {
         Objects.requireNonNull(change, SetCustomLineItemCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetCustomLineItemCustomFieldChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetCustomLineItemCustomFieldChange.class + ": nextValue is missing");
         Objects.requireNonNull(name, SetCustomLineItemCustomFieldChange.class + ": name is missing");
         Objects.requireNonNull(customLineItem,
             SetCustomLineItemCustomFieldChange.class + ": customLineItem is missing");
         Objects.requireNonNull(customLineItemId,
             SetCustomLineItemCustomFieldChange.class + ": customLineItemId is missing");
-        Objects.requireNonNull(nextValue, SetCustomLineItemCustomFieldChange.class + ": nextValue is missing");
-        Objects.requireNonNull(previousValue, SetCustomLineItemCustomFieldChange.class + ": previousValue is missing");
-        return new SetCustomLineItemCustomFieldChangeImpl(change, name, customLineItem, customLineItemId, nextValue,
-            previousValue);
+        return new SetCustomLineItemCustomFieldChangeImpl(change, previousValue, nextValue, name, customLineItem,
+            customLineItemId);
     }
 
     /**
@@ -205,8 +205,8 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
      * @return SetCustomLineItemCustomFieldChange
      */
     public SetCustomLineItemCustomFieldChange buildUnchecked() {
-        return new SetCustomLineItemCustomFieldChangeImpl(change, name, customLineItem, customLineItemId, nextValue,
-            previousValue);
+        return new SetCustomLineItemCustomFieldChangeImpl(change, previousValue, nextValue, name, customLineItem,
+            customLineItemId);
     }
 
     /**
@@ -225,11 +225,11 @@ public class SetCustomLineItemCustomFieldChangeBuilder implements Builder<SetCus
     public static SetCustomLineItemCustomFieldChangeBuilder of(final SetCustomLineItemCustomFieldChange template) {
         SetCustomLineItemCustomFieldChangeBuilder builder = new SetCustomLineItemCustomFieldChangeBuilder();
         builder.change = template.getChange();
+        builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.name = template.getName();
         builder.customLineItem = template.getCustomLineItem();
         builder.customLineItemId = template.getCustomLineItemId();
-        builder.nextValue = template.getNextValue();
-        builder.previousValue = template.getPreviousValue();
         return builder;
     }
 

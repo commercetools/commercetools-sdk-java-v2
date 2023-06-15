@@ -24,7 +24,7 @@ public class ChangeTargetCustomLineItemsChangeValueBuilder implements Builder<Ch
     private String predicate;
 
     /**
-     * set the value to the predicate
+     *  <p>Valid CustomLineItem target predicate.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class ChangeTargetCustomLineItemsChangeValueBuilder implements Builder<Ch
     }
 
     /**
-     * value of predicate}
+     *  <p>Valid CustomLineItem target predicate.</p>
      * @return predicate
      */
 

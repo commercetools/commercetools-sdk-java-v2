@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeReviewRatingStatisticsChange changeReviewRatingStatisticsChange = ChangeReviewRatingStatisticsChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -40,7 +40,7 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     String CHANGE_REVIEW_RATING_STATISTICS_CHANGE = "ChangeReviewRatingStatisticsChange";
 
     /**
-     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +56,7 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     public String getType();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public ReviewRatingStatistics getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +65,34 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     public ReviewRatingStatistics getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changeReviewRatingStatistics</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public ReviewRatingStatistics getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final ReviewRatingStatistics nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final ReviewRatingStatistics previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final ReviewRatingStatistics nextValue);
 
     /**
      * factory method
@@ -110,8 +110,8 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
     public static ChangeReviewRatingStatisticsChange of(final ChangeReviewRatingStatisticsChange template) {
         ChangeReviewRatingStatisticsChangeImpl instance = new ChangeReviewRatingStatisticsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -128,10 +128,10 @@ public interface ChangeReviewRatingStatisticsChange extends Change {
         }
         ChangeReviewRatingStatisticsChangeImpl instance = new ChangeReviewRatingStatisticsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.common.ReviewRatingStatistics.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.ReviewRatingStatistics.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.ReviewRatingStatistics.deepCopy(template.getNextValue()));
         return instance;
     }
 

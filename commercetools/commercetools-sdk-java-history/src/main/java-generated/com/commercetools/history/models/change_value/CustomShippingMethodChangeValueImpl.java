@@ -37,7 +37,7 @@ public class CustomShippingMethodChangeValueImpl implements CustomShippingMethod
     }
 
     /**
-     *
+     *  <p>Name of the Custom ShippingMethod.</p>
      */
 
     public String getName() {

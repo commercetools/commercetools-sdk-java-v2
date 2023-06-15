@@ -41,7 +41,7 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     }
 
     /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     }
 
     /**
-     * set values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     }
 
     /**
-     * set value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     }
 
     /**
-     * add values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -137,7 +137,7 @@ public class SetChannelRolesChangeBuilder implements Builder<SetChannelRolesChan
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

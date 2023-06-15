@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface EnumValue {
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier.</p>
      * @return key
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface EnumValue {
     public String getKey();
 
     /**
-     *
+     *  <p>Descriptive label of the value.</p>
      * @return label
      */
     @NotNull
@@ -48,14 +48,14 @@ public interface EnumValue {
     public String getLabel();
 
     /**
-     * set key
+     *  <p>Key of the value used as a programmatic identifier.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     * set label
+     *  <p>Descriptive label of the value.</p>
      * @param label value to be set
      */
 

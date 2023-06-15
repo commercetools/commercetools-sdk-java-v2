@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * RemoveProductChange
+ *  <p>Change triggered by the Remove Product update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface RemoveProductChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for when a product is unassigned from a product selection</p>
+     *
      * @return change
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface RemoveProductChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -64,14 +64,14 @@ public interface RemoveProductChange extends Change {
     public Reference getPreviousValue();
 
     /**
-     *  <p>Update action for when a product is unassigned from a product selection</p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 

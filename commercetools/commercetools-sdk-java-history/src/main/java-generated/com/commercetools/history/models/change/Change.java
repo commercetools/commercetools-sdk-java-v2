@@ -14,7 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * Change
+ *  <p>Difference between the previous and next version of a resource represented by <code>previousValue</code> (omitted, for example, on creations) and <code>nextValue</code> of the associated change. A Change can also contain extra fields that provide further information.</p>
+ *  <p>They are not identical to the actual update actions sent.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -22,8 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     Change change = Change.addAddressChangeBuilder()
  *             change("{change}")
- *             nextValue(nextValueBuilder -> nextValueBuilder)
  *             previousValue(previousValueBuilder -> previousValueBuilder)
+ *             nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -302,7 +303,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface Change {
 
     /**
-     *
+     *  <p>Unique discriminator value to reliably deserialize the data type.</p>
      * @return type
      */
     @NotNull
@@ -310,7 +311,8 @@ public interface Change {
     public String getType();
 
     /**
-     *
+     *  <p>Type of change on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
+     *  <p>Records can be filtered by this value using the <code>changes</code> query parameter.</p>
      * @return change
      */
     @NotNull
@@ -318,7 +320,8 @@ public interface Change {
     public String getChange();
 
     /**
-     * set change
+     *  <p>Type of change on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
+     *  <p>Records can be filtered by this value using the <code>changes</code> query parameter.</p>
      * @param change value to be set
      */
 

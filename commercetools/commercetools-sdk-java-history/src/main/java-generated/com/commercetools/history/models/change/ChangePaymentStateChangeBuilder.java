@@ -14,8 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangePaymentStateChange changePaymentStateChange = ChangePaymentStateChange.builder()
  *             .change("{change}")
- *             .nextValue(PaymentState.BALANCE_DUE)
  *             .previousValue(PaymentState.BALANCE_DUE)
+ *             .nextValue(PaymentState.BALANCE_DUE)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,12 +25,12 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
 
     private String change;
 
-    private com.commercetools.history.models.common.PaymentState nextValue;
-
     private com.commercetools.history.models.common.PaymentState previousValue;
 
+    private com.commercetools.history.models.common.PaymentState nextValue;
+
     /**
-     *  <p>Update action for <code>changePaymentState</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,19 +41,7 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangePaymentStateChangeBuilder nextValue(
-            final com.commercetools.history.models.common.PaymentState nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -65,7 +53,19 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
     }
 
     /**
-     *  <p>Update action for <code>changePaymentState</code></p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangePaymentStateChangeBuilder nextValue(
+            final com.commercetools.history.models.common.PaymentState nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -74,16 +74,7 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.PaymentState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -92,14 +83,23 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.PaymentState getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds ChangePaymentStateChange with checking for non-null required values
      * @return ChangePaymentStateChange
      */
     public ChangePaymentStateChange build() {
         Objects.requireNonNull(change, ChangePaymentStateChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, ChangePaymentStateChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangePaymentStateChange.class + ": previousValue is missing");
-        return new ChangePaymentStateChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangePaymentStateChange.class + ": nextValue is missing");
+        return new ChangePaymentStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -107,7 +107,7 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
      * @return ChangePaymentStateChange
      */
     public ChangePaymentStateChange buildUnchecked() {
-        return new ChangePaymentStateChangeImpl(change, nextValue, previousValue);
+        return new ChangePaymentStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -126,8 +126,8 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
     public static ChangePaymentStateChangeBuilder of(final ChangePaymentStateChange template) {
         ChangePaymentStateChangeBuilder builder = new ChangePaymentStateChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

@@ -28,7 +28,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     private com.commercetools.history.models.common.Reference customer;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the Quote Request.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     }
 
     /**
-     * set the value to the customer using the builder function
+     *  <p>The Buyer who raised the Quote Request.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     }
 
     /**
-     * set the value to the customer using the builder function
+     *  <p>The Buyer who raised the Quote Request.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     }
 
     /**
-     * set the value to the customer
+     *  <p>The Buyer who raised the Quote Request.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the Quote Request.</p>
      * @return key
      */
 
@@ -83,7 +83,7 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     }
 
     /**
-     * value of customer}
+     *  <p>The Buyer who raised the Quote Request.</p>
      * @return customer
      */
 

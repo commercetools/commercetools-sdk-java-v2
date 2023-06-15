@@ -45,7 +45,7 @@ public class TransactionChangeValueImpl implements TransactionChangeValue, Model
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Transaction.</p>
      */
 
     public String getId() {
@@ -53,7 +53,7 @@ public class TransactionChangeValueImpl implements TransactionChangeValue, Model
     }
 
     /**
-     *
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP).</p>
      */
 
     public String getInteractionId() {
@@ -61,7 +61,7 @@ public class TransactionChangeValueImpl implements TransactionChangeValue, Model
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      */
 
     public String getTimestamp() {

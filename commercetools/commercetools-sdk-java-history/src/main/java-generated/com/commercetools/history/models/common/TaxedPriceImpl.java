@@ -41,7 +41,7 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     *
+     *  <p>Total net price of the Order.</p>
      */
 
     public com.commercetools.history.models.common.Money getTotalNet() {
@@ -49,7 +49,7 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
     }
 
     /**
-     *
+     *  <p>Total gross price of the Order.</p>
      */
 
     public com.commercetools.history.models.common.Money getTotalGross() {

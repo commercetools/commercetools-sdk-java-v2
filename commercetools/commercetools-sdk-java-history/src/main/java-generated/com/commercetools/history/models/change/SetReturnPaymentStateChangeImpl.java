@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetReturnPaymentStateChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set PaymentShipmentState on Orders.</li>
+ *   <li>Set PaymentShipmentState on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateChange, ModelBase {
@@ -24,20 +28,20 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
 
     private String change;
 
-    private com.commercetools.history.models.common.ReturnPaymentState nextValue;
-
     private com.commercetools.history.models.common.ReturnPaymentState previousValue;
+
+    private com.commercetools.history.models.common.ReturnPaymentState nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetReturnPaymentStateChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.ReturnPaymentState nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.ReturnPaymentState previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.ReturnPaymentState previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.ReturnPaymentState nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = SET_RETURN_PAYMENT_STATE_CHANGE;
     }
 
@@ -57,7 +61,7 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
     }
 
     /**
-     *  <p>Update action for <code>setReturnPaymentState</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +69,31 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.ReturnPaymentState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.ReturnPaymentState getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.ReturnPaymentState getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.ReturnPaymentState nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.ReturnPaymentState previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.ReturnPaymentState nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +108,8 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +117,8 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

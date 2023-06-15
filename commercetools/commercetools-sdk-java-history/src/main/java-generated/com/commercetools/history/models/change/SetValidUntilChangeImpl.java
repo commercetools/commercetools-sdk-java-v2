@@ -15,7 +15,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetValidUntilChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Valid Until on Cart Discounts.</li>
+ *   <li>Set Valid Until on Discount Codes.</li>
+ *   <li>Set Valid Until on Product Discounts.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetValidUntilChangeImpl implements SetValidUntilChange, ModelBase {
@@ -57,7 +62,7 @@ public class SetValidUntilChangeImpl implements SetValidUntilChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>setValidUntil</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +70,7 @@ public class SetValidUntilChangeImpl implements SetValidUntilChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +78,7 @@ public class SetValidUntilChangeImpl implements SetValidUntilChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

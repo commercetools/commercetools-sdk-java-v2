@@ -52,7 +52,7 @@ public class ReviewLabelImpl implements ReviewLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Review.</p>
      */
 
     public String getKey() {
@@ -60,7 +60,7 @@ public class ReviewLabelImpl implements ReviewLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Title of the Review.</p>
      */
 
     public String getTitle() {

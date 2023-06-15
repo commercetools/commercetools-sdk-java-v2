@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     RemoveParcelFromDeliveryChange removeParcelFromDeliveryChange = RemoveParcelFromDeliveryChange.builder()
  *             .change("{change}")
- *             .deliveryId("{deliveryId}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
 
     private String change;
 
-    private String deliveryId;
-
     private com.commercetools.history.models.common.Parcel previousValue;
 
+    private String deliveryId;
+
     /**
-     *  <p>Update action for <code>removeParcelFromDelivery</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,18 +42,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     * set the value to the deliveryId
-     * @param deliveryId value to be set
-     * @return Builder
-     */
-
-    public RemoveParcelFromDeliveryChangeBuilder deliveryId(final String deliveryId) {
-        this.deliveryId = deliveryId;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -65,7 +54,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -77,7 +66,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -89,7 +78,18 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     *  <p>Update action for <code>removeParcelFromDelivery</code></p>
+     *  <p><code>id</code> of the Delivery from which the Parcel was removed.</p>
+     * @param deliveryId value to be set
+     * @return Builder
+     */
+
+    public RemoveParcelFromDeliveryChangeBuilder deliveryId(final String deliveryId) {
+        this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -98,16 +98,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
-     * value of deliveryId}
-     * @return deliveryId
-     */
-
-    public String getDeliveryId() {
-        return this.deliveryId;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -116,14 +107,23 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     }
 
     /**
+     *  <p><code>id</code> of the Delivery from which the Parcel was removed.</p>
+     * @return deliveryId
+     */
+
+    public String getDeliveryId() {
+        return this.deliveryId;
+    }
+
+    /**
      * builds RemoveParcelFromDeliveryChange with checking for non-null required values
      * @return RemoveParcelFromDeliveryChange
      */
     public RemoveParcelFromDeliveryChange build() {
         Objects.requireNonNull(change, RemoveParcelFromDeliveryChange.class + ": change is missing");
-        Objects.requireNonNull(deliveryId, RemoveParcelFromDeliveryChange.class + ": deliveryId is missing");
         Objects.requireNonNull(previousValue, RemoveParcelFromDeliveryChange.class + ": previousValue is missing");
-        return new RemoveParcelFromDeliveryChangeImpl(change, deliveryId, previousValue);
+        Objects.requireNonNull(deliveryId, RemoveParcelFromDeliveryChange.class + ": deliveryId is missing");
+        return new RemoveParcelFromDeliveryChangeImpl(change, previousValue, deliveryId);
     }
 
     /**
@@ -131,7 +131,7 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
      * @return RemoveParcelFromDeliveryChange
      */
     public RemoveParcelFromDeliveryChange buildUnchecked() {
-        return new RemoveParcelFromDeliveryChangeImpl(change, deliveryId, previousValue);
+        return new RemoveParcelFromDeliveryChangeImpl(change, previousValue, deliveryId);
     }
 
     /**
@@ -150,8 +150,8 @@ public class RemoveParcelFromDeliveryChangeBuilder implements Builder<RemoveParc
     public static RemoveParcelFromDeliveryChangeBuilder of(final RemoveParcelFromDeliveryChange template) {
         RemoveParcelFromDeliveryChangeBuilder builder = new RemoveParcelFromDeliveryChangeBuilder();
         builder.change = template.getChange();
-        builder.deliveryId = template.getDeliveryId();
         builder.previousValue = template.getPreviousValue();
+        builder.deliveryId = template.getDeliveryId();
         return builder;
     }
 

@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetCustomerEmailChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Customer Email on Orders.</li>
+ *   <li>Set Customer Email on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomerEmailChangeImpl implements SetCustomerEmailChange, ModelBase {
@@ -57,7 +61,7 @@ public class SetCustomerEmailChangeImpl implements SetCustomerEmailChange, Model
     }
 
     /**
-     *  <p>Shape of the action for <code>setCustomerEmail</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +69,7 @@ public class SetCustomerEmailChangeImpl implements SetCustomerEmailChange, Model
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +77,7 @@ public class SetCustomerEmailChangeImpl implements SetCustomerEmailChange, Model
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

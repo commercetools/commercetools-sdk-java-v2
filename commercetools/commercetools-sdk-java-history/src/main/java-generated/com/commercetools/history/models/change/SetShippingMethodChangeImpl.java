@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetShippingMethodChange
+ *  <p>Change triggered by the Set ShippingMethod update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShippingMethodChangeImpl implements SetShippingMethodChange, ModelBase {
@@ -24,20 +24,20 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
 
     private String change;
 
-    private com.commercetools.history.models.change_value.ShippingMethodChangeValue nextValue;
-
     private com.commercetools.history.models.change_value.ShippingMethodChangeValue previousValue;
+
+    private com.commercetools.history.models.change_value.ShippingMethodChangeValue nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetShippingMethodChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.ShippingMethodChangeValue nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.ShippingMethodChangeValue previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.ShippingMethodChangeValue previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.ShippingMethodChangeValue nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = SET_SHIPPING_METHOD_CHANGE;
     }
 
@@ -57,7 +57,7 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
     }
 
     /**
-     *  <p>Update action for <code>setShippingMethod</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,32 +65,32 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.change_value.ShippingMethodChangeValue getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.change_value.ShippingMethodChangeValue getPreviousValue() {
         return this.previousValue;
     }
 
-    public void setChange(final String change) {
-        this.change = change;
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.change_value.ShippingMethodChangeValue getNextValue() {
+        return this.nextValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.change_value.ShippingMethodChangeValue nextValue) {
-        this.nextValue = nextValue;
+    public void setChange(final String change) {
+        this.change = change;
     }
 
     public void setPreviousValue(
             final com.commercetools.history.models.change_value.ShippingMethodChangeValue previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.change_value.ShippingMethodChangeValue nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -105,8 +105,8 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -114,8 +114,8 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

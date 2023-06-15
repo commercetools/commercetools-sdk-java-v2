@@ -14,8 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeQuoteStateChange changeQuoteStateChange = ChangeQuoteStateChange.builder()
  *             .change("{change}")
- *             .nextValue(QuoteState.PENDING)
  *             .previousValue(QuoteState.PENDING)
+ *             .nextValue(QuoteState.PENDING)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,9 +25,9 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
 
     private String change;
 
-    private com.commercetools.history.models.common.QuoteState nextValue;
-
     private com.commercetools.history.models.common.QuoteState previousValue;
+
+    private com.commercetools.history.models.common.QuoteState nextValue;
 
     /**
      * set the value to the change
@@ -41,18 +41,7 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeQuoteStateChangeBuilder nextValue(final com.commercetools.history.models.common.QuoteState nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -60,6 +49,17 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
     public ChangeQuoteStateChangeBuilder previousValue(
             final com.commercetools.history.models.common.QuoteState previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeQuoteStateChangeBuilder nextValue(final com.commercetools.history.models.common.QuoteState nextValue) {
+        this.nextValue = nextValue;
         return this;
     }
 
@@ -73,16 +73,7 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.QuoteState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -91,14 +82,23 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.QuoteState getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds ChangeQuoteStateChange with checking for non-null required values
      * @return ChangeQuoteStateChange
      */
     public ChangeQuoteStateChange build() {
         Objects.requireNonNull(change, ChangeQuoteStateChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, ChangeQuoteStateChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeQuoteStateChange.class + ": previousValue is missing");
-        return new ChangeQuoteStateChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeQuoteStateChange.class + ": nextValue is missing");
+        return new ChangeQuoteStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -106,7 +106,7 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
      * @return ChangeQuoteStateChange
      */
     public ChangeQuoteStateChange buildUnchecked() {
-        return new ChangeQuoteStateChangeImpl(change, nextValue, previousValue);
+        return new ChangeQuoteStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -125,8 +125,8 @@ public class ChangeQuoteStateChangeBuilder implements Builder<ChangeQuoteStateCh
     public static ChangeQuoteStateChangeBuilder of(final ChangeQuoteStateChange template) {
         ChangeQuoteStateChangeBuilder builder = new ChangeQuoteStateChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

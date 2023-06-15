@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetParcelItemsChange setParcelItemsChange = SetParcelItemsChange.builder()
  *             .change("{change}")
- *             .parcel(parcelBuilder -> parcelBuilder)
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .parcel(parcelBuilder -> parcelBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
 
     private String change;
 
-    private com.commercetools.history.models.change_value.ParcelChangeValue parcel;
+    private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue;
 
-    private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
+    private com.commercetools.history.models.change_value.ParcelChangeValue parcel;
 
     /**
-     *  <p>Update action for <code>setParcelItems</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,133 +45,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     * set the value to the parcel using the builder function
-     * @param builder function to build the parcel value
-     * @return Builder
-     */
-
-    public SetParcelItemsChangeBuilder parcel(
-            Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValueBuilder> builder) {
-        this.parcel = builder.apply(com.commercetools.history.models.change_value.ParcelChangeValueBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     * set the value to the parcel using the builder function
-     * @param builder function to build the parcel value
-     * @return Builder
-     */
-
-    public SetParcelItemsChangeBuilder withParcel(
-            Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValue> builder) {
-        this.parcel = builder.apply(com.commercetools.history.models.change_value.ParcelChangeValueBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the parcel
-     * @param parcel value to be set
-     * @return Builder
-     */
-
-    public SetParcelItemsChangeBuilder parcel(
-            final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
-        this.parcel = parcel;
-        return this;
-    }
-
-    /**
-     * set values to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetParcelItemsChangeBuilder nextValue(
-            final com.commercetools.history.models.common.DeliveryItem... nextValue) {
-        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
-        return this;
-    }
-
-    /**
-     * set value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetParcelItemsChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * add values to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetParcelItemsChangeBuilder plusNextValue(
-            final com.commercetools.history.models.common.DeliveryItem... nextValue) {
-        if (this.nextValue == null) {
-            this.nextValue = new ArrayList<>();
-        }
-        this.nextValue.addAll(Arrays.asList(nextValue));
-        return this;
-    }
-
-    /**
-     * add the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetParcelItemsChangeBuilder plusNextValue(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
-        if (this.nextValue == null) {
-            this.nextValue = new ArrayList<>();
-        }
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetParcelItemsChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     * add the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetParcelItemsChangeBuilder addNextValue(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
-        return plusNextValue(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetParcelItemsChangeBuilder setNextValue(
-            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
-        return nextValue(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
-    }
-
-    /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -183,7 +57,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -195,7 +69,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -210,7 +84,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -225,7 +99,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -238,7 +112,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -249,7 +123,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -260,7 +134,133 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     *  <p>Update action for <code>setParcelItems</code></p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetParcelItemsChangeBuilder nextValue(
+            final com.commercetools.history.models.common.DeliveryItem... nextValue) {
+        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetParcelItemsChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetParcelItemsChangeBuilder plusNextValue(
+            final com.commercetools.history.models.common.DeliveryItem... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetParcelItemsChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetParcelItemsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItemBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetParcelItemsChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetParcelItemsChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Information about the updated Parcel.</p>
+     * @param builder function to build the parcel value
+     * @return Builder
+     */
+
+    public SetParcelItemsChangeBuilder parcel(
+            Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValueBuilder> builder) {
+        this.parcel = builder.apply(com.commercetools.history.models.change_value.ParcelChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Information about the updated Parcel.</p>
+     * @param builder function to build the parcel value
+     * @return Builder
+     */
+
+    public SetParcelItemsChangeBuilder withParcel(
+            Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValue> builder) {
+        this.parcel = builder.apply(com.commercetools.history.models.change_value.ParcelChangeValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Information about the updated Parcel.</p>
+     * @param parcel value to be set
+     * @return Builder
+     */
+
+    public SetParcelItemsChangeBuilder parcel(
+            final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
+        this.parcel = parcel;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -269,25 +269,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
-     * value of parcel}
-     * @return parcel
-     */
-
-    public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
-        return this.parcel;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.util.List<com.commercetools.history.models.common.DeliveryItem> getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -296,15 +278,33 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.util.List<com.commercetools.history.models.common.DeliveryItem> getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Information about the updated Parcel.</p>
+     * @return parcel
+     */
+
+    public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
+        return this.parcel;
+    }
+
+    /**
      * builds SetParcelItemsChange with checking for non-null required values
      * @return SetParcelItemsChange
      */
     public SetParcelItemsChange build() {
         Objects.requireNonNull(change, SetParcelItemsChange.class + ": change is missing");
-        Objects.requireNonNull(parcel, SetParcelItemsChange.class + ": parcel is missing");
-        Objects.requireNonNull(nextValue, SetParcelItemsChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetParcelItemsChange.class + ": previousValue is missing");
-        return new SetParcelItemsChangeImpl(change, parcel, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetParcelItemsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(parcel, SetParcelItemsChange.class + ": parcel is missing");
+        return new SetParcelItemsChangeImpl(change, previousValue, nextValue, parcel);
     }
 
     /**
@@ -312,7 +312,7 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
      * @return SetParcelItemsChange
      */
     public SetParcelItemsChange buildUnchecked() {
-        return new SetParcelItemsChangeImpl(change, parcel, nextValue, previousValue);
+        return new SetParcelItemsChangeImpl(change, previousValue, nextValue, parcel);
     }
 
     /**
@@ -331,9 +331,9 @@ public class SetParcelItemsChangeBuilder implements Builder<SetParcelItemsChange
     public static SetParcelItemsChangeBuilder of(final SetParcelItemsChange template) {
         SetParcelItemsChangeBuilder builder = new SetParcelItemsChangeBuilder();
         builder.change = template.getChange();
-        builder.parcel = template.getParcel();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.parcel = template.getParcel();
         return builder;
     }
 

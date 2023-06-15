@@ -23,12 +23,12 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
 
     private String change;
 
-    private java.lang.Object nextValue;
-
     private java.lang.Object previousValue;
 
+    private java.lang.Object nextValue;
+
     /**
-     *  <p>Update action for <code>setShippingRateInput</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -39,18 +39,7 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetShippingRateInputChangeBuilder nextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -61,7 +50,18 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
     }
 
     /**
-     *  <p>Update action for <code>setShippingRateInput</code></p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetShippingRateInputChangeBuilder nextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -70,16 +70,7 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.lang.Object getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -88,14 +79,23 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.lang.Object getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds SetShippingRateInputChange with checking for non-null required values
      * @return SetShippingRateInputChange
      */
     public SetShippingRateInputChange build() {
         Objects.requireNonNull(change, SetShippingRateInputChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, SetShippingRateInputChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetShippingRateInputChange.class + ": previousValue is missing");
-        return new SetShippingRateInputChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetShippingRateInputChange.class + ": nextValue is missing");
+        return new SetShippingRateInputChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -103,7 +103,7 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
      * @return SetShippingRateInputChange
      */
     public SetShippingRateInputChange buildUnchecked() {
-        return new SetShippingRateInputChangeImpl(change, nextValue, previousValue);
+        return new SetShippingRateInputChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -122,8 +122,8 @@ public class SetShippingRateInputChangeBuilder implements Builder<SetShippingRat
     public static SetShippingRateInputChangeBuilder of(final SetShippingRateInputChange template) {
         SetShippingRateInputChangeBuilder builder = new SetShippingRateInputChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

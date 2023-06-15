@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddReturnInfoChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Add ReturnInfo on Orders.</li>
+ *   <li>Add ReturnInfo on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
@@ -53,7 +57,7 @@ public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>addReturnInfo</code></p>
+     *
      */
 
     public String getChange() {
@@ -61,7 +65,7 @@ public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.ReturnInfo getNextValue() {

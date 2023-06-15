@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetIsValidChange
+ *  <p>Change triggered automatically due to a user-initiated change.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>setIsValid</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public Boolean getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public Boolean getNextValue() {

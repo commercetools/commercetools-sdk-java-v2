@@ -28,7 +28,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     private com.commercetools.history.models.common.DiscountCodeInfo previousValue;
 
     /**
-     *  <p>Update action for <code>removeDiscountCode</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     }
 
     /**
-     *  <p>Update action for <code>removeDiscountCode</code></p>
+     * value of change}
      * @return change
      */
 
@@ -85,7 +85,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 

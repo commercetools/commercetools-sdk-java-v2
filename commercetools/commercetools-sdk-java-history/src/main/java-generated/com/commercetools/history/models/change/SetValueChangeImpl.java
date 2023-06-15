@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetValueChange
+ *  <p>Change triggered by the Update CustomObject request when a value of a property is updated.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetValueChangeImpl implements SetValueChange, ModelBase {
@@ -24,20 +24,20 @@ public class SetValueChangeImpl implements SetValueChange, ModelBase {
 
     private String change;
 
-    private java.lang.Object nextValue;
-
     private java.lang.Object previousValue;
+
+    private java.lang.Object nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetValueChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final java.lang.Object nextValue,
-            @JsonProperty("previousValue") final java.lang.Object previousValue) {
+            @JsonProperty("previousValue") final java.lang.Object previousValue,
+            @JsonProperty("nextValue") final java.lang.Object nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = SET_VALUE_CHANGE;
     }
 
@@ -57,7 +57,7 @@ public class SetValueChangeImpl implements SetValueChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>setValue</code> on custom objects</p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +65,31 @@ public class SetValueChangeImpl implements SetValueChange, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public java.lang.Object getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public java.lang.Object getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final java.lang.Object previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +104,8 @@ public class SetValueChangeImpl implements SetValueChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +113,8 @@ public class SetValueChangeImpl implements SetValueChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

@@ -57,7 +57,7 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Given name (first name) of the Customer.</p>
      */
 
     public String getFirstName() {
@@ -65,7 +65,7 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Family name (last name) of the Customer.</p>
      */
 
     public String getLastName() {
@@ -73,7 +73,7 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Customer.</p>
      */
 
     public String getCustomerNumber() {

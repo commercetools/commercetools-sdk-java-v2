@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeEnumValueOrderChange
+ *  <p>Change triggered by the Change the order of EnumValues update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,9 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeEnumValueOrderChange changeEnumValueOrderChange = ChangeEnumValueOrderChange.builder()
  *             .change("{change}")
- *             .fieldName("{fieldName}")
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .fieldName("{fieldName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface ChangeEnumValueOrderChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
+     *
      * @return change
      */
     @NotNull
@@ -58,24 +58,7 @@ public interface ChangeEnumValueOrderChange extends Change {
     public String getChange();
 
     /**
-     *  <p>The name of the field/attribute definition updated.</p>
-     * @return fieldName
-     */
-    @NotNull
-    @JsonProperty("fieldName")
-    public String getFieldName();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public List<EnumValue> getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -84,36 +67,31 @@ public interface ChangeEnumValueOrderChange extends Change {
     public List<EnumValue> getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public List<EnumValue> getNextValue();
+
+    /**
+     *  <p>Name of the updated FieldDefinition.</p>
+     * @return fieldName
+     */
+    @NotNull
+    @JsonProperty("fieldName")
+    public String getFieldName();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>The name of the field/attribute definition updated.</p>
-     * @param fieldName value to be set
-     */
-
-    public void setFieldName(final String fieldName);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    @JsonIgnore
-    public void setNextValue(final EnumValue... nextValue);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    public void setNextValue(final List<EnumValue> nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -121,11 +99,33 @@ public interface ChangeEnumValueOrderChange extends Change {
     public void setPreviousValue(final EnumValue... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<EnumValue> previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    @JsonIgnore
+    public void setNextValue(final EnumValue... nextValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    public void setNextValue(final List<EnumValue> nextValue);
+
+    /**
+     *  <p>Name of the updated FieldDefinition.</p>
+     * @param fieldName value to be set
+     */
+
+    public void setFieldName(final String fieldName);
 
     /**
      * factory method
@@ -143,9 +143,9 @@ public interface ChangeEnumValueOrderChange extends Change {
     public static ChangeEnumValueOrderChange of(final ChangeEnumValueOrderChange template) {
         ChangeEnumValueOrderChangeImpl instance = new ChangeEnumValueOrderChangeImpl();
         instance.setChange(template.getChange());
-        instance.setFieldName(template.getFieldName());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setFieldName(template.getFieldName());
         return instance;
     }
 
@@ -161,17 +161,17 @@ public interface ChangeEnumValueOrderChange extends Change {
         }
         ChangeEnumValueOrderChangeImpl instance = new ChangeEnumValueOrderChangeImpl();
         instance.setChange(template.getChange());
-        instance.setFieldName(template.getFieldName());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setFieldName(template.getFieldName());
         return instance;
     }
 

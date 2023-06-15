@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetAuthorNameChange
+ *  <p>Change triggered by the Set Author Name update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAuthorNameChangeImpl implements SetAuthorNameChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetAuthorNameChangeImpl implements SetAuthorNameChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>setAuthorName</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetAuthorNameChangeImpl implements SetAuthorNameChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetAuthorNameChangeImpl implements SetAuthorNameChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

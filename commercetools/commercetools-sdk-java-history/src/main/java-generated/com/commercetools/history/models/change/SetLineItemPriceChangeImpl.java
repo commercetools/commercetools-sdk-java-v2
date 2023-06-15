@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetLineItemPriceChange
+ *  <p>Change triggered by the Set LineItem Price update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, ModelBase {
@@ -24,24 +24,24 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
 
     private String change;
 
-    private com.commercetools.history.models.common.LocalizedString lineItem;
+    private com.commercetools.history.models.common.Price previousValue;
 
     private com.commercetools.history.models.common.Price nextValue;
 
-    private com.commercetools.history.models.common.Price previousValue;
+    private com.commercetools.history.models.common.LocalizedString lineItem;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetLineItemPriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.Price previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Price nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Price previousValue) {
+            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.change = change;
-        this.lineItem = lineItem;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.lineItem = lineItem;
         this.type = SET_LINE_ITEM_PRICE_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
     }
 
     /**
-     *  <p>Update action for <code>setLineItemPrice</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,15 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getLineItem() {
-        return this.lineItem;
+    public com.commercetools.history.models.common.Price getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Price getNextValue() {
@@ -85,27 +85,27 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
     }
 
     /**
-     *
+     *  <p>Name of the Product the updated Line Item is based on.</p>
      */
 
-    public com.commercetools.history.models.common.Price getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+        return this.lineItem;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setLineItem(final com.commercetools.history.models.common.LocalizedString lineItem) {
-        this.lineItem = lineItem;
+    public void setPreviousValue(final com.commercetools.history.models.common.Price previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.Price nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Price previousValue) {
-        this.previousValue = previousValue;
+    public void setLineItem(final com.commercetools.history.models.common.LocalizedString lineItem) {
+        this.lineItem = lineItem;
     }
 
     @Override
@@ -120,9 +120,9 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(lineItem, that.lineItem)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(lineItem, that.lineItem)
                 .isEquals();
     }
 
@@ -130,9 +130,9 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(lineItem)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(lineItem)
                 .toHashCode();
     }
 

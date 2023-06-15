@@ -15,10 +15,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetVariantAvailabilityChange setVariantAvailabilityChange = SetVariantAvailabilityChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
- *             .variant("{variant}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -28,16 +28,16 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
 
     private String change;
 
-    private String catalogData;
-
-    private String variant;
-
     private com.commercetools.history.models.common.ProductVariantAvailability previousValue;
 
     private com.commercetools.history.models.common.ProductVariantAvailability nextValue;
 
+    private String catalogData;
+
+    private String variant;
+
     /**
-     *  <p>Update action for <code>setVariantAvailability</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -48,29 +48,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public SetVariantAvailabilityChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the variant
-     * @param variant value to be set
-     * @return Builder
-     */
-
-    public SetVariantAvailabilityChangeBuilder variant(final String variant) {
-        this.variant = variant;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -84,7 +62,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -97,7 +75,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -109,7 +87,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -122,7 +100,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -134,7 +112,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -146,7 +124,32 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     *  <p>Update action for <code>setVariantAvailability</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetVariantAvailabilityChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetVariantAvailabilityChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -155,25 +158,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of variant}
-     * @return variant
-     */
-
-    public String getVariant() {
-        return this.variant;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -182,7 +167,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -191,16 +176,37 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetVariantAvailabilityChange with checking for non-null required values
      * @return SetVariantAvailabilityChange
      */
     public SetVariantAvailabilityChange build() {
         Objects.requireNonNull(change, SetVariantAvailabilityChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, SetVariantAvailabilityChange.class + ": catalogData is missing");
-        Objects.requireNonNull(variant, SetVariantAvailabilityChange.class + ": variant is missing");
         Objects.requireNonNull(previousValue, SetVariantAvailabilityChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetVariantAvailabilityChange.class + ": nextValue is missing");
-        return new SetVariantAvailabilityChangeImpl(change, catalogData, variant, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, SetVariantAvailabilityChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, SetVariantAvailabilityChange.class + ": variant is missing");
+        return new SetVariantAvailabilityChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -208,7 +214,7 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
      * @return SetVariantAvailabilityChange
      */
     public SetVariantAvailabilityChange buildUnchecked() {
-        return new SetVariantAvailabilityChangeImpl(change, catalogData, variant, previousValue, nextValue);
+        return new SetVariantAvailabilityChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -227,10 +233,10 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     public static SetVariantAvailabilityChangeBuilder of(final SetVariantAvailabilityChange template) {
         SetVariantAvailabilityChangeBuilder builder = new SetVariantAvailabilityChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
-        builder.variant = template.getVariant();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

@@ -30,7 +30,7 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
     private com.commercetools.history.models.common.RoundingMode nextValue;
 
     /**
-     *  <p>Shape of the action for <code>changeTaxRoundingMode</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
     }
 
     /**
-     *  <p>Shape of the action for <code>changeTaxRoundingMode</code></p>
+     * value of change}
      * @return change
      */
 
@@ -74,7 +74,7 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -83,7 +83,7 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

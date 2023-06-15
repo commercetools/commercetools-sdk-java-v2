@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * RemoveStateRolesChange
+ *  <p>Change triggered by the Remove State roles update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -55,7 +55,7 @@ public interface RemoveStateRolesChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface RemoveStateRolesChange extends Change {
     public List<StateRole> getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -78,7 +78,7 @@ public interface RemoveStateRolesChange extends Change {
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -86,14 +86,14 @@ public interface RemoveStateRolesChange extends Change {
     public void setPreviousValue(final StateRole... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<StateRole> previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
@@ -101,7 +101,7 @@ public interface RemoveStateRolesChange extends Change {
     public void setNextValue(final StateRole... nextValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 

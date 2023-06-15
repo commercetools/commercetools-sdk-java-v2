@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangePlainEnumValueOrderChange
+ *  <p>Change triggered by the Change the order of EnumValues update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,9 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangePlainEnumValueOrderChange changePlainEnumValueOrderChange = ChangePlainEnumValueOrderChange.builder()
  *             .change("{change}")
- *             .attributeName("{attributeName}")
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changePlainEnumValueOrder</code> on product types</p>
+     *
      * @return change
      */
     @NotNull
@@ -58,24 +58,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     public String getChange();
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @return attributeName
-     */
-    @NotNull
-    @JsonProperty("attributeName")
-    public String getAttributeName();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public List<EnumValue> getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -84,36 +67,31 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     public List<EnumValue> getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changePlainEnumValueOrder</code> on product types</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public List<EnumValue> getNextValue();
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @param attributeName value to be set
-     */
-
-    public void setAttributeName(final String attributeName);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    @JsonIgnore
-    public void setNextValue(final EnumValue... nextValue);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    public void setNextValue(final List<EnumValue> nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -121,11 +99,33 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     public void setPreviousValue(final EnumValue... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<EnumValue> previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    @JsonIgnore
+    public void setNextValue(final EnumValue... nextValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    public void setNextValue(final List<EnumValue> nextValue);
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @param attributeName value to be set
+     */
+
+    public void setAttributeName(final String attributeName);
 
     /**
      * factory method
@@ -143,9 +143,9 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     public static ChangePlainEnumValueOrderChange of(final ChangePlainEnumValueOrderChange template) {
         ChangePlainEnumValueOrderChangeImpl instance = new ChangePlainEnumValueOrderChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 
@@ -161,17 +161,17 @@ public interface ChangePlainEnumValueOrderChange extends Change {
         }
         ChangePlainEnumValueOrderChangeImpl instance = new ChangePlainEnumValueOrderChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 

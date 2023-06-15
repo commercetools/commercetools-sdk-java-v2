@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeTextLineItemsOrderChange
+ *  <p>Change triggered by the Change TextLineItems Order update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOrderChange, ModelBase {
@@ -65,7 +65,7 @@ public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOr
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOr
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> getNextValue() {

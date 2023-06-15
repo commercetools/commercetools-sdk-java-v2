@@ -53,7 +53,7 @@ public class OrderLabelImpl implements OrderLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Email address of the Customer that the Order belongs to.</p>
      */
 
     public String getCustomerEmail() {
@@ -61,7 +61,7 @@ public class OrderLabelImpl implements OrderLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Order that is unique across a Project.</p>
      */
 
     public String getOrderNumber() {

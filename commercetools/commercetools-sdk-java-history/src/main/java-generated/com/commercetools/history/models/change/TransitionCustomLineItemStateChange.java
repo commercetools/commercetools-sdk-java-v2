@@ -17,7 +17,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TransitionCustomLineItemStateChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change the state of CustomLineItem according to allowed transitions on Orders.</li>
+ *   <li>Change the state of CustomLineItem according to allowed transitions on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,10 +29,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     TransitionCustomLineItemStateChange transitionCustomLineItemStateChange = TransitionCustomLineItemStateChange.builder()
  *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItemId("{lineItemId}")
  *             .stateId("{stateId}")
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
- *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -51,7 +55,7 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>transitionCustomLineItemState</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -59,32 +63,7 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return lineItemId
-     */
-    @NotNull
-    @JsonProperty("lineItemId")
-    public String getLineItemId();
-
-    /**
-     *
-     * @return stateId
-     */
-    @NotNull
-    @JsonProperty("stateId")
-    public String getStateId();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public List<ItemState> getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -93,43 +72,39 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public List<ItemState> getPreviousValue();
 
     /**
-     *  <p>Update action for <code>transitionCustomLineItemState</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public List<ItemState> getNextValue();
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @return lineItemId
+     */
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+
+    /**
+     *  <p><code>id</code> of the State involved in the transition.</p>
+     * @return stateId
+     */
+    @NotNull
+    @JsonProperty("stateId")
+    public String getStateId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set lineItemId
-     * @param lineItemId value to be set
-     */
-
-    public void setLineItemId(final String lineItemId);
-
-    /**
-     * set stateId
-     * @param stateId value to be set
-     */
-
-    public void setStateId(final String stateId);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    @JsonIgnore
-    public void setNextValue(final ItemState... nextValue);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    public void setNextValue(final List<ItemState> nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -137,11 +112,40 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public void setPreviousValue(final ItemState... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<ItemState> previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    @JsonIgnore
+    public void setNextValue(final ItemState... nextValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    public void setNextValue(final List<ItemState> nextValue);
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @param lineItemId value to be set
+     */
+
+    public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p><code>id</code> of the State involved in the transition.</p>
+     * @param stateId value to be set
+     */
+
+    public void setStateId(final String stateId);
 
     /**
      * factory method
@@ -159,10 +163,10 @@ public interface TransitionCustomLineItemStateChange extends Change {
     public static TransitionCustomLineItemStateChange of(final TransitionCustomLineItemStateChange template) {
         TransitionCustomLineItemStateChangeImpl instance = new TransitionCustomLineItemStateChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setLineItemId(template.getLineItemId());
         instance.setStateId(template.getStateId());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -179,18 +183,18 @@ public interface TransitionCustomLineItemStateChange extends Change {
         }
         TransitionCustomLineItemStateChangeImpl instance = new TransitionCustomLineItemStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItemId(template.getLineItemId());
-        instance.setStateId(template.getStateId());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.ItemState::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.ItemState::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.ItemState::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setLineItemId(template.getLineItemId());
+        instance.setStateId(template.getStateId());
         return instance;
     }
 

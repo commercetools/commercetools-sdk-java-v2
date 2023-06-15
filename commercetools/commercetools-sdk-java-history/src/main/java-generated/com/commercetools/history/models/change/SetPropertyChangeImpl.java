@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetPropertyChange
+ *  <p>Change triggered by the Update CustomObject request when an existing property is updated.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
@@ -24,23 +24,23 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
 
     private String change;
 
-    private String path;
+    private java.lang.Object previousValue;
 
     private java.lang.Object nextValue;
 
-    private java.lang.Object previousValue;
+    private String path;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SetPropertyChangeImpl(@JsonProperty("change") final String change, @JsonProperty("path") final String path,
-            @JsonProperty("nextValue") final java.lang.Object nextValue,
-            @JsonProperty("previousValue") final java.lang.Object previousValue) {
+    SetPropertyChangeImpl(@JsonProperty("change") final String change,
+            @JsonProperty("previousValue") final java.lang.Object previousValue,
+            @JsonProperty("nextValue") final java.lang.Object nextValue, @JsonProperty("path") final String path) {
         this.change = change;
-        this.path = path;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.path = path;
         this.type = SET_PROPERTY_CHANGE;
     }
 
@@ -60,7 +60,7 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>setProperty</code> on custom objects</p>
+     *
      */
 
     public String getChange() {
@@ -68,15 +68,15 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
     }
 
     /**
-     *  <p>Value path to the property that was changed</p>
+     *  <p>Value before the change.</p>
      */
 
-    public String getPath() {
-        return this.path;
+    public java.lang.Object getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.lang.Object getNextValue() {
@@ -84,27 +84,27 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Path to the property that was updated.</p>
      */
 
-    public java.lang.Object getPreviousValue() {
-        return this.previousValue;
+    public String getPath() {
+        return this.path;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setPath(final String path) {
-        this.path = path;
+    public void setPreviousValue(final java.lang.Object previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final java.lang.Object nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final java.lang.Object previousValue) {
-        this.previousValue = previousValue;
+    public void setPath(final String path) {
+        this.path = path;
     }
 
     @Override
@@ -119,9 +119,9 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(path, that.path)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(path, that.path)
                 .isEquals();
     }
 
@@ -129,9 +129,9 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(path)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(path)
                 .toHashCode();
     }
 

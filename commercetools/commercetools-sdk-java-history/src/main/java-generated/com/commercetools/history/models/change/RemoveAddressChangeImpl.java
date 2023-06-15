@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveAddressChange
+ *  <p>Change triggered by the Remove Address update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveAddressChangeImpl implements RemoveAddressChange, ModelBase {
@@ -53,7 +53,7 @@ public class RemoveAddressChangeImpl implements RemoveAddressChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>removeAddress</code> action.</p>
+     *
      */
 
     public String getChange() {
@@ -61,7 +61,7 @@ public class RemoveAddressChangeImpl implements RemoveAddressChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {

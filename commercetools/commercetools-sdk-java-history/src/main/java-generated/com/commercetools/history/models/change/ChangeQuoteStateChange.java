@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Update action for <code>changeQuoteState</code> on <code>quote</code></p>
+ *  <p>Change triggered by the Change Quote State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,8 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeQuoteStateChange changeQuoteStateChange = ChangeQuoteStateChange.builder()
  *             .change("{change}")
- *             .nextValue(QuoteState.PENDING)
  *             .previousValue(QuoteState.PENDING)
+ *             .nextValue(QuoteState.PENDING)
  *             .build()
  * </code></pre>
  * </div>
@@ -55,20 +55,20 @@ public interface ChangeQuoteStateChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public QuoteState getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
     @JsonProperty("previousValue")
     public QuoteState getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public QuoteState getNextValue();
 
     /**
      * set change
@@ -78,18 +78,18 @@ public interface ChangeQuoteStateChange extends Change {
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final QuoteState nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final QuoteState previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final QuoteState nextValue);
 
     /**
      * factory method
@@ -107,8 +107,8 @@ public interface ChangeQuoteStateChange extends Change {
     public static ChangeQuoteStateChange of(final ChangeQuoteStateChange template) {
         ChangeQuoteStateChangeImpl instance = new ChangeQuoteStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -124,8 +124,8 @@ public interface ChangeQuoteStateChange extends Change {
         }
         ChangeQuoteStateChangeImpl instance = new ChangeQuoteStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetTextLineItemCustomTypeChange
+ *  <p>Change triggered by the Set TextLineItem Custom Type update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCustomTypeChange, ModelBase {
@@ -24,24 +24,24 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
 
     private String change;
 
-    private com.commercetools.history.models.change_value.TextLineItemValue textLineItem;
+    private com.commercetools.history.models.common.CustomFields previousValue;
 
     private com.commercetools.history.models.common.CustomFields nextValue;
 
-    private com.commercetools.history.models.common.CustomFields previousValue;
+    private com.commercetools.history.models.change_value.TextLineItemValue textLineItem;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetTextLineItemCustomTypeChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue) {
+            @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
         this.change = change;
-        this.textLineItem = textLineItem;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.textLineItem = textLineItem;
         this.type = SET_TEXT_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
     }
 
     /**
-     *  <p>Update action for <code>setTextLineItemCustomType</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,15 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
-        return this.textLineItem;
+    public com.commercetools.history.models.common.CustomFields getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.CustomFields getNextValue() {
@@ -85,27 +85,27 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
     }
 
     /**
-     *
+     *  <p>Holds information about the updated Text Line Item.</p>
      */
 
-    public com.commercetools.history.models.common.CustomFields getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
+        return this.textLineItem;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setTextLineItem(final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
-        this.textLineItem = textLineItem;
+    public void setPreviousValue(final com.commercetools.history.models.common.CustomFields previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.CustomFields nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.CustomFields previousValue) {
-        this.previousValue = previousValue;
+    public void setTextLineItem(final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
+        this.textLineItem = textLineItem;
     }
 
     @Override
@@ -120,9 +120,9 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(textLineItem, that.textLineItem)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(textLineItem, that.textLineItem)
                 .isEquals();
     }
 
@@ -130,9 +130,9 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(textLineItem)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(textLineItem)
                 .toHashCode();
     }
 

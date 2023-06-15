@@ -15,7 +15,18 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * TransitionStateChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Transition State on Orders.</li>
+ *   <li>Transition State on Staged Orders.</li>
+ *   <li>Transition State on Payments.</li>
+ *   <li>Transition State on Products.</li>
+ *   <li>Transition State on Quotes.</li>
+ *   <li>Transition State on Staged Quotes.</li>
+ *   <li>Transition State on Quote Requests.</li>
+ *   <li>Transition State on Reviews.</li>
+ *   <li>Transition State on States.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransitionStateChangeImpl implements TransitionStateChange, ModelBase {
@@ -57,7 +68,7 @@ public class TransitionStateChangeImpl implements TransitionStateChange, ModelBa
     }
 
     /**
-     *  <p>Shape of the action for <code>transitionState</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +76,7 @@ public class TransitionStateChangeImpl implements TransitionStateChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Reference getPreviousValue() {
@@ -73,7 +84,7 @@ public class TransitionStateChangeImpl implements TransitionStateChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Reference getNextValue() {

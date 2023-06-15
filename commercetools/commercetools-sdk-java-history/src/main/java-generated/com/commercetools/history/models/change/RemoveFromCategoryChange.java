@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * RemoveFromCategoryChange
+ *  <p>Change triggered by the Remove from Category update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,9 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     RemoveFromCategoryChange removeFromCategoryChange = RemoveFromCategoryChange.builder()
  *             .change("{change}")
- *             .category(categoryBuilder -> categoryBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .category(categoryBuilder -> categoryBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface RemoveFromCategoryChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addToCategory</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,16 +58,7 @@ public interface RemoveFromCategoryChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return category
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("category")
-    public Reference getCategory();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -76,7 +67,7 @@ public interface RemoveFromCategoryChange extends Change {
     public List<Reference> getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -85,21 +76,23 @@ public interface RemoveFromCategoryChange extends Change {
     public List<Reference> getNextValue();
 
     /**
-     *  <p>Update action for <code>addToCategory</code></p>
+     *  <p>Category from which the Product was removed.</p>
+     * @return category
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("category")
+    public Reference getCategory();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set category
-     * @param category value to be set
-     */
-
-    public void setCategory(final Reference category);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -107,14 +100,14 @@ public interface RemoveFromCategoryChange extends Change {
     public void setPreviousValue(final Reference... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<Reference> previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
@@ -122,11 +115,18 @@ public interface RemoveFromCategoryChange extends Change {
     public void setNextValue(final Reference... nextValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
     public void setNextValue(final List<Reference> nextValue);
+
+    /**
+     *  <p>Category from which the Product was removed.</p>
+     * @param category value to be set
+     */
+
+    public void setCategory(final Reference category);
 
     /**
      * factory method
@@ -144,9 +144,9 @@ public interface RemoveFromCategoryChange extends Change {
     public static RemoveFromCategoryChange of(final RemoveFromCategoryChange template) {
         RemoveFromCategoryChangeImpl instance = new RemoveFromCategoryChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCategory(template.getCategory());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCategory(template.getCategory());
         return instance;
     }
 
@@ -162,7 +162,6 @@ public interface RemoveFromCategoryChange extends Change {
         }
         RemoveFromCategoryChangeImpl instance = new RemoveFromCategoryChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCategory(com.commercetools.history.models.common.Reference.deepCopy(template.getCategory()));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.Reference::deepCopy)
@@ -173,6 +172,7 @@ public interface RemoveFromCategoryChange extends Change {
                         .map(com.commercetools.history.models.common.Reference::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setCategory(com.commercetools.history.models.common.Reference.deepCopy(template.getCategory()));
         return instance;
     }
 

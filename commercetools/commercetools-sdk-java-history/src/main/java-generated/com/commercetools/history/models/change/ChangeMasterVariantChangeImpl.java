@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeMasterVariantChange
+ *  <p>Change triggered by the Change Master Variant update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange, ModelBase {
@@ -24,24 +24,24 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
 
     private String change;
 
-    private String catalogData;
-
     private com.commercetools.history.models.common.Variant previousValue;
 
     private com.commercetools.history.models.common.Variant nextValue;
+
+    private String catalogData;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeMasterVariantChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("catalogData") final String catalogData,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Variant previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Variant nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.Variant nextValue,
+            @JsonProperty("catalogData") final String catalogData) {
         this.change = change;
-        this.catalogData = catalogData;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.catalogData = catalogData;
         this.type = CHANGE_MASTER_VARIANT_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
     }
 
     /**
-     *  <p>Update action for <code>changeMasterVariant</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,7 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
     }
 
     /**
-     *
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Variant getPreviousValue() {
@@ -85,19 +77,26 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Variant getNextValue() {
         return this.nextValue;
     }
 
-    public void setChange(final String change) {
-        this.change = change;
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
     }
 
-    public void setCatalogData(final String catalogData) {
-        this.catalogData = catalogData;
+    public void setChange(final String change) {
+        this.change = change;
     }
 
     public void setPreviousValue(final com.commercetools.history.models.common.Variant previousValue) {
@@ -106,6 +105,10 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
 
     public void setNextValue(final com.commercetools.history.models.common.Variant nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
     }
 
     @Override
@@ -120,9 +123,9 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(catalogData, that.catalogData)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
                 .isEquals();
     }
 
@@ -130,9 +133,9 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(catalogData)
                 .append(previousValue)
                 .append(nextValue)
+                .append(catalogData)
                 .toHashCode();
     }
 

@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeTextLineItemQuantityChange
+ *  <p>Change triggered by the Change TextLineItem Quantity update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,9 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeTextLineItemQuantityChange changeTextLineItemQuantityChange = ChangeTextLineItemQuantityChange.builder()
  *             .change("{change}")
- *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
  *             .previousValue(1)
  *             .nextValue(1)
+ *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -57,16 +57,7 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return textLineItem
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("textLineItem")
-    public TextLineItemValue getTextLineItem();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,12 +65,21 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     public Integer getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
     public Integer getNextValue();
+
+    /**
+     *  <p>Holds information about the updated Text Line Item.</p>
+     * @return textLineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("textLineItem")
+    public TextLineItemValue getTextLineItem();
 
     /**
      * set change
@@ -89,25 +89,25 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     public void setChange(final String change);
 
     /**
-     * set textLineItem
-     * @param textLineItem value to be set
-     */
-
-    public void setTextLineItem(final TextLineItemValue textLineItem);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Integer previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Integer nextValue);
+
+    /**
+     *  <p>Holds information about the updated Text Line Item.</p>
+     * @param textLineItem value to be set
+     */
+
+    public void setTextLineItem(final TextLineItemValue textLineItem);
 
     /**
      * factory method
@@ -125,9 +125,9 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     public static ChangeTextLineItemQuantityChange of(final ChangeTextLineItemQuantityChange template) {
         ChangeTextLineItemQuantityChangeImpl instance = new ChangeTextLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTextLineItem(template.getTextLineItem());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setTextLineItem(template.getTextLineItem());
         return instance;
     }
 
@@ -143,10 +143,10 @@ public interface ChangeTextLineItemQuantityChange extends Change {
         }
         ChangeTextLineItemQuantityChangeImpl instance = new ChangeTextLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTextLineItem(
-            com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setTextLineItem(
+            com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
         return instance;
     }
 

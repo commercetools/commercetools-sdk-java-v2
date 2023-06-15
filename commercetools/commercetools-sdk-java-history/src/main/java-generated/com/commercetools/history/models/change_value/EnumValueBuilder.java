@@ -27,7 +27,7 @@ public class EnumValueBuilder implements Builder<EnumValue> {
     private String label;
 
     /**
-     * set the value to the key
+     *  <p>Key of the value used as a programmatic identifier.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class EnumValueBuilder implements Builder<EnumValue> {
     }
 
     /**
-     * set the value to the label
+     *  <p>Descriptive label of the value.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class EnumValueBuilder implements Builder<EnumValue> {
     }
 
     /**
-     * value of key}
+     *  <p>Key of the value used as a programmatic identifier.</p>
      * @return key
      */
 
@@ -58,7 +58,7 @@ public class EnumValueBuilder implements Builder<EnumValue> {
     }
 
     /**
-     * value of label}
+     *  <p>Descriptive label of the value.</p>
      * @return label
      */
 

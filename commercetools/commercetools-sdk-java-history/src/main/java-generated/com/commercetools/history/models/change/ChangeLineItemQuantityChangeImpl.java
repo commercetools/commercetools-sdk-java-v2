@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeLineItemQuantityChange
+ *  <p>Change triggered by the Change LineItem Quantity update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityChange, ModelBase {
@@ -24,27 +24,28 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
 
     private String change;
 
-    private com.commercetools.history.models.common.LocalizedString lineItem;
-
-    private String lineItemId;
+    private Integer previousValue;
 
     private Integer nextValue;
 
-    private Integer previousValue;
+    private com.commercetools.history.models.common.LocalizedString lineItem;
+
+    private String lineItemId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeLineItemQuantityChangeImpl(@JsonProperty("change") final String change,
+            @JsonProperty("previousValue") final Integer previousValue,
+            @JsonProperty("nextValue") final Integer nextValue,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
-            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("nextValue") final Integer nextValue,
-            @JsonProperty("previousValue") final Integer previousValue) {
+            @JsonProperty("lineItemId") final String lineItemId) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.lineItem = lineItem;
         this.lineItemId = lineItemId;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = CHANGE_LINE_ITEM_QUANTITY_CHANGE;
     }
 
@@ -64,7 +65,7 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
     }
 
     /**
-     *  <p>Update action for <code>changeLineItemQuantity</code></p>
+     *
      */
 
     public String getChange() {
@@ -72,23 +73,15 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getLineItem() {
-        return this.lineItem;
+    public Integer getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getLineItemId() {
-        return this.lineItemId;
-    }
-
-    /**
-     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     *  <p>Value after the change</p>
      */
 
     public Integer getNextValue() {
@@ -96,15 +89,31 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
     }
 
     /**
-     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     *  <p>Name of the Product the updated Line Item is based on.</p>
      */
 
-    public Integer getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated LineItem.</p>
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final Integer previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final Integer nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setLineItem(final com.commercetools.history.models.common.LocalizedString lineItem) {
@@ -113,14 +122,6 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
-    }
-
-    public void setNextValue(final Integer nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final Integer previousValue) {
-        this.previousValue = previousValue;
     }
 
     @Override
@@ -135,10 +136,10 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(lineItemId, that.lineItemId)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -146,10 +147,10 @@ public class ChangeLineItemQuantityChangeImpl implements ChangeLineItemQuantityC
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(lineItem)
                 .append(lineItemId)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

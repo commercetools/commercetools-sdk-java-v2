@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetSearchKeywordsChange setSearchKeywordsChange = SetSearchKeywordsChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
 
     private String change;
 
-    private String catalogData;
-
     private com.commercetools.history.models.common.SearchKeywords previousValue;
 
     private com.commercetools.history.models.common.SearchKeywords nextValue;
 
+    private String catalogData;
+
     /**
-     *  <p>Update action for <code>setSearchKeywords</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,18 +45,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public SetSearchKeywordsChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -68,7 +57,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -80,7 +69,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -92,7 +81,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -104,7 +93,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -116,7 +105,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -128,7 +117,21 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     *  <p>Update action for <code>setSearchKeywords</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetSearchKeywordsChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -137,16 +140,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -155,7 +149,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -164,15 +158,27 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
      * builds SetSearchKeywordsChange with checking for non-null required values
      * @return SetSearchKeywordsChange
      */
     public SetSearchKeywordsChange build() {
         Objects.requireNonNull(change, SetSearchKeywordsChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, SetSearchKeywordsChange.class + ": catalogData is missing");
         Objects.requireNonNull(previousValue, SetSearchKeywordsChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetSearchKeywordsChange.class + ": nextValue is missing");
-        return new SetSearchKeywordsChangeImpl(change, catalogData, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, SetSearchKeywordsChange.class + ": catalogData is missing");
+        return new SetSearchKeywordsChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -180,7 +186,7 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
      * @return SetSearchKeywordsChange
      */
     public SetSearchKeywordsChange buildUnchecked() {
-        return new SetSearchKeywordsChangeImpl(change, catalogData, previousValue, nextValue);
+        return new SetSearchKeywordsChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -199,9 +205,9 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     public static SetSearchKeywordsChangeBuilder of(final SetSearchKeywordsChange template) {
         SetSearchKeywordsChangeBuilder builder = new SetSearchKeywordsChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
         return builder;
     }
 

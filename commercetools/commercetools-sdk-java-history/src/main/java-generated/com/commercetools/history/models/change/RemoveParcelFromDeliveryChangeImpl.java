@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveParcelFromDeliveryChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Remove Parcel From Delivery on Orders.</li>
+ *   <li>Remove Parcel From Delivery on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliveryChange, ModelBase {
@@ -24,20 +28,20 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
 
     private String change;
 
-    private String deliveryId;
-
     private com.commercetools.history.models.common.Parcel previousValue;
+
+    private String deliveryId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveParcelFromDeliveryChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Parcel previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.Parcel previousValue,
+            @JsonProperty("deliveryId") final String deliveryId) {
         this.change = change;
-        this.deliveryId = deliveryId;
         this.previousValue = previousValue;
+        this.deliveryId = deliveryId;
         this.type = REMOVE_PARCEL_FROM_DELIVERY_CHANGE;
     }
 
@@ -57,7 +61,7 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
     }
 
     /**
-     *  <p>Update action for <code>removeParcelFromDelivery</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +69,31 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
     }
 
     /**
-     *
-     */
-
-    public String getDeliveryId() {
-        return this.deliveryId;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Parcel getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p><code>id</code> of the Delivery from which the Parcel was removed.</p>
+     */
+
+    public String getDeliveryId() {
+        return this.deliveryId;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setDeliveryId(final String deliveryId) {
-        this.deliveryId = deliveryId;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.Parcel previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setDeliveryId(final String deliveryId) {
+        this.deliveryId = deliveryId;
     }
 
     @Override
@@ -104,8 +108,8 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(deliveryId, that.deliveryId)
                 .append(previousValue, that.previousValue)
+                .append(deliveryId, that.deliveryId)
                 .isEquals();
     }
 
@@ -113,8 +117,8 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(deliveryId)
                 .append(previousValue)
+                .append(deliveryId)
                 .toHashCode();
     }
 

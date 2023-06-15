@@ -14,7 +14,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetPurchaseOrderNumberChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Purchase Order Number on Orders.</li>
+ *   <li>Set Purchase Order Number on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +50,7 @@ public interface SetPurchaseOrderNumberChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setPurchaseOrderNumber</code>.</p>
+     *
      * @return change
      */
     @NotNull
@@ -54,7 +58,7 @@ public interface SetPurchaseOrderNumberChange extends Change {
     public String getChange();
 
     /**
-     *  <p>Purchase Order number prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -62,7 +66,7 @@ public interface SetPurchaseOrderNumberChange extends Change {
     public String getPreviousValue();
 
     /**
-     *  <p>Purchase Order number after the update action.</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -70,21 +74,21 @@ public interface SetPurchaseOrderNumberChange extends Change {
     public String getNextValue();
 
     /**
-     *  <p>Update action for <code>setPurchaseOrderNumber</code>.</p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>Purchase Order number prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final String previousValue);
 
     /**
-     *  <p>Purchase Order number after the update action.</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

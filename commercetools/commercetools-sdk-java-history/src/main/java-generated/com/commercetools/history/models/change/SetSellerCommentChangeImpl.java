@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetSellerCommentChange
+ *  <p>Change triggered by the Set Seller Comment update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetSellerCommentChangeImpl implements SetSellerCommentChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetSellerCommentChangeImpl implements SetSellerCommentChange, Model
     }
 
     /**
-     *  <p>Shape of the action for <code>setSellerComment</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetSellerCommentChangeImpl implements SetSellerCommentChange, Model
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetSellerCommentChangeImpl implements SetSellerCommentChange, Model
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

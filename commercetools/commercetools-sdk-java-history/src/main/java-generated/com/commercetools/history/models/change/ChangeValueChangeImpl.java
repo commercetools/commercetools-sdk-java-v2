@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeValueChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Value on Cart Discounts.</li>
+ *   <li>Change Value on Product Discounts.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
@@ -24,20 +28,20 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.ChangeValueChangeValue nextValue;
-
     private com.commercetools.history.models.change_value.ChangeValueChangeValue previousValue;
+
+    private com.commercetools.history.models.change_value.ChangeValueChangeValue nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeValueChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.ChangeValueChangeValue nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.ChangeValueChangeValue previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.ChangeValueChangeValue previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.ChangeValueChangeValue nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = CHANGE_VALUE_CHANGE;
     }
 
@@ -57,7 +61,7 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>
+     *
      */
 
     public String getChange() {
@@ -65,32 +69,32 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.change_value.ChangeValueChangeValue getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.change_value.ChangeValueChangeValue getPreviousValue() {
         return this.previousValue;
     }
 
-    public void setChange(final String change) {
-        this.change = change;
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.change_value.ChangeValueChangeValue getNextValue() {
+        return this.nextValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.change_value.ChangeValueChangeValue nextValue) {
-        this.nextValue = nextValue;
+    public void setChange(final String change) {
+        this.change = change;
     }
 
     public void setPreviousValue(
             final com.commercetools.history.models.change_value.ChangeValueChangeValue previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.change_value.ChangeValueChangeValue nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -105,8 +109,8 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -114,8 +118,8 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

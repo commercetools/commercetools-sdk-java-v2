@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetOrderLineItemCustomFieldChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set LineItem CustomField on Orders.</li>
+ *   <li>Set LineItem CustomField on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCustomFieldChange, ModelBase {
@@ -24,35 +28,35 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
 
     private String change;
 
+    private java.lang.Object previousValue;
+
+    private java.lang.Object nextValue;
+
     private String customTypeId;
 
     private String name;
 
-    private String variant;
-
     private com.commercetools.history.models.common.LocalizedString lineItem;
 
-    private java.lang.Object nextValue;
-
-    private java.lang.Object previousValue;
+    private String variant;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetOrderLineItemCustomFieldChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("customTypeId") final String customTypeId, @JsonProperty("name") final String name,
-            @JsonProperty("variant") final String variant,
-            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
+            @JsonProperty("previousValue") final java.lang.Object previousValue,
             @JsonProperty("nextValue") final java.lang.Object nextValue,
-            @JsonProperty("previousValue") final java.lang.Object previousValue) {
+            @JsonProperty("customTypeId") final String customTypeId, @JsonProperty("name") final String name,
+            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
+            @JsonProperty("variant") final String variant) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.customTypeId = customTypeId;
         this.name = name;
-        this.variant = variant;
         this.lineItem = lineItem;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
+        this.variant = variant;
         this.type = SET_ORDER_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }
 
@@ -72,7 +76,7 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     }
 
     /**
-     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     *
      */
 
     public String getChange() {
@@ -80,39 +84,15 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public String getCustomTypeId() {
-        return this.customTypeId;
+    public java.lang.Object getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     *
-     */
-
-    public String getVariant() {
-        return this.variant;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.history.models.common.LocalizedString getLineItem() {
-        return this.lineItem;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.lang.Object getNextValue() {
@@ -120,15 +100,47 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     }
 
     /**
-     *
+     *  <p><code>id</code> of the referenced Type.</p>
      */
 
-    public java.lang.Object getPreviousValue() {
-        return this.previousValue;
+    public String getCustomTypeId() {
+        return this.customTypeId;
+    }
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     *  <p>Name of the Product the Line Item is based on.</p>
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final java.lang.Object previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setCustomTypeId(final String customTypeId) {
@@ -139,20 +151,12 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
         this.name = name;
     }
 
-    public void setVariant(final String variant) {
-        this.variant = variant;
-    }
-
     public void setLineItem(final com.commercetools.history.models.common.LocalizedString lineItem) {
         this.lineItem = lineItem;
     }
 
-    public void setNextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final java.lang.Object previousValue) {
-        this.previousValue = previousValue;
+    public void setVariant(final String variant) {
+        this.variant = variant;
     }
 
     @Override
@@ -167,12 +171,12 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(customTypeId, that.customTypeId)
                 .append(name, that.name)
-                .append(variant, that.variant)
                 .append(lineItem, that.lineItem)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -180,12 +184,12 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(customTypeId)
                 .append(name)
-                .append(variant)
                 .append(lineItem)
-                .append(nextValue)
-                .append(previousValue)
+                .append(variant)
                 .toHashCode();
     }
 

@@ -25,7 +25,7 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
     private com.commercetools.history.models.common.LocalizedString value;
 
     /**
-     * set the value to the value using the builder function
+     *  <p>Changed value.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>Changed value.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
     }
 
     /**
-     * set the value to the value
+     *  <p>Changed value.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
     }
 
     /**
-     * value of value}
+     *  <p>Changed value.</p>
      * @return value
      */
 

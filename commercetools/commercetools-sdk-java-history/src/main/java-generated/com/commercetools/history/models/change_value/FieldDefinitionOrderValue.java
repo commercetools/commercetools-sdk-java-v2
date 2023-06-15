@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Shape of the value for action <code>changeFieldDefinitionOrder</code></p>
+ * FieldDefinitionOrderValue
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface FieldDefinitionOrderValue {
 
     /**
-     *
+     *  <p>Name of the FieldDefinition.</p>
      * @return name
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface FieldDefinitionOrderValue {
     public String getName();
 
     /**
-     *
+     *  <p>Descriptive label of the field.</p>
      * @return label
      */
     @NotNull
@@ -51,14 +51,14 @@ public interface FieldDefinitionOrderValue {
     public LocalizedString getLabel();
 
     /**
-     * set name
+     *  <p>Name of the FieldDefinition.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     * set label
+     *  <p>Descriptive label of the field.</p>
      * @param label value to be set
      */
 

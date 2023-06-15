@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetLineItemPriceChange
+ *  <p>Change triggered by the Set LineItem Price update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,9 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemPriceChange setLineItemPriceChange = SetLineItemPriceChange.builder()
  *             .change("{change}")
- *             .lineItem(lineItemBuilder -> lineItemBuilder)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface SetLineItemPriceChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setLineItemPrice</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,25 +58,7 @@ public interface SetLineItemPriceChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return lineItem
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("lineItem")
-    public LocalizedString getLineItem();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public Price getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -85,32 +67,50 @@ public interface SetLineItemPriceChange extends Change {
     public Price getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setLineItemPrice</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public Price getNextValue();
+
+    /**
+     *  <p>Name of the Product the updated Line Item is based on.</p>
+     * @return lineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("lineItem")
+    public LocalizedString getLineItem();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set lineItem
-     * @param lineItem value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setLineItem(final LocalizedString lineItem);
+    public void setPreviousValue(final Price previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Price nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the Product the updated Line Item is based on.</p>
+     * @param lineItem value to be set
      */
 
-    public void setPreviousValue(final Price previousValue);
+    public void setLineItem(final LocalizedString lineItem);
 
     /**
      * factory method
@@ -128,9 +128,9 @@ public interface SetLineItemPriceChange extends Change {
     public static SetLineItemPriceChange of(final SetLineItemPriceChange template) {
         SetLineItemPriceChangeImpl instance = new SetLineItemPriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(template.getLineItem());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setLineItem(template.getLineItem());
         return instance;
     }
 
@@ -146,9 +146,9 @@ public interface SetLineItemPriceChange extends Change {
         }
         SetLineItemPriceChangeImpl instance = new SetLineItemPriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
-        instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
         instance.setPreviousValue(com.commercetools.history.models.common.Price.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         return instance;
     }
 

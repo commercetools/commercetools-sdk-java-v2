@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Shape of the value for cart discounts absolute value.</p>
+ * ChangeValueAbsoluteChangeValue
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
     public String getType();
 
     /**
-     *
+     *  <p>Money values in different currencies.</p>
      * @return money
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
     public List<Money> getMoney();
 
     /**
-     * set money
+     *  <p>Money values in different currencies.</p>
      * @param money values to be set
      */
 
@@ -64,7 +64,7 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
     public void setMoney(final Money... money);
 
     /**
-     * set money
+     *  <p>Money values in different currencies.</p>
      * @param money values to be set
      */
 

@@ -23,12 +23,12 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
 
     private String change;
 
-    private java.lang.Object nextValue;
-
     private java.lang.Object previousValue;
 
+    private java.lang.Object nextValue;
+
     /**
-     *  <p>Update action for <code>setValue</code> on custom objects</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -39,18 +39,7 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetValueChangeBuilder nextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -61,7 +50,18 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
     }
 
     /**
-     *  <p>Update action for <code>setValue</code> on custom objects</p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetValueChangeBuilder nextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -70,16 +70,7 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.lang.Object getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -88,14 +79,23 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.lang.Object getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds SetValueChange with checking for non-null required values
      * @return SetValueChange
      */
     public SetValueChange build() {
         Objects.requireNonNull(change, SetValueChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, SetValueChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetValueChange.class + ": previousValue is missing");
-        return new SetValueChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetValueChange.class + ": nextValue is missing");
+        return new SetValueChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -103,7 +103,7 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
      * @return SetValueChange
      */
     public SetValueChange buildUnchecked() {
-        return new SetValueChangeImpl(change, nextValue, previousValue);
+        return new SetValueChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -122,8 +122,8 @@ public class SetValueChangeBuilder implements Builder<SetValueChange> {
     public static SetValueChangeBuilder of(final SetValueChange template) {
         SetValueChangeBuilder builder = new SetValueChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

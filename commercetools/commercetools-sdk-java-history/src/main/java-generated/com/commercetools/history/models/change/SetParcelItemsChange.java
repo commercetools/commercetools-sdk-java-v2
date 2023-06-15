@@ -18,7 +18,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetParcelItemsChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Parcel Items on Orders.</li>
+ *   <li>Set Parcel Items on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,9 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetParcelItemsChange setParcelItemsChange = SetParcelItemsChange.builder()
  *             .change("{change}")
- *             .parcel(parcelBuilder -> parcelBuilder)
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .parcel(parcelBuilder -> parcelBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -51,7 +55,7 @@ public interface SetParcelItemsChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setParcelItems</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -59,25 +63,7 @@ public interface SetParcelItemsChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return parcel
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("parcel")
-    public ParcelChangeValue getParcel();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public List<DeliveryItem> getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -86,36 +72,32 @@ public interface SetParcelItemsChange extends Change {
     public List<DeliveryItem> getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setParcelItems</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public List<DeliveryItem> getNextValue();
+
+    /**
+     *  <p>Information about the updated Parcel.</p>
+     * @return parcel
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("parcel")
+    public ParcelChangeValue getParcel();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set parcel
-     * @param parcel value to be set
-     */
-
-    public void setParcel(final ParcelChangeValue parcel);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    @JsonIgnore
-    public void setNextValue(final DeliveryItem... nextValue);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    public void setNextValue(final List<DeliveryItem> nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -123,11 +105,33 @@ public interface SetParcelItemsChange extends Change {
     public void setPreviousValue(final DeliveryItem... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<DeliveryItem> previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    @JsonIgnore
+    public void setNextValue(final DeliveryItem... nextValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    public void setNextValue(final List<DeliveryItem> nextValue);
+
+    /**
+     *  <p>Information about the updated Parcel.</p>
+     * @param parcel value to be set
+     */
+
+    public void setParcel(final ParcelChangeValue parcel);
 
     /**
      * factory method
@@ -145,9 +149,9 @@ public interface SetParcelItemsChange extends Change {
     public static SetParcelItemsChange of(final SetParcelItemsChange template) {
         SetParcelItemsChangeImpl instance = new SetParcelItemsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setParcel(template.getParcel());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setParcel(template.getParcel());
         return instance;
     }
 
@@ -163,18 +167,18 @@ public interface SetParcelItemsChange extends Change {
         }
         SetParcelItemsChangeImpl instance = new SetParcelItemsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setParcel(
-            com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setParcel(
+            com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
         return instance;
     }
 

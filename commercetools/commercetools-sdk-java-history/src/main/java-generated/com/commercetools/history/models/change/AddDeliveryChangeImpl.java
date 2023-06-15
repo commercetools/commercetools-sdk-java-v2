@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddDeliveryChange
+ *  <p>Change triggered by the Add Delivery update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
@@ -24,20 +24,20 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.DeliveryChangeValue nextValue;
-
     private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
+
+    private com.commercetools.history.models.change_value.DeliveryChangeValue nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddDeliveryChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = ADD_DELIVERY_CHANGE;
     }
 
@@ -57,7 +57,7 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>addDelivery</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,32 +65,32 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.change_value.DeliveryChangeValue getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.change_value.DeliveryChangeValue getPreviousValue() {
         return this.previousValue;
     }
 
-    public void setChange(final String change) {
-        this.change = change;
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.change_value.DeliveryChangeValue getNextValue() {
+        return this.nextValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue) {
-        this.nextValue = nextValue;
+    public void setChange(final String change) {
+        this.change = change;
     }
 
     public void setPreviousValue(
             final com.commercetools.history.models.change_value.DeliveryChangeValue previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -105,8 +105,8 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -114,8 +114,8 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

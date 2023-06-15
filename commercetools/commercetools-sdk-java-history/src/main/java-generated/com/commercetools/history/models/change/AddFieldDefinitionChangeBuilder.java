@@ -28,7 +28,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     private com.commercetools.history.models.common.FieldDefinition nextValue;
 
     /**
-     *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     }
 
     /**
-     *  <p>Update action for <code>addFieldDefinition</code> on payments</p>
+     * value of change}
      * @return change
      */
 
@@ -84,7 +84,7 @@ public class AddFieldDefinitionChangeBuilder implements Builder<AddFieldDefiniti
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

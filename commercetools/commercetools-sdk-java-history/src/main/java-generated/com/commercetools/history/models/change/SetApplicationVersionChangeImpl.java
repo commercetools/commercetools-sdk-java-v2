@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetApplicationVersionChange
+ *  <p>Change triggered automatically due to a user-initiated change.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetApplicationVersionChangeImpl implements SetApplicationVersionChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetApplicationVersionChangeImpl implements SetApplicationVersionCha
     }
 
     /**
-     *  <p>Internal Update action for <code>setApplicationVersion</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetApplicationVersionChangeImpl implements SetApplicationVersionCha
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public Integer getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetApplicationVersionChangeImpl implements SetApplicationVersionCha
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public Integer getNextValue() {

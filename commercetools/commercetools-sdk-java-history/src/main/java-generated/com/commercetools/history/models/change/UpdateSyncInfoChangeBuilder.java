@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     UpdateSyncInfoChange updateSyncInfoChange = UpdateSyncInfoChange.builder()
  *             .change("{change}")
- *             .channelId("{channelId}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .channelId("{channelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
 
     private String change;
 
-    private String channelId;
-
     private com.commercetools.history.models.common.SyncInfo nextValue;
 
+    private String channelId;
+
     /**
-     *  <p>Update action for <code>updateSyncInfo</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,18 +42,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
-     * set the value to the channelId
-     * @param channelId value to be set
-     * @return Builder
-     */
-
-    public UpdateSyncInfoChangeBuilder channelId(final String channelId) {
-        this.channelId = channelId;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -65,7 +54,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -77,7 +66,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -88,7 +77,18 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
-     *  <p>Update action for <code>updateSyncInfo</code></p>
+     *  <p><code>id</code> of the updated Channel.</p>
+     * @param channelId value to be set
+     * @return Builder
+     */
+
+    public UpdateSyncInfoChangeBuilder channelId(final String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -97,16 +97,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
-     * value of channelId}
-     * @return channelId
-     */
-
-    public String getChannelId() {
-        return this.channelId;
-    }
-
-    /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -115,14 +106,23 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
+     *  <p><code>id</code> of the updated Channel.</p>
+     * @return channelId
+     */
+
+    public String getChannelId() {
+        return this.channelId;
+    }
+
+    /**
      * builds UpdateSyncInfoChange with checking for non-null required values
      * @return UpdateSyncInfoChange
      */
     public UpdateSyncInfoChange build() {
         Objects.requireNonNull(change, UpdateSyncInfoChange.class + ": change is missing");
-        Objects.requireNonNull(channelId, UpdateSyncInfoChange.class + ": channelId is missing");
         Objects.requireNonNull(nextValue, UpdateSyncInfoChange.class + ": nextValue is missing");
-        return new UpdateSyncInfoChangeImpl(change, channelId, nextValue);
+        Objects.requireNonNull(channelId, UpdateSyncInfoChange.class + ": channelId is missing");
+        return new UpdateSyncInfoChangeImpl(change, nextValue, channelId);
     }
 
     /**
@@ -130,7 +130,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
      * @return UpdateSyncInfoChange
      */
     public UpdateSyncInfoChange buildUnchecked() {
-        return new UpdateSyncInfoChangeImpl(change, channelId, nextValue);
+        return new UpdateSyncInfoChangeImpl(change, nextValue, channelId);
     }
 
     /**
@@ -149,8 +149,8 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     public static UpdateSyncInfoChangeBuilder of(final UpdateSyncInfoChange template) {
         UpdateSyncInfoChangeBuilder builder = new UpdateSyncInfoChangeBuilder();
         builder.change = template.getChange();
-        builder.channelId = template.getChannelId();
         builder.nextValue = template.getNextValue();
+        builder.channelId = template.getChannelId();
         return builder;
     }
 

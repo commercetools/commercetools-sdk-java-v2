@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetProductSelectionsChange
+ *  <p>Change triggered by the Set Product Selections update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface SetProductSelectionsChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setProductSelections</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface SetProductSelectionsChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface SetProductSelectionsChange extends Change {
     public List<ProductSelectionSetting> getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -75,14 +75,14 @@ public interface SetProductSelectionsChange extends Change {
     public List<ProductSelectionSetting> getNextValue();
 
     /**
-     *  <p>Update action for <code>setProductSelections</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -90,14 +90,14 @@ public interface SetProductSelectionsChange extends Change {
     public void setPreviousValue(final ProductSelectionSetting... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<ProductSelectionSetting> previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
@@ -105,7 +105,7 @@ public interface SetProductSelectionsChange extends Change {
     public void setNextValue(final ProductSelectionSetting... nextValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 

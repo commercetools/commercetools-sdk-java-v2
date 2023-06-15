@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveDeliveryItemsChange
+ *  <p>Change triggered by the Remove Delivery update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange, ModelBase {
@@ -53,7 +53,7 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
     }
 
     /**
-     *  <p>Update action for <code>removeDelivery</code></p>
+     *
      */
 
     public String getChange() {
@@ -61,7 +61,7 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Delivery getPreviousValue() {

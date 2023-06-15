@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetMetaDescriptionChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Meta Description on Categories.</li>
+ *   <li>Set Meta Description on Products.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, ModelBase {
@@ -57,7 +61,7 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
     }
 
     /**
-     *  <p>Shape of the action for <code>setMetaDescription</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +69,7 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -73,7 +77,7 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

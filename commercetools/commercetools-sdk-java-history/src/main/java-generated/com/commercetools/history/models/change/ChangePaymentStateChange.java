@@ -15,7 +15,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangePaymentStateChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change PaymentState on Orders.</li>
+ *   <li>Change PaymentState on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,8 +27,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangePaymentStateChange changePaymentStateChange = ChangePaymentStateChange.builder()
  *             .change("{change}")
- *             .nextValue(PaymentState.BALANCE_DUE)
  *             .previousValue(PaymentState.BALANCE_DUE)
+ *             .nextValue(PaymentState.BALANCE_DUE)
  *             .build()
  * </code></pre>
  * </div>
@@ -47,7 +51,7 @@ public interface ChangePaymentStateChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changePaymentState</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -55,15 +59,7 @@ public interface ChangePaymentStateChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public PaymentState getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -71,25 +67,33 @@ public interface ChangePaymentStateChange extends Change {
     public PaymentState getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changePaymentState</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public PaymentState getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final PaymentState nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final PaymentState previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final PaymentState nextValue);
 
     /**
      * factory method
@@ -107,8 +111,8 @@ public interface ChangePaymentStateChange extends Change {
     public static ChangePaymentStateChange of(final ChangePaymentStateChange template) {
         ChangePaymentStateChangeImpl instance = new ChangePaymentStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -124,8 +128,8 @@ public interface ChangePaymentStateChange extends Change {
         }
         ChangePaymentStateChangeImpl instance = new ChangePaymentStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 

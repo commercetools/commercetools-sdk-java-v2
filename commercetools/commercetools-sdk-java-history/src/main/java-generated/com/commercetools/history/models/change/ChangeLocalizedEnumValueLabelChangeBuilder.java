@@ -15,11 +15,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeLocalizedEnumValueLabelChange changeLocalizedEnumValueLabelChange = ChangeLocalizedEnumValueLabelChange.builder()
  *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .fieldName("{fieldName}")
  *             .attributeName("{attributeName}")
  *             .valueKey("{valueKey}")
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,18 +29,18 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
 
     private String change;
 
+    private com.commercetools.history.models.common.LocalizedString previousValue;
+
+    private com.commercetools.history.models.common.LocalizedString nextValue;
+
     private String fieldName;
 
     private String attributeName;
 
     private String valueKey;
 
-    private com.commercetools.history.models.common.LocalizedString previousValue;
-
-    private com.commercetools.history.models.common.LocalizedString nextValue;
-
     /**
-     *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -51,40 +51,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     *  <p>The name of the field definition updated.</p>
-     * @param fieldName value to be set
-     * @return Builder
-     */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder fieldName(final String fieldName) {
-        this.fieldName = fieldName;
-        return this;
-    }
-
-    /**
-     *  <p>The name of the attribute updated.</p>
-     * @param attributeName value to be set
-     * @return Builder
-     */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder attributeName(final String attributeName) {
-        this.attributeName = attributeName;
-        return this;
-    }
-
-    /**
-     *  <p>Key of the values that was updated</p>
-     * @param valueKey value to be set
-     * @return Builder
-     */
-
-    public ChangeLocalizedEnumValueLabelChangeBuilder valueKey(final String valueKey) {
-        this.valueKey = valueKey;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -96,7 +63,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -108,7 +75,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -120,7 +87,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -132,7 +99,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -144,7 +111,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -156,7 +123,40 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     * @param fieldName value to be set
+     * @return Builder
+     */
+
+    public ChangeLocalizedEnumValueLabelChangeBuilder fieldName(final String fieldName) {
+        this.fieldName = fieldName;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     * @param attributeName value to be set
+     * @return Builder
+     */
+
+    public ChangeLocalizedEnumValueLabelChangeBuilder attributeName(final String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+
+    /**
+     *  <p>Key of the updated values.</p>
+     * @param valueKey value to be set
+     * @return Builder
+     */
+
+    public ChangeLocalizedEnumValueLabelChangeBuilder valueKey(final String valueKey) {
+        this.valueKey = valueKey;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -165,34 +165,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     *  <p>The name of the field definition updated.</p>
-     * @return fieldName
-     */
-
-    public String getFieldName() {
-        return this.fieldName;
-    }
-
-    /**
-     *  <p>The name of the attribute updated.</p>
-     * @return attributeName
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     *  <p>Key of the values that was updated</p>
-     * @return valueKey
-     */
-
-    public String getValueKey() {
-        return this.valueKey;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -201,7 +174,7 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -210,18 +183,45 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     * @return fieldName
+     */
+
+    public String getFieldName() {
+        return this.fieldName;
+    }
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     * @return attributeName
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
+    /**
+     *  <p>Key of the updated values.</p>
+     * @return valueKey
+     */
+
+    public String getValueKey() {
+        return this.valueKey;
+    }
+
+    /**
      * builds ChangeLocalizedEnumValueLabelChange with checking for non-null required values
      * @return ChangeLocalizedEnumValueLabelChange
      */
     public ChangeLocalizedEnumValueLabelChange build() {
         Objects.requireNonNull(change, ChangeLocalizedEnumValueLabelChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeLocalizedEnumValueLabelChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeLocalizedEnumValueLabelChange.class + ": nextValue is missing");
         Objects.requireNonNull(fieldName, ChangeLocalizedEnumValueLabelChange.class + ": fieldName is missing");
         Objects.requireNonNull(attributeName, ChangeLocalizedEnumValueLabelChange.class + ": attributeName is missing");
         Objects.requireNonNull(valueKey, ChangeLocalizedEnumValueLabelChange.class + ": valueKey is missing");
-        Objects.requireNonNull(previousValue, ChangeLocalizedEnumValueLabelChange.class + ": previousValue is missing");
-        Objects.requireNonNull(nextValue, ChangeLocalizedEnumValueLabelChange.class + ": nextValue is missing");
-        return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue,
-            nextValue);
+        return new ChangeLocalizedEnumValueLabelChangeImpl(change, previousValue, nextValue, fieldName, attributeName,
+            valueKey);
     }
 
     /**
@@ -229,8 +229,8 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
      * @return ChangeLocalizedEnumValueLabelChange
      */
     public ChangeLocalizedEnumValueLabelChange buildUnchecked() {
-        return new ChangeLocalizedEnumValueLabelChangeImpl(change, fieldName, attributeName, valueKey, previousValue,
-            nextValue);
+        return new ChangeLocalizedEnumValueLabelChangeImpl(change, previousValue, nextValue, fieldName, attributeName,
+            valueKey);
     }
 
     /**
@@ -249,11 +249,11 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     public static ChangeLocalizedEnumValueLabelChangeBuilder of(final ChangeLocalizedEnumValueLabelChange template) {
         ChangeLocalizedEnumValueLabelChangeBuilder builder = new ChangeLocalizedEnumValueLabelChangeBuilder();
         builder.change = template.getChange();
+        builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.fieldName = template.getFieldName();
         builder.attributeName = template.getAttributeName();
         builder.valueKey = template.getValueKey();
-        builder.previousValue = template.getPreviousValue();
-        builder.nextValue = template.getNextValue();
         return builder;
     }
 

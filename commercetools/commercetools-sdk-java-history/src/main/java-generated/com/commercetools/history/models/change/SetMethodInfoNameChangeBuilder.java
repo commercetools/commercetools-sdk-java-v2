@@ -31,7 +31,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setMethodInfoName</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     *  <p>Shape of the action for <code>setMethodInfoName</code></p>
+     * value of change}
      * @return change
      */
 
@@ -123,7 +123,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -132,7 +132,7 @@ public class SetMethodInfoNameChangeBuilder implements Builder<SetMethodInfoName
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

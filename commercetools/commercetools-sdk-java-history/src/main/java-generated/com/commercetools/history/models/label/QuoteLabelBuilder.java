@@ -34,7 +34,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     private com.commercetools.history.models.common.Reference quoteRequest;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the Quote.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * set the value to the customer using the builder function
+     *  <p>The Buyer who requested the Quote.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * set the value to the customer using the builder function
+     *  <p>The Buyer who requested the Quote.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * set the value to the customer
+     *  <p>The Buyer who requested the Quote.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * set the value to the stagedQuote using the builder function
+     *  <p>Staged Quote related to the Quote.</p>
      * @param builder function to build the stagedQuote value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * set the value to the stagedQuote using the builder function
+     *  <p>Staged Quote related to the Quote.</p>
      * @param builder function to build the stagedQuote value
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * set the value to the stagedQuote
+     *  <p>Staged Quote related to the Quote.</p>
      * @param stagedQuote value to be set
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * set the value to the quoteRequest using the builder function
+     *  <p>Quote Request related to the Quote.</p>
      * @param builder function to build the quoteRequest value
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * set the value to the quoteRequest using the builder function
+     *  <p>Quote Request related to the Quote.</p>
      * @param builder function to build the quoteRequest value
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * set the value to the quoteRequest
+     *  <p>Quote Request related to the Quote.</p>
      * @param quoteRequest value to be set
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the Quote.</p>
      * @return key
      */
 
@@ -159,7 +159,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * value of customer}
+     *  <p>The Buyer who requested the Quote.</p>
      * @return customer
      */
 
@@ -168,7 +168,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * value of stagedQuote}
+     *  <p>Staged Quote related to the Quote.</p>
      * @return stagedQuote
      */
 
@@ -177,7 +177,7 @@ public class QuoteLabelBuilder implements Builder<QuoteLabel> {
     }
 
     /**
-     * value of quoteRequest}
+     *  <p>Quote Request related to the Quote.</p>
      * @return quoteRequest
      */
 

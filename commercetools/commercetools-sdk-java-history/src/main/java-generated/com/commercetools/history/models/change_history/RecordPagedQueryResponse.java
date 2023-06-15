@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Response to a query request for Record.</p>
+ *  <p>PagedQueryResult with <code>results</code> containing an array of Record.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -69,7 +69,7 @@ public interface RecordPagedQueryResponse {
     public Integer getOffset();
 
     /**
-     *
+     *  <p>Records matching the query.</p>
      * @return results
      */
     @NotNull
@@ -106,7 +106,7 @@ public interface RecordPagedQueryResponse {
     public void setOffset(final Integer offset);
 
     /**
-     * set results
+     *  <p>Records matching the query.</p>
      * @param results values to be set
      */
 
@@ -114,7 +114,7 @@ public interface RecordPagedQueryResponse {
     public void setResults(final Record... results);
 
     /**
-     * set results
+     *  <p>Records matching the query.</p>
      * @param results values to be set
      */
 

@@ -15,7 +15,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetValidFromAndUntilChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Valid From and Until on Cart Discounts.</li>
+ *   <li>Set Valid From and Until on Discount Codes.</li>
+ *   <li>Set Valid From and Until on Product Discounts.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChange, ModelBase {
@@ -65,7 +70,7 @@ public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChang
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.change_value.ValidFromAndUntilValue getPreviousValue() {
@@ -73,7 +78,7 @@ public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChang
     }
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.change_value.ValidFromAndUntilValue getNextValue() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddLocationChange
+ *  <p>Change triggered by the Add Location update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddLocationChangeImpl implements AddLocationChange, ModelBase {
@@ -57,7 +57,7 @@ public class AddLocationChangeImpl implements AddLocationChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>addLocation</code> on zones</p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class AddLocationChangeImpl implements AddLocationChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Location getPreviousValue() {
@@ -73,7 +73,7 @@ public class AddLocationChangeImpl implements AddLocationChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Location getNextValue() {

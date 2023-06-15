@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Shape of the value for cart discounts multiBuyCustomLineItems target.</p>
+ * ChangeTargetMultiBuyCustomLineItemsChangeValue
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public String getType();
 
     /**
-     *
+     *  <p>Valid CustomLineItem target predicate.</p>
      * @return predicate
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public String getPredicate();
 
     /**
-     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     *  <p>Quantity of Custom Line Items that triggered the application of the discount.</p>
      * @return triggerQuantity
      */
     @NotNull
@@ -65,7 +65,7 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public Integer getTriggerQuantity();
 
     /**
-     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     *  <p>Quantity of Custom Line Items discounted per application of this discount.</p>
      * @return discountedQuantity
      */
     @NotNull
@@ -73,7 +73,7 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public Integer getDiscountedQuantity();
 
     /**
-     *  <p>Maximum number of applications of this discount.</p>
+     *  <p>Maximum number of times the discount is applicable.</p>
      * @return maxOccurrence
      */
     @NotNull
@@ -81,7 +81,7 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public Integer getMaxOccurrence();
 
     /**
-     *
+     *  <p>SelectionMode based on which particular Custom Line Items were discounted.</p>
      * @return selectionMode
      */
     @NotNull
@@ -89,35 +89,35 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     public SelectionMode getSelectionMode();
 
     /**
-     * set predicate
+     *  <p>Valid CustomLineItem target predicate.</p>
      * @param predicate value to be set
      */
 
     public void setPredicate(final String predicate);
 
     /**
-     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     *  <p>Quantity of Custom Line Items that triggered the application of the discount.</p>
      * @param triggerQuantity value to be set
      */
 
     public void setTriggerQuantity(final Integer triggerQuantity);
 
     /**
-     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     *  <p>Quantity of Custom Line Items discounted per application of this discount.</p>
      * @param discountedQuantity value to be set
      */
 
     public void setDiscountedQuantity(final Integer discountedQuantity);
 
     /**
-     *  <p>Maximum number of applications of this discount.</p>
+     *  <p>Maximum number of times the discount is applicable.</p>
      * @param maxOccurrence value to be set
      */
 
     public void setMaxOccurrence(final Integer maxOccurrence);
 
     /**
-     * set selectionMode
+     *  <p>SelectionMode based on which particular Custom Line Items were discounted.</p>
      * @param selectionMode value to be set
      */
 

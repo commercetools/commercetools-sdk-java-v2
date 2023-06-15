@@ -30,7 +30,7 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
     private Integer nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setMaxApplicationsPerCustomer</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
     }
 
     /**
-     *  <p>Shape of the action for <code>setMaxApplicationsPerCustomer</code></p>
+     * value of change}
      * @return change
      */
 
@@ -72,7 +72,7 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -81,7 +81,7 @@ public class SetMaxApplicationsPerCustomerChangeBuilder implements Builder<SetMa
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

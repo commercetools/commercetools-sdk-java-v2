@@ -27,7 +27,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
     private String name;
 
     /**
-     * set the value to the id
+     *  <p><code>id</code> of the ShippingMethod.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
     }
 
     /**
-     * set the value to the name
+     *  <p>Name of the ShippingMethod.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
     }
 
     /**
-     * value of id}
+     *  <p><code>id</code> of the ShippingMethod.</p>
      * @return id
      */
 
@@ -58,7 +58,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
     }
 
     /**
-     * value of name}
+     *  <p>Name of the ShippingMethod.</p>
      * @return name
      */
 

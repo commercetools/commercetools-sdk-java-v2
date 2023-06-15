@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetMaxApplicationsPerCustomerChange
+ *  <p>Change triggered by the Set Max Applications Per Customer update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMaxApplicationsPerCustomerChangeImpl implements SetMaxApplicationsPerCustomerChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetMaxApplicationsPerCustomerChangeImpl implements SetMaxApplicatio
     }
 
     /**
-     *  <p>Shape of the action for <code>setMaxApplicationsPerCustomer</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetMaxApplicationsPerCustomerChangeImpl implements SetMaxApplicatio
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public Integer getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetMaxApplicationsPerCustomerChangeImpl implements SetMaxApplicatio
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public Integer getNextValue() {

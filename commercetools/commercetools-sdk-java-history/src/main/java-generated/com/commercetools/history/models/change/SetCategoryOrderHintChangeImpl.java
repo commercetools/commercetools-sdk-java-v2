@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetCategoryOrderHintChange
+ *  <p>Change triggered by the Set Category Order Hint update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChange, ModelBase {
@@ -24,27 +24,28 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
 
     private String change;
 
-    private String catalogData;
-
-    private String categoryId;
-
     private com.commercetools.history.models.common.CategoryOrderHints previousValue;
 
     private com.commercetools.history.models.common.CategoryOrderHints nextValue;
+
+    private String catalogData;
+
+    private String categoryId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetCategoryOrderHintChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("catalogData") final String catalogData, @JsonProperty("categoryId") final String categoryId,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.CategoryOrderHints previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.CategoryOrderHints nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.CategoryOrderHints nextValue,
+            @JsonProperty("catalogData") final String catalogData,
+            @JsonProperty("categoryId") final String categoryId) {
         this.change = change;
-        this.catalogData = catalogData;
-        this.categoryId = categoryId;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.catalogData = catalogData;
+        this.categoryId = categoryId;
         this.type = SET_CATEGORY_ORDER_HINT_CHANGE;
     }
 
@@ -64,7 +65,7 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     }
 
     /**
-     *  <p>Update action for <code>setCategoryOrderHint</code></p>
+     *
      */
 
     public String getChange() {
@@ -72,23 +73,7 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     }
 
     /**
-     *
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     *
-     */
-
-    public String getCategoryId() {
-        return this.categoryId;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.CategoryOrderHints getPreviousValue() {
@@ -96,23 +81,34 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.CategoryOrderHints getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated Category.</p>
+     */
+
+    public String getCategoryId() {
+        return this.categoryId;
+    }
+
     public void setChange(final String change) {
         this.change = change;
-    }
-
-    public void setCatalogData(final String catalogData) {
-        this.catalogData = catalogData;
-    }
-
-    public void setCategoryId(final String categoryId) {
-        this.categoryId = categoryId;
     }
 
     public void setPreviousValue(final com.commercetools.history.models.common.CategoryOrderHints previousValue) {
@@ -121,6 +117,14 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
 
     public void setNextValue(final com.commercetools.history.models.common.CategoryOrderHints nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
+    public void setCategoryId(final String categoryId) {
+        this.categoryId = categoryId;
     }
 
     @Override
@@ -135,10 +139,10 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(catalogData, that.catalogData)
-                .append(categoryId, that.categoryId)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(categoryId, that.categoryId)
                 .isEquals();
     }
 
@@ -146,10 +150,10 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(catalogData)
-                .append(categoryId)
                 .append(previousValue)
                 .append(nextValue)
+                .append(catalogData)
+                .append(categoryId)
                 .toHashCode();
     }
 

@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Shape of the value for product discounts external value.</p>
+ * ChangeValueExternalChangeValue
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeValueExternalChangeValueImpl implements ChangeValueExternalChangeValue, ModelBase {

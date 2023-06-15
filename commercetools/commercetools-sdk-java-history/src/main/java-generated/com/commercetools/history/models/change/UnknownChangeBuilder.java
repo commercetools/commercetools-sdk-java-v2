@@ -28,7 +28,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
     private java.lang.Object nextValue;
 
     /**
-     * set the value to the change
+     *  <p>Identifier for the type of modification.</p>
      * @param change value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
     }
 
     /**
-     * value of change}
+     *  <p>Identifier for the type of modification.</p>
      * @return change
      */
 
@@ -70,7 +70,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -79,7 +79,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

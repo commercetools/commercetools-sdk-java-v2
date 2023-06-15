@@ -38,7 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DeliveryChangeValue {
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      * @return items
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface DeliveryChangeValue {
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Address to which the parcels are delivered.</p>
      * @return address
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface DeliveryChangeValue {
     public Address getAddress();
 
     /**
-     *
+     *  <p>Parcels included in the Delivery.</p>
      * @return parcels
      */
     @NotNull
@@ -65,7 +65,7 @@ public interface DeliveryChangeValue {
     public List<Parcel> getParcels();
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      * @param items values to be set
      */
 
@@ -73,21 +73,21 @@ public interface DeliveryChangeValue {
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     * set address
+     *  <p>Address to which the parcels are delivered.</p>
      * @param address value to be set
      */
 
     public void setAddress(final Address address);
 
     /**
-     * set parcels
+     *  <p>Parcels included in the Delivery.</p>
      * @param parcels values to be set
      */
 
@@ -95,7 +95,7 @@ public interface DeliveryChangeValue {
     public void setParcels(final Parcel... parcels);
 
     /**
-     * set parcels
+     *  <p>Parcels included in the Delivery.</p>
      * @param parcels values to be set
      */
 

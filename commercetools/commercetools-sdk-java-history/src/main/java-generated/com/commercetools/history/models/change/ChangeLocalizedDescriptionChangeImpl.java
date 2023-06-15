@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeLocalizedDescriptionChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Description on Product Types.</li>
+ *   <li>Change Description on Channels.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedDescriptionChangeImpl implements ChangeLocalizedDescriptionChange, ModelBase {
@@ -57,7 +61,7 @@ public class ChangeLocalizedDescriptionChangeImpl implements ChangeLocalizedDesc
     }
 
     /**
-     *  <p>Shape of the action for <code>changeDescription</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +69,7 @@ public class ChangeLocalizedDescriptionChangeImpl implements ChangeLocalizedDesc
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -73,7 +77,7 @@ public class ChangeLocalizedDescriptionChangeImpl implements ChangeLocalizedDesc
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

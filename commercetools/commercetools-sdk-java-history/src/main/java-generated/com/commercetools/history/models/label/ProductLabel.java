@@ -47,7 +47,7 @@ public interface ProductLabel extends Label {
     public String getType();
 
     /**
-     *
+     *  <p>User-defined identifier used in a deep-link URL for the Product.</p>
      * @return slug
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface ProductLabel extends Label {
     public LocalizedString getSlug();
 
     /**
-     *
+     *  <p>Name of the Product.</p>
      * @return name
      */
     @NotNull
@@ -65,14 +65,14 @@ public interface ProductLabel extends Label {
     public LocalizedString getName();
 
     /**
-     * set slug
+     *  <p>User-defined identifier used in a deep-link URL for the Product.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     * set name
+     *  <p>Name of the Product.</p>
      * @param name value to be set
      */
 

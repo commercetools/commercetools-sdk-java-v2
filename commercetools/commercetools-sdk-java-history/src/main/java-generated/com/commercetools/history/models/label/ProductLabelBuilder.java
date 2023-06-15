@@ -28,7 +28,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     private com.commercetools.history.models.common.LocalizedString name;
 
     /**
-     * set the value to the slug using the builder function
+     *  <p>User-defined identifier used in a deep-link URL for the Product.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     * set the value to the slug using the builder function
+     *  <p>User-defined identifier used in a deep-link URL for the Product.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     * set the value to the slug
+     *  <p>User-defined identifier used in a deep-link URL for the Product.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     * set the value to the name using the builder function
+     *  <p>Name of the Product.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     * set the value to the name using the builder function
+     *  <p>Name of the Product.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     * set the value to the name
+     *  <p>Name of the Product.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     * value of slug}
+     *  <p>User-defined identifier used in a deep-link URL for the Product.</p>
      * @return slug
      */
 
@@ -107,7 +107,7 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
-     * value of name}
+     *  <p>Name of the Product.</p>
      * @return name
      */
 

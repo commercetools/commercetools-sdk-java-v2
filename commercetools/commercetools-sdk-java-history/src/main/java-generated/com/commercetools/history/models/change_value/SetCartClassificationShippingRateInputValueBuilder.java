@@ -43,7 +43,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     * set the value to the key
+     *  <p>Key of the value used as a programmatic identifier.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     * set the value to the label using the builder function
+     *  <p>Descriptive localized label of the value.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     * set the value to the label using the builder function
+     *  <p>Descriptive localized label of the value.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     * set the value to the label
+     *  <p>Descriptive localized label of the value.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     * value of key}
+     *  <p>Key of the value used as a programmatic identifier.</p>
      * @return key
      */
 
@@ -108,7 +108,7 @@ public class SetCartClassificationShippingRateInputValueBuilder
     }
 
     /**
-     * value of label}
+     *  <p>Descriptive localized label of the value.</p>
      * @return label
      */
 

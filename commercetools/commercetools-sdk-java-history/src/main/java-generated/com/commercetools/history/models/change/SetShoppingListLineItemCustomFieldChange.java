@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetShoppingListLineItemCustomFieldChange
+ *  <p>Change triggered by the Set ShoppingListLineItem Custom Field update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +49,7 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -57,7 +57,23 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @JsonProperty("previousValue")
+    public Object getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public Object getNextValue();
+
+    /**
+     *  <p>Name of the Custom Field.</p>
      * @return name
      */
     @NotNull
@@ -65,7 +81,7 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
     public String getName();
 
     /**
-     *
+     *  <p><code>id</code> of the referenced Type.</p>
      * @return customTypeId
      */
     @NotNull
@@ -73,7 +89,7 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
     public String getCustomTypeId();
 
     /**
-     *
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
      * @return lineItem
      */
     @NotNull
@@ -82,62 +98,46 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
     public ShoppingListLineItemValue getLineItem();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public Object getNextValue();
-
-    /**
-     *
-     * @return previousValue
-     */
-    @NotNull
-    @JsonProperty("previousValue")
-    public Object getPreviousValue();
-
-    /**
-     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set name
-     * @param name value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setName(final String name);
+    public void setPreviousValue(final Object previousValue);
 
     /**
-     * set customTypeId
-     * @param customTypeId value to be set
-     */
-
-    public void setCustomTypeId(final String customTypeId);
-
-    /**
-     * set lineItem
-     * @param lineItem value to be set
-     */
-
-    public void setLineItem(final ShoppingListLineItemValue lineItem);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Object nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the Custom Field.</p>
+     * @param name value to be set
      */
 
-    public void setPreviousValue(final Object previousValue);
+    public void setName(final String name);
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
+     * @param customTypeId value to be set
+     */
+
+    public void setCustomTypeId(final String customTypeId);
+
+    /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
+     * @param lineItem value to be set
+     */
+
+    public void setLineItem(final ShoppingListLineItemValue lineItem);
 
     /**
      * factory method
@@ -155,11 +155,11 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
     public static SetShoppingListLineItemCustomFieldChange of(final SetShoppingListLineItemCustomFieldChange template) {
         SetShoppingListLineItemCustomFieldChangeImpl instance = new SetShoppingListLineItemCustomFieldChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setName(template.getName());
         instance.setCustomTypeId(template.getCustomTypeId());
         instance.setLineItem(template.getLineItem());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -176,12 +176,12 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
         }
         SetShoppingListLineItemCustomFieldChangeImpl instance = new SetShoppingListLineItemCustomFieldChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setName(template.getName());
         instance.setCustomTypeId(template.getCustomTypeId());
         instance.setLineItem(
             com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 

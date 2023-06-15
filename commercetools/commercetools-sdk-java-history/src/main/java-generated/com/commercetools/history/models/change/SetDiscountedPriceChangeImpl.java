@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetDiscountedPriceChange
+ *  <p>Change triggered by the Set Discounted Embedded Price update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, ModelBase {
@@ -24,31 +24,31 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
 
     private String change;
 
+    private com.commercetools.history.models.common.Price previousValue;
+
+    private com.commercetools.history.models.common.Price nextValue;
+
     private String catalogData;
 
     private String variant;
 
     private String priceId;
 
-    private com.commercetools.history.models.common.Price previousValue;
-
-    private com.commercetools.history.models.common.Price nextValue;
-
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetDiscountedPriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant,
-            @JsonProperty("priceId") final String priceId,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Price previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Price nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.Price nextValue,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant,
+            @JsonProperty("priceId") final String priceId) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.catalogData = catalogData;
         this.variant = variant;
         this.priceId = priceId;
-        this.previousValue = previousValue;
-        this.nextValue = nextValue;
         this.type = SET_DISCOUNTED_PRICE_CHANGE;
     }
 
@@ -68,7 +68,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     *  <p>Update action for <code>setDiscountedPrice</code></p>
+     *
      */
 
     public String getChange() {
@@ -76,31 +76,7 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     *
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     *
-     */
-
-    public String getVariant() {
-        return this.variant;
-    }
-
-    /**
-     *
-     */
-
-    public String getPriceId() {
-        return this.priceId;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Price getPreviousValue() {
@@ -108,15 +84,50 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Price getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded Price.</p>
+     */
+
+    public String getPriceId() {
+        return this.priceId;
+    }
+
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final com.commercetools.history.models.common.Price previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.Price nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setCatalogData(final String catalogData) {
@@ -131,14 +142,6 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
         this.priceId = priceId;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Price previousValue) {
-        this.previousValue = previousValue;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.common.Price nextValue) {
-        this.nextValue = nextValue;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -151,11 +154,11 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(variant, that.variant)
                 .append(priceId, that.priceId)
-                .append(previousValue, that.previousValue)
-                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -163,11 +166,11 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(catalogData)
                 .append(variant)
                 .append(priceId)
-                .append(previousValue)
-                .append(nextValue)
                 .toHashCode();
     }
 

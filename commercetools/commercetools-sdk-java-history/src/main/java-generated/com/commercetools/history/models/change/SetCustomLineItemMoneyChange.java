@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetCustomLineItemMoneyChange
+ *  <p>Change triggered by the Set CustomLineItem Money update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,10 +25,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetCustomLineItemMoneyChange setCustomLineItemMoneyChange = SetCustomLineItemMoneyChange.builder()
  *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .customLineItemId("{customLineItemId}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -51,7 +51,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setCustomLineItemMoney</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -59,33 +59,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return customLineItem
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("customLineItem")
-    public LocalizedString getCustomLineItem();
-
-    /**
-     *
-     * @return customLineItemId
-     */
-    @NotNull
-    @JsonProperty("customLineItemId")
-    public String getCustomLineItemId();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public Money getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -94,39 +68,65 @@ public interface SetCustomLineItemMoneyChange extends Change {
     public Money getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setCustomLineItemMoney</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public Money getNextValue();
+
+    /**
+     *  <p>Name of the updated CustomLineItem.</p>
+     * @return customLineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("customLineItem")
+    public LocalizedString getCustomLineItem();
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @return customLineItemId
+     */
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set customLineItem
-     * @param customLineItem value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setCustomLineItem(final LocalizedString customLineItem);
+    public void setPreviousValue(final Money previousValue);
 
     /**
-     * set customLineItemId
-     * @param customLineItemId value to be set
-     */
-
-    public void setCustomLineItemId(final String customLineItemId);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Money nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the updated CustomLineItem.</p>
+     * @param customLineItem value to be set
      */
 
-    public void setPreviousValue(final Money previousValue);
+    public void setCustomLineItem(final LocalizedString customLineItem);
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @param customLineItemId value to be set
+     */
+
+    public void setCustomLineItemId(final String customLineItemId);
 
     /**
      * factory method
@@ -144,10 +144,10 @@ public interface SetCustomLineItemMoneyChange extends Change {
     public static SetCustomLineItemMoneyChange of(final SetCustomLineItemMoneyChange template) {
         SetCustomLineItemMoneyChangeImpl instance = new SetCustomLineItemMoneyChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setCustomLineItem(template.getCustomLineItem());
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -163,11 +163,11 @@ public interface SetCustomLineItemMoneyChange extends Change {
         }
         SetCustomLineItemMoneyChangeImpl instance = new SetCustomLineItemMoneyChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(com.commercetools.history.models.common.Money.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
         instance.setCustomLineItem(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(com.commercetools.history.models.common.Money.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

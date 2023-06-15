@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeStateTypeChange
+ *  <p>Change triggered by the Change State Type update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBase {
@@ -57,7 +57,7 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
     }
 
     /**
-     *  <p>Update action for <code>changeType</code> on state</p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.StateType getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.StateType getNextValue() {

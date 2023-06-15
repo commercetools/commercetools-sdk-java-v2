@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangePlainEnumValueLabelChange
+ *  <p>Change triggered by the Change the label of an EnumValue update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValueLabelChange, ModelBase {
@@ -24,27 +24,28 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
 
     private String change;
 
-    private String attributeName;
-
-    private String valueKey;
-
     private String previousValue;
 
     private String nextValue;
+
+    private String attributeName;
+
+    private String valueKey;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangePlainEnumValueLabelChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("attributeName") final String attributeName, @JsonProperty("valueKey") final String valueKey,
             @JsonProperty("previousValue") final String previousValue,
-            @JsonProperty("nextValue") final String nextValue) {
+            @JsonProperty("nextValue") final String nextValue,
+            @JsonProperty("attributeName") final String attributeName,
+            @JsonProperty("valueKey") final String valueKey) {
         this.change = change;
-        this.attributeName = attributeName;
-        this.valueKey = valueKey;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.attributeName = attributeName;
+        this.valueKey = valueKey;
         this.type = CHANGE_PLAIN_ENUM_VALUE_LABEL_CHANGE;
     }
 
@@ -64,7 +65,7 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
     }
 
     /**
-     *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
+     *
      */
 
     public String getChange() {
@@ -72,23 +73,7 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     *  <p>Key of the values that was updated</p>
-     */
-
-    public String getValueKey() {
-        return this.valueKey;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -96,23 +81,31 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
+    /**
+     *  <p>Key of the updated values.</p>
+     */
+
+    public String getValueKey() {
+        return this.valueKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
-    }
-
-    public void setAttributeName(final String attributeName) {
-        this.attributeName = attributeName;
-    }
-
-    public void setValueKey(final String valueKey) {
-        this.valueKey = valueKey;
     }
 
     public void setPreviousValue(final String previousValue) {
@@ -121,6 +114,14 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
 
     public void setNextValue(final String nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setAttributeName(final String attributeName) {
+        this.attributeName = attributeName;
+    }
+
+    public void setValueKey(final String valueKey) {
+        this.valueKey = valueKey;
     }
 
     @Override
@@ -135,10 +136,10 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(attributeName, that.attributeName)
-                .append(valueKey, that.valueKey)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(attributeName, that.attributeName)
+                .append(valueKey, that.valueKey)
                 .isEquals();
     }
 
@@ -146,10 +147,10 @@ public class ChangePlainEnumValueLabelChangeImpl implements ChangePlainEnumValue
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(attributeName)
-                .append(valueKey)
                 .append(previousValue)
                 .append(nextValue)
+                .append(attributeName)
+                .append(valueKey)
                 .toHashCode();
     }
 

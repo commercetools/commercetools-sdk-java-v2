@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetStateRolesChange
+ *  <p>Change triggered by the Set State roles update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetStateRolesChangeImpl implements SetStateRolesChange, ModelBase {
@@ -65,7 +65,7 @@ public class SetStateRolesChangeImpl implements SetStateRolesChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.StateRole> getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetStateRolesChangeImpl implements SetStateRolesChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.StateRole> getNextValue() {

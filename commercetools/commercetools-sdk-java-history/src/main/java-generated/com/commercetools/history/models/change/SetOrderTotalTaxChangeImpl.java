@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetOrderTotalTaxChange
+ *  <p>Change triggered by the Set OrderTotalTax update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, ModelBase {
@@ -24,24 +24,24 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
 
     private String change;
 
-    private com.commercetools.history.models.common.TaxMode taxMode;
+    private com.commercetools.history.models.common.Money previousValue;
 
     private com.commercetools.history.models.common.Money nextValue;
 
-    private com.commercetools.history.models.common.Money previousValue;
+    private com.commercetools.history.models.common.TaxMode taxMode;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetOrderTotalTaxChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.Money previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Money nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Money previousValue) {
+            @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode) {
         this.change = change;
-        this.taxMode = taxMode;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.taxMode = taxMode;
         this.type = SET_ORDER_TOTAL_TAX_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
     }
 
     /**
-     *  <p>Update action for <code>setOrderTotalTax</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,15 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.TaxMode getTaxMode() {
-        return this.taxMode;
+    public com.commercetools.history.models.common.Money getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Money getNextValue() {
@@ -85,27 +85,27 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
     }
 
     /**
-     *
+     *  <p><code>"ExternalAmount"</code></p>
      */
 
-    public com.commercetools.history.models.common.Money getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.common.TaxMode getTaxMode() {
+        return this.taxMode;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setTaxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
-        this.taxMode = taxMode;
+    public void setPreviousValue(final com.commercetools.history.models.common.Money previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.Money nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Money previousValue) {
-        this.previousValue = previousValue;
+    public void setTaxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
+        this.taxMode = taxMode;
     }
 
     @Override
@@ -120,9 +120,9 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(taxMode, that.taxMode)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(taxMode, that.taxMode)
                 .isEquals();
     }
 
@@ -130,9 +130,9 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(taxMode)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(taxMode)
                 .toHashCode();
     }
 

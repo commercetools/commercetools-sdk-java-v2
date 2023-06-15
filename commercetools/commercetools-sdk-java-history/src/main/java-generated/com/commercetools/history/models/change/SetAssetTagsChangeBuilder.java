@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetAssetTagsChange setAssetTagsChange = SetAssetTagsChange.builder()
  *             .change("{change}")
- *             .asset(assetBuilder -> assetBuilder)
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .asset(assetBuilder -> assetBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.AssetChangeValue asset;
+    private java.util.List<String> previousValue;
 
     private java.util.List<String> nextValue;
 
-    private java.util.List<String> previousValue;
+    private com.commercetools.history.models.change_value.AssetChangeValue asset;
 
     /**
-     *  <p>Update action for <code>setAssetTags</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,78 +45,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     * set the value to the asset using the builder function
-     * @param builder function to build the asset value
-     * @return Builder
-     */
-
-    public SetAssetTagsChangeBuilder asset(
-            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
-        this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the asset using the builder function
-     * @param builder function to build the asset value
-     * @return Builder
-     */
-
-    public SetAssetTagsChangeBuilder withAsset(
-            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValue> builder) {
-        this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the asset
-     * @param asset value to be set
-     * @return Builder
-     */
-
-    public SetAssetTagsChangeBuilder asset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
-        this.asset = asset;
-        return this;
-    }
-
-    /**
-     * set values to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetAssetTagsChangeBuilder nextValue(final String... nextValue) {
-        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
-        return this;
-    }
-
-    /**
-     * set value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetAssetTagsChangeBuilder nextValue(final java.util.List<String> nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * add values to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetAssetTagsChangeBuilder plusNextValue(final String... nextValue) {
-        if (this.nextValue == null) {
-            this.nextValue = new ArrayList<>();
-        }
-        this.nextValue.addAll(Arrays.asList(nextValue));
-        return this;
-    }
-
-    /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -127,7 +56,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -138,7 +67,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -152,7 +81,78 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     *  <p>Update action for <code>setAssetTags</code></p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetAssetTagsChangeBuilder nextValue(final String... nextValue) {
+        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetAssetTagsChangeBuilder nextValue(final java.util.List<String> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetAssetTagsChangeBuilder plusNextValue(final String... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
+        return this;
+    }
+
+    /**
+     *  <p>Information about the updated Asset.</p>
+     * @param builder function to build the asset value
+     * @return Builder
+     */
+
+    public SetAssetTagsChangeBuilder asset(
+            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValueBuilder> builder) {
+        this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Information about the updated Asset.</p>
+     * @param builder function to build the asset value
+     * @return Builder
+     */
+
+    public SetAssetTagsChangeBuilder withAsset(
+            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValue> builder) {
+        this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Information about the updated Asset.</p>
+     * @param asset value to be set
+     * @return Builder
+     */
+
+    public SetAssetTagsChangeBuilder asset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
+        this.asset = asset;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -161,25 +161,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
-     * value of asset}
-     * @return asset
-     */
-
-    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
-        return this.asset;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.util.List<String> getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -188,15 +170,33 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.util.List<String> getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Information about the updated Asset.</p>
+     * @return asset
+     */
+
+    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
+        return this.asset;
+    }
+
+    /**
      * builds SetAssetTagsChange with checking for non-null required values
      * @return SetAssetTagsChange
      */
     public SetAssetTagsChange build() {
         Objects.requireNonNull(change, SetAssetTagsChange.class + ": change is missing");
-        Objects.requireNonNull(asset, SetAssetTagsChange.class + ": asset is missing");
-        Objects.requireNonNull(nextValue, SetAssetTagsChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetAssetTagsChange.class + ": previousValue is missing");
-        return new SetAssetTagsChangeImpl(change, asset, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetAssetTagsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(asset, SetAssetTagsChange.class + ": asset is missing");
+        return new SetAssetTagsChangeImpl(change, previousValue, nextValue, asset);
     }
 
     /**
@@ -204,7 +204,7 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
      * @return SetAssetTagsChange
      */
     public SetAssetTagsChange buildUnchecked() {
-        return new SetAssetTagsChangeImpl(change, asset, nextValue, previousValue);
+        return new SetAssetTagsChangeImpl(change, previousValue, nextValue, asset);
     }
 
     /**
@@ -223,9 +223,9 @@ public class SetAssetTagsChangeBuilder implements Builder<SetAssetTagsChange> {
     public static SetAssetTagsChangeBuilder of(final SetAssetTagsChange template) {
         SetAssetTagsChangeBuilder builder = new SetAssetTagsChangeBuilder();
         builder.change = template.getChange();
-        builder.asset = template.getAsset();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.asset = template.getAsset();
         return builder;
     }
 

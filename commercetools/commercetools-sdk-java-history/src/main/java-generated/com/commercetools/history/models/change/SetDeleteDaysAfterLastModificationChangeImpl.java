@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetDeleteDaysAfterLastModificationChange
+ *  <p>Change triggered by the Set DeleteDaysAfterLastModification update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDeleteDaysAfterLastModificationChangeImpl
@@ -58,7 +58,7 @@ public class SetDeleteDaysAfterLastModificationChangeImpl
     }
 
     /**
-     *  <p>Shape of the action for <code>setDeleteDaysAfterLastModification</code></p>
+     *
      */
 
     public String getChange() {
@@ -66,7 +66,7 @@ public class SetDeleteDaysAfterLastModificationChangeImpl
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public Integer getPreviousValue() {
@@ -74,7 +74,7 @@ public class SetDeleteDaysAfterLastModificationChangeImpl
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public Integer getNextValue() {

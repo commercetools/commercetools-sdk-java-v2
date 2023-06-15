@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeShoppingListLineItemsOrderChange
+ *  <p>Change triggered by the Change ShoppingListLineItems Order update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeShoppingListLineItemsOrderChangeImpl implements ChangeShoppingListLineItemsOrderChange, ModelBase {
@@ -65,7 +65,7 @@ public class ChangeShoppingListLineItemsOrderChangeImpl implements ChangeShoppin
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.change_value.ShoppingListLineItemValue> getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeShoppingListLineItemsOrderChangeImpl implements ChangeShoppin
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.change_value.ShoppingListLineItemValue> getNextValue() {

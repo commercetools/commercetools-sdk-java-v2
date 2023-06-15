@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddShoppingListLineItemChange
+ *  <p>Change triggered by the Add ShoppingListLineItem update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineItemChange, ModelBase {
@@ -65,7 +65,7 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.LineItem getPreviousValue() {
@@ -73,7 +73,7 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.LineItem getNextValue() {

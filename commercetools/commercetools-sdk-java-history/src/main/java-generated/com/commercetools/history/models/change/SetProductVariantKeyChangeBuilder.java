@@ -14,9 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetProductVariantKeyChange setProductVariantKeyChange = SetProductVariantKeyChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
  *             .previousValue("{previousValue}")
  *             .nextValue("{nextValue}")
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,14 +26,14 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
 
     private String change;
 
-    private String catalogData;
-
     private String previousValue;
 
     private String nextValue;
 
+    private String catalogData;
+
     /**
-     *  <p>Update action for <code>setProductVariantKey</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -44,18 +44,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public SetProductVariantKeyChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +55,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -77,7 +66,21 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
-     *  <p>Update action for <code>setProductVariantKey</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetProductVariantKeyChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -86,16 +89,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -104,7 +98,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -113,15 +107,27 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
      * builds SetProductVariantKeyChange with checking for non-null required values
      * @return SetProductVariantKeyChange
      */
     public SetProductVariantKeyChange build() {
         Objects.requireNonNull(change, SetProductVariantKeyChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, SetProductVariantKeyChange.class + ": catalogData is missing");
         Objects.requireNonNull(previousValue, SetProductVariantKeyChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetProductVariantKeyChange.class + ": nextValue is missing");
-        return new SetProductVariantKeyChangeImpl(change, catalogData, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, SetProductVariantKeyChange.class + ": catalogData is missing");
+        return new SetProductVariantKeyChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -129,7 +135,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
      * @return SetProductVariantKeyChange
      */
     public SetProductVariantKeyChange buildUnchecked() {
-        return new SetProductVariantKeyChangeImpl(change, catalogData, previousValue, nextValue);
+        return new SetProductVariantKeyChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -148,9 +154,9 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     public static SetProductVariantKeyChangeBuilder of(final SetProductVariantKeyChange template) {
         SetProductVariantKeyChangeBuilder builder = new SetProductVariantKeyChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
         return builder;
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetPricesChange
+ *  <p>Change triggered by the Set Prices update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
@@ -24,27 +24,27 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
 
     private String change;
 
-    private String catalogData;
-
-    private String variant;
-
     private java.util.List<com.commercetools.history.models.common.Price> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.Price> nextValue;
+
+    private String catalogData;
+
+    private String variant;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetPricesChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Price> previousValue,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Price> nextValue) {
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Price> nextValue,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
         this.change = change;
-        this.catalogData = catalogData;
-        this.variant = variant;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.catalogData = catalogData;
+        this.variant = variant;
         this.type = SET_PRICES_CHANGE;
     }
 
@@ -64,7 +64,7 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>setPrices</code></p>
+     *
      */
 
     public String getChange() {
@@ -72,23 +72,7 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     *
-     */
-
-    public String getVariant() {
-        return this.variant;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Price> getPreviousValue() {
@@ -96,23 +80,34 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Price> getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
     public void setChange(final String change) {
         this.change = change;
-    }
-
-    public void setCatalogData(final String catalogData) {
-        this.catalogData = catalogData;
-    }
-
-    public void setVariant(final String variant) {
-        this.variant = variant;
     }
 
     public void setPreviousValue(final com.commercetools.history.models.common.Price... previousValue) {
@@ -131,6 +126,14 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
         this.nextValue = nextValue;
     }
 
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -143,10 +146,10 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(catalogData, that.catalogData)
-                .append(variant, that.variant)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -154,10 +157,10 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(catalogData)
-                .append(variant)
                 .append(previousValue)
                 .append(nextValue)
+                .append(catalogData)
+                .append(variant)
                 .toHashCode();
     }
 

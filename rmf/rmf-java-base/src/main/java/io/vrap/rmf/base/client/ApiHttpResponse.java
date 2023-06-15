@@ -5,6 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -120,6 +121,11 @@ public class ApiHttpResponse<U> extends Base implements ContextAware<ApiHttpResp
         response.body = body;
 
         return response;
+    }
+
+    public <TBody> ApiHttpResponse<TBody> withBody(final Function<U, TBody> bodyFn) {
+        return new ApiHttpResponse<>(this.statusCode, this.headers, bodyFn.apply(this.body), this.message,
+            this.contextMap);
     }
 
     public String getMessage() {

@@ -108,10 +108,11 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
         this.apiHttpClient = apiMethod.apiHttpClient;
         this.headers = new ApiHttpHeaders(apiMethod.headers);
         this.queryParams = new ArrayList<>(apiMethod.queryParams);
+        this.httpRequestDecorator = apiMethod.httpRequestDecorator;
     }
 
     /**
-     * adds an additional header with the specified value
+     * adds a header with the specified value
      * @param key header name
      * @param value header value
      * @return T

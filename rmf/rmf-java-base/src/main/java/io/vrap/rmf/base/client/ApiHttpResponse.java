@@ -15,7 +15,7 @@ public class ApiHttpResponse<U> extends Base implements ContextAware<ApiHttpResp
 
     private int statusCode;
     private ApiHttpHeaders headers;
-    private U body;
+    private final U body;
     private String message;
 
     private Map<Object, Object> contextMap = new HashMap<>();
@@ -116,11 +116,8 @@ public class ApiHttpResponse<U> extends Base implements ContextAware<ApiHttpResp
         return body;
     }
 
-    public ApiHttpResponse<U> withBody(final U body) {
-        ApiHttpResponse<U> response = copy();
-        response.body = body;
-
-        return response;
+    public <TBody> ApiHttpResponse<TBody> withBody(final TBody body) {
+        return new ApiHttpResponse<>(this.statusCode, this.headers, body, this.message, this.contextMap);
     }
 
     public <TBody> ApiHttpResponse<TBody> withBody(final Function<U, TBody> bodyFn) {

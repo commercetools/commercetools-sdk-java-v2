@@ -71,4 +71,24 @@ public class TestQuery {
         final ProductQueryResult data = response.getBody().getData();
         Assertions.assertThat(data.getResults()).isNotNull();
     }
+
+    @Test
+    public void graphQLCustom() {
+        final ProjectApiRoot projectRoot = CommercetoolsTestUtils.getProjectApiRoot();
+
+        final GraphQLRequest<ProductQueryResult> productQuery = GraphQL.query(
+            "query($localeProjection:[Locale!]) { products(localeProjection: $localeProjection) { results { id } } }")
+                .variables(b -> b.addValue("$localeProjection", Collections.singletonList("en")))
+                .dataMapper(GraphQLData::getProducts)
+                .build();
+
+        final ApiHttpResponse<GraphQLResponse<ProductQueryResult>> response = projectRoot.graphql()
+                .query(productQuery)
+                .executeBlocking();
+
+        Assertions.assertThat(response.getBody()).isNotNull();
+
+        final ProductQueryResult data = response.getBody().getData();
+        Assertions.assertThat(data.getResults()).isNotNull();
+    }
 }

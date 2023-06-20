@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     @Nullable
+    private String key;
+
+    @Nullable
     private String productId;
 
     @Nullable
@@ -61,6 +64,17 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public LineItemDraftBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p><code>id</code> of a published Product.</p>
@@ -393,6 +407,16 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p><code>id</code> of a published Product.</p>
      * @return productId
      */
@@ -529,8 +553,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
      * @return LineItemDraft
      */
     public LineItemDraft build() {
-        return new LineItemDraftImpl(productId, variantId, sku, quantity, addedAt, distributionChannel, supplyChannel,
-            externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
+        return new LineItemDraftImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
+            supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
     }
 
     /**
@@ -538,8 +562,8 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
      * @return LineItemDraft
      */
     public LineItemDraft buildUnchecked() {
-        return new LineItemDraftImpl(productId, variantId, sku, quantity, addedAt, distributionChannel, supplyChannel,
-            externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
+        return new LineItemDraftImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
+            supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
     }
 
     /**
@@ -557,6 +581,7 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
      */
     public static LineItemDraftBuilder of(final LineItemDraft template) {
         LineItemDraftBuilder builder = new LineItemDraftBuilder();
+        builder.key = template.getKey();
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();

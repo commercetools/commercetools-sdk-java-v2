@@ -25,8 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetReservationsChange setReservationsChange = SetReservationsChange.builder()
  *             .change("{change}")
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -41,7 +41,7 @@ public interface SetReservationsChange extends Change {
     String SET_RESERVATIONS_CHANGE = "SetReservationsChange";
 
     /**
-     *  <p>Update action for <code>setReservations</code> on inventories</p>
+     *
      * @return change
      */
     @NotNull
@@ -57,16 +57,7 @@ public interface SetReservationsChange extends Change {
     public String getType();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public List<Reservation> getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -75,29 +66,23 @@ public interface SetReservationsChange extends Change {
     public List<Reservation> getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setReservations</code> on inventories</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public List<Reservation> getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    @JsonIgnore
-    public void setNextValue(final Reservation... nextValue);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    public void setNextValue(final List<Reservation> nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -105,11 +90,26 @@ public interface SetReservationsChange extends Change {
     public void setPreviousValue(final Reservation... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<Reservation> previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    @JsonIgnore
+    public void setNextValue(final Reservation... nextValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    public void setNextValue(final List<Reservation> nextValue);
 
     /**
      * factory method
@@ -127,8 +127,8 @@ public interface SetReservationsChange extends Change {
     public static SetReservationsChange of(final SetReservationsChange template) {
         SetReservationsChangeImpl instance = new SetReservationsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -144,12 +144,12 @@ public interface SetReservationsChange extends Change {
         }
         SetReservationsChangeImpl instance = new SetReservationsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.Reservation::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.Reservation::deepCopy)
                         .collect(Collectors.toList()))

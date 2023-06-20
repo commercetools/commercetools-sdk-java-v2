@@ -22,6 +22,8 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
 
     private String action;
 
+    private String key;
+
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
@@ -50,7 +52,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
      * create instance with all properties
      */
     @JsonCreator
-    StagedOrderAddLineItemActionImpl(
+    StagedOrderAddLineItemActionImpl(@JsonProperty("key") final String key,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
@@ -61,6 +63,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+        this.key = key;
         this.custom = custom;
         this.distributionChannel = distributionChannel;
         this.externalTaxRate = externalTaxRate;
@@ -89,6 +92,14 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
 
     public String getAction() {
         return this.action;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -187,6 +198,10 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
         return this.shippingDetails;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
@@ -248,6 +263,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
         StagedOrderAddLineItemActionImpl that = (StagedOrderAddLineItemActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(key, that.key)
                 .append(custom, that.custom)
                 .append(distributionChannel, that.distributionChannel)
                 .append(externalTaxRate, that.externalTaxRate)
@@ -266,6 +282,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
+                .append(key)
                 .append(custom)
                 .append(distributionChannel)
                 .append(externalTaxRate)

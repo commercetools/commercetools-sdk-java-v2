@@ -20,6 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelDraftImpl implements ParcelDraft, ModelBase {
 
+    private String key;
+
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
     private com.commercetools.api.models.order.TrackingData trackingData;
@@ -32,11 +34,12 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    ParcelDraftImpl(
+    ParcelDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.key = key;
         this.measurements = measurements;
         this.trackingData = trackingData;
         this.items = items;
@@ -47,6 +50,14 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
      * create empty instance
      */
     public ParcelDraftImpl() {
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -81,6 +92,10 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
         return this.custom;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
     }
@@ -111,7 +126,8 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
 
         ParcelDraftImpl that = (ParcelDraftImpl) o;
 
-        return new EqualsBuilder().append(measurements, that.measurements)
+        return new EqualsBuilder().append(key, that.key)
+                .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
                 .append(custom, that.custom)
@@ -120,7 +136,8 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(measurements)
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(measurements)
                 .append(trackingData)
                 .append(items)
                 .append(custom)

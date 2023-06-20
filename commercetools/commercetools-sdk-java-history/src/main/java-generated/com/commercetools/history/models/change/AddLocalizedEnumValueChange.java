@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddLocalizedEnumValueChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Add LocalizableEnumValue to AttributeDefinition on Product Types.</li>
+ *   <li>Add LocalizedEnumValue to FieldDefinition on Types.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,9 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddLocalizedEnumValueChange addLocalizedEnumValueChange = AddLocalizedEnumValueChange.builder()
  *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .fieldName("{fieldName}")
  *             .attributeName("{attributeName}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +53,7 @@ public interface AddLocalizedEnumValueChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
+     *
      * @return change
      */
     @NotNull
@@ -57,23 +61,7 @@ public interface AddLocalizedEnumValueChange extends Change {
     public String getChange();
 
     /**
-     *  <p>The name of the field definition updated.</p>
-     * @return fieldName
-     */
-    @NotNull
-    @JsonProperty("fieldName")
-    public String getFieldName();
-
-    /**
-     *  <p>The name of the attribute updated.</p>
-     * @return attributeName
-     */
-    @NotNull
-    @JsonProperty("attributeName")
-    public String getAttributeName();
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -82,32 +70,48 @@ public interface AddLocalizedEnumValueChange extends Change {
     public LocalizedEnumValue getNextValue();
 
     /**
-     *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     * @return fieldName
+     */
+    @NotNull
+    @JsonProperty("fieldName")
+    public String getFieldName();
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>The name of the field definition updated.</p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final LocalizedEnumValue nextValue);
+
+    /**
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
      * @param fieldName value to be set
      */
 
     public void setFieldName(final String fieldName);
 
     /**
-     *  <p>The name of the attribute updated.</p>
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
      * @param attributeName value to be set
      */
 
     public void setAttributeName(final String attributeName);
-
-    /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final LocalizedEnumValue nextValue);
 
     /**
      * factory method
@@ -125,9 +129,9 @@ public interface AddLocalizedEnumValueChange extends Change {
     public static AddLocalizedEnumValueChange of(final AddLocalizedEnumValueChange template) {
         AddLocalizedEnumValueChangeImpl instance = new AddLocalizedEnumValueChangeImpl();
         instance.setChange(template.getChange());
+        instance.setNextValue(template.getNextValue());
         instance.setFieldName(template.getFieldName());
         instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -143,10 +147,10 @@ public interface AddLocalizedEnumValueChange extends Change {
         }
         AddLocalizedEnumValueChangeImpl instance = new AddLocalizedEnumValueChangeImpl();
         instance.setChange(template.getChange());
-        instance.setFieldName(template.getFieldName());
-        instance.setAttributeName(template.getAttributeName());
         instance.setNextValue(
             com.commercetools.history.models.change_value.LocalizedEnumValue.deepCopy(template.getNextValue()));
+        instance.setFieldName(template.getFieldName());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 

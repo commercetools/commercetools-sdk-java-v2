@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetProductPriceCustomFieldChange
+ *  <p>Change triggered by the Set Price CustomField update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,9 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetProductPriceCustomFieldChange setProductPriceCustomFieldChange = SetProductPriceCustomFieldChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +49,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setProductPriceCustomField</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -57,15 +57,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return catalogData
-     */
-    @NotNull
-    @JsonProperty("catalogData")
-    public String getCatalogData();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,7 +66,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
     public CustomFields getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -83,32 +75,46 @@ public interface SetProductPriceCustomFieldChange extends Change {
     public CustomFields getNextValue();
 
     /**
-     *  <p>Update action for <code>setProductPriceCustomField</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set catalogData
-     * @param catalogData value to be set
-     */
-
-    public void setCatalogData(final String catalogData);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final CustomFields previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final CustomFields nextValue);
+
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
 
     /**
      * factory method
@@ -126,9 +132,9 @@ public interface SetProductPriceCustomFieldChange extends Change {
     public static SetProductPriceCustomFieldChange of(final SetProductPriceCustomFieldChange template) {
         SetProductPriceCustomFieldChangeImpl instance = new SetProductPriceCustomFieldChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 
@@ -144,10 +150,10 @@ public interface SetProductPriceCustomFieldChange extends Change {
         }
         SetProductPriceCustomFieldChangeImpl instance = new SetProductPriceCustomFieldChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(
             com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 

@@ -49,7 +49,7 @@ public interface QuoteLabel extends Label {
     public String getType();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Quote.</p>
      * @return key
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface QuoteLabel extends Label {
     public String getKey();
 
     /**
-     *
+     *  <p>The Buyer who requested the Quote.</p>
      * @return customer
      */
     @NotNull
@@ -66,7 +66,7 @@ public interface QuoteLabel extends Label {
     public Reference getCustomer();
 
     /**
-     *
+     *  <p>Staged Quote related to the Quote.</p>
      * @return stagedQuote
      */
     @NotNull
@@ -75,7 +75,7 @@ public interface QuoteLabel extends Label {
     public Reference getStagedQuote();
 
     /**
-     *
+     *  <p>Quote Request related to the Quote.</p>
      * @return quoteRequest
      */
     @NotNull
@@ -84,28 +84,28 @@ public interface QuoteLabel extends Label {
     public Reference getQuoteRequest();
 
     /**
-     * set key
+     *  <p>User-defined unique identifier of the Quote.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     * set customer
+     *  <p>The Buyer who requested the Quote.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final Reference customer);
 
     /**
-     * set stagedQuote
+     *  <p>Staged Quote related to the Quote.</p>
      * @param stagedQuote value to be set
      */
 
     public void setStagedQuote(final Reference stagedQuote);
 
     /**
-     * set quoteRequest
+     *  <p>Quote Request related to the Quote.</p>
      * @param quoteRequest value to be set
      */
 

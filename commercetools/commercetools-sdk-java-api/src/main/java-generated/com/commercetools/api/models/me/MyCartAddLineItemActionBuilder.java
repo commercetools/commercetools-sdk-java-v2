@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItemAction> {
 
     @Nullable
+    private String key;
+
+    @Nullable
     private String productId;
 
     @Nullable
@@ -49,6 +52,17 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public MyCartAddLineItemActionBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p><code>id</code> of the Product.</p>
@@ -260,6 +274,16 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p><code>id</code> of the Product.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      * @return productId
@@ -359,7 +383,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
      * @return MyCartAddLineItemAction
      */
     public MyCartAddLineItemAction build() {
-        return new MyCartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
+        return new MyCartAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
             supplyChannel, shippingDetails, custom);
     }
 
@@ -368,7 +392,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
      * @return MyCartAddLineItemAction
      */
     public MyCartAddLineItemAction buildUnchecked() {
-        return new MyCartAddLineItemActionImpl(productId, variantId, sku, quantity, addedAt, distributionChannel,
+        return new MyCartAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
             supplyChannel, shippingDetails, custom);
     }
 
@@ -387,6 +411,7 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
      */
     public static MyCartAddLineItemActionBuilder of(final MyCartAddLineItemAction template) {
         MyCartAddLineItemActionBuilder builder = new MyCartAddLineItemActionBuilder();
+        builder.key = template.getKey();
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();

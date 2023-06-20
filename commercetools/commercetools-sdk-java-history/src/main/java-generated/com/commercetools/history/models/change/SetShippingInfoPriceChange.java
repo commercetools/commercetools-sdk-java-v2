@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetShippingInfoPriceChange setShippingInfoPriceChange = SetShippingInfoPriceChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +48,7 @@ public interface SetShippingInfoPriceChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setShippingInfoPrice</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +56,7 @@ public interface SetShippingInfoPriceChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public Money getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +65,34 @@ public interface SetShippingInfoPriceChange extends Change {
     public Money getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setShippingInfoPrice</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public Money getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final Money nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Money previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final Money nextValue);
 
     /**
      * factory method
@@ -110,8 +110,8 @@ public interface SetShippingInfoPriceChange extends Change {
     public static SetShippingInfoPriceChange of(final SetShippingInfoPriceChange template) {
         SetShippingInfoPriceChangeImpl instance = new SetShippingInfoPriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,8 +127,8 @@ public interface SetShippingInfoPriceChange extends Change {
         }
         SetShippingInfoPriceChangeImpl instance = new SetShippingInfoPriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
         instance.setPreviousValue(com.commercetools.history.models.common.Money.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
         return instance;
     }
 

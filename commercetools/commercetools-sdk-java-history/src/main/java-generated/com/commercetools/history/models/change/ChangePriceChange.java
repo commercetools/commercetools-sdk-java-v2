@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangePriceChange
+ *  <p>Change triggered by the Change Price update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,10 +24,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangePriceChange changePriceChange = ChangePriceChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
- *             .priceId("{priceId}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .priceId("{priceId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface ChangePriceChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for changing prices</p>
+     *
      * @return change
      */
     @NotNull
@@ -58,23 +58,7 @@ public interface ChangePriceChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return catalogData
-     */
-    @NotNull
-    @JsonProperty("catalogData")
-    public String getCatalogData();
-
-    /**
-     *
-     * @return priceId
-     */
-    @NotNull
-    @JsonProperty("priceId")
-    public String getPriceId();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -83,7 +67,7 @@ public interface ChangePriceChange extends Change {
     public Price getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -92,39 +76,61 @@ public interface ChangePriceChange extends Change {
     public Price getNextValue();
 
     /**
-     *  <p>Update action for changing prices</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
+     *  <p><code>id</code> of the Embedded Price.</p>
+     * @return priceId
+     */
+    @NotNull
+    @JsonProperty("priceId")
+    public String getPriceId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set catalogData
-     * @param catalogData value to be set
-     */
-
-    public void setCatalogData(final String catalogData);
-
-    /**
-     * set priceId
-     * @param priceId value to be set
-     */
-
-    public void setPriceId(final String priceId);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Price previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Price nextValue);
+
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
+     *  <p><code>id</code> of the Embedded Price.</p>
+     * @param priceId value to be set
+     */
+
+    public void setPriceId(final String priceId);
 
     /**
      * factory method
@@ -142,10 +148,10 @@ public interface ChangePriceChange extends Change {
     public static ChangePriceChange of(final ChangePriceChange template) {
         ChangePriceChangeImpl instance = new ChangePriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
-        instance.setPriceId(template.getPriceId());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setPriceId(template.getPriceId());
         return instance;
     }
 
@@ -161,10 +167,10 @@ public interface ChangePriceChange extends Change {
         }
         ChangePriceChangeImpl instance = new ChangePriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
-        instance.setPriceId(template.getPriceId());
         instance.setPreviousValue(com.commercetools.history.models.common.Price.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
+        instance.setCatalogData(template.getCatalogData());
+        instance.setPriceId(template.getPriceId());
         return instance;
     }
 

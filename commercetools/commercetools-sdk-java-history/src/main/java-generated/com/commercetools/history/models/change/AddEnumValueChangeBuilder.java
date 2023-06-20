@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddEnumValueChange addEnumValueChange = AddEnumValueChange.builder()
  *             .change("{change}")
- *             .fieldName("{fieldName}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .fieldName("{fieldName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
 
     private String change;
 
-    private String fieldName;
-
     private com.commercetools.history.models.change_value.EnumValue nextValue;
 
+    private String fieldName;
+
     /**
-     *  <p>Update action for <code>addEnumValue</code> on types</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,18 +42,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     }
 
     /**
-     *  <p>The name of the field/attribute definition updated.</p>
-     * @param fieldName value to be set
-     * @return Builder
-     */
-
-    public AddEnumValueChangeBuilder fieldName(final String fieldName) {
-        this.fieldName = fieldName;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -65,7 +54,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -77,7 +66,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -89,7 +78,18 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     }
 
     /**
-     *  <p>Update action for <code>addEnumValue</code> on types</p>
+     *  <p>Name of the updated FieldDefinition.</p>
+     * @param fieldName value to be set
+     * @return Builder
+     */
+
+    public AddEnumValueChangeBuilder fieldName(final String fieldName) {
+        this.fieldName = fieldName;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -98,16 +98,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     }
 
     /**
-     *  <p>The name of the field/attribute definition updated.</p>
-     * @return fieldName
-     */
-
-    public String getFieldName() {
-        return this.fieldName;
-    }
-
-    /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -116,14 +107,23 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     }
 
     /**
+     *  <p>Name of the updated FieldDefinition.</p>
+     * @return fieldName
+     */
+
+    public String getFieldName() {
+        return this.fieldName;
+    }
+
+    /**
      * builds AddEnumValueChange with checking for non-null required values
      * @return AddEnumValueChange
      */
     public AddEnumValueChange build() {
         Objects.requireNonNull(change, AddEnumValueChange.class + ": change is missing");
-        Objects.requireNonNull(fieldName, AddEnumValueChange.class + ": fieldName is missing");
         Objects.requireNonNull(nextValue, AddEnumValueChange.class + ": nextValue is missing");
-        return new AddEnumValueChangeImpl(change, fieldName, nextValue);
+        Objects.requireNonNull(fieldName, AddEnumValueChange.class + ": fieldName is missing");
+        return new AddEnumValueChangeImpl(change, nextValue, fieldName);
     }
 
     /**
@@ -131,7 +131,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
      * @return AddEnumValueChange
      */
     public AddEnumValueChange buildUnchecked() {
-        return new AddEnumValueChangeImpl(change, fieldName, nextValue);
+        return new AddEnumValueChangeImpl(change, nextValue, fieldName);
     }
 
     /**
@@ -150,8 +150,8 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     public static AddEnumValueChangeBuilder of(final AddEnumValueChange template) {
         AddEnumValueChangeBuilder builder = new AddEnumValueChangeBuilder();
         builder.change = template.getChange();
-        builder.fieldName = template.getFieldName();
         builder.nextValue = template.getNextValue();
+        builder.fieldName = template.getFieldName();
         return builder;
     }
 

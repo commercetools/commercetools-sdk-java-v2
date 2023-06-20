@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Shape of the value for cart discounts gift line item value.</p>
+ * ChangeValueGiftLineItemChangeValue
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +48,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public String getType();
 
     /**
-     *
+     *  <p>Reference to a Product.</p>
      * @return product
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public Reference getProduct();
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant.</p>
      * @return variantId
      */
     @NotNull
@@ -65,7 +65,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public Integer getVariantId();
 
     /**
-     *
+     *  <p>Channel with ChannelRoleEnum <code>InventorySupply</code>.</p>
      * @return supplyChannel
      */
     @Valid
@@ -73,7 +73,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public Reference getSupplyChannel();
 
     /**
-     *
+     *  <p>Channel with ChannelRoleEnum <code>ProductDistribution</code>.</p>
      * @return distributionChannel
      */
     @NotNull
@@ -82,28 +82,28 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     public Reference getDistributionChannel();
 
     /**
-     * set product
+     *  <p>Reference to a Product.</p>
      * @param product value to be set
      */
 
     public void setProduct(final Reference product);
 
     /**
-     * set variantId
+     *  <p><code>id</code> of the ProductVariant.</p>
      * @param variantId value to be set
      */
 
     public void setVariantId(final Integer variantId);
 
     /**
-     * set supplyChannel
+     *  <p>Channel with ChannelRoleEnum <code>InventorySupply</code>.</p>
      * @param supplyChannel value to be set
      */
 
     public void setSupplyChannel(final Reference supplyChannel);
 
     /**
-     * set distributionChannel
+     *  <p>Channel with ChannelRoleEnum <code>ProductDistribution</code>.</p>
      * @param distributionChannel value to be set
      */
 

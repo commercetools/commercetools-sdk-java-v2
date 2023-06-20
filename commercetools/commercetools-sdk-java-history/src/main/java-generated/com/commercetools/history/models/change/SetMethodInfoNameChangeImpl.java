@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetMethodInfoNameChange
+ *  <p>Change triggered by the Set MethodInfoName update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMethodInfoNameChangeImpl implements SetMethodInfoNameChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetMethodInfoNameChangeImpl implements SetMethodInfoNameChange, Mod
     }
 
     /**
-     *  <p>Shape of the action for <code>setMethodInfoName</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetMethodInfoNameChangeImpl implements SetMethodInfoNameChange, Mod
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetMethodInfoNameChangeImpl implements SetMethodInfoNameChange, Mod
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

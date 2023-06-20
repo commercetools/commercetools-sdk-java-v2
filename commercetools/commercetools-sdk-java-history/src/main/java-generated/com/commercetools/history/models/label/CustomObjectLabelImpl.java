@@ -52,7 +52,7 @@ public class CustomObjectLabelImpl implements CustomObjectLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the CustomObject within the defined <code>container</code>.</p>
      */
 
     public String getKey() {
@@ -60,7 +60,7 @@ public class CustomObjectLabelImpl implements CustomObjectLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Namespace to group Custom Objects.</p>
      */
 
     public String getContainer() {

@@ -33,6 +33,14 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
         io.vrap.rmf.base.client.Draft<ParcelDraft> {
 
     /**
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *
      * @return measurements
      */
@@ -63,6 +71,13 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      * set measurements
@@ -115,6 +130,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
      */
     public static ParcelDraft of(final ParcelDraft template) {
         ParcelDraftImpl instance = new ParcelDraftImpl();
+        instance.setKey(template.getKey());
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
@@ -133,6 +149,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
             return null;
         }
         ParcelDraftImpl instance = new ParcelDraftImpl();
+        instance.setKey(template.getKey());
         instance.setMeasurements(
             com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));

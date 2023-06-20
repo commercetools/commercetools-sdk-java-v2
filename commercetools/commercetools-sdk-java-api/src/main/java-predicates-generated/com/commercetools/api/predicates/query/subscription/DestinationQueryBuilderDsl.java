@@ -34,6 +34,13 @@ public class DestinationQueryBuilderDsl {
             DestinationQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<DestinationQueryBuilderDsl> asConfluentCloud(
+            Function<com.commercetools.api.predicates.query.subscription.ConfluentCloudDestinationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.ConfluentCloudDestinationQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.subscription.ConfluentCloudDestinationQueryBuilderDsl.of()),
+            DestinationQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<DestinationQueryBuilderDsl> asEventBridge(
             Function<com.commercetools.api.predicates.query.subscription.EventBridgeDestinationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.EventBridgeDestinationQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

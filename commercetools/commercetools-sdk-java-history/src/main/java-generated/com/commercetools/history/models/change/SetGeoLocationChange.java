@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetGeoLocationChange
+ *  <p>Change triggered by the Set GeoLocation update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetGeoLocationChange setGeoLocationChange = SetGeoLocationChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -40,7 +40,7 @@ public interface SetGeoLocationChange extends Change {
     String SET_GEO_LOCATION_CHANGE = "SetGeoLocationChange";
 
     /**
-     *  <p>Update action for <code>setGeoLocation</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +56,7 @@ public interface SetGeoLocationChange extends Change {
     public String getType();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public GeoLocation getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +65,34 @@ public interface SetGeoLocationChange extends Change {
     public GeoLocation getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setGeoLocation</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public GeoLocation getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final GeoLocation nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final GeoLocation previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final GeoLocation nextValue);
 
     /**
      * factory method
@@ -110,8 +110,8 @@ public interface SetGeoLocationChange extends Change {
     public static SetGeoLocationChange of(final SetGeoLocationChange template) {
         SetGeoLocationChangeImpl instance = new SetGeoLocationChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,9 +127,9 @@ public interface SetGeoLocationChange extends Change {
         }
         SetGeoLocationChangeImpl instance = new SetGeoLocationChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(com.commercetools.history.models.common.GeoLocation.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.GeoLocation.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.GeoLocation.deepCopy(template.getNextValue()));
         return instance;
     }
 

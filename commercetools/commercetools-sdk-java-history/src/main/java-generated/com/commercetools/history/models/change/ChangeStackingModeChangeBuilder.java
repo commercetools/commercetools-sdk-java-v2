@@ -14,8 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeStackingModeChange changeStackingModeChange = ChangeStackingModeChange.builder()
  *             .change("{change}")
- *             .nextValue(StackingMode.STACKING)
  *             .previousValue(StackingMode.STACKING)
+ *             .nextValue(StackingMode.STACKING)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,12 +25,12 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
 
     private String change;
 
-    private com.commercetools.history.models.common.StackingMode nextValue;
-
     private com.commercetools.history.models.common.StackingMode previousValue;
 
+    private com.commercetools.history.models.common.StackingMode nextValue;
+
     /**
-     *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,19 +41,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeStackingModeChangeBuilder nextValue(
-            final com.commercetools.history.models.common.StackingMode nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -65,7 +53,19 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     }
 
     /**
-     *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeStackingModeChangeBuilder nextValue(
+            final com.commercetools.history.models.common.StackingMode nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -74,16 +74,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.StackingMode getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -92,14 +83,23 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.StackingMode getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds ChangeStackingModeChange with checking for non-null required values
      * @return ChangeStackingModeChange
      */
     public ChangeStackingModeChange build() {
         Objects.requireNonNull(change, ChangeStackingModeChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, ChangeStackingModeChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeStackingModeChange.class + ": previousValue is missing");
-        return new ChangeStackingModeChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeStackingModeChange.class + ": nextValue is missing");
+        return new ChangeStackingModeChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -107,7 +107,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
      * @return ChangeStackingModeChange
      */
     public ChangeStackingModeChange buildUnchecked() {
-        return new ChangeStackingModeChangeImpl(change, nextValue, previousValue);
+        return new ChangeStackingModeChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -126,8 +126,8 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     public static ChangeStackingModeChangeBuilder of(final ChangeStackingModeChange template) {
         ChangeStackingModeChangeBuilder builder = new ChangeStackingModeChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

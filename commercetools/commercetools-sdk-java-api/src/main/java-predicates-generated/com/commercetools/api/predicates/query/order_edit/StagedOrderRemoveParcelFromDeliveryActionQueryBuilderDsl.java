@@ -23,4 +23,10 @@ public class StagedOrderRemoveParcelFromDeliveryActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveParcelFromDeliveryActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderRemoveParcelFromDeliveryActionQueryBuilderDsl> parcelKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("parcelKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveParcelFromDeliveryActionQueryBuilderDsl::of));
+    }
+
 }

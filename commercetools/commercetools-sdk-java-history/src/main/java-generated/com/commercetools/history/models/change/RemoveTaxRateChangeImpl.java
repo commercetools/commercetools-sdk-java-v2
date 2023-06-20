@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveTaxRateChange
+ *  <p>Change triggered by the Remove TaxRate update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
@@ -57,7 +57,7 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getPreviousValue() {
@@ -73,7 +73,7 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.TaxRate getNextValue() {

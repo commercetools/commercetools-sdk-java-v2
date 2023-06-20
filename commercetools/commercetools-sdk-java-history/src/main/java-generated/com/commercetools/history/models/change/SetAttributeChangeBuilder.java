@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetAttributeChange setAttributeChange = SetAttributeChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
 
     private String change;
 
-    private String catalogData;
-
     private com.commercetools.history.models.change_value.AttributeValue previousValue;
 
     private com.commercetools.history.models.change_value.AttributeValue nextValue;
 
+    private String catalogData;
+
     /**
-     *  <p>Update action for <code>setAttribute</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,18 +45,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public SetAttributeChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -69,7 +58,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -81,7 +70,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -93,7 +82,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -106,7 +95,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -118,7 +107,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -130,7 +119,21 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     *  <p>Update action for <code>setAttribute</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetAttributeChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -139,16 +142,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -157,7 +151,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -166,15 +160,27 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
      * builds SetAttributeChange with checking for non-null required values
      * @return SetAttributeChange
      */
     public SetAttributeChange build() {
         Objects.requireNonNull(change, SetAttributeChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, SetAttributeChange.class + ": catalogData is missing");
         Objects.requireNonNull(previousValue, SetAttributeChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetAttributeChange.class + ": nextValue is missing");
-        return new SetAttributeChangeImpl(change, catalogData, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, SetAttributeChange.class + ": catalogData is missing");
+        return new SetAttributeChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -182,7 +188,7 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
      * @return SetAttributeChange
      */
     public SetAttributeChange buildUnchecked() {
-        return new SetAttributeChangeImpl(change, catalogData, previousValue, nextValue);
+        return new SetAttributeChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -201,9 +207,9 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     public static SetAttributeChangeBuilder of(final SetAttributeChange template) {
         SetAttributeChangeBuilder builder = new SetAttributeChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
         return builder;
     }
 

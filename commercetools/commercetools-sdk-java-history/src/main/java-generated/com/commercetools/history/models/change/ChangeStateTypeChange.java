@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeStateTypeChange
+ *  <p>Change triggered by the Change State Type update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface ChangeStateTypeChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeType</code> on state</p>
+     *
      * @return change
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface ChangeStateTypeChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface ChangeStateTypeChange extends Change {
     public StateType getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -71,21 +71,21 @@ public interface ChangeStateTypeChange extends Change {
     public StateType getNextValue();
 
     /**
-     *  <p>Update action for <code>changeType</code> on state</p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final StateType previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

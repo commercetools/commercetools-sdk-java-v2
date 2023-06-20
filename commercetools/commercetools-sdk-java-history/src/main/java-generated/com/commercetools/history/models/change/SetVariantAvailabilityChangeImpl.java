@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetVariantAvailabilityChange
+ *  <p>Change triggered automatically when an InventoryEntry associated with a Product changes.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityChange, ModelBase {
@@ -24,27 +24,27 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
 
     private String change;
 
-    private String catalogData;
-
-    private String variant;
-
     private com.commercetools.history.models.common.ProductVariantAvailability previousValue;
 
     private com.commercetools.history.models.common.ProductVariantAvailability nextValue;
+
+    private String catalogData;
+
+    private String variant;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetVariantAvailabilityChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.ProductVariantAvailability previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.ProductVariantAvailability nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.ProductVariantAvailability nextValue,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant) {
         this.change = change;
-        this.catalogData = catalogData;
-        this.variant = variant;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.catalogData = catalogData;
+        this.variant = variant;
         this.type = SET_VARIANT_AVAILABILITY_CHANGE;
     }
 
@@ -64,7 +64,7 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
     }
 
     /**
-     *  <p>Update action for <code>setVariantAvailability</code></p>
+     *
      */
 
     public String getChange() {
@@ -72,23 +72,7 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
     }
 
     /**
-     *
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     *
-     */
-
-    public String getVariant() {
-        return this.variant;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.ProductVariantAvailability getPreviousValue() {
@@ -96,23 +80,34 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.ProductVariantAvailability getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
     public void setChange(final String change) {
         this.change = change;
-    }
-
-    public void setCatalogData(final String catalogData) {
-        this.catalogData = catalogData;
-    }
-
-    public void setVariant(final String variant) {
-        this.variant = variant;
     }
 
     public void setPreviousValue(
@@ -122,6 +117,14 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
 
     public void setNextValue(final com.commercetools.history.models.common.ProductVariantAvailability nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
+    public void setVariant(final String variant) {
+        this.variant = variant;
     }
 
     @Override
@@ -136,10 +139,10 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(catalogData, that.catalogData)
-                .append(variant, that.variant)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -147,10 +150,10 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(catalogData)
-                .append(variant)
                 .append(previousValue)
                 .append(nextValue)
+                .append(catalogData)
+                .append(variant)
                 .toHashCode();
     }
 

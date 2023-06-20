@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetOrderLineItemCustomFieldChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set LineItem CustomField on Orders.</li>
+ *   <li>Set LineItem CustomField on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,8 +30,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .change("{change}")
  *             .customTypeId("{customTypeId}")
  *             .name("{name}")
- *             .variant("{variant}")
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +54,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,7 +62,23 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @JsonProperty("previousValue")
+    public Object getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public Object getNextValue();
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
      * @return customTypeId
      */
     @NotNull
@@ -66,7 +86,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public String getCustomTypeId();
 
     /**
-     *
+     *  <p>Name of the Custom Field.</p>
      * @return name
      */
     @NotNull
@@ -74,15 +94,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public String getName();
 
     /**
-     *
-     * @return variant
-     */
-    @NotNull
-    @JsonProperty("variant")
-    public String getVariant();
-
-    /**
-     *
+     *  <p>Name of the Product the Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -91,69 +103,61 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *
-     * @return nextValue
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @return variant
      */
     @NotNull
-    @JsonProperty("nextValue")
-    public Object getNextValue();
+    @JsonProperty("variant")
+    public String getVariant();
 
     /**
-     *
-     * @return previousValue
-     */
-    @NotNull
-    @JsonProperty("previousValue")
-    public Object getPreviousValue();
-
-    /**
-     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set customTypeId
-     * @param customTypeId value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setCustomTypeId(final String customTypeId);
+    public void setPreviousValue(final Object previousValue);
 
     /**
-     * set name
-     * @param name value to be set
-     */
-
-    public void setName(final String name);
-
-    /**
-     * set variant
-     * @param variant value to be set
-     */
-
-    public void setVariant(final String variant);
-
-    /**
-     * set lineItem
-     * @param lineItem value to be set
-     */
-
-    public void setLineItem(final LocalizedString lineItem);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Object nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p><code>id</code> of the referenced Type.</p>
+     * @param customTypeId value to be set
      */
 
-    public void setPreviousValue(final Object previousValue);
+    public void setCustomTypeId(final String customTypeId);
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @param name value to be set
+     */
+
+    public void setName(final String name);
+
+    /**
+     *  <p>Name of the Product the Line Item is based on.</p>
+     * @param lineItem value to be set
+     */
+
+    public void setLineItem(final LocalizedString lineItem);
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -171,12 +175,12 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
     public static SetOrderLineItemCustomFieldChange of(final SetOrderLineItemCustomFieldChange template) {
         SetOrderLineItemCustomFieldChangeImpl instance = new SetOrderLineItemCustomFieldChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setCustomTypeId(template.getCustomTypeId());
         instance.setName(template.getName());
-        instance.setVariant(template.getVariant());
         instance.setLineItem(template.getLineItem());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -193,12 +197,12 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
         }
         SetOrderLineItemCustomFieldChangeImpl instance = new SetOrderLineItemCustomFieldChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setCustomTypeId(template.getCustomTypeId());
         instance.setName(template.getName());
-        instance.setVariant(template.getVariant());
         instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

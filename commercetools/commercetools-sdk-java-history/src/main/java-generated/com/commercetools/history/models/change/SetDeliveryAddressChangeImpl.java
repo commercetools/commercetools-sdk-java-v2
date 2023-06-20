@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetDeliveryAddressChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set DeliveryAddress on Orders.</li>
+ *   <li>Set DeliveryAddress on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, ModelBase {
@@ -24,24 +28,24 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
 
     private String change;
 
-    private String deliveryId;
+    private com.commercetools.history.models.common.Address previousValue;
 
     private com.commercetools.history.models.common.Address nextValue;
 
-    private com.commercetools.history.models.common.Address previousValue;
+    private String deliveryId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetDeliveryAddressChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("deliveryId") final String deliveryId,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.Address previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Address nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Address previousValue) {
+            @JsonProperty("deliveryId") final String deliveryId) {
         this.change = change;
-        this.deliveryId = deliveryId;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.deliveryId = deliveryId;
         this.type = SET_DELIVERY_ADDRESS_CHANGE;
     }
 
@@ -61,7 +65,7 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
     }
 
     /**
-     *  <p>Update action for <code>setDeliveryAddress</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +73,15 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public String getDeliveryId() {
-        return this.deliveryId;
+    public com.commercetools.history.models.common.Address getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Address getNextValue() {
@@ -85,27 +89,27 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
     }
 
     /**
-     *
+     *  <p><code>id</code> of the updated Delivery.</p>
      */
 
-    public com.commercetools.history.models.common.Address getPreviousValue() {
-        return this.previousValue;
+    public String getDeliveryId() {
+        return this.deliveryId;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setDeliveryId(final String deliveryId) {
-        this.deliveryId = deliveryId;
+    public void setPreviousValue(final com.commercetools.history.models.common.Address previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.Address nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.Address previousValue) {
-        this.previousValue = previousValue;
+    public void setDeliveryId(final String deliveryId) {
+        this.deliveryId = deliveryId;
     }
 
     @Override
@@ -120,9 +124,9 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(deliveryId, that.deliveryId)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(deliveryId, that.deliveryId)
                 .isEquals();
     }
 
@@ -130,9 +134,9 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(deliveryId)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(deliveryId)
                 .toHashCode();
     }
 

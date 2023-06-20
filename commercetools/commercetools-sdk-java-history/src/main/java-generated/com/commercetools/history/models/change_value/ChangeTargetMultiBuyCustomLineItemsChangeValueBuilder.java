@@ -37,7 +37,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     private com.commercetools.history.models.common.SelectionMode selectionMode;
 
     /**
-     * set the value to the predicate
+     *  <p>Valid CustomLineItem target predicate.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     *  <p>Quantity of Custom Line Items that triggered the application of the discount.</p>
      * @param triggerQuantity value to be set
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     *  <p>Quantity of Custom Line Items discounted per application of this discount.</p>
      * @param discountedQuantity value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     *  <p>Maximum number of applications of this discount.</p>
+     *  <p>Maximum number of times the discount is applicable.</p>
      * @param maxOccurrence value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     * set the value to the selectionMode
+     *  <p>SelectionMode based on which particular Custom Line Items were discounted.</p>
      * @param selectionMode value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     * value of predicate}
+     *  <p>Valid CustomLineItem target predicate.</p>
      * @return predicate
      */
 
@@ -102,7 +102,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     *  <p>Quantity of Custom Line Items that triggered the application of the discount.</p>
      * @return triggerQuantity
      */
 
@@ -111,7 +111,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     *  <p>Quantity of Custom Line Items discounted per application of this discount.</p>
      * @return discountedQuantity
      */
 
@@ -120,7 +120,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     *  <p>Maximum number of applications of this discount.</p>
+     *  <p>Maximum number of times the discount is applicable.</p>
      * @return maxOccurrence
      */
 
@@ -129,7 +129,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder
     }
 
     /**
-     * value of selectionMode}
+     *  <p>SelectionMode based on which particular Custom Line Items were discounted.</p>
      * @return selectionMode
      */
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetCountriesChange
+ *  <p>Change triggered by the Set Countries update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCountriesChangeImpl implements SetCountriesChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetCountriesChangeImpl implements SetCountriesChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>setCountries</code>.</p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetCountriesChangeImpl implements SetCountriesChange, ModelBase {
     }
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.StoreCountry> getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetCountriesChangeImpl implements SetCountriesChange, ModelBase {
     }
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.StoreCountry> getNextValue() {

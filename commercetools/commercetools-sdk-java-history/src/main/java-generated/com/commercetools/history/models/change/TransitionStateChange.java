@@ -16,7 +16,18 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TransitionStateChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Transition State on Orders.</li>
+ *   <li>Transition State on Staged Orders.</li>
+ *   <li>Transition State on Payments.</li>
+ *   <li>Transition State on Products.</li>
+ *   <li>Transition State on Quotes.</li>
+ *   <li>Transition State on Staged Quotes.</li>
+ *   <li>Transition State on Quote Requests.</li>
+ *   <li>Transition State on Reviews.</li>
+ *   <li>Transition State on States.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +59,7 @@ public interface TransitionStateChange extends Change {
     public String getType();
 
     /**
-     *  <p>Shape of the action for <code>transitionState</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,7 +67,7 @@ public interface TransitionStateChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -65,7 +76,7 @@ public interface TransitionStateChange extends Change {
     public Reference getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -74,21 +85,21 @@ public interface TransitionStateChange extends Change {
     public Reference getNextValue();
 
     /**
-     *  <p>Shape of the action for <code>transitionState</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Reference previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

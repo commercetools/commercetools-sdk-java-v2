@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     RemoveShippingAddressIdChange removeShippingAddressIdChange = RemoveShippingAddressIdChange.builder()
  *             .change("{change}")
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .address(addressBuilder -> addressBuilder)
  *             .build()
  * </code></pre>
@@ -27,14 +27,14 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
 
     private String change;
 
-    private java.util.List<String> nextValue;
-
     private java.util.List<String> previousValue;
+
+    private java.util.List<String> nextValue;
 
     private com.commercetools.history.models.common.Address address;
 
     /**
-     *  <p>Update action for <code>removeShippingAddressId</code> action on customers.</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,43 +45,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     * set values to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public RemoveShippingAddressIdChangeBuilder nextValue(final String... nextValue) {
-        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
-        return this;
-    }
-
-    /**
-     * set value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public RemoveShippingAddressIdChangeBuilder nextValue(final java.util.List<String> nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * add values to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public RemoveShippingAddressIdChangeBuilder plusNextValue(final String... nextValue) {
-        if (this.nextValue == null) {
-            this.nextValue = new ArrayList<>();
-        }
-        this.nextValue.addAll(Arrays.asList(nextValue));
-        return this;
-    }
-
-    /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -92,7 +56,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -103,7 +67,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -117,7 +81,43 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     * set the value to the address using the builder function
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public RemoveShippingAddressIdChangeBuilder nextValue(final String... nextValue) {
+        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public RemoveShippingAddressIdChangeBuilder nextValue(final java.util.List<String> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public RemoveShippingAddressIdChangeBuilder plusNextValue(final String... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
+        return this;
+    }
+
+    /**
+     *  <p>Address removed from <code>shippingAddressesIds</code>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     * set the value to the address using the builder function
+     *  <p>Address removed from <code>shippingAddressesIds</code>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     * set the value to the address
+     *  <p>Address removed from <code>shippingAddressesIds</code>.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -152,7 +152,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     *  <p>Update action for <code>removeShippingAddressId</code> action on customers.</p>
+     * value of change}
      * @return change
      */
 
@@ -161,16 +161,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.util.List<String> getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -179,7 +170,16 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     }
 
     /**
-     * value of address}
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.util.List<String> getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Address removed from <code>shippingAddressesIds</code>.</p>
      * @return address
      */
 
@@ -193,10 +193,10 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
      */
     public RemoveShippingAddressIdChange build() {
         Objects.requireNonNull(change, RemoveShippingAddressIdChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, RemoveShippingAddressIdChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, RemoveShippingAddressIdChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, RemoveShippingAddressIdChange.class + ": nextValue is missing");
         Objects.requireNonNull(address, RemoveShippingAddressIdChange.class + ": address is missing");
-        return new RemoveShippingAddressIdChangeImpl(change, nextValue, previousValue, address);
+        return new RemoveShippingAddressIdChangeImpl(change, previousValue, nextValue, address);
     }
 
     /**
@@ -204,7 +204,7 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
      * @return RemoveShippingAddressIdChange
      */
     public RemoveShippingAddressIdChange buildUnchecked() {
-        return new RemoveShippingAddressIdChangeImpl(change, nextValue, previousValue, address);
+        return new RemoveShippingAddressIdChangeImpl(change, previousValue, nextValue, address);
     }
 
     /**
@@ -223,8 +223,8 @@ public class RemoveShippingAddressIdChangeBuilder implements Builder<RemoveShipp
     public static RemoveShippingAddressIdChangeBuilder of(final RemoveShippingAddressIdChange template) {
         RemoveShippingAddressIdChangeBuilder builder = new RemoveShippingAddressIdChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.address = template.getAddress();
         return builder;
     }

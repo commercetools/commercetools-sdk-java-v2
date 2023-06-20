@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MoveImageToPositionChange
+ *  <p>Change triggered by the Move image to position update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,9 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     MoveImageToPositionChange moveImageToPositionChange = MoveImageToPositionChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface MoveImageToPositionChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update actions for moving images</p>
+     *
      * @return change
      */
     @NotNull
@@ -58,15 +58,7 @@ public interface MoveImageToPositionChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return catalogData
-     */
-    @NotNull
-    @JsonProperty("catalogData")
-    public String getCatalogData();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -75,7 +67,7 @@ public interface MoveImageToPositionChange extends Change {
     public List<Image> getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -84,21 +76,25 @@ public interface MoveImageToPositionChange extends Change {
     public List<Image> getNextValue();
 
     /**
-     *  <p>Update actions for moving images</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set catalogData
-     * @param catalogData value to be set
-     */
-
-    public void setCatalogData(final String catalogData);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -106,14 +102,14 @@ public interface MoveImageToPositionChange extends Change {
     public void setPreviousValue(final Image... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<Image> previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
@@ -121,11 +117,21 @@ public interface MoveImageToPositionChange extends Change {
     public void setNextValue(final Image... nextValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
     public void setNextValue(final List<Image> nextValue);
+
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
 
     /**
      * factory method
@@ -143,9 +149,9 @@ public interface MoveImageToPositionChange extends Change {
     public static MoveImageToPositionChange of(final MoveImageToPositionChange template) {
         MoveImageToPositionChangeImpl instance = new MoveImageToPositionChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 
@@ -161,7 +167,6 @@ public interface MoveImageToPositionChange extends Change {
         }
         MoveImageToPositionChangeImpl instance = new MoveImageToPositionChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.Image::deepCopy)
@@ -172,6 +177,7 @@ public interface MoveImageToPositionChange extends Change {
                         .map(com.commercetools.history.models.common.Image::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 

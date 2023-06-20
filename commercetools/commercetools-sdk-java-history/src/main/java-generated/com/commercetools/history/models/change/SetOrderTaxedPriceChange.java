@@ -25,9 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetOrderTaxedPriceChange setOrderTaxedPriceChange = SetOrderTaxedPriceChange.builder()
  *             .change("{change}")
- *             .taxMode(TaxMode.PLATFORM)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .taxMode(TaxMode.PLATFORM)
  *             .build()
  * </code></pre>
  * </div>
@@ -50,12 +50,30 @@ public interface SetOrderTaxedPriceChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setOrderTaxedPrice</code></p>
+     *
      * @return change
      */
     @NotNull
     @JsonProperty("change")
     public String getChange();
+
+    /**
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("previousValue")
+    public TaxedItemPrice getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public TaxedItemPrice getNextValue();
 
     /**
      *
@@ -66,29 +84,25 @@ public interface SetOrderTaxedPriceChange extends Change {
     public TaxMode getTaxMode();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public TaxedItemPrice getNextValue();
-
-    /**
-     *
-     * @return previousValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("previousValue")
-    public TaxedItemPrice getPreviousValue();
-
-    /**
-     *  <p>Update action for <code>setOrderTaxedPrice</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
+
+    /**
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     */
+
+    public void setPreviousValue(final TaxedItemPrice previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final TaxedItemPrice nextValue);
 
     /**
      * set taxMode
@@ -96,20 +110,6 @@ public interface SetOrderTaxedPriceChange extends Change {
      */
 
     public void setTaxMode(final TaxMode taxMode);
-
-    /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final TaxedItemPrice nextValue);
-
-    /**
-     * set previousValue
-     * @param previousValue value to be set
-     */
-
-    public void setPreviousValue(final TaxedItemPrice previousValue);
 
     /**
      * factory method
@@ -127,9 +127,9 @@ public interface SetOrderTaxedPriceChange extends Change {
     public static SetOrderTaxedPriceChange of(final SetOrderTaxedPriceChange template) {
         SetOrderTaxedPriceChangeImpl instance = new SetOrderTaxedPriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTaxMode(template.getTaxMode());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setTaxMode(template.getTaxMode());
         return instance;
     }
 
@@ -145,10 +145,10 @@ public interface SetOrderTaxedPriceChange extends Change {
         }
         SetOrderTaxedPriceChangeImpl instance = new SetOrderTaxedPriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTaxMode(template.getTaxMode());
-        instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
+        instance.setTaxMode(template.getTaxMode());
         return instance;
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetTransitionsChange
+ *  <p>Change triggered by the Set Transitions update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTransitionsChangeImpl implements SetTransitionsChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetTransitionsChangeImpl implements SetTransitionsChange, ModelBase
     }
 
     /**
-     *  <p>Shape of the action for <code>setTransitions</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetTransitionsChangeImpl implements SetTransitionsChange, ModelBase
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetTransitionsChangeImpl implements SetTransitionsChange, ModelBase
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getNextValue() {

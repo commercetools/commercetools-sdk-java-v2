@@ -30,7 +30,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     private com.commercetools.history.models.common.LocalizedString label;
 
     /**
-     *  <p>Name of a custom field.</p>
+     *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     * set the value to the value
+     *  <p>CustomFieldValue based on the FieldType.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     * set the value to the label using the builder function
+     *  <p>User-defined label of the Custom Field.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     * set the value to the label using the builder function
+     *  <p>User-defined label of the Custom Field.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     * set the value to the label
+     *  <p>User-defined label of the Custom Field.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     *  <p>Name of a custom field.</p>
+     *  <p>Name of the Custom Field.</p>
      * @return name
      */
 
@@ -96,7 +96,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     * value of value}
+     *  <p>CustomFieldValue based on the FieldType.</p>
      * @return value
      */
 
@@ -105,7 +105,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     * value of label}
+     *  <p>User-defined label of the Custom Field.</p>
      * @return label
      */
 

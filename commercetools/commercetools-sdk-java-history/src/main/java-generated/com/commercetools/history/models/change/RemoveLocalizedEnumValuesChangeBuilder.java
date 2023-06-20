@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     RemoveLocalizedEnumValuesChange removeLocalizedEnumValuesChange = RemoveLocalizedEnumValuesChange.builder()
  *             .change("{change}")
- *             .attributeName("{attributeName}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
 
     private String change;
 
-    private String attributeName;
-
     private com.commercetools.history.models.change_value.LocalizedEnumValue previousValue;
 
+    private String attributeName;
+
     /**
-     *  <p>Update action for <code>removeEnumValues</code> on product types</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,18 +42,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @param attributeName value to be set
-     * @return Builder
-     */
-
-    public RemoveLocalizedEnumValuesChangeBuilder attributeName(final String attributeName) {
-        this.attributeName = attributeName;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -66,7 +55,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -79,7 +68,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -91,7 +80,18 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     *  <p>Update action for <code>removeEnumValues</code> on product types</p>
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @param attributeName value to be set
+     * @return Builder
+     */
+
+    public RemoveLocalizedEnumValuesChangeBuilder attributeName(final String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -100,16 +100,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @return attributeName
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -118,14 +109,23 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @return attributeName
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
+    /**
      * builds RemoveLocalizedEnumValuesChange with checking for non-null required values
      * @return RemoveLocalizedEnumValuesChange
      */
     public RemoveLocalizedEnumValuesChange build() {
         Objects.requireNonNull(change, RemoveLocalizedEnumValuesChange.class + ": change is missing");
-        Objects.requireNonNull(attributeName, RemoveLocalizedEnumValuesChange.class + ": attributeName is missing");
         Objects.requireNonNull(previousValue, RemoveLocalizedEnumValuesChange.class + ": previousValue is missing");
-        return new RemoveLocalizedEnumValuesChangeImpl(change, attributeName, previousValue);
+        Objects.requireNonNull(attributeName, RemoveLocalizedEnumValuesChange.class + ": attributeName is missing");
+        return new RemoveLocalizedEnumValuesChangeImpl(change, previousValue, attributeName);
     }
 
     /**
@@ -133,7 +133,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
      * @return RemoveLocalizedEnumValuesChange
      */
     public RemoveLocalizedEnumValuesChange buildUnchecked() {
-        return new RemoveLocalizedEnumValuesChangeImpl(change, attributeName, previousValue);
+        return new RemoveLocalizedEnumValuesChangeImpl(change, previousValue, attributeName);
     }
 
     /**
@@ -152,8 +152,8 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     public static RemoveLocalizedEnumValuesChangeBuilder of(final RemoveLocalizedEnumValuesChange template) {
         RemoveLocalizedEnumValuesChangeBuilder builder = new RemoveLocalizedEnumValuesChangeBuilder();
         builder.change = template.getChange();
-        builder.attributeName = template.getAttributeName();
         builder.previousValue = template.getPreviousValue();
+        builder.attributeName = template.getAttributeName();
         return builder;
     }
 

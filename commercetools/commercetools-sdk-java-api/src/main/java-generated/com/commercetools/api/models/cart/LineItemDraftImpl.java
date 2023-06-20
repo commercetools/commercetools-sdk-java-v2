@@ -20,6 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemDraftImpl implements LineItemDraft, ModelBase {
 
+    private String key;
+
     private String productId;
 
     private Long variantId;
@@ -50,7 +52,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    LineItemDraftImpl(@JsonProperty("productId") final String productId,
+    LineItemDraftImpl(@JsonProperty("key") final String key, @JsonProperty("productId") final String productId,
             @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
@@ -62,6 +64,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.key = key;
         this.productId = productId;
         this.variantId = variantId;
         this.sku = sku;
@@ -81,6 +84,14 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
      * create empty instance
      */
     public LineItemDraftImpl() {
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -189,6 +200,10 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         return this.custom;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setProductId(final String productId) {
         this.productId = productId;
     }
@@ -253,7 +268,8 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
 
         LineItemDraftImpl that = (LineItemDraftImpl) o;
 
-        return new EqualsBuilder().append(productId, that.productId)
+        return new EqualsBuilder().append(key, that.key)
+                .append(productId, that.productId)
                 .append(variantId, that.variantId)
                 .append(sku, that.sku)
                 .append(quantity, that.quantity)
@@ -271,7 +287,8 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productId)
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(productId)
                 .append(variantId)
                 .append(sku)
                 .append(quantity)

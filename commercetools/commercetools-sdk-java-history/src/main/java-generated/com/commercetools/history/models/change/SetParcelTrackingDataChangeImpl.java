@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetParcelTrackingDataChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Parcel Tracking Data on Orders.</li>
+ *   <li>Set Parcel Tracking Data on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataChange, ModelBase {
@@ -24,24 +28,24 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
 
     private String change;
 
-    private com.commercetools.history.models.change_value.ParcelChangeValue parcel;
+    private com.commercetools.history.models.common.TrackingData previousValue;
 
     private com.commercetools.history.models.common.TrackingData nextValue;
 
-    private com.commercetools.history.models.common.TrackingData previousValue;
+    private com.commercetools.history.models.change_value.ParcelChangeValue parcel;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetParcelTrackingDataChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.TrackingData previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TrackingData nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.TrackingData previousValue) {
+            @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
         this.change = change;
-        this.parcel = parcel;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.parcel = parcel;
         this.type = SET_PARCEL_TRACKING_DATA_CHANGE;
     }
 
@@ -61,7 +65,7 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
     }
 
     /**
-     *  <p>Update action for <code>setParcelTrackingData</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +73,15 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
-        return this.parcel;
+    public com.commercetools.history.models.common.TrackingData getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.TrackingData getNextValue() {
@@ -85,27 +89,27 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
     }
 
     /**
-     *
+     *  <p>Information about the updated Parcel.</p>
      */
 
-    public com.commercetools.history.models.common.TrackingData getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
+        return this.parcel;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setParcel(final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
-        this.parcel = parcel;
+    public void setPreviousValue(final com.commercetools.history.models.common.TrackingData previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.TrackingData nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.TrackingData previousValue) {
-        this.previousValue = previousValue;
+    public void setParcel(final com.commercetools.history.models.change_value.ParcelChangeValue parcel) {
+        this.parcel = parcel;
     }
 
     @Override
@@ -120,9 +124,9 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(parcel, that.parcel)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(parcel, that.parcel)
                 .isEquals();
     }
 
@@ -130,9 +134,9 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(parcel)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(parcel)
                 .toHashCode();
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Shape of the value for cart discounts multiBuyCustomLineItems target.</p>
+ * ChangeTargetMultiBuyCustomLineItemsChangeValue
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
@@ -66,7 +66,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     *
+     *  <p>Valid CustomLineItem target predicate.</p>
      */
 
     public String getPredicate() {
@@ -74,7 +74,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     *  <p>Quantity of Custom Line Items that triggered the application of the discount.</p>
      */
 
     public Integer getTriggerQuantity() {
@@ -82,7 +82,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     *  <p>Quantity of Custom Line Items discounted per application of this discount.</p>
      */
 
     public Integer getDiscountedQuantity() {
@@ -90,7 +90,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     *  <p>Maximum number of applications of this discount.</p>
+     *  <p>Maximum number of times the discount is applicable.</p>
      */
 
     public Integer getMaxOccurrence() {
@@ -98,7 +98,7 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
     }
 
     /**
-     *
+     *  <p>SelectionMode based on which particular Custom Line Items were discounted.</p>
      */
 
     public com.commercetools.history.models.common.SelectionMode getSelectionMode() {

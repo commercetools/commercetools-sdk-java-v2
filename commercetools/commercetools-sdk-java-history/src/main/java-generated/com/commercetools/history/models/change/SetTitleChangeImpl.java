@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetTitleChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Title on Customers.</li>
+ *   <li>Set Title on Reviews.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTitleChangeImpl implements SetTitleChange, ModelBase {
@@ -57,7 +61,7 @@ public class SetTitleChangeImpl implements SetTitleChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>setTitle</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +69,7 @@ public class SetTitleChangeImpl implements SetTitleChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +77,7 @@ public class SetTitleChangeImpl implements SetTitleChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

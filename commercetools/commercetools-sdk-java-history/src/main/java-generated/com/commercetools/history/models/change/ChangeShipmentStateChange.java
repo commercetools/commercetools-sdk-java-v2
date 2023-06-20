@@ -15,7 +15,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeShipmentStateChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change ShipmentState on Orders.</li>
+ *   <li>Change ShipmentState on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,8 +27,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeShipmentStateChange changeShipmentStateChange = ChangeShipmentStateChange.builder()
  *             .change("{change}")
- *             .nextValue(ShipmentState.SHIPPED)
  *             .previousValue(ShipmentState.SHIPPED)
+ *             .nextValue(ShipmentState.SHIPPED)
  *             .build()
  * </code></pre>
  * </div>
@@ -47,7 +51,7 @@ public interface ChangeShipmentStateChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeShipmentState</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -55,15 +59,7 @@ public interface ChangeShipmentStateChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public ShipmentState getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -71,25 +67,33 @@ public interface ChangeShipmentStateChange extends Change {
     public ShipmentState getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changeShipmentState</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public ShipmentState getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final ShipmentState nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final ShipmentState previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final ShipmentState nextValue);
 
     /**
      * factory method
@@ -107,8 +111,8 @@ public interface ChangeShipmentStateChange extends Change {
     public static ChangeShipmentStateChange of(final ChangeShipmentStateChange template) {
         ChangeShipmentStateChangeImpl instance = new ChangeShipmentStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -124,8 +128,8 @@ public interface ChangeShipmentStateChange extends Change {
         }
         ChangeShipmentStateChangeImpl instance = new ChangeShipmentStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 

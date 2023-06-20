@@ -15,7 +15,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetKeyChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Key on Cart Discounts.</li>
+ *   <li>Set Key on Categories.</li>
+ *   <li>Set Key on Customers.</li>
+ *   <li>Set Key on Customer Groups.</li>
+ *   <li>Set Key on Payments.</li>
+ *   <li>Set Key on Products.</li>
+ *   <li>Set Key on Product Discounts.</li>
+ *   <li>Set Key on Product Selections.</li>
+ *   <li>Set Key on Product Types.</li>
+ *   <li>Set Key on Reviews.</li>
+ *   <li>Set Key on Shopping Lists.</li>
+ *   <li>Set Key on Zones.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetKeyChangeImpl implements SetKeyChange, ModelBase {
@@ -57,7 +71,7 @@ public class SetKeyChangeImpl implements SetKeyChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>setKey</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +79,7 @@ public class SetKeyChangeImpl implements SetKeyChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +87,7 @@ public class SetKeyChangeImpl implements SetKeyChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

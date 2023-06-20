@@ -28,7 +28,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     private com.commercetools.history.models.common.LocalizedString name;
 
     /**
-     * set the value to the id
+     *  <p><code>id</code> of the Asset.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     }
 
     /**
-     * set the value to the name using the builder function
+     *  <p>Name of the Asset.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     }
 
     /**
-     * set the value to the name using the builder function
+     *  <p>Name of the Asset.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     }
 
     /**
-     * set the value to the name
+     *  <p>Name of the Asset.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     }
 
     /**
-     * value of id}
+     *  <p><code>id</code> of the Asset.</p>
      * @return id
      */
 
@@ -83,7 +83,7 @@ public class AssetChangeValueBuilder implements Builder<AssetChangeValue> {
     }
 
     /**
-     * value of name}
+     *  <p>Name of the Asset.</p>
      * @return name
      */
 

@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShoppingListLineItemValue {
 
     /**
-     *
+     *  <p><code>id</code> of the ShoppingListLineItem.</p>
      * @return id
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface ShoppingListLineItemValue {
     public String getId();
 
     /**
-     *
+     *  <p>Name of the corresponding Product the Product Variant belongs to.</p>
      * @return name
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface ShoppingListLineItemValue {
     public LocalizedString getName();
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to.</p>
      * @return variantId
      */
     @NotNull
@@ -60,21 +60,21 @@ public interface ShoppingListLineItemValue {
     public Integer getVariantId();
 
     /**
-     * set id
+     *  <p><code>id</code> of the ShoppingListLineItem.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set name
+     *  <p>Name of the corresponding Product the Product Variant belongs to.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     * set variantId
+     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to.</p>
      * @param variantId value to be set
      */
 

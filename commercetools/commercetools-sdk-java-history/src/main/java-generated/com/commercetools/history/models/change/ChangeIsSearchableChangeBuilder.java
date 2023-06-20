@@ -14,9 +14,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeIsSearchableChange changeIsSearchableChange = ChangeIsSearchableChange.builder()
  *             .change("{change}")
- *             .attributeName("{attributeName}")
- *             .nextValue(true)
  *             .previousValue(true)
+ *             .nextValue(true)
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,14 +26,14 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
 
     private String change;
 
-    private String attributeName;
+    private Boolean previousValue;
 
     private Boolean nextValue;
 
-    private Boolean previousValue;
+    private String attributeName;
 
     /**
-     *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -44,29 +44,7 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     }
 
     /**
-     *  <p>The name of the updated attribute.</p>
-     * @param attributeName value to be set
-     * @return Builder
-     */
-
-    public ChangeIsSearchableChangeBuilder attributeName(final String attributeName) {
-        this.attributeName = attributeName;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeIsSearchableChangeBuilder nextValue(final Boolean nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -77,7 +55,29 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     }
 
     /**
-     *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeIsSearchableChangeBuilder nextValue(final Boolean nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @param attributeName value to be set
+     * @return Builder
+     */
+
+    public ChangeIsSearchableChangeBuilder attributeName(final String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -86,25 +86,7 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     }
 
     /**
-     *  <p>The name of the updated attribute.</p>
-     * @return attributeName
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public Boolean getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -113,15 +95,33 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public Boolean getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @return attributeName
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
+    /**
      * builds ChangeIsSearchableChange with checking for non-null required values
      * @return ChangeIsSearchableChange
      */
     public ChangeIsSearchableChange build() {
         Objects.requireNonNull(change, ChangeIsSearchableChange.class + ": change is missing");
-        Objects.requireNonNull(attributeName, ChangeIsSearchableChange.class + ": attributeName is missing");
-        Objects.requireNonNull(nextValue, ChangeIsSearchableChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeIsSearchableChange.class + ": previousValue is missing");
-        return new ChangeIsSearchableChangeImpl(change, attributeName, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeIsSearchableChange.class + ": nextValue is missing");
+        Objects.requireNonNull(attributeName, ChangeIsSearchableChange.class + ": attributeName is missing");
+        return new ChangeIsSearchableChangeImpl(change, previousValue, nextValue, attributeName);
     }
 
     /**
@@ -129,7 +129,7 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
      * @return ChangeIsSearchableChange
      */
     public ChangeIsSearchableChange buildUnchecked() {
-        return new ChangeIsSearchableChangeImpl(change, attributeName, nextValue, previousValue);
+        return new ChangeIsSearchableChangeImpl(change, previousValue, nextValue, attributeName);
     }
 
     /**
@@ -148,9 +148,9 @@ public class ChangeIsSearchableChangeBuilder implements Builder<ChangeIsSearchab
     public static ChangeIsSearchableChangeBuilder of(final ChangeIsSearchableChange template) {
         ChangeIsSearchableChangeBuilder builder = new ChangeIsSearchableChangeBuilder();
         builder.change = template.getChange();
-        builder.attributeName = template.getAttributeName();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.attributeName = template.getAttributeName();
         return builder;
     }
 

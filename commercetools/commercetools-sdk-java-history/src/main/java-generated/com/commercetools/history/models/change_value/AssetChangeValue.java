@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AssetChangeValue {
 
     /**
-     *
+     *  <p><code>id</code> of the Asset.</p>
      * @return id
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface AssetChangeValue {
     public String getId();
 
     /**
-     *
+     *  <p>Name of the Asset.</p>
      * @return name
      */
     @NotNull
@@ -51,14 +51,14 @@ public interface AssetChangeValue {
     public LocalizedString getName();
 
     /**
-     * set id
+     *  <p><code>id</code> of the Asset.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set name
+     *  <p>Name of the Asset.</p>
      * @param name value to be set
      */
 

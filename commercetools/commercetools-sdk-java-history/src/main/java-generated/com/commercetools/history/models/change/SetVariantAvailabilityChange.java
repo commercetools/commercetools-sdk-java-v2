@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetVariantAvailabilityChange
+ *  <p>Change triggered automatically when an InventoryEntry associated with a Product changes.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,10 +24,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetVariantAvailabilityChange setVariantAvailabilityChange = SetVariantAvailabilityChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
- *             .variant("{variant}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface SetVariantAvailabilityChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setVariantAvailability</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,23 +58,7 @@ public interface SetVariantAvailabilityChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return catalogData
-     */
-    @NotNull
-    @JsonProperty("catalogData")
-    public String getCatalogData();
-
-    /**
-     *
-     * @return variant
-     */
-    @NotNull
-    @JsonProperty("variant")
-    public String getVariant();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -83,7 +67,7 @@ public interface SetVariantAvailabilityChange extends Change {
     public ProductVariantAvailability getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -92,39 +76,61 @@ public interface SetVariantAvailabilityChange extends Change {
     public ProductVariantAvailability getNextValue();
 
     /**
-     *  <p>Update action for <code>setVariantAvailability</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set catalogData
-     * @param catalogData value to be set
-     */
-
-    public void setCatalogData(final String catalogData);
-
-    /**
-     * set variant
-     * @param variant value to be set
-     */
-
-    public void setVariant(final String variant);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final ProductVariantAvailability previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final ProductVariantAvailability nextValue);
+
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -142,10 +148,10 @@ public interface SetVariantAvailabilityChange extends Change {
     public static SetVariantAvailabilityChange of(final SetVariantAvailabilityChange template) {
         SetVariantAvailabilityChangeImpl instance = new SetVariantAvailabilityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
-        instance.setVariant(template.getVariant());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -161,12 +167,12 @@ public interface SetVariantAvailabilityChange extends Change {
         }
         SetVariantAvailabilityChangeImpl instance = new SetVariantAvailabilityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
-        instance.setVariant(template.getVariant());
         instance.setPreviousValue(
             com.commercetools.history.models.common.ProductVariantAvailability.deepCopy(template.getPreviousValue()));
         instance.setNextValue(
             com.commercetools.history.models.common.ProductVariantAvailability.deepCopy(template.getNextValue()));
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

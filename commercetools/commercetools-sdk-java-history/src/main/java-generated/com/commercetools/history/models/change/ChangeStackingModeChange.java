@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeStackingModeChange
+ *  <p>Change triggered by the Change Stacking Mode update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,8 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeStackingModeChange changeStackingModeChange = ChangeStackingModeChange.builder()
  *             .change("{change}")
- *             .nextValue(StackingMode.STACKING)
  *             .previousValue(StackingMode.STACKING)
+ *             .nextValue(StackingMode.STACKING)
  *             .build()
  * </code></pre>
  * </div>
@@ -39,7 +39,7 @@ public interface ChangeStackingModeChange extends Change {
     String CHANGE_STACKING_MODE_CHANGE = "ChangeStackingModeChange";
 
     /**
-     *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
+     *
      * @return change
      */
     @NotNull
@@ -55,15 +55,7 @@ public interface ChangeStackingModeChange extends Change {
     public String getType();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public StackingMode getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -71,25 +63,33 @@ public interface ChangeStackingModeChange extends Change {
     public StackingMode getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public StackingMode getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final StackingMode nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final StackingMode previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final StackingMode nextValue);
 
     /**
      * factory method
@@ -107,8 +107,8 @@ public interface ChangeStackingModeChange extends Change {
     public static ChangeStackingModeChange of(final ChangeStackingModeChange template) {
         ChangeStackingModeChangeImpl instance = new ChangeStackingModeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -124,8 +124,8 @@ public interface ChangeStackingModeChange extends Change {
         }
         ChangeStackingModeChangeImpl instance = new ChangeStackingModeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 

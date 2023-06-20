@@ -19,6 +19,10 @@ public class DestinationBuilder {
         return com.commercetools.api.models.subscription.AzureServiceBusDestinationBuilder.of();
     }
 
+    public com.commercetools.api.models.subscription.ConfluentCloudDestinationBuilder confluentCloudBuilder() {
+        return com.commercetools.api.models.subscription.ConfluentCloudDestinationBuilder.of();
+    }
+
     public com.commercetools.api.models.subscription.EventBridgeDestinationBuilder eventBridgeBuilder() {
         return com.commercetools.api.models.subscription.EventBridgeDestinationBuilder.of();
     }

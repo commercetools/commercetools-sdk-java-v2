@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetAssetKeyChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Asset Key on Categories.</li>
+ *   <li>Set Asset Key on Products.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
@@ -24,24 +28,24 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.AssetChangeValue asset;
+    private String previousValue;
 
     private String nextValue;
 
-    private String previousValue;
+    private com.commercetools.history.models.change_value.AssetChangeValue asset;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetAssetKeyChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
+            @JsonProperty("previousValue") final String previousValue,
             @JsonProperty("nextValue") final String nextValue,
-            @JsonProperty("previousValue") final String previousValue) {
+            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.change = change;
-        this.asset = asset;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.asset = asset;
         this.type = SET_ASSET_KEY_CHANGE;
     }
 
@@ -61,7 +65,7 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>setAssetKey</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +73,15 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
-        return this.asset;
+    public String getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {
@@ -85,27 +89,27 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information about the updated Asset.</p>
      */
 
-    public String getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
+        return this.asset;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setAsset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
-        this.asset = asset;
+    public void setPreviousValue(final String previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final String nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final String previousValue) {
-        this.previousValue = previousValue;
+    public void setAsset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
+        this.asset = asset;
     }
 
     @Override
@@ -120,9 +124,9 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(asset, that.asset)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(asset, that.asset)
                 .isEquals();
     }
 
@@ -130,9 +134,9 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(asset)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(asset)
                 .toHashCode();
     }
 

@@ -16,7 +16,12 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetNameChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Name on Discount Codes.</li>
+ *   <li>Set Name on States.</li>
+ *   <li>Set Name on Stores.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -48,7 +53,7 @@ public interface SetNameChange extends Change {
     public String getType();
 
     /**
-     *  <p>Shape of the action for <code>setName</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,7 +61,7 @@ public interface SetNameChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -65,7 +70,7 @@ public interface SetNameChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -74,21 +79,21 @@ public interface SetNameChange extends Change {
     public LocalizedString getNextValue();
 
     /**
-     *  <p>Shape of the action for <code>setName</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final LocalizedString previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

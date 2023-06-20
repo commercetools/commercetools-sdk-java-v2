@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddProductChange
+ *  <p>Change triggered by the Add Product update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddProductChangeImpl implements AddProductChange, ModelBase {
@@ -53,7 +53,7 @@ public class AddProductChangeImpl implements AddProductChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for when a product is assigned to a product selection</p>
+     *
      */
 
     public String getChange() {
@@ -61,7 +61,7 @@ public class AddProductChangeImpl implements AddProductChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Reference getNextValue() {

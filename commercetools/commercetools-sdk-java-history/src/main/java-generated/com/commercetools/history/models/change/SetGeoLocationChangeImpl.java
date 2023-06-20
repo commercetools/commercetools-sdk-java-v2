@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetGeoLocationChange
+ *  <p>Change triggered by the Set GeoLocation update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase {
@@ -24,20 +24,20 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
 
     private String change;
 
-    private com.commercetools.history.models.common.GeoLocation nextValue;
-
     private com.commercetools.history.models.common.GeoLocation previousValue;
+
+    private com.commercetools.history.models.common.GeoLocation nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetGeoLocationChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.GeoLocation nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.GeoLocation previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.GeoLocation previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.GeoLocation nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = SET_GEO_LOCATION_CHANGE;
     }
 
@@ -57,7 +57,7 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
     }
 
     /**
-     *  <p>Update action for <code>setGeoLocation</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +65,31 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.GeoLocation getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.GeoLocation getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.GeoLocation getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.GeoLocation nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.GeoLocation previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.GeoLocation nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +104,8 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +113,8 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

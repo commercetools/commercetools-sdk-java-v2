@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetBillingAddressChange setBillingAddressChange = SetBillingAddressChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
 
     private String change;
 
-    private com.commercetools.history.models.common.Address nextValue;
-
     private com.commercetools.history.models.common.Address previousValue;
 
+    private com.commercetools.history.models.common.Address nextValue;
+
     /**
-     *  <p>Update action for <code>setBillingAddress</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,42 +42,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
     }
 
     /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetBillingAddressChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetBillingAddressChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetBillingAddressChangeBuilder nextValue(final com.commercetools.history.models.common.Address nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -89,7 +54,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -101,7 +66,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -113,7 +78,42 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
     }
 
     /**
-     *  <p>Update action for <code>setBillingAddress</code></p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetBillingAddressChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetBillingAddressChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetBillingAddressChangeBuilder nextValue(final com.commercetools.history.models.common.Address nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -122,16 +122,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.Address getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -140,14 +131,23 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.Address getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds SetBillingAddressChange with checking for non-null required values
      * @return SetBillingAddressChange
      */
     public SetBillingAddressChange build() {
         Objects.requireNonNull(change, SetBillingAddressChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, SetBillingAddressChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetBillingAddressChange.class + ": previousValue is missing");
-        return new SetBillingAddressChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetBillingAddressChange.class + ": nextValue is missing");
+        return new SetBillingAddressChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -155,7 +155,7 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
      * @return SetBillingAddressChange
      */
     public SetBillingAddressChange buildUnchecked() {
-        return new SetBillingAddressChangeImpl(change, nextValue, previousValue);
+        return new SetBillingAddressChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -174,8 +174,8 @@ public class SetBillingAddressChangeBuilder implements Builder<SetBillingAddress
     public static SetBillingAddressChangeBuilder of(final SetBillingAddressChange template) {
         SetBillingAddressChangeBuilder builder = new SetBillingAddressChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

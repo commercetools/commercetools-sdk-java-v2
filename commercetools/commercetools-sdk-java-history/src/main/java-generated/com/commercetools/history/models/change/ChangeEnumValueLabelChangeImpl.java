@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeEnumValueLabelChange
+ *  <p>Change triggered by the Change EnumValue Label update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChange, ModelBase {
@@ -24,27 +24,27 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
 
     private String change;
 
-    private String fieldName;
-
-    private String valueKey;
-
     private String previousValue;
 
     private String nextValue;
+
+    private String fieldName;
+
+    private String valueKey;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeEnumValueLabelChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("fieldName") final String fieldName, @JsonProperty("valueKey") final String valueKey,
             @JsonProperty("previousValue") final String previousValue,
-            @JsonProperty("nextValue") final String nextValue) {
+            @JsonProperty("nextValue") final String nextValue, @JsonProperty("fieldName") final String fieldName,
+            @JsonProperty("valueKey") final String valueKey) {
         this.change = change;
-        this.fieldName = fieldName;
-        this.valueKey = valueKey;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.fieldName = fieldName;
+        this.valueKey = valueKey;
         this.type = CHANGE_ENUM_VALUE_LABEL_CHANGE;
     }
 
@@ -64,7 +64,7 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
     }
 
     /**
-     *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
+     *
      */
 
     public String getChange() {
@@ -72,23 +72,7 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
     }
 
     /**
-     *  <p>The name of the field definition updated.</p>
-     */
-
-    public String getFieldName() {
-        return this.fieldName;
-    }
-
-    /**
-     *  <p>Key of the values that was updated</p>
-     */
-
-    public String getValueKey() {
-        return this.valueKey;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -96,23 +80,31 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <p>Name of the updated FieldDefinition.</p>
+     */
+
+    public String getFieldName() {
+        return this.fieldName;
+    }
+
+    /**
+     *  <p>Key of the updated values.</p>
+     */
+
+    public String getValueKey() {
+        return this.valueKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
-    }
-
-    public void setFieldName(final String fieldName) {
-        this.fieldName = fieldName;
-    }
-
-    public void setValueKey(final String valueKey) {
-        this.valueKey = valueKey;
     }
 
     public void setPreviousValue(final String previousValue) {
@@ -121,6 +113,14 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
 
     public void setNextValue(final String nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setFieldName(final String fieldName) {
+        this.fieldName = fieldName;
+    }
+
+    public void setValueKey(final String valueKey) {
+        this.valueKey = valueKey;
     }
 
     @Override
@@ -135,10 +135,10 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(fieldName, that.fieldName)
-                .append(valueKey, that.valueKey)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(fieldName, that.fieldName)
+                .append(valueKey, that.valueKey)
                 .isEquals();
     }
 
@@ -146,10 +146,10 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(fieldName)
-                .append(valueKey)
                 .append(previousValue)
                 .append(nextValue)
+                .append(fieldName)
+                .append(valueKey)
                 .toHashCode();
     }
 

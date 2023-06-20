@@ -1,47 +1,102 @@
 **Api changes**
 
 <details>
+<summary>Deprecated Property(s)</summary>
+
+- property `MyCartChangeLineItemQuantityAction::externalPrice` is removed
+- property `MyCartChangeLineItemQuantityAction::externalTotalPrice` is removed
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `parcelId` of type `StagedOrderRemoveParcelFromDeliveryAction` to be optional
+- changed property `parcelId` of type `StagedOrderSetParcelCustomFieldAction` to be optional
+- changed property `parcelId` of type `StagedOrderSetParcelCustomTypeAction` to be optional
+- changed property `parcelId` of type `StagedOrderSetParcelItemsAction` to be optional
+- changed property `parcelId` of type `StagedOrderSetParcelMeasurementsAction` to be optional
+- changed property `parcelId` of type `StagedOrderSetParcelTrackingDataAction` to be optional
+- changed property `parcelId` of type `OrderRemoveParcelFromDeliveryAction` to be optional
+- changed property `parcelId` of type `OrderSetParcelCustomFieldAction` to be optional
+- changed property `parcelId` of type `OrderSetParcelCustomTypeAction` to be optional
+- changed property `parcelId` of type `OrderSetParcelItemsAction` to be optional
+- changed property `parcelId` of type `OrderSetParcelMeasurementsAction` to be optional
+- changed property `parcelId` of type `OrderSetParcelTrackingDataAction` to be optional
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
-- added property `shippingKey` to type `CartSetShippingMethodTaxAmountAction`
-- added property `shippingKey` to type `CartSetShippingMethodTaxRateAction`
-- added property `shippingKey` to type `StagedOrderSetShippingMethodTaxAmountAction`
-- added property `shippingKey` to type `StagedOrderSetShippingMethodTaxRateAction`
+- added property `key` to type `LineItem`
+- added property `key` to type `LineItemDraft`
+- added property `key` to type `CartAddLineItemAction`
+- added property `key` to type `MyLineItemDraft`
+- added property `key` to type `MyCartAddLineItemAction`
+- added property `sku` to type `StandalonePriceDeletedMessage`
+- added property `sku` to type `StandalonePriceDeletedMessagePayload`
+- added property `key` to type `StagedOrderAddLineItemAction`
+- added property `parcelKey` to type `StagedOrderAddParcelToDeliveryAction`
+- added property `parcelKey` to type `StagedOrderRemoveParcelFromDeliveryAction`
+- added property `parcelKey` to type `StagedOrderSetParcelCustomFieldAction`
+- added property `parcelKey` to type `StagedOrderSetParcelCustomTypeAction`
+- added property `parcelKey` to type `StagedOrderSetParcelItemsAction`
+- added property `parcelKey` to type `StagedOrderSetParcelMeasurementsAction`
+- added property `parcelKey` to type `StagedOrderSetParcelTrackingDataAction`
+- added property `key` to type `Parcel`
+- added property `key` to type `ParcelDraft`
+- added property `parcelKey` to type `OrderAddParcelToDeliveryAction`
+- added property `parcelKey` to type `OrderRemoveParcelFromDeliveryAction`
+- added property `parcelKey` to type `OrderSetParcelCustomFieldAction`
+- added property `parcelKey` to type `OrderSetParcelCustomTypeAction`
+- added property `parcelKey` to type `OrderSetParcelItemsAction`
+- added property `parcelKey` to type `OrderSetParcelMeasurementsAction`
+- added property `parcelKey` to type `OrderSetParcelTrackingDataAction`
 </details>
 
 
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `MoneyOverflowError`
-- added type `GraphQLMoneyOverflowError`
-- added type `QuoteCustomerChangedMessage`
-- added type `QuoteRequestCustomerChangedMessage`
-- added type `QuoteCustomerChangedMessagePayload`
-- added type `QuoteRequestCustomerChangedMessagePayload`
-- added type `QuoteRequestChangeCustomerAction`
-- added type `QuoteChangeCustomerAction`
-</details>
-
-
-<details>
-<summary>Added Resource(s)</summary>
-
-- added resource `/{projectKey}/as-associate/{associateId}/in-business-unit/key={businessUnitKey}/carts/replicate`
+- added type `CartSetLineItemInventoryModeAction`
+- added type `MyCartSetDirectDiscountsAction`
+- added type `StandalonePriceTierAddedMessage`
+- added type `StandalonePriceTierRemovedMessage`
+- added type `StandalonePriceTiersSetMessage`
+- added type `StandalonePriceValidFromAndUntilSetMessage`
+- added type `StandalonePriceValidFromSetMessage`
+- added type `StandalonePriceValidUntilSetMessage`
+- added type `StandalonePriceTierAddedMessagePayload`
+- added type `StandalonePriceTierRemovedMessagePayload`
+- added type `StandalonePriceTiersSetMessagePayload`
+- added type `StandalonePriceValidFromAndUntilSetMessagePayload`
+- added type `StandalonePriceValidFromSetMessagePayload`
+- added type `StandalonePriceValidUntilSetMessagePayload`
+- added type `StandalonePriceAddPriceTierAction`
+- added type `StandalonePriceRemovePriceTierAction`
+- added type `StandalonePriceSetPriceTiersAction`
+- added type `StandalonePriceSetValidFromAction`
+- added type `StandalonePriceSetValidFromAndUntilAction`
+- added type `StandalonePriceSetValidUntilAction`
+- added type `ConfluentCloudDestination`
 </details>
 
 
 <details>
 <summary>Added Enum(s)</summary>
 
-- added enum `ReassignMyQuotes` to type `Permission`
-- added enum `ReassignOthersQuotes` to type `Permission`
+- added enum `RenegotiationAddressed` to type `QuoteState`
+- added enum `associate-role` to type `CustomFieldReferenceValue`
+- added enum `business-unit` to type `CustomFieldReferenceValue`
 </details>
 
+**Import changes**
 
 <details>
-<summary>Added Method(s)</summary>
+<summary>Added Enum(s)</summary>
 
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().carts().replicate().post()`
+- added enum `associate-role` to type `CustomFieldReferenceValue`
+- added enum `business-unit` to type `CustomFieldReferenceValue`
 </details>
 

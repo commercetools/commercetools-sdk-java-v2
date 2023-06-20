@@ -24,7 +24,7 @@ public class StringLabelBuilder implements Builder<StringLabel> {
     private String value;
 
     /**
-     * set the value to the value
+     *  <p>Changed value.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StringLabelBuilder implements Builder<StringLabel> {
     }
 
     /**
-     * value of value}
+     *  <p>Changed value.</p>
      * @return value
      */
 

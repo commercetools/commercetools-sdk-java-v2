@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Information about the user or the API client who performed the change. This is a variant of LastModifiedBy.</p>
+ *  <p>Information about the user or API Client who performed the change. This is a variant of LastModifiedBy.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ModifiedByImpl implements ModifiedBy, ModelBase {
@@ -55,7 +55,8 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+     *  <p>ID of the Merchant Center user who made the change.</p>
+     *  <p>Present only if the change was made in the Merchant Center.</p>
      */
 
     public String getId() {
@@ -63,7 +64,11 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+     *  <p>Indicates who performed the change.</p>
+     *  <ul>
+     *   <li>If the change was made by a user, the value is <code>"user"</code>.</li>
+     *   <li>If the change was made by an API Client with or without an external user ID, the value is <code>"external-user"</code>.</li>
+     *  </ul>
      */
 
     public String getType() {
@@ -71,7 +76,8 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     *  <p>Reference to the Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
      */
 
     public com.commercetools.history.models.common.Reference getCustomer() {
@@ -79,7 +85,7 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+     *  <p>Present only if the change was made using a token from an anonymous session.</p>
      */
 
     public String getAnonymousId() {
@@ -87,7 +93,8 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+     *  <p>ID of the API Client that made the change.</p>
+     *  <p>Present only if the change was made using an API Client.</p>
      */
 
     public String getClientId() {
@@ -95,7 +102,7 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+     *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
      */
 
     public Boolean getIsPlatformClient() {

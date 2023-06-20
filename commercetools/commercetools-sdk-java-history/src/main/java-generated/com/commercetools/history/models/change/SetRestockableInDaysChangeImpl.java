@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetRestockableInDaysChange
+ *  <p>Change triggered by the Set RestockableInDays update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetRestockableInDaysChangeImpl implements SetRestockableInDaysChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetRestockableInDaysChangeImpl implements SetRestockableInDaysChang
     }
 
     /**
-     *  <p>Shape of the action for <code>setRestockableInDays</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetRestockableInDaysChangeImpl implements SetRestockableInDaysChang
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public Integer getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetRestockableInDaysChangeImpl implements SetRestockableInDaysChang
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public Integer getNextValue() {

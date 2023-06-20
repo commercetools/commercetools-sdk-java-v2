@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetAssetTagsChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Asset Tags on Categories.</li>
+ *   <li>Change Asset Tags on Products.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,9 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetAssetTagsChange setAssetTagsChange = SetAssetTagsChange.builder()
  *             .change("{change}")
- *             .asset(assetBuilder -> assetBuilder)
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .asset(assetBuilder -> assetBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -41,7 +45,7 @@ public interface SetAssetTagsChange extends Change {
     String SET_ASSET_TAGS_CHANGE = "SetAssetTagsChange";
 
     /**
-     *  <p>Update action for <code>setAssetTags</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -57,7 +61,23 @@ public interface SetAssetTagsChange extends Change {
     public String getType();
 
     /**
-     *
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @JsonProperty("previousValue")
+    public List<String> getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public List<String> getNextValue();
+
+    /**
+     *  <p>Information about the updated Asset.</p>
      * @return asset
      */
     @NotNull
@@ -66,52 +86,14 @@ public interface SetAssetTagsChange extends Change {
     public AssetChangeValue getAsset();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public List<String> getNextValue();
-
-    /**
-     *
-     * @return previousValue
-     */
-    @NotNull
-    @JsonProperty("previousValue")
-    public List<String> getPreviousValue();
-
-    /**
-     *  <p>Update action for <code>setAssetTags</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set asset
-     * @param asset value to be set
-     */
-
-    public void setAsset(final AssetChangeValue asset);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    @JsonIgnore
-    public void setNextValue(final String... nextValue);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    public void setNextValue(final List<String> nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -119,11 +101,33 @@ public interface SetAssetTagsChange extends Change {
     public void setPreviousValue(final String... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<String> previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    @JsonIgnore
+    public void setNextValue(final String... nextValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    public void setNextValue(final List<String> nextValue);
+
+    /**
+     *  <p>Information about the updated Asset.</p>
+     * @param asset value to be set
+     */
+
+    public void setAsset(final AssetChangeValue asset);
 
     /**
      * factory method
@@ -141,9 +145,9 @@ public interface SetAssetTagsChange extends Change {
     public static SetAssetTagsChange of(final SetAssetTagsChange template) {
         SetAssetTagsChangeImpl instance = new SetAssetTagsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAsset(template.getAsset());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setAsset(template.getAsset());
         return instance;
     }
 
@@ -159,9 +163,9 @@ public interface SetAssetTagsChange extends Change {
         }
         SetAssetTagsChangeImpl instance = new SetAssetTagsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
         return instance;
     }
 

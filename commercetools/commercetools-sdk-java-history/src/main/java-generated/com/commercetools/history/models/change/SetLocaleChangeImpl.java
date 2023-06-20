@@ -15,7 +15,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetLocaleChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Locale on Customers.</li>
+ *   <li>Set Locale on Orders.</li>
+ *   <li>Set Locale on Staged Orders.</li>
+ *   <li>Set Locale on Reviews.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
@@ -57,7 +63,7 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>setLocale</code> on reviews</p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +71,7 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
     }
 
     /**
-     *  <p>A locale of IETF language tag.</p>
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +79,7 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
     }
 
     /**
-     *  <p>A locale of IETF language tag.</p>
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeIsSearchableChange
+ *  <p>Change triggered by the Change AttributeDefinition IsSearchable update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, ModelBase {
@@ -24,24 +24,24 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
 
     private String change;
 
-    private String attributeName;
+    private Boolean previousValue;
 
     private Boolean nextValue;
 
-    private Boolean previousValue;
+    private String attributeName;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeIsSearchableChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("attributeName") final String attributeName,
+            @JsonProperty("previousValue") final Boolean previousValue,
             @JsonProperty("nextValue") final Boolean nextValue,
-            @JsonProperty("previousValue") final Boolean previousValue) {
+            @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
-        this.attributeName = attributeName;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.attributeName = attributeName;
         this.type = CHANGE_IS_SEARCHABLE_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
     }
 
     /**
-     *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,15 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
     }
 
     /**
-     *  <p>The name of the updated attribute.</p>
+     *  <p>Value before the change.</p>
      */
 
-    public String getAttributeName() {
-        return this.attributeName;
+    public Boolean getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public Boolean getNextValue() {
@@ -85,27 +85,27 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
     }
 
     /**
-     *
+     *  <p>Name of the updated AttributeDefinition.</p>
      */
 
-    public Boolean getPreviousValue() {
-        return this.previousValue;
+    public String getAttributeName() {
+        return this.attributeName;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setAttributeName(final String attributeName) {
-        this.attributeName = attributeName;
+    public void setPreviousValue(final Boolean previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final Boolean nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final Boolean previousValue) {
-        this.previousValue = previousValue;
+    public void setAttributeName(final String attributeName) {
+        this.attributeName = attributeName;
     }
 
     @Override
@@ -120,9 +120,9 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(attributeName, that.attributeName)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(attributeName, that.attributeName)
                 .isEquals();
     }
 
@@ -130,9 +130,9 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(attributeName)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(attributeName)
                 .toHashCode();
     }
 

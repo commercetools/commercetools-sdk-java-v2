@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Shape of the value for cart discounts relative value.</p>
+ * ChangeValueRelativeChangeValue
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeValueRelativeChangeValueImpl implements ChangeValueRelativeChangeValue, ModelBase {
@@ -49,7 +49,7 @@ public class ChangeValueRelativeChangeValueImpl implements ChangeValueRelativeCh
     }
 
     /**
-     *
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, 1000 results in a 10% price reduction.</p>
      */
 
     public Integer getPermyriad() {

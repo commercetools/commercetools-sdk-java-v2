@@ -42,6 +42,14 @@ public interface MyCartAddLineItemAction
     String ADD_LINE_ITEM = "addLineItem";
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p><code>id</code> of the Product.</p>
      *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      * @return productId
@@ -117,6 +125,13 @@ public interface MyCartAddLineItemAction
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p><code>id</code> of the Product.</p>
@@ -201,6 +216,7 @@ public interface MyCartAddLineItemAction
      */
     public static MyCartAddLineItemAction of(final MyCartAddLineItemAction template) {
         MyCartAddLineItemActionImpl instance = new MyCartAddLineItemActionImpl();
+        instance.setKey(template.getKey());
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -224,6 +240,7 @@ public interface MyCartAddLineItemAction
             return null;
         }
         MyCartAddLineItemActionImpl instance = new MyCartAddLineItemActionImpl();
+        instance.setKey(template.getKey());
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());

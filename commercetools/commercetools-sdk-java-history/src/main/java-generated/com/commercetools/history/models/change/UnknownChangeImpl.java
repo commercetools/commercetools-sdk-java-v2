@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * UnknownChange
+ *  <p>Change triggered when the format of changes on an entity is not identified by Audit Log.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UnknownChangeImpl implements UnknownChange, ModelBase {
@@ -57,7 +57,7 @@ public class UnknownChangeImpl implements UnknownChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Identifier for the type of modification.</p>
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class UnknownChangeImpl implements UnknownChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.lang.Object getPreviousValue() {
@@ -73,7 +73,7 @@ public class UnknownChangeImpl implements UnknownChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.lang.Object getNextValue() {

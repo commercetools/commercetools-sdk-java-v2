@@ -24,9 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemDeactivatedAtChange setLineItemDeactivatedAtChange = SetLineItemDeactivatedAtChange.builder()
  *             .change("{change}")
- *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .previousValue("{previousValue}")
  *             .nextValue("{nextValue}")
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +49,7 @@ public interface SetLineItemDeactivatedAtChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setLineItemDeactivatedAt</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -57,7 +57,23 @@ public interface SetLineItemDeactivatedAtChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @JsonProperty("previousValue")
+    public String getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public String getNextValue();
+
+    /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
      * @return lineItem
      */
     @NotNull
@@ -66,48 +82,32 @@ public interface SetLineItemDeactivatedAtChange extends Change {
     public ShoppingListLineItemValue getLineItem();
 
     /**
-     *
-     * @return previousValue
-     */
-    @NotNull
-    @JsonProperty("previousValue")
-    public String getPreviousValue();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public String getNextValue();
-
-    /**
-     *  <p>Update action for <code>setLineItemDeactivatedAt</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set lineItem
-     * @param lineItem value to be set
-     */
-
-    public void setLineItem(final ShoppingListLineItemValue lineItem);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final String previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final String nextValue);
+
+    /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
+     * @param lineItem value to be set
+     */
+
+    public void setLineItem(final ShoppingListLineItemValue lineItem);
 
     /**
      * factory method
@@ -125,9 +125,9 @@ public interface SetLineItemDeactivatedAtChange extends Change {
     public static SetLineItemDeactivatedAtChange of(final SetLineItemDeactivatedAtChange template) {
         SetLineItemDeactivatedAtChangeImpl instance = new SetLineItemDeactivatedAtChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(template.getLineItem());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setLineItem(template.getLineItem());
         return instance;
     }
 
@@ -143,10 +143,10 @@ public interface SetLineItemDeactivatedAtChange extends Change {
         }
         SetLineItemDeactivatedAtChangeImpl instance = new SetLineItemDeactivatedAtChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(
-            com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setLineItem(
+            com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
         return instance;
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveEnumValuesChange
+ *  <p>Change triggered by the Remove EnumValues from AttributeDefinition update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, ModelBase {
@@ -24,20 +24,20 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
 
     private String change;
 
-    private String attributeName;
-
     private com.commercetools.history.models.change_value.EnumValue previousValue;
+
+    private String attributeName;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveEnumValuesChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("attributeName") final String attributeName,
-            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.EnumValue previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.EnumValue previousValue,
+            @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
-        this.attributeName = attributeName;
         this.previousValue = previousValue;
+        this.attributeName = attributeName;
         this.type = REMOVE_ENUM_VALUES_CHANGE;
     }
 
@@ -57,7 +57,7 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
     }
 
     /**
-     *  <p>Update action for <code>removeEnumValues</code> on product types</p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +65,31 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.change_value.EnumValue getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setAttributeName(final String attributeName) {
-        this.attributeName = attributeName;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.change_value.EnumValue previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setAttributeName(final String attributeName) {
+        this.attributeName = attributeName;
     }
 
     @Override
@@ -104,8 +104,8 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(attributeName, that.attributeName)
                 .append(previousValue, that.previousValue)
+                .append(attributeName, that.attributeName)
                 .isEquals();
     }
 
@@ -113,8 +113,8 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(attributeName)
                 .append(previousValue)
+                .append(attributeName)
                 .toHashCode();
     }
 

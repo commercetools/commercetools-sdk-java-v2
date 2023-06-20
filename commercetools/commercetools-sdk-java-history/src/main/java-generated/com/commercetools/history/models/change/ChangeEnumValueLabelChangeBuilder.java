@@ -14,10 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeEnumValueLabelChange changeEnumValueLabelChange = ChangeEnumValueLabelChange.builder()
  *             .change("{change}")
- *             .fieldName("{fieldName}")
- *             .valueKey("{valueKey}")
  *             .previousValue("{previousValue}")
  *             .nextValue("{nextValue}")
+ *             .fieldName("{fieldName}")
+ *             .valueKey("{valueKey}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,16 +27,16 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
 
     private String change;
 
-    private String fieldName;
-
-    private String valueKey;
-
     private String previousValue;
 
     private String nextValue;
 
+    private String fieldName;
+
+    private String valueKey;
+
     /**
-     *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -47,29 +47,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *  <p>The name of the field definition updated.</p>
-     * @param fieldName value to be set
-     * @return Builder
-     */
-
-    public ChangeEnumValueLabelChangeBuilder fieldName(final String fieldName) {
-        this.fieldName = fieldName;
-        return this;
-    }
-
-    /**
-     *  <p>Key of the values that was updated</p>
-     * @param valueKey value to be set
-     * @return Builder
-     */
-
-    public ChangeEnumValueLabelChangeBuilder valueKey(final String valueKey) {
-        this.valueKey = valueKey;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +58,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -91,7 +69,29 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *  <p>Update action for <code>changeEnumValueLabel</code> on types</p>
+     *  <p>Name of the updated FieldDefinition.</p>
+     * @param fieldName value to be set
+     * @return Builder
+     */
+
+    public ChangeEnumValueLabelChangeBuilder fieldName(final String fieldName) {
+        this.fieldName = fieldName;
+        return this;
+    }
+
+    /**
+     *  <p>Key of the updated values.</p>
+     * @param valueKey value to be set
+     * @return Builder
+     */
+
+    public ChangeEnumValueLabelChangeBuilder valueKey(final String valueKey) {
+        this.valueKey = valueKey;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -100,25 +100,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *  <p>The name of the field definition updated.</p>
-     * @return fieldName
-     */
-
-    public String getFieldName() {
-        return this.fieldName;
-    }
-
-    /**
-     *  <p>Key of the values that was updated</p>
-     * @return valueKey
-     */
-
-    public String getValueKey() {
-        return this.valueKey;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -127,7 +109,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -136,16 +118,34 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
+     *  <p>Name of the updated FieldDefinition.</p>
+     * @return fieldName
+     */
+
+    public String getFieldName() {
+        return this.fieldName;
+    }
+
+    /**
+     *  <p>Key of the updated values.</p>
+     * @return valueKey
+     */
+
+    public String getValueKey() {
+        return this.valueKey;
+    }
+
+    /**
      * builds ChangeEnumValueLabelChange with checking for non-null required values
      * @return ChangeEnumValueLabelChange
      */
     public ChangeEnumValueLabelChange build() {
         Objects.requireNonNull(change, ChangeEnumValueLabelChange.class + ": change is missing");
-        Objects.requireNonNull(fieldName, ChangeEnumValueLabelChange.class + ": fieldName is missing");
-        Objects.requireNonNull(valueKey, ChangeEnumValueLabelChange.class + ": valueKey is missing");
         Objects.requireNonNull(previousValue, ChangeEnumValueLabelChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, ChangeEnumValueLabelChange.class + ": nextValue is missing");
-        return new ChangeEnumValueLabelChangeImpl(change, fieldName, valueKey, previousValue, nextValue);
+        Objects.requireNonNull(fieldName, ChangeEnumValueLabelChange.class + ": fieldName is missing");
+        Objects.requireNonNull(valueKey, ChangeEnumValueLabelChange.class + ": valueKey is missing");
+        return new ChangeEnumValueLabelChangeImpl(change, previousValue, nextValue, fieldName, valueKey);
     }
 
     /**
@@ -153,7 +153,7 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
      * @return ChangeEnumValueLabelChange
      */
     public ChangeEnumValueLabelChange buildUnchecked() {
-        return new ChangeEnumValueLabelChangeImpl(change, fieldName, valueKey, previousValue, nextValue);
+        return new ChangeEnumValueLabelChangeImpl(change, previousValue, nextValue, fieldName, valueKey);
     }
 
     /**
@@ -172,10 +172,10 @@ public class ChangeEnumValueLabelChangeBuilder implements Builder<ChangeEnumValu
     public static ChangeEnumValueLabelChangeBuilder of(final ChangeEnumValueLabelChange template) {
         ChangeEnumValueLabelChangeBuilder builder = new ChangeEnumValueLabelChangeBuilder();
         builder.change = template.getChange();
-        builder.fieldName = template.getFieldName();
-        builder.valueKey = template.getValueKey();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.fieldName = template.getFieldName();
+        builder.valueKey = template.getValueKey();
         return builder;
     }
 

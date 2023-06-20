@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetAssetDescriptionChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Asset Description on Categories.</li>
+ *   <li>Set Asset Description on Products.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange, ModelBase {
@@ -24,24 +28,24 @@ public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange,
 
     private String change;
 
-    private com.commercetools.history.models.change_value.AssetChangeValue asset;
+    private com.commercetools.history.models.common.LocalizedString previousValue;
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
-    private com.commercetools.history.models.common.LocalizedString previousValue;
+    private com.commercetools.history.models.change_value.AssetChangeValue asset;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetAssetDescriptionChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue) {
+            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.change = change;
-        this.asset = asset;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.asset = asset;
         this.type = SET_ASSET_DESCRIPTION_CHANGE;
     }
 
@@ -61,7 +65,7 @@ public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange,
     }
 
     /**
-     *  <p>Update action for <code>setAssetDescription</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +73,15 @@ public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange,
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
-        return this.asset;
+    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
@@ -85,27 +89,27 @@ public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange,
     }
 
     /**
-     *
+     *  <p>Information about the updated Asset.</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
+        return this.asset;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setAsset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
-        this.asset = asset;
+    public void setPreviousValue(final com.commercetools.history.models.common.LocalizedString previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.LocalizedString previousValue) {
-        this.previousValue = previousValue;
+    public void setAsset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
+        this.asset = asset;
     }
 
     @Override
@@ -120,9 +124,9 @@ public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange,
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(asset, that.asset)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(asset, that.asset)
                 .isEquals();
     }
 
@@ -130,9 +134,9 @@ public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange,
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(asset)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(asset)
                 .toHashCode();
     }
 

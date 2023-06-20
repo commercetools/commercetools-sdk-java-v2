@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Shape of the value for cart discounts line item and custom line items target.</p>
+ * ChangeTargetCustomLineItemsChangeValue
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,7 +44,7 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
     public String getType();
 
     /**
-     *
+     *  <p>Valid CustomLineItem target predicate.</p>
      * @return predicate
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
     public String getPredicate();
 
     /**
-     * set predicate
+     *  <p>Valid CustomLineItem target predicate.</p>
      * @param predicate value to be set
      */
 

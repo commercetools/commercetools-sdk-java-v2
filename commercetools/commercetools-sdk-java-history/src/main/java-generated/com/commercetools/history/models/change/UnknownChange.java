@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * UnknownChange
+ *  <p>Change triggered when the format of changes on an entity is not identified by Audit Log.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,7 +44,7 @@ public interface UnknownChange extends Change {
     public String getType();
 
     /**
-     *
+     *  <p>Identifier for the type of modification.</p>
      * @return change
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface UnknownChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface UnknownChange extends Change {
     public Object getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -68,21 +68,21 @@ public interface UnknownChange extends Change {
     public Object getNextValue();
 
     /**
-     * set change
+     *  <p>Identifier for the type of modification.</p>
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Object previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

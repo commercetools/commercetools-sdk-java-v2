@@ -24,7 +24,7 @@ public class ChangeTargetLineItemsChangeValueBuilder implements Builder<ChangeTa
     private String predicate;
 
     /**
-     * set the value to the predicate
+     *  <p>Valid LineItem target predicate.</p>
      * @param predicate value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class ChangeTargetLineItemsChangeValueBuilder implements Builder<ChangeTa
     }
 
     /**
-     * value of predicate}
+     *  <p>Valid LineItem target predicate.</p>
      * @return predicate
      */
 

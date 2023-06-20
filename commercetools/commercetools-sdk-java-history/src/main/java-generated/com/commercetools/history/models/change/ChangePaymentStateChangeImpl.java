@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangePaymentStateChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change PaymentState on Orders.</li>
+ *   <li>Change PaymentState on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, ModelBase {
@@ -24,20 +28,20 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
 
     private String change;
 
-    private com.commercetools.history.models.common.PaymentState nextValue;
-
     private com.commercetools.history.models.common.PaymentState previousValue;
+
+    private com.commercetools.history.models.common.PaymentState nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangePaymentStateChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.PaymentState nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.PaymentState previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.PaymentState previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.PaymentState nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = CHANGE_PAYMENT_STATE_CHANGE;
     }
 
@@ -57,7 +61,7 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
     }
 
     /**
-     *  <p>Update action for <code>changePaymentState</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +69,31 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.PaymentState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.PaymentState getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.PaymentState getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.PaymentState nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.PaymentState previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.PaymentState nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +108,8 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +117,8 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

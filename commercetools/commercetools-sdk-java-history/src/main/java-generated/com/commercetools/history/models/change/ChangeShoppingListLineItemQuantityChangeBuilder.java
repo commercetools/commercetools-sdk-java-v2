@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeShoppingListLineItemQuantityChange changeShoppingListLineItemQuantityChange = ChangeShoppingListLineItemQuantityChange.builder()
  *             .change("{change}")
- *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .previousValue(1)
  *             .nextValue(1)
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,11 +28,11 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
 
     private String change;
 
-    private com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem;
-
     private Integer previousValue;
 
     private Integer nextValue;
+
+    private com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem;
 
     /**
      * set the value to the change
@@ -46,7 +46,29 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     /**
-     * set the value to the lineItem using the builder function
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public ChangeShoppingListLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeShoppingListLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -60,7 +82,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     /**
-     * set the value to the lineItem using the builder function
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -73,7 +95,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     /**
-     * set the value to the lineItem
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
      * @param lineItem value to be set
      * @return Builder
      */
@@ -81,28 +103,6 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     public ChangeShoppingListLineItemQuantityChangeBuilder lineItem(
             final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
         this.lineItem = lineItem;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public ChangeShoppingListLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
-        this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeShoppingListLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
-        this.nextValue = nextValue;
         return this;
     }
 
@@ -116,16 +116,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     /**
-     * value of lineItem}
-     * @return lineItem
-     */
-
-    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
-        return this.lineItem;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -134,7 +125,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -143,16 +134,25 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
     }
 
     /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
+     * @return lineItem
+     */
+
+    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
      * builds ChangeShoppingListLineItemQuantityChange with checking for non-null required values
      * @return ChangeShoppingListLineItemQuantityChange
      */
     public ChangeShoppingListLineItemQuantityChange build() {
         Objects.requireNonNull(change, ChangeShoppingListLineItemQuantityChange.class + ": change is missing");
-        Objects.requireNonNull(lineItem, ChangeShoppingListLineItemQuantityChange.class + ": lineItem is missing");
         Objects.requireNonNull(previousValue,
             ChangeShoppingListLineItemQuantityChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, ChangeShoppingListLineItemQuantityChange.class + ": nextValue is missing");
-        return new ChangeShoppingListLineItemQuantityChangeImpl(change, lineItem, previousValue, nextValue);
+        Objects.requireNonNull(lineItem, ChangeShoppingListLineItemQuantityChange.class + ": lineItem is missing");
+        return new ChangeShoppingListLineItemQuantityChangeImpl(change, previousValue, nextValue, lineItem);
     }
 
     /**
@@ -160,7 +160,7 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
      * @return ChangeShoppingListLineItemQuantityChange
      */
     public ChangeShoppingListLineItemQuantityChange buildUnchecked() {
-        return new ChangeShoppingListLineItemQuantityChangeImpl(change, lineItem, previousValue, nextValue);
+        return new ChangeShoppingListLineItemQuantityChangeImpl(change, previousValue, nextValue, lineItem);
     }
 
     /**
@@ -180,9 +180,9 @@ public class ChangeShoppingListLineItemQuantityChangeBuilder
             final ChangeShoppingListLineItemQuantityChange template) {
         ChangeShoppingListLineItemQuantityChangeBuilder builder = new ChangeShoppingListLineItemQuantityChangeBuilder();
         builder.change = template.getChange();
-        builder.lineItem = template.getLineItem();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.lineItem = template.getLineItem();
         return builder;
     }
 

@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeLineItemQuantityChange
+ *  <p>Change triggered by the Change LineItem Quantity update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,10 +24,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeLineItemQuantityChange changeLineItemQuantityChange = ChangeLineItemQuantityChange.builder()
  *             .change("{change}")
+ *             .previousValue(1)
+ *             .nextValue(1)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .lineItemId("{lineItemId}")
- *             .nextValue(1)
- *             .previousValue(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface ChangeLineItemQuantityChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeLineItemQuantity</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,7 +58,23 @@ public interface ChangeLineItemQuantityChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @JsonProperty("previousValue")
+    public Integer getPreviousValue();
+
+    /**
+     *  <p>Value after the change</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public Integer getNextValue();
+
+    /**
+     *  <p>Name of the Product the updated Line Item is based on.</p>
      * @return lineItem
      */
     @NotNull
@@ -67,7 +83,7 @@ public interface ChangeLineItemQuantityChange extends Change {
     public LocalizedString getLineItem();
 
     /**
-     *
+     *  <p><code>id</code> of the updated LineItem.</p>
      * @return lineItemId
      */
     @NotNull
@@ -75,55 +91,39 @@ public interface ChangeLineItemQuantityChange extends Change {
     public String getLineItemId();
 
     /**
-     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public Integer getNextValue();
-
-    /**
-     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-     * @return previousValue
-     */
-    @NotNull
-    @JsonProperty("previousValue")
-    public Integer getPreviousValue();
-
-    /**
-     *  <p>Update action for <code>changeLineItemQuantity</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set lineItem
-     * @param lineItem value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setLineItem(final LocalizedString lineItem);
+    public void setPreviousValue(final Integer previousValue);
 
     /**
-     * set lineItemId
-     * @param lineItemId value to be set
-     */
-
-    public void setLineItemId(final String lineItemId);
-
-    /**
-     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     *  <p>Value after the change</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Integer nextValue);
 
     /**
-     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
-     * @param previousValue value to be set
+     *  <p>Name of the Product the updated Line Item is based on.</p>
+     * @param lineItem value to be set
      */
 
-    public void setPreviousValue(final Integer previousValue);
+    public void setLineItem(final LocalizedString lineItem);
+
+    /**
+     *  <p><code>id</code> of the updated LineItem.</p>
+     * @param lineItemId value to be set
+     */
+
+    public void setLineItemId(final String lineItemId);
 
     /**
      * factory method
@@ -141,10 +141,10 @@ public interface ChangeLineItemQuantityChange extends Change {
     public static ChangeLineItemQuantityChange of(final ChangeLineItemQuantityChange template) {
         ChangeLineItemQuantityChangeImpl instance = new ChangeLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setLineItem(template.getLineItem());
         instance.setLineItemId(template.getLineItemId());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -160,10 +160,10 @@ public interface ChangeLineItemQuantityChange extends Change {
         }
         ChangeLineItemQuantityChangeImpl instance = new ChangeLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setLineItemId(template.getLineItemId());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 

@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddAssetChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Add Asset on Categories.</li>
+ *   <li>Add Asset on Products.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
@@ -24,20 +28,20 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.common.Asset nextValue;
-
     private com.commercetools.history.models.common.Asset previousValue;
+
+    private com.commercetools.history.models.common.Asset nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddAssetChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Asset nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Asset previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.Asset previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.Asset nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = ADD_ASSET_CHANGE;
     }
 
@@ -57,7 +61,7 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>addAsset</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +69,31 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.Asset getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Asset getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.Asset getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.Asset nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.Asset previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.Asset nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +108,8 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +117,8 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

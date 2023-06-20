@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeOrderHintChange
+ *  <p>Change triggered by the Change OrderHint update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeOrderHintChangeImpl implements ChangeOrderHintChange, ModelBase {
@@ -57,7 +57,7 @@ public class ChangeOrderHintChangeImpl implements ChangeOrderHintChange, ModelBa
     }
 
     /**
-     *  <p>Shape of the action for <code>changeOrderHint</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class ChangeOrderHintChangeImpl implements ChangeOrderHintChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeOrderHintChangeImpl implements ChangeOrderHintChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

@@ -39,7 +39,7 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

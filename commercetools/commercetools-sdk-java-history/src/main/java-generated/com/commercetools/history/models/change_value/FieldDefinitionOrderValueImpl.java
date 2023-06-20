@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Shape of the value for action <code>changeFieldDefinitionOrder</code></p>
+ * FieldDefinitionOrderValue
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue, ModelBase {
@@ -41,7 +41,7 @@ public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue,
     }
 
     /**
-     *
+     *  <p>Name of the FieldDefinition.</p>
      */
 
     public String getName() {
@@ -49,7 +49,7 @@ public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue,
     }
 
     /**
-     *
+     *  <p>Descriptive label of the field.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {

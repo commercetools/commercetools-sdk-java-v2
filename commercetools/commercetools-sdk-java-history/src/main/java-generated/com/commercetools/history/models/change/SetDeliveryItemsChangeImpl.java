@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetDeliveryItemsChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Delivery Items on Orders.</li>
+ *   <li>Set Delivery Items on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, ModelBase {
@@ -24,24 +28,24 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
 
     private String change;
 
-    private String deliveryId;
+    private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue;
 
-    private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
+    private String deliveryId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetDeliveryItemsChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("deliveryId") final String deliveryId,
+            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue,
             @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.DeliveryItem> nextValue,
-            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue) {
+            @JsonProperty("deliveryId") final String deliveryId) {
         this.change = change;
-        this.deliveryId = deliveryId;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.deliveryId = deliveryId;
         this.type = SET_DELIVERY_ITEMS_CHANGE;
     }
 
@@ -61,7 +65,7 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
     }
 
     /**
-     *  <p>Update action for <code>setDeliveryItems</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +73,15 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public String getDeliveryId() {
-        return this.deliveryId;
+    public java.util.List<com.commercetools.history.models.common.DeliveryItem> getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getNextValue() {
@@ -85,19 +89,24 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
     }
 
     /**
-     *
+     *  <p><code>id</code> of the updated Delivery.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.common.DeliveryItem> getPreviousValue() {
-        return this.previousValue;
+    public String getDeliveryId() {
+        return this.deliveryId;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setDeliveryId(final String deliveryId) {
-        this.deliveryId = deliveryId;
+    public void setPreviousValue(final com.commercetools.history.models.common.DeliveryItem... previousValue) {
+        this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+    }
+
+    public void setPreviousValue(
+            final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.DeliveryItem... nextValue) {
@@ -108,13 +117,8 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.DeliveryItem... previousValue) {
-        this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
-    }
-
-    public void setPreviousValue(
-            final java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue) {
-        this.previousValue = previousValue;
+    public void setDeliveryId(final String deliveryId) {
+        this.deliveryId = deliveryId;
     }
 
     @Override
@@ -129,9 +133,9 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(deliveryId, that.deliveryId)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(deliveryId, that.deliveryId)
                 .isEquals();
     }
 
@@ -139,9 +143,9 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(deliveryId)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(deliveryId)
                 .toHashCode();
     }
 

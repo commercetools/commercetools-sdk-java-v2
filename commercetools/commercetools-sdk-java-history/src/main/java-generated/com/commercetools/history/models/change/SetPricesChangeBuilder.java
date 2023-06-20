@@ -15,10 +15,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetPricesChange setPricesChange = SetPricesChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
- *             .variant("{variant}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -28,16 +28,16 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
 
     private String change;
 
-    private String catalogData;
-
-    private String variant;
-
     private java.util.List<com.commercetools.history.models.common.Price> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.Price> nextValue;
 
+    private String catalogData;
+
+    private String variant;
+
     /**
-     *  <p>Update action for <code>setPrices</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -48,29 +48,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public SetPricesChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the variant
-     * @param variant value to be set
-     * @return Builder
-     */
-
-    public SetPricesChangeBuilder variant(final String variant) {
-        this.variant = variant;
-        return this;
-    }
-
-    /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -81,7 +59,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -93,7 +71,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -108,7 +86,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -123,7 +101,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -136,7 +114,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -147,7 +125,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -158,7 +136,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * set values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -169,7 +147,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * set value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -181,7 +159,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * add values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -195,7 +173,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * add the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -210,7 +188,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -223,7 +201,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * add the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -234,7 +212,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -245,7 +223,32 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     *  <p>Update action for <code>setPrices</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -254,25 +257,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of variant}
-     * @return variant
-     */
-
-    public String getVariant() {
-        return this.variant;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -281,7 +266,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -290,16 +275,37 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
      * builds SetPricesChange with checking for non-null required values
      * @return SetPricesChange
      */
     public SetPricesChange build() {
         Objects.requireNonNull(change, SetPricesChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, SetPricesChange.class + ": catalogData is missing");
-        Objects.requireNonNull(variant, SetPricesChange.class + ": variant is missing");
         Objects.requireNonNull(previousValue, SetPricesChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetPricesChange.class + ": nextValue is missing");
-        return new SetPricesChangeImpl(change, catalogData, variant, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, SetPricesChange.class + ": catalogData is missing");
+        Objects.requireNonNull(variant, SetPricesChange.class + ": variant is missing");
+        return new SetPricesChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -307,7 +313,7 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
      * @return SetPricesChange
      */
     public SetPricesChange buildUnchecked() {
-        return new SetPricesChangeImpl(change, catalogData, variant, previousValue, nextValue);
+        return new SetPricesChangeImpl(change, previousValue, nextValue, catalogData, variant);
     }
 
     /**
@@ -326,10 +332,10 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     public static SetPricesChangeBuilder of(final SetPricesChange template) {
         SetPricesChangeBuilder builder = new SetPricesChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
-        builder.variant = template.getVariant();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
+        builder.variant = template.getVariant();
         return builder;
     }
 

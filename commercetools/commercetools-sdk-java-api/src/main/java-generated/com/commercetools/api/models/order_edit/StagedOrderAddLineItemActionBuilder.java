@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderAddLineItemAction> {
 
     @Nullable
+    private String key;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @Nullable
@@ -58,6 +61,17 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
@@ -376,6 +390,16 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      * @return custom
      */
@@ -500,8 +524,8 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
      * @return StagedOrderAddLineItemAction
      */
     public StagedOrderAddLineItemAction build() {
-        return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId,
-            sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
+        return new StagedOrderAddLineItemActionImpl(key, custom, distributionChannel, externalTaxRate, productId,
+            variantId, sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
     }
 
     /**
@@ -509,8 +533,8 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
      * @return StagedOrderAddLineItemAction
      */
     public StagedOrderAddLineItemAction buildUnchecked() {
-        return new StagedOrderAddLineItemActionImpl(custom, distributionChannel, externalTaxRate, productId, variantId,
-            sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
+        return new StagedOrderAddLineItemActionImpl(key, custom, distributionChannel, externalTaxRate, productId,
+            variantId, sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
     }
 
     /**
@@ -528,6 +552,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
      */
     public static StagedOrderAddLineItemActionBuilder of(final StagedOrderAddLineItemAction template) {
         StagedOrderAddLineItemActionBuilder builder = new StagedOrderAddLineItemActionBuilder();
+        builder.key = template.getKey();
         builder.custom = template.getCustom();
         builder.distributionChannel = template.getDistributionChannel();
         builder.externalTaxRate = template.getExternalTaxRate();

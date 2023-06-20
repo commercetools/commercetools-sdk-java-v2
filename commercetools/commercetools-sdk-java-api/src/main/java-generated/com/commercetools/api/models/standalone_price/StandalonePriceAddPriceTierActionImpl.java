@@ -1,0 +1,86 @@
+
+package com.commercetools.api.models.standalone_price;
+
+import java.time.*;
+import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.ModelBase;
+import io.vrap.rmf.base.client.utils.Generated;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+/**
+ *  <p>Adding a PriceTier to a StandalonePrice produces the Standalone Price Tier Added Message.</p>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class StandalonePriceAddPriceTierActionImpl implements StandalonePriceAddPriceTierAction, ModelBase {
+
+    private String action;
+
+    private com.commercetools.api.models.common.PriceTierDraft tier;
+
+    /**
+     * create instance with all properties
+     */
+    @JsonCreator
+    StandalonePriceAddPriceTierActionImpl(
+            @JsonProperty("tier") final com.commercetools.api.models.common.PriceTierDraft tier) {
+        this.tier = tier;
+        this.action = ADD_PRICE_TIER;
+    }
+
+    /**
+     * create empty instance
+     */
+    public StandalonePriceAddPriceTierActionImpl() {
+        this.action = ADD_PRICE_TIER;
+    }
+
+    /**
+     *
+     */
+
+    public String getAction() {
+        return this.action;
+    }
+
+    /**
+     *  <p>The PriceTier to be added to the <code>tiers</code> field of the StandalonePrice. The action returns an InvalidField error in the following cases:</p>
+     *  <ul>
+     *   <li>Trying to add a PriceTier with <code>minimumQuantity</code> &lt; <code>2</code>.</li>
+     *   <li>Trying to add a PriceTier with <code>minimumQuantity</code> that already exists for the StandalonePrice.</li>
+     *  </ul>
+     */
+
+    public com.commercetools.api.models.common.PriceTierDraft getTier() {
+        return this.tier;
+    }
+
+    public void setTier(final com.commercetools.api.models.common.PriceTierDraft tier) {
+        this.tier = tier;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        StandalonePriceAddPriceTierActionImpl that = (StandalonePriceAddPriceTierActionImpl) o;
+
+        return new EqualsBuilder().append(action, that.action).append(tier, that.tier).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(action).append(tier).toHashCode();
+    }
+
+}

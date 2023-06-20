@@ -15,10 +15,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     TransitionCustomLineItemStateChange transitionCustomLineItemStateChange = TransitionCustomLineItemStateChange.builder()
  *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItemId("{lineItemId}")
  *             .stateId("{stateId}")
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
- *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,16 +28,16 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
 
     private String change;
 
+    private java.util.List<com.commercetools.history.models.common.ItemState> previousValue;
+
+    private java.util.List<com.commercetools.history.models.common.ItemState> nextValue;
+
     private String lineItemId;
 
     private String stateId;
 
-    private java.util.List<com.commercetools.history.models.common.ItemState> nextValue;
-
-    private java.util.List<com.commercetools.history.models.common.ItemState> previousValue;
-
     /**
-     *  <p>Update action for <code>transitionCustomLineItemState</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -48,118 +48,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
-     * set the value to the lineItemId
-     * @param lineItemId value to be set
-     * @return Builder
-     */
-
-    public TransitionCustomLineItemStateChangeBuilder lineItemId(final String lineItemId) {
-        this.lineItemId = lineItemId;
-        return this;
-    }
-
-    /**
-     * set the value to the stateId
-     * @param stateId value to be set
-     * @return Builder
-     */
-
-    public TransitionCustomLineItemStateChangeBuilder stateId(final String stateId) {
-        this.stateId = stateId;
-        return this;
-    }
-
-    /**
-     * set values to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public TransitionCustomLineItemStateChangeBuilder nextValue(
-            final com.commercetools.history.models.common.ItemState... nextValue) {
-        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
-        return this;
-    }
-
-    /**
-     * set value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public TransitionCustomLineItemStateChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.ItemState> nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * add values to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public TransitionCustomLineItemStateChangeBuilder plusNextValue(
-            final com.commercetools.history.models.common.ItemState... nextValue) {
-        if (this.nextValue == null) {
-            this.nextValue = new ArrayList<>();
-        }
-        this.nextValue.addAll(Arrays.asList(nextValue));
-        return this;
-    }
-
-    /**
-     * add the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public TransitionCustomLineItemStateChangeBuilder plusNextValue(
-            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
-        if (this.nextValue == null) {
-            this.nextValue = new ArrayList<>();
-        }
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public TransitionCustomLineItemStateChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
-        this.nextValue = new ArrayList<>();
-        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     * add the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public TransitionCustomLineItemStateChangeBuilder addNextValue(
-            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemState> builder) {
-        return plusNextValue(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()));
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public TransitionCustomLineItemStateChangeBuilder setNextValue(
-            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemState> builder) {
-        return nextValue(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()));
-    }
-
-    /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -171,7 +60,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -183,7 +72,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -198,7 +87,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -213,7 +102,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -226,7 +115,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -237,7 +126,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -248,7 +137,118 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
-     *  <p>Update action for <code>transitionCustomLineItemState</code></p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public TransitionCustomLineItemStateChangeBuilder nextValue(
+            final com.commercetools.history.models.common.ItemState... nextValue) {
+        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public TransitionCustomLineItemStateChangeBuilder nextValue(
+            final java.util.List<com.commercetools.history.models.common.ItemState> nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public TransitionCustomLineItemStateChangeBuilder plusNextValue(
+            final com.commercetools.history.models.common.ItemState... nextValue) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.addAll(Arrays.asList(nextValue));
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public TransitionCustomLineItemStateChangeBuilder plusNextValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
+        if (this.nextValue == null) {
+            this.nextValue = new ArrayList<>();
+        }
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public TransitionCustomLineItemStateChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemStateBuilder> builder) {
+        this.nextValue = new ArrayList<>();
+        this.nextValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public TransitionCustomLineItemStateChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemState> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()));
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public TransitionCustomLineItemStateChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemState> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()));
+    }
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @param lineItemId value to be set
+     * @return Builder
+     */
+
+    public TransitionCustomLineItemStateChangeBuilder lineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the State involved in the transition.</p>
+     * @param stateId value to be set
+     * @return Builder
+     */
+
+    public TransitionCustomLineItemStateChangeBuilder stateId(final String stateId) {
+        this.stateId = stateId;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -257,34 +257,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
-     * value of lineItemId}
-     * @return lineItemId
-     */
-
-    public String getLineItemId() {
-        return this.lineItemId;
-    }
-
-    /**
-     * value of stateId}
-     * @return stateId
-     */
-
-    public String getStateId() {
-        return this.stateId;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.util.List<com.commercetools.history.models.common.ItemState> getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -293,16 +266,43 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.util.List<com.commercetools.history.models.common.ItemState> getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @return lineItemId
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>id</code> of the State involved in the transition.</p>
+     * @return stateId
+     */
+
+    public String getStateId() {
+        return this.stateId;
+    }
+
+    /**
      * builds TransitionCustomLineItemStateChange with checking for non-null required values
      * @return TransitionCustomLineItemStateChange
      */
     public TransitionCustomLineItemStateChange build() {
         Objects.requireNonNull(change, TransitionCustomLineItemStateChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, TransitionCustomLineItemStateChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, TransitionCustomLineItemStateChange.class + ": nextValue is missing");
         Objects.requireNonNull(lineItemId, TransitionCustomLineItemStateChange.class + ": lineItemId is missing");
         Objects.requireNonNull(stateId, TransitionCustomLineItemStateChange.class + ": stateId is missing");
-        Objects.requireNonNull(nextValue, TransitionCustomLineItemStateChange.class + ": nextValue is missing");
-        Objects.requireNonNull(previousValue, TransitionCustomLineItemStateChange.class + ": previousValue is missing");
-        return new TransitionCustomLineItemStateChangeImpl(change, lineItemId, stateId, nextValue, previousValue);
+        return new TransitionCustomLineItemStateChangeImpl(change, previousValue, nextValue, lineItemId, stateId);
     }
 
     /**
@@ -310,7 +310,7 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
      * @return TransitionCustomLineItemStateChange
      */
     public TransitionCustomLineItemStateChange buildUnchecked() {
-        return new TransitionCustomLineItemStateChangeImpl(change, lineItemId, stateId, nextValue, previousValue);
+        return new TransitionCustomLineItemStateChangeImpl(change, previousValue, nextValue, lineItemId, stateId);
     }
 
     /**
@@ -329,10 +329,10 @@ public class TransitionCustomLineItemStateChangeBuilder implements Builder<Trans
     public static TransitionCustomLineItemStateChangeBuilder of(final TransitionCustomLineItemStateChange template) {
         TransitionCustomLineItemStateChangeBuilder builder = new TransitionCustomLineItemStateChangeBuilder();
         builder.change = template.getChange();
+        builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.lineItemId = template.getLineItemId();
         builder.stateId = template.getStateId();
-        builder.nextValue = template.getNextValue();
-        builder.previousValue = template.getPreviousValue();
         return builder;
     }
 

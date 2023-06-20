@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetChannelRolesChange
+ *  <p>Change triggered by the Set Roles update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBase {
@@ -65,7 +65,7 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetChannelRolesChangeImpl implements SetChannelRolesChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getNextValue() {

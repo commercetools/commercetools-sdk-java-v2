@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetTextLineItemCustomFieldChange
+ *  <p>Change triggered by the Set TextLineItem CustomField update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCustomFieldChange, ModelBase {
@@ -24,31 +24,31 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
 
     private String change;
 
+    private java.lang.Object previousValue;
+
+    private java.lang.Object nextValue;
+
     private String name;
 
     private String customTypeId;
 
     private com.commercetools.history.models.change_value.TextLineItemValue textLineItem;
 
-    private java.lang.Object nextValue;
-
-    private java.lang.Object previousValue;
-
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetTextLineItemCustomFieldChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("name") final String name, @JsonProperty("customTypeId") final String customTypeId,
-            @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem,
-            @JsonProperty("nextValue") final java.lang.Object nextValue,
-            @JsonProperty("previousValue") final java.lang.Object previousValue) {
+            @JsonProperty("previousValue") final java.lang.Object previousValue,
+            @JsonProperty("nextValue") final java.lang.Object nextValue, @JsonProperty("name") final String name,
+            @JsonProperty("customTypeId") final String customTypeId,
+            @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.name = name;
         this.customTypeId = customTypeId;
         this.textLineItem = textLineItem;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = SET_TEXT_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }
 
@@ -68,7 +68,7 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
     }
 
     /**
-     *  <p>Update action for <code>setTextLineItemCustomField</code></p>
+     *
      */
 
     public String getChange() {
@@ -76,31 +76,15 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public String getName() {
-        return this.name;
+    public java.lang.Object getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getCustomTypeId() {
-        return this.customTypeId;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
-        return this.textLineItem;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.lang.Object getNextValue() {
@@ -108,15 +92,39 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
     }
 
     /**
-     *
+     *  <p>Name of the Custom Field.</p>
      */
 
-    public java.lang.Object getPreviousValue() {
-        return this.previousValue;
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
+    }
+
+    /**
+     *  <p>Holds information about the updated Text Line Item.</p>
+     */
+
+    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
+        return this.textLineItem;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final java.lang.Object previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setName(final String name) {
@@ -131,14 +139,6 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
         this.textLineItem = textLineItem;
     }
 
-    public void setNextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final java.lang.Object previousValue) {
-        this.previousValue = previousValue;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -151,11 +151,11 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(name, that.name)
                 .append(customTypeId, that.customTypeId)
                 .append(textLineItem, that.textLineItem)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -163,11 +163,11 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(name)
                 .append(customTypeId)
                 .append(textLineItem)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

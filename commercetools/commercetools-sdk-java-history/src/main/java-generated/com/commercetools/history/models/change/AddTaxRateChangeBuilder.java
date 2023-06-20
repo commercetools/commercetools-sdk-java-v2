@@ -28,7 +28,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
     private com.commercetools.history.models.common.TaxRate nextValue;
 
     /**
-     *  <p>Update action for <code>addTaxRate</code> on tax categories</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
     }
 
     /**
-     *  <p>Update action for <code>addTaxRate</code> on tax categories</p>
+     * value of change}
      * @return change
      */
 
@@ -83,7 +83,7 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

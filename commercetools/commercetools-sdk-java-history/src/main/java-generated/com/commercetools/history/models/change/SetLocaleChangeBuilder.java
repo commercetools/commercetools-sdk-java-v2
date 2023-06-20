@@ -30,7 +30,7 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
     private String nextValue;
 
     /**
-     *  <p>Update action for <code>setLocale</code> on reviews</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
     }
 
     /**
-     *  <p>A locale of IETF language tag.</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
     }
 
     /**
-     *  <p>A locale of IETF language tag.</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
     }
 
     /**
-     *  <p>Update action for <code>setLocale</code> on reviews</p>
+     * value of change}
      * @return change
      */
 
@@ -72,7 +72,7 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
     }
 
     /**
-     *  <p>A locale of IETF language tag.</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -81,7 +81,7 @@ public class SetLocaleChangeBuilder implements Builder<SetLocaleChange> {
     }
 
     /**
-     *  <p>A locale of IETF language tag.</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

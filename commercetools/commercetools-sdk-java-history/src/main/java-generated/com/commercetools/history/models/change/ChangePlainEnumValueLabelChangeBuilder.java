@@ -14,10 +14,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangePlainEnumValueLabelChange changePlainEnumValueLabelChange = ChangePlainEnumValueLabelChange.builder()
  *             .change("{change}")
- *             .attributeName("{attributeName}")
- *             .valueKey("{valueKey}")
  *             .previousValue("{previousValue}")
  *             .nextValue("{nextValue}")
+ *             .attributeName("{attributeName}")
+ *             .valueKey("{valueKey}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,16 +27,16 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
 
     private String change;
 
-    private String attributeName;
-
-    private String valueKey;
-
     private String previousValue;
 
     private String nextValue;
 
+    private String attributeName;
+
+    private String valueKey;
+
     /**
-     *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -47,29 +47,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @param attributeName value to be set
-     * @return Builder
-     */
-
-    public ChangePlainEnumValueLabelChangeBuilder attributeName(final String attributeName) {
-        this.attributeName = attributeName;
-        return this;
-    }
-
-    /**
-     *  <p>Key of the values that was updated</p>
-     * @param valueKey value to be set
-     * @return Builder
-     */
-
-    public ChangePlainEnumValueLabelChangeBuilder valueKey(final String valueKey) {
-        this.valueKey = valueKey;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +58,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -91,7 +69,29 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     *  <p>Update action for <code>changePlainEnumValueLabel</code> on types</p>
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @param attributeName value to be set
+     * @return Builder
+     */
+
+    public ChangePlainEnumValueLabelChangeBuilder attributeName(final String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+
+    /**
+     *  <p>Key of the updated values.</p>
+     * @param valueKey value to be set
+     * @return Builder
+     */
+
+    public ChangePlainEnumValueLabelChangeBuilder valueKey(final String valueKey) {
+        this.valueKey = valueKey;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -100,25 +100,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @return attributeName
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     *  <p>Key of the values that was updated</p>
-     * @return valueKey
-     */
-
-    public String getValueKey() {
-        return this.valueKey;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -127,7 +109,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -136,16 +118,34 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
     }
 
     /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @return attributeName
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
+    /**
+     *  <p>Key of the updated values.</p>
+     * @return valueKey
+     */
+
+    public String getValueKey() {
+        return this.valueKey;
+    }
+
+    /**
      * builds ChangePlainEnumValueLabelChange with checking for non-null required values
      * @return ChangePlainEnumValueLabelChange
      */
     public ChangePlainEnumValueLabelChange build() {
         Objects.requireNonNull(change, ChangePlainEnumValueLabelChange.class + ": change is missing");
-        Objects.requireNonNull(attributeName, ChangePlainEnumValueLabelChange.class + ": attributeName is missing");
-        Objects.requireNonNull(valueKey, ChangePlainEnumValueLabelChange.class + ": valueKey is missing");
         Objects.requireNonNull(previousValue, ChangePlainEnumValueLabelChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, ChangePlainEnumValueLabelChange.class + ": nextValue is missing");
-        return new ChangePlainEnumValueLabelChangeImpl(change, attributeName, valueKey, previousValue, nextValue);
+        Objects.requireNonNull(attributeName, ChangePlainEnumValueLabelChange.class + ": attributeName is missing");
+        Objects.requireNonNull(valueKey, ChangePlainEnumValueLabelChange.class + ": valueKey is missing");
+        return new ChangePlainEnumValueLabelChangeImpl(change, previousValue, nextValue, attributeName, valueKey);
     }
 
     /**
@@ -153,7 +153,7 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
      * @return ChangePlainEnumValueLabelChange
      */
     public ChangePlainEnumValueLabelChange buildUnchecked() {
-        return new ChangePlainEnumValueLabelChangeImpl(change, attributeName, valueKey, previousValue, nextValue);
+        return new ChangePlainEnumValueLabelChangeImpl(change, previousValue, nextValue, attributeName, valueKey);
     }
 
     /**
@@ -172,10 +172,10 @@ public class ChangePlainEnumValueLabelChangeBuilder implements Builder<ChangePla
     public static ChangePlainEnumValueLabelChangeBuilder of(final ChangePlainEnumValueLabelChange template) {
         ChangePlainEnumValueLabelChangeBuilder builder = new ChangePlainEnumValueLabelChangeBuilder();
         builder.change = template.getChange();
-        builder.attributeName = template.getAttributeName();
-        builder.valueKey = template.getValueKey();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.attributeName = template.getAttributeName();
+        builder.valueKey = template.getValueKey();
         return builder;
     }
 

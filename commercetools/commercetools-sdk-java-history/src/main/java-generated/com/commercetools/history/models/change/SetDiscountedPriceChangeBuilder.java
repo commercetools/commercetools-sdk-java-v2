@@ -15,11 +15,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetDiscountedPriceChange setDiscountedPriceChange = SetDiscountedPriceChange.builder()
  *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
  *             .variant("{variant}")
  *             .priceId("{priceId}")
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,18 +29,18 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
 
     private String change;
 
+    private com.commercetools.history.models.common.Price previousValue;
+
+    private com.commercetools.history.models.common.Price nextValue;
+
     private String catalogData;
 
     private String variant;
 
     private String priceId;
 
-    private com.commercetools.history.models.common.Price previousValue;
-
-    private com.commercetools.history.models.common.Price nextValue;
-
     /**
-     *  <p>Update action for <code>setDiscountedPrice</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -51,40 +51,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public SetDiscountedPriceChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the variant
-     * @param variant value to be set
-     * @return Builder
-     */
-
-    public SetDiscountedPriceChangeBuilder variant(final String variant) {
-        this.variant = variant;
-        return this;
-    }
-
-    /**
-     * set the value to the priceId
-     * @param priceId value to be set
-     * @return Builder
-     */
-
-    public SetDiscountedPriceChangeBuilder priceId(final String priceId) {
-        this.priceId = priceId;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -96,7 +63,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -108,7 +75,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -120,7 +87,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -132,7 +99,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -144,7 +111,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -155,7 +122,43 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     *  <p>Update action for <code>setDiscountedPrice</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetDiscountedPriceChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     * @param variant value to be set
+     * @return Builder
+     */
+
+    public SetDiscountedPriceChangeBuilder variant(final String variant) {
+        this.variant = variant;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded Price.</p>
+     * @param priceId value to be set
+     * @return Builder
+     */
+
+    public SetDiscountedPriceChangeBuilder priceId(final String priceId) {
+        this.priceId = priceId;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -164,34 +167,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of variant}
-     * @return variant
-     */
-
-    public String getVariant() {
-        return this.variant;
-    }
-
-    /**
-     * value of priceId}
-     * @return priceId
-     */
-
-    public String getPriceId() {
-        return this.priceId;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -200,7 +176,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -209,17 +185,47 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the updated ProductVariant.</p>
+     * @return variant
+     */
+
+    public String getVariant() {
+        return this.variant;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded Price.</p>
+     * @return priceId
+     */
+
+    public String getPriceId() {
+        return this.priceId;
+    }
+
+    /**
      * builds SetDiscountedPriceChange with checking for non-null required values
      * @return SetDiscountedPriceChange
      */
     public SetDiscountedPriceChange build() {
         Objects.requireNonNull(change, SetDiscountedPriceChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetDiscountedPriceChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetDiscountedPriceChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, SetDiscountedPriceChange.class + ": catalogData is missing");
         Objects.requireNonNull(variant, SetDiscountedPriceChange.class + ": variant is missing");
         Objects.requireNonNull(priceId, SetDiscountedPriceChange.class + ": priceId is missing");
-        Objects.requireNonNull(previousValue, SetDiscountedPriceChange.class + ": previousValue is missing");
-        Objects.requireNonNull(nextValue, SetDiscountedPriceChange.class + ": nextValue is missing");
-        return new SetDiscountedPriceChangeImpl(change, catalogData, variant, priceId, previousValue, nextValue);
+        return new SetDiscountedPriceChangeImpl(change, previousValue, nextValue, catalogData, variant, priceId);
     }
 
     /**
@@ -227,7 +233,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
      * @return SetDiscountedPriceChange
      */
     public SetDiscountedPriceChange buildUnchecked() {
-        return new SetDiscountedPriceChangeImpl(change, catalogData, variant, priceId, previousValue, nextValue);
+        return new SetDiscountedPriceChangeImpl(change, previousValue, nextValue, catalogData, variant, priceId);
     }
 
     /**
@@ -246,11 +252,11 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     public static SetDiscountedPriceChangeBuilder of(final SetDiscountedPriceChange template) {
         SetDiscountedPriceChangeBuilder builder = new SetDiscountedPriceChangeBuilder();
         builder.change = template.getChange();
+        builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
         builder.variant = template.getVariant();
         builder.priceId = template.getPriceId();
-        builder.previousValue = template.getPreviousValue();
-        builder.nextValue = template.getNextValue();
         return builder;
     }
 

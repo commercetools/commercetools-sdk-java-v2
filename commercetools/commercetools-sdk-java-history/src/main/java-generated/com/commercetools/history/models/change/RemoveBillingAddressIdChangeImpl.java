@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveBillingAddressIdChange
+ *  <p>Change triggered by the Remove Billing Address ID update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdChange, ModelBase {
@@ -24,9 +24,9 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
 
     private String change;
 
-    private java.util.List<String> nextValue;
-
     private java.util.List<String> previousValue;
+
+    private java.util.List<String> nextValue;
 
     private com.commercetools.history.models.common.Address address;
 
@@ -35,12 +35,12 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
      */
     @JsonCreator
     RemoveBillingAddressIdChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final java.util.List<String> nextValue,
             @JsonProperty("previousValue") final java.util.List<String> previousValue,
+            @JsonProperty("nextValue") final java.util.List<String> nextValue,
             @JsonProperty("address") final com.commercetools.history.models.common.Address address) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.address = address;
         this.type = REMOVE_BILLING_ADDRESS_ID_CHANGE;
     }
@@ -61,7 +61,7 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
     }
 
     /**
-     *  <p>Update action for <code>removeBillingAddressId</code> action on customers.</p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,7 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
     }
 
     /**
-     *
-     */
-
-    public java.util.List<String> getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<String> getPreviousValue() {
@@ -85,7 +77,15 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
+     */
+
+    public java.util.List<String> getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Address removed from <code>billingAddressesIds</code>.</p>
      */
 
     public com.commercetools.history.models.common.Address getAddress() {
@@ -96,20 +96,20 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
         this.change = change;
     }
 
-    public void setNextValue(final String... nextValue) {
-        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
-    }
-
-    public void setNextValue(final java.util.List<String> nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final String... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
     }
 
     public void setPreviousValue(final java.util.List<String> previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final String... nextValue) {
+        this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
+    }
+
+    public void setNextValue(final java.util.List<String> nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setAddress(final com.commercetools.history.models.common.Address address) {
@@ -128,8 +128,8 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(address, that.address)
                 .isEquals();
     }
@@ -138,8 +138,8 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .append(address)
                 .toHashCode();
     }

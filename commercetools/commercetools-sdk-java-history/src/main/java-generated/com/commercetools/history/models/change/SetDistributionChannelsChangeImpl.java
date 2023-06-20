@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetDistributionChannelsChange
+ *  <p>Change triggered by the Set Distribution Channels update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetDistributionChannelsChangeImpl implements SetDistributionChannelsChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetDistributionChannelsChangeImpl implements SetDistributionChannel
     }
 
     /**
-     *  <p>Shape of the action for <code>setDistributionChannels</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetDistributionChannelsChangeImpl implements SetDistributionChannel
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetDistributionChannelsChangeImpl implements SetDistributionChannel
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getNextValue() {

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Shape of the cart score shipping input rate value.</p>
+ * SetCartScoreShippingRateInputValue
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface SetCartScoreShippingRateInputValue {
     public String getType();
 
     /**
-     *
+     *  <p>Abstract value for categorizing a Cart.</p>
      * @return score
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface SetCartScoreShippingRateInputValue {
     public void setType(final String type);
 
     /**
-     * set score
+     *  <p>Abstract value for categorizing a Cart.</p>
      * @param score value to be set
      */
 

@@ -15,7 +15,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetValidFromChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Valid From on Cart Discounts.</li>
+ *   <li>Set Valid From on Discount Codes.</li>
+ *   <li>Set Valid From on Product Discounts.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetValidFromChangeImpl implements SetValidFromChange, ModelBase {
@@ -57,7 +62,7 @@ public class SetValidFromChangeImpl implements SetValidFromChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>setValidFrom</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +70,7 @@ public class SetValidFromChangeImpl implements SetValidFromChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +78,7 @@ public class SetValidFromChangeImpl implements SetValidFromChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

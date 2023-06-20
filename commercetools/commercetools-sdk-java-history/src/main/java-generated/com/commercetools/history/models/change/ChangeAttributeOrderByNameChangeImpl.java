@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeAttributeOrderByNameChange
+ *  <p>Change triggered by the Change the order of AttributeDefinitions update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrderByNameChange, ModelBase {
@@ -57,7 +57,7 @@ public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrde
     }
 
     /**
-     *  <p>Update action for <code>changeAttributeOrderByName</code> on product types</p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrde
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<String> getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrde
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<String> getNextValue() {

@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetShippingMethodTaxRateChange setShippingMethodTaxRateChange = SetShippingMethodTaxRateChange.builder()
  *             .change("{change}")
- *             .taxMode(TaxMode.PLATFORM)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .taxMode(TaxMode.PLATFORM)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
 
     private String change;
 
-    private com.commercetools.history.models.common.TaxMode taxMode;
+    private com.commercetools.history.models.common.TaxRate previousValue;
 
     private com.commercetools.history.models.common.TaxRate nextValue;
 
-    private com.commercetools.history.models.common.TaxRate previousValue;
+    private com.commercetools.history.models.common.TaxMode taxMode;
 
     /**
-     *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,55 +45,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     * set the value to the taxMode
-     * @param taxMode value to be set
-     * @return Builder
-     */
-
-    public SetShippingMethodTaxRateChangeBuilder taxMode(
-            final com.commercetools.history.models.common.TaxMode taxMode) {
-        this.taxMode = taxMode;
-        return this;
-    }
-
-    /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetShippingMethodTaxRateChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetShippingMethodTaxRateChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRate> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetShippingMethodTaxRateChangeBuilder nextValue(
-            final com.commercetools.history.models.common.TaxRate nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -105,7 +57,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -117,7 +69,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -129,7 +81,55 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetShippingMethodTaxRateChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetShippingMethodTaxRateChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRate> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetShippingMethodTaxRateChangeBuilder nextValue(
+            final com.commercetools.history.models.common.TaxRate nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p><code>"External"</code></p>
+     * @param taxMode value to be set
+     * @return Builder
+     */
+
+    public SetShippingMethodTaxRateChangeBuilder taxMode(
+            final com.commercetools.history.models.common.TaxMode taxMode) {
+        this.taxMode = taxMode;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -138,25 +138,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
-     * value of taxMode}
-     * @return taxMode
-     */
-
-    public com.commercetools.history.models.common.TaxMode getTaxMode() {
-        return this.taxMode;
-    }
-
-    /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.TaxRate getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -165,15 +147,33 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.TaxRate getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p><code>"External"</code></p>
+     * @return taxMode
+     */
+
+    public com.commercetools.history.models.common.TaxMode getTaxMode() {
+        return this.taxMode;
+    }
+
+    /**
      * builds SetShippingMethodTaxRateChange with checking for non-null required values
      * @return SetShippingMethodTaxRateChange
      */
     public SetShippingMethodTaxRateChange build() {
         Objects.requireNonNull(change, SetShippingMethodTaxRateChange.class + ": change is missing");
-        Objects.requireNonNull(taxMode, SetShippingMethodTaxRateChange.class + ": taxMode is missing");
-        Objects.requireNonNull(nextValue, SetShippingMethodTaxRateChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetShippingMethodTaxRateChange.class + ": previousValue is missing");
-        return new SetShippingMethodTaxRateChangeImpl(change, taxMode, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetShippingMethodTaxRateChange.class + ": nextValue is missing");
+        Objects.requireNonNull(taxMode, SetShippingMethodTaxRateChange.class + ": taxMode is missing");
+        return new SetShippingMethodTaxRateChangeImpl(change, previousValue, nextValue, taxMode);
     }
 
     /**
@@ -181,7 +181,7 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
      * @return SetShippingMethodTaxRateChange
      */
     public SetShippingMethodTaxRateChange buildUnchecked() {
-        return new SetShippingMethodTaxRateChangeImpl(change, taxMode, nextValue, previousValue);
+        return new SetShippingMethodTaxRateChangeImpl(change, previousValue, nextValue, taxMode);
     }
 
     /**
@@ -200,9 +200,9 @@ public class SetShippingMethodTaxRateChangeBuilder implements Builder<SetShippin
     public static SetShippingMethodTaxRateChangeBuilder of(final SetShippingMethodTaxRateChange template) {
         SetShippingMethodTaxRateChangeBuilder builder = new SetShippingMethodTaxRateChangeBuilder();
         builder.change = template.getChange();
-        builder.taxMode = template.getTaxMode();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.taxMode = template.getTaxMode();
         return builder;
     }
 

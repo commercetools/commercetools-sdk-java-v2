@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeLocalizedEnumValueLabelChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change the label of a LocalizedEnumValue on Product Types.</li>
+ *   <li>Change LocalizedEnumValue Label on Types.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedEnumValueLabelChange, ModelBase {
@@ -24,31 +28,32 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
 
     private String change;
 
+    private com.commercetools.history.models.common.LocalizedString previousValue;
+
+    private com.commercetools.history.models.common.LocalizedString nextValue;
+
     private String fieldName;
 
     private String attributeName;
 
     private String valueKey;
 
-    private com.commercetools.history.models.common.LocalizedString previousValue;
-
-    private com.commercetools.history.models.common.LocalizedString nextValue;
-
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeLocalizedEnumValueLabelChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("fieldName") final String fieldName,
-            @JsonProperty("attributeName") final String attributeName, @JsonProperty("valueKey") final String valueKey,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue,
+            @JsonProperty("fieldName") final String fieldName,
+            @JsonProperty("attributeName") final String attributeName,
+            @JsonProperty("valueKey") final String valueKey) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.fieldName = fieldName;
         this.attributeName = attributeName;
         this.valueKey = valueKey;
-        this.previousValue = previousValue;
-        this.nextValue = nextValue;
         this.type = CHANGE_LOCALIZED_ENUM_VALUE_LABEL_CHANGE;
     }
 
@@ -68,7 +73,7 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     *  <p>Update action for <code>changeLocalizedEnumValueLabel</code> on types</p>
+     *
      */
 
     public String getChange() {
@@ -76,31 +81,7 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     *  <p>The name of the field definition updated.</p>
-     */
-
-    public String getFieldName() {
-        return this.fieldName;
-    }
-
-    /**
-     *  <p>The name of the attribute updated.</p>
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     *  <p>Key of the values that was updated</p>
-     */
-
-    public String getValueKey() {
-        return this.valueKey;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -108,15 +89,47 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     */
+
+    public String getFieldName() {
+        return this.fieldName;
+    }
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
+    /**
+     *  <p>Key of the updated values.</p>
+     */
+
+    public String getValueKey() {
+        return this.valueKey;
+    }
+
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final com.commercetools.history.models.common.LocalizedString previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setFieldName(final String fieldName) {
@@ -131,14 +144,6 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
         this.valueKey = valueKey;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.LocalizedString previousValue) {
-        this.previousValue = previousValue;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
-        this.nextValue = nextValue;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -151,11 +156,11 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
                 .append(attributeName, that.attributeName)
                 .append(valueKey, that.valueKey)
-                .append(previousValue, that.previousValue)
-                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -163,11 +168,11 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(fieldName)
                 .append(attributeName)
                 .append(valueKey)
-                .append(previousValue)
-                .append(nextValue)
                 .toHashCode();
     }
 

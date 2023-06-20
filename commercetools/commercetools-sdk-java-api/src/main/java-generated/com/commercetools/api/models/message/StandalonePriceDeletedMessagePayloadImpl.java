@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
@@ -21,11 +22,21 @@ public class StandalonePriceDeletedMessagePayloadImpl implements StandalonePrice
 
     private String type;
 
+    private String sku;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    StandalonePriceDeletedMessagePayloadImpl() {
+    StandalonePriceDeletedMessagePayloadImpl(@JsonProperty("sku") final String sku) {
+        this.sku = sku;
+        this.type = STANDALONE_PRICE_DELETED;
+    }
+
+    /**
+     * create empty instance
+     */
+    public StandalonePriceDeletedMessagePayloadImpl() {
         this.type = STANDALONE_PRICE_DELETED;
     }
 
@@ -35,6 +46,18 @@ public class StandalonePriceDeletedMessagePayloadImpl implements StandalonePrice
 
     public String getType() {
         return this.type;
+    }
+
+    /**
+     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     */
+
+    public String getSku() {
+        return this.sku;
+    }
+
+    public void setSku(final String sku) {
+        this.sku = sku;
     }
 
     @Override
@@ -47,12 +70,12 @@ public class StandalonePriceDeletedMessagePayloadImpl implements StandalonePrice
 
         StandalonePriceDeletedMessagePayloadImpl that = (StandalonePriceDeletedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(sku, that.sku).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(sku).toHashCode();
     }
 
 }

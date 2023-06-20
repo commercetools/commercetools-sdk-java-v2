@@ -25,6 +25,12 @@ public class OrderSetParcelTrackingDataActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderSetParcelTrackingDataActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderSetParcelTrackingDataActionQueryBuilderDsl> parcelKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("parcelKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderSetParcelTrackingDataActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<OrderSetParcelTrackingDataActionQueryBuilderDsl> trackingData(
             Function<com.commercetools.api.predicates.query.order.TrackingDataQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.TrackingDataQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

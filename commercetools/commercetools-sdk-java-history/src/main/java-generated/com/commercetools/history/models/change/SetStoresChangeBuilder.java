@@ -31,7 +31,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
     /**
-     *  <p>Shape of the action for <code>setStores</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * set values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -142,7 +142,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * set value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -154,7 +154,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * add values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -168,7 +168,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * add the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -183,7 +183,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * add the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -207,7 +207,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -218,7 +218,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     *  <p>Shape of the action for <code>setStores</code></p>
+     * value of change}
      * @return change
      */
 
@@ -227,7 +227,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -236,7 +236,7 @@ public class SetStoresChangeBuilder implements Builder<SetStoresChange> {
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

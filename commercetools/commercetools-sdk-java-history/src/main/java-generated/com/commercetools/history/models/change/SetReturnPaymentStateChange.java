@@ -15,7 +15,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetReturnPaymentStateChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set PaymentShipmentState on Orders.</li>
+ *   <li>Set PaymentShipmentState on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,8 +27,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetReturnPaymentStateChange setReturnPaymentStateChange = SetReturnPaymentStateChange.builder()
  *             .change("{change}")
- *             .nextValue(ReturnPaymentState.NON_REFUNDABLE)
  *             .previousValue(ReturnPaymentState.NON_REFUNDABLE)
+ *             .nextValue(ReturnPaymentState.NON_REFUNDABLE)
  *             .build()
  * </code></pre>
  * </div>
@@ -47,7 +51,7 @@ public interface SetReturnPaymentStateChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setReturnPaymentState</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -55,15 +59,7 @@ public interface SetReturnPaymentStateChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public ReturnPaymentState getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -71,25 +67,33 @@ public interface SetReturnPaymentStateChange extends Change {
     public ReturnPaymentState getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setReturnPaymentState</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public ReturnPaymentState getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final ReturnPaymentState nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final ReturnPaymentState previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final ReturnPaymentState nextValue);
 
     /**
      * factory method
@@ -107,8 +111,8 @@ public interface SetReturnPaymentStateChange extends Change {
     public static SetReturnPaymentStateChange of(final SetReturnPaymentStateChange template) {
         SetReturnPaymentStateChangeImpl instance = new SetReturnPaymentStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -124,8 +128,8 @@ public interface SetReturnPaymentStateChange extends Change {
         }
         SetReturnPaymentStateChangeImpl instance = new SetReturnPaymentStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 

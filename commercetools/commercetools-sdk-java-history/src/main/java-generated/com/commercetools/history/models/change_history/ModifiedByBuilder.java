@@ -42,7 +42,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     private Boolean isPlatformClient;
 
     /**
-     *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+     *  <p>ID of the Merchant Center user who made the change.</p>
+     *  <p>Present only if the change was made in the Merchant Center.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -53,7 +54,11 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+     *  <p>Indicates who performed the change.</p>
+     *  <ul>
+     *   <li>If the change was made by a user, the value is <code>"user"</code>.</li>
+     *   <li>If the change was made by an API Client with or without an external user ID, the value is <code>"external-user"</code>.</li>
+     *  </ul>
      * @param type value to be set
      * @return Builder
      */
@@ -64,7 +69,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     *  <p>Reference to the Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -76,7 +82,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     *  <p>Reference to the Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -88,7 +95,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     *  <p>Reference to the Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -99,7 +107,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+     *  <p>Present only if the change was made using a token from an anonymous session.</p>
      * @param anonymousId value to be set
      * @return Builder
      */
@@ -110,7 +118,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+     *  <p>ID of the API Client that made the change.</p>
+     *  <p>Present only if the change was made using an API Client.</p>
      * @param clientId value to be set
      * @return Builder
      */
@@ -121,7 +130,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+     *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
      * @param isPlatformClient value to be set
      * @return Builder
      */
@@ -132,7 +141,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+     *  <p>ID of the Merchant Center user who made the change.</p>
+     *  <p>Present only if the change was made in the Merchant Center.</p>
      * @return id
      */
 
@@ -141,7 +151,11 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+     *  <p>Indicates who performed the change.</p>
+     *  <ul>
+     *   <li>If the change was made by a user, the value is <code>"user"</code>.</li>
+     *   <li>If the change was made by an API Client with or without an external user ID, the value is <code>"external-user"</code>.</li>
+     *  </ul>
      * @return type
      */
 
@@ -150,7 +164,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     *  <p>Reference to the Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
      * @return customer
      */
 
@@ -160,7 +175,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+     *  <p>Present only if the change was made using a token from an anonymous session.</p>
      * @return anonymousId
      */
 
@@ -170,7 +185,8 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+     *  <p>ID of the API Client that made the change.</p>
+     *  <p>Present only if the change was made using an API Client.</p>
      * @return clientId
      */
 
@@ -180,7 +196,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+     *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
      * @return isPlatformClient
      */
 

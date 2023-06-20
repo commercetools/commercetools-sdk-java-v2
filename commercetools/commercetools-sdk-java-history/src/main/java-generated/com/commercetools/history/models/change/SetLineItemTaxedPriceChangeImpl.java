@@ -24,28 +24,28 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
 
     private String change;
 
-    private com.commercetools.history.models.common.LocalizedString lineItem;
-
-    private String lineItemId;
+    private com.commercetools.history.models.common.TaxedItemPrice previousValue;
 
     private com.commercetools.history.models.common.TaxedItemPrice nextValue;
 
-    private com.commercetools.history.models.common.TaxedItemPrice previousValue;
+    private com.commercetools.history.models.common.LocalizedString lineItem;
+
+    private String lineItemId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetLineItemTaxedPriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
-            @JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedItemPrice previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedItemPrice nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedItemPrice previousValue) {
+            @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
+            @JsonProperty("lineItemId") final String lineItemId) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.lineItem = lineItem;
         this.lineItemId = lineItemId;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = SET_LINE_ITEM_TAXED_PRICE_CHANGE;
     }
 
@@ -65,7 +65,7 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     }
 
     /**
-     *  <p>Update action for <code>setLineItemTaxedPrice</code></p>
+     *
      */
 
     public String getChange() {
@@ -73,23 +73,15 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getLineItem() {
-        return this.lineItem;
+    public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getLineItemId() {
-        return this.lineItemId;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.TaxedItemPrice getNextValue() {
@@ -97,15 +89,31 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     }
 
     /**
-     *
+     *  <p>Name of the Product the Line Item is based on.</p>
      */
 
-    public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated LineItem.</p>
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final com.commercetools.history.models.common.TaxedItemPrice previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setLineItem(final com.commercetools.history.models.common.LocalizedString lineItem) {
@@ -114,14 +122,6 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final com.commercetools.history.models.common.TaxedItemPrice previousValue) {
-        this.previousValue = previousValue;
     }
 
     @Override
@@ -136,10 +136,10 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(lineItemId, that.lineItemId)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -147,10 +147,10 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(lineItem)
                 .append(lineItemId)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

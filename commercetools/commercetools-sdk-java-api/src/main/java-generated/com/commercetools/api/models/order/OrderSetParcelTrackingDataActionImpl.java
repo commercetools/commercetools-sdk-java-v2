@@ -24,6 +24,8 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
 
     private String parcelId;
 
+    private String parcelKey;
+
     private com.commercetools.api.models.order.TrackingData trackingData;
 
     /**
@@ -31,8 +33,10 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
      */
     @JsonCreator
     OrderSetParcelTrackingDataActionImpl(@JsonProperty("parcelId") final String parcelId,
+            @JsonProperty("parcelKey") final String parcelKey,
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData) {
         this.parcelId = parcelId;
+        this.parcelKey = parcelKey;
         this.trackingData = trackingData;
         this.action = SET_PARCEL_TRACKING_DATA;
     }
@@ -53,11 +57,19 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
     }
 
     /**
-     *
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      */
 
     public String getParcelId() {
         return this.parcelId;
+    }
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     */
+
+    public String getParcelKey() {
+        return this.parcelKey;
     }
 
     /**
@@ -70,6 +82,10 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
 
     public void setParcelId(final String parcelId) {
         this.parcelId = parcelId;
+    }
+
+    public void setParcelKey(final String parcelKey) {
+        this.parcelKey = parcelKey;
     }
 
     public void setTrackingData(final com.commercetools.api.models.order.TrackingData trackingData) {
@@ -88,13 +104,18 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
 
         return new EqualsBuilder().append(action, that.action)
                 .append(parcelId, that.parcelId)
+                .append(parcelKey, that.parcelKey)
                 .append(trackingData, that.trackingData)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(parcelId).append(trackingData).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(parcelId)
+                .append(parcelKey)
+                .append(trackingData)
+                .toHashCode();
     }
 
 }

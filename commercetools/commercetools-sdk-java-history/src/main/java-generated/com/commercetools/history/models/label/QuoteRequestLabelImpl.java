@@ -53,7 +53,7 @@ public class QuoteRequestLabelImpl implements QuoteRequestLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Quote Request.</p>
      */
 
     public String getKey() {
@@ -61,7 +61,7 @@ public class QuoteRequestLabelImpl implements QuoteRequestLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>The Buyer who raised the Quote Request.</p>
      */
 
     public com.commercetools.history.models.common.Reference getCustomer() {

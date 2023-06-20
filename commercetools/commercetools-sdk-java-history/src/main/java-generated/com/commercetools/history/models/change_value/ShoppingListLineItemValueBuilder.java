@@ -31,7 +31,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     private Integer variantId;
 
     /**
-     * set the value to the id
+     *  <p><code>id</code> of the ShoppingListLineItem.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     * set the value to the name using the builder function
+     *  <p>Name of the corresponding Product the Product Variant belongs to.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     * set the value to the name using the builder function
+     *  <p>Name of the corresponding Product the Product Variant belongs to.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     * set the value to the name
+     *  <p>Name of the corresponding Product the Product Variant belongs to.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     * set the value to the variantId
+     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to.</p>
      * @param variantId value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     * value of id}
+     *  <p><code>id</code> of the ShoppingListLineItem.</p>
      * @return id
      */
 
@@ -97,7 +97,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     * value of name}
+     *  <p>Name of the corresponding Product the Product Variant belongs to.</p>
      * @return name
      */
 
@@ -106,7 +106,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     * value of variantId}
+     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to.</p>
      * @return variantId
      */
 

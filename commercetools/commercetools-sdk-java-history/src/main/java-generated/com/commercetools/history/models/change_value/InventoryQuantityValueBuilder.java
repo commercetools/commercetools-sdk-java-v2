@@ -27,7 +27,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
     private Integer availableQuantity;
 
     /**
-     * set the value to the quantityOnStock
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
      * @param quantityOnStock value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
     }
 
     /**
-     * set the value to the availableQuantity
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
      * @param availableQuantity value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
     }
 
     /**
-     * value of quantityOnStock}
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
      * @return quantityOnStock
      */
 
@@ -58,7 +58,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
     }
 
     /**
-     * value of availableQuantity}
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
      * @return availableQuantity
      */
 

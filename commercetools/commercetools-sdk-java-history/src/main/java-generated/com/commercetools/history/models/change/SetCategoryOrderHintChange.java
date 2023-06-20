@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetCategoryOrderHintChange
+ *  <p>Change triggered by the Set Category Order Hint update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,10 +24,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetCategoryOrderHintChange setCategoryOrderHintChange = SetCategoryOrderHintChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
- *             .categoryId("{categoryId}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .categoryId("{categoryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface SetCategoryOrderHintChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setCategoryOrderHint</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,23 +58,7 @@ public interface SetCategoryOrderHintChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return catalogData
-     */
-    @NotNull
-    @JsonProperty("catalogData")
-    public String getCatalogData();
-
-    /**
-     *
-     * @return categoryId
-     */
-    @NotNull
-    @JsonProperty("categoryId")
-    public String getCategoryId();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -83,7 +67,7 @@ public interface SetCategoryOrderHintChange extends Change {
     public CategoryOrderHints getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -92,39 +76,61 @@ public interface SetCategoryOrderHintChange extends Change {
     public CategoryOrderHints getNextValue();
 
     /**
-     *  <p>Update action for <code>setCategoryOrderHint</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
+     *  <p><code>id</code> of the updated Category.</p>
+     * @return categoryId
+     */
+    @NotNull
+    @JsonProperty("categoryId")
+    public String getCategoryId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set catalogData
-     * @param catalogData value to be set
-     */
-
-    public void setCatalogData(final String catalogData);
-
-    /**
-     * set categoryId
-     * @param categoryId value to be set
-     */
-
-    public void setCategoryId(final String categoryId);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final CategoryOrderHints previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final CategoryOrderHints nextValue);
+
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
+     *  <p><code>id</code> of the updated Category.</p>
+     * @param categoryId value to be set
+     */
+
+    public void setCategoryId(final String categoryId);
 
     /**
      * factory method
@@ -142,10 +148,10 @@ public interface SetCategoryOrderHintChange extends Change {
     public static SetCategoryOrderHintChange of(final SetCategoryOrderHintChange template) {
         SetCategoryOrderHintChangeImpl instance = new SetCategoryOrderHintChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
-        instance.setCategoryId(template.getCategoryId());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setCategoryId(template.getCategoryId());
         return instance;
     }
 
@@ -161,12 +167,12 @@ public interface SetCategoryOrderHintChange extends Change {
         }
         SetCategoryOrderHintChangeImpl instance = new SetCategoryOrderHintChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
-        instance.setCategoryId(template.getCategoryId());
         instance.setPreviousValue(
             com.commercetools.history.models.common.CategoryOrderHints.deepCopy(template.getPreviousValue()));
         instance.setNextValue(
             com.commercetools.history.models.common.CategoryOrderHints.deepCopy(template.getNextValue()));
+        instance.setCatalogData(template.getCatalogData());
+        instance.setCategoryId(template.getCategoryId());
         return instance;
     }
 

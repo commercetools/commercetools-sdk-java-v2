@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetAssetKeyChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Asset Key on Categories.</li>
+ *   <li>Set Asset Key on Products.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,9 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetAssetKeyChange setAssetKeyChange = SetAssetKeyChange.builder()
  *             .change("{change}")
- *             .asset(assetBuilder -> assetBuilder)
- *             .nextValue("{nextValue}")
  *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .asset(assetBuilder -> assetBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -41,7 +45,7 @@ public interface SetAssetKeyChange extends Change {
     String SET_ASSET_KEY_CHANGE = "SetAssetKeyChange";
 
     /**
-     *  <p>Update action for <code>setAssetKey</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -57,7 +61,23 @@ public interface SetAssetKeyChange extends Change {
     public String getType();
 
     /**
-     *
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @JsonProperty("previousValue")
+    public String getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public String getNextValue();
+
+    /**
+     *  <p>Information about the updated Asset.</p>
      * @return asset
      */
     @NotNull
@@ -66,48 +86,32 @@ public interface SetAssetKeyChange extends Change {
     public AssetChangeValue getAsset();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public String getNextValue();
-
-    /**
-     *
-     * @return previousValue
-     */
-    @NotNull
-    @JsonProperty("previousValue")
-    public String getPreviousValue();
-
-    /**
-     *  <p>Update action for <code>setAssetKey</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set asset
-     * @param asset value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setAsset(final AssetChangeValue asset);
+    public void setPreviousValue(final String previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final String nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Information about the updated Asset.</p>
+     * @param asset value to be set
      */
 
-    public void setPreviousValue(final String previousValue);
+    public void setAsset(final AssetChangeValue asset);
 
     /**
      * factory method
@@ -125,9 +129,9 @@ public interface SetAssetKeyChange extends Change {
     public static SetAssetKeyChange of(final SetAssetKeyChange template) {
         SetAssetKeyChangeImpl instance = new SetAssetKeyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAsset(template.getAsset());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setAsset(template.getAsset());
         return instance;
     }
 
@@ -143,9 +147,9 @@ public interface SetAssetKeyChange extends Change {
         }
         SetAssetKeyChangeImpl instance = new SetAssetKeyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
         return instance;
     }
 

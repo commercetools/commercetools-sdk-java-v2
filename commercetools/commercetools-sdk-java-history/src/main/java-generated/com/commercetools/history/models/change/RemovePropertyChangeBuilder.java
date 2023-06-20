@@ -24,12 +24,12 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
 
     private String change;
 
-    private String path;
-
     private java.lang.Object previousValue;
 
+    private String path;
+
     /**
-     *  <p>Update action for <code>removeProperty</code> on custom objects</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -40,18 +40,7 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
     }
 
     /**
-     *  <p>Value path to the property that was removed</p>
-     * @param path value to be set
-     * @return Builder
-     */
-
-    public RemovePropertyChangeBuilder path(final String path) {
-        this.path = path;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -62,7 +51,18 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
     }
 
     /**
-     *  <p>Update action for <code>removeProperty</code> on custom objects</p>
+     *  <p>Path to the property that was removed.</p>
+     * @param path value to be set
+     * @return Builder
+     */
+
+    public RemovePropertyChangeBuilder path(final String path) {
+        this.path = path;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -71,16 +71,7 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
     }
 
     /**
-     *  <p>Value path to the property that was removed</p>
-     * @return path
-     */
-
-    public String getPath() {
-        return this.path;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -89,14 +80,23 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
     }
 
     /**
+     *  <p>Path to the property that was removed.</p>
+     * @return path
+     */
+
+    public String getPath() {
+        return this.path;
+    }
+
+    /**
      * builds RemovePropertyChange with checking for non-null required values
      * @return RemovePropertyChange
      */
     public RemovePropertyChange build() {
         Objects.requireNonNull(change, RemovePropertyChange.class + ": change is missing");
-        Objects.requireNonNull(path, RemovePropertyChange.class + ": path is missing");
         Objects.requireNonNull(previousValue, RemovePropertyChange.class + ": previousValue is missing");
-        return new RemovePropertyChangeImpl(change, path, previousValue);
+        Objects.requireNonNull(path, RemovePropertyChange.class + ": path is missing");
+        return new RemovePropertyChangeImpl(change, previousValue, path);
     }
 
     /**
@@ -104,7 +104,7 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
      * @return RemovePropertyChange
      */
     public RemovePropertyChange buildUnchecked() {
-        return new RemovePropertyChangeImpl(change, path, previousValue);
+        return new RemovePropertyChangeImpl(change, previousValue, path);
     }
 
     /**
@@ -123,8 +123,8 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
     public static RemovePropertyChangeBuilder of(final RemovePropertyChange template) {
         RemovePropertyChangeBuilder builder = new RemovePropertyChangeBuilder();
         builder.change = template.getChange();
-        builder.path = template.getPath();
         builder.previousValue = template.getPreviousValue();
+        builder.path = template.getPath();
         return builder;
     }
 

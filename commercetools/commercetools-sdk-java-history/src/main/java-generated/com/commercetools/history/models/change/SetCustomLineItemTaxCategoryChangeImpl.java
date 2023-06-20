@@ -24,28 +24,28 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
 
     private String change;
 
-    private com.commercetools.history.models.common.LocalizedString customLineItem;
-
-    private String customLineItemId;
+    private com.commercetools.history.models.common.Reference previousValue;
 
     private com.commercetools.history.models.common.Reference nextValue;
 
-    private com.commercetools.history.models.common.Reference previousValue;
+    private com.commercetools.history.models.common.LocalizedString customLineItem;
+
+    private String customLineItemId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetCustomLineItemTaxCategoryChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
-            @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.Reference previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Reference nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Reference previousValue) {
+            @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
+            @JsonProperty("customLineItemId") final String customLineItemId) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.customLineItem = customLineItem;
         this.customLineItemId = customLineItemId;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = SET_CUSTOM_LINE_ITEM_TAX_CATEGORY_CHANGE;
     }
 
@@ -65,7 +65,7 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
     }
 
     /**
-     *  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>
+     *
      */
 
     public String getChange() {
@@ -73,23 +73,15 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
-        return this.customLineItem;
+    public com.commercetools.history.models.common.Reference getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getCustomLineItemId() {
-        return this.customLineItemId;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Reference getNextValue() {
@@ -97,15 +89,31 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
     }
 
     /**
-     *
+     *  <p>Name of the updated CustomLineItem.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
+        return this.customLineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     */
+
+    public String getCustomLineItemId() {
+        return this.customLineItemId;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final com.commercetools.history.models.common.Reference previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.Reference nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setCustomLineItem(final com.commercetools.history.models.common.LocalizedString customLineItem) {
@@ -114,14 +122,6 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.common.Reference nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final com.commercetools.history.models.common.Reference previousValue) {
-        this.previousValue = previousValue;
     }
 
     @Override
@@ -136,10 +136,10 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(customLineItem, that.customLineItem)
                 .append(customLineItemId, that.customLineItemId)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -147,10 +147,10 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(customLineItem)
                 .append(customLineItemId)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

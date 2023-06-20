@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddVariantChange
+ *  <p>Change triggered by the Add ProductVariant update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,9 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddVariantChange addVariantChange = AddVariantChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +49,7 @@ public interface AddVariantChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addVariant</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -57,15 +57,7 @@ public interface AddVariantChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return catalogData
-     */
-    @NotNull
-    @JsonProperty("catalogData")
-    public String getCatalogData();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,7 +66,7 @@ public interface AddVariantChange extends Change {
     public Variant getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -83,32 +75,46 @@ public interface AddVariantChange extends Change {
     public Variant getNextValue();
 
     /**
-     *  <p>Update action for <code>addVariant</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set catalogData
-     * @param catalogData value to be set
-     */
-
-    public void setCatalogData(final String catalogData);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Variant previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Variant nextValue);
+
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
 
     /**
      * factory method
@@ -126,9 +132,9 @@ public interface AddVariantChange extends Change {
     public static AddVariantChange of(final AddVariantChange template) {
         AddVariantChangeImpl instance = new AddVariantChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 
@@ -144,10 +150,10 @@ public interface AddVariantChange extends Change {
         }
         AddVariantChangeImpl instance = new AddVariantChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(
             com.commercetools.history.models.common.Variant.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.Variant.deepCopy(template.getNextValue()));
+        instance.setCatalogData(template.getCatalogData());
         return instance;
     }
 

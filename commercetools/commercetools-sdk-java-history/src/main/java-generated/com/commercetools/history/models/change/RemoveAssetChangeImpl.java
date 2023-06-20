@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveAssetChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Remove Asset on Categories.</li>
+ *   <li>Remove Asset on Products.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
@@ -53,7 +57,7 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>removeAsset</code></p>
+     *
      */
 
     public String getChange() {
@@ -61,7 +65,7 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Asset getPreviousValue() {

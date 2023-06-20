@@ -15,7 +15,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeKeyChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Key on Channels.</li>
+ *   <li>Change State key on States.</li>
+ *   <li>Change Key on Types.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeKeyChangeImpl implements ChangeKeyChange, ModelBase {
@@ -57,7 +62,7 @@ public class ChangeKeyChangeImpl implements ChangeKeyChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>changeKey</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +70,7 @@ public class ChangeKeyChangeImpl implements ChangeKeyChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +78,7 @@ public class ChangeKeyChangeImpl implements ChangeKeyChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

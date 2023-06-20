@@ -25,16 +25,16 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
 
     private String change;
 
+    private java.lang.Object previousValue;
+
+    private java.lang.Object nextValue;
+
     private String name;
 
     private String customTypeId;
 
-    private java.lang.Object nextValue;
-
-    private java.lang.Object previousValue;
-
     /**
-     *  <p>Update action for setting a custom field</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,40 +45,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
     }
 
     /**
-     *  <p>Custom field name</p>
-     * @param name value to be set
-     * @return Builder
-     */
-
-    public SetCustomFieldChangeBuilder name(final String name) {
-        this.name = name;
-        return this;
-    }
-
-    /**
-     * set the value to the customTypeId
-     * @param customTypeId value to be set
-     * @return Builder
-     */
-
-    public SetCustomFieldChangeBuilder customTypeId(final String customTypeId) {
-        this.customTypeId = customTypeId;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -89,7 +56,40 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
     }
 
     /**
-     *  <p>Update action for setting a custom field</p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @param name value to be set
+     * @return Builder
+     */
+
+    public SetCustomFieldChangeBuilder name(final String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
+     * @param customTypeId value to be set
+     * @return Builder
+     */
+
+    public SetCustomFieldChangeBuilder customTypeId(final String customTypeId) {
+        this.customTypeId = customTypeId;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -98,34 +98,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
     }
 
     /**
-     *  <p>Custom field name</p>
-     * @return name
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * value of customTypeId}
-     * @return customTypeId
-     */
-
-    public String getCustomTypeId() {
-        return this.customTypeId;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.lang.Object getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -134,16 +107,43 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.lang.Object getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @return name
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
+     * @return customTypeId
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
+    }
+
+    /**
      * builds SetCustomFieldChange with checking for non-null required values
      * @return SetCustomFieldChange
      */
     public SetCustomFieldChange build() {
         Objects.requireNonNull(change, SetCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetCustomFieldChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetCustomFieldChange.class + ": nextValue is missing");
         Objects.requireNonNull(name, SetCustomFieldChange.class + ": name is missing");
         Objects.requireNonNull(customTypeId, SetCustomFieldChange.class + ": customTypeId is missing");
-        Objects.requireNonNull(nextValue, SetCustomFieldChange.class + ": nextValue is missing");
-        Objects.requireNonNull(previousValue, SetCustomFieldChange.class + ": previousValue is missing");
-        return new SetCustomFieldChangeImpl(change, name, customTypeId, nextValue, previousValue);
+        return new SetCustomFieldChangeImpl(change, previousValue, nextValue, name, customTypeId);
     }
 
     /**
@@ -151,7 +151,7 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
      * @return SetCustomFieldChange
      */
     public SetCustomFieldChange buildUnchecked() {
-        return new SetCustomFieldChangeImpl(change, name, customTypeId, nextValue, previousValue);
+        return new SetCustomFieldChangeImpl(change, previousValue, nextValue, name, customTypeId);
     }
 
     /**
@@ -170,10 +170,10 @@ public class SetCustomFieldChangeBuilder implements Builder<SetCustomFieldChange
     public static SetCustomFieldChangeBuilder of(final SetCustomFieldChange template) {
         SetCustomFieldChangeBuilder builder = new SetCustomFieldChangeBuilder();
         builder.change = template.getChange();
+        builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.name = template.getName();
         builder.customTypeId = template.getCustomTypeId();
-        builder.nextValue = template.getNextValue();
-        builder.previousValue = template.getPreviousValue();
         return builder;
     }
 

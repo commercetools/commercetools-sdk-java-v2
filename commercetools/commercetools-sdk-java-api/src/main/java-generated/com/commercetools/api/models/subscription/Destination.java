@@ -30,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureEventGridDestinationImpl.class, name = AzureEventGridDestination.EVENT_GRID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureServiceBusDestinationImpl.class, name = AzureServiceBusDestination.AZURE_SERVICE_BUS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ConfluentCloudDestinationImpl.class, name = ConfluentCloudDestination.CONFLUENT_CLOUD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.EventBridgeDestinationImpl.class, name = EventBridgeDestination.EVENT_BRIDGE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationImpl.class, name = GoogleCloudPubSubDestination.GOOGLE_CLOUD_PUB_SUB),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SnsDestinationImpl.class, name = SnsDestination.SNS),
@@ -65,6 +66,10 @@ public interface Destination {
             return com.commercetools.api.models.subscription.AzureServiceBusDestination
                     .deepCopy((com.commercetools.api.models.subscription.AzureServiceBusDestination) template);
         }
+        if (template instanceof com.commercetools.api.models.subscription.ConfluentCloudDestination) {
+            return com.commercetools.api.models.subscription.ConfluentCloudDestination
+                    .deepCopy((com.commercetools.api.models.subscription.ConfluentCloudDestination) template);
+        }
         if (template instanceof com.commercetools.api.models.subscription.EventBridgeDestination) {
             return com.commercetools.api.models.subscription.EventBridgeDestination
                     .deepCopy((com.commercetools.api.models.subscription.EventBridgeDestination) template);
@@ -99,6 +104,14 @@ public interface Destination {
      */
     public static com.commercetools.api.models.subscription.AzureServiceBusDestinationBuilder azureServiceBusBuilder() {
         return com.commercetools.api.models.subscription.AzureServiceBusDestinationBuilder.of();
+    }
+
+    /**
+     * builder for confluentCloud subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.subscription.ConfluentCloudDestinationBuilder confluentCloudBuilder() {
+        return com.commercetools.api.models.subscription.ConfluentCloudDestinationBuilder.of();
     }
 
     /**

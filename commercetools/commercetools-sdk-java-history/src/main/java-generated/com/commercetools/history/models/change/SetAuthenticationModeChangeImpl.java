@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetAuthenticationModeChange
+ *  <p>Change triggered by the Set AuthenticationMode update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAuthenticationModeChangeImpl implements SetAuthenticationModeChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetAuthenticationModeChangeImpl implements SetAuthenticationModeCha
     }
 
     /**
-     *  <p>Update action for <code>setAuthenticationMode</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetAuthenticationModeChangeImpl implements SetAuthenticationModeCha
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.AuthenticationMode getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetAuthenticationModeChangeImpl implements SetAuthenticationModeCha
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.AuthenticationMode getNextValue() {

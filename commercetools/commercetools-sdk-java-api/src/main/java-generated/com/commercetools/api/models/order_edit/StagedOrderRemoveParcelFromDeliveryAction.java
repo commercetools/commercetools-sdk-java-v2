@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
@@ -22,7 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderRemoveParcelFromDeliveryAction stagedOrderRemoveParcelFromDeliveryAction = StagedOrderRemoveParcelFromDeliveryAction.builder()
- *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -37,19 +35,34 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
     String REMOVE_PARCEL_FROM_DELIVERY = "removeParcelFromDelivery";
 
     /**
-     *
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      * @return parcelId
      */
-    @NotNull
+
     @JsonProperty("parcelId")
     public String getParcelId();
 
     /**
-     * set parcelId
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * @return parcelKey
+     */
+
+    @JsonProperty("parcelKey")
+    public String getParcelKey();
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * @param parcelKey value to be set
+     */
+
+    public void setParcelKey(final String parcelKey);
 
     /**
      * factory method
@@ -68,6 +81,7 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
             final StagedOrderRemoveParcelFromDeliveryAction template) {
         StagedOrderRemoveParcelFromDeliveryActionImpl instance = new StagedOrderRemoveParcelFromDeliveryActionImpl();
         instance.setParcelId(template.getParcelId());
+        instance.setParcelKey(template.getParcelKey());
         return instance;
     }
 
@@ -84,6 +98,7 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
         }
         StagedOrderRemoveParcelFromDeliveryActionImpl instance = new StagedOrderRemoveParcelFromDeliveryActionImpl();
         instance.setParcelId(template.getParcelId());
+        instance.setParcelKey(template.getParcelKey());
         return instance;
     }
 

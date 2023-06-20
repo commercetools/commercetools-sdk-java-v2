@@ -40,7 +40,7 @@ public class EnumValueImpl implements EnumValue, ModelBase {
     }
 
     /**
-     *
+     *  <p>Key of the value used as a programmatic identifier.</p>
      */
 
     public String getKey() {
@@ -48,7 +48,7 @@ public class EnumValueImpl implements EnumValue, ModelBase {
     }
 
     /**
-     *
+     *  <p>Descriptive label of the value.</p>
      */
 
     public String getLabel() {

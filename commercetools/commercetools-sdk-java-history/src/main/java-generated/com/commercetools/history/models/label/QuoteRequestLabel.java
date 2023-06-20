@@ -47,7 +47,7 @@ public interface QuoteRequestLabel extends Label {
     public String getType();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Quote Request.</p>
      * @return key
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface QuoteRequestLabel extends Label {
     public String getKey();
 
     /**
-     *
+     *  <p>The Buyer who raised the Quote Request.</p>
      * @return customer
      */
     @NotNull
@@ -64,14 +64,14 @@ public interface QuoteRequestLabel extends Label {
     public Reference getCustomer();
 
     /**
-     * set key
+     *  <p>User-defined unique identifier of the Quote Request.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     * set customer
+     *  <p>The Buyer who raised the Quote Request.</p>
      * @param customer value to be set
      */
 

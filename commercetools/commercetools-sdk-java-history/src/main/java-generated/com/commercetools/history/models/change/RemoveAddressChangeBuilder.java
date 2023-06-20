@@ -28,7 +28,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
     private com.commercetools.history.models.common.Address previousValue;
 
     /**
-     *  <p>Update action for <code>removeAddress</code> action.</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
     }
 
     /**
-     *  <p>Update action for <code>removeAddress</code> action.</p>
+     * value of change}
      * @return change
      */
 
@@ -84,7 +84,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 

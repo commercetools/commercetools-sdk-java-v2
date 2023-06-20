@@ -15,7 +15,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeLocalizedNameChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Name on Cart Discounts.</li>
+ *   <li>Change Name on Categories.</li>
+ *   <li>Change Name on Channels.</li>
+ *   <li>Change Name on Customer Groups.</li>
+ *   <li>Change Name on Products.</li>
+ *   <li>Change Name on Product Discounts.</li>
+ *   <li>Change Name on Product Selections.</li>
+ *   <li>Change Name on Product Types.</li>
+ *   <li>Change Name on Shopping Lists.</li>
+ *   <li>Change Name on Tax Categories.</li>
+ *   <li>Change Name on Types.</li>
+ *   <li>Change Name on Zones.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange, ModelBase {
@@ -57,7 +71,7 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
     }
 
     /**
-     *  <p>Shape of the action for <code>changeName</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +79,7 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -73,7 +87,7 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>The <code>view_audit_log:{projectKey}</code> scope is required, and depending on the resource type queried, their respective scopes must be granted.</p>
  *
  * <hr>
  * <div class=code-example>

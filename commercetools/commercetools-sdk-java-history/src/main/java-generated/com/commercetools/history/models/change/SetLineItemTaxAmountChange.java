@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetLineItemTaxAmountChange
+ *  <p>Change triggered by the Set LineItem TaxAmount update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -26,11 +26,11 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemTaxAmountChange setLineItemTaxAmountChange = SetLineItemTaxAmountChange.builder()
  *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .variant("{variant}")
  *             .taxMode(TaxMode.PLATFORM)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -53,7 +53,7 @@ public interface SetLineItemTaxAmountChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setLineItemTaxAmount</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -61,41 +61,7 @@ public interface SetLineItemTaxAmountChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return lineItem
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("lineItem")
-    public LocalizedString getLineItem();
-
-    /**
-     *
-     * @return variant
-     */
-    @NotNull
-    @JsonProperty("variant")
-    public String getVariant();
-
-    /**
-     *
-     * @return taxMode
-     */
-    @NotNull
-    @JsonProperty("taxMode")
-    public TaxMode getTaxMode();
-
-    /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public TaxRate getNextValue();
-
-    /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -104,46 +70,80 @@ public interface SetLineItemTaxAmountChange extends Change {
     public TaxRate getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setLineItemTaxAmount</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public TaxRate getNextValue();
+
+    /**
+     *  <p>Name of the Product the Line Item is based on.</p>
+     * @return lineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("lineItem")
+    public LocalizedString getLineItem();
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
+     *  <p><code>"ExternalAmount"</code></p>
+     * @return taxMode
+     */
+    @NotNull
+    @JsonProperty("taxMode")
+    public TaxMode getTaxMode();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set lineItem
-     * @param lineItem value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setLineItem(final LocalizedString lineItem);
+    public void setPreviousValue(final TaxRate previousValue);
 
     /**
-     * set variant
-     * @param variant value to be set
-     */
-
-    public void setVariant(final String variant);
-
-    /**
-     * set taxMode
-     * @param taxMode value to be set
-     */
-
-    public void setTaxMode(final TaxMode taxMode);
-
-    /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final TaxRate nextValue);
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @param previousValue value to be set
+     *  <p>Name of the Product the Line Item is based on.</p>
+     * @param lineItem value to be set
      */
 
-    public void setPreviousValue(final TaxRate previousValue);
+    public void setLineItem(final LocalizedString lineItem);
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
+
+    /**
+     *  <p><code>"ExternalAmount"</code></p>
+     * @param taxMode value to be set
+     */
+
+    public void setTaxMode(final TaxMode taxMode);
 
     /**
      * factory method
@@ -161,11 +161,11 @@ public interface SetLineItemTaxAmountChange extends Change {
     public static SetLineItemTaxAmountChange of(final SetLineItemTaxAmountChange template) {
         SetLineItemTaxAmountChangeImpl instance = new SetLineItemTaxAmountChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setLineItem(template.getLineItem());
         instance.setVariant(template.getVariant());
         instance.setTaxMode(template.getTaxMode());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -181,12 +181,12 @@ public interface SetLineItemTaxAmountChange extends Change {
         }
         SetLineItemTaxAmountChangeImpl instance = new SetLineItemTaxAmountChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.TaxRate.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getNextValue()));
         instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setVariant(template.getVariant());
         instance.setTaxMode(template.getTaxMode());
-        instance.setNextValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getNextValue()));
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.TaxRate.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

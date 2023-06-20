@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetCustomLineItemCustomTypeChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set CustomLineItem CustomField on Orders.</li>
+ *   <li>Set CustomLineItem CustomField on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemCustomTypeChange, ModelBase {
@@ -24,28 +28,28 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
 
     private String change;
 
-    private com.commercetools.history.models.common.LocalizedString customLineItem;
-
-    private String customLineItemId;
+    private com.commercetools.history.models.common.CustomFields previousValue;
 
     private com.commercetools.history.models.common.CustomFields nextValue;
 
-    private com.commercetools.history.models.common.CustomFields previousValue;
+    private com.commercetools.history.models.common.LocalizedString customLineItem;
+
+    private String customLineItemId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetCustomLineItemCustomTypeChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
-            @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue) {
+            @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
+            @JsonProperty("customLineItemId") final String customLineItemId) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.customLineItem = customLineItem;
         this.customLineItemId = customLineItemId;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }
 
@@ -65,7 +69,7 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
     }
 
     /**
-     *  <p>Update action for <code>setCustomLineItemCustomType</code></p>
+     *
      */
 
     public String getChange() {
@@ -73,23 +77,15 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
-        return this.customLineItem;
+    public com.commercetools.history.models.common.CustomFields getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getCustomLineItemId() {
-        return this.customLineItemId;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.CustomFields getNextValue() {
@@ -97,15 +93,31 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
     }
 
     /**
-     *
+     *  <p>Name of the updated CustomLineItem.</p>
      */
 
-    public com.commercetools.history.models.common.CustomFields getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
+        return this.customLineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     */
+
+    public String getCustomLineItemId() {
+        return this.customLineItemId;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final com.commercetools.history.models.common.CustomFields previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.CustomFields nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setCustomLineItem(final com.commercetools.history.models.common.LocalizedString customLineItem) {
@@ -114,14 +126,6 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.common.CustomFields nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final com.commercetools.history.models.common.CustomFields previousValue) {
-        this.previousValue = previousValue;
     }
 
     @Override
@@ -136,10 +140,10 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(customLineItem, that.customLineItem)
                 .append(customLineItemId, that.customLineItemId)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -147,10 +151,10 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(customLineItem)
                 .append(customLineItemId)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

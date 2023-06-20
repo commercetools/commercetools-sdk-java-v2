@@ -31,7 +31,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     private java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> nextValue;
 
     /**
-     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * set values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * set value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -159,7 +159,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * add values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -174,7 +174,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * add the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * add the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -216,7 +216,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -228,7 +228,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
+     * value of change}
      * @return change
      */
 
@@ -237,7 +237,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -246,7 +246,7 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetCustomShippingMethodChange
+ *  <p>Change triggered by the Set Custom ShippingMethod update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetCustomShippingMethodChange setCustomShippingMethodChange = SetCustomShippingMethodChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +48,7 @@ public interface SetCustomShippingMethodChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setCustomShippingMethod</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +56,7 @@ public interface SetCustomShippingMethodChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public CustomShippingMethodChangeValue getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +65,34 @@ public interface SetCustomShippingMethodChange extends Change {
     public CustomShippingMethodChangeValue getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setCustomShippingMethod</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public CustomShippingMethodChangeValue getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final CustomShippingMethodChangeValue nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final CustomShippingMethodChangeValue previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final CustomShippingMethodChangeValue nextValue);
 
     /**
      * factory method
@@ -110,8 +110,8 @@ public interface SetCustomShippingMethodChange extends Change {
     public static SetCustomShippingMethodChange of(final SetCustomShippingMethodChange template) {
         SetCustomShippingMethodChangeImpl instance = new SetCustomShippingMethodChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,10 +127,10 @@ public interface SetCustomShippingMethodChange extends Change {
         }
         SetCustomShippingMethodChangeImpl instance = new SetCustomShippingMethodChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(com.commercetools.history.models.change_value.CustomShippingMethodChangeValue
-                .deepCopy(template.getNextValue()));
         instance.setPreviousValue(com.commercetools.history.models.change_value.CustomShippingMethodChangeValue
                 .deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.change_value.CustomShippingMethodChangeValue
+                .deepCopy(template.getNextValue()));
         return instance;
     }
 

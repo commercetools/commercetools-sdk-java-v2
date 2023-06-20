@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddPriceChange addPriceChange = AddPriceChange.builder()
  *             .change("{change}")
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .catalogData("{catalogData}")
  *             .priceId("{priceId}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
 
     private String change;
 
+    private com.commercetools.history.models.common.Price nextValue;
+
     private String catalogData;
 
     private String priceId;
 
-    private com.commercetools.history.models.common.Price nextValue;
-
     /**
-     *  <p>Update action for adding prices</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,29 +45,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public AddPriceChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the priceId
-     * @param priceId value to be set
-     * @return Builder
-     */
-
-    public AddPriceChangeBuilder priceId(final String priceId) {
-        this.priceId = priceId;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -79,7 +57,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -91,7 +69,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -102,7 +80,32 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
-     *  <p>Update action for adding prices</p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public AddPriceChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded Price.</p>
+     * @param priceId value to be set
+     * @return Builder
+     */
+
+    public AddPriceChangeBuilder priceId(final String priceId) {
+        this.priceId = priceId;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -111,25 +114,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of priceId}
-     * @return priceId
-     */
-
-    public String getPriceId() {
-        return this.priceId;
-    }
-
-    /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -138,15 +123,36 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded Price.</p>
+     * @return priceId
+     */
+
+    public String getPriceId() {
+        return this.priceId;
+    }
+
+    /**
      * builds AddPriceChange with checking for non-null required values
      * @return AddPriceChange
      */
     public AddPriceChange build() {
         Objects.requireNonNull(change, AddPriceChange.class + ": change is missing");
+        Objects.requireNonNull(nextValue, AddPriceChange.class + ": nextValue is missing");
         Objects.requireNonNull(catalogData, AddPriceChange.class + ": catalogData is missing");
         Objects.requireNonNull(priceId, AddPriceChange.class + ": priceId is missing");
-        Objects.requireNonNull(nextValue, AddPriceChange.class + ": nextValue is missing");
-        return new AddPriceChangeImpl(change, catalogData, priceId, nextValue);
+        return new AddPriceChangeImpl(change, nextValue, catalogData, priceId);
     }
 
     /**
@@ -154,7 +160,7 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
      * @return AddPriceChange
      */
     public AddPriceChange buildUnchecked() {
-        return new AddPriceChangeImpl(change, catalogData, priceId, nextValue);
+        return new AddPriceChangeImpl(change, nextValue, catalogData, priceId);
     }
 
     /**
@@ -173,9 +179,9 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     public static AddPriceChangeBuilder of(final AddPriceChange template) {
         AddPriceChangeBuilder builder = new AddPriceChangeBuilder();
         builder.change = template.getChange();
+        builder.nextValue = template.getNextValue();
         builder.catalogData = template.getCatalogData();
         builder.priceId = template.getPriceId();
-        builder.nextValue = template.getNextValue();
         return builder;
     }
 

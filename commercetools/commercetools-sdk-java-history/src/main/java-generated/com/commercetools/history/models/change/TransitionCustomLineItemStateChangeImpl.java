@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * TransitionCustomLineItemStateChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change the state of CustomLineItem according to allowed transitions on Orders.</li>
+ *   <li>Change the state of CustomLineItem according to allowed transitions on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TransitionCustomLineItemStateChangeImpl implements TransitionCustomLineItemStateChange, ModelBase {
@@ -24,27 +28,27 @@ public class TransitionCustomLineItemStateChangeImpl implements TransitionCustom
 
     private String change;
 
-    private String lineItemId;
-
-    private String stateId;
+    private java.util.List<com.commercetools.history.models.common.ItemState> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.ItemState> nextValue;
 
-    private java.util.List<com.commercetools.history.models.common.ItemState> previousValue;
+    private String lineItemId;
+
+    private String stateId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     TransitionCustomLineItemStateChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("stateId") final String stateId,
+            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.ItemState> previousValue,
             @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.ItemState> nextValue,
-            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.ItemState> previousValue) {
+            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("stateId") final String stateId) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.lineItemId = lineItemId;
         this.stateId = stateId;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = TRANSITION_CUSTOM_LINE_ITEM_STATE_CHANGE;
     }
 
@@ -64,7 +68,7 @@ public class TransitionCustomLineItemStateChangeImpl implements TransitionCustom
     }
 
     /**
-     *  <p>Update action for <code>transitionCustomLineItemState</code></p>
+     *
      */
 
     public String getChange() {
@@ -72,23 +76,15 @@ public class TransitionCustomLineItemStateChangeImpl implements TransitionCustom
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public String getLineItemId() {
-        return this.lineItemId;
+    public java.util.List<com.commercetools.history.models.common.ItemState> getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getStateId() {
-        return this.stateId;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.ItemState> getNextValue() {
@@ -96,23 +92,32 @@ public class TransitionCustomLineItemStateChangeImpl implements TransitionCustom
     }
 
     /**
-     *
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.common.ItemState> getPreviousValue() {
-        return this.previousValue;
+    public String getLineItemId() {
+        return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>id</code> of the State involved in the transition.</p>
+     */
+
+    public String getStateId() {
+        return this.stateId;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setLineItemId(final String lineItemId) {
-        this.lineItemId = lineItemId;
+    public void setPreviousValue(final com.commercetools.history.models.common.ItemState... previousValue) {
+        this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
     }
 
-    public void setStateId(final String stateId) {
-        this.stateId = stateId;
+    public void setPreviousValue(
+            final java.util.List<com.commercetools.history.models.common.ItemState> previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.ItemState... nextValue) {
@@ -123,13 +128,12 @@ public class TransitionCustomLineItemStateChangeImpl implements TransitionCustom
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.ItemState... previousValue) {
-        this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+    public void setLineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
     }
 
-    public void setPreviousValue(
-            final java.util.List<com.commercetools.history.models.common.ItemState> previousValue) {
-        this.previousValue = previousValue;
+    public void setStateId(final String stateId) {
+        this.stateId = stateId;
     }
 
     @Override
@@ -144,10 +148,10 @@ public class TransitionCustomLineItemStateChangeImpl implements TransitionCustom
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(lineItemId, that.lineItemId)
                 .append(stateId, that.stateId)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -155,10 +159,10 @@ public class TransitionCustomLineItemStateChangeImpl implements TransitionCustom
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(lineItemId)
                 .append(stateId)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

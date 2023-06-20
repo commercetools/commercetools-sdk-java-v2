@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeCartPredicateChange
+ *  <p>Change triggered by the Change Cart Predicate update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange, ModelBase {
@@ -57,7 +57,7 @@ public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange,
     }
 
     /**
-     *  <p>Shape of the action for <code>changeCartPredicate</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange,
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange,
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

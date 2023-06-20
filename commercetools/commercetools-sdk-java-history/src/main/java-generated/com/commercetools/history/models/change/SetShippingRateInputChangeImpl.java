@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetShippingRateInputChange
+ *  <p>Change triggered by the Set Shipping Rate Input update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShippingRateInputChangeImpl implements SetShippingRateInputChange, ModelBase {
@@ -27,20 +27,20 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
 
     private String change;
 
-    private java.lang.Object nextValue;
-
     private java.lang.Object previousValue;
+
+    private java.lang.Object nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetShippingRateInputChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final java.lang.Object nextValue,
-            @JsonProperty("previousValue") final java.lang.Object previousValue) {
+            @JsonProperty("previousValue") final java.lang.Object previousValue,
+            @JsonProperty("nextValue") final java.lang.Object nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = SET_SHIPPING_RATE_INPUT_CHANGE;
     }
 
@@ -60,7 +60,7 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
     }
 
     /**
-     *  <p>Update action for <code>setShippingRateInput</code></p>
+     *
      */
 
     public String getChange() {
@@ -68,37 +68,23 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
     }
 
     /**
-     *
-     */
-
-    public java.lang.Object getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public java.lang.Object getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
-    }
-
-    @JsonIgnore
-    public void setNextValue(final SetCartClassificationShippingRateInputValue nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    @JsonIgnore
-    public void setNextValue(final SetCartScoreShippingRateInputValue nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setNextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
     }
 
     @JsonIgnore
@@ -115,6 +101,20 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
         this.previousValue = previousValue;
     }
 
+    @JsonIgnore
+    public void setNextValue(final SetCartClassificationShippingRateInputValue nextValue) {
+        this.nextValue = nextValue;
+    }
+
+    @JsonIgnore
+    public void setNextValue(final SetCartScoreShippingRateInputValue nextValue) {
+        this.nextValue = nextValue;
+    }
+
+    public void setNextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -127,8 +127,8 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -136,8 +136,8 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

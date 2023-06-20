@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetAnonymousIdChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set AnonymousId on Payments.</li>
+ *   <li>Set AnonymousId on Shopping Lists.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAnonymousIdChangeImpl implements SetAnonymousIdChange, ModelBase {
@@ -57,7 +61,7 @@ public class SetAnonymousIdChangeImpl implements SetAnonymousIdChange, ModelBase
     }
 
     /**
-     *  <p>Shape of the action for <code>setAnonymousId</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +69,7 @@ public class SetAnonymousIdChangeImpl implements SetAnonymousIdChange, ModelBase
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +77,7 @@ public class SetAnonymousIdChangeImpl implements SetAnonymousIdChange, ModelBase
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

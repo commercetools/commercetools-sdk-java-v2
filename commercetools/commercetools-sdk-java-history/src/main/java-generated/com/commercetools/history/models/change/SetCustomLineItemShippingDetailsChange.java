@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetCustomLineItemShippingDetailsChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set CustomLineItemShippingDetails on Orders.</li>
+ *   <li>Set CustomLineItemShippingDetails on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,9 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetCustomLineItemShippingDetailsChange setCustomLineItemShippingDetailsChange = SetCustomLineItemShippingDetailsChange.builder()
  *             .change("{change}")
- *             .customLineItemId("{customLineItemId}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +53,7 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setCustomLineItemShippingDetails</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -57,24 +61,7 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return customLineItemId
-     */
-    @NotNull
-    @JsonProperty("customLineItemId")
-    public String getCustomLineItemId();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public ItemShippingDetails getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -83,32 +70,49 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     public ItemShippingDetails getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setCustomLineItemShippingDetails</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public ItemShippingDetails getNextValue();
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @return customLineItemId
+     */
+    @NotNull
+    @JsonProperty("customLineItemId")
+    public String getCustomLineItemId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set customLineItemId
-     * @param customLineItemId value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setCustomLineItemId(final String customLineItemId);
+    public void setPreviousValue(final ItemShippingDetails previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final ItemShippingDetails nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @param customLineItemId value to be set
      */
 
-    public void setPreviousValue(final ItemShippingDetails previousValue);
+    public void setCustomLineItemId(final String customLineItemId);
 
     /**
      * factory method
@@ -126,9 +130,9 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
     public static SetCustomLineItemShippingDetailsChange of(final SetCustomLineItemShippingDetailsChange template) {
         SetCustomLineItemShippingDetailsChangeImpl instance = new SetCustomLineItemShippingDetailsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setCustomLineItemId(template.getCustomLineItemId());
         return instance;
     }
 
@@ -145,11 +149,11 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
         }
         SetCustomLineItemShippingDetailsChangeImpl instance = new SetCustomLineItemShippingDetailsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setNextValue(
-            com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
+        instance.setCustomLineItemId(template.getCustomLineItemId());
         return instance;
     }
 

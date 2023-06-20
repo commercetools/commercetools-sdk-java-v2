@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetCountryChange
+ *  <p>Change triggered by the Set Country update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface SetCountryChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setCountry</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface SetCountryChange extends Change {
     public String getChange();
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface SetCountryChange extends Change {
     public String getPreviousValue();
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -70,21 +70,21 @@ public interface SetCountryChange extends Change {
     public String getNextValue();
 
     /**
-     *  <p>Update action for <code>setCountry</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final String previousValue);
 
     /**
-     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     RemoveFromCategoryChange removeFromCategoryChange = RemoveFromCategoryChange.builder()
  *             .change("{change}")
- *             .category(categoryBuilder -> categoryBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .category(categoryBuilder -> categoryBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
 
     private String change;
 
-    private com.commercetools.history.models.common.Reference category;
-
     private java.util.List<com.commercetools.history.models.common.Reference> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    private com.commercetools.history.models.common.Reference category;
+
     /**
-     *  <p>Update action for <code>addToCategory</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,42 +45,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * set the value to the category using the builder function
-     * @param builder function to build the category value
-     * @return Builder
-     */
-
-    public RemoveFromCategoryChangeBuilder category(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.category = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the category using the builder function
-     * @param builder function to build the category value
-     * @return Builder
-     */
-
-    public RemoveFromCategoryChangeBuilder withCategory(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.category = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the category
-     * @param category value to be set
-     * @return Builder
-     */
-
-    public RemoveFromCategoryChangeBuilder category(final com.commercetools.history.models.common.Reference category) {
-        this.category = category;
-        return this;
-    }
-
-    /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -92,7 +57,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -104,7 +69,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -119,7 +84,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -134,7 +99,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -147,7 +112,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * add the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -158,7 +123,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -169,7 +134,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * set values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -181,7 +146,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * set value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -193,7 +158,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * add values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -208,7 +173,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * add the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -223,7 +188,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -236,7 +201,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * add the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -247,7 +212,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -258,7 +223,42 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     *  <p>Update action for <code>addToCategory</code></p>
+     *  <p>Category from which the Product was removed.</p>
+     * @param builder function to build the category value
+     * @return Builder
+     */
+
+    public RemoveFromCategoryChangeBuilder category(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.category = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Category from which the Product was removed.</p>
+     * @param builder function to build the category value
+     * @return Builder
+     */
+
+    public RemoveFromCategoryChangeBuilder withCategory(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.category = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Category from which the Product was removed.</p>
+     * @param category value to be set
+     * @return Builder
+     */
+
+    public RemoveFromCategoryChangeBuilder category(final com.commercetools.history.models.common.Reference category) {
+        this.category = category;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -267,16 +267,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * value of category}
-     * @return category
-     */
-
-    public com.commercetools.history.models.common.Reference getCategory() {
-        return this.category;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -285,7 +276,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -294,15 +285,24 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
+     *  <p>Category from which the Product was removed.</p>
+     * @return category
+     */
+
+    public com.commercetools.history.models.common.Reference getCategory() {
+        return this.category;
+    }
+
+    /**
      * builds RemoveFromCategoryChange with checking for non-null required values
      * @return RemoveFromCategoryChange
      */
     public RemoveFromCategoryChange build() {
         Objects.requireNonNull(change, RemoveFromCategoryChange.class + ": change is missing");
-        Objects.requireNonNull(category, RemoveFromCategoryChange.class + ": category is missing");
         Objects.requireNonNull(previousValue, RemoveFromCategoryChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, RemoveFromCategoryChange.class + ": nextValue is missing");
-        return new RemoveFromCategoryChangeImpl(change, category, previousValue, nextValue);
+        Objects.requireNonNull(category, RemoveFromCategoryChange.class + ": category is missing");
+        return new RemoveFromCategoryChangeImpl(change, previousValue, nextValue, category);
     }
 
     /**
@@ -310,7 +310,7 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
      * @return RemoveFromCategoryChange
      */
     public RemoveFromCategoryChange buildUnchecked() {
-        return new RemoveFromCategoryChangeImpl(change, category, previousValue, nextValue);
+        return new RemoveFromCategoryChangeImpl(change, previousValue, nextValue, category);
     }
 
     /**
@@ -329,9 +329,9 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     public static RemoveFromCategoryChangeBuilder of(final RemoveFromCategoryChange template) {
         RemoveFromCategoryChangeBuilder builder = new RemoveFromCategoryChangeBuilder();
         builder.change = template.getChange();
-        builder.category = template.getCategory();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.category = template.getCategory();
         return builder;
     }
 

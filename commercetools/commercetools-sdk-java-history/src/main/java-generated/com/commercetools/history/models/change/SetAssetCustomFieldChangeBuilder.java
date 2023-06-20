@@ -27,18 +27,18 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
 
     private String change;
 
+    private java.lang.Object previousValue;
+
+    private java.lang.Object nextValue;
+
     private String name;
 
     private String customTypeId;
 
     private com.commercetools.history.models.change_value.AssetChangeValue asset;
 
-    private java.lang.Object nextValue;
-
-    private java.lang.Object previousValue;
-
     /**
-     *  <p>Update action for <code>setAssetCustomField</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -49,7 +49,29 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     * set the value to the name
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public SetAssetCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetAssetCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Custom Field.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -60,7 +82,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     * set the value to the customTypeId
+     *  <p><code>id</code> of the referenced Type.</p>
      * @param customTypeId value to be set
      * @return Builder
      */
@@ -71,7 +93,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     * set the value to the asset using the builder function
+     *  <p>Information about the updated Asset.</p>
      * @param builder function to build the asset value
      * @return Builder
      */
@@ -83,7 +105,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     * set the value to the asset using the builder function
+     *  <p>Information about the updated Asset.</p>
      * @param builder function to build the asset value
      * @return Builder
      */
@@ -95,7 +117,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     * set the value to the asset
+     *  <p>Information about the updated Asset.</p>
      * @param asset value to be set
      * @return Builder
      */
@@ -107,29 +129,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetAssetCustomFieldChangeBuilder nextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public SetAssetCustomFieldChangeBuilder previousValue(final java.lang.Object previousValue) {
-        this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     *  <p>Update action for <code>setAssetCustomField</code></p>
+     * value of change}
      * @return change
      */
 
@@ -138,43 +138,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     * value of name}
-     * @return name
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * value of customTypeId}
-     * @return customTypeId
-     */
-
-    public String getCustomTypeId() {
-        return this.customTypeId;
-    }
-
-    /**
-     * value of asset}
-     * @return asset
-     */
-
-    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
-        return this.asset;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public java.lang.Object getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -183,17 +147,53 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public java.lang.Object getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @return name
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
+     * @return customTypeId
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
+    }
+
+    /**
+     *  <p>Information about the updated Asset.</p>
+     * @return asset
+     */
+
+    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
+        return this.asset;
+    }
+
+    /**
      * builds SetAssetCustomFieldChange with checking for non-null required values
      * @return SetAssetCustomFieldChange
      */
     public SetAssetCustomFieldChange build() {
         Objects.requireNonNull(change, SetAssetCustomFieldChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetAssetCustomFieldChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetAssetCustomFieldChange.class + ": nextValue is missing");
         Objects.requireNonNull(name, SetAssetCustomFieldChange.class + ": name is missing");
         Objects.requireNonNull(customTypeId, SetAssetCustomFieldChange.class + ": customTypeId is missing");
         Objects.requireNonNull(asset, SetAssetCustomFieldChange.class + ": asset is missing");
-        Objects.requireNonNull(nextValue, SetAssetCustomFieldChange.class + ": nextValue is missing");
-        Objects.requireNonNull(previousValue, SetAssetCustomFieldChange.class + ": previousValue is missing");
-        return new SetAssetCustomFieldChangeImpl(change, name, customTypeId, asset, nextValue, previousValue);
+        return new SetAssetCustomFieldChangeImpl(change, previousValue, nextValue, name, customTypeId, asset);
     }
 
     /**
@@ -201,7 +201,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
      * @return SetAssetCustomFieldChange
      */
     public SetAssetCustomFieldChange buildUnchecked() {
-        return new SetAssetCustomFieldChangeImpl(change, name, customTypeId, asset, nextValue, previousValue);
+        return new SetAssetCustomFieldChangeImpl(change, previousValue, nextValue, name, customTypeId, asset);
     }
 
     /**
@@ -220,11 +220,11 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     public static SetAssetCustomFieldChangeBuilder of(final SetAssetCustomFieldChange template) {
         SetAssetCustomFieldChangeBuilder builder = new SetAssetCustomFieldChangeBuilder();
         builder.change = template.getChange();
+        builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.name = template.getName();
         builder.customTypeId = template.getCustomTypeId();
         builder.asset = template.getAsset();
-        builder.nextValue = template.getNextValue();
-        builder.previousValue = template.getPreviousValue();
         return builder;
     }
 

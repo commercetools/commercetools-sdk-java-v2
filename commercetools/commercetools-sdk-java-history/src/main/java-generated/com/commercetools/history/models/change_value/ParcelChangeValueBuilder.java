@@ -27,7 +27,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
     private String createdAt;
 
     /**
-     * set the value to the id
+     *  <p><code>id</code> of the Parcel.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
     }
 
     /**
-     * set the value to the createdAt
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
     }
 
     /**
-     * value of id}
+     *  <p><code>id</code> of the Parcel.</p>
      * @return id
      */
 
@@ -58,7 +58,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
     }
 
     /**
-     * value of createdAt}
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @return createdAt
      */
 

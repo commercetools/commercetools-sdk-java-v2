@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ParcelChangeValue {
 
     /**
-     *
+     *  <p><code>id</code> of the Parcel.</p>
      * @return id
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface ParcelChangeValue {
     public String getId();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @return createdAt
      */
     @NotNull
@@ -48,14 +48,14 @@ public interface ParcelChangeValue {
     public String getCreatedAt();
 
     /**
-     * set id
+     *  <p><code>id</code> of the Parcel.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set createdAt
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @param createdAt value to be set
      */
 

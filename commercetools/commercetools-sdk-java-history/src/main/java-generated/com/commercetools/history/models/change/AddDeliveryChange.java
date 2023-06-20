@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddDeliveryChange
+ *  <p>Change triggered by the Add Delivery update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddDeliveryChange addDeliveryChange = AddDeliveryChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +48,7 @@ public interface AddDeliveryChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addDelivery</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +56,7 @@ public interface AddDeliveryChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public DeliveryChangeValue getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +65,34 @@ public interface AddDeliveryChange extends Change {
     public DeliveryChangeValue getPreviousValue();
 
     /**
-     *  <p>Update action for <code>addDelivery</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public DeliveryChangeValue getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final DeliveryChangeValue nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final DeliveryChangeValue previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final DeliveryChangeValue nextValue);
 
     /**
      * factory method
@@ -110,8 +110,8 @@ public interface AddDeliveryChange extends Change {
     public static AddDeliveryChange of(final AddDeliveryChange template) {
         AddDeliveryChangeImpl instance = new AddDeliveryChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,10 +127,10 @@ public interface AddDeliveryChange extends Change {
         }
         AddDeliveryChangeImpl instance = new AddDeliveryChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

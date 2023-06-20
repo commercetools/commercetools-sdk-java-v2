@@ -16,7 +16,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetCustomTypeChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Custom Type on Cart Discounts.</li>
+ *   <li>Set Custom Type on Categories.</li>
+ *   <li>Set Custom Type on Channels.</li>
+ *   <li>Set Custom Type on Customers.</li>
+ *   <li>Set Custom Type on Customer Groups.</li>
+ *   <li>Set Custom Type on Discount Codes.</li>
+ *   <li>Set Custom Type on Inventories.</li>
+ *   <li>Set Custom Type on Orders.</li>
+ *   <li>Set Custom Type on Order Edits.</li>
+ *   <li>Set Custom Type on Staged Orders.</li>
+ *   <li>Set Custom Type on Payments.</li>
+ *   <li>Set Custom Type on Product Selections.</li>
+ *   <li>Set Custom Type on Quotes.</li>
+ *   <li>Set Custom Type on Staged Quotes.</li>
+ *   <li>Set Custom Type on Quote Requests.</li>
+ *   <li>Set Custom Type on Reviews.</li>
+ *   <li>Set Custom Type on Shopping Lists.</li>
+ *   <li>Set Custom Type on Stores.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +44,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetCustomTypeChange setCustomTypeChange = SetCustomTypeChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +68,7 @@ public interface SetCustomTypeChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for setting a custom type</p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +76,7 @@ public interface SetCustomTypeChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public CustomFields getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +85,34 @@ public interface SetCustomTypeChange extends Change {
     public CustomFields getPreviousValue();
 
     /**
-     *  <p>Update action for setting a custom type</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public CustomFields getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final CustomFields nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final CustomFields previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final CustomFields nextValue);
 
     /**
      * factory method
@@ -110,8 +130,8 @@ public interface SetCustomTypeChange extends Change {
     public static SetCustomTypeChange of(final SetCustomTypeChange template) {
         SetCustomTypeChangeImpl instance = new SetCustomTypeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,9 +147,9 @@ public interface SetCustomTypeChange extends Change {
         }
         SetCustomTypeChangeImpl instance = new SetCustomTypeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
         return instance;
     }
 

@@ -17,7 +17,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetParcelMeasurementsChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>SetParcelMeasurements on Orders.</li>
+ *   <li>SetParcelMeasurements on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,9 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetParcelMeasurementsChange setParcelMeasurementsChange = SetParcelMeasurementsChange.builder()
  *             .change("{change}")
- *             .parcel(parcelBuilder -> parcelBuilder)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .parcel(parcelBuilder -> parcelBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +54,7 @@ public interface SetParcelMeasurementsChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setParcelMeasurements</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,25 +62,7 @@ public interface SetParcelMeasurementsChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return parcel
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("parcel")
-    public ParcelChangeValue getParcel();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public ParcelMeasurements getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -85,32 +71,50 @@ public interface SetParcelMeasurementsChange extends Change {
     public ParcelMeasurements getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setParcelMeasurements</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public ParcelMeasurements getNextValue();
+
+    /**
+     *  <p>Information about the updated Parcel.</p>
+     * @return parcel
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("parcel")
+    public ParcelChangeValue getParcel();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set parcel
-     * @param parcel value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setParcel(final ParcelChangeValue parcel);
+    public void setPreviousValue(final ParcelMeasurements previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final ParcelMeasurements nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Information about the updated Parcel.</p>
+     * @param parcel value to be set
      */
 
-    public void setPreviousValue(final ParcelMeasurements previousValue);
+    public void setParcel(final ParcelChangeValue parcel);
 
     /**
      * factory method
@@ -128,9 +132,9 @@ public interface SetParcelMeasurementsChange extends Change {
     public static SetParcelMeasurementsChange of(final SetParcelMeasurementsChange template) {
         SetParcelMeasurementsChangeImpl instance = new SetParcelMeasurementsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setParcel(template.getParcel());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setParcel(template.getParcel());
         return instance;
     }
 
@@ -146,12 +150,12 @@ public interface SetParcelMeasurementsChange extends Change {
         }
         SetParcelMeasurementsChangeImpl instance = new SetParcelMeasurementsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setParcel(
-            com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
-        instance.setNextValue(
-            com.commercetools.history.models.common.ParcelMeasurements.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.ParcelMeasurements.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.ParcelMeasurements.deepCopy(template.getNextValue()));
+        instance.setParcel(
+            com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
         return instance;
     }
 

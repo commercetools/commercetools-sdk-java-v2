@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeAttributeConstraintChange
+ *  <p>Change triggered by the Change AttributeDefinition AttributeConstraint update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,9 +23,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeAttributeConstraintChange changeAttributeConstraintChange = ChangeAttributeConstraintChange.builder()
  *             .change("{change}")
- *             .attributeName("{attributeName}")
  *             .previousValue(AttributeConstraintEnum.NONE)
  *             .nextValue(AttributeConstraintEnum.NONE)
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -56,15 +56,7 @@ public interface ChangeAttributeConstraintChange extends Change {
     public String getChange();
 
     /**
-     *  <p>name of the updated attribute</p>
-     * @return attributeName
-     */
-    @NotNull
-    @JsonProperty("attributeName")
-    public String getAttributeName();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -72,12 +64,20 @@ public interface ChangeAttributeConstraintChange extends Change {
     public AttributeConstraintEnum getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
     @JsonProperty("nextValue")
     public AttributeConstraintEnum getNextValue();
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
 
     /**
      * set change
@@ -87,25 +87,25 @@ public interface ChangeAttributeConstraintChange extends Change {
     public void setChange(final String change);
 
     /**
-     *  <p>name of the updated attribute</p>
-     * @param attributeName value to be set
-     */
-
-    public void setAttributeName(final String attributeName);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final AttributeConstraintEnum previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final AttributeConstraintEnum nextValue);
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @param attributeName value to be set
+     */
+
+    public void setAttributeName(final String attributeName);
 
     /**
      * factory method
@@ -123,9 +123,9 @@ public interface ChangeAttributeConstraintChange extends Change {
     public static ChangeAttributeConstraintChange of(final ChangeAttributeConstraintChange template) {
         ChangeAttributeConstraintChangeImpl instance = new ChangeAttributeConstraintChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 
@@ -141,9 +141,9 @@ public interface ChangeAttributeConstraintChange extends Change {
         }
         ChangeAttributeConstraintChangeImpl instance = new ChangeAttributeConstraintChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 

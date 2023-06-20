@@ -27,7 +27,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
     private String validUntil;
 
     /**
-     * set the value to the validFrom
+     *  <p>Date and time (UTC) from when the Discount is effective.</p>
      * @param validFrom value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
     }
 
     /**
-     * set the value to the validUntil
+     *  <p>Date and time (UTC) until when the Discount is effective.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
     }
 
     /**
-     * value of validFrom}
+     *  <p>Date and time (UTC) from when the Discount is effective.</p>
      * @return validFrom
      */
 
@@ -58,7 +58,7 @@ public class ValidFromAndUntilValueBuilder implements Builder<ValidFromAndUntilV
     }
 
     /**
-     * value of validUntil}
+     *  <p>Date and time (UTC) until when the Discount is effective.</p>
      * @return validUntil
      */
 

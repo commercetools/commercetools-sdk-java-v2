@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetShoppingListLineItemCustomFieldChange
+ *  <p>Change triggered by the Set ShoppingListLineItem Custom Field update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShoppingListLineItemCustomFieldChangeImpl
@@ -25,31 +25,31 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
 
     private String change;
 
+    private java.lang.Object previousValue;
+
+    private java.lang.Object nextValue;
+
     private String name;
 
     private String customTypeId;
 
     private com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem;
 
-    private java.lang.Object nextValue;
-
-    private java.lang.Object previousValue;
-
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetShoppingListLineItemCustomFieldChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("name") final String name, @JsonProperty("customTypeId") final String customTypeId,
-            @JsonProperty("lineItem") final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem,
-            @JsonProperty("nextValue") final java.lang.Object nextValue,
-            @JsonProperty("previousValue") final java.lang.Object previousValue) {
+            @JsonProperty("previousValue") final java.lang.Object previousValue,
+            @JsonProperty("nextValue") final java.lang.Object nextValue, @JsonProperty("name") final String name,
+            @JsonProperty("customTypeId") final String customTypeId,
+            @JsonProperty("lineItem") final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.name = name;
         this.customTypeId = customTypeId;
         this.lineItem = lineItem;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = SET_SHOPPING_LIST_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }
 
@@ -69,7 +69,7 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
     }
 
     /**
-     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     *
      */
 
     public String getChange() {
@@ -77,31 +77,15 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public String getName() {
-        return this.name;
+    public java.lang.Object getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getCustomTypeId() {
-        return this.customTypeId;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
-        return this.lineItem;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.lang.Object getNextValue() {
@@ -109,15 +93,39 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
     }
 
     /**
-     *
+     *  <p>Name of the Custom Field.</p>
      */
 
-    public java.lang.Object getPreviousValue() {
-        return this.previousValue;
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
+    }
+
+    /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
+     */
+
+    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
+        return this.lineItem;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final java.lang.Object previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setName(final String name) {
@@ -132,14 +140,6 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
         this.lineItem = lineItem;
     }
 
-    public void setNextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final java.lang.Object previousValue) {
-        this.previousValue = previousValue;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -152,11 +152,11 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(name, that.name)
                 .append(customTypeId, that.customTypeId)
                 .append(lineItem, that.lineItem)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -164,11 +164,11 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(name)
                 .append(customTypeId)
                 .append(lineItem)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

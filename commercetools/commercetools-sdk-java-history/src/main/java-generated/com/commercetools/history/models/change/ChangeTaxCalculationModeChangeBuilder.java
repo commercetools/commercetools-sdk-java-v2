@@ -30,7 +30,7 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
     private com.commercetools.history.models.common.TaxCalculationMode nextValue;
 
     /**
-     *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
     }
 
     /**
-     *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
+     * value of change}
      * @return change
      */
 
@@ -74,7 +74,7 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -83,7 +83,7 @@ public class ChangeTaxCalculationModeChangeBuilder implements Builder<ChangeTaxC
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

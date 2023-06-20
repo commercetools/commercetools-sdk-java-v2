@@ -27,6 +27,9 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     private String id;
 
+    @Nullable
+    private String key;
+
     private java.time.ZonedDateTime createdAt;
 
     @Nullable
@@ -49,6 +52,17 @@ public class ParcelBuilder implements Builder<Parcel> {
 
     public ParcelBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public ParcelBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -265,6 +279,16 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      * value of createdAt}
      * @return createdAt
      */
@@ -320,7 +344,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     public Parcel build() {
         Objects.requireNonNull(id, Parcel.class + ": id is missing");
         Objects.requireNonNull(createdAt, Parcel.class + ": createdAt is missing");
-        return new ParcelImpl(id, createdAt, measurements, trackingData, items, custom);
+        return new ParcelImpl(id, key, createdAt, measurements, trackingData, items, custom);
     }
 
     /**
@@ -328,7 +352,7 @@ public class ParcelBuilder implements Builder<Parcel> {
      * @return Parcel
      */
     public Parcel buildUnchecked() {
-        return new ParcelImpl(id, createdAt, measurements, trackingData, items, custom);
+        return new ParcelImpl(id, key, createdAt, measurements, trackingData, items, custom);
     }
 
     /**
@@ -347,6 +371,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     public static ParcelBuilder of(final Parcel template) {
         ParcelBuilder builder = new ParcelBuilder();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.createdAt = template.getCreatedAt();
         builder.measurements = template.getMeasurements();
         builder.trackingData = template.getTrackingData();

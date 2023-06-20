@@ -17,7 +17,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetAssetCustomTypeChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Asset Custom Type on Categories.</li>
+ *   <li>Set Asset Custom Type on Products.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,9 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetAssetCustomTypeChange setAssetCustomTypeChange = SetAssetCustomTypeChange.builder()
  *             .change("{change}")
- *             .asset(assetBuilder -> assetBuilder)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .asset(assetBuilder -> assetBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -42,7 +46,7 @@ public interface SetAssetCustomTypeChange extends Change {
     String SET_ASSET_CUSTOM_TYPE_CHANGE = "SetAssetCustomTypeChange";
 
     /**
-     *  <p>Update action for <code>setAssetCustomType</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,25 +62,7 @@ public interface SetAssetCustomTypeChange extends Change {
     public String getType();
 
     /**
-     *
-     * @return asset
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("asset")
-    public AssetChangeValue getAsset();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public CustomFields getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -85,32 +71,50 @@ public interface SetAssetCustomTypeChange extends Change {
     public CustomFields getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setAssetCustomType</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public CustomFields getNextValue();
+
+    /**
+     *  <p>Information about the updated Asset.</p>
+     * @return asset
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("asset")
+    public AssetChangeValue getAsset();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set asset
-     * @param asset value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setAsset(final AssetChangeValue asset);
+    public void setPreviousValue(final CustomFields previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final CustomFields nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Information about the updated Asset.</p>
+     * @param asset value to be set
      */
 
-    public void setPreviousValue(final CustomFields previousValue);
+    public void setAsset(final AssetChangeValue asset);
 
     /**
      * factory method
@@ -128,9 +132,9 @@ public interface SetAssetCustomTypeChange extends Change {
     public static SetAssetCustomTypeChange of(final SetAssetCustomTypeChange template) {
         SetAssetCustomTypeChangeImpl instance = new SetAssetCustomTypeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAsset(template.getAsset());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setAsset(template.getAsset());
         return instance;
     }
 
@@ -146,10 +150,10 @@ public interface SetAssetCustomTypeChange extends Change {
         }
         SetAssetCustomTypeChangeImpl instance = new SetAssetCustomTypeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
-        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
         return instance;
     }
 

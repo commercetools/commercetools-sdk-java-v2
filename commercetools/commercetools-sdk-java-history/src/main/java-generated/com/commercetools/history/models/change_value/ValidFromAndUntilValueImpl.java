@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+ * ValidFromAndUntilValue
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue, ModelBase {
@@ -41,7 +41,7 @@ public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue, Model
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) from when the Discount is effective.</p>
      */
 
     public String getValidFrom() {
@@ -49,7 +49,7 @@ public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue, Model
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) until when the Discount is effective.</p>
      */
 
     public String getValidUntil() {

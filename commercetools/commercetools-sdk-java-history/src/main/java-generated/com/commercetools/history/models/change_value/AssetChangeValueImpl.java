@@ -41,7 +41,7 @@ public class AssetChangeValueImpl implements AssetChangeValue, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Asset.</p>
      */
 
     public String getId() {
@@ -49,7 +49,7 @@ public class AssetChangeValueImpl implements AssetChangeValue, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the Asset.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getName() {

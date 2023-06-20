@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetAssetTagsChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Asset Tags on Categories.</li>
+ *   <li>Change Asset Tags on Products.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
@@ -24,24 +28,24 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.AssetChangeValue asset;
+    private java.util.List<String> previousValue;
 
     private java.util.List<String> nextValue;
 
-    private java.util.List<String> previousValue;
+    private com.commercetools.history.models.change_value.AssetChangeValue asset;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetAssetTagsChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
+            @JsonProperty("previousValue") final java.util.List<String> previousValue,
             @JsonProperty("nextValue") final java.util.List<String> nextValue,
-            @JsonProperty("previousValue") final java.util.List<String> previousValue) {
+            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.change = change;
-        this.asset = asset;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.asset = asset;
         this.type = SET_ASSET_TAGS_CHANGE;
     }
 
@@ -61,7 +65,7 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>setAssetTags</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +73,15 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
-        return this.asset;
+    public java.util.List<String> getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<String> getNextValue() {
@@ -85,19 +89,23 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information about the updated Asset.</p>
      */
 
-    public java.util.List<String> getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
+        return this.asset;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setAsset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
-        this.asset = asset;
+    public void setPreviousValue(final String... previousValue) {
+        this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+    }
+
+    public void setPreviousValue(final java.util.List<String> previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final String... nextValue) {
@@ -108,12 +116,8 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final String... previousValue) {
-        this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
-    }
-
-    public void setPreviousValue(final java.util.List<String> previousValue) {
-        this.previousValue = previousValue;
+    public void setAsset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
+        this.asset = asset;
     }
 
     @Override
@@ -128,9 +132,9 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(asset, that.asset)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(asset, that.asset)
                 .isEquals();
     }
 
@@ -138,9 +142,9 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(asset)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(asset)
                 .toHashCode();
     }
 

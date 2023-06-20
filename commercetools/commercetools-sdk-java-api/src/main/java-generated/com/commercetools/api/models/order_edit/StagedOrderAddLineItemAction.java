@@ -44,6 +44,14 @@ public interface StagedOrderAddLineItemAction
     String ADD_LINE_ITEM = "addLineItem";
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      * @return custom
      */
@@ -138,6 +146,13 @@ public interface StagedOrderAddLineItemAction
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetailsDraft getShippingDetails();
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
@@ -238,6 +253,7 @@ public interface StagedOrderAddLineItemAction
      */
     public static StagedOrderAddLineItemAction of(final StagedOrderAddLineItemAction template) {
         StagedOrderAddLineItemActionImpl instance = new StagedOrderAddLineItemActionImpl();
+        instance.setKey(template.getKey());
         instance.setCustom(template.getCustom());
         instance.setDistributionChannel(template.getDistributionChannel());
         instance.setExternalTaxRate(template.getExternalTaxRate());
@@ -264,6 +280,7 @@ public interface StagedOrderAddLineItemAction
             return null;
         }
         StagedOrderAddLineItemActionImpl instance = new StagedOrderAddLineItemActionImpl();
+        instance.setKey(template.getKey());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setDistributionChannel(
             com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));

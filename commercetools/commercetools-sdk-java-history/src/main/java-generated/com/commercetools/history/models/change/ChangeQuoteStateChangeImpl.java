@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Update action for <code>changeQuoteState</code> on <code>quote</code></p>
+ *  <p>Change triggered by the Change Quote State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeQuoteStateChangeImpl implements ChangeQuoteStateChange, ModelBase {
@@ -24,20 +24,20 @@ public class ChangeQuoteStateChangeImpl implements ChangeQuoteStateChange, Model
 
     private String change;
 
-    private com.commercetools.history.models.common.QuoteState nextValue;
-
     private com.commercetools.history.models.common.QuoteState previousValue;
+
+    private com.commercetools.history.models.common.QuoteState nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeQuoteStateChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.QuoteState nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.QuoteState previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.QuoteState previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.QuoteState nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = CHANGE_QUOTE_STATE_CHANGE;
     }
 
@@ -65,31 +65,31 @@ public class ChangeQuoteStateChangeImpl implements ChangeQuoteStateChange, Model
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.QuoteState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.QuoteState getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.QuoteState getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.QuoteState nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.QuoteState previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.QuoteState nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +104,8 @@ public class ChangeQuoteStateChangeImpl implements ChangeQuoteStateChange, Model
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +113,8 @@ public class ChangeQuoteStateChangeImpl implements ChangeQuoteStateChange, Model
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

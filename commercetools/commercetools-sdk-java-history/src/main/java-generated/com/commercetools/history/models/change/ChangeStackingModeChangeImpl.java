@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeStackingModeChange
+ *  <p>Change triggered by the Change Stacking Mode update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, ModelBase {
@@ -24,20 +24,20 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
 
     private String change;
 
-    private com.commercetools.history.models.common.StackingMode nextValue;
-
     private com.commercetools.history.models.common.StackingMode previousValue;
+
+    private com.commercetools.history.models.common.StackingMode nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeStackingModeChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.StackingMode nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.StackingMode previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.StackingMode previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.StackingMode nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = CHANGE_STACKING_MODE_CHANGE;
     }
 
@@ -57,7 +57,7 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
     }
 
     /**
-     *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +65,31 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.StackingMode getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.StackingMode getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.StackingMode getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.StackingMode nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.StackingMode previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.StackingMode nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +104,8 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +113,8 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

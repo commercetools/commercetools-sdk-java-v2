@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetSlugChange
+ *  <p>Change triggered by the Set Slug update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetSlugChangeImpl implements SetSlugChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetSlugChangeImpl implements SetSlugChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>setSlug</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetSlugChangeImpl implements SetSlugChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetSlugChangeImpl implements SetSlugChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {

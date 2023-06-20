@@ -31,7 +31,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     private java.util.List<com.commercetools.history.models.common.StoreCountry> nextValue;
 
     /**
-     *  <p>Update action for <code>setCountries</code>.</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -170,7 +170,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -209,7 +209,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -220,7 +220,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Update action for <code>setCountries</code>.</p>
+     * value of change}
      * @return change
      */
 
@@ -229,7 +229,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store prior to the update action.</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -238,7 +238,7 @@ public class SetCountriesChangeBuilder implements Builder<SetCountriesChange> {
     }
 
     /**
-     *  <p>Countries defined for the Store after the update action.</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

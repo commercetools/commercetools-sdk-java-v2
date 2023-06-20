@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddParcelToDeliveryChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Add Parcel on Orders.</li>
+ *   <li>Add Parcel on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange, ModelBase {
@@ -24,20 +28,20 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
 
     private String change;
 
-    private String deliveryId;
-
     private com.commercetools.history.models.common.Parcel nextValue;
+
+    private String deliveryId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddParcelToDeliveryChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Parcel nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.Parcel nextValue,
+            @JsonProperty("deliveryId") final String deliveryId) {
         this.change = change;
-        this.deliveryId = deliveryId;
         this.nextValue = nextValue;
+        this.deliveryId = deliveryId;
         this.type = ADD_PARCEL_TO_DELIVERY_CHANGE;
     }
 
@@ -57,7 +61,7 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
     }
 
     /**
-     *  <p>Update action for <code>addParcelToDelivery</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +69,31 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
     }
 
     /**
-     *
-     */
-
-    public String getDeliveryId() {
-        return this.deliveryId;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Parcel getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <p><code>id</code> of the Delivery to which the Parcel was added.</p>
+     */
+
+    public String getDeliveryId() {
+        return this.deliveryId;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setDeliveryId(final String deliveryId) {
-        this.deliveryId = deliveryId;
-    }
-
     public void setNextValue(final com.commercetools.history.models.common.Parcel nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setDeliveryId(final String deliveryId) {
+        this.deliveryId = deliveryId;
     }
 
     @Override
@@ -104,8 +108,8 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(deliveryId, that.deliveryId)
                 .append(nextValue, that.nextValue)
+                .append(deliveryId, that.deliveryId)
                 .isEquals();
     }
 
@@ -113,8 +117,8 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(deliveryId)
                 .append(nextValue)
+                .append(deliveryId)
                 .toHashCode();
     }
 

@@ -14,8 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetReturnPaymentStateChange setReturnPaymentStateChange = SetReturnPaymentStateChange.builder()
  *             .change("{change}")
- *             .nextValue(ReturnPaymentState.NON_REFUNDABLE)
  *             .previousValue(ReturnPaymentState.NON_REFUNDABLE)
+ *             .nextValue(ReturnPaymentState.NON_REFUNDABLE)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,12 +25,12 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
 
     private String change;
 
-    private com.commercetools.history.models.common.ReturnPaymentState nextValue;
-
     private com.commercetools.history.models.common.ReturnPaymentState previousValue;
 
+    private com.commercetools.history.models.common.ReturnPaymentState nextValue;
+
     /**
-     *  <p>Update action for <code>setReturnPaymentState</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,19 +41,7 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetReturnPaymentStateChangeBuilder nextValue(
-            final com.commercetools.history.models.common.ReturnPaymentState nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -65,7 +53,19 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
     }
 
     /**
-     *  <p>Update action for <code>setReturnPaymentState</code></p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetReturnPaymentStateChangeBuilder nextValue(
+            final com.commercetools.history.models.common.ReturnPaymentState nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -74,16 +74,7 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.ReturnPaymentState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -92,14 +83,23 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.ReturnPaymentState getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds SetReturnPaymentStateChange with checking for non-null required values
      * @return SetReturnPaymentStateChange
      */
     public SetReturnPaymentStateChange build() {
         Objects.requireNonNull(change, SetReturnPaymentStateChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, SetReturnPaymentStateChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetReturnPaymentStateChange.class + ": previousValue is missing");
-        return new SetReturnPaymentStateChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetReturnPaymentStateChange.class + ": nextValue is missing");
+        return new SetReturnPaymentStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -107,7 +107,7 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
      * @return SetReturnPaymentStateChange
      */
     public SetReturnPaymentStateChange buildUnchecked() {
-        return new SetReturnPaymentStateChangeImpl(change, nextValue, previousValue);
+        return new SetReturnPaymentStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -126,8 +126,8 @@ public class SetReturnPaymentStateChangeBuilder implements Builder<SetReturnPaym
     public static SetReturnPaymentStateChangeBuilder of(final SetReturnPaymentStateChange template) {
         SetReturnPaymentStateChangeBuilder builder = new SetReturnPaymentStateChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

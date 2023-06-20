@@ -25,10 +25,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemTaxedPriceChange setLineItemTaxedPriceChange = SetLineItemTaxedPriceChange.builder()
  *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .lineItemId("{lineItemId}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -51,7 +51,7 @@ public interface SetLineItemTaxedPriceChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setLineItemTaxedPrice</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -59,33 +59,7 @@ public interface SetLineItemTaxedPriceChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return lineItem
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("lineItem")
-    public LocalizedString getLineItem();
-
-    /**
-     *
-     * @return lineItemId
-     */
-    @NotNull
-    @JsonProperty("lineItemId")
-    public String getLineItemId();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public TaxedItemPrice getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -94,39 +68,65 @@ public interface SetLineItemTaxedPriceChange extends Change {
     public TaxedItemPrice getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setLineItemTaxedPrice</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public TaxedItemPrice getNextValue();
+
+    /**
+     *  <p>Name of the Product the Line Item is based on.</p>
+     * @return lineItem
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("lineItem")
+    public LocalizedString getLineItem();
+
+    /**
+     *  <p><code>id</code> of the updated LineItem.</p>
+     * @return lineItemId
+     */
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set lineItem
-     * @param lineItem value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setLineItem(final LocalizedString lineItem);
+    public void setPreviousValue(final TaxedItemPrice previousValue);
 
     /**
-     * set lineItemId
-     * @param lineItemId value to be set
-     */
-
-    public void setLineItemId(final String lineItemId);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final TaxedItemPrice nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the Product the Line Item is based on.</p>
+     * @param lineItem value to be set
      */
 
-    public void setPreviousValue(final TaxedItemPrice previousValue);
+    public void setLineItem(final LocalizedString lineItem);
+
+    /**
+     *  <p><code>id</code> of the updated LineItem.</p>
+     * @param lineItemId value to be set
+     */
+
+    public void setLineItemId(final String lineItemId);
 
     /**
      * factory method
@@ -144,10 +144,10 @@ public interface SetLineItemTaxedPriceChange extends Change {
     public static SetLineItemTaxedPriceChange of(final SetLineItemTaxedPriceChange template) {
         SetLineItemTaxedPriceChangeImpl instance = new SetLineItemTaxedPriceChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setLineItem(template.getLineItem());
         instance.setLineItemId(template.getLineItemId());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -163,11 +163,11 @@ public interface SetLineItemTaxedPriceChange extends Change {
         }
         SetLineItemTaxedPriceChangeImpl instance = new SetLineItemTaxedPriceChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
-        instance.setLineItemId(template.getLineItemId());
-        instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
+        instance.setLineItemId(template.getLineItemId());
         return instance;
     }
 

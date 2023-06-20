@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddOrderLineItemChange
+ *  <p>Change triggered by the Add LineItem update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddOrderLineItemChangeImpl implements AddOrderLineItemChange, ModelBase {
@@ -65,7 +65,7 @@ public class AddOrderLineItemChangeImpl implements AddOrderLineItemChange, Model
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.LineItem getPreviousValue() {
@@ -73,7 +73,7 @@ public class AddOrderLineItemChangeImpl implements AddOrderLineItemChange, Model
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.LineItem getNextValue() {

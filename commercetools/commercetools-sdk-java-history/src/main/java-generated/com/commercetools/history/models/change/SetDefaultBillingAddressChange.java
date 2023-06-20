@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetDefaultBillingAddressChange
+ *  <p>Change triggered by the Set Default Billing Address update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetDefaultBillingAddressChange setDefaultBillingAddressChange = SetDefaultBillingAddressChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -40,7 +40,7 @@ public interface SetDefaultBillingAddressChange extends Change {
     String SET_DEFAULT_BILLING_ADDRESS_CHANGE = "SetDefaultBillingAddressChange";
 
     /**
-     *  <p>Update action for <code>setDefaultBillingAddress</code> action.</p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +56,7 @@ public interface SetDefaultBillingAddressChange extends Change {
     public String getType();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public Address getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +65,34 @@ public interface SetDefaultBillingAddressChange extends Change {
     public Address getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setDefaultBillingAddress</code> action.</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public Address getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final Address nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Address previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final Address nextValue);
 
     /**
      * factory method
@@ -110,8 +110,8 @@ public interface SetDefaultBillingAddressChange extends Change {
     public static SetDefaultBillingAddressChange of(final SetDefaultBillingAddressChange template) {
         SetDefaultBillingAddressChangeImpl instance = new SetDefaultBillingAddressChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,9 +127,9 @@ public interface SetDefaultBillingAddressChange extends Change {
         }
         SetDefaultBillingAddressChangeImpl instance = new SetDefaultBillingAddressChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(com.commercetools.history.models.common.Address.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.Address.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Address.deepCopy(template.getNextValue()));
         return instance;
     }
 

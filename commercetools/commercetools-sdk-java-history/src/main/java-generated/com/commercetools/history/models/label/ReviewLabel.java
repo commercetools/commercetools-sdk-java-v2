@@ -45,7 +45,7 @@ public interface ReviewLabel extends Label {
     public String getType();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Review.</p>
      * @return key
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface ReviewLabel extends Label {
     public String getKey();
 
     /**
-     *
+     *  <p>Title of the Review.</p>
      * @return title
      */
     @NotNull
@@ -61,14 +61,14 @@ public interface ReviewLabel extends Label {
     public String getTitle();
 
     /**
-     * set key
+     *  <p>User-defined unique identifier of the Review.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     * set title
+     *  <p>Title of the Review.</p>
      * @param title value to be set
      */
 

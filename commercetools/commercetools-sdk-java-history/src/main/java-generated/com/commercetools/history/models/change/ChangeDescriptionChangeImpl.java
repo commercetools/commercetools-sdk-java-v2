@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeDescriptionChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Description on Channels.</li>
+ *   <li>Change Description on Product Types.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeDescriptionChangeImpl implements ChangeDescriptionChange, ModelBase {
@@ -57,7 +61,7 @@ public class ChangeDescriptionChangeImpl implements ChangeDescriptionChange, Mod
     }
 
     /**
-     *  <p>Shape of the action for <code>changeDescription</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +69,7 @@ public class ChangeDescriptionChangeImpl implements ChangeDescriptionChange, Mod
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +77,7 @@ public class ChangeDescriptionChangeImpl implements ChangeDescriptionChange, Mod
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

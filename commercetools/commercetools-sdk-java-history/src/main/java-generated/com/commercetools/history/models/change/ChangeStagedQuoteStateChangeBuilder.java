@@ -14,8 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeStagedQuoteStateChange changeStagedQuoteStateChange = ChangeStagedQuoteStateChange.builder()
  *             .change("{change}")
- *             .nextValue(StagedQuoteState.IN_PROGRESS)
  *             .previousValue(StagedQuoteState.IN_PROGRESS)
+ *             .nextValue(StagedQuoteState.IN_PROGRESS)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,9 +25,9 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
 
     private String change;
 
-    private com.commercetools.history.models.common.StagedQuoteState nextValue;
-
     private com.commercetools.history.models.common.StagedQuoteState previousValue;
+
+    private com.commercetools.history.models.common.StagedQuoteState nextValue;
 
     /**
      * set the value to the change
@@ -41,19 +41,7 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeStagedQuoteStateChangeBuilder nextValue(
-            final com.commercetools.history.models.common.StagedQuoteState nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -61,6 +49,18 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
     public ChangeStagedQuoteStateChangeBuilder previousValue(
             final com.commercetools.history.models.common.StagedQuoteState previousValue) {
         this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeStagedQuoteStateChangeBuilder nextValue(
+            final com.commercetools.history.models.common.StagedQuoteState nextValue) {
+        this.nextValue = nextValue;
         return this;
     }
 
@@ -74,16 +74,7 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.StagedQuoteState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -92,14 +83,23 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.StagedQuoteState getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds ChangeStagedQuoteStateChange with checking for non-null required values
      * @return ChangeStagedQuoteStateChange
      */
     public ChangeStagedQuoteStateChange build() {
         Objects.requireNonNull(change, ChangeStagedQuoteStateChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, ChangeStagedQuoteStateChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeStagedQuoteStateChange.class + ": previousValue is missing");
-        return new ChangeStagedQuoteStateChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeStagedQuoteStateChange.class + ": nextValue is missing");
+        return new ChangeStagedQuoteStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -107,7 +107,7 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
      * @return ChangeStagedQuoteStateChange
      */
     public ChangeStagedQuoteStateChange buildUnchecked() {
-        return new ChangeStagedQuoteStateChangeImpl(change, nextValue, previousValue);
+        return new ChangeStagedQuoteStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -126,8 +126,8 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
     public static ChangeStagedQuoteStateChangeBuilder of(final ChangeStagedQuoteStateChange template) {
         ChangeStagedQuoteStateChangeBuilder builder = new ChangeStagedQuoteStateChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

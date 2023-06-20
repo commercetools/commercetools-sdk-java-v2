@@ -16,7 +16,12 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetValidFromAndUntilChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Valid From and Until on Cart Discounts.</li>
+ *   <li>Set Valid From and Until on Discount Codes.</li>
+ *   <li>Set Valid From and Until on Product Discounts.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -56,7 +61,7 @@ public interface SetValidFromAndUntilChange extends Change {
     public String getChange();
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -65,7 +70,7 @@ public interface SetValidFromAndUntilChange extends Change {
     public ValidFromAndUntilValue getPreviousValue();
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -81,14 +86,14 @@ public interface SetValidFromAndUntilChange extends Change {
     public void setChange(final String change);
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final ValidFromAndUntilValue previousValue);
 
     /**
-     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

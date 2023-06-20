@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetAssetKeyChange setAssetKeyChange = SetAssetKeyChange.builder()
  *             .change("{change}")
- *             .asset(assetBuilder -> assetBuilder)
- *             .nextValue("{nextValue}")
  *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
+ *             .asset(assetBuilder -> assetBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.AssetChangeValue asset;
+    private String previousValue;
 
     private String nextValue;
 
-    private String previousValue;
+    private com.commercetools.history.models.change_value.AssetChangeValue asset;
 
     /**
-     *  <p>Update action for <code>setAssetKey</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,7 +45,29 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     * set the value to the asset using the builder function
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public SetAssetKeyChangeBuilder previousValue(final String previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetAssetKeyChangeBuilder nextValue(final String nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Information about the updated Asset.</p>
      * @param builder function to build the asset value
      * @return Builder
      */
@@ -57,7 +79,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     * set the value to the asset using the builder function
+     *  <p>Information about the updated Asset.</p>
      * @param builder function to build the asset value
      * @return Builder
      */
@@ -69,7 +91,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     * set the value to the asset
+     *  <p>Information about the updated Asset.</p>
      * @param asset value to be set
      * @return Builder
      */
@@ -80,29 +102,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetAssetKeyChangeBuilder nextValue(final String nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public SetAssetKeyChangeBuilder previousValue(final String previousValue) {
-        this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     *  <p>Update action for <code>setAssetKey</code></p>
+     * value of change}
      * @return change
      */
 
@@ -111,25 +111,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     * value of asset}
-     * @return asset
-     */
-
-    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
-        return this.asset;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public String getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -138,15 +120,33 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public String getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Information about the updated Asset.</p>
+     * @return asset
+     */
+
+    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
+        return this.asset;
+    }
+
+    /**
      * builds SetAssetKeyChange with checking for non-null required values
      * @return SetAssetKeyChange
      */
     public SetAssetKeyChange build() {
         Objects.requireNonNull(change, SetAssetKeyChange.class + ": change is missing");
-        Objects.requireNonNull(asset, SetAssetKeyChange.class + ": asset is missing");
-        Objects.requireNonNull(nextValue, SetAssetKeyChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetAssetKeyChange.class + ": previousValue is missing");
-        return new SetAssetKeyChangeImpl(change, asset, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetAssetKeyChange.class + ": nextValue is missing");
+        Objects.requireNonNull(asset, SetAssetKeyChange.class + ": asset is missing");
+        return new SetAssetKeyChangeImpl(change, previousValue, nextValue, asset);
     }
 
     /**
@@ -154,7 +154,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
      * @return SetAssetKeyChange
      */
     public SetAssetKeyChange buildUnchecked() {
-        return new SetAssetKeyChangeImpl(change, asset, nextValue, previousValue);
+        return new SetAssetKeyChangeImpl(change, previousValue, nextValue, asset);
     }
 
     /**
@@ -173,9 +173,9 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     public static SetAssetKeyChangeBuilder of(final SetAssetKeyChange template) {
         SetAssetKeyChangeBuilder builder = new SetAssetKeyChangeBuilder();
         builder.change = template.getChange();
-        builder.asset = template.getAsset();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.asset = template.getAsset();
         return builder;
     }
 

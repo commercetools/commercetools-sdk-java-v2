@@ -13,6 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StandalonePriceDeletedMessagePayload standalonePriceDeletedMessagePayload = StandalonePriceDeletedMessagePayload.builder()
+ *             .sku("{sku}")
  *             .build()
  * </code></pre>
  * </div>
@@ -20,12 +21,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceDeletedMessagePayloadBuilder implements Builder<StandalonePriceDeletedMessagePayload> {
 
+    private String sku;
+
+    /**
+     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     * @param sku value to be set
+     * @return Builder
+     */
+
+    public StandalonePriceDeletedMessagePayloadBuilder sku(final String sku) {
+        this.sku = sku;
+        return this;
+    }
+
+    /**
+     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     * @return sku
+     */
+
+    public String getSku() {
+        return this.sku;
+    }
+
     /**
      * builds StandalonePriceDeletedMessagePayload with checking for non-null required values
      * @return StandalonePriceDeletedMessagePayload
      */
     public StandalonePriceDeletedMessagePayload build() {
-        return new StandalonePriceDeletedMessagePayloadImpl();
+        Objects.requireNonNull(sku, StandalonePriceDeletedMessagePayload.class + ": sku is missing");
+        return new StandalonePriceDeletedMessagePayloadImpl(sku);
     }
 
     /**
@@ -33,7 +57,7 @@ public class StandalonePriceDeletedMessagePayloadBuilder implements Builder<Stan
      * @return StandalonePriceDeletedMessagePayload
      */
     public StandalonePriceDeletedMessagePayload buildUnchecked() {
-        return new StandalonePriceDeletedMessagePayloadImpl();
+        return new StandalonePriceDeletedMessagePayloadImpl(sku);
     }
 
     /**
@@ -51,6 +75,7 @@ public class StandalonePriceDeletedMessagePayloadBuilder implements Builder<Stan
      */
     public static StandalonePriceDeletedMessagePayloadBuilder of(final StandalonePriceDeletedMessagePayload template) {
         StandalonePriceDeletedMessagePayloadBuilder builder = new StandalonePriceDeletedMessagePayloadBuilder();
+        builder.sku = template.getSku();
         return builder;
     }
 

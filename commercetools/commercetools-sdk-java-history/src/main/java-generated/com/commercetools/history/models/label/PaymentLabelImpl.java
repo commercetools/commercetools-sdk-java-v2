@@ -53,7 +53,7 @@ public class PaymentLabelImpl implements PaymentLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Payment.</p>
      */
 
     public String getKey() {
@@ -61,7 +61,7 @@ public class PaymentLabelImpl implements PaymentLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Money value the Payment intends to receive from the Customer.</p>
      */
 
     public com.commercetools.history.models.common.Money getAmountPlanned() {

@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetInputTipChange
+ *  <p>Change triggered by the Set AttributeDefinition InputTip update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,9 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetInputTipChange setInputTipChange = SetInputTipChange.builder()
  *             .change("{change}")
- *             .attributeName("{attributeName}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +49,7 @@ public interface SetInputTipChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setInputTip</code> on product types</p>
+     *
      * @return change
      */
     @NotNull
@@ -57,24 +57,7 @@ public interface SetInputTipChange extends Change {
     public String getChange();
 
     /**
-     *  <p>The name of the updated attribute.</p>
-     * @return attributeName
-     */
-    @NotNull
-    @JsonProperty("attributeName")
-    public String getAttributeName();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public LocalizedString getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -83,32 +66,49 @@ public interface SetInputTipChange extends Change {
     public LocalizedString getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setInputTip</code> on product types</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public LocalizedString getNextValue();
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>The name of the updated attribute.</p>
-     * @param attributeName value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setAttributeName(final String attributeName);
+    public void setPreviousValue(final LocalizedString previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final LocalizedString nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @param attributeName value to be set
      */
 
-    public void setPreviousValue(final LocalizedString previousValue);
+    public void setAttributeName(final String attributeName);
 
     /**
      * factory method
@@ -126,9 +126,9 @@ public interface SetInputTipChange extends Change {
     public static SetInputTipChange of(final SetInputTipChange template) {
         SetInputTipChangeImpl instance = new SetInputTipChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 
@@ -144,11 +144,11 @@ public interface SetInputTipChange extends Change {
         }
         SetInputTipChangeImpl instance = new SetInputTipChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 

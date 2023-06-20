@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemoveChannelRolesChange
+ *  <p>Change triggered by the Remove Roles update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, ModelBase {
@@ -65,7 +65,7 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getPreviousValue() {
@@ -73,7 +73,7 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getNextValue() {

@@ -45,7 +45,7 @@ public class ShoppingListLineItemValueImpl implements ShoppingListLineItemValue,
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ShoppingListLineItem.</p>
      */
 
     public String getId() {
@@ -53,7 +53,7 @@ public class ShoppingListLineItemValueImpl implements ShoppingListLineItemValue,
     }
 
     /**
-     *
+     *  <p>Name of the corresponding Product the Product Variant belongs to.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
@@ -61,7 +61,7 @@ public class ShoppingListLineItemValueImpl implements ShoppingListLineItemValue,
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to.</p>
      */
 
     public Integer getVariantId() {

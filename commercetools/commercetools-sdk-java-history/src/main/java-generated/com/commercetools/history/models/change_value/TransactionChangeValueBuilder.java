@@ -30,7 +30,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     private String timestamp;
 
     /**
-     * set the value to the id
+     *  <p><code>id</code> of the Transaction.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     }
 
     /**
-     * set the value to the interactionId
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP).</p>
      * @param interactionId value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     }
 
     /**
-     * set the value to the timestamp
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      * @param timestamp value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     }
 
     /**
-     * value of id}
+     *  <p><code>id</code> of the Transaction.</p>
      * @return id
      */
 
@@ -72,7 +72,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     }
 
     /**
-     * value of interactionId}
+     *  <p>Identifier used by the interface that manages the Transaction (usually the PSP).</p>
      * @return interactionId
      */
 
@@ -81,7 +81,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     }
 
     /**
-     * value of timestamp}
+     *  <p>Date and time (UTC) the Transaction took place.</p>
      * @return timestamp
      */
 

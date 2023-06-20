@@ -14,7 +14,27 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetCustomFieldChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set CustomField on Cart Discounts.</li>
+ *   <li>Set CustomField on Categories.</li>
+ *   <li>Set CustomField on Channels.</li>
+ *   <li>Set CustomField on Customers.</li>
+ *   <li>Set CustomField on Customer Groups.</li>
+ *   <li>Set CustomField on Discount Codes.</li>
+ *   <li>Set CustomField on Inventories.</li>
+ *   <li>Set CustomField on Orders.</li>
+ *   <li>Set CustomField on Order Edits.</li>
+ *   <li>Set CustomField on Payments.</li>
+ *   <li>Set CustomField on Product Selections.</li>
+ *   <li>Set CustomField on Quotes.</li>
+ *   <li>Set CustomField on Quote Requests.</li>
+ *   <li>Set CustomField on Reviews.</li>
+ *   <li>Set CustomField on Shopping Lists.</li>
+ *   <li>Set CustomField on Staged Orders.</li>
+ *   <li>Set CustomField on Staged Quotes.</li>
+ *   <li>Set CustomField on Stores.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +58,7 @@ public interface SetCustomFieldChange extends Change {
     String SET_CUSTOM_FIELD_CHANGE = "SetCustomFieldChange";
 
     /**
-     *  <p>Update action for setting a custom field</p>
+     *
      * @return change
      */
     @NotNull
@@ -54,31 +74,7 @@ public interface SetCustomFieldChange extends Change {
     public String getType();
 
     /**
-     *  <p>Custom field name</p>
-     * @return name
-     */
-    @NotNull
-    @JsonProperty("name")
-    public String getName();
-
-    /**
-     *
-     * @return customTypeId
-     */
-    @NotNull
-    @JsonProperty("customTypeId")
-    public String getCustomTypeId();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public Object getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -86,39 +82,63 @@ public interface SetCustomFieldChange extends Change {
     public Object getPreviousValue();
 
     /**
-     *  <p>Update action for setting a custom field</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public Object getNextValue();
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @return name
+     */
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
+     * @return customTypeId
+     */
+    @NotNull
+    @JsonProperty("customTypeId")
+    public String getCustomTypeId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>Custom field name</p>
-     * @param name value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setName(final String name);
+    public void setPreviousValue(final Object previousValue);
 
     /**
-     * set customTypeId
-     * @param customTypeId value to be set
-     */
-
-    public void setCustomTypeId(final String customTypeId);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Object nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the Custom Field.</p>
+     * @param name value to be set
      */
 
-    public void setPreviousValue(final Object previousValue);
+    public void setName(final String name);
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
+     * @param customTypeId value to be set
+     */
+
+    public void setCustomTypeId(final String customTypeId);
 
     /**
      * factory method
@@ -136,10 +156,10 @@ public interface SetCustomFieldChange extends Change {
     public static SetCustomFieldChange of(final SetCustomFieldChange template) {
         SetCustomFieldChangeImpl instance = new SetCustomFieldChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setName(template.getName());
         instance.setCustomTypeId(template.getCustomTypeId());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -155,10 +175,10 @@ public interface SetCustomFieldChange extends Change {
         }
         SetCustomFieldChangeImpl instance = new SetCustomFieldChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setName(template.getName());
         instance.setCustomTypeId(template.getCustomTypeId());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 

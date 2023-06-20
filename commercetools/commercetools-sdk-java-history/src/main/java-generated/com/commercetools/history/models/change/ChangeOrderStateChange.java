@@ -15,7 +15,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeOrderStateChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change OrderState on Orders.</li>
+ *   <li>Change OrderState on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -23,8 +27,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeOrderStateChange changeOrderStateChange = ChangeOrderStateChange.builder()
  *             .change("{change}")
- *             .nextValue(OrderState.OPEN)
  *             .previousValue(OrderState.OPEN)
+ *             .nextValue(OrderState.OPEN)
  *             .build()
  * </code></pre>
  * </div>
@@ -47,7 +51,7 @@ public interface ChangeOrderStateChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeOrderState</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -55,15 +59,7 @@ public interface ChangeOrderStateChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public OrderState getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -71,25 +67,33 @@ public interface ChangeOrderStateChange extends Change {
     public OrderState getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changeOrderState</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public OrderState getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final OrderState nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final OrderState previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final OrderState nextValue);
 
     /**
      * factory method
@@ -107,8 +111,8 @@ public interface ChangeOrderStateChange extends Change {
     public static ChangeOrderStateChange of(final ChangeOrderStateChange template) {
         ChangeOrderStateChangeImpl instance = new ChangeOrderStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -124,8 +128,8 @@ public interface ChangeOrderStateChange extends Change {
         }
         ChangeOrderStateChangeImpl instance = new ChangeOrderStateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 

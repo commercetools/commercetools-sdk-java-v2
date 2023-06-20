@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ParcelDraftBuilder implements Builder<ParcelDraft> {
 
     @Nullable
+    private String key;
+
+    @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
     @Nullable
@@ -34,6 +37,17 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    /**
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public ParcelDraftBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      * set the value to the measurements using the builder function
@@ -230,6 +244,16 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      * value of measurements}
      * @return measurements
      */
@@ -274,7 +298,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
      * @return ParcelDraft
      */
     public ParcelDraft build() {
-        return new ParcelDraftImpl(measurements, trackingData, items, custom);
+        return new ParcelDraftImpl(key, measurements, trackingData, items, custom);
     }
 
     /**
@@ -282,7 +306,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
      * @return ParcelDraft
      */
     public ParcelDraft buildUnchecked() {
-        return new ParcelDraftImpl(measurements, trackingData, items, custom);
+        return new ParcelDraftImpl(key, measurements, trackingData, items, custom);
     }
 
     /**
@@ -300,6 +324,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
      */
     public static ParcelDraftBuilder of(final ParcelDraft template) {
         ParcelDraftBuilder builder = new ParcelDraftBuilder();
+        builder.key = template.getKey();
         builder.measurements = template.getMeasurements();
         builder.trackingData = template.getTrackingData();
         builder.items = template.getItems();

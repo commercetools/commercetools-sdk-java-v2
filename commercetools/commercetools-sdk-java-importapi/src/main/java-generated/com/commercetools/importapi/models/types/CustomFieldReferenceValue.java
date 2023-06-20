@@ -16,6 +16,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface CustomFieldReferenceValue extends JsonEnum {
 
+    CustomFieldReferenceValue ASSOCIATE_ROLE = CustomFieldReferenceValueEnum.ASSOCIATE_ROLE;
+
+    CustomFieldReferenceValue BUSINESS_UNIT = CustomFieldReferenceValueEnum.BUSINESS_UNIT;
+
     CustomFieldReferenceValue CART = CustomFieldReferenceValueEnum.CART;
 
     CustomFieldReferenceValue CATEGORY = CustomFieldReferenceValueEnum.CATEGORY;
@@ -44,6 +48,16 @@ public interface CustomFieldReferenceValue extends JsonEnum {
      * possible values of CustomFieldReferenceValue
      */
     enum CustomFieldReferenceValueEnum implements CustomFieldReferenceValue {
+        /**
+         * associate-role
+         */
+        ASSOCIATE_ROLE("associate-role"),
+
+        /**
+         * business-unit
+         */
+        BUSINESS_UNIT("business-unit"),
+
         /**
          * cart
          */

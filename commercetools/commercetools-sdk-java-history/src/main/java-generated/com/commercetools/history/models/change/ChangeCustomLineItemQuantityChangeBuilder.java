@@ -15,10 +15,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeCustomLineItemQuantityChange changeCustomLineItemQuantityChange = ChangeCustomLineItemQuantityChange.builder()
  *             .change("{change}")
+ *             .previousValue(1)
+ *             .nextValue(1)
  *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .customLineItemId("{customLineItemId}")
- *             .nextValue(1)
- *             .previousValue(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,16 +28,16 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
 
     private String change;
 
+    private Integer previousValue;
+
+    private Integer nextValue;
+
     private com.commercetools.history.models.common.LocalizedString customLineItem;
 
     private String customLineItemId;
 
-    private Integer nextValue;
-
-    private Integer previousValue;
-
     /**
-     *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -48,7 +48,29 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the customLineItem using the builder function
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public ChangeCustomLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeCustomLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the CustomLineItem.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -61,7 +83,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the customLineItem using the builder function
+     *  <p>Name of the CustomLineItem.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -73,7 +95,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the customLineItem
+     *  <p>Name of the CustomLineItem.</p>
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -85,7 +107,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -96,29 +118,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeCustomLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public ChangeCustomLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
-        this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
+     * value of change}
      * @return change
      */
 
@@ -127,34 +127,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     * value of customLineItem}
-     * @return customLineItem
-     */
-
-    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
-        return this.customLineItem;
-    }
-
-    /**
-     * value of customLineItemId}
-     * @return customLineItemId
-     */
-
-    public String getCustomLineItemId() {
-        return this.customLineItemId;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public Integer getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -163,19 +136,46 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public Integer getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the CustomLineItem.</p>
+     * @return customLineItem
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
+        return this.customLineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @return customLineItemId
+     */
+
+    public String getCustomLineItemId() {
+        return this.customLineItemId;
+    }
+
+    /**
      * builds ChangeCustomLineItemQuantityChange with checking for non-null required values
      * @return ChangeCustomLineItemQuantityChange
      */
     public ChangeCustomLineItemQuantityChange build() {
         Objects.requireNonNull(change, ChangeCustomLineItemQuantityChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, ChangeCustomLineItemQuantityChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, ChangeCustomLineItemQuantityChange.class + ": nextValue is missing");
         Objects.requireNonNull(customLineItem,
             ChangeCustomLineItemQuantityChange.class + ": customLineItem is missing");
         Objects.requireNonNull(customLineItemId,
             ChangeCustomLineItemQuantityChange.class + ": customLineItemId is missing");
-        Objects.requireNonNull(nextValue, ChangeCustomLineItemQuantityChange.class + ": nextValue is missing");
-        Objects.requireNonNull(previousValue, ChangeCustomLineItemQuantityChange.class + ": previousValue is missing");
-        return new ChangeCustomLineItemQuantityChangeImpl(change, customLineItem, customLineItemId, nextValue,
-            previousValue);
+        return new ChangeCustomLineItemQuantityChangeImpl(change, previousValue, nextValue, customLineItem,
+            customLineItemId);
     }
 
     /**
@@ -183,8 +183,8 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
      * @return ChangeCustomLineItemQuantityChange
      */
     public ChangeCustomLineItemQuantityChange buildUnchecked() {
-        return new ChangeCustomLineItemQuantityChangeImpl(change, customLineItem, customLineItemId, nextValue,
-            previousValue);
+        return new ChangeCustomLineItemQuantityChangeImpl(change, previousValue, nextValue, customLineItem,
+            customLineItemId);
     }
 
     /**
@@ -203,10 +203,10 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     public static ChangeCustomLineItemQuantityChangeBuilder of(final ChangeCustomLineItemQuantityChange template) {
         ChangeCustomLineItemQuantityChangeBuilder builder = new ChangeCustomLineItemQuantityChangeBuilder();
         builder.change = template.getChange();
+        builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.customLineItem = template.getCustomLineItem();
         builder.customLineItemId = template.getCustomLineItemId();
-        builder.nextValue = template.getNextValue();
-        builder.previousValue = template.getPreviousValue();
         return builder;
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeTransactionStateChange
+ *  <p>Change triggered by the Change TransactionState update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateChange, ModelBase {
@@ -24,24 +24,24 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
 
     private String change;
 
-    private com.commercetools.history.models.change_value.TransactionChangeValue transaction;
+    private com.commercetools.history.models.common.TransactionState previousValue;
 
     private com.commercetools.history.models.common.TransactionState nextValue;
 
-    private com.commercetools.history.models.common.TransactionState previousValue;
+    private com.commercetools.history.models.change_value.TransactionChangeValue transaction;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeTransactionStateChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("transaction") final com.commercetools.history.models.change_value.TransactionChangeValue transaction,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.TransactionState previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TransactionState nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.TransactionState previousValue) {
+            @JsonProperty("transaction") final com.commercetools.history.models.change_value.TransactionChangeValue transaction) {
         this.change = change;
-        this.transaction = transaction;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.transaction = transaction;
         this.type = CHANGE_TRANSACTION_STATE_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
     }
 
     /**
-     *  <p>Update action for <code>changeTransactionState</code> on payments</p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,15 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
-        return this.transaction;
+    public com.commercetools.history.models.common.TransactionState getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.TransactionState getNextValue() {
@@ -85,27 +85,27 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
     }
 
     /**
-     *
+     *  <p>Holds information about the updated Transaction.</p>
      */
 
-    public com.commercetools.history.models.common.TransactionState getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
+        return this.transaction;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setTransaction(final com.commercetools.history.models.change_value.TransactionChangeValue transaction) {
-        this.transaction = transaction;
+    public void setPreviousValue(final com.commercetools.history.models.common.TransactionState previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.TransactionState nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.TransactionState previousValue) {
-        this.previousValue = previousValue;
+    public void setTransaction(final com.commercetools.history.models.change_value.TransactionChangeValue transaction) {
+        this.transaction = transaction;
     }
 
     @Override
@@ -120,9 +120,9 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(transaction, that.transaction)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(transaction, that.transaction)
                 .isEquals();
     }
 
@@ -130,9 +130,9 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(transaction)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(transaction)
                 .toHashCode();
     }
 

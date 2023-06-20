@@ -31,7 +31,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     private java.util.List<com.commercetools.history.models.common.Parcel> parcels;
 
     /**
-     * set values to the items
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * set value to the items
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * add values to the items
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * set the value to the address using the builder function
+     *  <p>Address to which the parcels are delivered.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * set the value to the address using the builder function
+     *  <p>Address to which the parcels are delivered.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -142,7 +142,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * set the value to the address
+     *  <p>Address to which the parcels are delivered.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * set values to the parcels
+     *  <p>Parcels included in the Delivery.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * set value to the parcels
+     *  <p>Parcels included in the Delivery.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * add values to the parcels
+     *  <p>Parcels included in the Delivery.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * add the value to the parcels using the builder function
+     *  <p>Parcels included in the Delivery.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -205,7 +205,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * set the value to the parcels using the builder function
+     *  <p>Parcels included in the Delivery.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -218,7 +218,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * add the value to the parcels using the builder function
+     *  <p>Parcels included in the Delivery.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -229,7 +229,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * set the value to the parcels using the builder function
+     *  <p>Parcels included in the Delivery.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -240,7 +240,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * value of items}
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      * @return items
      */
 
@@ -249,7 +249,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * value of address}
+     *  <p>Address to which the parcels are delivered.</p>
      * @return address
      */
 
@@ -258,7 +258,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     * value of parcels}
+     *  <p>Parcels included in the Delivery.</p>
      * @return parcels
      */
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * RemovePriceChange
+ *  <p>Change triggered by the Remove Embedded Price update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
@@ -24,27 +24,27 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
 
     private String change;
 
-    private String catalogData;
-
-    private String priceId;
-
     private com.commercetools.history.models.common.Price previousValue;
 
     private com.commercetools.history.models.common.Price nextValue;
+
+    private String catalogData;
+
+    private String priceId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemovePriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("catalogData") final String catalogData, @JsonProperty("priceId") final String priceId,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Price previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Price nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.Price nextValue,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("priceId") final String priceId) {
         this.change = change;
-        this.catalogData = catalogData;
-        this.priceId = priceId;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.catalogData = catalogData;
+        this.priceId = priceId;
         this.type = REMOVE_PRICE_CHANGE;
     }
 
@@ -64,7 +64,7 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for removing prices</p>
+     *
      */
 
     public String getChange() {
@@ -72,23 +72,7 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     }
 
     /**
-     *
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     *
-     */
-
-    public String getPriceId() {
-        return this.priceId;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Price getPreviousValue() {
@@ -96,23 +80,34 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Price getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p><code>id</code> of the Embedded Price.</p>
+     */
+
+    public String getPriceId() {
+        return this.priceId;
+    }
+
     public void setChange(final String change) {
         this.change = change;
-    }
-
-    public void setCatalogData(final String catalogData) {
-        this.catalogData = catalogData;
-    }
-
-    public void setPriceId(final String priceId) {
-        this.priceId = priceId;
     }
 
     public void setPreviousValue(final com.commercetools.history.models.common.Price previousValue) {
@@ -121,6 +116,14 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
 
     public void setNextValue(final com.commercetools.history.models.common.Price nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setCatalogData(final String catalogData) {
+        this.catalogData = catalogData;
+    }
+
+    public void setPriceId(final String priceId) {
+        this.priceId = priceId;
     }
 
     @Override
@@ -135,10 +138,10 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(catalogData, that.catalogData)
-                .append(priceId, that.priceId)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(priceId, that.priceId)
                 .isEquals();
     }
 
@@ -146,10 +149,10 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(catalogData)
-                .append(priceId)
                 .append(previousValue)
                 .append(nextValue)
+                .append(catalogData)
+                .append(priceId)
                 .toHashCode();
     }
 

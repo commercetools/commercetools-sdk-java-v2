@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetOrderTotalTaxChange setOrderTotalTaxChange = SetOrderTotalTaxChange.builder()
  *             .change("{change}")
- *             .taxMode(TaxMode.PLATFORM)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .taxMode(TaxMode.PLATFORM)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
 
     private String change;
 
-    private com.commercetools.history.models.common.TaxMode taxMode;
+    private com.commercetools.history.models.common.Money previousValue;
 
     private com.commercetools.history.models.common.Money nextValue;
 
-    private com.commercetools.history.models.common.Money previousValue;
+    private com.commercetools.history.models.common.TaxMode taxMode;
 
     /**
-     *  <p>Update action for <code>setOrderTotalTax</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,53 +45,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
-     * set the value to the taxMode
-     * @param taxMode value to be set
-     * @return Builder
-     */
-
-    public SetOrderTotalTaxChangeBuilder taxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
-        this.taxMode = taxMode;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetOrderTotalTaxChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetOrderTotalTaxChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetOrderTotalTaxChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -103,7 +57,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -115,7 +69,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -127,7 +81,53 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
-     *  <p>Update action for <code>setOrderTotalTax</code></p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetOrderTotalTaxChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetOrderTotalTaxChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetOrderTotalTaxChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p><code>"ExternalAmount"</code></p>
+     * @param taxMode value to be set
+     * @return Builder
+     */
+
+    public SetOrderTotalTaxChangeBuilder taxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
+        this.taxMode = taxMode;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -136,25 +136,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
-     * value of taxMode}
-     * @return taxMode
-     */
-
-    public com.commercetools.history.models.common.TaxMode getTaxMode() {
-        return this.taxMode;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.Money getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -163,15 +145,33 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.Money getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p><code>"ExternalAmount"</code></p>
+     * @return taxMode
+     */
+
+    public com.commercetools.history.models.common.TaxMode getTaxMode() {
+        return this.taxMode;
+    }
+
+    /**
      * builds SetOrderTotalTaxChange with checking for non-null required values
      * @return SetOrderTotalTaxChange
      */
     public SetOrderTotalTaxChange build() {
         Objects.requireNonNull(change, SetOrderTotalTaxChange.class + ": change is missing");
-        Objects.requireNonNull(taxMode, SetOrderTotalTaxChange.class + ": taxMode is missing");
-        Objects.requireNonNull(nextValue, SetOrderTotalTaxChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetOrderTotalTaxChange.class + ": previousValue is missing");
-        return new SetOrderTotalTaxChangeImpl(change, taxMode, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetOrderTotalTaxChange.class + ": nextValue is missing");
+        Objects.requireNonNull(taxMode, SetOrderTotalTaxChange.class + ": taxMode is missing");
+        return new SetOrderTotalTaxChangeImpl(change, previousValue, nextValue, taxMode);
     }
 
     /**
@@ -179,7 +179,7 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
      * @return SetOrderTotalTaxChange
      */
     public SetOrderTotalTaxChange buildUnchecked() {
-        return new SetOrderTotalTaxChangeImpl(change, taxMode, nextValue, previousValue);
+        return new SetOrderTotalTaxChangeImpl(change, previousValue, nextValue, taxMode);
     }
 
     /**
@@ -198,9 +198,9 @@ public class SetOrderTotalTaxChangeBuilder implements Builder<SetOrderTotalTaxCh
     public static SetOrderTotalTaxChangeBuilder of(final SetOrderTotalTaxChange template) {
         SetOrderTotalTaxChangeBuilder builder = new SetOrderTotalTaxChangeBuilder();
         builder.change = template.getChange();
-        builder.taxMode = template.getTaxMode();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.taxMode = template.getTaxMode();
         return builder;
     }
 

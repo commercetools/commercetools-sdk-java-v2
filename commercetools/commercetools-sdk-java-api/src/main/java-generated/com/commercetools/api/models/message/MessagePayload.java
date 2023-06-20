@@ -180,6 +180,12 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadImpl.class, name = StandalonePriceExternalDiscountSetMessagePayload.STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceKeySetMessagePayloadImpl.class, name = StandalonePriceKeySetMessagePayload.STANDALONE_PRICE_KEY_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadImpl.class, name = StandalonePriceStagedChangesAppliedMessagePayload.STANDALONE_PRICE_STAGED_CHANGES_APPLIED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTierAddedMessagePayloadImpl.class, name = StandalonePriceTierAddedMessagePayload.STANDALONE_PRICE_TIER_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTierRemovedMessagePayloadImpl.class, name = StandalonePriceTierRemovedMessagePayload.STANDALONE_PRICE_TIER_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTiersSetMessagePayloadImpl.class, name = StandalonePriceTiersSetMessagePayload.STANDALONE_PRICE_TIERS_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessagePayloadImpl.class, name = StandalonePriceValidFromAndUntilSetMessagePayload.STANDALONE_PRICE_VALID_FROM_AND_UNTIL_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceValidFromSetMessagePayloadImpl.class, name = StandalonePriceValidFromSetMessagePayload.STANDALONE_PRICE_VALID_FROM_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceValidUntilSetMessagePayloadImpl.class, name = StandalonePriceValidUntilSetMessagePayload.STANDALONE_PRICE_VALID_UNTIL_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadImpl.class, name = StandalonePriceValueChangedMessagePayload.STANDALONE_PRICE_VALUE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreCountriesChangedMessagePayloadImpl.class, name = StoreCountriesChangedMessagePayload.STORE_COUNTRIES_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StoreCreatedMessagePayloadImpl.class, name = StoreCreatedMessagePayload.STORE_CREATED),
@@ -659,6 +665,30 @@ public interface MessagePayload {
         if (template instanceof com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayload) {
             return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayload.deepCopy(
                 (com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceTierAddedMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceTierAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StandalonePriceTierAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceTierRemovedMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceTierRemovedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StandalonePriceTierRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceTiersSetMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceTiersSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StandalonePriceTiersSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceValidFromSetMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceValidFromSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.StandalonePriceValidFromSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceValidUntilSetMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceValidUntilSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.StandalonePriceValidUntilSetMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayload) {
             return com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayload.deepCopy(
@@ -1922,6 +1952,54 @@ public interface MessagePayload {
      */
     public static com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder standalonePriceStagedChangesAppliedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceTierAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StandalonePriceTierAddedMessagePayloadBuilder standalonePriceTierAddedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceTierAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceTierRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StandalonePriceTierRemovedMessagePayloadBuilder standalonePriceTierRemovedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceTierRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceTiersSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StandalonePriceTiersSetMessagePayloadBuilder standalonePriceTiersSetBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceTiersSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceValidFromAndUntilSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessagePayloadBuilder standalonePriceValidFromAndUntilSetBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceValidFromSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StandalonePriceValidFromSetMessagePayloadBuilder standalonePriceValidFromSetBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceValidFromSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceValidUntilSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StandalonePriceValidUntilSetMessagePayloadBuilder standalonePriceValidUntilSetBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceValidUntilSetMessagePayloadBuilder.of();
     }
 
     /**

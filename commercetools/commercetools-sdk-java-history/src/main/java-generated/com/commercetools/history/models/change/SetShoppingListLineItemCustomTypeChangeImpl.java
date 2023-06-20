@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetShoppingListLineItemCustomTypeChange
+ *  <p>Change triggered by the Set ShoppingListLineItem Custom Type update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingListLineItemCustomTypeChange, ModelBase {
@@ -24,24 +24,24 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
 
     private String change;
 
-    private com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem;
+    private com.commercetools.history.models.common.CustomFields previousValue;
 
     private com.commercetools.history.models.common.CustomFields nextValue;
 
-    private com.commercetools.history.models.common.CustomFields previousValue;
+    private com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetShoppingListLineItemCustomTypeChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("lineItem") final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomFields nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.CustomFields previousValue) {
+            @JsonProperty("lineItem") final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
         this.change = change;
-        this.lineItem = lineItem;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.lineItem = lineItem;
         this.type = SET_SHOPPING_LIST_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
     }
 
     /**
-     *  <p>Update action for <code>setLineItemCustomType</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,15 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
-        return this.lineItem;
+    public com.commercetools.history.models.common.CustomFields getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.CustomFields getNextValue() {
@@ -85,27 +85,27 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
     }
 
     /**
-     *
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
      */
 
-    public com.commercetools.history.models.common.CustomFields getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
+        return this.lineItem;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setLineItem(final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
-        this.lineItem = lineItem;
+    public void setPreviousValue(final com.commercetools.history.models.common.CustomFields previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.CustomFields nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.CustomFields previousValue) {
-        this.previousValue = previousValue;
+    public void setLineItem(final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
+        this.lineItem = lineItem;
     }
 
     @Override
@@ -120,9 +120,9 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(lineItem, that.lineItem)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(lineItem, that.lineItem)
                 .isEquals();
     }
 
@@ -130,9 +130,9 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(lineItem)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(lineItem)
                 .toHashCode();
     }
 

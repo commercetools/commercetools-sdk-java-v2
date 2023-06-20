@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetMethodInfoInterfaceChange
+ *  <p>Change triggered by the Set MethodInfoInterface update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetMethodInfoInterfaceChangeImpl implements SetMethodInfoInterfaceChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetMethodInfoInterfaceChangeImpl implements SetMethodInfoInterfaceC
     }
 
     /**
-     *  <p>Shape of the action for <code>setMethodInfoInterface</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetMethodInfoInterfaceChangeImpl implements SetMethodInfoInterfaceC
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetMethodInfoInterfaceChangeImpl implements SetMethodInfoInterfaceC
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

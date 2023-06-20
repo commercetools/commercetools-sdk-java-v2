@@ -14,8 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeOrderStateChange changeOrderStateChange = ChangeOrderStateChange.builder()
  *             .change("{change}")
- *             .nextValue(OrderState.OPEN)
  *             .previousValue(OrderState.OPEN)
+ *             .nextValue(OrderState.OPEN)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,12 +25,12 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
 
     private String change;
 
-    private com.commercetools.history.models.common.OrderState nextValue;
-
     private com.commercetools.history.models.common.OrderState previousValue;
 
+    private com.commercetools.history.models.common.OrderState nextValue;
+
     /**
-     *  <p>Update action for <code>changeOrderState</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,18 +41,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeOrderStateChangeBuilder nextValue(final com.commercetools.history.models.common.OrderState nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -64,7 +53,18 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     }
 
     /**
-     *  <p>Update action for <code>changeOrderState</code></p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeOrderStateChangeBuilder nextValue(final com.commercetools.history.models.common.OrderState nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -73,16 +73,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.OrderState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -91,14 +82,23 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.OrderState getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds ChangeOrderStateChange with checking for non-null required values
      * @return ChangeOrderStateChange
      */
     public ChangeOrderStateChange build() {
         Objects.requireNonNull(change, ChangeOrderStateChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, ChangeOrderStateChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeOrderStateChange.class + ": previousValue is missing");
-        return new ChangeOrderStateChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeOrderStateChange.class + ": nextValue is missing");
+        return new ChangeOrderStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -106,7 +106,7 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
      * @return ChangeOrderStateChange
      */
     public ChangeOrderStateChange buildUnchecked() {
-        return new ChangeOrderStateChangeImpl(change, nextValue, previousValue);
+        return new ChangeOrderStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -125,8 +125,8 @@ public class ChangeOrderStateChangeBuilder implements Builder<ChangeOrderStateCh
     public static ChangeOrderStateChangeBuilder of(final ChangeOrderStateChange template) {
         ChangeOrderStateChangeBuilder builder = new ChangeOrderStateChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

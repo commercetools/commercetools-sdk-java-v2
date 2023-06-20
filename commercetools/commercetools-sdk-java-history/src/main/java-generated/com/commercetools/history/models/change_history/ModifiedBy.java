@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Information about the user or the API client who performed the change. This is a variant of LastModifiedBy.</p>
+ *  <p>Information about the user or API Client who performed the change. This is a variant of LastModifiedBy.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ModifiedBy {
 
     /**
-     *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+     *  <p>ID of the Merchant Center user who made the change.</p>
+     *  <p>Present only if the change was made in the Merchant Center.</p>
      * @return id
      */
     @NotNull
@@ -43,7 +44,11 @@ public interface ModifiedBy {
     public String getId();
 
     /**
-     *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+     *  <p>Indicates who performed the change.</p>
+     *  <ul>
+     *   <li>If the change was made by a user, the value is <code>"user"</code>.</li>
+     *   <li>If the change was made by an API Client with or without an external user ID, the value is <code>"external-user"</code>.</li>
+     *  </ul>
      * @return type
      */
     @NotNull
@@ -51,7 +56,8 @@ public interface ModifiedBy {
     public String getType();
 
     /**
-     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     *  <p>Reference to the Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
      * @return customer
      */
     @Valid
@@ -59,7 +65,7 @@ public interface ModifiedBy {
     public Reference getCustomer();
 
     /**
-     *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+     *  <p>Present only if the change was made using a token from an anonymous session.</p>
      * @return anonymousId
      */
 
@@ -67,7 +73,8 @@ public interface ModifiedBy {
     public String getAnonymousId();
 
     /**
-     *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+     *  <p>ID of the API Client that made the change.</p>
+     *  <p>Present only if the change was made using an API Client.</p>
      * @return clientId
      */
 
@@ -75,7 +82,7 @@ public interface ModifiedBy {
     public String getClientId();
 
     /**
-     *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+     *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
      * @return isPlatformClient
      */
     @NotNull
@@ -83,42 +90,49 @@ public interface ModifiedBy {
     public Boolean getIsPlatformClient();
 
     /**
-     *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+     *  <p>ID of the Merchant Center user who made the change.</p>
+     *  <p>Present only if the change was made in the Merchant Center.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+     *  <p>Indicates who performed the change.</p>
+     *  <ul>
+     *   <li>If the change was made by a user, the value is <code>"user"</code>.</li>
+     *   <li>If the change was made by an API Client with or without an external user ID, the value is <code>"external-user"</code>.</li>
+     *  </ul>
      * @param type value to be set
      */
 
     public void setType(final String type);
 
     /**
-     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     *  <p>Reference to the Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final Reference customer);
 
     /**
-     *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+     *  <p>Present only if the change was made using a token from an anonymous session.</p>
      * @param anonymousId value to be set
      */
 
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+     *  <p>ID of the API Client that made the change.</p>
+     *  <p>Present only if the change was made using an API Client.</p>
      * @param clientId value to be set
      */
 
     public void setClientId(final String clientId);
 
     /**
-     *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+     *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
      * @param isPlatformClient value to be set
      */
 

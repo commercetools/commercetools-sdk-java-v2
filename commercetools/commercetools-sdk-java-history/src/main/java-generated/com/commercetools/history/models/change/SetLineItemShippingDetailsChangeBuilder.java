@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemShippingDetailsChange setLineItemShippingDetailsChange = SetLineItemShippingDetailsChange.builder()
  *             .change("{change}")
- *             .lineItemId("{lineItemId}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
 
     private String change;
 
-    private String lineItemId;
+    private com.commercetools.history.models.common.ItemShippingDetails previousValue;
 
     private com.commercetools.history.models.common.ItemShippingDetails nextValue;
 
-    private com.commercetools.history.models.common.ItemShippingDetails previousValue;
+    private String lineItemId;
 
     /**
-     *  <p>Update action for <code>setLineItemShippingDetails</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,54 +45,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     * set the value to the lineItemId
-     * @param lineItemId value to be set
-     * @return Builder
-     */
-
-    public SetLineItemShippingDetailsChangeBuilder lineItemId(final String lineItemId) {
-        this.lineItemId = lineItemId;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetLineItemShippingDetailsChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetailsBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ItemShippingDetailsBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetLineItemShippingDetailsChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetails> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.ItemShippingDetailsBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetLineItemShippingDetailsChangeBuilder nextValue(
-            final com.commercetools.history.models.common.ItemShippingDetails nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -105,7 +58,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -117,7 +70,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -129,7 +82,54 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     *  <p>Update action for <code>setLineItemShippingDetails</code></p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetLineItemShippingDetailsChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetailsBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ItemShippingDetailsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetLineItemShippingDetailsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetails> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ItemShippingDetailsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetLineItemShippingDetailsChangeBuilder nextValue(
+            final com.commercetools.history.models.common.ItemShippingDetails nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated LineItem.</p>
+     * @param lineItemId value to be set
+     * @return Builder
+     */
+
+    public SetLineItemShippingDetailsChangeBuilder lineItemId(final String lineItemId) {
+        this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -138,25 +138,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
-     * value of lineItemId}
-     * @return lineItemId
-     */
-
-    public String getLineItemId() {
-        return this.lineItemId;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.ItemShippingDetails getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -165,15 +147,33 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.ItemShippingDetails getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated LineItem.</p>
+     * @return lineItemId
+     */
+
+    public String getLineItemId() {
+        return this.lineItemId;
+    }
+
+    /**
      * builds SetLineItemShippingDetailsChange with checking for non-null required values
      * @return SetLineItemShippingDetailsChange
      */
     public SetLineItemShippingDetailsChange build() {
         Objects.requireNonNull(change, SetLineItemShippingDetailsChange.class + ": change is missing");
-        Objects.requireNonNull(lineItemId, SetLineItemShippingDetailsChange.class + ": lineItemId is missing");
-        Objects.requireNonNull(nextValue, SetLineItemShippingDetailsChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetLineItemShippingDetailsChange.class + ": previousValue is missing");
-        return new SetLineItemShippingDetailsChangeImpl(change, lineItemId, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetLineItemShippingDetailsChange.class + ": nextValue is missing");
+        Objects.requireNonNull(lineItemId, SetLineItemShippingDetailsChange.class + ": lineItemId is missing");
+        return new SetLineItemShippingDetailsChangeImpl(change, previousValue, nextValue, lineItemId);
     }
 
     /**
@@ -181,7 +181,7 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
      * @return SetLineItemShippingDetailsChange
      */
     public SetLineItemShippingDetailsChange buildUnchecked() {
-        return new SetLineItemShippingDetailsChangeImpl(change, lineItemId, nextValue, previousValue);
+        return new SetLineItemShippingDetailsChangeImpl(change, previousValue, nextValue, lineItemId);
     }
 
     /**
@@ -200,9 +200,9 @@ public class SetLineItemShippingDetailsChangeBuilder implements Builder<SetLineI
     public static SetLineItemShippingDetailsChangeBuilder of(final SetLineItemShippingDetailsChange template) {
         SetLineItemShippingDetailsChangeBuilder builder = new SetLineItemShippingDetailsChangeBuilder();
         builder.change = template.getChange();
-        builder.lineItemId = template.getLineItemId();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.lineItemId = template.getLineItemId();
         return builder;
     }
 

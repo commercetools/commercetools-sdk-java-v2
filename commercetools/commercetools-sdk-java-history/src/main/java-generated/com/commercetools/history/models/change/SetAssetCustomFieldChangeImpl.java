@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetAssetCustomFieldChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Asset CustomField on Categories.</li>
+ *   <li>Set Asset CustomField on Products.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange, ModelBase {
@@ -24,31 +28,31 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
 
     private String change;
 
+    private java.lang.Object previousValue;
+
+    private java.lang.Object nextValue;
+
     private String name;
 
     private String customTypeId;
 
     private com.commercetools.history.models.change_value.AssetChangeValue asset;
 
-    private java.lang.Object nextValue;
-
-    private java.lang.Object previousValue;
-
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SetAssetCustomFieldChangeImpl(@JsonProperty("change") final String change, @JsonProperty("name") final String name,
+    SetAssetCustomFieldChangeImpl(@JsonProperty("change") final String change,
+            @JsonProperty("previousValue") final java.lang.Object previousValue,
+            @JsonProperty("nextValue") final java.lang.Object nextValue, @JsonProperty("name") final String name,
             @JsonProperty("customTypeId") final String customTypeId,
-            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
-            @JsonProperty("nextValue") final java.lang.Object nextValue,
-            @JsonProperty("previousValue") final java.lang.Object previousValue) {
+            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.name = name;
         this.customTypeId = customTypeId;
         this.asset = asset;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = SET_ASSET_CUSTOM_FIELD_CHANGE;
     }
 
@@ -68,7 +72,7 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     *  <p>Update action for <code>setAssetCustomField</code></p>
+     *
      */
 
     public String getChange() {
@@ -76,31 +80,15 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public String getName() {
-        return this.name;
+    public java.lang.Object getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getCustomTypeId() {
-        return this.customTypeId;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
-        return this.asset;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.lang.Object getNextValue() {
@@ -108,15 +96,39 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     }
 
     /**
-     *
+     *  <p>Name of the Custom Field.</p>
      */
 
-    public java.lang.Object getPreviousValue() {
-        return this.previousValue;
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
+    }
+
+    /**
+     *  <p>Information about the updated Asset.</p>
+     */
+
+    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
+        return this.asset;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final java.lang.Object previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setName(final String name) {
@@ -131,14 +143,6 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
         this.asset = asset;
     }
 
-    public void setNextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final java.lang.Object previousValue) {
-        this.previousValue = previousValue;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -151,11 +155,11 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(name, that.name)
                 .append(customTypeId, that.customTypeId)
                 .append(asset, that.asset)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -163,11 +167,11 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(name)
                 .append(customTypeId)
                 .append(asset)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

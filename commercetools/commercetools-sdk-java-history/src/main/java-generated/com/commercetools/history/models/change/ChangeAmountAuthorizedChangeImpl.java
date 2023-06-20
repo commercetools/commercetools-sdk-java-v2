@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeAmountAuthorizedChange
+ *  <p>Change triggered automatically due to a user-initiated change.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedChange, ModelBase {
@@ -57,7 +57,7 @@ public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedC
     }
 
     /**
-     *  <p>Internal Update action for <code>changeAmountAuthorized</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedC
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Money getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedC
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Money getNextValue() {

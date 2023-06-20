@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * Change
+ *  <p>Difference between the previous and next version of a resource represented by <code>previousValue</code> (omitted, for example, on creations) and <code>nextValue</code> of the associated change. A Change can also contain extra fields that provide further information.</p>
+ *  <p>They are not identical to the actual update actions sent.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeImpl implements Change, ModelBase {
@@ -40,7 +41,7 @@ public class ChangeImpl implements Change, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique discriminator value to reliably deserialize the data type.</p>
      */
 
     public String getType() {
@@ -48,7 +49,8 @@ public class ChangeImpl implements Change, ModelBase {
     }
 
     /**
-     *
+     *  <p>Type of change on a resource that is similar to the update action it relates to, where possible. It is not a unique identifier for the data structure, for example, the <code>setDescription</code> change can occur with a localized and non-localized representation.</p>
+     *  <p>Records can be filtered by this value using the <code>changes</code> query parameter.</p>
      */
 
     public String getChange() {

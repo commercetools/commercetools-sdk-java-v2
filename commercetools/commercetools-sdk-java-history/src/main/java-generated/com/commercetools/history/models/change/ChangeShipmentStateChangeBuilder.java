@@ -14,8 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeShipmentStateChange changeShipmentStateChange = ChangeShipmentStateChange.builder()
  *             .change("{change}")
- *             .nextValue(ShipmentState.SHIPPED)
  *             .previousValue(ShipmentState.SHIPPED)
+ *             .nextValue(ShipmentState.SHIPPED)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,12 +25,12 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
 
     private String change;
 
-    private com.commercetools.history.models.common.ShipmentState nextValue;
-
     private com.commercetools.history.models.common.ShipmentState previousValue;
 
+    private com.commercetools.history.models.common.ShipmentState nextValue;
+
     /**
-     *  <p>Update action for <code>changeShipmentState</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,19 +41,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeShipmentStateChangeBuilder nextValue(
-            final com.commercetools.history.models.common.ShipmentState nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -65,7 +53,19 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     }
 
     /**
-     *  <p>Update action for <code>changeShipmentState</code></p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeShipmentStateChangeBuilder nextValue(
+            final com.commercetools.history.models.common.ShipmentState nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -74,16 +74,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.ShipmentState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -92,14 +83,23 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.ShipmentState getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds ChangeShipmentStateChange with checking for non-null required values
      * @return ChangeShipmentStateChange
      */
     public ChangeShipmentStateChange build() {
         Objects.requireNonNull(change, ChangeShipmentStateChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, ChangeShipmentStateChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeShipmentStateChange.class + ": previousValue is missing");
-        return new ChangeShipmentStateChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeShipmentStateChange.class + ": nextValue is missing");
+        return new ChangeShipmentStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -107,7 +107,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
      * @return ChangeShipmentStateChange
      */
     public ChangeShipmentStateChange buildUnchecked() {
-        return new ChangeShipmentStateChangeImpl(change, nextValue, previousValue);
+        return new ChangeShipmentStateChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -126,8 +126,8 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     public static ChangeShipmentStateChangeBuilder of(final ChangeShipmentStateChange template) {
         ChangeShipmentStateChangeBuilder builder = new ChangeShipmentStateChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

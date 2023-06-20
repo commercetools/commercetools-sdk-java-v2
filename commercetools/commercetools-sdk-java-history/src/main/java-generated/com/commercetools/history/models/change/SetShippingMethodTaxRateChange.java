@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetShippingMethodTaxRateChange
+ *  <p>Change triggered by the Set ShippingMethod TaxRate update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,9 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetShippingMethodTaxRateChange setShippingMethodTaxRateChange = SetShippingMethodTaxRateChange.builder()
  *             .change("{change}")
- *             .taxMode(TaxMode.PLATFORM)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .taxMode(TaxMode.PLATFORM)
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +50,7 @@ public interface SetShippingMethodTaxRateChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,24 +58,7 @@ public interface SetShippingMethodTaxRateChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return taxMode
-     */
-    @NotNull
-    @JsonProperty("taxMode")
-    public TaxMode getTaxMode();
-
-    /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public TaxRate getNextValue();
-
-    /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -84,32 +67,49 @@ public interface SetShippingMethodTaxRateChange extends Change {
     public TaxRate getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setShippingMethodTaxRate</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public TaxRate getNextValue();
+
+    /**
+     *  <p><code>"External"</code></p>
+     * @return taxMode
+     */
+    @NotNull
+    @JsonProperty("taxMode")
+    public TaxMode getTaxMode();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set taxMode
-     * @param taxMode value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setTaxMode(final TaxMode taxMode);
+    public void setPreviousValue(final TaxRate previousValue);
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final TaxRate nextValue);
 
     /**
-     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
-     * @param previousValue value to be set
+     *  <p><code>"External"</code></p>
+     * @param taxMode value to be set
      */
 
-    public void setPreviousValue(final TaxRate previousValue);
+    public void setTaxMode(final TaxMode taxMode);
 
     /**
      * factory method
@@ -127,9 +127,9 @@ public interface SetShippingMethodTaxRateChange extends Change {
     public static SetShippingMethodTaxRateChange of(final SetShippingMethodTaxRateChange template) {
         SetShippingMethodTaxRateChangeImpl instance = new SetShippingMethodTaxRateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTaxMode(template.getTaxMode());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setTaxMode(template.getTaxMode());
         return instance;
     }
 
@@ -145,10 +145,10 @@ public interface SetShippingMethodTaxRateChange extends Change {
         }
         SetShippingMethodTaxRateChangeImpl instance = new SetShippingMethodTaxRateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTaxMode(template.getTaxMode());
-        instance.setNextValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.TaxRate.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getNextValue()));
+        instance.setTaxMode(template.getTaxMode());
         return instance;
     }
 

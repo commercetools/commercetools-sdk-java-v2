@@ -49,7 +49,7 @@ public class LocalizedLabelImpl implements LocalizedLabel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Changed value.</p>
      */
 
     public com.commercetools.history.models.common.LocalizedString getValue() {

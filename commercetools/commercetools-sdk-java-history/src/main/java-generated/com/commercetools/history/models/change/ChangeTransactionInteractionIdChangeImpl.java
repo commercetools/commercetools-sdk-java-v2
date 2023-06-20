@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeTransactionInteractionIdChange
+ *  <p>Change triggered by the Change TransactionInteractionId update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransactionInteractionIdChange, ModelBase {
@@ -24,24 +24,24 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
 
     private String change;
 
-    private com.commercetools.history.models.change_value.TransactionChangeValue transaction;
+    private String previousValue;
 
     private String nextValue;
 
-    private String previousValue;
+    private com.commercetools.history.models.change_value.TransactionChangeValue transaction;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeTransactionInteractionIdChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("transaction") final com.commercetools.history.models.change_value.TransactionChangeValue transaction,
+            @JsonProperty("previousValue") final String previousValue,
             @JsonProperty("nextValue") final String nextValue,
-            @JsonProperty("previousValue") final String previousValue) {
+            @JsonProperty("transaction") final com.commercetools.history.models.change_value.TransactionChangeValue transaction) {
         this.change = change;
-        this.transaction = transaction;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.transaction = transaction;
         this.type = CHANGE_TRANSACTION_INTERACTION_ID_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
     }
 
     /**
-     *  <p>Update action for <code>changeTransactionInteractionId</code> on payments</p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,15 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
-        return this.transaction;
+    public String getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getNextValue() {
@@ -85,27 +85,27 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
     }
 
     /**
-     *
+     *  <p>Holds information about the updated Transaction.</p>
      */
 
-    public String getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
+        return this.transaction;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setTransaction(final com.commercetools.history.models.change_value.TransactionChangeValue transaction) {
-        this.transaction = transaction;
+    public void setPreviousValue(final String previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final String nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final String previousValue) {
-        this.previousValue = previousValue;
+    public void setTransaction(final com.commercetools.history.models.change_value.TransactionChangeValue transaction) {
+        this.transaction = transaction;
     }
 
     @Override
@@ -120,9 +120,9 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(transaction, that.transaction)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(transaction, that.transaction)
                 .isEquals();
     }
 
@@ -130,9 +130,9 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(transaction)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(transaction)
                 .toHashCode();
     }
 

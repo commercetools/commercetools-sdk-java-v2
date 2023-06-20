@@ -24,24 +24,24 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
 
     private String change;
 
-    private com.commercetools.history.models.common.TaxMode taxMode;
+    private com.commercetools.history.models.common.TaxedItemPrice previousValue;
 
     private com.commercetools.history.models.common.TaxedItemPrice nextValue;
 
-    private com.commercetools.history.models.common.TaxedItemPrice previousValue;
+    private com.commercetools.history.models.common.TaxMode taxMode;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetOrderTaxedPriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedItemPrice previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedItemPrice nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxedItemPrice previousValue) {
+            @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode) {
         this.change = change;
-        this.taxMode = taxMode;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.taxMode = taxMode;
         this.type = SET_ORDER_TAXED_PRICE_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
     }
 
     /**
-     *  <p>Update action for <code>setOrderTaxedPrice</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,15 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.TaxMode getTaxMode() {
-        return this.taxMode;
+    public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.TaxedItemPrice getNextValue() {
@@ -88,24 +88,24 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
      *
      */
 
-    public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.common.TaxMode getTaxMode() {
+        return this.taxMode;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setTaxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
-        this.taxMode = taxMode;
+    public void setPreviousValue(final com.commercetools.history.models.common.TaxedItemPrice previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.TaxedItemPrice nextValue) {
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.TaxedItemPrice previousValue) {
-        this.previousValue = previousValue;
+    public void setTaxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
+        this.taxMode = taxMode;
     }
 
     @Override
@@ -120,9 +120,9 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(taxMode, that.taxMode)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(taxMode, that.taxMode)
                 .isEquals();
     }
 
@@ -130,9 +130,9 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(taxMode)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(taxMode)
                 .toHashCode();
     }
 

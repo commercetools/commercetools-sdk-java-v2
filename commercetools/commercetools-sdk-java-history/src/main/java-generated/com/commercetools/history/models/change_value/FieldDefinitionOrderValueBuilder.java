@@ -28,7 +28,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     private com.commercetools.history.models.common.LocalizedString label;
 
     /**
-     * set the value to the name
+     *  <p>Name of the FieldDefinition.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
-     * set the value to the label using the builder function
+     *  <p>Descriptive label of the field.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
-     * set the value to the label using the builder function
+     *  <p>Descriptive label of the field.</p>
      * @param builder function to build the label value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
-     * set the value to the label
+     *  <p>Descriptive label of the field.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
-     * value of name}
+     *  <p>Name of the FieldDefinition.</p>
      * @return name
      */
 
@@ -83,7 +83,7 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
-     * value of label}
+     *  <p>Descriptive label of the field.</p>
      * @return label
      */
 

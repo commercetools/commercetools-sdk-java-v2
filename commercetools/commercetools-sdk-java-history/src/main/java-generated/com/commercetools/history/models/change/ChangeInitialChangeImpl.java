@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeInitialChange
+ *  <p>Change triggered by the Change initial State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeInitialChangeImpl implements ChangeInitialChange, ModelBase {
@@ -57,7 +57,7 @@ public class ChangeInitialChangeImpl implements ChangeInitialChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>changeInitial</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class ChangeInitialChangeImpl implements ChangeInitialChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public Boolean getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeInitialChangeImpl implements ChangeInitialChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public Boolean getNextValue() {

@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddDeliveryChange addDeliveryChange = AddDeliveryChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.DeliveryChangeValue nextValue;
-
     private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
 
+    private com.commercetools.history.models.change_value.DeliveryChangeValue nextValue;
+
     /**
-     *  <p>Update action for <code>addDelivery</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,44 +42,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public AddDeliveryChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValueBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.change_value.DeliveryChangeValueBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public AddDeliveryChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValue> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.change_value.DeliveryChangeValueBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public AddDeliveryChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -93,7 +56,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -106,7 +69,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -118,7 +81,44 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
-     *  <p>Update action for <code>addDelivery</code></p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddDeliveryChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.DeliveryChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddDeliveryChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValue> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.DeliveryChangeValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public AddDeliveryChangeBuilder nextValue(
+            final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -127,16 +127,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.change_value.DeliveryChangeValue getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -145,14 +136,23 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.change_value.DeliveryChangeValue getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds AddDeliveryChange with checking for non-null required values
      * @return AddDeliveryChange
      */
     public AddDeliveryChange build() {
         Objects.requireNonNull(change, AddDeliveryChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, AddDeliveryChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, AddDeliveryChange.class + ": previousValue is missing");
-        return new AddDeliveryChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, AddDeliveryChange.class + ": nextValue is missing");
+        return new AddDeliveryChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -160,7 +160,7 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
      * @return AddDeliveryChange
      */
     public AddDeliveryChange buildUnchecked() {
-        return new AddDeliveryChangeImpl(change, nextValue, previousValue);
+        return new AddDeliveryChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -179,8 +179,8 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     public static AddDeliveryChangeBuilder of(final AddDeliveryChange template) {
         AddDeliveryChangeBuilder builder = new AddDeliveryChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

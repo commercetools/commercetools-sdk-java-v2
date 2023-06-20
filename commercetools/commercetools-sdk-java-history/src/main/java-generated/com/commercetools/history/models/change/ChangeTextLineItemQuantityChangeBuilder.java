@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeTextLineItemQuantityChange changeTextLineItemQuantityChange = ChangeTextLineItemQuantityChange.builder()
  *             .change("{change}")
- *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
  *             .previousValue(1)
  *             .nextValue(1)
+ *             .textLineItem(textLineItemBuilder -> textLineItemBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,11 +27,11 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
 
     private String change;
 
-    private com.commercetools.history.models.change_value.TextLineItemValue textLineItem;
-
     private Integer previousValue;
 
     private Integer nextValue;
+
+    private com.commercetools.history.models.change_value.TextLineItemValue textLineItem;
 
     /**
      * set the value to the change
@@ -45,7 +45,29 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     }
 
     /**
-     * set the value to the textLineItem using the builder function
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public ChangeTextLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeTextLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Holds information about the updated Text Line Item.</p>
      * @param builder function to build the textLineItem value
      * @return Builder
      */
@@ -58,7 +80,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     }
 
     /**
-     * set the value to the textLineItem using the builder function
+     *  <p>Holds information about the updated Text Line Item.</p>
      * @param builder function to build the textLineItem value
      * @return Builder
      */
@@ -70,7 +92,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     }
 
     /**
-     * set the value to the textLineItem
+     *  <p>Holds information about the updated Text Line Item.</p>
      * @param textLineItem value to be set
      * @return Builder
      */
@@ -78,28 +100,6 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     public ChangeTextLineItemQuantityChangeBuilder textLineItem(
             final com.commercetools.history.models.change_value.TextLineItemValue textLineItem) {
         this.textLineItem = textLineItem;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public ChangeTextLineItemQuantityChangeBuilder previousValue(final Integer previousValue) {
-        this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeTextLineItemQuantityChangeBuilder nextValue(final Integer nextValue) {
-        this.nextValue = nextValue;
         return this;
     }
 
@@ -113,16 +113,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     }
 
     /**
-     * value of textLineItem}
-     * @return textLineItem
-     */
-
-    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
-        return this.textLineItem;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -131,7 +122,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -140,15 +131,24 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     }
 
     /**
+     *  <p>Holds information about the updated Text Line Item.</p>
+     * @return textLineItem
+     */
+
+    public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
+        return this.textLineItem;
+    }
+
+    /**
      * builds ChangeTextLineItemQuantityChange with checking for non-null required values
      * @return ChangeTextLineItemQuantityChange
      */
     public ChangeTextLineItemQuantityChange build() {
         Objects.requireNonNull(change, ChangeTextLineItemQuantityChange.class + ": change is missing");
-        Objects.requireNonNull(textLineItem, ChangeTextLineItemQuantityChange.class + ": textLineItem is missing");
         Objects.requireNonNull(previousValue, ChangeTextLineItemQuantityChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, ChangeTextLineItemQuantityChange.class + ": nextValue is missing");
-        return new ChangeTextLineItemQuantityChangeImpl(change, textLineItem, previousValue, nextValue);
+        Objects.requireNonNull(textLineItem, ChangeTextLineItemQuantityChange.class + ": textLineItem is missing");
+        return new ChangeTextLineItemQuantityChangeImpl(change, previousValue, nextValue, textLineItem);
     }
 
     /**
@@ -156,7 +156,7 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
      * @return ChangeTextLineItemQuantityChange
      */
     public ChangeTextLineItemQuantityChange buildUnchecked() {
-        return new ChangeTextLineItemQuantityChangeImpl(change, textLineItem, previousValue, nextValue);
+        return new ChangeTextLineItemQuantityChangeImpl(change, previousValue, nextValue, textLineItem);
     }
 
     /**
@@ -175,9 +175,9 @@ public class ChangeTextLineItemQuantityChangeBuilder implements Builder<ChangeTe
     public static ChangeTextLineItemQuantityChangeBuilder of(final ChangeTextLineItemQuantityChange template) {
         ChangeTextLineItemQuantityChangeBuilder builder = new ChangeTextLineItemQuantityChangeBuilder();
         builder.change = template.getChange();
-        builder.textLineItem = template.getTextLineItem();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.textLineItem = template.getTextLineItem();
         return builder;
     }
 

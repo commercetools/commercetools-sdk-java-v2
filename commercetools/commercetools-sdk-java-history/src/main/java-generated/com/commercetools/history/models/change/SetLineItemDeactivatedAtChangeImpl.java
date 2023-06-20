@@ -24,24 +24,24 @@ public class SetLineItemDeactivatedAtChangeImpl implements SetLineItemDeactivate
 
     private String change;
 
-    private com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem;
-
     private String previousValue;
 
     private String nextValue;
+
+    private com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetLineItemDeactivatedAtChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("lineItem") final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem,
             @JsonProperty("previousValue") final String previousValue,
-            @JsonProperty("nextValue") final String nextValue) {
+            @JsonProperty("nextValue") final String nextValue,
+            @JsonProperty("lineItem") final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
         this.change = change;
-        this.lineItem = lineItem;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
+        this.lineItem = lineItem;
         this.type = SET_LINE_ITEM_DEACTIVATED_AT_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class SetLineItemDeactivatedAtChangeImpl implements SetLineItemDeactivate
     }
 
     /**
-     *  <p>Update action for <code>setLineItemDeactivatedAt</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,7 @@ public class SetLineItemDeactivatedAtChangeImpl implements SetLineItemDeactivate
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
-        return this.lineItem;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -85,19 +77,23 @@ public class SetLineItemDeactivatedAtChangeImpl implements SetLineItemDeactivate
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {
         return this.nextValue;
     }
 
-    public void setChange(final String change) {
-        this.change = change;
+    /**
+     *  <p>Holds information about the updated Shopping List Line Item.</p>
+     */
+
+    public com.commercetools.history.models.change_value.ShoppingListLineItemValue getLineItem() {
+        return this.lineItem;
     }
 
-    public void setLineItem(final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
-        this.lineItem = lineItem;
+    public void setChange(final String change) {
+        this.change = change;
     }
 
     public void setPreviousValue(final String previousValue) {
@@ -106,6 +102,10 @@ public class SetLineItemDeactivatedAtChangeImpl implements SetLineItemDeactivate
 
     public void setNextValue(final String nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setLineItem(final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem) {
+        this.lineItem = lineItem;
     }
 
     @Override
@@ -120,9 +120,9 @@ public class SetLineItemDeactivatedAtChangeImpl implements SetLineItemDeactivate
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(lineItem, that.lineItem)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(lineItem, that.lineItem)
                 .isEquals();
     }
 
@@ -130,9 +130,9 @@ public class SetLineItemDeactivatedAtChangeImpl implements SetLineItemDeactivate
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(lineItem)
                 .append(previousValue)
                 .append(nextValue)
+                .append(lineItem)
                 .toHashCode();
     }
 

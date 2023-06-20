@@ -41,7 +41,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     * set values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     * set value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     * add values to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     * set values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     * set value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     * add values to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -136,7 +136,7 @@ public class AddStateRolesChangeBuilder implements Builder<AddStateRolesChange> 
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

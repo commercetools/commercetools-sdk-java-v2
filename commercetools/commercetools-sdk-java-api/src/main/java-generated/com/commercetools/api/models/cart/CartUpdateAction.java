@@ -82,6 +82,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemCustomFieldActionImpl.class, name = CartSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemCustomTypeActionImpl.class, name = CartSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemDistributionChannelActionImpl.class, name = CartSetLineItemDistributionChannelAction.SET_LINE_ITEM_DISTRIBUTION_CHANNEL),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemInventoryModeActionImpl.class, name = CartSetLineItemInventoryModeAction.SET_LINE_ITEM_INVENTORY_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemPriceActionImpl.class, name = CartSetLineItemPriceAction.SET_LINE_ITEM_PRICE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemShippingDetailsActionImpl.class, name = CartSetLineItemShippingDetailsAction.SET_LINE_ITEM_SHIPPING_DETAILS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemSupplyChannelActionImpl.class, name = CartSetLineItemSupplyChannelAction.SET_LINE_ITEM_SUPPLY_CHANNEL),
@@ -335,6 +336,10 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
         if (template instanceof com.commercetools.api.models.cart.CartSetLineItemDistributionChannelAction) {
             return com.commercetools.api.models.cart.CartSetLineItemDistributionChannelAction
                     .deepCopy((com.commercetools.api.models.cart.CartSetLineItemDistributionChannelAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetLineItemInventoryModeAction) {
+            return com.commercetools.api.models.cart.CartSetLineItemInventoryModeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetLineItemInventoryModeAction) template);
         }
         if (template instanceof com.commercetools.api.models.cart.CartSetLineItemPriceAction) {
             return com.commercetools.api.models.cart.CartSetLineItemPriceAction
@@ -834,6 +839,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
      */
     public static com.commercetools.api.models.cart.CartSetLineItemDistributionChannelActionBuilder setLineItemDistributionChannelBuilder() {
         return com.commercetools.api.models.cart.CartSetLineItemDistributionChannelActionBuilder.of();
+    }
+
+    /**
+     * builder for setLineItemInventoryMode subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartSetLineItemInventoryModeActionBuilder setLineItemInventoryModeBuilder() {
+        return com.commercetools.api.models.cart.CartSetLineItemInventoryModeActionBuilder.of();
     }
 
     /**

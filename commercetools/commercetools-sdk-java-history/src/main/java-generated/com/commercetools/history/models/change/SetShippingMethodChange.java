@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetShippingMethodChange
+ *  <p>Change triggered by the Set ShippingMethod update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetShippingMethodChange setShippingMethodChange = SetShippingMethodChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +48,7 @@ public interface SetShippingMethodChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setShippingMethod</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,16 +56,7 @@ public interface SetShippingMethodChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public ShippingMethodChangeValue getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -74,25 +65,34 @@ public interface SetShippingMethodChange extends Change {
     public ShippingMethodChangeValue getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setShippingMethod</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public ShippingMethodChangeValue getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final ShippingMethodChangeValue nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final ShippingMethodChangeValue previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final ShippingMethodChangeValue nextValue);
 
     /**
      * factory method
@@ -110,8 +110,8 @@ public interface SetShippingMethodChange extends Change {
     public static SetShippingMethodChange of(final SetShippingMethodChange template) {
         SetShippingMethodChangeImpl instance = new SetShippingMethodChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,10 +127,10 @@ public interface SetShippingMethodChange extends Change {
         }
         SetShippingMethodChangeImpl instance = new SetShippingMethodChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.ShippingMethodChangeValue.deepCopy(template.getNextValue()));
         instance.setPreviousValue(com.commercetools.history.models.change_value.ShippingMethodChangeValue
                 .deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.ShippingMethodChangeValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

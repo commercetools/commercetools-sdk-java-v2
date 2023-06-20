@@ -44,7 +44,7 @@ public interface StringLabel extends Label {
     public String getType();
 
     /**
-     *
+     *  <p>Changed value.</p>
      * @return value
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface StringLabel extends Label {
     public String getValue();
 
     /**
-     * set value
+     *  <p>Changed value.</p>
      * @param value value to be set
      */
 

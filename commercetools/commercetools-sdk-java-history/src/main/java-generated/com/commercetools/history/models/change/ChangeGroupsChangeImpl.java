@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeGroupsChange
+ *  <p>Change triggered by the Change Groups update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeGroupsChangeImpl implements ChangeGroupsChange, ModelBase {
@@ -57,7 +57,7 @@ public class ChangeGroupsChangeImpl implements ChangeGroupsChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for <code>changeGroups</code> on stores</p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class ChangeGroupsChangeImpl implements ChangeGroupsChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<String> getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeGroupsChangeImpl implements ChangeGroupsChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<String> getNextValue() {

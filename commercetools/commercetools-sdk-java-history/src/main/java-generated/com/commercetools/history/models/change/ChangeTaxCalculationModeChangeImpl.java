@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeTaxCalculationModeChange
+ *  <p>Change triggered by the Change TaxCalculationMode update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTaxCalculationModeChangeImpl implements ChangeTaxCalculationModeChange, ModelBase {
@@ -57,7 +57,7 @@ public class ChangeTaxCalculationModeChangeImpl implements ChangeTaxCalculationM
     }
 
     /**
-     *  <p>Shape of the action for <code>changeTaxCalculationMode</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class ChangeTaxCalculationModeChangeImpl implements ChangeTaxCalculationM
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.TaxCalculationMode getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeTaxCalculationModeChangeImpl implements ChangeTaxCalculationM
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.TaxCalculationMode getNextValue() {

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetCustomerGroupChange
+ *  <p>Change triggered by the Set CustomerGroup update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomerGroupChangeImpl implements SetCustomerGroupChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetCustomerGroupChangeImpl implements SetCustomerGroupChange, Model
     }
 
     /**
-     *  <p>Shape of the action for <code>setCustomerGroup</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetCustomerGroupChangeImpl implements SetCustomerGroupChange, Model
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.Reference getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetCustomerGroupChangeImpl implements SetCustomerGroupChange, Model
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.Reference getNextValue() {

@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetLineItemShippingDetailsChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set LineItemShippingDetails on Orders.</li>
+ *   <li>Set LineItemShippingDetails on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,9 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemShippingDetailsChange setLineItemShippingDetailsChange = SetLineItemShippingDetailsChange.builder()
  *             .change("{change}")
- *             .lineItemId("{lineItemId}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +53,7 @@ public interface SetLineItemShippingDetailsChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setLineItemShippingDetails</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -57,24 +61,7 @@ public interface SetLineItemShippingDetailsChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return lineItemId
-     */
-    @NotNull
-    @JsonProperty("lineItemId")
-    public String getLineItemId();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public ItemShippingDetails getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -83,32 +70,49 @@ public interface SetLineItemShippingDetailsChange extends Change {
     public ItemShippingDetails getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setLineItemShippingDetails</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public ItemShippingDetails getNextValue();
+
+    /**
+     *  <p><code>id</code> of the updated LineItem.</p>
+     * @return lineItemId
+     */
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set lineItemId
-     * @param lineItemId value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setLineItemId(final String lineItemId);
+    public void setPreviousValue(final ItemShippingDetails previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final ItemShippingDetails nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p><code>id</code> of the updated LineItem.</p>
+     * @param lineItemId value to be set
      */
 
-    public void setPreviousValue(final ItemShippingDetails previousValue);
+    public void setLineItemId(final String lineItemId);
 
     /**
      * factory method
@@ -126,9 +130,9 @@ public interface SetLineItemShippingDetailsChange extends Change {
     public static SetLineItemShippingDetailsChange of(final SetLineItemShippingDetailsChange template) {
         SetLineItemShippingDetailsChangeImpl instance = new SetLineItemShippingDetailsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItemId(template.getLineItemId());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setLineItemId(template.getLineItemId());
         return instance;
     }
 
@@ -144,11 +148,11 @@ public interface SetLineItemShippingDetailsChange extends Change {
         }
         SetLineItemShippingDetailsChangeImpl instance = new SetLineItemShippingDetailsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItemId(template.getLineItemId());
-        instance.setNextValue(
-            com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
+        instance.setLineItemId(template.getLineItemId());
         return instance;
     }
 

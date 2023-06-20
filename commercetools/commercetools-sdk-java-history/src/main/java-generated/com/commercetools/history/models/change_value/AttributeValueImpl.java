@@ -40,7 +40,7 @@ public class AttributeValueImpl implements AttributeValue, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the Attribute set.</p>
      */
 
     public String getName() {
@@ -48,7 +48,15 @@ public class AttributeValueImpl implements AttributeValue, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value set for the Attribute determined by the AttributeType:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, <code>value</code> is the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects.</li>
+     *   <li>For Localizable Text Type, <code>value</code> is the LocalizedString object.</li>
+     *   <li>For Money Type Attributes, <code>value</code> is the Money object.</li>
+     *   <li>For Set Type Attributes, <code>value</code> is the entire <code>set</code> object.</li>
+     *   <li>For Nested Type Attributes, <code>value</code> is the list of values of all Attributes of the nested Product.</li>
+     *   <li>For Reference Type Attributes, <code>value</code> is the Reference object.</li>
+     *  </ul>
      */
 
     public java.lang.Object getValue() {

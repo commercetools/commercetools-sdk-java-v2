@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddPlainEnumValueChange addPlainEnumValueChange = AddPlainEnumValueChange.builder()
  *             .change("{change}")
- *             .attributeName("{attributeName}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
 
     private String change;
 
-    private String attributeName;
-
     private com.commercetools.history.models.change_value.EnumValue nextValue;
 
+    private String attributeName;
+
     /**
-     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,18 +42,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @param attributeName value to be set
-     * @return Builder
-     */
-
-    public AddPlainEnumValueChangeBuilder attributeName(final String attributeName) {
-        this.attributeName = attributeName;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -65,7 +54,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -77,7 +66,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -89,7 +78,18 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     *  <p>Update action for <code>addPlainEnumValue</code> on product types</p>
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @param attributeName value to be set
+     * @return Builder
+     */
+
+    public AddPlainEnumValueChangeBuilder attributeName(final String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -98,16 +98,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
-     * @return attributeName
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -116,14 +107,23 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     }
 
     /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @return attributeName
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
+    /**
      * builds AddPlainEnumValueChange with checking for non-null required values
      * @return AddPlainEnumValueChange
      */
     public AddPlainEnumValueChange build() {
         Objects.requireNonNull(change, AddPlainEnumValueChange.class + ": change is missing");
-        Objects.requireNonNull(attributeName, AddPlainEnumValueChange.class + ": attributeName is missing");
         Objects.requireNonNull(nextValue, AddPlainEnumValueChange.class + ": nextValue is missing");
-        return new AddPlainEnumValueChangeImpl(change, attributeName, nextValue);
+        Objects.requireNonNull(attributeName, AddPlainEnumValueChange.class + ": attributeName is missing");
+        return new AddPlainEnumValueChangeImpl(change, nextValue, attributeName);
     }
 
     /**
@@ -131,7 +131,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
      * @return AddPlainEnumValueChange
      */
     public AddPlainEnumValueChange buildUnchecked() {
-        return new AddPlainEnumValueChangeImpl(change, attributeName, nextValue);
+        return new AddPlainEnumValueChangeImpl(change, nextValue, attributeName);
     }
 
     /**
@@ -150,8 +150,8 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
     public static AddPlainEnumValueChangeBuilder of(final AddPlainEnumValueChange template) {
         AddPlainEnumValueChangeBuilder builder = new AddPlainEnumValueChangeBuilder();
         builder.change = template.getChange();
-        builder.attributeName = template.getAttributeName();
         builder.nextValue = template.getNextValue();
+        builder.attributeName = template.getAttributeName();
         return builder;
     }
 

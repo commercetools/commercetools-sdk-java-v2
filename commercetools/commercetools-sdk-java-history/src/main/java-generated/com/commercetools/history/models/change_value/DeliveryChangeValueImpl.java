@@ -46,7 +46,7 @@ public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
     }
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items shipped in the Delivery.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {
@@ -54,7 +54,7 @@ public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
     }
 
     /**
-     *
+     *  <p>Address to which the parcels are delivered.</p>
      */
 
     public com.commercetools.history.models.common.Address getAddress() {
@@ -62,7 +62,7 @@ public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
     }
 
     /**
-     *
+     *  <p>Parcels included in the Delivery.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.Parcel> getParcels() {

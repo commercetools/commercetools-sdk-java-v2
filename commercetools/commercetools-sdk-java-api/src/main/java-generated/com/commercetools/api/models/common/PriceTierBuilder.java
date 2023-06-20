@@ -29,7 +29,7 @@ public class PriceTierBuilder implements Builder<PriceTier> {
 
     /**
      *  <p>Minimum quantity this Price tier is valid for.</p>
-     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>
+     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A Price or StandalonePrice cannot contain more than one tier with the same <code>minimumQuantity</code>.</p>
      * @param minimumQuantity value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class PriceTierBuilder implements Builder<PriceTier> {
 
     /**
      *  <p>Minimum quantity this Price tier is valid for.</p>
-     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>
+     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A Price or StandalonePrice cannot contain more than one tier with the same <code>minimumQuantity</code>.</p>
      * @return minimumQuantity
      */
 

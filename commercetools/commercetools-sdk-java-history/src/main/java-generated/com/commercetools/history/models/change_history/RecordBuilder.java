@@ -56,6 +56,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Version of the resource after the change.</p>
+     *  <p>For more information on how the version is incremented, see Optimistic Concurrency Control.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -77,7 +78,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Type of the change (creation, update or deletion).</p>
+     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -88,7 +89,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Information about the user or the API client who performed the change.</p>
+     *  <p>Information about the user or API Client who performed the change.</p>
      * @param builder function to build the modifiedBy value
      * @return Builder
      */
@@ -100,7 +101,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Information about the user or the API client who performed the change.</p>
+     *  <p>Information about the user or API Client who performed the change.</p>
      * @param builder function to build the modifiedBy value
      * @return Builder
      */
@@ -112,7 +113,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Information about the user or the API client who performed the change.</p>
+     *  <p>Information about the user or API Client who performed the change.</p>
      * @param modifiedBy value to be set
      * @return Builder
      */
@@ -123,7 +124,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Date and time when the change was made.</p>
+     *  <p>Date and time (UTC) when the change was made.</p>
      * @param modifiedAt value to be set
      * @return Builder
      */
@@ -180,7 +181,8 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -191,7 +193,8 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -202,7 +205,8 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -216,7 +220,8 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -231,7 +236,8 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -279,7 +285,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -290,7 +296,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -301,7 +307,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      * @param stores value to be set
      * @return Builder
      */
@@ -315,7 +321,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -330,7 +336,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -343,7 +349,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -354,7 +360,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      * @param builder function to build the stores value
      * @return Builder
      */
@@ -365,7 +371,8 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     *  <p><code>true</code> if no change was detected.</p>
+     *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      * @param withoutChanges value to be set
      * @return Builder
      */
@@ -377,6 +384,7 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Version of the resource after the change.</p>
+     *  <p>For more information on how the version is incremented, see Optimistic Concurrency Control.</p>
      * @return version
      */
 
@@ -394,7 +402,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Type of the change (creation, update or deletion).</p>
+     *  <p>Indicates the type of change. For creation, update, or deletion, the value is <code>"ResourceCreated"</code>, <code>"ResourceUpdated"</code>, or <code>"ResourceDeleted"</code> respectively.</p>
      * @return type
      */
 
@@ -403,7 +411,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Information about the user or the API client who performed the change.</p>
+     *  <p>Information about the user or API Client who performed the change.</p>
      * @return modifiedBy
      */
 
@@ -412,7 +420,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Date and time when the change was made.</p>
+     *  <p>Date and time (UTC) when the change was made.</p>
      * @return modifiedAt
      */
 
@@ -439,7 +447,8 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>. The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
+     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.</p>
+     *  <p>The value is not identical to the actual array of update actions sent and is not limited to update actions (see, for example, Optimistic Concurrency Control).</p>
      * @return changes
      */
 
@@ -457,7 +466,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>References to the Stores attached to the Change.</p>
+     *  <p>References to the Stores associated with the Change.</p>
      * @return stores
      */
 
@@ -466,7 +475,8 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p><code>true</code> if no change was detected. The version number of the resource can be increased even without any change in the resource.</p>
+     *  <p><code>true</code> if no change was detected.</p>
+     *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      * @return withoutChanges
      */
 

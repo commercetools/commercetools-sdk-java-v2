@@ -30,7 +30,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
     private Integer nextValue;
 
     /**
-     *  <p>Internal Update action for <code>setApplicationVersion</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
     }
 
     /**
-     *  <p>Internal Update action for <code>setApplicationVersion</code></p>
+     * value of change}
      * @return change
      */
 
@@ -72,7 +72,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
     }
 
     /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -81,7 +81,7 @@ public class SetApplicationVersionChangeBuilder implements Builder<SetApplicatio
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

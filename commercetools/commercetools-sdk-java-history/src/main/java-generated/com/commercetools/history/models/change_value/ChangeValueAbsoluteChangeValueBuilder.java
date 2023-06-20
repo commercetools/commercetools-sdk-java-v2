@@ -25,7 +25,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     private java.util.List<com.commercetools.history.models.common.Money> money;
 
     /**
-     * set values to the money
+     *  <p>Money values in different currencies.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     * set value to the money
+     *  <p>Money values in different currencies.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     * add values to the money
+     *  <p>Money values in different currencies.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     * add the value to the money using the builder function
+     *  <p>Money values in different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     * set the value to the money using the builder function
+     *  <p>Money values in different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     * add the value to the money using the builder function
+     *  <p>Money values in different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     * set the value to the money using the builder function
+     *  <p>Money values in different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
-     * value of money}
+     *  <p>Money values in different currencies.</p>
      * @return money
      */
 

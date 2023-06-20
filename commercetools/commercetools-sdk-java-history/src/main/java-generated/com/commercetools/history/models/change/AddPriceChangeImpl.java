@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddPriceChange
+ *  <p>Change triggered by the Add Price update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
@@ -24,23 +24,23 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
 
     private String change;
 
+    private com.commercetools.history.models.common.Price nextValue;
+
     private String catalogData;
 
     private String priceId;
-
-    private com.commercetools.history.models.common.Price nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddPriceChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("catalogData") final String catalogData, @JsonProperty("priceId") final String priceId,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Price nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.Price nextValue,
+            @JsonProperty("catalogData") final String catalogData, @JsonProperty("priceId") final String priceId) {
         this.change = change;
+        this.nextValue = nextValue;
         this.catalogData = catalogData;
         this.priceId = priceId;
-        this.nextValue = nextValue;
         this.type = ADD_PRICE_CHANGE;
     }
 
@@ -60,7 +60,7 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
     }
 
     /**
-     *  <p>Update action for adding prices</p>
+     *
      */
 
     public String getChange() {
@@ -68,7 +68,18 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.Price getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
      */
 
     public String getCatalogData() {
@@ -76,23 +87,19 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Embedded Price.</p>
      */
 
     public String getPriceId() {
         return this.priceId;
     }
 
-    /**
-     *
-     */
-
-    public com.commercetools.history.models.common.Price getNextValue() {
-        return this.nextValue;
-    }
-
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.Price nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setCatalogData(final String catalogData) {
@@ -101,10 +108,6 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
 
     public void setPriceId(final String priceId) {
         this.priceId = priceId;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.common.Price nextValue) {
-        this.nextValue = nextValue;
     }
 
     @Override
@@ -119,9 +122,9 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(priceId, that.priceId)
-                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -129,9 +132,9 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(nextValue)
                 .append(catalogData)
                 .append(priceId)
-                .append(nextValue)
                 .toHashCode();
     }
 

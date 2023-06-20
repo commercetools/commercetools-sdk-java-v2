@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AddPropertyChange
+ *  <p>Change triggered by the Update CustomObject request when a new property is added.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,7 @@ public interface AddPropertyChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>addProperty</code> on custom objects</p>
+     *
      * @return change
      */
     @NotNull
@@ -53,15 +53,7 @@ public interface AddPropertyChange extends Change {
     public String getChange();
 
     /**
-     *  <p>Value path to the property that was added</p>
-     * @return path
-     */
-    @NotNull
-    @JsonProperty("path")
-    public String getPath();
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -69,25 +61,33 @@ public interface AddPropertyChange extends Change {
     public Object getNextValue();
 
     /**
-     *  <p>Update action for <code>addProperty</code> on custom objects</p>
+     *  <p>Path to the new property that was added.</p>
+     * @return path
+     */
+    @NotNull
+    @JsonProperty("path")
+    public String getPath();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>Value path to the property that was added</p>
-     * @param path value to be set
-     */
-
-    public void setPath(final String path);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Object nextValue);
+
+    /**
+     *  <p>Path to the new property that was added.</p>
+     * @param path value to be set
+     */
+
+    public void setPath(final String path);
 
     /**
      * factory method
@@ -105,8 +105,8 @@ public interface AddPropertyChange extends Change {
     public static AddPropertyChange of(final AddPropertyChange template) {
         AddPropertyChangeImpl instance = new AddPropertyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPath(template.getPath());
         instance.setNextValue(template.getNextValue());
+        instance.setPath(template.getPath());
         return instance;
     }
 
@@ -122,8 +122,8 @@ public interface AddPropertyChange extends Change {
         }
         AddPropertyChangeImpl instance = new AddPropertyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPath(template.getPath());
         instance.setNextValue(template.getNextValue());
+        instance.setPath(template.getPath());
         return instance;
     }
 

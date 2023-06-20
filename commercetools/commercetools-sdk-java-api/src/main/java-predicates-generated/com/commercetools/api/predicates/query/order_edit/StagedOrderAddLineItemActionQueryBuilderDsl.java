@@ -19,6 +19,11 @@ public class StagedOrderAddLineItemActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderAddLineItemActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderAddLineItemActionQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderAddLineItemActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<StagedOrderAddLineItemActionQueryBuilderDsl> custom(
             Function<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

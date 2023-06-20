@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Update action for <code>changeQuantity</code> on inventories</p>
+ *  <p>Change triggered by the Change Quantity update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeQuantityChange changeQuantityChange = ChangeQuantityChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -56,22 +56,22 @@ public interface ChangeQuantityChange extends Change {
     public String getType();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public InventoryQuantityValue getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
     @Valid
     @JsonProperty("previousValue")
     public InventoryQuantityValue getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public InventoryQuantityValue getNextValue();
 
     /**
      * set change
@@ -81,18 +81,18 @@ public interface ChangeQuantityChange extends Change {
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final InventoryQuantityValue nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final InventoryQuantityValue previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final InventoryQuantityValue nextValue);
 
     /**
      * factory method
@@ -110,8 +110,8 @@ public interface ChangeQuantityChange extends Change {
     public static ChangeQuantityChange of(final ChangeQuantityChange template) {
         ChangeQuantityChangeImpl instance = new ChangeQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -127,10 +127,10 @@ public interface ChangeQuantityChange extends Change {
         }
         ChangeQuantityChangeImpl instance = new ChangeQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(
-            com.commercetools.history.models.change_value.InventoryQuantityValue.deepCopy(template.getNextValue()));
         instance.setPreviousValue(
             com.commercetools.history.models.change_value.InventoryQuantityValue.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.InventoryQuantityValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

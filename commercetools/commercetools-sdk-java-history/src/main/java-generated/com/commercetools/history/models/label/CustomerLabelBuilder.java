@@ -30,7 +30,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     private String customerNumber;
 
     /**
-     * set the value to the firstName
+     *  <p>Given name (first name) of the Customer.</p>
      * @param firstName value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     * set the value to the lastName
+     *  <p>Family name (last name) of the Customer.</p>
      * @param lastName value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     * set the value to the customerNumber
+     *  <p>User-defined unique identifier of the Customer.</p>
      * @param customerNumber value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     * value of firstName}
+     *  <p>Given name (first name) of the Customer.</p>
      * @return firstName
      */
 
@@ -72,7 +72,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     * value of lastName}
+     *  <p>Family name (last name) of the Customer.</p>
      * @return lastName
      */
 
@@ -81,7 +81,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     * value of customerNumber}
+     *  <p>User-defined unique identifier of the Customer.</p>
      * @return customerNumber
      */
 

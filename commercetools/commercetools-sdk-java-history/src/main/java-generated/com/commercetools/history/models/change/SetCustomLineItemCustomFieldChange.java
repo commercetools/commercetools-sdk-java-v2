@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetCustomLineItemCustomFieldChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set CustomLineItem Custom Type on Orders.</li>
+ *   <li>Set CustomLineItem Custom Type on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,7 +53,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setCustomLineItemCustomField</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -57,7 +61,23 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @JsonProperty("previousValue")
+    public Object getPreviousValue();
+
+    /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public Object getNextValue();
+
+    /**
+     *  <p>Name of the Custom Field.</p>
      * @return name
      */
     @NotNull
@@ -65,7 +85,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public String getName();
 
     /**
-     *
+     *  <p>Name of the updated CustomLineItem.</p>
      * @return customLineItem
      */
     @NotNull
@@ -74,7 +94,7 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public LocalizedString getCustomLineItem();
 
     /**
-     *
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -82,62 +102,46 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public String getCustomLineItemId();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public Object getNextValue();
-
-    /**
-     *
-     * @return previousValue
-     */
-    @NotNull
-    @JsonProperty("previousValue")
-    public Object getPreviousValue();
-
-    /**
-     *  <p>Update action for <code>setCustomLineItemCustomField</code></p>
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set name
-     * @param name value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setName(final String name);
+    public void setPreviousValue(final Object previousValue);
 
     /**
-     * set customLineItem
-     * @param customLineItem value to be set
-     */
-
-    public void setCustomLineItem(final LocalizedString customLineItem);
-
-    /**
-     * set customLineItemId
-     * @param customLineItemId value to be set
-     */
-
-    public void setCustomLineItemId(final String customLineItemId);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Object nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the Custom Field.</p>
+     * @param name value to be set
      */
 
-    public void setPreviousValue(final Object previousValue);
+    public void setName(final String name);
+
+    /**
+     *  <p>Name of the updated CustomLineItem.</p>
+     * @param customLineItem value to be set
+     */
+
+    public void setCustomLineItem(final LocalizedString customLineItem);
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @param customLineItemId value to be set
+     */
+
+    public void setCustomLineItemId(final String customLineItemId);
 
     /**
      * factory method
@@ -155,11 +159,11 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
     public static SetCustomLineItemCustomFieldChange of(final SetCustomLineItemCustomFieldChange template) {
         SetCustomLineItemCustomFieldChangeImpl instance = new SetCustomLineItemCustomFieldChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setName(template.getName());
         instance.setCustomLineItem(template.getCustomLineItem());
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -176,12 +180,12 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
         }
         SetCustomLineItemCustomFieldChangeImpl instance = new SetCustomLineItemCustomFieldChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setName(template.getName());
         instance.setCustomLineItem(
             com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 

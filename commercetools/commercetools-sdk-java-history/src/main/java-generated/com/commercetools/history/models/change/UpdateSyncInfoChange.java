@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * UpdateSyncInfoChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Update SyncInfo on Orders.</li>
+ *   <li>Update SyncInfo on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +28,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     UpdateSyncInfoChange updateSyncInfoChange = UpdateSyncInfoChange.builder()
  *             .change("{change}")
- *             .channelId("{channelId}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .channelId("{channelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +52,7 @@ public interface UpdateSyncInfoChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>updateSyncInfo</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,15 +60,7 @@ public interface UpdateSyncInfoChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return channelId
-     */
-    @NotNull
-    @JsonProperty("channelId")
-    public String getChannelId();
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -73,25 +69,33 @@ public interface UpdateSyncInfoChange extends Change {
     public SyncInfo getNextValue();
 
     /**
-     *  <p>Update action for <code>updateSyncInfo</code></p>
+     *  <p><code>id</code> of the updated Channel.</p>
+     * @return channelId
+     */
+    @NotNull
+    @JsonProperty("channelId")
+    public String getChannelId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set channelId
-     * @param channelId value to be set
-     */
-
-    public void setChannelId(final String channelId);
-
-    /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final SyncInfo nextValue);
+
+    /**
+     *  <p><code>id</code> of the updated Channel.</p>
+     * @param channelId value to be set
+     */
+
+    public void setChannelId(final String channelId);
 
     /**
      * factory method
@@ -109,8 +113,8 @@ public interface UpdateSyncInfoChange extends Change {
     public static UpdateSyncInfoChange of(final UpdateSyncInfoChange template) {
         UpdateSyncInfoChangeImpl instance = new UpdateSyncInfoChangeImpl();
         instance.setChange(template.getChange());
-        instance.setChannelId(template.getChannelId());
         instance.setNextValue(template.getNextValue());
+        instance.setChannelId(template.getChannelId());
         return instance;
     }
 
@@ -126,8 +130,8 @@ public interface UpdateSyncInfoChange extends Change {
         }
         UpdateSyncInfoChangeImpl instance = new UpdateSyncInfoChangeImpl();
         instance.setChange(template.getChange());
-        instance.setChannelId(template.getChannelId());
         instance.setNextValue(com.commercetools.history.models.common.SyncInfo.deepCopy(template.getNextValue()));
+        instance.setChannelId(template.getChannelId());
         return instance;
     }
 

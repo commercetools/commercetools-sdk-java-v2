@@ -16,7 +16,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * RemoveParcelFromDeliveryChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Remove Parcel From Delivery on Orders.</li>
+ *   <li>Remove Parcel From Delivery on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +28,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     RemoveParcelFromDeliveryChange removeParcelFromDeliveryChange = RemoveParcelFromDeliveryChange.builder()
  *             .change("{change}")
- *             .deliveryId("{deliveryId}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -48,7 +52,7 @@ public interface RemoveParcelFromDeliveryChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>removeParcelFromDelivery</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -56,15 +60,7 @@ public interface RemoveParcelFromDeliveryChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return deliveryId
-     */
-    @NotNull
-    @JsonProperty("deliveryId")
-    public String getDeliveryId();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -73,25 +69,33 @@ public interface RemoveParcelFromDeliveryChange extends Change {
     public Parcel getPreviousValue();
 
     /**
-     *  <p>Update action for <code>removeParcelFromDelivery</code></p>
+     *  <p><code>id</code> of the Delivery from which the Parcel was removed.</p>
+     * @return deliveryId
+     */
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set deliveryId
-     * @param deliveryId value to be set
-     */
-
-    public void setDeliveryId(final String deliveryId);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Parcel previousValue);
+
+    /**
+     *  <p><code>id</code> of the Delivery from which the Parcel was removed.</p>
+     * @param deliveryId value to be set
+     */
+
+    public void setDeliveryId(final String deliveryId);
 
     /**
      * factory method
@@ -109,8 +113,8 @@ public interface RemoveParcelFromDeliveryChange extends Change {
     public static RemoveParcelFromDeliveryChange of(final RemoveParcelFromDeliveryChange template) {
         RemoveParcelFromDeliveryChangeImpl instance = new RemoveParcelFromDeliveryChangeImpl();
         instance.setChange(template.getChange());
-        instance.setDeliveryId(template.getDeliveryId());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setDeliveryId(template.getDeliveryId());
         return instance;
     }
 
@@ -126,8 +130,8 @@ public interface RemoveParcelFromDeliveryChange extends Change {
         }
         RemoveParcelFromDeliveryChangeImpl instance = new RemoveParcelFromDeliveryChangeImpl();
         instance.setChange(template.getChange());
-        instance.setDeliveryId(template.getDeliveryId());
         instance.setPreviousValue(com.commercetools.history.models.common.Parcel.deepCopy(template.getPreviousValue()));
+        instance.setDeliveryId(template.getDeliveryId());
         return instance;
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeTaxRoundingModeChange
+ *  <p>Change triggered by the Change Tax RoundingMode update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTaxRoundingModeChangeImpl implements ChangeTaxRoundingModeChange, ModelBase {
@@ -57,7 +57,7 @@ public class ChangeTaxRoundingModeChangeImpl implements ChangeTaxRoundingModeCha
     }
 
     /**
-     *  <p>Shape of the action for <code>changeTaxRoundingMode</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class ChangeTaxRoundingModeChangeImpl implements ChangeTaxRoundingModeCha
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.RoundingMode getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeTaxRoundingModeChangeImpl implements ChangeTaxRoundingModeCha
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.RoundingMode getNextValue() {

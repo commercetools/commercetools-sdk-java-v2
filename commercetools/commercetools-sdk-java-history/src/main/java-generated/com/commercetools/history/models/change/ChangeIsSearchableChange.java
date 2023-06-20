@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeIsSearchableChange
+ *  <p>Change triggered by the Change AttributeDefinition IsSearchable update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -22,9 +22,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeIsSearchableChange changeIsSearchableChange = ChangeIsSearchableChange.builder()
  *             .change("{change}")
- *             .attributeName("{attributeName}")
- *             .nextValue(true)
  *             .previousValue(true)
+ *             .nextValue(true)
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -47,7 +47,7 @@ public interface ChangeIsSearchableChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+     *
      * @return change
      */
     @NotNull
@@ -55,23 +55,7 @@ public interface ChangeIsSearchableChange extends Change {
     public String getChange();
 
     /**
-     *  <p>The name of the updated attribute.</p>
-     * @return attributeName
-     */
-    @NotNull
-    @JsonProperty("attributeName")
-    public String getAttributeName();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public Boolean getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -79,32 +63,48 @@ public interface ChangeIsSearchableChange extends Change {
     public Boolean getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changeIsSearchable</code> on product types</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public Boolean getNextValue();
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>The name of the updated attribute.</p>
-     * @param attributeName value to be set
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
      */
 
-    public void setAttributeName(final String attributeName);
+    public void setPreviousValue(final Boolean previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
     public void setNextValue(final Boolean nextValue);
 
     /**
-     * set previousValue
-     * @param previousValue value to be set
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @param attributeName value to be set
      */
 
-    public void setPreviousValue(final Boolean previousValue);
+    public void setAttributeName(final String attributeName);
 
     /**
      * factory method
@@ -122,9 +122,9 @@ public interface ChangeIsSearchableChange extends Change {
     public static ChangeIsSearchableChange of(final ChangeIsSearchableChange template) {
         ChangeIsSearchableChangeImpl instance = new ChangeIsSearchableChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 
@@ -140,9 +140,9 @@ public interface ChangeIsSearchableChange extends Change {
         }
         ChangeIsSearchableChangeImpl instance = new ChangeIsSearchableChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 

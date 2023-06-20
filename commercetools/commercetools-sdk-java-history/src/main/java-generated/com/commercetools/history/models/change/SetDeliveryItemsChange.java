@@ -17,7 +17,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetDeliveryItemsChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Delivery Items on Orders.</li>
+ *   <li>Set Delivery Items on Staged Orders.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,9 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetDeliveryItemsChange setDeliveryItemsChange = SetDeliveryItemsChange.builder()
  *             .change("{change}")
- *             .deliveryId("{deliveryId}")
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +54,7 @@ public interface SetDeliveryItemsChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setDeliveryItems</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -58,24 +62,7 @@ public interface SetDeliveryItemsChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return deliveryId
-     */
-    @NotNull
-    @JsonProperty("deliveryId")
-    public String getDeliveryId();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public List<DeliveryItem> getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -84,36 +71,31 @@ public interface SetDeliveryItemsChange extends Change {
     public List<DeliveryItem> getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setDeliveryItems</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public List<DeliveryItem> getNextValue();
+
+    /**
+     *  <p><code>id</code> of the updated Delivery.</p>
+     * @return deliveryId
+     */
+    @NotNull
+    @JsonProperty("deliveryId")
+    public String getDeliveryId();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set deliveryId
-     * @param deliveryId value to be set
-     */
-
-    public void setDeliveryId(final String deliveryId);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    @JsonIgnore
-    public void setNextValue(final DeliveryItem... nextValue);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    public void setNextValue(final List<DeliveryItem> nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -121,11 +103,33 @@ public interface SetDeliveryItemsChange extends Change {
     public void setPreviousValue(final DeliveryItem... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<DeliveryItem> previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    @JsonIgnore
+    public void setNextValue(final DeliveryItem... nextValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    public void setNextValue(final List<DeliveryItem> nextValue);
+
+    /**
+     *  <p><code>id</code> of the updated Delivery.</p>
+     * @param deliveryId value to be set
+     */
+
+    public void setDeliveryId(final String deliveryId);
 
     /**
      * factory method
@@ -143,9 +147,9 @@ public interface SetDeliveryItemsChange extends Change {
     public static SetDeliveryItemsChange of(final SetDeliveryItemsChange template) {
         SetDeliveryItemsChangeImpl instance = new SetDeliveryItemsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setDeliveryId(template.getDeliveryId());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        instance.setDeliveryId(template.getDeliveryId());
         return instance;
     }
 
@@ -161,17 +165,17 @@ public interface SetDeliveryItemsChange extends Change {
         }
         SetDeliveryItemsChangeImpl instance = new SetDeliveryItemsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setDeliveryId(template.getDeliveryId());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDeliveryId(template.getDeliveryId());
         return instance;
     }
 

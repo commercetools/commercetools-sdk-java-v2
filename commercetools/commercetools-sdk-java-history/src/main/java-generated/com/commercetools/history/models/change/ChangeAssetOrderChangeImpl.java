@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeAssetOrderChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Asset Order on Categories.</li>
+ *   <li>Change Asset Order on Products.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, ModelBase {
@@ -65,7 +69,7 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.LocalizedString> getPreviousValue() {
@@ -73,7 +77,7 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.LocalizedString> getNextValue() {

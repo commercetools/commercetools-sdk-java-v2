@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetShippingMethodTaxAmountChange
+ *  <p>Change triggered by the Set ShippingMethod TaxAmount update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTaxAmountChange, ModelBase {
@@ -24,24 +24,24 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
 
     private String change;
 
-    private com.commercetools.history.models.common.TaxMode taxMode;
+    private com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue;
 
     private com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue nextValue;
 
-    private com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue;
+    private com.commercetools.history.models.common.TaxMode taxMode;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetShippingMethodTaxAmountChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode,
+            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue) {
+            @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode) {
         this.change = change;
-        this.taxMode = taxMode;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.taxMode = taxMode;
         this.type = SET_SHIPPING_METHOD_TAX_AMOUNT_CHANGE;
     }
 
@@ -61,7 +61,7 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
     }
 
     /**
-     *  <p>Update action for <code>setShippingMethodTaxAmount</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +69,15 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.TaxMode getTaxMode() {
-        return this.taxMode;
+    public com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue getNextValue() {
@@ -85,19 +85,20 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
     }
 
     /**
-     *
+     *  <p><code>"ExternalAmount"</code></p>
      */
 
-    public com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.common.TaxMode getTaxMode() {
+        return this.taxMode;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setTaxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
-        this.taxMode = taxMode;
+    public void setPreviousValue(
+            final com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(
@@ -105,9 +106,8 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(
-            final com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue previousValue) {
-        this.previousValue = previousValue;
+    public void setTaxMode(final com.commercetools.history.models.common.TaxMode taxMode) {
+        this.taxMode = taxMode;
     }
 
     @Override
@@ -122,9 +122,9 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(taxMode, that.taxMode)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(taxMode, that.taxMode)
                 .isEquals();
     }
 
@@ -132,9 +132,9 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(taxMode)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(taxMode)
                 .toHashCode();
     }
 

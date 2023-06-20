@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetProductPriceCustomTypeChange setProductPriceCustomTypeChange = SetProductPriceCustomTypeChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
 
     private String change;
 
-    private String catalogData;
-
     private com.commercetools.history.models.common.CustomFields previousValue;
 
     private com.commercetools.history.models.common.CustomFields nextValue;
 
+    private String catalogData;
+
     /**
-     *  <p>Update action for <code>setProductPriceCustomType</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,18 +45,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public SetProductPriceCustomTypeChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -68,7 +57,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -80,7 +69,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -92,7 +81,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -104,7 +93,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -116,7 +105,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -128,7 +117,21 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     *  <p>Update action for <code>setProductPriceCustomType</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetProductPriceCustomTypeChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -137,16 +140,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -155,7 +149,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -164,15 +158,27 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
      * builds SetProductPriceCustomTypeChange with checking for non-null required values
      * @return SetProductPriceCustomTypeChange
      */
     public SetProductPriceCustomTypeChange build() {
         Objects.requireNonNull(change, SetProductPriceCustomTypeChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, SetProductPriceCustomTypeChange.class + ": catalogData is missing");
         Objects.requireNonNull(previousValue, SetProductPriceCustomTypeChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetProductPriceCustomTypeChange.class + ": nextValue is missing");
-        return new SetProductPriceCustomTypeChangeImpl(change, catalogData, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, SetProductPriceCustomTypeChange.class + ": catalogData is missing");
+        return new SetProductPriceCustomTypeChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -180,7 +186,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
      * @return SetProductPriceCustomTypeChange
      */
     public SetProductPriceCustomTypeChange buildUnchecked() {
-        return new SetProductPriceCustomTypeChangeImpl(change, catalogData, previousValue, nextValue);
+        return new SetProductPriceCustomTypeChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -199,9 +205,9 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     public static SetProductPriceCustomTypeChangeBuilder of(final SetProductPriceCustomTypeChange template) {
         SetProductPriceCustomTypeChangeBuilder builder = new SetProductPriceCustomTypeChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
         return builder;
     }
 

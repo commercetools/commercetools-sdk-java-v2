@@ -15,7 +15,27 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetCustomFieldChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set CustomField on Cart Discounts.</li>
+ *   <li>Set CustomField on Categories.</li>
+ *   <li>Set CustomField on Channels.</li>
+ *   <li>Set CustomField on Customers.</li>
+ *   <li>Set CustomField on Customer Groups.</li>
+ *   <li>Set CustomField on Discount Codes.</li>
+ *   <li>Set CustomField on Inventories.</li>
+ *   <li>Set CustomField on Orders.</li>
+ *   <li>Set CustomField on Order Edits.</li>
+ *   <li>Set CustomField on Payments.</li>
+ *   <li>Set CustomField on Product Selections.</li>
+ *   <li>Set CustomField on Quotes.</li>
+ *   <li>Set CustomField on Quote Requests.</li>
+ *   <li>Set CustomField on Reviews.</li>
+ *   <li>Set CustomField on Shopping Lists.</li>
+ *   <li>Set CustomField on Staged Orders.</li>
+ *   <li>Set CustomField on Staged Quotes.</li>
+ *   <li>Set CustomField on Stores.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase {
@@ -24,27 +44,27 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
 
     private String change;
 
-    private String name;
-
-    private String customTypeId;
+    private java.lang.Object previousValue;
 
     private java.lang.Object nextValue;
 
-    private java.lang.Object previousValue;
+    private String name;
+
+    private String customTypeId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SetCustomFieldChangeImpl(@JsonProperty("change") final String change, @JsonProperty("name") final String name,
-            @JsonProperty("customTypeId") final String customTypeId,
-            @JsonProperty("nextValue") final java.lang.Object nextValue,
-            @JsonProperty("previousValue") final java.lang.Object previousValue) {
+    SetCustomFieldChangeImpl(@JsonProperty("change") final String change,
+            @JsonProperty("previousValue") final java.lang.Object previousValue,
+            @JsonProperty("nextValue") final java.lang.Object nextValue, @JsonProperty("name") final String name,
+            @JsonProperty("customTypeId") final String customTypeId) {
         this.change = change;
+        this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.name = name;
         this.customTypeId = customTypeId;
-        this.nextValue = nextValue;
-        this.previousValue = previousValue;
         this.type = SET_CUSTOM_FIELD_CHANGE;
     }
 
@@ -64,7 +84,7 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
     }
 
     /**
-     *  <p>Update action for setting a custom field</p>
+     *
      */
 
     public String getChange() {
@@ -72,23 +92,15 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
     }
 
     /**
-     *  <p>Custom field name</p>
+     *  <p>Value before the change.</p>
      */
 
-    public String getName() {
-        return this.name;
+    public java.lang.Object getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
-     */
-
-    public String getCustomTypeId() {
-        return this.customTypeId;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.lang.Object getNextValue() {
@@ -96,15 +108,31 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
     }
 
     /**
-     *
+     *  <p>Name of the Custom Field.</p>
      */
 
-    public java.lang.Object getPreviousValue() {
-        return this.previousValue;
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     *  <p><code>id</code> of the referenced Type.</p>
+     */
+
+    public String getCustomTypeId() {
+        return this.customTypeId;
     }
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final java.lang.Object previousValue) {
+        this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final java.lang.Object nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setName(final String name) {
@@ -113,14 +141,6 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
 
     public void setCustomTypeId(final String customTypeId) {
         this.customTypeId = customTypeId;
-    }
-
-    public void setNextValue(final java.lang.Object nextValue) {
-        this.nextValue = nextValue;
-    }
-
-    public void setPreviousValue(final java.lang.Object previousValue) {
-        this.previousValue = previousValue;
     }
 
     @Override
@@ -135,10 +155,10 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(name, that.name)
                 .append(customTypeId, that.customTypeId)
-                .append(nextValue, that.nextValue)
-                .append(previousValue, that.previousValue)
                 .isEquals();
     }
 
@@ -146,10 +166,10 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(previousValue)
+                .append(nextValue)
                 .append(name)
                 .append(customTypeId)
-                .append(nextValue)
-                .append(previousValue)
                 .toHashCode();
     }
 

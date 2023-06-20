@@ -15,10 +15,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetCustomLineItemMoneyChange setCustomLineItemMoneyChange = SetCustomLineItemMoneyChange.builder()
  *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .customLineItem(customLineItemBuilder -> customLineItemBuilder)
  *             .customLineItemId("{customLineItemId}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,16 +28,16 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
 
     private String change;
 
+    private com.commercetools.history.models.common.Money previousValue;
+
+    private com.commercetools.history.models.common.Money nextValue;
+
     private com.commercetools.history.models.common.LocalizedString customLineItem;
 
     private String customLineItemId;
 
-    private com.commercetools.history.models.common.Money nextValue;
-
-    private com.commercetools.history.models.common.Money previousValue;
-
     /**
-     *  <p>Update action for <code>setCustomLineItemMoney</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -48,7 +48,79 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     * set the value to the customLineItem using the builder function
+     *  <p>Value before the change.</p>
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetCustomLineItemMoneyChangeBuilder previousValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value before the change.</p>
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetCustomLineItemMoneyChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     * @return Builder
+     */
+
+    public SetCustomLineItemMoneyChangeBuilder previousValue(
+            final com.commercetools.history.models.common.Money previousValue) {
+        this.previousValue = previousValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetCustomLineItemMoneyChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetCustomLineItemMoneyChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetCustomLineItemMoneyChangeBuilder nextValue(
+            final com.commercetools.history.models.common.Money nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the updated CustomLineItem.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -61,7 +133,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     * set the value to the customLineItem using the builder function
+     *  <p>Name of the updated CustomLineItem.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -73,7 +145,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     * set the value to the customLineItem
+     *  <p>Name of the updated CustomLineItem.</p>
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -85,7 +157,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -96,79 +168,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetCustomLineItemMoneyChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetCustomLineItemMoneyChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetCustomLineItemMoneyChangeBuilder nextValue(
-            final com.commercetools.history.models.common.Money nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public SetCustomLineItemMoneyChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public SetCustomLineItemMoneyChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
-     * @param previousValue value to be set
-     * @return Builder
-     */
-
-    public SetCustomLineItemMoneyChangeBuilder previousValue(
-            final com.commercetools.history.models.common.Money previousValue) {
-        this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     *  <p>Update action for <code>setCustomLineItemMoney</code></p>
+     * value of change}
      * @return change
      */
 
@@ -177,34 +177,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
-     * value of customLineItem}
-     * @return customLineItem
-     */
-
-    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
-        return this.customLineItem;
-    }
-
-    /**
-     * value of customLineItemId}
-     * @return customLineItemId
-     */
-
-    public String getCustomLineItemId() {
-        return this.customLineItemId;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.Money getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -213,16 +186,43 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.Money getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the updated CustomLineItem.</p>
+     * @return customLineItem
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
+        return this.customLineItem;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated CustomLineItem.</p>
+     * @return customLineItemId
+     */
+
+    public String getCustomLineItemId() {
+        return this.customLineItemId;
+    }
+
+    /**
      * builds SetCustomLineItemMoneyChange with checking for non-null required values
      * @return SetCustomLineItemMoneyChange
      */
     public SetCustomLineItemMoneyChange build() {
         Objects.requireNonNull(change, SetCustomLineItemMoneyChange.class + ": change is missing");
+        Objects.requireNonNull(previousValue, SetCustomLineItemMoneyChange.class + ": previousValue is missing");
+        Objects.requireNonNull(nextValue, SetCustomLineItemMoneyChange.class + ": nextValue is missing");
         Objects.requireNonNull(customLineItem, SetCustomLineItemMoneyChange.class + ": customLineItem is missing");
         Objects.requireNonNull(customLineItemId, SetCustomLineItemMoneyChange.class + ": customLineItemId is missing");
-        Objects.requireNonNull(nextValue, SetCustomLineItemMoneyChange.class + ": nextValue is missing");
-        Objects.requireNonNull(previousValue, SetCustomLineItemMoneyChange.class + ": previousValue is missing");
-        return new SetCustomLineItemMoneyChangeImpl(change, customLineItem, customLineItemId, nextValue, previousValue);
+        return new SetCustomLineItemMoneyChangeImpl(change, previousValue, nextValue, customLineItem, customLineItemId);
     }
 
     /**
@@ -230,7 +230,7 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
      * @return SetCustomLineItemMoneyChange
      */
     public SetCustomLineItemMoneyChange buildUnchecked() {
-        return new SetCustomLineItemMoneyChangeImpl(change, customLineItem, customLineItemId, nextValue, previousValue);
+        return new SetCustomLineItemMoneyChangeImpl(change, previousValue, nextValue, customLineItem, customLineItemId);
     }
 
     /**
@@ -249,10 +249,10 @@ public class SetCustomLineItemMoneyChangeBuilder implements Builder<SetCustomLin
     public static SetCustomLineItemMoneyChangeBuilder of(final SetCustomLineItemMoneyChange template) {
         SetCustomLineItemMoneyChangeBuilder builder = new SetCustomLineItemMoneyChangeBuilder();
         builder.change = template.getChange();
+        builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         builder.customLineItem = template.getCustomLineItem();
         builder.customLineItemId = template.getCustomLineItemId();
-        builder.nextValue = template.getNextValue();
-        builder.previousValue = template.getPreviousValue();
         return builder;
     }
 

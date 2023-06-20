@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeTargetChange changeTargetChange = ChangeTargetChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
 
     private String change;
 
-    private com.commercetools.history.models.change_value.ChangeTargetChangeValue nextValue;
-
     private com.commercetools.history.models.change_value.ChangeTargetChangeValue previousValue;
 
+    private com.commercetools.history.models.change_value.ChangeTargetChangeValue nextValue;
+
     /**
-     *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,33 +42,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     }
 
     /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public ChangeTargetChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.ChangeTargetChangeValue nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public ChangeTargetChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeTargetChangeValue>> builder) {
-        this.nextValue = builder
-                .apply(com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +54,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -94,7 +68,33 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     }
 
     /**
-     *  <p>Update action for <code>changeTarget</code> on cart discounts</p>
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public ChangeTargetChangeBuilder nextValue(
+            final com.commercetools.history.models.change_value.ChangeTargetChangeValue nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeTargetChangeBuilder nextValue(
+            Function<com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder, Builder<? extends com.commercetools.history.models.change_value.ChangeTargetChangeValue>> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.change_value.ChangeTargetChangeValueBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -103,16 +103,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.change_value.ChangeTargetChangeValue getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -121,14 +112,23 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.change_value.ChangeTargetChangeValue getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds ChangeTargetChange with checking for non-null required values
      * @return ChangeTargetChange
      */
     public ChangeTargetChange build() {
         Objects.requireNonNull(change, ChangeTargetChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, ChangeTargetChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, ChangeTargetChange.class + ": previousValue is missing");
-        return new ChangeTargetChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, ChangeTargetChange.class + ": nextValue is missing");
+        return new ChangeTargetChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -136,7 +136,7 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
      * @return ChangeTargetChange
      */
     public ChangeTargetChange buildUnchecked() {
-        return new ChangeTargetChangeImpl(change, nextValue, previousValue);
+        return new ChangeTargetChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -155,8 +155,8 @@ public class ChangeTargetChangeBuilder implements Builder<ChangeTargetChange> {
     public static ChangeTargetChangeBuilder of(final ChangeTargetChange template) {
         ChangeTargetChangeBuilder builder = new ChangeTargetChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Shape of the value for cart discounts gift line item value.</p>
+ * ChangeValueGiftLineItemChangeValue
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLineItemChangeValue, ModelBase {
@@ -62,7 +62,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *
+     *  <p>Reference to a Product.</p>
      */
 
     public com.commercetools.history.models.common.Reference getProduct() {
@@ -70,7 +70,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant.</p>
      */
 
     public Integer getVariantId() {
@@ -78,7 +78,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *
+     *  <p>Channel with ChannelRoleEnum <code>InventorySupply</code>.</p>
      */
 
     public com.commercetools.history.models.common.Reference getSupplyChannel() {
@@ -86,7 +86,7 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
     }
 
     /**
-     *
+     *  <p>Channel with ChannelRoleEnum <code>ProductDistribution</code>.</p>
      */
 
     public com.commercetools.history.models.common.Reference getDistributionChannel() {

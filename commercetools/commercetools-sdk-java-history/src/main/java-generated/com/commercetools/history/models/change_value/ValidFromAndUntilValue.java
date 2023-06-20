@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+ * ValidFromAndUntilValue
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ValidFromAndUntilValue {
 
     /**
-     *
+     *  <p>Date and time (UTC) from when the Discount is effective.</p>
      * @return validFrom
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface ValidFromAndUntilValue {
     public String getValidFrom();
 
     /**
-     *
+     *  <p>Date and time (UTC) until when the Discount is effective.</p>
      * @return validUntil
      */
     @NotNull
@@ -48,14 +48,14 @@ public interface ValidFromAndUntilValue {
     public String getValidUntil();
 
     /**
-     * set validFrom
+     *  <p>Date and time (UTC) from when the Discount is effective.</p>
      * @param validFrom value to be set
      */
 
     public void setValidFrom(final String validFrom);
 
     /**
-     * set validUntil
+     *  <p>Date and time (UTC) until when the Discount is effective.</p>
      * @param validUntil value to be set
      */
 

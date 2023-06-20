@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeFieldDefinitionOrderChange
+ *  <p>Change triggered by the Change the order of FieldDefinitions update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefinitionOrderChange, ModelBase {
@@ -57,7 +57,7 @@ public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefiniti
     }
 
     /**
-     *  <p>Update action for <code>changeFieldDefinitionOrder</code> on types</p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefiniti
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> getPreviousValue() {
@@ -73,7 +73,7 @@ public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefiniti
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> getNextValue() {

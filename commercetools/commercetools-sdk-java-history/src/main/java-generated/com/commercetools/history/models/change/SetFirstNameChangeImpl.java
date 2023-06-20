@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetFirstNameChange
+ *  <p>Change triggered by the Set First Name update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetFirstNameChangeImpl implements SetFirstNameChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetFirstNameChangeImpl implements SetFirstNameChange, ModelBase {
     }
 
     /**
-     *  <p>Shape of the action for <code>setFirstName</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetFirstNameChangeImpl implements SetFirstNameChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetFirstNameChangeImpl implements SetFirstNameChange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

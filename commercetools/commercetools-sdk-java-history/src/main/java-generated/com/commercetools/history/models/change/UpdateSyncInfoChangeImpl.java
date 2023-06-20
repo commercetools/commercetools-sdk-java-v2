@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * UpdateSyncInfoChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Update SyncInfo on Orders.</li>
+ *   <li>Update SyncInfo on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase {
@@ -24,20 +28,20 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
 
     private String change;
 
-    private String channelId;
-
     private com.commercetools.history.models.common.SyncInfo nextValue;
+
+    private String channelId;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     UpdateSyncInfoChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("channelId") final String channelId,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.SyncInfo nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.SyncInfo nextValue,
+            @JsonProperty("channelId") final String channelId) {
         this.change = change;
-        this.channelId = channelId;
         this.nextValue = nextValue;
+        this.channelId = channelId;
         this.type = UPDATE_SYNC_INFO_CHANGE;
     }
 
@@ -57,7 +61,7 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
     }
 
     /**
-     *  <p>Update action for <code>updateSyncInfo</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +69,31 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
     }
 
     /**
-     *
-     */
-
-    public String getChannelId() {
-        return this.channelId;
-    }
-
-    /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public com.commercetools.history.models.common.SyncInfo getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     *  <p><code>id</code> of the updated Channel.</p>
+     */
+
+    public String getChannelId() {
+        return this.channelId;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setChannelId(final String channelId) {
-        this.channelId = channelId;
-    }
-
     public void setNextValue(final com.commercetools.history.models.common.SyncInfo nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setChannelId(final String channelId) {
+        this.channelId = channelId;
     }
 
     @Override
@@ -104,14 +108,14 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(channelId, that.channelId)
                 .append(nextValue, that.nextValue)
+                .append(channelId, that.channelId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(channelId).append(nextValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(change).append(nextValue).append(channelId).toHashCode();
     }
 
 }

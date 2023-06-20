@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetInputTipChange setInputTipChange = SetInputTipChange.builder()
  *             .change("{change}")
- *             .attributeName("{attributeName}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .attributeName("{attributeName}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
 
     private String change;
 
-    private String attributeName;
+    private com.commercetools.history.models.common.LocalizedString previousValue;
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
-    private com.commercetools.history.models.common.LocalizedString previousValue;
+    private String attributeName;
 
     /**
-     *  <p>Update action for <code>setInputTip</code> on product types</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,53 +45,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
     }
 
     /**
-     *  <p>The name of the updated attribute.</p>
-     * @param attributeName value to be set
-     * @return Builder
-     */
-
-    public SetInputTipChangeBuilder attributeName(final String attributeName) {
-        this.attributeName = attributeName;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetInputTipChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetInputTipChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetInputTipChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -103,7 +57,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -115,7 +69,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -127,7 +81,53 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
     }
 
     /**
-     *  <p>Update action for <code>setInputTip</code> on product types</p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetInputTipChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetInputTipChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetInputTipChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @param attributeName value to be set
+     * @return Builder
+     */
+
+    public SetInputTipChangeBuilder attributeName(final String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -136,25 +136,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
     }
 
     /**
-     *  <p>The name of the updated attribute.</p>
-     * @return attributeName
-     */
-
-    public String getAttributeName() {
-        return this.attributeName;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.LocalizedString getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -163,15 +145,33 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the updated AttributeDefinition.</p>
+     * @return attributeName
+     */
+
+    public String getAttributeName() {
+        return this.attributeName;
+    }
+
+    /**
      * builds SetInputTipChange with checking for non-null required values
      * @return SetInputTipChange
      */
     public SetInputTipChange build() {
         Objects.requireNonNull(change, SetInputTipChange.class + ": change is missing");
-        Objects.requireNonNull(attributeName, SetInputTipChange.class + ": attributeName is missing");
-        Objects.requireNonNull(nextValue, SetInputTipChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetInputTipChange.class + ": previousValue is missing");
-        return new SetInputTipChangeImpl(change, attributeName, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetInputTipChange.class + ": nextValue is missing");
+        Objects.requireNonNull(attributeName, SetInputTipChange.class + ": attributeName is missing");
+        return new SetInputTipChangeImpl(change, previousValue, nextValue, attributeName);
     }
 
     /**
@@ -179,7 +179,7 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
      * @return SetInputTipChange
      */
     public SetInputTipChange buildUnchecked() {
-        return new SetInputTipChangeImpl(change, attributeName, nextValue, previousValue);
+        return new SetInputTipChangeImpl(change, previousValue, nextValue, attributeName);
     }
 
     /**
@@ -198,9 +198,9 @@ public class SetInputTipChangeBuilder implements Builder<SetInputTipChange> {
     public static SetInputTipChangeBuilder of(final SetInputTipChange template) {
         SetInputTipChangeBuilder builder = new SetInputTipChangeBuilder();
         builder.change = template.getChange();
-        builder.attributeName = template.getAttributeName();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.attributeName = template.getAttributeName();
         return builder;
     }
 

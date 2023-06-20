@@ -28,7 +28,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     private com.commercetools.history.models.common.Reference nextValue;
 
     /**
-     *  <p>Update action for when a product is assigned to a product selection</p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     *  <p>Update action for when a product is assigned to a product selection</p>
+     * value of change}
      * @return change
      */
 
@@ -83,7 +83,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 

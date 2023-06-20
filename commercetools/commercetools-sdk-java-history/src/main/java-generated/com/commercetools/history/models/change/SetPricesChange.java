@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetPricesChange
+ *  <p>Change triggered by the Set Prices update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,10 +25,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetPricesChange setPricesChange = SetPricesChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
- *             .variant("{variant}")
  *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .variant("{variant}")
  *             .build()
  * </code></pre>
  * </div>
@@ -51,7 +51,7 @@ public interface SetPricesChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setPrices</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -59,23 +59,7 @@ public interface SetPricesChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return catalogData
-     */
-    @NotNull
-    @JsonProperty("catalogData")
-    public String getCatalogData();
-
-    /**
-     *
-     * @return variant
-     */
-    @NotNull
-    @JsonProperty("variant")
-    public String getVariant();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -84,7 +68,7 @@ public interface SetPricesChange extends Change {
     public List<Price> getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -93,28 +77,33 @@ public interface SetPricesChange extends Change {
     public List<Price> getNextValue();
 
     /**
-     *  <p>Update action for <code>setPrices</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+    @NotNull
+    @JsonProperty("catalogData")
+    public String getCatalogData();
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @return variant
+     */
+    @NotNull
+    @JsonProperty("variant")
+    public String getVariant();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set catalogData
-     * @param catalogData value to be set
-     */
-
-    public void setCatalogData(final String catalogData);
-
-    /**
-     * set variant
-     * @param variant value to be set
-     */
-
-    public void setVariant(final String variant);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -122,14 +111,14 @@ public interface SetPricesChange extends Change {
     public void setPreviousValue(final Price... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<Price> previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
@@ -137,11 +126,28 @@ public interface SetPricesChange extends Change {
     public void setNextValue(final Price... nextValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
     public void setNextValue(final List<Price> nextValue);
+
+    /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     */
+
+    public void setCatalogData(final String catalogData);
+
+    /**
+     *  <p><code>sku</code> or <code>key</code> of the ProductVariant.</p>
+     * @param variant value to be set
+     */
+
+    public void setVariant(final String variant);
 
     /**
      * factory method
@@ -159,10 +165,10 @@ public interface SetPricesChange extends Change {
     public static SetPricesChange of(final SetPricesChange template) {
         SetPricesChangeImpl instance = new SetPricesChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
-        instance.setVariant(template.getVariant());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 
@@ -178,8 +184,6 @@ public interface SetPricesChange extends Change {
         }
         SetPricesChangeImpl instance = new SetPricesChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCatalogData(template.getCatalogData());
-        instance.setVariant(template.getVariant());
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.Price::deepCopy)
@@ -190,6 +194,8 @@ public interface SetPricesChange extends Change {
                         .map(com.commercetools.history.models.common.Price::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
         return instance;
     }
 

@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * AddLocalizedEnumValueChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Add LocalizableEnumValue to AttributeDefinition on Product Types.</li>
+ *   <li>Add LocalizedEnumValue to FieldDefinition on Types.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueChange, ModelBase {
@@ -24,24 +28,24 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
 
     private String change;
 
+    private com.commercetools.history.models.change_value.LocalizedEnumValue nextValue;
+
     private String fieldName;
 
     private String attributeName;
-
-    private com.commercetools.history.models.change_value.LocalizedEnumValue nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddLocalizedEnumValueChangeImpl(@JsonProperty("change") final String change,
+            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.LocalizedEnumValue nextValue,
             @JsonProperty("fieldName") final String fieldName,
-            @JsonProperty("attributeName") final String attributeName,
-            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.LocalizedEnumValue nextValue) {
+            @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
+        this.nextValue = nextValue;
         this.fieldName = fieldName;
         this.attributeName = attributeName;
-        this.nextValue = nextValue;
         this.type = ADD_LOCALIZED_ENUM_VALUE_CHANGE;
     }
 
@@ -61,7 +65,7 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
     }
 
     /**
-     *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
+     *
      */
 
     public String getChange() {
@@ -69,7 +73,15 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
     }
 
     /**
-     *  <p>The name of the field definition updated.</p>
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.change_value.LocalizedEnumValue getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
      */
 
     public String getFieldName() {
@@ -77,23 +89,19 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
     }
 
     /**
-     *  <p>The name of the attribute updated.</p>
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
      */
 
     public String getAttributeName() {
         return this.attributeName;
     }
 
-    /**
-     *
-     */
-
-    public com.commercetools.history.models.change_value.LocalizedEnumValue getNextValue() {
-        return this.nextValue;
-    }
-
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.change_value.LocalizedEnumValue nextValue) {
+        this.nextValue = nextValue;
     }
 
     public void setFieldName(final String fieldName) {
@@ -102,10 +110,6 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
 
     public void setAttributeName(final String attributeName) {
         this.attributeName = attributeName;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.change_value.LocalizedEnumValue nextValue) {
-        this.nextValue = nextValue;
     }
 
     @Override
@@ -120,9 +124,9 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
                 .append(attributeName, that.attributeName)
-                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -130,9 +134,9 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
+                .append(nextValue)
                 .append(fieldName)
                 .append(attributeName)
-                .append(nextValue)
                 .toHashCode();
     }
 

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetCustomerNumberChange
+ *  <p>Change triggered by the Set Customer Number update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetCustomerNumberChangeImpl implements SetCustomerNumberChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetCustomerNumberChangeImpl implements SetCustomerNumberChange, Mod
     }
 
     /**
-     *  <p>Shape of the action for <code>setCustomerNumber</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetCustomerNumberChangeImpl implements SetCustomerNumberChange, Mod
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public String getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetCustomerNumberChangeImpl implements SetCustomerNumberChange, Mod
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public String getNextValue() {

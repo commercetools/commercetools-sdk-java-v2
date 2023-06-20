@@ -15,10 +15,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetCategoryOrderHintChange setCategoryOrderHintChange = SetCategoryOrderHintChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
- *             .categoryId("{categoryId}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
+ *             .categoryId("{categoryId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -28,16 +28,16 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
 
     private String change;
 
-    private String catalogData;
-
-    private String categoryId;
-
     private com.commercetools.history.models.common.CategoryOrderHints previousValue;
 
     private com.commercetools.history.models.common.CategoryOrderHints nextValue;
 
+    private String catalogData;
+
+    private String categoryId;
+
     /**
-     *  <p>Update action for <code>setCategoryOrderHint</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -48,29 +48,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public SetCategoryOrderHintChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the categoryId
-     * @param categoryId value to be set
-     * @return Builder
-     */
-
-    public SetCategoryOrderHintChangeBuilder categoryId(final String categoryId) {
-        this.categoryId = categoryId;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -83,7 +61,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -95,7 +73,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -107,7 +85,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -119,7 +97,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -131,7 +109,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -143,7 +121,32 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     *  <p>Update action for <code>setCategoryOrderHint</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public SetCategoryOrderHintChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated Category.</p>
+     * @param categoryId value to be set
+     * @return Builder
+     */
+
+    public SetCategoryOrderHintChangeBuilder categoryId(final String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -152,25 +155,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of categoryId}
-     * @return categoryId
-     */
-
-    public String getCategoryId() {
-        return this.categoryId;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -179,7 +164,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -188,16 +173,37 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
+     *  <p><code>id</code> of the updated Category.</p>
+     * @return categoryId
+     */
+
+    public String getCategoryId() {
+        return this.categoryId;
+    }
+
+    /**
      * builds SetCategoryOrderHintChange with checking for non-null required values
      * @return SetCategoryOrderHintChange
      */
     public SetCategoryOrderHintChange build() {
         Objects.requireNonNull(change, SetCategoryOrderHintChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, SetCategoryOrderHintChange.class + ": catalogData is missing");
-        Objects.requireNonNull(categoryId, SetCategoryOrderHintChange.class + ": categoryId is missing");
         Objects.requireNonNull(previousValue, SetCategoryOrderHintChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, SetCategoryOrderHintChange.class + ": nextValue is missing");
-        return new SetCategoryOrderHintChangeImpl(change, catalogData, categoryId, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, SetCategoryOrderHintChange.class + ": catalogData is missing");
+        Objects.requireNonNull(categoryId, SetCategoryOrderHintChange.class + ": categoryId is missing");
+        return new SetCategoryOrderHintChangeImpl(change, previousValue, nextValue, catalogData, categoryId);
     }
 
     /**
@@ -205,7 +211,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
      * @return SetCategoryOrderHintChange
      */
     public SetCategoryOrderHintChange buildUnchecked() {
-        return new SetCategoryOrderHintChangeImpl(change, catalogData, categoryId, previousValue, nextValue);
+        return new SetCategoryOrderHintChangeImpl(change, previousValue, nextValue, catalogData, categoryId);
     }
 
     /**
@@ -224,10 +230,10 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     public static SetCategoryOrderHintChangeBuilder of(final SetCategoryOrderHintChange template) {
         SetCategoryOrderHintChangeBuilder builder = new SetCategoryOrderHintChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
-        builder.categoryId = template.getCategoryId();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
+        builder.categoryId = template.getCategoryId();
         return builder;
     }
 

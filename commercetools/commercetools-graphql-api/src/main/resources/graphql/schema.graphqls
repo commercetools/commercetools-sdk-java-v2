@@ -69,6 +69,10 @@ input AddAssociateRolePermission {
   permission: Permission!
 }
 
+input AddAttributeGroupAttribute {
+  attribute: AttributeReferenceInput!
+}
+
 input AddBusinessUnitAddress {
   address: AddressInput!
 }
@@ -136,6 +140,7 @@ input AddCartLineItem {
   supplyChannel: ResourceIdentifierInput
   variantId: Int
   quantity: Long
+  key: String
   sku: String
   productId: String
 }
@@ -168,6 +173,7 @@ input AddCategoryAsset {
 input AddChannelRoles {
   roles: [ChannelRole!]!
 }
+
 
 input AddCustomerAddress {
   address: AddressInput!
@@ -214,6 +220,7 @@ input AddMyCartLineItem {
   variantId: Int
   quantity: Long
   sku: String
+  key: String
   productId: String
 }
 
@@ -241,6 +248,7 @@ input AddOrderItemShippingAddress {
 input AddOrderParcelToDelivery {
   deliveryId: String
   deliveryKey: String
+  parcelKey: String
   measurements: ParcelMeasurementsDraftType
   trackingData: TrackingDataDraftType
   items: [DeliveryItemDraftType!] = []
@@ -405,6 +413,7 @@ input AddStagedOrderLineItem {
   supplyChannel: ResourceIdentifierInput
   variantId: Int
   quantity: Long
+  key: String
   sku: String
   productId: String
 }
@@ -417,6 +426,7 @@ type AddStagedOrderLineItemOutput implements StagedOrderUpdateActionOutput {
 input AddStagedOrderParcelToDelivery {
   deliveryId: String
   deliveryKey: String
+  parcelKey: String
   measurements: ParcelMeasurementsDraftType
   trackingData: TrackingDataDraftType
   items: [DeliveryItemDraftType!] = []
@@ -427,6 +437,7 @@ type AddStagedOrderParcelToDeliveryOutput implements StagedOrderUpdateActionOutp
   type: String!
   deliveryId: String
   deliveryKey: String
+  parcelKey: String
   measurements: ParcelMeasurements
   trackingData: TrackingData
   items: [DeliveryItem!]!
@@ -466,6 +477,10 @@ type AddStagedOrderShoppingListOutput implements StagedOrderUpdateActionOutput {
   shoppingListResId: ResourceIdentifier!
   supplyChannelResId: ChannelReferenceIdentifier
   distributionChannelResId: ChannelReferenceIdentifier
+}
+
+input AddStandalonePriceTier {
+  tier: ProductPriceTierInput!
 }
 
 input AddStateRoles {
@@ -930,6 +945,65 @@ interface AttributeDefinitionType {
   name: String!
 }
 
+type AttributeGroup implements Versioned {
+  id: String!
+  version: Long!
+  createdAt: DateTime!
+  lastModifiedAt: DateTime!
+  name(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  nameAllLocales: [LocalizedString!]!
+  description(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  descriptionAllLocales: [LocalizedString!]
+  key: String
+  attributes: [AttributeReference!]!
+  createdBy: Initiator
+  lastModifiedBy: Initiator
+}
+
+input AttributeGroupDraft {
+  name: [LocalizedStringItemInputType!]!
+  description: [LocalizedStringItemInputType!]
+  key: String
+  attributes: [AttributeReferenceInput!]!
+}
+
+type AttributeGroupQueryResult {
+  offset: Int!
+  count: Int!
+  total: Long!
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  exists: Boolean!
+  results: [AttributeGroup!]!
+}
+
+input AttributeGroupUpdateAction {
+  addAttribute: AddAttributeGroupAttribute
+  changeName: ChangeAttributeGroupName
+  removeAttribute: RemoveAttributeGroupAttribute
+  setDescription: SetAttributeGroupDescription
+  setKey: SetAttributeGroupKey
+  setAttributes: SetAttributeGroupAttributes
+}
+
+type AttributeReference {
+  key: String!
+}
+
+input AttributeReferenceInput {
+  key: String!
+}
+
 input AttributeSetElementTypeDraft {
   text: SimpleAttributeTypeDraft
   number: SimpleAttributeTypeDraft
@@ -1017,6 +1091,9 @@ input BaseSearchKeywordInput {
   whitespace: WhitespaceSuggestTokenizerInput
   custom: CustomSuggestTokenizerInput
 }
+
+"The `BigDecimal` scalar type represents signed fractional values with arbitrary precision."
+scalar BigDecimal
 
 type BooleanAttribute implements Attribute {
   value: Boolean!
@@ -1344,8 +1421,6 @@ type Cart implements Versioned & ReferenceExpandable {
   shippingKey: String
   shippingInfo: ShippingInfo
   discountCodes: [DiscountCodeInfo!]!
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   directDiscounts: [DirectDiscount!]!
   refusedGifts: [CartDiscount!]!
   refusedGiftsRefs: [Reference!]!
@@ -1618,7 +1693,6 @@ input CartUpdateAction {
   changeCustomLineItemMoney: ChangeCartCustomLineItemMoney
   changeCustomLineItemPriceMode: ChangeCartCustomLineItemPriceMode
   changeCustomLineItemQuantity: ChangeCartCustomLineItemQuantity
-  changeLineItemQuantity: ChangeCartLineItemQuantity
   changeTaxCalculationMode: ChangeCartTaxCalculationMode
   changeTaxMode: ChangeCartTaxMode
   changeTaxRoundingMode: ChangeCartTaxRoundingMode
@@ -1649,14 +1723,13 @@ input CartUpdateAction {
   setCustomerGroup: SetCartCustomerGroup
   setCustomerId: SetCartCustomerId
   setDeleteDaysAfterLastModification: SetCartDeleteDaysAfterLastModification
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setDirectDiscounts: SetCartDirectDiscounts
   setItemShippingAddressCustomField: SetCartItemShippingAddressCustomField
   setItemShippingAddressCustomType: SetCartItemShippingAddressCustomType
   setLineItemCustomField: SetCartLineItemCustomField
   setLineItemCustomType: SetCartLineItemCustomType
   setLineItemDistributionChannel: SetCartLineItemDistributionChannel
+  setLineItemInventoryMode: SetCartLineItemInventoryMode
   setLineItemPrice: SetCartLineItemPrice
   setLineItemShippingDetails: SetCartLineItemShippingDetails
   setLineItemSupplyChannel: SetCartLineItemSupplyChannel
@@ -1676,6 +1749,7 @@ input CartUpdateAction {
   updateItemShippingAddress: UpdateCartItemShippingAddress
   freezeCart: FreezeCart
   unfreezeCart: UnfreezeCart
+  changeLineItemQuantity: ChangeCartLineItemQuantity
 }
 
 input CartValueInput {
@@ -1861,6 +1935,10 @@ input ChangeAssociateRoleBuyerAssignable {
   buyerAssignable: Boolean!
 }
 
+input ChangeAttributeGroupName {
+  name: [LocalizedStringItemInputType!]!
+}
+
 input ChangeBusinessUnitAddress {
   addressId: String
   addressKey: String
@@ -1938,7 +2016,11 @@ input ChangeCartDiscountValue {
 input ChangeCartLineItemQuantity {
   lineItemId: String!
   quantity: Long!
+
+  "Only valid for the general Carts API. Ignored for the My Carts API."
   externalPrice: BaseMoneyInput
+
+  "Only valid for the general Carts API. Ignored for the My Carts API."
   externalTotalPrice: ExternalLineItemTotalPriceDraft
 }
 
@@ -2205,6 +2287,14 @@ input ChangeProjectSettingsProductSearchIndexingEnabled {
 
 input ChangeProjectSettingsShoppingListsConfiguration {
   shoppingListsConfiguration: ShoppingListsConfigurationInput!
+}
+
+input ChangeQuoteCustomer {
+  customer: ResourceIdentifierInput!
+}
+
+input ChangeQuoteRequestCustomer {
+  customer: ResourceIdentifierInput!
 }
 
 input ChangeQuoteRequestState {
@@ -2581,6 +2671,25 @@ type CommercetoolsSubscriptionQueryResult {
   results: [CommercetoolsSubscription!]!
 }
 
+type ConfluentCloudDestination implements Destination {
+  bootstrapServer: String!
+  apiKey: String!
+  apiSecret: String!
+  acks: String!
+  topic: String!
+  key: String
+  type: String!
+}
+
+input ConfluentCloudDestinationInput {
+  bootstrapServer: String!
+  apiKey: String!
+  apiSecret: String!
+  acks: String!
+  topic: String!
+  key: String
+}
+
 "[ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1) country code."
 scalar Country
 
@@ -2620,8 +2729,6 @@ input CreateStore {
   key: String!
   name: [LocalizedStringItemInputType!]
   languages: [Locale!]
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   countries: [StoreCountryInput!]
   distributionChannels: [ResourceIdentifierInput!]
   supplyChannels: [ResourceIdentifierInput!]
@@ -2648,13 +2755,14 @@ A key-value pair representing the field name and value of one single custom fiel
 
 The value of this custom field consists of escaped JSON based on the FieldDefinition of the Type.
 
+
 Examples for `value`:
 
 * FieldType `String`: `"\"This is a string\""`
 * FieldType `DateTimeType`: `"\"2018-10-12T14:00:00.000Z\""`
 * FieldType `Number`: `"4"`
 * FieldType `Set` with an elementType of `String`: `"[\"This is a string\", \"This is another string\"]"`
-* FieldType `Reference`: `"{\"id\", \"b911b62d-353a-4388-93ee-8d488d9af962\", \"typeId\", \"product\"}"`
+* FieldType `Reference`: `"{\"id\": \"b911b62d-353a-4388-93ee-8d488d9af962\", \"typeId\": \"product\"}"`
 """
 input CustomFieldInput {
   name: String!
@@ -2662,13 +2770,14 @@ input CustomFieldInput {
   """
   The value of this custom field consists of escaped JSON based on the FieldDefinition of the Type.
 
+
   Examples for `value`:
 
   * FieldType `String`: `"\"This is a string\""`
   * FieldType `DateTimeType`: `"\"2018-10-12T14:00:00.000Z\""`
   * FieldType `Number`: `"4"`
   * FieldType `Set` with an elementType of `String`: `"[\"This is a string\", \"This is another string\"]"`
-  * FieldType `Reference`: `"{\"id\", \"b911b62d-353a-4388-93ee-8d488d9af962\", \"typeId\", \"product\"}"`
+  * FieldType `Reference`: `"{\"id\": \"b911b62d-353a-4388-93ee-8d488d9af962\", \"typeId\": \"product\"}"`
   """
   value: String!
 }
@@ -3366,6 +3475,7 @@ input DestinationInput {
   EventGrid: EventGridDestinationInput
   GoogleCloudPubSub: GoogleCloudPubSubDestinationInput
   EventBridge: EventBridgeDestinationInput
+  ConfluentCloud: ConfluentCloudDestinationInput
 }
 
 type Dimensions {
@@ -3383,20 +3493,17 @@ type DimensionsProductSearch {
   height: Int!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type DirectDiscount {
   id: String!
   value: CartDiscountValue!
   target: CartDiscountTarget
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input DirectDiscountDraft {
   value: CartDiscountValueInput!
   target: CartDiscountTargetInput
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type DirectDiscountDraftOutput {
   value: CartDiscountValue!
   target: CartDiscountTarget
@@ -4311,6 +4418,7 @@ Please also note that creating an order is impossible if the product or product 
 """
 type LineItem {
   id: String!
+  key: String
   productId: String!
   productKey: String
   name(
@@ -4353,6 +4461,7 @@ type LineItem {
 }
 
 input LineItemDraft {
+  key: String
   productId: String
   sku: String
   quantity: Long
@@ -4371,6 +4480,7 @@ input LineItemDraft {
 type LineItemDraftOutput {
   productId: String
   sku: String
+  key: String
   quantity: Long
   variantId: Int
   custom: CustomFieldsCommand
@@ -4580,6 +4690,9 @@ type Location {
   country: Country!
   state: String
 }
+
+"The `Long` scalar type represents non-fractional signed whole numeric values. Long can represent values between -(2^63) and 2^63 - 1."
+scalar Long
 
 type Me implements MeQueryInterface & CartQueryInterface & ActiveCartInterface & OrderQueryInterface & ShoppingListQueryInterface {
   "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
@@ -4972,6 +5085,21 @@ type Mutation {
 
     "Queries with specified key"
     key: String): ProductDiscount
+  createAttributeGroup(draft: AttributeGroupDraft!): AttributeGroup
+  updateAttributeGroup(version: Long!, actions: [AttributeGroupUpdateAction!]!,
+
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): AttributeGroup
+  deleteAttributeGroup(version: Long!,
+
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): AttributeGroup
   createProduct(draft: ProductDraft!): Product
   updateProduct(version: Long!, actions: [ProductUpdateAction!]!,
 
@@ -5117,6 +5245,9 @@ type Mutation {
 
     "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
     storeKey: KeyReferenceInput): CustomerSignInResult!
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta Signs up a new customer and associates it with the business unit."
+  signUpInMyBusinessUnit(draft: SignUpInMyBusinessUnitDraft!): CustomerSignInResult!
 
   "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   updateMyCustomer(version: Long!, actions: [MyCustomerUpdateAction!]!,
@@ -5639,7 +5770,6 @@ input MyCartUpdateAction {
   addPayment: AddCartPayment
   addShoppingList: AddCartShoppingList
   applyDeltaToLineItemShippingDetailsTargets: ApplyCartDeltaToLineItemShippingDetailsTargets
-  changeLineItemQuantity: ChangeCartLineItemQuantity
   changeTaxMode: ChangeMyCartTaxMode
   recalculate: RecalculateCart
   removeDiscountCode: RemoveCartDiscountCode
@@ -5655,8 +5785,6 @@ input MyCartUpdateAction {
   setCustomType: SetCartCustomType
   setCustomerEmail: SetCartCustomerEmail
   setDeleteDaysAfterLastModification: SetCartDeleteDaysAfterLastModification
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setDirectDiscounts: SetCartDirectDiscounts
   setItemShippingAddressCustomField: SetCartItemShippingAddressCustomField
   setItemShippingAddressCustomType: SetCartItemShippingAddressCustomType
@@ -5673,6 +5801,7 @@ input MyCartUpdateAction {
   setShippingCustomField: SetCartShippingCustomField
   setShippingCustomType: SetCartShippingCustomType
   updateItemShippingAddress: UpdateCartItemShippingAddress
+  changeLineItemQuantity: ChangeCartLineItemQuantity
 }
 
 input MyCustomerUpdateAction {
@@ -5702,6 +5831,7 @@ input MyCustomerUpdateAction {
 }
 
 input MyLineItemDraft {
+  key: String
   productId: String
   sku: String
   quantity: Long
@@ -5878,8 +6008,6 @@ type Order implements Versioned & ReferenceExpandable {
   shippingKey: String
   shippingInfo: ShippingInfo
   discountCodes: [DiscountCodeInfo!]!
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   directDiscounts: [DirectDiscount!]!
   refusedGifts: [CartDiscount!]!
   refusedGiftsRefs: [Reference!]!
@@ -6327,6 +6455,7 @@ input OrderUpdateAction {
 
 type Parcel {
   id: String!
+  key: String
   createdAt: DateTime!
   measurements: ParcelMeasurements
   trackingData: TrackingData
@@ -6342,6 +6471,7 @@ type ParcelAddedToDelivery implements MessagePayload & OrderMessagePayload {
 }
 
 type ParcelData {
+  key: String
   measurements: ParcelMeasurements
   trackingData: TrackingData
   items: [DeliveryItem!]!
@@ -6349,6 +6479,7 @@ type ParcelData {
 }
 
 input ParcelDataDraftType {
+  key: String
   measurements: ParcelMeasurementsDraftType
   trackingData: TrackingDataDraftType
   items: [DeliveryItemDraftType!] = []
@@ -6357,6 +6488,7 @@ input ParcelDataDraftType {
 
 input ParcelDraft {
   id: String!
+  key: String
   createdAt: DateTime!
   measurements: ParcelMeasurementsDraftType
   trackingData: TrackingDataDraftType
@@ -6598,6 +6730,8 @@ enum Permission {
   CreateOrdersFromOthersQuotes
   ViewMyOrders
   UpdateOthersQuoteRequests
+  ReassignMyQuotes
+  ReassignOthersQuotes
 }
 
 type PlainEnumValue {
@@ -6719,8 +6853,35 @@ type ProductAssignmentQueryResult {
   results: [ProductAssignment!]!
 }
 
+"""
+An input object used to define a ProductAttribute.
+
+The value should be passed in a form of escaped JSON.
+
+
+Examples for `value`:
+
+* FieldType `String`: `"\"This is a string\""`
+* FieldType `DateTimeType`: `"\"2018-10-12T14:00:00.000Z\""`
+* FieldType `Number`: `"4"`
+* FieldType `Set` with an elementType of `String`: `"[\"This is a string\", \"This is another string\"]"`
+* FieldType `Reference`: `"{\"id\": \"b911b62d-353a-4388-93ee-8d488d9af962\", \"typeId\": \"product\"}"`
+"""
 input ProductAttributeInput {
   name: String!
+
+  """
+  The value should be passed in a form of escaped JSON.
+
+
+  Examples for `value`:
+
+  * FieldType `String`: `"\"This is a string\""`
+  * FieldType `DateTimeType`: `"\"2018-10-12T14:00:00.000Z\""`
+  * FieldType `Number`: `"4"`
+  * FieldType `Set` with an elementType of `String`: `"[\"This is a string\", \"This is another string\"]"`
+  * FieldType `Reference`: `"{\"id\": \"b911b62d-353a-4388-93ee-8d488d9af962\", \"typeId\": \"product\"}"`
+  """
   value: String!
 }
 
@@ -7824,7 +7985,7 @@ type PurchaseOrderNumberSet implements MessagePayload & OrderMessagePayload {
   type: String!
 }
 
-type Query  {
+type Query {
   """
   This field can only be used with an access token created with the password flow or with an anonymous session.
 
@@ -7921,6 +8082,13 @@ type Query  {
     "Queries with specified key"
     key: String): ProductDiscount
   productDiscounts(where: String, sort: [String!], limit: Int, offset: Int): ProductDiscountQueryResult!
+  attributeGroup(
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): AttributeGroup
+  attributeGroups(where: String, sort: [String!], limit: Int, offset: Int): AttributeGroupQueryResult!
   product(projectExpandedProducts: Boolean = false, localeProjection: [Locale!],
 
     "Queries for a product with specified SKU"
@@ -8251,6 +8419,7 @@ enum QuoteRequestState {
 }
 
 input QuoteRequestUpdateAction {
+  changeCustomer: ChangeQuoteRequestCustomer
   changeQuoteRequestState: ChangeQuoteRequestState
   setCustomField: SetQuoteRequestCustomField
   setCustomType: SetQuoteRequestCustomType
@@ -8262,11 +8431,13 @@ enum QuoteState {
   Withdrawn
   Pending
   DeclinedForRenegotiation
+  RenegotiationAddressed
   Accepted
   Declined
 }
 
 input QuoteUpdateAction {
+  changeCustomer: ChangeQuoteCustomer
   changeQuoteState: ChangeQuoteState
   requestQuoteRenegotiation: RequestQuoteRenegotiation
   setCustomField: SetQuoteCustomField
@@ -8445,6 +8616,10 @@ input RemoveAssociateRolePermission {
   permission: Permission!
 }
 
+input RemoveAttributeGroupAttribute {
+  attribute: AttributeReferenceInput!
+}
+
 input RemoveBusinessUnitAddress {
   addressId: String
   addressKey: String
@@ -8557,7 +8732,8 @@ input RemoveOrderItemShippingAddress {
 }
 
 input RemoveOrderParcelFromDelivery {
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
 }
 
 input RemoveOrderPayment {
@@ -8586,15 +8762,6 @@ input RemoveProductImage {
 
 input RemoveProductPrice {
   priceId: String
-
-  "'variantId' is deprecated. Use 'priceId' instead."
-  variantId: Int
-
-  "'sku' is deprecated. Use 'priceId' instead."
-  sku: String
-
-  "'price' is deprecated. Use 'priceId' instead."
-  price: ProductPriceDataInput
   staged: Boolean = true
 }
 
@@ -8684,12 +8851,14 @@ type RemoveStagedOrderLineItemOutput implements StagedOrderUpdateActionOutput {
 }
 
 input RemoveStagedOrderParcelFromDelivery {
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
 }
 
 type RemoveStagedOrderParcelFromDeliveryOutput implements StagedOrderUpdateActionOutput {
   type: String!
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
 }
 
 input RemoveStagedOrderPayment {
@@ -8699,6 +8868,10 @@ input RemoveStagedOrderPayment {
 type RemoveStagedOrderPaymentOutput implements StagedOrderUpdateActionOutput {
   type: String!
   paymentResId: ResourceIdentifier!
+}
+
+input RemoveStandalonePriceTier {
+  minimumQuantity: Int!
 }
 
 input RemoveStateRoles {
@@ -9134,6 +9307,18 @@ type SetAttributeDefinitionType implements AttributeDefinitionType {
   name: String!
 }
 
+input SetAttributeGroupAttributes {
+  attributes: [AttributeReferenceInput!]!
+}
+
+input SetAttributeGroupDescription {
+  description: [LocalizedStringItemInputType!]
+}
+
+input SetAttributeGroupKey {
+  key: String
+}
+
 input SetBusinessUnitAddressCustomField {
   addressId: String
   addressKey: String
@@ -9354,6 +9539,11 @@ input SetCartLineItemCustomType {
 input SetCartLineItemDistributionChannel {
   lineItemId: String!
   distributionChannel: ResourceIdentifierInput
+}
+
+input SetCartLineItemInventoryMode {
+  lineItemId: String!
+  inventoryMode: InventoryMode
 }
 
 input SetCartLineItemPrice {
@@ -9970,7 +10160,8 @@ input SetOrderNumber {
 input SetOrderParcelCustomField {
   name: String!
   value: String
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
 }
 
 input SetOrderParcelCustomType {
@@ -9978,21 +10169,25 @@ input SetOrderParcelCustomType {
   type: ResourceIdentifierInput
   typeKey: String
   typeId: String
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
 }
 
 input SetOrderParcelItems {
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
   items: [DeliveryItemDraftType!]!
 }
 
 input SetOrderParcelMeasurements {
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
   measurements: ParcelMeasurementsDraftType
 }
 
 input SetOrderParcelTrackingData {
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
   trackingData: TrackingDataDraftType
 }
 
@@ -10970,14 +11165,16 @@ type SetStagedOrderOrderTotalTaxOutput implements StagedOrderUpdateActionOutput 
 input SetStagedOrderParcelCustomField {
   name: String!
   value: String
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
 }
 
 type SetStagedOrderParcelCustomFieldOutput implements StagedOrderUpdateActionOutput {
   type: String!
   name: String!
   value: Json
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
 }
 
 input SetStagedOrderParcelCustomType {
@@ -10985,45 +11182,53 @@ input SetStagedOrderParcelCustomType {
   type: ResourceIdentifierInput
   typeKey: String
   typeId: String
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
 }
 
 type SetStagedOrderParcelCustomTypeOutput implements StagedOrderUpdateActionOutput {
   type: String!
   custom: CustomFieldsCommand!
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
 }
 
 input SetStagedOrderParcelItems {
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
   items: [DeliveryItemDraftType!]!
 }
 
 type SetStagedOrderParcelItemsOutput implements StagedOrderUpdateActionOutput {
   type: String!
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
   items: [DeliveryItem!]!
 }
 
 input SetStagedOrderParcelMeasurements {
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
   measurements: ParcelMeasurementsDraftType
 }
 
 type SetStagedOrderParcelMeasurementsOutput implements StagedOrderUpdateActionOutput {
   type: String!
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
   measurements: ParcelMeasurements
 }
 
 input SetStagedOrderParcelTrackingData {
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
   trackingData: TrackingDataDraftType
 }
 
 type SetStagedOrderParcelTrackingDataOutput implements StagedOrderUpdateActionOutput {
   type: String!
-  parcelId: String!
+  parcelId: String
+  parcelKey: String
   trackingData: TrackingData
 }
 
@@ -11265,6 +11470,23 @@ input SetStandalonePriceDiscountedPrice {
 
 input SetStandalonePriceKey {
   key: String
+}
+
+input SetStandalonePriceTiers {
+  tiers: [ProductPriceTierInput!]!
+}
+
+input SetStandalonePriceValidFrom {
+  validFrom: DateTime
+}
+
+input SetStandalonePriceValidFromAndUntil {
+  validFrom: DateTime
+  validUntil: DateTime
+}
+
+input SetStandalonePriceValidUntil {
+  validUntil: DateTime
 }
 
 input SetStateDescription {
@@ -11784,6 +12006,13 @@ input ShoppingListsConfigurationInput {
   deleteDaysAfterLastModification: Int
 }
 
+input SignUpInMyBusinessUnitDraft {
+  businessUnit: ResourceIdentifierInput!
+  customer: CustomerSignUpDraft!
+  version: Long!
+  associateRoleAssignments: [AssociateRoleAssignmentDraft!]!
+}
+
 input SimpleAttributeTypeDraft {
   dummy: String
 }
@@ -11851,8 +12080,6 @@ input StagedOrderUpdateAction {
   setDeliveryCustomField: SetStagedOrderDeliveryCustomField
   setDeliveryCustomType: SetStagedOrderDeliveryCustomType
   setDeliveryItems: SetStagedOrderDeliveryItems
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setDirectDiscounts: SetStagedOrderDirectDiscounts
   setItemShippingAddressCustomField: SetStagedOrderItemShippingAddressCustomField
   setItemShippingAddressCustomType: SetStagedOrderItemShippingAddressCustomType
@@ -12011,6 +12238,7 @@ type StandalonePriceCreated implements MessagePayload {
 }
 
 type StandalonePriceDeleted implements MessagePayload {
+  sku: String
   type: String!
 }
 
@@ -12046,6 +12274,22 @@ type StandalonePriceStagedChangesApplied implements MessagePayload {
   type: String!
 }
 
+type StandalonePriceTierAdded implements MessagePayload {
+  tier: ProductPriceTier!
+  type: String!
+}
+
+type StandalonePriceTierRemoved implements MessagePayload {
+  tier: ProductPriceTier!
+  type: String!
+}
+
+type StandalonePriceTiersSet implements MessagePayload {
+  tiers: [ProductPriceTier!]!
+  previousTiers: [ProductPriceTier!]!
+  type: String!
+}
+
 input StandalonePriceUpdateAction {
   applyStagedChanges: ApplyStagedChanges
   changeActive: ChangeStandalonePriceActive
@@ -12054,6 +12298,32 @@ input StandalonePriceUpdateAction {
   setDiscountedPrice: SetStandalonePriceDiscountedPrice
   setCustomField: SetStandalonePriceCustomFields
   setCustomType: CustomFieldsDraft
+  setValidFromAndUntil: SetStandalonePriceValidFromAndUntil
+  setValidFrom: SetStandalonePriceValidFrom
+  setValidUntil: SetStandalonePriceValidUntil
+  addPriceTier: AddStandalonePriceTier
+  removePriceTier: RemoveStandalonePriceTier
+  setPriceTiers: SetStandalonePriceTiers
+}
+
+type StandalonePriceValidFromAndUntilSet implements MessagePayload {
+  validFrom: DateTime
+  validUntil: DateTime
+  previousValidFrom: DateTime
+  previousValidUntil: DateTime
+  type: String!
+}
+
+type StandalonePriceValidFromSet implements MessagePayload {
+  validFrom: DateTime
+  previousValidFrom: DateTime
+  type: String!
+}
+
+type StandalonePriceValidUntilSet implements MessagePayload {
+  validUntil: DateTime
+  previousValidUntil: DateTime
+  type: String!
 }
 
 type StandalonePriceValueChanged implements MessagePayload {
@@ -12157,8 +12427,6 @@ type Store implements Versioned & ReferenceExpandable {
     acceptLanguage: [Locale!]): String
   nameAllLocales: [LocalizedString!]
   languages: [Locale!]
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   countries: [StoreCountry!]
   productSelections: [ProductSelectionSetting!]!
   distributionChannelsRef: [Reference!]!
@@ -12172,7 +12440,6 @@ type Store implements Versioned & ReferenceExpandable {
   lastModifiedBy: Initiator
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type StoreCountriesChanged implements MessagePayload {
   addedCountries: [StoreCountry!]
   removedCountries: [StoreCountry!]
@@ -12199,8 +12466,6 @@ type StoreCreated implements MessagePayload {
   productSelections: [ProductSelectionSetting!]!
   distributionChannels: [Channel!]!
   supplyChannels: [Channel!]!
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   countries: [StoreCountry!]
   distributionChannelsRef: [Reference!]!
   supplyChannelsRef: [Reference!]!
@@ -12277,21 +12542,15 @@ type StoreSupplyChannelsChanged implements MessagePayload {
 
 input StoreUpdateAction {
   addProductSelection: AddStoreProductSelection
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   addCountry: AddStoreCountry
   addDistributionChannel: AddStoreDistributionChannel
   addSupplyChannel: AddStoreSupplyChannel
   changeProductSelectionActive: ChangeStoreProductSelectionActive
   removeProductSelection: RemoveStoreProductSelection
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   removeCountry: RemoveStoreCountry
   removeDistributionChannel: RemoveStoreDistributionChannel
   removeSupplyChannel: RemoveStoreSupplyChannel
   setProductSelections: SetStoreProductSelections
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setCountries: SetStoreCountries
   setCustomField: SetStoreCustomField
   setCustomType: SetStoreCustomType

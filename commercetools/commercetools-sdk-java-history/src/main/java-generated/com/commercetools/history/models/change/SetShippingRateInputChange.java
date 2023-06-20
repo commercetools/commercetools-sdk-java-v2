@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetShippingRateInputChange
+ *  <p>Change triggered by the Set Shipping Rate Input update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,7 +46,7 @@ public interface SetShippingRateInputChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>setShippingRateInput</code></p>
+     *
      * @return change
      */
     @NotNull
@@ -54,15 +54,7 @@ public interface SetShippingRateInputChange extends Change {
     public String getChange();
 
     /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @JsonProperty("nextValue")
-    public Object getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -70,53 +62,61 @@ public interface SetShippingRateInputChange extends Change {
     public Object getPreviousValue();
 
     /**
-     *  <p>Update action for <code>setShippingRateInput</code></p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @JsonProperty("nextValue")
+    public Object getNextValue();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final SetCartClassificationShippingRateInputValue nextValue);
-
-    /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final SetCartScoreShippingRateInputValue nextValue);
-
-    /**
-     * set nextValue
-     * @param nextValue value to be set
-     */
-
-    public void setNextValue(final Object nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final SetCartClassificationShippingRateInputValue previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final SetCartScoreShippingRateInputValue previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final Object previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final SetCartClassificationShippingRateInputValue nextValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final SetCartScoreShippingRateInputValue nextValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final Object nextValue);
 
     /**
      * factory method
@@ -134,8 +134,8 @@ public interface SetShippingRateInputChange extends Change {
     public static SetShippingRateInputChange of(final SetShippingRateInputChange template) {
         SetShippingRateInputChangeImpl instance = new SetShippingRateInputChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -151,8 +151,8 @@ public interface SetShippingRateInputChange extends Change {
         }
         SetShippingRateInputChangeImpl instance = new SetShippingRateInputChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 

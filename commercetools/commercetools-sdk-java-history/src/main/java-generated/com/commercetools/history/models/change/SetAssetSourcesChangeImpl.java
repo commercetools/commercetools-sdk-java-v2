@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetAssetSourcesChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Asset Sources on Categories.</li>
+ *   <li>Set Asset Sources on Products.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBase {
@@ -24,24 +28,24 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
 
     private String change;
 
-    private com.commercetools.history.models.change_value.AssetChangeValue asset;
+    private java.util.List<com.commercetools.history.models.common.AssetSource> previousValue;
 
     private java.util.List<com.commercetools.history.models.common.AssetSource> nextValue;
 
-    private java.util.List<com.commercetools.history.models.common.AssetSource> previousValue;
+    private com.commercetools.history.models.change_value.AssetChangeValue asset;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetAssetSourcesChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
+            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.AssetSource> previousValue,
             @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.AssetSource> nextValue,
-            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.AssetSource> previousValue) {
+            @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset) {
         this.change = change;
-        this.asset = asset;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
+        this.asset = asset;
         this.type = SET_ASSET_SOURCES_CHANGE;
     }
 
@@ -61,7 +65,7 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
     }
 
     /**
-     *  <p>Update action for <code>setAssetSources</code></p>
+     *
      */
 
     public String getChange() {
@@ -69,15 +73,15 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
-        return this.asset;
+    public java.util.List<com.commercetools.history.models.common.AssetSource> getPreviousValue() {
+        return this.previousValue;
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.AssetSource> getNextValue() {
@@ -85,19 +89,24 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
     }
 
     /**
-     *
+     *  <p>Information about the updated Asset.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.common.AssetSource> getPreviousValue() {
-        return this.previousValue;
+    public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
+        return this.asset;
     }
 
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setAsset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
-        this.asset = asset;
+    public void setPreviousValue(final com.commercetools.history.models.common.AssetSource... previousValue) {
+        this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
+    }
+
+    public void setPreviousValue(
+            final java.util.List<com.commercetools.history.models.common.AssetSource> previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.AssetSource... nextValue) {
@@ -108,13 +117,8 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
         this.nextValue = nextValue;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.AssetSource... previousValue) {
-        this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
-    }
-
-    public void setPreviousValue(
-            final java.util.List<com.commercetools.history.models.common.AssetSource> previousValue) {
-        this.previousValue = previousValue;
+    public void setAsset(final com.commercetools.history.models.change_value.AssetChangeValue asset) {
+        this.asset = asset;
     }
 
     @Override
@@ -129,9 +133,9 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(asset, that.asset)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(asset, that.asset)
                 .isEquals();
     }
 
@@ -139,9 +143,9 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(asset)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
+                .append(asset)
                 .toHashCode();
     }
 

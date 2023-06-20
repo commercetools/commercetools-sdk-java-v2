@@ -33,6 +33,11 @@ public interface QuoteState extends JsonEnum {
     */
     QuoteState DECLINED_FOR_RENEGOTIATION = QuoteStateEnum.DECLINED_FOR_RENEGOTIATION;
     /**
+    	<p>A state indicating that the <a href="/../api/quotes-overview#seller">Seller</a> has created a new Quote after a renegotiation has been requested.</p>
+
+    */
+    QuoteState RENEGOTIATION_ADDRESSED = QuoteStateEnum.RENEGOTIATION_ADDRESSED;
+    /**
     	<p>A state indicating that the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted the Quote.</p>
 
     */
@@ -66,6 +71,11 @@ public interface QuoteState extends JsonEnum {
          * DeclinedForRenegotiation
          */
         DECLINED_FOR_RENEGOTIATION("DeclinedForRenegotiation"),
+
+        /**
+         * RenegotiationAddressed
+         */
+        RENEGOTIATION_ADDRESSED("RenegotiationAddressed"),
 
         /**
          * Accepted

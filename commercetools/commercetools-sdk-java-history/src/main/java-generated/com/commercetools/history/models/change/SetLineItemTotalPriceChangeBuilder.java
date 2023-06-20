@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetLineItemTotalPriceChange setLineItemTotalPriceChange = SetLineItemTotalPriceChange.builder()
  *             .change("{change}")
- *             .lineItem(lineItemBuilder -> lineItemBuilder)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .lineItem(lineItemBuilder -> lineItemBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
 
     private String change;
 
-    private com.commercetools.history.models.common.LocalizedString lineItem;
+    private com.commercetools.history.models.common.Money previousValue;
 
     private com.commercetools.history.models.common.Money nextValue;
 
-    private com.commercetools.history.models.common.Money previousValue;
+    private com.commercetools.history.models.common.LocalizedString lineItem;
 
     /**
-     *  <p>Update action for <code>setLineItemTotalPrice</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,78 +45,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     * set the value to the lineItem using the builder function
-     * @param builder function to build the lineItem value
-     * @return Builder
-     */
-
-    public SetLineItemTotalPriceChangeBuilder lineItem(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
-        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the lineItem using the builder function
-     * @param builder function to build the lineItem value
-     * @return Builder
-     */
-
-    public SetLineItemTotalPriceChangeBuilder withLineItem(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
-        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the lineItem
-     * @param lineItem value to be set
-     * @return Builder
-     */
-
-    public SetLineItemTotalPriceChangeBuilder lineItem(
-            final com.commercetools.history.models.common.LocalizedString lineItem) {
-        this.lineItem = lineItem;
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetLineItemTotalPriceChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetLineItemTotalPriceChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public SetLineItemTotalPriceChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -128,7 +57,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -140,7 +69,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -152,7 +81,78 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     *  <p>Update action for <code>setLineItemTotalPrice</code></p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetLineItemTotalPriceChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetLineItemTotalPriceChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public SetLineItemTotalPriceChangeBuilder nextValue(final com.commercetools.history.models.common.Money nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Product the updated Line Item is based on.</p>
+     * @param builder function to build the lineItem value
+     * @return Builder
+     */
+
+    public SetLineItemTotalPriceChangeBuilder lineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Product the updated Line Item is based on.</p>
+     * @param builder function to build the lineItem value
+     * @return Builder
+     */
+
+    public SetLineItemTotalPriceChangeBuilder withLineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Product the updated Line Item is based on.</p>
+     * @param lineItem value to be set
+     * @return Builder
+     */
+
+    public SetLineItemTotalPriceChangeBuilder lineItem(
+            final com.commercetools.history.models.common.LocalizedString lineItem) {
+        this.lineItem = lineItem;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -161,25 +161,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
-     * value of lineItem}
-     * @return lineItem
-     */
-
-    public com.commercetools.history.models.common.LocalizedString getLineItem() {
-        return this.lineItem;
-    }
-
-    /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.Money getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -188,15 +170,33 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.Money getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
+     *  <p>Name of the Product the updated Line Item is based on.</p>
+     * @return lineItem
+     */
+
+    public com.commercetools.history.models.common.LocalizedString getLineItem() {
+        return this.lineItem;
+    }
+
+    /**
      * builds SetLineItemTotalPriceChange with checking for non-null required values
      * @return SetLineItemTotalPriceChange
      */
     public SetLineItemTotalPriceChange build() {
         Objects.requireNonNull(change, SetLineItemTotalPriceChange.class + ": change is missing");
-        Objects.requireNonNull(lineItem, SetLineItemTotalPriceChange.class + ": lineItem is missing");
-        Objects.requireNonNull(nextValue, SetLineItemTotalPriceChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, SetLineItemTotalPriceChange.class + ": previousValue is missing");
-        return new SetLineItemTotalPriceChangeImpl(change, lineItem, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, SetLineItemTotalPriceChange.class + ": nextValue is missing");
+        Objects.requireNonNull(lineItem, SetLineItemTotalPriceChange.class + ": lineItem is missing");
+        return new SetLineItemTotalPriceChangeImpl(change, previousValue, nextValue, lineItem);
     }
 
     /**
@@ -204,7 +204,7 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
      * @return SetLineItemTotalPriceChange
      */
     public SetLineItemTotalPriceChange buildUnchecked() {
-        return new SetLineItemTotalPriceChangeImpl(change, lineItem, nextValue, previousValue);
+        return new SetLineItemTotalPriceChangeImpl(change, previousValue, nextValue, lineItem);
     }
 
     /**
@@ -223,9 +223,9 @@ public class SetLineItemTotalPriceChangeBuilder implements Builder<SetLineItemTo
     public static SetLineItemTotalPriceChangeBuilder of(final SetLineItemTotalPriceChange template) {
         SetLineItemTotalPriceChangeBuilder builder = new SetLineItemTotalPriceChangeBuilder();
         builder.change = template.getChange();
-        builder.lineItem = template.getLineItem();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
+        builder.lineItem = template.getLineItem();
         return builder;
     }
 

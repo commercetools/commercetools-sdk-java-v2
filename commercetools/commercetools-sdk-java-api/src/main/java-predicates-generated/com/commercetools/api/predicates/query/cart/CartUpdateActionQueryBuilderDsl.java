@@ -405,6 +405,14 @@ public class CartUpdateActionQueryBuilderDsl {
             CartUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetLineItemInventoryMode(
+            Function<com.commercetools.api.predicates.query.cart.CartSetLineItemInventoryModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetLineItemInventoryModeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.cart.CartSetLineItemInventoryModeActionQueryBuilderDsl.of()),
+            CartUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetLineItemPrice(
             Function<com.commercetools.api.predicates.query.cart.CartSetLineItemPriceActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetLineItemPriceActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

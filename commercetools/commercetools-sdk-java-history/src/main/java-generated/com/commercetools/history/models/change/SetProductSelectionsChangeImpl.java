@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SetProductSelectionsChange
+ *  <p>Change triggered by the Set Product Selections update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetProductSelectionsChangeImpl implements SetProductSelectionsChange, ModelBase {
@@ -57,7 +57,7 @@ public class SetProductSelectionsChangeImpl implements SetProductSelectionsChang
     }
 
     /**
-     *  <p>Update action for <code>setProductSelections</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,7 +65,7 @@ public class SetProductSelectionsChangeImpl implements SetProductSelectionsChang
     }
 
     /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.ProductSelectionSetting> getPreviousValue() {
@@ -73,7 +73,7 @@ public class SetProductSelectionsChangeImpl implements SetProductSelectionsChang
     }
 
     /**
-     *
+     *  <p>Value after the change.</p>
      */
 
     public java.util.List<com.commercetools.history.models.common.ProductSelectionSetting> getNextValue() {

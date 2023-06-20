@@ -17,7 +17,11 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChangeLocalizedEnumValueOrderChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change the order of LocalizedEnumValues on Product Types.</li>
+ *   <li>Change the order of LocalizedEnumValues on Types.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,10 +29,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeLocalizedEnumValueOrderChange changeLocalizedEnumValueOrderChange = ChangeLocalizedEnumValueOrderChange.builder()
  *             .change("{change}")
+ *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
+ *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
  *             .fieldName("{fieldName}")
  *             .attributeName("{attributeName}")
- *             .plusNextValue(nextValueBuilder -> nextValueBuilder)
- *             .plusPreviousValue(previousValueBuilder -> previousValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -51,7 +55,7 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     public String getType();
 
     /**
-     *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
+     *
      * @return change
      */
     @NotNull
@@ -59,32 +63,7 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     public String getChange();
 
     /**
-     *  <p>The name of the field definition updated.</p>
-     * @return fieldName
-     */
-    @NotNull
-    @JsonProperty("fieldName")
-    public String getFieldName();
-
-    /**
-     *  <p>The name of the attribute updated.</p>
-     * @return attributeName
-     */
-    @NotNull
-    @JsonProperty("attributeName")
-    public String getAttributeName();
-
-    /**
-     *
-     * @return nextValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("nextValue")
-    public List<LocalizedEnumValue> getNextValue();
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -93,43 +72,39 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     public List<LocalizedEnumValue> getPreviousValue();
 
     /**
-     *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public List<LocalizedEnumValue> getNextValue();
+
+    /**
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     * @return fieldName
+     */
+    @NotNull
+    @JsonProperty("fieldName")
+    public String getFieldName();
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     * @return attributeName
+     */
+    @NotNull
+    @JsonProperty("attributeName")
+    public String getAttributeName();
+
+    /**
+     * set change
      * @param change value to be set
      */
 
     public void setChange(final String change);
 
     /**
-     *  <p>The name of the field definition updated.</p>
-     * @param fieldName value to be set
-     */
-
-    public void setFieldName(final String fieldName);
-
-    /**
-     *  <p>The name of the attribute updated.</p>
-     * @param attributeName value to be set
-     */
-
-    public void setAttributeName(final String attributeName);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    @JsonIgnore
-    public void setNextValue(final LocalizedEnumValue... nextValue);
-
-    /**
-     * set nextValue
-     * @param nextValue values to be set
-     */
-
-    public void setNextValue(final List<LocalizedEnumValue> nextValue);
-
-    /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
@@ -137,11 +112,40 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     public void setPreviousValue(final LocalizedEnumValue... previousValue);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
     public void setPreviousValue(final List<LocalizedEnumValue> previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    @JsonIgnore
+    public void setNextValue(final LocalizedEnumValue... nextValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue values to be set
+     */
+
+    public void setNextValue(final List<LocalizedEnumValue> nextValue);
+
+    /**
+     *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
+     * @param fieldName value to be set
+     */
+
+    public void setFieldName(final String fieldName);
+
+    /**
+     *  <p>Name of the updated AttributeDefinition; only present on changes to Product Types.</p>
+     * @param attributeName value to be set
+     */
+
+    public void setAttributeName(final String attributeName);
 
     /**
      * factory method
@@ -159,10 +163,10 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     public static ChangeLocalizedEnumValueOrderChange of(final ChangeLocalizedEnumValueOrderChange template) {
         ChangeLocalizedEnumValueOrderChangeImpl instance = new ChangeLocalizedEnumValueOrderChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         instance.setFieldName(template.getFieldName());
         instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(template.getNextValue());
-        instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
 
@@ -179,18 +183,18 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
         }
         ChangeLocalizedEnumValueOrderChangeImpl instance = new ChangeLocalizedEnumValueOrderChangeImpl();
         instance.setChange(template.getChange());
-        instance.setFieldName(template.getFieldName());
-        instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(t -> t.stream()
-                        .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setFieldName(template.getFieldName());
+        instance.setAttributeName(template.getAttributeName());
         return instance;
     }
 

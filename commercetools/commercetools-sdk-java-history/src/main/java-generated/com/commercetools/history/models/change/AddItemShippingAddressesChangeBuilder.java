@@ -15,8 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddItemShippingAddressesChange addItemShippingAddressesChange = AddItemShippingAddressesChange.builder()
  *             .change("{change}")
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,12 +26,12 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
 
     private String change;
 
-    private com.commercetools.history.models.common.Address nextValue;
-
     private com.commercetools.history.models.common.Address previousValue;
 
+    private com.commercetools.history.models.common.Address nextValue;
+
     /**
-     *  <p>Update action for <code>addItemShippingAddress</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,43 +42,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
     }
 
     /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public AddItemShippingAddressesChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue using the builder function
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public AddItemShippingAddressesChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
-        return this;
-    }
-
-    /**
-     * set the value to the nextValue
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public AddItemShippingAddressesChangeBuilder nextValue(
-            final com.commercetools.history.models.common.Address nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -90,7 +54,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -102,7 +66,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -114,7 +78,43 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
     }
 
     /**
-     *  <p>Update action for <code>addItemShippingAddress</code></p>
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddItemShippingAddressesChangeBuilder nextValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddItemShippingAddressesChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     * @return Builder
+     */
+
+    public AddItemShippingAddressesChangeBuilder nextValue(
+            final com.commercetools.history.models.common.Address nextValue) {
+        this.nextValue = nextValue;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -123,16 +123,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
     }
 
     /**
-     * value of nextValue}
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.Address getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -141,14 +132,23 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
     }
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+
+    public com.commercetools.history.models.common.Address getNextValue() {
+        return this.nextValue;
+    }
+
+    /**
      * builds AddItemShippingAddressesChange with checking for non-null required values
      * @return AddItemShippingAddressesChange
      */
     public AddItemShippingAddressesChange build() {
         Objects.requireNonNull(change, AddItemShippingAddressesChange.class + ": change is missing");
-        Objects.requireNonNull(nextValue, AddItemShippingAddressesChange.class + ": nextValue is missing");
         Objects.requireNonNull(previousValue, AddItemShippingAddressesChange.class + ": previousValue is missing");
-        return new AddItemShippingAddressesChangeImpl(change, nextValue, previousValue);
+        Objects.requireNonNull(nextValue, AddItemShippingAddressesChange.class + ": nextValue is missing");
+        return new AddItemShippingAddressesChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -156,7 +156,7 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
      * @return AddItemShippingAddressesChange
      */
     public AddItemShippingAddressesChange buildUnchecked() {
-        return new AddItemShippingAddressesChangeImpl(change, nextValue, previousValue);
+        return new AddItemShippingAddressesChangeImpl(change, previousValue, nextValue);
     }
 
     /**
@@ -175,8 +175,8 @@ public class AddItemShippingAddressesChangeBuilder implements Builder<AddItemShi
     public static AddItemShippingAddressesChangeBuilder of(final AddItemShippingAddressesChange template) {
         AddItemShippingAddressesChangeBuilder builder = new AddItemShippingAddressesChangeBuilder();
         builder.change = template.getChange();
-        builder.nextValue = template.getNextValue();
         builder.previousValue = template.getPreviousValue();
+        builder.nextValue = template.getNextValue();
         return builder;
     }
 

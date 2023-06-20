@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ChangeOrderStateChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change OrderState on Orders.</li>
+ *   <li>Change OrderState on Staged Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, ModelBase {
@@ -24,20 +28,20 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
 
     private String change;
 
-    private com.commercetools.history.models.common.OrderState nextValue;
-
     private com.commercetools.history.models.common.OrderState previousValue;
+
+    private com.commercetools.history.models.common.OrderState nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeOrderStateChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.OrderState nextValue,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.OrderState previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.OrderState previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.OrderState nextValue) {
         this.change = change;
-        this.nextValue = nextValue;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = CHANGE_ORDER_STATE_CHANGE;
     }
 
@@ -57,7 +61,7 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
     }
 
     /**
-     *  <p>Update action for <code>changeOrderState</code></p>
+     *
      */
 
     public String getChange() {
@@ -65,31 +69,31 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
     }
 
     /**
-     *
-     */
-
-    public com.commercetools.history.models.common.OrderState getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
-     *
+     *  <p>Value before the change.</p>
      */
 
     public com.commercetools.history.models.common.OrderState getPreviousValue() {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.OrderState getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.OrderState nextValue) {
-        this.nextValue = nextValue;
-    }
-
     public void setPreviousValue(final com.commercetools.history.models.common.OrderState previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.OrderState nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -104,8 +108,8 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
-                .append(nextValue, that.nextValue)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
@@ -113,8 +117,8 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(change)
-                .append(nextValue)
                 .append(previousValue)
+                .append(nextValue)
                 .toHashCode();
     }
 

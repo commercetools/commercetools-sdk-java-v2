@@ -41,7 +41,7 @@ public class InventoryQuantityValueImpl implements InventoryQuantityValue, Model
     }
 
     /**
-     *
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
      */
 
     public Integer getQuantityOnStock() {
@@ -49,7 +49,7 @@ public class InventoryQuantityValueImpl implements InventoryQuantityValue, Model
     }
 
     /**
-     *
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
      */
 
     public Integer getAvailableQuantity() {

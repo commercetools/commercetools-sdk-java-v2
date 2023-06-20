@@ -19,6 +19,11 @@ public class MyCartAddLineItemActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, MyCartAddLineItemActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<MyCartAddLineItemActionQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, MyCartAddLineItemActionQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<MyCartAddLineItemActionQueryBuilderDsl> productId() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("productId")),

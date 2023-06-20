@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * RemoveShoppingListLineItemChange
+ *  <p>Change triggered by the Remove ShoppingListLineItem update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -56,7 +56,7 @@ public interface RemoveShoppingListLineItemChange extends Change {
     public String getChange();
 
     /**
-     *
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
     @NotNull
@@ -65,7 +65,7 @@ public interface RemoveShoppingListLineItemChange extends Change {
     public LineItem getPreviousValue();
 
     /**
-     *
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
@@ -81,14 +81,14 @@ public interface RemoveShoppingListLineItemChange extends Change {
     public void setChange(final String change);
 
     /**
-     * set previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      */
 
     public void setPreviousValue(final LineItem previousValue);
 
     /**
-     * set nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 

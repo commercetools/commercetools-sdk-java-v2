@@ -38,7 +38,7 @@ public class SetCartScoreShippingRateInputValueBuilder implements Builder<SetCar
     }
 
     /**
-     * set the value to the score
+     *  <p>Abstract value for categorizing a Cart.</p>
      * @param score value to be set
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class SetCartScoreShippingRateInputValueBuilder implements Builder<SetCar
     }
 
     /**
-     * value of score}
+     *  <p>Abstract value for categorizing a Cart.</p>
      * @return score
      */
 

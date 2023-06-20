@@ -15,9 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     RemoveVariantChange removeVariantChange = RemoveVariantChange.builder()
  *             .change("{change}")
- *             .catalogData("{catalogData}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .catalogData("{catalogData}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,14 +27,14 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
 
     private String change;
 
-    private String catalogData;
-
     private com.commercetools.history.models.common.Variant previousValue;
 
     private com.commercetools.history.models.common.Variant nextValue;
 
+    private String catalogData;
+
     /**
-     *  <p>Update action for <code>removeVariant</code></p>
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -45,18 +45,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
-     * set the value to the catalogData
-     * @param catalogData value to be set
-     * @return Builder
-     */
-
-    public RemoveVariantChangeBuilder catalogData(final String catalogData) {
-        this.catalogData = catalogData;
-        return this;
-    }
-
-    /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -68,7 +57,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
-     * set the value to the previousValue using the builder function
+     *  <p>Value before the change.</p>
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -80,7 +69,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
-     * set the value to the previousValue
+     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -92,7 +81,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -104,7 +93,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
-     * set the value to the nextValue using the builder function
+     *  <p>Value after the change.</p>
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -116,7 +105,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
-     * set the value to the nextValue
+     *  <p>Value after the change.</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -127,7 +116,21 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
-     *  <p>Update action for <code>removeVariant</code></p>
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @param catalogData value to be set
+     * @return Builder
+     */
+
+    public RemoveVariantChangeBuilder catalogData(final String catalogData) {
+        this.catalogData = catalogData;
+        return this;
+    }
+
+    /**
+     * value of change}
      * @return change
      */
 
@@ -136,16 +139,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
-     * value of catalogData}
-     * @return catalogData
-     */
-
-    public String getCatalogData() {
-        return this.catalogData;
-    }
-
-    /**
-     * value of previousValue}
+     *  <p>Value before the change.</p>
      * @return previousValue
      */
 
@@ -154,7 +148,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
-     * value of nextValue}
+     *  <p>Value after the change.</p>
      * @return nextValue
      */
 
@@ -163,15 +157,27 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
+     *  <ul>
+     *   <li><code>staged</code>, if the staged ProductCatalogData was updated.</li>
+     *   <li><code>current</code>, if the current ProductCatalogData was updated.</li>
+     *  </ul>
+     * @return catalogData
+     */
+
+    public String getCatalogData() {
+        return this.catalogData;
+    }
+
+    /**
      * builds RemoveVariantChange with checking for non-null required values
      * @return RemoveVariantChange
      */
     public RemoveVariantChange build() {
         Objects.requireNonNull(change, RemoveVariantChange.class + ": change is missing");
-        Objects.requireNonNull(catalogData, RemoveVariantChange.class + ": catalogData is missing");
         Objects.requireNonNull(previousValue, RemoveVariantChange.class + ": previousValue is missing");
         Objects.requireNonNull(nextValue, RemoveVariantChange.class + ": nextValue is missing");
-        return new RemoveVariantChangeImpl(change, catalogData, previousValue, nextValue);
+        Objects.requireNonNull(catalogData, RemoveVariantChange.class + ": catalogData is missing");
+        return new RemoveVariantChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -179,7 +185,7 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
      * @return RemoveVariantChange
      */
     public RemoveVariantChange buildUnchecked() {
-        return new RemoveVariantChangeImpl(change, catalogData, previousValue, nextValue);
+        return new RemoveVariantChangeImpl(change, previousValue, nextValue, catalogData);
     }
 
     /**
@@ -198,9 +204,9 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     public static RemoveVariantChangeBuilder of(final RemoveVariantChange template) {
         RemoveVariantChangeBuilder builder = new RemoveVariantChangeBuilder();
         builder.change = template.getChange();
-        builder.catalogData = template.getCatalogData();
         builder.previousValue = template.getPreviousValue();
         builder.nextValue = template.getNextValue();
+        builder.catalogData = template.getCatalogData();
         return builder;
     }
 

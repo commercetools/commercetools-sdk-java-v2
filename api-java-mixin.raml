@@ -156,6 +156,10 @@ types:
       public static CustomerGroupSetCustomFieldAction ofUnset(final String name) {
           return CustomerGroupSetCustomFieldActionBuilder.of().name(name).build();
       }
+  CustomFieldEnumValue:
+      (java-extends): 'com.commercetools.api.models.WithKey'
+  CustomFieldLocalizedEnumValue:
+      (java-extends): 'com.commercetools.api.models.WithKey'
   DiscountCode:
     (java-extends): 'DiscountCodeMixin, com.commercetools.api.models.DomainResource<DiscountCode>, com.commercetools.api.models.Referencable<DiscountCode>, com.commercetools.api.models.ResourceIdentifiable<DiscountCode>, com.commercetools.api.models.Customizable<DiscountCode>'
     (java-mixin): |

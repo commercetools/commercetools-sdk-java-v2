@@ -17,4 +17,9 @@ public class StandalonePriceDeletedMessagePayloadQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StandalonePriceDeletedMessagePayloadQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StandalonePriceDeletedMessagePayloadQueryBuilderDsl> sku() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("sku")),
+            p -> new CombinationQueryPredicate<>(p, StandalonePriceDeletedMessagePayloadQueryBuilderDsl::of));
+    }
+
 }

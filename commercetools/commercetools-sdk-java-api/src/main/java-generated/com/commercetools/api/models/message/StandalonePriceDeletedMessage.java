@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -27,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
+ *             .sku("{sku}")
  *             .build()
  * </code></pre>
  * </div>
@@ -39,6 +41,21 @@ public interface StandalonePriceDeletedMessage extends Message {
      * discriminator value for StandalonePriceDeletedMessage
      */
     String STANDALONE_PRICE_DELETED = "StandalonePriceDeleted";
+
+    /**
+     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     * @return sku
+     */
+    @NotNull
+    @JsonProperty("sku")
+    public String getSku();
+
+    /**
+     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     * @param sku value to be set
+     */
+
+    public void setSku(final String sku);
 
     /**
      * factory method
@@ -65,6 +82,7 @@ public interface StandalonePriceDeletedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setSku(template.getSku());
         return instance;
     }
 
@@ -91,6 +109,7 @@ public interface StandalonePriceDeletedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setSku(template.getSku());
         return instance;
     }
 

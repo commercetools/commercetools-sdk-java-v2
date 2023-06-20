@@ -42,6 +42,8 @@ public class StandalonePriceDeletedMessageImpl implements StandalonePriceDeleted
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    private String sku;
+
     /**
      * create instance with all properties
      */
@@ -54,7 +56,8 @@ public class StandalonePriceDeletedMessageImpl implements StandalonePriceDeleted
             @JsonProperty("sequenceNumber") final Long sequenceNumber,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
-            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
+            @JsonProperty("sku") final String sku) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -65,6 +68,7 @@ public class StandalonePriceDeletedMessageImpl implements StandalonePriceDeleted
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        this.sku = sku;
         this.type = STANDALONE_PRICE_DELETED;
     }
 
@@ -163,6 +167,14 @@ public class StandalonePriceDeletedMessageImpl implements StandalonePriceDeleted
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     */
+
+    public String getSku() {
+        return this.sku;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -204,6 +216,10 @@ public class StandalonePriceDeletedMessageImpl implements StandalonePriceDeleted
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
+    public void setSku(final String sku) {
+        this.sku = sku;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -225,6 +241,7 @@ public class StandalonePriceDeletedMessageImpl implements StandalonePriceDeleted
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(sku, that.sku)
                 .isEquals();
     }
 
@@ -241,6 +258,7 @@ public class StandalonePriceDeletedMessageImpl implements StandalonePriceDeleted
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
+                .append(sku)
                 .toHashCode();
     }
 

@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -20,6 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StandalonePriceDeletedMessagePayload standalonePriceDeletedMessagePayload = StandalonePriceDeletedMessagePayload.builder()
+ *             .sku("{sku}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,6 +34,21 @@ public interface StandalonePriceDeletedMessagePayload extends MessagePayload {
      * discriminator value for StandalonePriceDeletedMessagePayload
      */
     String STANDALONE_PRICE_DELETED = "StandalonePriceDeleted";
+
+    /**
+     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     * @return sku
+     */
+    @NotNull
+    @JsonProperty("sku")
+    public String getSku();
+
+    /**
+     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     * @param sku value to be set
+     */
+
+    public void setSku(final String sku);
 
     /**
      * factory method
@@ -48,6 +65,7 @@ public interface StandalonePriceDeletedMessagePayload extends MessagePayload {
      */
     public static StandalonePriceDeletedMessagePayload of(final StandalonePriceDeletedMessagePayload template) {
         StandalonePriceDeletedMessagePayloadImpl instance = new StandalonePriceDeletedMessagePayloadImpl();
+        instance.setSku(template.getSku());
         return instance;
     }
 
@@ -63,6 +81,7 @@ public interface StandalonePriceDeletedMessagePayload extends MessagePayload {
             return null;
         }
         StandalonePriceDeletedMessagePayloadImpl instance = new StandalonePriceDeletedMessagePayloadImpl();
+        instance.setSku(template.getSku());
         return instance;
     }
 

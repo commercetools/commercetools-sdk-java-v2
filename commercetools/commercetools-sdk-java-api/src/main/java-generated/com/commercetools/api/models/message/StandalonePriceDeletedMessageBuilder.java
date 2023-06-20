@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
+ *             .sku("{sku}")
  *             .build()
  * </code></pre>
  * </div>
@@ -52,6 +53,8 @@ public class StandalonePriceDeletedMessageBuilder implements Builder<StandaloneP
 
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
+
+    private String sku;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -254,6 +257,17 @@ public class StandalonePriceDeletedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
+     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     * @param sku value to be set
+     * @return Builder
+     */
+
+    public StandalonePriceDeletedMessageBuilder sku(final String sku) {
+        this.sku = sku;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -347,6 +361,15 @@ public class StandalonePriceDeletedMessageBuilder implements Builder<StandaloneP
     }
 
     /**
+     *  <p>SKU of the ProductVariant to which the deleted Standalone Price was associated.</p>
+     * @return sku
+     */
+
+    public String getSku() {
+        return this.sku;
+    }
+
+    /**
      * builds StandalonePriceDeletedMessage with checking for non-null required values
      * @return StandalonePriceDeletedMessage
      */
@@ -358,8 +381,9 @@ public class StandalonePriceDeletedMessageBuilder implements Builder<StandaloneP
         Objects.requireNonNull(sequenceNumber, StandalonePriceDeletedMessage.class + ": sequenceNumber is missing");
         Objects.requireNonNull(resource, StandalonePriceDeletedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, StandalonePriceDeletedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(sku, StandalonePriceDeletedMessage.class + ": sku is missing");
         return new StandalonePriceDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, sku);
     }
 
     /**
@@ -368,7 +392,7 @@ public class StandalonePriceDeletedMessageBuilder implements Builder<StandaloneP
      */
     public StandalonePriceDeletedMessage buildUnchecked() {
         return new StandalonePriceDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, sku);
     }
 
     /**
@@ -396,6 +420,7 @@ public class StandalonePriceDeletedMessageBuilder implements Builder<StandaloneP
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
+        builder.sku = template.getSku();
         return builder;
     }
 

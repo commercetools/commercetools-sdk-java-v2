@@ -36,6 +36,17 @@ public class GraphQLRequestBuilder<T> implements Builder<GraphQLRequest<T>> {
     @Nullable
     private Function<GraphQLData, T> dataMapper;
 
+    public GraphQLRequestBuilder(String query, @Nullable String operationName, @Nullable GraphQLVariablesMap variables,
+            @Nullable Function<GraphQLData, T> dataMapper) {
+        this.query = query;
+        this.operationName = operationName;
+        this.variables = variables;
+        this.dataMapper = dataMapper;
+    }
+
+    public GraphQLRequestBuilder() {
+    }
+
     /**
      * set the value to the query
      * @param query value to be set
@@ -92,9 +103,8 @@ public class GraphQLRequestBuilder<T> implements Builder<GraphQLRequest<T>> {
         return this;
     }
 
-    public GraphQLRequestBuilder<T> dataMapper(Function<GraphQLData, T> dataMapper) {
-        this.dataMapper = dataMapper;
-        return this;
+    public <TData> GraphQLRequestBuilder<TData> dataMapper(Function<GraphQLData, TData> dataMapper) {
+        return new GraphQLRequestBuilder<>(query, operationName, variables, dataMapper);
     }
 
     /**
@@ -137,6 +147,7 @@ public class GraphQLRequestBuilder<T> implements Builder<GraphQLRequest<T>> {
      */
     public GraphQLRequest<T> build() {
         Objects.requireNonNull(query, GraphQLRequest.class + ": query is missing");
+        Objects.requireNonNull(dataMapper, GraphQLRequest.class + ": data mapper is missing");
         return new GraphQLRequestImpl<T>(query, operationName, variables, dataMapper);
     }
 

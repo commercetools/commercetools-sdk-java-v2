@@ -21,6 +21,10 @@ public class ByProjectKeyGraphqlRequestBuilder {
         return new ByProjectKeyGraphqlPost(apiHttpClient, projectKey, graphQLRequest);
     }
 
+    public <TMethod> TMethod query(ProjectRequestBuilder<TMethod> requestBuilder) {
+        return requestBuilder.build(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyGraphqlPostString post(final String graphQLRequest) {
         return new ByProjectKeyGraphqlPostString(apiHttpClient, projectKey, graphQLRequest);
     }

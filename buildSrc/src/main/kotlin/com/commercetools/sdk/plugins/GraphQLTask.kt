@@ -16,6 +16,7 @@ import org.gradle.api.tasks.TaskAction
 import java.io.File
 import java.nio.file.Paths
 import java.util.*
+import java.util.function.Function
 import java.util.function.UnaryOperator
 import javax.lang.model.element.Modifier
 
@@ -47,6 +48,19 @@ open class GraphQLTask: DefaultTask() {
 
         val graphQL = TypeSpec.classBuilder("GraphQL")
                 .addModifiers(Modifier.PUBLIC)
+
+        graphQL.addMethod(MethodSpec.methodBuilder("query")
+                .addModifiers(Modifier.PUBLIC)
+                .addModifiers(Modifier.STATIC)
+                .addTypeVariable(TypeVariableName.get("T"))
+                .addParameter(ParameterSpec.builder(ClassName.get(String::class.java), "query").addModifiers(Modifier.FINAL).build())
+                .returns(ParameterizedTypeName.get(
+                        ClassName.get(packageName, "GraphQLRequestBuilder"),
+                        TypeVariableName.get("T")
+                        ))
+                .addCode("return GraphQLRequest.<T>builder().query(query);")
+                .build()
+        )
 
         val graphQLData = TypeSpec.interfaceBuilder("GraphQLData")
                 .addModifiers(Modifier.PUBLIC)

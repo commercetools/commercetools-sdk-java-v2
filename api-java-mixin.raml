@@ -1495,7 +1495,11 @@ types:
       delete:
         (java-implements):
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.InventoryEntry>'
-
+  /graphql:
+    (java-mixin): |
+      public <TMethod> TMethod query(ProjectRequestBuilder<TMethod> requestBuilder) {
+          return requestBuilder.build(apiHttpClient, projectKey);
+      }
   /messages:
     get:
       (java-implements):

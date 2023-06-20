@@ -5,6 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -14,7 +15,7 @@ public class ApiHttpResponse<U> extends Base implements ContextAware<ApiHttpResp
 
     private int statusCode;
     private ApiHttpHeaders headers;
-    private U body;
+    private final U body;
     private String message;
 
     private Map<Object, Object> contextMap = new HashMap<>();
@@ -115,11 +116,13 @@ public class ApiHttpResponse<U> extends Base implements ContextAware<ApiHttpResp
         return body;
     }
 
-    public ApiHttpResponse<U> withBody(final U body) {
-        ApiHttpResponse<U> response = copy();
-        response.body = body;
+    public <TBody> ApiHttpResponse<TBody> withBody(final TBody body) {
+        return new ApiHttpResponse<>(this.statusCode, this.headers, body, this.message, this.contextMap);
+    }
 
-        return response;
+    public <TBody> ApiHttpResponse<TBody> withBody(final Function<U, TBody> bodyFn) {
+        return new ApiHttpResponse<>(this.statusCode, this.headers, bodyFn.apply(this.body), this.message,
+            this.contextMap);
     }
 
     public String getMessage() {

@@ -33,154 +33,233 @@
 <span class="source-line-no">020</span><span id="line.20"> * Example to create a subtype instance using the builder pattern</span>
 <span class="source-line-no">021</span><span id="line.21"> * &lt;div class=code-example&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">023</span><span id="line.23"> *     StandalonePriceUpdateAction standalonePriceUpdateAction = StandalonePriceUpdateAction.applyStagedChangesBuilder()</span>
-<span class="source-line-no">024</span><span id="line.24"> *             .build()</span>
-<span class="source-line-no">025</span><span id="line.25"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">026</span><span id="line.26"> * &lt;/div&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> */</span>
-<span class="source-line-no">028</span><span id="line.28">@JsonSubTypes({</span>
-<span class="source-line-no">029</span><span id="line.29">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionImpl.class, name = StandalonePriceApplyStagedChangesAction.APPLY_STAGED_CHANGES),</span>
-<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionImpl.class, name = StandalonePriceChangeActiveAction.CHANGE_ACTIVE),</span>
-<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionImpl.class, name = StandalonePriceChangeValueAction.CHANGE_VALUE),</span>
-<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionImpl.class, name = StandalonePriceSetCustomFieldAction.SET_CUSTOM_FIELD),</span>
-<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionImpl.class, name = StandalonePriceSetCustomTypeAction.SET_CUSTOM_TYPE),</span>
-<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionImpl.class, name = StandalonePriceSetDiscountedPriceAction.SET_DISCOUNTED_PRICE),</span>
-<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionImpl.class, name = StandalonePriceSetKeyAction.SET_KEY) })</span>
-<span class="source-line-no">036</span><span id="line.36">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = StandalonePriceUpdateActionImpl.class, visible = true)</span>
-<span class="source-line-no">037</span><span id="line.37">@JsonDeserialize(as = StandalonePriceUpdateActionImpl.class)</span>
-<span class="source-line-no">038</span><span id="line.38">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">039</span><span id="line.39">public interface StandalonePriceUpdateAction</span>
-<span class="source-line-no">040</span><span id="line.40">        extends com.commercetools.api.models.ResourceUpdateAction&lt;StandalonePriceUpdateAction&gt; {</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">     *</span>
-<span class="source-line-no">044</span><span id="line.44">     * @return action</span>
-<span class="source-line-no">045</span><span id="line.45">     */</span>
-<span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
-<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("action")</span>
-<span class="source-line-no">048</span><span id="line.48">    public String getAction();</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     * factory method to create a deep copy of StandalonePriceUpdateAction</span>
-<span class="source-line-no">052</span><span id="line.52">     * @param template instance to be copied</span>
-<span class="source-line-no">053</span><span id="line.53">     * @return copy instance</span>
-<span class="source-line-no">054</span><span id="line.54">     */</span>
-<span class="source-line-no">055</span><span id="line.55">    @Nullable</span>
-<span class="source-line-no">056</span><span id="line.56">    public static StandalonePriceUpdateAction deepCopy(@Nullable final StandalonePriceUpdateAction template) {</span>
-<span class="source-line-no">057</span><span id="line.57">        if (template == null) {</span>
-<span class="source-line-no">058</span><span id="line.58">            return null;</span>
-<span class="source-line-no">059</span><span id="line.59">        }</span>
-<span class="source-line-no">060</span><span id="line.60">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction) {</span>
-<span class="source-line-no">061</span><span id="line.61">            return com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction.deepCopy(</span>
-<span class="source-line-no">062</span><span id="line.62">                (com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction) template);</span>
-<span class="source-line-no">063</span><span id="line.63">        }</span>
-<span class="source-line-no">064</span><span id="line.64">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction) {</span>
-<span class="source-line-no">065</span><span id="line.65">            return com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction.deepCopy(</span>
-<span class="source-line-no">066</span><span id="line.66">                (com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction) template);</span>
-<span class="source-line-no">067</span><span id="line.67">        }</span>
-<span class="source-line-no">068</span><span id="line.68">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction) {</span>
-<span class="source-line-no">069</span><span id="line.69">            return com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction.deepCopy(</span>
-<span class="source-line-no">070</span><span id="line.70">                (com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction) template);</span>
-<span class="source-line-no">071</span><span id="line.71">        }</span>
-<span class="source-line-no">072</span><span id="line.72">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction) {</span>
-<span class="source-line-no">073</span><span id="line.73">            return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction.deepCopy(</span>
-<span class="source-line-no">074</span><span id="line.74">                (com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction) template);</span>
-<span class="source-line-no">075</span><span id="line.75">        }</span>
-<span class="source-line-no">076</span><span id="line.76">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction) {</span>
-<span class="source-line-no">077</span><span id="line.77">            return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction.deepCopy(</span>
-<span class="source-line-no">078</span><span id="line.78">                (com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction) template);</span>
-<span class="source-line-no">079</span><span id="line.79">        }</span>
-<span class="source-line-no">080</span><span id="line.80">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction) {</span>
-<span class="source-line-no">081</span><span id="line.81">            return com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction.deepCopy(</span>
-<span class="source-line-no">082</span><span id="line.82">                (com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction) template);</span>
-<span class="source-line-no">083</span><span id="line.83">        }</span>
-<span class="source-line-no">084</span><span id="line.84">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction) {</span>
-<span class="source-line-no">085</span><span id="line.85">            return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction</span>
-<span class="source-line-no">086</span><span id="line.86">                    .deepCopy((com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction) template);</span>
-<span class="source-line-no">087</span><span id="line.87">        }</span>
-<span class="source-line-no">088</span><span id="line.88">        StandalonePriceUpdateActionImpl instance = new StandalonePriceUpdateActionImpl();</span>
-<span class="source-line-no">089</span><span id="line.89">        return instance;</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     * builder for applyStagedChanges subtype</span>
-<span class="source-line-no">094</span><span id="line.94">     * @return builder</span>
-<span class="source-line-no">095</span><span id="line.95">     */</span>
-<span class="source-line-no">096</span><span id="line.96">    public static com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionBuilder applyStagedChangesBuilder() {</span>
-<span class="source-line-no">097</span><span id="line.97">        return com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionBuilder.of();</span>
-<span class="source-line-no">098</span><span id="line.98">    }</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    /**</span>
-<span class="source-line-no">101</span><span id="line.101">     * builder for changeActive subtype</span>
-<span class="source-line-no">102</span><span id="line.102">     * @return builder</span>
-<span class="source-line-no">103</span><span id="line.103">     */</span>
-<span class="source-line-no">104</span><span id="line.104">    public static com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionBuilder changeActiveBuilder() {</span>
-<span class="source-line-no">105</span><span id="line.105">        return com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionBuilder.of();</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    /**</span>
-<span class="source-line-no">109</span><span id="line.109">     * builder for changeValue subtype</span>
-<span class="source-line-no">110</span><span id="line.110">     * @return builder</span>
-<span class="source-line-no">111</span><span id="line.111">     */</span>
-<span class="source-line-no">112</span><span id="line.112">    public static com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionBuilder changeValueBuilder() {</span>
-<span class="source-line-no">113</span><span id="line.113">        return com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionBuilder.of();</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    /**</span>
-<span class="source-line-no">117</span><span id="line.117">     * builder for setCustomField subtype</span>
-<span class="source-line-no">118</span><span id="line.118">     * @return builder</span>
-<span class="source-line-no">119</span><span id="line.119">     */</span>
-<span class="source-line-no">120</span><span id="line.120">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionBuilder setCustomFieldBuilder() {</span>
-<span class="source-line-no">121</span><span id="line.121">        return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionBuilder.of();</span>
-<span class="source-line-no">122</span><span id="line.122">    }</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    /**</span>
-<span class="source-line-no">125</span><span id="line.125">     * builder for setCustomType subtype</span>
-<span class="source-line-no">126</span><span id="line.126">     * @return builder</span>
-<span class="source-line-no">127</span><span id="line.127">     */</span>
-<span class="source-line-no">128</span><span id="line.128">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionBuilder setCustomTypeBuilder() {</span>
-<span class="source-line-no">129</span><span id="line.129">        return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionBuilder.of();</span>
-<span class="source-line-no">130</span><span id="line.130">    }</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    /**</span>
-<span class="source-line-no">133</span><span id="line.133">     * builder for setDiscountedPrice subtype</span>
-<span class="source-line-no">134</span><span id="line.134">     * @return builder</span>
-<span class="source-line-no">135</span><span id="line.135">     */</span>
-<span class="source-line-no">136</span><span id="line.136">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionBuilder setDiscountedPriceBuilder() {</span>
-<span class="source-line-no">137</span><span id="line.137">        return com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionBuilder.of();</span>
-<span class="source-line-no">138</span><span id="line.138">    }</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    /**</span>
-<span class="source-line-no">141</span><span id="line.141">     * builder for setKey subtype</span>
-<span class="source-line-no">142</span><span id="line.142">     * @return builder</span>
-<span class="source-line-no">143</span><span id="line.143">     */</span>
-<span class="source-line-no">144</span><span id="line.144">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder setKeyBuilder() {</span>
-<span class="source-line-no">145</span><span id="line.145">        return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder.of();</span>
-<span class="source-line-no">146</span><span id="line.146">    }</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    /**</span>
-<span class="source-line-no">149</span><span id="line.149">     * accessor map function</span>
-<span class="source-line-no">150</span><span id="line.150">     * @param &lt;T&gt; mapped type</span>
-<span class="source-line-no">151</span><span id="line.151">     * @param helper function to map the object</span>
-<span class="source-line-no">152</span><span id="line.152">     * @return mapped value</span>
-<span class="source-line-no">153</span><span id="line.153">     */</span>
-<span class="source-line-no">154</span><span id="line.154">    default &lt;T&gt; T withStandalonePriceUpdateAction(Function&lt;StandalonePriceUpdateAction, T&gt; helper) {</span>
-<span class="source-line-no">155</span><span id="line.155">        return helper.apply(this);</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    /**</span>
-<span class="source-line-no">159</span><span id="line.159">     * gives a TypeReference for usage with Jackson DataBind</span>
-<span class="source-line-no">160</span><span id="line.160">     * @return TypeReference</span>
-<span class="source-line-no">161</span><span id="line.161">     */</span>
-<span class="source-line-no">162</span><span id="line.162">    public static com.fasterxml.jackson.core.type.TypeReference&lt;StandalonePriceUpdateAction&gt; typeReference() {</span>
-<span class="source-line-no">163</span><span id="line.163">        return new com.fasterxml.jackson.core.type.TypeReference&lt;StandalonePriceUpdateAction&gt;() {</span>
-<span class="source-line-no">164</span><span id="line.164">            @Override</span>
-<span class="source-line-no">165</span><span id="line.165">            public String toString() {</span>
-<span class="source-line-no">166</span><span id="line.166">                return "TypeReference&lt;StandalonePriceUpdateAction&gt;";</span>
-<span class="source-line-no">167</span><span id="line.167">            }</span>
-<span class="source-line-no">168</span><span id="line.168">        };</span>
+<span class="source-line-no">023</span><span id="line.23"> *     StandalonePriceUpdateAction standalonePriceUpdateAction = StandalonePriceUpdateAction.addPriceTierBuilder()</span>
+<span class="source-line-no">024</span><span id="line.24"> *             tier(tierBuilder -&gt; tierBuilder)</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .build()</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> * &lt;/div&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> */</span>
+<span class="source-line-no">029</span><span id="line.29">@JsonSubTypes({</span>
+<span class="source-line-no">030</span><span id="line.30">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceAddPriceTierActionImpl.class, name = StandalonePriceAddPriceTierAction.ADD_PRICE_TIER),</span>
+<span class="source-line-no">031</span><span id="line.31">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionImpl.class, name = StandalonePriceApplyStagedChangesAction.APPLY_STAGED_CHANGES),</span>
+<span class="source-line-no">032</span><span id="line.32">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionImpl.class, name = StandalonePriceChangeActiveAction.CHANGE_ACTIVE),</span>
+<span class="source-line-no">033</span><span id="line.33">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionImpl.class, name = StandalonePriceChangeValueAction.CHANGE_VALUE),</span>
+<span class="source-line-no">034</span><span id="line.34">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierActionImpl.class, name = StandalonePriceRemovePriceTierAction.REMOVE_PRICE_TIER),</span>
+<span class="source-line-no">035</span><span id="line.35">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionImpl.class, name = StandalonePriceSetCustomFieldAction.SET_CUSTOM_FIELD),</span>
+<span class="source-line-no">036</span><span id="line.36">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionImpl.class, name = StandalonePriceSetCustomTypeAction.SET_CUSTOM_TYPE),</span>
+<span class="source-line-no">037</span><span id="line.37">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionImpl.class, name = StandalonePriceSetDiscountedPriceAction.SET_DISCOUNTED_PRICE),</span>
+<span class="source-line-no">038</span><span id="line.38">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionImpl.class, name = StandalonePriceSetKeyAction.SET_KEY),</span>
+<span class="source-line-no">039</span><span id="line.39">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionImpl.class, name = StandalonePriceSetPriceTiersAction.SET_PRICE_TIER),</span>
+<span class="source-line-no">040</span><span id="line.40">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromActionImpl.class, name = StandalonePriceSetValidFromAction.SET_VALID_FROM),</span>
+<span class="source-line-no">041</span><span id="line.41">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilActionImpl.class, name = StandalonePriceSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL),</span>
+<span class="source-line-no">042</span><span id="line.42">        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilActionImpl.class, name = StandalonePriceSetValidUntilAction.SET_VALID_UNTIL) })</span>
+<span class="source-line-no">043</span><span id="line.43">@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = StandalonePriceUpdateActionImpl.class, visible = true)</span>
+<span class="source-line-no">044</span><span id="line.44">@JsonDeserialize(as = StandalonePriceUpdateActionImpl.class)</span>
+<span class="source-line-no">045</span><span id="line.45">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">046</span><span id="line.46">public interface StandalonePriceUpdateAction</span>
+<span class="source-line-no">047</span><span id="line.47">        extends com.commercetools.api.models.ResourceUpdateAction&lt;StandalonePriceUpdateAction&gt; {</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    /**</span>
+<span class="source-line-no">050</span><span id="line.50">     *</span>
+<span class="source-line-no">051</span><span id="line.51">     * @return action</span>
+<span class="source-line-no">052</span><span id="line.52">     */</span>
+<span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
+<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("action")</span>
+<span class="source-line-no">055</span><span id="line.55">    public String getAction();</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    /**</span>
+<span class="source-line-no">058</span><span id="line.58">     * factory method to create a deep copy of StandalonePriceUpdateAction</span>
+<span class="source-line-no">059</span><span id="line.59">     * @param template instance to be copied</span>
+<span class="source-line-no">060</span><span id="line.60">     * @return copy instance</span>
+<span class="source-line-no">061</span><span id="line.61">     */</span>
+<span class="source-line-no">062</span><span id="line.62">    @Nullable</span>
+<span class="source-line-no">063</span><span id="line.63">    public static StandalonePriceUpdateAction deepCopy(@Nullable final StandalonePriceUpdateAction template) {</span>
+<span class="source-line-no">064</span><span id="line.64">        if (template == null) {</span>
+<span class="source-line-no">065</span><span id="line.65">            return null;</span>
+<span class="source-line-no">066</span><span id="line.66">        }</span>
+<span class="source-line-no">067</span><span id="line.67">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceAddPriceTierAction) {</span>
+<span class="source-line-no">068</span><span id="line.68">            return com.commercetools.api.models.standalone_price.StandalonePriceAddPriceTierAction.deepCopy(</span>
+<span class="source-line-no">069</span><span id="line.69">                (com.commercetools.api.models.standalone_price.StandalonePriceAddPriceTierAction) template);</span>
+<span class="source-line-no">070</span><span id="line.70">        }</span>
+<span class="source-line-no">071</span><span id="line.71">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction) {</span>
+<span class="source-line-no">072</span><span id="line.72">            return com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction.deepCopy(</span>
+<span class="source-line-no">073</span><span id="line.73">                (com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction) template);</span>
+<span class="source-line-no">074</span><span id="line.74">        }</span>
+<span class="source-line-no">075</span><span id="line.75">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction) {</span>
+<span class="source-line-no">076</span><span id="line.76">            return com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction.deepCopy(</span>
+<span class="source-line-no">077</span><span id="line.77">                (com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction) template);</span>
+<span class="source-line-no">078</span><span id="line.78">        }</span>
+<span class="source-line-no">079</span><span id="line.79">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction) {</span>
+<span class="source-line-no">080</span><span id="line.80">            return com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction.deepCopy(</span>
+<span class="source-line-no">081</span><span id="line.81">                (com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction) template);</span>
+<span class="source-line-no">082</span><span id="line.82">        }</span>
+<span class="source-line-no">083</span><span id="line.83">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierAction) {</span>
+<span class="source-line-no">084</span><span id="line.84">            return com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierAction.deepCopy(</span>
+<span class="source-line-no">085</span><span id="line.85">                (com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierAction) template);</span>
+<span class="source-line-no">086</span><span id="line.86">        }</span>
+<span class="source-line-no">087</span><span id="line.87">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction) {</span>
+<span class="source-line-no">088</span><span id="line.88">            return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction.deepCopy(</span>
+<span class="source-line-no">089</span><span id="line.89">                (com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction) template);</span>
+<span class="source-line-no">090</span><span id="line.90">        }</span>
+<span class="source-line-no">091</span><span id="line.91">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction) {</span>
+<span class="source-line-no">092</span><span id="line.92">            return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction.deepCopy(</span>
+<span class="source-line-no">093</span><span id="line.93">                (com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction) template);</span>
+<span class="source-line-no">094</span><span id="line.94">        }</span>
+<span class="source-line-no">095</span><span id="line.95">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction) {</span>
+<span class="source-line-no">096</span><span id="line.96">            return com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction.deepCopy(</span>
+<span class="source-line-no">097</span><span id="line.97">                (com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction) template);</span>
+<span class="source-line-no">098</span><span id="line.98">        }</span>
+<span class="source-line-no">099</span><span id="line.99">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction) {</span>
+<span class="source-line-no">100</span><span id="line.100">            return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction</span>
+<span class="source-line-no">101</span><span id="line.101">                    .deepCopy((com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction) template);</span>
+<span class="source-line-no">102</span><span id="line.102">        }</span>
+<span class="source-line-no">103</span><span id="line.103">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersAction) {</span>
+<span class="source-line-no">104</span><span id="line.104">            return com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersAction.deepCopy(</span>
+<span class="source-line-no">105</span><span id="line.105">                (com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersAction) template);</span>
+<span class="source-line-no">106</span><span id="line.106">        }</span>
+<span class="source-line-no">107</span><span id="line.107">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAction) {</span>
+<span class="source-line-no">108</span><span id="line.108">            return com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAction.deepCopy(</span>
+<span class="source-line-no">109</span><span id="line.109">                (com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAction) template);</span>
+<span class="source-line-no">110</span><span id="line.110">        }</span>
+<span class="source-line-no">111</span><span id="line.111">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilAction) {</span>
+<span class="source-line-no">112</span><span id="line.112">            return com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilAction.deepCopy(</span>
+<span class="source-line-no">113</span><span id="line.113">                (com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilAction) template);</span>
+<span class="source-line-no">114</span><span id="line.114">        }</span>
+<span class="source-line-no">115</span><span id="line.115">        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilAction) {</span>
+<span class="source-line-no">116</span><span id="line.116">            return com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilAction.deepCopy(</span>
+<span class="source-line-no">117</span><span id="line.117">                (com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilAction) template);</span>
+<span class="source-line-no">118</span><span id="line.118">        }</span>
+<span class="source-line-no">119</span><span id="line.119">        StandalonePriceUpdateActionImpl instance = new StandalonePriceUpdateActionImpl();</span>
+<span class="source-line-no">120</span><span id="line.120">        return instance;</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    /**</span>
+<span class="source-line-no">124</span><span id="line.124">     * builder for addPriceTier subtype</span>
+<span class="source-line-no">125</span><span id="line.125">     * @return builder</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
+<span class="source-line-no">127</span><span id="line.127">    public static com.commercetools.api.models.standalone_price.StandalonePriceAddPriceTierActionBuilder addPriceTierBuilder() {</span>
+<span class="source-line-no">128</span><span id="line.128">        return com.commercetools.api.models.standalone_price.StandalonePriceAddPriceTierActionBuilder.of();</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    /**</span>
+<span class="source-line-no">132</span><span id="line.132">     * builder for applyStagedChanges subtype</span>
+<span class="source-line-no">133</span><span id="line.133">     * @return builder</span>
+<span class="source-line-no">134</span><span id="line.134">     */</span>
+<span class="source-line-no">135</span><span id="line.135">    public static com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionBuilder applyStagedChangesBuilder() {</span>
+<span class="source-line-no">136</span><span id="line.136">        return com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionBuilder.of();</span>
+<span class="source-line-no">137</span><span id="line.137">    }</span>
+<span class="source-line-no">138</span><span id="line.138"></span>
+<span class="source-line-no">139</span><span id="line.139">    /**</span>
+<span class="source-line-no">140</span><span id="line.140">     * builder for changeActive subtype</span>
+<span class="source-line-no">141</span><span id="line.141">     * @return builder</span>
+<span class="source-line-no">142</span><span id="line.142">     */</span>
+<span class="source-line-no">143</span><span id="line.143">    public static com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionBuilder changeActiveBuilder() {</span>
+<span class="source-line-no">144</span><span id="line.144">        return com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionBuilder.of();</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    /**</span>
+<span class="source-line-no">148</span><span id="line.148">     * builder for changeValue subtype</span>
+<span class="source-line-no">149</span><span id="line.149">     * @return builder</span>
+<span class="source-line-no">150</span><span id="line.150">     */</span>
+<span class="source-line-no">151</span><span id="line.151">    public static com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionBuilder changeValueBuilder() {</span>
+<span class="source-line-no">152</span><span id="line.152">        return com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionBuilder.of();</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    /**</span>
+<span class="source-line-no">156</span><span id="line.156">     * builder for removePriceTier subtype</span>
+<span class="source-line-no">157</span><span id="line.157">     * @return builder</span>
+<span class="source-line-no">158</span><span id="line.158">     */</span>
+<span class="source-line-no">159</span><span id="line.159">    public static com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierActionBuilder removePriceTierBuilder() {</span>
+<span class="source-line-no">160</span><span id="line.160">        return com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierActionBuilder.of();</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    /**</span>
+<span class="source-line-no">164</span><span id="line.164">     * builder for setCustomField subtype</span>
+<span class="source-line-no">165</span><span id="line.165">     * @return builder</span>
+<span class="source-line-no">166</span><span id="line.166">     */</span>
+<span class="source-line-no">167</span><span id="line.167">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionBuilder setCustomFieldBuilder() {</span>
+<span class="source-line-no">168</span><span id="line.168">        return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionBuilder.of();</span>
 <span class="source-line-no">169</span><span id="line.169">    }</span>
-<span class="source-line-no">170</span><span id="line.170">}</span>
+<span class="source-line-no">170</span><span id="line.170"></span>
+<span class="source-line-no">171</span><span id="line.171">    /**</span>
+<span class="source-line-no">172</span><span id="line.172">     * builder for setCustomType subtype</span>
+<span class="source-line-no">173</span><span id="line.173">     * @return builder</span>
+<span class="source-line-no">174</span><span id="line.174">     */</span>
+<span class="source-line-no">175</span><span id="line.175">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionBuilder setCustomTypeBuilder() {</span>
+<span class="source-line-no">176</span><span id="line.176">        return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionBuilder.of();</span>
+<span class="source-line-no">177</span><span id="line.177">    }</span>
+<span class="source-line-no">178</span><span id="line.178"></span>
+<span class="source-line-no">179</span><span id="line.179">    /**</span>
+<span class="source-line-no">180</span><span id="line.180">     * builder for setDiscountedPrice subtype</span>
+<span class="source-line-no">181</span><span id="line.181">     * @return builder</span>
+<span class="source-line-no">182</span><span id="line.182">     */</span>
+<span class="source-line-no">183</span><span id="line.183">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionBuilder setDiscountedPriceBuilder() {</span>
+<span class="source-line-no">184</span><span id="line.184">        return com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionBuilder.of();</span>
+<span class="source-line-no">185</span><span id="line.185">    }</span>
+<span class="source-line-no">186</span><span id="line.186"></span>
+<span class="source-line-no">187</span><span id="line.187">    /**</span>
+<span class="source-line-no">188</span><span id="line.188">     * builder for setKey subtype</span>
+<span class="source-line-no">189</span><span id="line.189">     * @return builder</span>
+<span class="source-line-no">190</span><span id="line.190">     */</span>
+<span class="source-line-no">191</span><span id="line.191">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder setKeyBuilder() {</span>
+<span class="source-line-no">192</span><span id="line.192">        return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder.of();</span>
+<span class="source-line-no">193</span><span id="line.193">    }</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">    /**</span>
+<span class="source-line-no">196</span><span id="line.196">     * builder for setPriceTier subtype</span>
+<span class="source-line-no">197</span><span id="line.197">     * @return builder</span>
+<span class="source-line-no">198</span><span id="line.198">     */</span>
+<span class="source-line-no">199</span><span id="line.199">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionBuilder setPriceTierBuilder() {</span>
+<span class="source-line-no">200</span><span id="line.200">        return com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionBuilder.of();</span>
+<span class="source-line-no">201</span><span id="line.201">    }</span>
+<span class="source-line-no">202</span><span id="line.202"></span>
+<span class="source-line-no">203</span><span id="line.203">    /**</span>
+<span class="source-line-no">204</span><span id="line.204">     * builder for setValidFrom subtype</span>
+<span class="source-line-no">205</span><span id="line.205">     * @return builder</span>
+<span class="source-line-no">206</span><span id="line.206">     */</span>
+<span class="source-line-no">207</span><span id="line.207">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromActionBuilder setValidFromBuilder() {</span>
+<span class="source-line-no">208</span><span id="line.208">        return com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromActionBuilder.of();</span>
+<span class="source-line-no">209</span><span id="line.209">    }</span>
+<span class="source-line-no">210</span><span id="line.210"></span>
+<span class="source-line-no">211</span><span id="line.211">    /**</span>
+<span class="source-line-no">212</span><span id="line.212">     * builder for setValidFromAndUntil subtype</span>
+<span class="source-line-no">213</span><span id="line.213">     * @return builder</span>
+<span class="source-line-no">214</span><span id="line.214">     */</span>
+<span class="source-line-no">215</span><span id="line.215">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilActionBuilder setValidFromAndUntilBuilder() {</span>
+<span class="source-line-no">216</span><span id="line.216">        return com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilActionBuilder.of();</span>
+<span class="source-line-no">217</span><span id="line.217">    }</span>
+<span class="source-line-no">218</span><span id="line.218"></span>
+<span class="source-line-no">219</span><span id="line.219">    /**</span>
+<span class="source-line-no">220</span><span id="line.220">     * builder for setValidUntil subtype</span>
+<span class="source-line-no">221</span><span id="line.221">     * @return builder</span>
+<span class="source-line-no">222</span><span id="line.222">     */</span>
+<span class="source-line-no">223</span><span id="line.223">    public static com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilActionBuilder setValidUntilBuilder() {</span>
+<span class="source-line-no">224</span><span id="line.224">        return com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilActionBuilder.of();</span>
+<span class="source-line-no">225</span><span id="line.225">    }</span>
+<span class="source-line-no">226</span><span id="line.226"></span>
+<span class="source-line-no">227</span><span id="line.227">    /**</span>
+<span class="source-line-no">228</span><span id="line.228">     * accessor map function</span>
+<span class="source-line-no">229</span><span id="line.229">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">230</span><span id="line.230">     * @param helper function to map the object</span>
+<span class="source-line-no">231</span><span id="line.231">     * @return mapped value</span>
+<span class="source-line-no">232</span><span id="line.232">     */</span>
+<span class="source-line-no">233</span><span id="line.233">    default &lt;T&gt; T withStandalonePriceUpdateAction(Function&lt;StandalonePriceUpdateAction, T&gt; helper) {</span>
+<span class="source-line-no">234</span><span id="line.234">        return helper.apply(this);</span>
+<span class="source-line-no">235</span><span id="line.235">    }</span>
+<span class="source-line-no">236</span><span id="line.236"></span>
+<span class="source-line-no">237</span><span id="line.237">    /**</span>
+<span class="source-line-no">238</span><span id="line.238">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">239</span><span id="line.239">     * @return TypeReference</span>
+<span class="source-line-no">240</span><span id="line.240">     */</span>
+<span class="source-line-no">241</span><span id="line.241">    public static com.fasterxml.jackson.core.type.TypeReference&lt;StandalonePriceUpdateAction&gt; typeReference() {</span>
+<span class="source-line-no">242</span><span id="line.242">        return new com.fasterxml.jackson.core.type.TypeReference&lt;StandalonePriceUpdateAction&gt;() {</span>
+<span class="source-line-no">243</span><span id="line.243">            @Override</span>
+<span class="source-line-no">244</span><span id="line.244">            public String toString() {</span>
+<span class="source-line-no">245</span><span id="line.245">                return "TypeReference&lt;StandalonePriceUpdateAction&gt;";</span>
+<span class="source-line-no">246</span><span id="line.246">            }</span>
+<span class="source-line-no">247</span><span id="line.247">        };</span>
+<span class="source-line-no">248</span><span id="line.248">    }</span>
+<span class="source-line-no">249</span><span id="line.249">}</span>
 
 
 

@@ -38,8 +38,8 @@
 <span class="source-line-no">025</span><span id="line.25"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
 <span class="source-line-no">026</span><span id="line.26"> *     SetReservationsChange setReservationsChange = SetReservationsChange.builder()</span>
 <span class="source-line-no">027</span><span id="line.27"> *             .change("{change}")</span>
-<span class="source-line-no">028</span><span id="line.28"> *             .plusNextValue(nextValueBuilder -&gt; nextValueBuilder)</span>
-<span class="source-line-no">029</span><span id="line.29"> *             .plusPreviousValue(previousValueBuilder -&gt; previousValueBuilder)</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .plusPreviousValue(previousValueBuilder -&gt; previousValueBuilder)</span>
+<span class="source-line-no">029</span><span id="line.29"> *             .plusNextValue(nextValueBuilder -&gt; nextValueBuilder)</span>
 <span class="source-line-no">030</span><span id="line.30"> *             .build()</span>
 <span class="source-line-no">031</span><span id="line.31"> * &lt;/code&gt;&lt;/pre&gt;</span>
 <span class="source-line-no">032</span><span id="line.32"> * &lt;/div&gt;</span>
@@ -54,7 +54,7 @@
 <span class="source-line-no">041</span><span id="line.41">    String SET_RESERVATIONS_CHANGE = "SetReservationsChange";</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Update action for &lt;code&gt;setReservations&lt;/code&gt; on inventories&lt;/p&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">     *</span>
 <span class="source-line-no">045</span><span id="line.45">     * @return change</span>
 <span class="source-line-no">046</span><span id="line.46">     */</span>
 <span class="source-line-no">047</span><span id="line.47">    @NotNull</span>
@@ -70,59 +70,59 @@
 <span class="source-line-no">057</span><span id="line.57">    public String getType();</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
 <span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">     *</span>
-<span class="source-line-no">061</span><span id="line.61">     * @return nextValue</span>
+<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     * @return previousValue</span>
 <span class="source-line-no">062</span><span id="line.62">     */</span>
 <span class="source-line-no">063</span><span id="line.63">    @NotNull</span>
 <span class="source-line-no">064</span><span id="line.64">    @Valid</span>
-<span class="source-line-no">065</span><span id="line.65">    @JsonProperty("nextValue")</span>
-<span class="source-line-no">066</span><span id="line.66">    public List&lt;Reservation&gt; getNextValue();</span>
+<span class="source-line-no">065</span><span id="line.65">    @JsonProperty("previousValue")</span>
+<span class="source-line-no">066</span><span id="line.66">    public List&lt;Reservation&gt; getPreviousValue();</span>
 <span class="source-line-no">067</span><span id="line.67"></span>
 <span class="source-line-no">068</span><span id="line.68">    /**</span>
-<span class="source-line-no">069</span><span id="line.69">     *</span>
-<span class="source-line-no">070</span><span id="line.70">     * @return previousValue</span>
+<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">070</span><span id="line.70">     * @return nextValue</span>
 <span class="source-line-no">071</span><span id="line.71">     */</span>
 <span class="source-line-no">072</span><span id="line.72">    @NotNull</span>
 <span class="source-line-no">073</span><span id="line.73">    @Valid</span>
-<span class="source-line-no">074</span><span id="line.74">    @JsonProperty("previousValue")</span>
-<span class="source-line-no">075</span><span id="line.75">    public List&lt;Reservation&gt; getPreviousValue();</span>
+<span class="source-line-no">074</span><span id="line.74">    @JsonProperty("nextValue")</span>
+<span class="source-line-no">075</span><span id="line.75">    public List&lt;Reservation&gt; getNextValue();</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;Update action for &lt;code&gt;setReservations&lt;/code&gt; on inventories&lt;/p&gt;</span>
+<span class="source-line-no">078</span><span id="line.78">     * set change</span>
 <span class="source-line-no">079</span><span id="line.79">     * @param change value to be set</span>
 <span class="source-line-no">080</span><span id="line.80">     */</span>
 <span class="source-line-no">081</span><span id="line.81"></span>
 <span class="source-line-no">082</span><span id="line.82">    public void setChange(final String change);</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
 <span class="source-line-no">084</span><span id="line.84">    /**</span>
-<span class="source-line-no">085</span><span id="line.85">     * set nextValue</span>
-<span class="source-line-no">086</span><span id="line.86">     * @param nextValue values to be set</span>
+<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     * @param previousValue values to be set</span>
 <span class="source-line-no">087</span><span id="line.87">     */</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
 <span class="source-line-no">089</span><span id="line.89">    @JsonIgnore</span>
-<span class="source-line-no">090</span><span id="line.90">    public void setNextValue(final Reservation... nextValue);</span>
+<span class="source-line-no">090</span><span id="line.90">    public void setPreviousValue(final Reservation... previousValue);</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
 <span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     * set nextValue</span>
-<span class="source-line-no">094</span><span id="line.94">     * @param nextValue values to be set</span>
+<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">094</span><span id="line.94">     * @param previousValue values to be set</span>
 <span class="source-line-no">095</span><span id="line.95">     */</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public void setNextValue(final List&lt;Reservation&gt; nextValue);</span>
+<span class="source-line-no">097</span><span id="line.97">    public void setPreviousValue(final List&lt;Reservation&gt; previousValue);</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
 <span class="source-line-no">099</span><span id="line.99">    /**</span>
-<span class="source-line-no">100</span><span id="line.100">     * set previousValue</span>
-<span class="source-line-no">101</span><span id="line.101">     * @param previousValue values to be set</span>
+<span class="source-line-no">100</span><span id="line.100">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">101</span><span id="line.101">     * @param nextValue values to be set</span>
 <span class="source-line-no">102</span><span id="line.102">     */</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
 <span class="source-line-no">104</span><span id="line.104">    @JsonIgnore</span>
-<span class="source-line-no">105</span><span id="line.105">    public void setPreviousValue(final Reservation... previousValue);</span>
+<span class="source-line-no">105</span><span id="line.105">    public void setNextValue(final Reservation... nextValue);</span>
 <span class="source-line-no">106</span><span id="line.106"></span>
 <span class="source-line-no">107</span><span id="line.107">    /**</span>
-<span class="source-line-no">108</span><span id="line.108">     * set previousValue</span>
-<span class="source-line-no">109</span><span id="line.109">     * @param previousValue values to be set</span>
+<span class="source-line-no">108</span><span id="line.108">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">109</span><span id="line.109">     * @param nextValue values to be set</span>
 <span class="source-line-no">110</span><span id="line.110">     */</span>
 <span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public void setPreviousValue(final List&lt;Reservation&gt; previousValue);</span>
+<span class="source-line-no">112</span><span id="line.112">    public void setNextValue(final List&lt;Reservation&gt; nextValue);</span>
 <span class="source-line-no">113</span><span id="line.113"></span>
 <span class="source-line-no">114</span><span id="line.114">    /**</span>
 <span class="source-line-no">115</span><span id="line.115">     * factory method</span>
@@ -140,8 +140,8 @@
 <span class="source-line-no">127</span><span id="line.127">    public static SetReservationsChange of(final SetReservationsChange template) {</span>
 <span class="source-line-no">128</span><span id="line.128">        SetReservationsChangeImpl instance = new SetReservationsChangeImpl();</span>
 <span class="source-line-no">129</span><span id="line.129">        instance.setChange(template.getChange());</span>
-<span class="source-line-no">130</span><span id="line.130">        instance.setNextValue(template.getNextValue());</span>
-<span class="source-line-no">131</span><span id="line.131">        instance.setPreviousValue(template.getPreviousValue());</span>
+<span class="source-line-no">130</span><span id="line.130">        instance.setPreviousValue(template.getPreviousValue());</span>
+<span class="source-line-no">131</span><span id="line.131">        instance.setNextValue(template.getNextValue());</span>
 <span class="source-line-no">132</span><span id="line.132">        return instance;</span>
 <span class="source-line-no">133</span><span id="line.133">    }</span>
 <span class="source-line-no">134</span><span id="line.134"></span>
@@ -157,12 +157,12 @@
 <span class="source-line-no">144</span><span id="line.144">        }</span>
 <span class="source-line-no">145</span><span id="line.145">        SetReservationsChangeImpl instance = new SetReservationsChangeImpl();</span>
 <span class="source-line-no">146</span><span id="line.146">        instance.setChange(template.getChange());</span>
-<span class="source-line-no">147</span><span id="line.147">        instance.setNextValue(Optional.ofNullable(template.getNextValue())</span>
+<span class="source-line-no">147</span><span id="line.147">        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())</span>
 <span class="source-line-no">148</span><span id="line.148">                .map(t -&gt; t.stream()</span>
 <span class="source-line-no">149</span><span id="line.149">                        .map(com.commercetools.history.models.common.Reservation::deepCopy)</span>
 <span class="source-line-no">150</span><span id="line.150">                        .collect(Collectors.toList()))</span>
 <span class="source-line-no">151</span><span id="line.151">                .orElse(null));</span>
-<span class="source-line-no">152</span><span id="line.152">        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())</span>
+<span class="source-line-no">152</span><span id="line.152">        instance.setNextValue(Optional.ofNullable(template.getNextValue())</span>
 <span class="source-line-no">153</span><span id="line.153">                .map(t -&gt; t.stream()</span>
 <span class="source-line-no">154</span><span id="line.154">                        .map(com.commercetools.history.models.common.Reservation::deepCopy)</span>
 <span class="source-line-no">155</span><span id="line.155">                        .collect(Collectors.toList()))</span>

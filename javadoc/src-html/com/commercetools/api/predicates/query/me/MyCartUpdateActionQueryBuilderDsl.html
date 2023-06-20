@@ -168,72 +168,79 @@
 <span class="source-line-no">155</span><span id="line.155">            MyCartUpdateActionQueryBuilderDsl::of);</span>
 <span class="source-line-no">156</span><span id="line.156">    }</span>
 <span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLineItemCustomField(</span>
-<span class="source-line-no">159</span><span id="line.159">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomFieldActionQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">158</span><span id="line.158">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetDirectDiscounts(</span>
+<span class="source-line-no">159</span><span id="line.159">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetDirectDiscountsActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetDirectDiscountsActionQueryBuilderDsl&gt;&gt; fn) {</span>
 <span class="source-line-no">160</span><span id="line.160">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">161</span><span id="line.161">            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomFieldActionQueryBuilderDsl.of()),</span>
+<span class="source-line-no">161</span><span id="line.161">            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetDirectDiscountsActionQueryBuilderDsl.of()),</span>
 <span class="source-line-no">162</span><span id="line.162">            MyCartUpdateActionQueryBuilderDsl::of);</span>
 <span class="source-line-no">163</span><span id="line.163">    }</span>
 <span class="source-line-no">164</span><span id="line.164"></span>
-<span class="source-line-no">165</span><span id="line.165">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLineItemCustomType(</span>
-<span class="source-line-no">166</span><span id="line.166">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomTypeActionQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">165</span><span id="line.165">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLineItemCustomField(</span>
+<span class="source-line-no">166</span><span id="line.166">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomFieldActionQueryBuilderDsl&gt;&gt; fn) {</span>
 <span class="source-line-no">167</span><span id="line.167">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">168</span><span id="line.168">            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomTypeActionQueryBuilderDsl.of()),</span>
+<span class="source-line-no">168</span><span id="line.168">            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomFieldActionQueryBuilderDsl.of()),</span>
 <span class="source-line-no">169</span><span id="line.169">            MyCartUpdateActionQueryBuilderDsl::of);</span>
 <span class="source-line-no">170</span><span id="line.170">    }</span>
 <span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLineItemDistributionChannel(</span>
-<span class="source-line-no">173</span><span id="line.173">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl&gt;&gt; fn) {</span>
-<span class="source-line-no">174</span><span id="line.174">        return new CombinationQueryPredicate&lt;&gt;(fn.apply(</span>
-<span class="source-line-no">175</span><span id="line.175">            com.commercetools.api.predicates.query.me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl.of()),</span>
+<span class="source-line-no">172</span><span id="line.172">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLineItemCustomType(</span>
+<span class="source-line-no">173</span><span id="line.173">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomTypeActionQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">174</span><span id="line.174">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">175</span><span id="line.175">            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetLineItemCustomTypeActionQueryBuilderDsl.of()),</span>
 <span class="source-line-no">176</span><span id="line.176">            MyCartUpdateActionQueryBuilderDsl::of);</span>
 <span class="source-line-no">177</span><span id="line.177">    }</span>
 <span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLineItemShippingDetails(</span>
-<span class="source-line-no">180</span><span id="line.180">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemShippingDetailsActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemShippingDetailsActionQueryBuilderDsl&gt;&gt; fn) {</span>
-<span class="source-line-no">181</span><span id="line.181">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">182</span><span id="line.182">            fn.apply(</span>
-<span class="source-line-no">183</span><span id="line.183">                com.commercetools.api.predicates.query.me.MyCartSetLineItemShippingDetailsActionQueryBuilderDsl.of()),</span>
-<span class="source-line-no">184</span><span id="line.184">            MyCartUpdateActionQueryBuilderDsl::of);</span>
-<span class="source-line-no">185</span><span id="line.185">    }</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLineItemSupplyChannel(</span>
-<span class="source-line-no">188</span><span id="line.188">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemSupplyChannelActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemSupplyChannelActionQueryBuilderDsl&gt;&gt; fn) {</span>
-<span class="source-line-no">189</span><span id="line.189">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">190</span><span id="line.190">            fn.apply(</span>
-<span class="source-line-no">191</span><span id="line.191">                com.commercetools.api.predicates.query.me.MyCartSetLineItemSupplyChannelActionQueryBuilderDsl.of()),</span>
-<span class="source-line-no">192</span><span id="line.192">            MyCartUpdateActionQueryBuilderDsl::of);</span>
-<span class="source-line-no">193</span><span id="line.193">    }</span>
-<span class="source-line-no">194</span><span id="line.194"></span>
-<span class="source-line-no">195</span><span id="line.195">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLocale(</span>
-<span class="source-line-no">196</span><span id="line.196">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLocaleActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLocaleActionQueryBuilderDsl&gt;&gt; fn) {</span>
-<span class="source-line-no">197</span><span id="line.197">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">198</span><span id="line.198">            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetLocaleActionQueryBuilderDsl.of()),</span>
+<span class="source-line-no">179</span><span id="line.179">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLineItemDistributionChannel(</span>
+<span class="source-line-no">180</span><span id="line.180">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">181</span><span id="line.181">        return new CombinationQueryPredicate&lt;&gt;(fn.apply(</span>
+<span class="source-line-no">182</span><span id="line.182">            com.commercetools.api.predicates.query.me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl.of()),</span>
+<span class="source-line-no">183</span><span id="line.183">            MyCartUpdateActionQueryBuilderDsl::of);</span>
+<span class="source-line-no">184</span><span id="line.184">    }</span>
+<span class="source-line-no">185</span><span id="line.185"></span>
+<span class="source-line-no">186</span><span id="line.186">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLineItemShippingDetails(</span>
+<span class="source-line-no">187</span><span id="line.187">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemShippingDetailsActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemShippingDetailsActionQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">188</span><span id="line.188">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">189</span><span id="line.189">            fn.apply(</span>
+<span class="source-line-no">190</span><span id="line.190">                com.commercetools.api.predicates.query.me.MyCartSetLineItemShippingDetailsActionQueryBuilderDsl.of()),</span>
+<span class="source-line-no">191</span><span id="line.191">            MyCartUpdateActionQueryBuilderDsl::of);</span>
+<span class="source-line-no">192</span><span id="line.192">    }</span>
+<span class="source-line-no">193</span><span id="line.193"></span>
+<span class="source-line-no">194</span><span id="line.194">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLineItemSupplyChannel(</span>
+<span class="source-line-no">195</span><span id="line.195">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemSupplyChannelActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLineItemSupplyChannelActionQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">196</span><span id="line.196">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">197</span><span id="line.197">            fn.apply(</span>
+<span class="source-line-no">198</span><span id="line.198">                com.commercetools.api.predicates.query.me.MyCartSetLineItemSupplyChannelActionQueryBuilderDsl.of()),</span>
 <span class="source-line-no">199</span><span id="line.199">            MyCartUpdateActionQueryBuilderDsl::of);</span>
 <span class="source-line-no">200</span><span id="line.200">    }</span>
 <span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetShippingAddress(</span>
-<span class="source-line-no">203</span><span id="line.203">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetShippingAddressActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetShippingAddressActionQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">202</span><span id="line.202">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetLocale(</span>
+<span class="source-line-no">203</span><span id="line.203">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetLocaleActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetLocaleActionQueryBuilderDsl&gt;&gt; fn) {</span>
 <span class="source-line-no">204</span><span id="line.204">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">205</span><span id="line.205">            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetShippingAddressActionQueryBuilderDsl.of()),</span>
+<span class="source-line-no">205</span><span id="line.205">            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetLocaleActionQueryBuilderDsl.of()),</span>
 <span class="source-line-no">206</span><span id="line.206">            MyCartUpdateActionQueryBuilderDsl::of);</span>
 <span class="source-line-no">207</span><span id="line.207">    }</span>
 <span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetShippingMethod(</span>
-<span class="source-line-no">210</span><span id="line.210">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetShippingMethodActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetShippingMethodActionQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">209</span><span id="line.209">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetShippingAddress(</span>
+<span class="source-line-no">210</span><span id="line.210">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetShippingAddressActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetShippingAddressActionQueryBuilderDsl&gt;&gt; fn) {</span>
 <span class="source-line-no">211</span><span id="line.211">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">212</span><span id="line.212">            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetShippingMethodActionQueryBuilderDsl.of()),</span>
+<span class="source-line-no">212</span><span id="line.212">            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetShippingAddressActionQueryBuilderDsl.of()),</span>
 <span class="source-line-no">213</span><span id="line.213">            MyCartUpdateActionQueryBuilderDsl::of);</span>
 <span class="source-line-no">214</span><span id="line.214">    }</span>
 <span class="source-line-no">215</span><span id="line.215"></span>
-<span class="source-line-no">216</span><span id="line.216">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asUpdateItemShippingAddress(</span>
-<span class="source-line-no">217</span><span id="line.217">            Function&lt;com.commercetools.api.predicates.query.me.MyCartUpdateItemShippingAddressActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartUpdateItemShippingAddressActionQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">216</span><span id="line.216">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asSetShippingMethod(</span>
+<span class="source-line-no">217</span><span id="line.217">            Function&lt;com.commercetools.api.predicates.query.me.MyCartSetShippingMethodActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartSetShippingMethodActionQueryBuilderDsl&gt;&gt; fn) {</span>
 <span class="source-line-no">218</span><span id="line.218">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">219</span><span id="line.219">            fn.apply(</span>
-<span class="source-line-no">220</span><span id="line.220">                com.commercetools.api.predicates.query.me.MyCartUpdateItemShippingAddressActionQueryBuilderDsl.of()),</span>
-<span class="source-line-no">221</span><span id="line.221">            MyCartUpdateActionQueryBuilderDsl::of);</span>
-<span class="source-line-no">222</span><span id="line.222">    }</span>
-<span class="source-line-no">223</span><span id="line.223">}</span>
+<span class="source-line-no">219</span><span id="line.219">            fn.apply(com.commercetools.api.predicates.query.me.MyCartSetShippingMethodActionQueryBuilderDsl.of()),</span>
+<span class="source-line-no">220</span><span id="line.220">            MyCartUpdateActionQueryBuilderDsl::of);</span>
+<span class="source-line-no">221</span><span id="line.221">    }</span>
+<span class="source-line-no">222</span><span id="line.222"></span>
+<span class="source-line-no">223</span><span id="line.223">    public CombinationQueryPredicate&lt;MyCartUpdateActionQueryBuilderDsl&gt; asUpdateItemShippingAddress(</span>
+<span class="source-line-no">224</span><span id="line.224">            Function&lt;com.commercetools.api.predicates.query.me.MyCartUpdateItemShippingAddressActionQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.me.MyCartUpdateItemShippingAddressActionQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">225</span><span id="line.225">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">226</span><span id="line.226">            fn.apply(</span>
+<span class="source-line-no">227</span><span id="line.227">                com.commercetools.api.predicates.query.me.MyCartUpdateItemShippingAddressActionQueryBuilderDsl.of()),</span>
+<span class="source-line-no">228</span><span id="line.228">            MyCartUpdateActionQueryBuilderDsl::of);</span>
+<span class="source-line-no">229</span><span id="line.229">    }</span>
+<span class="source-line-no">230</span><span id="line.230">}</span>
 
 
 

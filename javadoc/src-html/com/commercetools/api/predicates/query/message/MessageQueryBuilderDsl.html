@@ -917,71 +917,118 @@
 <span class="source-line-no">904</span><span id="line.904">            MessageQueryBuilderDsl::of);</span>
 <span class="source-line-no">905</span><span id="line.905">    }</span>
 <span class="source-line-no">906</span><span id="line.906"></span>
-<span class="source-line-no">907</span><span id="line.907">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStandalonePriceValueChanged(</span>
-<span class="source-line-no">908</span><span id="line.908">            Function&lt;com.commercetools.api.predicates.query.message.StandalonePriceValueChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StandalonePriceValueChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">907</span><span id="line.907">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStandalonePriceTierAdded(</span>
+<span class="source-line-no">908</span><span id="line.908">            Function&lt;com.commercetools.api.predicates.query.message.StandalonePriceTierAddedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StandalonePriceTierAddedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
 <span class="source-line-no">909</span><span id="line.909">        return new CombinationQueryPredicate&lt;&gt;(</span>
 <span class="source-line-no">910</span><span id="line.910">            fn.apply(</span>
-<span class="source-line-no">911</span><span id="line.911">                com.commercetools.api.predicates.query.message.StandalonePriceValueChangedMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">911</span><span id="line.911">                com.commercetools.api.predicates.query.message.StandalonePriceTierAddedMessageQueryBuilderDsl.of()),</span>
 <span class="source-line-no">912</span><span id="line.912">            MessageQueryBuilderDsl::of);</span>
 <span class="source-line-no">913</span><span id="line.913">    }</span>
 <span class="source-line-no">914</span><span id="line.914"></span>
-<span class="source-line-no">915</span><span id="line.915">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreCountriesChanged(</span>
-<span class="source-line-no">916</span><span id="line.916">            Function&lt;com.commercetools.api.predicates.query.message.StoreCountriesChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreCountriesChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">915</span><span id="line.915">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStandalonePriceTierRemoved(</span>
+<span class="source-line-no">916</span><span id="line.916">            Function&lt;com.commercetools.api.predicates.query.message.StandalonePriceTierRemovedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StandalonePriceTierRemovedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
 <span class="source-line-no">917</span><span id="line.917">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">918</span><span id="line.918">            fn.apply(com.commercetools.api.predicates.query.message.StoreCountriesChangedMessageQueryBuilderDsl.of()),</span>
-<span class="source-line-no">919</span><span id="line.919">            MessageQueryBuilderDsl::of);</span>
-<span class="source-line-no">920</span><span id="line.920">    }</span>
-<span class="source-line-no">921</span><span id="line.921"></span>
-<span class="source-line-no">922</span><span id="line.922">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreCreated(</span>
-<span class="source-line-no">923</span><span id="line.923">            Function&lt;com.commercetools.api.predicates.query.message.StoreCreatedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreCreatedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
-<span class="source-line-no">924</span><span id="line.924">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">925</span><span id="line.925">            fn.apply(com.commercetools.api.predicates.query.message.StoreCreatedMessageQueryBuilderDsl.of()),</span>
-<span class="source-line-no">926</span><span id="line.926">            MessageQueryBuilderDsl::of);</span>
-<span class="source-line-no">927</span><span id="line.927">    }</span>
-<span class="source-line-no">928</span><span id="line.928"></span>
-<span class="source-line-no">929</span><span id="line.929">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreDeleted(</span>
-<span class="source-line-no">930</span><span id="line.930">            Function&lt;com.commercetools.api.predicates.query.message.StoreDeletedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreDeletedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
-<span class="source-line-no">931</span><span id="line.931">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">932</span><span id="line.932">            fn.apply(com.commercetools.api.predicates.query.message.StoreDeletedMessageQueryBuilderDsl.of()),</span>
-<span class="source-line-no">933</span><span id="line.933">            MessageQueryBuilderDsl::of);</span>
-<span class="source-line-no">934</span><span id="line.934">    }</span>
-<span class="source-line-no">935</span><span id="line.935"></span>
-<span class="source-line-no">936</span><span id="line.936">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreDistributionChannelsChanged(</span>
-<span class="source-line-no">937</span><span id="line.937">            Function&lt;com.commercetools.api.predicates.query.message.StoreDistributionChannelsChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreDistributionChannelsChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
-<span class="source-line-no">938</span><span id="line.938">        return new CombinationQueryPredicate&lt;&gt;(fn.apply(</span>
-<span class="source-line-no">939</span><span id="line.939">            com.commercetools.api.predicates.query.message.StoreDistributionChannelsChangedMessageQueryBuilderDsl.of()),</span>
-<span class="source-line-no">940</span><span id="line.940">            MessageQueryBuilderDsl::of);</span>
-<span class="source-line-no">941</span><span id="line.941">    }</span>
-<span class="source-line-no">942</span><span id="line.942"></span>
-<span class="source-line-no">943</span><span id="line.943">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreLanguagesChanged(</span>
-<span class="source-line-no">944</span><span id="line.944">            Function&lt;com.commercetools.api.predicates.query.message.StoreLanguagesChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreLanguagesChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
-<span class="source-line-no">945</span><span id="line.945">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">946</span><span id="line.946">            fn.apply(com.commercetools.api.predicates.query.message.StoreLanguagesChangedMessageQueryBuilderDsl.of()),</span>
-<span class="source-line-no">947</span><span id="line.947">            MessageQueryBuilderDsl::of);</span>
-<span class="source-line-no">948</span><span id="line.948">    }</span>
-<span class="source-line-no">949</span><span id="line.949"></span>
-<span class="source-line-no">950</span><span id="line.950">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreNameSet(</span>
-<span class="source-line-no">951</span><span id="line.951">            Function&lt;com.commercetools.api.predicates.query.message.StoreNameSetMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreNameSetMessageQueryBuilderDsl&gt;&gt; fn) {</span>
-<span class="source-line-no">952</span><span id="line.952">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">953</span><span id="line.953">            fn.apply(com.commercetools.api.predicates.query.message.StoreNameSetMessageQueryBuilderDsl.of()),</span>
-<span class="source-line-no">954</span><span id="line.954">            MessageQueryBuilderDsl::of);</span>
-<span class="source-line-no">955</span><span id="line.955">    }</span>
-<span class="source-line-no">956</span><span id="line.956"></span>
-<span class="source-line-no">957</span><span id="line.957">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreProductSelectionsChanged(</span>
-<span class="source-line-no">958</span><span id="line.958">            Function&lt;com.commercetools.api.predicates.query.message.StoreProductSelectionsChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreProductSelectionsChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
-<span class="source-line-no">959</span><span id="line.959">        return new CombinationQueryPredicate&lt;&gt;(fn.apply(</span>
-<span class="source-line-no">960</span><span id="line.960">            com.commercetools.api.predicates.query.message.StoreProductSelectionsChangedMessageQueryBuilderDsl.of()),</span>
-<span class="source-line-no">961</span><span id="line.961">            MessageQueryBuilderDsl::of);</span>
-<span class="source-line-no">962</span><span id="line.962">    }</span>
-<span class="source-line-no">963</span><span id="line.963"></span>
-<span class="source-line-no">964</span><span id="line.964">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreSupplyChannelsChanged(</span>
-<span class="source-line-no">965</span><span id="line.965">            Function&lt;com.commercetools.api.predicates.query.message.StoreSupplyChannelsChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreSupplyChannelsChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
-<span class="source-line-no">966</span><span id="line.966">        return new CombinationQueryPredicate&lt;&gt;(</span>
-<span class="source-line-no">967</span><span id="line.967">            fn.apply(</span>
-<span class="source-line-no">968</span><span id="line.968">                com.commercetools.api.predicates.query.message.StoreSupplyChannelsChangedMessageQueryBuilderDsl.of()),</span>
-<span class="source-line-no">969</span><span id="line.969">            MessageQueryBuilderDsl::of);</span>
-<span class="source-line-no">970</span><span id="line.970">    }</span>
-<span class="source-line-no">971</span><span id="line.971">}</span>
+<span class="source-line-no">918</span><span id="line.918">            fn.apply(</span>
+<span class="source-line-no">919</span><span id="line.919">                com.commercetools.api.predicates.query.message.StandalonePriceTierRemovedMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">920</span><span id="line.920">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">921</span><span id="line.921">    }</span>
+<span class="source-line-no">922</span><span id="line.922"></span>
+<span class="source-line-no">923</span><span id="line.923">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStandalonePriceTiersSet(</span>
+<span class="source-line-no">924</span><span id="line.924">            Function&lt;com.commercetools.api.predicates.query.message.StandalonePriceTiersSetMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StandalonePriceTiersSetMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">925</span><span id="line.925">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">926</span><span id="line.926">            fn.apply(com.commercetools.api.predicates.query.message.StandalonePriceTiersSetMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">927</span><span id="line.927">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">928</span><span id="line.928">    }</span>
+<span class="source-line-no">929</span><span id="line.929"></span>
+<span class="source-line-no">930</span><span id="line.930">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStandalonePriceValidFromAndUntilSet(</span>
+<span class="source-line-no">931</span><span id="line.931">            Function&lt;com.commercetools.api.predicates.query.message.StandalonePriceValidFromAndUntilSetMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StandalonePriceValidFromAndUntilSetMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">932</span><span id="line.932">        return new CombinationQueryPredicate&lt;&gt;(fn.apply(</span>
+<span class="source-line-no">933</span><span id="line.933">            com.commercetools.api.predicates.query.message.StandalonePriceValidFromAndUntilSetMessageQueryBuilderDsl</span>
+<span class="source-line-no">934</span><span id="line.934">                    .of()),</span>
+<span class="source-line-no">935</span><span id="line.935">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">936</span><span id="line.936">    }</span>
+<span class="source-line-no">937</span><span id="line.937"></span>
+<span class="source-line-no">938</span><span id="line.938">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStandalonePriceValidFromSet(</span>
+<span class="source-line-no">939</span><span id="line.939">            Function&lt;com.commercetools.api.predicates.query.message.StandalonePriceValidFromSetMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StandalonePriceValidFromSetMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">940</span><span id="line.940">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">941</span><span id="line.941">            fn.apply(</span>
+<span class="source-line-no">942</span><span id="line.942">                com.commercetools.api.predicates.query.message.StandalonePriceValidFromSetMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">943</span><span id="line.943">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">944</span><span id="line.944">    }</span>
+<span class="source-line-no">945</span><span id="line.945"></span>
+<span class="source-line-no">946</span><span id="line.946">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStandalonePriceValidUntilSet(</span>
+<span class="source-line-no">947</span><span id="line.947">            Function&lt;com.commercetools.api.predicates.query.message.StandalonePriceValidUntilSetMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StandalonePriceValidUntilSetMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">948</span><span id="line.948">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">949</span><span id="line.949">            fn.apply(</span>
+<span class="source-line-no">950</span><span id="line.950">                com.commercetools.api.predicates.query.message.StandalonePriceValidUntilSetMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">951</span><span id="line.951">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">952</span><span id="line.952">    }</span>
+<span class="source-line-no">953</span><span id="line.953"></span>
+<span class="source-line-no">954</span><span id="line.954">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStandalonePriceValueChanged(</span>
+<span class="source-line-no">955</span><span id="line.955">            Function&lt;com.commercetools.api.predicates.query.message.StandalonePriceValueChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StandalonePriceValueChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">956</span><span id="line.956">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">957</span><span id="line.957">            fn.apply(</span>
+<span class="source-line-no">958</span><span id="line.958">                com.commercetools.api.predicates.query.message.StandalonePriceValueChangedMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">959</span><span id="line.959">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">960</span><span id="line.960">    }</span>
+<span class="source-line-no">961</span><span id="line.961"></span>
+<span class="source-line-no">962</span><span id="line.962">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreCountriesChanged(</span>
+<span class="source-line-no">963</span><span id="line.963">            Function&lt;com.commercetools.api.predicates.query.message.StoreCountriesChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreCountriesChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">964</span><span id="line.964">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">965</span><span id="line.965">            fn.apply(com.commercetools.api.predicates.query.message.StoreCountriesChangedMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">966</span><span id="line.966">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">967</span><span id="line.967">    }</span>
+<span class="source-line-no">968</span><span id="line.968"></span>
+<span class="source-line-no">969</span><span id="line.969">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreCreated(</span>
+<span class="source-line-no">970</span><span id="line.970">            Function&lt;com.commercetools.api.predicates.query.message.StoreCreatedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreCreatedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">971</span><span id="line.971">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">972</span><span id="line.972">            fn.apply(com.commercetools.api.predicates.query.message.StoreCreatedMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">973</span><span id="line.973">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">974</span><span id="line.974">    }</span>
+<span class="source-line-no">975</span><span id="line.975"></span>
+<span class="source-line-no">976</span><span id="line.976">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreDeleted(</span>
+<span class="source-line-no">977</span><span id="line.977">            Function&lt;com.commercetools.api.predicates.query.message.StoreDeletedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreDeletedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">978</span><span id="line.978">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">979</span><span id="line.979">            fn.apply(com.commercetools.api.predicates.query.message.StoreDeletedMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">980</span><span id="line.980">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">981</span><span id="line.981">    }</span>
+<span class="source-line-no">982</span><span id="line.982"></span>
+<span class="source-line-no">983</span><span id="line.983">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreDistributionChannelsChanged(</span>
+<span class="source-line-no">984</span><span id="line.984">            Function&lt;com.commercetools.api.predicates.query.message.StoreDistributionChannelsChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreDistributionChannelsChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">985</span><span id="line.985">        return new CombinationQueryPredicate&lt;&gt;(fn.apply(</span>
+<span class="source-line-no">986</span><span id="line.986">            com.commercetools.api.predicates.query.message.StoreDistributionChannelsChangedMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">987</span><span id="line.987">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">988</span><span id="line.988">    }</span>
+<span class="source-line-no">989</span><span id="line.989"></span>
+<span class="source-line-no">990</span><span id="line.990">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreLanguagesChanged(</span>
+<span class="source-line-no">991</span><span id="line.991">            Function&lt;com.commercetools.api.predicates.query.message.StoreLanguagesChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreLanguagesChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">992</span><span id="line.992">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">993</span><span id="line.993">            fn.apply(com.commercetools.api.predicates.query.message.StoreLanguagesChangedMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">994</span><span id="line.994">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">995</span><span id="line.995">    }</span>
+<span class="source-line-no">996</span><span id="line.996"></span>
+<span class="source-line-no">997</span><span id="line.997">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreNameSet(</span>
+<span class="source-line-no">998</span><span id="line.998">            Function&lt;com.commercetools.api.predicates.query.message.StoreNameSetMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreNameSetMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">999</span><span id="line.999">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">1000</span><span id="line.1000">            fn.apply(com.commercetools.api.predicates.query.message.StoreNameSetMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">1001</span><span id="line.1001">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">1002</span><span id="line.1002">    }</span>
+<span class="source-line-no">1003</span><span id="line.1003"></span>
+<span class="source-line-no">1004</span><span id="line.1004">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreProductSelectionsChanged(</span>
+<span class="source-line-no">1005</span><span id="line.1005">            Function&lt;com.commercetools.api.predicates.query.message.StoreProductSelectionsChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreProductSelectionsChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">1006</span><span id="line.1006">        return new CombinationQueryPredicate&lt;&gt;(fn.apply(</span>
+<span class="source-line-no">1007</span><span id="line.1007">            com.commercetools.api.predicates.query.message.StoreProductSelectionsChangedMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">1008</span><span id="line.1008">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">1009</span><span id="line.1009">    }</span>
+<span class="source-line-no">1010</span><span id="line.1010"></span>
+<span class="source-line-no">1011</span><span id="line.1011">    public CombinationQueryPredicate&lt;MessageQueryBuilderDsl&gt; asStoreSupplyChannelsChanged(</span>
+<span class="source-line-no">1012</span><span id="line.1012">            Function&lt;com.commercetools.api.predicates.query.message.StoreSupplyChannelsChangedMessageQueryBuilderDsl, CombinationQueryPredicate&lt;com.commercetools.api.predicates.query.message.StoreSupplyChannelsChangedMessageQueryBuilderDsl&gt;&gt; fn) {</span>
+<span class="source-line-no">1013</span><span id="line.1013">        return new CombinationQueryPredicate&lt;&gt;(</span>
+<span class="source-line-no">1014</span><span id="line.1014">            fn.apply(</span>
+<span class="source-line-no">1015</span><span id="line.1015">                com.commercetools.api.predicates.query.message.StoreSupplyChannelsChangedMessageQueryBuilderDsl.of()),</span>
+<span class="source-line-no">1016</span><span id="line.1016">            MessageQueryBuilderDsl::of);</span>
+<span class="source-line-no">1017</span><span id="line.1017">    }</span>
+<span class="source-line-no">1018</span><span id="line.1018">}</span>
 
 
 

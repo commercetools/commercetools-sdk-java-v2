@@ -29,7 +29,7 @@
 <span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
 <span class="source-line-no">018</span><span id="line.18">/**</span>
-<span class="source-line-no">019</span><span id="line.19"> * SetShippingRateInputChange</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;Change triggered by the Set Shipping Rate Input update action.&lt;/p&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> *</span>
 <span class="source-line-no">021</span><span id="line.21"> * &lt;hr&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> * Example to create an instance using the builder pattern</span>
@@ -59,7 +59,7 @@
 <span class="source-line-no">046</span><span id="line.46">    public String getType();</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
 <span class="source-line-no">048</span><span id="line.48">    /**</span>
-<span class="source-line-no">049</span><span id="line.49">     *  &lt;p&gt;Update action for &lt;code&gt;setShippingRateInput&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     *</span>
 <span class="source-line-no">050</span><span id="line.50">     * @return change</span>
 <span class="source-line-no">051</span><span id="line.51">     */</span>
 <span class="source-line-no">052</span><span id="line.52">    @NotNull</span>
@@ -67,69 +67,69 @@
 <span class="source-line-no">054</span><span id="line.54">    public String getChange();</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
 <span class="source-line-no">056</span><span id="line.56">    /**</span>
-<span class="source-line-no">057</span><span id="line.57">     *</span>
-<span class="source-line-no">058</span><span id="line.58">     * @return nextValue</span>
+<span class="source-line-no">057</span><span id="line.57">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     * @return previousValue</span>
 <span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60">    @NotNull</span>
-<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("nextValue")</span>
-<span class="source-line-no">062</span><span id="line.62">    public Object getNextValue();</span>
+<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("previousValue")</span>
+<span class="source-line-no">062</span><span id="line.62">    public Object getPreviousValue();</span>
 <span class="source-line-no">063</span><span id="line.63"></span>
 <span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     *</span>
-<span class="source-line-no">066</span><span id="line.66">     * @return previousValue</span>
+<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">066</span><span id="line.66">     * @return nextValue</span>
 <span class="source-line-no">067</span><span id="line.67">     */</span>
 <span class="source-line-no">068</span><span id="line.68">    @NotNull</span>
-<span class="source-line-no">069</span><span id="line.69">    @JsonProperty("previousValue")</span>
-<span class="source-line-no">070</span><span id="line.70">    public Object getPreviousValue();</span>
+<span class="source-line-no">069</span><span id="line.69">    @JsonProperty("nextValue")</span>
+<span class="source-line-no">070</span><span id="line.70">    public Object getNextValue();</span>
 <span class="source-line-no">071</span><span id="line.71"></span>
 <span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;Update action for &lt;code&gt;setShippingRateInput&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">073</span><span id="line.73">     * set change</span>
 <span class="source-line-no">074</span><span id="line.74">     * @param change value to be set</span>
 <span class="source-line-no">075</span><span id="line.75">     */</span>
 <span class="source-line-no">076</span><span id="line.76"></span>
 <span class="source-line-no">077</span><span id="line.77">    public void setChange(final String change);</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
 <span class="source-line-no">079</span><span id="line.79">    /**</span>
-<span class="source-line-no">080</span><span id="line.80">     * set nextValue</span>
-<span class="source-line-no">081</span><span id="line.81">     * @param nextValue value to be set</span>
+<span class="source-line-no">080</span><span id="line.80">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">081</span><span id="line.81">     * @param previousValue value to be set</span>
 <span class="source-line-no">082</span><span id="line.82">     */</span>
 <span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public void setNextValue(final SetCartClassificationShippingRateInputValue nextValue);</span>
+<span class="source-line-no">084</span><span id="line.84">    public void setPreviousValue(final SetCartClassificationShippingRateInputValue previousValue);</span>
 <span class="source-line-no">085</span><span id="line.85"></span>
 <span class="source-line-no">086</span><span id="line.86">    /**</span>
-<span class="source-line-no">087</span><span id="line.87">     * set nextValue</span>
-<span class="source-line-no">088</span><span id="line.88">     * @param nextValue value to be set</span>
+<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">088</span><span id="line.88">     * @param previousValue value to be set</span>
 <span class="source-line-no">089</span><span id="line.89">     */</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setNextValue(final SetCartScoreShippingRateInputValue nextValue);</span>
+<span class="source-line-no">091</span><span id="line.91">    public void setPreviousValue(final SetCartScoreShippingRateInputValue previousValue);</span>
 <span class="source-line-no">092</span><span id="line.92"></span>
 <span class="source-line-no">093</span><span id="line.93">    /**</span>
-<span class="source-line-no">094</span><span id="line.94">     * set nextValue</span>
-<span class="source-line-no">095</span><span id="line.95">     * @param nextValue value to be set</span>
+<span class="source-line-no">094</span><span id="line.94">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">095</span><span id="line.95">     * @param previousValue value to be set</span>
 <span class="source-line-no">096</span><span id="line.96">     */</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public void setNextValue(final Object nextValue);</span>
+<span class="source-line-no">098</span><span id="line.98">    public void setPreviousValue(final Object previousValue);</span>
 <span class="source-line-no">099</span><span id="line.99"></span>
 <span class="source-line-no">100</span><span id="line.100">    /**</span>
-<span class="source-line-no">101</span><span id="line.101">     * set previousValue</span>
-<span class="source-line-no">102</span><span id="line.102">     * @param previousValue value to be set</span>
+<span class="source-line-no">101</span><span id="line.101">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">102</span><span id="line.102">     * @param nextValue value to be set</span>
 <span class="source-line-no">103</span><span id="line.103">     */</span>
 <span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public void setPreviousValue(final SetCartClassificationShippingRateInputValue previousValue);</span>
+<span class="source-line-no">105</span><span id="line.105">    public void setNextValue(final SetCartClassificationShippingRateInputValue nextValue);</span>
 <span class="source-line-no">106</span><span id="line.106"></span>
 <span class="source-line-no">107</span><span id="line.107">    /**</span>
-<span class="source-line-no">108</span><span id="line.108">     * set previousValue</span>
-<span class="source-line-no">109</span><span id="line.109">     * @param previousValue value to be set</span>
+<span class="source-line-no">108</span><span id="line.108">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">109</span><span id="line.109">     * @param nextValue value to be set</span>
 <span class="source-line-no">110</span><span id="line.110">     */</span>
 <span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    public void setPreviousValue(final SetCartScoreShippingRateInputValue previousValue);</span>
+<span class="source-line-no">112</span><span id="line.112">    public void setNextValue(final SetCartScoreShippingRateInputValue nextValue);</span>
 <span class="source-line-no">113</span><span id="line.113"></span>
 <span class="source-line-no">114</span><span id="line.114">    /**</span>
-<span class="source-line-no">115</span><span id="line.115">     * set previousValue</span>
-<span class="source-line-no">116</span><span id="line.116">     * @param previousValue value to be set</span>
+<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">116</span><span id="line.116">     * @param nextValue value to be set</span>
 <span class="source-line-no">117</span><span id="line.117">     */</span>
 <span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    public void setPreviousValue(final Object previousValue);</span>
+<span class="source-line-no">119</span><span id="line.119">    public void setNextValue(final Object nextValue);</span>
 <span class="source-line-no">120</span><span id="line.120"></span>
 <span class="source-line-no">121</span><span id="line.121">    /**</span>
 <span class="source-line-no">122</span><span id="line.122">     * factory method</span>
@@ -147,8 +147,8 @@
 <span class="source-line-no">134</span><span id="line.134">    public static SetShippingRateInputChange of(final SetShippingRateInputChange template) {</span>
 <span class="source-line-no">135</span><span id="line.135">        SetShippingRateInputChangeImpl instance = new SetShippingRateInputChangeImpl();</span>
 <span class="source-line-no">136</span><span id="line.136">        instance.setChange(template.getChange());</span>
-<span class="source-line-no">137</span><span id="line.137">        instance.setNextValue(template.getNextValue());</span>
-<span class="source-line-no">138</span><span id="line.138">        instance.setPreviousValue(template.getPreviousValue());</span>
+<span class="source-line-no">137</span><span id="line.137">        instance.setPreviousValue(template.getPreviousValue());</span>
+<span class="source-line-no">138</span><span id="line.138">        instance.setNextValue(template.getNextValue());</span>
 <span class="source-line-no">139</span><span id="line.139">        return instance;</span>
 <span class="source-line-no">140</span><span id="line.140">    }</span>
 <span class="source-line-no">141</span><span id="line.141"></span>
@@ -164,8 +164,8 @@
 <span class="source-line-no">151</span><span id="line.151">        }</span>
 <span class="source-line-no">152</span><span id="line.152">        SetShippingRateInputChangeImpl instance = new SetShippingRateInputChangeImpl();</span>
 <span class="source-line-no">153</span><span id="line.153">        instance.setChange(template.getChange());</span>
-<span class="source-line-no">154</span><span id="line.154">        instance.setNextValue(template.getNextValue());</span>
-<span class="source-line-no">155</span><span id="line.155">        instance.setPreviousValue(template.getPreviousValue());</span>
+<span class="source-line-no">154</span><span id="line.154">        instance.setPreviousValue(template.getPreviousValue());</span>
+<span class="source-line-no">155</span><span id="line.155">        instance.setNextValue(template.getNextValue());</span>
 <span class="source-line-no">156</span><span id="line.156">        return instance;</span>
 <span class="source-line-no">157</span><span id="line.157">    }</span>
 <span class="source-line-no">158</span><span id="line.158"></span>

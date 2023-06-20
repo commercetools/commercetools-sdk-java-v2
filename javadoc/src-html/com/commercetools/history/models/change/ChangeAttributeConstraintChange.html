@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * ChangeAttributeConstraintChange</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Change triggered by the Change AttributeDefinition AttributeConstraint update action.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> *</span>
 <span class="source-line-no">020</span><span id="line.20"> * &lt;hr&gt;</span>
 <span class="source-line-no">021</span><span id="line.21"> * Example to create an instance using the builder pattern</span>
@@ -36,9 +36,9 @@
 <span class="source-line-no">023</span><span id="line.23"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
 <span class="source-line-no">024</span><span id="line.24"> *     ChangeAttributeConstraintChange changeAttributeConstraintChange = ChangeAttributeConstraintChange.builder()</span>
 <span class="source-line-no">025</span><span id="line.25"> *             .change("{change}")</span>
-<span class="source-line-no">026</span><span id="line.26"> *             .attributeName("{attributeName}")</span>
-<span class="source-line-no">027</span><span id="line.27"> *             .previousValue(AttributeConstraintEnum.NONE)</span>
-<span class="source-line-no">028</span><span id="line.28"> *             .nextValue(AttributeConstraintEnum.NONE)</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .previousValue(AttributeConstraintEnum.NONE)</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .nextValue(AttributeConstraintEnum.NONE)</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .attributeName("{attributeName}")</span>
 <span class="source-line-no">029</span><span id="line.29"> *             .build()</span>
 <span class="source-line-no">030</span><span id="line.30"> * &lt;/code&gt;&lt;/pre&gt;</span>
 <span class="source-line-no">031</span><span id="line.31"> * &lt;/div&gt;</span>
@@ -69,28 +69,28 @@
 <span class="source-line-no">056</span><span id="line.56">    public String getChange();</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
 <span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;name of the updated attribute&lt;/p&gt;</span>
-<span class="source-line-no">060</span><span id="line.60">     * @return attributeName</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     * @return previousValue</span>
 <span class="source-line-no">061</span><span id="line.61">     */</span>
 <span class="source-line-no">062</span><span id="line.62">    @NotNull</span>
-<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("attributeName")</span>
-<span class="source-line-no">064</span><span id="line.64">    public String getAttributeName();</span>
+<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("previousValue")</span>
+<span class="source-line-no">064</span><span id="line.64">    public AttributeConstraintEnum getPreviousValue();</span>
 <span class="source-line-no">065</span><span id="line.65"></span>
 <span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     *</span>
-<span class="source-line-no">068</span><span id="line.68">     * @return previousValue</span>
+<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">     * @return nextValue</span>
 <span class="source-line-no">069</span><span id="line.69">     */</span>
 <span class="source-line-no">070</span><span id="line.70">    @NotNull</span>
-<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("previousValue")</span>
-<span class="source-line-no">072</span><span id="line.72">    public AttributeConstraintEnum getPreviousValue();</span>
+<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("nextValue")</span>
+<span class="source-line-no">072</span><span id="line.72">    public AttributeConstraintEnum getNextValue();</span>
 <span class="source-line-no">073</span><span id="line.73"></span>
 <span class="source-line-no">074</span><span id="line.74">    /**</span>
-<span class="source-line-no">075</span><span id="line.75">     *</span>
-<span class="source-line-no">076</span><span id="line.76">     * @return nextValue</span>
+<span class="source-line-no">075</span><span id="line.75">     *  &lt;p&gt;Name of the updated AttributeDefinition.&lt;/p&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">     * @return attributeName</span>
 <span class="source-line-no">077</span><span id="line.77">     */</span>
 <span class="source-line-no">078</span><span id="line.78">    @NotNull</span>
-<span class="source-line-no">079</span><span id="line.79">    @JsonProperty("nextValue")</span>
-<span class="source-line-no">080</span><span id="line.80">    public AttributeConstraintEnum getNextValue();</span>
+<span class="source-line-no">079</span><span id="line.79">    @JsonProperty("attributeName")</span>
+<span class="source-line-no">080</span><span id="line.80">    public String getAttributeName();</span>
 <span class="source-line-no">081</span><span id="line.81"></span>
 <span class="source-line-no">082</span><span id="line.82">    /**</span>
 <span class="source-line-no">083</span><span id="line.83">     * set change</span>
@@ -100,25 +100,25 @@
 <span class="source-line-no">087</span><span id="line.87">    public void setChange(final String change);</span>
 <span class="source-line-no">088</span><span id="line.88"></span>
 <span class="source-line-no">089</span><span id="line.89">    /**</span>
-<span class="source-line-no">090</span><span id="line.90">     *  &lt;p&gt;name of the updated attribute&lt;/p&gt;</span>
-<span class="source-line-no">091</span><span id="line.91">     * @param attributeName value to be set</span>
+<span class="source-line-no">090</span><span id="line.90">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">091</span><span id="line.91">     * @param previousValue value to be set</span>
 <span class="source-line-no">092</span><span id="line.92">     */</span>
 <span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public void setAttributeName(final String attributeName);</span>
+<span class="source-line-no">094</span><span id="line.94">    public void setPreviousValue(final AttributeConstraintEnum previousValue);</span>
 <span class="source-line-no">095</span><span id="line.95"></span>
 <span class="source-line-no">096</span><span id="line.96">    /**</span>
-<span class="source-line-no">097</span><span id="line.97">     * set previousValue</span>
-<span class="source-line-no">098</span><span id="line.98">     * @param previousValue value to be set</span>
+<span class="source-line-no">097</span><span id="line.97">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">098</span><span id="line.98">     * @param nextValue value to be set</span>
 <span class="source-line-no">099</span><span id="line.99">     */</span>
 <span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public void setPreviousValue(final AttributeConstraintEnum previousValue);</span>
+<span class="source-line-no">101</span><span id="line.101">    public void setNextValue(final AttributeConstraintEnum nextValue);</span>
 <span class="source-line-no">102</span><span id="line.102"></span>
 <span class="source-line-no">103</span><span id="line.103">    /**</span>
-<span class="source-line-no">104</span><span id="line.104">     * set nextValue</span>
-<span class="source-line-no">105</span><span id="line.105">     * @param nextValue value to be set</span>
+<span class="source-line-no">104</span><span id="line.104">     *  &lt;p&gt;Name of the updated AttributeDefinition.&lt;/p&gt;</span>
+<span class="source-line-no">105</span><span id="line.105">     * @param attributeName value to be set</span>
 <span class="source-line-no">106</span><span id="line.106">     */</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public void setNextValue(final AttributeConstraintEnum nextValue);</span>
+<span class="source-line-no">108</span><span id="line.108">    public void setAttributeName(final String attributeName);</span>
 <span class="source-line-no">109</span><span id="line.109"></span>
 <span class="source-line-no">110</span><span id="line.110">    /**</span>
 <span class="source-line-no">111</span><span id="line.111">     * factory method</span>
@@ -136,9 +136,9 @@
 <span class="source-line-no">123</span><span id="line.123">    public static ChangeAttributeConstraintChange of(final ChangeAttributeConstraintChange template) {</span>
 <span class="source-line-no">124</span><span id="line.124">        ChangeAttributeConstraintChangeImpl instance = new ChangeAttributeConstraintChangeImpl();</span>
 <span class="source-line-no">125</span><span id="line.125">        instance.setChange(template.getChange());</span>
-<span class="source-line-no">126</span><span id="line.126">        instance.setAttributeName(template.getAttributeName());</span>
-<span class="source-line-no">127</span><span id="line.127">        instance.setPreviousValue(template.getPreviousValue());</span>
-<span class="source-line-no">128</span><span id="line.128">        instance.setNextValue(template.getNextValue());</span>
+<span class="source-line-no">126</span><span id="line.126">        instance.setPreviousValue(template.getPreviousValue());</span>
+<span class="source-line-no">127</span><span id="line.127">        instance.setNextValue(template.getNextValue());</span>
+<span class="source-line-no">128</span><span id="line.128">        instance.setAttributeName(template.getAttributeName());</span>
 <span class="source-line-no">129</span><span id="line.129">        return instance;</span>
 <span class="source-line-no">130</span><span id="line.130">    }</span>
 <span class="source-line-no">131</span><span id="line.131"></span>
@@ -154,9 +154,9 @@
 <span class="source-line-no">141</span><span id="line.141">        }</span>
 <span class="source-line-no">142</span><span id="line.142">        ChangeAttributeConstraintChangeImpl instance = new ChangeAttributeConstraintChangeImpl();</span>
 <span class="source-line-no">143</span><span id="line.143">        instance.setChange(template.getChange());</span>
-<span class="source-line-no">144</span><span id="line.144">        instance.setAttributeName(template.getAttributeName());</span>
-<span class="source-line-no">145</span><span id="line.145">        instance.setPreviousValue(template.getPreviousValue());</span>
-<span class="source-line-no">146</span><span id="line.146">        instance.setNextValue(template.getNextValue());</span>
+<span class="source-line-no">144</span><span id="line.144">        instance.setPreviousValue(template.getPreviousValue());</span>
+<span class="source-line-no">145</span><span id="line.145">        instance.setNextValue(template.getNextValue());</span>
+<span class="source-line-no">146</span><span id="line.146">        instance.setAttributeName(template.getAttributeName());</span>
 <span class="source-line-no">147</span><span id="line.147">        return instance;</span>
 <span class="source-line-no">148</span><span id="line.148">    }</span>
 <span class="source-line-no">149</span><span id="line.149"></span>

@@ -55,7 +55,7 @@
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    /**</span>
 <span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Minimum quantity this Price tier is valid for.&lt;/p&gt;</span>
-<span class="source-line-no">045</span><span id="line.45">     *  &lt;p&gt;The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.&lt;/p&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">     *  &lt;p&gt;The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A Price or StandalonePrice cannot contain more than one tier with the same &lt;code&gt;minimumQuantity&lt;/code&gt;. In the case one of the constraint is not met an InvalidField is returned.&lt;/p&gt;</span>
 <span class="source-line-no">046</span><span id="line.46">     */</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
 <span class="source-line-no">048</span><span id="line.48">    public Long getMinimumQuantity() {</span>

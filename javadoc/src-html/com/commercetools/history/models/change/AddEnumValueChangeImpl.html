@@ -28,7 +28,7 @@
 <span class="source-line-no">015</span><span id="line.15">import org.apache.commons.lang3.builder.HashCodeBuilder;</span>
 <span class="source-line-no">016</span><span id="line.16"></span>
 <span class="source-line-no">017</span><span id="line.17">/**</span>
-<span class="source-line-no">018</span><span id="line.18"> * AddEnumValueChange</span>
+<span class="source-line-no">018</span><span id="line.18"> *  &lt;p&gt;Change triggered by the Add EnumValue to FieldDefinition update action.&lt;/p&gt;</span>
 <span class="source-line-no">019</span><span id="line.19"> */</span>
 <span class="source-line-no">020</span><span id="line.20">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
 <span class="source-line-no">021</span><span id="line.21">public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {</span>
@@ -37,20 +37,20 @@
 <span class="source-line-no">024</span><span id="line.24"></span>
 <span class="source-line-no">025</span><span id="line.25">    private String change;</span>
 <span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    private String fieldName;</span>
+<span class="source-line-no">027</span><span id="line.27">    private com.commercetools.history.models.change_value.EnumValue nextValue;</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    private com.commercetools.history.models.change_value.EnumValue nextValue;</span>
+<span class="source-line-no">029</span><span id="line.29">    private String fieldName;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
 <span class="source-line-no">031</span><span id="line.31">    /**</span>
 <span class="source-line-no">032</span><span id="line.32">     * create instance with all properties</span>
 <span class="source-line-no">033</span><span id="line.33">     */</span>
 <span class="source-line-no">034</span><span id="line.34">    @JsonCreator</span>
 <span class="source-line-no">035</span><span id="line.35">    AddEnumValueChangeImpl(@JsonProperty("change") final String change,</span>
-<span class="source-line-no">036</span><span id="line.36">            @JsonProperty("fieldName") final String fieldName,</span>
-<span class="source-line-no">037</span><span id="line.37">            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.EnumValue nextValue) {</span>
+<span class="source-line-no">036</span><span id="line.36">            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.EnumValue nextValue,</span>
+<span class="source-line-no">037</span><span id="line.37">            @JsonProperty("fieldName") final String fieldName) {</span>
 <span class="source-line-no">038</span><span id="line.38">        this.change = change;</span>
-<span class="source-line-no">039</span><span id="line.39">        this.fieldName = fieldName;</span>
-<span class="source-line-no">040</span><span id="line.40">        this.nextValue = nextValue;</span>
+<span class="source-line-no">039</span><span id="line.39">        this.nextValue = nextValue;</span>
+<span class="source-line-no">040</span><span id="line.40">        this.fieldName = fieldName;</span>
 <span class="source-line-no">041</span><span id="line.41">        this.type = ADD_ENUM_VALUE_CHANGE;</span>
 <span class="source-line-no">042</span><span id="line.42">    }</span>
 <span class="source-line-no">043</span><span id="line.43"></span>
@@ -70,7 +70,7 @@
 <span class="source-line-no">057</span><span id="line.57">    }</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
 <span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;Update action for &lt;code&gt;addEnumValue&lt;/code&gt; on types&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     *</span>
 <span class="source-line-no">061</span><span id="line.61">     */</span>
 <span class="source-line-no">062</span><span id="line.62"></span>
 <span class="source-line-no">063</span><span id="line.63">    public String getChange() {</span>
@@ -78,31 +78,31 @@
 <span class="source-line-no">065</span><span id="line.65">    }</span>
 <span class="source-line-no">066</span><span id="line.66"></span>
 <span class="source-line-no">067</span><span id="line.67">    /**</span>
-<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;The name of the field/attribute definition updated.&lt;/p&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
 <span class="source-line-no">069</span><span id="line.69">     */</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public String getFieldName() {</span>
-<span class="source-line-no">072</span><span id="line.72">        return this.fieldName;</span>
+<span class="source-line-no">071</span><span id="line.71">    public com.commercetools.history.models.change_value.EnumValue getNextValue() {</span>
+<span class="source-line-no">072</span><span id="line.72">        return this.nextValue;</span>
 <span class="source-line-no">073</span><span id="line.73">    }</span>
 <span class="source-line-no">074</span><span id="line.74"></span>
 <span class="source-line-no">075</span><span id="line.75">    /**</span>
-<span class="source-line-no">076</span><span id="line.76">     *</span>
+<span class="source-line-no">076</span><span id="line.76">     *  &lt;p&gt;Name of the updated FieldDefinition.&lt;/p&gt;</span>
 <span class="source-line-no">077</span><span id="line.77">     */</span>
 <span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    public com.commercetools.history.models.change_value.EnumValue getNextValue() {</span>
-<span class="source-line-no">080</span><span id="line.80">        return this.nextValue;</span>
+<span class="source-line-no">079</span><span id="line.79">    public String getFieldName() {</span>
+<span class="source-line-no">080</span><span id="line.80">        return this.fieldName;</span>
 <span class="source-line-no">081</span><span id="line.81">    }</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
 <span class="source-line-no">083</span><span id="line.83">    public void setChange(final String change) {</span>
 <span class="source-line-no">084</span><span id="line.84">        this.change = change;</span>
 <span class="source-line-no">085</span><span id="line.85">    }</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setFieldName(final String fieldName) {</span>
-<span class="source-line-no">088</span><span id="line.88">        this.fieldName = fieldName;</span>
+<span class="source-line-no">087</span><span id="line.87">    public void setNextValue(final com.commercetools.history.models.change_value.EnumValue nextValue) {</span>
+<span class="source-line-no">088</span><span id="line.88">        this.nextValue = nextValue;</span>
 <span class="source-line-no">089</span><span id="line.89">    }</span>
 <span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public void setNextValue(final com.commercetools.history.models.change_value.EnumValue nextValue) {</span>
-<span class="source-line-no">092</span><span id="line.92">        this.nextValue = nextValue;</span>
+<span class="source-line-no">091</span><span id="line.91">    public void setFieldName(final String fieldName) {</span>
+<span class="source-line-no">092</span><span id="line.92">        this.fieldName = fieldName;</span>
 <span class="source-line-no">093</span><span id="line.93">    }</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
 <span class="source-line-no">095</span><span id="line.95">    @Override</span>
@@ -117,14 +117,14 @@
 <span class="source-line-no">104</span><span id="line.104"></span>
 <span class="source-line-no">105</span><span id="line.105">        return new EqualsBuilder().append(type, that.type)</span>
 <span class="source-line-no">106</span><span id="line.106">                .append(change, that.change)</span>
-<span class="source-line-no">107</span><span id="line.107">                .append(fieldName, that.fieldName)</span>
-<span class="source-line-no">108</span><span id="line.108">                .append(nextValue, that.nextValue)</span>
+<span class="source-line-no">107</span><span id="line.107">                .append(nextValue, that.nextValue)</span>
+<span class="source-line-no">108</span><span id="line.108">                .append(fieldName, that.fieldName)</span>
 <span class="source-line-no">109</span><span id="line.109">                .isEquals();</span>
 <span class="source-line-no">110</span><span id="line.110">    }</span>
 <span class="source-line-no">111</span><span id="line.111"></span>
 <span class="source-line-no">112</span><span id="line.112">    @Override</span>
 <span class="source-line-no">113</span><span id="line.113">    public int hashCode() {</span>
-<span class="source-line-no">114</span><span id="line.114">        return new HashCodeBuilder(17, 37).append(type).append(change).append(fieldName).append(nextValue).toHashCode();</span>
+<span class="source-line-no">114</span><span id="line.114">        return new HashCodeBuilder(17, 37).append(type).append(change).append(nextValue).append(fieldName).toHashCode();</span>
 <span class="source-line-no">115</span><span id="line.115">    }</span>
 <span class="source-line-no">116</span><span id="line.116"></span>
 <span class="source-line-no">117</span><span id="line.117">}</span>

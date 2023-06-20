@@ -27,9 +27,9 @@
 <span class="source-line-no">014</span><span id="line.14"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
 <span class="source-line-no">015</span><span id="line.15"> *     ChangeAttributeConstraintChange changeAttributeConstraintChange = ChangeAttributeConstraintChange.builder()</span>
 <span class="source-line-no">016</span><span id="line.16"> *             .change("{change}")</span>
-<span class="source-line-no">017</span><span id="line.17"> *             .attributeName("{attributeName}")</span>
-<span class="source-line-no">018</span><span id="line.18"> *             .previousValue(AttributeConstraintEnum.NONE)</span>
-<span class="source-line-no">019</span><span id="line.19"> *             .nextValue(AttributeConstraintEnum.NONE)</span>
+<span class="source-line-no">017</span><span id="line.17"> *             .previousValue(AttributeConstraintEnum.NONE)</span>
+<span class="source-line-no">018</span><span id="line.18"> *             .nextValue(AttributeConstraintEnum.NONE)</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .attributeName("{attributeName}")</span>
 <span class="source-line-no">020</span><span id="line.20"> *             .build()</span>
 <span class="source-line-no">021</span><span id="line.21"> * &lt;/code&gt;&lt;/pre&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> * &lt;/div&gt;</span>
@@ -39,11 +39,11 @@
 <span class="source-line-no">026</span><span id="line.26"></span>
 <span class="source-line-no">027</span><span id="line.27">    private String change;</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    private String attributeName;</span>
+<span class="source-line-no">029</span><span id="line.29">    private com.commercetools.history.models.common.AttributeConstraintEnum previousValue;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    private com.commercetools.history.models.common.AttributeConstraintEnum previousValue;</span>
+<span class="source-line-no">031</span><span id="line.31">    private com.commercetools.history.models.common.AttributeConstraintEnum nextValue;</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    private com.commercetools.history.models.common.AttributeConstraintEnum nextValue;</span>
+<span class="source-line-no">033</span><span id="line.33">    private String attributeName;</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
 <span class="source-line-no">035</span><span id="line.35">    /**</span>
 <span class="source-line-no">036</span><span id="line.36">     * set the value to the change</span>
@@ -57,37 +57,37 @@
 <span class="source-line-no">044</span><span id="line.44">    }</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
 <span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;name of the updated attribute&lt;/p&gt;</span>
-<span class="source-line-no">048</span><span id="line.48">     * @param attributeName value to be set</span>
+<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">     * @param previousValue value to be set</span>
 <span class="source-line-no">049</span><span id="line.49">     * @return Builder</span>
 <span class="source-line-no">050</span><span id="line.50">     */</span>
 <span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    public ChangeAttributeConstraintChangeBuilder attributeName(final String attributeName) {</span>
-<span class="source-line-no">053</span><span id="line.53">        this.attributeName = attributeName;</span>
-<span class="source-line-no">054</span><span id="line.54">        return this;</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     * set the value to the previousValue</span>
-<span class="source-line-no">059</span><span id="line.59">     * @param previousValue value to be set</span>
-<span class="source-line-no">060</span><span id="line.60">     * @return Builder</span>
-<span class="source-line-no">061</span><span id="line.61">     */</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public ChangeAttributeConstraintChangeBuilder previousValue(</span>
-<span class="source-line-no">064</span><span id="line.64">            final com.commercetools.history.models.common.AttributeConstraintEnum previousValue) {</span>
-<span class="source-line-no">065</span><span id="line.65">        this.previousValue = previousValue;</span>
-<span class="source-line-no">066</span><span id="line.66">        return this;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    /**</span>
-<span class="source-line-no">070</span><span id="line.70">     * set the value to the nextValue</span>
-<span class="source-line-no">071</span><span id="line.71">     * @param nextValue value to be set</span>
-<span class="source-line-no">072</span><span id="line.72">     * @return Builder</span>
-<span class="source-line-no">073</span><span id="line.73">     */</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public ChangeAttributeConstraintChangeBuilder nextValue(</span>
-<span class="source-line-no">076</span><span id="line.76">            final com.commercetools.history.models.common.AttributeConstraintEnum nextValue) {</span>
-<span class="source-line-no">077</span><span id="line.77">        this.nextValue = nextValue;</span>
+<span class="source-line-no">052</span><span id="line.52">    public ChangeAttributeConstraintChangeBuilder previousValue(</span>
+<span class="source-line-no">053</span><span id="line.53">            final com.commercetools.history.models.common.AttributeConstraintEnum previousValue) {</span>
+<span class="source-line-no">054</span><span id="line.54">        this.previousValue = previousValue;</span>
+<span class="source-line-no">055</span><span id="line.55">        return this;</span>
+<span class="source-line-no">056</span><span id="line.56">    }</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     * @param nextValue value to be set</span>
+<span class="source-line-no">061</span><span id="line.61">     * @return Builder</span>
+<span class="source-line-no">062</span><span id="line.62">     */</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public ChangeAttributeConstraintChangeBuilder nextValue(</span>
+<span class="source-line-no">065</span><span id="line.65">            final com.commercetools.history.models.common.AttributeConstraintEnum nextValue) {</span>
+<span class="source-line-no">066</span><span id="line.66">        this.nextValue = nextValue;</span>
+<span class="source-line-no">067</span><span id="line.67">        return this;</span>
+<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    /**</span>
+<span class="source-line-no">071</span><span id="line.71">     *  &lt;p&gt;Name of the updated AttributeDefinition.&lt;/p&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     * @param attributeName value to be set</span>
+<span class="source-line-no">073</span><span id="line.73">     * @return Builder</span>
+<span class="source-line-no">074</span><span id="line.74">     */</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public ChangeAttributeConstraintChangeBuilder attributeName(final String attributeName) {</span>
+<span class="source-line-no">077</span><span id="line.77">        this.attributeName = attributeName;</span>
 <span class="source-line-no">078</span><span id="line.78">        return this;</span>
 <span class="source-line-no">079</span><span id="line.79">    }</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
@@ -101,30 +101,30 @@
 <span class="source-line-no">088</span><span id="line.88">    }</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
 <span class="source-line-no">090</span><span id="line.90">    /**</span>
-<span class="source-line-no">091</span><span id="line.91">     *  &lt;p&gt;name of the updated attribute&lt;/p&gt;</span>
-<span class="source-line-no">092</span><span id="line.92">     * @return attributeName</span>
+<span class="source-line-no">091</span><span id="line.91">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">092</span><span id="line.92">     * @return previousValue</span>
 <span class="source-line-no">093</span><span id="line.93">     */</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public String getAttributeName() {</span>
-<span class="source-line-no">096</span><span id="line.96">        return this.attributeName;</span>
+<span class="source-line-no">095</span><span id="line.95">    public com.commercetools.history.models.common.AttributeConstraintEnum getPreviousValue() {</span>
+<span class="source-line-no">096</span><span id="line.96">        return this.previousValue;</span>
 <span class="source-line-no">097</span><span id="line.97">    }</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
 <span class="source-line-no">099</span><span id="line.99">    /**</span>
-<span class="source-line-no">100</span><span id="line.100">     * value of previousValue}</span>
-<span class="source-line-no">101</span><span id="line.101">     * @return previousValue</span>
+<span class="source-line-no">100</span><span id="line.100">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">101</span><span id="line.101">     * @return nextValue</span>
 <span class="source-line-no">102</span><span id="line.102">     */</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public com.commercetools.history.models.common.AttributeConstraintEnum getPreviousValue() {</span>
-<span class="source-line-no">105</span><span id="line.105">        return this.previousValue;</span>
+<span class="source-line-no">104</span><span id="line.104">    public com.commercetools.history.models.common.AttributeConstraintEnum getNextValue() {</span>
+<span class="source-line-no">105</span><span id="line.105">        return this.nextValue;</span>
 <span class="source-line-no">106</span><span id="line.106">    }</span>
 <span class="source-line-no">107</span><span id="line.107"></span>
 <span class="source-line-no">108</span><span id="line.108">    /**</span>
-<span class="source-line-no">109</span><span id="line.109">     * value of nextValue}</span>
-<span class="source-line-no">110</span><span id="line.110">     * @return nextValue</span>
+<span class="source-line-no">109</span><span id="line.109">     *  &lt;p&gt;Name of the updated AttributeDefinition.&lt;/p&gt;</span>
+<span class="source-line-no">110</span><span id="line.110">     * @return attributeName</span>
 <span class="source-line-no">111</span><span id="line.111">     */</span>
 <span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    public com.commercetools.history.models.common.AttributeConstraintEnum getNextValue() {</span>
-<span class="source-line-no">114</span><span id="line.114">        return this.nextValue;</span>
+<span class="source-line-no">113</span><span id="line.113">    public String getAttributeName() {</span>
+<span class="source-line-no">114</span><span id="line.114">        return this.attributeName;</span>
 <span class="source-line-no">115</span><span id="line.115">    }</span>
 <span class="source-line-no">116</span><span id="line.116"></span>
 <span class="source-line-no">117</span><span id="line.117">    /**</span>
@@ -133,10 +133,10 @@
 <span class="source-line-no">120</span><span id="line.120">     */</span>
 <span class="source-line-no">121</span><span id="line.121">    public ChangeAttributeConstraintChange build() {</span>
 <span class="source-line-no">122</span><span id="line.122">        Objects.requireNonNull(change, ChangeAttributeConstraintChange.class + ": change is missing");</span>
-<span class="source-line-no">123</span><span id="line.123">        Objects.requireNonNull(attributeName, ChangeAttributeConstraintChange.class + ": attributeName is missing");</span>
-<span class="source-line-no">124</span><span id="line.124">        Objects.requireNonNull(previousValue, ChangeAttributeConstraintChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">125</span><span id="line.125">        Objects.requireNonNull(nextValue, ChangeAttributeConstraintChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">126</span><span id="line.126">        return new ChangeAttributeConstraintChangeImpl(change, attributeName, previousValue, nextValue);</span>
+<span class="source-line-no">123</span><span id="line.123">        Objects.requireNonNull(previousValue, ChangeAttributeConstraintChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">124</span><span id="line.124">        Objects.requireNonNull(nextValue, ChangeAttributeConstraintChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">125</span><span id="line.125">        Objects.requireNonNull(attributeName, ChangeAttributeConstraintChange.class + ": attributeName is missing");</span>
+<span class="source-line-no">126</span><span id="line.126">        return new ChangeAttributeConstraintChangeImpl(change, previousValue, nextValue, attributeName);</span>
 <span class="source-line-no">127</span><span id="line.127">    }</span>
 <span class="source-line-no">128</span><span id="line.128"></span>
 <span class="source-line-no">129</span><span id="line.129">    /**</span>
@@ -144,7 +144,7 @@
 <span class="source-line-no">131</span><span id="line.131">     * @return ChangeAttributeConstraintChange</span>
 <span class="source-line-no">132</span><span id="line.132">     */</span>
 <span class="source-line-no">133</span><span id="line.133">    public ChangeAttributeConstraintChange buildUnchecked() {</span>
-<span class="source-line-no">134</span><span id="line.134">        return new ChangeAttributeConstraintChangeImpl(change, attributeName, previousValue, nextValue);</span>
+<span class="source-line-no">134</span><span id="line.134">        return new ChangeAttributeConstraintChangeImpl(change, previousValue, nextValue, attributeName);</span>
 <span class="source-line-no">135</span><span id="line.135">    }</span>
 <span class="source-line-no">136</span><span id="line.136"></span>
 <span class="source-line-no">137</span><span id="line.137">    /**</span>
@@ -163,9 +163,9 @@
 <span class="source-line-no">150</span><span id="line.150">    public static ChangeAttributeConstraintChangeBuilder of(final ChangeAttributeConstraintChange template) {</span>
 <span class="source-line-no">151</span><span id="line.151">        ChangeAttributeConstraintChangeBuilder builder = new ChangeAttributeConstraintChangeBuilder();</span>
 <span class="source-line-no">152</span><span id="line.152">        builder.change = template.getChange();</span>
-<span class="source-line-no">153</span><span id="line.153">        builder.attributeName = template.getAttributeName();</span>
-<span class="source-line-no">154</span><span id="line.154">        builder.previousValue = template.getPreviousValue();</span>
-<span class="source-line-no">155</span><span id="line.155">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">153</span><span id="line.153">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">154</span><span id="line.154">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">155</span><span id="line.155">        builder.attributeName = template.getAttributeName();</span>
 <span class="source-line-no">156</span><span id="line.156">        return builder;</span>
 <span class="source-line-no">157</span><span id="line.157">    }</span>
 <span class="source-line-no">158</span><span id="line.158"></span>

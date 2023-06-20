@@ -29,7 +29,7 @@
 <span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
 <span class="source-line-no">018</span><span id="line.18">/**</span>
-<span class="source-line-no">019</span><span id="line.19"> * AddDeliveryChange</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;Change triggered by the Add Delivery update action.&lt;/p&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> *</span>
 <span class="source-line-no">021</span><span id="line.21"> * &lt;hr&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> * Example to create an instance using the builder pattern</span>
@@ -37,8 +37,8 @@
 <span class="source-line-no">024</span><span id="line.24"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
 <span class="source-line-no">025</span><span id="line.25"> *     AddDeliveryChange addDeliveryChange = AddDeliveryChange.builder()</span>
 <span class="source-line-no">026</span><span id="line.26"> *             .change("{change}")</span>
-<span class="source-line-no">027</span><span id="line.27"> *             .nextValue(nextValueBuilder -&gt; nextValueBuilder)</span>
-<span class="source-line-no">028</span><span id="line.28"> *             .previousValue(previousValueBuilder -&gt; previousValueBuilder)</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .previousValue(previousValueBuilder -&gt; previousValueBuilder)</span>
+<span class="source-line-no">028</span><span id="line.28"> *             .nextValue(nextValueBuilder -&gt; nextValueBuilder)</span>
 <span class="source-line-no">029</span><span id="line.29"> *             .build()</span>
 <span class="source-line-no">030</span><span id="line.30"> * &lt;/code&gt;&lt;/pre&gt;</span>
 <span class="source-line-no">031</span><span id="line.31"> * &lt;/div&gt;</span>
@@ -61,7 +61,7 @@
 <span class="source-line-no">048</span><span id="line.48">    public String getType();</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Update action for &lt;code&gt;addDelivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     *</span>
 <span class="source-line-no">052</span><span id="line.52">     * @return change</span>
 <span class="source-line-no">053</span><span id="line.53">     */</span>
 <span class="source-line-no">054</span><span id="line.54">    @NotNull</span>
@@ -69,43 +69,43 @@
 <span class="source-line-no">056</span><span id="line.56">    public String getChange();</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
 <span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     *</span>
-<span class="source-line-no">060</span><span id="line.60">     * @return nextValue</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     * @return previousValue</span>
 <span class="source-line-no">061</span><span id="line.61">     */</span>
 <span class="source-line-no">062</span><span id="line.62">    @NotNull</span>
 <span class="source-line-no">063</span><span id="line.63">    @Valid</span>
-<span class="source-line-no">064</span><span id="line.64">    @JsonProperty("nextValue")</span>
-<span class="source-line-no">065</span><span id="line.65">    public DeliveryChangeValue getNextValue();</span>
+<span class="source-line-no">064</span><span id="line.64">    @JsonProperty("previousValue")</span>
+<span class="source-line-no">065</span><span id="line.65">    public DeliveryChangeValue getPreviousValue();</span>
 <span class="source-line-no">066</span><span id="line.66"></span>
 <span class="source-line-no">067</span><span id="line.67">    /**</span>
-<span class="source-line-no">068</span><span id="line.68">     *</span>
-<span class="source-line-no">069</span><span id="line.69">     * @return previousValue</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     * @return nextValue</span>
 <span class="source-line-no">070</span><span id="line.70">     */</span>
 <span class="source-line-no">071</span><span id="line.71">    @NotNull</span>
 <span class="source-line-no">072</span><span id="line.72">    @Valid</span>
-<span class="source-line-no">073</span><span id="line.73">    @JsonProperty("previousValue")</span>
-<span class="source-line-no">074</span><span id="line.74">    public DeliveryChangeValue getPreviousValue();</span>
+<span class="source-line-no">073</span><span id="line.73">    @JsonProperty("nextValue")</span>
+<span class="source-line-no">074</span><span id="line.74">    public DeliveryChangeValue getNextValue();</span>
 <span class="source-line-no">075</span><span id="line.75"></span>
 <span class="source-line-no">076</span><span id="line.76">    /**</span>
-<span class="source-line-no">077</span><span id="line.77">     *  &lt;p&gt;Update action for &lt;code&gt;addDelivery&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">077</span><span id="line.77">     * set change</span>
 <span class="source-line-no">078</span><span id="line.78">     * @param change value to be set</span>
 <span class="source-line-no">079</span><span id="line.79">     */</span>
 <span class="source-line-no">080</span><span id="line.80"></span>
 <span class="source-line-no">081</span><span id="line.81">    public void setChange(final String change);</span>
 <span class="source-line-no">082</span><span id="line.82"></span>
 <span class="source-line-no">083</span><span id="line.83">    /**</span>
-<span class="source-line-no">084</span><span id="line.84">     * set nextValue</span>
-<span class="source-line-no">085</span><span id="line.85">     * @param nextValue value to be set</span>
+<span class="source-line-no">084</span><span id="line.84">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">085</span><span id="line.85">     * @param previousValue value to be set</span>
 <span class="source-line-no">086</span><span id="line.86">     */</span>
 <span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public void setNextValue(final DeliveryChangeValue nextValue);</span>
+<span class="source-line-no">088</span><span id="line.88">    public void setPreviousValue(final DeliveryChangeValue previousValue);</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
 <span class="source-line-no">090</span><span id="line.90">    /**</span>
-<span class="source-line-no">091</span><span id="line.91">     * set previousValue</span>
-<span class="source-line-no">092</span><span id="line.92">     * @param previousValue value to be set</span>
+<span class="source-line-no">091</span><span id="line.91">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">092</span><span id="line.92">     * @param nextValue value to be set</span>
 <span class="source-line-no">093</span><span id="line.93">     */</span>
 <span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public void setPreviousValue(final DeliveryChangeValue previousValue);</span>
+<span class="source-line-no">095</span><span id="line.95">    public void setNextValue(final DeliveryChangeValue nextValue);</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
 <span class="source-line-no">097</span><span id="line.97">    /**</span>
 <span class="source-line-no">098</span><span id="line.98">     * factory method</span>
@@ -123,8 +123,8 @@
 <span class="source-line-no">110</span><span id="line.110">    public static AddDeliveryChange of(final AddDeliveryChange template) {</span>
 <span class="source-line-no">111</span><span id="line.111">        AddDeliveryChangeImpl instance = new AddDeliveryChangeImpl();</span>
 <span class="source-line-no">112</span><span id="line.112">        instance.setChange(template.getChange());</span>
-<span class="source-line-no">113</span><span id="line.113">        instance.setNextValue(template.getNextValue());</span>
-<span class="source-line-no">114</span><span id="line.114">        instance.setPreviousValue(template.getPreviousValue());</span>
+<span class="source-line-no">113</span><span id="line.113">        instance.setPreviousValue(template.getPreviousValue());</span>
+<span class="source-line-no">114</span><span id="line.114">        instance.setNextValue(template.getNextValue());</span>
 <span class="source-line-no">115</span><span id="line.115">        return instance;</span>
 <span class="source-line-no">116</span><span id="line.116">    }</span>
 <span class="source-line-no">117</span><span id="line.117"></span>
@@ -140,10 +140,10 @@
 <span class="source-line-no">127</span><span id="line.127">        }</span>
 <span class="source-line-no">128</span><span id="line.128">        AddDeliveryChangeImpl instance = new AddDeliveryChangeImpl();</span>
 <span class="source-line-no">129</span><span id="line.129">        instance.setChange(template.getChange());</span>
-<span class="source-line-no">130</span><span id="line.130">        instance.setNextValue(</span>
-<span class="source-line-no">131</span><span id="line.131">            com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getNextValue()));</span>
-<span class="source-line-no">132</span><span id="line.132">        instance.setPreviousValue(</span>
-<span class="source-line-no">133</span><span id="line.133">            com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getPreviousValue()));</span>
+<span class="source-line-no">130</span><span id="line.130">        instance.setPreviousValue(</span>
+<span class="source-line-no">131</span><span id="line.131">            com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getPreviousValue()));</span>
+<span class="source-line-no">132</span><span id="line.132">        instance.setNextValue(</span>
+<span class="source-line-no">133</span><span id="line.133">            com.commercetools.history.models.change_value.DeliveryChangeValue.deepCopy(template.getNextValue()));</span>
 <span class="source-line-no">134</span><span id="line.134">        return instance;</span>
 <span class="source-line-no">135</span><span id="line.135">    }</span>
 <span class="source-line-no">136</span><span id="line.136"></span>

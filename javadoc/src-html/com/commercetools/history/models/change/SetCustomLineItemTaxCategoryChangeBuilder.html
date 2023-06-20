@@ -28,10 +28,10 @@
 <span class="source-line-no">015</span><span id="line.15"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
 <span class="source-line-no">016</span><span id="line.16"> *     SetCustomLineItemTaxCategoryChange setCustomLineItemTaxCategoryChange = SetCustomLineItemTaxCategoryChange.builder()</span>
 <span class="source-line-no">017</span><span id="line.17"> *             .change("{change}")</span>
-<span class="source-line-no">018</span><span id="line.18"> *             .customLineItem(customLineItemBuilder -&gt; customLineItemBuilder)</span>
-<span class="source-line-no">019</span><span id="line.19"> *             .customLineItemId("{customLineItemId}")</span>
-<span class="source-line-no">020</span><span id="line.20"> *             .nextValue(nextValueBuilder -&gt; nextValueBuilder)</span>
-<span class="source-line-no">021</span><span id="line.21"> *             .previousValue(previousValueBuilder -&gt; previousValueBuilder)</span>
+<span class="source-line-no">018</span><span id="line.18"> *             .previousValue(previousValueBuilder -&gt; previousValueBuilder)</span>
+<span class="source-line-no">019</span><span id="line.19"> *             .nextValue(nextValueBuilder -&gt; nextValueBuilder)</span>
+<span class="source-line-no">020</span><span id="line.20"> *             .customLineItem(customLineItemBuilder -&gt; customLineItemBuilder)</span>
+<span class="source-line-no">021</span><span id="line.21"> *             .customLineItemId("{customLineItemId}")</span>
 <span class="source-line-no">022</span><span id="line.22"> *             .build()</span>
 <span class="source-line-no">023</span><span id="line.23"> * &lt;/code&gt;&lt;/pre&gt;</span>
 <span class="source-line-no">024</span><span id="line.24"> * &lt;/div&gt;</span>
@@ -41,16 +41,16 @@
 <span class="source-line-no">028</span><span id="line.28"></span>
 <span class="source-line-no">029</span><span id="line.29">    private String change;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    private com.commercetools.history.models.common.LocalizedString customLineItem;</span>
+<span class="source-line-no">031</span><span id="line.31">    private com.commercetools.history.models.common.Reference previousValue;</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    private String customLineItemId;</span>
+<span class="source-line-no">033</span><span id="line.33">    private com.commercetools.history.models.common.Reference nextValue;</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    private com.commercetools.history.models.common.Reference nextValue;</span>
+<span class="source-line-no">035</span><span id="line.35">    private com.commercetools.history.models.common.LocalizedString customLineItem;</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    private com.commercetools.history.models.common.Reference previousValue;</span>
+<span class="source-line-no">037</span><span id="line.37">    private String customLineItemId;</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
 <span class="source-line-no">039</span><span id="line.39">    /**</span>
-<span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;Update action for &lt;code&gt;setCustomLineItemTaxCategory&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">040</span><span id="line.40">     * set the value to the change</span>
 <span class="source-line-no">041</span><span id="line.41">     * @param change value to be set</span>
 <span class="source-line-no">042</span><span id="line.42">     * @return Builder</span>
 <span class="source-line-no">043</span><span id="line.43">     */</span>
@@ -61,127 +61,127 @@
 <span class="source-line-no">048</span><span id="line.48">    }</span>
 <span class="source-line-no">049</span><span id="line.49"></span>
 <span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     * set the value to the customLineItem using the builder function</span>
-<span class="source-line-no">052</span><span id="line.52">     * @param builder function to build the customLineItem value</span>
+<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">052</span><span id="line.52">     * @param builder function to build the previousValue value</span>
 <span class="source-line-no">053</span><span id="line.53">     * @return Builder</span>
 <span class="source-line-no">054</span><span id="line.54">     */</span>
 <span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(</span>
-<span class="source-line-no">057</span><span id="line.57">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">058</span><span id="line.58">        this.customLineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of())</span>
-<span class="source-line-no">059</span><span id="line.59">                .build();</span>
-<span class="source-line-no">060</span><span id="line.60">        return this;</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    /**</span>
-<span class="source-line-no">064</span><span id="line.64">     * set the value to the customLineItem using the builder function</span>
-<span class="source-line-no">065</span><span id="line.65">     * @param builder function to build the customLineItem value</span>
-<span class="source-line-no">066</span><span id="line.66">     * @return Builder</span>
-<span class="source-line-no">067</span><span id="line.67">     */</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public SetCustomLineItemTaxCategoryChangeBuilder withCustomLineItem(</span>
-<span class="source-line-no">070</span><span id="line.70">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString&gt; builder) {</span>
-<span class="source-line-no">071</span><span id="line.71">        this.customLineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());</span>
-<span class="source-line-no">072</span><span id="line.72">        return this;</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    /**</span>
-<span class="source-line-no">076</span><span id="line.76">     * set the value to the customLineItem</span>
-<span class="source-line-no">077</span><span id="line.77">     * @param customLineItem value to be set</span>
-<span class="source-line-no">078</span><span id="line.78">     * @return Builder</span>
-<span class="source-line-no">079</span><span id="line.79">     */</span>
-<span class="source-line-no">080</span><span id="line.80"></span>
-<span class="source-line-no">081</span><span id="line.81">    public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(</span>
-<span class="source-line-no">082</span><span id="line.82">            final com.commercetools.history.models.common.LocalizedString customLineItem) {</span>
-<span class="source-line-no">083</span><span id="line.83">        this.customLineItem = customLineItem;</span>
-<span class="source-line-no">084</span><span id="line.84">        return this;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    /**</span>
-<span class="source-line-no">088</span><span id="line.88">     * set the value to the customLineItemId</span>
-<span class="source-line-no">089</span><span id="line.89">     * @param customLineItemId value to be set</span>
-<span class="source-line-no">090</span><span id="line.90">     * @return Builder</span>
-<span class="source-line-no">091</span><span id="line.91">     */</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public SetCustomLineItemTaxCategoryChangeBuilder customLineItemId(final String customLineItemId) {</span>
-<span class="source-line-no">094</span><span id="line.94">        this.customLineItemId = customLineItemId;</span>
+<span class="source-line-no">056</span><span id="line.56">    public SetCustomLineItemTaxCategoryChangeBuilder previousValue(</span>
+<span class="source-line-no">057</span><span id="line.57">            Function&lt;com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">058</span><span id="line.58">        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();</span>
+<span class="source-line-no">059</span><span id="line.59">        return this;</span>
+<span class="source-line-no">060</span><span id="line.60">    }</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    /**</span>
+<span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">064</span><span id="line.64">     * @param builder function to build the previousValue value</span>
+<span class="source-line-no">065</span><span id="line.65">     * @return Builder</span>
+<span class="source-line-no">066</span><span id="line.66">     */</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    public SetCustomLineItemTaxCategoryChangeBuilder withPreviousValue(</span>
+<span class="source-line-no">069</span><span id="line.69">            Function&lt;com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference&gt; builder) {</span>
+<span class="source-line-no">070</span><span id="line.70">        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());</span>
+<span class="source-line-no">071</span><span id="line.71">        return this;</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">     * @param previousValue value to be set</span>
+<span class="source-line-no">077</span><span id="line.77">     * @return Builder</span>
+<span class="source-line-no">078</span><span id="line.78">     */</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    public SetCustomLineItemTaxCategoryChangeBuilder previousValue(</span>
+<span class="source-line-no">081</span><span id="line.81">            final com.commercetools.history.models.common.Reference previousValue) {</span>
+<span class="source-line-no">082</span><span id="line.82">        this.previousValue = previousValue;</span>
+<span class="source-line-no">083</span><span id="line.83">        return this;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    /**</span>
+<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">088</span><span id="line.88">     * @param builder function to build the nextValue value</span>
+<span class="source-line-no">089</span><span id="line.89">     * @return Builder</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    public SetCustomLineItemTaxCategoryChangeBuilder nextValue(</span>
+<span class="source-line-no">093</span><span id="line.93">            Function&lt;com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder&gt; builder) {</span>
+<span class="source-line-no">094</span><span id="line.94">        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();</span>
 <span class="source-line-no">095</span><span id="line.95">        return this;</span>
 <span class="source-line-no">096</span><span id="line.96">    }</span>
 <span class="source-line-no">097</span><span id="line.97"></span>
 <span class="source-line-no">098</span><span id="line.98">    /**</span>
-<span class="source-line-no">099</span><span id="line.99">     * set the value to the nextValue using the builder function</span>
+<span class="source-line-no">099</span><span id="line.99">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
 <span class="source-line-no">100</span><span id="line.100">     * @param builder function to build the nextValue value</span>
 <span class="source-line-no">101</span><span id="line.101">     * @return Builder</span>
 <span class="source-line-no">102</span><span id="line.102">     */</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    public SetCustomLineItemTaxCategoryChangeBuilder nextValue(</span>
-<span class="source-line-no">105</span><span id="line.105">            Function&lt;com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">106</span><span id="line.106">        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();</span>
+<span class="source-line-no">104</span><span id="line.104">    public SetCustomLineItemTaxCategoryChangeBuilder withNextValue(</span>
+<span class="source-line-no">105</span><span id="line.105">            Function&lt;com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference&gt; builder) {</span>
+<span class="source-line-no">106</span><span id="line.106">        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());</span>
 <span class="source-line-no">107</span><span id="line.107">        return this;</span>
 <span class="source-line-no">108</span><span id="line.108">    }</span>
 <span class="source-line-no">109</span><span id="line.109"></span>
 <span class="source-line-no">110</span><span id="line.110">    /**</span>
-<span class="source-line-no">111</span><span id="line.111">     * set the value to the nextValue using the builder function</span>
-<span class="source-line-no">112</span><span id="line.112">     * @param builder function to build the nextValue value</span>
+<span class="source-line-no">111</span><span id="line.111">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">112</span><span id="line.112">     * @param nextValue value to be set</span>
 <span class="source-line-no">113</span><span id="line.113">     * @return Builder</span>
 <span class="source-line-no">114</span><span id="line.114">     */</span>
 <span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public SetCustomLineItemTaxCategoryChangeBuilder withNextValue(</span>
-<span class="source-line-no">117</span><span id="line.117">            Function&lt;com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference&gt; builder) {</span>
-<span class="source-line-no">118</span><span id="line.118">        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());</span>
+<span class="source-line-no">116</span><span id="line.116">    public SetCustomLineItemTaxCategoryChangeBuilder nextValue(</span>
+<span class="source-line-no">117</span><span id="line.117">            final com.commercetools.history.models.common.Reference nextValue) {</span>
+<span class="source-line-no">118</span><span id="line.118">        this.nextValue = nextValue;</span>
 <span class="source-line-no">119</span><span id="line.119">        return this;</span>
 <span class="source-line-no">120</span><span id="line.120">    }</span>
 <span class="source-line-no">121</span><span id="line.121"></span>
 <span class="source-line-no">122</span><span id="line.122">    /**</span>
-<span class="source-line-no">123</span><span id="line.123">     * set the value to the nextValue</span>
-<span class="source-line-no">124</span><span id="line.124">     * @param nextValue value to be set</span>
+<span class="source-line-no">123</span><span id="line.123">     *  &lt;p&gt;Name of the updated CustomLineItem.&lt;/p&gt;</span>
+<span class="source-line-no">124</span><span id="line.124">     * @param builder function to build the customLineItem value</span>
 <span class="source-line-no">125</span><span id="line.125">     * @return Builder</span>
 <span class="source-line-no">126</span><span id="line.126">     */</span>
 <span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    public SetCustomLineItemTaxCategoryChangeBuilder nextValue(</span>
-<span class="source-line-no">129</span><span id="line.129">            final com.commercetools.history.models.common.Reference nextValue) {</span>
-<span class="source-line-no">130</span><span id="line.130">        this.nextValue = nextValue;</span>
-<span class="source-line-no">131</span><span id="line.131">        return this;</span>
-<span class="source-line-no">132</span><span id="line.132">    }</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    /**</span>
-<span class="source-line-no">135</span><span id="line.135">     * set the value to the previousValue using the builder function</span>
-<span class="source-line-no">136</span><span id="line.136">     * @param builder function to build the previousValue value</span>
-<span class="source-line-no">137</span><span id="line.137">     * @return Builder</span>
-<span class="source-line-no">138</span><span id="line.138">     */</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public SetCustomLineItemTaxCategoryChangeBuilder previousValue(</span>
-<span class="source-line-no">141</span><span id="line.141">            Function&lt;com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder&gt; builder) {</span>
-<span class="source-line-no">142</span><span id="line.142">        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();</span>
-<span class="source-line-no">143</span><span id="line.143">        return this;</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    /**</span>
-<span class="source-line-no">147</span><span id="line.147">     * set the value to the previousValue using the builder function</span>
-<span class="source-line-no">148</span><span id="line.148">     * @param builder function to build the previousValue value</span>
-<span class="source-line-no">149</span><span id="line.149">     * @return Builder</span>
-<span class="source-line-no">150</span><span id="line.150">     */</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    public SetCustomLineItemTaxCategoryChangeBuilder withPreviousValue(</span>
-<span class="source-line-no">153</span><span id="line.153">            Function&lt;com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference&gt; builder) {</span>
-<span class="source-line-no">154</span><span id="line.154">        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());</span>
-<span class="source-line-no">155</span><span id="line.155">        return this;</span>
-<span class="source-line-no">156</span><span id="line.156">    }</span>
-<span class="source-line-no">157</span><span id="line.157"></span>
-<span class="source-line-no">158</span><span id="line.158">    /**</span>
-<span class="source-line-no">159</span><span id="line.159">     * set the value to the previousValue</span>
-<span class="source-line-no">160</span><span id="line.160">     * @param previousValue value to be set</span>
-<span class="source-line-no">161</span><span id="line.161">     * @return Builder</span>
-<span class="source-line-no">162</span><span id="line.162">     */</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public SetCustomLineItemTaxCategoryChangeBuilder previousValue(</span>
-<span class="source-line-no">165</span><span id="line.165">            final com.commercetools.history.models.common.Reference previousValue) {</span>
-<span class="source-line-no">166</span><span id="line.166">        this.previousValue = previousValue;</span>
+<span class="source-line-no">128</span><span id="line.128">    public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(</span>
+<span class="source-line-no">129</span><span id="line.129">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">130</span><span id="line.130">        this.customLineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of())</span>
+<span class="source-line-no">131</span><span id="line.131">                .build();</span>
+<span class="source-line-no">132</span><span id="line.132">        return this;</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    /**</span>
+<span class="source-line-no">136</span><span id="line.136">     *  &lt;p&gt;Name of the updated CustomLineItem.&lt;/p&gt;</span>
+<span class="source-line-no">137</span><span id="line.137">     * @param builder function to build the customLineItem value</span>
+<span class="source-line-no">138</span><span id="line.138">     * @return Builder</span>
+<span class="source-line-no">139</span><span id="line.139">     */</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    public SetCustomLineItemTaxCategoryChangeBuilder withCustomLineItem(</span>
+<span class="source-line-no">142</span><span id="line.142">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString&gt; builder) {</span>
+<span class="source-line-no">143</span><span id="line.143">        this.customLineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());</span>
+<span class="source-line-no">144</span><span id="line.144">        return this;</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    /**</span>
+<span class="source-line-no">148</span><span id="line.148">     *  &lt;p&gt;Name of the updated CustomLineItem.&lt;/p&gt;</span>
+<span class="source-line-no">149</span><span id="line.149">     * @param customLineItem value to be set</span>
+<span class="source-line-no">150</span><span id="line.150">     * @return Builder</span>
+<span class="source-line-no">151</span><span id="line.151">     */</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    public SetCustomLineItemTaxCategoryChangeBuilder customLineItem(</span>
+<span class="source-line-no">154</span><span id="line.154">            final com.commercetools.history.models.common.LocalizedString customLineItem) {</span>
+<span class="source-line-no">155</span><span id="line.155">        this.customLineItem = customLineItem;</span>
+<span class="source-line-no">156</span><span id="line.156">        return this;</span>
+<span class="source-line-no">157</span><span id="line.157">    }</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    /**</span>
+<span class="source-line-no">160</span><span id="line.160">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the updated CustomLineItem.&lt;/p&gt;</span>
+<span class="source-line-no">161</span><span id="line.161">     * @param customLineItemId value to be set</span>
+<span class="source-line-no">162</span><span id="line.162">     * @return Builder</span>
+<span class="source-line-no">163</span><span id="line.163">     */</span>
+<span class="source-line-no">164</span><span id="line.164"></span>
+<span class="source-line-no">165</span><span id="line.165">    public SetCustomLineItemTaxCategoryChangeBuilder customLineItemId(final String customLineItemId) {</span>
+<span class="source-line-no">166</span><span id="line.166">        this.customLineItemId = customLineItemId;</span>
 <span class="source-line-no">167</span><span id="line.167">        return this;</span>
 <span class="source-line-no">168</span><span id="line.168">    }</span>
 <span class="source-line-no">169</span><span id="line.169"></span>
 <span class="source-line-no">170</span><span id="line.170">    /**</span>
-<span class="source-line-no">171</span><span id="line.171">     *  &lt;p&gt;Update action for &lt;code&gt;setCustomLineItemTaxCategory&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">171</span><span id="line.171">     * value of change}</span>
 <span class="source-line-no">172</span><span id="line.172">     * @return change</span>
 <span class="source-line-no">173</span><span id="line.173">     */</span>
 <span class="source-line-no">174</span><span id="line.174"></span>
@@ -190,39 +190,39 @@
 <span class="source-line-no">177</span><span id="line.177">    }</span>
 <span class="source-line-no">178</span><span id="line.178"></span>
 <span class="source-line-no">179</span><span id="line.179">    /**</span>
-<span class="source-line-no">180</span><span id="line.180">     * value of customLineItem}</span>
-<span class="source-line-no">181</span><span id="line.181">     * @return customLineItem</span>
+<span class="source-line-no">180</span><span id="line.180">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">181</span><span id="line.181">     * @return previousValue</span>
 <span class="source-line-no">182</span><span id="line.182">     */</span>
 <span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {</span>
-<span class="source-line-no">185</span><span id="line.185">        return this.customLineItem;</span>
+<span class="source-line-no">184</span><span id="line.184">    public com.commercetools.history.models.common.Reference getPreviousValue() {</span>
+<span class="source-line-no">185</span><span id="line.185">        return this.previousValue;</span>
 <span class="source-line-no">186</span><span id="line.186">    }</span>
 <span class="source-line-no">187</span><span id="line.187"></span>
 <span class="source-line-no">188</span><span id="line.188">    /**</span>
-<span class="source-line-no">189</span><span id="line.189">     * value of customLineItemId}</span>
-<span class="source-line-no">190</span><span id="line.190">     * @return customLineItemId</span>
+<span class="source-line-no">189</span><span id="line.189">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">190</span><span id="line.190">     * @return nextValue</span>
 <span class="source-line-no">191</span><span id="line.191">     */</span>
 <span class="source-line-no">192</span><span id="line.192"></span>
-<span class="source-line-no">193</span><span id="line.193">    public String getCustomLineItemId() {</span>
-<span class="source-line-no">194</span><span id="line.194">        return this.customLineItemId;</span>
+<span class="source-line-no">193</span><span id="line.193">    public com.commercetools.history.models.common.Reference getNextValue() {</span>
+<span class="source-line-no">194</span><span id="line.194">        return this.nextValue;</span>
 <span class="source-line-no">195</span><span id="line.195">    }</span>
 <span class="source-line-no">196</span><span id="line.196"></span>
 <span class="source-line-no">197</span><span id="line.197">    /**</span>
-<span class="source-line-no">198</span><span id="line.198">     * value of nextValue}</span>
-<span class="source-line-no">199</span><span id="line.199">     * @return nextValue</span>
+<span class="source-line-no">198</span><span id="line.198">     *  &lt;p&gt;Name of the updated CustomLineItem.&lt;/p&gt;</span>
+<span class="source-line-no">199</span><span id="line.199">     * @return customLineItem</span>
 <span class="source-line-no">200</span><span id="line.200">     */</span>
 <span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">    public com.commercetools.history.models.common.Reference getNextValue() {</span>
-<span class="source-line-no">203</span><span id="line.203">        return this.nextValue;</span>
+<span class="source-line-no">202</span><span id="line.202">    public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {</span>
+<span class="source-line-no">203</span><span id="line.203">        return this.customLineItem;</span>
 <span class="source-line-no">204</span><span id="line.204">    }</span>
 <span class="source-line-no">205</span><span id="line.205"></span>
 <span class="source-line-no">206</span><span id="line.206">    /**</span>
-<span class="source-line-no">207</span><span id="line.207">     * value of previousValue}</span>
-<span class="source-line-no">208</span><span id="line.208">     * @return previousValue</span>
+<span class="source-line-no">207</span><span id="line.207">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the updated CustomLineItem.&lt;/p&gt;</span>
+<span class="source-line-no">208</span><span id="line.208">     * @return customLineItemId</span>
 <span class="source-line-no">209</span><span id="line.209">     */</span>
 <span class="source-line-no">210</span><span id="line.210"></span>
-<span class="source-line-no">211</span><span id="line.211">    public com.commercetools.history.models.common.Reference getPreviousValue() {</span>
-<span class="source-line-no">212</span><span id="line.212">        return this.previousValue;</span>
+<span class="source-line-no">211</span><span id="line.211">    public String getCustomLineItemId() {</span>
+<span class="source-line-no">212</span><span id="line.212">        return this.customLineItemId;</span>
 <span class="source-line-no">213</span><span id="line.213">    }</span>
 <span class="source-line-no">214</span><span id="line.214"></span>
 <span class="source-line-no">215</span><span id="line.215">    /**</span>
@@ -231,14 +231,14 @@
 <span class="source-line-no">218</span><span id="line.218">     */</span>
 <span class="source-line-no">219</span><span id="line.219">    public SetCustomLineItemTaxCategoryChange build() {</span>
 <span class="source-line-no">220</span><span id="line.220">        Objects.requireNonNull(change, SetCustomLineItemTaxCategoryChange.class + ": change is missing");</span>
-<span class="source-line-no">221</span><span id="line.221">        Objects.requireNonNull(customLineItem,</span>
-<span class="source-line-no">222</span><span id="line.222">            SetCustomLineItemTaxCategoryChange.class + ": customLineItem is missing");</span>
-<span class="source-line-no">223</span><span id="line.223">        Objects.requireNonNull(customLineItemId,</span>
-<span class="source-line-no">224</span><span id="line.224">            SetCustomLineItemTaxCategoryChange.class + ": customLineItemId is missing");</span>
-<span class="source-line-no">225</span><span id="line.225">        Objects.requireNonNull(nextValue, SetCustomLineItemTaxCategoryChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">226</span><span id="line.226">        Objects.requireNonNull(previousValue, SetCustomLineItemTaxCategoryChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">227</span><span id="line.227">        return new SetCustomLineItemTaxCategoryChangeImpl(change, customLineItem, customLineItemId, nextValue,</span>
-<span class="source-line-no">228</span><span id="line.228">            previousValue);</span>
+<span class="source-line-no">221</span><span id="line.221">        Objects.requireNonNull(previousValue, SetCustomLineItemTaxCategoryChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">222</span><span id="line.222">        Objects.requireNonNull(nextValue, SetCustomLineItemTaxCategoryChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">223</span><span id="line.223">        Objects.requireNonNull(customLineItem,</span>
+<span class="source-line-no">224</span><span id="line.224">            SetCustomLineItemTaxCategoryChange.class + ": customLineItem is missing");</span>
+<span class="source-line-no">225</span><span id="line.225">        Objects.requireNonNull(customLineItemId,</span>
+<span class="source-line-no">226</span><span id="line.226">            SetCustomLineItemTaxCategoryChange.class + ": customLineItemId is missing");</span>
+<span class="source-line-no">227</span><span id="line.227">        return new SetCustomLineItemTaxCategoryChangeImpl(change, previousValue, nextValue, customLineItem,</span>
+<span class="source-line-no">228</span><span id="line.228">            customLineItemId);</span>
 <span class="source-line-no">229</span><span id="line.229">    }</span>
 <span class="source-line-no">230</span><span id="line.230"></span>
 <span class="source-line-no">231</span><span id="line.231">    /**</span>
@@ -246,8 +246,8 @@
 <span class="source-line-no">233</span><span id="line.233">     * @return SetCustomLineItemTaxCategoryChange</span>
 <span class="source-line-no">234</span><span id="line.234">     */</span>
 <span class="source-line-no">235</span><span id="line.235">    public SetCustomLineItemTaxCategoryChange buildUnchecked() {</span>
-<span class="source-line-no">236</span><span id="line.236">        return new SetCustomLineItemTaxCategoryChangeImpl(change, customLineItem, customLineItemId, nextValue,</span>
-<span class="source-line-no">237</span><span id="line.237">            previousValue);</span>
+<span class="source-line-no">236</span><span id="line.236">        return new SetCustomLineItemTaxCategoryChangeImpl(change, previousValue, nextValue, customLineItem,</span>
+<span class="source-line-no">237</span><span id="line.237">            customLineItemId);</span>
 <span class="source-line-no">238</span><span id="line.238">    }</span>
 <span class="source-line-no">239</span><span id="line.239"></span>
 <span class="source-line-no">240</span><span id="line.240">    /**</span>
@@ -266,10 +266,10 @@
 <span class="source-line-no">253</span><span id="line.253">    public static SetCustomLineItemTaxCategoryChangeBuilder of(final SetCustomLineItemTaxCategoryChange template) {</span>
 <span class="source-line-no">254</span><span id="line.254">        SetCustomLineItemTaxCategoryChangeBuilder builder = new SetCustomLineItemTaxCategoryChangeBuilder();</span>
 <span class="source-line-no">255</span><span id="line.255">        builder.change = template.getChange();</span>
-<span class="source-line-no">256</span><span id="line.256">        builder.customLineItem = template.getCustomLineItem();</span>
-<span class="source-line-no">257</span><span id="line.257">        builder.customLineItemId = template.getCustomLineItemId();</span>
-<span class="source-line-no">258</span><span id="line.258">        builder.nextValue = template.getNextValue();</span>
-<span class="source-line-no">259</span><span id="line.259">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">256</span><span id="line.256">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">257</span><span id="line.257">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">258</span><span id="line.258">        builder.customLineItem = template.getCustomLineItem();</span>
+<span class="source-line-no">259</span><span id="line.259">        builder.customLineItemId = template.getCustomLineItemId();</span>
 <span class="source-line-no">260</span><span id="line.260">        return builder;</span>
 <span class="source-line-no">261</span><span id="line.261">    }</span>
 <span class="source-line-no">262</span><span id="line.262"></span>

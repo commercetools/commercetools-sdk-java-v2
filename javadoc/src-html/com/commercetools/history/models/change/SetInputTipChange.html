@@ -29,7 +29,7 @@
 <span class="source-line-no">016</span><span id="line.16">import io.vrap.rmf.base.client.utils.Generated;</span>
 <span class="source-line-no">017</span><span id="line.17"></span>
 <span class="source-line-no">018</span><span id="line.18">/**</span>
-<span class="source-line-no">019</span><span id="line.19"> * SetInputTipChange</span>
+<span class="source-line-no">019</span><span id="line.19"> *  &lt;p&gt;Change triggered by the Set AttributeDefinition InputTip update action.&lt;/p&gt;</span>
 <span class="source-line-no">020</span><span id="line.20"> *</span>
 <span class="source-line-no">021</span><span id="line.21"> * &lt;hr&gt;</span>
 <span class="source-line-no">022</span><span id="line.22"> * Example to create an instance using the builder pattern</span>
@@ -37,9 +37,9 @@
 <span class="source-line-no">024</span><span id="line.24"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
 <span class="source-line-no">025</span><span id="line.25"> *     SetInputTipChange setInputTipChange = SetInputTipChange.builder()</span>
 <span class="source-line-no">026</span><span id="line.26"> *             .change("{change}")</span>
-<span class="source-line-no">027</span><span id="line.27"> *             .attributeName("{attributeName}")</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .previousValue(previousValueBuilder -&gt; previousValueBuilder)</span>
 <span class="source-line-no">028</span><span id="line.28"> *             .nextValue(nextValueBuilder -&gt; nextValueBuilder)</span>
-<span class="source-line-no">029</span><span id="line.29"> *             .previousValue(previousValueBuilder -&gt; previousValueBuilder)</span>
+<span class="source-line-no">029</span><span id="line.29"> *             .attributeName("{attributeName}")</span>
 <span class="source-line-no">030</span><span id="line.30"> *             .build()</span>
 <span class="source-line-no">031</span><span id="line.31"> * &lt;/code&gt;&lt;/pre&gt;</span>
 <span class="source-line-no">032</span><span id="line.32"> * &lt;/div&gt;</span>
@@ -62,7 +62,7 @@
 <span class="source-line-no">049</span><span id="line.49">    public String getType();</span>
 <span class="source-line-no">050</span><span id="line.50"></span>
 <span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;Update action for &lt;code&gt;setInputTip&lt;/code&gt; on product types&lt;/p&gt;</span>
+<span class="source-line-no">052</span><span id="line.52">     *</span>
 <span class="source-line-no">053</span><span id="line.53">     * @return change</span>
 <span class="source-line-no">054</span><span id="line.54">     */</span>
 <span class="source-line-no">055</span><span id="line.55">    @NotNull</span>
@@ -70,58 +70,58 @@
 <span class="source-line-no">057</span><span id="line.57">    public String getChange();</span>
 <span class="source-line-no">058</span><span id="line.58"></span>
 <span class="source-line-no">059</span><span id="line.59">    /**</span>
-<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;The name of the updated attribute.&lt;/p&gt;</span>
-<span class="source-line-no">061</span><span id="line.61">     * @return attributeName</span>
+<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     * @return previousValue</span>
 <span class="source-line-no">062</span><span id="line.62">     */</span>
 <span class="source-line-no">063</span><span id="line.63">    @NotNull</span>
-<span class="source-line-no">064</span><span id="line.64">    @JsonProperty("attributeName")</span>
-<span class="source-line-no">065</span><span id="line.65">    public String getAttributeName();</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    /**</span>
-<span class="source-line-no">068</span><span id="line.68">     *</span>
-<span class="source-line-no">069</span><span id="line.69">     * @return nextValue</span>
-<span class="source-line-no">070</span><span id="line.70">     */</span>
-<span class="source-line-no">071</span><span id="line.71">    @NotNull</span>
-<span class="source-line-no">072</span><span id="line.72">    @Valid</span>
-<span class="source-line-no">073</span><span id="line.73">    @JsonProperty("nextValue")</span>
-<span class="source-line-no">074</span><span id="line.74">    public LocalizedString getNextValue();</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    /**</span>
-<span class="source-line-no">077</span><span id="line.77">     *</span>
-<span class="source-line-no">078</span><span id="line.78">     * @return previousValue</span>
-<span class="source-line-no">079</span><span id="line.79">     */</span>
-<span class="source-line-no">080</span><span id="line.80">    @NotNull</span>
-<span class="source-line-no">081</span><span id="line.81">    @Valid</span>
-<span class="source-line-no">082</span><span id="line.82">    @JsonProperty("previousValue")</span>
-<span class="source-line-no">083</span><span id="line.83">    public LocalizedString getPreviousValue();</span>
+<span class="source-line-no">064</span><span id="line.64">    @Valid</span>
+<span class="source-line-no">065</span><span id="line.65">    @JsonProperty("previousValue")</span>
+<span class="source-line-no">066</span><span id="line.66">    public LocalizedString getPreviousValue();</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    /**</span>
+<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
+<span class="source-line-no">070</span><span id="line.70">     * @return nextValue</span>
+<span class="source-line-no">071</span><span id="line.71">     */</span>
+<span class="source-line-no">072</span><span id="line.72">    @NotNull</span>
+<span class="source-line-no">073</span><span id="line.73">    @Valid</span>
+<span class="source-line-no">074</span><span id="line.74">    @JsonProperty("nextValue")</span>
+<span class="source-line-no">075</span><span id="line.75">    public LocalizedString getNextValue();</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    /**</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;Name of the updated AttributeDefinition.&lt;/p&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     * @return attributeName</span>
+<span class="source-line-no">080</span><span id="line.80">     */</span>
+<span class="source-line-no">081</span><span id="line.81">    @NotNull</span>
+<span class="source-line-no">082</span><span id="line.82">    @JsonProperty("attributeName")</span>
+<span class="source-line-no">083</span><span id="line.83">    public String getAttributeName();</span>
 <span class="source-line-no">084</span><span id="line.84"></span>
 <span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     *  &lt;p&gt;Update action for &lt;code&gt;setInputTip&lt;/code&gt; on product types&lt;/p&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     * set change</span>
 <span class="source-line-no">087</span><span id="line.87">     * @param change value to be set</span>
 <span class="source-line-no">088</span><span id="line.88">     */</span>
 <span class="source-line-no">089</span><span id="line.89"></span>
 <span class="source-line-no">090</span><span id="line.90">    public void setChange(final String change);</span>
 <span class="source-line-no">091</span><span id="line.91"></span>
 <span class="source-line-no">092</span><span id="line.92">    /**</span>
-<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;The name of the updated attribute.&lt;/p&gt;</span>
-<span class="source-line-no">094</span><span id="line.94">     * @param attributeName value to be set</span>
+<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;Value before the change.&lt;/p&gt;</span>
+<span class="source-line-no">094</span><span id="line.94">     * @param previousValue value to be set</span>
 <span class="source-line-no">095</span><span id="line.95">     */</span>
 <span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public void setAttributeName(final String attributeName);</span>
+<span class="source-line-no">097</span><span id="line.97">    public void setPreviousValue(final LocalizedString previousValue);</span>
 <span class="source-line-no">098</span><span id="line.98"></span>
 <span class="source-line-no">099</span><span id="line.99">    /**</span>
-<span class="source-line-no">100</span><span id="line.100">     * set nextValue</span>
+<span class="source-line-no">100</span><span id="line.100">     *  &lt;p&gt;Value after the change.&lt;/p&gt;</span>
 <span class="source-line-no">101</span><span id="line.101">     * @param nextValue value to be set</span>
 <span class="source-line-no">102</span><span id="line.102">     */</span>
 <span class="source-line-no">103</span><span id="line.103"></span>
 <span class="source-line-no">104</span><span id="line.104">    public void setNextValue(final LocalizedString nextValue);</span>
 <span class="source-line-no">105</span><span id="line.105"></span>
 <span class="source-line-no">106</span><span id="line.106">    /**</span>
-<span class="source-line-no">107</span><span id="line.107">     * set previousValue</span>
-<span class="source-line-no">108</span><span id="line.108">     * @param previousValue value to be set</span>
+<span class="source-line-no">107</span><span id="line.107">     *  &lt;p&gt;Name of the updated AttributeDefinition.&lt;/p&gt;</span>
+<span class="source-line-no">108</span><span id="line.108">     * @param attributeName value to be set</span>
 <span class="source-line-no">109</span><span id="line.109">     */</span>
 <span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    public void setPreviousValue(final LocalizedString previousValue);</span>
+<span class="source-line-no">111</span><span id="line.111">    public void setAttributeName(final String attributeName);</span>
 <span class="source-line-no">112</span><span id="line.112"></span>
 <span class="source-line-no">113</span><span id="line.113">    /**</span>
 <span class="source-line-no">114</span><span id="line.114">     * factory method</span>
@@ -139,9 +139,9 @@
 <span class="source-line-no">126</span><span id="line.126">    public static SetInputTipChange of(final SetInputTipChange template) {</span>
 <span class="source-line-no">127</span><span id="line.127">        SetInputTipChangeImpl instance = new SetInputTipChangeImpl();</span>
 <span class="source-line-no">128</span><span id="line.128">        instance.setChange(template.getChange());</span>
-<span class="source-line-no">129</span><span id="line.129">        instance.setAttributeName(template.getAttributeName());</span>
+<span class="source-line-no">129</span><span id="line.129">        instance.setPreviousValue(template.getPreviousValue());</span>
 <span class="source-line-no">130</span><span id="line.130">        instance.setNextValue(template.getNextValue());</span>
-<span class="source-line-no">131</span><span id="line.131">        instance.setPreviousValue(template.getPreviousValue());</span>
+<span class="source-line-no">131</span><span id="line.131">        instance.setAttributeName(template.getAttributeName());</span>
 <span class="source-line-no">132</span><span id="line.132">        return instance;</span>
 <span class="source-line-no">133</span><span id="line.133">    }</span>
 <span class="source-line-no">134</span><span id="line.134"></span>
@@ -157,11 +157,11 @@
 <span class="source-line-no">144</span><span id="line.144">        }</span>
 <span class="source-line-no">145</span><span id="line.145">        SetInputTipChangeImpl instance = new SetInputTipChangeImpl();</span>
 <span class="source-line-no">146</span><span id="line.146">        instance.setChange(template.getChange());</span>
-<span class="source-line-no">147</span><span id="line.147">        instance.setAttributeName(template.getAttributeName());</span>
-<span class="source-line-no">148</span><span id="line.148">        instance.setNextValue(</span>
-<span class="source-line-no">149</span><span id="line.149">            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));</span>
-<span class="source-line-no">150</span><span id="line.150">        instance.setPreviousValue(</span>
-<span class="source-line-no">151</span><span id="line.151">            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));</span>
+<span class="source-line-no">147</span><span id="line.147">        instance.setPreviousValue(</span>
+<span class="source-line-no">148</span><span id="line.148">            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));</span>
+<span class="source-line-no">149</span><span id="line.149">        instance.setNextValue(</span>
+<span class="source-line-no">150</span><span id="line.150">            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));</span>
+<span class="source-line-no">151</span><span id="line.151">        instance.setAttributeName(template.getAttributeName());</span>
 <span class="source-line-no">152</span><span id="line.152">        return instance;</span>
 <span class="source-line-no">153</span><span id="line.153">    }</span>
 <span class="source-line-no">154</span><span id="line.154"></span>

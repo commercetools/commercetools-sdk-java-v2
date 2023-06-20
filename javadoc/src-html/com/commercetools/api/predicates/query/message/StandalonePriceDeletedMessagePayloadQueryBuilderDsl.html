@@ -30,7 +30,12 @@
 <span class="source-line-no">017</span><span id="line.17">            p -&gt; new CombinationQueryPredicate&lt;&gt;(p, StandalonePriceDeletedMessagePayloadQueryBuilderDsl::of));</span>
 <span class="source-line-no">018</span><span id="line.18">    }</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">}</span>
+<span class="source-line-no">020</span><span id="line.20">    public StringComparisonPredicateBuilder&lt;StandalonePriceDeletedMessagePayloadQueryBuilderDsl&gt; sku() {</span>
+<span class="source-line-no">021</span><span id="line.21">        return new StringComparisonPredicateBuilder&lt;&gt;(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("sku")),</span>
+<span class="source-line-no">022</span><span id="line.22">            p -&gt; new CombinationQueryPredicate&lt;&gt;(p, StandalonePriceDeletedMessagePayloadQueryBuilderDsl::of));</span>
+<span class="source-line-no">023</span><span id="line.23">    }</span>
+<span class="source-line-no">024</span><span id="line.24"></span>
+<span class="source-line-no">025</span><span id="line.25">}</span>
 
 
 

@@ -19,6 +19,14 @@ public class StandalonePriceUpdateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StandalonePriceUpdateActionQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> asAddPriceTier(
+            Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceAddPriceTierActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceAddPriceTierActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.standalone_price.StandalonePriceAddPriceTierActionQueryBuilderDsl
+                    .of()),
+            StandalonePriceUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> asApplyStagedChanges(
             Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceApplyStagedChangesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceApplyStagedChangesActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -39,6 +47,14 @@ public class StandalonePriceUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceChangeValueActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceChangeValueActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.standalone_price.StandalonePriceChangeValueActionQueryBuilderDsl
+                    .of()),
+            StandalonePriceUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> asRemovePriceTier(
+            Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceRemovePriceTierActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceRemovePriceTierActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.standalone_price.StandalonePriceRemovePriceTierActionQueryBuilderDsl
                     .of()),
             StandalonePriceUpdateActionQueryBuilderDsl::of);
     }
@@ -71,6 +87,14 @@ public class StandalonePriceUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetKeyActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetKeyActionQueryBuilderDsl.of()),
+            StandalonePriceUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> asSetPriceTier(
+            Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetPriceTiersActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetPriceTiersActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetPriceTiersActionQueryBuilderDsl
+                    .of()),
             StandalonePriceUpdateActionQueryBuilderDsl::of);
     }
 

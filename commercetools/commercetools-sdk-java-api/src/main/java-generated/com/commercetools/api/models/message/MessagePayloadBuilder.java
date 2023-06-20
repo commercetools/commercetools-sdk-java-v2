@@ -623,6 +623,18 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StandalonePriceTierAddedMessagePayloadBuilder standalonePriceTierAddedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceTierAddedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StandalonePriceTierRemovedMessagePayloadBuilder standalonePriceTierRemovedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceTierRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StandalonePriceTiersSetMessagePayloadBuilder standalonePriceTiersSetBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceTiersSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessagePayloadBuilder standalonePriceValidFromAndUntilSetBuilder() {
         return com.commercetools.api.models.message.StandalonePriceValidFromAndUntilSetMessagePayloadBuilder.of();
     }

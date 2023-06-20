@@ -42,7 +42,7 @@ public class PriceTierDraftImpl implements PriceTierDraft, ModelBase {
 
     /**
      *  <p>Minimum quantity this Price tier is valid for.</p>
-     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1.</p>
+     *  <p>The minimum quantity is always greater than or equal to 2. The base Price is interpreted as valid for a minimum quantity equal to 1. A Price or StandalonePrice cannot contain more than one tier with the same <code>minimumQuantity</code>. In the case one of the constraint is not met an InvalidField is returned.</p>
      */
 
     public Long getMinimumQuantity() {

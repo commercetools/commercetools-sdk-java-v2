@@ -87,10 +87,6 @@ public class MyCartUpdateActionBuilder {
         return com.commercetools.api.models.me.MyCartSetDeleteDaysAfterLastModificationActionBuilder.of();
     }
 
-    public com.commercetools.api.models.me.MyCartSetDirectDiscountsActionBuilder setDirectDiscountsBuilder() {
-        return com.commercetools.api.models.me.MyCartSetDirectDiscountsActionBuilder.of();
-    }
-
     public com.commercetools.api.models.me.MyCartSetLineItemCustomFieldActionBuilder setLineItemCustomFieldBuilder() {
         return com.commercetools.api.models.me.MyCartSetLineItemCustomFieldActionBuilder.of();
     }

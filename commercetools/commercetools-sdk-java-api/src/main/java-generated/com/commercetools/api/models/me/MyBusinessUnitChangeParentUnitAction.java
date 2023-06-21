@@ -38,7 +38,7 @@ public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpda
     String CHANGE_PARENT_UNIT = "changeParentUnit";
 
     /**
-     *  <p>New parent unit of the Business Unit.</p>
+     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
      * @return parentUnit
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpda
     public BusinessUnitResourceIdentifier getParentUnit();
 
     /**
-     *  <p>New parent unit of the Business Unit.</p>
+     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
      * @param parentUnit value to be set
      */
 

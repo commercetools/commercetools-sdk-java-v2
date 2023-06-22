@@ -100,8 +100,9 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
             if (request.getHeaders().getFirst(ApiHttpHeaders.AUTHORIZATION) != null) {
                 return next.apply(request);
             }
-            AuthenticationToken token = authHandler.getToken();
-            return next.apply(request.addHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token)));
+            return authHandler.getTokenAsync()
+                    .thenCompose(token -> next
+                            .apply(request.addHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token))));
         });
     }
 

@@ -33,7 +33,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: '16'
+          java-version: '17'
 
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1

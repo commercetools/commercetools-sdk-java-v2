@@ -105,7 +105,7 @@ subprojects { project ->
     }
     tasks.withType(Javadoc).configureEach {
         javadocTool = javaToolchains.javadocToolFor {
-            languageVersion = JavaLanguageVersion.of(11)
+            languageVersion = JavaLanguageVersion.of(17)
         }
     }
     tasks.withType(Test).configureEach {

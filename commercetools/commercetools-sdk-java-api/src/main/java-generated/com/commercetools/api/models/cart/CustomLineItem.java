@@ -37,6 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .slug("{slug}")
  *             .quantity(0.3)
  *             .plusState(stateBuilder -> stateBuilder)
+ *             .plusPerMethodTaxRate(perMethodTaxRateBuilder -> perMethodTaxRateBuilder)
  *             .plusDiscountedPricePerQuantity(discountedPricePerQuantityBuilder -> discountedPricePerQuantityBuilder)
  *             .priceMode(CustomLineItemPriceMode.STANDARD)
  *             .build()
@@ -134,6 +135,15 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
+
+    /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     * @return perMethodTaxRate
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("perMethodTaxRate")
+    public List<MethodTaxRate> getPerMethodTaxRate();
 
     /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
@@ -251,6 +261,21 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setTaxRate(final TaxRate taxRate);
 
     /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     * @param perMethodTaxRate values to be set
+     */
+
+    @JsonIgnore
+    public void setPerMethodTaxRate(final MethodTaxRate... perMethodTaxRate);
+
+    /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     * @param perMethodTaxRate values to be set
+     */
+
+    public void setPerMethodTaxRate(final List<MethodTaxRate> perMethodTaxRate);
+
+    /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
      * @param discountedPricePerQuantity values to be set
      */
@@ -312,6 +337,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         instance.setState(template.getState());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setTaxRate(template.getTaxRate());
+        instance.setPerMethodTaxRate(template.getPerMethodTaxRate());
         instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
         instance.setCustom(template.getCustom());
         instance.setShippingDetails(template.getShippingDetails());
@@ -346,6 +372,11 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         instance.setTaxCategory(
             com.commercetools.api.models.tax_category.TaxCategoryReference.deepCopy(template.getTaxCategory()));
         instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setPerMethodTaxRate(Optional.ofNullable(template.getPerMethodTaxRate())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.MethodTaxRate::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)

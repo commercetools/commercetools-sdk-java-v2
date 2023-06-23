@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartSetLineItemCustomTypeAction cartSetLineItemCustomTypeAction = CartSetLineItemCustomTypeAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLineItemCustomTypeAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -33,13 +36,24 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public CartSetLineItemCustomTypeActionBuilder lineItemId(final String lineItemId) {
+    public CartSetLineItemCustomTypeActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartSetLineItemCustomTypeActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -116,12 +130,23 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -149,8 +174,7 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
      * @return CartSetLineItemCustomTypeAction
      */
     public CartSetLineItemCustomTypeAction build() {
-        Objects.requireNonNull(lineItemId, CartSetLineItemCustomTypeAction.class + ": lineItemId is missing");
-        return new CartSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
+        return new CartSetLineItemCustomTypeActionImpl(lineItemId, lineItemKey, type, fields);
     }
 
     /**
@@ -158,7 +182,7 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
      * @return CartSetLineItemCustomTypeAction
      */
     public CartSetLineItemCustomTypeAction buildUnchecked() {
-        return new CartSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
+        return new CartSetLineItemCustomTypeActionImpl(lineItemId, lineItemKey, type, fields);
     }
 
     /**
@@ -177,6 +201,7 @@ public class CartSetLineItemCustomTypeActionBuilder implements Builder<CartSetLi
     public static CartSetLineItemCustomTypeActionBuilder of(final CartSetLineItemCustomTypeAction template) {
         CartSetLineItemCustomTypeActionBuilder builder = new CartSetLineItemCustomTypeActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

@@ -4,6 +4,8 @@ package com.commercetools.api.models.cart;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartApplyDeltaToLineItemShippingDetailsTargetsAction cartApplyDeltaToLineItemShippingDetailsTargetsAction = CartApplyDeltaToLineItemShippingDetailsTargetsAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .plusTargetsDelta(targetsDeltaBuilder -> targetsDeltaBuilder)
  *             .build()
  * </code></pre>
@@ -24,18 +25,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
         implements Builder<CartApplyDeltaToLineItemShippingDetailsTargetsAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder lineItemId(final String lineItemId) {
+    public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -129,12 +145,23 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -151,11 +178,9 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
      * @return CartApplyDeltaToLineItemShippingDetailsTargetsAction
      */
     public CartApplyDeltaToLineItemShippingDetailsTargetsAction build() {
-        Objects.requireNonNull(lineItemId,
-            CartApplyDeltaToLineItemShippingDetailsTargetsAction.class + ": lineItemId is missing");
         Objects.requireNonNull(targetsDelta,
             CartApplyDeltaToLineItemShippingDetailsTargetsAction.class + ": targetsDelta is missing");
-        return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, targetsDelta);
+        return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, lineItemKey, targetsDelta);
     }
 
     /**
@@ -163,7 +188,7 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
      * @return CartApplyDeltaToLineItemShippingDetailsTargetsAction
      */
     public CartApplyDeltaToLineItemShippingDetailsTargetsAction buildUnchecked() {
-        return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, targetsDelta);
+        return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, lineItemKey, targetsDelta);
     }
 
     /**
@@ -183,6 +208,7 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
             final CartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
         CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder = new CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.targetsDelta = template.getTargetsDelta();
         return builder;
     }

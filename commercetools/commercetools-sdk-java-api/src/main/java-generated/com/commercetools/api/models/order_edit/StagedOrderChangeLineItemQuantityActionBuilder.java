@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderChangeLineItemQuantityAction stagedOrderChangeLineItemQuantityAction = StagedOrderChangeLineItemQuantityAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -26,7 +25,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderChangeLineItemQuantityActionBuilder
         implements Builder<StagedOrderChangeLineItemQuantityAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     private Long quantity;
 
@@ -37,13 +40,24 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
+    public StagedOrderChangeLineItemQuantityActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderChangeLineItemQuantityActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -134,12 +148,23 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -176,9 +201,9 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
      * @return StagedOrderChangeLineItemQuantityAction
      */
     public StagedOrderChangeLineItemQuantityAction build() {
-        Objects.requireNonNull(lineItemId, StagedOrderChangeLineItemQuantityAction.class + ": lineItemId is missing");
         Objects.requireNonNull(quantity, StagedOrderChangeLineItemQuantityAction.class + ": quantity is missing");
-        return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
+        return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, lineItemKey, quantity, externalPrice,
+            externalTotalPrice);
     }
 
     /**
@@ -186,7 +211,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
      * @return StagedOrderChangeLineItemQuantityAction
      */
     public StagedOrderChangeLineItemQuantityAction buildUnchecked() {
-        return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
+        return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, lineItemKey, quantity, externalPrice,
+            externalTotalPrice);
     }
 
     /**
@@ -206,6 +232,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
             final StagedOrderChangeLineItemQuantityAction template) {
         StagedOrderChangeLineItemQuantityActionBuilder builder = new StagedOrderChangeLineItemQuantityActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.quantity = template.getQuantity();
         builder.externalPrice = template.getExternalPrice();
         builder.externalTotalPrice = template.getExternalTotalPrice();

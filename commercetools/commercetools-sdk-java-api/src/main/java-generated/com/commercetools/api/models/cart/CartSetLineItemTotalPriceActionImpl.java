@@ -24,6 +24,8 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
@@ -31,8 +33,10 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
      */
     @JsonCreator
     CartSetLineItemTotalPriceActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.externalTotalPrice = externalTotalPrice;
         this.action = SET_LINE_ITEM_TOTAL_PRICE;
     }
@@ -53,11 +57,19 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -70,6 +82,10 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setExternalTotalPrice(
@@ -89,13 +105,18 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(externalTotalPrice, that.externalTotalPrice)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(externalTotalPrice).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(externalTotalPrice)
+                .toHashCode();
     }
 
 }

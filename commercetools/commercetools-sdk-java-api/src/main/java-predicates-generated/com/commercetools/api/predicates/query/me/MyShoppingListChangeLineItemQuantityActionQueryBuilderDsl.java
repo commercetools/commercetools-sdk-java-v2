@@ -23,6 +23,12 @@ public class MyShoppingListChangeLineItemQuantityActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, MyShoppingListChangeLineItemQuantityActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<MyShoppingListChangeLineItemQuantityActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, MyShoppingListChangeLineItemQuantityActionQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<MyShoppingListChangeLineItemQuantityActionQueryBuilderDsl> quantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),

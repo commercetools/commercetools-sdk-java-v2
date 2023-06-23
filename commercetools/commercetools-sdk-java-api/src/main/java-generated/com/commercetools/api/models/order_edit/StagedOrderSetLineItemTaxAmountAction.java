@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -24,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetLineItemTaxAmountAction stagedOrderSetLineItemTaxAmountAction = StagedOrderSetLineItemTaxAmountAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -39,12 +37,20 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
     String SET_LINE_ITEM_TAX_AMOUNT = "setLineItemTaxAmount";
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
 
     /**
      *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
@@ -68,11 +74,18 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
     public String getShippingKey();
 
     /**
-     * set lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
 
     /**
      *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
@@ -109,6 +122,7 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
     public static StagedOrderSetLineItemTaxAmountAction of(final StagedOrderSetLineItemTaxAmountAction template) {
         StagedOrderSetLineItemTaxAmountActionImpl instance = new StagedOrderSetLineItemTaxAmountActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
         instance.setShippingKey(template.getShippingKey());
         return instance;
@@ -127,6 +141,7 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
         }
         StagedOrderSetLineItemTaxAmountActionImpl instance = new StagedOrderSetLineItemTaxAmountActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setExternalTaxAmount(
             com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
         instance.setShippingKey(template.getShippingKey());

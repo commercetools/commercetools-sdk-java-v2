@@ -53,7 +53,7 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                 })
                 .onRetry(event -> {
                     logger.debug(() -> "Refresh Bearer token #" + event.getAttemptCount());
-                    authHandler.refreshToken();
+                    authHandler.refreshTokenAsync();
                 })
                 .withMaxRetries(maxRetries)
                 .build();
@@ -73,9 +73,9 @@ public class OAuthMiddlewareImpl implements AutoCloseable, OAuthMiddleware {
                     .handleIf((response, throwable) -> {
                         Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
                         if (cause instanceof AuthException) {
-                            return ((AuthException) throwable.getCause()).getResponse().getStatusCode() == 400;
+                            return ((AuthException) cause).getResponse().getStatusCode() == 400;
                         }
-                        return response.getStatusCode() == 400;
+                        return response != null && response.getStatusCode() == 400;
                     })
                     .withDelayFn(context -> Duration
                             .ofMillis(Math.min(100 * context.getAttemptCount() * context.getAttemptCount(), 15000)))

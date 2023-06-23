@@ -4,6 +4,8 @@ package io.vrap.rmf.base.client.http;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 
+import com.spotify.futures.CompletableFutures;
+
 import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.AutoCloseableService;
 import io.vrap.rmf.base.client.oauth2.InMemoryTokenSupplier;
@@ -46,12 +48,12 @@ public class OAuthHandler extends AutoCloseableService {
     }
 
     public CompletableFuture<AuthenticationToken> getTokenAsync() {
-        return supplier.getToken().thenCompose(token -> {
+        return CompletableFutures.exceptionallyCompose(supplier.getToken().thenCompose(token -> {
             if (token.isExpired()) {
                 return refreshTokenAsync();
             }
             return CompletableFuture.completedFuture(token);
-        });
+        }), throwable -> refreshTokenAsync()).toCompletableFuture();
     }
 
     public CompletableFuture<AuthenticationToken> refreshTokenAsync() {

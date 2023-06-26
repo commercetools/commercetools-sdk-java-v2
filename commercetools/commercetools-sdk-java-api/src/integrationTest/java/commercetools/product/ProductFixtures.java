@@ -81,6 +81,12 @@ public class ProductFixtures {
                             .type(AttributeTextTypeBuilder.of().build())
                             .build(),
                     AttributeDefinitionDraftBuilder.of()
+                            .name("testboolean")
+                            .label(LocalizedStringBuilder.of().addValue("en", "test-boolean").build())
+                            .isRequired(false)
+                            .type(AttributeBooleanTypeBuilder.of().build())
+                            .build(),
+                    AttributeDefinitionDraftBuilder.of()
                             .name("test-number")
                             .label(LocalizedStringBuilder.of().addValue("en", "test-number").build())
                             .isRequired(false)
@@ -169,6 +175,7 @@ public class ProductFixtures {
                         .build()))
                 .attributes(AttributeBuilder.of().name("test-text").value("foo").build(),
                     AttributeBuilder.of().name("test-number").value(10.0).build(),
+                    AttributeBuilder.of().name("testboolean").value(true).build(),
                     AttributeBuilder.of().name("test-integer").value(10).build(),
                     AttributeBuilder.of().name("test-enum").value("test").build(),
                     AttributeBuilder.of().name("test-set-text").value(Collections.singletonList("foo")).build(),

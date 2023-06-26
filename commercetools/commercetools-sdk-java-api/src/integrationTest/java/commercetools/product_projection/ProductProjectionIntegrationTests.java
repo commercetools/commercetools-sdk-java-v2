@@ -2,11 +2,12 @@
 package commercetools.product_projection;
 
 import static commercetools.product.ProductFixtures.*;
+import static commercetools.utils.CommercetoolsTestUtils.assertEventually;
 
-import com.commercetools.api.models.product.ProductProjection;
-import com.commercetools.api.models.product.ProductProjectionPagedQueryResponse;
-import com.commercetools.api.models.product.ProductProjectionPagedSearchResponse;
-import com.commercetools.api.models.product.TermFacetResult;
+import java.time.Duration;
+
+import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.models.product.*;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import commercetools.utils.CommercetoolsTestUtils;
 
@@ -76,6 +77,48 @@ public class ProductProjectionIntegrationTests {
 
             Assertions.assertThat(searchResponse.getFacets().values().get("categories.id"))
                     .isInstanceOf(TermFacetResult.class);
+        });
+    }
+
+    @Test
+    public void searchBoolean() {
+        ProjectApiRoot apiRoot = CommercetoolsTestUtils.getProjectApiRoot();
+        withProduct(product1 -> {
+            withProduct(product2 -> {
+                withUpdateableProduct(product3 -> {
+                    assertEventually(Duration.ofSeconds(60), Duration.ofMillis(500), () -> {
+                        ProductProjectionPagedSearchResponse searchResponse = apiRoot.productProjections()
+                                .search()
+                                .get()
+                                .withFilter("variants.attributes.testboolean:true")
+                                .withStaged(true)
+                                .executeBlocking()
+                                .getBody();
+                        Assertions.assertThat(searchResponse.getCount()).isEqualTo(3);
+
+                    });
+                    Product p = apiRoot.products()
+                            .update(product3)
+                            .with(
+                                b -> b.plus(a -> a.setAttributeInAllVariantsBuilder().name("testboolean").value(false)))
+                            .executeBlocking()
+                            .getBody();
+
+                    assertEventually(Duration.ofSeconds(60), Duration.ofMillis(500), () -> {
+                        ProductProjectionPagedSearchResponse searchResponse = apiRoot.productProjections()
+                                .search()
+                                .get()
+                                .withFilter("variants.attributes.testboolean:true")
+                                .withStaged(true)
+                                .executeBlocking()
+                                .getBody();
+                        Assertions.assertThat(searchResponse.getCount()).isEqualTo(2);
+                        Assertions.assertThat(searchResponse.getResults().stream().map(ProductProjection::getId))
+                                .doesNotContain(product3.getId());
+                    });
+                    return p;
+                });
+            });
         });
     }
 

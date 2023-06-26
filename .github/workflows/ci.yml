@@ -27,7 +27,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: '8'
+          java-version: '17'
 
       - name: Fix code style
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
@@ -115,7 +115,7 @@ jobs:
           uses: actions/setup-java@v3
           with:
               distribution: 'temurin'
-              java-version: '16'
+              java-version: '17'
 
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@v1

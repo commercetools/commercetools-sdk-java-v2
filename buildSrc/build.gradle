@@ -6,6 +6,12 @@ repositories {
     mavenCentral()
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
 dependencies {
     implementation "com.github.javaparser:javaparser-symbol-solver-core:3.25.2"
     implementation "com.google.code.gson:gson:2.10.1"

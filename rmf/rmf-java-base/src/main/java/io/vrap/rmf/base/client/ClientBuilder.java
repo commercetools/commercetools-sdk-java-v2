@@ -1132,7 +1132,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             return Optional.ofNullable(oauthExecutorService)
                     .map(executorService -> OAuthMiddleware.of(executorService.get(), oAuthHandler, authRetries,
                         useAuthCircuitBreaker))
-                    .orElse(OAuthMiddleware.of(oAuthHandler, authRetries, useAuthCircuitBreaker));
+                    .orElseGet(() -> OAuthMiddleware.of(oAuthHandler, authRetries, useAuthCircuitBreaker));
         });
     }
 

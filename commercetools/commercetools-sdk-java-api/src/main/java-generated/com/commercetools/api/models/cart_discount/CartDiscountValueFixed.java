@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueFixedImpl.class)
-public interface CartDiscountValueFixed extends CartDiscountValue {
+public interface CartDiscountValueFixed extends CartDiscountValue, CartDiscountValueFixedMixin {
 
     /**
      * discriminator value for CartDiscountValueFixed

@@ -50,7 +50,7 @@ public class BusinessUnitChangeParentUnitActionImpl implements BusinessUnitChang
     }
 
     /**
-     *  <p>New parent unit of the Business Unit.</p>
+     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit() {

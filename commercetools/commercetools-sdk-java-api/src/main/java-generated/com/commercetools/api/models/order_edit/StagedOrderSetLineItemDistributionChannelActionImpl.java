@@ -25,6 +25,8 @@ public class StagedOrderSetLineItemDistributionChannelActionImpl
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
@@ -32,8 +34,10 @@ public class StagedOrderSetLineItemDistributionChannelActionImpl
      */
     @JsonCreator
     StagedOrderSetLineItemDistributionChannelActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.distributionChannel = distributionChannel;
         this.action = SET_LINE_ITEM_DISTRIBUTION_CHANNEL;
     }
@@ -54,11 +58,19 @@ public class StagedOrderSetLineItemDistributionChannelActionImpl
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -71,6 +83,10 @@ public class StagedOrderSetLineItemDistributionChannelActionImpl
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setDistributionChannel(
@@ -90,13 +106,18 @@ public class StagedOrderSetLineItemDistributionChannelActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(distributionChannel, that.distributionChannel)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(distributionChannel).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(distributionChannel)
+                .toHashCode();
     }
 
 }

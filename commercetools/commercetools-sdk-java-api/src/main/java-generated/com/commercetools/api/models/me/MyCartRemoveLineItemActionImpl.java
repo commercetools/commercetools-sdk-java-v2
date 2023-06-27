@@ -24,6 +24,8 @@ public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemActio
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private Long quantity;
 
     private com.commercetools.api.models.common.Money externalPrice;
@@ -37,11 +39,12 @@ public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemActio
      */
     @JsonCreator
     MyCartRemoveLineItemActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("lineItemKey") final String lineItemKey, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
             @JsonProperty("shippingDetailsToRemove") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.quantity = quantity;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
@@ -65,11 +68,19 @@ public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemActio
     }
 
     /**
-     *  <p><code>id</code> of the Line Item to remove.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -109,6 +120,10 @@ public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemActio
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
@@ -139,6 +154,7 @@ public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemActio
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(quantity, that.quantity)
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
@@ -150,6 +166,7 @@ public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemActio
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(quantity)
                 .append(externalPrice)
                 .append(externalTotalPrice)

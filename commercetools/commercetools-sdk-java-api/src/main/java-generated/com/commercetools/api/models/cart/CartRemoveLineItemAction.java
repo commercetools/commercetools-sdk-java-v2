@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
@@ -23,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartRemoveLineItemAction cartRemoveLineItemAction = CartRemoveLineItemAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -38,12 +36,20 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
     String REMOVE_LINE_ITEM = "removeLineItem";
 
     /**
-     *  <p><code>id</code> of the Line Item to remove.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
 
     /**
      *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
@@ -78,11 +84,18 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
     public ItemShippingDetailsDraft getShippingDetailsToRemove();
 
     /**
-     *  <p><code>id</code> of the Line Item to remove.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
 
     /**
      *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
@@ -128,6 +141,7 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
     public static CartRemoveLineItemAction of(final CartRemoveLineItemAction template) {
         CartRemoveLineItemActionImpl instance = new CartRemoveLineItemActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
@@ -147,6 +161,7 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
         }
         CartRemoveLineItemActionImpl instance = new CartRemoveLineItemActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setExternalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getExternalPrice()));
         instance.setExternalTotalPrice(

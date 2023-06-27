@@ -24,6 +24,8 @@ public class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineIt
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
@@ -31,8 +33,10 @@ public class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineIt
      */
     @JsonCreator
     OrderSetLineItemShippingDetailsActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.shippingDetails = shippingDetails;
         this.action = SET_LINE_ITEM_SHIPPING_DETAILS;
     }
@@ -53,11 +57,19 @@ public class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineIt
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -70,6 +82,10 @@ public class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineIt
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
@@ -88,13 +104,18 @@ public class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineIt
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(shippingDetails, that.shippingDetails)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(shippingDetails).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(shippingDetails)
+                .toHashCode();
     }
 
 }

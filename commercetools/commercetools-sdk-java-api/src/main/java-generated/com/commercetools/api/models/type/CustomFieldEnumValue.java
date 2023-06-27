@@ -8,7 +8,6 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.WithKey;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -30,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldEnumValueImpl.class)
-public interface CustomFieldEnumValue extends WithKey {
+public interface CustomFieldEnumValue extends com.commercetools.api.models.WithKey {
 
     /**
      *  <p>Key of the value used as a programmatic identifier.</p>

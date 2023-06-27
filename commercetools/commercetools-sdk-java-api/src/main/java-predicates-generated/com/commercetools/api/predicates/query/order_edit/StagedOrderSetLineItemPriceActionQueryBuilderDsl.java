@@ -25,6 +25,12 @@ public class StagedOrderSetLineItemPriceActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderSetLineItemPriceActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderSetLineItemPriceActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderSetLineItemPriceActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<StagedOrderSetLineItemPriceActionQueryBuilderDsl> externalPrice(
             Function<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

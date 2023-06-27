@@ -40,6 +40,8 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate;
+
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
     private com.commercetools.api.models.type.CustomFields custom;
@@ -61,6 +63,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
+            @JsonProperty("perMethodTaxRate") final java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails,
@@ -75,6 +78,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.state = state;
         this.taxCategory = taxCategory;
         this.taxRate = taxRate;
+        this.perMethodTaxRate = perMethodTaxRate;
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.custom = custom;
         this.shippingDetails = shippingDetails;
@@ -172,6 +176,14 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxRate> getPerMethodTaxRate() {
+        return this.perMethodTaxRate;
+    }
+
+    /**
      *  <p>Discounted price of a single quantity of the Custom Line Item.</p>
      */
 
@@ -247,6 +259,15 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.taxRate = taxRate;
     }
 
+    public void setPerMethodTaxRate(final com.commercetools.api.models.cart.MethodTaxRate... perMethodTaxRate) {
+        this.perMethodTaxRate = new ArrayList<>(Arrays.asList(perMethodTaxRate));
+    }
+
+    public void setPerMethodTaxRate(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate) {
+        this.perMethodTaxRate = perMethodTaxRate;
+    }
+
     public void setDiscountedPricePerQuantity(
             final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
         this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
@@ -289,6 +310,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(state, that.state)
                 .append(taxCategory, that.taxCategory)
                 .append(taxRate, that.taxRate)
+                .append(perMethodTaxRate, that.perMethodTaxRate)
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(custom, that.custom)
                 .append(shippingDetails, that.shippingDetails)
@@ -308,6 +330,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(state)
                 .append(taxCategory)
                 .append(taxRate)
+                .append(perMethodTaxRate)
                 .append(discountedPricePerQuantity)
                 .append(custom)
                 .append(shippingDetails)

@@ -24,6 +24,8 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     private String shippingKey;
@@ -33,9 +35,11 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
      */
     @JsonCreator
     StagedOrderSetLineItemTaxRateActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("shippingKey") final String shippingKey) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.externalTaxRate = externalTaxRate;
         this.shippingKey = shippingKey;
         this.action = SET_LINE_ITEM_TAX_RATE;
@@ -57,11 +61,19 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -84,6 +96,10 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
     }
@@ -104,6 +120,7 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(shippingKey, that.shippingKey)
                 .isEquals();
@@ -113,6 +130,7 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(externalTaxRate)
                 .append(shippingKey)
                 .toHashCode();

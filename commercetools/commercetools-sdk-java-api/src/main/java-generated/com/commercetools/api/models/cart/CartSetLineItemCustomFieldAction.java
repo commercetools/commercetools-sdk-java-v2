@@ -21,7 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartSetLineItemCustomFieldAction cartSetLineItemCustomFieldAction = CartSetLineItemCustomFieldAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -37,12 +36,20 @@ public interface CartSetLineItemCustomFieldAction extends CartUpdateAction {
     String SET_LINE_ITEM_CUSTOM_FIELD = "setLineItemCustomField";
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -61,11 +68,18 @@ public interface CartSetLineItemCustomFieldAction extends CartUpdateAction {
     public Object getValue();
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -97,6 +111,7 @@ public interface CartSetLineItemCustomFieldAction extends CartUpdateAction {
     public static CartSetLineItemCustomFieldAction of(final CartSetLineItemCustomFieldAction template) {
         CartSetLineItemCustomFieldActionImpl instance = new CartSetLineItemCustomFieldActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
@@ -114,6 +129,7 @@ public interface CartSetLineItemCustomFieldAction extends CartUpdateAction {
         }
         CartSetLineItemCustomFieldActionImpl instance = new CartSetLineItemCustomFieldActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;

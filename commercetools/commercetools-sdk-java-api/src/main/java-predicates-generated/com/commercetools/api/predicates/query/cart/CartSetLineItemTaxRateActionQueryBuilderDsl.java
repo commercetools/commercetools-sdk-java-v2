@@ -25,6 +25,12 @@ public class CartSetLineItemTaxRateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartSetLineItemTaxRateActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartSetLineItemTaxRateActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, CartSetLineItemTaxRateActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CartSetLineItemTaxRateActionQueryBuilderDsl> externalTaxRate(
             Function<com.commercetools.api.predicates.query.cart.ExternalTaxRateDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ExternalTaxRateDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartSetLineItemTaxAmountAction cartSetLineItemTaxAmountAction = CartSetLineItemTaxAmountAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLineItemTaxAmountAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
@@ -33,13 +36,24 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
     private String shippingKey;
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public CartSetLineItemTaxAmountActionBuilder lineItemId(final String lineItemId) {
+    public CartSetLineItemTaxAmountActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartSetLineItemTaxAmountActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -92,12 +106,23 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -125,8 +150,7 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
      * @return CartSetLineItemTaxAmountAction
      */
     public CartSetLineItemTaxAmountAction build() {
-        Objects.requireNonNull(lineItemId, CartSetLineItemTaxAmountAction.class + ": lineItemId is missing");
-        return new CartSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount, shippingKey);
+        return new CartSetLineItemTaxAmountActionImpl(lineItemId, lineItemKey, externalTaxAmount, shippingKey);
     }
 
     /**
@@ -134,7 +158,7 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
      * @return CartSetLineItemTaxAmountAction
      */
     public CartSetLineItemTaxAmountAction buildUnchecked() {
-        return new CartSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount, shippingKey);
+        return new CartSetLineItemTaxAmountActionImpl(lineItemId, lineItemKey, externalTaxAmount, shippingKey);
     }
 
     /**
@@ -153,6 +177,7 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
     public static CartSetLineItemTaxAmountActionBuilder of(final CartSetLineItemTaxAmountAction template) {
         CartSetLineItemTaxAmountActionBuilder builder = new CartSetLineItemTaxAmountActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.externalTaxAmount = template.getExternalTaxAmount();
         builder.shippingKey = template.getShippingKey();
         return builder;

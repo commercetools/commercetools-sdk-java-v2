@@ -74,7 +74,7 @@ public class ConfluentCloudDestinationBuilder implements Builder<ConfluentCloudD
     }
 
     /**
-     *  <p>The Kafka <code>acks</code> value. Can be <code>"0"</code>, <code>"1"</code>, or <code>"all"</code>.</p>
+     *  <p>The Kafka <code>acks</code> value.</p>
      * @param acks value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class ConfluentCloudDestinationBuilder implements Builder<ConfluentCloudD
     }
 
     /**
-     *  <p>The Kafka <code>acks</code> value. Can be <code>"0"</code>, <code>"1"</code>, or <code>"all"</code>.</p>
+     *  <p>The Kafka <code>acks</code> value.</p>
      * @return acks
      */
 

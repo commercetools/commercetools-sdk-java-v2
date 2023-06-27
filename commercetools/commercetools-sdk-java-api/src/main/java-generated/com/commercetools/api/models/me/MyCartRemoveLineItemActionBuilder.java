@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyCartRemoveLineItemAction myCartRemoveLineItemAction = MyCartRemoveLineItemAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLineItemAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private Long quantity;
@@ -39,13 +42,24 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
 
     /**
-     *  <p><code>id</code> of the Line Item to remove.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public MyCartRemoveLineItemActionBuilder lineItemId(final String lineItemId) {
+    public MyCartRemoveLineItemActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public MyCartRemoveLineItemActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -176,12 +190,23 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
     }
 
     /**
-     *  <p><code>id</code> of the Line Item to remove.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -230,8 +255,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
      * @return MyCartRemoveLineItemAction
      */
     public MyCartRemoveLineItemAction build() {
-        Objects.requireNonNull(lineItemId, MyCartRemoveLineItemAction.class + ": lineItemId is missing");
-        return new MyCartRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,
+        return new MyCartRemoveLineItemActionImpl(lineItemId, lineItemKey, quantity, externalPrice, externalTotalPrice,
             shippingDetailsToRemove);
     }
 
@@ -240,7 +264,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
      * @return MyCartRemoveLineItemAction
      */
     public MyCartRemoveLineItemAction buildUnchecked() {
-        return new MyCartRemoveLineItemActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice,
+        return new MyCartRemoveLineItemActionImpl(lineItemId, lineItemKey, quantity, externalPrice, externalTotalPrice,
             shippingDetailsToRemove);
     }
 
@@ -260,6 +284,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
     public static MyCartRemoveLineItemActionBuilder of(final MyCartRemoveLineItemAction template) {
         MyCartRemoveLineItemActionBuilder builder = new MyCartRemoveLineItemActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.quantity = template.getQuantity();
         builder.externalPrice = template.getExternalPrice();
         builder.externalTotalPrice = template.getExternalTotalPrice();

@@ -51,7 +51,7 @@ srcInfo {
     ]
 }
 
-task integrationTest(type: Test) {
+tasks.register('integrationTest', Test) {
     description = "Runs integration tests."
     group = "verification"
 
@@ -70,12 +70,12 @@ task integrationTest(type: Test) {
     }
 }
 
-task sourcesJar(type: Jar) {
+tasks.register('sourcesJar', Jar) {
     archiveClassifier = 'sources'
     from sourceSets.main.allJava
 }
 
-task javadocJar(type: Jar) {
+tasks.register('javadocJar', Jar) {
     dependsOn "javadoc"
     archiveClassifier = 'javadoc'
     from javadoc.destinationDir

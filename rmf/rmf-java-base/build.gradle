@@ -20,7 +20,7 @@ sourceSets {
 }
 
 
-task versionTxt()  {
+tasks.register('versionTxt') {
     doLast {
         new File(projectDir, "$buildInfoPath/io/vrap/rmf/base/client").mkdirs()
         new File(projectDir, "$buildInfoPath/io/vrap/rmf/base/client/BuildInfo.java").text = """

@@ -169,7 +169,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
      */
 
     public Boolean getActive() {

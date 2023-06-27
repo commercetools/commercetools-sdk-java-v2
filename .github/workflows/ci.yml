@@ -69,7 +69,7 @@ jobs:
 
       - name: Run integration tests for PR
         if: github.event_name == 'pull_request'
-        run: ./gradlew clean build runMainMethodThreadLeakTest
+        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest codeCoverageReport
         env:
           CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID_PR }}
           CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET_PR }}
@@ -79,7 +79,7 @@ jobs:
 
       - name: Run integration tests
         if: github.event_name != 'pull_request'
-        run: ./gradlew clean build runMainMethodThreadLeakTest
+        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest codeCoverageReport
         env:
             CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
             CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
@@ -89,12 +89,8 @@ jobs:
 
       - name: Test examples
         run: |
-          ./gradlew publishMavenPublicationToMavenLocal
           cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
           cd ../maven-okhttp4 && mvn verify --no-transfer-progress
-
-      - name: Collect code coverage
-        run: ./gradlew codeCoverageReport
 
       - name: Send code coverage report to Codecov.io
         run: bash <(curl -s https://codecov.io/bash) || true

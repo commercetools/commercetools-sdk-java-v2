@@ -2,8 +2,9 @@ allprojects {
     apply plugin: 'jacoco'
 }
 
+
 tasks.register('codeCoverageReport', JacocoReport) {
-    dependsOn test
+    dependsOn subprojects*.test
     executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
 
     subprojects.each {

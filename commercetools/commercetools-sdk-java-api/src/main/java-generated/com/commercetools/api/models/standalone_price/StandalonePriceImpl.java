@@ -243,7 +243,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has some changes staged.</p>
      */
 
     public com.commercetools.api.models.standalone_price.StagedStandalonePrice getStaged() {

@@ -190,7 +190,7 @@ public interface StandalonePrice
     public CustomFields getCustom();
 
     /**
-     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has some changes staged.</p>
      * @return staged
      */
     @Valid
@@ -333,7 +333,7 @@ public interface StandalonePrice
     public void setCustom(final CustomFields custom);
 
     /**
-     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has some changes staged.</p>
      * @param staged value to be set
      */
 

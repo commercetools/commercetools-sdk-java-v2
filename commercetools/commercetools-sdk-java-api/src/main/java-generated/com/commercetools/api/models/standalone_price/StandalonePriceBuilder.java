@@ -507,7 +507,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has some changes staged.</p>
      * @param builder function to build the staged value
      * @return Builder
      */
@@ -520,7 +520,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has some changes staged.</p>
      * @param builder function to build the staged value
      * @return Builder
      */
@@ -532,7 +532,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has some changes staged.</p>
      * @param staged value to be set
      * @return Builder
      */
@@ -719,7 +719,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has some changes staged.</p>
      * @return staged
      */
 

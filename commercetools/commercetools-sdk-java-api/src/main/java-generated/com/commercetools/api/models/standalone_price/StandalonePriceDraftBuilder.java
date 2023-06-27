@@ -387,7 +387,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -506,7 +506,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
      * @return active
      */
 

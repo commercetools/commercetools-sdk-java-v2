@@ -20,7 +20,7 @@ sourceSets.main.java.srcDirs += "src/main/java-generated"
 sourceSets.main.java.srcDirs += "src/main/java-predicates-generated"
 sourceSets.test.java.srcDirs += "src/test/java-generated"
 
-task runMainMethodThreadLeakTest(type: JavaExec) {
+tasks.register('runMainMethodThreadLeakTest', JavaExec) {
     group = "Execution"
     description = "Run the main method thread leak test class"
     classpath = sourceSets.test.runtimeClasspath

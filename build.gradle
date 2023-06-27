@@ -183,7 +183,7 @@ subprojects { project ->
 
     }
 
-    task allDeps(type: DependencyReportTask) {}
+    tasks.register("allDeps", DependencyReportTask) {}
 }
 
 def documentationProjects= [
@@ -206,7 +206,7 @@ def documentationProjects= [
 allprojects {
     project -> {
         if (project.file('src/jmh').exists())
-            task benchmark(type: Task) {
+            tasks.register("benchmark") {
                 dependsOn 'jmh'
             }
     }

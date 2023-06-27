@@ -14,6 +14,12 @@ annotationTypes:
   java-builder-mixin:
     type: string
     allowedTargets: TypeDeclaration
+  java-extends:
+    type: string
+    allowedTargets: TypeDeclaration
+  java-implements:
+    type: string
+    allowedTargets: TypeDeclaration
 
 types:
   BaseAddress:
@@ -1381,6 +1387,15 @@ types:
     (java-extends): 'com.commercetools.api.models.Customizable<ScopedPrice>'
   MyBusinessUnitDraft:
     (java-extends): 'com.commercetools.api.models.Customizable<MyBusinessUnitDraft>, com.commercetools.api.models.WithKey'
+  AssociateRolePagedQueryResponse:
+    (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<AssociateRole>'
+  AssociateRole:
+    (java-extends): 'com.commercetools.api.models.Identifiable<AssociateRole>'
+  AssociateRoleResourceIdentifier:
+    (java-extends): 'com.commercetools.api.models.Identifiable<AssociateRole>'
+  AssociateRoleUpdateAction:
+    (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<AssociateRoleUpdateAction>'
+
 /{projectKey}:
   /categories:
     (java-implements): 'ByProjectKeyCategoriesRequestBuilderMixin'

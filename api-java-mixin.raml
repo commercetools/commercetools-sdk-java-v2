@@ -67,6 +67,16 @@ types:
       public static com.commercetools.api.models.common.ReferenceTypeId referenceTypeId() {
           return com.commercetools.api.models.common.ReferenceTypeId.CART_DISCOUNT;
       }
+  CartDiscountValue:
+    (java-extends): 'CartDiscountValueMixin'
+  CartDiscountValueAbsolute:
+    (java-extends): 'CartDiscountValueAbsoluteMixin'
+  CartDiscountValueFixed:
+    (java-extends): 'CartDiscountValueFixedMixin'
+  CartDiscountValueGiftLineItem:
+    (java-extends): 'CartDiscountValueGiftLineItemMixin'
+  CartDiscountValueRelative:
+    (java-extends): 'CartDiscountValueRelativeMixin'
   Category:
     (java-extends): 'CategoryMixin, com.commercetools.api.models.DomainResource<Category>, com.commercetools.api.models.Referencable<Category>, com.commercetools.api.models.ResourceIdentifiable<Category>, com.commercetools.api.models.Customizable<Category>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -467,7 +477,7 @@ types:
   ProductProjectionPagedSearchResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection>'
   ProductReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Product>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Product>, ProductReferenceMixin'
   ProductResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Product>'
   ProductUpdate:
@@ -1263,7 +1273,7 @@ types:
   ChannelPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Channel>'
   ChannelReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Channel>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Channel>, ChannelReferenceMixin'
   ChannelResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Channel>'
   ChannelUpdate:

@@ -20,14 +20,15 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     Label label = Label.customObjectLabelBuilder()
+ *     Label label = Label.businessUnitLabelBuilder()
  *             key("{key}")
- *             container("{container}")
+ *             name("{name}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.history.models.label.BusinessUnitLabelImpl.class, name = BusinessUnitLabel.BUSINESS_UNIT_LABEL),
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.CustomObjectLabelImpl.class, name = CustomObjectLabel.CUSTOM_OBJECT_LABEL),
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.CustomerLabelImpl.class, name = CustomerLabel.CUSTOMER_LABEL),
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.LocalizedLabelImpl.class, name = LocalizedLabel.LOCALIZED_LABEL),
@@ -61,6 +62,10 @@ public interface Label {
     public static Label deepCopy(@Nullable final Label template) {
         if (template == null) {
             return null;
+        }
+        if (template instanceof com.commercetools.history.models.label.BusinessUnitLabel) {
+            return com.commercetools.history.models.label.BusinessUnitLabel
+                    .deepCopy((com.commercetools.history.models.label.BusinessUnitLabel) template);
         }
         if (template instanceof com.commercetools.history.models.label.CustomObjectLabel) {
             return com.commercetools.history.models.label.CustomObjectLabel
@@ -108,6 +113,14 @@ public interface Label {
         }
         LabelImpl instance = new LabelImpl();
         return instance;
+    }
+
+    /**
+     * builder for businessUnitLabel subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.label.BusinessUnitLabelBuilder businessUnitLabelBuilder() {
+        return com.commercetools.history.models.label.BusinessUnitLabelBuilder.of();
     }
 
     /**

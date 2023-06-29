@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AddProductChange addProductChange = AddProductChange.builder()
  *             .change("{change}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,6 +27,8 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     private String change;
 
     private com.commercetools.history.models.common.Reference nextValue;
+
+    private com.commercetools.history.models.common.ProductVariantSelection variantSelection;
 
     /**
      * set the value to the change
@@ -74,6 +77,45 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
+     *  <p>The Product Variants included in the Product Selection.</p>
+     * @param builder function to build the variantSelection value
+     * @return Builder
+     */
+
+    public AddProductChangeBuilder variantSelection(
+            Function<com.commercetools.history.models.common.ProductVariantSelectionBuilder, com.commercetools.history.models.common.ProductVariantSelectionBuilder> builder) {
+        this.variantSelection = builder
+                .apply(com.commercetools.history.models.common.ProductVariantSelectionBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>The Product Variants included in the Product Selection.</p>
+     * @param builder function to build the variantSelection value
+     * @return Builder
+     */
+
+    public AddProductChangeBuilder withVariantSelection(
+            Function<com.commercetools.history.models.common.ProductVariantSelectionBuilder, com.commercetools.history.models.common.ProductVariantSelection> builder) {
+        this.variantSelection = builder
+                .apply(com.commercetools.history.models.common.ProductVariantSelectionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Product Variants included in the Product Selection.</p>
+     * @param variantSelection value to be set
+     * @return Builder
+     */
+
+    public AddProductChangeBuilder variantSelection(
+            final com.commercetools.history.models.common.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
+        return this;
+    }
+
+    /**
      * value of change}
      * @return change
      */
@@ -92,13 +134,23 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
     }
 
     /**
+     *  <p>The Product Variants included in the Product Selection.</p>
+     * @return variantSelection
+     */
+
+    public com.commercetools.history.models.common.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
+    }
+
+    /**
      * builds AddProductChange with checking for non-null required values
      * @return AddProductChange
      */
     public AddProductChange build() {
         Objects.requireNonNull(change, AddProductChange.class + ": change is missing");
         Objects.requireNonNull(nextValue, AddProductChange.class + ": nextValue is missing");
-        return new AddProductChangeImpl(change, nextValue);
+        Objects.requireNonNull(variantSelection, AddProductChange.class + ": variantSelection is missing");
+        return new AddProductChangeImpl(change, nextValue, variantSelection);
     }
 
     /**
@@ -106,7 +158,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
      * @return AddProductChange
      */
     public AddProductChange buildUnchecked() {
-        return new AddProductChangeImpl(change, nextValue);
+        return new AddProductChangeImpl(change, nextValue, variantSelection);
     }
 
     /**
@@ -126,6 +178,7 @@ public class AddProductChangeBuilder implements Builder<AddProductChange> {
         AddProductChangeBuilder builder = new AddProductChangeBuilder();
         builder.change = template.getChange();
         builder.nextValue = template.getNextValue();
+        builder.variantSelection = template.getVariantSelection();
         return builder;
     }
 

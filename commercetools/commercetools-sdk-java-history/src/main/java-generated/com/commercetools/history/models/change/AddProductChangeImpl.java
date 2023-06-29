@@ -26,14 +26,18 @@ public class AddProductChangeImpl implements AddProductChange, ModelBase {
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    private com.commercetools.history.models.common.ProductVariantSelection variantSelection;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     AddProductChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Reference nextValue) {
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.Reference nextValue,
+            @JsonProperty("variantSelection") final com.commercetools.history.models.common.ProductVariantSelection variantSelection) {
         this.change = change;
         this.nextValue = nextValue;
+        this.variantSelection = variantSelection;
         this.type = ADD_PRODUCT_CHANGE;
     }
 
@@ -68,12 +72,25 @@ public class AddProductChangeImpl implements AddProductChange, ModelBase {
         return this.nextValue;
     }
 
+    /**
+     *  <p>The Product Variants included in the Product Selection.</p>
+     */
+
+    public com.commercetools.history.models.common.ProductVariantSelection getVariantSelection() {
+        return this.variantSelection;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.Reference nextValue) {
         this.nextValue = nextValue;
+    }
+
+    public void setVariantSelection(
+            final com.commercetools.history.models.common.ProductVariantSelection variantSelection) {
+        this.variantSelection = variantSelection;
     }
 
     @Override
@@ -89,12 +106,17 @@ public class AddProductChangeImpl implements AddProductChange, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
+                .append(variantSelection, that.variantSelection)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(nextValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(nextValue)
+                .append(variantSelection)
+                .toHashCode();
     }
 
 }

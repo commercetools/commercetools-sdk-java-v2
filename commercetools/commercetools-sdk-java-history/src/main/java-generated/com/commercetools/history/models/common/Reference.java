@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     Reference reference = Reference.builder()
  *             .id("{id}")
- *             .typeId(ReferenceTypeId.CART)
+ *             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
  * </div>

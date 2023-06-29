@@ -16,6 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ChangeHistoryResourceType extends JsonEnum {
 
+    ChangeHistoryResourceType BUSINESS_UNIT = ChangeHistoryResourceTypeEnum.BUSINESS_UNIT;
+
     ChangeHistoryResourceType CART_DISCOUNT = ChangeHistoryResourceTypeEnum.CART_DISCOUNT;
 
     ChangeHistoryResourceType CATEGORY = ChangeHistoryResourceTypeEnum.CATEGORY;
@@ -68,6 +70,11 @@ public interface ChangeHistoryResourceType extends JsonEnum {
      * possible values of ChangeHistoryResourceType
      */
     enum ChangeHistoryResourceTypeEnum implements ChangeHistoryResourceType {
+        /**
+         * business-unit
+         */
+        BUSINESS_UNIT("business-unit"),
+
         /**
          * cart-discount
          */

@@ -48,7 +48,7 @@ public class RecordBuilder implements Builder<Record> {
 
     private java.util.List<com.commercetools.history.models.change.Change> changes;
 
-    private com.commercetools.history.models.common.Reference resource;
+    private com.commercetools.history.models.common.ResourceIdentifier resource;
 
     private java.util.List<com.commercetools.history.models.common.KeyReference> stores;
 
@@ -250,36 +250,36 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     *  <p>ResourceIdentifier of the changed resource.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
 
     public RecordBuilder resource(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.resource = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.ResourceIdentifierBuilder, com.commercetools.history.models.common.ResourceIdentifierBuilder> builder) {
+        this.resource = builder.apply(com.commercetools.history.models.common.ResourceIdentifierBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     *  <p>ResourceIdentifier of the changed resource.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
 
     public RecordBuilder withResource(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.resource = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+            Function<com.commercetools.history.models.common.ResourceIdentifierBuilder, com.commercetools.history.models.common.ResourceIdentifier> builder) {
+        this.resource = builder.apply(com.commercetools.history.models.common.ResourceIdentifierBuilder.of());
         return this;
     }
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     *  <p>ResourceIdentifier of the changed resource.</p>
      * @param resource value to be set
      * @return Builder
      */
 
-    public RecordBuilder resource(final com.commercetools.history.models.common.Reference resource) {
+    public RecordBuilder resource(final com.commercetools.history.models.common.ResourceIdentifier resource) {
         this.resource = resource;
         return this;
     }
@@ -457,11 +457,11 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     *  <p>ResourceIdentifier of the changed resource.</p>
      * @return resource
      */
 
-    public com.commercetools.history.models.common.Reference getResource() {
+    public com.commercetools.history.models.common.ResourceIdentifier getResource() {
         return this.resource;
     }
 

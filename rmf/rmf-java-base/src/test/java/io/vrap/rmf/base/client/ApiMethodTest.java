@@ -268,6 +268,11 @@ public class ApiMethodTest {
         Assertions.assertNull(decoratedMethod3.getHeaders().getFirst("foo"));
         Assertions.assertNull(decoratedMethod3.getHeaders().getFirst("bar"));
         Assertions.assertEquals("foo", decoratedMethod3.getFirstQueryParam("test"));
+
+        final TestApiMethod decoratedMethod4 = method.with(TestApiMethod::withTestParam, "foo");
+        Assertions.assertNull(decoratedMethod4.getHeaders().getFirst("foo"));
+        Assertions.assertNull(decoratedMethod4.getHeaders().getFirst("bar"));
+        Assertions.assertEquals("foo", decoratedMethod4.getFirstQueryParam("test"));
     }
 
     public static <T extends ApiMethod<T, TResult>, TResult> T addFoo(ApiMethod<T, TResult> method) {

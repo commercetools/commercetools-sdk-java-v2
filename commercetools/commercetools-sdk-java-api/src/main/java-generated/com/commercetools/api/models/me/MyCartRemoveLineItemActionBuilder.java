@@ -64,8 +64,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
     }
 
     /**
-     *  <p>New value to set.</p>
-     *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
+     *  <p>Amount to subtract from the LineItem's <code>quantity</code>. If absent, the LineItem is removed from the Cart.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -210,8 +209,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
     }
 
     /**
-     *  <p>New value to set.</p>
-     *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
+     *  <p>Amount to subtract from the LineItem's <code>quantity</code>. If absent, the LineItem is removed from the Cart.</p>
      * @return quantity
      */
 

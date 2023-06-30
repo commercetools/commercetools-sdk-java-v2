@@ -84,6 +84,14 @@
 
 
 <details>
+<summary>Deprecated Type(s)</summary>
+
+- type `ProductVariantSelectionExclusion` is removed
+- type `ProductVariantSelectionInclusion` is removed
+</details>
+
+
+<details>
 <summary>Removed Type(s)</summary>
 
 - :warning: removed type `MyCartSetDirectDiscountsAction`

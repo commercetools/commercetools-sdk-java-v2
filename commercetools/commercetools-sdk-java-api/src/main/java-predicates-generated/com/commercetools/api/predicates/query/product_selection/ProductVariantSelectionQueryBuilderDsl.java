@@ -19,14 +19,6 @@ public class ProductVariantSelectionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductVariantSelectionQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<ProductVariantSelectionQueryBuilderDsl> asExclusion(
-            Function<com.commercetools.api.predicates.query.product_selection.ProductVariantSelectionExclusionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_selection.ProductVariantSelectionExclusionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(fn.apply(
-            com.commercetools.api.predicates.query.product_selection.ProductVariantSelectionExclusionQueryBuilderDsl
-                    .of()),
-            ProductVariantSelectionQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<ProductVariantSelectionQueryBuilderDsl> asIncludeAllExcept(
             Function<com.commercetools.api.predicates.query.product_selection.ProductVariantSelectionIncludeAllExceptQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_selection.ProductVariantSelectionIncludeAllExceptQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -39,14 +31,6 @@ public class ProductVariantSelectionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.product_selection.ProductVariantSelectionIncludeOnlyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_selection.ProductVariantSelectionIncludeOnlyQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.product_selection.ProductVariantSelectionIncludeOnlyQueryBuilderDsl
-                    .of()),
-            ProductVariantSelectionQueryBuilderDsl::of);
-    }
-
-    public CombinationQueryPredicate<ProductVariantSelectionQueryBuilderDsl> asInclusion(
-            Function<com.commercetools.api.predicates.query.product_selection.ProductVariantSelectionInclusionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_selection.ProductVariantSelectionInclusionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(fn.apply(
-            com.commercetools.api.predicates.query.product_selection.ProductVariantSelectionInclusionQueryBuilderDsl
                     .of()),
             ProductVariantSelectionQueryBuilderDsl::of);
     }

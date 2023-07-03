@@ -35,6 +35,9 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     private String id;
 
+    @Nullable
+    private String key;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     private com.commercetools.api.models.common.TypedMoney money;
@@ -76,6 +79,17 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     public CustomLineItemBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -674,6 +688,16 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Name of the Custom Line Item.</p>
      * @return name
      */
@@ -824,7 +848,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         Objects.requireNonNull(discountedPricePerQuantity,
             CustomLineItem.class + ": discountedPricePerQuantity is missing");
         Objects.requireNonNull(priceMode, CustomLineItem.class + ": priceMode is missing");
-        return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
+        return new CustomLineItemImpl(id, key, name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
             taxRate, perMethodTaxRate, discountedPricePerQuantity, custom, shippingDetails, priceMode);
     }
 
@@ -833,7 +857,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
      * @return CustomLineItem
      */
     public CustomLineItem buildUnchecked() {
-        return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
+        return new CustomLineItemImpl(id, key, name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
             taxRate, perMethodTaxRate, discountedPricePerQuantity, custom, shippingDetails, priceMode);
     }
 
@@ -853,6 +877,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     public static CustomLineItemBuilder of(final CustomLineItem template) {
         CustomLineItemBuilder builder = new CustomLineItemBuilder();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.name = template.getName();
         builder.money = template.getMoney();
         builder.taxedPrice = template.getTaxedPrice();

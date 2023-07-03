@@ -30,6 +30,9 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     private com.commercetools.api.models.common.LocalizedString name;
 
     @Nullable
+    private String key;
+
+    @Nullable
     private Long quantity;
 
     private com.commercetools.api.models.common.Money money;
@@ -82,6 +85,17 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     public CustomLineItemDraftBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -316,6 +330,16 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Number of Custom Line Items to add to the Cart.</p>
      * @return quantity
      */
@@ -404,7 +428,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         Objects.requireNonNull(money, CustomLineItemDraft.class + ": money is missing");
         Objects.requireNonNull(slug, CustomLineItemDraft.class + ": slug is missing");
         Objects.requireNonNull(priceMode, CustomLineItemDraft.class + ": priceMode is missing");
-        return new CustomLineItemDraftImpl(name, quantity, money, slug, taxCategory, externalTaxRate, custom,
+        return new CustomLineItemDraftImpl(name, key, quantity, money, slug, taxCategory, externalTaxRate, custom,
             shippingDetails, priceMode);
     }
 
@@ -413,7 +437,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      * @return CustomLineItemDraft
      */
     public CustomLineItemDraft buildUnchecked() {
-        return new CustomLineItemDraftImpl(name, quantity, money, slug, taxCategory, externalTaxRate, custom,
+        return new CustomLineItemDraftImpl(name, key, quantity, money, slug, taxCategory, externalTaxRate, custom,
             shippingDetails, priceMode);
     }
 
@@ -433,6 +457,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     public static CustomLineItemDraftBuilder of(final CustomLineItemDraft template) {
         CustomLineItemDraftBuilder builder = new CustomLineItemDraftBuilder();
         builder.name = template.getName();
+        builder.key = template.getKey();
         builder.quantity = template.getQuantity();
         builder.money = template.getMoney();
         builder.slug = template.getSlug();

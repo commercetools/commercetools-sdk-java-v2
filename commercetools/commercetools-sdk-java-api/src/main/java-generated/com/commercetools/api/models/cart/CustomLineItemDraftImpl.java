@@ -22,6 +22,8 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    private String key;
+
     private Long quantity;
 
     private com.commercetools.api.models.common.Money money;
@@ -43,7 +45,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
      */
     @JsonCreator
     CustomLineItemDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("key") final String key, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("money") final com.commercetools.api.models.common.Money money,
             @JsonProperty("slug") final String slug,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
@@ -52,6 +54,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
             @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
         this.name = name;
+        this.key = key;
         this.quantity = quantity;
         this.money = money;
         this.slug = slug;
@@ -74,6 +77,14 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -147,6 +158,10 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         this.name = name;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
@@ -191,6 +206,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         CustomLineItemDraftImpl that = (CustomLineItemDraftImpl) o;
 
         return new EqualsBuilder().append(name, that.name)
+                .append(key, that.key)
                 .append(quantity, that.quantity)
                 .append(money, that.money)
                 .append(slug, that.slug)
@@ -205,6 +221,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(name)
+                .append(key)
                 .append(quantity)
                 .append(money)
                 .append(slug)

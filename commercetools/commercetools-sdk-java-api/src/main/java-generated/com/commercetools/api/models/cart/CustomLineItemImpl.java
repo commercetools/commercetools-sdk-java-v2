@@ -22,6 +22,8 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     private String id;
 
+    private String key;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     private com.commercetools.api.models.common.TypedMoney money;
@@ -54,7 +56,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    CustomLineItemImpl(@JsonProperty("id") final String id,
+    CustomLineItemImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("money") final com.commercetools.api.models.common.TypedMoney money,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
@@ -69,6 +71,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails,
             @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
         this.id = id;
+        this.key = key;
         this.name = name;
         this.money = money;
         this.taxedPrice = taxedPrice;
@@ -97,6 +100,14 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -219,6 +230,10 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.id = id;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -301,6 +316,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         CustomLineItemImpl that = (CustomLineItemImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(name, that.name)
                 .append(money, that.money)
                 .append(taxedPrice, that.taxedPrice)
@@ -321,6 +337,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(name)
                 .append(money)
                 .append(taxedPrice)

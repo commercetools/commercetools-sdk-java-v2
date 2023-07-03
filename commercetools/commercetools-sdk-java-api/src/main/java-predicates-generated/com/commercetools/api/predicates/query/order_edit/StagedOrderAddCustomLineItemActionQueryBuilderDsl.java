@@ -37,6 +37,11 @@ public class StagedOrderAddCustomLineItemActionQueryBuilderDsl {
             StagedOrderAddCustomLineItemActionQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderAddCustomLineItemActionQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderAddCustomLineItemActionQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<StagedOrderAddCustomLineItemActionQueryBuilderDsl> quantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),

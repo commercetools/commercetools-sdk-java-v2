@@ -65,6 +65,14 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public LocalizedString getName();
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *
      * @return quantity
      */
@@ -130,6 +138,13 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public void setName(final LocalizedString name);
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
      * set quantity
      * @param quantity value to be set
      */
@@ -191,6 +206,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
         StagedOrderAddCustomLineItemActionImpl instance = new StagedOrderAddCustomLineItemActionImpl();
         instance.setMoney(template.getMoney());
         instance.setName(template.getName());
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setSlug(template.getSlug());
         instance.setTaxCategory(template.getTaxCategory());
@@ -214,6 +230,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
         StagedOrderAddCustomLineItemActionImpl instance = new StagedOrderAddCustomLineItemActionImpl();
         instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setSlug(template.getSlug());
         instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier

@@ -31,6 +31,9 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     private com.commercetools.api.models.common.LocalizedString name;
 
     @Nullable
+    private String key;
+
+    @Nullable
     private Long quantity;
 
     private String slug;
@@ -117,6 +120,17 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     public CartAddCustomLineItemActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -328,6 +342,16 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Number of Custom Line Items to add to the Cart.</p>
      * @return quantity
      */
@@ -408,7 +432,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         Objects.requireNonNull(money, CartAddCustomLineItemAction.class + ": money is missing");
         Objects.requireNonNull(name, CartAddCustomLineItemAction.class + ": name is missing");
         Objects.requireNonNull(slug, CartAddCustomLineItemAction.class + ": slug is missing");
-        return new CartAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, externalTaxRate,
+        return new CartAddCustomLineItemActionImpl(money, name, key, quantity, slug, taxCategory, externalTaxRate,
             shippingDetails, custom, priceMode);
     }
 
@@ -417,7 +441,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
      * @return CartAddCustomLineItemAction
      */
     public CartAddCustomLineItemAction buildUnchecked() {
-        return new CartAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, externalTaxRate,
+        return new CartAddCustomLineItemActionImpl(money, name, key, quantity, slug, taxCategory, externalTaxRate,
             shippingDetails, custom, priceMode);
     }
 
@@ -438,6 +462,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         CartAddCustomLineItemActionBuilder builder = new CartAddCustomLineItemActionBuilder();
         builder.money = template.getMoney();
         builder.name = template.getName();
+        builder.key = template.getKey();
         builder.quantity = template.getQuantity();
         builder.slug = template.getSlug();
         builder.taxCategory = template.getTaxCategory();

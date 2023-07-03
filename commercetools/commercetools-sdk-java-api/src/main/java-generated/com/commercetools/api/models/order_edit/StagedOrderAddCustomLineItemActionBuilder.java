@@ -31,6 +31,9 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     private com.commercetools.api.models.common.LocalizedString name;
 
     @Nullable
+    private String key;
+
+    @Nullable
     private Long quantity;
 
     private String slug;
@@ -115,6 +118,17 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     public StagedOrderAddCustomLineItemActionBuilder name(
             final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -286,6 +300,16 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      * value of quantity}
      * @return quantity
      */
@@ -355,7 +379,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
         Objects.requireNonNull(money, StagedOrderAddCustomLineItemAction.class + ": money is missing");
         Objects.requireNonNull(name, StagedOrderAddCustomLineItemAction.class + ": name is missing");
         Objects.requireNonNull(slug, StagedOrderAddCustomLineItemAction.class + ": slug is missing");
-        return new StagedOrderAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom,
+        return new StagedOrderAddCustomLineItemActionImpl(money, name, key, quantity, slug, taxCategory, custom,
             externalTaxRate, priceMode);
     }
 
@@ -364,7 +388,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
      * @return StagedOrderAddCustomLineItemAction
      */
     public StagedOrderAddCustomLineItemAction buildUnchecked() {
-        return new StagedOrderAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom,
+        return new StagedOrderAddCustomLineItemActionImpl(money, name, key, quantity, slug, taxCategory, custom,
             externalTaxRate, priceMode);
     }
 
@@ -385,6 +409,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
         StagedOrderAddCustomLineItemActionBuilder builder = new StagedOrderAddCustomLineItemActionBuilder();
         builder.money = template.getMoney();
         builder.name = template.getName();
+        builder.key = template.getKey();
         builder.quantity = template.getQuantity();
         builder.slug = template.getSlug();
         builder.taxCategory = template.getTaxCategory();

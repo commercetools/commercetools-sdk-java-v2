@@ -16,6 +16,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ReferenceTypeId extends JsonEnum {
 
+    ReferenceTypeId ASSOCIATE_ROLE = ReferenceTypeIdEnum.ASSOCIATE_ROLE;
+
+    ReferenceTypeId BUSINESS_UNIT = ReferenceTypeIdEnum.BUSINESS_UNIT;
+
     ReferenceTypeId CART = ReferenceTypeIdEnum.CART;
 
     ReferenceTypeId CART_DISCOUNT = ReferenceTypeIdEnum.CART_DISCOUNT;
@@ -82,6 +86,16 @@ public interface ReferenceTypeId extends JsonEnum {
      * possible values of ReferenceTypeId
      */
     enum ReferenceTypeIdEnum implements ReferenceTypeId {
+        /**
+         * associate-role
+         */
+        ASSOCIATE_ROLE("associate-role"),
+
+        /**
+         * business-unit
+         */
+        BUSINESS_UNIT("business-unit"),
+
         /**
          * cart
          */

@@ -84,7 +84,7 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
+     *  <p>Amount to subtract from the LineItem's <code>quantity</code>. If absent, the LineItem is removed from the Cart.</p>
      */
 
     public Long getQuantity() {

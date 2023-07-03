@@ -103,9 +103,9 @@ public class ByProjectKeyByResourceTypeTest {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .withResourceTypeValue("test_resourceType")
                                 .get()
-                                .withResourceId("resourceId")
+                                .withResourceKey("resourceKey")
                                 .createHttpRequest(),
-                        "get", "test_projectKey/test_resourceType?resourceId=resourceId", },
+                        "get", "test_projectKey/test_resourceType?resourceKey=resourceKey", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
@@ -183,7 +183,7 @@ public class ByProjectKeyByResourceTypeTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
-                        .withResourceId("resourceId"), },
+                        .withResourceKey("resourceKey"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()

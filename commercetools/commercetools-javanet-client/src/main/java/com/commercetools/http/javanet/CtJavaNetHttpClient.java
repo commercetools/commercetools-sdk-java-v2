@@ -22,6 +22,7 @@ import org.apache.commons.io.input.AutoCloseInputStream;
 public class CtJavaNetHttpClient extends HttpClientBase {
     private final HttpClient javaHttpClient;
 
+    private static final String APPLICATION_JSON = "application/json";
     private final Supplier<HttpClient.Builder> clientBuilder = HttpClient::newBuilder;
 
     public CtJavaNetHttpClient() {
@@ -62,6 +63,15 @@ public class CtJavaNetHttpClient extends HttpClientBase {
         httpRequest.getHeaders().getHeaders().forEach((entry) -> builder.header(entry.getKey(), entry.getValue()));
 
         if (httpRequest.getBody() != null) {
+            String mediaType = APPLICATION_JSON;
+            if (httpRequest.getHeaders()
+                    .getHeaders()
+                    .stream()
+                    .anyMatch(s -> s.getKey().equalsIgnoreCase(ApiHttpHeaders.CONTENT_TYPE))) {
+                mediaType = httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE);
+            }
+            builder.setHeader(ApiHttpHeaders.CONTENT_TYPE, mediaType);
+
             builder.method(method, HttpRequest.BodyPublishers.ofByteArray(httpRequest.getBody()));
         }
         else {

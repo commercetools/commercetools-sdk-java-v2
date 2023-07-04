@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetLineItemCustomTypeAction orderSetLineItemCustomTypeAction = OrderSetLineItemCustomTypeAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSetLineItemCustomTypeAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -33,13 +36,24 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public OrderSetLineItemCustomTypeActionBuilder lineItemId(final String lineItemId) {
+    public OrderSetLineItemCustomTypeActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderSetLineItemCustomTypeActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -116,12 +130,23 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -149,8 +174,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
      * @return OrderSetLineItemCustomTypeAction
      */
     public OrderSetLineItemCustomTypeAction build() {
-        Objects.requireNonNull(lineItemId, OrderSetLineItemCustomTypeAction.class + ": lineItemId is missing");
-        return new OrderSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
+        return new OrderSetLineItemCustomTypeActionImpl(lineItemId, lineItemKey, type, fields);
     }
 
     /**
@@ -158,7 +182,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
      * @return OrderSetLineItemCustomTypeAction
      */
     public OrderSetLineItemCustomTypeAction buildUnchecked() {
-        return new OrderSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
+        return new OrderSetLineItemCustomTypeActionImpl(lineItemId, lineItemKey, type, fields);
     }
 
     /**
@@ -177,6 +201,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     public static OrderSetLineItemCustomTypeActionBuilder of(final OrderSetLineItemCustomTypeAction template) {
         OrderSetLineItemCustomTypeActionBuilder builder = new OrderSetLineItemCustomTypeActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

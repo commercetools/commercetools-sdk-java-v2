@@ -27,6 +27,13 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderD
                 MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p,
+                MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<MyCartApplyDeltaToLineItemShippingDetailsTargetsActionQueryBuilderDsl> targetsDelta(
             Function<com.commercetools.api.predicates.query.cart.ItemShippingTargetQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ItemShippingTargetQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

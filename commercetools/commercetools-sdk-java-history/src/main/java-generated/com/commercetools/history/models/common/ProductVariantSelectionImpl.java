@@ -1,5 +1,5 @@
 
-package com.commercetools.api.models.product_selection;
+package com.commercetools.history.models.common;
 
 import java.time.*;
 import java.util.*;
@@ -15,13 +15,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>All Product Variants except the explicitly stated SKUs are part of the Product Selection.</p>
+ * ProductVariantSelection
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@Deprecated
-public class ProductVariantSelectionExclusionImpl implements ProductVariantSelectionExclusion, ModelBase {
+public class ProductVariantSelectionImpl implements ProductVariantSelection, ModelBase {
 
-    private com.commercetools.api.models.product_selection.ProductVariantSelectionTypeEnum type;
+    private com.commercetools.history.models.common.ProductVariantSelectionTypeEnum type;
 
     private java.util.List<String> skus;
 
@@ -29,32 +28,37 @@ public class ProductVariantSelectionExclusionImpl implements ProductVariantSelec
      * create instance with all properties
      */
     @JsonCreator
-    ProductVariantSelectionExclusionImpl(@JsonProperty("skus") final java.util.List<String> skus) {
+    ProductVariantSelectionImpl(
+            @JsonProperty("type") final com.commercetools.history.models.common.ProductVariantSelectionTypeEnum type,
+            @JsonProperty("skus") final java.util.List<String> skus) {
+        this.type = type;
         this.skus = skus;
-        this.type = ProductVariantSelectionTypeEnum.findEnum("exclusion");
     }
 
     /**
      * create empty instance
      */
-    public ProductVariantSelectionExclusionImpl() {
-        this.type = ProductVariantSelectionTypeEnum.findEnum("exclusion");
+    public ProductVariantSelectionImpl() {
     }
 
     /**
      *
      */
 
-    public com.commercetools.api.models.product_selection.ProductVariantSelectionTypeEnum getType() {
+    public com.commercetools.history.models.common.ProductVariantSelectionTypeEnum getType() {
         return this.type;
     }
 
     /**
-     *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     *
      */
 
     public java.util.List<String> getSkus() {
         return this.skus;
+    }
+
+    public void setType(final com.commercetools.history.models.common.ProductVariantSelectionTypeEnum type) {
+        this.type = type;
     }
 
     public void setSkus(final String... skus) {
@@ -73,7 +77,7 @@ public class ProductVariantSelectionExclusionImpl implements ProductVariantSelec
         if (o == null || getClass() != o.getClass())
             return false;
 
-        ProductVariantSelectionExclusionImpl that = (ProductVariantSelectionExclusionImpl) o;
+        ProductVariantSelectionImpl that = (ProductVariantSelectionImpl) o;
 
         return new EqualsBuilder().append(type, that.type).append(skus, that.skus).isEquals();
     }

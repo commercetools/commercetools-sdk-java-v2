@@ -23,6 +23,12 @@ public class CartSetLineItemCustomFieldActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartSetLineItemCustomFieldActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartSetLineItemCustomFieldActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, CartSetLineItemCustomFieldActionQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<CartSetLineItemCustomFieldActionQueryBuilderDsl> name() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),

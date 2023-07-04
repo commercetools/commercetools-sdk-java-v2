@@ -25,6 +25,8 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
     /**
@@ -32,8 +34,10 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
      */
     @JsonCreator
     MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("targetsDelta") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.targetsDelta = targetsDelta;
         this.action = APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
     }
@@ -54,11 +58,19 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -71,6 +83,10 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setTargetsDelta(final com.commercetools.api.models.cart.ItemShippingTarget... targetsDelta) {
@@ -94,13 +110,18 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(targetsDelta, that.targetsDelta)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(targetsDelta).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(targetsDelta)
+                .toHashCode();
     }
 
 }

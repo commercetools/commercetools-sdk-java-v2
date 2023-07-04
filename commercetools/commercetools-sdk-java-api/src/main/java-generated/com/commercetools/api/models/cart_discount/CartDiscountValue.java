@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = CartDiscountValueImpl.class, visible = true)
 @JsonDeserialize(as = CartDiscountValueImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface CartDiscountValue {
+public interface CartDiscountValue extends CartDiscountValueMixin {
 
     /**
      *

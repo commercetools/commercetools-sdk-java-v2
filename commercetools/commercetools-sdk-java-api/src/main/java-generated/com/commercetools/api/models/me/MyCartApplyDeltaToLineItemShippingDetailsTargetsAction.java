@@ -24,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyCartApplyDeltaToLineItemShippingDetailsTargetsAction myCartApplyDeltaToLineItemShippingDetailsTargetsAction = MyCartApplyDeltaToLineItemShippingDetailsTargetsAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .plusTargetsDelta(targetsDeltaBuilder -> targetsDeltaBuilder)
  *             .build()
  * </code></pre>
@@ -40,12 +39,20 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
     String APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS = "applyDeltaToLineItemShippingDetailsTargets";
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
@@ -57,11 +64,18 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
     public List<ItemShippingTarget> getTargetsDelta();
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
 
     /**
      *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
@@ -95,6 +109,7 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
             final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
         MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl instance = new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setTargetsDelta(template.getTargetsDelta());
         return instance;
     }
@@ -112,6 +127,7 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
         }
         MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl instance = new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setTargetsDelta(Optional.ofNullable(template.getTargetsDelta())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.ItemShippingTarget::deepCopy)

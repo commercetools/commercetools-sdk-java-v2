@@ -25,7 +25,7 @@ public class MyBusinessUnitChangeParentUnitActionBuilder implements Builder<MyBu
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
 
     /**
-     *  <p>New parent unit of the Business Unit.</p>
+     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class MyBusinessUnitChangeParentUnitActionBuilder implements Builder<MyBu
     }
 
     /**
-     *  <p>New parent unit of the Business Unit.</p>
+     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class MyBusinessUnitChangeParentUnitActionBuilder implements Builder<MyBu
     }
 
     /**
-     *  <p>New parent unit of the Business Unit.</p>
+     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
      * @param parentUnit value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class MyBusinessUnitChangeParentUnitActionBuilder implements Builder<MyBu
     }
 
     /**
-     *  <p>New parent unit of the Business Unit.</p>
+     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
      * @return parentUnit
      */
 

@@ -25,6 +25,12 @@ public class CartRemoveLineItemActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartRemoveLineItemActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartRemoveLineItemActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, CartRemoveLineItemActionQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<CartRemoveLineItemActionQueryBuilderDsl> quantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),

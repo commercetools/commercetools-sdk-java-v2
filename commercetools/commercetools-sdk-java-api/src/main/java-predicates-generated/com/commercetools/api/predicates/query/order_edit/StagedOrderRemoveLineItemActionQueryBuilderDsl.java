@@ -25,6 +25,12 @@ public class StagedOrderRemoveLineItemActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveLineItemActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderRemoveLineItemActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveLineItemActionQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<StagedOrderRemoveLineItemActionQueryBuilderDsl> quantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),

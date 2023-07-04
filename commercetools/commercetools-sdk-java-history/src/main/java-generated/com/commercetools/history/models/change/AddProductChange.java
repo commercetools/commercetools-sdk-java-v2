@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.history.models.common.ProductVariantSelection;
 import com.commercetools.history.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     AddProductChange addProductChange = AddProductChange.builder()
  *             .change("{change}")
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .variantSelection(variantSelectionBuilder -> variantSelectionBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -64,6 +66,15 @@ public interface AddProductChange extends Change {
     public Reference getNextValue();
 
     /**
+     *  <p>The Product Variants included in the Product Selection.</p>
+     * @return variantSelection
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("variantSelection")
+    public ProductVariantSelection getVariantSelection();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -76,6 +87,13 @@ public interface AddProductChange extends Change {
      */
 
     public void setNextValue(final Reference nextValue);
+
+    /**
+     *  <p>The Product Variants included in the Product Selection.</p>
+     * @param variantSelection value to be set
+     */
+
+    public void setVariantSelection(final ProductVariantSelection variantSelection);
 
     /**
      * factory method
@@ -94,6 +112,7 @@ public interface AddProductChange extends Change {
         AddProductChangeImpl instance = new AddProductChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());
+        instance.setVariantSelection(template.getVariantSelection());
         return instance;
     }
 
@@ -110,6 +129,8 @@ public interface AddProductChange extends Change {
         AddProductChangeImpl instance = new AddProductChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(com.commercetools.history.models.common.Reference.deepCopy(template.getNextValue()));
+        instance.setVariantSelection(
+            com.commercetools.history.models.common.ProductVariantSelection.deepCopy(template.getVariantSelection()));
         return instance;
     }
 

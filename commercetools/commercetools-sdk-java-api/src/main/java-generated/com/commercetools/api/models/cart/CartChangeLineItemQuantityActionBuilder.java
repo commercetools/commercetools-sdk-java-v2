@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartChangeLineItemQuantityAction cartChangeLineItemQuantityAction = CartChangeLineItemQuantityAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -25,7 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChangeLineItemQuantityAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     private Long quantity;
 
@@ -36,13 +39,24 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public CartChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
+    public CartChangeLineItemQuantityActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartChangeLineItemQuantityActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -137,12 +151,23 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -181,9 +206,9 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
      * @return CartChangeLineItemQuantityAction
      */
     public CartChangeLineItemQuantityAction build() {
-        Objects.requireNonNull(lineItemId, CartChangeLineItemQuantityAction.class + ": lineItemId is missing");
         Objects.requireNonNull(quantity, CartChangeLineItemQuantityAction.class + ": quantity is missing");
-        return new CartChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
+        return new CartChangeLineItemQuantityActionImpl(lineItemId, lineItemKey, quantity, externalPrice,
+            externalTotalPrice);
     }
 
     /**
@@ -191,7 +216,8 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
      * @return CartChangeLineItemQuantityAction
      */
     public CartChangeLineItemQuantityAction buildUnchecked() {
-        return new CartChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
+        return new CartChangeLineItemQuantityActionImpl(lineItemId, lineItemKey, quantity, externalPrice,
+            externalTotalPrice);
     }
 
     /**
@@ -210,6 +236,7 @@ public class CartChangeLineItemQuantityActionBuilder implements Builder<CartChan
     public static CartChangeLineItemQuantityActionBuilder of(final CartChangeLineItemQuantityAction template) {
         CartChangeLineItemQuantityActionBuilder builder = new CartChangeLineItemQuantityActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.quantity = template.getQuantity();
         builder.externalPrice = template.getExternalPrice();
         builder.externalTotalPrice = template.getExternalTotalPrice();

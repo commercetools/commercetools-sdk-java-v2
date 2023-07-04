@@ -24,6 +24,8 @@ public class MyCartSetLineItemCustomFieldActionImpl implements MyCartSetLineItem
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private String name;
 
     private java.lang.Object value;
@@ -33,8 +35,10 @@ public class MyCartSetLineItemCustomFieldActionImpl implements MyCartSetLineItem
      */
     @JsonCreator
     MyCartSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+            @JsonProperty("lineItemKey") final String lineItemKey, @JsonProperty("name") final String name,
+            @JsonProperty("value") final java.lang.Object value) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.name = name;
         this.value = value;
         this.action = SET_LINE_ITEM_CUSTOM_FIELD;
@@ -56,11 +60,19 @@ public class MyCartSetLineItemCustomFieldActionImpl implements MyCartSetLineItem
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -83,6 +95,10 @@ public class MyCartSetLineItemCustomFieldActionImpl implements MyCartSetLineItem
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setName(final String name) {
         this.name = name;
     }
@@ -103,6 +119,7 @@ public class MyCartSetLineItemCustomFieldActionImpl implements MyCartSetLineItem
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
@@ -110,7 +127,12 @@ public class MyCartSetLineItemCustomFieldActionImpl implements MyCartSetLineItem
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(name).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(name)
+                .append(value)
+                .toHashCode();
     }
 
 }

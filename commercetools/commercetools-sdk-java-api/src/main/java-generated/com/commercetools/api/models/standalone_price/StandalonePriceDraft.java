@@ -132,7 +132,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
      * @return active
      */
 
@@ -225,7 +225,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
      * @param active value to be set
      */
 

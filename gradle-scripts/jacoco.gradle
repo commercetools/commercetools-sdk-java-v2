@@ -2,7 +2,9 @@ allprojects {
     apply plugin: 'jacoco'
 }
 
-task codeCoverageReport(type: JacocoReport) {
+
+tasks.register('codeCoverageReport', JacocoReport) {
+    dependsOn subprojects*.test
     executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
 
     subprojects.each {
@@ -15,8 +17,4 @@ task codeCoverageReport(type: JacocoReport) {
         html.required = false
         csv.required = false
     }
-}
-
-codeCoverageReport.dependsOn {
-    subprojects*.test
 }

@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetLineItemTotalPriceAction stagedOrderSetLineItemTotalPriceAction = StagedOrderSetLineItemTotalPriceAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,19 +23,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<StagedOrderSetLineItemTotalPriceAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetLineItemTotalPriceActionBuilder lineItemId(final String lineItemId) {
+    public StagedOrderSetLineItemTotalPriceActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetLineItemTotalPriceActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -80,12 +94,23 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -103,8 +128,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
      * @return StagedOrderSetLineItemTotalPriceAction
      */
     public StagedOrderSetLineItemTotalPriceAction build() {
-        Objects.requireNonNull(lineItemId, StagedOrderSetLineItemTotalPriceAction.class + ": lineItemId is missing");
-        return new StagedOrderSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);
+        return new StagedOrderSetLineItemTotalPriceActionImpl(lineItemId, lineItemKey, externalTotalPrice);
     }
 
     /**
@@ -112,7 +136,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
      * @return StagedOrderSetLineItemTotalPriceAction
      */
     public StagedOrderSetLineItemTotalPriceAction buildUnchecked() {
-        return new StagedOrderSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);
+        return new StagedOrderSetLineItemTotalPriceActionImpl(lineItemId, lineItemKey, externalTotalPrice);
     }
 
     /**
@@ -132,6 +156,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
             final StagedOrderSetLineItemTotalPriceAction template) {
         StagedOrderSetLineItemTotalPriceActionBuilder builder = new StagedOrderSetLineItemTotalPriceActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.externalTotalPrice = template.getExternalTotalPrice();
         return builder;
     }

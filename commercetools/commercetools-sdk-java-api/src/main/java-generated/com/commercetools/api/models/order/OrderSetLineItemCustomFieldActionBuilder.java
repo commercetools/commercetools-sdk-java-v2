@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetLineItemCustomFieldAction orderSetLineItemCustomFieldAction = OrderSetLineItemCustomFieldAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetLineItemCustomFieldActionBuilder implements Builder<OrderSetLineItemCustomFieldAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     private String name;
 
@@ -32,13 +35,24 @@ public class OrderSetLineItemCustomFieldActionBuilder implements Builder<OrderSe
     private java.lang.Object value;
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public OrderSetLineItemCustomFieldActionBuilder lineItemId(final String lineItemId) {
+    public OrderSetLineItemCustomFieldActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderSetLineItemCustomFieldActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -65,12 +79,23 @@ public class OrderSetLineItemCustomFieldActionBuilder implements Builder<OrderSe
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -97,9 +122,8 @@ public class OrderSetLineItemCustomFieldActionBuilder implements Builder<OrderSe
      * @return OrderSetLineItemCustomFieldAction
      */
     public OrderSetLineItemCustomFieldAction build() {
-        Objects.requireNonNull(lineItemId, OrderSetLineItemCustomFieldAction.class + ": lineItemId is missing");
         Objects.requireNonNull(name, OrderSetLineItemCustomFieldAction.class + ": name is missing");
-        return new OrderSetLineItemCustomFieldActionImpl(lineItemId, name, value);
+        return new OrderSetLineItemCustomFieldActionImpl(lineItemId, lineItemKey, name, value);
     }
 
     /**
@@ -107,7 +131,7 @@ public class OrderSetLineItemCustomFieldActionBuilder implements Builder<OrderSe
      * @return OrderSetLineItemCustomFieldAction
      */
     public OrderSetLineItemCustomFieldAction buildUnchecked() {
-        return new OrderSetLineItemCustomFieldActionImpl(lineItemId, name, value);
+        return new OrderSetLineItemCustomFieldActionImpl(lineItemId, lineItemKey, name, value);
     }
 
     /**
@@ -126,6 +150,7 @@ public class OrderSetLineItemCustomFieldActionBuilder implements Builder<OrderSe
     public static OrderSetLineItemCustomFieldActionBuilder of(final OrderSetLineItemCustomFieldAction template) {
         OrderSetLineItemCustomFieldActionBuilder builder = new OrderSetLineItemCustomFieldActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.name = template.getName();
         builder.value = template.getValue();
         return builder;

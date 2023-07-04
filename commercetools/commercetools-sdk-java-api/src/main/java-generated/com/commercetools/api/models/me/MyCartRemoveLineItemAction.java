@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
@@ -25,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyCartRemoveLineItemAction myCartRemoveLineItemAction = MyCartRemoveLineItemAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -40,16 +38,23 @@ public interface MyCartRemoveLineItemAction extends MyCartUpdateAction {
     String REMOVE_LINE_ITEM = "removeLineItem";
 
     /**
-     *  <p><code>id</code> of the Line Item to remove.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *  <p>New value to set.</p>
-     *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
+
+    /**
+     *  <p>Amount to subtract from the LineItem's <code>quantity</code>. If absent, the LineItem is removed from the Cart.</p>
      * @return quantity
      */
 
@@ -81,15 +86,21 @@ public interface MyCartRemoveLineItemAction extends MyCartUpdateAction {
     public ItemShippingDetailsDraft getShippingDetailsToRemove();
 
     /**
-     *  <p><code>id</code> of the Line Item to remove.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p>New value to set.</p>
-     *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
+
+    /**
+     *  <p>Amount to subtract from the LineItem's <code>quantity</code>. If absent, the LineItem is removed from the Cart.</p>
      * @param quantity value to be set
      */
 
@@ -132,6 +143,7 @@ public interface MyCartRemoveLineItemAction extends MyCartUpdateAction {
     public static MyCartRemoveLineItemAction of(final MyCartRemoveLineItemAction template) {
         MyCartRemoveLineItemActionImpl instance = new MyCartRemoveLineItemActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
@@ -151,6 +163,7 @@ public interface MyCartRemoveLineItemAction extends MyCartUpdateAction {
         }
         MyCartRemoveLineItemActionImpl instance = new MyCartRemoveLineItemActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setExternalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getExternalPrice()));
         instance.setExternalTotalPrice(

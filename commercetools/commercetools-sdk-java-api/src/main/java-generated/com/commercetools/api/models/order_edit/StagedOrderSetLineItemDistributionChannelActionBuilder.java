@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetLineItemDistributionChannelAction stagedOrderSetLineItemDistributionChannelAction = StagedOrderSetLineItemDistributionChannelAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -25,19 +24,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderSetLineItemDistributionChannelActionBuilder
         implements Builder<StagedOrderSetLineItemDistributionChannelAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetLineItemDistributionChannelActionBuilder lineItemId(final String lineItemId) {
+    public StagedOrderSetLineItemDistributionChannelActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetLineItemDistributionChannelActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -81,12 +95,23 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -104,9 +129,7 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
      * @return StagedOrderSetLineItemDistributionChannelAction
      */
     public StagedOrderSetLineItemDistributionChannelAction build() {
-        Objects.requireNonNull(lineItemId,
-            StagedOrderSetLineItemDistributionChannelAction.class + ": lineItemId is missing");
-        return new StagedOrderSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);
+        return new StagedOrderSetLineItemDistributionChannelActionImpl(lineItemId, lineItemKey, distributionChannel);
     }
 
     /**
@@ -114,7 +137,7 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
      * @return StagedOrderSetLineItemDistributionChannelAction
      */
     public StagedOrderSetLineItemDistributionChannelAction buildUnchecked() {
-        return new StagedOrderSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);
+        return new StagedOrderSetLineItemDistributionChannelActionImpl(lineItemId, lineItemKey, distributionChannel);
     }
 
     /**
@@ -134,6 +157,7 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
             final StagedOrderSetLineItemDistributionChannelAction template) {
         StagedOrderSetLineItemDistributionChannelActionBuilder builder = new StagedOrderSetLineItemDistributionChannelActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.distributionChannel = template.getDistributionChannel();
         return builder;
     }

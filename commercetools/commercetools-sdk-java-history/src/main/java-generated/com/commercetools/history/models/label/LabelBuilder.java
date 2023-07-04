@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LabelBuilder {
 
+    public com.commercetools.history.models.label.BusinessUnitLabelBuilder businessUnitLabelBuilder() {
+        return com.commercetools.history.models.label.BusinessUnitLabelBuilder.of();
+    }
+
     public com.commercetools.history.models.label.CustomObjectLabelBuilder customObjectLabelBuilder() {
         return com.commercetools.history.models.label.CustomObjectLabelBuilder.of();
     }

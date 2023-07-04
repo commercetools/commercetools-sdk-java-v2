@@ -92,7 +92,7 @@ public class ConfluentCloudDestinationImpl implements ConfluentCloudDestination,
     }
 
     /**
-     *  <p>The Kafka <code>acks</code> value. Can be <code>"0"</code>, <code>"1"</code>, or <code>"all"</code>.</p>
+     *  <p>The Kafka <code>acks</code> value.</p>
      */
 
     public String getAcks() {

@@ -23,6 +23,12 @@ public class StagedOrderSetLineItemCustomFieldActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderSetLineItemCustomFieldActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderSetLineItemCustomFieldActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderSetLineItemCustomFieldActionQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<StagedOrderSetLineItemCustomFieldActionQueryBuilderDsl> name() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),

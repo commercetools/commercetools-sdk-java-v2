@@ -69,7 +69,9 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLInvalidTokenErrorImpl.class, name = GraphQLInvalidTokenError.INVALID_TOKEN),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLLanguageUsedInStoresErrorImpl.class, name = GraphQLLanguageUsedInStoresError.LANGUAGE_USED_IN_STORES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMatchingPriceNotFoundErrorImpl.class, name = GraphQLMatchingPriceNotFoundError.MATCHING_PRICE_NOT_FOUND),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedErrorImpl.class, name = GraphQLMaxCartDiscountsReachedError.MAX_CART_DISCOUNTS_REACHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededErrorImpl.class, name = GraphQLMaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorImpl.class, name = GraphQLMaxStoreReferencesReachedError.MAX_STORE_REFERENCES_REACHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMissingRoleOnChannelErrorImpl.class, name = GraphQLMissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMissingTaxRateForCountryErrorImpl.class, name = GraphQLMissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMoneyOverflowErrorImpl.class, name = GraphQLMoneyOverflowError.MONEY_OVERFLOW),
@@ -97,6 +99,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLSearchIndexingInProgressErrorImpl.class, name = GraphQLSearchIndexingInProgressError.SEARCH_INDEXING_IN_PROGRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLSemanticErrorErrorImpl.class, name = GraphQLSemanticErrorError.SEMANTIC_ERROR),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLShippingMethodDoesNotMatchCartErrorImpl.class, name = GraphQLShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLStoreCartDiscountsLimitReachedErrorImpl.class, name = GraphQLStoreCartDiscountsLimitReachedError.STORE_CART_DISCOUNTS_LIMIT_REACHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLSyntaxErrorErrorImpl.class, name = GraphQLSyntaxErrorError.SYNTAX_ERROR) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = GraphQLErrorObjectImpl.class, visible = true)
 @JsonDeserialize(as = GraphQLErrorObjectImpl.class)
@@ -310,9 +313,17 @@ public interface GraphQLErrorObject {
             return com.commercetools.api.models.error.GraphQLMatchingPriceNotFoundError
                     .deepCopy((com.commercetools.api.models.error.GraphQLMatchingPriceNotFoundError) template);
         }
+        if (template instanceof com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedError) {
+            return com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedError) template);
+        }
         if (template instanceof com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededError) {
             return com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededError
                     .deepCopy((com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedError) {
+            return com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedError) template);
         }
         if (template instanceof com.commercetools.api.models.error.GraphQLMissingRoleOnChannelError) {
             return com.commercetools.api.models.error.GraphQLMissingRoleOnChannelError
@@ -421,6 +432,10 @@ public interface GraphQLErrorObject {
         if (template instanceof com.commercetools.api.models.error.GraphQLShippingMethodDoesNotMatchCartError) {
             return com.commercetools.api.models.error.GraphQLShippingMethodDoesNotMatchCartError
                     .deepCopy((com.commercetools.api.models.error.GraphQLShippingMethodDoesNotMatchCartError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLStoreCartDiscountsLimitReachedError) {
+            return com.commercetools.api.models.error.GraphQLStoreCartDiscountsLimitReachedError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLStoreCartDiscountsLimitReachedError) template);
         }
         if (template instanceof com.commercetools.api.models.error.GraphQLSyntaxErrorError) {
             return com.commercetools.api.models.error.GraphQLSyntaxErrorError
@@ -776,11 +791,27 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for maxCartDiscountsReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedErrorBuilder maxCartDiscountsReachedBuilder() {
+        return com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedErrorBuilder.of();
+    }
+
+    /**
      * builder for maxResourceLimitExceeded subtype
      * @return builder
      */
     public static com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededErrorBuilder maxResourceLimitExceededBuilder() {
         return com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededErrorBuilder.of();
+    }
+
+    /**
+     * builder for maxStoreReferencesReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
+        return com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder.of();
     }
 
     /**
@@ -997,6 +1028,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLShippingMethodDoesNotMatchCartErrorBuilder shippingMethodDoesNotMatchCartBuilder() {
         return com.commercetools.api.models.error.GraphQLShippingMethodDoesNotMatchCartErrorBuilder.of();
+    }
+
+    /**
+     * builder for storeCartDiscountsLimitReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLStoreCartDiscountsLimitReachedErrorBuilder storeCartDiscountsLimitReachedBuilder() {
+        return com.commercetools.api.models.error.GraphQLStoreCartDiscountsLimitReachedErrorBuilder.of();
     }
 
     /**

@@ -90,7 +90,7 @@ public class StandalonePriceUpdateActionQueryBuilderDsl {
             StandalonePriceUpdateActionQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> asSetPriceTier(
+    public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> asSetPriceTiers(
             Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetPriceTiersActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetPriceTiersActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetPriceTiersActionQueryBuilderDsl

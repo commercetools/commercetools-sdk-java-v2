@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionImpl.class, name = StandalonePriceSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionImpl.class, name = StandalonePriceSetDiscountedPriceAction.SET_DISCOUNTED_PRICE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionImpl.class, name = StandalonePriceSetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionImpl.class, name = StandalonePriceSetPriceTiersAction.SET_PRICE_TIER),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionImpl.class, name = StandalonePriceSetPriceTiersAction.SET_PRICE_TIERS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromActionImpl.class, name = StandalonePriceSetValidFromAction.SET_VALID_FROM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilActionImpl.class, name = StandalonePriceSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilActionImpl.class, name = StandalonePriceSetValidUntilAction.SET_VALID_UNTIL) })
@@ -193,10 +193,10 @@ public interface StandalonePriceUpdateAction
     }
 
     /**
-     * builder for setPriceTier subtype
+     * builder for setPriceTiers subtype
      * @return builder
      */
-    public static com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionBuilder setPriceTierBuilder() {
+    public static com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionBuilder setPriceTiersBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionBuilder.of();
     }
 

@@ -77,8 +77,10 @@ dependencies {
 * `commercetools-apachehttp-client`: uses Apache HTTP async client 5.1
 * `commercetools-asynchttp-client`: uses Async HTTP client 2.12
 * `commercetools-reactornetty-client`: uses Reactor Netty HTTP Client
+* `commercetools-javanet-client`: uses HTTP client (`java.net.http.HttpClient`) included in JDK 11+
 * `commercetools-sdk-java-api`: models and request builders for the product API
 * `commercetools-sdk-java-importapi`: models and request builders for the import API
+* `commercetools-sdk-java-history`: models and request builders for the audit log API
 * `commercetools-sdk-java-ml`: models and request builders for the machine learning API
 * `commercetools-sdk-compat-v1`: Compatibility layer for Java v1 SDK
 * `commercetools-money`: Provider for JSR-354 money instances

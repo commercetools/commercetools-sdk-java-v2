@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartDiscountChangeValueAction
+ *  <p>Changes the CartDiscountValue for relative, absolute and fixed price CartDiscounts. Changing to Gift Line Item is not supported.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +37,7 @@ public interface CartDiscountChangeValueAction extends CartDiscountUpdateAction 
     String CHANGE_VALUE = "changeValue";
 
     /**
-     *  <p>New value to set.</p>
+     *  <p>New value to set. When trying to set a CartDiscountValueGiftLineItemDraft an InvalidInput error is returned.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface CartDiscountChangeValueAction extends CartDiscountUpdateAction 
     public CartDiscountValueDraft getValue();
 
     /**
-     *  <p>New value to set.</p>
+     *  <p>New value to set. When trying to set a CartDiscountValueGiftLineItemDraft an InvalidInput error is returned.</p>
      * @param value value to be set
      */
 

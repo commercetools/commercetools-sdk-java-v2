@@ -18,6 +18,7 @@
 - added property `key` to type `CustomLineItemDraft`
 - added property `key` to type `CartAddCustomLineItemAction`
 - added property `key` to type `StagedOrderAddCustomLineItemAction`
+- added property `shippingKey` to type `StagedOrderAddDeliveryAction`
 </details>
 
 

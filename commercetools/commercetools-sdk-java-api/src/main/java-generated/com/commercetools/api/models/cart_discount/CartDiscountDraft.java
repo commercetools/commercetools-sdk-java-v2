@@ -5,12 +5,14 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -97,7 +99,20 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public String getSortOrder();
 
     /**
-     *  <p>Only active Discounts can be applied to the Cart.</p>
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     * @return stores
+     */
+    @Valid
+    @JsonProperty("stores")
+    public List<StoreResourceIdentifier> getStores();
+
+    /**
+     *  <p>Only active Discounts can be applied to the Cart. If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
      * @return isActive
      */
 
@@ -194,7 +209,32 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public void setSortOrder(final String sortOrder);
 
     /**
-     *  <p>Only active Discounts can be applied to the Cart.</p>
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     * @param stores values to be set
+     */
+
+    @JsonIgnore
+    public void setStores(final StoreResourceIdentifier... stores);
+
+    /**
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     * @param stores values to be set
+     */
+
+    public void setStores(final List<StoreResourceIdentifier> stores);
+
+    /**
+     *  <p>Only active Discounts can be applied to the Cart. If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
      * @param isActive value to be set
      */
 
@@ -257,6 +297,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
         instance.setCartPredicate(template.getCartPredicate());
         instance.setTarget(template.getTarget());
         instance.setSortOrder(template.getSortOrder());
+        instance.setStores(template.getStores());
         instance.setIsActive(template.getIsActive());
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
@@ -287,6 +328,11 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
         instance.setTarget(
             com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
         instance.setSortOrder(template.getSortOrder());
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setIsActive(template.getIsActive());
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());

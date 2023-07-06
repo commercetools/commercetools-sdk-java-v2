@@ -18,6 +18,11 @@ public class CustomLineItemQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomLineItemQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CustomLineItemQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, CustomLineItemQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> name(
             Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

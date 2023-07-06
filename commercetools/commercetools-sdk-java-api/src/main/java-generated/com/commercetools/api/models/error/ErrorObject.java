@@ -71,7 +71,9 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidTokenErrorImpl.class, name = InvalidTokenError.INVALID_TOKEN),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.LanguageUsedInStoresErrorImpl.class, name = LanguageUsedInStoresError.LANGUAGE_USED_IN_STORES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MatchingPriceNotFoundErrorImpl.class, name = MatchingPriceNotFoundError.MATCHING_PRICE_NOT_FOUND),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxCartDiscountsReachedErrorImpl.class, name = MaxCartDiscountsReachedError.MAX_CART_DISCOUNTS_REACHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxResourceLimitExceededErrorImpl.class, name = MaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxStoreReferencesReachedErrorImpl.class, name = MaxStoreReferencesReachedError.MAX_STORE_REFERENCES_REACHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingRoleOnChannelErrorImpl.class, name = MissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingTaxRateForCountryErrorImpl.class, name = MissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MoneyOverflowErrorImpl.class, name = MoneyOverflowError.MONEY_OVERFLOW),
@@ -99,6 +101,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchIndexingInProgressErrorImpl.class, name = SearchIndexingInProgressError.SEARCH_INDEXING_IN_PROGRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.SemanticErrorErrorImpl.class, name = SemanticErrorError.SEMANTIC_ERROR),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = ShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.StoreCartDiscountsLimitReachedErrorImpl.class, name = StoreCartDiscountsLimitReachedError.STORE_CART_DISCOUNTS_LIMIT_REACHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.SyntaxErrorErrorImpl.class, name = SyntaxErrorError.SYNTAX_ERROR) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = ErrorObjectImpl.class, visible = true)
 @JsonDeserialize(as = ErrorObjectImpl.class)
@@ -327,9 +330,17 @@ public interface ErrorObject {
             return com.commercetools.api.models.error.MatchingPriceNotFoundError
                     .deepCopy((com.commercetools.api.models.error.MatchingPriceNotFoundError) template);
         }
+        if (template instanceof com.commercetools.api.models.error.MaxCartDiscountsReachedError) {
+            return com.commercetools.api.models.error.MaxCartDiscountsReachedError
+                    .deepCopy((com.commercetools.api.models.error.MaxCartDiscountsReachedError) template);
+        }
         if (template instanceof com.commercetools.api.models.error.MaxResourceLimitExceededError) {
             return com.commercetools.api.models.error.MaxResourceLimitExceededError
                     .deepCopy((com.commercetools.api.models.error.MaxResourceLimitExceededError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.MaxStoreReferencesReachedError) {
+            return com.commercetools.api.models.error.MaxStoreReferencesReachedError
+                    .deepCopy((com.commercetools.api.models.error.MaxStoreReferencesReachedError) template);
         }
         if (template instanceof com.commercetools.api.models.error.MissingRoleOnChannelError) {
             return com.commercetools.api.models.error.MissingRoleOnChannelError
@@ -438,6 +449,10 @@ public interface ErrorObject {
         if (template instanceof com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartError) {
             return com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartError
                     .deepCopy((com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.StoreCartDiscountsLimitReachedError) {
+            return com.commercetools.api.models.error.StoreCartDiscountsLimitReachedError
+                    .deepCopy((com.commercetools.api.models.error.StoreCartDiscountsLimitReachedError) template);
         }
         if (template instanceof com.commercetools.api.models.error.SyntaxErrorError) {
             return com.commercetools.api.models.error.SyntaxErrorError
@@ -794,11 +809,27 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for maxCartDiscountsReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.MaxCartDiscountsReachedErrorBuilder maxCartDiscountsReachedBuilder() {
+        return com.commercetools.api.models.error.MaxCartDiscountsReachedErrorBuilder.of();
+    }
+
+    /**
      * builder for maxResourceLimitExceeded subtype
      * @return builder
      */
     public static com.commercetools.api.models.error.MaxResourceLimitExceededErrorBuilder maxResourceLimitExceededBuilder() {
         return com.commercetools.api.models.error.MaxResourceLimitExceededErrorBuilder.of();
+    }
+
+    /**
+     * builder for maxStoreReferencesReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
+        return com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder.of();
     }
 
     /**
@@ -1015,6 +1046,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorBuilder shippingMethodDoesNotMatchCartBuilder() {
         return com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorBuilder.of();
+    }
+
+    /**
+     * builder for storeCartDiscountsLimitReached subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.StoreCartDiscountsLimitReachedErrorBuilder storeCartDiscountsLimitReachedBuilder() {
+        return com.commercetools.api.models.error.StoreCartDiscountsLimitReachedErrorBuilder.of();
     }
 
     /**

@@ -67,6 +67,21 @@ public class CartDiscountDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartDiscountDraftQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl> stores(
+            Function<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("stores"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl.of())),
+            CartDiscountDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CartDiscountDraftQueryBuilderDsl> stores() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("stores")),
+            p -> new CombinationQueryPredicate<>(p, CartDiscountDraftQueryBuilderDsl::of));
+    }
+
     public BooleanComparisonPredicateBuilder<CartDiscountDraftQueryBuilderDsl> isActive() {
         return new BooleanComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("isActive")),

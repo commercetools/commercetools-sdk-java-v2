@@ -47,7 +47,7 @@ public class StandalonePriceUpdateActionBuilder {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder.of();
     }
 
-    public com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionBuilder setPriceTierBuilder() {
+    public com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionBuilder setPriceTiersBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionBuilder.of();
     }
 

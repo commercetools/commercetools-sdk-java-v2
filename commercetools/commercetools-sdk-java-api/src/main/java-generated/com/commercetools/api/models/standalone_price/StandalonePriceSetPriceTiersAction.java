@@ -36,7 +36,7 @@ public interface StandalonePriceSetPriceTiersAction extends StandalonePriceUpdat
     /**
      * discriminator value for StandalonePriceSetPriceTiersAction
      */
-    String SET_PRICE_TIER = "setPriceTier";
+    String SET_PRICE_TIERS = "setPriceTiers";
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. The <code>minimumQuantity</code> of the PriceTiers must be unique and greater than <code>1</code>, otherwise an InvalidField error is returned.</p>

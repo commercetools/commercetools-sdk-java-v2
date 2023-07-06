@@ -183,8 +183,16 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLMatchingPriceNotFoundErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedErrorBuilder maxCartDiscountsReachedBuilder() {
+        return com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededErrorBuilder maxResourceLimitExceededBuilder() {
         return com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
+        return com.commercetools.api.models.error.GraphQLMaxStoreReferencesReachedErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.GraphQLMissingRoleOnChannelErrorBuilder missingRoleOnChannelBuilder() {
@@ -293,6 +301,10 @@ public class GraphQLErrorObjectBuilder {
 
     public com.commercetools.api.models.error.GraphQLShippingMethodDoesNotMatchCartErrorBuilder shippingMethodDoesNotMatchCartBuilder() {
         return com.commercetools.api.models.error.GraphQLShippingMethodDoesNotMatchCartErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.GraphQLStoreCartDiscountsLimitReachedErrorBuilder storeCartDiscountsLimitReachedBuilder() {
+        return com.commercetools.api.models.error.GraphQLStoreCartDiscountsLimitReachedErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.GraphQLSyntaxErrorErrorBuilder syntaxErrorBuilder() {

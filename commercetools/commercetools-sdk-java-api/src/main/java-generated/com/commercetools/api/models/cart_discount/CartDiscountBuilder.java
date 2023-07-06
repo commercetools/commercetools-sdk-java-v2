@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .cartPredicate("{cartPredicate}")
  *             .sortOrder("{sortOrder}")
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .isActive(true)
  *             .requiresDiscountCode(true)
  *             .plusReferences(referencesBuilder -> referencesBuilder)
@@ -65,6 +66,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
     private String sortOrder;
+
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
     private Boolean isActive;
 
@@ -350,6 +353,114 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
+     *  <ul>
+     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CartDiscountBuilder stores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CartDiscountBuilder stores(
+            final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CartDiscountBuilder plusStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CartDiscountBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CartDiscountBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CartDiscountBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CartDiscountBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
      * @param isActive value to be set
      * @return Builder
@@ -628,6 +739,18 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
+     *  <ul>
+     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     * @return stores
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
+        return this.stores;
+    }
+
+    /**
      *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
      * @return isActive
      */
@@ -706,13 +829,14 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         Objects.requireNonNull(value, CartDiscount.class + ": value is missing");
         Objects.requireNonNull(cartPredicate, CartDiscount.class + ": cartPredicate is missing");
         Objects.requireNonNull(sortOrder, CartDiscount.class + ": sortOrder is missing");
+        Objects.requireNonNull(stores, CartDiscount.class + ": stores is missing");
         Objects.requireNonNull(isActive, CartDiscount.class + ": isActive is missing");
         Objects.requireNonNull(requiresDiscountCode, CartDiscount.class + ": requiresDiscountCode is missing");
         Objects.requireNonNull(references, CartDiscount.class + ": references is missing");
         Objects.requireNonNull(stackingMode, CartDiscount.class + ": stackingMode is missing");
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
-            description, value, cartPredicate, target, sortOrder, isActive, validFrom, validUntil, requiresDiscountCode,
-            references, stackingMode, custom);
+            description, value, cartPredicate, target, sortOrder, stores, isActive, validFrom, validUntil,
+            requiresDiscountCode, references, stackingMode, custom);
     }
 
     /**
@@ -721,8 +845,8 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
      */
     public CartDiscount buildUnchecked() {
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
-            description, value, cartPredicate, target, sortOrder, isActive, validFrom, validUntil, requiresDiscountCode,
-            references, stackingMode, custom);
+            description, value, cartPredicate, target, sortOrder, stores, isActive, validFrom, validUntil,
+            requiresDiscountCode, references, stackingMode, custom);
     }
 
     /**
@@ -753,6 +877,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         builder.cartPredicate = template.getCartPredicate();
         builder.target = template.getTarget();
         builder.sortOrder = template.getSortOrder();
+        builder.stores = template.getStores();
         builder.isActive = template.getIsActive();
         builder.validFrom = template.getValidFrom();
         builder.validUntil = template.getValidUntil();

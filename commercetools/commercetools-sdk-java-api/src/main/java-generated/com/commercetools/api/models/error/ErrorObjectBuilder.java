@@ -183,8 +183,16 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.MatchingPriceNotFoundErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.MaxCartDiscountsReachedErrorBuilder maxCartDiscountsReachedBuilder() {
+        return com.commercetools.api.models.error.MaxCartDiscountsReachedErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.MaxResourceLimitExceededErrorBuilder maxResourceLimitExceededBuilder() {
         return com.commercetools.api.models.error.MaxResourceLimitExceededErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder maxStoreReferencesReachedBuilder() {
+        return com.commercetools.api.models.error.MaxStoreReferencesReachedErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.MissingRoleOnChannelErrorBuilder missingRoleOnChannelBuilder() {
@@ -293,6 +301,10 @@ public class ErrorObjectBuilder {
 
     public com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorBuilder shippingMethodDoesNotMatchCartBuilder() {
         return com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.StoreCartDiscountsLimitReachedErrorBuilder storeCartDiscountsLimitReachedBuilder() {
+        return com.commercetools.api.models.error.StoreCartDiscountsLimitReachedErrorBuilder.of();
     }
 
     public com.commercetools.api.models.error.SyntaxErrorErrorBuilder syntaxErrorBuilder() {

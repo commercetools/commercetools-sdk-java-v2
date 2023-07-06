@@ -27,6 +27,9 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     private String deliveryKey;
 
     @Nullable
+    private String shippingKey;
+
+    @Nullable
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     @Nullable
@@ -46,6 +49,17 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
 
     public StagedOrderAddDeliveryActionBuilder deliveryKey(@Nullable final String deliveryKey) {
         this.deliveryKey = deliveryKey;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddDeliveryActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
         return this;
     }
 
@@ -310,6 +324,16 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      * value of items}
      * @return items
      */
@@ -354,7 +378,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
      * @return StagedOrderAddDeliveryAction
      */
     public StagedOrderAddDeliveryAction build() {
-        return new StagedOrderAddDeliveryActionImpl(deliveryKey, items, address, parcels, custom);
+        return new StagedOrderAddDeliveryActionImpl(deliveryKey, shippingKey, items, address, parcels, custom);
     }
 
     /**
@@ -362,7 +386,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
      * @return StagedOrderAddDeliveryAction
      */
     public StagedOrderAddDeliveryAction buildUnchecked() {
-        return new StagedOrderAddDeliveryActionImpl(deliveryKey, items, address, parcels, custom);
+        return new StagedOrderAddDeliveryActionImpl(deliveryKey, shippingKey, items, address, parcels, custom);
     }
 
     /**
@@ -381,6 +405,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     public static StagedOrderAddDeliveryActionBuilder of(final StagedOrderAddDeliveryAction template) {
         StagedOrderAddDeliveryActionBuilder builder = new StagedOrderAddDeliveryActionBuilder();
         builder.deliveryKey = template.getDeliveryKey();
+        builder.shippingKey = template.getShippingKey();
         builder.items = template.getItems();
         builder.address = template.getAddress();
         builder.parcels = template.getParcels();

@@ -34,6 +34,8 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
 
     private String sortOrder;
 
+    private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
+
     private Boolean isActive;
 
     private java.time.ZonedDateTime validFrom;
@@ -56,7 +58,9 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
             @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value,
             @JsonProperty("cartPredicate") final String cartPredicate,
             @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target,
-            @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("isActive") final Boolean isActive,
+            @JsonProperty("sortOrder") final String sortOrder,
+            @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores,
+            @JsonProperty("isActive") final Boolean isActive,
             @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode,
@@ -69,6 +73,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         this.cartPredicate = cartPredicate;
         this.target = target;
         this.sortOrder = sortOrder;
+        this.stores = stores;
         this.isActive = isActive;
         this.validFrom = validFrom;
         this.validUntil = validUntil;
@@ -140,7 +145,20 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Only active Discounts can be applied to the Cart.</p>
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
+        return this.stores;
+    }
+
+    /**
+     *  <p>Only active Discounts can be applied to the Cart. If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
      */
 
     public Boolean getIsActive() {
@@ -215,6 +233,14 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         this.sortOrder = sortOrder;
     }
 
+    public void setStores(final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+    }
+
+    public void setStores(final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+        this.stores = stores;
+    }
+
     public void setIsActive(final Boolean isActive) {
         this.isActive = isActive;
     }
@@ -256,6 +282,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(cartPredicate, that.cartPredicate)
                 .append(target, that.target)
                 .append(sortOrder, that.sortOrder)
+                .append(stores, that.stores)
                 .append(isActive, that.isActive)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
@@ -274,6 +301,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(cartPredicate)
                 .append(target)
                 .append(sortOrder)
+                .append(stores)
                 .append(isActive)
                 .append(validFrom)
                 .append(validUntil)

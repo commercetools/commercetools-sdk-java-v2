@@ -333,11 +333,27 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asMaxCartDiscountsReached(
+            Function<com.commercetools.api.predicates.query.error.GraphQLMaxCartDiscountsReachedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLMaxCartDiscountsReachedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.error.GraphQLMaxCartDiscountsReachedErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asMaxResourceLimitExceeded(
             Function<com.commercetools.api.predicates.query.error.GraphQLMaxResourceLimitExceededErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLMaxResourceLimitExceededErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.error.GraphQLMaxResourceLimitExceededErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asMaxStoreReferencesReached(
+            Function<com.commercetools.api.predicates.query.error.GraphQLMaxStoreReferencesReachedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLMaxStoreReferencesReachedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.error.GraphQLMaxStoreReferencesReachedErrorQueryBuilderDsl.of()),
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
@@ -537,6 +553,14 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.error.GraphQLShippingMethodDoesNotMatchCartErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLShippingMethodDoesNotMatchCartErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.error.GraphQLShippingMethodDoesNotMatchCartErrorQueryBuilderDsl
+                    .of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asStoreCartDiscountsLimitReached(
+            Function<com.commercetools.api.predicates.query.error.GraphQLStoreCartDiscountsLimitReachedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLStoreCartDiscountsLimitReachedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.error.GraphQLStoreCartDiscountsLimitReachedErrorQueryBuilderDsl
                     .of()),
             GraphQLErrorObjectQueryBuilderDsl::of);
     }

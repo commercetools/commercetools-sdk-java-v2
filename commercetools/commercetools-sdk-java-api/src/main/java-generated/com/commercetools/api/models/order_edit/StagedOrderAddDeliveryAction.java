@@ -50,6 +50,14 @@ public interface StagedOrderAddDeliveryAction
     public String getDeliveryKey();
 
     /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      *
      * @return items
      */
@@ -87,6 +95,13 @@ public interface StagedOrderAddDeliveryAction
      */
 
     public void setDeliveryKey(final String deliveryKey);
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
 
     /**
      * set items
@@ -148,6 +163,7 @@ public interface StagedOrderAddDeliveryAction
     public static StagedOrderAddDeliveryAction of(final StagedOrderAddDeliveryAction template) {
         StagedOrderAddDeliveryActionImpl instance = new StagedOrderAddDeliveryActionImpl();
         instance.setDeliveryKey(template.getDeliveryKey());
+        instance.setShippingKey(template.getShippingKey());
         instance.setItems(template.getItems());
         instance.setAddress(template.getAddress());
         instance.setParcels(template.getParcels());
@@ -167,6 +183,7 @@ public interface StagedOrderAddDeliveryAction
         }
         StagedOrderAddDeliveryActionImpl instance = new StagedOrderAddDeliveryActionImpl();
         instance.setDeliveryKey(template.getDeliveryKey());
+        instance.setShippingKey(template.getShippingKey());
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)

@@ -64,6 +64,14 @@ public interface CartAddCustomLineItemAction
     public LocalizedString getName();
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Number of Custom Line Items to add to the Cart.</p>
      * @return quantity
      */
@@ -138,6 +146,13 @@ public interface CartAddCustomLineItemAction
     public void setName(final LocalizedString name);
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
      *  <p>Number of Custom Line Items to add to the Cart.</p>
      * @param quantity value to be set
      */
@@ -207,6 +222,7 @@ public interface CartAddCustomLineItemAction
         CartAddCustomLineItemActionImpl instance = new CartAddCustomLineItemActionImpl();
         instance.setMoney(template.getMoney());
         instance.setName(template.getName());
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setSlug(template.getSlug());
         instance.setTaxCategory(template.getTaxCategory());
@@ -230,6 +246,7 @@ public interface CartAddCustomLineItemAction
         CartAddCustomLineItemActionImpl instance = new CartAddCustomLineItemActionImpl();
         instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setSlug(template.getSlug());
         instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier

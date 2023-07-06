@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CartDiscountValueGiftLineItemDraft
+ *  <p>Can only be used in a CartDiscountDraft with no <code>target</code> specified. Hence, this type can not be used in the Change Value update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

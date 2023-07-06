@@ -56,4 +56,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
             storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder cartDiscounts() {
+        return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
 }

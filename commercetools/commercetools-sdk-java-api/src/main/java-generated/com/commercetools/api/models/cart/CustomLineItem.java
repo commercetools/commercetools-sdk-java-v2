@@ -57,6 +57,14 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public String getId();
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Name of the Custom Line Item.</p>
      * @return name
      */
@@ -184,6 +192,13 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
      */
 
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Name of the Custom Line Item.</p>
@@ -328,6 +343,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public static CustomLineItem of(final CustomLineItem template) {
         CustomLineItemImpl instance = new CustomLineItemImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setMoney(template.getMoney());
         instance.setTaxedPrice(template.getTaxedPrice());
@@ -357,6 +373,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         }
         CustomLineItemImpl instance = new CustomLineItemImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setMoney(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getMoney()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));

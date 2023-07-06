@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartDiscountValueGiftLineItemDraft
+ *  <p>Can only be used in a CartDiscountDraft with no <code>target</code> specified. Hence, this type can not be used in the Change Value update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValueGiftLineItemDraft, ModelBase {

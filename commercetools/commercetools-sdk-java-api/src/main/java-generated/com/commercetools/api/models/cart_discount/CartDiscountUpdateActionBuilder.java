@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountUpdateActionBuilder {
 
+    public com.commercetools.api.models.cart_discount.CartDiscountAddStoreActionBuilder addStoreBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountAddStoreActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateActionBuilder changeCartPredicateBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateActionBuilder.of();
     }
@@ -43,6 +47,10 @@ public class CartDiscountUpdateActionBuilder {
         return com.commercetools.api.models.cart_discount.CartDiscountChangeValueActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart_discount.CartDiscountRemoveStoreActionBuilder removeStoreBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountRemoveStoreActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldActionBuilder.of();
     }
@@ -57,6 +65,10 @@ public class CartDiscountUpdateActionBuilder {
 
     public com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart_discount.CartDiscountSetStoresActionBuilder setStoresBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountSetStoresActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart_discount.CartDiscountSetValidFromActionBuilder setValidFromBuilder() {

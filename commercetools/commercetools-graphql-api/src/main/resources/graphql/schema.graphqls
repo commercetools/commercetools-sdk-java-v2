@@ -104,6 +104,7 @@ input AddCartCustomLineItem {
   taxCategory: ResourceIdentifierInput
   slug: String!
   money: BaseMoneyInput!
+  key: String
   name: [LocalizedStringItemInputType!]!
 }
 
@@ -122,6 +123,11 @@ input AddCartCustomShippingMethod {
 input AddCartDiscountCode {
   code: String!
   validateDuplicates: Boolean = false
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input AddCartDiscountStore {
+  store: ResourceIdentifierInput!
 }
 
 input AddCartItemShippingAddress {
@@ -354,6 +360,7 @@ input AddStagedOrderCustomLineItem {
   taxCategory: ResourceIdentifierInput
   slug: String!
   money: BaseMoneyInput!
+  key: String
   name: [LocalizedStringItemInputType!]!
 }
 
@@ -1492,6 +1499,12 @@ type CartDiscount implements Versioned & ReferenceExpandable {
   descriptionAllLocales: [LocalizedString!]
   referenceRefs: [Reference!]!
   custom: CustomFieldsType
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  storesRef: [KeyReference!]!
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  stores: [Store!]!
   value: CartDiscountValue!
   target: CartDiscountTarget
   id: String!
@@ -1516,6 +1529,9 @@ input CartDiscountDraft {
   isActive: Boolean = true
   custom: CustomFieldsDraft
   key: String
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  stores: [ResourceIdentifierInput!]
 }
 
 type CartDiscountLimitWithCurrent implements LimitWithCurrent {
@@ -1561,6 +1577,14 @@ input CartDiscountTargetInput {
 }
 
 input CartDiscountUpdateAction {
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  setStores: SetCartDiscountStores
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  addStore: AddCartDiscountStore
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  removeStore: RemoveCartDiscountStore
   changeCartPredicate: ChangeCartDiscountCartPredicate
   changeIsActive: ChangeCartDiscountIsActive
   changeName: ChangeCartDiscountName
@@ -2817,6 +2841,7 @@ type CustomFieldsType {
 "A custom line item is a generic item that can be added to the cart but is not bound to a product. You can use it for discounts (negative money), vouchers, complex cart rules, additional services or fees. You control the lifecycle of this item."
 type CustomLineItem {
   id: String!
+  key: String
   name(
     "String is defined for different locales. This argument specifies the desired locale."
     locale: Locale,
@@ -2842,6 +2867,7 @@ type CustomLineItem {
 
 input CustomLineItemDraft {
   name: [LocalizedStringItemInputType!]!
+  key: String
   money: BaseMoneyInput!
   slug: String!
   taxCategory: ReferenceInput
@@ -2853,6 +2879,7 @@ input CustomLineItemDraft {
 }
 
 type CustomLineItemDraftOutput {
+  key: String
   money: BaseMoney!
   slug: String!
   externalTaxRate: ExternalTaxRateDraftOutput
@@ -8628,6 +8655,11 @@ input RemoveCartDiscountCode {
   discountCode: ReferenceInput!
 }
 
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input RemoveCartDiscountStore {
+  store: ResourceIdentifierInput!
+}
+
 input RemoveCartItemShippingAddress {
   addressKey: String!
 }
@@ -9469,6 +9501,11 @@ input SetCartDiscountDescription {
 
 input SetCartDiscountKey {
   key: String
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input SetCartDiscountStores {
+  stores: [ResourceIdentifierInput!]
 }
 
 input SetCartDiscountValidFrom {

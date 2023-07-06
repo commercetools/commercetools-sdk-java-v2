@@ -31,14 +31,14 @@ public class StandalonePriceSetPriceTiersActionImpl implements StandalonePriceSe
     StandalonePriceSetPriceTiersActionImpl(
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers) {
         this.tiers = tiers;
-        this.action = SET_PRICE_TIER;
+        this.action = SET_PRICE_TIERS;
     }
 
     /**
      * create empty instance
      */
     public StandalonePriceSetPriceTiersActionImpl() {
-        this.action = SET_PRICE_TIER;
+        this.action = SET_PRICE_TIERS;
     }
 
     /**

@@ -1,8 +1,6 @@
 
 package com.commercetools.compat;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -99,7 +97,7 @@ public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TR
 
     @Override
     public ApiHttpResponse<TResult> executeBlocking(final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        return client.executeBlocking(this, resultClass, timeout);
     }
 
     @Override

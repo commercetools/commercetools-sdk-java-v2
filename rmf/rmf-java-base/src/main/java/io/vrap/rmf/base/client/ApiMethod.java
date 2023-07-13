@@ -396,7 +396,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
     }
 
     public ApiHttpResponse<byte[]> sendBlocking() {
-        return apiHttpClient.sendBlocking(this);
+        return sendBlocking(ApiHttpClient.DEFAULT_TIMEOUT);
     }
 
     public ApiHttpResponse<byte[]> sendBlocking(final Duration timeout) {

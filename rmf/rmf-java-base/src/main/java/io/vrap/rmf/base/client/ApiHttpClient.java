@@ -93,10 +93,6 @@ public interface ApiHttpClient extends AutoCloseable, VrapHttpClient {
         return execute(method.createHttpRequest());
     }
 
-    default public <T> ApiHttpResponse<byte[]> sendBlocking(final CreateHttpRequestCommand method) {
-        return sendBlocking(method, DEFAULT_TIMEOUT);
-    }
-
     default public <T> ApiHttpResponse<byte[]> sendBlocking(final CreateHttpRequestCommand method,
             final Duration timeout) {
         ApiHttpRequest request = method.createHttpRequest();

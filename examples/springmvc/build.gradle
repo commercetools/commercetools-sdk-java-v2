@@ -16,7 +16,7 @@ repositories {
 
 ext {
     versions = [
-            commercetools: "14.6.0-SNAPSHOT",
+            commercetools: "14.7.0-SNAPSHOT",
             newrelic: "8.0.1"
     ]
 }

@@ -1,8 +1,6 @@
 
 package com.commercetools.compat;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -25,7 +23,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TResult>
-        implements ClientRequestCommand<TResult> {
+        implements ClientRequestCommand<TResult>, CreateHttpRequestCommand {
 
     private final SphereRequest<?> request;
     private final Class<TResult> resultClass;
@@ -99,12 +97,12 @@ public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TR
 
     @Override
     public ApiHttpResponse<TResult> executeBlocking(final ApiHttpClient client, Duration timeout) {
-        return blockingWait(execute(client), timeout);
+        return client.executeBlocking(this, resultClass, timeout);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<TResult>> execute(final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), resultClass);
+        return client.execute(this, resultClass);
     }
 
     @Override

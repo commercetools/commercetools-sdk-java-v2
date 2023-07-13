@@ -4,8 +4,6 @@ package io.vrap.rmf.base.client;
 import java.net.URI;
 import java.util.concurrent.CompletableFuture;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -29,26 +27,6 @@ public class SerializerOnlyApiHttpClient implements ApiHttpClient {
 
     public static SerializerOnlyApiHttpClient of(ResponseSerializer serializer) {
         return new SerializerOnlyApiHttpClient(serializer);
-    }
-
-    @Override
-    public <O> CompletableFuture<ApiHttpResponse<O>> execute(ApiHttpRequest request, Class<O> outputType) {
-        throw new IllegalStateException(NO_EXECUTABLE_API_CLIENT);
-    }
-
-    @Override
-    public <O> CompletableFuture<ApiHttpResponse<O>> execute(ApiHttpRequest request, TypeReference<O> outputType) {
-        throw new IllegalStateException(NO_EXECUTABLE_API_CLIENT);
-    }
-
-    @Override
-    public <O> CompletableFuture<ApiHttpResponse<O>> execute(ApiHttpRequest request, JavaType outputType) {
-        throw new IllegalStateException(NO_EXECUTABLE_API_CLIENT);
-    }
-
-    @Override
-    public <O> CompletableFuture<ApiHttpResponse<O>> execute(ClientRequestCommand<O> method) {
-        throw new IllegalStateException(NO_EXECUTABLE_API_CLIENT);
     }
 
     @Override

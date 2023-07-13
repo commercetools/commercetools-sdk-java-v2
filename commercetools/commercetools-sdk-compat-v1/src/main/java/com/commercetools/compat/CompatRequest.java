@@ -104,7 +104,7 @@ public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TR
 
     @Override
     public CompletableFuture<ApiHttpResponse<TResult>> execute(final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(), resultClass);
+        return client.execute(this, resultClass);
     }
 
     @Override

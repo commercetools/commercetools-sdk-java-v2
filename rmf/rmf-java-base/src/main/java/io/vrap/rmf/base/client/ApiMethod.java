@@ -1,8 +1,6 @@
 
 package io.vrap.rmf.base.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -312,7 +310,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
 
     public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final ApiHttpClient client,
             final Class<TReturn> returnType) {
-        return client.execute(this.createHttpRequest(), returnType).toCompletableFuture();
+        return client.execute(this, returnType).toCompletableFuture();
     }
 
     public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(
@@ -322,7 +320,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
 
     public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final ApiHttpClient client,
             final TypeReference<TReturn> returnTypeReference) {
-        return client.execute(this.createHttpRequest(), returnTypeReference).toCompletableFuture();
+        return client.execute(this, returnTypeReference).toCompletableFuture();
     }
 
     public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final JavaType returnJavaType) {
@@ -331,88 +329,85 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
 
     public <TReturn> CompletableFuture<ApiHttpResponse<TReturn>> execute(final ApiHttpClient client,
             final JavaType returnJavaType) {
-        return client.execute(this.createHttpRequest(), returnJavaType);
+        return client.execute(this, returnJavaType);
     }
 
     public ApiHttpResponse<TResult> executeBlocking() {
-        return executeBlocking(apiHttpClient(), Duration.ofSeconds(120));
+        return apiHttpClient().executeBlocking(this);
     };
 
     public ApiHttpResponse<TResult> executeBlocking(final ApiHttpClient client) {
-        return executeBlocking(client, Duration.ofSeconds(120));
+        return client.executeBlocking(this);
     };
 
     public ApiHttpResponse<TResult> executeBlocking(final Duration timeout) {
-        return executeBlocking(apiHttpClient(), timeout);
+        return apiHttpClient().executeBlocking(this, timeout);
     }
 
     public abstract ApiHttpResponse<TResult> executeBlocking(final ApiHttpClient client, final Duration timeout);
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final Class<TReturn> clazz) {
-        return executeBlocking(apiHttpClient(), Duration.ofSeconds(120), clazz);
+        return apiHttpClient().executeBlocking(this, clazz);
     };
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final Class<TReturn> clazz) {
-        return executeBlocking(client, Duration.ofSeconds(120), clazz);
+        return client.executeBlocking(this, clazz);
     };
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final Duration timeout, final Class<TReturn> clazz) {
-        return executeBlocking(apiHttpClient(), timeout, clazz);
+        return apiHttpClient().executeBlocking(this, clazz, timeout);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final Duration timeout,
             final Class<TReturn> clazz) {
-        final ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, clazz).toCompletableFuture(), request, timeout);
+        return client.executeBlocking(this, clazz, timeout);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final TypeReference<TReturn> typeReference) {
-        return executeBlocking(apiHttpClient(), Duration.ofSeconds(120), typeReference);
+        return apiHttpClient().executeBlocking(this, typeReference);
     };
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client,
             final TypeReference<TReturn> typeReference) {
-        return executeBlocking(client, Duration.ofSeconds(120), typeReference);
+        return client.executeBlocking(this, typeReference);
     };
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final Duration timeout,
             final TypeReference<TReturn> typeReference) {
-        return executeBlocking(apiHttpClient(), timeout, typeReference);
+        return apiHttpClient().executeBlocking(this, typeReference, timeout);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final Duration timeout,
             TypeReference<TReturn> typeReference) {
-        final ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, typeReference).toCompletableFuture(), request, timeout);
+        return client.executeBlocking(this, typeReference, timeout);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final JavaType javaType) {
-        return executeBlocking(apiHttpClient(), Duration.ofSeconds(120), javaType);
+        return apiHttpClient().executeBlocking(this, javaType);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final JavaType javaType) {
-        return executeBlocking(client, Duration.ofSeconds(120), javaType);
+        return client.executeBlocking(this, javaType);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final Duration timeout, final JavaType javaType) {
-        return executeBlocking(apiHttpClient(), timeout, javaType);
+        return apiHttpClient().executeBlocking(this, javaType, timeout);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final Duration timeout,
             JavaType javaType) {
-        final ApiHttpRequest request = this.createHttpRequest();
-        return blockingWait(client.execute(request, javaType), request, timeout);
+        return client.executeBlocking(this, javaType, timeout);
     }
 
     public CompletableFuture<ApiHttpResponse<byte[]>> send() {
-        return apiHttpClient.execute(createHttpRequest());
+        return apiHttpClient().send(this);
     }
 
     public ApiHttpResponse<byte[]> sendBlocking() {
-        return sendBlocking(Duration.ofSeconds(120));
-    };
+        return apiHttpClient().sendBlocking(this);
+    }
 
     public ApiHttpResponse<byte[]> sendBlocking(final Duration timeout) {
-        return blockingWait(send(), timeout);
+        return apiHttpClient().sendBlocking(this, timeout);
     }
 }

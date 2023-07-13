@@ -8,9 +8,6 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
-
 public class ContextApiHttpClientImpl extends AutoCloseableService implements ContextApiHttpClient {
     private final ApiHttpClient client;
 
@@ -104,31 +101,6 @@ public class ContextApiHttpClientImpl extends AutoCloseableService implements Co
 
     private void restoreContext() {
         Optional.ofNullable(consumer).ifPresent(c -> c.accept(this));
-    }
-
-    @Override
-    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request, final Class<O> outputType) {
-        restoreContext();
-        return client.execute(request.withContextMap(contextMap), outputType);
-    }
-
-    @Override
-    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
-            final TypeReference<O> outputType) {
-        restoreContext();
-        return client.execute(request.withContextMap(contextMap), outputType);
-    }
-
-    @Override
-    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request, final JavaType outputType) {
-        restoreContext();
-        return client.execute(request.withContextMap(contextMap), outputType);
-    }
-
-    @Override
-    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ClientRequestCommand<O> method) {
-        restoreContext();
-        return method.execute(this);
     }
 
     @Override

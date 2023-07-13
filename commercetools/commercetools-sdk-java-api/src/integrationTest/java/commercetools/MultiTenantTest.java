@@ -10,8 +10,6 @@ import java.util.concurrent.CompletableFuture;
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.*;
@@ -92,26 +90,6 @@ public class MultiTenantTest {
 
         public void setActiveTenant(final String activeTenant) {
             this.activeTenant = activeTenant;
-        }
-
-        @Override
-        public <O> CompletableFuture<ApiHttpResponse<O>> execute(ApiHttpRequest request, Class<O> outputType) {
-            return invoke().execute(request, outputType);
-        }
-
-        @Override
-        public <O> CompletableFuture<ApiHttpResponse<O>> execute(ApiHttpRequest request, TypeReference<O> outputType) {
-            return invoke().execute(request, outputType);
-        }
-
-        @Override
-        public <O> CompletableFuture<ApiHttpResponse<O>> execute(ApiHttpRequest request, JavaType outputType) {
-            return invoke().execute(request, outputType);
-        }
-
-        @Override
-        public <O> CompletableFuture<ApiHttpResponse<O>> execute(ClientRequestCommand<O> method) {
-            return invoke().execute(method);
         }
 
         @Override

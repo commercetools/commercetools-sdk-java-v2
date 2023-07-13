@@ -10,4 +10,6 @@ public interface ClientRequestCommand<TResult> {
     ApiHttpResponse<TResult> executeBlocking(final ApiHttpClient client);
 
     ApiHttpResponse<TResult> executeBlocking(final ApiHttpClient client, final Duration timeout);
+
+    ApiHttpRequest createHttpRequest();
 }

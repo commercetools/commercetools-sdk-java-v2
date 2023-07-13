@@ -9,8 +9,6 @@ import java.util.concurrent.CompletionStage;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -293,29 +291,6 @@ public class CompatSphereClient extends AutoCloseableService implements SphereCl
         @Override
         public URI getBaseUri() {
             return apiHttpClient.getBaseUri();
-        }
-
-        @Override
-        public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ClientRequestCommand<O> method) {
-            return method.execute(this);
-        }
-
-        @Override
-        public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
-                final Class<O> outputType) {
-            return execute(request).thenApply(response -> serializer.convertResponse(response, outputType));
-        }
-
-        @Override
-        public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
-                final TypeReference<O> outputType) {
-            return execute(request).thenApply(response -> serializer.convertResponse(response, outputType));
-        }
-
-        @Override
-        public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
-                final JavaType outputType) {
-            return execute(request).thenApply(response -> serializer.convertResponse(response, outputType));
         }
 
         @Override

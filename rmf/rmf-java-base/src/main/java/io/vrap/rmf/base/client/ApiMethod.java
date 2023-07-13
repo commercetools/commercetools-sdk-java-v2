@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extends Base
-        implements RequestCommand<TResult>, ClientRequestCommand<TResult> {
+        implements RequestCommand<TResult>, ClientRequestCommand<TResult>, CreateHttpRequestCommand {
 
     public static class ParamEntry<K, V> extends Base implements Map.Entry<K, V> {
         protected final K key;
@@ -332,30 +332,22 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
         return client.execute(this, returnJavaType);
     }
 
-    public ApiHttpResponse<TResult> executeBlocking() {
-        return apiHttpClient().executeBlocking(this);
-    };
-
-    public ApiHttpResponse<TResult> executeBlocking(final ApiHttpClient client) {
-        return client.executeBlocking(this);
-    };
-
     public ApiHttpResponse<TResult> executeBlocking(final Duration timeout) {
-        return apiHttpClient().executeBlocking(this, timeout);
+        return executeBlocking(apiHttpClient(), timeout);
     }
 
     public abstract ApiHttpResponse<TResult> executeBlocking(final ApiHttpClient client, final Duration timeout);
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final Class<TReturn> clazz) {
-        return apiHttpClient().executeBlocking(this, clazz);
+        return executeBlocking(apiHttpClient(), ApiHttpClient.DEFAULT_TIMEOUT, clazz);
     };
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final Class<TReturn> clazz) {
-        return client.executeBlocking(this, clazz);
+        return executeBlocking(client, ApiHttpClient.DEFAULT_TIMEOUT, clazz);
     };
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final Duration timeout, final Class<TReturn> clazz) {
-        return apiHttpClient().executeBlocking(this, clazz, timeout);
+        return executeBlocking(apiHttpClient(), timeout, clazz);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final Duration timeout,
@@ -364,17 +356,17 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final TypeReference<TReturn> typeReference) {
-        return apiHttpClient().executeBlocking(this, typeReference);
-    };
+        return executeBlocking(apiHttpClient(), ApiHttpClient.DEFAULT_TIMEOUT, typeReference);
+    }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client,
             final TypeReference<TReturn> typeReference) {
-        return client.executeBlocking(this, typeReference);
-    };
+        return executeBlocking(client, ApiHttpClient.DEFAULT_TIMEOUT, typeReference);
+    }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final Duration timeout,
             final TypeReference<TReturn> typeReference) {
-        return apiHttpClient().executeBlocking(this, typeReference, timeout);
+        return executeBlocking(apiHttpClient(), timeout, typeReference);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final Duration timeout,
@@ -383,15 +375,15 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final JavaType javaType) {
-        return apiHttpClient().executeBlocking(this, javaType);
+        return executeBlocking(apiHttpClient(), ApiHttpClient.DEFAULT_TIMEOUT, javaType);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final JavaType javaType) {
-        return client.executeBlocking(this, javaType);
+        return executeBlocking(apiHttpClient(), ApiHttpClient.DEFAULT_TIMEOUT, javaType);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final Duration timeout, final JavaType javaType) {
-        return apiHttpClient().executeBlocking(this, javaType, timeout);
+        return executeBlocking(apiHttpClient(), timeout, javaType);
     }
 
     public <TReturn> ApiHttpResponse<TReturn> executeBlocking(final ApiHttpClient client, final Duration timeout,
@@ -400,14 +392,14 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
     }
 
     public CompletableFuture<ApiHttpResponse<byte[]>> send() {
-        return apiHttpClient().send(this);
+        return apiHttpClient.send(this);
     }
 
     public ApiHttpResponse<byte[]> sendBlocking() {
-        return apiHttpClient().sendBlocking(this);
+        return apiHttpClient.sendBlocking(this);
     }
 
     public ApiHttpResponse<byte[]> sendBlocking(final Duration timeout) {
-        return apiHttpClient().sendBlocking(this, timeout);
+        return apiHttpClient.sendBlocking(this, timeout);
     }
 }

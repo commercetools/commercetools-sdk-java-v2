@@ -4,12 +4,12 @@ package commercetools;
 import java.net.URI;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
 
 import com.commercetools.api.client.PagedQueryResourceRequest;
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
+import com.commercetools.api.models.project.Project;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.*;
@@ -28,6 +28,9 @@ public class DecoratorTest {
         final ApiHttpResponse<CategoryPagedQueryResponse> response = decoratedRoot.categories().get().executeBlocking();
 
         Assertions.assertThat(client.lastRequest.getUri().toString()).contains("sort=id+asc");
+
+        final ApiHttpResponse<Project> projectResponse = decoratedRoot.get().executeBlocking();
+        Assertions.assertThat(client.lastRequest.getUri().toString()).doesNotContain("sort=id+asc");
     }
 
     public static class DecoratedApiHttpClient implements ApiHttpClient {
@@ -56,39 +59,25 @@ public class DecoratorTest {
         }
 
         @Override
-        public <T, O> CompletableFuture<ApiHttpResponse<O>> execute(ClientRequestCommand<T> method,
-                Class<O> outputType) {
-            return ApiHttpClient.super.execute(addIdSort(method), outputType);
+        public <O> CompletableFuture<ApiHttpResponse<O>> execute(CreateHttpRequestCommand request,
+                Function<ApiHttpResponse<byte[]>, ApiHttpResponse<O>> mapper) {
+            return ApiHttpClient.super.execute(addIdSort(request), mapper);
         }
 
         @Override
-        public <T, O> CompletableFuture<ApiHttpResponse<O>> execute(ClientRequestCommand<T> method,
-                JavaType outputType) {
-            return ApiHttpClient.super.execute(addIdSort(method), outputType);
+        public <O> ApiHttpResponse<O> executeBlocking(CreateHttpRequestCommand method,
+                Function<ApiHttpResponse<byte[]>, ApiHttpResponse<O>> mapper, Duration timeout) {
+            return ApiHttpClient.super.executeBlocking(addIdSort(method), mapper, timeout);
         }
 
         @Override
-        public <T, O> CompletableFuture<ApiHttpResponse<O>> execute(ClientRequestCommand<T> method,
-                TypeReference<O> outputType) {
-            return ApiHttpClient.super.execute(addIdSort(method), outputType);
+        public CompletableFuture<ApiHttpResponse<byte[]>> send(CreateHttpRequestCommand method) {
+            return ApiHttpClient.super.send(addIdSort(method));
         }
 
         @Override
-        public <T, O> ApiHttpResponse<O> executeBlocking(ClientRequestCommand<T> method, Class<O> outputType,
-                Duration timeout) {
-            return ApiHttpClient.super.executeBlocking(addIdSort(method), outputType, timeout);
-        }
-
-        @Override
-        public <T, O> ApiHttpResponse<O> executeBlocking(ClientRequestCommand<T> method, JavaType outputType,
-                Duration timeout) {
-            return ApiHttpClient.super.executeBlocking(addIdSort(method), outputType, timeout);
-        }
-
-        @Override
-        public <T, O> ApiHttpResponse<O> executeBlocking(ClientRequestCommand<T> method, TypeReference<O> outputType,
-                Duration timeout) {
-            return ApiHttpClient.super.executeBlocking(addIdSort(method), outputType, timeout);
+        public <T> ApiHttpResponse<byte[]> sendBlocking(CreateHttpRequestCommand method, Duration timeout) {
+            return ApiHttpClient.super.sendBlocking(addIdSort(method), timeout);
         }
 
         @Override
@@ -96,10 +85,9 @@ public class DecoratorTest {
             apiHttpClient.close();
         }
 
-        @SuppressWarnings("unchecked")
-        public static <T> ClientRequestCommand<T> addIdSort(ClientRequestCommand<T> method) {
+        public static CreateHttpRequestCommand addIdSort(CreateHttpRequestCommand method) {
             if (method instanceof PagedQueryResourceRequest) {
-                return ((PagedQueryResourceRequest<?, T, ?>) method).addSort("id asc");
+                return (CreateHttpRequestCommand) ((PagedQueryResourceRequest<?, ?, ?>) method).addSort("id asc");
             }
             return method;
         }

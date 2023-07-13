@@ -47,11 +47,6 @@ final class ConcurrentModificationDeleteRetryHandler<T extends ApiDeleteMethod<T
     }
 
     @Override
-    public ApiHttpResponse<TResult> executeBlocking() {
-        return executeBlocking(Duration.ofSeconds(120));
-    }
-
-    @Override
     public ApiHttpResponse<TResult> executeBlocking(Duration timeout) {
         return blockingWait(execute(), timeout);
     }

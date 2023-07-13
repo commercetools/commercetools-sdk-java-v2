@@ -25,7 +25,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class CompatRequest<TResult> extends ApiMethod<CompatRequest<TResult>, TResult>
-        implements ClientRequestCommand<TResult> {
+        implements ClientRequestCommand<TResult>, CreateHttpRequestCommand {
 
     private final SphereRequest<?> request;
     private final Class<TResult> resultClass;

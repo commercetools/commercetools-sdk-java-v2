@@ -6,6 +6,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 import java.net.URI;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JavaType;
@@ -22,102 +23,84 @@ public interface ApiHttpClient extends AutoCloseable, VrapHttpClient {
 
     default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
             final Class<O> outputType) {
-        return execute(request).thenApply(response -> getSerializerService().convertResponse(response, outputType));
+        return execute(request, apiHttpResponse -> getSerializerService().convertResponse(apiHttpResponse, outputType));
     }
 
     default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
             final TypeReference<O> outputType) {
-        return execute(request).thenApply(response -> getSerializerService().convertResponse(response, outputType));
+        return execute(request, apiHttpResponse -> getSerializerService().convertResponse(apiHttpResponse, outputType));
     }
 
     default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
             final JavaType outputType) {
-        return execute(request).thenApply(response -> getSerializerService().convertResponse(response, outputType));
+        return execute(request, apiHttpResponse -> getSerializerService().convertResponse(apiHttpResponse, outputType));
     }
 
-    default public <O> ApiHttpResponse<O> executeBlocking(final ApiHttpRequest request, final Class<O> outputType,
-            Duration timeout) {
-        return blockingWait(execute(request, outputType), request, timeout);
-    }
-
-    default public <O> ApiHttpResponse<O> executeBlocking(final ApiHttpRequest request,
-            final TypeReference<O> outputType, Duration timeout) {
-        return blockingWait(execute(request, outputType), request, timeout);
-    }
-
-    default public <O> ApiHttpResponse<O> executeBlocking(final ApiHttpRequest request, final JavaType outputType,
-            Duration timeout) {
-        return blockingWait(execute(request, outputType), request, timeout);
+    default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
+            final Function<ApiHttpResponse<byte[]>, ApiHttpResponse<O>> mapper) {
+        return execute(request).thenApply(mapper);
     }
 
     default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ClientRequestCommand<O> method) {
         return method.execute(this);
     }
 
-    default public <T, O> CompletableFuture<ApiHttpResponse<O>> execute(final ClientRequestCommand<T> method,
+    default public <T, O> CompletableFuture<ApiHttpResponse<O>> execute(final CreateHttpRequestCommand method,
             final Class<O> outputType) {
-        return execute(method.createHttpRequest(), outputType);
+        return execute(method, apiHttpResponse -> getSerializerService().convertResponse(apiHttpResponse, outputType));
     }
 
-    default public <T, O> CompletableFuture<ApiHttpResponse<O>> execute(final ClientRequestCommand<T> method,
+    default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final CreateHttpRequestCommand method,
             final JavaType outputType) {
-        return execute(method.createHttpRequest(), outputType);
+        return execute(method, apiHttpResponse -> getSerializerService().convertResponse(apiHttpResponse, outputType));
     }
 
-    default public <T, O> CompletableFuture<ApiHttpResponse<O>> execute(final ClientRequestCommand<T> method,
+    default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final CreateHttpRequestCommand method,
             final TypeReference<O> outputType) {
-        return execute(method.createHttpRequest(), outputType);
+        return execute(method, apiHttpResponse -> getSerializerService().convertResponse(apiHttpResponse, outputType));
     }
 
-    default public <O> ApiHttpResponse<O> executeBlocking(final ClientRequestCommand<O> method, Duration timeout) {
-        return method.executeBlocking(this, timeout);
+    default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final CreateHttpRequestCommand method,
+            final Function<ApiHttpResponse<byte[]>, ApiHttpResponse<O>> mapper) {
+        return execute(method.createHttpRequest()).thenApply(mapper);
     }
 
-    default public <T, O> ApiHttpResponse<O> executeBlocking(final ClientRequestCommand<T> method,
+    default public <O> ApiHttpResponse<O> executeBlocking(final CreateHttpRequestCommand method,
+            final Function<ApiHttpResponse<byte[]>, ApiHttpResponse<O>> mapper, Duration timeout) {
+        ApiHttpRequest request = method.createHttpRequest();
+        return blockingWait(execute(request).thenApply(mapper), request, timeout);
+    }
+
+    default public <O> ApiHttpResponse<O> executeBlocking(final CreateHttpRequestCommand method,
             final Class<O> outputType, Duration timeout) {
-        return executeBlocking(method.createHttpRequest(), outputType, timeout);
+        return executeBlocking(method,
+            apiHttpResponse -> getSerializerService().convertResponse(apiHttpResponse, outputType), timeout);
     }
 
-    default public <T, O> ApiHttpResponse<O> executeBlocking(final ClientRequestCommand<T> method,
+    default public <O> ApiHttpResponse<O> executeBlocking(final CreateHttpRequestCommand method,
             final JavaType outputType, Duration timeout) {
-        return executeBlocking(method.createHttpRequest(), outputType, timeout);
+        return executeBlocking(method,
+            apiHttpResponse -> getSerializerService().convertResponse(apiHttpResponse, outputType), timeout);
     }
 
-    default public <T, O> ApiHttpResponse<O> executeBlocking(final ClientRequestCommand<T> method,
+    default public <O> ApiHttpResponse<O> executeBlocking(final CreateHttpRequestCommand method,
             final TypeReference<O> outputType, Duration timeout) {
-        return executeBlocking(method.createHttpRequest(), outputType, timeout);
+        return executeBlocking(method,
+            apiHttpResponse -> getSerializerService().convertResponse(apiHttpResponse, outputType), timeout);
     }
 
-    default public <O> ApiHttpResponse<O> executeBlocking(final ClientRequestCommand<O> method) {
-        return executeBlocking(method, DEFAULT_TIMEOUT);
-    }
-
-    default public <T, O> ApiHttpResponse<O> executeBlocking(final ClientRequestCommand<T> method,
-            final Class<O> outputType) {
-        return executeBlocking(method, outputType, DEFAULT_TIMEOUT);
-    }
-
-    default public <T, O> ApiHttpResponse<O> executeBlocking(final ClientRequestCommand<T> method,
-            final JavaType outputType) {
-        return executeBlocking(method, outputType, DEFAULT_TIMEOUT);
-    }
-
-    default public <T, O> ApiHttpResponse<O> executeBlocking(final ClientRequestCommand<T> method,
-            final TypeReference<O> outputType) {
-        return executeBlocking(method, outputType, DEFAULT_TIMEOUT);
-    }
-
-    default public <T> CompletableFuture<ApiHttpResponse<byte[]>> send(final ClientRequestCommand<T> method) {
+    default public CompletableFuture<ApiHttpResponse<byte[]>> send(final CreateHttpRequestCommand method) {
         return execute(method.createHttpRequest());
     }
 
-    default public <T> ApiHttpResponse<byte[]> sendBlocking(final ClientRequestCommand<T> method) {
-        return blockingWait(send(method), DEFAULT_TIMEOUT);
-    };
+    default public <T> ApiHttpResponse<byte[]> sendBlocking(final CreateHttpRequestCommand method) {
+        return sendBlocking(method, DEFAULT_TIMEOUT);
+    }
 
-    default public <T> ApiHttpResponse<byte[]> sendBlocking(final ClientRequestCommand<T> method,
+    default public <T> ApiHttpResponse<byte[]> sendBlocking(final CreateHttpRequestCommand method,
             final Duration timeout) {
-        return blockingWait(send(method), timeout);
+        ApiHttpRequest request = method.createHttpRequest();
+        return blockingWait(execute(request), request, timeout);
     }
 
     public ResponseSerializer getSerializerService();

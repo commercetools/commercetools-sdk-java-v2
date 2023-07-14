@@ -91,6 +91,9 @@ com.commercetools.api.predicates.query.zone
 com.commercetools.api.product
 com.commercetools.compat
 com.commercetools.docs.meta
+com.commercetools.graphql.api
+com.commercetools.graphql.api.client
+com.commercetools.graphql.api.types
 com.commercetools.history.client
 com.commercetools.history.defaultconfig
 com.commercetools.history.models.change
@@ -99,6 +102,9 @@ com.commercetools.history.models.change_value
 com.commercetools.history.models.common
 com.commercetools.history.models.label
 com.commercetools.http.apachehttp
+com.commercetools.http.asynchttp
+com.commercetools.http.javanet
+com.commercetools.http.netty
 com.commercetools.http.okhttp3
 com.commercetools.http.okhttp4
 com.commercetools.importapi.client

@@ -1,25 +1,23 @@
-package commercetools.custom_command;
 
-import com.commercetools.api.client.ByProjectKeyCartsByIDPost;
-import com.commercetools.api.client.PagedQueryResourceRequest;
-import com.commercetools.api.client.ProjectApiRoot;
-import com.commercetools.api.models.cart.*;
-import com.commercetools.api.models.category.CategoryPagedQueryResponse;
-import com.commercetools.api.models.project.Project;
-import commercetools.DecoratorTest;
-import commercetools.utils.CommercetoolsTestUtils;
-import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.CreateHttpRequestCommand;
-import io.vrap.rmf.base.client.ResponseSerializer;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Test;
+package commercetools.custom_command;
 
 import java.net.URI;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
+
+import com.commercetools.api.client.ByProjectKeyCartsByIDPost;
+import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.models.cart.*;
+import commercetools.utils.CommercetoolsTestUtils;
+
+import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiHttpRequest;
+import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.CreateHttpRequestCommand;
+import io.vrap.rmf.base.client.ResponseSerializer;
+
+import org.junit.jupiter.api.Test;
 
 public class CartDecoratorTest {
     @Test
@@ -29,9 +27,11 @@ public class CartDecoratorTest {
         final ProjectApiRoot decoratedRoot = ProjectApiRoot.fromClient(apiRoot.getProjectKey(), client);
         final CartDraft cartDraft = CartDraftBuilder.of().currency("EUR").build();
 
-        final CartRecalculateAction cartRecalculateAction
-                = CartUpdateActionBuilder.of().recalculateBuilder().build();
-        final CartChangeTaxModeAction cartChangeTaxModeAction = CartUpdateActionBuilder.of().changeTaxModeBuilder().taxMode(TaxMode.DISABLED).build();
+        final CartRecalculateAction cartRecalculateAction = CartUpdateActionBuilder.of().recalculateBuilder().build();
+        final CartChangeTaxModeAction cartChangeTaxModeAction = CartUpdateActionBuilder.of()
+                .changeTaxModeBuilder()
+                .taxMode(TaxMode.DISABLED)
+                .build();
         final Cart cart = decoratedRoot.carts().create(cartDraft).execute().thenApply(ApiHttpResponse::getBody).join();
         final Cart updatedCart = decoratedRoot.carts()
                 .withId(cart.getId())
@@ -39,8 +39,7 @@ public class CartDecoratorTest {
                         .cart(cart)
                         .version(cart.getVersion())
                         .actions(cartRecalculateAction, cartChangeTaxModeAction)
-                        .build()
-                )
+                        .build())
                 .execute()
                 .thenApply(ApiHttpResponse::getBody)
                 .join();

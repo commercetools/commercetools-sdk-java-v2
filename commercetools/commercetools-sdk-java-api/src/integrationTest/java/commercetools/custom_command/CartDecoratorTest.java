@@ -25,7 +25,7 @@ public class CartDecoratorTest {
     @Test
     public void decoratedClient() {
         final ProjectApiRoot apiRoot = CommercetoolsTestUtils.getProjectApiRoot();
-        final DecoratedApiHttpClient client = new DecoratedApiHttpClient(apiRoot.getApiHttpClient());
+        final DecoratedApiHttpClient client = new DecoratedApiHttpClient(apiRoot.getApiHttpClient(), true);
         final ProjectApiRoot decoratedRoot = ProjectApiRoot.fromClient(apiRoot.getProjectKey(), client);
         final CartDraft cartDraft = CartDraftBuilder.of().currency("EUR").build();
 
@@ -51,8 +51,11 @@ public class CartDecoratorTest {
 
         private ApiHttpRequest lastRequest;
 
-        public DecoratedApiHttpClient(ApiHttpClient apiHttpClient) {
+        private boolean enableResetLineItemExternalTotals;
+
+        public DecoratedApiHttpClient(ApiHttpClient apiHttpClient, boolean enableResetLineItemExternalTotals) {
             this.apiHttpClient = apiHttpClient;
+            this.enableResetLineItemExternalTotals = enableResetLineItemExternalTotals;
         }
 
         @Override
@@ -99,7 +102,7 @@ public class CartDecoratorTest {
         }
 
         public CreateHttpRequestCommand resetLineItemExternalTotals(CreateHttpRequestCommand method) {
-            if (method instanceof ByProjectKeyCartsByIDPost) {
+            if (enableResetLineItemExternalTotals && method instanceof ByProjectKeyCartsByIDPost) {
                 final ByProjectKeyCartsByIDPost byProjectKeyCartsByIDPost = (ByProjectKeyCartsByIDPost) method;
                 final CartUpdate cartUpdate = byProjectKeyCartsByIDPost.getBody();
                 if (cartUpdate instanceof WithCartCartUpdateImpl) {

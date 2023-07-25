@@ -1,12 +1,13 @@
+
 package commercetools.custom_command;
+
+import java.util.List;
+import java.util.Objects;
 
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.cart.CartUpdate;
 import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.cart.CartUpdateBuilder;
-
-import java.util.List;
-import java.util.Objects;
 
 public class IncludeCartCartUpdateBuilder extends CartUpdateBuilder {
     private Cart cart;
@@ -15,7 +16,7 @@ public class IncludeCartCartUpdateBuilder extends CartUpdateBuilder {
         return cart;
     }
 
-    public IncludeCartCartUpdateBuilder cart(Cart cart){
+    public IncludeCartCartUpdateBuilder cart(Cart cart) {
         this.cart = cart;
         return this;
     }

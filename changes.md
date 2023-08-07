@@ -4,7 +4,6 @@
 <summary>Changed Property(s)</summary>
 
 - :warning: changed property `money` of type `CartDiscountValueFixed` from type `CentPrecisionMoney[]` to `TypedMoney[]`
-- :warning: changed property `money` of type `CartDiscountValueFixedDraft` from type `Money[]` to `TypedMoneyDraft[]`
 - :warning: changed property `country` of type `StagedOrder` from type `string` to `CountryCode`
 - :warning: changed property `locale` of type `StagedOrder` from type `string` to `Locale`
 - :warning: changed property `country` of type `StagedOrderSetCountryAction` from type `string` to `CountryCode`
@@ -203,9 +202,15 @@
 
 
 <details>
+<summary>Changed Type(s)</summary>
+
+- :warning: changed type `CartSetDeliveryAddressCustomFieldAction` from type `CartUpdateAction` to `string`
+</details>
+
+
+<details>
 <summary>Removed Type(s)</summary>
 
-- :warning: removed type `CartSetDeliveryAddressCustomFieldAction`
 - :warning: removed type `CartSetDeliveryAddressCustomTypeAction`
 - :warning: removed type `BusinessUnitParentUnitChangedMessage`
 - :warning: removed type `BusinessUnitParentUnitChangedMessagePayload`

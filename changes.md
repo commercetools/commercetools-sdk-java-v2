@@ -202,15 +202,9 @@
 
 
 <details>
-<summary>Changed Type(s)</summary>
-
-- :warning: changed type `CartSetDeliveryAddressCustomFieldAction` from type `CartUpdateAction` to `string`
-</details>
-
-
-<details>
 <summary>Removed Type(s)</summary>
 
+- :warning: removed type `CartSetDeliveryAddressCustomFieldAction`
 - :warning: removed type `CartSetDeliveryAddressCustomTypeAction`
 - :warning: removed type `BusinessUnitParentUnitChangedMessage`
 - :warning: removed type `BusinessUnitParentUnitChangedMessagePayload`

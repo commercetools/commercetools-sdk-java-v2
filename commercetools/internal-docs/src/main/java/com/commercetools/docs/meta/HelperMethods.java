@@ -45,8 +45,6 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#cartSetCustomLineItemCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#cartSetDeleteDaysAfterLastModificationUnset()}
- * <p>{@link com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldAction#ofUnset(String, String)}</p>
- * {@include.example example.HelperMethodsTest#cartSetDeliveryAddressCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldAction#ofUnset(String, String)}</p>
  * {@include.example example.HelperMethodsTest#cartSetItemShippingAddressCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.cart.CartSetShippingAddressCustomFieldAction#ofUnset(String)}</p>

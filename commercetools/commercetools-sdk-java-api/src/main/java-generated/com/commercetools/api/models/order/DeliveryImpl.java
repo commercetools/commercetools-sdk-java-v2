@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * Delivery
+ *  <p>Contains information on how items are shipped to Customers, for example, a delivery note.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DeliveryImpl implements Delivery, ModelBase {
@@ -76,7 +76,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Delivery was created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -84,7 +84,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -92,7 +92,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.Parcel> getParcels() {
@@ -100,7 +100,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Address to which Parcels are delivered.</p>
      */
 
     public com.commercetools.api.models.common.Address getAddress() {
@@ -108,7 +108,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields of the Delivery.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -162,6 +162,13 @@ public class DeliveryImpl implements Delivery, ModelBase {
         DeliveryImpl that = (DeliveryImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
+                .append(createdAt, that.createdAt)
+                .append(items, that.items)
+                .append(parcels, that.parcels)
+                .append(address, that.address)
+                .append(custom, that.custom)
+                .append(id, that.id)
                 .append(key, that.key)
                 .append(createdAt, that.createdAt)
                 .append(items, that.items)

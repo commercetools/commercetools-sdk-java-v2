@@ -72,7 +72,11 @@ public class StandalonePriceTierRemovedMessagePayloadImpl
 
         StandalonePriceTierRemovedMessagePayloadImpl that = (StandalonePriceTierRemovedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(removedTier, that.removedTier).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(removedTier, that.removedTier)
+                .append(type, that.type)
+                .append(removedTier, that.removedTier)
+                .isEquals();
     }
 
     @Override

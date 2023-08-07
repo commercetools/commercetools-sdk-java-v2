@@ -92,6 +92,9 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
         return new EqualsBuilder().append(channel, that.channel)
                 .append(externalId, that.externalId)
                 .append(syncedAt, that.syncedAt)
+                .append(channel, that.channel)
+                .append(externalId, that.externalId)
+                .append(syncedAt, that.syncedAt)
                 .isEquals();
     }
 

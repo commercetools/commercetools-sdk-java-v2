@@ -143,6 +143,12 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
                 .append(waitForMasterVariant, that.waitForMasterVariant)
                 .append(imported, that.imported)
                 .append(rejected, that.rejected)
+                .append(processing, that.processing)
+                .append(validationFailed, that.validationFailed)
+                .append(unresolved, that.unresolved)
+                .append(waitForMasterVariant, that.waitForMasterVariant)
+                .append(imported, that.imported)
+                .append(rejected, that.rejected)
                 .isEquals();
     }
 

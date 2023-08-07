@@ -58,7 +58,7 @@ public class CustomShippingMethodChangeValueImpl implements CustomShippingMethod
 
         CustomShippingMethodChangeValueImpl that = (CustomShippingMethodChangeValueImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).isEquals();
+        return new EqualsBuilder().append(name, that.name).append(name, that.name).isEquals();
     }
 
     @Override

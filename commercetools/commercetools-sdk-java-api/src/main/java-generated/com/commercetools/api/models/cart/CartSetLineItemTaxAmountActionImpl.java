@@ -123,6 +123,11 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
                 .append(lineItemKey, that.lineItemKey)
                 .append(externalTaxAmount, that.externalTaxAmount)
                 .append(shippingKey, that.shippingKey)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(externalTaxAmount, that.externalTaxAmount)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 

@@ -27,7 +27,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     private java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> items;
 
     /**
-     * set values to the items
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * set value to the items
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * add values to the items
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * value of items}
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return items
      */
 

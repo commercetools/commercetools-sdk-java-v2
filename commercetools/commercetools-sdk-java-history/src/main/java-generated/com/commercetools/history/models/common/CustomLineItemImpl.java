@@ -160,6 +160,13 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(totalPrice, that.totalPrice)
                 .append(slug, that.slug)
                 .append(quantity, that.quantity)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(money, that.money)
+                .append(taxedPrice, that.taxedPrice)
+                .append(totalPrice, that.totalPrice)
+                .append(slug, that.slug)
+                .append(quantity, that.quantity)
                 .isEquals();
     }
 

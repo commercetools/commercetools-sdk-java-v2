@@ -37,7 +37,8 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
     String SET_DELIVERY_ADDRESS_CUSTOM_TYPE = "setDeliveryAddressCustomType";
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
 
@@ -45,7 +46,8 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
     public String getDeliveryId();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
 
@@ -53,7 +55,7 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
     public String getDeliveryKey();
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
      * @return type
      */
     @Valid
@@ -61,7 +63,7 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
      * @return fields
      */
     @Valid
@@ -69,28 +71,30 @@ public interface OrderSetDeliveryAddressCustomTypeAction extends OrderUpdateActi
     public FieldContainer getFields();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      */
 
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
      * @param fields value to be set
      */
 

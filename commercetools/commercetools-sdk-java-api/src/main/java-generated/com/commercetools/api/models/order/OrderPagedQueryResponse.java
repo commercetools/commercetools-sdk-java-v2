@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderPagedQueryResponse
+ *  <p>PagedQueryResult with <code>results</code> containing an array of Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -24,8 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     OrderPagedQueryResponse orderPagedQueryResponse = OrderPagedQueryResponse.builder()
  *             .limit(0.3)
- *             .count(0.3)
  *             .offset(0.3)
+ *             .count(0.3)
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
@@ -44,22 +44,6 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public Long getLimit();
 
     /**
-     *
-     * @return count
-     */
-    @NotNull
-    @JsonProperty("count")
-    public Long getCount();
-
-    /**
-     *
-     * @return total
-     */
-
-    @JsonProperty("total")
-    public Long getTotal();
-
-    /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
@@ -68,7 +52,23 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public Long getOffset();
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
+    @NotNull
+    @JsonProperty("count")
+    public Long getCount();
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
+     */
+
+    @JsonProperty("total")
+    public Long getTotal();
+
+    /**
+     *  <p>Orders matching the query.</p>
      * @return results
      */
     @NotNull
@@ -84,20 +84,6 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public void setLimit(final Long limit);
 
     /**
-     * set count
-     * @param count value to be set
-     */
-
-    public void setCount(final Long count);
-
-    /**
-     * set total
-     * @param total value to be set
-     */
-
-    public void setTotal(final Long total);
-
-    /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      */
@@ -105,7 +91,21 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public void setOffset(final Long offset);
 
     /**
-     * set results
+     *  <p>Actual number of results returned.</p>
+     * @param count value to be set
+     */
+
+    public void setCount(final Long count);
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @param total value to be set
+     */
+
+    public void setTotal(final Long total);
+
+    /**
+     *  <p>Orders matching the query.</p>
      * @param results values to be set
      */
 
@@ -113,7 +113,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public void setResults(final Order... results);
 
     /**
-     * set results
+     *  <p>Orders matching the query.</p>
      * @param results values to be set
      */
 
@@ -135,9 +135,9 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public static OrderPagedQueryResponse of(final OrderPagedQueryResponse template) {
         OrderPagedQueryResponseImpl instance = new OrderPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
-        instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
         return instance;
     }
@@ -154,9 +154,9 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
         }
         OrderPagedQueryResponseImpl instance = new OrderPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
-        instance.setOffset(template.getOffset());
         instance.setResults(Optional.ofNullable(template.getResults())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.Order::deepCopy)

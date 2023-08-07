@@ -138,6 +138,11 @@ public class TypeImportImpl implements TypeImport, ModelBase {
                 .append(description, that.description)
                 .append(resourceTypeIds, that.resourceTypeIds)
                 .append(fieldDefinitions, that.fieldDefinitions)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(resourceTypeIds, that.resourceTypeIds)
+                .append(fieldDefinitions, that.fieldDefinitions)
                 .isEquals();
     }
 

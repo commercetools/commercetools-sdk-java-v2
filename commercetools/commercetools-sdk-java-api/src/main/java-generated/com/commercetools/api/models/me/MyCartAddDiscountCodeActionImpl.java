@@ -72,7 +72,11 @@ public class MyCartAddDiscountCodeActionImpl implements MyCartAddDiscountCodeAct
 
         MyCartAddDiscountCodeActionImpl that = (MyCartAddDiscountCodeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(code, that.code).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(code, that.code)
+                .append(action, that.action)
+                .append(code, that.code)
+                .isEquals();
     }
 
     @Override

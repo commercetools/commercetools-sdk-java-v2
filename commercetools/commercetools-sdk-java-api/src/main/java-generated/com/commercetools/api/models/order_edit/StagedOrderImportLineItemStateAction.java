@@ -18,14 +18,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderImportLineItemStateAction
+ *  <p>The import of States does not follow any predefined rules and should be only used if no transitions are defined. The <code>quantity</code> in the ItemStates must match the sum of all Line Item states' quantities.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderImportLineItemStateAction stagedOrderImportLineItemStateAction = StagedOrderImportLineItemStateAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .plusState(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
@@ -41,15 +40,23 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
     String IMPORT_LINE_ITEM_STATE = "importLineItemState";
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
+
+    /**
+     *  <p>New status of the Line Items.</p>
      * @return state
      */
     @NotNull
@@ -58,14 +65,21 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
     public List<ItemState> getState();
 
     /**
-     * set lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     * set state
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
+
+    /**
+     *  <p>New status of the Line Items.</p>
      * @param state values to be set
      */
 
@@ -73,7 +87,7 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
     public void setState(final ItemState... state);
 
     /**
-     * set state
+     *  <p>New status of the Line Items.</p>
      * @param state values to be set
      */
 
@@ -95,6 +109,7 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
     public static StagedOrderImportLineItemStateAction of(final StagedOrderImportLineItemStateAction template) {
         StagedOrderImportLineItemStateActionImpl instance = new StagedOrderImportLineItemStateActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setState(template.getState());
         return instance;
     }
@@ -112,6 +127,7 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
         }
         StagedOrderImportLineItemStateActionImpl instance = new StagedOrderImportLineItemStateActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setState(Optional.ofNullable(template.getState())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.ItemState::deepCopy)

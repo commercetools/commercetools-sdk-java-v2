@@ -47,7 +47,7 @@ public class CartDiscountShippingCostTargetImpl implements CartDiscountShippingC
 
         CartDiscountShippingCostTargetImpl that = (CartDiscountShippingCostTargetImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

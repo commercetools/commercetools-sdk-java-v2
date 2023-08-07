@@ -125,6 +125,11 @@ public class StandalonePriceValidFromAndUntilSetMessagePayloadImpl
                 .append(previousValidFrom, that.previousValidFrom)
                 .append(validUntil, that.validUntil)
                 .append(previousValidUntil, that.previousValidUntil)
+                .append(type, that.type)
+                .append(validFrom, that.validFrom)
+                .append(previousValidFrom, that.previousValidFrom)
+                .append(validUntil, that.validUntil)
+                .append(previousValidUntil, that.previousValidUntil)
                 .isEquals();
     }
 

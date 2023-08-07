@@ -17,8 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     OrderPagedQueryResponse orderPagedQueryResponse = OrderPagedQueryResponse.builder()
  *             .limit(0.3)
- *             .count(0.3)
  *             .offset(0.3)
+ *             .count(0.3)
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
@@ -29,12 +29,12 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
-
-    private Long offset;
 
     private java.util.List<com.commercetools.api.models.order.Order> results;
 
@@ -50,28 +50,6 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     * set the value to the count
-     * @param count value to be set
-     * @return Builder
-     */
-
-    public OrderPagedQueryResponseBuilder count(final Long count) {
-        this.count = count;
-        return this;
-    }
-
-    /**
-     * set the value to the total
-     * @param total value to be set
-     * @return Builder
-     */
-
-    public OrderPagedQueryResponseBuilder total(@Nullable final Long total) {
-        this.total = total;
-        return this;
-    }
-
-    /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      * @return Builder
@@ -83,7 +61,29 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     * set values to the results
+     *  <p>Actual number of results returned.</p>
+     * @param count value to be set
+     * @return Builder
+     */
+
+    public OrderPagedQueryResponseBuilder count(final Long count) {
+        this.count = count;
+        return this;
+    }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @param total value to be set
+     * @return Builder
+     */
+
+    public OrderPagedQueryResponseBuilder total(@Nullable final Long total) {
+        this.total = total;
+        return this;
+    }
+
+    /**
+     *  <p>Orders matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     * set value to the results
+     *  <p>Orders matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     * add values to the results
+     *  <p>Orders matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     * add the value to the results using the builder function
+     *  <p>Orders matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     * set the value to the results using the builder function
+     *  <p>Orders matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -148,7 +148,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     * add the value to the results using the builder function
+     *  <p>Orders matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -159,7 +159,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     * set the value to the results using the builder function
+     *  <p>Orders matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -179,25 +179,6 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     * value of count}
-     * @return count
-     */
-
-    public Long getCount() {
-        return this.count;
-    }
-
-    /**
-     * value of total}
-     * @return total
-     */
-
-    @Nullable
-    public Long getTotal() {
-        return this.total;
-    }
-
-    /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
@@ -207,7 +188,26 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
-     * value of results}
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
+
+    public Long getCount() {
+        return this.count;
+    }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
+     */
+
+    @Nullable
+    public Long getTotal() {
+        return this.total;
+    }
+
+    /**
+     *  <p>Orders matching the query.</p>
      * @return results
      */
 
@@ -221,10 +221,10 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
      */
     public OrderPagedQueryResponse build() {
         Objects.requireNonNull(limit, OrderPagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, OrderPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, OrderPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, OrderPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, OrderPagedQueryResponse.class + ": results is missing");
-        return new OrderPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new OrderPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
@@ -232,7 +232,7 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
      * @return OrderPagedQueryResponse
      */
     public OrderPagedQueryResponse buildUnchecked() {
-        return new OrderPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new OrderPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
@@ -251,9 +251,9 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     public static OrderPagedQueryResponseBuilder of(final OrderPagedQueryResponse template) {
         OrderPagedQueryResponseBuilder builder = new OrderPagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

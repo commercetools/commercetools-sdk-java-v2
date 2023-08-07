@@ -70,7 +70,11 @@ public class CartDiscountKeyReferenceImpl implements CartDiscountKeyReference, M
 
         CartDiscountKeyReferenceImpl that = (CartDiscountKeyReferenceImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(typeId, that.typeId).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .isEquals();
     }
 
     @Override

@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPriceDraft> {
 
     /**
-     *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     *  <p>Total net price of the Cart or Order.</p>
      * @return totalNet
      */
     @NotNull
@@ -45,7 +45,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     public Money getTotalNet();
 
     /**
-     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     *  <p>Total gross price of the Cart or Order.</p>
      * @return totalGross
      */
     @NotNull
@@ -64,14 +64,14 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     public List<TaxPortionDraft> getTaxPortions();
 
     /**
-     *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     *  <p>Total net price of the Cart or Order.</p>
      * @param totalNet value to be set
      */
 
     public void setTotalNet(final Money totalNet);
 
     /**
-     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     *  <p>Total gross price of the Cart or Order.</p>
      * @param totalGross value to be set
      */
 

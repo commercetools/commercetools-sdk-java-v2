@@ -17,7 +17,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
 
     /**
-    	<p>Changes to <a href="ctp:api:type:BusinessUnit">Business Units</a>.</p>
+    	<p>Changes related to <a href="ctp:api:type:AssociateRole">AssociateRoles</a>.</p>
+
+    */
+    ChangeSubscriptionResourceTypeId ASSOCIATE_ROLE = ChangeSubscriptionResourceTypeIdEnum.ASSOCIATE_ROLE;
+    /**
+    	<p>Changes to <a href="ctp:api:type:BusinessUnit">BusinessUnits</a>.</p>
 
     */
     ChangeSubscriptionResourceTypeId BUSINESS_UNIT = ChangeSubscriptionResourceTypeIdEnum.BUSINESS_UNIT;
@@ -127,7 +132,7 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
     */
     ChangeSubscriptionResourceTypeId QUOTE = ChangeSubscriptionResourceTypeIdEnum.QUOTE;
     /**
-    	<p>Changes to <a href="ctp:api:type:QuoteRequest">Quote Requests</a>.</p>
+    	<p>Changes to <a href="ctp:api:type:QuoteRequest">QuoteRequests</a>.</p>
 
     */
     ChangeSubscriptionResourceTypeId QUOTE_REQUEST = ChangeSubscriptionResourceTypeIdEnum.QUOTE_REQUEST;
@@ -147,7 +152,7 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
     */
     ChangeSubscriptionResourceTypeId SHOPPING_LIST = ChangeSubscriptionResourceTypeIdEnum.SHOPPING_LIST;
     /**
-    	<p>Changes to <a href="ctp:api:type:StagedQuote">Staged Quotes</a>.</p>
+    	<p>Changes to <a href="ctp:api:type:StagedQuote">StagedQuotes</a>.</p>
 
     */
     ChangeSubscriptionResourceTypeId STAGED_QUOTE = ChangeSubscriptionResourceTypeIdEnum.STAGED_QUOTE;
@@ -191,6 +196,11 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
      * possible values of ChangeSubscriptionResourceTypeId
      */
     enum ChangeSubscriptionResourceTypeIdEnum implements ChangeSubscriptionResourceTypeId {
+        /**
+         * associate-role
+         */
+        ASSOCIATE_ROLE("associate-role"),
+
         /**
          * business-unit
          */

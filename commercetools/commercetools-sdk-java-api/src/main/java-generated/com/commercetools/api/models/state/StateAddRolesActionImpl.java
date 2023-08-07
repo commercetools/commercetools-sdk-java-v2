@@ -75,7 +75,11 @@ public class StateAddRolesActionImpl implements StateAddRolesAction, ModelBase {
 
         StateAddRolesActionImpl that = (StateAddRolesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(roles, that.roles).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(roles, that.roles)
+                .append(action, that.action)
+                .append(roles, that.roles)
+                .isEquals();
     }
 
     @Override

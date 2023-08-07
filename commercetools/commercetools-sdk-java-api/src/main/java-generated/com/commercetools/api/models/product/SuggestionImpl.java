@@ -58,7 +58,7 @@ public class SuggestionImpl implements Suggestion, ModelBase {
 
         SuggestionImpl that = (SuggestionImpl) o;
 
-        return new EqualsBuilder().append(text, that.text).isEquals();
+        return new EqualsBuilder().append(text, that.text).append(text, that.text).isEquals();
     }
 
     @Override

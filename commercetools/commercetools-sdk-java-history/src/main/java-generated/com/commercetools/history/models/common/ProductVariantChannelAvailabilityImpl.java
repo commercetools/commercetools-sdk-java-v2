@@ -93,6 +93,9 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
         return new EqualsBuilder().append(isOnStock, that.isOnStock)
                 .append(restockableInDays, that.restockableInDays)
                 .append(availableQuantity, that.availableQuantity)
+                .append(isOnStock, that.isOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(availableQuantity, that.availableQuantity)
                 .isEquals();
     }
 

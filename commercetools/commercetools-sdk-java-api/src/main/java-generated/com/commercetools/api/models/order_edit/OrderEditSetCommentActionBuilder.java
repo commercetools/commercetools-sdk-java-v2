@@ -26,7 +26,7 @@ public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCom
     private String comment;
 
     /**
-     * set the value to the comment
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param comment value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderEditSetCommentActionBuilder implements Builder<OrderEditSetCom
     }
 
     /**
-     * value of comment}
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return comment
      */
 

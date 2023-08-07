@@ -60,7 +60,9 @@ public class ChangeSubscriptionImpl implements ChangeSubscription, ModelBase {
 
         ChangeSubscriptionImpl that = (ChangeSubscriptionImpl) o;
 
-        return new EqualsBuilder().append(resourceTypeId, that.resourceTypeId).isEquals();
+        return new EqualsBuilder().append(resourceTypeId, that.resourceTypeId)
+                .append(resourceTypeId, that.resourceTypeId)
+                .isEquals();
     }
 
     @Override

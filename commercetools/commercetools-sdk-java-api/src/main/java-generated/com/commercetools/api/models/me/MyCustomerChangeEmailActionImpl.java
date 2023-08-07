@@ -70,7 +70,11 @@ public class MyCustomerChangeEmailActionImpl implements MyCustomerChangeEmailAct
 
         MyCustomerChangeEmailActionImpl that = (MyCustomerChangeEmailActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(email, that.email).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(email, that.email)
+                .append(action, that.action)
+                .append(email, that.email)
+                .isEquals();
     }
 
     @Override

@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetLineItemTaxAmountAction
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -53,12 +53,7 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
     public String getLineItemKey();
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return externalTaxAmount
      */
     @Valid
@@ -66,7 +61,7 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
     public ExternalTaxAmountDraft getExternalTaxAmount();
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
 
@@ -88,19 +83,14 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param externalTaxAmount value to be set
      */
 
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
 

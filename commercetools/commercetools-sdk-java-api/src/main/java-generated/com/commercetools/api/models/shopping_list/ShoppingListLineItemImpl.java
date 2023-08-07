@@ -233,6 +233,17 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(variantId, that.variantId)
                 .append(variant, that.variant)
                 .append(productSlug, that.productSlug)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(deactivatedAt, that.deactivatedAt)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(productId, that.productId)
+                .append(productType, that.productType)
+                .append(quantity, that.quantity)
+                .append(variantId, that.variantId)
+                .append(variant, that.variant)
+                .append(productSlug, that.productSlug)
                 .isEquals();
     }
 

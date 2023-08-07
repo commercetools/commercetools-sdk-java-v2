@@ -70,7 +70,11 @@ public class OrderImportedMessagePayloadImpl implements OrderImportedMessagePayl
 
         OrderImportedMessagePayloadImpl that = (OrderImportedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(order, that.order).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(order, that.order)
+                .append(type, that.type)
+                .append(order, that.order)
+                .isEquals();
     }
 
     @Override

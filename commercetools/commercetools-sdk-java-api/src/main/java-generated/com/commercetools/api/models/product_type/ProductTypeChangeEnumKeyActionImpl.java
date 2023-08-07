@@ -107,6 +107,10 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
                 .append(attributeName, that.attributeName)
                 .append(key, that.key)
                 .append(newKey, that.newKey)
+                .append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(key, that.key)
+                .append(newKey, that.newKey)
                 .isEquals();
     }
 

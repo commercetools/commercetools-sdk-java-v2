@@ -70,7 +70,11 @@ public class ProductDiscountChangePredicateActionImpl implements ProductDiscount
 
         ProductDiscountChangePredicateActionImpl that = (ProductDiscountChangePredicateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(predicate, that.predicate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(predicate, that.predicate)
+                .append(action, that.action)
+                .append(predicate, that.predicate)
+                .isEquals();
     }
 
     @Override

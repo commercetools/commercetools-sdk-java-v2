@@ -50,6 +50,21 @@ public class CustomLineItemQueryBuilderDsl {
             CustomLineItemQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> taxedPricePortions(
+            Function<com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("taxedPricePortions"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl.of())),
+            CustomLineItemQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CustomLineItemQueryBuilderDsl> taxedPricePortions() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxedPricePortions")),
+            p -> new CombinationQueryPredicate<>(p, CustomLineItemQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> totalPrice(
             Function<com.commercetools.api.predicates.query.common.CentPrecisionMoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.CentPrecisionMoneyQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

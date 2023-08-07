@@ -31,10 +31,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .shippingMode(ShippingMode.SINGLE)
  *             .plusShipping(shippingBuilder -> shippingBuilder)
+ *             .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
+ *             .origin(CartOrigin.CUSTOMER)
  *             .orderState(OrderState.OPEN)
  *             .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
- *             .origin(CartOrigin.CUSTOMER)
- *             .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -62,12 +62,11 @@ public interface StagedOrder extends Order {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(template.getLastModifiedBy());
-        instance.setCreatedBy(template.getCreatedBy());
-        instance.setCompletedAt(template.getCompletedAt());
         instance.setOrderNumber(template.getOrderNumber());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setCustomerId(template.getCustomerId());
         instance.setCustomerEmail(template.getCustomerEmail());
+        instance.setCustomerGroup(template.getCustomerGroup());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setBusinessUnit(template.getBusinessUnit());
         instance.setStore(template.getStore());
@@ -76,37 +75,39 @@ public interface StagedOrder extends Order {
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxedShippingPrice(template.getTaxedShippingPrice());
-        instance.setShippingAddress(template.getShippingAddress());
-        instance.setBillingAddress(template.getBillingAddress());
-        instance.setShippingMode(template.getShippingMode());
-        instance.setShippingKey(template.getShippingKey());
-        instance.setShippingCustomFields(template.getShippingCustomFields());
-        instance.setShipping(template.getShipping());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
-        instance.setCustomerGroup(template.getCustomerGroup());
-        instance.setCountry(template.getCountry());
-        instance.setOrderState(template.getOrderState());
-        instance.setState(template.getState());
-        instance.setShipmentState(template.getShipmentState());
-        instance.setPaymentState(template.getPaymentState());
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setBillingAddress(template.getBillingAddress());
+        instance.setShippingAddress(template.getShippingAddress());
+        instance.setShippingMode(template.getShippingMode());
+        instance.setShippingKey(template.getShippingKey());
         instance.setShippingInfo(template.getShippingInfo());
-        instance.setSyncInfo(template.getSyncInfo());
-        instance.setReturnInfo(template.getReturnInfo());
-        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
+        instance.setShippingRateInput(template.getShippingRateInput());
+        instance.setShippingCustomFields(template.getShippingCustomFields());
+        instance.setShipping(template.getShipping());
+        instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDiscountCodes(template.getDiscountCodes());
-        instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
+        instance.setDirectDiscounts(template.getDirectDiscounts());
+        instance.setRefusedGifts(template.getRefusedGifts());
+        instance.setPaymentInfo(template.getPaymentInfo());
+        instance.setCountry(template.getCountry());
+        instance.setLocale(template.getLocale());
+        instance.setOrigin(template.getOrigin());
         instance.setCart(template.getCart());
         instance.setQuote(template.getQuote());
+        instance.setOrderState(template.getOrderState());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setState(template.getState());
+        instance.setSyncInfo(template.getSyncInfo());
+        instance.setReturnInfo(template.getReturnInfo());
+        instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCustom(template.getCustom());
-        instance.setPaymentInfo(template.getPaymentInfo());
-        instance.setLocale(template.getLocale());
-        instance.setInventoryMode(template.getInventoryMode());
-        instance.setOrigin(template.getOrigin());
-        instance.setTaxCalculationMode(template.getTaxCalculationMode());
-        instance.setShippingRateInput(template.getShippingRateInput());
-        instance.setItemShippingAddresses(template.getItemShippingAddresses());
-        instance.setRefusedGifts(template.getRefusedGifts());
+        instance.setCompletedAt(template.getCompletedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
         return instance;
     }
 
@@ -125,13 +126,12 @@ public interface StagedOrder extends Order {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
-        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
-        instance.setCompletedAt(template.getCompletedAt());
         instance.setOrderNumber(template.getOrderNumber());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setCustomerId(template.getCustomerId());
         instance.setCustomerEmail(template.getCustomerEmail());
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
         instance.setAnonymousId(template.getAnonymousId());
         instance.setBusinessUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));
@@ -150,11 +150,18 @@ public interface StagedOrder extends Order {
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedShippingPrice(
             com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedShippingPrice()));
+        instance.setTaxMode(template.getTaxMode());
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));
         instance.setShippingAddress(
             com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));
-        instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));
         instance.setShippingMode(template.getShippingMode());
         instance.setShippingKey(template.getShippingKey());
+        instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
         instance.setShippingCustomFields(
             com.commercetools.api.models.type.CustomFields.deepCopy(template.getShippingCustomFields()));
         instance.setShipping(Optional.ofNullable(template.getShipping())
@@ -162,16 +169,36 @@ public interface StagedOrder extends Order {
                         .map(com.commercetools.api.models.cart.Shipping::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTaxMode(template.getTaxMode());
-        instance.setTaxRoundingMode(template.getTaxRoundingMode());
-        instance.setCustomerGroup(
-            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Address::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDiscountCodes(Optional.ofNullable(template.getDiscountCodes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.DiscountCodeInfo::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDirectDiscounts(Optional.ofNullable(template.getDirectDiscounts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.DirectDiscount::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setRefusedGifts(Optional.ofNullable(template.getRefusedGifts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart_discount.CartDiscountReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setPaymentInfo(com.commercetools.api.models.order.PaymentInfo.deepCopy(template.getPaymentInfo()));
         instance.setCountry(template.getCountry());
+        instance.setLocale(template.getLocale());
+        instance.setOrigin(template.getOrigin());
+        instance.setCart(com.commercetools.api.models.cart.CartReference.deepCopy(template.getCart()));
+        instance.setQuote(com.commercetools.api.models.quote.QuoteReference.deepCopy(template.getQuote()));
         instance.setOrderState(template.getOrderState());
-        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
-        instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setSyncInfo(Optional.ofNullable(template.getSyncInfo())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.SyncInfo::deepCopy)
@@ -182,33 +209,12 @@ public interface StagedOrder extends Order {
                         .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
-        instance.setDiscountCodes(Optional.ofNullable(template.getDiscountCodes())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.DiscountCodeInfo::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
-        instance.setCart(com.commercetools.api.models.cart.CartReference.deepCopy(template.getCart()));
-        instance.setQuote(com.commercetools.api.models.quote.QuoteReference.deepCopy(template.getQuote()));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
-        instance.setPaymentInfo(com.commercetools.api.models.order.PaymentInfo.deepCopy(template.getPaymentInfo()));
-        instance.setLocale(template.getLocale());
-        instance.setInventoryMode(template.getInventoryMode());
-        instance.setOrigin(template.getOrigin());
-        instance.setTaxCalculationMode(template.getTaxCalculationMode());
-        instance.setShippingRateInput(
-            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
-        instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.Address::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
-        instance.setRefusedGifts(Optional.ofNullable(template.getRefusedGifts())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart_discount.CartDiscountReference::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
+        instance.setCompletedAt(template.getCompletedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         return instance;
     }
 

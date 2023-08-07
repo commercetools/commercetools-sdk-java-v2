@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Set Parcel TrackingData update action.</p>
+ *  <p>Generated after a successful Set Parcel Tracking Data update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTrackingDataUpdatedMessagePayload, ModelBase {
@@ -85,7 +85,7 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -119,6 +119,11 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
         ParcelTrackingDataUpdatedMessagePayloadImpl that = (ParcelTrackingDataUpdatedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(deliveryId, that.deliveryId)
+                .append(parcelId, that.parcelId)
+                .append(trackingData, that.trackingData)
+                .append(shippingKey, that.shippingKey)
+                .append(type, that.type)
                 .append(deliveryId, that.deliveryId)
                 .append(parcelId, that.parcelId)
                 .append(trackingData, that.trackingData)

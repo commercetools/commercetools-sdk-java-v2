@@ -71,7 +71,11 @@ public class AttributeGroupAddAttributeActionImpl implements AttributeGroupAddAt
 
         AttributeGroupAddAttributeActionImpl that = (AttributeGroupAddAttributeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attribute, that.attribute).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attribute, that.attribute)
+                .append(action, that.action)
+                .append(attribute, that.attribute)
+                .isEquals();
     }
 
     @Override

@@ -74,7 +74,11 @@ public class TaxedItemPriceDraftImpl implements TaxedItemPriceDraft, ModelBase {
 
         TaxedItemPriceDraftImpl that = (TaxedItemPriceDraftImpl) o;
 
-        return new EqualsBuilder().append(totalNet, that.totalNet).append(totalGross, that.totalGross).isEquals();
+        return new EqualsBuilder().append(totalNet, that.totalNet)
+                .append(totalGross, that.totalGross)
+                .append(totalNet, that.totalNet)
+                .append(totalGross, that.totalGross)
+                .isEquals();
     }
 
     @Override

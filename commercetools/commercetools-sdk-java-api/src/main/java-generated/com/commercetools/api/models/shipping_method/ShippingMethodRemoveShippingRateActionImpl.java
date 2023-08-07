@@ -90,6 +90,9 @@ public class ShippingMethodRemoveShippingRateActionImpl implements ShippingMetho
         return new EqualsBuilder().append(action, that.action)
                 .append(zone, that.zone)
                 .append(shippingRate, that.shippingRate)
+                .append(action, that.action)
+                .append(zone, that.zone)
+                .append(shippingRate, that.shippingRate)
                 .isEquals();
     }
 

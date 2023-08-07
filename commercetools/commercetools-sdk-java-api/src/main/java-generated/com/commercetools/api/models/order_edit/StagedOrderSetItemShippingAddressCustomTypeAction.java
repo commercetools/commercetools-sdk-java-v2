@@ -40,7 +40,7 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     String SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE = "setItemShippingAddressCustomType";
 
     /**
-     *
+     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
      * @return addressKey
      */
     @NotNull
@@ -64,7 +64,7 @@ public interface StagedOrderSetItemShippingAddressCustomTypeAction extends Stage
     public FieldContainer getFields();
 
     /**
-     * set addressKey
+     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
      * @param addressKey value to be set
      */
 

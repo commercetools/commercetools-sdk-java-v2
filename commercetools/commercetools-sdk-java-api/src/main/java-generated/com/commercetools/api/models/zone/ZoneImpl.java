@@ -214,6 +214,16 @@ public class ZoneImpl implements Zone, ModelBase {
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(locations, that.locations)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(locations, that.locations)
                 .isEquals();
     }
 

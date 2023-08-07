@@ -93,6 +93,9 @@ public class GraphQLAttributeNameDoesNotExistErrorImpl implements GraphQLAttribu
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(invalidAttributeName, that.invalidAttributeName)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(invalidAttributeName, that.invalidAttributeName)
                 .isEquals();
     }
 

@@ -113,6 +113,10 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(duplicates, that.duplicates)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(duplicates, that.duplicates)
                 .isEquals();
     }
 

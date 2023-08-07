@@ -97,6 +97,9 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
         return new EqualsBuilder().append(operationId, that.operationId)
                 .append(state, that.state)
                 .append(errors, that.errors)
+                .append(operationId, that.operationId)
+                .append(state, that.state)
+                .append(errors, that.errors)
                 .isEquals();
     }
 

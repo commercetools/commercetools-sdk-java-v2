@@ -98,6 +98,9 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
         return new EqualsBuilder().append(resourceTypeId, that.resourceTypeId)
                 .append(actions, that.actions)
                 .append(condition, that.condition)
+                .append(resourceTypeId, that.resourceTypeId)
+                .append(actions, that.actions)
+                .append(condition, that.condition)
                 .isEquals();
     }
 

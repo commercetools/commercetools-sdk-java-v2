@@ -126,6 +126,11 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
                 .append(accessSecret, that.accessSecret)
                 .append(topicArn, that.topicArn)
                 .append(authenticationMode, that.authenticationMode)
+                .append(type, that.type)
+                .append(accessKey, that.accessKey)
+                .append(accessSecret, that.accessSecret)
+                .append(topicArn, that.topicArn)
+                .append(authenticationMode, that.authenticationMode)
                 .isEquals();
     }
 

@@ -60,6 +60,9 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     private String lineItemId;
 
+    @Nullable
+    private String lineItemKey;
+
     private Long removedQuantity;
 
     private Long newQuantity;
@@ -285,6 +288,17 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
 
     public OrderLineItemRemovedMessageBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderLineItemRemovedMessageBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -646,6 +660,16 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
      * @return removedQuantity
      */
@@ -729,8 +753,8 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         Objects.requireNonNull(newState, OrderLineItemRemovedMessage.class + ": newState is missing");
         Objects.requireNonNull(newTotalPrice, OrderLineItemRemovedMessage.class + ": newTotalPrice is missing");
         return new OrderLineItemRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, removedQuantity,
-            newQuantity, newState, newTotalPrice, newTaxedPrice, newPrice, newShippingDetail);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, lineItemKey,
+            removedQuantity, newQuantity, newState, newTotalPrice, newTaxedPrice, newPrice, newShippingDetail);
     }
 
     /**
@@ -739,8 +763,8 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
      */
     public OrderLineItemRemovedMessage buildUnchecked() {
         return new OrderLineItemRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, removedQuantity,
-            newQuantity, newState, newTotalPrice, newTaxedPrice, newPrice, newShippingDetail);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, lineItemKey,
+            removedQuantity, newQuantity, newState, newTotalPrice, newTaxedPrice, newPrice, newShippingDetail);
     }
 
     /**
@@ -769,6 +793,7 @@ public class OrderLineItemRemovedMessageBuilder implements Builder<OrderLineItem
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.removedQuantity = template.getRemovedQuantity();
         builder.newQuantity = template.getNewQuantity();
         builder.newState = template.getNewState();

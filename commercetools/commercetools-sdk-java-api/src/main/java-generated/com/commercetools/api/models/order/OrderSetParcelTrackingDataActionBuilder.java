@@ -33,7 +33,8 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     private com.commercetools.api.models.order.TrackingData trackingData;
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      * @return Builder
      */
@@ -44,7 +45,8 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      * @return Builder
      */
@@ -55,7 +57,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -67,7 +69,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -79,7 +81,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     }
 
     /**
-     * set the value to the trackingData
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param trackingData value to be set
      * @return Builder
      */
@@ -91,7 +93,8 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
 
@@ -101,7 +104,8 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
 
@@ -111,7 +115,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     }
 
     /**
-     * value of trackingData}
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return trackingData
      */
 

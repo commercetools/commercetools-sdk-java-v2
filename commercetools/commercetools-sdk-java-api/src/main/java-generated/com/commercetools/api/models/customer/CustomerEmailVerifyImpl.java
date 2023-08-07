@@ -74,7 +74,11 @@ public class CustomerEmailVerifyImpl implements CustomerEmailVerify, ModelBase {
 
         CustomerEmailVerifyImpl that = (CustomerEmailVerifyImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(tokenValue, that.tokenValue).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(tokenValue, that.tokenValue)
+                .append(version, that.version)
+                .append(tokenValue, that.tokenValue)
+                .isEquals();
     }
 
     @Override

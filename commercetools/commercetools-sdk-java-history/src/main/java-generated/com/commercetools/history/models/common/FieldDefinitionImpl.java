@@ -110,6 +110,10 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
                 .append(name, that.name)
                 .append(label, that.label)
                 .append(inputHint, that.inputHint)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(label, that.label)
+                .append(inputHint, that.inputHint)
                 .isEquals();
     }
 

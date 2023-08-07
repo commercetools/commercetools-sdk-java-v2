@@ -156,6 +156,13 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
                 .append(lineItem, that.lineItem)
                 .append(lineItemId, that.lineItemId)
                 .append(variant, that.variant)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(lineItem, that.lineItem)
+                .append(lineItemId, that.lineItemId)
+                .append(variant, that.variant)
                 .isEquals();
     }
 

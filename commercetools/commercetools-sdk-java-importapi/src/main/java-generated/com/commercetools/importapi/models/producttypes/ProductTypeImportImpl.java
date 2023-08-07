@@ -114,6 +114,10 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(attributes, that.attributes)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 

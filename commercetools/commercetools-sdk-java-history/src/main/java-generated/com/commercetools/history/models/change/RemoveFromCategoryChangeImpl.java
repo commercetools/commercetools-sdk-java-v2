@@ -132,6 +132,11 @@ public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, M
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(category, that.category)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(category, that.category)
                 .isEquals();
     }
 

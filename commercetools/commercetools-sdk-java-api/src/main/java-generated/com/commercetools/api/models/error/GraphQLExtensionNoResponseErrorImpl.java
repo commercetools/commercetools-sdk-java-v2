@@ -109,6 +109,10 @@ public class GraphQLExtensionNoResponseErrorImpl implements GraphQLExtensionNoRe
                 .append(values, that.values)
                 .append(extensionId, that.extensionId)
                 .append(extensionKey, that.extensionKey)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(extensionId, that.extensionId)
+                .append(extensionKey, that.extensionKey)
                 .isEquals();
     }
 

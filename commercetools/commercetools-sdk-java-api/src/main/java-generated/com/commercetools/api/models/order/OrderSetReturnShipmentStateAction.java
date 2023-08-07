@@ -14,14 +14,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderSetReturnShipmentStateAction
+ *  <p>To set a <code>ReturnShipmentState</code>, the Order <code>returnInfo</code> must have at least one ReturnItem.</p>
+ *  <p>Produces the Order Return Shipment State Changed Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetReturnShipmentStateAction orderSetReturnShipmentStateAction = OrderSetReturnShipmentStateAction.builder()
- *             .returnItemId("{returnItemId}")
  *             .shipmentState(ReturnShipmentState.ADVISED)
  *             .build()
  * </code></pre>
@@ -37,15 +37,23 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
     String SET_RETURN_SHIPMENT_STATE = "setReturnShipmentState";
 
     /**
-     *
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
-    @NotNull
+
     @JsonProperty("returnItemId")
     public String getReturnItemId();
 
     /**
-     *
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @return returnItemKey
+     */
+
+    @JsonProperty("returnItemKey")
+    public String getReturnItemKey();
+
+    /**
+     *  <p>New shipment state of the ReturnItem.</p>
      * @return shipmentState
      */
     @NotNull
@@ -53,14 +61,21 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
     public ReturnShipmentState getShipmentState();
 
     /**
-     * set returnItemId
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      */
 
     public void setReturnItemId(final String returnItemId);
 
     /**
-     * set shipmentState
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @param returnItemKey value to be set
+     */
+
+    public void setReturnItemKey(final String returnItemKey);
+
+    /**
+     *  <p>New shipment state of the ReturnItem.</p>
      * @param shipmentState value to be set
      */
 
@@ -82,6 +97,7 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
     public static OrderSetReturnShipmentStateAction of(final OrderSetReturnShipmentStateAction template) {
         OrderSetReturnShipmentStateActionImpl instance = new OrderSetReturnShipmentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
+        instance.setReturnItemKey(template.getReturnItemKey());
         instance.setShipmentState(template.getShipmentState());
         return instance;
     }
@@ -99,6 +115,7 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
         }
         OrderSetReturnShipmentStateActionImpl instance = new OrderSetReturnShipmentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
+        instance.setReturnItemKey(template.getReturnItemKey());
         instance.setShipmentState(template.getShipmentState());
         return instance;
     }

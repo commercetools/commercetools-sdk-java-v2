@@ -74,7 +74,11 @@ public class GraphQLGeneralErrorImpl implements GraphQLGeneralError, ModelBase {
 
         GraphQLGeneralErrorImpl that = (GraphQLGeneralErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(values, that.values).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(values, that.values)
+                .append(code, that.code)
+                .append(values, that.values)
+                .isEquals();
     }
 
     @Override

@@ -76,7 +76,11 @@ public class AssociateRoleSetPermissionsActionImpl implements AssociateRoleSetPe
 
         AssociateRoleSetPermissionsActionImpl that = (AssociateRoleSetPermissionsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(permissions, that.permissions).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(permissions, that.permissions)
+                .append(action, that.action)
+                .append(permissions, that.permissions)
+                .isEquals();
     }
 
     @Override

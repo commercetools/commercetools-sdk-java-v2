@@ -71,7 +71,11 @@ public class ProjectSetExternalOAuthActionImpl implements ProjectSetExternalOAut
 
         ProjectSetExternalOAuthActionImpl that = (ProjectSetExternalOAuthActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(externalOAuth, that.externalOAuth).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(externalOAuth, that.externalOAuth)
+                .append(action, that.action)
+                .append(externalOAuth, that.externalOAuth)
+                .isEquals();
     }
 
     @Override

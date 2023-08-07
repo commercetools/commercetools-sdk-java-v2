@@ -96,6 +96,9 @@ public class GraphQLDuplicateAttributeValuesErrorImpl implements GraphQLDuplicat
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(attributes, that.attributes)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 

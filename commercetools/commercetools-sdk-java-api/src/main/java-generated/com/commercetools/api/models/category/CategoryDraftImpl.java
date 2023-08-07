@@ -249,6 +249,18 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(assets, that.assets)
                 .append(key, that.key)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(parent, that.parent)
+                .append(orderHint, that.orderHint)
+                .append(externalId, that.externalId)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(custom, that.custom)
+                .append(assets, that.assets)
+                .append(key, that.key)
                 .isEquals();
     }
 

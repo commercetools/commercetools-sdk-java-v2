@@ -75,7 +75,11 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
 
         SearchKeywordImpl that = (SearchKeywordImpl) o;
 
-        return new EqualsBuilder().append(text, that.text).append(suggestTokenizer, that.suggestTokenizer).isEquals();
+        return new EqualsBuilder().append(text, that.text)
+                .append(suggestTokenizer, that.suggestTokenizer)
+                .append(text, that.text)
+                .append(suggestTokenizer, that.suggestTokenizer)
+                .isEquals();
     }
 
     @Override

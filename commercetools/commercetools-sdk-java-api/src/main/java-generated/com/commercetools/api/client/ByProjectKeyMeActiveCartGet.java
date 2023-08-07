@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Retrieves the Customer's most recently modified active Cart. Carts with <code>Merchant</code> or <code>Quote</code> CartOrigin are ignored.</p>
- *  <p>If no active Cart exists, a ResourceNotFound error is returned.</p>
+ *  <p>If no active Cart exists, this method returns a ResourceNotFound error.</p>
  *
  * <hr>
  * <div class=code-example>

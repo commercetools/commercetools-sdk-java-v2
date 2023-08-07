@@ -74,6 +74,8 @@ public class ProjectSetShippingRateInputTypeActionImpl implements ProjectSetShip
 
         return new EqualsBuilder().append(action, that.action)
                 .append(shippingRateInputType, that.shippingRateInputType)
+                .append(action, that.action)
+                .append(shippingRateInputType, that.shippingRateInputType)
                 .isEquals();
     }
 

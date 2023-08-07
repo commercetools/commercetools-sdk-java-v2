@@ -149,6 +149,12 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
                 .append(anonymousId, that.anonymousId)
                 .append(clientId, that.clientId)
                 .append(isPlatformClient, that.isPlatformClient)
+                .append(id, that.id)
+                .append(type, that.type)
+                .append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .append(clientId, that.clientId)
+                .append(isPlatformClient, that.isPlatformClient)
                 .isEquals();
     }
 

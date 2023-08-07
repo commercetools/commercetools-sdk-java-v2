@@ -70,7 +70,11 @@ public class StandalonePriceDeletedMessagePayloadImpl implements StandalonePrice
 
         StandalonePriceDeletedMessagePayloadImpl that = (StandalonePriceDeletedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(sku, that.sku).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(sku, that.sku)
+                .append(type, that.type)
+                .append(sku, that.sku)
+                .isEquals();
     }
 
     @Override

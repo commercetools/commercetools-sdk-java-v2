@@ -77,7 +77,11 @@ public class CartClassificationTypeImpl implements CartClassificationType, Model
 
         CartClassificationTypeImpl that = (CartClassificationTypeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(values, that.values).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(values, that.values)
+                .append(type, that.type)
+                .append(values, that.values)
+                .isEquals();
     }
 
     @Override

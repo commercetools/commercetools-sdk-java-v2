@@ -89,6 +89,9 @@ public class MyCustomerSetCustomFieldActionImpl implements MyCustomerSetCustomFi
         return new EqualsBuilder().append(action, that.action)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 

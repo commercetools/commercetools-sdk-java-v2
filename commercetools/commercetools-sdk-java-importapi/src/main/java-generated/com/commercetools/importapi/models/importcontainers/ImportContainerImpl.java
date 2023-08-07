@@ -127,6 +127,11 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
+                .append(resourceType, that.resourceType)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
                 .isEquals();
     }
 

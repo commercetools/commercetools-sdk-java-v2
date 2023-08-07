@@ -51,7 +51,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     private com.commercetools.api.models.cart.ShippingMethodState shippingMethodState;
 
     /**
-     * set the value to the shippingMethodName
+     *  <p>Name of the Shipping Method.</p>
      * @param shippingMethodName value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the price using the builder function
+     *  <p>The base price for the Shipping Method.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the price using the builder function
+     *  <p>The base price for the Shipping Method.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the price
+     *  <p>The base price for the Shipping Method.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     *  <p>Shipping rate information for the Order.</p>
      * @param builder function to build the shippingRate value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     *  <p>Shipping rate information for the Order.</p>
      * @param builder function to build the shippingRate value
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     *  <p>Shipping rate information for the Order.</p>
      * @param shippingRate value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the taxRate using the builder function
+     *  <p>Include a Tax Rate for the Shipping Method.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the taxRate using the builder function
+     *  <p>Include a Tax Rate for the Shipping Method.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -158,7 +158,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the taxRate
+     *  <p>Include a Tax Rate for the Shipping Method.</p>
      * @param taxRate value to be set
      * @return Builder
      */
@@ -170,7 +170,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the taxCategory using the builder function
+     *  <p>Include a value to associate a Tax Category with the shipping information.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -184,7 +184,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the taxCategory using the builder function
+     *  <p>Include a value to associate a Tax Category with the shipping information.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -197,7 +197,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the taxCategory
+     *  <p>Include a value to associate a Tax Category with the shipping information.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -209,7 +209,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     *  <p>Include a value to associate a Shipping Method with the Order.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -223,7 +223,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     *  <p>Include a value to associate a Shipping Method with the Order.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -236,7 +236,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     *  <p>Include a value to associate a Shipping Method with the Order.</p>
      * @param shippingMethod value to be set
      * @return Builder
      */
@@ -248,7 +248,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      * @param deliveries value to be set
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      * @param deliveries value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      * @param deliveries value to be set
      * @return Builder
      */
@@ -287,7 +287,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      * @param builder function to build the deliveries value
      * @return Builder
      */
@@ -302,7 +302,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      * @param builder function to build the deliveries value
      * @return Builder
      */
@@ -315,7 +315,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      * @param builder function to build the deliveries value
      * @return Builder
      */
@@ -326,7 +326,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      * @param builder function to build the deliveries value
      * @return Builder
      */
@@ -337,7 +337,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the discountedPrice using the builder function
+     *  <p>Discounted Price of the Shipping Method.</p>
      * @param builder function to build the discountedPrice value
      * @return Builder
      */
@@ -351,7 +351,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the discountedPrice using the builder function
+     *  <p>Discounted Price of the Shipping Method.</p>
      * @param builder function to build the discountedPrice value
      * @return Builder
      */
@@ -364,7 +364,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * set the value to the discountedPrice
+     *  <p>Discounted Price of the Shipping Method.</p>
      * @param discountedPrice value to be set
      * @return Builder
      */
@@ -376,7 +376,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+     *  <p>Indicates if the ShippingMethod referenced is allowed for the Order or not.</p>
      * @param shippingMethodState value to be set
      * @return Builder
      */
@@ -388,7 +388,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * value of shippingMethodName}
+     *  <p>Name of the Shipping Method.</p>
      * @return shippingMethodName
      */
 
@@ -397,7 +397,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * value of price}
+     *  <p>The base price for the Shipping Method.</p>
      * @return price
      */
 
@@ -406,7 +406,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     *  <p>Shipping rate information for the Order.</p>
      * @return shippingRate
      */
 
@@ -415,7 +415,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * value of taxRate}
+     *  <p>Include a Tax Rate for the Shipping Method.</p>
      * @return taxRate
      */
 
@@ -425,7 +425,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * value of taxCategory}
+     *  <p>Include a value to associate a Tax Category with the shipping information.</p>
      * @return taxCategory
      */
 
@@ -435,7 +435,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     *  <p>Include a value to associate a Shipping Method with the Order.</p>
      * @return shippingMethod
      */
 
@@ -445,7 +445,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      * @return deliveries
      */
 
@@ -455,7 +455,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     * value of discountedPrice}
+     *  <p>Discounted Price of the Shipping Method.</p>
      * @return discountedPrice
      */
 
@@ -465,7 +465,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+     *  <p>Indicates if the ShippingMethod referenced is allowed for the Order or not.</p>
      * @return shippingMethodState
      */
 

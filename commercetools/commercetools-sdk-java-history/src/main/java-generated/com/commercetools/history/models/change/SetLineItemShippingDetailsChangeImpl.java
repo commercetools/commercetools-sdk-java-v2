@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set LineItemShippingDetails on Orders.</li>
- *   <li>Set LineItemShippingDetails on Staged Orders.</li>
+ *   <li>Set LineItem ShippingDetails on Orders.</li>
+ *   <li>Set LineItem ShippingDetails on Staged Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -123,6 +123,11 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
         SetLineItemShippingDetailsChangeImpl that = (SetLineItemShippingDetailsChangeImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(lineItemId, that.lineItemId)
+                .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)

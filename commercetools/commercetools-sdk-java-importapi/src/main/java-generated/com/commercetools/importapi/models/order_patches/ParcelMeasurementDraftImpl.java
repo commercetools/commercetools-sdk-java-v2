@@ -74,7 +74,11 @@ public class ParcelMeasurementDraftImpl implements ParcelMeasurementDraft, Model
 
         ParcelMeasurementDraftImpl that = (ParcelMeasurementDraftImpl) o;
 
-        return new EqualsBuilder().append(parcelId, that.parcelId).append(measurements, that.measurements).isEquals();
+        return new EqualsBuilder().append(parcelId, that.parcelId)
+                .append(measurements, that.measurements)
+                .append(parcelId, that.parcelId)
+                .append(measurements, that.measurements)
+                .isEquals();
     }
 
     @Override

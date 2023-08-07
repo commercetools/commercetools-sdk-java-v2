@@ -76,7 +76,11 @@ public class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedEnumTyp
 
         AttributeLocalizedEnumTypeImpl that = (AttributeLocalizedEnumTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(values, that.values).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(values, that.values)
+                .append(name, that.name)
+                .append(values, that.values)
+                .isEquals();
     }
 
     @Override

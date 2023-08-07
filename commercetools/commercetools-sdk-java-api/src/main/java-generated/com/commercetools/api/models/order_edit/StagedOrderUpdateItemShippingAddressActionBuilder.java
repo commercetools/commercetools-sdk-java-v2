@@ -26,7 +26,7 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class StagedOrderUpdateItemShippingAddressActionBuilder
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
      * @return address
      */
 

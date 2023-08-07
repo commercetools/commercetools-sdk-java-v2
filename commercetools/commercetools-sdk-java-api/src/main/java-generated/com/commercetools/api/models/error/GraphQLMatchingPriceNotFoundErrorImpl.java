@@ -183,6 +183,14 @@ public class GraphQLMatchingPriceNotFoundErrorImpl implements GraphQLMatchingPri
                 .append(country, that.country)
                 .append(customerGroup, that.customerGroup)
                 .append(channel, that.channel)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(currency, that.currency)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
                 .isEquals();
     }
 

@@ -47,7 +47,7 @@ public class CustomFieldDateTimeTypeImpl implements CustomFieldDateTimeType, Mod
 
         CustomFieldDateTimeTypeImpl that = (CustomFieldDateTimeTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).isEquals();
+        return new EqualsBuilder().append(name, that.name).append(name, that.name).isEquals();
     }
 
     @Override

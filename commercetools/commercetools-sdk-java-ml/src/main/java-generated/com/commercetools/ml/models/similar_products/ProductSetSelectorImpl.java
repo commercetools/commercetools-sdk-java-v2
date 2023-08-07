@@ -152,6 +152,12 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
                 .append(staged, that.staged)
                 .append(includeVariants, that.includeVariants)
                 .append(productSetLimit, that.productSetLimit)
+                .append(projectKey, that.projectKey)
+                .append(productIds, that.productIds)
+                .append(productTypeIds, that.productTypeIds)
+                .append(staged, that.staged)
+                .append(includeVariants, that.includeVariants)
+                .append(productSetLimit, that.productSetLimit)
                 .isEquals();
     }
 

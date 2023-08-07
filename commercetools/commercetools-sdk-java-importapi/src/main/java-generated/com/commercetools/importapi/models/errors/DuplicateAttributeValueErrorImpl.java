@@ -89,6 +89,9 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
                 .append(attribute, that.attribute)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(attribute, that.attribute)
                 .isEquals();
     }
 

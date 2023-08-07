@@ -87,7 +87,13 @@ public class CartReferenceImpl implements CartReference, ModelBase {
 
         CartReferenceImpl that = (CartReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(obj, that.obj).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .isEquals();
     }
 
     @Override

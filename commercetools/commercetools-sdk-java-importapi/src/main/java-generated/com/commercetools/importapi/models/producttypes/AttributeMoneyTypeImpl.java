@@ -47,7 +47,7 @@ public class AttributeMoneyTypeImpl implements AttributeMoneyType, ModelBase {
 
         AttributeMoneyTypeImpl that = (AttributeMoneyTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).isEquals();
+        return new EqualsBuilder().append(name, that.name).append(name, that.name).isEquals();
     }
 
     @Override

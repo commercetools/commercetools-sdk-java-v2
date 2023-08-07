@@ -81,7 +81,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount.</p>
+     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      */
 
     public Integer getDiscountedQuantity() {
@@ -89,7 +89,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     *  <p>Maximum number of times this Discount can be applied.</p>
+     *  <p>Maximum number of times this Discount can be applied. Do not set if the Discount should be applied an unlimited number of times.</p>
      */
 
     public Integer getMaxOccurrence() {
@@ -135,6 +135,12 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
         MultiBuyLineItemsTargetImpl that = (MultiBuyLineItemsTargetImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(predicate, that.predicate)
+                .append(triggerQuantity, that.triggerQuantity)
+                .append(discountedQuantity, that.discountedQuantity)
+                .append(maxOccurrence, that.maxOccurrence)
+                .append(selectionMode, that.selectionMode)
+                .append(type, that.type)
                 .append(predicate, that.predicate)
                 .append(triggerQuantity, that.triggerQuantity)
                 .append(discountedQuantity, that.discountedQuantity)

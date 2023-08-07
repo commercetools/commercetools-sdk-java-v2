@@ -108,6 +108,10 @@ public class StandalonePriceValueChangedMessagePayloadImpl
                 .append(value, that.value)
                 .append(staged, that.staged)
                 .append(oldValue, that.oldValue)
+                .append(type, that.type)
+                .append(value, that.value)
+                .append(staged, that.staged)
+                .append(oldValue, that.oldValue)
                 .isEquals();
     }
 

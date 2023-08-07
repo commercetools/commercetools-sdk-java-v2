@@ -113,6 +113,10 @@ public class ZoneDraftImpl implements ZoneDraft, ModelBase {
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(locations, that.locations)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(locations, that.locations)
                 .isEquals();
     }
 

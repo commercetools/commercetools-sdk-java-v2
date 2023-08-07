@@ -32,10 +32,6 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
-    @Deprecated
-    @Nullable
-    private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
-
     @Nullable
     private com.commercetools.api.models.product_selection.ProductSelectionMode mode;
 
@@ -122,18 +118,6 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     }
 
     /**
-     *  <p>Type of the Product Selection.</p>
-     * @param type value to be set
-     * @return Builder
-     */
-    @Deprecated
-    public ProductSelectionDraftBuilder type(
-            @Nullable final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
-        this.type = type;
-        return this;
-    }
-
-    /**
      *  <p>Mode of the Product Selection.</p>
      * @param mode value to be set
      * @return Builder
@@ -175,16 +159,6 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     }
 
     /**
-     *  <p>Type of the Product Selection.</p>
-     * @return type
-     */
-    @Deprecated
-    @Nullable
-    public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
-        return this.type;
-    }
-
-    /**
      *  <p>Mode of the Product Selection.</p>
      * @return mode
      */
@@ -200,7 +174,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
      */
     public ProductSelectionDraft build() {
         Objects.requireNonNull(name, ProductSelectionDraft.class + ": name is missing");
-        return new ProductSelectionDraftImpl(key, name, custom, type, mode);
+        return new ProductSelectionDraftImpl(key, name, custom, mode);
     }
 
     /**
@@ -208,7 +182,7 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
      * @return ProductSelectionDraft
      */
     public ProductSelectionDraft buildUnchecked() {
-        return new ProductSelectionDraftImpl(key, name, custom, type, mode);
+        return new ProductSelectionDraftImpl(key, name, custom, mode);
     }
 
     /**
@@ -229,7 +203,6 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
         builder.key = template.getKey();
         builder.name = template.getName();
         builder.custom = template.getCustom();
-        builder.type = template.getType();
         builder.mode = template.getMode();
         return builder;
     }

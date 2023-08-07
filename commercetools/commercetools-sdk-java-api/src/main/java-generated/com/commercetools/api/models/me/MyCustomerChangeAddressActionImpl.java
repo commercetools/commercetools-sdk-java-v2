@@ -107,6 +107,10 @@ public class MyCustomerChangeAddressActionImpl implements MyCustomerChangeAddres
                 .append(addressId, that.addressId)
                 .append(addressKey, that.addressKey)
                 .append(address, that.address)
+                .append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(addressKey, that.addressKey)
+                .append(address, that.address)
                 .isEquals();
     }
 

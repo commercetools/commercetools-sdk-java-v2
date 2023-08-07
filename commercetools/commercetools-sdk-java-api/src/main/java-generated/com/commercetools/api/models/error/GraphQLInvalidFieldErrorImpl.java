@@ -130,6 +130,11 @@ public class GraphQLInvalidFieldErrorImpl implements GraphQLInvalidFieldError, M
                 .append(field, that.field)
                 .append(invalidValue, that.invalidValue)
                 .append(allowedValues, that.allowedValues)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(field, that.field)
+                .append(invalidValue, that.invalidValue)
+                .append(allowedValues, that.allowedValues)
                 .isEquals();
     }
 

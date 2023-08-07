@@ -78,7 +78,11 @@ public class ParcelItemsImpl implements ParcelItems, ModelBase {
 
         ParcelItemsImpl that = (ParcelItemsImpl) o;
 
-        return new EqualsBuilder().append(parcelId, that.parcelId).append(items, that.items).isEquals();
+        return new EqualsBuilder().append(parcelId, that.parcelId)
+                .append(items, that.items)
+                .append(parcelId, that.parcelId)
+                .append(items, that.items)
+                .isEquals();
     }
 
     @Override

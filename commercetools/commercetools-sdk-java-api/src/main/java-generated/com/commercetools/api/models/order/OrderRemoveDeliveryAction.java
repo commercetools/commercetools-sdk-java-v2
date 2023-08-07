@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderRemoveDeliveryAction
+ *  <p>Produces the DeliveryRemoved Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,8 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     String REMOVE_DELIVERY = "removeDelivery";
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
 
@@ -42,7 +43,8 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     public String getDeliveryId();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
 
@@ -50,14 +52,16 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
     public String getDeliveryKey();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      */
 

@@ -74,7 +74,11 @@ public class MyCustomerResetPasswordImpl implements MyCustomerResetPassword, Mod
 
         MyCustomerResetPasswordImpl that = (MyCustomerResetPasswordImpl) o;
 
-        return new EqualsBuilder().append(tokenValue, that.tokenValue).append(newPassword, that.newPassword).isEquals();
+        return new EqualsBuilder().append(tokenValue, that.tokenValue)
+                .append(newPassword, that.newPassword)
+                .append(tokenValue, that.tokenValue)
+                .append(newPassword, that.newPassword)
+                .isEquals();
     }
 
     @Override

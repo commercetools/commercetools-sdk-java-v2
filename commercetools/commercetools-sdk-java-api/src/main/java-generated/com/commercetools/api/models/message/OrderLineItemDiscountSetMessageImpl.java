@@ -44,6 +44,8 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
     private com.commercetools.api.models.common.Money totalPrice;
@@ -66,7 +68,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
@@ -82,6 +84,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
@@ -193,6 +196,14 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
@@ -217,7 +228,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
@@ -269,6 +280,10 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setDiscountedPricePerQuantity(
             final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
         this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
@@ -318,6 +333,24 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(taxedPricePortions, that.taxedPricePortions)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
@@ -339,6 +372,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(discountedPricePerQuantity)
                 .append(totalPrice)
                 .append(taxedPrice)

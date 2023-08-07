@@ -24,6 +24,8 @@ public class CartChangeCustomLineItemPriceModeActionImpl implements CartChangeCu
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private com.commercetools.api.models.cart.CustomLineItemPriceMode mode;
 
     /**
@@ -31,8 +33,10 @@ public class CartChangeCustomLineItemPriceModeActionImpl implements CartChangeCu
      */
     @JsonCreator
     CartChangeCustomLineItemPriceModeActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("mode") final com.commercetools.api.models.cart.CustomLineItemPriceMode mode) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.mode = mode;
         this.action = CHANGE_CUSTOM_LINE_ITEM_PRICE_MODE;
     }
@@ -53,11 +57,19 @@ public class CartChangeCustomLineItemPriceModeActionImpl implements CartChangeCu
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -70,6 +82,10 @@ public class CartChangeCustomLineItemPriceModeActionImpl implements CartChangeCu
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
     }
 
     public void setMode(final com.commercetools.api.models.cart.CustomLineItemPriceMode mode) {
@@ -88,13 +104,22 @@ public class CartChangeCustomLineItemPriceModeActionImpl implements CartChangeCu
 
         return new EqualsBuilder().append(action, that.action)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(mode, that.mode)
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(mode, that.mode)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).append(mode).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(customLineItemId)
+                .append(customLineItemKey)
+                .append(mode)
+                .toHashCode();
     }
 
 }

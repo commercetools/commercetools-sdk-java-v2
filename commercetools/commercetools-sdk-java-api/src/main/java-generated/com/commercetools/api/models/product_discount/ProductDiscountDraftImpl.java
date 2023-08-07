@@ -194,6 +194,15 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
                 .append(isActive, that.isActive)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(value, that.value)
+                .append(predicate, that.predicate)
+                .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
                 .isEquals();
     }
 

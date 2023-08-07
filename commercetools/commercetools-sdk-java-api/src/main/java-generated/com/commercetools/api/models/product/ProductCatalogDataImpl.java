@@ -110,6 +110,10 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
                 .append(current, that.current)
                 .append(staged, that.staged)
                 .append(hasStagedChanges, that.hasStagedChanges)
+                .append(published, that.published)
+                .append(current, that.current)
+                .append(staged, that.staged)
+                .append(hasStagedChanges, that.hasStagedChanges)
                 .isEquals();
     }
 

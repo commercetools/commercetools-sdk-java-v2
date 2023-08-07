@@ -89,7 +89,13 @@ public class ResourceIdentifierImpl implements ResourceIdentifier, ModelBase {
 
         ResourceIdentifierImpl that = (ResourceIdentifierImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(key, that.key).append(typeId, that.typeId).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .isEquals();
     }
 
     @Override

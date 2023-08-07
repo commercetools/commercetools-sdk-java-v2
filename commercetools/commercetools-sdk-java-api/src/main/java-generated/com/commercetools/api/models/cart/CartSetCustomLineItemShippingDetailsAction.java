@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -22,7 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartSetCustomLineItemShippingDetailsAction cartSetCustomLineItemShippingDetailsAction = CartSetCustomLineItemShippingDetailsAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -37,12 +35,20 @@ public interface CartSetCustomLineItemShippingDetailsAction extends CartUpdateAc
     String SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS = "setCustomLineItemShippingDetails";
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
-    @NotNull
+
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
@@ -53,11 +59,18 @@ public interface CartSetCustomLineItemShippingDetailsAction extends CartUpdateAc
     public ItemShippingDetailsDraft getShippingDetails();
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
@@ -83,6 +96,7 @@ public interface CartSetCustomLineItemShippingDetailsAction extends CartUpdateAc
             final CartSetCustomLineItemShippingDetailsAction template) {
         CartSetCustomLineItemShippingDetailsActionImpl instance = new CartSetCustomLineItemShippingDetailsActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
@@ -100,6 +114,7 @@ public interface CartSetCustomLineItemShippingDetailsAction extends CartUpdateAc
         }
         CartSetCustomLineItemShippingDetailsActionImpl instance = new CartSetCustomLineItemShippingDetailsActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setShippingDetails(
             com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         return instance;

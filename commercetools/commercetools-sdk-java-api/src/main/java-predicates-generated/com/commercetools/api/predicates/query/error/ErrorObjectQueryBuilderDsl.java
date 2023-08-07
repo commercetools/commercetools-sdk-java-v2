@@ -76,6 +76,13 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asContentTooLarge(
+            Function<com.commercetools.api.predicates.query.error.ContentTooLargeErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.ContentTooLargeErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.ContentTooLargeErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asCountryNotConfiguredInStore(
             Function<com.commercetools.api.predicates.query.error.CountryNotConfiguredInStoreErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.CountryNotConfiguredInStoreErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

@@ -155,6 +155,13 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
                 .append(description, that.description)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(description, that.description)
                 .isEquals();
     }
 

@@ -30,6 +30,9 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     private String lineItemId;
 
+    @Nullable
+    private String lineItemKey;
+
     private Long removedQuantity;
 
     private Long newQuantity;
@@ -55,6 +58,17 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     public OrderLineItemRemovedMessagePayloadBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderLineItemRemovedMessagePayloadBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -324,6 +338,16 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
      * @return removedQuantity
      */
@@ -400,8 +424,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
         Objects.requireNonNull(newQuantity, OrderLineItemRemovedMessagePayload.class + ": newQuantity is missing");
         Objects.requireNonNull(newState, OrderLineItemRemovedMessagePayload.class + ": newState is missing");
         Objects.requireNonNull(newTotalPrice, OrderLineItemRemovedMessagePayload.class + ": newTotalPrice is missing");
-        return new OrderLineItemRemovedMessagePayloadImpl(lineItemId, removedQuantity, newQuantity, newState,
-            newTotalPrice, newTaxedPrice, newPrice, newShippingDetail);
+        return new OrderLineItemRemovedMessagePayloadImpl(lineItemId, lineItemKey, removedQuantity, newQuantity,
+            newState, newTotalPrice, newTaxedPrice, newPrice, newShippingDetail);
     }
 
     /**
@@ -409,8 +433,8 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
      * @return OrderLineItemRemovedMessagePayload
      */
     public OrderLineItemRemovedMessagePayload buildUnchecked() {
-        return new OrderLineItemRemovedMessagePayloadImpl(lineItemId, removedQuantity, newQuantity, newState,
-            newTotalPrice, newTaxedPrice, newPrice, newShippingDetail);
+        return new OrderLineItemRemovedMessagePayloadImpl(lineItemId, lineItemKey, removedQuantity, newQuantity,
+            newState, newTotalPrice, newTaxedPrice, newPrice, newShippingDetail);
     }
 
     /**
@@ -429,6 +453,7 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     public static OrderLineItemRemovedMessagePayloadBuilder of(final OrderLineItemRemovedMessagePayload template) {
         OrderLineItemRemovedMessagePayloadBuilder builder = new OrderLineItemRemovedMessagePayloadBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.removedQuantity = template.getRemovedQuantity();
         builder.newQuantity = template.getNewQuantity();
         builder.newState = template.getNewState();

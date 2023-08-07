@@ -41,7 +41,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     public String getKey();
 
     /**
-     *
+     *  <p>Information about the dimensions for the Parcel.</p>
      * @return measurements
      */
     @Valid
@@ -49,7 +49,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     public ParcelMeasurements getMeasurements();
 
     /**
-     *
+     *  <p>Shipment tracking information for the Parcel.</p>
      * @return trackingData
      */
     @Valid
@@ -57,7 +57,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     public TrackingData getTrackingData();
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @return items
      */
     @Valid
@@ -65,7 +65,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     *  <p>Custom Fields for the Parcel.</p>
      * @return custom
      */
     @Valid
@@ -80,21 +80,21 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     public void setKey(final String key);
 
     /**
-     * set measurements
+     *  <p>Information about the dimensions for the Parcel.</p>
      * @param measurements value to be set
      */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
     /**
-     * set trackingData
+     *  <p>Shipment tracking information for the Parcel.</p>
      * @param trackingData value to be set
      */
 
     public void setTrackingData(final TrackingData trackingData);
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
@@ -102,14 +102,14 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     *  <p>Custom Fields for the Parcel.</p>
      * @param custom value to be set
      */
 

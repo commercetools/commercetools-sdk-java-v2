@@ -77,7 +77,11 @@ public class ProductVariantPatchRequestImpl implements ProductVariantPatchReques
 
         ProductVariantPatchRequestImpl that = (ProductVariantPatchRequestImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(patches, that.patches).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(patches, that.patches)
+                .append(type, that.type)
+                .append(patches, that.patches)
+                .isEquals();
     }
 
     @Override

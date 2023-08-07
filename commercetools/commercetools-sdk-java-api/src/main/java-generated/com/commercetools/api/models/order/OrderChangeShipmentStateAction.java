@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -13,13 +14,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderChangeShipmentStateAction
+ *  <p>Produces the Order Shipment State Changed Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderChangeShipmentStateAction orderChangeShipmentStateAction = OrderChangeShipmentStateAction.builder()
+ *             .shipmentState(ShipmentState.SHIPPED)
  *             .build()
  * </code></pre>
  * </div>
@@ -34,15 +36,15 @@ public interface OrderChangeShipmentStateAction extends OrderUpdateAction {
     String CHANGE_SHIPMENT_STATE = "changeShipmentState";
 
     /**
-     *
+     *  <p>New shipment status of the Order.</p>
      * @return shipmentState
      */
-
+    @NotNull
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
 
     /**
-     * set shipmentState
+     *  <p>New shipment status of the Order.</p>
      * @param shipmentState value to be set
      */
 

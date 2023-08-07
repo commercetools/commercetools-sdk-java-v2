@@ -93,6 +93,9 @@ public class GraphQLMaxResourceLimitExceededErrorImpl implements GraphQLMaxResou
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(exceededResource, that.exceededResource)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(exceededResource, that.exceededResource)
                 .isEquals();
     }
 

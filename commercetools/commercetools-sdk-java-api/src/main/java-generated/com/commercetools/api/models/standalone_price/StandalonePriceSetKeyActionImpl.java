@@ -70,7 +70,11 @@ public class StandalonePriceSetKeyActionImpl implements StandalonePriceSetKeyAct
 
         StandalonePriceSetKeyActionImpl that = (StandalonePriceSetKeyActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(key, that.key)
+                .append(action, that.action)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

@@ -160,6 +160,13 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
                 .append(restockableInDays, that.restockableInDays)
                 .append(expectedDelivery, that.expectedDelivery)
                 .append(custom, that.custom)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(supplyChannel, that.supplyChannel)
+                .append(quantityOnStock, that.quantityOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(expectedDelivery, that.expectedDelivery)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

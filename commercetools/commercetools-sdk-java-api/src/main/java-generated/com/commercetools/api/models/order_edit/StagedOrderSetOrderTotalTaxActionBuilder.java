@@ -30,7 +30,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Total gross amount of the Order (totalNet + taxes).</p>
      * @param builder function to build the externalTotalGross value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Total gross amount of the Order (totalNet + taxes).</p>
      * @param builder function to build the externalTotalGross value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Total gross amount of the Order (totalNet + taxes).</p>
      * @param externalTotalGross value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     * set values to the externalTaxPortions
+     *  <p>Value to set.</p>
      * @param externalTaxPortions value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     * set value to the externalTaxPortions
+     *  <p>Value to set.</p>
      * @param externalTaxPortions value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     * add values to the externalTaxPortions
+     *  <p>Value to set.</p>
      * @param externalTaxPortions value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     * add the value to the externalTaxPortions using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     * set the value to the externalTaxPortions using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     * add the value to the externalTaxPortions using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     * set the value to the externalTaxPortions using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the externalTaxPortions value
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Total gross amount of the Order (totalNet + taxes).</p>
      * @return externalTotalGross
      */
 
@@ -166,7 +166,7 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     }
 
     /**
-     * value of externalTaxPortions}
+     *  <p>Value to set.</p>
      * @return externalTaxPortions
      */
 

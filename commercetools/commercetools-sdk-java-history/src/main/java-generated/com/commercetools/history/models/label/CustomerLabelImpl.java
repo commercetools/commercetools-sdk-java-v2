@@ -106,6 +106,10 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
                 .append(firstName, that.firstName)
                 .append(lastName, that.lastName)
                 .append(customerNumber, that.customerNumber)
+                .append(type, that.type)
+                .append(firstName, that.firstName)
+                .append(lastName, that.lastName)
+                .append(customerNumber, that.customerNumber)
                 .isEquals();
     }
 

@@ -73,7 +73,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the Cart from which you can create an Order.</p>
+     *  <p><code>id</code> of the Cart used to create the Order.</p>
      */
     @Deprecated
     public String getId() {
@@ -81,7 +81,8 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which the Order is created.</p>
+     *  <p>ResourceIdentifier to the Cart from which the Order is created.</p>
+     *  <p>This field is required, but is marked as optional for backwards compatibility reasons.</p>
      */
 
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
@@ -89,7 +90,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the Cart from which the Order is created. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p><code>version</code> of the Cart from which the Order is created.</p>
      */
 
     public Long getVersion() {
@@ -97,7 +98,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     *  <p>User-defined identifier for the Order that is unique across a Project. Once set, the value cannot be changed.</p>
      */
 
     public String getOrderNumber() {
@@ -105,7 +106,8 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     *  <p>User-defined identifier for a purchase Order.</p>
+     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -113,7 +115,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Payment state for the Order.</p>
+     *  <p>Payment status for the Order.</p>
      */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
@@ -121,7 +123,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Shipment state for the Order.</p>
+     *  <p>Shipment status for the Order.</p>
      */
 
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
@@ -129,7 +131,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     *  <p>Current status for the Order.</p>
      */
 
     public com.commercetools.api.models.order.OrderState getOrderState() {
@@ -137,7 +139,7 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Reference to a State indicating the Order's state.</p>
+     *  <p>State for the Order in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -145,7 +147,11 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     *  <p>Custom Fields for the Order. The Custom Fields' type must match the Custom Fields' type in the referenced Cart.</p>
+     *  <ul>
+     *   <li>If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order.</li>
+     *  </ul>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -204,6 +210,16 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
         OrderFromCartDraftImpl that = (OrderFromCartDraftImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(cart, that.cart)
+                .append(version, that.version)
+                .append(orderNumber, that.orderNumber)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(paymentState, that.paymentState)
+                .append(shipmentState, that.shipmentState)
+                .append(orderState, that.orderState)
+                .append(state, that.state)
+                .append(custom, that.custom)
+                .append(id, that.id)
                 .append(cart, that.cart)
                 .append(version, that.version)
                 .append(orderNumber, that.orderNumber)

@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Line Item Distribution Channel update action.</p>
+ *  <p>Generated after a successful Set LineItem DistributionChannel update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -53,6 +53,14 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
     public String getLineItemId();
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
+
+    /**
      *  <p>Distribution Channel that was set.</p>
      * @return distributionChannel
      */
@@ -66,6 +74,13 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
 
     /**
      *  <p>Distribution Channel that was set.</p>
@@ -101,6 +116,7 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
@@ -130,6 +146,7 @@ public interface OrderLineItemDistributionChannelSetMessage extends OrderMessage
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setDistributionChannel(
             com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getDistributionChannel()));
         return instance;

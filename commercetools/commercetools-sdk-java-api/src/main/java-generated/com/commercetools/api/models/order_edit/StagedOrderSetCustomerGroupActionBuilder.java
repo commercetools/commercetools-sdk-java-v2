@@ -27,7 +27,7 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return customerGroup
      */
 

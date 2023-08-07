@@ -72,7 +72,11 @@ public class AssociateRoleBuyerAssignableChangedMessagePayloadImpl
 
         AssociateRoleBuyerAssignableChangedMessagePayloadImpl that = (AssociateRoleBuyerAssignableChangedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(buyerAssignable, that.buyerAssignable).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(buyerAssignable, that.buyerAssignable)
+                .append(type, that.type)
+                .append(buyerAssignable, that.buyerAssignable)
+                .isEquals();
     }
 
     @Override

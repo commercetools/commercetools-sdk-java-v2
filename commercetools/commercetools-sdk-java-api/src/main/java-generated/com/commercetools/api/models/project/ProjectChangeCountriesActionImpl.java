@@ -74,7 +74,11 @@ public class ProjectChangeCountriesActionImpl implements ProjectChangeCountriesA
 
         ProjectChangeCountriesActionImpl that = (ProjectChangeCountriesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(countries, that.countries).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(countries, that.countries)
+                .append(action, that.action)
+                .append(countries, that.countries)
+                .isEquals();
     }
 
     @Override

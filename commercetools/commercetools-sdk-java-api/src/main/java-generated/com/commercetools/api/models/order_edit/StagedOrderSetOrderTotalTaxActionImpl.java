@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetOrderTotalTaxAction
+ *  <p>Updates the total tax amount of the Order if it has the <code>ExternalAmount</code> TaxMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderSetOrderTotalTaxAction, ModelBase {
@@ -54,7 +54,7 @@ public class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderSetOrde
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Total gross amount of the Order (totalNet + taxes).</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalTotalGross() {
@@ -62,7 +62,7 @@ public class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderSetOrde
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getExternalTaxPortions() {
@@ -93,6 +93,9 @@ public class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderSetOrde
         StagedOrderSetOrderTotalTaxActionImpl that = (StagedOrderSetOrderTotalTaxActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(externalTotalGross, that.externalTotalGross)
+                .append(externalTaxPortions, that.externalTaxPortions)
+                .append(action, that.action)
                 .append(externalTotalGross, that.externalTotalGross)
                 .append(externalTaxPortions, that.externalTaxPortions)
                 .isEquals();

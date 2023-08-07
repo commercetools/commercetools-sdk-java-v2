@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderSetStoreAction
+ *  <p>Sets the Store the Order is assigned to. It should be used to migrate Orders to a new Store. No validations are performed (such as that the Customer is allowed to create Orders in the Store).</p>
+ *  <p>Produces the Order Store Set Message. Returns a <code>400</code> error if <code>store</code> references the same Store the Order is currently assigned to, including if you try to remove the value when no Store is currently assigned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetStoreActionImpl implements OrderSetStoreAction, ModelBase {
@@ -50,7 +51,8 @@ public class OrderSetStoreActionImpl implements OrderSetStoreAction, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to a Store.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>If <code>store</code> references the same Store the Order is currently assigned to or if you try to remove the value when no Store is currently assigned, a <code>400</code> error is returned.</p>
      */
 
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
@@ -71,7 +73,11 @@ public class OrderSetStoreActionImpl implements OrderSetStoreAction, ModelBase {
 
         OrderSetStoreActionImpl that = (OrderSetStoreActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(store, that.store).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(store, that.store)
+                .append(action, that.action)
+                .append(store, that.store)
+                .isEquals();
     }
 
     @Override

@@ -309,6 +309,21 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(externalOAuth, that.externalOAuth)
                 .append(searchIndexing, that.searchIndexing)
                 .append(businessUnits, that.businessUnits)
+                .append(version, that.version)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(countries, that.countries)
+                .append(currencies, that.currencies)
+                .append(languages, that.languages)
+                .append(createdAt, that.createdAt)
+                .append(trialUntil, that.trialUntil)
+                .append(messages, that.messages)
+                .append(carts, that.carts)
+                .append(shoppingLists, that.shoppingLists)
+                .append(shippingRateInputType, that.shippingRateInputType)
+                .append(externalOAuth, that.externalOAuth)
+                .append(searchIndexing, that.searchIndexing)
+                .append(businessUnits, that.businessUnits)
                 .isEquals();
     }
 

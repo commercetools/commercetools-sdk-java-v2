@@ -76,6 +76,8 @@ public class MethodTaxRateImpl implements MethodTaxRate, ModelBase {
 
         return new EqualsBuilder().append(shippingMethodKey, that.shippingMethodKey)
                 .append(taxRate, that.taxRate)
+                .append(shippingMethodKey, that.shippingMethodKey)
+                .append(taxRate, that.taxRate)
                 .isEquals();
     }
 

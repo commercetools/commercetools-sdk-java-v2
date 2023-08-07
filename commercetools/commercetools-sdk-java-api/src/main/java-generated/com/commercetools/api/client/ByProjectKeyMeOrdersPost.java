@@ -18,7 +18,15 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>The Cart must have a shipping address set for taxes to be calculated. When creating B2B Orders, the Customer must have the <code>CreateMyOrdersFromMyCarts</code> Permission.</p>
+ *  <p>Creating an Order produces the OrderCreated Message.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li>OutOfStock</li>
+ *   <li>PriceChanged</li>
+ *   <li>DiscountCodeNonApplicable</li>
+ *   <li>AssociateMissingPermission</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

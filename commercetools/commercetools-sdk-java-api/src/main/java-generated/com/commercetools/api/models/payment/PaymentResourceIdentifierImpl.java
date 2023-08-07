@@ -86,7 +86,13 @@ public class PaymentResourceIdentifierImpl implements PaymentResourceIdentifier,
 
         PaymentResourceIdentifierImpl that = (PaymentResourceIdentifierImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

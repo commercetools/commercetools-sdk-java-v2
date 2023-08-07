@@ -89,6 +89,9 @@ public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChang
         return new EqualsBuilder().append(action, that.action)
                 .append(attributeName, that.attributeName)
                 .append(isSearchable, that.isSearchable)
+                .append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(isSearchable, that.isSearchable)
                 .isEquals();
     }
 

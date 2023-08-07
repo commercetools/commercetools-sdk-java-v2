@@ -133,6 +133,11 @@ public class BusinessUnitStoreModeChangedMessagePayloadImpl
                 .append(storeMode, that.storeMode)
                 .append(oldStores, that.oldStores)
                 .append(oldStoreMode, that.oldStoreMode)
+                .append(type, that.type)
+                .append(stores, that.stores)
+                .append(storeMode, that.storeMode)
+                .append(oldStores, that.oldStores)
+                .append(oldStoreMode, that.oldStoreMode)
                 .isEquals();
     }
 

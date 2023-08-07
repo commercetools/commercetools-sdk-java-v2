@@ -70,7 +70,11 @@ public class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfB
 
         CustomerDateOfBirthSetMessagePayloadImpl that = (CustomerDateOfBirthSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(dateOfBirth, that.dateOfBirth).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(dateOfBirth, that.dateOfBirth)
+                .append(type, that.type)
+                .append(dateOfBirth, that.dateOfBirth)
+                .isEquals();
     }
 
     @Override

@@ -59,6 +59,9 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     private String lineItemId;
 
+    @Nullable
+    private String lineItemKey;
+
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
     private com.commercetools.api.models.common.Money totalPrice;
@@ -281,6 +284,17 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderLineItemDiscountSetMessageBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+        return this;
+    }
+
+    /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @param discountedPricePerQuantity value to be set
      * @return Builder
@@ -446,7 +460,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param taxedPricePortions value to be set
      * @return Builder
      */
@@ -458,7 +472,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param taxedPricePortions value to be set
      * @return Builder
      */
@@ -470,7 +484,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param taxedPricePortions value to be set
      * @return Builder
      */
@@ -485,7 +499,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -501,7 +515,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -515,7 +529,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -526,7 +540,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -639,6 +653,16 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @return discountedPricePerQuantity
      */
@@ -667,7 +691,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @return taxedPricePortions
      */
 
@@ -695,7 +719,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
             OrderLineItemDiscountSetMessage.class + ": taxedPricePortions is missing");
         return new OrderLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId,
-            discountedPricePerQuantity, totalPrice, taxedPrice, taxedPricePortions);
+            lineItemKey, discountedPricePerQuantity, totalPrice, taxedPrice, taxedPricePortions);
     }
 
     /**
@@ -705,7 +729,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     public OrderLineItemDiscountSetMessage buildUnchecked() {
         return new OrderLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId,
-            discountedPricePerQuantity, totalPrice, taxedPrice, taxedPricePortions);
+            lineItemKey, discountedPricePerQuantity, totalPrice, taxedPrice, taxedPricePortions);
     }
 
     /**
@@ -734,6 +758,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.discountedPricePerQuantity = template.getDiscountedPricePerQuantity();
         builder.totalPrice = template.getTotalPrice();
         builder.taxedPrice = template.getTaxedPrice();

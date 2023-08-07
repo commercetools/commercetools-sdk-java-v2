@@ -76,6 +76,8 @@ public class InventoryQuantityValueImpl implements InventoryQuantityValue, Model
 
         return new EqualsBuilder().append(quantityOnStock, that.quantityOnStock)
                 .append(availableQuantity, that.availableQuantity)
+                .append(quantityOnStock, that.quantityOnStock)
+                .append(availableQuantity, that.availableQuantity)
                 .isEquals();
     }
 

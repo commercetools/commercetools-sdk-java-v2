@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetCustomLineItemCustomFieldAction stagedOrderSetCustomLineItemCustomFieldAction = StagedOrderSetCustomLineItemCustomFieldAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -25,7 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderSetCustomLineItemCustomFieldActionBuilder
         implements Builder<StagedOrderSetCustomLineItemCustomFieldAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     private String name;
 
@@ -33,13 +36,26 @@ public class StagedOrderSetCustomLineItemCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetCustomLineItemCustomFieldActionBuilder customLineItemId(final String customLineItemId) {
+    public StagedOrderSetCustomLineItemCustomFieldActionBuilder customLineItemId(
+            @Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomLineItemCustomFieldActionBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -66,12 +82,23 @@ public class StagedOrderSetCustomLineItemCustomFieldActionBuilder
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -98,10 +125,8 @@ public class StagedOrderSetCustomLineItemCustomFieldActionBuilder
      * @return StagedOrderSetCustomLineItemCustomFieldAction
      */
     public StagedOrderSetCustomLineItemCustomFieldAction build() {
-        Objects.requireNonNull(customLineItemId,
-            StagedOrderSetCustomLineItemCustomFieldAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(name, StagedOrderSetCustomLineItemCustomFieldAction.class + ": name is missing");
-        return new StagedOrderSetCustomLineItemCustomFieldActionImpl(customLineItemId, name, value);
+        return new StagedOrderSetCustomLineItemCustomFieldActionImpl(customLineItemId, customLineItemKey, name, value);
     }
 
     /**
@@ -109,7 +134,7 @@ public class StagedOrderSetCustomLineItemCustomFieldActionBuilder
      * @return StagedOrderSetCustomLineItemCustomFieldAction
      */
     public StagedOrderSetCustomLineItemCustomFieldAction buildUnchecked() {
-        return new StagedOrderSetCustomLineItemCustomFieldActionImpl(customLineItemId, name, value);
+        return new StagedOrderSetCustomLineItemCustomFieldActionImpl(customLineItemId, customLineItemKey, name, value);
     }
 
     /**
@@ -129,6 +154,7 @@ public class StagedOrderSetCustomLineItemCustomFieldActionBuilder
             final StagedOrderSetCustomLineItemCustomFieldAction template) {
         StagedOrderSetCustomLineItemCustomFieldActionBuilder builder = new StagedOrderSetCustomLineItemCustomFieldActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.name = template.getName();
         builder.value = template.getValue();
         return builder;

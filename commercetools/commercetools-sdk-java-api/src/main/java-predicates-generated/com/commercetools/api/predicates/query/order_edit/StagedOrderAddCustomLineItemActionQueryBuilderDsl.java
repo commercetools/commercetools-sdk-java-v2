@@ -64,15 +64,6 @@ public class StagedOrderAddCustomLineItemActionQueryBuilderDsl {
             StagedOrderAddCustomLineItemActionQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<StagedOrderAddCustomLineItemActionQueryBuilderDsl> custom(
-            Function<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("custom"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl.of())),
-            StagedOrderAddCustomLineItemActionQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<StagedOrderAddCustomLineItemActionQueryBuilderDsl> externalTaxRate(
             Function<com.commercetools.api.predicates.query.cart.ExternalTaxRateDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ExternalTaxRateDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
@@ -81,10 +72,29 @@ public class StagedOrderAddCustomLineItemActionQueryBuilderDsl {
             StagedOrderAddCustomLineItemActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StagedOrderAddCustomLineItemActionQueryBuilderDsl> shippingDetails(
+            Function<com.commercetools.api.predicates.query.cart.ItemShippingDetailsDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ItemShippingDetailsDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("shippingDetails"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.cart.ItemShippingDetailsDraftQueryBuilderDsl.of())),
+            StagedOrderAddCustomLineItemActionQueryBuilderDsl::of);
+    }
+
     public StringComparisonPredicateBuilder<StagedOrderAddCustomLineItemActionQueryBuilderDsl> priceMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceMode")),
             p -> new CombinationQueryPredicate<>(p, StagedOrderAddCustomLineItemActionQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<StagedOrderAddCustomLineItemActionQueryBuilderDsl> custom(
+            Function<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("custom"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl.of())),
+            StagedOrderAddCustomLineItemActionQueryBuilderDsl::of);
     }
 
 }

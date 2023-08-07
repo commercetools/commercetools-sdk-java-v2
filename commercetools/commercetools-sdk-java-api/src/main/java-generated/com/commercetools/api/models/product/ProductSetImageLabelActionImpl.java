@@ -138,6 +138,12 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
                 .append(imageUrl, that.imageUrl)
                 .append(label, that.label)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(sku, that.sku)
+                .append(variantId, that.variantId)
+                .append(imageUrl, that.imageUrl)
+                .append(label, that.label)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

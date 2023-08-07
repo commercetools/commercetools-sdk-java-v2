@@ -49,7 +49,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
         com.commercetools.api.models.Customizable<OrderEdit>, com.commercetools.api.models.WithKey {
 
     /**
-     *  <p>Unique identifier of the OrderEdit.</p>
+     *  <p>Unique identifier of the Order Edit.</p>
      * @return id
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
     public String getId();
 
     /**
-     *  <p>The current version of the OrderEdit.</p>
+     *  <p>Current version of the Order Edit.</p>
      * @return version
      */
     @NotNull
@@ -65,7 +65,58 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
     public Long getVersion();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Order Edit.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>Reference to the Order updated with this edit.</p>
+     * @return resource
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("resource")
+    public OrderReference getResource();
+
+    /**
+     *  <p>Update actions applied to the Order referenced by <code>resource</code>.</p>
+     * @return stagedActions
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("stagedActions")
+    public List<StagedOrderUpdateAction> getStagedActions();
+
+    /**
+     *  <p>For applied edits, it's a summary of the changes on the Order. For unapplied edits, it's a preview of the changes.</p>
+     * @return result
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("result")
+    public OrderEditResult getResult();
+
+    /**
+     *  <p>User-defined information regarding the Order Edit.</p>
+     * @return comment
+     */
+
+    @JsonProperty("comment")
+    public String getComment();
+
+    /**
+     *  <p>Custom Fields of the Order Edit.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
+    /**
+     *  <p>Date and time (UTC) the Order Edit was initially created.</p>
      * @return createdAt
      */
     @NotNull
@@ -73,7 +124,7 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Order Edit was last updated.</p>
      * @return lastModifiedAt
      */
     @NotNull
@@ -97,79 +148,78 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>User-defined unique identifier of the OrderEdit.</p>
-     * @return key
-     */
-
-    @JsonProperty("key")
-    public String getKey();
-
-    /**
-     *  <p>The order to be updated with this edit.</p>
-     * @return resource
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("resource")
-    public OrderReference getResource();
-
-    /**
-     *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
-     * @return stagedActions
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("stagedActions")
-    public List<StagedOrderUpdateAction> getStagedActions();
-
-    /**
-     *
-     * @return custom
-     */
-    @Valid
-    @JsonProperty("custom")
-    public CustomFields getCustom();
-
-    /**
-     *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
-     * @return result
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("result")
-    public OrderEditResult getResult();
-
-    /**
-     *  <p>This field can be used to add textual information regarding the edit.</p>
-     * @return comment
-     */
-
-    @JsonProperty("comment")
-    public String getComment();
-
-    /**
-     *  <p>Unique identifier of the OrderEdit.</p>
+     *  <p>Unique identifier of the Order Edit.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>The current version of the OrderEdit.</p>
+     *  <p>Current version of the Order Edit.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     * set createdAt
+     *  <p>User-defined unique identifier of the Order Edit.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p>Reference to the Order updated with this edit.</p>
+     * @param resource value to be set
+     */
+
+    public void setResource(final OrderReference resource);
+
+    /**
+     *  <p>Update actions applied to the Order referenced by <code>resource</code>.</p>
+     * @param stagedActions values to be set
+     */
+
+    @JsonIgnore
+    public void setStagedActions(final StagedOrderUpdateAction... stagedActions);
+
+    /**
+     *  <p>Update actions applied to the Order referenced by <code>resource</code>.</p>
+     * @param stagedActions values to be set
+     */
+
+    public void setStagedActions(final List<StagedOrderUpdateAction> stagedActions);
+
+    /**
+     *  <p>For applied edits, it's a summary of the changes on the Order. For unapplied edits, it's a preview of the changes.</p>
+     * @param result value to be set
+     */
+
+    public void setResult(final OrderEditResult result);
+
+    /**
+     *  <p>User-defined information regarding the Order Edit.</p>
+     * @param comment value to be set
+     */
+
+    public void setComment(final String comment);
+
+    /**
+     *  <p>Custom Fields of the Order Edit.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>Date and time (UTC) the Order Edit was initially created.</p>
      * @param createdAt value to be set
      */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     * set lastModifiedAt
+     *  <p>Date and time (UTC) the Order Edit was last updated.</p>
      * @param lastModifiedAt value to be set
      */
 
@@ -190,56 +240,6 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
     public void setCreatedBy(final CreatedBy createdBy);
 
     /**
-     *  <p>User-defined unique identifier of the OrderEdit.</p>
-     * @param key value to be set
-     */
-
-    public void setKey(final String key);
-
-    /**
-     *  <p>The order to be updated with this edit.</p>
-     * @param resource value to be set
-     */
-
-    public void setResource(final OrderReference resource);
-
-    /**
-     *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
-     * @param stagedActions values to be set
-     */
-
-    @JsonIgnore
-    public void setStagedActions(final StagedOrderUpdateAction... stagedActions);
-
-    /**
-     *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
-     * @param stagedActions values to be set
-     */
-
-    public void setStagedActions(final List<StagedOrderUpdateAction> stagedActions);
-
-    /**
-     * set custom
-     * @param custom value to be set
-     */
-
-    public void setCustom(final CustomFields custom);
-
-    /**
-     *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
-     * @param result value to be set
-     */
-
-    public void setResult(final OrderEditResult result);
-
-    /**
-     *  <p>This field can be used to add textual information regarding the edit.</p>
-     * @param comment value to be set
-     */
-
-    public void setComment(final String comment);
-
-    /**
      * factory method
      * @return instance of OrderEdit
      */
@@ -258,14 +258,14 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(template.getLastModifiedBy());
-        instance.setCreatedBy(template.getCreatedBy());
         instance.setKey(template.getKey());
         instance.setResource(template.getResource());
         instance.setStagedActions(template.getStagedActions());
-        instance.setCustom(template.getCustom());
         instance.setResult(template.getResult());
         instance.setComment(template.getComment());
+        instance.setCustom(template.getCustom());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
         return instance;
     }
 
@@ -284,9 +284,6 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
-        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setResource(com.commercetools.api.models.order.OrderReference.deepCopy(template.getResource()));
         instance.setStagedActions(Optional.ofNullable(template.getStagedActions())
@@ -294,9 +291,12 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
                         .map(com.commercetools.api.models.order.StagedOrderUpdateAction::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setResult(com.commercetools.api.models.order_edit.OrderEditResult.deepCopy(template.getResult()));
         instance.setComment(template.getComment());
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         return instance;
     }
 

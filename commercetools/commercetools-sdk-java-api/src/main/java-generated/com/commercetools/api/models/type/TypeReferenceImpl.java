@@ -87,7 +87,13 @@ public class TypeReferenceImpl implements TypeReference, ModelBase {
 
         TypeReferenceImpl that = (TypeReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(obj, that.obj).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .isEquals();
     }
 
     @Override

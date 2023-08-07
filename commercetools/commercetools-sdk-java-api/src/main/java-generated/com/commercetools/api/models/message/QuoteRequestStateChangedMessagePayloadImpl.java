@@ -92,6 +92,9 @@ public class QuoteRequestStateChangedMessagePayloadImpl implements QuoteRequestS
         return new EqualsBuilder().append(type, that.type)
                 .append(quoteRequestState, that.quoteRequestState)
                 .append(oldQuoteRequestState, that.oldQuoteRequestState)
+                .append(type, that.type)
+                .append(quoteRequestState, that.quoteRequestState)
+                .append(oldQuoteRequestState, that.oldQuoteRequestState)
                 .isEquals();
     }
 

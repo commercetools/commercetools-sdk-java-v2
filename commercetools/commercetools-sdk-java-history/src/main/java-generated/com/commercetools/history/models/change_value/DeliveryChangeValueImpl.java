@@ -102,6 +102,9 @@ public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
         return new EqualsBuilder().append(items, that.items)
                 .append(address, that.address)
                 .append(parcels, that.parcels)
+                .append(items, that.items)
+                .append(address, that.address)
+                .append(parcels, that.parcels)
                 .isEquals();
     }
 

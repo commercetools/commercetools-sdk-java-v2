@@ -71,7 +71,11 @@ public class DirectDiscountReferenceImpl implements DirectDiscountReference, Mod
 
         DirectDiscountReferenceImpl that = (DirectDiscountReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .isEquals();
     }
 
     @Override

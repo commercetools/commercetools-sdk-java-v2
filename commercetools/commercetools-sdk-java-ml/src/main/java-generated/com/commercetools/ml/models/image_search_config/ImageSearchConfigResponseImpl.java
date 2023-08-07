@@ -75,7 +75,11 @@ public class ImageSearchConfigResponseImpl implements ImageSearchConfigResponse,
 
         ImageSearchConfigResponseImpl that = (ImageSearchConfigResponseImpl) o;
 
-        return new EqualsBuilder().append(status, that.status).append(lastModifiedAt, that.lastModifiedAt).isEquals();
+        return new EqualsBuilder().append(status, that.status)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(status, that.status)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .isEquals();
     }
 
     @Override

@@ -35,7 +35,7 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
     String SET_LOCALE = "setLocale";
 
     /**
-     *
+     *  <p>Value to set. Must be one of the Project's languages. If empty, any existing value is removed.</p>
      * @return locale
      */
 
@@ -43,7 +43,7 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
     public String getLocale();
 
     /**
-     * set locale
+     *  <p>Value to set. Must be one of the Project's languages. If empty, any existing value is removed.</p>
      * @param locale value to be set
      */
 

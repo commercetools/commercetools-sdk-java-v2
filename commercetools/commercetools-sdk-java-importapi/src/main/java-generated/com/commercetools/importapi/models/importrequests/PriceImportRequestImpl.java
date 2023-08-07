@@ -76,7 +76,11 @@ public class PriceImportRequestImpl implements PriceImportRequest, ModelBase {
 
         PriceImportRequestImpl that = (PriceImportRequestImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(resources, that.resources).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(resources, that.resources)
+                .append(type, that.type)
+                .append(resources, that.resources)
+                .isEquals();
     }
 
     @Override

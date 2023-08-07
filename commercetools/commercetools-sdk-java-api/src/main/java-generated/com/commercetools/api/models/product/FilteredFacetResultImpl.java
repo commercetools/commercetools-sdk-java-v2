@@ -89,6 +89,9 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(count, that.count)
                 .append(productCount, that.productCount)
+                .append(type, that.type)
+                .append(count, that.count)
+                .append(productCount, that.productCount)
                 .isEquals();
     }
 

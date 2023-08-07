@@ -75,7 +75,11 @@ public class StoreSetCountriesActionImpl implements StoreSetCountriesAction, Mod
 
         StoreSetCountriesActionImpl that = (StoreSetCountriesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(countries, that.countries).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(countries, that.countries)
+                .append(action, that.action)
+                .append(countries, that.countries)
+                .isEquals();
     }
 
     @Override

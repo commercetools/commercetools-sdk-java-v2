@@ -57,7 +57,7 @@ public class OrderSetItemShippingAddressCustomFieldActionImpl
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
      */
 
     public String getAddressKey() {
@@ -103,6 +103,10 @@ public class OrderSetItemShippingAddressCustomFieldActionImpl
         OrderSetItemShippingAddressCustomFieldActionImpl that = (OrderSetItemShippingAddressCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(addressKey, that.addressKey)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(action, that.action)
                 .append(addressKey, that.addressKey)
                 .append(name, that.name)
                 .append(value, that.value)

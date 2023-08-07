@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
@@ -15,14 +14,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderRemoveCustomLineItemAction
+ *  <p>This update action does not support specifying a quantity, unlike the Remove LineItem update action.</p>
+ *  <p>If <code>shippingDetails</code> must be partially removed, use the Change CustomLineItem Quantity update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderRemoveCustomLineItemAction stagedOrderRemoveCustomLineItemAction = StagedOrderRemoveCustomLineItemAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -37,19 +36,34 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
     String REMOVE_CUSTOM_LINE_ITEM = "removeCustomLineItem";
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
-    @NotNull
+
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     * set customLineItemId
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
      * factory method
@@ -67,6 +81,7 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
     public static StagedOrderRemoveCustomLineItemAction of(final StagedOrderRemoveCustomLineItemAction template) {
         StagedOrderRemoveCustomLineItemActionImpl instance = new StagedOrderRemoveCustomLineItemActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         return instance;
     }
 
@@ -83,6 +98,7 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
         }
         StagedOrderRemoveCustomLineItemActionImpl instance = new StagedOrderRemoveCustomLineItemActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         return instance;
     }
 

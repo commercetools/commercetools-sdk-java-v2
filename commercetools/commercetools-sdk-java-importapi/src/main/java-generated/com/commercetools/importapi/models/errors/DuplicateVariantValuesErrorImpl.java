@@ -89,6 +89,9 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
                 .append(variantValues, that.variantValues)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(variantValues, that.variantValues)
                 .isEquals();
     }
 

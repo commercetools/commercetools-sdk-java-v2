@@ -89,6 +89,9 @@ public class ProductChangeSlugActionImpl implements ProductChangeSlugAction, Mod
         return new EqualsBuilder().append(action, that.action)
                 .append(slug, that.slug)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(slug, that.slug)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

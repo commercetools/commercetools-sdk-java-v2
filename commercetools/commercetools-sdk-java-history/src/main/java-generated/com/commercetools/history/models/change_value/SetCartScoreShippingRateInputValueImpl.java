@@ -74,7 +74,11 @@ public class SetCartScoreShippingRateInputValueImpl implements SetCartScoreShipp
 
         SetCartScoreShippingRateInputValueImpl that = (SetCartScoreShippingRateInputValueImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(score, that.score).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(score, that.score)
+                .append(type, that.type)
+                .append(score, that.score)
+                .isEquals();
     }
 
     @Override

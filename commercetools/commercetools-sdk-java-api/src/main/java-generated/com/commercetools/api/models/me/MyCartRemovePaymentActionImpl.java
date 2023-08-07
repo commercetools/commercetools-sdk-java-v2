@@ -71,7 +71,11 @@ public class MyCartRemovePaymentActionImpl implements MyCartRemovePaymentAction,
 
         MyCartRemovePaymentActionImpl that = (MyCartRemovePaymentActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(payment, that.payment).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(payment, that.payment)
+                .append(action, that.action)
+                .append(payment, that.payment)
+                .isEquals();
     }
 
     @Override

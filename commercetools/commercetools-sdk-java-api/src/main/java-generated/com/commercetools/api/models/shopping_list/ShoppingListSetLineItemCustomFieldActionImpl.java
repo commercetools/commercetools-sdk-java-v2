@@ -106,6 +106,10 @@ public class ShoppingListSetLineItemCustomFieldActionImpl
                 .append(lineItemId, that.lineItemId)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 

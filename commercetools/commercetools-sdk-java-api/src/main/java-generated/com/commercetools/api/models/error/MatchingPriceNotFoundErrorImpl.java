@@ -200,6 +200,15 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
                 .append(country, that.country)
                 .append(customerGroup, that.customerGroup)
                 .append(channel, that.channel)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(currency, that.currency)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
                 .isEquals();
     }
 

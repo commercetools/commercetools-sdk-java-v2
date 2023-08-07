@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Remove Custom Line Item update action.</p>
+ *  <p>Generated after a successful Remove CustomLineItem update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,6 +47,14 @@ public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePa
     public String getCustomLineItemId();
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
      *  <p>Custom Line Item that was removed from the Order.</p>
      * @return customLineItem
      */
@@ -61,6 +69,13 @@ public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePa
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
      *  <p>Custom Line Item that was removed from the Order.</p>
@@ -85,6 +100,7 @@ public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePa
     public static OrderCustomLineItemRemovedMessagePayload of(final OrderCustomLineItemRemovedMessagePayload template) {
         OrderCustomLineItemRemovedMessagePayloadImpl instance = new OrderCustomLineItemRemovedMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setCustomLineItem(template.getCustomLineItem());
         return instance;
     }
@@ -102,6 +118,7 @@ public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePa
         }
         OrderCustomLineItemRemovedMessagePayloadImpl instance = new OrderCustomLineItemRemovedMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setCustomLineItem(
             com.commercetools.api.models.cart.CustomLineItem.deepCopy(template.getCustomLineItem()));
         return instance;

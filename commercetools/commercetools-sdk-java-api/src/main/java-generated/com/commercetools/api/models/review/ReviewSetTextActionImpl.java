@@ -70,7 +70,11 @@ public class ReviewSetTextActionImpl implements ReviewSetTextAction, ModelBase {
 
         ReviewSetTextActionImpl that = (ReviewSetTextActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(text, that.text).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(text, that.text)
+                .append(action, that.action)
+                .append(text, that.text)
+                .isEquals();
     }
 
     @Override

@@ -80,6 +80,8 @@ public class StoreSetDistributionChannelsActionImpl implements StoreSetDistribut
 
         return new EqualsBuilder().append(action, that.action)
                 .append(distributionChannels, that.distributionChannels)
+                .append(action, that.action)
+                .append(distributionChannels, that.distributionChannels)
                 .isEquals();
     }
 

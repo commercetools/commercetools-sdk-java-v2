@@ -140,6 +140,12 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
                 .append(oldAvailableQuantity, that.oldAvailableQuantity)
                 .append(newAvailableQuantity, that.newAvailableQuantity)
                 .append(supplyChannel, that.supplyChannel)
+                .append(type, that.type)
+                .append(oldQuantityOnStock, that.oldQuantityOnStock)
+                .append(newQuantityOnStock, that.newQuantityOnStock)
+                .append(oldAvailableQuantity, that.oldAvailableQuantity)
+                .append(newAvailableQuantity, that.newAvailableQuantity)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 

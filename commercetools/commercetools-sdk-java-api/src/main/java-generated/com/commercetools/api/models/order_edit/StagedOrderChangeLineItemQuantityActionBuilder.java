@@ -62,7 +62,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * set the value to the quantity
+     *  <p>New value to set. If <code>0</code>, the LineItem is removed from the Order.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -73,7 +73,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -85,7 +86,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -97,7 +99,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -109,7 +112,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * set the value to the externalTotalPrice using the builder function
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -123,7 +126,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * set the value to the externalTotalPrice using the builder function
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -136,7 +139,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * set the value to the externalTotalPrice
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -168,7 +171,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * value of quantity}
+     *  <p>New value to set. If <code>0</code>, the LineItem is removed from the Order.</p>
      * @return quantity
      */
 
@@ -177,7 +180,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      * @return externalPrice
      */
 
@@ -187,7 +191,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * value of externalTotalPrice}
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @return externalTotalPrice
      */
 

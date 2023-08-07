@@ -103,6 +103,9 @@ public class StoreDistributionChannelsChangedMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(addedDistributionChannels, that.addedDistributionChannels)
                 .append(removedDistributionChannels, that.removedDistributionChannels)
+                .append(type, that.type)
+                .append(addedDistributionChannels, that.addedDistributionChannels)
+                .append(removedDistributionChannels, that.removedDistributionChannels)
                 .isEquals();
     }
 

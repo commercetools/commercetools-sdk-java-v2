@@ -73,7 +73,7 @@ public class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineIt
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Value to set. If empty, the existing value is removed.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
@@ -103,6 +103,10 @@ public class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineIt
         OrderSetLineItemShippingDetailsActionImpl that = (OrderSetLineItemShippingDetailsActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(shippingDetails, that.shippingDetails)
+                .append(action, that.action)
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(shippingDetails, that.shippingDetails)

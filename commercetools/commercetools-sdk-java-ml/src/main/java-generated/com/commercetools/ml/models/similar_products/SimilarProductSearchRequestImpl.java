@@ -183,6 +183,14 @@ public class SimilarProductSearchRequestImpl implements SimilarProductSearchRequ
                 .append(productSetSelectors, that.productSetSelectors)
                 .append(confidenceMin, that.confidenceMin)
                 .append(confidenceMax, that.confidenceMax)
+                .append(limit, that.limit)
+                .append(offset, that.offset)
+                .append(language, that.language)
+                .append(currencyCode, that.currencyCode)
+                .append(similarityMeasures, that.similarityMeasures)
+                .append(productSetSelectors, that.productSetSelectors)
+                .append(confidenceMin, that.confidenceMin)
+                .append(confidenceMax, that.confidenceMax)
                 .isEquals();
     }
 

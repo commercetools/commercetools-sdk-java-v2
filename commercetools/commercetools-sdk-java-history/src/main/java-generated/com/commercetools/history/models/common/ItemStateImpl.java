@@ -74,7 +74,11 @@ public class ItemStateImpl implements ItemState, ModelBase {
 
         ItemStateImpl that = (ItemStateImpl) o;
 
-        return new EqualsBuilder().append(quantity, that.quantity).append(state, that.state).isEquals();
+        return new EqualsBuilder().append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override

@@ -109,6 +109,10 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
                 .append(key, that.key)
                 .append(dimensions, that.dimensions)
                 .append(contentType, that.contentType)
+                .append(uri, that.uri)
+                .append(key, that.key)
+                .append(dimensions, that.dimensions)
+                .append(contentType, that.contentType)
                 .isEquals();
     }
 

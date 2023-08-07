@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Add Parcel To Delivery update action.</p>
+ *  <p>Generated after a successful Add Parcel to Delivery update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDeliveryMessagePayload, ModelBase {
@@ -74,7 +74,7 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -104,6 +104,10 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
         ParcelAddedToDeliveryMessagePayloadImpl that = (ParcelAddedToDeliveryMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(delivery, that.delivery)
+                .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
+                .append(type, that.type)
                 .append(delivery, that.delivery)
                 .append(parcel, that.parcel)
                 .append(shippingKey, that.shippingKey)

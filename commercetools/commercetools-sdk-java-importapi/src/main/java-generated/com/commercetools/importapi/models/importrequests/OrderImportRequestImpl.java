@@ -76,7 +76,11 @@ public class OrderImportRequestImpl implements OrderImportRequest, ModelBase {
 
         OrderImportRequestImpl that = (OrderImportRequestImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(resources, that.resources).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(resources, that.resources)
+                .append(type, that.type)
+                .append(resources, that.resources)
+                .isEquals();
     }
 
     @Override

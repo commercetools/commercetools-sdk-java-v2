@@ -54,7 +54,7 @@ public class CustomFieldImpl implements CustomField, ModelBase {
 
         CustomFieldImpl that = (CustomFieldImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

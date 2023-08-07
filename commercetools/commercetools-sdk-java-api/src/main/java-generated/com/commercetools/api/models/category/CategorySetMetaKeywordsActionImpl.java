@@ -71,7 +71,11 @@ public class CategorySetMetaKeywordsActionImpl implements CategorySetMetaKeyword
 
         CategorySetMetaKeywordsActionImpl that = (CategorySetMetaKeywordsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(metaKeywords, that.metaKeywords).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(metaKeywords, that.metaKeywords)
+                .append(action, that.action)
+                .append(metaKeywords, that.metaKeywords)
+                .isEquals();
     }
 
     @Override

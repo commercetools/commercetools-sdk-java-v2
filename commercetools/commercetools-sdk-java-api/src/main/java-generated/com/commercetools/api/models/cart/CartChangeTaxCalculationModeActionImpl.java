@@ -73,6 +73,8 @@ public class CartChangeTaxCalculationModeActionImpl implements CartChangeTaxCalc
 
         return new EqualsBuilder().append(action, that.action)
                 .append(taxCalculationMode, that.taxCalculationMode)
+                .append(action, that.action)
+                .append(taxCalculationMode, that.taxCalculationMode)
                 .isEquals();
     }
 

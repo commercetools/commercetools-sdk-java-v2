@@ -12,14 +12,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Deprecated
 public class ProductSelectionTypeBuilder {
 
-    public com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder individualExclusionBuilder() {
-        return com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder.of();
-    }
-
-    public com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder individualBuilder() {
-        return com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of();
-    }
-
     /**
      * factory method for an instance of ProductSelectionTypeBuilder
      * @return builder

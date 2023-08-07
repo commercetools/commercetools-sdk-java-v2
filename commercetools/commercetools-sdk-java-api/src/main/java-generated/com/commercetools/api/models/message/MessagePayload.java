@@ -50,7 +50,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessagePayloadImpl.class, name = BusinessUnitDefaultShippingAddressSetMessagePayload.BUSINESS_UNIT_DEFAULT_SHIPPING_ADDRESS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitDeletedMessagePayloadImpl.class, name = BusinessUnitDeletedMessagePayload.BUSINESS_UNIT_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitNameChangedMessagePayloadImpl.class, name = BusinessUnitNameChangedMessagePayload.BUSINESS_UNIT_NAME_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayloadImpl.class, name = BusinessUnitParentUnitChangedMessagePayload.BUSINESS_UNIT_PARENT_UNIT_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitParentChangedMessagePayloadImpl.class, name = BusinessUnitParentChangedMessagePayload.BUSINESS_UNIT_PARENT_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessagePayloadImpl.class, name = BusinessUnitShippingAddressAddedMessagePayload.BUSINESS_UNIT_SHIPPING_ADDRESS_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessagePayloadImpl.class, name = BusinessUnitShippingAddressRemovedMessagePayload.BUSINESS_UNIT_SHIPPING_ADDRESS_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStatusChangedMessagePayloadImpl.class, name = BusinessUnitStatusChangedMessagePayload.BUSINESS_UNIT_STATUS_CHANGED),
@@ -85,10 +85,15 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.LineItemStateTransitionMessagePayloadImpl.class, name = LineItemStateTransitionMessagePayload.LINE_ITEM_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderBillingAddressSetMessagePayloadImpl.class, name = OrderBillingAddressSetMessagePayload.ORDER_BILLING_ADDRESS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCreatedMessagePayloadImpl.class, name = OrderCreatedMessagePayload.ORDER_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldAddedMessagePayloadImpl.class, name = OrderCustomFieldAddedMessagePayload.ORDER_CUSTOM_FIELD_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldChangedMessagePayloadImpl.class, name = OrderCustomFieldChangedMessagePayload.ORDER_CUSTOM_FIELD_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldRemovedMessagePayloadImpl.class, name = OrderCustomFieldRemovedMessagePayload.ORDER_CUSTOM_FIELD_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemAddedMessagePayloadImpl.class, name = OrderCustomLineItemAddedMessagePayload.ORDER_CUSTOM_LINE_ITEM_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessagePayloadImpl.class, name = OrderCustomLineItemDiscountSetMessagePayload.ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessagePayloadImpl.class, name = OrderCustomLineItemQuantityChangedMessagePayload.ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemRemovedMessagePayloadImpl.class, name = OrderCustomLineItemRemovedMessagePayload.ORDER_CUSTOM_LINE_ITEM_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomTypeRemovedMessagePayloadImpl.class, name = OrderCustomTypeRemovedMessagePayload.ORDER_CUSTOM_TYPE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomTypeSetMessagePayloadImpl.class, name = OrderCustomTypeSetMessagePayload.ORDER_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerEmailSetMessagePayloadImpl.class, name = OrderCustomerEmailSetMessagePayload.ORDER_CUSTOMER_EMAIL_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerGroupSetMessagePayloadImpl.class, name = OrderCustomerGroupSetMessagePayload.ORDER_CUSTOMER_GROUP_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerSetMessagePayloadImpl.class, name = OrderCustomerSetMessagePayload.ORDER_CUSTOMER_SET),
@@ -310,9 +315,9 @@ public interface MessagePayload {
             return com.commercetools.api.models.message.BusinessUnitNameChangedMessagePayload
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitNameChangedMessagePayload) template);
         }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayload) {
-            return com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayload.deepCopy(
-                (com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayload) template);
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitParentChangedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitParentChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitParentChangedMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessagePayload) {
             return com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessagePayload.deepCopy(
@@ -915,11 +920,11 @@ public interface MessagePayload {
     }
 
     /**
-     * builder for businessUnitParentUnitChanged subtype
+     * builder for businessUnitParentChanged subtype
      * @return builder
      */
-    public static com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayloadBuilder businessUnitParentUnitChangedBuilder() {
-        return com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayloadBuilder.of();
+    public static com.commercetools.api.models.message.BusinessUnitParentChangedMessagePayloadBuilder businessUnitParentChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitParentChangedMessagePayloadBuilder.of();
     }
 
     /**
@@ -1195,6 +1200,30 @@ public interface MessagePayload {
     }
 
     /**
+     * builder for orderCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomFieldAddedMessagePayloadBuilder orderCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomFieldChangedMessagePayloadBuilder orderCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldChangedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomFieldRemovedMessagePayloadBuilder orderCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for orderCustomLineItemAdded subtype
      * @return builder
      */
@@ -1224,6 +1253,22 @@ public interface MessagePayload {
      */
     public static com.commercetools.api.models.message.OrderCustomLineItemRemovedMessagePayloadBuilder orderCustomLineItemRemovedBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomTypeRemovedMessagePayloadBuilder orderCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomTypeRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomTypeSetMessagePayloadBuilder orderCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.OrderCustomTypeSetMessagePayloadBuilder.of();
     }
 
     /**

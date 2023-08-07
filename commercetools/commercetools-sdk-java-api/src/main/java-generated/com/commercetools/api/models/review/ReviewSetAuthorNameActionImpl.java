@@ -70,7 +70,11 @@ public class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameAction,
 
         ReviewSetAuthorNameActionImpl that = (ReviewSetAuthorNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(authorName, that.authorName).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(authorName, that.authorName)
+                .append(action, that.action)
+                .append(authorName, that.authorName)
+                .isEquals();
     }
 
     @Override

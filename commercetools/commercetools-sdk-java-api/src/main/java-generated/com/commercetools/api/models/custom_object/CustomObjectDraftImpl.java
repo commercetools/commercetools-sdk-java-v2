@@ -108,6 +108,10 @@ public class CustomObjectDraftImpl implements CustomObjectDraft, ModelBase {
                 .append(key, that.key)
                 .append(value, that.value)
                 .append(version, that.version)
+                .append(container, that.container)
+                .append(key, that.key)
+                .append(value, that.value)
+                .append(version, that.version)
                 .isEquals();
     }
 

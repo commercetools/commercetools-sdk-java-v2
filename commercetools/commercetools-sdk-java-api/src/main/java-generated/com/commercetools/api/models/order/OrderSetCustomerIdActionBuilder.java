@@ -26,7 +26,7 @@ public class OrderSetCustomerIdActionBuilder implements Builder<OrderSetCustomer
     private String customerId;
 
     /**
-     * set the value to the customerId
+     *  <p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p>
      * @param customerId value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderSetCustomerIdActionBuilder implements Builder<OrderSetCustomer
     }
 
     /**
-     * value of customerId}
+     *  <p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p>
      * @return customerId
      */
 

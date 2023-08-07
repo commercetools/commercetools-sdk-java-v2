@@ -82,6 +82,8 @@ public class DiscountedLineItemPriceImpl implements DiscountedLineItemPrice, Mod
 
         return new EqualsBuilder().append(value, that.value)
                 .append(includedDiscounts, that.includedDiscounts)
+                .append(value, that.value)
+                .append(includedDiscounts, that.includedDiscounts)
                 .isEquals();
     }
 

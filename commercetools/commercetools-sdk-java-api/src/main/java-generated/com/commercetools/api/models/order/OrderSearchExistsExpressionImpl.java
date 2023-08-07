@@ -59,7 +59,7 @@ public class OrderSearchExistsExpressionImpl implements OrderSearchExistsExpress
 
         OrderSearchExistsExpressionImpl that = (OrderSearchExistsExpressionImpl) o;
 
-        return new EqualsBuilder().append(exists, that.exists).isEquals();
+        return new EqualsBuilder().append(exists, that.exists).append(exists, that.exists).isEquals();
     }
 
     @Override

@@ -25,7 +25,7 @@ public class StagedOrderAddPaymentActionBuilder implements Builder<StagedOrderAd
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class StagedOrderAddPaymentActionBuilder implements Builder<StagedOrderAd
     }
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
      * @param builder function to build the payment value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class StagedOrderAddPaymentActionBuilder implements Builder<StagedOrderAd
     }
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
      * @param payment value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class StagedOrderAddPaymentActionBuilder implements Builder<StagedOrderAd
     }
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
      * @return payment
      */
 

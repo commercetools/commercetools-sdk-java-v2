@@ -71,7 +71,11 @@ public class BusinessUnitKeyReferenceImpl implements BusinessUnitKeyReference, M
 
         BusinessUnitKeyReferenceImpl that = (BusinessUnitKeyReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

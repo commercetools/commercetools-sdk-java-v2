@@ -262,6 +262,18 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
                 .append(isMatchingVariant, that.isMatchingVariant)
                 .append(scopedPrice, that.scopedPrice)
                 .append(scopedPriceDiscounted, that.scopedPriceDiscounted)
+                .append(id, that.id)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .append(price, that.price)
+                .append(images, that.images)
+                .append(assets, that.assets)
+                .append(availability, that.availability)
+                .append(isMatchingVariant, that.isMatchingVariant)
+                .append(scopedPrice, that.scopedPrice)
+                .append(scopedPriceDiscounted, that.scopedPriceDiscounted)
                 .isEquals();
     }
 

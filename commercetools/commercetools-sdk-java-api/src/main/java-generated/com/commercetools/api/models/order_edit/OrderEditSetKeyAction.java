@@ -34,7 +34,7 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
     String SET_KEY = "setKey";
 
     /**
-     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return key
      */
 
@@ -42,7 +42,7 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
     public String getKey();
 
     /**
-     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param key value to be set
      */
 

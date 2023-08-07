@@ -71,7 +71,11 @@ public class ChangeStatusUpdateActionImpl implements ChangeStatusUpdateAction, M
 
         ChangeStatusUpdateActionImpl that = (ChangeStatusUpdateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(status, that.status).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(status, that.status)
+                .append(action, that.action)
+                .append(status, that.status)
+                .isEquals();
     }
 
     @Override

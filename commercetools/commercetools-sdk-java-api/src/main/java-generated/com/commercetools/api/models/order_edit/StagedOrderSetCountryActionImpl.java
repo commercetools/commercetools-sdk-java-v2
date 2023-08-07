@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetCountryAction
+ *  <p>Setting the country can lead to changes in the LineItem prices.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCountryActionImpl implements StagedOrderSetCountryAction, ModelBase {
@@ -49,7 +49,8 @@ public class StagedOrderSetCountryActionImpl implements StagedOrderSetCountryAct
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
      */
 
     public String getCountry() {
@@ -70,7 +71,11 @@ public class StagedOrderSetCountryActionImpl implements StagedOrderSetCountryAct
 
         StagedOrderSetCountryActionImpl that = (StagedOrderSetCountryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(country, that.country).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(country, that.country)
+                .append(action, that.action)
+                .append(country, that.country)
+                .isEquals();
     }
 
     @Override

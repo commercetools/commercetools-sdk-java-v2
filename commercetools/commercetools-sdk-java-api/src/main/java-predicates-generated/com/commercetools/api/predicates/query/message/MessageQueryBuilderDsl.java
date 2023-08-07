@@ -267,10 +267,11 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<MessageQueryBuilderDsl> asBusinessUnitParentUnitChanged(
-            Function<com.commercetools.api.predicates.query.message.BusinessUnitParentUnitChangedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitParentUnitChangedMessageQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(fn.apply(
-            com.commercetools.api.predicates.query.message.BusinessUnitParentUnitChangedMessageQueryBuilderDsl.of()),
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asBusinessUnitParentChanged(
+            Function<com.commercetools.api.predicates.query.message.BusinessUnitParentChangedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitParentChangedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.BusinessUnitParentChangedMessageQueryBuilderDsl.of()),
             MessageQueryBuilderDsl::of);
     }
 

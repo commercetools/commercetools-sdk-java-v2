@@ -25,6 +25,8 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private com.commercetools.api.models.type.FieldContainer fields;
@@ -34,9 +36,11 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
      */
     @JsonCreator
     StagedOrderSetCustomLineItemCustomTypeActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.type = type;
         this.fields = fields;
         this.action = SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE;
@@ -58,7 +62,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
     }
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
@@ -66,7 +70,15 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
     }
 
     /**
-     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>Defines the Type that extends the Custom Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -74,7 +86,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Custom Line Item.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -83,6 +95,10 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
     }
 
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -105,6 +121,12 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();
@@ -114,6 +136,7 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(customLineItemId)
+                .append(customLineItemKey)
                 .append(type)
                 .append(fields)
                 .toHashCode();

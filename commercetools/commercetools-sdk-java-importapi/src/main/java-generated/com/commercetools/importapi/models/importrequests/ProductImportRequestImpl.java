@@ -77,7 +77,11 @@ public class ProductImportRequestImpl implements ProductImportRequest, ModelBase
 
         ProductImportRequestImpl that = (ProductImportRequestImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(resources, that.resources).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(resources, that.resources)
+                .append(type, that.type)
+                .append(resources, that.resources)
+                .isEquals();
     }
 
     @Override

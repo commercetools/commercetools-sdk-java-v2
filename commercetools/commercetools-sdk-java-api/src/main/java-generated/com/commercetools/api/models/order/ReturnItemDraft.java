@@ -35,7 +35,15 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
         io.vrap.rmf.base.client.Draft<ReturnItemDraft> {
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Return Item.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>Number of Line Items or Custom Line Items to return.</p>
      * @return quantity
      */
     @NotNull
@@ -43,7 +51,8 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public Long getQuantity();
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to return.</p>
+     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
      * @return lineItemId
      */
 
@@ -51,7 +60,8 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public String getLineItemId();
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
      * @return customLineItemId
      */
 
@@ -59,7 +69,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p>User-defined description for the return.</p>
      * @return comment
      */
 
@@ -67,7 +77,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public String getComment();
 
     /**
-     *
+     *  <p>Shipment status of the item to be returned. Can either be <code>Advised</code> or <code>Returned</code> only.</p>
      * @return shipmentState
      */
     @NotNull
@@ -75,7 +85,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public ReturnShipmentState getShipmentState();
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields for the Return Item.</p>
      * @return custom
      */
     @Valid
@@ -83,42 +93,51 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     public CustomFieldsDraft getCustom();
 
     /**
-     * set quantity
+     *  <p>User-defined unique identifier of the Return Item.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p>Number of Line Items or Custom Line Items to return.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     * set lineItemId
+     *  <p><code>id</code> of the LineItem to return.</p>
+     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     * set customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     * set comment
+     *  <p>User-defined description for the return.</p>
      * @param comment value to be set
      */
 
     public void setComment(final String comment);
 
     /**
-     * set shipmentState
+     *  <p>Shipment status of the item to be returned. Can either be <code>Advised</code> or <code>Returned</code> only.</p>
      * @param shipmentState value to be set
      */
 
     public void setShipmentState(final ReturnShipmentState shipmentState);
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields for the Return Item.</p>
      * @param custom value to be set
      */
 
@@ -139,6 +158,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
      */
     public static ReturnItemDraft of(final ReturnItemDraft template) {
         ReturnItemDraftImpl instance = new ReturnItemDraftImpl();
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setLineItemId(template.getLineItemId());
         instance.setCustomLineItemId(template.getCustomLineItemId());
@@ -159,6 +179,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
             return null;
         }
         ReturnItemDraftImpl instance = new ReturnItemDraftImpl();
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setLineItemId(template.getLineItemId());
         instance.setCustomLineItemId(template.getCustomLineItemId());

@@ -105,6 +105,10 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
                 .append(categoryId, that.categoryId)
                 .append(orderHint, that.orderHint)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(categoryId, that.categoryId)
+                .append(orderHint, that.orderHint)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

@@ -74,7 +74,11 @@ public class StagedStandalonePriceImpl implements StagedStandalonePrice, ModelBa
 
         StagedStandalonePriceImpl that = (StagedStandalonePriceImpl) o;
 
-        return new EqualsBuilder().append(value, that.value).append(discounted, that.discounted).isEquals();
+        return new EqualsBuilder().append(value, that.value)
+                .append(discounted, that.discounted)
+                .append(value, that.value)
+                .append(discounted, that.discounted)
+                .isEquals();
     }
 
     @Override

@@ -3,8 +3,6 @@ package com.commercetools.api.models.order;
 
 import java.util.*;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,6 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderChangeShipmentStateAction orderChangeShipmentStateAction = OrderChangeShipmentStateAction.builder()
+ *             .shipmentState(ShipmentState.SHIPPED)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,27 +21,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderChangeShipmentStateActionBuilder implements Builder<OrderChangeShipmentStateAction> {
 
-    @Nullable
     private com.commercetools.api.models.order.ShipmentState shipmentState;
 
     /**
-     * set the value to the shipmentState
+     *  <p>New shipment status of the Order.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
 
     public OrderChangeShipmentStateActionBuilder shipmentState(
-            @Nullable final com.commercetools.api.models.order.ShipmentState shipmentState) {
+            final com.commercetools.api.models.order.ShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
 
     /**
-     * value of shipmentState}
+     *  <p>New shipment status of the Order.</p>
      * @return shipmentState
      */
 
-    @Nullable
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
         return this.shipmentState;
     }
@@ -52,6 +49,7 @@ public class OrderChangeShipmentStateActionBuilder implements Builder<OrderChang
      * @return OrderChangeShipmentStateAction
      */
     public OrderChangeShipmentStateAction build() {
+        Objects.requireNonNull(shipmentState, OrderChangeShipmentStateAction.class + ": shipmentState is missing");
         return new OrderChangeShipmentStateActionImpl(shipmentState);
     }
 

@@ -70,7 +70,11 @@ public class CustomerSetSalutationActionImpl implements CustomerSetSalutationAct
 
         CustomerSetSalutationActionImpl that = (CustomerSetSalutationActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(salutation, that.salutation).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(salutation, that.salutation)
+                .append(action, that.action)
+                .append(salutation, that.salutation)
+                .isEquals();
     }
 
     @Override

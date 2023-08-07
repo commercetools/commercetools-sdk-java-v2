@@ -110,6 +110,10 @@ public class SimilarProductMetaImpl implements SimilarProductMeta, ModelBase {
                 .append(description, that.description)
                 .append(price, that.price)
                 .append(variantCount, that.variantCount)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(price, that.price)
+                .append(variantCount, that.variantCount)
                 .isEquals();
     }
 

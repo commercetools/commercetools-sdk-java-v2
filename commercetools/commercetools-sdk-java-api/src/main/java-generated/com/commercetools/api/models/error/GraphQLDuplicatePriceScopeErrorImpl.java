@@ -93,6 +93,9 @@ public class GraphQLDuplicatePriceScopeErrorImpl implements GraphQLDuplicatePric
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(conflictingPrice, that.conflictingPrice)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(conflictingPrice, that.conflictingPrice)
                 .isEquals();
     }
 

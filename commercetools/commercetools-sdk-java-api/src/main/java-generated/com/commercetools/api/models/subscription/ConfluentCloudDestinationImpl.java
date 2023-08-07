@@ -156,6 +156,13 @@ public class ConfluentCloudDestinationImpl implements ConfluentCloudDestination,
                 .append(acks, that.acks)
                 .append(topic, that.topic)
                 .append(key, that.key)
+                .append(type, that.type)
+                .append(bootstrapServer, that.bootstrapServer)
+                .append(apiKey, that.apiKey)
+                .append(apiSecret, that.apiSecret)
+                .append(acks, that.acks)
+                .append(topic, that.topic)
+                .append(key, that.key)
                 .isEquals();
     }
 

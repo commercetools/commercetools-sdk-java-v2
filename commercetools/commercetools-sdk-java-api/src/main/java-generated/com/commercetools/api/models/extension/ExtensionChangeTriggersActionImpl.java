@@ -75,7 +75,11 @@ public class ExtensionChangeTriggersActionImpl implements ExtensionChangeTrigger
 
         ExtensionChangeTriggersActionImpl that = (ExtensionChangeTriggersActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(triggers, that.triggers).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(triggers, that.triggers)
+                .append(action, that.action)
+                .append(triggers, that.triggers)
+                .isEquals();
     }
 
     @Override

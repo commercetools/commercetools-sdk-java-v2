@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderAddItemShippingAddressAction
+ *  <p>Adds an address to an Order when shipping to multiple addresses is desired.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderAddItemShippingAddressActionImpl implements OrderAddItemShippingAddressAction, ModelBase {
@@ -50,7 +50,7 @@ public class OrderAddItemShippingAddressActionImpl implements OrderAddItemShippi
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address to append to <code>itemShippingAddresses</code>. The new Address must have a <code>key</code> that is unique across this Order.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -71,7 +71,11 @@ public class OrderAddItemShippingAddressActionImpl implements OrderAddItemShippi
 
         OrderAddItemShippingAddressActionImpl that = (OrderAddItemShippingAddressActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(address, that.address)
+                .append(action, that.action)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override

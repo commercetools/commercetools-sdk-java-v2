@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderChangeOrderStateAction
+ *  <p>Produces the Order State Changed Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateActi
     String CHANGE_ORDER_STATE = "changeOrderState";
 
     /**
-     *
+     *  <p>New status of the Order.</p>
      * @return orderState
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateActi
     public OrderState getOrderState();
 
     /**
-     * set orderState
+     *  <p>New status of the Order.</p>
      * @param orderState value to be set
      */
 

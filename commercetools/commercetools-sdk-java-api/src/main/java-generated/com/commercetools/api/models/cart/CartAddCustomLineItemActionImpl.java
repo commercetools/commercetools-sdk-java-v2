@@ -231,6 +231,17 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
                 .append(priceMode, that.priceMode)
+                .append(action, that.action)
+                .append(money, that.money)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(quantity, that.quantity)
+                .append(slug, that.slug)
+                .append(taxCategory, that.taxCategory)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 

@@ -90,6 +90,9 @@ public class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleAction,
         return new EqualsBuilder().append(action, that.action)
                 .append(metaTitle, that.metaTitle)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(metaTitle, that.metaTitle)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

@@ -141,6 +141,12 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
                 .append(quantity, that.quantity)
                 .append(addedAt, that.addedAt)
                 .append(custom, that.custom)
+                .append(action, that.action)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

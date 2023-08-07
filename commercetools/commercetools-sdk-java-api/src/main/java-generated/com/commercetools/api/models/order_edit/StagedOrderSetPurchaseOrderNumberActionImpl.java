@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetPurchaseOrderNumberAction
+ *  <p>Produces the PurchaseOrderNumberSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetPurchaseOrderNumberActionImpl implements StagedOrderSetPurchaseOrderNumberAction, ModelBase {
@@ -49,7 +49,7 @@ public class StagedOrderSetPurchaseOrderNumberActionImpl implements StagedOrderS
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     *  <p>Value to set.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -71,6 +71,8 @@ public class StagedOrderSetPurchaseOrderNumberActionImpl implements StagedOrderS
         StagedOrderSetPurchaseOrderNumberActionImpl that = (StagedOrderSetPurchaseOrderNumberActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(action, that.action)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .isEquals();
     }

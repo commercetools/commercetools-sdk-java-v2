@@ -71,7 +71,11 @@ public class CategorySetMetaTitleActionImpl implements CategorySetMetaTitleActio
 
         CategorySetMetaTitleActionImpl that = (CategorySetMetaTitleActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(metaTitle, that.metaTitle).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(metaTitle, that.metaTitle)
+                .append(action, that.action)
+                .append(metaTitle, that.metaTitle)
+                .isEquals();
     }
 
     @Override

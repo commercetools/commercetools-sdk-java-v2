@@ -86,7 +86,13 @@ public class ProductLabelImpl implements ProductLabel, ModelBase {
 
         ProductLabelImpl that = (ProductLabelImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(slug, that.slug).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(slug, that.slug)
+                .append(name, that.name)
+                .append(type, that.type)
+                .append(slug, that.slug)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override

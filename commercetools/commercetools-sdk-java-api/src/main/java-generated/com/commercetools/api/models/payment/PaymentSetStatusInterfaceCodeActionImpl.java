@@ -70,7 +70,11 @@ public class PaymentSetStatusInterfaceCodeActionImpl implements PaymentSetStatus
 
         PaymentSetStatusInterfaceCodeActionImpl that = (PaymentSetStatusInterfaceCodeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(interfaceCode, that.interfaceCode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(interfaceCode, that.interfaceCode)
+                .append(action, that.action)
+                .append(interfaceCode, that.interfaceCode)
+                .isEquals();
     }
 
     @Override

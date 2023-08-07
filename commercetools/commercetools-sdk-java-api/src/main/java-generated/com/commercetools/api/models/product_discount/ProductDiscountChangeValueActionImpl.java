@@ -71,7 +71,11 @@ public class ProductDiscountChangeValueActionImpl implements ProductDiscountChan
 
         ProductDiscountChangeValueActionImpl that = (ProductDiscountChangeValueActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(value, that.value)
+                .append(action, that.action)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

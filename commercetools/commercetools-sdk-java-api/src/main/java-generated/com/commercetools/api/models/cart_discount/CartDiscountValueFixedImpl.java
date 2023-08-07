@@ -22,14 +22,14 @@ public class CartDiscountValueFixedImpl implements CartDiscountValueFixed, Model
 
     private String type;
 
-    private java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money;
+    private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     CartDiscountValueFixedImpl(
-            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
+            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
         this.money = money;
         this.type = FIXED;
     }
@@ -50,18 +50,18 @@ public class CartDiscountValueFixedImpl implements CartDiscountValueFixed, Model
     }
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> getMoney() {
+    public java.util.List<com.commercetools.api.models.common.TypedMoney> getMoney() {
         return this.money;
     }
 
-    public void setMoney(final com.commercetools.api.models.common.CentPrecisionMoney... money) {
+    public void setMoney(final com.commercetools.api.models.common.TypedMoney... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
     }
 
-    public void setMoney(final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
+    public void setMoney(final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
         this.money = money;
     }
 
@@ -75,7 +75,11 @@ public class CartDiscountValueFixedImpl implements CartDiscountValueFixed, Model
 
         CartDiscountValueFixedImpl that = (CartDiscountValueFixedImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(money, that.money).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(money, that.money)
+                .append(type, that.type)
+                .append(money, that.money)
+                .isEquals();
     }
 
     @Override

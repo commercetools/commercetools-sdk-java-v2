@@ -126,6 +126,10 @@ public class StoreProductSelectionsChangedMessagePayloadImpl
                 .append(addedProductSelections, that.addedProductSelections)
                 .append(removedProductSelections, that.removedProductSelections)
                 .append(updatedProductSelections, that.updatedProductSelections)
+                .append(type, that.type)
+                .append(addedProductSelections, that.addedProductSelections)
+                .append(removedProductSelections, that.removedProductSelections)
+                .append(updatedProductSelections, that.updatedProductSelections)
                 .isEquals();
     }
 

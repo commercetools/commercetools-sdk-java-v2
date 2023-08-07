@@ -75,6 +75,8 @@ public class QuoteRequestChangeQuoteRequestStateActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(quoteRequestState, that.quoteRequestState)
+                .append(action, that.action)
+                .append(quoteRequestState, that.quoteRequestState)
                 .isEquals();
     }
 

@@ -4,6 +4,8 @@ package com.commercetools.api.models.order;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderImportLineItemStateAction orderImportLineItemStateAction = OrderImportLineItemStateAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .plusState(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
@@ -23,23 +24,38 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderImportLineItemStateActionBuilder implements Builder<OrderImportLineItemStateAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public OrderImportLineItemStateActionBuilder lineItemId(final String lineItemId) {
+    public OrderImportLineItemStateActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
     /**
-     * set values to the state
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderImportLineItemStateActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>New status of the Line Items.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -50,7 +66,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     * set value to the state
+     *  <p>New status of the Line Items.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -62,7 +78,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     * add values to the state
+     *  <p>New status of the Line Items.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -77,7 +93,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     * add the value to the state using the builder function
+     *  <p>New status of the Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -92,7 +108,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>New status of the Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -105,7 +121,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     * add the value to the state using the builder function
+     *  <p>New status of the Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -116,7 +132,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>New status of the Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -127,16 +143,27 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
     }
 
     /**
-     * value of state}
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>New status of the Line Items.</p>
      * @return state
      */
 
@@ -149,9 +176,8 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
      * @return OrderImportLineItemStateAction
      */
     public OrderImportLineItemStateAction build() {
-        Objects.requireNonNull(lineItemId, OrderImportLineItemStateAction.class + ": lineItemId is missing");
         Objects.requireNonNull(state, OrderImportLineItemStateAction.class + ": state is missing");
-        return new OrderImportLineItemStateActionImpl(lineItemId, state);
+        return new OrderImportLineItemStateActionImpl(lineItemId, lineItemKey, state);
     }
 
     /**
@@ -159,7 +185,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
      * @return OrderImportLineItemStateAction
      */
     public OrderImportLineItemStateAction buildUnchecked() {
-        return new OrderImportLineItemStateActionImpl(lineItemId, state);
+        return new OrderImportLineItemStateActionImpl(lineItemId, lineItemKey, state);
     }
 
     /**
@@ -178,6 +204,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     public static OrderImportLineItemStateActionBuilder of(final OrderImportLineItemStateAction template) {
         OrderImportLineItemStateActionBuilder builder = new OrderImportLineItemStateActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.state = template.getState();
         return builder;
     }

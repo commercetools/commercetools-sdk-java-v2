@@ -74,7 +74,11 @@ public class TypeChangeFieldDefinitionOrderActionImpl implements TypeChangeField
 
         TypeChangeFieldDefinitionOrderActionImpl that = (TypeChangeFieldDefinitionOrderActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(fieldNames, that.fieldNames).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(fieldNames, that.fieldNames)
+                .append(action, that.action)
+                .append(fieldNames, that.fieldNames)
+                .isEquals();
     }
 
     @Override

@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderEditNotProcessed
+ *  <p>Indicates that the edit has not been applied or processed in any way.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditNotProcessedImpl implements OrderEditNotProcessed, ModelBase {
@@ -30,7 +30,7 @@ public class OrderEditNotProcessedImpl implements OrderEditNotProcessed, ModelBa
     }
 
     /**
-     *
+     *  <p>This field is queryable.</p>
      */
 
     public String getType() {
@@ -47,7 +47,7 @@ public class OrderEditNotProcessedImpl implements OrderEditNotProcessed, ModelBa
 
         OrderEditNotProcessedImpl that = (OrderEditNotProcessedImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

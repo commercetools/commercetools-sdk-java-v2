@@ -70,7 +70,11 @@ public class UnpublishChangeImpl implements UnpublishChange, ModelBase {
 
         UnpublishChangeImpl that = (UnpublishChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(type, that.type)
+                .append(change, that.change)
+                .isEquals();
     }
 
     @Override

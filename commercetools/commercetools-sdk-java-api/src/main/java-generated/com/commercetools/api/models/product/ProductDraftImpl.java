@@ -344,6 +344,23 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append(state, that.state)
                 .append(publish, that.publish)
                 .append(priceMode, that.priceMode)
+                .append(productType, that.productType)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(categories, that.categories)
+                .append(categoryOrderHints, that.categoryOrderHints)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(taxCategory, that.taxCategory)
+                .append(searchKeywords, that.searchKeywords)
+                .append(state, that.state)
+                .append(publish, that.publish)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 

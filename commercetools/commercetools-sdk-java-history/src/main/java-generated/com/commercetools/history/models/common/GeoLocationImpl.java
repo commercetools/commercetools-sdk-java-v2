@@ -78,7 +78,11 @@ public class GeoLocationImpl implements GeoLocation, ModelBase {
 
         GeoLocationImpl that = (GeoLocationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(coordinates, that.coordinates).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(coordinates, that.coordinates)
+                .append(type, that.type)
+                .append(coordinates, that.coordinates)
+                .isEquals();
     }
 
     @Override

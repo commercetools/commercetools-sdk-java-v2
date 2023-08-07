@@ -75,7 +75,11 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
 
         SearchIndexingConfigurationImpl that = (SearchIndexingConfigurationImpl) o;
 
-        return new EqualsBuilder().append(products, that.products).append(orders, that.orders).isEquals();
+        return new EqualsBuilder().append(products, that.products)
+                .append(orders, that.orders)
+                .append(products, that.products)
+                .append(orders, that.orders)
+                .isEquals();
     }
 
     @Override

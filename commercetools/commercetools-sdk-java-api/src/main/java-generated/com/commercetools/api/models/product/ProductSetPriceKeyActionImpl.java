@@ -105,6 +105,10 @@ public class ProductSetPriceKeyActionImpl implements ProductSetPriceKeyAction, M
                 .append(priceId, that.priceId)
                 .append(staged, that.staged)
                 .append(key, that.key)
+                .append(action, that.action)
+                .append(priceId, that.priceId)
+                .append(staged, that.staged)
+                .append(key, that.key)
                 .isEquals();
     }
 

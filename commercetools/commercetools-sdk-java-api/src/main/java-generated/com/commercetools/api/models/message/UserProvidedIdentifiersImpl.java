@@ -159,6 +159,13 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
                 .append(sku, that.sku)
                 .append(slug, that.slug)
                 .append(containerAndKey, that.containerAndKey)
+                .append(key, that.key)
+                .append(externalId, that.externalId)
+                .append(orderNumber, that.orderNumber)
+                .append(customerNumber, that.customerNumber)
+                .append(sku, that.sku)
+                .append(slug, that.slug)
+                .append(containerAndKey, that.containerAndKey)
                 .isEquals();
     }
 

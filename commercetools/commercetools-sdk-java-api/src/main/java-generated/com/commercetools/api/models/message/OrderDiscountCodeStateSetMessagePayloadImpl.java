@@ -107,6 +107,10 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
                 .append(discountCode, that.discountCode)
                 .append(state, that.state)
                 .append(oldState, that.oldState)
+                .append(type, that.type)
+                .append(discountCode, that.discountCode)
+                .append(state, that.state)
+                .append(oldState, that.oldState)
                 .isEquals();
     }
 

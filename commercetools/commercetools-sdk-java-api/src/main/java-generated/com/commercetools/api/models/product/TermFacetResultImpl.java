@@ -144,6 +144,12 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
                 .append(total, that.total)
                 .append(other, that.other)
                 .append(terms, that.terms)
+                .append(type, that.type)
+                .append(dataType, that.dataType)
+                .append(missing, that.missing)
+                .append(total, that.total)
+                .append(other, that.other)
+                .append(terms, that.terms)
                 .isEquals();
     }
 

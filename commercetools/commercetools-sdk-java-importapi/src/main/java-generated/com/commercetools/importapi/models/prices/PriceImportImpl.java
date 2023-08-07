@@ -269,6 +269,19 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .append(custom, that.custom)
                 .append(productVariant, that.productVariant)
                 .append(product, that.product)
+                .append(key, that.key)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(discounted, that.discounted)
+                .append(publish, that.publish)
+                .append(tiers, that.tiers)
+                .append(custom, that.custom)
+                .append(productVariant, that.productVariant)
+                .append(product, that.product)
                 .isEquals();
     }
 

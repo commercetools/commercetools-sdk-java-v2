@@ -58,12 +58,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
@@ -76,12 +71,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
@@ -93,12 +83,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param externalTaxAmount value to be set
      * @return Builder
      */
@@ -110,7 +95,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -141,12 +126,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return externalTaxAmount
      */
 
@@ -156,7 +136,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
 

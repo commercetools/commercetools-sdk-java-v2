@@ -20,7 +20,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderAddDeliveryAction
+ *  <p>A Delivery can only be added to an Order if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
+ *  <p>Produces the Delivery Added Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +43,7 @@ public interface StagedOrderAddDeliveryAction
     String ADD_DELIVERY = "addDelivery";
 
     /**
-     *  <p>User-defined unique identifier of a Delivery.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
      * @return deliveryKey
      */
 
@@ -50,7 +51,7 @@ public interface StagedOrderAddDeliveryAction
     public String getDeliveryKey();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
 
@@ -58,7 +59,7 @@ public interface StagedOrderAddDeliveryAction
     public String getShippingKey();
 
     /**
-     *
+     *  <p>Items to be included in the Delivery.</p>
      * @return items
      */
     @Valid
@@ -66,7 +67,7 @@ public interface StagedOrderAddDeliveryAction
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address the <code>parcels</code> should be delivered to.</p>
      * @return address
      */
     @Valid
@@ -74,7 +75,8 @@ public interface StagedOrderAddDeliveryAction
     public BaseAddress getAddress();
 
     /**
-     *
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      * @return parcels
      */
     @Valid
@@ -82,7 +84,7 @@ public interface StagedOrderAddDeliveryAction
     public List<ParcelDraft> getParcels();
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      * @return custom
      */
     @Valid
@@ -90,21 +92,21 @@ public interface StagedOrderAddDeliveryAction
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier of a Delivery.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
      * @param deliveryKey value to be set
      */
 
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
 
     public void setShippingKey(final String shippingKey);
 
     /**
-     * set items
+     *  <p>Items to be included in the Delivery.</p>
      * @param items values to be set
      */
 
@@ -112,21 +114,22 @@ public interface StagedOrderAddDeliveryAction
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Items to be included in the Delivery.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address the <code>parcels</code> should be delivered to.</p>
      * @param address value to be set
      */
 
     public void setAddress(final BaseAddress address);
 
     /**
-     * set parcels
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      * @param parcels values to be set
      */
 
@@ -134,14 +137,15 @@ public interface StagedOrderAddDeliveryAction
     public void setParcels(final ParcelDraft... parcels);
 
     /**
-     * set parcels
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      * @param parcels values to be set
      */
 
     public void setParcels(final List<ParcelDraft> parcels);
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      * @param custom value to be set
      */
 

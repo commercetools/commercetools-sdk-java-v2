@@ -86,7 +86,13 @@ public class StandalonePriceKeySetMessagePayloadImpl implements StandalonePriceK
 
         StandalonePriceKeySetMessagePayloadImpl that = (StandalonePriceKeySetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(key, that.key).append(oldKey, that.oldKey).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(key, that.key)
+                .append(oldKey, that.oldKey)
+                .append(type, that.type)
+                .append(key, that.key)
+                .append(oldKey, that.oldKey)
+                .isEquals();
     }
 
     @Override

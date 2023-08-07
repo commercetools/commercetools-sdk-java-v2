@@ -89,6 +89,9 @@ public class CategoryAddAssetActionImpl implements CategoryAddAssetAction, Model
         return new EqualsBuilder().append(action, that.action)
                 .append(asset, that.asset)
                 .append(position, that.position)
+                .append(action, that.action)
+                .append(asset, that.asset)
+                .append(position, that.position)
                 .isEquals();
     }
 

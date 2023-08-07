@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>When creating B2B Orders, the Customer must have the <code>MyOrderFromQuoteDraft</code> Permission.</p>
+ * MyOrderFromQuoteDraft
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyOrderFromQuoteDraft> {
 
     /**
-     *  <p>Unique identifier of the Quote from which the Order is created.</p>
+     *  <p><code>id</code> of the Quote from which the Order is created.</p>
      * @return id
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     public String getId();
 
     /**
-     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the Quote from which the Order is created.</p>
      * @return version
      */
     @NotNull
@@ -56,14 +56,14 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
     public Boolean getQuoteStateToAccepted();
 
     /**
-     *  <p>Unique identifier of the Quote from which the Order is created.</p>
+     *  <p><code>id</code> of the Quote from which the Order is created.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the Quote from which the Order is created.</p>
      * @param version value to be set
      */
 

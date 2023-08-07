@@ -163,6 +163,13 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
                 .append(state, that.state)
                 .append(subRates, that.subRates)
                 .append(key, that.key)
+                .append(name, that.name)
+                .append(amount, that.amount)
+                .append(includedInPrice, that.includedInPrice)
+                .append(country, that.country)
+                .append(state, that.state)
+                .append(subRates, that.subRates)
+                .append(key, that.key)
                 .isEquals();
     }
 

@@ -92,6 +92,9 @@ public class ProductSelectionProductAddedMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(product, that.product)
                 .append(variantSelection, that.variantSelection)
+                .append(type, that.type)
+                .append(product, that.product)
+                .append(variantSelection, that.variantSelection)
                 .isEquals();
     }
 

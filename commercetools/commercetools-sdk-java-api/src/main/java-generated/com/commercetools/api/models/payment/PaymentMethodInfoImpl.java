@@ -93,6 +93,9 @@ public class PaymentMethodInfoImpl implements PaymentMethodInfo, ModelBase {
         return new EqualsBuilder().append(paymentInterface, that.paymentInterface)
                 .append(method, that.method)
                 .append(name, that.name)
+                .append(paymentInterface, that.paymentInterface)
+                .append(method, that.method)
+                .append(name, that.name)
                 .isEquals();
     }
 

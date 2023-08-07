@@ -255,6 +255,18 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
                 .append(groups, that.groups)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(code, that.code)
+                .append(cartDiscounts, that.cartDiscounts)
+                .append(cartPredicate, that.cartPredicate)
+                .append(isActive, that.isActive)
+                .append(maxApplications, that.maxApplications)
+                .append(maxApplicationsPerCustomer, that.maxApplicationsPerCustomer)
+                .append(custom, that.custom)
+                .append(groups, that.groups)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
                 .isEquals();
     }
 

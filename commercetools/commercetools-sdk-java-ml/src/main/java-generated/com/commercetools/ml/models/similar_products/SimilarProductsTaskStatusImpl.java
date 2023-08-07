@@ -93,6 +93,9 @@ public class SimilarProductsTaskStatusImpl implements SimilarProductsTaskStatus,
         return new EqualsBuilder().append(state, that.state)
                 .append(expires, that.expires)
                 .append(result, that.result)
+                .append(state, that.state)
+                .append(expires, that.expires)
+                .append(result, that.result)
                 .isEquals();
     }
 

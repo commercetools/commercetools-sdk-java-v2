@@ -89,6 +89,9 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
         return new EqualsBuilder().append(action, that.action)
                 .append(value, that.value)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(value, that.value)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

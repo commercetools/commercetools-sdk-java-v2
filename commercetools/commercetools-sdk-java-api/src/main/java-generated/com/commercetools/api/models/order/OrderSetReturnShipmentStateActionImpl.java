@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderSetReturnShipmentStateAction
+ *  <p>To set a <code>ReturnShipmentState</code>, the Order <code>returnInfo</code> must have at least one ReturnItem.</p>
+ *  <p>Produces the Order Return Shipment State Changed Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShipmentStateAction, ModelBase {
@@ -24,6 +25,8 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
 
     private String returnItemId;
 
+    private String returnItemKey;
+
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
     /**
@@ -31,8 +34,10 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
      */
     @JsonCreator
     OrderSetReturnShipmentStateActionImpl(@JsonProperty("returnItemId") final String returnItemId,
+            @JsonProperty("returnItemKey") final String returnItemKey,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
         this.returnItemId = returnItemId;
+        this.returnItemKey = returnItemKey;
         this.shipmentState = shipmentState;
         this.action = SET_RETURN_SHIPMENT_STATE;
     }
@@ -53,7 +58,7 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      */
 
     public String getReturnItemId() {
@@ -61,7 +66,15 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
     }
 
     /**
-     *
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     */
+
+    public String getReturnItemKey() {
+        return this.returnItemKey;
+    }
+
+    /**
+     *  <p>New shipment state of the ReturnItem.</p>
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
@@ -70,6 +83,10 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
 
     public void setReturnItemId(final String returnItemId) {
         this.returnItemId = returnItemId;
+    }
+
+    public void setReturnItemKey(final String returnItemKey) {
+        this.returnItemKey = returnItemKey;
     }
 
     public void setShipmentState(final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
@@ -88,13 +105,22 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
 
         return new EqualsBuilder().append(action, that.action)
                 .append(returnItemId, that.returnItemId)
+                .append(returnItemKey, that.returnItemKey)
+                .append(shipmentState, that.shipmentState)
+                .append(action, that.action)
+                .append(returnItemId, that.returnItemId)
+                .append(returnItemKey, that.returnItemKey)
                 .append(shipmentState, that.shipmentState)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(returnItemId).append(shipmentState).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(returnItemId)
+                .append(returnItemKey)
+                .append(shipmentState)
+                .toHashCode();
     }
 
 }

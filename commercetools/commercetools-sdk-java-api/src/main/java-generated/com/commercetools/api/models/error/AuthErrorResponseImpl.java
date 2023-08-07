@@ -131,6 +131,11 @@ public class AuthErrorResponseImpl implements AuthErrorResponse, ModelBase {
                 .append(errors, that.errors)
                 .append(error, that.error)
                 .append(errorDescription, that.errorDescription)
+                .append(statusCode, that.statusCode)
+                .append(message, that.message)
+                .append(errors, that.errors)
+                .append(error, that.error)
+                .append(errorDescription, that.errorDescription)
                 .isEquals();
     }
 

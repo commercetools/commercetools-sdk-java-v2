@@ -70,7 +70,11 @@ public class InventoryEntryChangeQuantityActionImpl implements InventoryEntryCha
 
         InventoryEntryChangeQuantityActionImpl that = (InventoryEntryChangeQuantityActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(quantity, that.quantity).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(quantity, that.quantity)
+                .append(action, that.action)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override

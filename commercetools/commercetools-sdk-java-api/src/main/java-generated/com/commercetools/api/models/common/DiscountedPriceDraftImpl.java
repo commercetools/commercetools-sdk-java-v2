@@ -74,7 +74,11 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
 
         DiscountedPriceDraftImpl that = (DiscountedPriceDraftImpl) o;
 
-        return new EqualsBuilder().append(value, that.value).append(discount, that.discount).isEquals();
+        return new EqualsBuilder().append(value, that.value)
+                .append(discount, that.discount)
+                .append(value, that.value)
+                .append(discount, that.discount)
+                .isEquals();
     }
 
     @Override

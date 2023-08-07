@@ -70,7 +70,11 @@ public class ReviewSetRatingActionImpl implements ReviewSetRatingAction, ModelBa
 
         ReviewSetRatingActionImpl that = (ReviewSetRatingActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(rating, that.rating).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(rating, that.rating)
+                .append(action, that.action)
+                .append(rating, that.rating)
+                .isEquals();
     }
 
     @Override

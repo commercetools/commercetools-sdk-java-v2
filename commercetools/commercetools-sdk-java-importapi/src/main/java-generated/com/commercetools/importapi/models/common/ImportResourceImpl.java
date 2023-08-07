@@ -58,7 +58,7 @@ public class ImportResourceImpl implements ImportResource, ModelBase {
 
         ImportResourceImpl that = (ImportResourceImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).isEquals();
+        return new EqualsBuilder().append(key, that.key).append(key, that.key).isEquals();
     }
 
     @Override

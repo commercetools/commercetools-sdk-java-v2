@@ -160,6 +160,13 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
                 .append(expectedDelivery, that.expectedDelivery)
                 .append(supplyChannel, that.supplyChannel)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(quantityOnStock, that.quantityOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(expectedDelivery, that.expectedDelivery)
+                .append(supplyChannel, that.supplyChannel)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

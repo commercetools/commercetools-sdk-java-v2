@@ -161,6 +161,12 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
                 .append(attributes, that.attributes)
                 .append(images, that.images)
                 .append(assets, that.assets)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .append(images, that.images)
+                .append(assets, that.assets)
                 .isEquals();
     }
 

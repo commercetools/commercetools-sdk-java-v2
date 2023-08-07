@@ -70,7 +70,11 @@ public class QuoteCreatedMessagePayloadImpl implements QuoteCreatedMessagePayloa
 
         QuoteCreatedMessagePayloadImpl that = (QuoteCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(quote, that.quote).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(quote, that.quote)
+                .append(type, that.type)
+                .append(quote, that.quote)
+                .isEquals();
     }
 
     @Override

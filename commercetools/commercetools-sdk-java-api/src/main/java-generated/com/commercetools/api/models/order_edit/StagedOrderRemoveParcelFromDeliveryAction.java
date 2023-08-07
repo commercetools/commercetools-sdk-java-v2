@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderRemoveParcelFromDeliveryAction
+ *  <p>Produces the ParcelRemovedFromDelivery Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,8 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
     String REMOVE_PARCEL_FROM_DELIVERY = "removeParcelFromDelivery";
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
 
@@ -43,7 +44,8 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
     public String getParcelId();
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
 
@@ -51,14 +53,16 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
     public String getParcelKey();
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      */
 

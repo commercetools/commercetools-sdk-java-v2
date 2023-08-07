@@ -89,6 +89,9 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
         return new EqualsBuilder().append(type, that.type)
                 .append(email, that.email)
                 .append(oldEmail, that.oldEmail)
+                .append(type, that.type)
+                .append(email, that.email)
+                .append(oldEmail, that.oldEmail)
                 .isEquals();
     }
 

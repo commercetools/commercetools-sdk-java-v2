@@ -47,7 +47,7 @@ public class CustomFieldMoneyTypeImpl implements CustomFieldMoneyType, ModelBase
 
         CustomFieldMoneyTypeImpl that = (CustomFieldMoneyTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).isEquals();
+        return new EqualsBuilder().append(name, that.name).append(name, that.name).isEquals();
     }
 
     @Override

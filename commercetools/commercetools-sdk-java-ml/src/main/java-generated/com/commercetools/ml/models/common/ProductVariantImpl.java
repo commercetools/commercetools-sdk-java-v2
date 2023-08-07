@@ -92,6 +92,9 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
         return new EqualsBuilder().append(product, that.product)
                 .append(staged, that.staged)
                 .append(variantId, that.variantId)
+                .append(product, that.product)
+                .append(staged, that.staged)
+                .append(variantId, that.variantId)
                 .isEquals();
     }
 

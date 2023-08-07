@@ -214,6 +214,16 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
                 .append(validUntil, that.validUntil)
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(value, that.value)
+                .append(currentValue, that.currentValue)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(discounted, that.discounted)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

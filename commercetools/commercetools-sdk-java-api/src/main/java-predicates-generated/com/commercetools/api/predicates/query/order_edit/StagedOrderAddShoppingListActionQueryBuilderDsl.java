@@ -29,21 +29,21 @@ public class StagedOrderAddShoppingListActionQueryBuilderDsl {
             StagedOrderAddShoppingListActionQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<StagedOrderAddShoppingListActionQueryBuilderDsl> supplyChannel(
-            Function<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("supplyChannel"))
-                    .inner(fn.apply(
-                        com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl.of())),
-            StagedOrderAddShoppingListActionQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<StagedOrderAddShoppingListActionQueryBuilderDsl> distributionChannel(
             Function<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
                     .parent(ConstantQueryPredicate.of().constant("distributionChannel"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl.of())),
+            StagedOrderAddShoppingListActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StagedOrderAddShoppingListActionQueryBuilderDsl> supplyChannel(
+            Function<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("supplyChannel"))
                     .inner(fn.apply(
                         com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl.of())),
             StagedOrderAddShoppingListActionQueryBuilderDsl::of);

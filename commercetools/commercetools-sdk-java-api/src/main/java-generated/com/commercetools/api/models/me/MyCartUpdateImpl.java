@@ -78,7 +78,11 @@ public class MyCartUpdateImpl implements MyCartUpdate, ModelBase {
 
         MyCartUpdateImpl that = (MyCartUpdateImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(actions, that.actions).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(actions, that.actions)
+                .append(version, that.version)
+                .append(actions, that.actions)
+                .isEquals();
     }
 
     @Override

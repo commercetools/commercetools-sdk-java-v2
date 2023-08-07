@@ -127,6 +127,11 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
                 .append(price, that.price)
                 .append(tiers, that.tiers)
                 .append(isMatching, that.isMatching)
+                .append(type, that.type)
+                .append(value, that.value)
+                .append(price, that.price)
+                .append(tiers, that.tiers)
+                .append(isMatching, that.isMatching)
                 .isEquals();
     }
 

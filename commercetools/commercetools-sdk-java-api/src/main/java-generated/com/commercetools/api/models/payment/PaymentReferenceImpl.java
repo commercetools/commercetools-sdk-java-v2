@@ -87,7 +87,13 @@ public class PaymentReferenceImpl implements PaymentReference, ModelBase {
 
         PaymentReferenceImpl that = (PaymentReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(obj, that.obj).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .isEquals();
     }
 
     @Override

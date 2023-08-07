@@ -137,6 +137,11 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
                 .append(key, that.key)
                 .append(messages, that.messages)
                 .append(format, that.format)
+                .append(changes, that.changes)
+                .append(destination, that.destination)
+                .append(key, that.key)
+                .append(messages, that.messages)
+                .append(format, that.format)
                 .isEquals();
     }
 

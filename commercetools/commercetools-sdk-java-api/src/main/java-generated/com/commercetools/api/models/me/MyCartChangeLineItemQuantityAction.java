@@ -6,11 +6,8 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
-import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -18,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>When multiple shipping addresses are set for a Line Item, use the Remove LineItem and Add LineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Line Item quantity should be distributed over the sub-quantities, the <code>shippingDetails</code> field is kept in its current state to avoid data loss.</p>
- *  <p>To change the Line Item quantity and shipping details together, use this update action in combination with the Set LineItemShippingDetails update action in a single Cart update command.</p>
+ *  <p>To change the Line Item quantity and shipping details together, use this update action in combination with the Set LineItem ShippingDetails update action in a single Cart update command.</p>
  *  <p>When the action applies to LineItems with <code>ExternalTotal</code> LineItemPriceMode, it will be changed to <code>ExternalPrice</code> and the existing <code>externalPrice</code> value, i.e. <code>LineItem.price</code>, will be retained. The LineItem total will be calculated by the system instead, so that the <code>externalTotalPrice</code> will be dropped.</p>
  *
  * <hr>
@@ -66,22 +63,6 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     public Long getQuantity();
 
     /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @return externalPrice
-     */
-    @Valid
-    @JsonProperty("externalPrice")
-    public Money getExternalPrice();
-
-    /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @return externalTotalPrice
-     */
-    @Valid
-    @JsonProperty("externalTotalPrice")
-    public ExternalLineItemTotalPrice getExternalTotalPrice();
-
-    /**
      *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
@@ -104,20 +85,6 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @param externalPrice value to be set
-     */
-
-    public void setExternalPrice(final Money externalPrice);
-
-    /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @param externalTotalPrice value to be set
-     */
-
-    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
-
-    /**
      * factory method
      * @return instance of MyCartChangeLineItemQuantityAction
      */
@@ -135,8 +102,6 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
         instance.setLineItemId(template.getLineItemId());
         instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
-        instance.setExternalPrice(template.getExternalPrice());
-        instance.setExternalTotalPrice(template.getExternalTotalPrice());
         return instance;
     }
 
@@ -155,9 +120,6 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
         instance.setLineItemId(template.getLineItemId());
         instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
-        instance.setExternalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getExternalPrice()));
-        instance.setExternalTotalPrice(
-            com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         return instance;
     }
 

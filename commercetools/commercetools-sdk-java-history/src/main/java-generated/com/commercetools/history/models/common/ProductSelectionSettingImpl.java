@@ -77,6 +77,8 @@ public class ProductSelectionSettingImpl implements ProductSelectionSetting, Mod
 
         return new EqualsBuilder().append(productSelection, that.productSelection)
                 .append(active, that.active)
+                .append(productSelection, that.productSelection)
+                .append(active, that.active)
                 .isEquals();
     }
 

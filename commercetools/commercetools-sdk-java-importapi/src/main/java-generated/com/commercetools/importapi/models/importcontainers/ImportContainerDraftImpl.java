@@ -74,7 +74,11 @@ public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase
 
         ImportContainerDraftImpl that = (ImportContainerDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(resourceType, that.resourceType).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(resourceType, that.resourceType)
+                .append(key, that.key)
+                .append(resourceType, that.resourceType)
+                .isEquals();
     }
 
     @Override

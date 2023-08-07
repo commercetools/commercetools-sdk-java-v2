@@ -110,6 +110,10 @@ public class InvalidJsonInputErrorImpl implements InvalidJsonInputError, ModelBa
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(detailedErrorMessage, that.detailedErrorMessage)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(detailedErrorMessage, that.detailedErrorMessage)
                 .isEquals();
     }
 

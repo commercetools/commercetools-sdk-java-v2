@@ -165,6 +165,13 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
                 .append(address, that.address)
                 .append(custom, that.custom)
                 .append(geoLocation, that.geoLocation)
+                .append(key, that.key)
+                .append(roles, that.roles)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(address, that.address)
+                .append(custom, that.custom)
+                .append(geoLocation, that.geoLocation)
                 .isEquals();
     }
 

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Change Custom Line Item Quantity update action.</p>
+ *  <p>Generated after a successful Change CustomLineItem Quantity update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -46,6 +46,14 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     public String getCustomLineItemId();
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      * @return quantity
      */
@@ -67,6 +75,13 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
@@ -99,6 +114,7 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
             final OrderCustomLineItemQuantityChangedMessagePayload template) {
         OrderCustomLineItemQuantityChangedMessagePayloadImpl instance = new OrderCustomLineItemQuantityChangedMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setOldQuantity(template.getOldQuantity());
         return instance;
@@ -117,6 +133,7 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
         }
         OrderCustomLineItemQuantityChangedMessagePayloadImpl instance = new OrderCustomLineItemQuantityChangedMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setOldQuantity(template.getOldQuantity());
         return instance;

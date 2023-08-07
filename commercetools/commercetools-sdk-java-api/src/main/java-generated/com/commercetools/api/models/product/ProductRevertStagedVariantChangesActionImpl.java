@@ -70,7 +70,11 @@ public class ProductRevertStagedVariantChangesActionImpl implements ProductRever
 
         ProductRevertStagedVariantChangesActionImpl that = (ProductRevertStagedVariantChangesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .isEquals();
     }
 
     @Override

@@ -76,6 +76,8 @@ public class CartRecalculateActionImpl implements CartRecalculateAction, ModelBa
 
         return new EqualsBuilder().append(action, that.action)
                 .append(updateProductData, that.updateProductData)
+                .append(action, that.action)
+                .append(updateProductData, that.updateProductData)
                 .isEquals();
     }
 

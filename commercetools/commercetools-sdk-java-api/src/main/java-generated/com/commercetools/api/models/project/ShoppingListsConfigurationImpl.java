@@ -60,6 +60,7 @@ public class ShoppingListsConfigurationImpl implements ShoppingListsConfiguratio
         ShoppingListsConfigurationImpl that = (ShoppingListsConfigurationImpl) o;
 
         return new EqualsBuilder().append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .isEquals();
     }
 

@@ -155,6 +155,13 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
                 .append(name, that.name)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(name, that.name)
                 .isEquals();
     }
 

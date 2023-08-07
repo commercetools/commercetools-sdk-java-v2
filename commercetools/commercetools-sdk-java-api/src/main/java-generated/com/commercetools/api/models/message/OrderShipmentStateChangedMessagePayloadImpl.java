@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Change Shipment State update action.</p>
+ *  <p>Generated after a successful Change ShipmentState update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmentStateChangedMessagePayload, ModelBase {
@@ -88,6 +88,9 @@ public class OrderShipmentStateChangedMessagePayloadImpl implements OrderShipmen
         OrderShipmentStateChangedMessagePayloadImpl that = (OrderShipmentStateChangedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(shipmentState, that.shipmentState)
+                .append(oldShipmentState, that.oldShipmentState)
+                .append(type, that.type)
                 .append(shipmentState, that.shipmentState)
                 .append(oldShipmentState, that.oldShipmentState)
                 .isEquals();

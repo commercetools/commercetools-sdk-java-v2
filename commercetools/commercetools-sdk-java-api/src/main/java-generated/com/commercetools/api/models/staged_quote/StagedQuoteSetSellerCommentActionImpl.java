@@ -70,7 +70,11 @@ public class StagedQuoteSetSellerCommentActionImpl implements StagedQuoteSetSell
 
         StagedQuoteSetSellerCommentActionImpl that = (StagedQuoteSetSellerCommentActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(sellerComment, that.sellerComment).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(sellerComment, that.sellerComment)
+                .append(action, that.action)
+                .append(sellerComment, that.sellerComment)
+                .isEquals();
     }
 
     @Override

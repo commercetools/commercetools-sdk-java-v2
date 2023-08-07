@@ -71,7 +71,11 @@ public class ExtensionSetTimeoutInMsActionImpl implements ExtensionSetTimeoutInM
 
         ExtensionSetTimeoutInMsActionImpl that = (ExtensionSetTimeoutInMsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(timeoutInMs, that.timeoutInMs).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(timeoutInMs, that.timeoutInMs)
+                .append(action, that.action)
+                .append(timeoutInMs, that.timeoutInMs)
+                .isEquals();
     }
 
     @Override

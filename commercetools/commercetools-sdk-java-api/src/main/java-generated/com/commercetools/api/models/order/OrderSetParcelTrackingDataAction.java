@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderSetParcelTrackingDataAction
+ *  <p>Produces the ParcelTrackingDataUpdated Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,8 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     String SET_PARCEL_TRACKING_DATA = "setParcelTrackingData";
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
 
@@ -43,7 +44,8 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public String getParcelId();
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
 
@@ -51,7 +53,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public String getParcelKey();
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return trackingData
      */
     @Valid
@@ -59,21 +61,23 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     public TrackingData getTrackingData();
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      */
 
     public void setParcelKey(final String parcelKey);
 
     /**
-     * set trackingData
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param trackingData value to be set
      */
 

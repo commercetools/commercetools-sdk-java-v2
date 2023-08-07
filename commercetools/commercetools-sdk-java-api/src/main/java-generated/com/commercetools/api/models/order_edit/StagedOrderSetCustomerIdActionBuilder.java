@@ -26,7 +26,7 @@ public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrde
     private String customerId;
 
     /**
-     * set the value to the customerId
+     *  <p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p>
      * @param customerId value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class StagedOrderSetCustomerIdActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * value of customerId}
+     *  <p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p>
      * @return customerId
      */
 

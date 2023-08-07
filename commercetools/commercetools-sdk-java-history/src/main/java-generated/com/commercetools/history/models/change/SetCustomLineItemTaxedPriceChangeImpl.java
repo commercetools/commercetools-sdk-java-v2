@@ -140,6 +140,12 @@ public class SetCustomLineItemTaxedPriceChangeImpl implements SetCustomLineItemT
                 .append(nextValue, that.nextValue)
                 .append(customLineItem, that.customLineItem)
                 .append(customLineItemId, that.customLineItemId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(customLineItem, that.customLineItem)
+                .append(customLineItemId, that.customLineItemId)
                 .isEquals();
     }
 

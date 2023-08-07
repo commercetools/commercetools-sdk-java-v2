@@ -77,6 +77,8 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
 
         return new EqualsBuilder().append(quantity, that.quantity)
                 .append(discountedPrice, that.discountedPrice)
+                .append(quantity, that.quantity)
+                .append(discountedPrice, that.discountedPrice)
                 .isEquals();
     }
 

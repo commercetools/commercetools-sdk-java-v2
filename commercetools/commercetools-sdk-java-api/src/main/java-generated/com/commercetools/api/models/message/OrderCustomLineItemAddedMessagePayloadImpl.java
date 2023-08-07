@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Add Custom Line Item update action.</p>
+ *  <p>Generated after a successful Add CustomLineItem update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomLineItemAddedMessagePayloadImpl implements OrderCustomLineItemAddedMessagePayload, ModelBase {
@@ -71,7 +71,11 @@ public class OrderCustomLineItemAddedMessagePayloadImpl implements OrderCustomLi
 
         OrderCustomLineItemAddedMessagePayloadImpl that = (OrderCustomLineItemAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(customLineItem, that.customLineItem).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(customLineItem, that.customLineItem)
+                .append(type, that.type)
+                .append(customLineItem, that.customLineItem)
+                .isEquals();
     }
 
     @Override

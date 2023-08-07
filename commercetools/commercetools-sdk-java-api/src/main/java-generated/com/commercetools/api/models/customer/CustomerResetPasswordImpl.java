@@ -92,6 +92,9 @@ public class CustomerResetPasswordImpl implements CustomerResetPassword, ModelBa
         return new EqualsBuilder().append(tokenValue, that.tokenValue)
                 .append(newPassword, that.newPassword)
                 .append(version, that.version)
+                .append(tokenValue, that.tokenValue)
+                .append(newPassword, that.newPassword)
+                .append(version, that.version)
                 .isEquals();
     }
 

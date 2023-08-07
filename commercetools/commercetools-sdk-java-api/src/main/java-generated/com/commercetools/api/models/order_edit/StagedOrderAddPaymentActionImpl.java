@@ -50,7 +50,7 @@ public class StagedOrderAddPaymentActionImpl implements StagedOrderAddPaymentAct
     }
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {
@@ -71,7 +71,11 @@ public class StagedOrderAddPaymentActionImpl implements StagedOrderAddPaymentAct
 
         StagedOrderAddPaymentActionImpl that = (StagedOrderAddPaymentActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(payment, that.payment).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(payment, that.payment)
+                .append(action, that.action)
+                .append(payment, that.payment)
+                .isEquals();
     }
 
     @Override

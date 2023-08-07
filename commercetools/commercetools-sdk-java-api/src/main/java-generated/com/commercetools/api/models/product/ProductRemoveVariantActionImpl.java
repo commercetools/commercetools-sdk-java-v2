@@ -105,6 +105,10 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
                 .append(id, that.id)
                 .append(sku, that.sku)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(id, that.id)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

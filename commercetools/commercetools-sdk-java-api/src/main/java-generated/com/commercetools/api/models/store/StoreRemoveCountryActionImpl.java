@@ -71,7 +71,11 @@ public class StoreRemoveCountryActionImpl implements StoreRemoveCountryAction, M
 
         StoreRemoveCountryActionImpl that = (StoreRemoveCountryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(country, that.country).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(country, that.country)
+                .append(action, that.action)
+                .append(country, that.country)
+                .isEquals();
     }
 
     @Override

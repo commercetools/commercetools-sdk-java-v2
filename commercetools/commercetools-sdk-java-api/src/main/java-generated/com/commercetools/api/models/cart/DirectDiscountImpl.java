@@ -61,7 +61,7 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
     }
 
     /**
-     *  <p>Part of the Cart that is discounted.</p>
+     *  <p>Segment of the Cart that is discounted.</p>
      *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
      */
 
@@ -91,7 +91,13 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
 
         DirectDiscountImpl that = (DirectDiscountImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(value, that.value).append(target, that.target).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(value, that.value)
+                .append(target, that.target)
+                .append(id, that.id)
+                .append(value, that.value)
+                .append(target, that.target)
+                .isEquals();
     }
 
     @Override

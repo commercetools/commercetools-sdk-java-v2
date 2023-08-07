@@ -28,6 +28,9 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     private String lineItemId;
 
     @Nullable
+    private String lineItemKey;
+
+    @Nullable
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
     /**
@@ -38,6 +41,17 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
 
     public OrderLineItemDistributionChannelSetMessagePayloadBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderLineItemDistributionChannelSetMessagePayloadBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -88,6 +102,16 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Distribution Channel that was set.</p>
      * @return distributionChannel
      */
@@ -104,7 +128,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
     public OrderLineItemDistributionChannelSetMessagePayload build() {
         Objects.requireNonNull(lineItemId,
             OrderLineItemDistributionChannelSetMessagePayload.class + ": lineItemId is missing");
-        return new OrderLineItemDistributionChannelSetMessagePayloadImpl(lineItemId, distributionChannel);
+        return new OrderLineItemDistributionChannelSetMessagePayloadImpl(lineItemId, lineItemKey, distributionChannel);
     }
 
     /**
@@ -112,7 +136,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
      * @return OrderLineItemDistributionChannelSetMessagePayload
      */
     public OrderLineItemDistributionChannelSetMessagePayload buildUnchecked() {
-        return new OrderLineItemDistributionChannelSetMessagePayloadImpl(lineItemId, distributionChannel);
+        return new OrderLineItemDistributionChannelSetMessagePayloadImpl(lineItemId, lineItemKey, distributionChannel);
     }
 
     /**
@@ -132,6 +156,7 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
             final OrderLineItemDistributionChannelSetMessagePayload template) {
         OrderLineItemDistributionChannelSetMessagePayloadBuilder builder = new OrderLineItemDistributionChannelSetMessagePayloadBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.distributionChannel = template.getDistributionChannel();
         return builder;
     }

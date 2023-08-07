@@ -31,7 +31,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     private com.commercetools.api.models.order_edit.OrderExcerpt excerptAfterEdit;
 
     /**
-     * set the value to the appliedAt
+     *  <p>Date and time (UTC) the Order was edited.</p>
      * @param appliedAt value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     * set the value to the excerptBeforeEdit using the builder function
+     *  <p>Prices of the Order before the edit.</p>
      * @param builder function to build the excerptBeforeEdit value
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     * set the value to the excerptBeforeEdit using the builder function
+     *  <p>Prices of the Order before the edit.</p>
      * @param builder function to build the excerptBeforeEdit value
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     * set the value to the excerptBeforeEdit
+     *  <p>Prices of the Order before the edit.</p>
      * @param excerptBeforeEdit value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     * set the value to the excerptAfterEdit using the builder function
+     *  <p>Prices of the Order after the edit.</p>
      * @param builder function to build the excerptAfterEdit value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     * set the value to the excerptAfterEdit using the builder function
+     *  <p>Prices of the Order after the edit.</p>
      * @param builder function to build the excerptAfterEdit value
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     * set the value to the excerptAfterEdit
+     *  <p>Prices of the Order after the edit.</p>
      * @param excerptAfterEdit value to be set
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     * value of appliedAt}
+     *  <p>Date and time (UTC) the Order was edited.</p>
      * @return appliedAt
      */
 
@@ -124,7 +124,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     * value of excerptBeforeEdit}
+     *  <p>Prices of the Order before the edit.</p>
      * @return excerptBeforeEdit
      */
 
@@ -133,7 +133,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     * value of excerptAfterEdit}
+     *  <p>Prices of the Order after the edit.</p>
      * @return excerptAfterEdit
      */
 

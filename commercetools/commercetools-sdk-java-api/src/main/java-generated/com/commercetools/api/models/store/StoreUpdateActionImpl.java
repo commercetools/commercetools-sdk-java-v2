@@ -54,7 +54,7 @@ public class StoreUpdateActionImpl implements StoreUpdateAction, ModelBase {
 
         StoreUpdateActionImpl that = (StoreUpdateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override

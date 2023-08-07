@@ -123,6 +123,11 @@ public class ChangeProductSelectionActiveChangeImpl implements ChangeProductSele
                 .append(productSelection, that.productSelection)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(productSelection, that.productSelection)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 

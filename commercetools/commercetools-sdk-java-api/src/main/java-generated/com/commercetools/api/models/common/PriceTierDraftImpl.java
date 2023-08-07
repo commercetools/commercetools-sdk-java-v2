@@ -76,7 +76,11 @@ public class PriceTierDraftImpl implements PriceTierDraft, ModelBase {
 
         PriceTierDraftImpl that = (PriceTierDraftImpl) o;
 
-        return new EqualsBuilder().append(minimumQuantity, that.minimumQuantity).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(minimumQuantity, that.minimumQuantity)
+                .append(value, that.value)
+                .append(minimumQuantity, that.minimumQuantity)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

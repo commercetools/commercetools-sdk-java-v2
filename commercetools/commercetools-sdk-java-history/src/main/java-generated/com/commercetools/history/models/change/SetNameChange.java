@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
  *   <li>Set Name on Discount Codes.</li>
- *   <li>Set Name on States.</li>
+ *   <li>Set State Name on States.</li>
  *   <li>Set Name on Stores.</li>
  *  </ul>
  *

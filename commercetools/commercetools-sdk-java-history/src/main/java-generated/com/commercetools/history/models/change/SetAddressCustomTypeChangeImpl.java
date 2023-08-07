@@ -123,6 +123,11 @@ public class SetAddressCustomTypeChangeImpl implements SetAddressCustomTypeChang
                 .append(address, that.address)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(address, that.address)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 

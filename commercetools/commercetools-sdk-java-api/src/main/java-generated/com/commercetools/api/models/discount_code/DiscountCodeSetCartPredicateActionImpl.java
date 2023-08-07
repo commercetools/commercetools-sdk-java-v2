@@ -70,7 +70,11 @@ public class DiscountCodeSetCartPredicateActionImpl implements DiscountCodeSetCa
 
         DiscountCodeSetCartPredicateActionImpl that = (DiscountCodeSetCartPredicateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(cartPredicate, that.cartPredicate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(cartPredicate, that.cartPredicate)
+                .append(action, that.action)
+                .append(cartPredicate, that.cartPredicate)
+                .isEquals();
     }
 
     @Override

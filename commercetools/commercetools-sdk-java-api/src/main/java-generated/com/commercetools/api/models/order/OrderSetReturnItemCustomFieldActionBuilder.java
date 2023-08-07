@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetReturnItemCustomFieldAction orderSetReturnItemCustomFieldAction = OrderSetReturnItemCustomFieldAction.builder()
- *             .returnItemId("{returnItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<OrderSetReturnItemCustomFieldAction> {
 
+    @Nullable
     private String returnItemId;
+
+    @Nullable
+    private String returnItemKey;
 
     private String name;
 
@@ -32,13 +35,24 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     private java.lang.Object value;
 
     /**
-     * set the value to the returnItemId
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
 
-    public OrderSetReturnItemCustomFieldActionBuilder returnItemId(final String returnItemId) {
+    public OrderSetReturnItemCustomFieldActionBuilder returnItemId(@Nullable final String returnItemId) {
         this.returnItemId = returnItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @param returnItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderSetReturnItemCustomFieldActionBuilder returnItemKey(@Nullable final String returnItemKey) {
+        this.returnItemKey = returnItemKey;
         return this;
     }
 
@@ -65,12 +79,23 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     }
 
     /**
-     * value of returnItemId}
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
+    @Nullable
     public String getReturnItemId() {
         return this.returnItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @return returnItemKey
+     */
+
+    @Nullable
+    public String getReturnItemKey() {
+        return this.returnItemKey;
     }
 
     /**
@@ -97,9 +122,8 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
      * @return OrderSetReturnItemCustomFieldAction
      */
     public OrderSetReturnItemCustomFieldAction build() {
-        Objects.requireNonNull(returnItemId, OrderSetReturnItemCustomFieldAction.class + ": returnItemId is missing");
         Objects.requireNonNull(name, OrderSetReturnItemCustomFieldAction.class + ": name is missing");
-        return new OrderSetReturnItemCustomFieldActionImpl(returnItemId, name, value);
+        return new OrderSetReturnItemCustomFieldActionImpl(returnItemId, returnItemKey, name, value);
     }
 
     /**
@@ -107,7 +131,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
      * @return OrderSetReturnItemCustomFieldAction
      */
     public OrderSetReturnItemCustomFieldAction buildUnchecked() {
-        return new OrderSetReturnItemCustomFieldActionImpl(returnItemId, name, value);
+        return new OrderSetReturnItemCustomFieldActionImpl(returnItemId, returnItemKey, name, value);
     }
 
     /**
@@ -126,6 +150,7 @@ public class OrderSetReturnItemCustomFieldActionBuilder implements Builder<Order
     public static OrderSetReturnItemCustomFieldActionBuilder of(final OrderSetReturnItemCustomFieldAction template) {
         OrderSetReturnItemCustomFieldActionBuilder builder = new OrderSetReturnItemCustomFieldActionBuilder();
         builder.returnItemId = template.getReturnItemId();
+        builder.returnItemKey = template.getReturnItemKey();
         builder.name = template.getName();
         builder.value = template.getValue();
         return builder;

@@ -79,7 +79,11 @@ public class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft, Model
 
         ExternalTaxAmountDraftImpl that = (ExternalTaxAmountDraftImpl) o;
 
-        return new EqualsBuilder().append(totalGross, that.totalGross).append(taxRate, that.taxRate).isEquals();
+        return new EqualsBuilder().append(totalGross, that.totalGross)
+                .append(taxRate, that.taxRate)
+                .append(totalGross, that.totalGross)
+                .append(taxRate, that.taxRate)
+                .isEquals();
     }
 
     @Override

@@ -70,7 +70,11 @@ public class PaymentSetAnonymousIdActionImpl implements PaymentSetAnonymousIdAct
 
         PaymentSetAnonymousIdActionImpl that = (PaymentSetAnonymousIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(anonymousId, that.anonymousId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(anonymousId, that.anonymousId)
+                .append(action, that.action)
+                .append(anonymousId, that.anonymousId)
+                .isEquals();
     }
 
     @Override

@@ -39,7 +39,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     private java.util.List<com.commercetools.api.models.common.Image> images;
 
     /**
-     *  <p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p>
+     *  <p>The <code>id</code> of the ProductVariant. Required if you do not set a value for <code>sku</code>. If set, you must specify a <code>productId</code> in the LineItemImportDraft also.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>The SKU of the existing variant.</p>
+     *  <p>The <code>sku</code> of the ProductVariant. Required if you do not set a value for <code>id</code>.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -174,7 +174,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -189,7 +189,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -217,7 +217,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -228,7 +228,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -239,7 +239,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -251,7 +251,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -263,7 +263,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param images value to be set
      * @return Builder
      */
@@ -278,7 +278,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -293,7 +293,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -306,7 +306,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -317,7 +317,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -328,7 +328,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p>
+     *  <p>The <code>id</code> of the ProductVariant. Required if you do not set a value for <code>sku</code>. If set, you must specify a <code>productId</code> in the LineItemImportDraft also.</p>
      * @return id
      */
 
@@ -338,7 +338,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>The SKU of the existing variant.</p>
+     *  <p>The <code>sku</code> of the ProductVariant. Required if you do not set a value for <code>id</code>.</p>
      * @return sku
      */
 
@@ -348,7 +348,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @return prices
      */
 
@@ -358,7 +358,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @return attributes
      */
 
@@ -368,7 +368,7 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      * @return images
      */
 

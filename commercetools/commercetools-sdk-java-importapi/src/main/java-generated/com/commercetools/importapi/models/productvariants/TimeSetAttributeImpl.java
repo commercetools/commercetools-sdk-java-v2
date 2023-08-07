@@ -90,7 +90,13 @@ public class TimeSetAttributeImpl implements TimeSetAttribute, ModelBase {
 
         TimeSetAttributeImpl that = (TimeSetAttributeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(type, that.type).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(type, that.type)
+                .append(value, that.value)
+                .append(name, that.name)
+                .append(type, that.type)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

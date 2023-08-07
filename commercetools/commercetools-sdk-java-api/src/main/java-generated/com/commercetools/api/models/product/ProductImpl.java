@@ -264,6 +264,19 @@ public class ProductImpl implements Product, ModelBase {
                 .append(state, that.state)
                 .append(reviewRatingStatistics, that.reviewRatingStatistics)
                 .append(priceMode, that.priceMode)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(productType, that.productType)
+                .append(masterData, that.masterData)
+                .append(taxCategory, that.taxCategory)
+                .append(state, that.state)
+                .append(reviewRatingStatistics, that.reviewRatingStatistics)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 

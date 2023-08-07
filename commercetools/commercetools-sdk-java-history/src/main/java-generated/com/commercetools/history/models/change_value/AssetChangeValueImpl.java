@@ -74,7 +74,11 @@ public class AssetChangeValueImpl implements AssetChangeValue, ModelBase {
 
         AssetChangeValueImpl that = (AssetChangeValueImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(name, that.name)
+                .append(id, that.id)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override

@@ -58,7 +58,7 @@ public class RemoveDeliveryDraftImpl implements RemoveDeliveryDraft, ModelBase {
 
         RemoveDeliveryDraftImpl that = (RemoveDeliveryDraftImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).isEquals();
+        return new EqualsBuilder().append(id, that.id).append(id, that.id).isEquals();
     }
 
     @Override

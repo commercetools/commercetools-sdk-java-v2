@@ -70,7 +70,11 @@ public class ProductTypeReferenceImpl implements ProductTypeReference, ModelBase
 
         ProductTypeReferenceImpl that = (ProductTypeReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .isEquals();
     }
 
     @Override

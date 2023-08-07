@@ -219,6 +219,16 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
                 .append(deliveries, that.deliveries)
                 .append(discountedPrice, that.discountedPrice)
                 .append(shippingMethodState, that.shippingMethodState)
+                .append(shippingMethodName, that.shippingMethodName)
+                .append(price, that.price)
+                .append(shippingRate, that.shippingRate)
+                .append(taxedPrice, that.taxedPrice)
+                .append(taxRate, that.taxRate)
+                .append(taxCategory, that.taxCategory)
+                .append(shippingMethod, that.shippingMethod)
+                .append(deliveries, that.deliveries)
+                .append(discountedPrice, that.discountedPrice)
+                .append(shippingMethodState, that.shippingMethodState)
                 .isEquals();
     }
 

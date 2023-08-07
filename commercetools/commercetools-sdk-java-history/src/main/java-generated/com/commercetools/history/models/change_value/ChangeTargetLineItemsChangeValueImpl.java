@@ -70,7 +70,11 @@ public class ChangeTargetLineItemsChangeValueImpl implements ChangeTargetLineIte
 
         ChangeTargetLineItemsChangeValueImpl that = (ChangeTargetLineItemsChangeValueImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(predicate, that.predicate).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(predicate, that.predicate)
+                .append(type, that.type)
+                .append(predicate, that.predicate)
+                .isEquals();
     }
 
     @Override

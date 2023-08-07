@@ -123,6 +123,11 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(taxMode, that.taxMode)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(taxMode, that.taxMode)
                 .isEquals();
     }
 

@@ -123,6 +123,11 @@ public class SetVariantSelectionChangeImpl implements SetVariantSelectionChange,
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(product, that.product)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(product, that.product)
                 .isEquals();
     }
 

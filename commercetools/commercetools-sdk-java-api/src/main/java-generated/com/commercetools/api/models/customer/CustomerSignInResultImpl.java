@@ -74,7 +74,11 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
 
         CustomerSignInResultImpl that = (CustomerSignInResultImpl) o;
 
-        return new EqualsBuilder().append(customer, that.customer).append(cart, that.cart).isEquals();
+        return new EqualsBuilder().append(customer, that.customer)
+                .append(cart, that.cart)
+                .append(customer, that.customer)
+                .append(cart, that.cart)
+                .isEquals();
     }
 
     @Override

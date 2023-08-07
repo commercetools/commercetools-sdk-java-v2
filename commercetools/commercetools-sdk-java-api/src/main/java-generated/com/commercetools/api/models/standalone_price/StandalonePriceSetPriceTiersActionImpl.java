@@ -75,7 +75,11 @@ public class StandalonePriceSetPriceTiersActionImpl implements StandalonePriceSe
 
         StandalonePriceSetPriceTiersActionImpl that = (StandalonePriceSetPriceTiersActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(tiers, that.tiers).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(tiers, that.tiers)
+                .append(action, that.action)
+                .append(tiers, that.tiers)
+                .isEquals();
     }
 
     @Override

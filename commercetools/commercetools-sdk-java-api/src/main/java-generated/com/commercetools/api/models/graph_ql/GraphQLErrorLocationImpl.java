@@ -73,7 +73,11 @@ public class GraphQLErrorLocationImpl implements GraphQLErrorLocation, ModelBase
 
         GraphQLErrorLocationImpl that = (GraphQLErrorLocationImpl) o;
 
-        return new EqualsBuilder().append(line, that.line).append(column, that.column).isEquals();
+        return new EqualsBuilder().append(line, that.line)
+                .append(column, that.column)
+                .append(line, that.line)
+                .append(column, that.column)
+                .isEquals();
     }
 
     @Override

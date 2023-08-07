@@ -58,7 +58,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -126,7 +126,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return externalTaxRate
      */
 

@@ -114,6 +114,10 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(languages, that.languages)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(languages, that.languages)
                 .isEquals();
     }
 

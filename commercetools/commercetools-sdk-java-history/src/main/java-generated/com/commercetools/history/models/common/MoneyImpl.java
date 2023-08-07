@@ -110,6 +110,10 @@ public class MoneyImpl implements Money, ModelBase {
                 .append(centAmount, that.centAmount)
                 .append(fractionDigits, that.fractionDigits)
                 .append(type, that.type)
+                .append(currencyCode, that.currencyCode)
+                .append(centAmount, that.centAmount)
+                .append(fractionDigits, that.fractionDigits)
+                .append(type, that.type)
                 .isEquals();
     }
 

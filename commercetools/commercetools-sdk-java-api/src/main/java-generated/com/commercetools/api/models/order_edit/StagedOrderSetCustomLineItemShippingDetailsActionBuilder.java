@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetCustomLineItemShippingDetailsAction stagedOrderSetCustomLineItemShippingDetailsAction = StagedOrderSetCustomLineItemShippingDetailsAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -25,24 +24,41 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
         implements Builder<StagedOrderSetCustomLineItemShippingDetailsAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetCustomLineItemShippingDetailsActionBuilder customLineItemId(final String customLineItemId) {
+    public StagedOrderSetCustomLineItemShippingDetailsActionBuilder customLineItemId(
+            @Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomLineItemShippingDetailsActionBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -55,7 +71,7 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -67,7 +83,7 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -79,16 +95,27 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return shippingDetails
      */
 
@@ -102,9 +129,8 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
      * @return StagedOrderSetCustomLineItemShippingDetailsAction
      */
     public StagedOrderSetCustomLineItemShippingDetailsAction build() {
-        Objects.requireNonNull(customLineItemId,
-            StagedOrderSetCustomLineItemShippingDetailsAction.class + ": customLineItemId is missing");
-        return new StagedOrderSetCustomLineItemShippingDetailsActionImpl(customLineItemId, shippingDetails);
+        return new StagedOrderSetCustomLineItemShippingDetailsActionImpl(customLineItemId, customLineItemKey,
+            shippingDetails);
     }
 
     /**
@@ -112,7 +138,8 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
      * @return StagedOrderSetCustomLineItemShippingDetailsAction
      */
     public StagedOrderSetCustomLineItemShippingDetailsAction buildUnchecked() {
-        return new StagedOrderSetCustomLineItemShippingDetailsActionImpl(customLineItemId, shippingDetails);
+        return new StagedOrderSetCustomLineItemShippingDetailsActionImpl(customLineItemId, customLineItemKey,
+            shippingDetails);
     }
 
     /**
@@ -132,6 +159,7 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
             final StagedOrderSetCustomLineItemShippingDetailsAction template) {
         StagedOrderSetCustomLineItemShippingDetailsActionBuilder builder = new StagedOrderSetCustomLineItemShippingDetailsActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.shippingDetails = template.getShippingDetails();
         return builder;
     }

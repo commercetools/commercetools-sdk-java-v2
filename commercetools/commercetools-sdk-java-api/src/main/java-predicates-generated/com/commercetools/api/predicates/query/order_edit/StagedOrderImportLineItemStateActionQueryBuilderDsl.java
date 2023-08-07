@@ -25,6 +25,12 @@ public class StagedOrderImportLineItemStateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderImportLineItemStateActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderImportLineItemStateActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderImportLineItemStateActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<StagedOrderImportLineItemStateActionQueryBuilderDsl> state(
             Function<com.commercetools.api.predicates.query.order.ItemStateQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.ItemStateQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

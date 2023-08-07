@@ -94,6 +94,9 @@ public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveE
         return new EqualsBuilder().append(action, that.action)
                 .append(attributeName, that.attributeName)
                 .append(keys, that.keys)
+                .append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(keys, that.keys)
                 .isEquals();
     }
 

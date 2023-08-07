@@ -277,6 +277,20 @@ public class OrderDiscountCodeStateSetMessageImpl implements OrderDiscountCodeSt
                 .append(discountCode, that.discountCode)
                 .append(state, that.state)
                 .append(oldState, that.oldState)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(discountCode, that.discountCode)
+                .append(state, that.state)
+                .append(oldState, that.oldState)
                 .isEquals();
     }
 

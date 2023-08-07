@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     Label label = Label.businessUnitLabelBuilder()
+ *     Label label = Label.associateRoleLabelBuilder()
  *             key("{key}")
  *             name("{name}")
  *             .build()
@@ -28,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.history.models.label.AssociateRoleLabelImpl.class, name = AssociateRoleLabel.ASSOCIATE_ROLE_LABEL),
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.BusinessUnitLabelImpl.class, name = BusinessUnitLabel.BUSINESS_UNIT_LABEL),
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.CustomObjectLabelImpl.class, name = CustomObjectLabel.CUSTOM_OBJECT_LABEL),
         @JsonSubTypes.Type(value = com.commercetools.history.models.label.CustomerLabelImpl.class, name = CustomerLabel.CUSTOMER_LABEL),
@@ -62,6 +63,10 @@ public interface Label {
     public static Label deepCopy(@Nullable final Label template) {
         if (template == null) {
             return null;
+        }
+        if (template instanceof com.commercetools.history.models.label.AssociateRoleLabel) {
+            return com.commercetools.history.models.label.AssociateRoleLabel
+                    .deepCopy((com.commercetools.history.models.label.AssociateRoleLabel) template);
         }
         if (template instanceof com.commercetools.history.models.label.BusinessUnitLabel) {
             return com.commercetools.history.models.label.BusinessUnitLabel
@@ -113,6 +118,14 @@ public interface Label {
         }
         LabelImpl instance = new LabelImpl();
         return instance;
+    }
+
+    /**
+     * builder for associateRoleLabel subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.label.AssociateRoleLabelBuilder associateRoleLabelBuilder() {
+        return com.commercetools.history.models.label.AssociateRoleLabelBuilder.of();
     }
 
     /**

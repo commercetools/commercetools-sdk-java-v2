@@ -70,7 +70,11 @@ public class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDateOfBi
 
         MyCustomerSetDateOfBirthActionImpl that = (MyCustomerSetDateOfBirthActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(dateOfBirth, that.dateOfBirth).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(dateOfBirth, that.dateOfBirth)
+                .append(action, that.action)
+                .append(dateOfBirth, that.dateOfBirth)
+                .isEquals();
     }
 
     @Override

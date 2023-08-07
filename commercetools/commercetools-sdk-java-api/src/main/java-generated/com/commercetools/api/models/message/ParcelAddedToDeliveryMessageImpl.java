@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Add Parcel To Delivery update action.</p>
+ *  <p>Generated after a successful Add Parcel to Delivery update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMessage, ModelBase {
@@ -192,7 +192,7 @@ public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMe
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -263,6 +263,20 @@ public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMe
         ParcelAddedToDeliveryMessageImpl that = (ParcelAddedToDeliveryMessageImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(delivery, that.delivery)
+                .append(parcel, that.parcel)
+                .append(shippingKey, that.shippingKey)
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)

@@ -93,6 +93,9 @@ public class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeChangeLo
         return new EqualsBuilder().append(action, that.action)
                 .append(fieldName, that.fieldName)
                 .append(keys, that.keys)
+                .append(action, that.action)
+                .append(fieldName, that.fieldName)
+                .append(keys, that.keys)
                 .isEquals();
     }
 

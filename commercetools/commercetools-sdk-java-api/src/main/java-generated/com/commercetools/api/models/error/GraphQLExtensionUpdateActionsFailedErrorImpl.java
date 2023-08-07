@@ -132,6 +132,11 @@ public class GraphQLExtensionUpdateActionsFailedErrorImpl
                 .append(localizedMessage, that.localizedMessage)
                 .append(extensionExtraInfo, that.extensionExtraInfo)
                 .append(extensionErrors, that.extensionErrors)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(localizedMessage, that.localizedMessage)
+                .append(extensionExtraInfo, that.extensionExtraInfo)
+                .append(extensionErrors, that.extensionErrors)
                 .isEquals();
     }
 

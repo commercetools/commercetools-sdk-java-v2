@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Add Product Variant update action.</p>
+ *  <p>Generated after a successful Add ProductVariant update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAddedMessagePayload, ModelBase {
@@ -88,6 +88,9 @@ public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAdde
         ProductVariantAddedMessagePayloadImpl that = (ProductVariantAddedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(variant, that.variant)
+                .append(staged, that.staged)
+                .append(type, that.type)
                 .append(variant, that.variant)
                 .append(staged, that.staged)
                 .isEquals();

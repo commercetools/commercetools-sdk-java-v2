@@ -63,7 +63,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessageImpl.class, name = BusinessUnitDefaultShippingAddressSetMessage.BUSINESS_UNIT_DEFAULT_SHIPPING_ADDRESS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitDeletedMessageImpl.class, name = BusinessUnitDeletedMessage.BUSINESS_UNIT_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitNameChangedMessageImpl.class, name = BusinessUnitNameChangedMessage.BUSINESS_UNIT_NAME_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageImpl.class, name = BusinessUnitParentUnitChangedMessage.BUSINESS_UNIT_PARENT_UNIT_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitParentChangedMessageImpl.class, name = BusinessUnitParentChangedMessage.BUSINESS_UNIT_PARENT_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessageImpl.class, name = BusinessUnitShippingAddressAddedMessage.BUSINESS_UNIT_SHIPPING_ADDRESS_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessageImpl.class, name = BusinessUnitShippingAddressRemovedMessage.BUSINESS_UNIT_SHIPPING_ADDRESS_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStatusChangedMessageImpl.class, name = BusinessUnitStatusChangedMessage.BUSINESS_UNIT_STATUS_CHANGED),
@@ -98,10 +98,15 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.LineItemStateTransitionMessageImpl.class, name = LineItemStateTransitionMessage.LINE_ITEM_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderBillingAddressSetMessageImpl.class, name = OrderBillingAddressSetMessage.ORDER_BILLING_ADDRESS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCreatedMessageImpl.class, name = OrderCreatedMessage.ORDER_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldAddedMessageImpl.class, name = OrderCustomFieldAddedMessage.ORDER_CUSTOM_FIELD_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldChangedMessageImpl.class, name = OrderCustomFieldChangedMessage.ORDER_CUSTOM_FIELD_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldRemovedMessageImpl.class, name = OrderCustomFieldRemovedMessage.ORDER_CUSTOM_FIELD_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemAddedMessageImpl.class, name = OrderCustomLineItemAddedMessage.ORDER_CUSTOM_LINE_ITEM_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessageImpl.class, name = OrderCustomLineItemDiscountSetMessage.ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessageImpl.class, name = OrderCustomLineItemQuantityChangedMessage.ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageImpl.class, name = OrderCustomLineItemRemovedMessage.ORDER_CUSTOM_LINE_ITEM_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomTypeRemovedMessageImpl.class, name = OrderCustomTypeRemovedMessage.ORDER_CUSTOM_TYPE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomTypeSetMessageImpl.class, name = OrderCustomTypeSetMessage.ORDER_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerEmailSetMessageImpl.class, name = OrderCustomerEmailSetMessage.ORDER_CUSTOMER_EMAIL_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerGroupSetMessageImpl.class, name = OrderCustomerGroupSetMessage.ORDER_CUSTOMER_GROUP_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerSetMessageImpl.class, name = OrderCustomerSetMessage.ORDER_CUSTOMER_SET),
@@ -473,9 +478,9 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
             return com.commercetools.api.models.message.BusinessUnitNameChangedMessage
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitNameChangedMessage) template);
         }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessage) template);
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitParentChangedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitParentChangedMessage
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitParentChangedMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessage) {
             return com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessage
@@ -1086,11 +1091,11 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
-     * builder for businessUnitParentUnitChanged subtype
+     * builder for businessUnitParentChanged subtype
      * @return builder
      */
-    public static com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageBuilder businessUnitParentUnitChangedBuilder() {
-        return com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageBuilder.of();
+    public static com.commercetools.api.models.message.BusinessUnitParentChangedMessageBuilder businessUnitParentChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitParentChangedMessageBuilder.of();
     }
 
     /**
@@ -1366,6 +1371,30 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for orderCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomFieldAddedMessageBuilder orderCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomFieldChangedMessageBuilder orderCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomFieldRemovedMessageBuilder orderCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
      * builder for orderCustomLineItemAdded subtype
      * @return builder
      */
@@ -1395,6 +1424,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageBuilder orderCustomLineItemRemovedBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomTypeRemovedMessageBuilder orderCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomTypeSetMessageBuilder orderCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.OrderCustomTypeSetMessageBuilder.of();
     }
 
     /**

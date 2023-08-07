@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShippingInfoImportDraft
+ *  <p>Becomes the <code>shippingInfo</code> of the imported Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<ShippingInfoImportDraft> {
 
     /**
-     *
+     *  <p>Name of the Shipping Method.</p>
      * @return shippingMethodName
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public String getShippingMethodName();
 
     /**
-     *
+     *  <p>The base price for the Shipping Method.</p>
      * @return price
      */
     @NotNull
@@ -58,7 +58,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public Money getPrice();
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     *  <p>Shipping rate information for the Order.</p>
      * @return shippingRate
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public ShippingRateDraft getShippingRate();
 
     /**
-     *
+     *  <p>Include a Tax Rate for the Shipping Method.</p>
      * @return taxRate
      */
     @Valid
@@ -75,7 +75,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public TaxRate getTaxRate();
 
     /**
-     *
+     *  <p>Include a value to associate a Tax Category with the shipping information.</p>
      * @return taxCategory
      */
     @Valid
@@ -83,7 +83,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     *  <p>Include a value to associate a Shipping Method with the Order.</p>
      * @return shippingMethod
      */
     @Valid
@@ -91,7 +91,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public ShippingMethodResourceIdentifier getShippingMethod();
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      * @return deliveries
      */
     @Valid
@@ -99,7 +99,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public List<DeliveryDraft> getDeliveries();
 
     /**
-     *
+     *  <p>Discounted Price of the Shipping Method.</p>
      * @return discountedPrice
      */
     @Valid
@@ -107,7 +107,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public DiscountedLineItemPriceDraft getDiscountedPrice();
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+     *  <p>Indicates if the ShippingMethod referenced is allowed for the Order or not.</p>
      * @return shippingMethodState
      */
 
@@ -115,49 +115,49 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public ShippingMethodState getShippingMethodState();
 
     /**
-     * set shippingMethodName
+     *  <p>Name of the Shipping Method.</p>
      * @param shippingMethodName value to be set
      */
 
     public void setShippingMethodName(final String shippingMethodName);
 
     /**
-     * set price
+     *  <p>The base price for the Shipping Method.</p>
      * @param price value to be set
      */
 
     public void setPrice(final Money price);
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     *  <p>Shipping rate information for the Order.</p>
      * @param shippingRate value to be set
      */
 
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
     /**
-     * set taxRate
+     *  <p>Include a Tax Rate for the Shipping Method.</p>
      * @param taxRate value to be set
      */
 
     public void setTaxRate(final TaxRate taxRate);
 
     /**
-     * set taxCategory
+     *  <p>Include a value to associate a Tax Category with the shipping information.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     *  <p>Include a value to associate a Shipping Method with the Order.</p>
      * @param shippingMethod value to be set
      */
 
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      * @param deliveries values to be set
      */
 
@@ -165,21 +165,21 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     public void setDeliveries(final DeliveryDraft... deliveries);
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      * @param deliveries values to be set
      */
 
     public void setDeliveries(final List<DeliveryDraft> deliveries);
 
     /**
-     * set discountedPrice
+     *  <p>Discounted Price of the Shipping Method.</p>
      * @param discountedPrice value to be set
      */
 
     public void setDiscountedPrice(final DiscountedLineItemPriceDraft discountedPrice);
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+     *  <p>Indicates if the ShippingMethod referenced is allowed for the Order or not.</p>
      * @param shippingMethodState value to be set
      */
 

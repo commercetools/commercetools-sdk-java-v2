@@ -147,6 +147,12 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
                 .append(field, that.field)
                 .append(invalidValue, that.invalidValue)
                 .append(allowedValues, that.allowedValues)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(field, that.field)
+                .append(invalidValue, that.invalidValue)
+                .append(allowedValues, that.allowedValues)
                 .isEquals();
     }
 

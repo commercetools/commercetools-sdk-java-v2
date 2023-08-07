@@ -389,6 +389,13 @@ public class StagedOrderUpdateActionQueryBuilderDsl {
             StagedOrderUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetDirectDiscounts(
+            Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.order_edit.StagedOrderSetDirectDiscountsActionQueryBuilderDsl.of()),
+            StagedOrderUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetItemShippingAddressCustomField(
             Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetItemShippingAddressCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -643,6 +650,13 @@ public class StagedOrderUpdateActionQueryBuilderDsl {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.order_edit.StagedOrderSetShippingRateInputActionQueryBuilderDsl
                     .of()),
+            StagedOrderUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetStore(
+            Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetStoreActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetStoreActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.order_edit.StagedOrderSetStoreActionQueryBuilderDsl.of()),
             StagedOrderUpdateActionQueryBuilderDsl::of);
     }
 

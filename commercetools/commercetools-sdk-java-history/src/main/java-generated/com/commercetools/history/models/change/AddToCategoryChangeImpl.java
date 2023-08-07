@@ -132,6 +132,11 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(category, that.category)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(category, that.category)
                 .isEquals();
     }
 

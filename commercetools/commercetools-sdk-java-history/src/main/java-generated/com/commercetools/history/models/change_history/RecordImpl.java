@@ -240,6 +240,17 @@ public class RecordImpl implements Record, ModelBase {
                 .append(resource, that.resource)
                 .append(stores, that.stores)
                 .append(withoutChanges, that.withoutChanges)
+                .append(version, that.version)
+                .append(previousVersion, that.previousVersion)
+                .append(type, that.type)
+                .append(modifiedBy, that.modifiedBy)
+                .append(modifiedAt, that.modifiedAt)
+                .append(label, that.label)
+                .append(previousLabel, that.previousLabel)
+                .append(changes, that.changes)
+                .append(resource, that.resource)
+                .append(stores, that.stores)
+                .append(withoutChanges, that.withoutChanges)
                 .isEquals();
     }
 

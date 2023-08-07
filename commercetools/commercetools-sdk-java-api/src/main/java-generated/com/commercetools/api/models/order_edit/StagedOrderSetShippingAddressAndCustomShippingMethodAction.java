@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetShippingAddressAndCustomShippingMethodAction
+ *  <p>Sets the shipping address and a custom Shipping Method together to prevent an inconsistent state.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,7 +44,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     String SET_SHIPPING_ADDRESS_AND_CUSTOM_SHIPPING_METHOD = "setShippingAddressAndCustomShippingMethod";
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set for <code>shippingAddress</code>.</p>
      * @return address
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public BaseAddress getAddress();
 
     /**
-     *
+     *  <p>Value to set.</p>
      * @return shippingMethodName
      */
     @NotNull
@@ -61,7 +61,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public String getShippingMethodName();
 
     /**
-     *
+     *  <p>Value to set.</p>
      * @return shippingRate
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public ShippingRateDraft getShippingRate();
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when the Order has the <code>Platform</code> TaxMode.</p>
      * @return taxCategory
      */
     @Valid
@@ -78,7 +78,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -86,35 +86,35 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set for <code>shippingAddress</code>.</p>
      * @param address value to be set
      */
 
     public void setAddress(final BaseAddress address);
 
     /**
-     * set shippingMethodName
+     *  <p>Value to set.</p>
      * @param shippingMethodName value to be set
      */
 
     public void setShippingMethodName(final String shippingMethodName);
 
     /**
-     * set shippingRate
+     *  <p>Value to set.</p>
      * @param shippingRate value to be set
      */
 
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when the Order has the <code>Platform</code> TaxMode.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      */
 

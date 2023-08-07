@@ -25,6 +25,12 @@ public class StagedOrderTransitionCustomLineItemStateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderTransitionCustomLineItemStateActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderTransitionCustomLineItemStateActionQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderTransitionCustomLineItemStateActionQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<StagedOrderTransitionCustomLineItemStateActionQueryBuilderDsl> quantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),

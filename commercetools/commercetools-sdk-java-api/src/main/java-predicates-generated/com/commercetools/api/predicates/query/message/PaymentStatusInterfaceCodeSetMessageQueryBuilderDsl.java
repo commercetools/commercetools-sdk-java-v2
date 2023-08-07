@@ -91,12 +91,6 @@ public class PaymentStatusInterfaceCodeSetMessageQueryBuilderDsl {
             PaymentStatusInterfaceCodeSetMessageQueryBuilderDsl::of);
     }
 
-    public StringComparisonPredicateBuilder<PaymentStatusInterfaceCodeSetMessageQueryBuilderDsl> paymentId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("paymentId")),
-            p -> new CombinationQueryPredicate<>(p, PaymentStatusInterfaceCodeSetMessageQueryBuilderDsl::of));
-    }
-
     public StringComparisonPredicateBuilder<PaymentStatusInterfaceCodeSetMessageQueryBuilderDsl> interfaceCode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("interfaceCode")),

@@ -70,7 +70,11 @@ public class ChannelChangeKeyActionImpl implements ChannelChangeKeyAction, Model
 
         ChannelChangeKeyActionImpl that = (ChannelChangeKeyActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(key, that.key)
+                .append(action, that.action)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

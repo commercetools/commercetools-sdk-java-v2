@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * SyncInfo
+ *  <p>Contains synchronization activity information of the Order (like export or import).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SyncInfoImpl implements SyncInfo, ModelBase {
@@ -45,7 +45,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     *  <p>Connection to a particular synchronization destination.</p>
+     *  <p>Connection to a synchronization destination.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
@@ -53,7 +53,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     *  <p>Identifier of an external order instance, file, or other resource.</p>
      */
 
     public String getExternalId() {
@@ -61,7 +61,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the information was synced.</p>
      */
 
     public java.time.ZonedDateTime getSyncedAt() {
@@ -91,6 +91,9 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
         SyncInfoImpl that = (SyncInfoImpl) o;
 
         return new EqualsBuilder().append(channel, that.channel)
+                .append(externalId, that.externalId)
+                .append(syncedAt, that.syncedAt)
+                .append(channel, that.channel)
                 .append(externalId, that.externalId)
                 .append(syncedAt, that.syncedAt)
                 .isEquals();

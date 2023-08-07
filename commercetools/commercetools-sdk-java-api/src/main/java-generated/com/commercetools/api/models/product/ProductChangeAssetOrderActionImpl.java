@@ -126,6 +126,11 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
                 .append(sku, that.sku)
                 .append(staged, that.staged)
                 .append(assetOrder, that.assetOrder)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetOrder, that.assetOrder)
                 .isEquals();
     }
 

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TrackingData
+ *  <p>Information that helps track a Parcel.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TrackingData {
 
     /**
-     *  <p>The ID to track one parcel.</p>
+     *  <p>Identifier to track the Parcel.</p>
      * @return trackingId
      */
 
@@ -37,7 +37,7 @@ public interface TrackingData {
     public String getTrackingId();
 
     /**
-     *  <p>The carrier that delivers the parcel.</p>
+     *  <p>Name of the carrier that delivers the Parcel.</p>
      * @return carrier
      */
 
@@ -45,7 +45,7 @@ public interface TrackingData {
     public String getCarrier();
 
     /**
-     *
+     *  <p>Name of the provider that serves as facade to several carriers.</p>
      * @return provider
      */
 
@@ -53,7 +53,7 @@ public interface TrackingData {
     public String getProvider();
 
     /**
-     *
+     *  <p>Transaction identifier with the <code>provider</code>.</p>
      * @return providerTransaction
      */
 
@@ -61,7 +61,10 @@ public interface TrackingData {
     public String getProviderTransaction();
 
     /**
-     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     *  <ul>
+     *   <li>If <code>true</code>, the Parcel is being returned.</li>
+     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
+     *  </ul>
      * @return isReturn
      */
 
@@ -69,35 +72,38 @@ public interface TrackingData {
     public Boolean getIsReturn();
 
     /**
-     *  <p>The ID to track one parcel.</p>
+     *  <p>Identifier to track the Parcel.</p>
      * @param trackingId value to be set
      */
 
     public void setTrackingId(final String trackingId);
 
     /**
-     *  <p>The carrier that delivers the parcel.</p>
+     *  <p>Name of the carrier that delivers the Parcel.</p>
      * @param carrier value to be set
      */
 
     public void setCarrier(final String carrier);
 
     /**
-     * set provider
+     *  <p>Name of the provider that serves as facade to several carriers.</p>
      * @param provider value to be set
      */
 
     public void setProvider(final String provider);
 
     /**
-     * set providerTransaction
+     *  <p>Transaction identifier with the <code>provider</code>.</p>
      * @param providerTransaction value to be set
      */
 
     public void setProviderTransaction(final String providerTransaction);
 
     /**
-     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     *  <ul>
+     *   <li>If <code>true</code>, the Parcel is being returned.</li>
+     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
+     *  </ul>
      * @param isReturn value to be set
      */
 

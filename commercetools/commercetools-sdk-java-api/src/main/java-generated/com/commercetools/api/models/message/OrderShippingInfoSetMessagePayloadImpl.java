@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Set Shipping Method and Set Custom Shipping Method update actions.</p>
+ *  <p>Generated after a successful Set ShippingMethod and Set Custom ShippingMethod update actions.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfoSetMessagePayload, ModelBase {
@@ -88,6 +88,9 @@ public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfo
         OrderShippingInfoSetMessagePayloadImpl that = (OrderShippingInfoSetMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(shippingInfo, that.shippingInfo)
+                .append(oldShippingInfo, that.oldShippingInfo)
+                .append(type, that.type)
                 .append(shippingInfo, that.shippingInfo)
                 .append(oldShippingInfo, that.oldShippingInfo)
                 .isEquals();

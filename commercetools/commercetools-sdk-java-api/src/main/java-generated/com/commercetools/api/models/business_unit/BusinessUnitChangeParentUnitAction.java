@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentUnitChanged Message.</p>
+ *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentChanged Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

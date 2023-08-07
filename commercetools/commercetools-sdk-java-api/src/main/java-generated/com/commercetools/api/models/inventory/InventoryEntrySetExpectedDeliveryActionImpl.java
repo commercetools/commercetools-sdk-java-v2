@@ -73,6 +73,8 @@ public class InventoryEntrySetExpectedDeliveryActionImpl implements InventoryEnt
 
         return new EqualsBuilder().append(action, that.action)
                 .append(expectedDelivery, that.expectedDelivery)
+                .append(action, that.action)
+                .append(expectedDelivery, that.expectedDelivery)
                 .isEquals();
     }
 

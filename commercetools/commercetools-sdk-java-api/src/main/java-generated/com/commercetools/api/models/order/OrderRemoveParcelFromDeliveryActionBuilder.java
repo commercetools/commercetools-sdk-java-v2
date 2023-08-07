@@ -29,7 +29,8 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
     private String parcelKey;
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      * @return Builder
      */
@@ -40,7 +41,8 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      * @return Builder
      */
@@ -51,7 +53,8 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
 
@@ -61,7 +64,8 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
 

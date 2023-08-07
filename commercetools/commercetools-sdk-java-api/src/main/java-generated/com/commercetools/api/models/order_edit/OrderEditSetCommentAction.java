@@ -34,7 +34,7 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
     String SET_COMMENT = "setComment";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return comment
      */
 
@@ -42,7 +42,7 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
     public String getComment();
 
     /**
-     * set comment
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param comment value to be set
      */
 

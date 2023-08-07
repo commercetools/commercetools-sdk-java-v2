@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetLineItemPriceAction
+ *  <p>Sets the LineItem <code>price</code> and changes the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemPriceActionImpl implements StagedOrderSetLineItemPriceAction, ModelBase {
@@ -73,7 +73,7 @@ public class StagedOrderSetLineItemPriceActionImpl implements StagedOrderSetLine
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -103,6 +103,10 @@ public class StagedOrderSetLineItemPriceActionImpl implements StagedOrderSetLine
         StagedOrderSetLineItemPriceActionImpl that = (StagedOrderSetLineItemPriceActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(externalPrice, that.externalPrice)
+                .append(action, that.action)
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(externalPrice, that.externalPrice)

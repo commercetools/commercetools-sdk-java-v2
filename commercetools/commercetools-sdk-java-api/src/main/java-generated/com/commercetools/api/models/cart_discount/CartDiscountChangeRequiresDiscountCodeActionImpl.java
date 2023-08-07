@@ -74,6 +74,8 @@ public class CartDiscountChangeRequiresDiscountCodeActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(requiresDiscountCode, that.requiresDiscountCode)
+                .append(action, that.action)
+                .append(requiresDiscountCode, that.requiresDiscountCode)
                 .isEquals();
     }
 

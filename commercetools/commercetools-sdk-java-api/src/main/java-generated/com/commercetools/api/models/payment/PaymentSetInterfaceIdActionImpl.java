@@ -70,7 +70,11 @@ public class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAct
 
         PaymentSetInterfaceIdActionImpl that = (PaymentSetInterfaceIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(interfaceId, that.interfaceId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(interfaceId, that.interfaceId)
+                .append(action, that.action)
+                .append(interfaceId, that.interfaceId)
+                .isEquals();
     }
 
     @Override

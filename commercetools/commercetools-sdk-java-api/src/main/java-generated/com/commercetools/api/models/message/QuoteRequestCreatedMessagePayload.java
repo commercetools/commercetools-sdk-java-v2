@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Create Quote Request request.</p>
+ *  <p>Generated after a successful Create QuoteRequest request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

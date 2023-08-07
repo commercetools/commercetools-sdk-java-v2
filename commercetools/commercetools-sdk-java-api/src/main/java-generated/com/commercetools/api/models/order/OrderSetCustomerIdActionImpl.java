@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderSetCustomerIdAction
+ *  <p>Setting the Order's <code>customerId</code> does not recalculate prices or discounts on the Order. If the Customer belongs to a Customer Group, <code>customerGroup</code> on the Order is updated automatically.</p>
+ *  <p>Produces the OrderCustomerSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetCustomerIdActionImpl implements OrderSetCustomerIdAction, ModelBase {
@@ -49,7 +50,7 @@ public class OrderSetCustomerIdActionImpl implements OrderSetCustomerIdAction, M
     }
 
     /**
-     *
+     *  <p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p>
      */
 
     public String getCustomerId() {
@@ -70,7 +71,11 @@ public class OrderSetCustomerIdActionImpl implements OrderSetCustomerIdAction, M
 
         OrderSetCustomerIdActionImpl that = (OrderSetCustomerIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customerId, that.customerId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customerId, that.customerId)
+                .append(action, that.action)
+                .append(customerId, that.customerId)
+                .isEquals();
     }
 
     @Override

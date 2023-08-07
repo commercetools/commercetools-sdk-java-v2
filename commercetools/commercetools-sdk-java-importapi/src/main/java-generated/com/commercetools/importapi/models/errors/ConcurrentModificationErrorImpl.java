@@ -123,6 +123,11 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
                 .append(specifiedVersion, that.specifiedVersion)
                 .append(currentVersion, that.currentVersion)
                 .append(conflictedResource, that.conflictedResource)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(specifiedVersion, that.specifiedVersion)
+                .append(currentVersion, that.currentVersion)
+                .append(conflictedResource, that.conflictedResource)
                 .isEquals();
     }
 

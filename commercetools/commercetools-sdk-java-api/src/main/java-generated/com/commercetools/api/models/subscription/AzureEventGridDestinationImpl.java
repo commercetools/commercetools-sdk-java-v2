@@ -89,6 +89,9 @@ public class AzureEventGridDestinationImpl implements AzureEventGridDestination,
         return new EqualsBuilder().append(type, that.type)
                 .append(uri, that.uri)
                 .append(accessKey, that.accessKey)
+                .append(type, that.type)
+                .append(uri, that.uri)
+                .append(accessKey, that.accessKey)
                 .isEquals();
     }
 

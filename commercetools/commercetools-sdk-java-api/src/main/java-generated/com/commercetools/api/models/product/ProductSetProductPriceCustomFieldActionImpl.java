@@ -122,6 +122,11 @@ public class ProductSetProductPriceCustomFieldActionImpl implements ProductSetPr
                 .append(staged, that.staged)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(priceId, that.priceId)
+                .append(staged, that.staged)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 

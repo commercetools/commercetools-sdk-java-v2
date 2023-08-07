@@ -143,6 +143,12 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(categoryId, that.categoryId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(categoryId, that.categoryId)
                 .isEquals();
     }
 

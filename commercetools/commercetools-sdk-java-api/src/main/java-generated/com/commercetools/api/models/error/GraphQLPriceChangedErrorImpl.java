@@ -118,6 +118,10 @@ public class GraphQLPriceChangedErrorImpl implements GraphQLPriceChangedError, M
                 .append(values, that.values)
                 .append(lineItems, that.lineItems)
                 .append(shipping, that.shipping)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(lineItems, that.lineItems)
+                .append(shipping, that.shipping)
                 .isEquals();
     }
 

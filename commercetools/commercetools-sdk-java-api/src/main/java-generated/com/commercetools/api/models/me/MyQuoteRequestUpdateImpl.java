@@ -78,7 +78,11 @@ public class MyQuoteRequestUpdateImpl implements MyQuoteRequestUpdate, ModelBase
 
         MyQuoteRequestUpdateImpl that = (MyQuoteRequestUpdateImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(actions, that.actions).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(actions, that.actions)
+                .append(version, that.version)
+                .append(actions, that.actions)
+                .isEquals();
     }
 
     @Override

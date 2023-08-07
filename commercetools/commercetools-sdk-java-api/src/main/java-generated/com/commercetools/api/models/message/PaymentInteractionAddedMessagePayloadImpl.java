@@ -71,7 +71,11 @@ public class PaymentInteractionAddedMessagePayloadImpl implements PaymentInterac
 
         PaymentInteractionAddedMessagePayloadImpl that = (PaymentInteractionAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(interaction, that.interaction).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(interaction, that.interaction)
+                .append(type, that.type)
+                .append(interaction, that.interaction)
+                .isEquals();
     }
 
     @Override

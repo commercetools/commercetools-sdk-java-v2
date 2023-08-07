@@ -70,7 +70,11 @@ public class CartRemoveItemShippingAddressActionImpl implements CartRemoveItemSh
 
         CartRemoveItemShippingAddressActionImpl that = (CartRemoveItemShippingAddressActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(addressKey, that.addressKey).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(addressKey, that.addressKey)
+                .append(action, that.action)
+                .append(addressKey, that.addressKey)
+                .isEquals();
     }
 
     @Override

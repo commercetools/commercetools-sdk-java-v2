@@ -262,6 +262,18 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(shippingDetails, that.shippingDetails)
+                .append(name, that.name)
+                .append(money, that.money)
+                .append(taxedPrice, that.taxedPrice)
+                .append(totalPrice, that.totalPrice)
+                .append(slug, that.slug)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(taxCategory, that.taxCategory)
+                .append(taxRate, that.taxRate)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(shippingDetails, that.shippingDetails)
                 .isEquals();
     }
 

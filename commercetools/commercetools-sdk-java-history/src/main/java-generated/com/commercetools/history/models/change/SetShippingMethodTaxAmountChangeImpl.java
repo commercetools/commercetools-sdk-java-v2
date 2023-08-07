@@ -125,6 +125,11 @@ public class SetShippingMethodTaxAmountChangeImpl implements SetShippingMethodTa
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(taxMode, that.taxMode)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(taxMode, that.taxMode)
                 .isEquals();
     }
 

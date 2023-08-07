@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *   <li>Create Cart in Store request and Set Country update action on Carts.</li>
  *   <li>Create Cart in Store request and Set Country update action on My Carts.</li>
  *   <li>Create Order in Store from Cart requests on Orders.</li>
- *   <li>Create Order from Cart in a Store requests on My Orders.</li>
+ *   <li>Create Order in Store from Cart requests on My Orders.</li>
  *   <li>Create Order from Quote requests on Orders.</li>
  *   <li>Create Order from Quote requests on My Orders.</li>
  *   <li>Create Order by Import request on Order Import.</li>
@@ -121,6 +121,10 @@ public class GraphQLCountryNotConfiguredInStoreErrorImpl implements GraphQLCount
         GraphQLCountryNotConfiguredInStoreErrorImpl that = (GraphQLCountryNotConfiguredInStoreErrorImpl) o;
 
         return new EqualsBuilder().append(code, that.code)
+                .append(values, that.values)
+                .append(storeCountries, that.storeCountries)
+                .append(country, that.country)
+                .append(code, that.code)
                 .append(values, that.values)
                 .append(storeCountries, that.storeCountries)
                 .append(country, that.country)

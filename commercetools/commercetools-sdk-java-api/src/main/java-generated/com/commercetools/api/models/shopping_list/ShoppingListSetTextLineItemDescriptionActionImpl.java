@@ -90,6 +90,9 @@ public class ShoppingListSetTextLineItemDescriptionActionImpl
         return new EqualsBuilder().append(action, that.action)
                 .append(textLineItemId, that.textLineItemId)
                 .append(description, that.description)
+                .append(action, that.action)
+                .append(textLineItemId, that.textLineItemId)
+                .append(description, that.description)
                 .isEquals();
     }
 

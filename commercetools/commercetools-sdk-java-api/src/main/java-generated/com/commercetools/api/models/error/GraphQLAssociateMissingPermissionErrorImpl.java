@@ -150,6 +150,12 @@ public class GraphQLAssociateMissingPermissionErrorImpl implements GraphQLAssoci
                 .append(businessUnit, that.businessUnit)
                 .append(associateOnBehalf, that.associateOnBehalf)
                 .append(permissions, that.permissions)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(associate, that.associate)
+                .append(businessUnit, that.businessUnit)
+                .append(associateOnBehalf, that.associateOnBehalf)
+                .append(permissions, that.permissions)
                 .isEquals();
     }
 

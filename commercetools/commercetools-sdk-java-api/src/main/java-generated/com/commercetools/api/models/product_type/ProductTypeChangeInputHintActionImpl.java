@@ -89,6 +89,9 @@ public class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeIn
         return new EqualsBuilder().append(action, that.action)
                 .append(attributeName, that.attributeName)
                 .append(newValue, that.newValue)
+                .append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(newValue, that.newValue)
                 .isEquals();
     }
 

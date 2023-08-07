@@ -122,6 +122,11 @@ public class OrderSetLineItemCustomFieldActionImpl implements OrderSetLineItemCu
                 .append(lineItemKey, that.lineItemKey)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 

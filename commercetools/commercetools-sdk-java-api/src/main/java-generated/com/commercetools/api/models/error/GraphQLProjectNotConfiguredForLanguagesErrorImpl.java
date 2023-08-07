@@ -98,6 +98,9 @@ public class GraphQLProjectNotConfiguredForLanguagesErrorImpl
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(languages, that.languages)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(languages, that.languages)
                 .isEquals();
     }
 

@@ -89,6 +89,9 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
                 .append(resource, that.resource)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(resource, that.resource)
                 .isEquals();
     }
 

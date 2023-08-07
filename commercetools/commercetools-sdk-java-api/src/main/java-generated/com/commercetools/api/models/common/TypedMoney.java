@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+ *  <p>Base polymorphic read-only money type that stores currency in cent precision or high precision, that is in sub-cents.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -37,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TypedMoney extends Money {
 
     /**
-     *  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
+     *  <p>Type of money used.</p>
      * @return type
      */
     @NotNull
@@ -45,10 +45,10 @@ public interface TypedMoney extends Money {
     public MoneyType getType();
 
     /**
-     *  <p>Number of digits after the decimal separator:</p>
+     *  <p>Number of digits after the decimal separator.</p>
      *  <ul>
-     *   <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
-     *   <li>Greater than the default number of fraction digits for a currency in HighPrecisionMoney.</li>
+     *   <li>For CentPrecisionMoney, it is equal to the default number of fraction digits for a currency.</li>
+     *   <li>For HighPrecisionMoney, it is greater than the default number of fraction digits for a currency.</li>
      *  </ul>
      * @return fractionDigits
      */
@@ -57,10 +57,10 @@ public interface TypedMoney extends Money {
     public Integer getFractionDigits();
 
     /**
-     *  <p>Number of digits after the decimal separator:</p>
+     *  <p>Number of digits after the decimal separator.</p>
      *  <ul>
-     *   <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
-     *   <li>Greater than the default number of fraction digits for a currency in HighPrecisionMoney.</li>
+     *   <li>For CentPrecisionMoney, it is equal to the default number of fraction digits for a currency.</li>
+     *   <li>For HighPrecisionMoney, it is greater than the default number of fraction digits for a currency.</li>
      *  </ul>
      * @param fractionDigits value to be set
      */

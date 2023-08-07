@@ -121,6 +121,11 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
                 .append(sku, that.sku)
                 .append(imageUrl, that.imageUrl)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(imageUrl, that.imageUrl)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

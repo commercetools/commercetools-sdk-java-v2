@@ -58,7 +58,7 @@ public class AttributeReferenceImpl implements AttributeReference, ModelBase {
 
         AttributeReferenceImpl that = (AttributeReferenceImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).isEquals();
+        return new EqualsBuilder().append(key, that.key).append(key, that.key).isEquals();
     }
 
     @Override

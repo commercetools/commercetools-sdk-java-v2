@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetCustomLineItemCustomTypeAction orderSetCustomLineItemCustomTypeAction = OrderSetCustomLineItemCustomTypeAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<OrderSetCustomLineItemCustomTypeAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -33,18 +36,29 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public OrderSetCustomLineItemCustomTypeActionBuilder customLineItemId(final String customLineItemId) {
+    public OrderSetCustomLineItemCustomTypeActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderSetCustomLineItemCustomTypeActionBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>Defines the Type that extends the Custom Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -56,7 +70,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     *  <p>Defines the Type that extends the Custom Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -68,7 +82,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     *  <p>Defines the Type that extends the Custom Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -80,7 +94,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Custom Line Item.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -92,7 +106,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Custom Line Item.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -104,7 +118,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Custom Line Item.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -116,16 +130,27 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
     /**
-     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>Defines the Type that extends the Custom Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Custom Line Item.</p>
      * @return type
      */
 
@@ -135,7 +160,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Custom Line Item.</p>
      * @return fields
      */
 
@@ -149,9 +174,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
      * @return OrderSetCustomLineItemCustomTypeAction
      */
     public OrderSetCustomLineItemCustomTypeAction build() {
-        Objects.requireNonNull(customLineItemId,
-            OrderSetCustomLineItemCustomTypeAction.class + ": customLineItemId is missing");
-        return new OrderSetCustomLineItemCustomTypeActionImpl(customLineItemId, type, fields);
+        return new OrderSetCustomLineItemCustomTypeActionImpl(customLineItemId, customLineItemKey, type, fields);
     }
 
     /**
@@ -159,7 +182,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
      * @return OrderSetCustomLineItemCustomTypeAction
      */
     public OrderSetCustomLineItemCustomTypeAction buildUnchecked() {
-        return new OrderSetCustomLineItemCustomTypeActionImpl(customLineItemId, type, fields);
+        return new OrderSetCustomLineItemCustomTypeActionImpl(customLineItemId, customLineItemKey, type, fields);
     }
 
     /**
@@ -179,6 +202,7 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
             final OrderSetCustomLineItemCustomTypeAction template) {
         OrderSetCustomLineItemCustomTypeActionBuilder builder = new OrderSetCustomLineItemCustomTypeActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

@@ -15,7 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderSetBillingAddressAction
+ *  <p>This action updates the <code>billingAddress</code> on the Order, but it does not change the billing address on the referenced Cart from which the Order is created.</p>
+ *  <p>Produces the Order Billing Address Set Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +37,7 @@ public interface OrderSetBillingAddressAction extends OrderUpdateAction {
     String SET_BILLING_ADDRESS = "setBillingAddress";
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return address
      */
     @Valid
@@ -44,7 +45,7 @@ public interface OrderSetBillingAddressAction extends OrderUpdateAction {
     public BaseAddress getAddress();
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param address value to be set
      */
 

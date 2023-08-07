@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successfully applying an OrderEdit.</p>
+ *  <p>Generated after successfully applying an OrderEdit.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

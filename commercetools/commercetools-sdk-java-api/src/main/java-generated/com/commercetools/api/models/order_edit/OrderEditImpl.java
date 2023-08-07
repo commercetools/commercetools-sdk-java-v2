@@ -28,21 +28,21 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
-    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
-    private com.commercetools.api.models.common.CreatedBy createdBy;
-
     private String key;
 
     private com.commercetools.api.models.order.OrderReference resource;
 
     private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
 
-    private com.commercetools.api.models.type.CustomFields custom;
-
     private com.commercetools.api.models.order_edit.OrderEditResult result;
 
     private String comment;
+
+    private com.commercetools.api.models.type.CustomFields custom;
+
+    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+
+    private com.commercetools.api.models.common.CreatedBy createdBy;
 
     /**
      * create instance with all properties
@@ -51,26 +51,26 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     OrderEditImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
-            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
             @JsonProperty("key") final String key,
             @JsonProperty("resource") final com.commercetools.api.models.order.OrderReference resource,
             @JsonProperty("stagedActions") final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("result") final com.commercetools.api.models.order_edit.OrderEditResult result,
-            @JsonProperty("comment") final String comment) {
+            @JsonProperty("comment") final String comment,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
+            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
-        this.lastModifiedBy = lastModifiedBy;
-        this.createdBy = createdBy;
         this.key = key;
         this.resource = resource;
         this.stagedActions = stagedActions;
-        this.custom = custom;
         this.result = result;
         this.comment = comment;
+        this.custom = custom;
+        this.lastModifiedBy = lastModifiedBy;
+        this.createdBy = createdBy;
     }
 
     /**
@@ -80,7 +80,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the OrderEdit.</p>
+     *  <p>Unique identifier of the Order Edit.</p>
      */
 
     public String getId() {
@@ -88,7 +88,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     *  <p>The current version of the OrderEdit.</p>
+     *  <p>Current version of the Order Edit.</p>
      */
 
     public Long getVersion() {
@@ -96,7 +96,7 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Order Edit was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -104,11 +104,59 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Order Edit was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Order Edit.</p>
+     */
+
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Reference to the Order updated with this edit.</p>
+     */
+
+    public com.commercetools.api.models.order.OrderReference getResource() {
+        return this.resource;
+    }
+
+    /**
+     *  <p>Update actions applied to the Order referenced by <code>resource</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
+        return this.stagedActions;
+    }
+
+    /**
+     *  <p>For applied edits, it's a summary of the changes on the Order. For unapplied edits, it's a preview of the changes.</p>
+     */
+
+    public com.commercetools.api.models.order_edit.OrderEditResult getResult() {
+        return this.result;
+    }
+
+    /**
+     *  <p>User-defined information regarding the Order Edit.</p>
+     */
+
+    public String getComment() {
+        return this.comment;
+    }
+
+    /**
+     *  <p>Custom Fields of the Order Edit.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
     }
 
     /**
@@ -127,54 +175,6 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
         return this.createdBy;
     }
 
-    /**
-     *  <p>User-defined unique identifier of the OrderEdit.</p>
-     */
-
-    public String getKey() {
-        return this.key;
-    }
-
-    /**
-     *  <p>The order to be updated with this edit.</p>
-     */
-
-    public com.commercetools.api.models.order.OrderReference getResource() {
-        return this.resource;
-    }
-
-    /**
-     *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
-        return this.stagedActions;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
-     */
-
-    public com.commercetools.api.models.order_edit.OrderEditResult getResult() {
-        return this.result;
-    }
-
-    /**
-     *  <p>This field can be used to add textual information regarding the edit.</p>
-     */
-
-    public String getComment() {
-        return this.comment;
-    }
-
     public void setId(final String id) {
         this.id = id;
     }
@@ -189,14 +189,6 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
 
     public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
-    }
-
-    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-    }
-
-    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
-        this.createdBy = createdBy;
     }
 
     public void setKey(final String key) {
@@ -216,16 +208,24 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
         this.stagedActions = stagedActions;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
-        this.custom = custom;
-    }
-
     public void setResult(final com.commercetools.api.models.order_edit.OrderEditResult result) {
         this.result = result;
     }
 
     public void setComment(final String comment) {
         this.comment = comment;
+    }
+
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
+    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+        this.lastModifiedBy = lastModifiedBy;
+    }
+
+    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
+        this.createdBy = createdBy;
     }
 
     @Override
@@ -242,14 +242,26 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
-                .append(lastModifiedBy, that.lastModifiedBy)
-                .append(createdBy, that.createdBy)
                 .append(key, that.key)
                 .append(resource, that.resource)
                 .append(stagedActions, that.stagedActions)
-                .append(custom, that.custom)
                 .append(result, that.result)
                 .append(comment, that.comment)
+                .append(custom, that.custom)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
+                .append(resource, that.resource)
+                .append(stagedActions, that.stagedActions)
+                .append(result, that.result)
+                .append(comment, that.comment)
+                .append(custom, that.custom)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
                 .isEquals();
     }
 
@@ -259,14 +271,14 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
                 .append(version)
                 .append(createdAt)
                 .append(lastModifiedAt)
-                .append(lastModifiedBy)
-                .append(createdBy)
                 .append(key)
                 .append(resource)
                 .append(stagedActions)
-                .append(custom)
                 .append(result)
                 .append(comment)
+                .append(custom)
+                .append(lastModifiedBy)
+                .append(createdBy)
                 .toHashCode();
     }
 

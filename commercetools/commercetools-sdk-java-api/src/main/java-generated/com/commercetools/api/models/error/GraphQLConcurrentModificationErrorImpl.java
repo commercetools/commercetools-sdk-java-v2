@@ -92,6 +92,9 @@ public class GraphQLConcurrentModificationErrorImpl implements GraphQLConcurrent
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(currentVersion, that.currentVersion)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(currentVersion, that.currentVersion)
                 .isEquals();
     }
 

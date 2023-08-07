@@ -160,6 +160,13 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
                 .append(name, that.name)
                 .append(customLineItem, that.customLineItem)
                 .append(customLineItemId, that.customLineItemId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(name, that.name)
+                .append(customLineItem, that.customLineItem)
+                .append(customLineItemId, that.customLineItemId)
                 .isEquals();
     }
 

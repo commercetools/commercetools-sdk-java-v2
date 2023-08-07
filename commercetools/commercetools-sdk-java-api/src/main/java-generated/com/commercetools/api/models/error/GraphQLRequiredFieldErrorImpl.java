@@ -92,6 +92,9 @@ public class GraphQLRequiredFieldErrorImpl implements GraphQLRequiredFieldError,
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(field, that.field)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(field, that.field)
                 .isEquals();
     }
 

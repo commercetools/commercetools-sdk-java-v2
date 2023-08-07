@@ -38,7 +38,7 @@ public class PaymentInfoImpl implements PaymentInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>References to the Payments associated with the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.payment.PaymentReference> getPayments() {
@@ -63,7 +63,7 @@ public class PaymentInfoImpl implements PaymentInfo, ModelBase {
 
         PaymentInfoImpl that = (PaymentInfoImpl) o;
 
-        return new EqualsBuilder().append(payments, that.payments).isEquals();
+        return new EqualsBuilder().append(payments, that.payments).append(payments, that.payments).isEquals();
     }
 
     @Override

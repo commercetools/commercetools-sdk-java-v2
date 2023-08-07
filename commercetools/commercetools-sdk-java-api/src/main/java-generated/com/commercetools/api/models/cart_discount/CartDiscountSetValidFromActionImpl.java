@@ -70,7 +70,11 @@ public class CartDiscountSetValidFromActionImpl implements CartDiscountSetValidF
 
         CartDiscountSetValidFromActionImpl that = (CartDiscountSetValidFromActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(validFrom, that.validFrom).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(validFrom, that.validFrom)
+                .append(action, that.action)
+                .append(validFrom, that.validFrom)
+                .isEquals();
     }
 
     @Override

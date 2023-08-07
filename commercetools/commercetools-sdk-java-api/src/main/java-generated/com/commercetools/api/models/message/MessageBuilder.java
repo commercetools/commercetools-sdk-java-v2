@@ -103,8 +103,8 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.BusinessUnitNameChangedMessageBuilder.of();
     }
 
-    public com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageBuilder businessUnitParentUnitChangedBuilder() {
-        return com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageBuilder.of();
+    public com.commercetools.api.models.message.BusinessUnitParentChangedMessageBuilder businessUnitParentChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitParentChangedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessageBuilder businessUnitShippingAddressAddedBuilder() {
@@ -243,6 +243,18 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.OrderCreatedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.OrderCustomFieldAddedMessageBuilder orderCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderCustomFieldChangedMessageBuilder orderCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderCustomFieldRemovedMessageBuilder orderCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldRemovedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.OrderCustomLineItemAddedMessageBuilder orderCustomLineItemAddedBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemAddedMessageBuilder.of();
     }
@@ -257,6 +269,14 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageBuilder orderCustomLineItemRemovedBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderCustomTypeRemovedMessageBuilder orderCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomTypeRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderCustomTypeSetMessageBuilder orderCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.OrderCustomTypeSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.OrderCustomerEmailSetMessageBuilder orderCustomerEmailSetBuilder() {

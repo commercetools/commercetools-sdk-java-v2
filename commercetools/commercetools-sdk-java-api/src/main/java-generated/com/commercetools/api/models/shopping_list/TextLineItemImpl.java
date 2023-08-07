@@ -144,6 +144,12 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
                 .append(id, that.id)
                 .append(name, that.name)
                 .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(description, that.description)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(quantity, that.quantity)
                 .isEquals();
     }
 

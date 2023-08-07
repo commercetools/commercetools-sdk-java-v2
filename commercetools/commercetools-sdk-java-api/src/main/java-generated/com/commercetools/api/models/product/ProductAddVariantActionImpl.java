@@ -189,6 +189,14 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
                 .append(attributes, that.attributes)
                 .append(staged, that.staged)
                 .append(assets, that.assets)
+                .append(action, that.action)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(prices, that.prices)
+                .append(images, that.images)
+                .append(attributes, that.attributes)
+                .append(staged, that.staged)
+                .append(assets, that.assets)
                 .isEquals();
     }
 

@@ -98,6 +98,9 @@ public class StandalonePriceTiersSetMessagePayloadImpl implements StandalonePric
         return new EqualsBuilder().append(type, that.type)
                 .append(tiers, that.tiers)
                 .append(previousTiers, that.previousTiers)
+                .append(type, that.type)
+                .append(tiers, that.tiers)
+                .append(previousTiers, that.previousTiers)
                 .isEquals();
     }
 

@@ -73,7 +73,11 @@ public class TaskTokenImpl implements TaskToken, ModelBase {
 
         TaskTokenImpl that = (TaskTokenImpl) o;
 
-        return new EqualsBuilder().append(taskId, that.taskId).append(uriPath, that.uriPath).isEquals();
+        return new EqualsBuilder().append(taskId, that.taskId)
+                .append(uriPath, that.uriPath)
+                .append(taskId, that.taskId)
+                .append(uriPath, that.uriPath)
+                .isEquals();
     }
 
     @Override

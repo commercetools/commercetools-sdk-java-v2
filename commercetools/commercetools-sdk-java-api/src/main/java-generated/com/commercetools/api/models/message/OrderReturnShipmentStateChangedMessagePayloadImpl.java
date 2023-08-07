@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Set Return Shipment State update action.</p>
+ *  <p>Generated after a successful Set ReturnShipmentState update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReturnShipmentStateChangedMessagePayloadImpl
@@ -89,6 +89,9 @@ public class OrderReturnShipmentStateChangedMessagePayloadImpl
         OrderReturnShipmentStateChangedMessagePayloadImpl that = (OrderReturnShipmentStateChangedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(returnItemId, that.returnItemId)
+                .append(returnShipmentState, that.returnShipmentState)
+                .append(type, that.type)
                 .append(returnItemId, that.returnItemId)
                 .append(returnShipmentState, that.returnShipmentState)
                 .isEquals();

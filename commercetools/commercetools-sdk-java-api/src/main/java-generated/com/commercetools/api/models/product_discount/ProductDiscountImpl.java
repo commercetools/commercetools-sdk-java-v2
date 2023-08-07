@@ -316,6 +316,22 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
                 .append(references, that.references)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(value, that.value)
+                .append(predicate, that.predicate)
+                .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
+                .append(references, that.references)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
                 .isEquals();
     }
 

@@ -82,7 +82,11 @@ public class ItemShippingDetailsImpl implements ItemShippingDetails, ModelBase {
 
         ItemShippingDetailsImpl that = (ItemShippingDetailsImpl) o;
 
-        return new EqualsBuilder().append(targets, that.targets).append(valid, that.valid).isEquals();
+        return new EqualsBuilder().append(targets, that.targets)
+                .append(valid, that.valid)
+                .append(targets, that.targets)
+                .append(valid, that.valid)
+                .isEquals();
     }
 
     @Override

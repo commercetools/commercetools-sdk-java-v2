@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderExcerpt
+ *  <p>Excerpt of the Order extracting the total and the taxed price.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderExcerpt {
 
     /**
-     *
+     *  <p>Total price of the Order.</p>
      * @return totalPrice
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface OrderExcerpt {
     public TypedMoney getTotalPrice();
 
     /**
-     *
+     *  <p>Taxed price of the Order.</p>
      * @return taxedPrice
      */
     @Valid
@@ -52,7 +52,7 @@ public interface OrderExcerpt {
     public TaxedPrice getTaxedPrice();
 
     /**
-     *
+     *  <p>Current version of the Order.</p>
      * @return version
      */
     @NotNull
@@ -60,21 +60,21 @@ public interface OrderExcerpt {
     public Long getVersion();
 
     /**
-     * set totalPrice
+     *  <p>Total price of the Order.</p>
      * @param totalPrice value to be set
      */
 
     public void setTotalPrice(final TypedMoney totalPrice);
 
     /**
-     * set taxedPrice
+     *  <p>Taxed price of the Order.</p>
      * @param taxedPrice value to be set
      */
 
     public void setTaxedPrice(final TaxedPrice taxedPrice);
 
     /**
-     * set version
+     *  <p>Current version of the Order.</p>
      * @param version value to be set
      */
 

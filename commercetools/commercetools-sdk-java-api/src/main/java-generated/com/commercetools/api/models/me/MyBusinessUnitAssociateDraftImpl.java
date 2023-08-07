@@ -61,7 +61,7 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
     }
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> getAssociateRoleAssignments() {
@@ -97,6 +97,9 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
         MyBusinessUnitAssociateDraftImpl that = (MyBusinessUnitAssociateDraftImpl) o;
 
         return new EqualsBuilder().append(version, that.version)
+                .append(customer, that.customer)
+                .append(associateRoleAssignments, that.associateRoleAssignments)
+                .append(version, that.version)
                 .append(customer, that.customer)
                 .append(associateRoleAssignments, that.associateRoleAssignments)
                 .isEquals();

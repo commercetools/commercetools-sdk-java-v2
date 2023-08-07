@@ -18,14 +18,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderTransitionCustomLineItemStateAction
+ *  <p>Produces the Custom Line Item State Transition Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderTransitionCustomLineItemStateAction stagedOrderTransitionCustomLineItemStateAction = StagedOrderTransitionCustomLineItemStateAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .quantity(0.3)
  *             .fromState(fromStateBuilder -> fromStateBuilder)
  *             .toState(toStateBuilder -> toStateBuilder)
@@ -43,15 +42,23 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     String TRANSITION_CUSTOM_LINE_ITEM_STATE = "transitionCustomLineItemState";
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
-    @NotNull
+
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
+     *  <p>Number of Custom Line Items that should transition State.</p>
      * @return quantity
      */
     @NotNull
@@ -59,7 +66,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public Long getQuantity();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition from.</p>
      * @return fromState
      */
     @NotNull
@@ -68,7 +75,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public StateResourceIdentifier getFromState();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition to.</p>
      * @return toState
      */
     @NotNull
@@ -77,7 +84,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public StateResourceIdentifier getToState();
 
     /**
-     *
+     *  <p>Date and time (UTC) to perform the State transition.</p>
      * @return actualTransitionDate
      */
 
@@ -85,35 +92,42 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     public ZonedDateTime getActualTransitionDate();
 
     /**
-     * set customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     * set quantity
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
+
+    /**
+     *  <p>Number of Custom Line Items that should transition State.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition from.</p>
      * @param fromState value to be set
      */
 
     public void setFromState(final StateResourceIdentifier fromState);
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition to.</p>
      * @param toState value to be set
      */
 
     public void setToState(final StateResourceIdentifier toState);
 
     /**
-     * set actualTransitionDate
+     *  <p>Date and time (UTC) to perform the State transition.</p>
      * @param actualTransitionDate value to be set
      */
 
@@ -136,6 +150,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
             final StagedOrderTransitionCustomLineItemStateAction template) {
         StagedOrderTransitionCustomLineItemStateActionImpl instance = new StagedOrderTransitionCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setFromState(template.getFromState());
         instance.setToState(template.getToState());
@@ -156,6 +171,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
         }
         StagedOrderTransitionCustomLineItemStateActionImpl instance = new StagedOrderTransitionCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setFromState(
             com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getFromState()));

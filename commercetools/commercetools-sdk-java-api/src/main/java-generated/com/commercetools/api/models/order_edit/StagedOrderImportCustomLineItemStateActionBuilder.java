@@ -4,6 +4,8 @@ package com.commercetools.api.models.order_edit;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderImportCustomLineItemStateAction stagedOrderImportCustomLineItemStateAction = StagedOrderImportCustomLineItemStateAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .plusState(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
@@ -24,23 +25,39 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderImportCustomLineItemStateActionBuilder
         implements Builder<StagedOrderImportCustomLineItemStateAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderImportCustomLineItemStateActionBuilder customLineItemId(final String customLineItemId) {
+    public StagedOrderImportCustomLineItemStateActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     * set values to the state
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderImportCustomLineItemStateActionBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>New status of the Custom Line Items.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -52,7 +69,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     * set value to the state
+     *  <p>New status of the Custom Line Items.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -64,7 +81,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     * add values to the state
+     *  <p>New status of the Custom Line Items.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -79,7 +96,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     * add the value to the state using the builder function
+     *  <p>New status of the Custom Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -94,7 +111,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>New status of the Custom Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -107,7 +124,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     * add the value to the state using the builder function
+     *  <p>New status of the Custom Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -118,7 +135,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>New status of the Custom Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -129,16 +146,27 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
     /**
-     * value of state}
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>New status of the Custom Line Items.</p>
      * @return state
      */
 
@@ -151,10 +179,8 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
      * @return StagedOrderImportCustomLineItemStateAction
      */
     public StagedOrderImportCustomLineItemStateAction build() {
-        Objects.requireNonNull(customLineItemId,
-            StagedOrderImportCustomLineItemStateAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(state, StagedOrderImportCustomLineItemStateAction.class + ": state is missing");
-        return new StagedOrderImportCustomLineItemStateActionImpl(customLineItemId, state);
+        return new StagedOrderImportCustomLineItemStateActionImpl(customLineItemId, customLineItemKey, state);
     }
 
     /**
@@ -162,7 +188,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
      * @return StagedOrderImportCustomLineItemStateAction
      */
     public StagedOrderImportCustomLineItemStateAction buildUnchecked() {
-        return new StagedOrderImportCustomLineItemStateActionImpl(customLineItemId, state);
+        return new StagedOrderImportCustomLineItemStateActionImpl(customLineItemId, customLineItemKey, state);
     }
 
     /**
@@ -182,6 +208,7 @@ public class StagedOrderImportCustomLineItemStateActionBuilder
             final StagedOrderImportCustomLineItemStateAction template) {
         StagedOrderImportCustomLineItemStateActionBuilder builder = new StagedOrderImportCustomLineItemStateActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.state = template.getState();
         return builder;
     }

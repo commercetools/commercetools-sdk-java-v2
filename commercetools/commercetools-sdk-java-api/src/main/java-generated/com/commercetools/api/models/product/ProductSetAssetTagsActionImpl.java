@@ -159,6 +159,13 @@ public class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction,
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
                 .append(tags, that.tags)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(tags, that.tags)
                 .isEquals();
     }
 

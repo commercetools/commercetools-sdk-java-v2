@@ -53,14 +53,6 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     public String getAnonymousId();
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     * @return externalId
-     */
-
-    @JsonProperty("externalId")
-    public String getExternalId();
-
-    /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
      * @return interfaceId
      */
@@ -76,38 +68,6 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     @Valid
     @JsonProperty("amountPlanned")
     public Money getAmountPlanned();
-
-    /**
-     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
-     * @return amountAuthorized
-     */
-    @Valid
-    @JsonProperty("amountAuthorized")
-    public Money getAmountAuthorized();
-
-    /**
-     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
-     * @return authorizedUntil
-     */
-
-    @JsonProperty("authorizedUntil")
-    public String getAuthorizedUntil();
-
-    /**
-     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
-     * @return amountPaid
-     */
-    @Valid
-    @JsonProperty("amountPaid")
-    public Money getAmountPaid();
-
-    /**
-     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
-     * @return amountRefunded
-     */
-    @Valid
-    @JsonProperty("amountRefunded")
-    public Money getAmountRefunded();
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
@@ -172,13 +132,6 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     * @param externalId value to be set
-     */
-
-    public void setExternalId(final String externalId);
-
-    /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique. Once set, it cannot be changed.</p>
      * @param interfaceId value to be set
      */
@@ -191,34 +144,6 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
      */
 
     public void setAmountPlanned(final Money amountPlanned);
-
-    /**
-     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountAuthorized value to be set
-     */
-
-    public void setAmountAuthorized(final Money amountAuthorized);
-
-    /**
-     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
-     * @param authorizedUntil value to be set
-     */
-
-    public void setAuthorizedUntil(final String authorizedUntil);
-
-    /**
-     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountPaid value to be set
-     */
-
-    public void setAmountPaid(final Money amountPaid);
-
-    /**
-     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountRefunded value to be set
-     */
-
-    public void setAmountRefunded(final Money amountRefunded);
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
@@ -295,13 +220,8 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
         PaymentDraftImpl instance = new PaymentDraftImpl();
         instance.setCustomer(template.getCustomer());
         instance.setAnonymousId(template.getAnonymousId());
-        instance.setExternalId(template.getExternalId());
         instance.setInterfaceId(template.getInterfaceId());
         instance.setAmountPlanned(template.getAmountPlanned());
-        instance.setAmountAuthorized(template.getAmountAuthorized());
-        instance.setAuthorizedUntil(template.getAuthorizedUntil());
-        instance.setAmountPaid(template.getAmountPaid());
-        instance.setAmountRefunded(template.getAmountRefunded());
         instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
         instance.setPaymentStatus(template.getPaymentStatus());
         instance.setTransactions(template.getTransactions());
@@ -325,14 +245,8 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
         instance.setCustomer(
             com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         instance.setAnonymousId(template.getAnonymousId());
-        instance.setExternalId(template.getExternalId());
         instance.setInterfaceId(template.getInterfaceId());
         instance.setAmountPlanned(com.commercetools.api.models.common.Money.deepCopy(template.getAmountPlanned()));
-        instance.setAmountAuthorized(
-            com.commercetools.api.models.common.Money.deepCopy(template.getAmountAuthorized()));
-        instance.setAuthorizedUntil(template.getAuthorizedUntil());
-        instance.setAmountPaid(com.commercetools.api.models.common.Money.deepCopy(template.getAmountPaid()));
-        instance.setAmountRefunded(com.commercetools.api.models.common.Money.deepCopy(template.getAmountRefunded()));
         instance.setPaymentMethodInfo(
             com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
         instance.setPaymentStatus(

@@ -161,6 +161,13 @@ public class TransactionImpl implements Transaction, ModelBase {
                 .append(interactionId, that.interactionId)
                 .append(state, that.state)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(timestamp, that.timestamp)
+                .append(type, that.type)
+                .append(amount, that.amount)
+                .append(interactionId, that.interactionId)
+                .append(state, that.state)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

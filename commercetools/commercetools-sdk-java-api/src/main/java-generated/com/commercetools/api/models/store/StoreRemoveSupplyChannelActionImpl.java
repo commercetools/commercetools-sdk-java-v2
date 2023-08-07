@@ -71,7 +71,11 @@ public class StoreRemoveSupplyChannelActionImpl implements StoreRemoveSupplyChan
 
         StoreRemoveSupplyChannelActionImpl that = (StoreRemoveSupplyChannelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(supplyChannel, that.supplyChannel).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(supplyChannel, that.supplyChannel)
+                .append(action, that.action)
+                .append(supplyChannel, that.supplyChannel)
+                .isEquals();
     }
 
     @Override

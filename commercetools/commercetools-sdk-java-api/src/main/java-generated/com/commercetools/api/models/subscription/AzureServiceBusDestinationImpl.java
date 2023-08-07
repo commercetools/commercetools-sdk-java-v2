@@ -70,7 +70,11 @@ public class AzureServiceBusDestinationImpl implements AzureServiceBusDestinatio
 
         AzureServiceBusDestinationImpl that = (AzureServiceBusDestinationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(connectionString, that.connectionString).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(connectionString, that.connectionString)
+                .append(type, that.type)
+                .append(connectionString, that.connectionString)
+                .isEquals();
     }
 
     @Override

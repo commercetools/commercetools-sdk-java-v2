@@ -15,14 +15,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderChangeCustomLineItemQuantityAction
+ *  <p>When multiple shipping addresses are set for a Custom Line Item, use the Add CustomLineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Custom Line Item quantity should be distributed over the sub-quantities, the <code>shippingDetails</code> field is kept in its current state to avoid data loss.</p>
+ *  <p>To change the Custom Line Item quantity and shipping details together, use this update action in combination with the Set CustomLineItem ShippingDetails update action in a single Order update command.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderChangeCustomLineItemQuantityAction stagedOrderChangeCustomLineItemQuantityAction = StagedOrderChangeCustomLineItemQuantityAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -38,15 +38,23 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
     String CHANGE_CUSTOM_LINE_ITEM_QUANTITY = "changeCustomLineItemQuantity";
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
-    @NotNull
+
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
+     *  <p>New value to set. If <code>0</code>, the Custom Line Item is removed from the Order.</p>
      * @return quantity
      */
     @NotNull
@@ -54,14 +62,21 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
     public Long getQuantity();
 
     /**
-     * set customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     * set quantity
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
+
+    /**
+     *  <p>New value to set. If <code>0</code>, the Custom Line Item is removed from the Order.</p>
      * @param quantity value to be set
      */
 
@@ -84,6 +99,7 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
             final StagedOrderChangeCustomLineItemQuantityAction template) {
         StagedOrderChangeCustomLineItemQuantityActionImpl instance = new StagedOrderChangeCustomLineItemQuantityActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setQuantity(template.getQuantity());
         return instance;
     }
@@ -101,6 +117,7 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
         }
         StagedOrderChangeCustomLineItemQuantityActionImpl instance = new StagedOrderChangeCustomLineItemQuantityActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setQuantity(template.getQuantity());
         return instance;
     }

@@ -70,7 +70,11 @@ public class CustomerPasswordUpdatedMessagePayloadImpl implements CustomerPasswo
 
         CustomerPasswordUpdatedMessagePayloadImpl that = (CustomerPasswordUpdatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(reset, that.reset).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(reset, that.reset)
+                .append(type, that.type)
+                .append(reset, that.reset)
+                .isEquals();
     }
 
     @Override

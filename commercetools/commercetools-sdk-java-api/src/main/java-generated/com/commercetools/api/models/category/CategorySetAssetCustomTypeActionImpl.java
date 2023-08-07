@@ -123,6 +123,11 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
                 .append(assetKey, that.assetKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 

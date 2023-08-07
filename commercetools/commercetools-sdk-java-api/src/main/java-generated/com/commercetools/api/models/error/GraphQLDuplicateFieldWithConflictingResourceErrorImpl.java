@@ -128,6 +128,11 @@ public class GraphQLDuplicateFieldWithConflictingResourceErrorImpl
                 .append(field, that.field)
                 .append(duplicateValue, that.duplicateValue)
                 .append(conflictingResource, that.conflictingResource)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(field, that.field)
+                .append(duplicateValue, that.duplicateValue)
+                .append(conflictingResource, that.conflictingResource)
                 .isEquals();
     }
 

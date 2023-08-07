@@ -18,6 +18,12 @@ public class OrderPagedQueryResponseQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderPagedQueryResponseQueryBuilderDsl::of));
     }
 
+    public LongComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl> offset() {
+        return new LongComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("offset")),
+            p -> new CombinationQueryPredicate<>(p, OrderPagedQueryResponseQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl> count() {
         return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("count")),
             p -> new CombinationQueryPredicate<>(p, OrderPagedQueryResponseQueryBuilderDsl::of));
@@ -25,12 +31,6 @@ public class OrderPagedQueryResponseQueryBuilderDsl {
 
     public LongComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl> total() {
         return new LongComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("total")),
-            p -> new CombinationQueryPredicate<>(p, OrderPagedQueryResponseQueryBuilderDsl::of));
-    }
-
-    public LongComparisonPredicateBuilder<OrderPagedQueryResponseQueryBuilderDsl> offset() {
-        return new LongComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("offset")),
             p -> new CombinationQueryPredicate<>(p, OrderPagedQueryResponseQueryBuilderDsl::of));
     }
 

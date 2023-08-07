@@ -26,7 +26,7 @@ public class OrderEditSetKeyActionBuilder implements Builder<OrderEditSetKeyActi
     private String key;
 
     /**
-     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderEditSetKeyActionBuilder implements Builder<OrderEditSetKeyActi
     }
 
     /**
-     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return key
      */
 

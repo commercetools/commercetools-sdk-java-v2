@@ -77,6 +77,8 @@ public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
 
         return new EqualsBuilder().append(url, that.url)
                 .append(authorizationHeader, that.authorizationHeader)
+                .append(url, that.url)
+                .append(authorizationHeader, that.authorizationHeader)
                 .isEquals();
     }
 

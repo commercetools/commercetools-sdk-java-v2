@@ -70,7 +70,11 @@ public class BusinessUnitChangeStatusActionImpl implements BusinessUnitChangeSta
 
         BusinessUnitChangeStatusActionImpl that = (BusinessUnitChangeStatusActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(status, that.status).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(status, that.status)
+                .append(action, that.action)
+                .append(status, that.status)
+                .isEquals();
     }
 
     @Override

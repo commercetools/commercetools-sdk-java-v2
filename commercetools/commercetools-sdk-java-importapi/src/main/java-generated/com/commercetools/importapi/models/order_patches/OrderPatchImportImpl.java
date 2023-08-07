@@ -74,7 +74,11 @@ public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
 
         OrderPatchImportImpl that = (OrderPatchImportImpl) o;
 
-        return new EqualsBuilder().append(orderNumber, that.orderNumber).append(fields, that.fields).isEquals();
+        return new EqualsBuilder().append(orderNumber, that.orderNumber)
+                .append(fields, that.fields)
+                .append(orderNumber, that.orderNumber)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

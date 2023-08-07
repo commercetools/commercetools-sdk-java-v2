@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetLineItemTaxRateAction
+ *  <p>Can be used if the Cart has the <code>External</code> TaxMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLineItemTaxRateAction, ModelBase {
@@ -77,7 +77,7 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -119,6 +119,11 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
         StagedOrderSetLineItemTaxRateActionImpl that = (StagedOrderSetLineItemTaxRateActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(shippingKey, that.shippingKey)
+                .append(action, that.action)
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(externalTaxRate, that.externalTaxRate)

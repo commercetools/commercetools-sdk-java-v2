@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetParcelItemsAction
+ *  <p>Produces the ParcelItemsUpdated Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetParcelItemsActionImpl implements StagedOrderSetParcelItemsAction, ModelBase {
@@ -57,7 +57,8 @@ public class StagedOrderSetParcelItemsActionImpl implements StagedOrderSetParcel
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelId() {
@@ -65,7 +66,8 @@ public class StagedOrderSetParcelItemsActionImpl implements StagedOrderSetParcel
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelKey() {
@@ -73,7 +75,7 @@ public class StagedOrderSetParcelItemsActionImpl implements StagedOrderSetParcel
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -107,6 +109,10 @@ public class StagedOrderSetParcelItemsActionImpl implements StagedOrderSetParcel
         StagedOrderSetParcelItemsActionImpl that = (StagedOrderSetParcelItemsActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(parcelId, that.parcelId)
+                .append(parcelKey, that.parcelKey)
+                .append(items, that.items)
+                .append(action, that.action)
                 .append(parcelId, that.parcelId)
                 .append(parcelKey, that.parcelKey)
                 .append(items, that.items)

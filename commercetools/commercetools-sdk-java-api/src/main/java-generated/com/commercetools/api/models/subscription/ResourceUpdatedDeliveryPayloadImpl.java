@@ -157,6 +157,13 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
                 .append(version, that.version)
                 .append(oldVersion, that.oldVersion)
                 .append(modifiedAt, that.modifiedAt)
+                .append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(version, that.version)
+                .append(oldVersion, that.oldVersion)
+                .append(modifiedAt, that.modifiedAt)
                 .isEquals();
     }
 

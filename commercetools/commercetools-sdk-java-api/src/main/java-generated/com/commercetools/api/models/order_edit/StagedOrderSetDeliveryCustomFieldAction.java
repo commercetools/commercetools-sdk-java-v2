@@ -37,7 +37,8 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
     String SET_DELIVERY_CUSTOM_FIELD = "setDeliveryCustomField";
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
 
@@ -45,7 +46,8 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
     public String getDeliveryId();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
 
@@ -69,14 +71,16 @@ public interface StagedOrderSetDeliveryCustomFieldAction extends StagedOrderUpda
     public Object getValue();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      */
 

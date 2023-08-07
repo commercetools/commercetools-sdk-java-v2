@@ -311,6 +311,22 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
                 .append(oldAvailableQuantity, that.oldAvailableQuantity)
                 .append(newAvailableQuantity, that.newAvailableQuantity)
                 .append(supplyChannel, that.supplyChannel)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(oldQuantityOnStock, that.oldQuantityOnStock)
+                .append(newQuantityOnStock, that.newQuantityOnStock)
+                .append(oldAvailableQuantity, that.oldAvailableQuantity)
+                .append(newAvailableQuantity, that.newAvailableQuantity)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 

@@ -175,6 +175,13 @@ public class StateDraftImpl implements StateDraft, ModelBase {
                 .append(initial, that.initial)
                 .append(roles, that.roles)
                 .append(transitions, that.transitions)
+                .append(key, that.key)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(initial, that.initial)
+                .append(roles, that.roles)
+                .append(transitions, that.transitions)
                 .isEquals();
     }
 

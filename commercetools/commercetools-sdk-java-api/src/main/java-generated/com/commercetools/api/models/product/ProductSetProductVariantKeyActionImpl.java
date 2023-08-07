@@ -122,6 +122,11 @@ public class ProductSetProductVariantKeyActionImpl implements ProductSetProductV
                 .append(sku, that.sku)
                 .append(key, that.key)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

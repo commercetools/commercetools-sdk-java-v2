@@ -28,7 +28,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     private java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads;
 
     /**
-     * set the value to the preview using the builder function
+     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
      * @param builder function to build the preview value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     * set the value to the preview using the builder function
+     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
      * @param builder function to build the preview value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     * set the value to the preview
+     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
      * @param preview value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     * set values to the messagePayloads
+     *  <p>Messages that will be generated if the edit is applied.</p>
      * @param messagePayloads value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     * set value to the messagePayloads
+     *  <p>Messages that will be generated if the edit is applied.</p>
      * @param messagePayloads value to be set
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     * add values to the messagePayloads
+     *  <p>Messages that will be generated if the edit is applied.</p>
      * @param messagePayloads value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     * add a value to the messagePayloads using the builder function
+     *  <p>Messages that will be generated if the edit is applied.</p>
      * @param builder function to build the messagePayloads value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     * set the value to the messagePayloads using the builder function
+     *  <p>Messages that will be generated if the edit is applied.</p>
      * @param builder function to build the messagePayloads value
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     * value of preview}
+     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
      * @return preview
      */
 
@@ -141,7 +141,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     * value of messagePayloads}
+     *  <p>Messages that will be generated if the edit is applied.</p>
      * @return messagePayloads
      */
 

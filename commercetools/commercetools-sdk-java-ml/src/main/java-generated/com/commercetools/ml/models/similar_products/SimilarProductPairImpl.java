@@ -79,7 +79,11 @@ public class SimilarProductPairImpl implements SimilarProductPair, ModelBase {
 
         SimilarProductPairImpl that = (SimilarProductPairImpl) o;
 
-        return new EqualsBuilder().append(confidence, that.confidence).append(products, that.products).isEquals();
+        return new EqualsBuilder().append(confidence, that.confidence)
+                .append(products, that.products)
+                .append(confidence, that.confidence)
+                .append(products, that.products)
+                .isEquals();
     }
 
     @Override

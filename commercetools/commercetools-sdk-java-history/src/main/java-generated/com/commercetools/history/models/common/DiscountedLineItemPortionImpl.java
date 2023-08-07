@@ -77,6 +77,8 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
 
         return new EqualsBuilder().append(discount, that.discount)
                 .append(discountedAmount, that.discountedAmount)
+                .append(discount, that.discount)
+                .append(discountedAmount, that.discountedAmount)
                 .isEquals();
     }
 

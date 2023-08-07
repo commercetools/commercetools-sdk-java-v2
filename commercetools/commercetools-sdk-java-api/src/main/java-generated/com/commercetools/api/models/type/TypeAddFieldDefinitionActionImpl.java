@@ -72,7 +72,11 @@ public class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefinitionA
 
         TypeAddFieldDefinitionActionImpl that = (TypeAddFieldDefinitionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(fieldDefinition, that.fieldDefinition).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(fieldDefinition, that.fieldDefinition)
+                .append(action, that.action)
+                .append(fieldDefinition, that.fieldDefinition)
+                .isEquals();
     }
 
     @Override

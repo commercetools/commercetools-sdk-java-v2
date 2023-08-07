@@ -171,6 +171,13 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(deliveries, that.deliveries)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(shippingMethod, that.shippingMethod)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(deliveries, that.deliveries)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

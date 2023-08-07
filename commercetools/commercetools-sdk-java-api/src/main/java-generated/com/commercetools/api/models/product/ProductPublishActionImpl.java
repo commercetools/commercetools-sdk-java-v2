@@ -70,7 +70,11 @@ public class ProductPublishActionImpl implements ProductPublishAction, ModelBase
 
         ProductPublishActionImpl that = (ProductPublishActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(scope, that.scope).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(scope, that.scope)
+                .append(action, that.action)
+                .append(scope, that.scope)
+                .isEquals();
     }
 
     @Override

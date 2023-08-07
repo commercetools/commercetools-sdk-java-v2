@@ -144,6 +144,12 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
                 .append(customerId, that.customerId)
                 .append(expiresAt, that.expiresAt)
                 .append(value, that.value)
+                .append(id, that.id)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(customerId, that.customerId)
+                .append(expiresAt, that.expiresAt)
+                .append(value, that.value)
                 .isEquals();
     }
 

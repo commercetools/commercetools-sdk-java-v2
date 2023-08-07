@@ -188,7 +188,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Effect of the CartDiscount.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
@@ -204,7 +204,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     *  <p>Segment of the Cart that is discounted.</p>
+     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
@@ -389,6 +390,27 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
         CartDiscountImpl that = (CartDiscountImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(value, that.value)
+                .append(cartPredicate, that.cartPredicate)
+                .append(target, that.target)
+                .append(sortOrder, that.sortOrder)
+                .append(stores, that.stores)
+                .append(isActive, that.isActive)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(requiresDiscountCode, that.requiresDiscountCode)
+                .append(references, that.references)
+                .append(stackingMode, that.stackingMode)
+                .append(custom, that.custom)
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)

@@ -94,6 +94,9 @@ public class BusinessUnitSetStoreModeActionImpl implements BusinessUnitSetStoreM
         return new EqualsBuilder().append(action, that.action)
                 .append(storeMode, that.storeMode)
                 .append(stores, that.stores)
+                .append(action, that.action)
+                .append(storeMode, that.storeMode)
+                .append(stores, that.stores)
                 .isEquals();
     }
 

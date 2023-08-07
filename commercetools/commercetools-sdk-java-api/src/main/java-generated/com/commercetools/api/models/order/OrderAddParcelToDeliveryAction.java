@@ -15,7 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderAddParcelToDeliveryAction
+ *  <p>To add a Parcel, at least one Delivery must exist.</p>
+ *  <p>Produces the Parcel Added To Delivery Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +37,8 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     String ADD_PARCEL_TO_DELIVERY = "addParcelToDelivery";
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
 
@@ -44,7 +46,8 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public String getDeliveryId();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
 
@@ -52,7 +55,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public String getDeliveryKey();
 
     /**
-     *
+     *  <p><code>key</code> of an existing Parcel.</p>
      * @return parcelKey
      */
 
@@ -60,7 +63,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public String getParcelKey();
 
     /**
-     *
+     *  <p>Value to set.</p>
      * @return measurements
      */
     @Valid
@@ -68,7 +71,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public ParcelMeasurements getMeasurements();
 
     /**
-     *
+     *  <p>Value to set.</p>
      * @return trackingData
      */
     @Valid
@@ -76,7 +79,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public TrackingData getTrackingData();
 
     /**
-     *
+     *  <p>Value to set.</p>
      * @return items
      */
     @Valid
@@ -84,42 +87,44 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      */
 
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     * set parcelKey
+     *  <p><code>key</code> of an existing Parcel.</p>
      * @param parcelKey value to be set
      */
 
     public void setParcelKey(final String parcelKey);
 
     /**
-     * set measurements
+     *  <p>Value to set.</p>
      * @param measurements value to be set
      */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
     /**
-     * set trackingData
+     *  <p>Value to set.</p>
      * @param trackingData value to be set
      */
 
     public void setTrackingData(final TrackingData trackingData);
 
     /**
-     * set items
+     *  <p>Value to set.</p>
      * @param items values to be set
      */
 
@@ -127,7 +132,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Value to set.</p>
      * @param items values to be set
      */
 

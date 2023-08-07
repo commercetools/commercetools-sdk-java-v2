@@ -92,6 +92,9 @@ public class OrderSearchQueryExpressionValueImpl implements OrderSearchQueryExpr
         return new EqualsBuilder().append(field, that.field)
                 .append(boost, that.boost)
                 .append(customType, that.customType)
+                .append(field, that.field)
+                .append(boost, that.boost)
+                .append(customType, that.customType)
                 .isEquals();
     }
 

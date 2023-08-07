@@ -73,7 +73,11 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadImpl
 
         StandalonePriceStagedChangesAppliedMessagePayloadImpl that = (StandalonePriceStagedChangesAppliedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(stagedChanges, that.stagedChanges).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(stagedChanges, that.stagedChanges)
+                .append(type, that.type)
+                .append(stagedChanges, that.stagedChanges)
+                .isEquals();
     }
 
     @Override

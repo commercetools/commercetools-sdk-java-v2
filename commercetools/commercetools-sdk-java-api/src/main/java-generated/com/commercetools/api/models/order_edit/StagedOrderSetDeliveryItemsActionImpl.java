@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetDeliveryItemsAction
+ *  <p>Produces the Delivery Items Updated Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeliveryItemsAction, ModelBase {
@@ -57,7 +57,8 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryId() {
@@ -65,7 +66,8 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryKey() {
@@ -73,7 +75,7 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -107,6 +109,10 @@ public class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderSetDeli
         StagedOrderSetDeliveryItemsActionImpl that = (StagedOrderSetDeliveryItemsActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
+                .append(items, that.items)
+                .append(action, that.action)
                 .append(deliveryId, that.deliveryId)
                 .append(deliveryKey, that.deliveryKey)
                 .append(items, that.items)

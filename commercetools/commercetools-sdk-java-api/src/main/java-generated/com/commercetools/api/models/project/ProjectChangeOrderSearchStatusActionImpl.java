@@ -71,7 +71,11 @@ public class ProjectChangeOrderSearchStatusActionImpl implements ProjectChangeOr
 
         ProjectChangeOrderSearchStatusActionImpl that = (ProjectChangeOrderSearchStatusActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(status, that.status).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(status, that.status)
+                .append(action, that.action)
+                .append(status, that.status)
+                .isEquals();
     }
 
     @Override

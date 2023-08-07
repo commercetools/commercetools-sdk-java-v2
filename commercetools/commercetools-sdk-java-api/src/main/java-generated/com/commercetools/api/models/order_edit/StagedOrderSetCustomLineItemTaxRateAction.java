@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -17,14 +16,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetCustomLineItemTaxRateAction
+ *  <p>Can be used if the Cart has the <code>External</code> TaxMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetCustomLineItemTaxRateAction stagedOrderSetCustomLineItemTaxRateAction = StagedOrderSetCustomLineItemTaxRateAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -39,15 +37,23 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
     String SET_CUSTOM_LINE_ITEM_TAX_RATE = "setCustomLineItemTaxRate";
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
-    @NotNull
+
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
+     *  <p>Value to set. If empty, an existing value is removed.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -55,18 +61,40 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     * set customLineItemId
+     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
+
+    /**
+     *  <p>Value to set. If empty, an existing value is removed.</p>
      * @param externalTaxRate value to be set
      */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
 
     /**
      * factory method
@@ -85,7 +113,9 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
             final StagedOrderSetCustomLineItemTaxRateAction template) {
         StagedOrderSetCustomLineItemTaxRateActionImpl instance = new StagedOrderSetCustomLineItemTaxRateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
@@ -102,8 +132,10 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
         }
         StagedOrderSetCustomLineItemTaxRateActionImpl instance = new StagedOrderSetCustomLineItemTaxRateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setExternalTaxRate(
             com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

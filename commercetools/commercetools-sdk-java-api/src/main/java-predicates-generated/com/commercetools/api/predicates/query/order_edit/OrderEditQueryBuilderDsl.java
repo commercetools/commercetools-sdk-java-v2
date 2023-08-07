@@ -36,24 +36,6 @@ public class OrderEditQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderEditQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<OrderEditQueryBuilderDsl> lastModifiedBy(
-            Function<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("lastModifiedBy"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl.of())),
-            OrderEditQueryBuilderDsl::of);
-    }
-
-    public CombinationQueryPredicate<OrderEditQueryBuilderDsl> createdBy(
-            Function<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("createdBy"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl.of())),
-            OrderEditQueryBuilderDsl::of);
-    }
-
     public StringComparisonPredicateBuilder<OrderEditQueryBuilderDsl> key() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
             p -> new CombinationQueryPredicate<>(p, OrderEditQueryBuilderDsl::of));
@@ -84,15 +66,6 @@ public class OrderEditQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderEditQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<OrderEditQueryBuilderDsl> custom(
-            Function<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("custom"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl.of())),
-            OrderEditQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<OrderEditQueryBuilderDsl> result(
             Function<com.commercetools.api.predicates.query.order_edit.OrderEditResultQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.OrderEditResultQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -107,6 +80,33 @@ public class OrderEditQueryBuilderDsl {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("comment")),
             p -> new CombinationQueryPredicate<>(p, OrderEditQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<OrderEditQueryBuilderDsl> custom(
+            Function<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("custom"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl.of())),
+            OrderEditQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<OrderEditQueryBuilderDsl> lastModifiedBy(
+            Function<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("lastModifiedBy"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl.of())),
+            OrderEditQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<OrderEditQueryBuilderDsl> createdBy(
+            Function<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("createdBy"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl.of())),
+            OrderEditQueryBuilderDsl::of);
     }
 
 }

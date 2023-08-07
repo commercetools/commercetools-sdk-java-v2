@@ -14,7 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetCustomerEmailAction
+ *  <p>This action updates the <code>customerEmail</code> on the Order, but it does not change the Customer email on the Cart the Order has been created from.</p>
+ *  <p>Produces the Order Customer Email Set Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
     String SET_CUSTOMER_EMAIL = "setCustomerEmail";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return email
      */
 
@@ -43,7 +44,7 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
     public String getEmail();
 
     /**
-     * set email
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param email value to be set
      */
 

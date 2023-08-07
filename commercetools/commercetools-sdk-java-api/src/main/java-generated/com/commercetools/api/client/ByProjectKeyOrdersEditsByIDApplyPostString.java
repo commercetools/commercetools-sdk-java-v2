@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Applying an OrderEdit produces the OrderEditApplied Message.</p>
  *
  * <hr>
  * <div class=code-example>

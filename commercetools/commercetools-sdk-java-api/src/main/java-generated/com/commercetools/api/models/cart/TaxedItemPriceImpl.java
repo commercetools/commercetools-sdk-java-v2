@@ -93,6 +93,9 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
         return new EqualsBuilder().append(totalNet, that.totalNet)
                 .append(totalGross, that.totalGross)
                 .append(totalTax, that.totalTax)
+                .append(totalNet, that.totalNet)
+                .append(totalGross, that.totalGross)
+                .append(totalTax, that.totalTax)
                 .isEquals();
     }
 

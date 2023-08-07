@@ -76,7 +76,11 @@ public class ProductRevertedStagedChangesMessagePayloadImpl
 
         ProductRevertedStagedChangesMessagePayloadImpl that = (ProductRevertedStagedChangesMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(removedImageUrls, that.removedImageUrls).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(removedImageUrls, that.removedImageUrls)
+                .append(type, that.type)
+                .append(removedImageUrls, that.removedImageUrls)
+                .isEquals();
     }
 
     @Override

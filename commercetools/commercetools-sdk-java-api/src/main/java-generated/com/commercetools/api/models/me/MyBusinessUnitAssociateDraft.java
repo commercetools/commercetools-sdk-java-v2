@@ -53,7 +53,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public MyCustomerDraft getCustomer();
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @return associateRoleAssignments
      */
     @NotNull
@@ -76,7 +76,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public void setCustomer(final MyCustomerDraft customer);
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param associateRoleAssignments values to be set
      */
 
@@ -84,7 +84,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public void setAssociateRoleAssignments(final AssociateRoleAssignmentDraft... associateRoleAssignments);
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param associateRoleAssignments values to be set
      */
 

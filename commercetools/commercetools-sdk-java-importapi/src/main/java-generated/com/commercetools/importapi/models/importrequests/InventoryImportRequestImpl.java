@@ -77,7 +77,11 @@ public class InventoryImportRequestImpl implements InventoryImportRequest, Model
 
         InventoryImportRequestImpl that = (InventoryImportRequestImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(resources, that.resources).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(resources, that.resources)
+                .append(type, that.type)
+                .append(resources, that.resources)
+                .isEquals();
     }
 
     @Override

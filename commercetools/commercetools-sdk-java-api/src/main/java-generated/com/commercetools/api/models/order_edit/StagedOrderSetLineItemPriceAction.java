@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetLineItemPriceAction
+ *  <p>Sets the LineItem <code>price</code> and changes the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -53,7 +53,7 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
     public String getLineItemKey();
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @return externalPrice
      */
     @Valid
@@ -75,7 +75,7 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param externalPrice value to be set
      */
 

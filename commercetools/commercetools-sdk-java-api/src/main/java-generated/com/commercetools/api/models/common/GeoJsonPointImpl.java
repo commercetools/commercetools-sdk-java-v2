@@ -74,7 +74,11 @@ public class GeoJsonPointImpl implements GeoJsonPoint, ModelBase {
 
         GeoJsonPointImpl that = (GeoJsonPointImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(coordinates, that.coordinates).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(coordinates, that.coordinates)
+                .append(type, that.type)
+                .append(coordinates, that.coordinates)
+                .isEquals();
     }
 
     @Override

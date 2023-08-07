@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Set Parcel TrackingData update action.</p>
+ *  <p>Generated after a successful Set Parcel Tracking Data update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataUpdatedMessage, ModelBase {
@@ -204,7 +204,7 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -279,6 +279,21 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
         ParcelTrackingDataUpdatedMessageImpl that = (ParcelTrackingDataUpdatedMessageImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(deliveryId, that.deliveryId)
+                .append(parcelId, that.parcelId)
+                .append(trackingData, that.trackingData)
+                .append(shippingKey, that.shippingKey)
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderEditPreviewFailure
+ *  <p>Result of a failed application of <code>stagedActions</code> to the Order. The data is calculated on the fly and is not queryable.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure, ModelBase {
@@ -50,7 +50,7 @@ public class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure, Mod
     }
 
     /**
-     *
+     *  <p>Errors returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors() {
@@ -75,7 +75,11 @@ public class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure, Mod
 
         OrderEditPreviewFailureImpl that = (OrderEditPreviewFailureImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(errors, that.errors).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(errors, that.errors)
+                .append(type, that.type)
+                .append(errors, that.errors)
+                .isEquals();
     }
 
     @Override

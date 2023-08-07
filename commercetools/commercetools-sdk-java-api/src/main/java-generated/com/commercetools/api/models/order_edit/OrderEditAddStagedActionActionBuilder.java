@@ -25,7 +25,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
     private com.commercetools.api.models.order.StagedOrderUpdateAction stagedAction;
 
     /**
-     * set the value to the stagedAction
+     *  <p>Order update action to append to the <code>stagedActions</code> array.</p>
      * @param stagedAction value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
     }
 
     /**
-     * set the value to the stagedAction using the builder function
+     *  <p>Order update action to append to the <code>stagedActions</code> array.</p>
      * @param builder function to build the stagedAction value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class OrderEditAddStagedActionActionBuilder implements Builder<OrderEditA
     }
 
     /**
-     * value of stagedAction}
+     *  <p>Order update action to append to the <code>stagedActions</code> array.</p>
      * @return stagedAction
      */
 

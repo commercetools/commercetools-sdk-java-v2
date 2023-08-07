@@ -26,7 +26,7 @@ public class StagedOrderSetOrderNumberActionBuilder implements Builder<StagedOrd
     private String orderNumber;
 
     /**
-     * set the value to the orderNumber
+     *  <p>Value to set. Must be unique across a Project. Once set, the value cannot be changed.</p>
      * @param orderNumber value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class StagedOrderSetOrderNumberActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * value of orderNumber}
+     *  <p>Value to set. Must be unique across a Project. Once set, the value cannot be changed.</p>
      * @return orderNumber
      */
 

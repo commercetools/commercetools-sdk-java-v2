@@ -70,7 +70,11 @@ public class MyCustomerSetMiddleNameActionImpl implements MyCustomerSetMiddleNam
 
         MyCustomerSetMiddleNameActionImpl that = (MyCustomerSetMiddleNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(middleName, that.middleName).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(middleName, that.middleName)
+                .append(action, that.action)
+                .append(middleName, that.middleName)
+                .isEquals();
     }
 
     @Override

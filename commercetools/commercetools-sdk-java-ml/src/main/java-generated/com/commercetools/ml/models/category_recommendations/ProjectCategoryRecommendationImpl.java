@@ -93,6 +93,9 @@ public class ProjectCategoryRecommendationImpl implements ProjectCategoryRecomme
         return new EqualsBuilder().append(category, that.category)
                 .append(confidence, that.confidence)
                 .append(path, that.path)
+                .append(category, that.category)
+                .append(confidence, that.confidence)
+                .append(path, that.path)
                 .isEquals();
     }
 

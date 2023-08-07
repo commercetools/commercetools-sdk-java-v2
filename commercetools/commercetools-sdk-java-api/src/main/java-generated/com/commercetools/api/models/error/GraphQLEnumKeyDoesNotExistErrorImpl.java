@@ -110,6 +110,10 @@ public class GraphQLEnumKeyDoesNotExistErrorImpl implements GraphQLEnumKeyDoesNo
                 .append(values, that.values)
                 .append(conflictingEnumKey, that.conflictingEnumKey)
                 .append(conflictingAttributeName, that.conflictingAttributeName)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(conflictingEnumKey, that.conflictingEnumKey)
+                .append(conflictingAttributeName, that.conflictingAttributeName)
                 .isEquals();
     }
 

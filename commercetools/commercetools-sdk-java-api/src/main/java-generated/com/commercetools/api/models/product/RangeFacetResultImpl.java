@@ -75,7 +75,11 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
 
         RangeFacetResultImpl that = (RangeFacetResultImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(ranges, that.ranges).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(ranges, that.ranges)
+                .append(type, that.type)
+                .append(ranges, that.ranges)
+                .isEquals();
     }
 
     @Override

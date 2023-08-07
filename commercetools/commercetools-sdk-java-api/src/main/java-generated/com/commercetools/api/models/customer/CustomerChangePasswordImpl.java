@@ -110,6 +110,10 @@ public class CustomerChangePasswordImpl implements CustomerChangePassword, Model
                 .append(version, that.version)
                 .append(currentPassword, that.currentPassword)
                 .append(newPassword, that.newPassword)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(currentPassword, that.currentPassword)
+                .append(newPassword, that.newPassword)
                 .isEquals();
     }
 

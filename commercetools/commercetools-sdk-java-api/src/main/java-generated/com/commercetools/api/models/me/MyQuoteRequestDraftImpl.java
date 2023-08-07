@@ -92,6 +92,9 @@ public class MyQuoteRequestDraftImpl implements MyQuoteRequestDraft, ModelBase {
         return new EqualsBuilder().append(cartId, that.cartId)
                 .append(cartVersion, that.cartVersion)
                 .append(comment, that.comment)
+                .append(cartId, that.cartId)
+                .append(cartVersion, that.cartVersion)
+                .append(comment, that.comment)
                 .isEquals();
     }
 

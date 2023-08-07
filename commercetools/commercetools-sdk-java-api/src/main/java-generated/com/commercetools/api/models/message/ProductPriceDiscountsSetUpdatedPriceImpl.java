@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Details about a Embedded Price that was updated due to a Discount. Specific to ProductPriceDiscountsSet Message.</p>
+ *  <p>Details about a Embedded Price that was updated due to a Discount. Specific to Product Price Discounts Set Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDiscountsSetUpdatedPrice, ModelBase {
@@ -138,6 +138,12 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
         ProductPriceDiscountsSetUpdatedPriceImpl that = (ProductPriceDiscountsSetUpdatedPriceImpl) o;
 
         return new EqualsBuilder().append(variantId, that.variantId)
+                .append(variantKey, that.variantKey)
+                .append(sku, that.sku)
+                .append(priceId, that.priceId)
+                .append(discounted, that.discounted)
+                .append(staged, that.staged)
+                .append(variantId, that.variantId)
                 .append(variantKey, that.variantKey)
                 .append(sku, that.sku)
                 .append(priceId, that.priceId)

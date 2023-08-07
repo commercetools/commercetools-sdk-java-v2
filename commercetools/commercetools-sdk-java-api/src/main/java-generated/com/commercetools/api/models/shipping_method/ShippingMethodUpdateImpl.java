@@ -79,7 +79,11 @@ public class ShippingMethodUpdateImpl implements ShippingMethodUpdate, ModelBase
 
         ShippingMethodUpdateImpl that = (ShippingMethodUpdateImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(actions, that.actions).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(actions, that.actions)
+                .append(version, that.version)
+                .append(actions, that.actions)
+                .isEquals();
     }
 
     @Override

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderEditApplied
+ *  <p>Result of a succesful application of <code>stagedActions</code> to the Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
@@ -49,7 +49,7 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
     }
 
     /**
-     *
+     *  <p>This field is queryable.</p>
      */
 
     public String getType() {
@@ -57,7 +57,7 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Order was edited.</p>
      */
 
     public java.time.ZonedDateTime getAppliedAt() {
@@ -65,7 +65,7 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
     }
 
     /**
-     *
+     *  <p>Prices of the Order before the edit.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderExcerpt getExcerptBeforeEdit() {
@@ -73,7 +73,7 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
     }
 
     /**
-     *
+     *  <p>Prices of the Order after the edit.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderExcerpt getExcerptAfterEdit() {
@@ -103,6 +103,10 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
         OrderEditAppliedImpl that = (OrderEditAppliedImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(appliedAt, that.appliedAt)
+                .append(excerptBeforeEdit, that.excerptBeforeEdit)
+                .append(excerptAfterEdit, that.excerptAfterEdit)
+                .append(type, that.type)
                 .append(appliedAt, that.appliedAt)
                 .append(excerptBeforeEdit, that.excerptBeforeEdit)
                 .append(excerptAfterEdit, that.excerptAfterEdit)

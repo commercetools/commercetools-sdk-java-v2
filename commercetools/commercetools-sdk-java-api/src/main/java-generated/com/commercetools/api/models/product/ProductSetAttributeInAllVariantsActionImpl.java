@@ -114,6 +114,10 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
                 .append(name, that.name)
                 .append(value, that.value)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

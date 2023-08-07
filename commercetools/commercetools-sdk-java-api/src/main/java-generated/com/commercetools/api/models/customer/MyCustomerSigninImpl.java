@@ -116,6 +116,10 @@ public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
                 .append(password, that.password)
                 .append(activeCartSignInMode, that.activeCartSignInMode)
                 .append(updateProductData, that.updateProductData)
+                .append(email, that.email)
+                .append(password, that.password)
+                .append(activeCartSignInMode, that.activeCartSignInMode)
+                .append(updateProductData, that.updateProductData)
                 .isEquals();
     }
 

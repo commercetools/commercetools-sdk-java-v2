@@ -109,6 +109,10 @@ public class ProductAssignmentMissingErrorImpl implements ProductAssignmentMissi
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(product, that.product)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(product, that.product)
                 .isEquals();
     }
 

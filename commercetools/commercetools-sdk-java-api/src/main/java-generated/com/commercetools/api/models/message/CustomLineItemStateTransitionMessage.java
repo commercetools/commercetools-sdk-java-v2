@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Transition Custom Line Item State update action.</p>
+ *  <p>Generated after a successful Transition CustomLineItem State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -56,6 +56,14 @@ public interface CustomLineItemStateTransitionMessage extends OrderMessage {
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
 
     /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
@@ -97,6 +105,13 @@ public interface CustomLineItemStateTransitionMessage extends OrderMessage {
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
@@ -152,6 +167,7 @@ public interface CustomLineItemStateTransitionMessage extends OrderMessage {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setTransitionDate(template.getTransitionDate());
         instance.setQuantity(template.getQuantity());
         instance.setFromState(template.getFromState());
@@ -184,6 +200,7 @@ public interface CustomLineItemStateTransitionMessage extends OrderMessage {
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setTransitionDate(template.getTransitionDate());
         instance.setQuantity(template.getQuantity());
         instance.setFromState(com.commercetools.api.models.state.StateReference.deepCopy(template.getFromState()));

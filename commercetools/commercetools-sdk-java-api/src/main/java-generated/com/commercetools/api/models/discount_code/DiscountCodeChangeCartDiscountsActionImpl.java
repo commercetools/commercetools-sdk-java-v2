@@ -77,7 +77,11 @@ public class DiscountCodeChangeCartDiscountsActionImpl implements DiscountCodeCh
 
         DiscountCodeChangeCartDiscountsActionImpl that = (DiscountCodeChangeCartDiscountsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(cartDiscounts, that.cartDiscounts).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(cartDiscounts, that.cartDiscounts)
+                .append(action, that.action)
+                .append(cartDiscounts, that.cartDiscounts)
+                .isEquals();
     }
 
     @Override

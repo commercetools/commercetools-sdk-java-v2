@@ -266,7 +266,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     *  <p>Customer on the Order after the Set Customer ID update action.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -278,7 +278,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     *  <p>Customer on the Order after the Set Customer ID update action.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -290,7 +290,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     *  <p>Customer on the Order after the Set Customer ID update action.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -302,7 +302,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -316,7 +316,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -329,7 +329,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -341,7 +341,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     *  <p>Customer on the Order before the Set Customer ID update action.</p>
      * @param builder function to build the oldCustomer value
      * @return Builder
      */
@@ -353,7 +353,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     *  <p>Customer on the Order before the Set Customer ID update action.</p>
      * @param builder function to build the oldCustomer value
      * @return Builder
      */
@@ -365,7 +365,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     *  <p>Customer on the Order before the Set Customer ID update action.</p>
      * @param oldCustomer value to be set
      * @return Builder
      */
@@ -377,7 +377,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
      * @param builder function to build the oldCustomerGroup value
      * @return Builder
      */
@@ -391,7 +391,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
      * @param builder function to build the oldCustomerGroup value
      * @return Builder
      */
@@ -404,7 +404,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
      * @param oldCustomerGroup value to be set
      * @return Builder
      */
@@ -509,7 +509,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     *  <p>Customer on the Order after the Set Customer ID update action.</p>
      * @return customer
      */
 
@@ -519,7 +519,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
      * @return customerGroup
      */
 
@@ -529,7 +529,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     *  <p>Customer on the Order before the Set Customer ID update action.</p>
      * @return oldCustomer
      */
 
@@ -539,7 +539,7 @@ public class OrderCustomerSetMessageBuilder implements Builder<OrderCustomerSetM
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
      * @return oldCustomerGroup
      */
 

@@ -106,6 +106,10 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
                 .append(priceId, that.priceId)
                 .append(staged, that.staged)
                 .append(discounted, that.discounted)
+                .append(action, that.action)
+                .append(priceId, that.priceId)
+                .append(staged, that.staged)
+                .append(discounted, that.discounted)
                 .isEquals();
     }
 

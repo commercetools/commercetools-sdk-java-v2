@@ -74,7 +74,11 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
 
         ItemShippingTargetImpl that = (ItemShippingTargetImpl) o;
 
-        return new EqualsBuilder().append(addressKey, that.addressKey).append(quantity, that.quantity).isEquals();
+        return new EqualsBuilder().append(addressKey, that.addressKey)
+                .append(quantity, that.quantity)
+                .append(addressKey, that.addressKey)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override

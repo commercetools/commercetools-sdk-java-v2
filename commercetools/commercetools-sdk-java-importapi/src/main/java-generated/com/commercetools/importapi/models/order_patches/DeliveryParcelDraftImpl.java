@@ -98,6 +98,9 @@ public class DeliveryParcelDraftImpl implements DeliveryParcelDraft, ModelBase {
         return new EqualsBuilder().append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
                 .isEquals();
     }
 

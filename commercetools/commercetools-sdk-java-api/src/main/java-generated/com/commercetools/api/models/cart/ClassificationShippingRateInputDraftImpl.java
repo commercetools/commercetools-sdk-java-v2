@@ -70,7 +70,11 @@ public class ClassificationShippingRateInputDraftImpl implements ClassificationS
 
         ClassificationShippingRateInputDraftImpl that = (ClassificationShippingRateInputDraftImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(key, that.key)
+                .append(type, that.type)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

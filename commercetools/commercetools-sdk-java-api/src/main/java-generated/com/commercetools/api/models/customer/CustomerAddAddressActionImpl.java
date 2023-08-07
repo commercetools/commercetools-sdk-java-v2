@@ -71,7 +71,11 @@ public class CustomerAddAddressActionImpl implements CustomerAddAddressAction, M
 
         CustomerAddAddressActionImpl that = (CustomerAddAddressActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(address, that.address)
+                .append(action, that.action)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override

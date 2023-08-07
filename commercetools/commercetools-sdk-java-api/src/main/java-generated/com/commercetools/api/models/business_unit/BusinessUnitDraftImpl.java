@@ -316,6 +316,21 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(status, that.status)
+                .append(stores, that.stores)
+                .append(storeMode, that.storeMode)
+                .append(unitType, that.unitType)
+                .append(name, that.name)
+                .append(contactEmail, that.contactEmail)
+                .append(associateMode, that.associateMode)
+                .append(associates, that.associates)
+                .append(addresses, that.addresses)
+                .append(shippingAddresses, that.shippingAddresses)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
+                .append(billingAddresses, that.billingAddresses)
+                .append(defaultBillingAddress, that.defaultBillingAddress)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

@@ -85,7 +85,13 @@ public class BusinessUnitLabelImpl implements BusinessUnitLabel, ModelBase {
 
         BusinessUnitLabelImpl that = (BusinessUnitLabelImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(key, that.key).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(type, that.type)
+                .append(key, that.key)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override

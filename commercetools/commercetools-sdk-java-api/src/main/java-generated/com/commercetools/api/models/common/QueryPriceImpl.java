@@ -217,6 +217,16 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
                 .append(tiers, that.tiers)
+                .append(id, that.id)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(discounted, that.discounted)
+                .append(custom, that.custom)
+                .append(tiers, that.tiers)
                 .isEquals();
     }
 

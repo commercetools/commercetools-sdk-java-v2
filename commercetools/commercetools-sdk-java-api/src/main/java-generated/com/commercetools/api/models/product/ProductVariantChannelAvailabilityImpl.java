@@ -126,6 +126,11 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
                 .append(availableQuantity, that.availableQuantity)
                 .append(id, that.id)
                 .append(version, that.version)
+                .append(isOnStock, that.isOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(availableQuantity, that.availableQuantity)
+                .append(id, that.id)
+                .append(version, that.version)
                 .isEquals();
     }
 

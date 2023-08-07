@@ -22,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetCustomLineItemCustomFieldAction stagedOrderSetCustomLineItemCustomFieldAction = StagedOrderSetCustomLineItemCustomFieldAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -38,12 +37,20 @@ public interface StagedOrderSetCustomLineItemCustomFieldAction extends StagedOrd
     String SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD = "setCustomLineItemCustomField";
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
-    @NotNull
+
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -62,11 +69,18 @@ public interface StagedOrderSetCustomLineItemCustomFieldAction extends StagedOrd
     public Object getValue();
 
     /**
-     * set customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -99,6 +113,7 @@ public interface StagedOrderSetCustomLineItemCustomFieldAction extends StagedOrd
             final StagedOrderSetCustomLineItemCustomFieldAction template) {
         StagedOrderSetCustomLineItemCustomFieldActionImpl instance = new StagedOrderSetCustomLineItemCustomFieldActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
@@ -117,6 +132,7 @@ public interface StagedOrderSetCustomLineItemCustomFieldAction extends StagedOrd
         }
         StagedOrderSetCustomLineItemCustomFieldActionImpl instance = new StagedOrderSetCustomLineItemCustomFieldActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;

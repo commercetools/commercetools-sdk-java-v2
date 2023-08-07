@@ -110,6 +110,10 @@ public class ReservationImpl implements Reservation, ModelBase {
                 .append(owner, that.owner)
                 .append(createdAt, that.createdAt)
                 .append(checkoutStartedAt, that.checkoutStartedAt)
+                .append(quantity, that.quantity)
+                .append(owner, that.owner)
+                .append(createdAt, that.createdAt)
+                .append(checkoutStartedAt, that.checkoutStartedAt)
                 .isEquals();
     }
 

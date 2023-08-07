@@ -87,7 +87,13 @@ public class CustomerGroupReferenceImpl implements CustomerGroupReference, Model
 
         CustomerGroupReferenceImpl that = (CustomerGroupReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(obj, that.obj).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .isEquals();
     }
 
     @Override

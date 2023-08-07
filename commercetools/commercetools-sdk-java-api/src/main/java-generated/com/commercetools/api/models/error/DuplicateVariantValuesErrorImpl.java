@@ -109,6 +109,10 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(variantValues, that.variantValues)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(variantValues, that.variantValues)
                 .isEquals();
     }
 

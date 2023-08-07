@@ -106,6 +106,10 @@ public class MyCartSetLineItemShippingDetailsActionImpl implements MyCartSetLine
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(shippingDetails, that.shippingDetails)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(shippingDetails, that.shippingDetails)
                 .isEquals();
     }
 

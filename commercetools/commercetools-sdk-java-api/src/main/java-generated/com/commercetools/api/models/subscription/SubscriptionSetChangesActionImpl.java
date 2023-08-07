@@ -75,7 +75,11 @@ public class SubscriptionSetChangesActionImpl implements SubscriptionSetChangesA
 
         SubscriptionSetChangesActionImpl that = (SubscriptionSetChangesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(changes, that.changes).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(changes, that.changes)
+                .append(action, that.action)
+                .append(changes, that.changes)
+                .isEquals();
     }
 
     @Override

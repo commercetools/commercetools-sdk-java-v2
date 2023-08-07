@@ -54,7 +54,7 @@ public class TaxCategoryUpdateActionImpl implements TaxCategoryUpdateAction, Mod
 
         TaxCategoryUpdateActionImpl that = (TaxCategoryUpdateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override

@@ -89,6 +89,9 @@ public class OrderLabelImpl implements OrderLabel, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(customerEmail, that.customerEmail)
                 .append(orderNumber, that.orderNumber)
+                .append(type, that.type)
+                .append(customerEmail, that.customerEmail)
+                .append(orderNumber, that.orderNumber)
                 .isEquals();
     }
 

@@ -1,12 +1,14 @@
 
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.common.ResourceIdentifier;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import java.util.function.Function;
+
+import com.commercetools.api.models.common.ResourceIdentifier;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * OrderResourceIdentifier

@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * ResourceIdentifierBuilder
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ResourceIdentifierBuilder {
+public class ResourceIdentifierBuilder implements ResourceIdentifierBuilderMixin {
 
     public com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder associateRoleBuilder() {
         return com.commercetools.api.models.associate_role.AssociateRoleResourceIdentifierBuilder.of();
@@ -57,10 +57,6 @@ public class ResourceIdentifierBuilder {
 
     public com.commercetools.api.models.order_edit.OrderEditResourceIdentifierBuilder orderEditBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditResourceIdentifierBuilder.of();
-    }
-
-    public com.commercetools.api.models.order.OrderResourceIdentifierBuilder orderBuilder() {
-        return com.commercetools.api.models.order.OrderResourceIdentifierBuilder.of();
     }
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder paymentBuilder() {

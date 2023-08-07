@@ -1,10 +1,10 @@
 
 package com.commercetools.api.models.order;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
-
-import javax.annotation.Nullable;
 
 /**
  * OrderResourceIdentifierBuilder

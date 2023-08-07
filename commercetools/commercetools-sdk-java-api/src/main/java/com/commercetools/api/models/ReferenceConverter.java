@@ -120,6 +120,7 @@ public interface ReferenceConverter {
         return ResourceIdentifierBuilder.of().inventoryEntryBuilder().id(reference.getId()).build();
     }
 
+    @Deprecated
     static OrderResourceIdentifier toResourceIdentifier(OrderReference reference) {
         return ResourceIdentifierBuilder.of().orderBuilder().id(reference.getId()).build();
     }
@@ -212,6 +213,7 @@ public interface ReferenceConverter {
         return ResourceIdentifierBuilder.of().inventoryEntryBuilder().id(reference.getId()).build();
     }
 
+    @Deprecated
     static OrderResourceIdentifier toResourceIdentifier(Order reference) {
         return ResourceIdentifierBuilder.of().orderBuilder().id(reference.getId()).build();
     }

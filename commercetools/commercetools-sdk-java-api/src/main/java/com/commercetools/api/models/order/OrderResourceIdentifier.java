@@ -1,17 +1,12 @@
 
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.common.ResourceIdentifier;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import io.vrap.rmf.base.client.utils.Generated;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.ResourceIdentifier;
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-
-import io.vrap.rmf.base.client.utils.Generated;
+import java.util.function.Function;
 
 /**
  * OrderResourceIdentifier
@@ -26,6 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 @JsonDeserialize(as = OrderResourceIdentifierImpl.class)
 public interface OrderResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Order> {
 

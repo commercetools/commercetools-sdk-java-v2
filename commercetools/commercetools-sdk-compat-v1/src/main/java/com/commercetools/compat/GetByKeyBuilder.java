@@ -298,6 +298,7 @@ public class GetByKeyBuilder {
         return get(apiRoot.orders().withOrderNumber(key).get(), () -> OrderByOrderNumberGet.of(key), getDsl);
     }
 
+    @Deprecated
     public ByProjectKeyOrdersOrderNumberByOrderNumberGet order(final OrderResourceIdentifier identifiable,
             final Function<OrderByOrderNumberGet, OrderByOrderNumberGet> getDsl) {
         requireNonNull(identifiable.getKey());
@@ -305,6 +306,7 @@ public class GetByKeyBuilder {
             () -> OrderByOrderNumberGet.of(identifiable.getKey()), getDsl);
     }
 
+    @Deprecated
     public ByProjectKeyOrdersOrderNumberByOrderNumberGet order(
             final io.sphere.sdk.models.ResourceIdentifiable<io.sphere.sdk.orders.Order> identifiable,
             final Function<OrderByOrderNumberGet, OrderByOrderNumberGet> getDsl) {

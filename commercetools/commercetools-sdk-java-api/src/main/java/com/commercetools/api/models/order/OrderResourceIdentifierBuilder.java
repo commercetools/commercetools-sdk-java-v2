@@ -1,12 +1,10 @@
 
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
 
 /**
  * OrderResourceIdentifierBuilder
@@ -20,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class OrderResourceIdentifierBuilder implements Builder<OrderResourceIdentifier> {
 
     @Nullable

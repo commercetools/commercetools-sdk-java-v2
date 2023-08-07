@@ -257,18 +257,6 @@ types:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Order>'
   OrderReference:
     (java-extends): 'com.commercetools.api.models.Identifiable<Order>'
-  OrderResourceIdentifier:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Order>'
-    (package): Order
-    type: ResourceIdentifier
-    (markDeprecated): true
-    displayName: OrderResourceIdentifier
-    discriminatorValue: order
-    properties:
-      id?:
-        type: string
-      key?:
-        type: string
   OrderUpdate:
     (java-extends): 'com.commercetools.api.models.ResourceUpdate<OrderUpdate, OrderUpdateAction, OrderUpdateBuilder>'
   OrderUpdateAction:

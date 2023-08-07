@@ -1074,6 +1074,10 @@ types:
       default javax.money.MonetaryOperator createMoneyOperator() {
           return MoneyUtil::draftOf;
       }
+  CartDiscountValueFixedDraft:
+    properties:
+      money:
+        type: Money[]
   Reference:
     (java-extends): 'ReferenceMixin'
   KeyReference:

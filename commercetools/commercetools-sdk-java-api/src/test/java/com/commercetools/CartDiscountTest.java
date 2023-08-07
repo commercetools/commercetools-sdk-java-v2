@@ -23,7 +23,7 @@ public class CartDiscountTest {
     @Test
     public void fixedValueToDraft() {
         CartDiscountValue cartDiscountValue = CartDiscountValue.fixedBuilder()
-                .withMoney(m -> m.centAmount(100L).currencyCode("EUR").fractionDigits(2))
+                .withMoney(m -> m.centPrecisionBuilder().centAmount(100L).currencyCode("EUR").fractionDigits(2))
                 .build();
         assertThat(cartDiscountValue.toDraft()).isInstanceOfSatisfying(CartDiscountValueFixedDraft.class,
             draft -> assertThat(draft.getMoney().get(0)).satisfies(money -> {

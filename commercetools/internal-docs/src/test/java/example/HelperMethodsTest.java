@@ -175,19 +175,6 @@ public class HelperMethodsTest {
                 .getBody();
     }
 
-    public void cartSetDeliveryAddressCustomFieldUnset() {
-        final String name = "test-name-" + UUID.randomUUID().toString();
-        final String deliveryId = "test-deliveryId-" + UUID.randomUUID().toString();
-        final Cart updatedCart = projectApiRoot.carts()
-                .withId(cart.getId())
-                .post(CartUpdateBuilder.of()
-                        .version(cart.getVersion())
-                        .actions(CartSetDeliveryAddressCustomFieldAction.ofUnset(name, deliveryId))
-                        .build())
-                .executeBlocking()
-                .getBody();
-    }
-
     public void cartSetItemShippingAddressCustomFieldUnset() {
         final String name = "test-name-" + UUID.randomUUID().toString();
         final String addressKey = "test-addressKey-" + UUID.randomUUID().toString();

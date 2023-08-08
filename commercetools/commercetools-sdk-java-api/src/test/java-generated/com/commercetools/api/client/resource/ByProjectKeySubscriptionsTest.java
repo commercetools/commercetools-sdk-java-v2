@@ -63,17 +63,9 @@ public class ByProjectKeySubscriptionsTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .get()
-                        .withExpand("expand")
-                        .createHttpRequest(), "get", "test_projectKey/subscriptions?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .get()
-                        .withSort("sort")
-                        .createHttpRequest(), "get", "test_projectKey/subscriptions?sort=sort", },
+        return new Object[][] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").subscriptions().get().withSort("sort").createHttpRequest(),
+                "get", "test_projectKey/subscriptions?sort=sort", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .get()
@@ -104,18 +96,12 @@ public class ByProjectKeySubscriptionsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .post(com.commercetools.api.models.subscription.SubscriptionDraft.of())
-                        .withExpand("expand")
-                        .createHttpRequest(), "post", "test_projectKey/subscriptions?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .post(com.commercetools.api.models.subscription.SubscriptionDraft.of())
                         .createHttpRequest(), "post", "test_projectKey/subscriptions", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().withSort("sort"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().withLimit(7), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().withOffset(3), },
@@ -126,10 +112,6 @@ public class ByProjectKeySubscriptionsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .post(com.commercetools.api.models.subscription.SubscriptionDraft.of())
-                        .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .post(com.commercetools.api.models.subscription.SubscriptionDraft.of()), } };

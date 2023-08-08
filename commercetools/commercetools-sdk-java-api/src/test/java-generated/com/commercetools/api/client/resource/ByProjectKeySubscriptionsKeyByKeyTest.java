@@ -63,28 +63,9 @@ public class ByProjectKeySubscriptionsKeyByKeyTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .subscriptions()
-                                .withKey("test_key")
-                                .get()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "get", "test_projectKey/subscriptions/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .withKey("test_key")
-                        .get()
-                        .createHttpRequest(), "get", "test_projectKey/subscriptions/key=test_key", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .subscriptions()
-                                .withKey("test_key")
-                                .post(com.commercetools.api.models.subscription.SubscriptionUpdate.of())
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "post", "test_projectKey/subscriptions/key=test_key?expand=expand", },
+        return new Object[][] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").subscriptions().withKey("test_key").get().createHttpRequest(),
+                "get", "test_projectKey/subscriptions/key=test_key", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .withKey("test_key")
@@ -98,14 +79,6 @@ public class ByProjectKeySubscriptionsKeyByKeyTest {
                                 .withVersion(2)
                                 .createHttpRequest(),
                         "delete", "test_projectKey/subscriptions/key=test_key?version=2", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .subscriptions()
-                                .withKey("test_key")
-                                .delete()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "delete", "test_projectKey/subscriptions/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .withKey("test_key")
@@ -116,17 +89,7 @@ public class ByProjectKeySubscriptionsKeyByKeyTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .withKey("test_key")
-                        .get()
-                        .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().withKey("test_key").get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .withKey("test_key")
-                        .post(com.commercetools.api.models.subscription.SubscriptionUpdate.of())
-                        .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .withKey("test_key")
@@ -136,11 +99,6 @@ public class ByProjectKeySubscriptionsKeyByKeyTest {
                         .withKey("test_key")
                         .delete()
                         .withVersion(2), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .withKey("test_key")
-                        .delete()
-                        .withExpand("expand"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").subscriptions().withKey("test_key").delete(), } };
     }

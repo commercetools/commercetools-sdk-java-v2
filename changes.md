@@ -170,6 +170,28 @@
 
 
 <details>
+<summary>Removed QueryParameter(s)</summary>
+
+- :warning: removed query parameter `expand` from method `get /{projectKey}/subscriptions`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/subscriptions`
+- :warning: removed query parameter `expand` from method `get /{projectKey}/extensions`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/extensions`
+- :warning: removed query parameter `expand` from method `get /{projectKey}/subscriptions/key={key}`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/subscriptions/key={key}`
+- :warning: removed query parameter `expand` from method `delete /{projectKey}/subscriptions/key={key}`
+- :warning: removed query parameter `expand` from method `get /{projectKey}/subscriptions/{ID}`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/subscriptions/{ID}`
+- :warning: removed query parameter `expand` from method `delete /{projectKey}/subscriptions/{ID}`
+- :warning: removed query parameter `expand` from method `get /{projectKey}/extensions/key={key}`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/extensions/key={key}`
+- :warning: removed query parameter `expand` from method `delete /{projectKey}/extensions/key={key}`
+- :warning: removed query parameter `expand` from method `get /{projectKey}/extensions/{ID}`
+- :warning: removed query parameter `expand` from method `post /{projectKey}/extensions/{ID}`
+- :warning: removed query parameter `expand` from method `delete /{projectKey}/extensions/{ID}`
+</details>
+
+
+<details>
 <summary>Added Type(s)</summary>
 
 - added type `ContentTooLargeError`

@@ -9,7 +9,6 @@ import java.util.function.Function;
 import javax.annotation.Nonnull;
 
 import com.commercetools.api.models.DomainResource;
-import com.commercetools.api.models.PagedQueryResourceRequest;
 import com.commercetools.api.models.ResourcePagedQueryResponse;
 
 public class QueryUtils {
@@ -36,8 +35,8 @@ public class QueryUtils {
      * @return a completion stage containing a list of mapped pages as a result.
      */
     @Nonnull
-    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> CompletionStage<List<S>> queryAll(
-            @Nonnull final PagedQueryResourceRequest<TMethod, TResult> query,
+    public static <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> CompletionStage<List<S>> queryAll(
+            @Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> query,
             @Nonnull final Function<List<TElement>, S> pageMapper) {
         return queryAll(query, pageMapper, DEFAULT_PAGE_SIZE);
     }
@@ -62,8 +61,8 @@ public class QueryUtils {
      *     pages.
      */
     @Nonnull
-    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> CompletionStage<Void> queryAll(
-            @Nonnull final PagedQueryResourceRequest<TMethod, TResult> query,
+    public static <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> CompletionStage<Void> queryAll(
+            @Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> query,
             @Nonnull final Consumer<List<TElement>> pageConsumer) {
         return queryAll(query, pageConsumer, DEFAULT_PAGE_SIZE);
     }
@@ -91,8 +90,8 @@ public class QueryUtils {
      * @return a completion stage containing a list of mapped pages as a result.
      */
     @Nonnull
-    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> CompletionStage<List<S>> queryAll(
-            @Nonnull final PagedQueryResourceRequest<TMethod, TResult> query,
+    public static <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> CompletionStage<List<S>> queryAll(
+            @Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> query,
             @Nonnull final Function<List<TElement>, S> pageMapper, final int pageSize) {
         final QueryAll<TMethod, TResult, TElement, S> queryAll = QueryAll.of(query, pageSize);
         return queryAll.run(pageMapper);
@@ -118,8 +117,8 @@ public class QueryUtils {
      *     pages.
      */
     @Nonnull
-    public static <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> CompletionStage<Void> queryAll(
-            @Nonnull final PagedQueryResourceRequest<TMethod, TResult> query,
+    public static <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> CompletionStage<Void> queryAll(
+            @Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> query,
             @Nonnull final Consumer<List<TElement>> pageConsumer, final int pageSize) {
         final QueryAll<TMethod, TResult, TElement, Void> queryAll = QueryAll.of(query, pageSize);
         return queryAll.run(pageConsumer);

@@ -29,8 +29,8 @@ import java.time.Duration;
 import java.util.function.Consumer;
 
 import com.commercetools.api.client.QueryUtils;
+import com.commercetools.api.client.SimplePagedQueryResourceRequest;
 import com.commercetools.api.models.DomainResource;
-import com.commercetools.api.models.PagedQueryResourceRequest;
 import com.commercetools.api.models.ResourcePagedQueryResponse;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
 import com.commercetools.api.models.state.*;
@@ -80,8 +80,8 @@ public class DeleteEverythingIntegrationTest {
         }
     }
 
-    private <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> void deleteAllResources(
-            PagedQueryResourceRequest<TMethod, TResult> request, Consumer<TElement> deleteFn) {
+    private <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> void deleteAllResources(
+            SimplePagedQueryResourceRequest<TMethod, TResult, ?> request, Consumer<TElement> deleteFn) {
 
         QueryUtils.queryAll(request, list -> {
             list.forEach(deleteFn);

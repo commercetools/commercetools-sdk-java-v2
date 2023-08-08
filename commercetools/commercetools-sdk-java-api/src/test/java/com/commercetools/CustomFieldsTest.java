@@ -49,6 +49,10 @@ public class CustomFieldsTest {
             localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
         assertThat(fields.get("datetime")).isInstanceOfSatisfying(ZonedDateTime.class,
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+        assertThat(fields.get("time-simple")).isInstanceOfSatisfying(LocalTime.class,
+            localTime -> assertThat(localTime).isEqualTo("13:15:00"));
+        assertThat(fields.get("datetime-simple")).isInstanceOfSatisfying(ZonedDateTime.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00Z"));
         assertThat(fields.get("boolean")).isInstanceOfSatisfying(Boolean.class,
             aBoolean -> assertThat(aBoolean).isTrue());
         assertThat(fields.get("integer")).isInstanceOfSatisfying(Long.class,
@@ -106,6 +110,10 @@ public class CustomFieldsTest {
             localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
         assertThat(fields.get("datetime")).isInstanceOfSatisfying(String.class,
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+        assertThat(fields.get("time-simple")).isInstanceOfSatisfying(String.class,
+            localTime -> assertThat(localTime).isEqualTo("13:15:00"));
+        assertThat(fields.get("datetime-simple")).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00Z"));
 
         assertThat(fields.get("boolean")).isInstanceOfSatisfying(Boolean.class,
             aBoolean -> assertThat(aBoolean).isTrue());

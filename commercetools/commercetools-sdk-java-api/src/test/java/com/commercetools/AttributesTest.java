@@ -58,8 +58,12 @@ public class AttributesTest {
             localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
         assertThat(attributes.get("time")).isInstanceOfSatisfying(LocalTime.class,
             localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
+        assertThat(attributes.get("time-simple")).isInstanceOfSatisfying(LocalTime.class,
+            localTime -> assertThat(localTime).isEqualTo("13:15:00"));
         assertThat(attributes.get("datetime")).isInstanceOfSatisfying(ZonedDateTime.class,
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+        assertThat(attributes.get("datetime-simple")).isInstanceOfSatisfying(ZonedDateTime.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00Z"));
         assertThat(attributes.get("boolean")).isInstanceOfSatisfying(Boolean.class,
             aBoolean -> assertThat(aBoolean).isTrue());
         assertThat(attributes.get("integer")).isInstanceOfSatisfying(Long.class,
@@ -182,6 +186,10 @@ public class AttributesTest {
             localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
         assertThat(attributes.get("datetime").getValue()).isInstanceOfSatisfying(String.class,
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+        assertThat(attributes.get("time-simple").getValue()).isInstanceOfSatisfying(String.class,
+            localTime -> assertThat(localTime).isEqualTo("13:15:00"));
+        assertThat(attributes.get("datetime-simple").getValue()).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00Z"));
         assertThat(attributes.get("date").withAttribute(AttributeAccessor::asDate))
                 .isInstanceOfSatisfying(LocalDate.class, localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
         assertThat(attributes.get("time").withAttribute(AttributeAccessor::asTime))

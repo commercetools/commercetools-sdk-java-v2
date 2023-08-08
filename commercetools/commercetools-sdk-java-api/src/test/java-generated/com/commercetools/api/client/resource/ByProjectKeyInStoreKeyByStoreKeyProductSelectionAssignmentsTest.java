@@ -103,6 +103,24 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .productSelectionAssignments()
                                 .get()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/in-store/key=test_storeKey/product-selection-assignments?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productSelectionAssignments()
+                                .get()
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/in-store/key=test_storeKey/product-selection-assignments?var.varName=var.varName", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productSelectionAssignments()
+                                .get()
                                 .createHttpRequest(),
                         "get", "test_projectKey/in-store/key=test_storeKey/product-selection-assignments", } };
     }
@@ -130,6 +148,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
                         .productSelectionAssignments()
                         .get()
                         .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productSelectionAssignments()
+                        .get()
+                        .withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productSelectionAssignments()
+                        .get()
+                        .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .productSelectionAssignments()

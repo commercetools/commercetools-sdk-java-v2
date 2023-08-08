@@ -93,6 +93,9 @@ public class ImageImpl implements Image, ModelBase {
         return new EqualsBuilder().append(url, that.url)
                 .append(dimensions, that.dimensions)
                 .append(label, that.label)
+                .append(url, that.url)
+                .append(dimensions, that.dimensions)
+                .append(label, that.label)
                 .isEquals();
     }
 

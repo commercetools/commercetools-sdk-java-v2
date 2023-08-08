@@ -106,6 +106,10 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
                 .append(message, that.message)
                 .append(currentState, that.currentState)
                 .append(newState, that.newState)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(currentState, that.currentState)
+                .append(newState, that.newState)
                 .isEquals();
     }
 

@@ -71,7 +71,11 @@ public class ProductTypeAddAttributeDefinitionActionImpl implements ProductTypeA
 
         ProductTypeAddAttributeDefinitionActionImpl that = (ProductTypeAddAttributeDefinitionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attribute, that.attribute).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attribute, that.attribute)
+                .append(action, that.action)
+                .append(attribute, that.attribute)
+                .isEquals();
     }
 
     @Override

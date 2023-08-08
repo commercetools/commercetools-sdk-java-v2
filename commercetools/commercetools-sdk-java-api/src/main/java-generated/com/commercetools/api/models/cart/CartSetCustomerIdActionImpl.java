@@ -71,7 +71,11 @@ public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, Mod
 
         CartSetCustomerIdActionImpl that = (CartSetCustomerIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customerId, that.customerId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customerId, that.customerId)
+                .append(action, that.action)
+                .append(customerId, that.customerId)
+                .isEquals();
     }
 
     @Override

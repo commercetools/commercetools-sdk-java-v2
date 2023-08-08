@@ -89,6 +89,9 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
         return new EqualsBuilder().append(type, that.type)
                 .append(sku, that.sku)
                 .append(supplyChannel, that.supplyChannel)
+                .append(type, that.type)
+                .append(sku, that.sku)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 

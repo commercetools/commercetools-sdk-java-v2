@@ -24,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderChangeCustomLineItemMoneyAction stagedOrderChangeCustomLineItemMoneyAction = StagedOrderChangeCustomLineItemMoneyAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .money(moneyBuilder -> moneyBuilder)
  *             .build()
  * </code></pre>
@@ -40,15 +39,23 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
     String CHANGE_CUSTOM_LINE_ITEM_MONEY = "changeCustomLineItemMoney";
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
-    @NotNull
+
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      * @return money
      */
     @NotNull
@@ -57,14 +64,21 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
     public Money getMoney();
 
     /**
-     * set customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
+
+    /**
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      * @param money value to be set
      */
 
@@ -87,6 +101,7 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
             final StagedOrderChangeCustomLineItemMoneyAction template) {
         StagedOrderChangeCustomLineItemMoneyActionImpl instance = new StagedOrderChangeCustomLineItemMoneyActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setMoney(template.getMoney());
         return instance;
     }
@@ -104,6 +119,7 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
         }
         StagedOrderChangeCustomLineItemMoneyActionImpl instance = new StagedOrderChangeCustomLineItemMoneyActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
         return instance;
     }

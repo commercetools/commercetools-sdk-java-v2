@@ -25,6 +25,12 @@ public class OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<OrderCustomLineItemDiscountSetMessagePayloadQueryBuilderDsl> discountedPricePerQuantity(
             Function<com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceForQuantityQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountedLineItemPriceForQuantityQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

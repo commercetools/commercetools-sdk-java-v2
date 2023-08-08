@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Change Transaction State update action.</p>
+ *  <p>Generated after a successful Change TransactionState update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentTransactionStateChangedMessagePayloadImpl
@@ -88,6 +88,9 @@ public class PaymentTransactionStateChangedMessagePayloadImpl
         PaymentTransactionStateChangedMessagePayloadImpl that = (PaymentTransactionStateChangedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(transactionId, that.transactionId)
+                .append(state, that.state)
+                .append(type, that.type)
                 .append(transactionId, that.transactionId)
                 .append(state, that.state)
                 .isEquals();

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetLineItemTaxAmountAction
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSetLineItemTaxAmountAction, ModelBase {
@@ -77,12 +77,7 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
@@ -90,7 +85,7 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -124,6 +119,11 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
         StagedOrderSetLineItemTaxAmountActionImpl that = (StagedOrderSetLineItemTaxAmountActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(externalTaxAmount, that.externalTaxAmount)
+                .append(shippingKey, that.shippingKey)
+                .append(action, that.action)
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(externalTaxAmount, that.externalTaxAmount)

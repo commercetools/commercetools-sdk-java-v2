@@ -54,7 +54,7 @@ public class CategoryUpdateActionImpl implements CategoryUpdateAction, ModelBase
 
         CategoryUpdateActionImpl that = (CategoryUpdateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override

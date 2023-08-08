@@ -101,6 +101,9 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
         return new EqualsBuilder().append(productVariant, that.productVariant)
                 .append(attributes, that.attributes)
                 .append(staged, that.staged)
+                .append(productVariant, that.productVariant)
+                .append(attributes, that.attributes)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

@@ -72,7 +72,11 @@ public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShip
 
         MyCartAddItemShippingAddressActionImpl that = (MyCartAddItemShippingAddressActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(address, that.address)
+                .append(action, that.action)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override

@@ -228,6 +228,17 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
                 .append(rating, that.rating)
                 .append(customer, that.customer)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(uniquenessValue, that.uniquenessValue)
+                .append(locale, that.locale)
+                .append(authorName, that.authorName)
+                .append(title, that.title)
+                .append(text, that.text)
+                .append(target, that.target)
+                .append(state, that.state)
+                .append(rating, that.rating)
+                .append(customer, that.customer)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

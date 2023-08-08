@@ -70,7 +70,11 @@ public class QuoteRequestQuoteRenegotiationActionImpl implements QuoteRequestQuo
 
         QuoteRequestQuoteRenegotiationActionImpl that = (QuoteRequestQuoteRenegotiationActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(buyerComment, that.buyerComment).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(buyerComment, that.buyerComment)
+                .append(action, that.action)
+                .append(buyerComment, that.buyerComment)
+                .isEquals();
     }
 
     @Override

@@ -72,6 +72,8 @@ public class StandalonePriceRemovePriceTierActionImpl implements StandalonePrice
 
         return new EqualsBuilder().append(action, that.action)
                 .append(tierMinimumQuantity, that.tierMinimumQuantity)
+                .append(action, that.action)
+                .append(tierMinimumQuantity, that.tierMinimumQuantity)
                 .isEquals();
     }
 

@@ -126,6 +126,11 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
                 .append(values, that.values)
                 .append(extensionId, that.extensionId)
                 .append(extensionKey, that.extensionKey)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(extensionId, that.extensionId)
+                .append(extensionKey, that.extensionKey)
                 .isEquals();
     }
 

@@ -106,6 +106,10 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
                 .append(priceId, that.priceId)
                 .append(price, that.price)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(priceId, that.priceId)
+                .append(price, that.price)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

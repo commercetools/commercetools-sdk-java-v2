@@ -92,6 +92,9 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
         return new EqualsBuilder().append(key, that.key)
                 .append(groupName, that.groupName)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(groupName, that.groupName)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

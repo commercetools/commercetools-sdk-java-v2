@@ -73,7 +73,11 @@ public class ErrorByExtensionImpl implements ErrorByExtension, ModelBase {
 
         ErrorByExtensionImpl that = (ErrorByExtensionImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
+                .append(id, that.id)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

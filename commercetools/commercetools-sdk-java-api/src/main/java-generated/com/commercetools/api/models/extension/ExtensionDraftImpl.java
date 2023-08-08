@@ -115,6 +115,10 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
                 .append(destination, that.destination)
                 .append(triggers, that.triggers)
                 .append(timeoutInMs, that.timeoutInMs)
+                .append(key, that.key)
+                .append(destination, that.destination)
+                .append(triggers, that.triggers)
+                .append(timeoutInMs, that.timeoutInMs)
                 .isEquals();
     }
 

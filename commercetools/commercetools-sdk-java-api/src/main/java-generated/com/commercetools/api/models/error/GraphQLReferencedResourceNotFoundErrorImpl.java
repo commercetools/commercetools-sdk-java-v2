@@ -125,6 +125,11 @@ public class GraphQLReferencedResourceNotFoundErrorImpl implements GraphQLRefere
                 .append(typeId, that.typeId)
                 .append(id, that.id)
                 .append(key, that.key)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
                 .isEquals();
     }
 

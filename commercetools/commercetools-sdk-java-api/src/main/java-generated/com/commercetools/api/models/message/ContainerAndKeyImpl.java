@@ -73,7 +73,11 @@ public class ContainerAndKeyImpl implements ContainerAndKey, ModelBase {
 
         ContainerAndKeyImpl that = (ContainerAndKeyImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(container, that.container).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(container, that.container)
+                .append(key, that.key)
+                .append(container, that.container)
+                .isEquals();
     }
 
     @Override

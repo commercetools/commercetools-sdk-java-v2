@@ -55,7 +55,7 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     public Integer getTriggerQuantity();
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount.</p>
+     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      * @return discountedQuantity
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     public Integer getDiscountedQuantity();
 
     /**
-     *  <p>Maximum number of times this Discount can be applied.</p>
+     *  <p>Maximum number of times this Discount can be applied. Do not set if the Discount should be applied an unlimited number of times.</p>
      * @return maxOccurrence
      */
 
@@ -93,14 +93,14 @@ public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
     public void setTriggerQuantity(final Integer triggerQuantity);
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount.</p>
+     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      * @param discountedQuantity value to be set
      */
 
     public void setDiscountedQuantity(final Integer discountedQuantity);
 
     /**
-     *  <p>Maximum number of times this Discount can be applied.</p>
+     *  <p>Maximum number of times this Discount can be applied. Do not set if the Discount should be applied an unlimited number of times.</p>
      * @param maxOccurrence value to be set
      */
 

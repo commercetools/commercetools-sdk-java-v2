@@ -72,7 +72,11 @@ public class ProductSelectionProductRemovedMessagePayloadImpl
 
         ProductSelectionProductRemovedMessagePayloadImpl that = (ProductSelectionProductRemovedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(product, that.product).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(product, that.product)
+                .append(type, that.type)
+                .append(product, that.product)
+                .isEquals();
     }
 
     @Override

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>When multiple shipping addresses are set for a Line Item, use the Remove LineItem and Add LineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Line Item quantity should be distributed over the sub-quantities, the <code>shippingDetails</code> field is kept in its current state to avoid data loss.</p>
- *  <p>To change the Line Item quantity and shipping details together, use this update action in combination with the Set LineItemShippingDetails update action in a single Cart update command.</p>
+ *  <p>To change the Line Item quantity and shipping details together, use this update action in combination with the Set LineItem ShippingDetails update action in a single Cart update command.</p>
  *  <p>The LineItem price is set as described in LineItem Price selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -139,6 +139,12 @@ public class CartChangeLineItemQuantityActionImpl implements CartChangeLineItemQ
         CartChangeLineItemQuantityActionImpl that = (CartChangeLineItemQuantityActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(quantity, that.quantity)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(action, that.action)
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(quantity, that.quantity)

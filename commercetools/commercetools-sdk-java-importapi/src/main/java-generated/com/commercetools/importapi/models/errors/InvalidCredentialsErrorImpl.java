@@ -70,7 +70,11 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
 
         InvalidCredentialsErrorImpl that = (InvalidCredentialsErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(code, that.code)
+                .append(message, that.message)
+                .isEquals();
     }
 
     @Override

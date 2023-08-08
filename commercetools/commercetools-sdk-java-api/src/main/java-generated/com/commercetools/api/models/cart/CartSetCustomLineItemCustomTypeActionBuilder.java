@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartSetCustomLineItemCustomTypeAction cartSetCustomLineItemCustomTypeAction = CartSetCustomLineItemCustomTypeAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<CartSetCustomLineItemCustomTypeAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -33,13 +36,24 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public CartSetCustomLineItemCustomTypeActionBuilder customLineItemId(final String customLineItemId) {
+    public CartSetCustomLineItemCustomTypeActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartSetCustomLineItemCustomTypeActionBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -116,12 +130,23 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -149,9 +174,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
      * @return CartSetCustomLineItemCustomTypeAction
      */
     public CartSetCustomLineItemCustomTypeAction build() {
-        Objects.requireNonNull(customLineItemId,
-            CartSetCustomLineItemCustomTypeAction.class + ": customLineItemId is missing");
-        return new CartSetCustomLineItemCustomTypeActionImpl(customLineItemId, type, fields);
+        return new CartSetCustomLineItemCustomTypeActionImpl(customLineItemId, customLineItemKey, type, fields);
     }
 
     /**
@@ -159,7 +182,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
      * @return CartSetCustomLineItemCustomTypeAction
      */
     public CartSetCustomLineItemCustomTypeAction buildUnchecked() {
-        return new CartSetCustomLineItemCustomTypeActionImpl(customLineItemId, type, fields);
+        return new CartSetCustomLineItemCustomTypeActionImpl(customLineItemId, customLineItemKey, type, fields);
     }
 
     /**
@@ -179,6 +202,7 @@ public class CartSetCustomLineItemCustomTypeActionBuilder implements Builder<Car
             final CartSetCustomLineItemCustomTypeAction template) {
         CartSetCustomLineItemCustomTypeActionBuilder builder = new CartSetCustomLineItemCustomTypeActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

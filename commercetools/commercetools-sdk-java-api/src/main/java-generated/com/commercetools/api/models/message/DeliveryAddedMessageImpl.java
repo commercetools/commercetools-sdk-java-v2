@@ -172,7 +172,7 @@ public class DeliveryAddedMessageImpl implements DeliveryAddedMessage, ModelBase
     }
 
     /**
-     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional Parcel Added To Delivery Message containing information about the Parcels.</p>
      */
 
     public com.commercetools.api.models.order.Delivery getDelivery() {
@@ -180,7 +180,7 @@ public class DeliveryAddedMessageImpl implements DeliveryAddedMessage, ModelBase
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -247,6 +247,19 @@ public class DeliveryAddedMessageImpl implements DeliveryAddedMessage, ModelBase
         DeliveryAddedMessageImpl that = (DeliveryAddedMessageImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(delivery, that.delivery)
+                .append(shippingKey, that.shippingKey)
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)

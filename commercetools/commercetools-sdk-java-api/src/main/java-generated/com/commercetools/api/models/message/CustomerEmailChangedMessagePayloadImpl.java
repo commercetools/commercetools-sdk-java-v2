@@ -70,7 +70,11 @@ public class CustomerEmailChangedMessagePayloadImpl implements CustomerEmailChan
 
         CustomerEmailChangedMessagePayloadImpl that = (CustomerEmailChangedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(email, that.email).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(email, that.email)
+                .append(type, that.type)
+                .append(email, that.email)
+                .isEquals();
     }
 
     @Override

@@ -106,6 +106,10 @@ public class StagedQuoteLabelImpl implements StagedQuoteLabel, ModelBase {
                 .append(key, that.key)
                 .append(customer, that.customer)
                 .append(quoteRequest, that.quoteRequest)
+                .append(type, that.type)
+                .append(key, that.key)
+                .append(customer, that.customer)
+                .append(quoteRequest, that.quoteRequest)
                 .isEquals();
     }
 

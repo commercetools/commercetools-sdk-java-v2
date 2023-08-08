@@ -94,6 +94,9 @@ public class MyCustomerChangePasswordImpl implements MyCustomerChangePassword, M
         return new EqualsBuilder().append(version, that.version)
                 .append(currentPassword, that.currentPassword)
                 .append(newPassword, that.newPassword)
+                .append(version, that.version)
+                .append(currentPassword, that.currentPassword)
+                .append(newPassword, that.newPassword)
                 .isEquals();
     }
 

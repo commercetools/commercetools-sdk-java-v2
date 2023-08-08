@@ -125,6 +125,11 @@ public class CartSetCustomShippingMethodActionImpl implements CartSetCustomShipp
                 .append(shippingRate, that.shippingRate)
                 .append(taxCategory, that.taxCategory)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(action, that.action)
+                .append(shippingMethodName, that.shippingMethodName)
+                .append(shippingRate, that.shippingRate)
+                .append(taxCategory, that.taxCategory)
+                .append(externalTaxRate, that.externalTaxRate)
                 .isEquals();
     }
 

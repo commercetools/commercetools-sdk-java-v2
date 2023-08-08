@@ -61,7 +61,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information about the dimensions for the Parcel.</p>
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
@@ -69,7 +69,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Shipment tracking information for the Parcel.</p>
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
@@ -77,7 +77,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -85,7 +85,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     *  <p>Custom Fields for the Parcel.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -127,6 +127,11 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
         ParcelDraftImpl that = (ParcelDraftImpl) o;
 
         return new EqualsBuilder().append(key, that.key)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
+                .append(custom, that.custom)
+                .append(key, that.key)
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)

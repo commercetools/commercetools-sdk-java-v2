@@ -74,7 +74,11 @@ public class PriceImpl implements Price, ModelBase {
 
         PriceImpl that = (PriceImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(value, that.value)
+                .append(id, that.id)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

@@ -126,6 +126,11 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
                 .append(values, that.values)
                 .append(subject, that.subject)
                 .append(itemId, that.itemId)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(subject, that.subject)
+                .append(itemId, that.itemId)
                 .isEquals();
     }
 

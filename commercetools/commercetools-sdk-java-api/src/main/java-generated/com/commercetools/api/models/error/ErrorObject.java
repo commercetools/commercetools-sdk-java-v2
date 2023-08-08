@@ -35,6 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.AttributeNameDoesNotExistErrorImpl.class, name = AttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.BadGatewayErrorImpl.class, name = BadGatewayError.BAD_GATEWAY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = ConcurrentModificationError.CONCURRENT_MODIFICATION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.ContentTooLargeErrorImpl.class, name = ContentTooLargeError.CONTENT_TOO_LARGE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.CountryNotConfiguredInStoreErrorImpl.class, name = CountryNotConfiguredInStoreError.COUNTRY_NOT_CONFIGURED_IN_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.DiscountCodeNonApplicableErrorImpl.class, name = DiscountCodeNonApplicableError.DISCOUNT_CODE_NON_APPLICABLE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl.class, name = DuplicateAttributeValueError.DUPLICATE_ATTRIBUTE_VALUE),
@@ -185,6 +186,10 @@ public interface ErrorObject {
         if (template instanceof com.commercetools.api.models.error.ConcurrentModificationError) {
             return com.commercetools.api.models.error.ConcurrentModificationError
                     .deepCopy((com.commercetools.api.models.error.ConcurrentModificationError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ContentTooLargeError) {
+            return com.commercetools.api.models.error.ContentTooLargeError
+                    .deepCopy((com.commercetools.api.models.error.ContentTooLargeError) template);
         }
         if (template instanceof com.commercetools.api.models.error.CountryNotConfiguredInStoreError) {
             return com.commercetools.api.models.error.CountryNotConfiguredInStoreError
@@ -518,6 +523,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.ConcurrentModificationErrorBuilder concurrentModificationBuilder() {
         return com.commercetools.api.models.error.ConcurrentModificationErrorBuilder.of();
+    }
+
+    /**
+     * builder for contentTooLarge subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ContentTooLargeErrorBuilder contentTooLargeBuilder() {
+        return com.commercetools.api.models.error.ContentTooLargeErrorBuilder.of();
     }
 
     /**

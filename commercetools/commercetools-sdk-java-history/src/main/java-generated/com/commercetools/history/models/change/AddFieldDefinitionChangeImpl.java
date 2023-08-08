@@ -89,6 +89,9 @@ public class AddFieldDefinitionChangeImpl implements AddFieldDefinitionChange, M
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 

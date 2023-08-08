@@ -107,6 +107,10 @@ public class BusinessUnitSetAddressCustomTypeActionImpl implements BusinessUnitS
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .append(addressId, that.addressId)
+                .append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 

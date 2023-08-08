@@ -102,6 +102,9 @@ public class GraphQLStoreCartDiscountsLimitReachedErrorImpl
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(stores, that.stores)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(stores, that.stores)
                 .isEquals();
     }
 

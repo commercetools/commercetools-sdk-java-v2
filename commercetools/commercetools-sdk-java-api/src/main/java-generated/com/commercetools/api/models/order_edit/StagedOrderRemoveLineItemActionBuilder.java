@@ -64,7 +64,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * set the value to the quantity
+     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * set the value to the externalTotalPrice using the builder function
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * set the value to the externalTotalPrice using the builder function
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * set the value to the externalTotalPrice
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Container for Line Item-specific addresses to remove.</p>
      * @param builder function to build the shippingDetailsToRemove value
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Container for Line Item-specific addresses to remove.</p>
      * @param builder function to build the shippingDetailsToRemove value
      * @return Builder
      */
@@ -177,7 +177,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Container for Line Item-specific addresses to remove.</p>
      * @param shippingDetailsToRemove value to be set
      * @return Builder
      */
@@ -209,7 +209,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * value of quantity}
+     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
      * @return quantity
      */
 
@@ -219,7 +219,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      * @return externalPrice
      */
 
@@ -229,7 +229,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * value of externalTotalPrice}
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @return externalTotalPrice
      */
 
@@ -239,7 +239,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Container for Line Item-specific addresses to remove.</p>
      * @return shippingDetailsToRemove
      */
 

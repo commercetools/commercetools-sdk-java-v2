@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Remove From Category update action.</p>
+ *  <p>Generated after a successful Remove from Category update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemovedFromCategoryMessagePayloadImpl
@@ -89,6 +89,9 @@ public class ProductRemovedFromCategoryMessagePayloadImpl
         ProductRemovedFromCategoryMessagePayloadImpl that = (ProductRemovedFromCategoryMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(category, that.category)
+                .append(staged, that.staged)
+                .append(type, that.type)
                 .append(category, that.category)
                 .append(staged, that.staged)
                 .isEquals();

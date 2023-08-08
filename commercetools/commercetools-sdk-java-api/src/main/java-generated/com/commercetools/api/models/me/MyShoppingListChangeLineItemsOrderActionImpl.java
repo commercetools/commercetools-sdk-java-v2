@@ -76,7 +76,11 @@ public class MyShoppingListChangeLineItemsOrderActionImpl
 
         MyShoppingListChangeLineItemsOrderActionImpl that = (MyShoppingListChangeLineItemsOrderActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemOrder, that.lineItemOrder).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemOrder, that.lineItemOrder)
+                .append(action, that.action)
+                .append(lineItemOrder, that.lineItemOrder)
+                .isEquals();
     }
 
     @Override

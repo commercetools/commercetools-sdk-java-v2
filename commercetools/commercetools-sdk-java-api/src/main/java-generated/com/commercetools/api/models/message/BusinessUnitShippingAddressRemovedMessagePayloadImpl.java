@@ -72,7 +72,11 @@ public class BusinessUnitShippingAddressRemovedMessagePayloadImpl
 
         BusinessUnitShippingAddressRemovedMessagePayloadImpl that = (BusinessUnitShippingAddressRemovedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(address, that.address)
+                .append(type, that.type)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override

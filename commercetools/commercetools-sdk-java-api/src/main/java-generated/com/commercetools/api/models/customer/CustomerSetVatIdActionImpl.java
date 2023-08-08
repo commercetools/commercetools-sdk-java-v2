@@ -70,7 +70,11 @@ public class CustomerSetVatIdActionImpl implements CustomerSetVatIdAction, Model
 
         CustomerSetVatIdActionImpl that = (CustomerSetVatIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(vatId, that.vatId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(vatId, that.vatId)
+                .append(action, that.action)
+                .append(vatId, that.vatId)
+                .isEquals();
     }
 
     @Override

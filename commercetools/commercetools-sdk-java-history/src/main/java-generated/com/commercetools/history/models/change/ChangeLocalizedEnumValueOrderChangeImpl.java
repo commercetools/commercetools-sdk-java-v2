@@ -155,6 +155,12 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
                 .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
                 .append(attributeName, that.attributeName)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(fieldName, that.fieldName)
+                .append(attributeName, that.attributeName)
                 .isEquals();
     }
 

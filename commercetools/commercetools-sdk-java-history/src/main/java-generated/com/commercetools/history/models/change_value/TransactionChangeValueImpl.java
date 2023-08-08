@@ -93,6 +93,9 @@ public class TransactionChangeValueImpl implements TransactionChangeValue, Model
         return new EqualsBuilder().append(id, that.id)
                 .append(interactionId, that.interactionId)
                 .append(timestamp, that.timestamp)
+                .append(id, that.id)
+                .append(interactionId, that.interactionId)
+                .append(timestamp, that.timestamp)
                 .isEquals();
     }
 

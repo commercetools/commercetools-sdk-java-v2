@@ -127,6 +127,11 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
                 .append(amount, that.amount)
                 .append(interactionId, that.interactionId)
                 .append(custom, that.custom)
+                .append(timestamp, that.timestamp)
+                .append(type, that.type)
+                .append(amount, that.amount)
+                .append(interactionId, that.interactionId)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

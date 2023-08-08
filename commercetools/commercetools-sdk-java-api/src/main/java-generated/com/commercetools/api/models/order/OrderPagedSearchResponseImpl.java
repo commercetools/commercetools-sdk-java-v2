@@ -113,6 +113,10 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
                 .append(offset, that.offset)
                 .append(limit, that.limit)
                 .append(hits, that.hits)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(limit, that.limit)
+                .append(hits, that.hits)
                 .isEquals();
     }
 

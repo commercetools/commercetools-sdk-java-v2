@@ -17,8 +17,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     OrderEditPagedQueryResponse orderEditPagedQueryResponse = OrderEditPagedQueryResponse.builder()
  *             .limit(0.3)
- *             .count(0.3)
  *             .offset(0.3)
+ *             .count(0.3)
  *             .plusResults(resultsBuilder -> resultsBuilder)
  *             .build()
  * </code></pre>
@@ -29,12 +29,12 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     @Nullable
     private Long total;
-
-    private Long offset;
 
     private java.util.List<com.commercetools.api.models.order_edit.OrderEdit> results;
 
@@ -50,28 +50,6 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     * set the value to the count
-     * @param count value to be set
-     * @return Builder
-     */
-
-    public OrderEditPagedQueryResponseBuilder count(final Long count) {
-        this.count = count;
-        return this;
-    }
-
-    /**
-     * set the value to the total
-     * @param total value to be set
-     * @return Builder
-     */
-
-    public OrderEditPagedQueryResponseBuilder total(@Nullable final Long total) {
-        this.total = total;
-        return this;
-    }
-
-    /**
      *  <p>Number of elements skipped.</p>
      * @param offset value to be set
      * @return Builder
@@ -83,7 +61,29 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     * set values to the results
+     *  <p>Actual number of results returned.</p>
+     * @param count value to be set
+     * @return Builder
+     */
+
+    public OrderEditPagedQueryResponseBuilder count(final Long count) {
+        this.count = count;
+        return this;
+    }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @param total value to be set
+     * @return Builder
+     */
+
+    public OrderEditPagedQueryResponseBuilder total(@Nullable final Long total) {
+        this.total = total;
+        return this;
+    }
+
+    /**
+     *  <p>OrderEdits matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     * set value to the results
+     *  <p>OrderEdits matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     * add values to the results
+     *  <p>OrderEdits matching the query.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     * add the value to the results using the builder function
+     *  <p>OrderEdits matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     * set the value to the results using the builder function
+     *  <p>OrderEdits matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     * add the value to the results using the builder function
+     *  <p>OrderEdits matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     * set the value to the results using the builder function
+     *  <p>OrderEdits matching the query.</p>
      * @param builder function to build the results value
      * @return Builder
      */
@@ -181,25 +181,6 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     * value of count}
-     * @return count
-     */
-
-    public Long getCount() {
-        return this.count;
-    }
-
-    /**
-     * value of total}
-     * @return total
-     */
-
-    @Nullable
-    public Long getTotal() {
-        return this.total;
-    }
-
-    /**
      *  <p>Number of elements skipped.</p>
      * @return offset
      */
@@ -209,7 +190,26 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     * value of results}
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
+
+    public Long getCount() {
+        return this.count;
+    }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
+     */
+
+    @Nullable
+    public Long getTotal() {
+        return this.total;
+    }
+
+    /**
+     *  <p>OrderEdits matching the query.</p>
      * @return results
      */
 
@@ -223,10 +223,10 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
      */
     public OrderEditPagedQueryResponse build() {
         Objects.requireNonNull(limit, OrderEditPagedQueryResponse.class + ": limit is missing");
-        Objects.requireNonNull(count, OrderEditPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(offset, OrderEditPagedQueryResponse.class + ": offset is missing");
+        Objects.requireNonNull(count, OrderEditPagedQueryResponse.class + ": count is missing");
         Objects.requireNonNull(results, OrderEditPagedQueryResponse.class + ": results is missing");
-        return new OrderEditPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new OrderEditPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
@@ -234,7 +234,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
      * @return OrderEditPagedQueryResponse
      */
     public OrderEditPagedQueryResponse buildUnchecked() {
-        return new OrderEditPagedQueryResponseImpl(limit, count, total, offset, results);
+        return new OrderEditPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
     /**
@@ -253,9 +253,9 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     public static OrderEditPagedQueryResponseBuilder of(final OrderEditPagedQueryResponse template) {
         OrderEditPagedQueryResponseBuilder builder = new OrderEditPagedQueryResponseBuilder();
         builder.limit = template.getLimit();
+        builder.offset = template.getOffset();
         builder.count = template.getCount();
         builder.total = template.getTotal();
-        builder.offset = template.getOffset();
         builder.results = template.getResults();
         return builder;
     }

@@ -74,7 +74,11 @@ public class ProjectChangeCurrenciesActionImpl implements ProjectChangeCurrencie
 
         ProjectChangeCurrenciesActionImpl that = (ProjectChangeCurrenciesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(currencies, that.currencies).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(currencies, that.currencies)
+                .append(action, that.action)
+                .append(currencies, that.currencies)
+                .isEquals();
     }
 
     @Override

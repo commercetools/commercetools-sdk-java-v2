@@ -3,6 +3,8 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -26,6 +28,9 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
 
     private String customLineItemId;
 
+    @Nullable
+    private String customLineItemKey;
+
     private Long quantity;
 
     private Long oldQuantity;
@@ -38,6 +43,18 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
 
     public OrderCustomLineItemQuantityChangedMessagePayloadBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderCustomLineItemQuantityChangedMessagePayloadBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -73,6 +90,16 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      * @return quantity
      */
@@ -101,7 +128,8 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
             OrderCustomLineItemQuantityChangedMessagePayload.class + ": quantity is missing");
         Objects.requireNonNull(oldQuantity,
             OrderCustomLineItemQuantityChangedMessagePayload.class + ": oldQuantity is missing");
-        return new OrderCustomLineItemQuantityChangedMessagePayloadImpl(customLineItemId, quantity, oldQuantity);
+        return new OrderCustomLineItemQuantityChangedMessagePayloadImpl(customLineItemId, customLineItemKey, quantity,
+            oldQuantity);
     }
 
     /**
@@ -109,7 +137,8 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
      * @return OrderCustomLineItemQuantityChangedMessagePayload
      */
     public OrderCustomLineItemQuantityChangedMessagePayload buildUnchecked() {
-        return new OrderCustomLineItemQuantityChangedMessagePayloadImpl(customLineItemId, quantity, oldQuantity);
+        return new OrderCustomLineItemQuantityChangedMessagePayloadImpl(customLineItemId, customLineItemKey, quantity,
+            oldQuantity);
     }
 
     /**
@@ -129,6 +158,7 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadBuilder
             final OrderCustomLineItemQuantityChangedMessagePayload template) {
         OrderCustomLineItemQuantityChangedMessagePayloadBuilder builder = new OrderCustomLineItemQuantityChangedMessagePayloadBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.quantity = template.getQuantity();
         builder.oldQuantity = template.getOldQuantity();
         return builder;

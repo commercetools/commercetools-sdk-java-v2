@@ -70,7 +70,11 @@ public class CustomerSetCustomerNumberActionImpl implements CustomerSetCustomerN
 
         CustomerSetCustomerNumberActionImpl that = (CustomerSetCustomerNumberActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customerNumber, that.customerNumber).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customerNumber, that.customerNumber)
+                .append(action, that.action)
+                .append(customerNumber, that.customerNumber)
+                .isEquals();
     }
 
     @Override

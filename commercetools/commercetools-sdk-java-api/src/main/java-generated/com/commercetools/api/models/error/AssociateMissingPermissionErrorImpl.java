@@ -171,6 +171,13 @@ public class AssociateMissingPermissionErrorImpl implements AssociateMissingPerm
                 .append(businessUnit, that.businessUnit)
                 .append(associateOnBehalf, that.associateOnBehalf)
                 .append(permissions, that.permissions)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(associate, that.associate)
+                .append(businessUnit, that.businessUnit)
+                .append(associateOnBehalf, that.associateOnBehalf)
+                .append(permissions, that.permissions)
                 .isEquals();
     }
 

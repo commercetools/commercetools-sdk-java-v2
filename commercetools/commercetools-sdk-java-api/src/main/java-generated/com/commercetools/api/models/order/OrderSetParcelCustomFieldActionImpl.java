@@ -60,7 +60,8 @@ public class OrderSetParcelCustomFieldActionImpl implements OrderSetParcelCustom
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelId() {
@@ -68,7 +69,8 @@ public class OrderSetParcelCustomFieldActionImpl implements OrderSetParcelCustom
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelKey() {
@@ -118,6 +120,11 @@ public class OrderSetParcelCustomFieldActionImpl implements OrderSetParcelCustom
         OrderSetParcelCustomFieldActionImpl that = (OrderSetParcelCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(parcelId, that.parcelId)
+                .append(parcelKey, that.parcelKey)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(action, that.action)
                 .append(parcelId, that.parcelId)
                 .append(parcelKey, that.parcelKey)
                 .append(name, that.name)

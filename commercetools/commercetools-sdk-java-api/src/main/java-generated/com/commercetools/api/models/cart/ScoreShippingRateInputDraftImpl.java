@@ -70,7 +70,11 @@ public class ScoreShippingRateInputDraftImpl implements ScoreShippingRateInputDr
 
         ScoreShippingRateInputDraftImpl that = (ScoreShippingRateInputDraftImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(score, that.score).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(score, that.score)
+                .append(type, that.type)
+                .append(score, that.score)
+                .isEquals();
     }
 
     @Override

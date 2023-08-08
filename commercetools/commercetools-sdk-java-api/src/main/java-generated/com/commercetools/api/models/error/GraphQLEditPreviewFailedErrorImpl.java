@@ -93,6 +93,9 @@ public class GraphQLEditPreviewFailedErrorImpl implements GraphQLEditPreviewFail
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(result, that.result)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(result, that.result)
                 .isEquals();
     }
 

@@ -72,7 +72,11 @@ public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, M
 
         CustomFieldReferenceTypeImpl that = (CustomFieldReferenceTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(referenceTypeId, that.referenceTypeId).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(referenceTypeId, that.referenceTypeId)
+                .append(name, that.name)
+                .append(referenceTypeId, that.referenceTypeId)
+                .isEquals();
     }
 
     @Override

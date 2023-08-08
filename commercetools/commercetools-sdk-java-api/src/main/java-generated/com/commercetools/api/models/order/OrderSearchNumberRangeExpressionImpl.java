@@ -59,7 +59,7 @@ public class OrderSearchNumberRangeExpressionImpl implements OrderSearchNumberRa
 
         OrderSearchNumberRangeExpressionImpl that = (OrderSearchNumberRangeExpressionImpl) o;
 
-        return new EqualsBuilder().append(range, that.range).isEquals();
+        return new EqualsBuilder().append(range, that.range).append(range, that.range).isEquals();
     }
 
     @Override

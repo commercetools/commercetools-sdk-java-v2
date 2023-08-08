@@ -54,7 +54,7 @@ public class ZoneUpdateActionImpl implements ZoneUpdateAction, ModelBase {
 
         ZoneUpdateActionImpl that = (ZoneUpdateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override

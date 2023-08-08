@@ -15,7 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderChangeLineItemQuantityAction
+ *  <p>When multiple shipping addresses are set for a Line Item, use the Remove LineItem and Add LineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Line Item quantity should be distributed over the sub-quantities, the <code>shippingDetails</code> field is kept in its current state to avoid data loss.</p>
+ *  <p>To change the Line Item quantity and shipping details together, use this update action in combination with the Set LineItem ShippingDetails update action in a single Order update command.</p>
+ *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderChangeLineItemQuantityAction, ModelBase {
@@ -80,7 +82,7 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
     }
 
     /**
-     *
+     *  <p>New value to set. If <code>0</code>, the LineItem is removed from the Order.</p>
      */
 
     public Long getQuantity() {
@@ -88,7 +90,8 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -96,7 +99,7 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
     }
 
     /**
-     *
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -135,6 +138,12 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
         StagedOrderChangeLineItemQuantityActionImpl that = (StagedOrderChangeLineItemQuantityActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(quantity, that.quantity)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(action, that.action)
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(quantity, that.quantity)

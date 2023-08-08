@@ -78,7 +78,11 @@ public class CartSetDirectDiscountsActionImpl implements CartSetDirectDiscountsA
 
         CartSetDirectDiscountsActionImpl that = (CartSetDirectDiscountsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(discounts, that.discounts).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(discounts, that.discounts)
+                .append(action, that.action)
+                .append(discounts, that.discounts)
+                .isEquals();
     }
 
     @Override

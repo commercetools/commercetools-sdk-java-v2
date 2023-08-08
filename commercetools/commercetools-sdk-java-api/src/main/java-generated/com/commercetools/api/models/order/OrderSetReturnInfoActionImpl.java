@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderSetReturnInfoAction
+ *  <p>Produces the Return Info Set Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetReturnInfoActionImpl implements OrderSetReturnInfoAction, ModelBase {
@@ -50,7 +50,7 @@ public class OrderSetReturnInfoActionImpl implements OrderSetReturnInfoAction, M
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> getItems() {
@@ -75,7 +75,11 @@ public class OrderSetReturnInfoActionImpl implements OrderSetReturnInfoAction, M
 
         OrderSetReturnInfoActionImpl that = (OrderSetReturnInfoActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(items, that.items).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(items, that.items)
+                .append(action, that.action)
+                .append(items, that.items)
+                .isEquals();
     }
 
     @Override

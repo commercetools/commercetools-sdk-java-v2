@@ -27,7 +27,7 @@ public class StagedOrderSetShippingAddressActionBuilder implements Builder<Stage
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class StagedOrderSetShippingAddressActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class StagedOrderSetShippingAddressActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class StagedOrderSetShippingAddressActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return address
      */
 

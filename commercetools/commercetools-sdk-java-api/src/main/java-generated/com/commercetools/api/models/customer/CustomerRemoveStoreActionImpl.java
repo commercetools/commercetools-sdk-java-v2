@@ -71,7 +71,11 @@ public class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreAction,
 
         CustomerRemoveStoreActionImpl that = (CustomerRemoveStoreActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(store, that.store).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(store, that.store)
+                .append(action, that.action)
+                .append(store, that.store)
+                .isEquals();
     }
 
     @Override

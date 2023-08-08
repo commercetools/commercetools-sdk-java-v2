@@ -76,7 +76,11 @@ public class BusinessUnitSetAssociatesActionImpl implements BusinessUnitSetAssoc
 
         BusinessUnitSetAssociatesActionImpl that = (BusinessUnitSetAssociatesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(associates, that.associates).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(associates, that.associates)
+                .append(action, that.action)
+                .append(associates, that.associates)
+                .isEquals();
     }
 
     @Override

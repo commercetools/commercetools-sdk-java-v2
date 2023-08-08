@@ -54,7 +54,7 @@ public class MyPaymentUpdateActionImpl implements MyPaymentUpdateAction, ModelBa
 
         MyPaymentUpdateActionImpl that = (MyPaymentUpdateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override

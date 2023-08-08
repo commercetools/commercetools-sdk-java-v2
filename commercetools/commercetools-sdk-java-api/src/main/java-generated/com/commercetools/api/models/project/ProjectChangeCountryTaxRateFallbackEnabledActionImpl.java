@@ -74,6 +74,8 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(countryTaxRateFallbackEnabled, that.countryTaxRateFallbackEnabled)
+                .append(action, that.action)
+                .append(countryTaxRateFallbackEnabled, that.countryTaxRateFallbackEnabled)
                 .isEquals();
     }
 

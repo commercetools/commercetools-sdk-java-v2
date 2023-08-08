@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>When creating B2B Orders, the Customer must have the <code>MyOrderFromQuoteDraft</code> Permission.</p>
+ * MyOrderFromQuoteDraft
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBase {
@@ -44,7 +44,7 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
     }
 
     /**
-     *  <p>Unique identifier of the Quote from which the Order is created.</p>
+     *  <p><code>id</code> of the Quote from which the Order is created.</p>
      */
 
     public String getId() {
@@ -52,7 +52,7 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
     }
 
     /**
-     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the Quote from which the Order is created.</p>
      */
 
     public Long getVersion() {
@@ -90,6 +90,9 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
         MyOrderFromQuoteDraftImpl that = (MyOrderFromQuoteDraftImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(quoteStateToAccepted, that.quoteStateToAccepted)
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(quoteStateToAccepted, that.quoteStateToAccepted)
                 .isEquals();

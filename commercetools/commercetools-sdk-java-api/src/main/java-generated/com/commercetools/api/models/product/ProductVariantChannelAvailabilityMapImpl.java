@@ -62,7 +62,7 @@ public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantC
 
         ProductVariantChannelAvailabilityMapImpl that = (ProductVariantChannelAvailabilityMapImpl) o;
 
-        return new EqualsBuilder().append(values, that.values).isEquals();
+        return new EqualsBuilder().append(values, that.values).append(values, that.values).isEquals();
     }
 
     @Override

@@ -116,6 +116,10 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
                 .append(variantSelection, that.variantSelection)
                 .append(variantExclusion, that.variantExclusion)
                 .append(createdAt, that.createdAt)
+                .append(productSelection, that.productSelection)
+                .append(variantSelection, that.variantSelection)
+                .append(variantExclusion, that.variantExclusion)
+                .append(createdAt, that.createdAt)
                 .isEquals();
     }
 

@@ -44,7 +44,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReturnItem extends com.commercetools.api.models.Customizable<ReturnItem> {
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the Return Item.</p>
      * @return id
      */
     @NotNull
@@ -52,7 +52,15 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public String getId();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Return Item.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>Number of Line Items or Custom Line Items returned.</p>
      * @return quantity
      */
     @NotNull
@@ -68,7 +76,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public String getType();
 
     /**
-     *
+     *  <p>User-defined description for the return.</p>
      * @return comment
      */
 
@@ -76,7 +84,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public String getComment();
 
     /**
-     *
+     *  <p>Shipment status of the Return Item.</p>
      * @return shipmentState
      */
     @NotNull
@@ -84,7 +92,11 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public ReturnShipmentState getShipmentState();
 
     /**
-     *
+     *  <p>Payment status of the Return Item:</p>
+     *  <ul>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *  </ul>
      * @return paymentState
      */
     @NotNull
@@ -92,7 +104,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public ReturnPaymentState getPaymentState();
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields of the Return Item.</p>
      * @return custom
      */
     @Valid
@@ -100,7 +112,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public CustomFields getCustom();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Return Item was last updated.</p>
      * @return lastModifiedAt
      */
     @NotNull
@@ -108,7 +120,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
      * @return createdAt
      */
     @NotNull
@@ -116,56 +128,67 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the Return Item.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set quantity
+     *  <p>User-defined unique identifier of the Return Item.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p>Number of Line Items or Custom Line Items returned.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     * set comment
+     *  <p>User-defined description for the return.</p>
      * @param comment value to be set
      */
 
     public void setComment(final String comment);
 
     /**
-     * set shipmentState
+     *  <p>Shipment status of the Return Item.</p>
      * @param shipmentState value to be set
      */
 
     public void setShipmentState(final ReturnShipmentState shipmentState);
 
     /**
-     * set paymentState
+     *  <p>Payment status of the Return Item:</p>
+     *  <ul>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *  </ul>
      * @param paymentState value to be set
      */
 
     public void setPaymentState(final ReturnPaymentState paymentState);
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields of the Return Item.</p>
      * @param custom value to be set
      */
 
     public void setCustom(final CustomFields custom);
 
     /**
-     * set lastModifiedAt
+     *  <p>Date and time (UTC) the Return Item was last updated.</p>
      * @param lastModifiedAt value to be set
      */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     * set createdAt
+     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
      * @param createdAt value to be set
      */
 
@@ -191,6 +214,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
         }
         ReturnItemImpl instance = new ReturnItemImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setComment(template.getComment());
         instance.setShipmentState(template.getShipmentState());

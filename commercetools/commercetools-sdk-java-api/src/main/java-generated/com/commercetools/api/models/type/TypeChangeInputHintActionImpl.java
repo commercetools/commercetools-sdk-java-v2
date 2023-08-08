@@ -89,6 +89,9 @@ public class TypeChangeInputHintActionImpl implements TypeChangeInputHintAction,
         return new EqualsBuilder().append(action, that.action)
                 .append(fieldName, that.fieldName)
                 .append(inputHint, that.inputHint)
+                .append(action, that.action)
+                .append(fieldName, that.fieldName)
+                .append(inputHint, that.inputHint)
                 .isEquals();
     }
 

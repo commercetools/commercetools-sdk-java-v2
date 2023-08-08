@@ -106,6 +106,10 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
                 .append(addressId, that.addressId)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 

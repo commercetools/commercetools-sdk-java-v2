@@ -110,6 +110,10 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(exceededResource, that.exceededResource)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(exceededResource, that.exceededResource)
                 .isEquals();
     }
 

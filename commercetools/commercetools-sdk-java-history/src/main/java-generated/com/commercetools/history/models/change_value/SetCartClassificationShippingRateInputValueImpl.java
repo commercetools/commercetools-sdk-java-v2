@@ -91,7 +91,13 @@ public class SetCartClassificationShippingRateInputValueImpl
 
         SetCartClassificationShippingRateInputValueImpl that = (SetCartClassificationShippingRateInputValueImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(key, that.key).append(label, that.label).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(key, that.key)
+                .append(label, that.label)
+                .append(type, that.type)
+                .append(key, that.key)
+                .append(label, that.label)
+                .isEquals();
     }
 
     @Override

@@ -11,17 +11,30 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderState
+ *  <p>Indicates the state of the Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface OrderState extends JsonEnum {
 
+    /**
+    	<p>The default state of a new Order.</p>
+
+    */
     OrderState OPEN = OrderStateEnum.OPEN;
+    /**
+    	<p>Indicates that the Order is accepted and being processed.</p>
 
+    */
     OrderState CONFIRMED = OrderStateEnum.CONFIRMED;
+    /**
+    	<p>Indicates that the Order is fulfilled.</p>
 
+    */
     OrderState COMPLETE = OrderStateEnum.COMPLETE;
+    /**
+    	<p>Indicates that the Order is canceled.</p>
 
+    */
     OrderState CANCELLED = OrderStateEnum.CANCELLED;
 
     /**

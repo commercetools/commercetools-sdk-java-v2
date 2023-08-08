@@ -125,6 +125,11 @@ public class OrderSearchDateRangeValueImpl implements OrderSearchDateRangeValue,
                 .append(customType, that.customType)
                 .append(gte, that.gte)
                 .append(lte, that.lte)
+                .append(field, that.field)
+                .append(boost, that.boost)
+                .append(customType, that.customType)
+                .append(gte, that.gte)
+                .append(lte, that.lte)
                 .isEquals();
     }
 

@@ -71,7 +71,11 @@ public class ProductCreatedMessagePayloadImpl implements ProductCreatedMessagePa
 
         ProductCreatedMessagePayloadImpl that = (ProductCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(productProjection, that.productProjection).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(productProjection, that.productProjection)
+                .append(type, that.type)
+                .append(productProjection, that.productProjection)
+                .isEquals();
     }
 
     @Override

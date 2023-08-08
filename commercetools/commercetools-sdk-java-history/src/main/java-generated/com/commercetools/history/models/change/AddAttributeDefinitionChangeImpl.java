@@ -89,6 +89,9 @@ public class AddAttributeDefinitionChangeImpl implements AddAttributeDefinitionC
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 

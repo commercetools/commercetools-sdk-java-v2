@@ -158,6 +158,13 @@ public class ResourceDeletedDeliveryPayloadImpl implements ResourceDeletedDelive
                 .append(version, that.version)
                 .append(modifiedAt, that.modifiedAt)
                 .append(dataErasure, that.dataErasure)
+                .append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(version, that.version)
+                .append(modifiedAt, that.modifiedAt)
+                .append(dataErasure, that.dataErasure)
                 .isEquals();
     }
 

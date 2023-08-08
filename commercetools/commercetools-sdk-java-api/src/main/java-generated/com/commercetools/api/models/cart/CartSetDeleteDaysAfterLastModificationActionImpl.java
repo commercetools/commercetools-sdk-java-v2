@@ -75,6 +75,8 @@ public class CartSetDeleteDaysAfterLastModificationActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(action, that.action)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .isEquals();
     }
 

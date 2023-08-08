@@ -53,6 +53,14 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public String getLineItemId();
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
+
+    /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @return discountedPricePerQuantity
      */
@@ -79,7 +87,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public TaxedItemPrice getTaxedPrice();
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @return taxedPricePortions
      */
     @NotNull
@@ -93,6 +101,13 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
@@ -125,7 +140,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param taxedPricePortions values to be set
      */
 
@@ -133,7 +148,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param taxedPricePortions values to be set
      */
 
@@ -155,6 +170,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public static OrderLineItemDiscountSetMessagePayload of(final OrderLineItemDiscountSetMessagePayload template) {
         OrderLineItemDiscountSetMessagePayloadImpl instance = new OrderLineItemDiscountSetMessagePayloadImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
@@ -175,6 +191,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
         }
         OrderLineItemDiscountSetMessagePayloadImpl instance = new OrderLineItemDiscountSetMessagePayloadImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)

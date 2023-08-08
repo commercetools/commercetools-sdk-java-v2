@@ -106,6 +106,10 @@ public class RemovePropertyChangeImpl implements RemovePropertyChange, ModelBase
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(path, that.path)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(path, that.path)
                 .isEquals();
     }
 

@@ -106,6 +106,10 @@ public class CategorySetAssetDescriptionActionImpl implements CategorySetAssetDe
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
                 .append(description, that.description)
+                .append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(description, that.description)
                 .isEquals();
     }
 

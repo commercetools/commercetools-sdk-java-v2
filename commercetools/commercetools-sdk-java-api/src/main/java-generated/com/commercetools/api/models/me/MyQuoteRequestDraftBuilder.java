@@ -3,6 +3,8 @@ package com.commercetools.api.models.me;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,7 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     MyQuoteRequestDraft myQuoteRequestDraft = MyQuoteRequestDraft.builder()
  *             .cartId("{cartId}")
  *             .cartVersion(0.3)
- *             .comment("{comment}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,6 +28,7 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
 
     private Long cartVersion;
 
+    @Nullable
     private String comment;
 
     /**
@@ -57,7 +59,7 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
      * @return Builder
      */
 
-    public MyQuoteRequestDraftBuilder comment(final String comment) {
+    public MyQuoteRequestDraftBuilder comment(@Nullable final String comment) {
         this.comment = comment;
         return this;
     }
@@ -85,6 +87,7 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
      * @return comment
      */
 
+    @Nullable
     public String getComment() {
         return this.comment;
     }
@@ -96,7 +99,6 @@ public class MyQuoteRequestDraftBuilder implements Builder<MyQuoteRequestDraft> 
     public MyQuoteRequestDraft build() {
         Objects.requireNonNull(cartId, MyQuoteRequestDraft.class + ": cartId is missing");
         Objects.requireNonNull(cartVersion, MyQuoteRequestDraft.class + ": cartVersion is missing");
-        Objects.requireNonNull(comment, MyQuoteRequestDraft.class + ": comment is missing");
         return new MyQuoteRequestDraftImpl(cartId, cartVersion, comment);
     }
 

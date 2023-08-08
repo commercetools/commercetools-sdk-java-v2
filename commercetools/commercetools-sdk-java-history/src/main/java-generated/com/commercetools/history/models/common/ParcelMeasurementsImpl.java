@@ -110,6 +110,10 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
                 .append(lengthInMillimeter, that.lengthInMillimeter)
                 .append(widthInMillimeter, that.widthInMillimeter)
                 .append(weightInGram, that.weightInGram)
+                .append(heightInMillimeter, that.heightInMillimeter)
+                .append(lengthInMillimeter, that.lengthInMillimeter)
+                .append(widthInMillimeter, that.widthInMillimeter)
+                .append(weightInGram, that.weightInGram)
                 .isEquals();
     }
 

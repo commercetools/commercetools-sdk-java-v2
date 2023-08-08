@@ -18,7 +18,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>Deleting an Order produces the OrderDeleted Message.</p>
  *
  * <hr>
  * <div class=code-example>

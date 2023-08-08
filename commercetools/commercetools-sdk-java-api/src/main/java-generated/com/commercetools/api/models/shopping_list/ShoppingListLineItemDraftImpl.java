@@ -143,6 +143,12 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
                 .append(addedAt, that.addedAt)
                 .append(custom, that.custom)
                 .append(quantity, that.quantity)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(quantity, that.quantity)
                 .isEquals();
     }
 

@@ -23,6 +23,12 @@ public class StagedOrderSetReturnPaymentStateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderSetReturnPaymentStateActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderSetReturnPaymentStateActionQueryBuilderDsl> returnItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("returnItemKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderSetReturnPaymentStateActionQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<StagedOrderSetReturnPaymentStateActionQueryBuilderDsl> paymentState() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("paymentState")),

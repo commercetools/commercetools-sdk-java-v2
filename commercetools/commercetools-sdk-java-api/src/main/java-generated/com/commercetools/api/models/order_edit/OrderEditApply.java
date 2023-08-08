@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderEditApply
+ *  <p>If the <code>editVersion</code> and/or <code>resourceVersion</code> do not match the actual version, a 409 Conflict will be returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderEditApply {
 
     /**
-     *
+     *  <p>Current <code>version</code> of the OrderEdit to be applied.</p>
      * @return editVersion
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface OrderEditApply {
     public Long getEditVersion();
 
     /**
-     *
+     *  <p>Current <code>version</code> of the Order to which the OrderEdit is applied.</p>
      * @return resourceVersion
      */
     @NotNull
@@ -48,14 +48,14 @@ public interface OrderEditApply {
     public Long getResourceVersion();
 
     /**
-     * set editVersion
+     *  <p>Current <code>version</code> of the OrderEdit to be applied.</p>
      * @param editVersion value to be set
      */
 
     public void setEditVersion(final Long editVersion);
 
     /**
-     * set resourceVersion
+     *  <p>Current <code>version</code> of the Order to which the OrderEdit is applied.</p>
      * @param resourceVersion value to be set
      */
 

@@ -130,6 +130,11 @@ public class GraphQLMissingTaxRateForCountryErrorImpl implements GraphQLMissingT
                 .append(taxCategoryId, that.taxCategoryId)
                 .append(country, that.country)
                 .append(state, that.state)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(taxCategoryId, that.taxCategoryId)
+                .append(country, that.country)
+                .append(state, that.state)
                 .isEquals();
     }
 

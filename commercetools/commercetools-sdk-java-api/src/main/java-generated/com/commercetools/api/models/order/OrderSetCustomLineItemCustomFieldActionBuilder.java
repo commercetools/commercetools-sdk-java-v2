@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetCustomLineItemCustomFieldAction orderSetCustomLineItemCustomFieldAction = OrderSetCustomLineItemCustomFieldAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -25,7 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class OrderSetCustomLineItemCustomFieldActionBuilder
         implements Builder<OrderSetCustomLineItemCustomFieldAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     private String name;
 
@@ -33,13 +36,24 @@ public class OrderSetCustomLineItemCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public OrderSetCustomLineItemCustomFieldActionBuilder customLineItemId(final String customLineItemId) {
+    public OrderSetCustomLineItemCustomFieldActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderSetCustomLineItemCustomFieldActionBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -66,12 +80,23 @@ public class OrderSetCustomLineItemCustomFieldActionBuilder
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -98,10 +123,8 @@ public class OrderSetCustomLineItemCustomFieldActionBuilder
      * @return OrderSetCustomLineItemCustomFieldAction
      */
     public OrderSetCustomLineItemCustomFieldAction build() {
-        Objects.requireNonNull(customLineItemId,
-            OrderSetCustomLineItemCustomFieldAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(name, OrderSetCustomLineItemCustomFieldAction.class + ": name is missing");
-        return new OrderSetCustomLineItemCustomFieldActionImpl(customLineItemId, name, value);
+        return new OrderSetCustomLineItemCustomFieldActionImpl(customLineItemId, customLineItemKey, name, value);
     }
 
     /**
@@ -109,7 +132,7 @@ public class OrderSetCustomLineItemCustomFieldActionBuilder
      * @return OrderSetCustomLineItemCustomFieldAction
      */
     public OrderSetCustomLineItemCustomFieldAction buildUnchecked() {
-        return new OrderSetCustomLineItemCustomFieldActionImpl(customLineItemId, name, value);
+        return new OrderSetCustomLineItemCustomFieldActionImpl(customLineItemId, customLineItemKey, name, value);
     }
 
     /**
@@ -129,6 +152,7 @@ public class OrderSetCustomLineItemCustomFieldActionBuilder
             final OrderSetCustomLineItemCustomFieldAction template) {
         OrderSetCustomLineItemCustomFieldActionBuilder builder = new OrderSetCustomLineItemCustomFieldActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.name = template.getName();
         builder.value = template.getValue();
         return builder;

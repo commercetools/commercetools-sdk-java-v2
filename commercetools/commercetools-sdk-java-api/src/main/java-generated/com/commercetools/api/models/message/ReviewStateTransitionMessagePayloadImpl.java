@@ -158,6 +158,13 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
                 .append(newIncludedInStatistics, that.newIncludedInStatistics)
                 .append(target, that.target)
                 .append(force, that.force)
+                .append(type, that.type)
+                .append(oldState, that.oldState)
+                .append(newState, that.newState)
+                .append(oldIncludedInStatistics, that.oldIncludedInStatistics)
+                .append(newIncludedInStatistics, that.newIncludedInStatistics)
+                .append(target, that.target)
+                .append(force, that.force)
                 .isEquals();
     }
 

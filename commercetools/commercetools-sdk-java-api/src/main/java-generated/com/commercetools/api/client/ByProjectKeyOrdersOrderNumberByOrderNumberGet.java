@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>In case the orderNumber does not match the regular expression [a-zA-Z0-9_-]+, it should be provided in URL-encoded format.</p>
+ *
  *
  * <hr>
  * <div class=code-example>

@@ -107,6 +107,10 @@ public class DeliveryPayloadImpl implements DeliveryPayload, ModelBase {
                 .append(notificationType, that.notificationType)
                 .append(resource, that.resource)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .isEquals();
     }
 

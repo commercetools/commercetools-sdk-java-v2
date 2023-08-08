@@ -123,6 +123,11 @@ public class CartSetLineItemCustomTypeActionImpl implements CartSetLineItemCusto
                 .append(lineItemKey, that.lineItemKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 

@@ -77,6 +77,8 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
 
         return new EqualsBuilder().append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(countryTaxRateFallbackEnabled, that.countryTaxRateFallbackEnabled)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(countryTaxRateFallbackEnabled, that.countryTaxRateFallbackEnabled)
                 .isEquals();
     }
 

@@ -75,6 +75,8 @@ public class ShippingMethodSetLocalizedDescriptionActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(localizedDescription, that.localizedDescription)
+                .append(action, that.action)
+                .append(localizedDescription, that.localizedDescription)
                 .isEquals();
     }
 

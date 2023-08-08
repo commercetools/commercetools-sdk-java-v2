@@ -71,7 +71,11 @@ public class CategoryChangeParentActionImpl implements CategoryChangeParentActio
 
         CategoryChangeParentActionImpl that = (CategoryChangeParentActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(parent, that.parent).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(parent, that.parent)
+                .append(action, that.action)
+                .append(parent, that.parent)
+                .isEquals();
     }
 
     @Override

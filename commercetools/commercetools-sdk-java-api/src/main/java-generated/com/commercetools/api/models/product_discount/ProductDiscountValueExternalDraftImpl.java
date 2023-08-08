@@ -47,7 +47,7 @@ public class ProductDiscountValueExternalDraftImpl implements ProductDiscountVal
 
         ProductDiscountValueExternalDraftImpl that = (ProductDiscountValueExternalDraftImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

@@ -71,7 +71,11 @@ public class CategorySetMetaDescriptionActionImpl implements CategorySetMetaDesc
 
         CategorySetMetaDescriptionActionImpl that = (CategorySetMetaDescriptionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(metaDescription, that.metaDescription).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(metaDescription, that.metaDescription)
+                .append(action, that.action)
+                .append(metaDescription, that.metaDescription)
+                .isEquals();
     }
 
     @Override

@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Transition Line Item State update action.</p>
+ *  <p>Generated after a successful Transition LineItem State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,6 +49,14 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
 
     /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
@@ -90,6 +98,13 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
 
     /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
@@ -135,6 +150,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
     public static LineItemStateTransitionMessagePayload of(final LineItemStateTransitionMessagePayload template) {
         LineItemStateTransitionMessagePayloadImpl instance = new LineItemStateTransitionMessagePayloadImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setTransitionDate(template.getTransitionDate());
         instance.setQuantity(template.getQuantity());
         instance.setFromState(template.getFromState());
@@ -155,6 +171,7 @@ public interface LineItemStateTransitionMessagePayload extends OrderMessagePaylo
         }
         LineItemStateTransitionMessagePayloadImpl instance = new LineItemStateTransitionMessagePayloadImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setTransitionDate(template.getTransitionDate());
         instance.setQuantity(template.getQuantity());
         instance.setFromState(com.commercetools.api.models.state.StateReference.deepCopy(template.getFromState()));

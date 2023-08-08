@@ -70,7 +70,11 @@ public class PaymentSetMethodInfoInterfaceActionImpl implements PaymentSetMethod
 
         PaymentSetMethodInfoInterfaceActionImpl that = (PaymentSetMethodInfoInterfaceActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(_interface, that._interface).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(_interface, that._interface)
+                .append(action, that.action)
+                .append(_interface, that._interface)
+                .isEquals();
     }
 
     @Override

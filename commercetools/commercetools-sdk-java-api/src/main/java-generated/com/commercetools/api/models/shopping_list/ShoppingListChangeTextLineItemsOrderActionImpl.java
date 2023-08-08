@@ -78,6 +78,8 @@ public class ShoppingListChangeTextLineItemsOrderActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(textLineItemOrder, that.textLineItemOrder)
+                .append(action, that.action)
+                .append(textLineItemOrder, that.textLineItemOrder)
                 .isEquals();
     }
 

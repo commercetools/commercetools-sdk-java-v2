@@ -47,7 +47,7 @@ public class AttributeNumberTypeImpl implements AttributeNumberType, ModelBase {
 
         AttributeNumberTypeImpl that = (AttributeNumberTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).isEquals();
+        return new EqualsBuilder().append(name, that.name).append(name, that.name).isEquals();
     }
 
     @Override

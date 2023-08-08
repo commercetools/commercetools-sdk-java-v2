@@ -76,7 +76,11 @@ public class SubscriptionSetMessagesActionImpl implements SubscriptionSetMessage
 
         SubscriptionSetMessagesActionImpl that = (SubscriptionSetMessagesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(messages, that.messages).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(messages, that.messages)
+                .append(action, that.action)
+                .append(messages, that.messages)
+                .isEquals();
     }
 
     @Override

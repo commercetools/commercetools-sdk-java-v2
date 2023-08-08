@@ -28,12 +28,6 @@ public class AssociateQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, AssociateQueryBuilderDsl::of));
     }
 
-    public StringCollectionPredicateBuilder<AssociateQueryBuilderDsl> roles() {
-        return new StringCollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("roles")),
-            p -> new CombinationQueryPredicate<>(p, AssociateQueryBuilderDsl::of));
-    }
-
     public CombinationQueryPredicate<AssociateQueryBuilderDsl> customer(
             Function<com.commercetools.api.predicates.query.customer.CustomerReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

@@ -23,6 +23,12 @@ public class StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl> returnItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("returnItemKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<StagedOrderSetReturnItemCustomFieldActionQueryBuilderDsl> name() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),

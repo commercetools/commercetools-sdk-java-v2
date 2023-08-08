@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>To override the shipping details, see Set LineItemShippingDetails.</p>
+ *  <p>To override the shipping details, see Set LineItem ShippingDetails.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
@@ -109,6 +109,10 @@ public class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
         MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl that = (MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(targetsDelta, that.targetsDelta)
+                .append(action, that.action)
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(targetsDelta, that.targetsDelta)

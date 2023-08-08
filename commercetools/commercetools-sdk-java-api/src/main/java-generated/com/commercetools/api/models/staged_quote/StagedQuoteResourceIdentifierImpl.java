@@ -86,7 +86,13 @@ public class StagedQuoteResourceIdentifierImpl implements StagedQuoteResourceIde
 
         StagedQuoteResourceIdentifierImpl that = (StagedQuoteResourceIdentifierImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

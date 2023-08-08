@@ -72,7 +72,11 @@ public class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGr
 
         CustomerSetCustomerGroupActionImpl that = (CustomerSetCustomerGroupActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customerGroup, that.customerGroup).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customerGroup, that.customerGroup)
+                .append(action, that.action)
+                .append(customerGroup, that.customerGroup)
+                .isEquals();
     }
 
     @Override

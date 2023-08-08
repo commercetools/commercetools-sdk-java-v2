@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderRemoveItemShippingAddressAction
+ *  <p>An address can only be removed if it is not referenced in any ItemShippingTarget of the Cart.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction 
     String REMOVE_ITEM_SHIPPING_ADDRESS = "removeItemShippingAddress";
 
     /**
-     *
+     *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
      * @return addressKey
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction 
     public String getAddressKey();
 
     /**
-     * set addressKey
+     *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
      * @param addressKey value to be set
      */
 

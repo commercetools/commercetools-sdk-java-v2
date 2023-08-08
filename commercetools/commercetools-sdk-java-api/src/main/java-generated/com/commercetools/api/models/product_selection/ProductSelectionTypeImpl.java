@@ -5,7 +5,6 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
@@ -21,30 +20,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Deprecated
 public class ProductSelectionTypeImpl implements ProductSelectionType, ModelBase {
 
-    @Deprecated
-    private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
-
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ProductSelectionTypeImpl(
-            @JsonProperty("type") final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
-        this.type = type;
-    }
-
-    /**
-     * create empty instance
-     */
-    public ProductSelectionTypeImpl() {
-    }
-
-    /**
-     *  <p>The following types of Product Selections are supported:</p>
-     */
-    @Deprecated
-    public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
-        return this.type;
+    ProductSelectionTypeImpl() {
     }
 
     @Override
@@ -57,12 +37,12 @@ public class ProductSelectionTypeImpl implements ProductSelectionType, ModelBase
 
         ProductSelectionTypeImpl that = (ProductSelectionTypeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).toHashCode();
+        return new HashCodeBuilder(17, 37).toHashCode();
     }
 
 }

@@ -74,6 +74,8 @@ public class StoreRemoveDistributionChannelActionImpl implements StoreRemoveDist
 
         return new EqualsBuilder().append(action, that.action)
                 .append(distributionChannel, that.distributionChannel)
+                .append(action, that.action)
+                .append(distributionChannel, that.distributionChannel)
                 .isEquals();
     }
 

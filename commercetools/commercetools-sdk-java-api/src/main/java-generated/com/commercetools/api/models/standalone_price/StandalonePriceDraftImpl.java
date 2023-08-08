@@ -251,6 +251,18 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
                 .append(active, that.active)
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(tiers, that.tiers)
+                .append(discounted, that.discounted)
+                .append(custom, that.custom)
+                .append(active, that.active)
                 .isEquals();
     }
 

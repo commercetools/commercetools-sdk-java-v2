@@ -71,7 +71,11 @@ public class BusinessUnitRemoveAssociateActionImpl implements BusinessUnitRemove
 
         BusinessUnitRemoveAssociateActionImpl that = (BusinessUnitRemoveAssociateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customer, that.customer).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customer, that.customer)
+                .append(action, that.action)
+                .append(customer, that.customer)
+                .isEquals();
     }
 
     @Override

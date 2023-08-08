@@ -55,7 +55,7 @@ public class ShippingRateInputImpl implements ShippingRateInput, ModelBase {
 
         ShippingRateInputImpl that = (ShippingRateInputImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

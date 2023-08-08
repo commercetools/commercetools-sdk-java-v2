@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Embedded Prices update action.</p>
+ *  <p>Generated after a successful Set Prices update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

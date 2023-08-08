@@ -74,7 +74,11 @@ public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue,
 
         FieldDefinitionOrderValueImpl that = (FieldDefinitionOrderValueImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(label, that.label).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(label, that.label)
+                .append(name, that.name)
+                .append(label, that.label)
+                .isEquals();
     }
 
     @Override

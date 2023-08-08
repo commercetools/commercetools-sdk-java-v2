@@ -58,7 +58,7 @@ public class RemoveParcelFromDeliveryDraftImpl implements RemoveParcelFromDelive
 
         RemoveParcelFromDeliveryDraftImpl that = (RemoveParcelFromDeliveryDraftImpl) o;
 
-        return new EqualsBuilder().append(parcelId, that.parcelId).isEquals();
+        return new EqualsBuilder().append(parcelId, that.parcelId).append(parcelId, that.parcelId).isEquals();
     }
 
     @Override

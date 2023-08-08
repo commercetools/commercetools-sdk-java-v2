@@ -91,6 +91,9 @@ public class StagedQuoteStateChangedMessagePayloadImpl implements StagedQuoteSta
         return new EqualsBuilder().append(type, that.type)
                 .append(stagedQuoteState, that.stagedQuoteState)
                 .append(oldStagedQuoteState, that.oldStagedQuoteState)
+                .append(type, that.type)
+                .append(stagedQuoteState, that.stagedQuoteState)
+                .append(oldStagedQuoteState, that.oldStagedQuoteState)
                 .isEquals();
     }
 

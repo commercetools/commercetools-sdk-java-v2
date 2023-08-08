@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetReturnItemCustomTypeAction orderSetReturnItemCustomTypeAction = OrderSetReturnItemCustomTypeAction.builder()
- *             .returnItemId("{returnItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderSetReturnItemCustomTypeAction> {
 
+    @Nullable
     private String returnItemId;
+
+    @Nullable
+    private String returnItemKey;
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -33,18 +36,29 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     * set the value to the returnItemId
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
 
-    public OrderSetReturnItemCustomTypeActionBuilder returnItemId(final String returnItemId) {
+    public OrderSetReturnItemCustomTypeActionBuilder returnItemId(@Nullable final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @param returnItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderSetReturnItemCustomTypeActionBuilder returnItemKey(@Nullable final String returnItemKey) {
+        this.returnItemKey = returnItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>Defines the Type that extends the Return Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -56,7 +70,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     *  <p>Defines the Type that extends the Return Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -68,7 +82,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     *  <p>Defines the Type that extends the Return Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -80,7 +94,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     *  <p>Sets the Custom Fields fields for the Return Item.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -92,7 +106,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     *  <p>Sets the Custom Fields fields for the Return Item.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -104,7 +118,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     *  <p>Sets the Custom Fields fields for the Return Item.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -116,16 +130,27 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     }
 
     /**
-     * value of returnItemId}
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
+    @Nullable
     public String getReturnItemId() {
         return this.returnItemId;
     }
 
     /**
-     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @return returnItemKey
+     */
+
+    @Nullable
+    public String getReturnItemKey() {
+        return this.returnItemKey;
+    }
+
+    /**
+     *  <p>Defines the Type that extends the Return Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
      * @return type
      */
 
@@ -135,7 +160,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     *  <p>Sets the Custom Fields fields for the Return Item.</p>
      * @return fields
      */
 
@@ -149,8 +174,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
      * @return OrderSetReturnItemCustomTypeAction
      */
     public OrderSetReturnItemCustomTypeAction build() {
-        Objects.requireNonNull(returnItemId, OrderSetReturnItemCustomTypeAction.class + ": returnItemId is missing");
-        return new OrderSetReturnItemCustomTypeActionImpl(returnItemId, type, fields);
+        return new OrderSetReturnItemCustomTypeActionImpl(returnItemId, returnItemKey, type, fields);
     }
 
     /**
@@ -158,7 +182,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
      * @return OrderSetReturnItemCustomTypeAction
      */
     public OrderSetReturnItemCustomTypeAction buildUnchecked() {
-        return new OrderSetReturnItemCustomTypeActionImpl(returnItemId, type, fields);
+        return new OrderSetReturnItemCustomTypeActionImpl(returnItemId, returnItemKey, type, fields);
     }
 
     /**
@@ -177,6 +201,7 @@ public class OrderSetReturnItemCustomTypeActionBuilder implements Builder<OrderS
     public static OrderSetReturnItemCustomTypeActionBuilder of(final OrderSetReturnItemCustomTypeAction template) {
         OrderSetReturnItemCustomTypeActionBuilder builder = new OrderSetReturnItemCustomTypeActionBuilder();
         builder.returnItemId = template.getReturnItemId();
+        builder.returnItemKey = template.getReturnItemKey();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

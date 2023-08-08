@@ -74,7 +74,11 @@ public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue, Model
 
         ValidFromAndUntilValueImpl that = (ValidFromAndUntilValueImpl) o;
 
-        return new EqualsBuilder().append(validFrom, that.validFrom).append(validUntil, that.validUntil).isEquals();
+        return new EqualsBuilder().append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .isEquals();
     }
 
     @Override

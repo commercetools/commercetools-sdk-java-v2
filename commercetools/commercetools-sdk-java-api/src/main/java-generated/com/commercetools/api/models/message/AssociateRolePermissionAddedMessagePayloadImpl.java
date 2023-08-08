@@ -72,7 +72,11 @@ public class AssociateRolePermissionAddedMessagePayloadImpl
 
         AssociateRolePermissionAddedMessagePayloadImpl that = (AssociateRolePermissionAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(permission, that.permission).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(permission, that.permission)
+                .append(type, that.type)
+                .append(permission, that.permission)
+                .isEquals();
     }
 
     @Override

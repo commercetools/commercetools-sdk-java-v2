@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * BusinessUnitStoreRemovedMessagePayload
+ *  <p>Generated after a successful Remove Store update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitStoreRemovedMessagePayloadImpl implements BusinessUnitStoreRemovedMessagePayload, ModelBase {
@@ -71,7 +71,11 @@ public class BusinessUnitStoreRemovedMessagePayloadImpl implements BusinessUnitS
 
         BusinessUnitStoreRemovedMessagePayloadImpl that = (BusinessUnitStoreRemovedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(store, that.store).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(store, that.store)
+                .append(type, that.type)
+                .append(store, that.store)
+                .isEquals();
     }
 
     @Override

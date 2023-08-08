@@ -89,6 +89,9 @@ public class ShoppingListRemoveLineItemActionImpl implements ShoppingListRemoveL
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
                 .append(quantity, that.quantity)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(quantity, that.quantity)
                 .isEquals();
     }
 

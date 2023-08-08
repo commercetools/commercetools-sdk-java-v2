@@ -121,6 +121,10 @@ public class GraphQLMissingRoleOnChannelErrorImpl implements GraphQLMissingRoleO
                 .append(values, that.values)
                 .append(channel, that.channel)
                 .append(missingRole, that.missingRole)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(channel, that.channel)
+                .append(missingRole, that.missingRole)
                 .isEquals();
     }
 

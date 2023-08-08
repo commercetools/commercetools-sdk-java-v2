@@ -70,7 +70,11 @@ public class DiscountCodeSetValidFromActionImpl implements DiscountCodeSetValidF
 
         DiscountCodeSetValidFromActionImpl that = (DiscountCodeSetValidFromActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(validFrom, that.validFrom).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(validFrom, that.validFrom)
+                .append(action, that.action)
+                .append(validFrom, that.validFrom)
+                .isEquals();
     }
 
     @Override

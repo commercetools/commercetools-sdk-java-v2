@@ -42,7 +42,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -53,7 +54,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      * @return Builder
      */
@@ -64,7 +66,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * set the value to the parcelKey
+     *  <p><code>key</code> of an existing Parcel.</p>
      * @param parcelKey value to be set
      * @return Builder
      */
@@ -75,7 +77,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -87,7 +89,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -99,7 +101,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * set the value to the measurements
+     *  <p>Value to set.</p>
      * @param measurements value to be set
      * @return Builder
      */
@@ -111,7 +113,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -123,7 +125,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -135,7 +137,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * set the value to the trackingData
+     *  <p>Value to set.</p>
      * @param trackingData value to be set
      * @return Builder
      */
@@ -147,7 +149,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * set values to the items
+     *  <p>Value to set.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -159,7 +161,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * set value to the items
+     *  <p>Value to set.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -171,7 +173,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * add values to the items
+     *  <p>Value to set.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -186,7 +188,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -201,7 +203,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -214,7 +216,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -225,7 +227,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -236,7 +238,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
 
@@ -246,7 +249,8 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
 
@@ -256,7 +260,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * value of parcelKey}
+     *  <p><code>key</code> of an existing Parcel.</p>
      * @return parcelKey
      */
 
@@ -266,7 +270,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * value of measurements}
+     *  <p>Value to set.</p>
      * @return measurements
      */
 
@@ -276,7 +280,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * value of trackingData}
+     *  <p>Value to set.</p>
      * @return trackingData
      */
 
@@ -286,7 +290,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
-     * value of items}
+     *  <p>Value to set.</p>
      * @return items
      */
 

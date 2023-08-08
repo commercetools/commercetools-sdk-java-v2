@@ -128,6 +128,11 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
                 .append(customLineItemId, that.customLineItemId)
                 .append(comment, that.comment)
                 .append(shipmentState, that.shipmentState)
+                .append(quantity, that.quantity)
+                .append(lineItemId, that.lineItemId)
+                .append(customLineItemId, that.customLineItemId)
+                .append(comment, that.comment)
+                .append(shipmentState, that.shipmentState)
                 .isEquals();
     }
 

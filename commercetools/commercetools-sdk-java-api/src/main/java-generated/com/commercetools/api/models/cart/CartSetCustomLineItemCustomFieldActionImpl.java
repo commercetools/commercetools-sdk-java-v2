@@ -24,6 +24,8 @@ public class CartSetCustomLineItemCustomFieldActionImpl implements CartSetCustom
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private String name;
 
     private java.lang.Object value;
@@ -33,8 +35,10 @@ public class CartSetCustomLineItemCustomFieldActionImpl implements CartSetCustom
      */
     @JsonCreator
     CartSetCustomLineItemCustomFieldActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
-            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+            @JsonProperty("customLineItemKey") final String customLineItemKey, @JsonProperty("name") final String name,
+            @JsonProperty("value") final java.lang.Object value) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.name = name;
         this.value = value;
         this.action = SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD;
@@ -56,11 +60,19 @@ public class CartSetCustomLineItemCustomFieldActionImpl implements CartSetCustom
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -83,6 +95,10 @@ public class CartSetCustomLineItemCustomFieldActionImpl implements CartSetCustom
         this.customLineItemId = customLineItemId;
     }
 
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+    }
+
     public void setName(final String name) {
         this.name = name;
     }
@@ -103,6 +119,12 @@ public class CartSetCustomLineItemCustomFieldActionImpl implements CartSetCustom
 
         return new EqualsBuilder().append(action, that.action)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
@@ -112,6 +134,7 @@ public class CartSetCustomLineItemCustomFieldActionImpl implements CartSetCustom
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(customLineItemId)
+                .append(customLineItemKey)
                 .append(name)
                 .append(value)
                 .toHashCode();

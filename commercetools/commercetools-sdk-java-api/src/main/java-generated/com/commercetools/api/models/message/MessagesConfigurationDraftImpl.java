@@ -76,6 +76,8 @@ public class MessagesConfigurationDraftImpl implements MessagesConfigurationDraf
 
         return new EqualsBuilder().append(enabled, that.enabled)
                 .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
+                .append(enabled, that.enabled)
+                .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
                 .isEquals();
     }
 

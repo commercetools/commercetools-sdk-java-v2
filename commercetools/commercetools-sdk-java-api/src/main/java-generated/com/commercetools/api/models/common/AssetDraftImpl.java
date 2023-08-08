@@ -153,6 +153,12 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
                 .append(tags, that.tags)
                 .append(custom, that.custom)
                 .append(key, that.key)
+                .append(sources, that.sources)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(tags, that.tags)
+                .append(custom, that.custom)
+                .append(key, that.key)
                 .isEquals();
     }
 

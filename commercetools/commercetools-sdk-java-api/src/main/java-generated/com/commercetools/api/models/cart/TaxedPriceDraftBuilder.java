@@ -31,7 +31,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
 
     /**
-     *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     *  <p>Total net price of the Cart or Order.</p>
      * @param builder function to build the totalNet value
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     *  <p>Total net price of the Cart or Order.</p>
      * @param builder function to build the totalNet value
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     *  <p>Total net price of the Cart or Order.</p>
      * @param totalNet value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     *  <p>Total gross price of the Cart or Order.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     *  <p>Total gross price of the Cart or Order.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     *  <p>Total gross price of the Cart or Order.</p>
      * @param totalGross value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     *  <p>Total net price of the Cart or Order.</p>
      * @return totalNet
      */
 
@@ -205,7 +205,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
-     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     *  <p>Total gross price of the Cart or Order.</p>
      * @return totalGross
      */
 

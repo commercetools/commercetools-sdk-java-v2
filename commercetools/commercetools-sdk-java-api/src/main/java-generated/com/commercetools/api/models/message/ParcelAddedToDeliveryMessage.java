@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Add Parcel To Delivery update action.</p>
+ *  <p>Generated after a successful Add Parcel to Delivery update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -65,7 +65,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     public Parcel getParcel();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
 
@@ -87,7 +87,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     public void setParcel(final Parcel parcel);
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
 

@@ -70,7 +70,11 @@ public class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayl
 
         ReviewCreatedMessagePayloadImpl that = (ReviewCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(review, that.review).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(review, that.review)
+                .append(type, that.type)
+                .append(review, that.review)
+                .isEquals();
     }
 
     @Override

@@ -71,7 +71,11 @@ public class SubscriptionChangeDestinationActionImpl implements SubscriptionChan
 
         SubscriptionChangeDestinationActionImpl that = (SubscriptionChangeDestinationActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(destination, that.destination).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(destination, that.destination)
+                .append(action, that.action)
+                .append(destination, that.destination)
+                .isEquals();
     }
 
     @Override

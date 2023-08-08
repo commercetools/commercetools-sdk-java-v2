@@ -14,7 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetCustomerIdAction
+ *  <p>Setting the Order's <code>customerId</code> does not recalculate prices or discounts on the Order. If the Customer belongs to a Customer Group, <code>customerGroup</code> on the Order is updated automatically.</p>
+ *  <p>Produces the OrderCustomerSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +36,7 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
     String SET_CUSTOMER_ID = "setCustomerId";
 
     /**
-     *
+     *  <p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p>
      * @return customerId
      */
 
@@ -43,7 +44,7 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
     public String getCustomerId();
 
     /**
-     * set customerId
+     *  <p><code>id</code> of an existing Customer. If empty, any existing value is removed.</p>
      * @param customerId value to be set
      */
 

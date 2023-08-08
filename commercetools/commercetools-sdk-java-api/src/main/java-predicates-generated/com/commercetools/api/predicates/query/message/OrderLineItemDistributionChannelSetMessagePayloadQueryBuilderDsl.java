@@ -26,6 +26,13 @@ public class OrderLineItemDistributionChannelSetMessagePayloadQueryBuilderDsl {
                 OrderLineItemDistributionChannelSetMessagePayloadQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderLineItemDistributionChannelSetMessagePayloadQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p,
+                OrderLineItemDistributionChannelSetMessagePayloadQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<OrderLineItemDistributionChannelSetMessagePayloadQueryBuilderDsl> distributionChannel(
             Function<com.commercetools.api.predicates.query.channel.ChannelReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.channel.ChannelReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

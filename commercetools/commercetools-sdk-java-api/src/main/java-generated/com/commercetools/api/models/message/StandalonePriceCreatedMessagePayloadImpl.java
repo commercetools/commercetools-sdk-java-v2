@@ -72,7 +72,11 @@ public class StandalonePriceCreatedMessagePayloadImpl implements StandalonePrice
 
         StandalonePriceCreatedMessagePayloadImpl that = (StandalonePriceCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(standalonePrice, that.standalonePrice).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(standalonePrice, that.standalonePrice)
+                .append(type, that.type)
+                .append(standalonePrice, that.standalonePrice)
+                .isEquals();
     }
 
     @Override

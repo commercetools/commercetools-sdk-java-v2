@@ -147,6 +147,12 @@ public class ParcelImpl implements Parcel, ModelBase {
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(createdAt, that.createdAt)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

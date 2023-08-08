@@ -89,6 +89,9 @@ public class TypeChangeLabelActionImpl implements TypeChangeLabelAction, ModelBa
         return new EqualsBuilder().append(action, that.action)
                 .append(fieldName, that.fieldName)
                 .append(label, that.label)
+                .append(action, that.action)
+                .append(fieldName, that.fieldName)
+                .append(label, that.label)
                 .isEquals();
     }
 

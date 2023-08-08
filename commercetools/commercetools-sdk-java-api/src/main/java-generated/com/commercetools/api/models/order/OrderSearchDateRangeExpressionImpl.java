@@ -59,7 +59,7 @@ public class OrderSearchDateRangeExpressionImpl implements OrderSearchDateRangeE
 
         OrderSearchDateRangeExpressionImpl that = (OrderSearchDateRangeExpressionImpl) o;
 
-        return new EqualsBuilder().append(range, that.range).isEquals();
+        return new EqualsBuilder().append(range, that.range).append(range, that.range).isEquals();
     }
 
     @Override

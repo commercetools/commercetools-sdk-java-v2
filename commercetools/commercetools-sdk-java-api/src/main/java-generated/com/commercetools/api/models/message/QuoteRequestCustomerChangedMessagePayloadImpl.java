@@ -91,6 +91,9 @@ public class QuoteRequestCustomerChangedMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(customer, that.customer)
                 .append(previousCustomer, that.previousCustomer)
+                .append(type, that.type)
+                .append(customer, that.customer)
+                .append(previousCustomer, that.previousCustomer)
                 .isEquals();
     }
 

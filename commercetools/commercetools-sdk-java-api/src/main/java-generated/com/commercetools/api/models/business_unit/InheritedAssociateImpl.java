@@ -83,6 +83,8 @@ public class InheritedAssociateImpl implements InheritedAssociate, ModelBase {
 
         return new EqualsBuilder().append(associateRoleAssignments, that.associateRoleAssignments)
                 .append(customer, that.customer)
+                .append(associateRoleAssignments, that.associateRoleAssignments)
+                .append(customer, that.customer)
                 .isEquals();
     }
 

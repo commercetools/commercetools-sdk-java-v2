@@ -77,7 +77,11 @@ public class ProductPriceDiscountsSetMessagePayloadImpl implements ProductPriceD
 
         ProductPriceDiscountsSetMessagePayloadImpl that = (ProductPriceDiscountsSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(updatedPrices, that.updatedPrices).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(updatedPrices, that.updatedPrices)
+                .append(type, that.type)
+                .append(updatedPrices, that.updatedPrices)
+                .isEquals();
     }
 
     @Override

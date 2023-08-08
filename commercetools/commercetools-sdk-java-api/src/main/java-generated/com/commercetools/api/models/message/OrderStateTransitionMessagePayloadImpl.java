@@ -107,6 +107,10 @@ public class OrderStateTransitionMessagePayloadImpl implements OrderStateTransit
                 .append(state, that.state)
                 .append(oldState, that.oldState)
                 .append(force, that.force)
+                .append(type, that.type)
+                .append(state, that.state)
+                .append(oldState, that.oldState)
+                .append(force, that.force)
                 .isEquals();
     }
 

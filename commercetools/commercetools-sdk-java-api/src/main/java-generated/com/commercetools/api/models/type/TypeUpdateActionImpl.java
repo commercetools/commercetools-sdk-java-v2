@@ -54,7 +54,7 @@ public class TypeUpdateActionImpl implements TypeUpdateAction, ModelBase {
 
         TypeUpdateActionImpl that = (TypeUpdateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override

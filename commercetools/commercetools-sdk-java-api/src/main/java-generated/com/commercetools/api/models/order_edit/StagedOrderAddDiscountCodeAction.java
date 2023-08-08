@@ -15,7 +15,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderAddDiscountCodeAction
+ *  <p>Adds a DiscountCode to the Cart to activate the related Cart Discounts. Adding a Discount Code is only possible if no DirectDiscount has been applied to the Order.</p>
+ *  <p>The maximum number of Discount Codes in a Cart is restricted by a limit.</p>
+ *  <p>Specific Error Code: MatchingPriceNotFound</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +39,7 @@ public interface StagedOrderAddDiscountCodeAction extends StagedOrderUpdateActio
     String ADD_DISCOUNT_CODE = "addDiscountCode";
 
     /**
-     *
+     *  <p><code>code</code> of a DiscountCode.</p>
      * @return code
      */
     @NotNull
@@ -45,7 +47,7 @@ public interface StagedOrderAddDiscountCodeAction extends StagedOrderUpdateActio
     public String getCode();
 
     /**
-     * set code
+     *  <p><code>code</code> of a DiscountCode.</p>
      * @param code value to be set
      */
 

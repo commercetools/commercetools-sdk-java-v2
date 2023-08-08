@@ -107,6 +107,10 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(externalTotalPrice, that.externalTotalPrice)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(externalTotalPrice, that.externalTotalPrice)
                 .isEquals();
     }
 

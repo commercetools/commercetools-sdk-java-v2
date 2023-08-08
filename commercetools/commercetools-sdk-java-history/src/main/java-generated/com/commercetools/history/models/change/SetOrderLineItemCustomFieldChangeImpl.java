@@ -177,6 +177,14 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
                 .append(name, that.name)
                 .append(lineItem, that.lineItem)
                 .append(variant, that.variant)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(customTypeId, that.customTypeId)
+                .append(name, that.name)
+                .append(lineItem, that.lineItem)
+                .append(variant, that.variant)
                 .isEquals();
     }
 

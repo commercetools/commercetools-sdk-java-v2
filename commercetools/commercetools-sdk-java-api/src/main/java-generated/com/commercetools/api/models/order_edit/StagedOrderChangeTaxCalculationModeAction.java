@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderChangeTaxCalculationModeAction
+ *  <p>Changing the tax calculation mode leads to recalculation of taxes.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface StagedOrderChangeTaxCalculationModeAction extends StagedOrderUp
     String CHANGE_TAX_CALCULATION_MODE = "changeTaxCalculationMode";
 
     /**
-     *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
+     *  <p>New value to set.</p>
      * @return taxCalculationMode
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface StagedOrderChangeTaxCalculationModeAction extends StagedOrderUp
     public TaxCalculationMode getTaxCalculationMode();
 
     /**
-     *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
+     *  <p>New value to set.</p>
      * @param taxCalculationMode value to be set
      */
 

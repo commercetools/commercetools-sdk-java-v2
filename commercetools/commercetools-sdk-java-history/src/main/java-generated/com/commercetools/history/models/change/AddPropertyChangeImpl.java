@@ -105,6 +105,10 @@ public class AddPropertyChangeImpl implements AddPropertyChange, ModelBase {
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
                 .append(path, that.path)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .append(path, that.path)
                 .isEquals();
     }
 

@@ -13,14 +13,17 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TypedMoneyDraft
+ *  <p>Base polymorphic money type containing common fields for Money and HighPrecisionMoneyDraft.</p>
+ *  <ul>
+ *   <li>To set money in cent precision, use Money.</li>
+ *   <li>To set money in high precision, use HighPrecisionMoneyDraft.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     TypedMoneyDraft typedMoneyDraft = TypedMoneyDraft.centPrecisionBuilder()
- *             centAmount(0.3)
  *             currencyCode("{currencyCode}")
  *             .build()
  * </code></pre>
@@ -35,7 +38,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TypedMoneyDraft extends Money {
 
     /**
-     *
+     *  <p>Determines the type of money used.</p>
      * @return type
      */
 
@@ -43,7 +46,7 @@ public interface TypedMoneyDraft extends Money {
     public MoneyType getType();
 
     /**
-     *  <p>Must be equal to the default number of fraction digits for the specified currency.</p>
+     *  <p>Number of fraction digits for a specified money.</p>
      * @return fractionDigits
      */
 
@@ -51,11 +54,26 @@ public interface TypedMoneyDraft extends Money {
     public Integer getFractionDigits();
 
     /**
-     *  <p>Must be equal to the default number of fraction digits for the specified currency.</p>
+     *  <p>Amount in the smallest indivisible unit of a currency.</p>
+     * @return centAmount
+     */
+
+    @JsonProperty("centAmount")
+    public Long getCentAmount();
+
+    /**
+     *  <p>Number of fraction digits for a specified money.</p>
      * @param fractionDigits value to be set
      */
 
     public void setFractionDigits(final Integer fractionDigits);
+
+    /**
+     *  <p>Amount in the smallest indivisible unit of a currency.</p>
+     * @param centAmount value to be set
+     */
+
+    public void setCentAmount(final Long centAmount);
 
     /**
      * factory method to create a deep copy of TypedMoneyDraft

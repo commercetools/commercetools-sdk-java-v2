@@ -79,7 +79,11 @@ public class ProductDiscountUpdateImpl implements ProductDiscountUpdate, ModelBa
 
         ProductDiscountUpdateImpl that = (ProductDiscountUpdateImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(actions, that.actions).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(actions, that.actions)
+                .append(version, that.version)
+                .append(actions, that.actions)
+                .isEquals();
     }
 
     @Override

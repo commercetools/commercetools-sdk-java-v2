@@ -27,13 +27,13 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     private com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList;
 
     @Nullable
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-
-    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    @Nullable
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
+
     /**
-     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     *  <p>Shopping List that contains the Line Items to be added.</p>
      * @param builder function to build the shoppingList value
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     *  <p>Shopping List that contains the Line Items to be added.</p>
      * @param builder function to build the shoppingList value
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     *  <p>Shopping List that contains the Line Items to be added.</p>
      * @param shoppingList value to be set
      * @return Builder
      */
@@ -72,44 +72,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     * @param builder function to build the supplyChannel value
-     * @return Builder
-     */
-
-    public StagedOrderAddShoppingListActionBuilder supplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
-        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     * @param builder function to build the supplyChannel value
-     * @return Builder
-     */
-
-    public StagedOrderAddShoppingListActionBuilder withSupplyChannel(
-            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
-        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     * @param supplyChannel value to be set
-     * @return Builder
-     */
-
-    public StagedOrderAddShoppingListActionBuilder supplyChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
-        this.supplyChannel = supplyChannel;
-        return this;
-    }
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -123,7 +86,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -136,7 +99,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -148,7 +111,44 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public StagedOrderAddShoppingListActionBuilder supplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public StagedOrderAddShoppingListActionBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannel value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddShoppingListActionBuilder supplyChannel(
+            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
+        return this;
+    }
+
+    /**
+     *  <p>Shopping List that contains the Line Items to be added.</p>
      * @return shoppingList
      */
 
@@ -157,17 +157,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     * @return supplyChannel
-     */
-
-    @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
-        return this.supplyChannel;
-    }
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @return distributionChannel
      */
 
@@ -177,12 +167,22 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     }
 
     /**
+     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
+     */
+
+    @Nullable
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+        return this.supplyChannel;
+    }
+
+    /**
      * builds StagedOrderAddShoppingListAction with checking for non-null required values
      * @return StagedOrderAddShoppingListAction
      */
     public StagedOrderAddShoppingListAction build() {
         Objects.requireNonNull(shoppingList, StagedOrderAddShoppingListAction.class + ": shoppingList is missing");
-        return new StagedOrderAddShoppingListActionImpl(shoppingList, supplyChannel, distributionChannel);
+        return new StagedOrderAddShoppingListActionImpl(shoppingList, distributionChannel, supplyChannel);
     }
 
     /**
@@ -190,7 +190,7 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
      * @return StagedOrderAddShoppingListAction
      */
     public StagedOrderAddShoppingListAction buildUnchecked() {
-        return new StagedOrderAddShoppingListActionImpl(shoppingList, supplyChannel, distributionChannel);
+        return new StagedOrderAddShoppingListActionImpl(shoppingList, distributionChannel, supplyChannel);
     }
 
     /**
@@ -209,8 +209,8 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
     public static StagedOrderAddShoppingListActionBuilder of(final StagedOrderAddShoppingListAction template) {
         StagedOrderAddShoppingListActionBuilder builder = new StagedOrderAddShoppingListActionBuilder();
         builder.shoppingList = template.getShoppingList();
-        builder.supplyChannel = template.getSupplyChannel();
         builder.distributionChannel = template.getDistributionChannel();
+        builder.supplyChannel = template.getSupplyChannel();
         return builder;
     }
 

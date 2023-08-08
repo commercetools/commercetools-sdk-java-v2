@@ -110,6 +110,10 @@ public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSource
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
                 .append(sources, that.sources)
+                .append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(sources, that.sources)
                 .isEquals();
     }
 

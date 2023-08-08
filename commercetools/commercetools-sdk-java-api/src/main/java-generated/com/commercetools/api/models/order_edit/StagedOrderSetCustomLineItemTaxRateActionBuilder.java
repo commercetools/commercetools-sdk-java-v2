@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetCustomLineItemTaxRateAction stagedOrderSetCustomLineItemTaxRateAction = StagedOrderSetCustomLineItemTaxRateAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -25,24 +24,43 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderSetCustomLineItemTaxRateActionBuilder
         implements Builder<StagedOrderSetCustomLineItemTaxRateAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    @Nullable
+    private String shippingKey;
+
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetCustomLineItemTaxRateActionBuilder customLineItemId(final String customLineItemId) {
+    public StagedOrderSetCustomLineItemTaxRateActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomLineItemTaxRateActionBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, an existing value is removed.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -55,7 +73,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, an existing value is removed.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -67,7 +85,7 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, an existing value is removed.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -79,16 +97,38 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomLineItemTaxRateActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>Value to set. If empty, an existing value is removed.</p>
      * @return externalTaxRate
      */
 
@@ -98,13 +138,22 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
     }
 
     /**
+     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      * builds StagedOrderSetCustomLineItemTaxRateAction with checking for non-null required values
      * @return StagedOrderSetCustomLineItemTaxRateAction
      */
     public StagedOrderSetCustomLineItemTaxRateAction build() {
-        Objects.requireNonNull(customLineItemId,
-            StagedOrderSetCustomLineItemTaxRateAction.class + ": customLineItemId is missing");
-        return new StagedOrderSetCustomLineItemTaxRateActionImpl(customLineItemId, externalTaxRate);
+        return new StagedOrderSetCustomLineItemTaxRateActionImpl(customLineItemId, customLineItemKey, externalTaxRate,
+            shippingKey);
     }
 
     /**
@@ -112,7 +161,8 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
      * @return StagedOrderSetCustomLineItemTaxRateAction
      */
     public StagedOrderSetCustomLineItemTaxRateAction buildUnchecked() {
-        return new StagedOrderSetCustomLineItemTaxRateActionImpl(customLineItemId, externalTaxRate);
+        return new StagedOrderSetCustomLineItemTaxRateActionImpl(customLineItemId, customLineItemKey, externalTaxRate,
+            shippingKey);
     }
 
     /**
@@ -132,7 +182,9 @@ public class StagedOrderSetCustomLineItemTaxRateActionBuilder
             final StagedOrderSetCustomLineItemTaxRateAction template) {
         StagedOrderSetCustomLineItemTaxRateActionBuilder builder = new StagedOrderSetCustomLineItemTaxRateActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.externalTaxRate = template.getExternalTaxRate();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

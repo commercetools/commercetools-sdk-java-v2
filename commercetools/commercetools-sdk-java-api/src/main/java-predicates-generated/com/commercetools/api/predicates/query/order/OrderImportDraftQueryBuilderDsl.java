@@ -19,6 +19,12 @@ public class OrderImportDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> purchaseOrderNumber() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("purchaseOrderNumber")),
+            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> customerId() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerId")),
@@ -29,6 +35,36 @@ public class OrderImportDraftQueryBuilderDsl {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerEmail")),
             p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> customerGroup(
+            Function<com.commercetools.api.predicates.query.customer_group.CustomerGroupResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer_group.CustomerGroupResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("customerGroup"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.customer_group.CustomerGroupResourceIdentifierQueryBuilderDsl
+                            .of())),
+            OrderImportDraftQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> businessUnit(
+            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("businessUnit"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.business_unit.BusinessUnitResourceIdentifierQueryBuilderDsl
+                            .of())),
+            OrderImportDraftQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> store(
+            Function<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("store"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl.of())),
+            OrderImportDraftQueryBuilderDsl::of);
     }
 
     public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> lineItems(
@@ -45,12 +81,12 @@ public class OrderImportDraftQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> customLineItems(
-            Function<com.commercetools.api.predicates.query.cart.CustomLineItemImportDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CustomLineItemImportDraftQueryBuilderDsl>> fn) {
+            Function<com.commercetools.api.predicates.query.order.CustomLineItemImportDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.CustomLineItemImportDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
                     .parent(ConstantQueryPredicate.of().constant("customLineItems"))
                     .inner(fn.apply(
-                        com.commercetools.api.predicates.query.cart.CustomLineItemImportDraftQueryBuilderDsl.of())),
+                        com.commercetools.api.predicates.query.order.CustomLineItemImportDraftQueryBuilderDsl.of())),
             OrderImportDraftQueryBuilderDsl::of);
     }
 
@@ -78,13 +114,22 @@ public class OrderImportDraftQueryBuilderDsl {
             OrderImportDraftQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> shippingAddress(
-            Function<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("shippingAddress"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl.of())),
-            OrderImportDraftQueryBuilderDsl::of);
+    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> taxRoundingMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxRoundingMode")),
+            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> taxCalculationMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxCalculationMode")),
+            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> inventoryMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("inventoryMode")),
+            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
     }
 
     public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> billingAddress(
@@ -96,46 +141,27 @@ public class OrderImportDraftQueryBuilderDsl {
             OrderImportDraftQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> customerGroup(
-            Function<com.commercetools.api.predicates.query.customer_group.CustomerGroupResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer_group.CustomerGroupResourceIdentifierQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("customerGroup"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.customer_group.CustomerGroupResourceIdentifierQueryBuilderDsl
-                            .of())),
-            OrderImportDraftQueryBuilderDsl::of);
-    }
-
-    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> country() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("country")),
-            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
-    }
-
-    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> orderState() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("orderState")),
-            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
-    }
-
-    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> state(
-            Function<com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl>> fn) {
+    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> shippingAddress(
+            Function<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("state"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl.of())),
+                    .parent(ConstantQueryPredicate.of().constant("shippingAddress"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl.of())),
             OrderImportDraftQueryBuilderDsl::of);
     }
 
-    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> shipmentState() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shipmentState")),
-            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
+    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> itemShippingAddresses(
+            Function<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("itemShippingAddresses"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl.of())),
+            OrderImportDraftQueryBuilderDsl::of);
     }
 
-    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> paymentState() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("paymentState")),
+    public CollectionPredicateBuilder<OrderImportDraftQueryBuilderDsl> itemShippingAddresses() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("itemShippingAddresses")),
             p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
     }
 
@@ -158,6 +184,45 @@ public class OrderImportDraftQueryBuilderDsl {
             OrderImportDraftQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> paymentState() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("paymentState")),
+            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> shipmentState() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shipmentState")),
+            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> orderState() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("orderState")),
+            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> state(
+            Function<com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("state"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl.of())),
+            OrderImportDraftQueryBuilderDsl::of);
+    }
+
+    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> country() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("country")),
+            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> origin() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("origin")),
+            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
+    }
+
     public DateTimeComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> completedAt() {
         return new DateTimeComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("completedAt")),
@@ -171,59 +236,6 @@ public class OrderImportDraftQueryBuilderDsl {
                     .parent(ConstantQueryPredicate.of().constant("custom"))
                     .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl.of())),
             OrderImportDraftQueryBuilderDsl::of);
-    }
-
-    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> inventoryMode() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("inventoryMode")),
-            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
-    }
-
-    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> taxRoundingMode() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxRoundingMode")),
-            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
-    }
-
-    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> itemShippingAddresses(
-            Function<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("itemShippingAddresses"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl.of())),
-            OrderImportDraftQueryBuilderDsl::of);
-    }
-
-    public CollectionPredicateBuilder<OrderImportDraftQueryBuilderDsl> itemShippingAddresses() {
-        return new CollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("itemShippingAddresses")),
-            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
-    }
-
-    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> businessUnit(
-            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitResourceIdentifierQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("businessUnit"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.business_unit.BusinessUnitResourceIdentifierQueryBuilderDsl
-                            .of())),
-            OrderImportDraftQueryBuilderDsl::of);
-    }
-
-    public CombinationQueryPredicate<OrderImportDraftQueryBuilderDsl> store(
-            Function<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("store"))
-                    .inner(fn.apply(
-                        com.commercetools.api.predicates.query.store.StoreResourceIdentifierQueryBuilderDsl.of())),
-            OrderImportDraftQueryBuilderDsl::of);
-    }
-
-    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> origin() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("origin")),
-            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
     }
 
 }

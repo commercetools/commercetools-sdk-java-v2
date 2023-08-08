@@ -39,7 +39,7 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
     String REMOVE_DISCOUNT_CODE = "removeDiscountCode";
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>Discount Code to remove from the Cart.</p>
      * @return discountCode
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
     public DiscountCodeReference getDiscountCode();
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>Discount Code to remove from the Cart.</p>
      * @param discountCode value to be set
      */
 

@@ -36,19 +36,9 @@ public class PaymentImpl implements Payment, ModelBase {
 
     private String anonymousId;
 
-    private String externalId;
-
     private String interfaceId;
 
     private com.commercetools.api.models.common.CentPrecisionMoney amountPlanned;
-
-    private com.commercetools.api.models.common.TypedMoney amountAuthorized;
-
-    private String authorizedUntil;
-
-    private com.commercetools.api.models.common.TypedMoney amountPaid;
-
-    private com.commercetools.api.models.common.TypedMoney amountRefunded;
 
     private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
 
@@ -72,13 +62,9 @@ public class PaymentImpl implements Payment, ModelBase {
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer,
-            @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("externalId") final String externalId,
+            @JsonProperty("anonymousId") final String anonymousId,
             @JsonProperty("interfaceId") final String interfaceId,
             @JsonProperty("amountPlanned") final com.commercetools.api.models.common.CentPrecisionMoney amountPlanned,
-            @JsonProperty("amountAuthorized") final com.commercetools.api.models.common.TypedMoney amountAuthorized,
-            @JsonProperty("authorizedUntil") final String authorizedUntil,
-            @JsonProperty("amountPaid") final com.commercetools.api.models.common.TypedMoney amountPaid,
-            @JsonProperty("amountRefunded") final com.commercetools.api.models.common.TypedMoney amountRefunded,
             @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo,
             @JsonProperty("paymentStatus") final com.commercetools.api.models.payment.PaymentStatus paymentStatus,
             @JsonProperty("transactions") final java.util.List<com.commercetools.api.models.payment.Transaction> transactions,
@@ -93,13 +79,8 @@ public class PaymentImpl implements Payment, ModelBase {
         this.createdBy = createdBy;
         this.customer = customer;
         this.anonymousId = anonymousId;
-        this.externalId = externalId;
         this.interfaceId = interfaceId;
         this.amountPlanned = amountPlanned;
-        this.amountAuthorized = amountAuthorized;
-        this.authorizedUntil = authorizedUntil;
-        this.amountPaid = amountPaid;
-        this.amountRefunded = amountRefunded;
         this.paymentMethodInfo = paymentMethodInfo;
         this.paymentStatus = paymentStatus;
         this.transactions = transactions;
@@ -179,14 +160,6 @@ public class PaymentImpl implements Payment, ModelBase {
     }
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     */
-
-    public String getExternalId() {
-        return this.externalId;
-    }
-
-    /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
      */
 
@@ -200,38 +173,6 @@ public class PaymentImpl implements Payment, ModelBase {
 
     public com.commercetools.api.models.common.CentPrecisionMoney getAmountPlanned() {
         return this.amountPlanned;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     */
-
-    public com.commercetools.api.models.common.TypedMoney getAmountAuthorized() {
-        return this.amountAuthorized;
-    }
-
-    /**
-     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
-     */
-
-    public String getAuthorizedUntil() {
-        return this.authorizedUntil;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     */
-
-    public com.commercetools.api.models.common.TypedMoney getAmountPaid() {
-        return this.amountPaid;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     */
-
-    public com.commercetools.api.models.common.TypedMoney getAmountRefunded() {
-        return this.amountRefunded;
     }
 
     /**
@@ -314,32 +255,12 @@ public class PaymentImpl implements Payment, ModelBase {
         this.anonymousId = anonymousId;
     }
 
-    public void setExternalId(final String externalId) {
-        this.externalId = externalId;
-    }
-
     public void setInterfaceId(final String interfaceId) {
         this.interfaceId = interfaceId;
     }
 
     public void setAmountPlanned(final com.commercetools.api.models.common.CentPrecisionMoney amountPlanned) {
         this.amountPlanned = amountPlanned;
-    }
-
-    public void setAmountAuthorized(final com.commercetools.api.models.common.TypedMoney amountAuthorized) {
-        this.amountAuthorized = amountAuthorized;
-    }
-
-    public void setAuthorizedUntil(final String authorizedUntil) {
-        this.authorizedUntil = authorizedUntil;
-    }
-
-    public void setAmountPaid(final com.commercetools.api.models.common.TypedMoney amountPaid) {
-        this.amountPaid = amountPaid;
-    }
-
-    public void setAmountRefunded(final com.commercetools.api.models.common.TypedMoney amountRefunded) {
-        this.amountRefunded = amountRefunded;
     }
 
     public void setPaymentMethodInfo(final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
@@ -394,13 +315,24 @@ public class PaymentImpl implements Payment, ModelBase {
                 .append(createdBy, that.createdBy)
                 .append(customer, that.customer)
                 .append(anonymousId, that.anonymousId)
-                .append(externalId, that.externalId)
                 .append(interfaceId, that.interfaceId)
                 .append(amountPlanned, that.amountPlanned)
-                .append(amountAuthorized, that.amountAuthorized)
-                .append(authorizedUntil, that.authorizedUntil)
-                .append(amountPaid, that.amountPaid)
-                .append(amountRefunded, that.amountRefunded)
+                .append(paymentMethodInfo, that.paymentMethodInfo)
+                .append(paymentStatus, that.paymentStatus)
+                .append(transactions, that.transactions)
+                .append(interfaceInteractions, that.interfaceInteractions)
+                .append(custom, that.custom)
+                .append(key, that.key)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .append(interfaceId, that.interfaceId)
+                .append(amountPlanned, that.amountPlanned)
                 .append(paymentMethodInfo, that.paymentMethodInfo)
                 .append(paymentStatus, that.paymentStatus)
                 .append(transactions, that.transactions)
@@ -420,13 +352,8 @@ public class PaymentImpl implements Payment, ModelBase {
                 .append(createdBy)
                 .append(customer)
                 .append(anonymousId)
-                .append(externalId)
                 .append(interfaceId)
                 .append(amountPlanned)
-                .append(amountAuthorized)
-                .append(authorizedUntil)
-                .append(amountPaid)
-                .append(amountRefunded)
                 .append(paymentMethodInfo)
                 .append(paymentStatus)
                 .append(transactions)

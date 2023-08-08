@@ -110,6 +110,10 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
                 .append(channelId, that.channelId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .append(channelId, that.channelId)
                 .isEquals();
     }
 

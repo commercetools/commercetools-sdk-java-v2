@@ -74,7 +74,11 @@ public class CustomTokenizerImpl implements CustomTokenizer, ModelBase {
 
         CustomTokenizerImpl that = (CustomTokenizerImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(inputs, that.inputs).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(inputs, that.inputs)
+                .append(type, that.type)
+                .append(inputs, that.inputs)
+                .isEquals();
     }
 
     @Override

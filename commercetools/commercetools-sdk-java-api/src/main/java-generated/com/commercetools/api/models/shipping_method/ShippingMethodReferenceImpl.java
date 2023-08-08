@@ -87,7 +87,13 @@ public class ShippingMethodReferenceImpl implements ShippingMethodReference, Mod
 
         ShippingMethodReferenceImpl that = (ShippingMethodReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(obj, that.obj).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .isEquals();
     }
 
     @Override

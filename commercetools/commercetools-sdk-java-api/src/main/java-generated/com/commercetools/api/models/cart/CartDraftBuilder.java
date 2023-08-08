@@ -523,7 +523,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how taxes are calculated for <code>taxedPrice</code>.</p>
      * @param taxCalculationMode value to be set
      * @return Builder
      */
@@ -1229,7 +1229,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how taxes are calculated for <code>taxedPrice</code>.</p>
      * @return taxCalculationMode
      */
 

@@ -129,6 +129,11 @@ public class StatePagedQueryResponseImpl implements StatePagedQueryResponse, Mod
                 .append(count, that.count)
                 .append(total, that.total)
                 .append(results, that.results)
+                .append(limit, that.limit)
+                .append(offset, that.offset)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(results, that.results)
                 .isEquals();
     }
 

@@ -47,7 +47,7 @@ public class ProductDiscountValueExternalImpl implements ProductDiscountValueExt
 
         ProductDiscountValueExternalImpl that = (ProductDiscountValueExternalImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

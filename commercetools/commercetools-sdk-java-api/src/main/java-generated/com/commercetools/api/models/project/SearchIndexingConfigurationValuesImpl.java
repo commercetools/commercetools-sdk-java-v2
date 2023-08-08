@@ -94,6 +94,9 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
         return new EqualsBuilder().append(status, that.status)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(lastModifiedBy, that.lastModifiedBy)
+                .append(status, that.status)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
                 .isEquals();
     }
 

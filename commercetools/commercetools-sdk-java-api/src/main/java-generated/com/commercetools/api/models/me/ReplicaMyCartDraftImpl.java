@@ -71,7 +71,7 @@ public class ReplicaMyCartDraftImpl implements ReplicaMyCartDraft, ModelBase {
 
         ReplicaMyCartDraftImpl that = (ReplicaMyCartDraftImpl) o;
 
-        return new EqualsBuilder().append(reference, that.reference).isEquals();
+        return new EqualsBuilder().append(reference, that.reference).append(reference, that.reference).isEquals();
     }
 
     @Override

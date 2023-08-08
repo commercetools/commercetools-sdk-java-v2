@@ -231,6 +231,17 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
                 .append(supplyChannel, that.supplyChannel)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
+                .append(action, that.action)
+                .append(key, that.key)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(distributionChannel, that.distributionChannel)
+                .append(supplyChannel, that.supplyChannel)
+                .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

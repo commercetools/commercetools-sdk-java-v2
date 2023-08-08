@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderReference
+ *  <p>Reference to an Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReferenceImpl implements OrderReference, ModelBase {
@@ -54,7 +54,7 @@ public class OrderReferenceImpl implements OrderReference, ModelBase {
     }
 
     /**
-     *  <p>Unique ID of the referenced resource.</p>
+     *  <p>Unique identifier of the referenced Order.</p>
      */
 
     public String getId() {
@@ -62,7 +62,7 @@ public class OrderReferenceImpl implements OrderReference, ModelBase {
     }
 
     /**
-     *
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
      */
 
     public com.commercetools.api.models.order.Order getObj() {
@@ -87,7 +87,13 @@ public class OrderReferenceImpl implements OrderReference, ModelBase {
 
         OrderReferenceImpl that = (OrderReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(obj, that.obj).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .isEquals();
     }
 
     @Override

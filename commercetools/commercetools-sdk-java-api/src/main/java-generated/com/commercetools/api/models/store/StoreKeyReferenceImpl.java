@@ -71,7 +71,11 @@ public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {
 
         StoreKeyReferenceImpl that = (StoreKeyReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

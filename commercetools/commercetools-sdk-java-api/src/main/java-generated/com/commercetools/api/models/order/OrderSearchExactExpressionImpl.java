@@ -59,7 +59,7 @@ public class OrderSearchExactExpressionImpl implements OrderSearchExactExpressio
 
         OrderSearchExactExpressionImpl that = (OrderSearchExactExpressionImpl) o;
 
-        return new EqualsBuilder().append(exact, that.exact).isEquals();
+        return new EqualsBuilder().append(exact, that.exact).append(exact, that.exact).isEquals();
     }
 
     @Override

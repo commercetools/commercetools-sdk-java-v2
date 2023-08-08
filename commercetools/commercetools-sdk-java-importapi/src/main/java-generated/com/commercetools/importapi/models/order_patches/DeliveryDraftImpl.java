@@ -103,6 +103,9 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
         return new EqualsBuilder().append(items, that.items)
                 .append(address, that.address)
                 .append(parcels, that.parcels)
+                .append(items, that.items)
+                .append(address, that.address)
+                .append(parcels, that.parcels)
                 .isEquals();
     }
 

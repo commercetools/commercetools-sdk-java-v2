@@ -74,7 +74,11 @@ public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, Mod
 
         StoreSetLanguagesActionImpl that = (StoreSetLanguagesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(languages, that.languages).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(languages, that.languages)
+                .append(action, that.action)
+                .append(languages, that.languages)
+                .isEquals();
     }
 
     @Override

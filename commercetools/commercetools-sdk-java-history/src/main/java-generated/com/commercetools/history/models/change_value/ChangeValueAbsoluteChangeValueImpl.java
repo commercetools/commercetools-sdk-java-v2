@@ -75,7 +75,11 @@ public class ChangeValueAbsoluteChangeValueImpl implements ChangeValueAbsoluteCh
 
         ChangeValueAbsoluteChangeValueImpl that = (ChangeValueAbsoluteChangeValueImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(money, that.money).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(money, that.money)
+                .append(type, that.type)
+                .append(money, that.money)
+                .isEquals();
     }
 
     @Override

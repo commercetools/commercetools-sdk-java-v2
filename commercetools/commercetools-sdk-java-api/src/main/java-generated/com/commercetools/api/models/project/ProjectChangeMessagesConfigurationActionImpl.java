@@ -75,6 +75,8 @@ public class ProjectChangeMessagesConfigurationActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(messagesConfiguration, that.messagesConfiguration)
+                .append(action, that.action)
+                .append(messagesConfiguration, that.messagesConfiguration)
                 .isEquals();
     }
 

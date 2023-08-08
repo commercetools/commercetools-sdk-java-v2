@@ -142,6 +142,12 @@ public class OrderSearchFullTextValueImpl implements OrderSearchFullTextValue, M
                 .append(value, that.value)
                 .append(language, that.language)
                 .append(mustMatch, that.mustMatch)
+                .append(field, that.field)
+                .append(boost, that.boost)
+                .append(customType, that.customType)
+                .append(value, that.value)
+                .append(language, that.language)
+                .append(mustMatch, that.mustMatch)
                 .isEquals();
     }
 

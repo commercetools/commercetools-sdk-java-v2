@@ -78,6 +78,8 @@ public class ProductSelectionSettingDraftImpl implements ProductSelectionSetting
 
         return new EqualsBuilder().append(productSelection, that.productSelection)
                 .append(active, that.active)
+                .append(productSelection, that.productSelection)
+                .append(active, that.active)
                 .isEquals();
     }
 

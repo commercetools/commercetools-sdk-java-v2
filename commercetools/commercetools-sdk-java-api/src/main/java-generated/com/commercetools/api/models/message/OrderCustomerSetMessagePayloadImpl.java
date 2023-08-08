@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Set Customer Id update action.</p>
+ *  <p>Generated after a successful Set Customer ID update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessagePayload, ModelBase {
@@ -62,7 +62,7 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
     }
 
     /**
-     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     *  <p>Customer on the Order after the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -70,7 +70,7 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
     }
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -78,7 +78,7 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
     }
 
     /**
-     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     *  <p>Customer on the Order before the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getOldCustomer() {
@@ -86,7 +86,7 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {
@@ -122,6 +122,11 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
         OrderCustomerSetMessagePayloadImpl that = (OrderCustomerSetMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(customer, that.customer)
+                .append(customerGroup, that.customerGroup)
+                .append(oldCustomer, that.oldCustomer)
+                .append(oldCustomerGroup, that.oldCustomerGroup)
+                .append(type, that.type)
                 .append(customer, that.customer)
                 .append(customerGroup, that.customerGroup)
                 .append(oldCustomer, that.oldCustomer)

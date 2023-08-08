@@ -126,6 +126,11 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
                 .append(values, that.values)
                 .append(field, that.field)
                 .append(duplicateValue, that.duplicateValue)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(field, that.field)
+                .append(duplicateValue, that.duplicateValue)
                 .isEquals();
     }
 

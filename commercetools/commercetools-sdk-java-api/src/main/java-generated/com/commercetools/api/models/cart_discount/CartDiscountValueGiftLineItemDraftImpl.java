@@ -125,6 +125,11 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
                 .append(variantId, that.variantId)
                 .append(supplyChannel, that.supplyChannel)
                 .append(distributionChannel, that.distributionChannel)
+                .append(type, that.type)
+                .append(product, that.product)
+                .append(variantId, that.variantId)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
                 .isEquals();
     }
 

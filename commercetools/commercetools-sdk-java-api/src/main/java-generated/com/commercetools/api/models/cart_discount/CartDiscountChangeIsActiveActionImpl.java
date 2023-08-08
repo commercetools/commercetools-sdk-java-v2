@@ -71,7 +71,11 @@ public class CartDiscountChangeIsActiveActionImpl implements CartDiscountChangeI
 
         CartDiscountChangeIsActiveActionImpl that = (CartDiscountChangeIsActiveActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(isActive, that.isActive).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(isActive, that.isActive)
+                .append(action, that.action)
+                .append(isActive, that.isActive)
+                .isEquals();
     }
 
     @Override

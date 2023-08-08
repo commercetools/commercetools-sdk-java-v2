@@ -159,6 +159,13 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
                 .append(catalogData, that.catalogData)
                 .append(variant, that.variant)
                 .append(priceId, that.priceId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
+                .append(priceId, that.priceId)
                 .isEquals();
     }
 

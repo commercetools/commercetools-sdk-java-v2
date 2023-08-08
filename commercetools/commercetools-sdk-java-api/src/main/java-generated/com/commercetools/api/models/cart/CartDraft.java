@@ -145,7 +145,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public RoundingMode getTaxRoundingMode();
 
     /**
-     *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how taxes are calculated for <code>taxedPrice</code>.</p>
      * @return taxCalculationMode
      */
 
@@ -391,7 +391,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
     /**
-     *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how taxes are calculated for <code>taxedPrice</code>.</p>
      * @param taxCalculationMode value to be set
      */
 

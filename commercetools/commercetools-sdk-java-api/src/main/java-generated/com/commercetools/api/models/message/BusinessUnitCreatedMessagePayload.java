@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Create Business Unit request.</p>
+ *  <p>Generated after a successful Create BusinessUnit request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

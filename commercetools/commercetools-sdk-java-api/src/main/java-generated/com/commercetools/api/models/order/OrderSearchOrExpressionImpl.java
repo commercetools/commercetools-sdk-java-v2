@@ -63,7 +63,7 @@ public class OrderSearchOrExpressionImpl implements OrderSearchOrExpression, Mod
 
         OrderSearchOrExpressionImpl that = (OrderSearchOrExpressionImpl) o;
 
-        return new EqualsBuilder().append(or, that.or).isEquals();
+        return new EqualsBuilder().append(or, that.or).append(or, that.or).isEquals();
     }
 
     @Override

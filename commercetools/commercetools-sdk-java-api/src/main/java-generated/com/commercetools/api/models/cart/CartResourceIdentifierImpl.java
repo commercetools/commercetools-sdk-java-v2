@@ -86,7 +86,13 @@ public class CartResourceIdentifierImpl implements CartResourceIdentifier, Model
 
         CartResourceIdentifierImpl that = (CartResourceIdentifierImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

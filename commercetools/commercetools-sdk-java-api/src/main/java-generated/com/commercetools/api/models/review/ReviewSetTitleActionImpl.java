@@ -70,7 +70,11 @@ public class ReviewSetTitleActionImpl implements ReviewSetTitleAction, ModelBase
 
         ReviewSetTitleActionImpl that = (ReviewSetTitleActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(title, that.title).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(title, that.title)
+                .append(action, that.action)
+                .append(title, that.title)
+                .isEquals();
     }
 
     @Override

@@ -199,11 +199,10 @@ public class MessagePayloadQueryBuilderDsl {
             MessagePayloadQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asBusinessUnitParentUnitChanged(
-            Function<com.commercetools.api.predicates.query.message.BusinessUnitParentUnitChangedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitParentUnitChangedMessagePayloadQueryBuilderDsl>> fn) {
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asBusinessUnitParentChanged(
+            Function<com.commercetools.api.predicates.query.message.BusinessUnitParentChangedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitParentChangedMessagePayloadQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
-            com.commercetools.api.predicates.query.message.BusinessUnitParentUnitChangedMessagePayloadQueryBuilderDsl
-                    .of()),
+            com.commercetools.api.predicates.query.message.BusinessUnitParentChangedMessagePayloadQueryBuilderDsl.of()),
             MessagePayloadQueryBuilderDsl::of);
     }
 

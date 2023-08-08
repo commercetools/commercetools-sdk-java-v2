@@ -25,12 +25,16 @@ public class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineI
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CartRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final String customLineItemId) {
+    CartRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.action = REMOVE_CUSTOM_LINE_ITEM;
     }
 
@@ -50,15 +54,27 @@ public class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineI
     }
 
     /**
-     *  <p><code>id</code> of the Custom Line Item to remove.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
     }
 
     @Override
@@ -73,12 +89,19 @@ public class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineI
 
         return new EqualsBuilder().append(action, that.action)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(customLineItemId)
+                .append(customLineItemKey)
+                .toHashCode();
     }
 
 }

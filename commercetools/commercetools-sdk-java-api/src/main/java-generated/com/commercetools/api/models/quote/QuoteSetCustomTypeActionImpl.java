@@ -90,6 +90,9 @@ public class QuoteSetCustomTypeActionImpl implements QuoteSetCustomTypeAction, M
         return new EqualsBuilder().append(action, that.action)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 

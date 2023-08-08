@@ -54,7 +54,7 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     public String getLineItemKey();
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      * @return type
      */
     @Valid
@@ -62,7 +62,7 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
      * @return fields
      */
     @Valid
@@ -84,14 +84,14 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
      * @param fields value to be set
      */
 

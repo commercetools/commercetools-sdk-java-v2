@@ -126,6 +126,11 @@ public class OrderSearchSortingImpl implements OrderSearchSorting, ModelBase {
                 .append(order, that.order)
                 .append(mode, that.mode)
                 .append(filter, that.filter)
+                .append(field, that.field)
+                .append(language, that.language)
+                .append(order, that.order)
+                .append(mode, that.mode)
+                .append(filter, that.filter)
                 .isEquals();
     }
 

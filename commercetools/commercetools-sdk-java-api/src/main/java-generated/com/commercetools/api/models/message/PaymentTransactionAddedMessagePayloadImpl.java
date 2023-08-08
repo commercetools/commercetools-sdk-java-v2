@@ -71,7 +71,11 @@ public class PaymentTransactionAddedMessagePayloadImpl implements PaymentTransac
 
         PaymentTransactionAddedMessagePayloadImpl that = (PaymentTransactionAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(transaction, that.transaction).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(transaction, that.transaction)
+                .append(type, that.type)
+                .append(transaction, that.transaction)
+                .isEquals();
     }
 
     @Override

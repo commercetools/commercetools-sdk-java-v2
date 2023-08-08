@@ -106,6 +106,10 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
                 .append(taxRateId, that.taxRateId)
                 .append(taxRateKey, that.taxRateKey)
                 .append(taxRate, that.taxRate)
+                .append(action, that.action)
+                .append(taxRateId, that.taxRateId)
+                .append(taxRateKey, that.taxRateKey)
+                .append(taxRate, that.taxRate)
                 .isEquals();
     }
 

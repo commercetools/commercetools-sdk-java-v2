@@ -252,7 +252,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how taxes are calculated for <code>taxedPrice</code>.</p>
      */
 
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
@@ -548,6 +548,35 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         CartDraftImpl that = (CartDraftImpl) o;
 
         return new EqualsBuilder().append(currency, that.currency)
+                .append(key, that.key)
+                .append(customerId, that.customerId)
+                .append(customerEmail, that.customerEmail)
+                .append(customerGroup, that.customerGroup)
+                .append(anonymousId, that.anonymousId)
+                .append(businessUnit, that.businessUnit)
+                .append(store, that.store)
+                .append(lineItems, that.lineItems)
+                .append(customLineItems, that.customLineItems)
+                .append(taxMode, that.taxMode)
+                .append(externalTaxRateForShippingMethod, that.externalTaxRateForShippingMethod)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .append(inventoryMode, that.inventoryMode)
+                .append(billingAddress, that.billingAddress)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingMethod, that.shippingMethod)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(shippingMode, that.shippingMode)
+                .append(customShipping, that.customShipping)
+                .append(shipping, that.shipping)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(discountCodes, that.discountCodes)
+                .append(country, that.country)
+                .append(locale, that.locale)
+                .append(origin, that.origin)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(custom, that.custom)
+                .append(currency, that.currency)
                 .append(key, that.key)
                 .append(customerId, that.customerId)
                 .append(customerEmail, that.customerEmail)

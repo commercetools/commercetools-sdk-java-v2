@@ -109,6 +109,10 @@ public class CartSetLineItemSupplyChannelActionImpl implements CartSetLineItemSu
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(supplyChannel, that.supplyChannel)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 

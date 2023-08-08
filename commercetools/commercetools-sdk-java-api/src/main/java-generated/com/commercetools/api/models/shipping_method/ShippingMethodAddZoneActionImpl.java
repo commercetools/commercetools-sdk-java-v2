@@ -71,7 +71,11 @@ public class ShippingMethodAddZoneActionImpl implements ShippingMethodAddZoneAct
 
         ShippingMethodAddZoneActionImpl that = (ShippingMethodAddZoneActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(zone, that.zone).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(zone, that.zone)
+                .append(action, that.action)
+                .append(zone, that.zone)
+                .isEquals();
     }
 
     @Override

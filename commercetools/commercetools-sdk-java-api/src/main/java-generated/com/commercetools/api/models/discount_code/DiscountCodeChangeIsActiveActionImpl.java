@@ -70,7 +70,11 @@ public class DiscountCodeChangeIsActiveActionImpl implements DiscountCodeChangeI
 
         DiscountCodeChangeIsActiveActionImpl that = (DiscountCodeChangeIsActiveActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(isActive, that.isActive).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(isActive, that.isActive)
+                .append(action, that.action)
+                .append(isActive, that.isActive)
+                .isEquals();
     }
 
     @Override

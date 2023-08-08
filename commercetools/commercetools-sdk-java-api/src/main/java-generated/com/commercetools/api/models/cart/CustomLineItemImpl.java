@@ -30,6 +30,8 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
+
     private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
     private String slug;
@@ -60,6 +62,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("money") final com.commercetools.api.models.common.TypedMoney money,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
+            @JsonProperty("taxedPricePortions") final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice,
             @JsonProperty("slug") final String slug, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state,
@@ -75,6 +78,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.name = name;
         this.money = money;
         this.taxedPrice = taxedPrice;
+        this.taxedPricePortions = taxedPricePortions;
         this.totalPrice = totalPrice;
         this.slug = slug;
         this.quantity = quantity;
@@ -135,6 +139,14 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
+    }
+
+    /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
      *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
      */
@@ -152,7 +164,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Number of Custom Line Items in the Cart.</p>
+     *  <p>Number of Custom Line Items in the Cart or Order.</p>
      */
 
     public Long getQuantity() {
@@ -160,7 +172,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
@@ -246,6 +258,15 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.taxedPrice = taxedPrice;
     }
 
+    public void setTaxedPricePortions(final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        this.taxedPricePortions = new ArrayList<>(Arrays.asList(taxedPricePortions));
+    }
+
+    public void setTaxedPricePortions(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
+        this.taxedPricePortions = taxedPricePortions;
+    }
+
     public void setTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
         this.totalPrice = totalPrice;
     }
@@ -320,6 +341,24 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(name, that.name)
                 .append(money, that.money)
                 .append(taxedPrice, that.taxedPrice)
+                .append(taxedPricePortions, that.taxedPricePortions)
+                .append(totalPrice, that.totalPrice)
+                .append(slug, that.slug)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(taxCategory, that.taxCategory)
+                .append(taxRate, that.taxRate)
+                .append(perMethodTaxRate, that.perMethodTaxRate)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(custom, that.custom)
+                .append(shippingDetails, that.shippingDetails)
+                .append(priceMode, that.priceMode)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(money, that.money)
+                .append(taxedPrice, that.taxedPrice)
+                .append(taxedPricePortions, that.taxedPricePortions)
                 .append(totalPrice, that.totalPrice)
                 .append(slug, that.slug)
                 .append(quantity, that.quantity)
@@ -341,6 +380,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(name)
                 .append(money)
                 .append(taxedPrice)
+                .append(taxedPricePortions)
                 .append(totalPrice)
                 .append(slug)
                 .append(quantity)

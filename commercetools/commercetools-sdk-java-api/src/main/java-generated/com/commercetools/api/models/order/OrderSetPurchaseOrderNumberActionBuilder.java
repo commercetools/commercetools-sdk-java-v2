@@ -26,7 +26,7 @@ public class OrderSetPurchaseOrderNumberActionBuilder implements Builder<OrderSe
     private String purchaseOrderNumber;
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderSetPurchaseOrderNumberActionBuilder implements Builder<OrderSe
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return purchaseOrderNumber
      */
 

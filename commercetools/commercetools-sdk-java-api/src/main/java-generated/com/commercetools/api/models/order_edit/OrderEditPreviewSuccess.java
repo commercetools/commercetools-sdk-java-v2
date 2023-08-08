@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderEditPreviewSuccess
+ *  <p>The data is not persisted but is dynamically pulled by dry-running the update actions from <code>stagedActions</code> on the current version of the related Order, not from the Order version at the time the OrderEdit was created. Therefore, it cannot be queried.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     String PREVIEW_SUCCESS = "PreviewSuccess";
 
     /**
-     *
+     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
      * @return preview
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     public StagedOrder getPreview();
 
     /**
-     *
+     *  <p>Messages that will be generated if the edit is applied.</p>
      * @return messagePayloads
      */
     @NotNull
@@ -58,14 +58,14 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     public List<MessagePayload> getMessagePayloads();
 
     /**
-     * set preview
+     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
      * @param preview value to be set
      */
 
     public void setPreview(final StagedOrder preview);
 
     /**
-     * set messagePayloads
+     *  <p>Messages that will be generated if the edit is applied.</p>
      * @param messagePayloads values to be set
      */
 
@@ -73,7 +73,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     public void setMessagePayloads(final MessagePayload... messagePayloads);
 
     /**
-     * set messagePayloads
+     *  <p>Messages that will be generated if the edit is applied.</p>
      * @param messagePayloads values to be set
      */
 

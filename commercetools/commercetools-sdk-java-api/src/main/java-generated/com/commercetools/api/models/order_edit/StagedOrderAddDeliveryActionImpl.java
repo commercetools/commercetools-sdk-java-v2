@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderAddDeliveryAction
+ *  <p>A Delivery can only be added to an Order if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
+ *  <p>Produces the Delivery Added Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryAction, ModelBase {
@@ -69,7 +70,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     }
 
     /**
-     *  <p>User-defined unique identifier of a Delivery.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
      */
 
     public String getDeliveryKey() {
@@ -77,7 +78,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -85,7 +86,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     }
 
     /**
-     *
+     *  <p>Items to be included in the Delivery.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -93,7 +94,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address the <code>parcels</code> should be delivered to.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -101,7 +102,8 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     }
 
     /**
-     *
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ParcelDraft> getParcels() {
@@ -109,7 +111,7 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -159,6 +161,13 @@ public class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDeliveryA
         StagedOrderAddDeliveryActionImpl that = (StagedOrderAddDeliveryActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(deliveryKey, that.deliveryKey)
+                .append(shippingKey, that.shippingKey)
+                .append(items, that.items)
+                .append(address, that.address)
+                .append(parcels, that.parcels)
+                .append(custom, that.custom)
+                .append(action, that.action)
                 .append(deliveryKey, that.deliveryKey)
                 .append(shippingKey, that.shippingKey)
                 .append(items, that.items)

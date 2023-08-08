@@ -89,6 +89,9 @@ public class ProductSelectionSetCustomFieldActionImpl implements ProductSelectio
         return new EqualsBuilder().append(action, that.action)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 

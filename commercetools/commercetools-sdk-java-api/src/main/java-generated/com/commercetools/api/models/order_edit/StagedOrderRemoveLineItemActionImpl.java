@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderRemoveLineItemAction
+ *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLineItemAction, ModelBase {
@@ -84,7 +84,7 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
     }
 
     /**
-     *
+     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
      */
 
     public Long getQuantity() {
@@ -92,7 +92,7 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -100,7 +100,7 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
     }
 
     /**
-     *
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -108,7 +108,7 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Container for Line Item-specific addresses to remove.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetailsToRemove() {
@@ -152,6 +152,13 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
         StagedOrderRemoveLineItemActionImpl that = (StagedOrderRemoveLineItemActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(quantity, that.quantity)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(shippingDetailsToRemove, that.shippingDetailsToRemove)
+                .append(action, that.action)
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(quantity, that.quantity)

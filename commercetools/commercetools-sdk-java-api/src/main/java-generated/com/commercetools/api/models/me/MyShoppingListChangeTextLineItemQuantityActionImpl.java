@@ -90,6 +90,9 @@ public class MyShoppingListChangeTextLineItemQuantityActionImpl
         return new EqualsBuilder().append(action, that.action)
                 .append(textLineItemId, that.textLineItemId)
                 .append(quantity, that.quantity)
+                .append(action, that.action)
+                .append(textLineItemId, that.textLineItemId)
+                .append(quantity, that.quantity)
                 .isEquals();
     }
 

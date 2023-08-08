@@ -73,7 +73,11 @@ public class ShippingMethodChangeValueImpl implements ShippingMethodChangeValue,
 
         ShippingMethodChangeValueImpl that = (ShippingMethodChangeValueImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(name, that.name)
+                .append(id, that.id)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override

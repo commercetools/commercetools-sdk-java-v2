@@ -190,6 +190,14 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
                 .append(assets, that.assets)
                 .append(publish, that.publish)
                 .append(product, that.product)
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(isMasterVariant, that.isMasterVariant)
+                .append(attributes, that.attributes)
+                .append(images, that.images)
+                .append(assets, that.assets)
+                .append(publish, that.publish)
+                .append(product, that.product)
                 .isEquals();
     }
 

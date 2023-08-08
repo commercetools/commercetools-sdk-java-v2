@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *   <li>Create Cart in Store request and Set Country update action on Carts.</li>
  *   <li>Create Cart in Store request and Set Country update action on My Carts.</li>
  *   <li>Create Order in Store from Cart requests on Orders.</li>
- *   <li>Create Order from Cart in a Store requests on My Orders.</li>
+ *   <li>Create Order in Store from Cart requests on My Orders.</li>
  *   <li>Create Order from Quote requests on Orders.</li>
  *   <li>Create Order from Quote requests on My Orders.</li>
  *   <li>Create Order by Import request on Order Import.</li>

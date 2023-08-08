@@ -41,7 +41,7 @@ public class OrderUpdateImpl implements OrderUpdate, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the Order on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the Order on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public Long getVersion() {
@@ -78,7 +78,11 @@ public class OrderUpdateImpl implements OrderUpdate, ModelBase {
 
         OrderUpdateImpl that = (OrderUpdateImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(actions, that.actions).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(actions, that.actions)
+                .append(version, that.version)
+                .append(actions, that.actions)
+                .isEquals();
     }
 
     @Override

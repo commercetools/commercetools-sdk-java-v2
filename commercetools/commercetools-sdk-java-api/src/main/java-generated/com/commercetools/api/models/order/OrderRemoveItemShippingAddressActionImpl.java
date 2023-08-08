@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderRemoveItemShippingAddressAction
+ *  <p>An address can only be removed if it is not referenced in any ItemShippingTarget of the Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderRemoveItemShippingAddressActionImpl implements OrderRemoveItemShippingAddressAction, ModelBase {
@@ -49,7 +49,7 @@ public class OrderRemoveItemShippingAddressActionImpl implements OrderRemoveItem
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
      */
 
     public String getAddressKey() {
@@ -70,7 +70,11 @@ public class OrderRemoveItemShippingAddressActionImpl implements OrderRemoveItem
 
         OrderRemoveItemShippingAddressActionImpl that = (OrderRemoveItemShippingAddressActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(addressKey, that.addressKey).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(addressKey, that.addressKey)
+                .append(action, that.action)
+                .append(addressKey, that.addressKey)
+                .isEquals();
     }
 
     @Override

@@ -63,7 +63,7 @@ public class OrderSearchNotExpressionImpl implements OrderSearchNotExpression, M
 
         OrderSearchNotExpressionImpl that = (OrderSearchNotExpressionImpl) o;
 
-        return new EqualsBuilder().append(not, that.not).isEquals();
+        return new EqualsBuilder().append(not, that.not).append(not, that.not).isEquals();
     }
 
     @Override

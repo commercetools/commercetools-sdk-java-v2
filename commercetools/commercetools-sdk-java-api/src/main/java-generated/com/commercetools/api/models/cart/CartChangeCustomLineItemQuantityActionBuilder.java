@@ -3,6 +3,8 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartChangeCustomLineItemQuantityAction cartChangeCustomLineItemQuantityAction = CartChangeCustomLineItemQuantityAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -22,18 +23,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<CartChangeCustomLineItemQuantityAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     private Long quantity;
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public CartChangeCustomLineItemQuantityActionBuilder customLineItemId(final String customLineItemId) {
+    public CartChangeCustomLineItemQuantityActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartChangeCustomLineItemQuantityActionBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -50,12 +66,23 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -73,10 +100,8 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
      * @return CartChangeCustomLineItemQuantityAction
      */
     public CartChangeCustomLineItemQuantityAction build() {
-        Objects.requireNonNull(customLineItemId,
-            CartChangeCustomLineItemQuantityAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(quantity, CartChangeCustomLineItemQuantityAction.class + ": quantity is missing");
-        return new CartChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);
+        return new CartChangeCustomLineItemQuantityActionImpl(customLineItemId, customLineItemKey, quantity);
     }
 
     /**
@@ -84,7 +109,7 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
      * @return CartChangeCustomLineItemQuantityAction
      */
     public CartChangeCustomLineItemQuantityAction buildUnchecked() {
-        return new CartChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);
+        return new CartChangeCustomLineItemQuantityActionImpl(customLineItemId, customLineItemKey, quantity);
     }
 
     /**
@@ -104,6 +129,7 @@ public class CartChangeCustomLineItemQuantityActionBuilder implements Builder<Ca
             final CartChangeCustomLineItemQuantityAction template) {
         CartChangeCustomLineItemQuantityActionBuilder builder = new CartChangeCustomLineItemQuantityActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.quantity = template.getQuantity();
         return builder;
     }

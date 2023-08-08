@@ -75,7 +75,11 @@ public class ImportSummaryImpl implements ImportSummary, ModelBase {
 
         ImportSummaryImpl that = (ImportSummaryImpl) o;
 
-        return new EqualsBuilder().append(states, that.states).append(total, that.total).isEquals();
+        return new EqualsBuilder().append(states, that.states)
+                .append(total, that.total)
+                .append(states, that.states)
+                .append(total, that.total)
+                .isEquals();
     }
 
     @Override

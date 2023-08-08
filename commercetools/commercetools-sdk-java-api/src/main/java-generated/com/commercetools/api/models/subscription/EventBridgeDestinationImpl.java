@@ -89,6 +89,9 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
         return new EqualsBuilder().append(type, that.type)
                 .append(region, that.region)
                 .append(accountId, that.accountId)
+                .append(type, that.type)
+                .append(region, that.region)
+                .append(accountId, that.accountId)
                 .isEquals();
     }
 

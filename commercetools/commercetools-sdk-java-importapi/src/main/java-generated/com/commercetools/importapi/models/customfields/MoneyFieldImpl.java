@@ -70,7 +70,11 @@ public class MoneyFieldImpl implements MoneyField, ModelBase {
 
         MoneyFieldImpl that = (MoneyFieldImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(value, that.value)
+                .append(type, that.type)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

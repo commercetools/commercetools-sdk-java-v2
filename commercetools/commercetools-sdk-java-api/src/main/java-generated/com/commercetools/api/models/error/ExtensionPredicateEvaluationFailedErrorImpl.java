@@ -109,6 +109,10 @@ public class ExtensionPredicateEvaluationFailedErrorImpl implements ExtensionPre
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(errorByExtension, that.errorByExtension)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(errorByExtension, that.errorByExtension)
                 .isEquals();
     }
 

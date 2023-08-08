@@ -24,16 +24,27 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrderUpdateSyncInfoAction> {
 
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier channel;
-
     @Nullable
     private String externalId;
+
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier channel;
 
     @Nullable
     private java.time.ZonedDateTime syncedAt;
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Set this to identify an external order instance, file, or other resource.</p>
+     * @param externalId value to be set
+     * @return Builder
+     */
+
+    public StagedOrderUpdateSyncInfoActionBuilder externalId(@Nullable final String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
+
+    /**
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -46,7 +57,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -58,7 +69,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -70,18 +81,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * set the value to the externalId
-     * @param externalId value to be set
-     * @return Builder
-     */
-
-    public StagedOrderUpdateSyncInfoActionBuilder externalId(@Nullable final String externalId) {
-        this.externalId = externalId;
-        return this;
-    }
-
-    /**
-     * set the value to the syncedAt
+     *  <p>If not set, it defaults to the current date and time.</p>
      * @param syncedAt value to be set
      * @return Builder
      */
@@ -92,16 +92,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     * @return channel
-     */
-
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
-        return this.channel;
-    }
-
-    /**
-     * value of externalId}
+     *  <p>Set this to identify an external order instance, file, or other resource.</p>
      * @return externalId
      */
 
@@ -111,7 +102,16 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * value of syncedAt}
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     * @return channel
+     */
+
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
+        return this.channel;
+    }
+
+    /**
+     *  <p>If not set, it defaults to the current date and time.</p>
      * @return syncedAt
      */
 
@@ -126,7 +126,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
      */
     public StagedOrderUpdateSyncInfoAction build() {
         Objects.requireNonNull(channel, StagedOrderUpdateSyncInfoAction.class + ": channel is missing");
-        return new StagedOrderUpdateSyncInfoActionImpl(channel, externalId, syncedAt);
+        return new StagedOrderUpdateSyncInfoActionImpl(externalId, channel, syncedAt);
     }
 
     /**
@@ -134,7 +134,7 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
      * @return StagedOrderUpdateSyncInfoAction
      */
     public StagedOrderUpdateSyncInfoAction buildUnchecked() {
-        return new StagedOrderUpdateSyncInfoActionImpl(channel, externalId, syncedAt);
+        return new StagedOrderUpdateSyncInfoActionImpl(externalId, channel, syncedAt);
     }
 
     /**
@@ -152,8 +152,8 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
      */
     public static StagedOrderUpdateSyncInfoActionBuilder of(final StagedOrderUpdateSyncInfoAction template) {
         StagedOrderUpdateSyncInfoActionBuilder builder = new StagedOrderUpdateSyncInfoActionBuilder();
-        builder.channel = template.getChannel();
         builder.externalId = template.getExternalId();
+        builder.channel = template.getChannel();
         builder.syncedAt = template.getSyncedAt();
         return builder;
     }

@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderImportLineItemStateAction
+ *  <p>The import of States does not follow any predefined rules and should be only used if no transitions are defined. The <code>quantity</code> in the ItemStates must match the sum of all Line Item states' quantities.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImportLineItemStateAction, ModelBase {
@@ -24,6 +24,8 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
     /**
@@ -31,8 +33,10 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
      */
     @JsonCreator
     StagedOrderImportLineItemStateActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.state = state;
         this.action = IMPORT_LINE_ITEM_STATE;
     }
@@ -53,7 +57,7 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -61,7 +65,15 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
     }
 
     /**
-     *
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>New status of the Line Items.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
@@ -70,6 +82,10 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setState(final com.commercetools.api.models.order.ItemState... state) {
@@ -92,13 +108,22 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(state, that.state)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(state, that.state)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(state).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(state)
+                .toHashCode();
     }
 
 }

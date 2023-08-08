@@ -71,7 +71,11 @@ public class ShoppingListSetSlugActionImpl implements ShoppingListSetSlugAction,
 
         ShoppingListSetSlugActionImpl that = (ShoppingListSetSlugActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(slug, that.slug).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(slug, that.slug)
+                .append(action, that.action)
+                .append(slug, that.slug)
+                .isEquals();
     }
 
     @Override

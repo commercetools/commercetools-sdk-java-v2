@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderTransitionLineItemStateAction
+ *  <p>Produces the Line Item State Transition Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLineItemStateAction, ModelBase {
@@ -23,6 +23,8 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     private String action;
 
     private String lineItemId;
+
+    private String lineItemKey;
 
     private Long quantity;
 
@@ -37,11 +39,12 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
      */
     @JsonCreator
     OrderTransitionLineItemStateActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("lineItemKey") final String lineItemKey, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("fromState") final com.commercetools.api.models.state.StateResourceIdentifier fromState,
             @JsonProperty("toState") final com.commercetools.api.models.state.StateResourceIdentifier toState,
             @JsonProperty("actualTransitionDate") final java.time.ZonedDateTime actualTransitionDate) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.quantity = quantity;
         this.fromState = fromState;
         this.toState = toState;
@@ -65,7 +68,7 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -73,7 +76,15 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     }
 
     /**
-     *
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>Number of Line Items that should transition State.</p>
      */
 
     public Long getQuantity() {
@@ -81,7 +92,7 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition from.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
@@ -89,7 +100,7 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition to.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
@@ -97,7 +108,7 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) to perform the State transition.</p>
      */
 
     public java.time.ZonedDateTime getActualTransitionDate() {
@@ -106,6 +117,10 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setQuantity(final Long quantity) {
@@ -136,6 +151,14 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(quantity, that.quantity)
+                .append(fromState, that.fromState)
+                .append(toState, that.toState)
+                .append(actualTransitionDate, that.actualTransitionDate)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(quantity, that.quantity)
                 .append(fromState, that.fromState)
                 .append(toState, that.toState)
@@ -147,6 +170,7 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(quantity)
                 .append(fromState)
                 .append(toState)

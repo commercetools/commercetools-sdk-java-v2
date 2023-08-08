@@ -158,6 +158,13 @@ public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemActio
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
                 .append(shippingDetailsToRemove, that.shippingDetailsToRemove)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(quantity, that.quantity)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(shippingDetailsToRemove, that.shippingDetailsToRemove)
                 .isEquals();
     }
 

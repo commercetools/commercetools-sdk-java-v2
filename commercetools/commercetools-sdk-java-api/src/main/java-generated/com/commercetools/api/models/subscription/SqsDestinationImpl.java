@@ -143,6 +143,12 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
                 .append(queueUrl, that.queueUrl)
                 .append(region, that.region)
                 .append(authenticationMode, that.authenticationMode)
+                .append(type, that.type)
+                .append(accessKey, that.accessKey)
+                .append(accessSecret, that.accessSecret)
+                .append(queueUrl, that.queueUrl)
+                .append(region, that.region)
+                .append(authenticationMode, that.authenticationMode)
                 .isEquals();
     }
 

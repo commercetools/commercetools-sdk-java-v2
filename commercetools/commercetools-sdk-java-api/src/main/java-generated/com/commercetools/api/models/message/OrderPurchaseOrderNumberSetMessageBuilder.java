@@ -261,7 +261,7 @@ public class OrderPurchaseOrderNumberSetMessageBuilder implements Builder<OrderP
     }
 
     /**
-     *  <p>Purchase order number on the Order after the Set PurchaseOrderNumber update action.</p>
+     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
@@ -272,7 +272,7 @@ public class OrderPurchaseOrderNumberSetMessageBuilder implements Builder<OrderP
     }
 
     /**
-     *  <p>Purchase order number on the Order before the Set PurchaseOrderNumber update action.</p>
+     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
      * @param oldPurchaseOrderNumber value to be set
      * @return Builder
      */
@@ -377,7 +377,7 @@ public class OrderPurchaseOrderNumberSetMessageBuilder implements Builder<OrderP
     }
 
     /**
-     *  <p>Purchase order number on the Order after the Set PurchaseOrderNumber update action.</p>
+     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
      * @return purchaseOrderNumber
      */
 
@@ -387,7 +387,7 @@ public class OrderPurchaseOrderNumberSetMessageBuilder implements Builder<OrderP
     }
 
     /**
-     *  <p>Purchase order number on the Order before the Set PurchaseOrderNumber update action.</p>
+     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
      * @return oldPurchaseOrderNumber
      */
 

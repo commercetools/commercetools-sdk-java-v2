@@ -105,6 +105,10 @@ public class CustomerSetAddressCustomFieldActionImpl implements CustomerSetAddre
                 .append(addressId, that.addressId)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 

@@ -110,6 +110,10 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
                 .append(removedImageUrls, that.removedImageUrls)
                 .append(productProjection, that.productProjection)
                 .append(scope, that.scope)
+                .append(type, that.type)
+                .append(removedImageUrls, that.removedImageUrls)
+                .append(productProjection, that.productProjection)
+                .append(scope, that.scope)
                 .isEquals();
     }
 

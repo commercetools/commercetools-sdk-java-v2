@@ -16,7 +16,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetLineItemDistributionChannelAction
+ *  <p>Setting a distribution channel for a LineItem can lead to an updated <code>price</code> as described in LineItem Price selection.</p>
+ *  <p>Produces the OrderLineItemDistributionChannelSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -53,7 +54,10 @@ public interface StagedOrderSetLineItemDistributionChannelAction extends StagedO
     public String getLineItemKey();
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
+     *  </ul>
      * @return distributionChannel
      */
     @Valid
@@ -75,7 +79,10 @@ public interface StagedOrderSetLineItemDistributionChannelAction extends StagedO
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
+     *  </ul>
      * @param distributionChannel value to be set
      */
 

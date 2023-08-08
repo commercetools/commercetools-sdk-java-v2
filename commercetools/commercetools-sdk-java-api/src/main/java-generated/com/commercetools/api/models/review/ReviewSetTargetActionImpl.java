@@ -83,7 +83,11 @@ public class ReviewSetTargetActionImpl implements ReviewSetTargetAction, ModelBa
 
         ReviewSetTargetActionImpl that = (ReviewSetTargetActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(target, that.target).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(target, that.target)
+                .append(action, that.action)
+                .append(target, that.target)
+                .isEquals();
     }
 
     @Override

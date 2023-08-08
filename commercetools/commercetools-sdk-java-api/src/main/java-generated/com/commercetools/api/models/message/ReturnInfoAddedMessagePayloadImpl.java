@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Add Return Info update action.</p>
+ *  <p>Generated after a successful Add ReturnInfo update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnInfoAddedMessagePayloadImpl implements ReturnInfoAddedMessagePayload, ModelBase {
@@ -71,7 +71,11 @@ public class ReturnInfoAddedMessagePayloadImpl implements ReturnInfoAddedMessage
 
         ReturnInfoAddedMessagePayloadImpl that = (ReturnInfoAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(returnInfo, that.returnInfo).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(returnInfo, that.returnInfo)
+                .append(type, that.type)
+                .append(returnInfo, that.returnInfo)
+                .isEquals();
     }
 
     @Override

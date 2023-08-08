@@ -4,8 +4,6 @@ package com.commercetools.api.models.business_unit;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     AssociateDraft associateDraft = AssociateDraft.builder()
+ *             .plusAssociateRoleAssignments(associateRoleAssignmentsBuilder -> associateRoleAssignmentsBuilder)
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
@@ -24,12 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
-    @Nullable
     private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments;
-
-    @Deprecated
-    @Nullable
-    private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles;
 
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
@@ -40,7 +34,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      */
 
     public AssociateDraftBuilder associateRoleAssignments(
-            @Nullable final com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft... associateRoleAssignments) {
+            final com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft... associateRoleAssignments) {
         this.associateRoleAssignments = new ArrayList<>(Arrays.asList(associateRoleAssignments));
         return this;
     }
@@ -52,7 +46,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      */
 
     public AssociateDraftBuilder associateRoleAssignments(
-            @Nullable final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments) {
+            final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments) {
         this.associateRoleAssignments = associateRoleAssignments;
         return this;
     }
@@ -64,7 +58,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      */
 
     public AssociateDraftBuilder plusAssociateRoleAssignments(
-            @Nullable final com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft... associateRoleAssignments) {
+            final com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft... associateRoleAssignments) {
         if (this.associateRoleAssignments == null) {
             this.associateRoleAssignments = new ArrayList<>();
         }
@@ -127,45 +121,6 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
     }
 
     /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @param roles value to be set
-     * @return Builder
-     */
-    @Deprecated
-    public AssociateDraftBuilder roles(
-            @Nullable final com.commercetools.api.models.business_unit.AssociateRoleDeprecated... roles) {
-        this.roles = new ArrayList<>(Arrays.asList(roles));
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @param roles value to be set
-     * @return Builder
-     */
-    @Deprecated
-    public AssociateDraftBuilder roles(
-            @Nullable final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles) {
-        this.roles = roles;
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @param roles value to be set
-     * @return Builder
-     */
-    @Deprecated
-    public AssociateDraftBuilder plusRoles(
-            @Nullable final com.commercetools.api.models.business_unit.AssociateRoleDeprecated... roles) {
-        if (this.roles == null) {
-            this.roles = new ArrayList<>();
-        }
-        this.roles.addAll(Arrays.asList(roles));
-        return this;
-    }
-
-    /**
      *  <p>The Customer to be part of the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
@@ -207,19 +162,8 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      * @return associateRoleAssignments
      */
 
-    @Nullable
     public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> getAssociateRoleAssignments() {
         return this.associateRoleAssignments;
-    }
-
-    /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @return roles
-     */
-    @Deprecated
-    @Nullable
-    public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> getRoles() {
-        return this.roles;
     }
 
     /**
@@ -236,8 +180,10 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      * @return AssociateDraft
      */
     public AssociateDraft build() {
+        Objects.requireNonNull(associateRoleAssignments,
+            AssociateDraft.class + ": associateRoleAssignments is missing");
         Objects.requireNonNull(customer, AssociateDraft.class + ": customer is missing");
-        return new AssociateDraftImpl(associateRoleAssignments, roles, customer);
+        return new AssociateDraftImpl(associateRoleAssignments, customer);
     }
 
     /**
@@ -245,7 +191,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      * @return AssociateDraft
      */
     public AssociateDraft buildUnchecked() {
-        return new AssociateDraftImpl(associateRoleAssignments, roles, customer);
+        return new AssociateDraftImpl(associateRoleAssignments, customer);
     }
 
     /**
@@ -264,7 +210,6 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
     public static AssociateDraftBuilder of(final AssociateDraft template) {
         AssociateDraftBuilder builder = new AssociateDraftBuilder();
         builder.associateRoleAssignments = template.getAssociateRoleAssignments();
-        builder.roles = template.getRoles();
         builder.customer = template.getCustomer();
         return builder;
     }

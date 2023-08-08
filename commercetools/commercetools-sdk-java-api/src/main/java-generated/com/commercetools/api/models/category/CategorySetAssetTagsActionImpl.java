@@ -109,6 +109,10 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
                 .append(tags, that.tags)
+                .append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(tags, that.tags)
                 .isEquals();
     }
 

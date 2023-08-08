@@ -39,7 +39,7 @@ public interface CartAddItemShippingAddressAction extends CartUpdateAction {
 
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
-     *  <p>The new Address must have a <code>key</code> that is unique accross this Cart.</p>
+     *  <p>The new Address must have a <code>key</code> that is unique across this Cart.</p>
      * @return address
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface CartAddItemShippingAddressAction extends CartUpdateAction {
 
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
-     *  <p>The new Address must have a <code>key</code> that is unique accross this Cart.</p>
+     *  <p>The new Address must have a <code>key</code> that is unique across this Cart.</p>
      * @param address value to be set
      */
 

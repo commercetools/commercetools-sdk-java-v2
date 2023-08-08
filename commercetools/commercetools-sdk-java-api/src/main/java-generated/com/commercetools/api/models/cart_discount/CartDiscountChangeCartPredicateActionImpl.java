@@ -70,7 +70,11 @@ public class CartDiscountChangeCartPredicateActionImpl implements CartDiscountCh
 
         CartDiscountChangeCartPredicateActionImpl that = (CartDiscountChangeCartPredicateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(cartPredicate, that.cartPredicate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(cartPredicate, that.cartPredicate)
+                .append(action, that.action)
+                .append(cartPredicate, that.cartPredicate)
+                .isEquals();
     }
 
     @Override

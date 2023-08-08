@@ -169,6 +169,13 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
                 .append(anonymousCartSignInMode, that.anonymousCartSignInMode)
                 .append(anonymousId, that.anonymousId)
                 .append(updateProductData, that.updateProductData)
+                .append(email, that.email)
+                .append(password, that.password)
+                .append(anonymousCartId, that.anonymousCartId)
+                .append(anonymousCart, that.anonymousCart)
+                .append(anonymousCartSignInMode, that.anonymousCartSignInMode)
+                .append(anonymousId, that.anonymousId)
+                .append(updateProductData, that.updateProductData)
                 .isEquals();
     }
 

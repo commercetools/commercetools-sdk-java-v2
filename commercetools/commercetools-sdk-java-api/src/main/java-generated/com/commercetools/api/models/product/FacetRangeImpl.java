@@ -207,6 +207,16 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
                 .append(min, that.min)
                 .append(max, that.max)
                 .append(mean, that.mean)
+                .append(from, that.from)
+                .append(fromStr, that.fromStr)
+                .append(to, that.to)
+                .append(toStr, that.toStr)
+                .append(count, that.count)
+                .append(productCount, that.productCount)
+                .append(total, that.total)
+                .append(min, that.min)
+                .append(max, that.max)
+                .append(mean, that.mean)
                 .isEquals();
     }
 

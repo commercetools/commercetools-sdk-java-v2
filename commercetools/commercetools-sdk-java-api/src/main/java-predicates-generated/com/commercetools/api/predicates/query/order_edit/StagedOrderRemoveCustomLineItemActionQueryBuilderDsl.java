@@ -23,4 +23,10 @@ public class StagedOrderRemoveCustomLineItemActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveCustomLineItemActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderRemoveCustomLineItemActionQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderRemoveCustomLineItemActionQueryBuilderDsl::of));
+    }
+
 }

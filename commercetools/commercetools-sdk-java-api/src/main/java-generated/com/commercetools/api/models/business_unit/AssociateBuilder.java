@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     Associate associate = Associate.builder()
  *             .plusAssociateRoleAssignments(associateRoleAssignmentsBuilder -> associateRoleAssignmentsBuilder)
- *             .plusRoles(rolesBuilder -> rolesBuilder)
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
@@ -25,10 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class AssociateBuilder implements Builder<Associate> {
 
     private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignment> associateRoleAssignments;
-
-    @Deprecated
-
-    private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles;
 
     private com.commercetools.api.models.customer.CustomerReference customer;
 
@@ -126,44 +121,6 @@ public class AssociateBuilder implements Builder<Associate> {
     }
 
     /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @param roles value to be set
-     * @return Builder
-     */
-    @Deprecated
-    public AssociateBuilder roles(final com.commercetools.api.models.business_unit.AssociateRoleDeprecated... roles) {
-        this.roles = new ArrayList<>(Arrays.asList(roles));
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @param roles value to be set
-     * @return Builder
-     */
-    @Deprecated
-    public AssociateBuilder roles(
-            final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles) {
-        this.roles = roles;
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @param roles value to be set
-     * @return Builder
-     */
-    @Deprecated
-    public AssociateBuilder plusRoles(
-            final com.commercetools.api.models.business_unit.AssociateRoleDeprecated... roles) {
-        if (this.roles == null) {
-            this.roles = new ArrayList<>();
-        }
-        this.roles.addAll(Arrays.asList(roles));
-        return this;
-    }
-
-    /**
      *  <p>The Customer that acts as an Associate in the Business Unit.</p>
      * @param builder function to build the customer value
      * @return Builder
@@ -208,16 +165,6 @@ public class AssociateBuilder implements Builder<Associate> {
     }
 
     /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @return roles
-     */
-    @Deprecated
-
-    public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> getRoles() {
-        return this.roles;
-    }
-
-    /**
      *  <p>The Customer that acts as an Associate in the Business Unit.</p>
      * @return customer
      */
@@ -232,9 +179,8 @@ public class AssociateBuilder implements Builder<Associate> {
      */
     public Associate build() {
         Objects.requireNonNull(associateRoleAssignments, Associate.class + ": associateRoleAssignments is missing");
-        Objects.requireNonNull(roles, Associate.class + ": roles is missing");
         Objects.requireNonNull(customer, Associate.class + ": customer is missing");
-        return new AssociateImpl(associateRoleAssignments, roles, customer);
+        return new AssociateImpl(associateRoleAssignments, customer);
     }
 
     /**
@@ -242,7 +188,7 @@ public class AssociateBuilder implements Builder<Associate> {
      * @return Associate
      */
     public Associate buildUnchecked() {
-        return new AssociateImpl(associateRoleAssignments, roles, customer);
+        return new AssociateImpl(associateRoleAssignments, customer);
     }
 
     /**
@@ -261,7 +207,6 @@ public class AssociateBuilder implements Builder<Associate> {
     public static AssociateBuilder of(final Associate template) {
         AssociateBuilder builder = new AssociateBuilder();
         builder.associateRoleAssignments = template.getAssociateRoleAssignments();
-        builder.roles = template.getRoles();
         builder.customer = template.getCustomer();
         return builder;
     }

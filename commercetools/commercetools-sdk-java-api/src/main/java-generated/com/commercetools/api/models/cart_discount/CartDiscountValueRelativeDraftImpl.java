@@ -70,7 +70,11 @@ public class CartDiscountValueRelativeDraftImpl implements CartDiscountValueRela
 
         CartDiscountValueRelativeDraftImpl that = (CartDiscountValueRelativeDraftImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(permyriad, that.permyriad).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(permyriad, that.permyriad)
+                .append(type, that.type)
+                .append(permyriad, that.permyriad)
+                .isEquals();
     }
 
     @Override

@@ -74,7 +74,11 @@ public class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocalizedEn
 
         CustomFieldLocalizedEnumValueImpl that = (CustomFieldLocalizedEnumValueImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(label, that.label).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(label, that.label)
+                .append(key, that.key)
+                .append(label, that.label)
+                .isEquals();
     }
 
     @Override

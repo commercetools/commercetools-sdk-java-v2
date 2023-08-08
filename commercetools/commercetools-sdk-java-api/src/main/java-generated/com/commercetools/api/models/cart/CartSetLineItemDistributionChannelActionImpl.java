@@ -111,6 +111,10 @@ public class CartSetLineItemDistributionChannelActionImpl
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(distributionChannel, that.distributionChannel)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(distributionChannel, that.distributionChannel)
                 .isEquals();
     }
 

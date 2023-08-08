@@ -72,7 +72,11 @@ public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelecti
 
         ProductSelectionCreatedMessagePayloadImpl that = (ProductSelectionCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(productSelection, that.productSelection).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(productSelection, that.productSelection)
+                .append(type, that.type)
+                .append(productSelection, that.productSelection)
+                .isEquals();
     }
 
     @Override

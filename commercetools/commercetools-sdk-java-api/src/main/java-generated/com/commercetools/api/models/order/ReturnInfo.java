@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ReturnInfo
+ *  <p>Stores information about returns connected to an Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReturnInfo {
 
     /**
-     *
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @return items
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface ReturnInfo {
     public List<ReturnItem> getItems();
 
     /**
-     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     *  <p>User-defined identifier to track the return.</p>
      * @return returnTrackingId
      */
 
@@ -51,7 +51,7 @@ public interface ReturnInfo {
     public String getReturnTrackingId();
 
     /**
-     *
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @return returnDate
      */
 
@@ -59,7 +59,7 @@ public interface ReturnInfo {
     public ZonedDateTime getReturnDate();
 
     /**
-     * set items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items values to be set
      */
 
@@ -67,21 +67,21 @@ public interface ReturnInfo {
     public void setItems(final ReturnItem... items);
 
     /**
-     * set items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<ReturnItem> items);
 
     /**
-     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     *  <p>User-defined identifier to track the return.</p>
      * @param returnTrackingId value to be set
      */
 
     public void setReturnTrackingId(final String returnTrackingId);
 
     /**
-     * set returnDate
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @param returnDate value to be set
      */
 

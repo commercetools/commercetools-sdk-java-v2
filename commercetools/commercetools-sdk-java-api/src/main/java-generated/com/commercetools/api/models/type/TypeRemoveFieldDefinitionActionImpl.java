@@ -70,7 +70,11 @@ public class TypeRemoveFieldDefinitionActionImpl implements TypeRemoveFieldDefin
 
         TypeRemoveFieldDefinitionActionImpl that = (TypeRemoveFieldDefinitionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(fieldName, that.fieldName).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(fieldName, that.fieldName)
+                .append(action, that.action)
+                .append(fieldName, that.fieldName)
+                .isEquals();
     }
 
     @Override

@@ -109,6 +109,10 @@ public class GraphQLDuplicateFieldErrorImpl implements GraphQLDuplicateFieldErro
                 .append(values, that.values)
                 .append(field, that.field)
                 .append(duplicateValue, that.duplicateValue)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(field, that.field)
+                .append(duplicateValue, that.duplicateValue)
                 .isEquals();
     }
 

@@ -54,7 +54,7 @@ public class ShippingRateInputDraftImpl implements ShippingRateInputDraft, Model
 
         ShippingRateInputDraftImpl that = (ShippingRateInputDraftImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

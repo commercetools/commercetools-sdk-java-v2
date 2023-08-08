@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>When creating B2B Orders, the Customer must have the <code>MyOrderFromCartDraft</code> Permission.</p>
+ * MyOrderFromCartDraft
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOrderFromCartDraft> {
 
     /**
-     *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
+     *  <p><code>id</code> of the Cart from which the Order is created.</p>
      * @return id
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
     public String getId();
 
     /**
-     *
+     *  <p>Current <code>version</code> of the Cart from which the Order is created.</p>
      * @return version
      */
     @NotNull
@@ -48,14 +48,14 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
     public Long getVersion();
 
     /**
-     *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
+     *  <p><code>id</code> of the Cart from which the Order is created.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set version
+     *  <p>Current <code>version</code> of the Cart from which the Order is created.</p>
      * @param version value to be set
      */
 

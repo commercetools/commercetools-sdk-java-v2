@@ -254,6 +254,18 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .append(messages, that.messages)
                 .append(format, that.format)
                 .append(status, that.status)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(changes, that.changes)
+                .append(destination, that.destination)
+                .append(key, that.key)
+                .append(messages, that.messages)
+                .append(format, that.format)
+                .append(status, that.status)
                 .isEquals();
     }
 

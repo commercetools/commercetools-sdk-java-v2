@@ -93,6 +93,9 @@ public class ShoppingListLineItemValueImpl implements ShoppingListLineItemValue,
         return new EqualsBuilder().append(id, that.id)
                 .append(name, that.name)
                 .append(variantId, that.variantId)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(variantId, that.variantId)
                 .isEquals();
     }
 

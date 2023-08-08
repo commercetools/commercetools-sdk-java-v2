@@ -45,7 +45,7 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
     public CartDiscountValue getValue();
 
     /**
-     *  <p>Defines what part of the Cart will be discounted.</p>
+     *  <p>Defines what segment of the Cart will be discounted.</p>
      *  <p>If <code>value</code> is set to <code>giftLineItem</code>, this must not be set.</p>
      * @return target
      */
@@ -61,7 +61,7 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
     public void setValue(final CartDiscountValue value);
 
     /**
-     *  <p>Defines what part of the Cart will be discounted.</p>
+     *  <p>Defines what segment of the Cart will be discounted.</p>
      *  <p>If <code>value</code> is set to <code>giftLineItem</code>, this must not be set.</p>
      * @param target value to be set
      */

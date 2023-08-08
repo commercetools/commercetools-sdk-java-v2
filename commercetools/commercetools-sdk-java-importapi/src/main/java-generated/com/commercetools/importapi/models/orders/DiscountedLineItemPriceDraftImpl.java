@@ -82,6 +82,8 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
 
         return new EqualsBuilder().append(value, that.value)
                 .append(includedDiscounts, that.includedDiscounts)
+                .append(value, that.value)
+                .append(includedDiscounts, that.includedDiscounts)
                 .isEquals();
     }
 

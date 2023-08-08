@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -17,32 +16,17 @@ import io.vrap.rmf.base.client.utils.Generated;
  * ProductSelectionType
  *
  * <hr>
- * Example to create a subtype instance using the builder pattern
+ * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ProductSelectionType productSelectionType = ProductSelectionType.individualExclusionBuilder()
- *             name(nameBuilder -> nameBuilder)
+ *     ProductSelectionType productSelectionType = ProductSelectionType.builder()
  *             .build()
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeImpl.class, name = IndividualExclusionProductSelectionType.INDIVIDUAL_EXCLUSION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.IndividualProductSelectionTypeImpl.class, name = IndividualProductSelectionType.INDIVIDUAL) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductSelectionTypeImpl.class, visible = true)
-@JsonDeserialize(as = ProductSelectionTypeImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @Deprecated
 public interface ProductSelectionType {
-
-    /**
-     *  <p>The following types of Product Selections are supported:</p>
-     * @return type
-     */
-    @NotNull
-    @Deprecated
-    @JsonProperty("type")
-    public ProductSelectionTypeEnum getType();
 
     /**
      * factory method to create a deep copy of ProductSelectionType
@@ -54,32 +38,8 @@ public interface ProductSelectionType {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType) {
-            return com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType.deepCopy(
-                (com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_selection.IndividualProductSelectionType) {
-            return com.commercetools.api.models.product_selection.IndividualProductSelectionType
-                    .deepCopy((com.commercetools.api.models.product_selection.IndividualProductSelectionType) template);
-        }
         ProductSelectionTypeImpl instance = new ProductSelectionTypeImpl();
         return instance;
-    }
-
-    /**
-     * builder for individualExclusion subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder individualExclusionBuilder() {
-        return com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder.of();
-    }
-
-    /**
-     * builder for individual subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder individualBuilder() {
-        return com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of();
     }
 
     /**

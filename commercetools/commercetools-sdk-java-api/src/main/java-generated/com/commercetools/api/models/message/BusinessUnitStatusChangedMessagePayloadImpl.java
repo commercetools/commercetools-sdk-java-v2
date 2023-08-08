@@ -71,7 +71,11 @@ public class BusinessUnitStatusChangedMessagePayloadImpl implements BusinessUnit
 
         BusinessUnitStatusChangedMessagePayloadImpl that = (BusinessUnitStatusChangedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(active, that.active).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(active, that.active)
+                .append(type, that.type)
+                .append(active, that.active)
+                .isEquals();
     }
 
     @Override

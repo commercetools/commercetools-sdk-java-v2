@@ -54,7 +54,7 @@ public class CartDiscountValueDraftImpl implements CartDiscountValueDraft, Model
 
         CartDiscountValueDraftImpl that = (CartDiscountValueDraftImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

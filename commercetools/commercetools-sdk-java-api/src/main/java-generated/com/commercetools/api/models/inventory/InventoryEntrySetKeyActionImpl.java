@@ -70,7 +70,11 @@ public class InventoryEntrySetKeyActionImpl implements InventoryEntrySetKeyActio
 
         InventoryEntrySetKeyActionImpl that = (InventoryEntrySetKeyActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(key, that.key)
+                .append(action, that.action)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

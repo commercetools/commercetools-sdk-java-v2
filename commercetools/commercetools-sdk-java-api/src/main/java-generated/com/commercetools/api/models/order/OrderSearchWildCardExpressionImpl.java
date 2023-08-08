@@ -59,7 +59,7 @@ public class OrderSearchWildCardExpressionImpl implements OrderSearchWildCardExp
 
         OrderSearchWildCardExpressionImpl that = (OrderSearchWildCardExpressionImpl) o;
 
-        return new EqualsBuilder().append(wildcard, that.wildcard).isEquals();
+        return new EqualsBuilder().append(wildcard, that.wildcard).append(wildcard, that.wildcard).isEquals();
     }
 
     @Override

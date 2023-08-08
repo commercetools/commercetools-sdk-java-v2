@@ -89,6 +89,9 @@ public class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumValueLa
         return new EqualsBuilder().append(action, that.action)
                 .append(fieldName, that.fieldName)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(fieldName, that.fieldName)
+                .append(value, that.value)
                 .isEquals();
     }
 

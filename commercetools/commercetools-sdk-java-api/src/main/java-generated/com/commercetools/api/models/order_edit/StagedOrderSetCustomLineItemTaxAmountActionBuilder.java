@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetCustomLineItemTaxAmountAction stagedOrderSetCustomLineItemTaxAmountAction = StagedOrderSetCustomLineItemTaxAmountAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -25,29 +24,44 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
         implements Builder<StagedOrderSetCustomLineItemTaxAmountAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
+    @Nullable
+    private String shippingKey;
+
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetCustomLineItemTaxAmountActionBuilder customLineItemId(final String customLineItemId) {
+    public StagedOrderSetCustomLineItemTaxAmountActionBuilder customLineItemId(
+            @Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomLineItemTaxAmountActionBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
@@ -60,12 +74,7 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
@@ -77,12 +86,7 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param externalTaxAmount value to be set
      * @return Builder
      */
@@ -94,21 +98,38 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomLineItemTaxAmountActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return externalTaxAmount
      */
 
@@ -118,13 +139,22 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
     }
 
     /**
+     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      * builds StagedOrderSetCustomLineItemTaxAmountAction with checking for non-null required values
      * @return StagedOrderSetCustomLineItemTaxAmountAction
      */
     public StagedOrderSetCustomLineItemTaxAmountAction build() {
-        Objects.requireNonNull(customLineItemId,
-            StagedOrderSetCustomLineItemTaxAmountAction.class + ": customLineItemId is missing");
-        return new StagedOrderSetCustomLineItemTaxAmountActionImpl(customLineItemId, externalTaxAmount);
+        return new StagedOrderSetCustomLineItemTaxAmountActionImpl(customLineItemId, customLineItemKey,
+            externalTaxAmount, shippingKey);
     }
 
     /**
@@ -132,7 +162,8 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
      * @return StagedOrderSetCustomLineItemTaxAmountAction
      */
     public StagedOrderSetCustomLineItemTaxAmountAction buildUnchecked() {
-        return new StagedOrderSetCustomLineItemTaxAmountActionImpl(customLineItemId, externalTaxAmount);
+        return new StagedOrderSetCustomLineItemTaxAmountActionImpl(customLineItemId, customLineItemKey,
+            externalTaxAmount, shippingKey);
     }
 
     /**
@@ -152,7 +183,9 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
             final StagedOrderSetCustomLineItemTaxAmountAction template) {
         StagedOrderSetCustomLineItemTaxAmountActionBuilder builder = new StagedOrderSetCustomLineItemTaxAmountActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.externalTaxAmount = template.getExternalTaxAmount();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

@@ -71,7 +71,11 @@ public class ShippingMethodRemoveZoneActionImpl implements ShippingMethodRemoveZ
 
         ShippingMethodRemoveZoneActionImpl that = (ShippingMethodRemoveZoneActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(zone, that.zone).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(zone, that.zone)
+                .append(action, that.action)
+                .append(zone, that.zone)
+                .isEquals();
     }
 
     @Override

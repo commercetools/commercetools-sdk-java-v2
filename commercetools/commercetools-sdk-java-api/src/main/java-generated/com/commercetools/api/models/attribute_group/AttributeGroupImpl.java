@@ -216,6 +216,16 @@ public class AttributeGroupImpl implements AttributeGroup, ModelBase {
                 .append(description, that.description)
                 .append(attributes, that.attributes)
                 .append(key, that.key)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(attributes, that.attributes)
+                .append(key, that.key)
                 .isEquals();
     }
 

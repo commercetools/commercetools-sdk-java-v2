@@ -73,7 +73,7 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
 
         AssetDimensionsImpl that = (AssetDimensionsImpl) o;
 
-        return new EqualsBuilder().append(w, that.w).append(h, that.h).isEquals();
+        return new EqualsBuilder().append(w, that.w).append(h, that.h).append(w, that.w).append(h, that.h).isEquals();
     }
 
     @Override

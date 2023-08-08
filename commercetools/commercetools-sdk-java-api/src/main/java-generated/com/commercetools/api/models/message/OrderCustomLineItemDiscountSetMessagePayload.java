@@ -49,6 +49,14 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
     public String getCustomLineItemId();
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @return discountedPricePerQuantity
      */
@@ -71,6 +79,13 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
@@ -112,6 +127,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
             final OrderCustomLineItemDiscountSetMessagePayload template) {
         OrderCustomLineItemDiscountSetMessagePayloadImpl instance = new OrderCustomLineItemDiscountSetMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
         instance.setTaxedPrice(template.getTaxedPrice());
         return instance;
@@ -130,6 +146,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
         }
         OrderCustomLineItemDiscountSetMessagePayloadImpl instance = new OrderCustomLineItemDiscountSetMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)

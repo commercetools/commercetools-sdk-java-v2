@@ -317,6 +317,20 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .append(state, that.state)
                 .append(publish, that.publish)
                 .append(priceMode, that.priceMode)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(productType, that.productType)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(categories, that.categories)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(taxCategory, that.taxCategory)
+                .append(searchKeywords, that.searchKeywords)
+                .append(state, that.state)
+                .append(publish, that.publish)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 

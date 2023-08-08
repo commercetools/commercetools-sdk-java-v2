@@ -70,7 +70,11 @@ public class GoogleCloudFunctionDestinationImpl implements GoogleCloudFunctionDe
 
         GoogleCloudFunctionDestinationImpl that = (GoogleCloudFunctionDestinationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(url, that.url).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(url, that.url)
+                .append(type, that.type)
+                .append(url, that.url)
+                .isEquals();
     }
 
     @Override

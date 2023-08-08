@@ -26,7 +26,7 @@ public class StagedOrderSetLocaleActionBuilder implements Builder<StagedOrderSet
     private String locale;
 
     /**
-     * set the value to the locale
+     *  <p>Value to set. Must be one of the Project's languages. If empty, any existing value is removed.</p>
      * @param locale value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class StagedOrderSetLocaleActionBuilder implements Builder<StagedOrderSet
     }
 
     /**
-     * value of locale}
+     *  <p>Value to set. Must be one of the Project's languages. If empty, any existing value is removed.</p>
      * @return locale
      */
 

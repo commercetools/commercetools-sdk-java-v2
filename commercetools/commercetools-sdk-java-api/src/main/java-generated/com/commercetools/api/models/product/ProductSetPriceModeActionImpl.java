@@ -71,7 +71,11 @@ public class ProductSetPriceModeActionImpl implements ProductSetPriceModeAction,
 
         ProductSetPriceModeActionImpl that = (ProductSetPriceModeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(priceMode, that.priceMode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(priceMode, that.priceMode)
+                .append(action, that.action)
+                .append(priceMode, that.priceMode)
+                .isEquals();
     }
 
     @Override

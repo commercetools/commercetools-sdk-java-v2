@@ -129,6 +129,11 @@ public class ExtensionErrorImpl implements ExtensionError, ModelBase {
                 .append(extensionId, that.extensionId)
                 .append(extensionKey, that.extensionKey)
                 .append(values, that.values)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(extensionId, that.extensionId)
+                .append(extensionKey, that.extensionKey)
+                .append(values, that.values)
                 .isEquals();
     }
 

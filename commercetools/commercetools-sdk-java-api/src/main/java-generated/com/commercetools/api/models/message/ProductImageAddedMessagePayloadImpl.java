@@ -106,6 +106,10 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
                 .append(variantId, that.variantId)
                 .append(image, that.image)
                 .append(staged, that.staged)
+                .append(type, that.type)
+                .append(variantId, that.variantId)
+                .append(image, that.image)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

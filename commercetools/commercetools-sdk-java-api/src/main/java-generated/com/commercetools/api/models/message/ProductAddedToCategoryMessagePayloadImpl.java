@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Add To Category update action.</p>
+ *  <p>Generated after a successful Add to Category update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductAddedToCategoryMessagePayloadImpl implements ProductAddedToCategoryMessagePayload, ModelBase {
@@ -88,6 +88,9 @@ public class ProductAddedToCategoryMessagePayloadImpl implements ProductAddedToC
         ProductAddedToCategoryMessagePayloadImpl that = (ProductAddedToCategoryMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(category, that.category)
+                .append(staged, that.staged)
+                .append(type, that.type)
                 .append(category, that.category)
                 .append(staged, that.staged)
                 .isEquals();

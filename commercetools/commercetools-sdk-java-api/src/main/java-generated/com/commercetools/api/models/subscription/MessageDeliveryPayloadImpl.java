@@ -226,6 +226,17 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
                 .append(sequenceNumber, that.sequenceNumber)
                 .append(resourceVersion, that.resourceVersion)
                 .append(payloadNotIncluded, that.payloadNotIncluded)
+                .append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resourceVersion, that.resourceVersion)
+                .append(payloadNotIncluded, that.payloadNotIncluded)
                 .isEquals();
     }
 

@@ -123,6 +123,11 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(lineItem, that.lineItem)
                 .isEquals();
     }
 

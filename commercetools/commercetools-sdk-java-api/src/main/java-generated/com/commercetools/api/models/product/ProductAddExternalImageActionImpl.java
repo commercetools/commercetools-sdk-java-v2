@@ -123,6 +123,11 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
                 .append(sku, that.sku)
                 .append(image, that.image)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(image, that.image)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

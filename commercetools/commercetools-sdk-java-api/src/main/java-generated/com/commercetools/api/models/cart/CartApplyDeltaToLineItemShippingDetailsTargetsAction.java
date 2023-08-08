@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>To override the shipping details, see Set LineItemShippingDetails.</p>
+ *  <p>To override the shipping details, see Set LineItem ShippingDetails.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

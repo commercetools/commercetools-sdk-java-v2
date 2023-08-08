@@ -73,7 +73,11 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
 
         DeliveryItemImpl that = (DeliveryItemImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(quantity, that.quantity).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(quantity, that.quantity)
+                .append(id, that.id)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override

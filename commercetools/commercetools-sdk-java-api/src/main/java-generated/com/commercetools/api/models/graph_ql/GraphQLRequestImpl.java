@@ -93,6 +93,9 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
         return new EqualsBuilder().append(query, that.query)
                 .append(operationName, that.operationName)
                 .append(variables, that.variables)
+                .append(query, that.query)
+                .append(operationName, that.operationName)
+                .append(variables, that.variables)
                 .isEquals();
     }
 

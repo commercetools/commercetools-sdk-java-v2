@@ -38,7 +38,7 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
     String ORDER_EDIT = "order-edit";
 
     /**
-     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
+     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with Reference Expansion for Order Edits.</p>
      * @return obj
      */
     @Valid
@@ -54,7 +54,7 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
     public String getId();
 
     /**
-     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
+     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with Reference Expansion for Order Edits.</p>
      * @param obj value to be set
      */
 

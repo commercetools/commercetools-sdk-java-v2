@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetReturnInfoAction
+ *  <p>Produces the Return Info Set Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface StagedOrderSetReturnInfoAction extends StagedOrderUpdateAction 
     String SET_RETURN_INFO = "setReturnInfo";
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return items
      */
     @Valid
@@ -46,7 +46,7 @@ public interface StagedOrderSetReturnInfoAction extends StagedOrderUpdateAction 
     public List<ReturnInfoDraft> getItems();
 
     /**
-     * set items
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param items values to be set
      */
 
@@ -54,7 +54,7 @@ public interface StagedOrderSetReturnInfoAction extends StagedOrderUpdateAction 
     public void setItems(final ReturnInfoDraft... items);
 
     /**
-     * set items
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param items values to be set
      */
 

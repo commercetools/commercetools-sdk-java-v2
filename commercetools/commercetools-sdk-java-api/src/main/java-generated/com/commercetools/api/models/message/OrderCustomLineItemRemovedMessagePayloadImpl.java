@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Remove Custom Line Item update action.</p>
+ *  <p>Generated after a successful Remove CustomLineItem update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomLineItemRemovedMessagePayloadImpl
@@ -25,6 +25,8 @@ public class OrderCustomLineItemRemovedMessagePayloadImpl
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
     /**
@@ -32,8 +34,10 @@ public class OrderCustomLineItemRemovedMessagePayloadImpl
      */
     @JsonCreator
     OrderCustomLineItemRemovedMessagePayloadImpl(@JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("customLineItem") final com.commercetools.api.models.cart.CustomLineItem customLineItem) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.customLineItem = customLineItem;
         this.type = ORDER_CUSTOM_LINE_ITEM_REMOVED;
     }
@@ -62,6 +66,14 @@ public class OrderCustomLineItemRemovedMessagePayloadImpl
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Custom Line Item that was removed from the Order.</p>
      */
 
@@ -71,6 +83,10 @@ public class OrderCustomLineItemRemovedMessagePayloadImpl
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
     }
 
     public void setCustomLineItem(final com.commercetools.api.models.cart.CustomLineItem customLineItem) {
@@ -89,13 +105,22 @@ public class OrderCustomLineItemRemovedMessagePayloadImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(customLineItem, that.customLineItem)
+                .append(type, that.type)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(customLineItem, that.customLineItem)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(customLineItemId).append(customLineItem).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(customLineItemId)
+                .append(customLineItemKey)
+                .append(customLineItem)
+                .toHashCode();
     }
 
 }

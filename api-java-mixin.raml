@@ -1211,11 +1211,6 @@ types:
       public static CartSetCustomLineItemCustomFieldAction ofUnset(final String name, final String customLineItemId) {
           return CartSetCustomLineItemCustomFieldActionBuilder.of().name(name).customLineItemId(customLineItemId).build();
       }
-  CartSetDeliveryAddressCustomFieldAction:
-    (java-mixin): |
-      public static CartSetDeliveryAddressCustomFieldAction ofUnset(final String name, final String deliveryId) {
-          return CartSetDeliveryAddressCustomFieldActionBuilder.of().name(name).deliveryId(deliveryId).build();
-      }
   CartSetItemShippingAddressCustomFieldAction:
     (java-mixin): |
       public static CartSetItemShippingAddressCustomFieldAction ofUnset(final String name, final String addressKey) {

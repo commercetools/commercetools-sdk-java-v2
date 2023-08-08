@@ -4,6 +4,8 @@ package com.commercetools.api.models.cart;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction cartApplyDeltaToCustomLineItemShippingDetailsTargetsAction = CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .plusTargetsDelta(targetsDeltaBuilder -> targetsDeltaBuilder)
  *             .build()
  * </code></pre>
@@ -24,19 +25,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
         implements Builder<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder customLineItemId(
-            final String customLineItemId) {
+            @Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -130,12 +147,23 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -152,11 +180,10 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
      * @return CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
      */
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction build() {
-        Objects.requireNonNull(customLineItemId,
-            CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(targetsDelta,
             CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction.class + ": targetsDelta is missing");
-        return new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(customLineItemId, targetsDelta);
+        return new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(customLineItemId, customLineItemKey,
+            targetsDelta);
     }
 
     /**
@@ -164,7 +191,8 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
      * @return CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
      */
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction buildUnchecked() {
-        return new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(customLineItemId, targetsDelta);
+        return new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(customLineItemId, customLineItemKey,
+            targetsDelta);
     }
 
     /**
@@ -184,6 +212,7 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
             final CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction template) {
         CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder builder = new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.targetsDelta = template.getTargetsDelta();
         return builder;
     }

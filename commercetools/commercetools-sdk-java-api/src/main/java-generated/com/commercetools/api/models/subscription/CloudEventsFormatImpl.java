@@ -72,6 +72,8 @@ public class CloudEventsFormatImpl implements CloudEventsFormat, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(cloudEventsVersion, that.cloudEventsVersion)
+                .append(type, that.type)
+                .append(cloudEventsVersion, that.cloudEventsVersion)
                 .isEquals();
     }
 

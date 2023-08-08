@@ -74,7 +74,11 @@ public class DiscountCodeChangeGroupsActionImpl implements DiscountCodeChangeGro
 
         DiscountCodeChangeGroupsActionImpl that = (DiscountCodeChangeGroupsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(groups, that.groups).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(groups, that.groups)
+                .append(action, that.action)
+                .append(groups, that.groups)
+                .isEquals();
     }
 
     @Override

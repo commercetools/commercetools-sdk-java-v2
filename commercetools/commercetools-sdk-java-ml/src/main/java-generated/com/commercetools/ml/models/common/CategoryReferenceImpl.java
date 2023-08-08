@@ -70,7 +70,11 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
 
         CategoryReferenceImpl that = (CategoryReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .isEquals();
     }
 
     @Override

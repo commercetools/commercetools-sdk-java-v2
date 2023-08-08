@@ -73,7 +73,11 @@ public class AttributePlainEnumValueImpl implements AttributePlainEnumValue, Mod
 
         AttributePlainEnumValueImpl that = (AttributePlainEnumValueImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(label, that.label).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(label, that.label)
+                .append(key, that.key)
+                .append(label, that.label)
+                .isEquals();
     }
 
     @Override

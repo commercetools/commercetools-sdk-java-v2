@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderEditApplied
+ *  <p>Result of a succesful application of <code>stagedActions</code> to the Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,15 @@ public interface OrderEditApplied extends OrderEditResult {
     String APPLIED = "Applied";
 
     /**
-     *
+     *  <p>This field is queryable.</p>
+     * @return type
+     */
+    @NotNull
+    @JsonProperty("type")
+    public String getType();
+
+    /**
+     *  <p>Date and time (UTC) the Order was edited.</p>
      * @return appliedAt
      */
     @NotNull
@@ -48,7 +56,7 @@ public interface OrderEditApplied extends OrderEditResult {
     public ZonedDateTime getAppliedAt();
 
     /**
-     *
+     *  <p>Prices of the Order before the edit.</p>
      * @return excerptBeforeEdit
      */
     @NotNull
@@ -57,7 +65,7 @@ public interface OrderEditApplied extends OrderEditResult {
     public OrderExcerpt getExcerptBeforeEdit();
 
     /**
-     *
+     *  <p>Prices of the Order after the edit.</p>
      * @return excerptAfterEdit
      */
     @NotNull
@@ -66,21 +74,21 @@ public interface OrderEditApplied extends OrderEditResult {
     public OrderExcerpt getExcerptAfterEdit();
 
     /**
-     * set appliedAt
+     *  <p>Date and time (UTC) the Order was edited.</p>
      * @param appliedAt value to be set
      */
 
     public void setAppliedAt(final ZonedDateTime appliedAt);
 
     /**
-     * set excerptBeforeEdit
+     *  <p>Prices of the Order before the edit.</p>
      * @param excerptBeforeEdit value to be set
      */
 
     public void setExcerptBeforeEdit(final OrderExcerpt excerptBeforeEdit);
 
     /**
-     * set excerptAfterEdit
+     *  <p>Prices of the Order after the edit.</p>
      * @param excerptAfterEdit value to be set
      */
 

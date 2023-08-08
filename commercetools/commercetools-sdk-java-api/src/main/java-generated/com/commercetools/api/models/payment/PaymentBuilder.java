@@ -53,24 +53,9 @@ public class PaymentBuilder implements Builder<Payment> {
     private String anonymousId;
 
     @Nullable
-    private String externalId;
-
-    @Nullable
     private String interfaceId;
 
     private com.commercetools.api.models.common.CentPrecisionMoney amountPlanned;
-
-    @Nullable
-    private com.commercetools.api.models.common.TypedMoney amountAuthorized;
-
-    @Nullable
-    private String authorizedUntil;
-
-    @Nullable
-    private com.commercetools.api.models.common.TypedMoney amountPaid;
-
-    @Nullable
-    private com.commercetools.api.models.common.TypedMoney amountRefunded;
 
     private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
 
@@ -248,17 +233,6 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     * @param externalId value to be set
-     * @return Builder
-     */
-
-    public PaymentBuilder externalId(@Nullable final String externalId) {
-        this.externalId = externalId;
-        return this;
-    }
-
-    /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
      * @param interfaceId value to be set
      * @return Builder
@@ -301,88 +275,6 @@ public class PaymentBuilder implements Builder<Payment> {
 
     public PaymentBuilder amountPlanned(final com.commercetools.api.models.common.CentPrecisionMoney amountPlanned) {
         this.amountPlanned = amountPlanned;
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountAuthorized value to be set
-     * @return Builder
-     */
-
-    public PaymentBuilder amountAuthorized(
-            @Nullable final com.commercetools.api.models.common.TypedMoney amountAuthorized) {
-        this.amountAuthorized = amountAuthorized;
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param builder function to build the amountAuthorized value
-     * @return Builder
-     */
-
-    public PaymentBuilder amountAuthorized(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.amountAuthorized = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
-     * @param authorizedUntil value to be set
-     * @return Builder
-     */
-
-    public PaymentBuilder authorizedUntil(@Nullable final String authorizedUntil) {
-        this.authorizedUntil = authorizedUntil;
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountPaid value to be set
-     * @return Builder
-     */
-
-    public PaymentBuilder amountPaid(@Nullable final com.commercetools.api.models.common.TypedMoney amountPaid) {
-        this.amountPaid = amountPaid;
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param builder function to build the amountPaid value
-     * @return Builder
-     */
-
-    public PaymentBuilder amountPaid(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.amountPaid = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountRefunded value to be set
-     * @return Builder
-     */
-
-    public PaymentBuilder amountRefunded(
-            @Nullable final com.commercetools.api.models.common.TypedMoney amountRefunded) {
-        this.amountRefunded = amountRefunded;
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param builder function to build the amountRefunded value
-     * @return Builder
-     */
-
-    public PaymentBuilder amountRefunded(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.amountRefunded = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 
@@ -759,16 +651,6 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     * @return externalId
-     */
-
-    @Nullable
-    public String getExternalId() {
-        return this.externalId;
-    }
-
-    /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
      * @return interfaceId
      */
@@ -785,46 +667,6 @@ public class PaymentBuilder implements Builder<Payment> {
 
     public com.commercetools.api.models.common.CentPrecisionMoney getAmountPlanned() {
         return this.amountPlanned;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @return amountAuthorized
-     */
-
-    @Nullable
-    public com.commercetools.api.models.common.TypedMoney getAmountAuthorized() {
-        return this.amountAuthorized;
-    }
-
-    /**
-     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
-     * @return authorizedUntil
-     */
-
-    @Nullable
-    public String getAuthorizedUntil() {
-        return this.authorizedUntil;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @return amountPaid
-     */
-
-    @Nullable
-    public com.commercetools.api.models.common.TypedMoney getAmountPaid() {
-        return this.amountPaid;
-    }
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @return amountRefunded
-     */
-
-    @Nullable
-    public com.commercetools.api.models.common.TypedMoney getAmountRefunded() {
-        return this.amountRefunded;
     }
 
     /**
@@ -898,8 +740,8 @@ public class PaymentBuilder implements Builder<Payment> {
         Objects.requireNonNull(transactions, Payment.class + ": transactions is missing");
         Objects.requireNonNull(interfaceInteractions, Payment.class + ": interfaceInteractions is missing");
         return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,
-            externalId, interfaceId, amountPlanned, amountAuthorized, authorizedUntil, amountPaid, amountRefunded,
-            paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom, key);
+            interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,
+            key);
     }
 
     /**
@@ -908,8 +750,8 @@ public class PaymentBuilder implements Builder<Payment> {
      */
     public Payment buildUnchecked() {
         return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId,
-            externalId, interfaceId, amountPlanned, amountAuthorized, authorizedUntil, amountPaid, amountRefunded,
-            paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom, key);
+            interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom,
+            key);
     }
 
     /**
@@ -935,13 +777,8 @@ public class PaymentBuilder implements Builder<Payment> {
         builder.createdBy = template.getCreatedBy();
         builder.customer = template.getCustomer();
         builder.anonymousId = template.getAnonymousId();
-        builder.externalId = template.getExternalId();
         builder.interfaceId = template.getInterfaceId();
         builder.amountPlanned = template.getAmountPlanned();
-        builder.amountAuthorized = template.getAmountAuthorized();
-        builder.authorizedUntil = template.getAuthorizedUntil();
-        builder.amountPaid = template.getAmountPaid();
-        builder.amountRefunded = template.getAmountRefunded();
         builder.paymentMethodInfo = template.getPaymentMethodInfo();
         builder.paymentStatus = template.getPaymentStatus();
         builder.transactions = template.getTransactions();

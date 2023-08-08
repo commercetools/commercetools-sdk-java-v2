@@ -74,7 +74,11 @@ public class ProjectChangeProductSearchIndexingEnabledActionImpl
 
         ProjectChangeProductSearchIndexingEnabledActionImpl that = (ProjectChangeProductSearchIndexingEnabledActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(enabled, that.enabled).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(enabled, that.enabled)
+                .append(action, that.action)
+                .append(enabled, that.enabled)
+                .isEquals();
     }
 
     @Override

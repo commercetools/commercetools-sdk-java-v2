@@ -63,7 +63,7 @@ public class OrderSearchAndExpressionImpl implements OrderSearchAndExpression, M
 
         OrderSearchAndExpressionImpl that = (OrderSearchAndExpressionImpl) o;
 
-        return new EqualsBuilder().append(and, that.and).isEquals();
+        return new EqualsBuilder().append(and, that.and).append(and, that.and).isEquals();
     }
 
     @Override

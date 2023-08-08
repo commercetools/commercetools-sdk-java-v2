@@ -77,7 +77,11 @@ public class OrderPatchImportRequestImpl implements OrderPatchImportRequest, Mod
 
         OrderPatchImportRequestImpl that = (OrderPatchImportRequestImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(patches, that.patches).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(patches, that.patches)
+                .append(type, that.type)
+                .append(patches, that.patches)
+                .isEquals();
     }
 
     @Override

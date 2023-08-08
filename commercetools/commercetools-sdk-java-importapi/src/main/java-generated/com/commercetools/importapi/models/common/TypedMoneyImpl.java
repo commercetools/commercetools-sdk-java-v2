@@ -106,6 +106,10 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
                 .append(fractionDigits, that.fractionDigits)
                 .append(centAmount, that.centAmount)
                 .append(currencyCode, that.currencyCode)
+                .append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
+                .append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
                 .isEquals();
     }
 

@@ -71,7 +71,11 @@ public class AssociateRoleRemovePermissionActionImpl implements AssociateRoleRem
 
         AssociateRoleRemovePermissionActionImpl that = (AssociateRoleRemovePermissionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(permission, that.permission).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(permission, that.permission)
+                .append(action, that.action)
+                .append(permission, that.permission)
+                .isEquals();
     }
 
     @Override

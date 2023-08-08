@@ -70,7 +70,11 @@ public class CustomerSetExternalIdActionImpl implements CustomerSetExternalIdAct
 
         CustomerSetExternalIdActionImpl that = (CustomerSetExternalIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(externalId, that.externalId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(externalId, that.externalId)
+                .append(action, that.action)
+                .append(externalId, that.externalId)
+                .isEquals();
     }
 
     @Override

@@ -73,7 +73,11 @@ public class GraphQLInvalidTokenErrorImpl implements GraphQLInvalidTokenError, M
 
         GraphQLInvalidTokenErrorImpl that = (GraphQLInvalidTokenErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(values, that.values).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(values, that.values)
+                .append(code, that.code)
+                .append(values, that.values)
+                .isEquals();
     }
 
     @Override

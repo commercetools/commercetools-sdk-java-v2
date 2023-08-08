@@ -62,7 +62,7 @@ public class ProductVariantExclusionImpl implements ProductVariantExclusion, Mod
 
         ProductVariantExclusionImpl that = (ProductVariantExclusionImpl) o;
 
-        return new EqualsBuilder().append(skus, that.skus).isEquals();
+        return new EqualsBuilder().append(skus, that.skus).append(skus, that.skus).isEquals();
     }
 
     @Override

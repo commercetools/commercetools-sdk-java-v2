@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderEditApply
+ *  <p>If the <code>editVersion</code> and/or <code>resourceVersion</code> do not match the actual version, a 409 Conflict will be returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
@@ -41,7 +41,7 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current <code>version</code> of the OrderEdit to be applied.</p>
      */
 
     public Long getEditVersion() {
@@ -49,7 +49,7 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current <code>version</code> of the Order to which the OrderEdit is applied.</p>
      */
 
     public Long getResourceVersion() {
@@ -75,6 +75,8 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
         OrderEditApplyImpl that = (OrderEditApplyImpl) o;
 
         return new EqualsBuilder().append(editVersion, that.editVersion)
+                .append(resourceVersion, that.resourceVersion)
+                .append(editVersion, that.editVersion)
                 .append(resourceVersion, that.resourceVersion)
                 .isEquals();
     }

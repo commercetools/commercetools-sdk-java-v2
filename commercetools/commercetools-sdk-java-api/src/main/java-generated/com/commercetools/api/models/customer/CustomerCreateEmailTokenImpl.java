@@ -92,6 +92,9 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
         return new EqualsBuilder().append(id, that.id)
                 .append(version, that.version)
                 .append(ttlMinutes, that.ttlMinutes)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(ttlMinutes, that.ttlMinutes)
                 .isEquals();
     }
 

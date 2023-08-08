@@ -249,6 +249,18 @@ public class GraphQLOverlappingStandalonePriceValidityErrorImpl
                 .append(validUntil, that.validUntil)
                 .append(conflictingValidFrom, that.conflictingValidFrom)
                 .append(conflictingValidUntil, that.conflictingValidUntil)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(conflictingStandalonePrice, that.conflictingStandalonePrice)
+                .append(sku, that.sku)
+                .append(currency, that.currency)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(conflictingValidFrom, that.conflictingValidFrom)
+                .append(conflictingValidUntil, that.conflictingValidUntil)
                 .isEquals();
     }
 

@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ItemState {
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items in this State.</p>
      * @return quantity
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface ItemState {
     public Long getQuantity();
 
     /**
-     *
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow.</p>
      * @return state
      */
     @NotNull
@@ -51,14 +51,14 @@ public interface ItemState {
     public StateReference getState();
 
     /**
-     * set quantity
+     *  <p>Number of Line Items or Custom Line Items in this State.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     * set state
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow.</p>
      * @param state value to be set
      */
 

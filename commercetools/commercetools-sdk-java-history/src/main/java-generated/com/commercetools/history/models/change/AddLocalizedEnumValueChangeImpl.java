@@ -127,6 +127,11 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
                 .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
                 .append(attributeName, that.attributeName)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .append(fieldName, that.fieldName)
+                .append(attributeName, that.attributeName)
                 .isEquals();
     }
 

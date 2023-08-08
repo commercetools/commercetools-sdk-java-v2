@@ -60,6 +60,9 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
 
     private String lineItemId;
 
+    @Nullable
+    private String lineItemKey;
+
     private java.time.ZonedDateTime transitionDate;
 
     private Long quantity;
@@ -281,6 +284,17 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public LineItemStateTransitionMessageBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+        return this;
+    }
+
+    /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
      * @param transitionDate value to be set
      * @return Builder
@@ -477,6 +491,16 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
      * @return transitionDate
      */
@@ -530,8 +554,8 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
         Objects.requireNonNull(fromState, LineItemStateTransitionMessage.class + ": fromState is missing");
         Objects.requireNonNull(toState, LineItemStateTransitionMessage.class + ": toState is missing");
         return new LineItemStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, transitionDate,
-            quantity, fromState, toState);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, lineItemKey,
+            transitionDate, quantity, fromState, toState);
     }
 
     /**
@@ -540,8 +564,8 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
      */
     public LineItemStateTransitionMessage buildUnchecked() {
         return new LineItemStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, transitionDate,
-            quantity, fromState, toState);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, lineItemId, lineItemKey,
+            transitionDate, quantity, fromState, toState);
     }
 
     /**
@@ -570,6 +594,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.transitionDate = template.getTransitionDate();
         builder.quantity = template.getQuantity();
         builder.fromState = template.getFromState();

@@ -93,6 +93,9 @@ public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 

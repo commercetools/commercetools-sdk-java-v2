@@ -239,6 +239,17 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append(masterVariant, that.masterVariant)
                 .append(variants, that.variants)
                 .append(searchKeywords, that.searchKeywords)
+                .append(name, that.name)
+                .append(categories, that.categories)
+                .append(categoryOrderHints, that.categoryOrderHints)
+                .append(description, that.description)
+                .append(slug, that.slug)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(searchKeywords, that.searchKeywords)
                 .isEquals();
     }
 

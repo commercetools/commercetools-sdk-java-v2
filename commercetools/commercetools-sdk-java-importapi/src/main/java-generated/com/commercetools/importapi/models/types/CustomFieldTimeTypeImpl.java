@@ -47,7 +47,7 @@ public class CustomFieldTimeTypeImpl implements CustomFieldTimeType, ModelBase {
 
         CustomFieldTimeTypeImpl that = (CustomFieldTimeTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).isEquals();
+        return new EqualsBuilder().append(name, that.name).append(name, that.name).isEquals();
     }
 
     @Override

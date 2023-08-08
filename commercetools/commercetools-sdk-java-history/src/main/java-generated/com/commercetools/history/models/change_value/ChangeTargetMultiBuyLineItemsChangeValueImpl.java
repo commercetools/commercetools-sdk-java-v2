@@ -141,6 +141,12 @@ public class ChangeTargetMultiBuyLineItemsChangeValueImpl
                 .append(discountedQuantity, that.discountedQuantity)
                 .append(maxOccurrence, that.maxOccurrence)
                 .append(selectionMode, that.selectionMode)
+                .append(type, that.type)
+                .append(predicate, that.predicate)
+                .append(triggerQuantity, that.triggerQuantity)
+                .append(discountedQuantity, that.discountedQuantity)
+                .append(maxOccurrence, that.maxOccurrence)
+                .append(selectionMode, that.selectionMode)
                 .isEquals();
     }
 

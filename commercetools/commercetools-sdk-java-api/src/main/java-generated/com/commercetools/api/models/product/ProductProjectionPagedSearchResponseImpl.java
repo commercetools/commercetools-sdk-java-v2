@@ -147,6 +147,12 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
                 .append(offset, that.offset)
                 .append(results, that.results)
                 .append(facets, that.facets)
+                .append(limit, that.limit)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(results, that.results)
+                .append(facets, that.facets)
                 .isEquals();
     }
 

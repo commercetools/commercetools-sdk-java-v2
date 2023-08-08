@@ -331,6 +331,22 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
                 .append(locale, that.locale)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(custom, that.custom)
+                .append(currency, that.currency)
+                .append(customerEmail, that.customerEmail)
+                .append(businessUnit, that.businessUnit)
+                .append(store, that.store)
+                .append(lineItems, that.lineItems)
+                .append(taxMode, that.taxMode)
+                .append(inventoryMode, that.inventoryMode)
+                .append(billingAddress, that.billingAddress)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingMethod, that.shippingMethod)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(discountCodes, that.discountCodes)
+                .append(country, that.country)
+                .append(locale, that.locale)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

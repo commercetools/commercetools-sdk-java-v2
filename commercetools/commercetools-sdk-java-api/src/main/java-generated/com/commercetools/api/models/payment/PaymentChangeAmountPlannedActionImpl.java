@@ -71,7 +71,11 @@ public class PaymentChangeAmountPlannedActionImpl implements PaymentChangeAmount
 
         PaymentChangeAmountPlannedActionImpl that = (PaymentChangeAmountPlannedActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(amount, that.amount).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(amount, that.amount)
+                .append(action, that.action)
+                .append(amount, that.amount)
+                .isEquals();
     }
 
     @Override

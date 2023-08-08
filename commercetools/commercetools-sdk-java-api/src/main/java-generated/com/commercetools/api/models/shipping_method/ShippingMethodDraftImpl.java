@@ -219,6 +219,16 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(localizedName, that.localizedName)
+                .append(description, that.description)
+                .append(localizedDescription, that.localizedDescription)
+                .append(taxCategory, that.taxCategory)
+                .append(zoneRates, that.zoneRates)
+                .append(isDefault, that.isDefault)
+                .append(predicate, that.predicate)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

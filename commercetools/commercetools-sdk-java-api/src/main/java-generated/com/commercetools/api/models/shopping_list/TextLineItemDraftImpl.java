@@ -127,6 +127,11 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
                 .append(description, that.description)
                 .append(name, that.name)
                 .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(description, that.description)
+                .append(name, that.name)
+                .append(quantity, that.quantity)
                 .isEquals();
     }
 

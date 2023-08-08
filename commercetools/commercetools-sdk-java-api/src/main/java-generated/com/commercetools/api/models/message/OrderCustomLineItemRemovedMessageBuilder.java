@@ -57,6 +57,9 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
 
     private String customLineItemId;
 
+    @Nullable
+    private String customLineItemKey;
+
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
     /**
@@ -272,6 +275,17 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderCustomLineItemRemovedMessageBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
      *  <p>Custom Line Item that was removed from the Order.</p>
      * @param builder function to build the customLineItem value
      * @return Builder
@@ -410,6 +424,16 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Custom Line Item that was removed from the Order.</p>
      * @return customLineItem
      */
@@ -436,7 +460,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
         Objects.requireNonNull(customLineItem, OrderCustomLineItemRemovedMessage.class + ": customLineItem is missing");
         return new OrderCustomLineItemRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
-            customLineItem);
+            customLineItemKey, customLineItem);
     }
 
     /**
@@ -446,7 +470,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
     public OrderCustomLineItemRemovedMessage buildUnchecked() {
         return new OrderCustomLineItemRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
-            customLineItem);
+            customLineItemKey, customLineItem);
     }
 
     /**
@@ -475,6 +499,7 @@ public class OrderCustomLineItemRemovedMessageBuilder implements Builder<OrderCu
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.customLineItem = template.getCustomLineItem();
         return builder;
     }

@@ -32,7 +32,7 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
     private Boolean quoteStateToAccepted;
 
     /**
-     *  <p>Unique identifier of the Quote from which the Order is created.</p>
+     *  <p><code>id</code> of the Quote from which the Order is created.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -43,7 +43,7 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
     }
 
     /**
-     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the Quote from which the Order is created.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
     }
 
     /**
-     *  <p>Unique identifier of the Quote from which the Order is created.</p>
+     *  <p><code>id</code> of the Quote from which the Order is created.</p>
      * @return id
      */
 
@@ -74,7 +74,7 @@ public class MyOrderFromQuoteDraftBuilder implements Builder<MyOrderFromQuoteDra
     }
 
     /**
-     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the Quote from which the Order is created.</p>
      * @return version
      */
 

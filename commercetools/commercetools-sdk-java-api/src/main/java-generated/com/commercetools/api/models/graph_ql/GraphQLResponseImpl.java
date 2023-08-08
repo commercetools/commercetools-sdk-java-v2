@@ -78,7 +78,11 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
 
         GraphQLResponseImpl that = (GraphQLResponseImpl) o;
 
-        return new EqualsBuilder().append(data, that.data).append(errors, that.errors).isEquals();
+        return new EqualsBuilder().append(data, that.data)
+                .append(errors, that.errors)
+                .append(data, that.data)
+                .append(errors, that.errors)
+                .isEquals();
     }
 
     @Override

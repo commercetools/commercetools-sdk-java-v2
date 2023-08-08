@@ -107,6 +107,10 @@ public class AddProductChangeImpl implements AddProductChange, ModelBase {
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
                 .append(variantSelection, that.variantSelection)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .append(variantSelection, that.variantSelection)
                 .isEquals();
     }
 

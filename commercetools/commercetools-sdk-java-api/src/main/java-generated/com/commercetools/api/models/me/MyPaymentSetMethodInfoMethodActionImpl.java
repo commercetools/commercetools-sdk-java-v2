@@ -70,7 +70,11 @@ public class MyPaymentSetMethodInfoMethodActionImpl implements MyPaymentSetMetho
 
         MyPaymentSetMethodInfoMethodActionImpl that = (MyPaymentSetMethodInfoMethodActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(method, that.method).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(method, that.method)
+                .append(action, that.action)
+                .append(method, that.method)
+                .isEquals();
     }
 
     @Override

@@ -71,7 +71,11 @@ public class CartAddPaymentActionImpl implements CartAddPaymentAction, ModelBase
 
         CartAddPaymentActionImpl that = (CartAddPaymentActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(payment, that.payment).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(payment, that.payment)
+                .append(action, that.action)
+                .append(payment, that.payment)
+                .isEquals();
     }
 
     @Override

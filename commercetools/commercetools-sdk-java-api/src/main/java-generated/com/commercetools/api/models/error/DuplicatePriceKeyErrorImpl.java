@@ -110,6 +110,10 @@ public class DuplicatePriceKeyErrorImpl implements DuplicatePriceKeyError, Model
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(conflictingPrice, that.conflictingPrice)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(conflictingPrice, that.conflictingPrice)
                 .isEquals();
     }
 

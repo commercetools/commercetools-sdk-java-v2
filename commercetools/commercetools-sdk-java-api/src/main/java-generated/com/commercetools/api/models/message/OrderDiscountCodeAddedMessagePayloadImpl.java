@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Add Discount Code update action.</p>
+ *  <p>Generated after a successful Add DiscountCode update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDiscountCodeAddedMessagePayload, ModelBase {
@@ -71,7 +71,11 @@ public class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDiscountCo
 
         OrderDiscountCodeAddedMessagePayloadImpl that = (OrderDiscountCodeAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(discountCode, that.discountCode).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(discountCode, that.discountCode)
+                .append(type, that.type)
+                .append(discountCode, that.discountCode)
+                .isEquals();
     }
 
     @Override

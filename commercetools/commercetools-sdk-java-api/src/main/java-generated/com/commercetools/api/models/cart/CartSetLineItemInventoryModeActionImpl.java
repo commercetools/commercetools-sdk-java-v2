@@ -106,6 +106,10 @@ public class CartSetLineItemInventoryModeActionImpl implements CartSetLineItemIn
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(inventoryMode, that.inventoryMode)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(inventoryMode, that.inventoryMode)
                 .isEquals();
     }
 

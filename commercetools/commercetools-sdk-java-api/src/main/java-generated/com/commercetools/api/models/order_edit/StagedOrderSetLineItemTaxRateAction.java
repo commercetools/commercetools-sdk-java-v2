@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetLineItemTaxRateAction
+ *  <p>Can be used if the Cart has the <code>External</code> TaxMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -53,7 +53,7 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
     public String getLineItemKey();
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -83,7 +83,7 @@ public interface StagedOrderSetLineItemTaxRateAction extends StagedOrderUpdateAc
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param externalTaxRate value to be set
      */
 

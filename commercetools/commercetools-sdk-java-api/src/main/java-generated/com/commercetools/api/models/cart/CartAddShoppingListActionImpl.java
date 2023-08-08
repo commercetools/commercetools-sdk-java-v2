@@ -109,6 +109,10 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
                 .append(shoppingList, that.shoppingList)
                 .append(distributionChannel, that.distributionChannel)
                 .append(supplyChannel, that.supplyChannel)
+                .append(action, that.action)
+                .append(shoppingList, that.shoppingList)
+                .append(distributionChannel, that.distributionChannel)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 

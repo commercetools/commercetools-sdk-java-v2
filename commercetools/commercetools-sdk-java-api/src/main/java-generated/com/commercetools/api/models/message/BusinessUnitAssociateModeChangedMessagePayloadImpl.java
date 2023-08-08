@@ -93,6 +93,9 @@ public class BusinessUnitAssociateModeChangedMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(associateMode, that.associateMode)
                 .append(oldAssociateMode, that.oldAssociateMode)
+                .append(type, that.type)
+                .append(associateMode, that.associateMode)
+                .append(oldAssociateMode, that.oldAssociateMode)
                 .isEquals();
     }
 

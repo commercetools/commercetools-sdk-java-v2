@@ -70,7 +70,11 @@ public class ShippingMethodChangeIsDefaultActionImpl implements ShippingMethodCh
 
         ShippingMethodChangeIsDefaultActionImpl that = (ShippingMethodChangeIsDefaultActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(isDefault, that.isDefault).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(isDefault, that.isDefault)
+                .append(action, that.action)
+                .append(isDefault, that.isDefault)
+                .isEquals();
     }
 
     @Override

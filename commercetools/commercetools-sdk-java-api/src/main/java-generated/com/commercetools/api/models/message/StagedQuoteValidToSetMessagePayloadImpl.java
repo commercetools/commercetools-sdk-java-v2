@@ -70,7 +70,11 @@ public class StagedQuoteValidToSetMessagePayloadImpl implements StagedQuoteValid
 
         StagedQuoteValidToSetMessagePayloadImpl that = (StagedQuoteValidToSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(validTo, that.validTo).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(validTo, that.validTo)
+                .append(type, that.type)
+                .append(validTo, that.validTo)
+                .isEquals();
     }
 
     @Override

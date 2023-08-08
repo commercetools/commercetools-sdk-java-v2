@@ -111,6 +111,10 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
                 .append(isOnStock, that.isOnStock)
                 .append(restockableInDays, that.restockableInDays)
                 .append(availableQuantity, that.availableQuantity)
+                .append(channels, that.channels)
+                .append(isOnStock, that.isOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(availableQuantity, that.availableQuantity)
                 .isEquals();
     }
 

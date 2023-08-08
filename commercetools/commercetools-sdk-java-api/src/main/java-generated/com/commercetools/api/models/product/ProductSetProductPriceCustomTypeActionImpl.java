@@ -123,6 +123,11 @@ public class ProductSetProductPriceCustomTypeActionImpl implements ProductSetPro
                 .append(staged, that.staged)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(priceId, that.priceId)
+                .append(staged, that.staged)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 

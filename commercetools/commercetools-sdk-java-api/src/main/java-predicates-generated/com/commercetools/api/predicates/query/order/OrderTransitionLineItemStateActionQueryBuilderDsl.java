@@ -25,6 +25,12 @@ public class OrderTransitionLineItemStateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderTransitionLineItemStateActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderTransitionLineItemStateActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderTransitionLineItemStateActionQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<OrderTransitionLineItemStateActionQueryBuilderDsl> quantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),

@@ -76,6 +76,8 @@ public class MoneyImpl implements Money, ModelBase {
 
         return new EqualsBuilder().append(centAmount, that.centAmount)
                 .append(currencyCode, that.currencyCode)
+                .append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
                 .isEquals();
     }
 

@@ -106,6 +106,10 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
                 .append(change, that.change)
                 .append(nextValue, that.nextValue)
                 .append(attributeName, that.attributeName)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .append(attributeName, that.attributeName)
                 .isEquals();
     }
 

@@ -54,7 +54,7 @@ public class ExtensionDestinationImpl implements ExtensionDestination, ModelBase
 
         ExtensionDestinationImpl that = (ExtensionDestinationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

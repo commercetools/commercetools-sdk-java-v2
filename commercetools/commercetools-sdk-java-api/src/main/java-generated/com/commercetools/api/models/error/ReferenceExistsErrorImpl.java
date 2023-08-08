@@ -109,6 +109,10 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(referencedBy, that.referencedBy)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(referencedBy, that.referencedBy)
                 .isEquals();
     }
 

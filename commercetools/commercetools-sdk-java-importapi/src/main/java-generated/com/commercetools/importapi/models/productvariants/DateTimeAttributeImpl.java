@@ -86,7 +86,13 @@ public class DateTimeAttributeImpl implements DateTimeAttribute, ModelBase {
 
         DateTimeAttributeImpl that = (DateTimeAttributeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(type, that.type).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(type, that.type)
+                .append(value, that.value)
+                .append(name, that.name)
+                .append(type, that.type)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

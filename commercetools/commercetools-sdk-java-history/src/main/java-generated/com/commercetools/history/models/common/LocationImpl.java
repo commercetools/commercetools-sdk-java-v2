@@ -73,7 +73,11 @@ public class LocationImpl implements Location, ModelBase {
 
         LocationImpl that = (LocationImpl) o;
 
-        return new EqualsBuilder().append(country, that.country).append(state, that.state).isEquals();
+        return new EqualsBuilder().append(country, that.country)
+                .append(state, that.state)
+                .append(country, that.country)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override

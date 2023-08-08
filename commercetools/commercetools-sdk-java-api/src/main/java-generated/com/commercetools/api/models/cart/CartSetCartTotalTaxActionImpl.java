@@ -95,6 +95,9 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
         return new EqualsBuilder().append(action, that.action)
                 .append(externalTotalGross, that.externalTotalGross)
                 .append(externalTaxPortions, that.externalTaxPortions)
+                .append(action, that.action)
+                .append(externalTotalGross, that.externalTotalGross)
+                .append(externalTaxPortions, that.externalTaxPortions)
                 .isEquals();
     }
 

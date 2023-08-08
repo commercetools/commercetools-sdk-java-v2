@@ -118,6 +118,10 @@ public class StoreCartDiscountsLimitReachedErrorImpl implements StoreCartDiscoun
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(stores, that.stores)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(stores, that.stores)
                 .isEquals();
     }
 

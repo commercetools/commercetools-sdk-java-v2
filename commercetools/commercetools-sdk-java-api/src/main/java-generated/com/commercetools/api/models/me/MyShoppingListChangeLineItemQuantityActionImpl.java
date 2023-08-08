@@ -106,6 +106,10 @@ public class MyShoppingListChangeLineItemQuantityActionImpl
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(quantity, that.quantity)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(quantity, that.quantity)
                 .isEquals();
     }
 

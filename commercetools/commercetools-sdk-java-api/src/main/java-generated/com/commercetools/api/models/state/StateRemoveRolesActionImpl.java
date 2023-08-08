@@ -75,7 +75,11 @@ public class StateRemoveRolesActionImpl implements StateRemoveRolesAction, Model
 
         StateRemoveRolesActionImpl that = (StateRemoveRolesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(roles, that.roles).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(roles, that.roles)
+                .append(action, that.action)
+                .append(roles, that.roles)
+                .isEquals();
     }
 
     @Override

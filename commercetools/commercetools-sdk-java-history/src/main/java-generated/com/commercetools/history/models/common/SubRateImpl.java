@@ -73,7 +73,11 @@ public class SubRateImpl implements SubRate, ModelBase {
 
         SubRateImpl that = (SubRateImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(amount, that.amount).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(amount, that.amount)
+                .append(name, that.name)
+                .append(amount, that.amount)
+                .isEquals();
     }
 
     @Override

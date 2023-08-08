@@ -357,6 +357,22 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
                 .append(state, that.state)
                 .append(publish, that.publish)
                 .append(priceMode, that.priceMode)
+                .append(key, that.key)
+                .append(productType, that.productType)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(categories, that.categories)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(taxCategory, that.taxCategory)
+                .append(searchKeywords, that.searchKeywords)
+                .append(state, that.state)
+                .append(publish, that.publish)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 

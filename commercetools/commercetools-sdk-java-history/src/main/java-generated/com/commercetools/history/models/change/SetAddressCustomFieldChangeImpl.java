@@ -156,6 +156,13 @@ public class SetAddressCustomFieldChangeImpl implements SetAddressCustomFieldCha
                 .append(customTypeId, that.customTypeId)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(address, that.address)
+                .append(name, that.name)
+                .append(customTypeId, that.customTypeId)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 

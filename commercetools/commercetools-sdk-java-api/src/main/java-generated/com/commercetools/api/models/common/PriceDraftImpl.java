@@ -223,6 +223,16 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
                 .append(discounted, that.discounted)
                 .append(tiers, that.tiers)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(discounted, that.discounted)
+                .append(tiers, that.tiers)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

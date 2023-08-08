@@ -54,7 +54,7 @@ public class SubscriptionUpdateActionImpl implements SubscriptionUpdateAction, M
 
         SubscriptionUpdateActionImpl that = (SubscriptionUpdateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override

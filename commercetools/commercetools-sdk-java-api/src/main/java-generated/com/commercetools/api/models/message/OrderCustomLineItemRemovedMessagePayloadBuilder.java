@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -26,6 +28,9 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
 
     private String customLineItemId;
 
+    @Nullable
+    private String customLineItemKey;
+
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
     /**
@@ -36,6 +41,17 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
 
     public OrderCustomLineItemRemovedMessagePayloadBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderCustomLineItemRemovedMessagePayloadBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -85,6 +101,16 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Custom Line Item that was removed from the Order.</p>
      * @return customLineItem
      */
@@ -102,7 +128,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
             OrderCustomLineItemRemovedMessagePayload.class + ": customLineItemId is missing");
         Objects.requireNonNull(customLineItem,
             OrderCustomLineItemRemovedMessagePayload.class + ": customLineItem is missing");
-        return new OrderCustomLineItemRemovedMessagePayloadImpl(customLineItemId, customLineItem);
+        return new OrderCustomLineItemRemovedMessagePayloadImpl(customLineItemId, customLineItemKey, customLineItem);
     }
 
     /**
@@ -110,7 +136,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
      * @return OrderCustomLineItemRemovedMessagePayload
      */
     public OrderCustomLineItemRemovedMessagePayload buildUnchecked() {
-        return new OrderCustomLineItemRemovedMessagePayloadImpl(customLineItemId, customLineItem);
+        return new OrderCustomLineItemRemovedMessagePayloadImpl(customLineItemId, customLineItemKey, customLineItem);
     }
 
     /**
@@ -130,6 +156,7 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
             final OrderCustomLineItemRemovedMessagePayload template) {
         OrderCustomLineItemRemovedMessagePayloadBuilder builder = new OrderCustomLineItemRemovedMessagePayloadBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.customLineItem = template.getCustomLineItem();
         return builder;
     }

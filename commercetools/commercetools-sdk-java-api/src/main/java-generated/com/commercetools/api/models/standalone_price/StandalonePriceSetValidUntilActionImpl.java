@@ -71,7 +71,11 @@ public class StandalonePriceSetValidUntilActionImpl implements StandalonePriceSe
 
         StandalonePriceSetValidUntilActionImpl that = (StandalonePriceSetValidUntilActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(validUntil, that.validUntil).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(validUntil, that.validUntil)
+                .append(action, that.action)
+                .append(validUntil, that.validUntil)
+                .isEquals();
     }
 
     @Override

@@ -35,7 +35,7 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
     String SET_ORDER_NUMBER = "setOrderNumber";
 
     /**
-     *
+     *  <p>Value to set. Must be unique across a Project. Once set, the value cannot be changed.</p>
      * @return orderNumber
      */
 
@@ -43,7 +43,7 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
     public String getOrderNumber();
 
     /**
-     * set orderNumber
+     *  <p>Value to set. Must be unique across a Project. Once set, the value cannot be changed.</p>
      * @param orderNumber value to be set
      */
 

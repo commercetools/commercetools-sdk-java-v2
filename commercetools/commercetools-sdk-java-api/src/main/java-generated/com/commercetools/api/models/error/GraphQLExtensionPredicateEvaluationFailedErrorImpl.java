@@ -94,6 +94,9 @@ public class GraphQLExtensionPredicateEvaluationFailedErrorImpl
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(errorByExtension, that.errorByExtension)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(errorByExtension, that.errorByExtension)
                 .isEquals();
     }
 

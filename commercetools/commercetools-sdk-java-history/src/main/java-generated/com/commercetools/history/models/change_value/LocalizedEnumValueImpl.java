@@ -74,7 +74,11 @@ public class LocalizedEnumValueImpl implements LocalizedEnumValue, ModelBase {
 
         LocalizedEnumValueImpl that = (LocalizedEnumValueImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(label, that.label).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(label, that.label)
+                .append(key, that.key)
+                .append(label, that.label)
+                .isEquals();
     }
 
     @Override

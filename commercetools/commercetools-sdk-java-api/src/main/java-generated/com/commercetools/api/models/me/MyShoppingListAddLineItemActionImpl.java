@@ -156,6 +156,13 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
                 .append(quantity, that.quantity)
                 .append(addedAt, that.addedAt)
                 .append(custom, that.custom)
+                .append(action, that.action)
+                .append(sku, that.sku)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

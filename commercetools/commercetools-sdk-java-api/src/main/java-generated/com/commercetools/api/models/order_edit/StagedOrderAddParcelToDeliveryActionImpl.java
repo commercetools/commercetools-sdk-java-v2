@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderAddParcelToDeliveryAction
+ *  <p>To add a Parcel, at least one Delivery must exist.</p>
+ *  <p>Produces the Parcel Added To Delivery Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddParcelToDeliveryAction, ModelBase {
@@ -68,7 +69,8 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryId() {
@@ -76,7 +78,8 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryKey() {
@@ -84,7 +87,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
     }
 
     /**
-     *
+     *  <p><code>key</code> of an existing Parcel.</p>
      */
 
     public String getParcelKey() {
@@ -92,7 +95,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
@@ -100,7 +103,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
@@ -108,7 +111,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -154,6 +157,13 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
         StagedOrderAddParcelToDeliveryActionImpl that = (StagedOrderAddParcelToDeliveryActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
+                .append(parcelKey, that.parcelKey)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
+                .append(action, that.action)
                 .append(deliveryId, that.deliveryId)
                 .append(deliveryKey, that.deliveryKey)
                 .append(parcelKey, that.parcelKey)

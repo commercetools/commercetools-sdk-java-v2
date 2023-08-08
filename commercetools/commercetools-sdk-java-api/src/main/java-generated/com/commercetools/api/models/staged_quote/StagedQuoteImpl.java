@@ -331,6 +331,23 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(state, that.state)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(businessUnit, that.businessUnit)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(stagedQuoteState, that.stagedQuoteState)
+                .append(customer, that.customer)
+                .append(quoteRequest, that.quoteRequest)
+                .append(quotationCart, that.quotationCart)
+                .append(validTo, that.validTo)
+                .append(sellerComment, that.sellerComment)
+                .append(custom, that.custom)
+                .append(state, that.state)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(businessUnit, that.businessUnit)
                 .isEquals();
     }
 

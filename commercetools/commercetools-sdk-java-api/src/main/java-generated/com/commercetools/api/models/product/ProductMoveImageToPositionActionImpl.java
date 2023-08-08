@@ -138,6 +138,12 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
                 .append(imageUrl, that.imageUrl)
                 .append(position, that.position)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(imageUrl, that.imageUrl)
+                .append(position, that.position)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

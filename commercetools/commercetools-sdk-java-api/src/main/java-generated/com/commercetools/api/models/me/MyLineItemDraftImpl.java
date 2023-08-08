@@ -213,6 +213,16 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
                 .append(distributionChannel, that.distributionChannel)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
+                .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

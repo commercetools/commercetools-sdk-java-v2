@@ -30,7 +30,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerImport customerImport = CustomerImport.builder()
  *             .key("{key}")
  *             .email("{email}")
- *             .plusAddresses(addressesBuilder -> addressesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -163,7 +162,6 @@ public interface CustomerImport extends ImportResource {
      *  <p>Maps to <code>Customer.addresses</code>.</p>
      * @return addresses
      */
-    @NotNull
     @Valid
     @JsonProperty("addresses")
     public List<CustomerAddress> getAddresses();

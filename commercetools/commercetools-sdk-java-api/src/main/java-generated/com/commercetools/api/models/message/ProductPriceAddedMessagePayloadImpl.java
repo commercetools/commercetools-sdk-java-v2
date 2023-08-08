@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Add Embedded Price update action.</p>
+ *  <p>Generated after a successful Add Price update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceAddedMessagePayloadImpl implements ProductPriceAddedMessagePayload, ModelBase {
@@ -103,6 +103,10 @@ public class ProductPriceAddedMessagePayloadImpl implements ProductPriceAddedMes
         ProductPriceAddedMessagePayloadImpl that = (ProductPriceAddedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(variantId, that.variantId)
+                .append(price, that.price)
+                .append(staged, that.staged)
+                .append(type, that.type)
                 .append(variantId, that.variantId)
                 .append(price, that.price)
                 .append(staged, that.staged)

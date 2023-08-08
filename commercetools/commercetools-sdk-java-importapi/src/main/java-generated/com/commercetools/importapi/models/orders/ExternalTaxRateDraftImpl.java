@@ -146,6 +146,12 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
                 .append(state, that.state)
                 .append(subRates, that.subRates)
                 .append(includedInPrice, that.includedInPrice)
+                .append(name, that.name)
+                .append(amount, that.amount)
+                .append(country, that.country)
+                .append(state, that.state)
+                .append(subRates, that.subRates)
+                .append(includedInPrice, that.includedInPrice)
                 .isEquals();
     }
 

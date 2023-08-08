@@ -93,6 +93,9 @@ public class ProductSelectionSetVariantExclusionActionImpl
         return new EqualsBuilder().append(action, that.action)
                 .append(product, that.product)
                 .append(variantExclusion, that.variantExclusion)
+                .append(action, that.action)
+                .append(product, that.product)
+                .append(variantExclusion, that.variantExclusion)
                 .isEquals();
     }
 

@@ -152,6 +152,12 @@ public class TransitionCustomLineItemStateChangeImpl implements TransitionCustom
                 .append(nextValue, that.nextValue)
                 .append(lineItemId, that.lineItemId)
                 .append(stateId, that.stateId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(lineItemId, that.lineItemId)
+                .append(stateId, that.stateId)
                 .isEquals();
     }
 

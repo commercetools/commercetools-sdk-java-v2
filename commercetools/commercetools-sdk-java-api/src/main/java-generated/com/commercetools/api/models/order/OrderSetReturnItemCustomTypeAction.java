@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
@@ -24,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetReturnItemCustomTypeAction orderSetReturnItemCustomTypeAction = OrderSetReturnItemCustomTypeAction.builder()
- *             .returnItemId("{returnItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -39,15 +37,23 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
     String SET_RETURN_ITEM_CUSTOM_TYPE = "setReturnItemCustomType";
 
     /**
-     *
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
-    @NotNull
+
     @JsonProperty("returnItemId")
     public String getReturnItemId();
 
     /**
-     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @return returnItemKey
+     */
+
+    @JsonProperty("returnItemKey")
+    public String getReturnItemKey();
+
+    /**
+     *  <p>Defines the Type that extends the Return Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
      * @return type
      */
     @Valid
@@ -55,7 +61,7 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     *  <p>Sets the Custom Fields fields for the Return Item.</p>
      * @return fields
      */
     @Valid
@@ -63,21 +69,28 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
     public FieldContainer getFields();
 
     /**
-     * set returnItemId
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      */
 
     public void setReturnItemId(final String returnItemId);
 
     /**
-     *  <p>Defines the Type that extends the ReturnItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ReturnItem.</p>
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @param returnItemKey value to be set
+     */
+
+    public void setReturnItemKey(final String returnItemKey);
+
+    /**
+     *  <p>Defines the Type that extends the Return Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Return Item.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the ReturnItem.</p>
+     *  <p>Sets the Custom Fields fields for the Return Item.</p>
      * @param fields value to be set
      */
 
@@ -99,6 +112,7 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
     public static OrderSetReturnItemCustomTypeAction of(final OrderSetReturnItemCustomTypeAction template) {
         OrderSetReturnItemCustomTypeActionImpl instance = new OrderSetReturnItemCustomTypeActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
+        instance.setReturnItemKey(template.getReturnItemKey());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
@@ -117,6 +131,7 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
         }
         OrderSetReturnItemCustomTypeActionImpl instance = new OrderSetReturnItemCustomTypeActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
+        instance.setReturnItemKey(template.getReturnItemKey());
         instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
         instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;

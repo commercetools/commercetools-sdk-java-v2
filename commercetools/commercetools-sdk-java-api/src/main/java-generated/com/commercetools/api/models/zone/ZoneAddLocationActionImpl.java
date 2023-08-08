@@ -70,7 +70,11 @@ public class ZoneAddLocationActionImpl implements ZoneAddLocationAction, ModelBa
 
         ZoneAddLocationActionImpl that = (ZoneAddLocationActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(location, that.location).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(location, that.location)
+                .append(action, that.action)
+                .append(location, that.location)
+                .isEquals();
     }
 
     @Override

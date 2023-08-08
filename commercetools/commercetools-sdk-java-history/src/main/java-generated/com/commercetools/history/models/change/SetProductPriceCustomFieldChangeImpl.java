@@ -126,6 +126,11 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
                 .isEquals();
     }
 

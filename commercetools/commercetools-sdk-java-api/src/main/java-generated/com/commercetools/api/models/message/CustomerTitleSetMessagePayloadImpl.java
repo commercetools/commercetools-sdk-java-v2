@@ -70,7 +70,11 @@ public class CustomerTitleSetMessagePayloadImpl implements CustomerTitleSetMessa
 
         CustomerTitleSetMessagePayloadImpl that = (CustomerTitleSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(title, that.title).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(title, that.title)
+                .append(type, that.type)
+                .append(title, that.title)
+                .isEquals();
     }
 
     @Override

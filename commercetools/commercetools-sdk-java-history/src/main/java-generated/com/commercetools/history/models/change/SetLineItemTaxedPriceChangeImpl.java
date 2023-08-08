@@ -140,6 +140,12 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
                 .append(nextValue, that.nextValue)
                 .append(lineItem, that.lineItem)
                 .append(lineItemId, that.lineItemId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(lineItem, that.lineItem)
+                .append(lineItemId, that.lineItemId)
                 .isEquals();
     }
 

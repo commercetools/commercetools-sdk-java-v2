@@ -71,7 +71,11 @@ public class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessage
 
         CategoryCreatedMessagePayloadImpl that = (CategoryCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(category, that.category).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(category, that.category)
+                .append(type, that.type)
+                .append(category, that.category)
+                .isEquals();
     }
 
     @Override

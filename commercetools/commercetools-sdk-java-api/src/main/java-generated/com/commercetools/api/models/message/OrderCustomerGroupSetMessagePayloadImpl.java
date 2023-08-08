@@ -92,6 +92,9 @@ public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGro
         return new EqualsBuilder().append(type, that.type)
                 .append(customerGroup, that.customerGroup)
                 .append(oldCustomerGroup, that.oldCustomerGroup)
+                .append(type, that.type)
+                .append(customerGroup, that.customerGroup)
+                .append(oldCustomerGroup, that.oldCustomerGroup)
                 .isEquals();
     }
 

@@ -55,7 +55,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     }
 
     /**
-     * set the value to the externalTotalPrice using the builder function
+     *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     }
 
     /**
-     * set the value to the externalTotalPrice using the builder function
+     *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     }
 
     /**
-     * set the value to the externalTotalPrice
+     *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     }
 
     /**
-     * value of externalTotalPrice}
+     *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @return externalTotalPrice
      */
 

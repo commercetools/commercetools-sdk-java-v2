@@ -79,6 +79,8 @@ public class AssociateRoleAssignmentDraftImpl implements AssociateRoleAssignment
 
         return new EqualsBuilder().append(associateRole, that.associateRole)
                 .append(inheritance, that.inheritance)
+                .append(associateRole, that.associateRole)
+                .append(inheritance, that.inheritance)
                 .isEquals();
     }
 

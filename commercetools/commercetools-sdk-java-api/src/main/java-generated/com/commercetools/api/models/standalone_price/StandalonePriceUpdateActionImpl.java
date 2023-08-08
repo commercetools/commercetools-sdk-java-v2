@@ -54,7 +54,7 @@ public class StandalonePriceUpdateActionImpl implements StandalonePriceUpdateAct
 
         StandalonePriceUpdateActionImpl that = (StandalonePriceUpdateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override

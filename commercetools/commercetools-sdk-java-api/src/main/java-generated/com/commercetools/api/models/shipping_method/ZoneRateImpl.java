@@ -79,7 +79,11 @@ public class ZoneRateImpl implements ZoneRate, ModelBase {
 
         ZoneRateImpl that = (ZoneRateImpl) o;
 
-        return new EqualsBuilder().append(zone, that.zone).append(shippingRates, that.shippingRates).isEquals();
+        return new EqualsBuilder().append(zone, that.zone)
+                .append(shippingRates, that.shippingRates)
+                .append(zone, that.zone)
+                .append(shippingRates, that.shippingRates)
+                .isEquals();
     }
 
     @Override

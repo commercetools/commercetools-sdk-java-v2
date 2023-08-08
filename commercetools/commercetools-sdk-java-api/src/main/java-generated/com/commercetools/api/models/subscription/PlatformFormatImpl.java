@@ -47,7 +47,7 @@ public class PlatformFormatImpl implements PlatformFormat, ModelBase {
 
         PlatformFormatImpl that = (PlatformFormatImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

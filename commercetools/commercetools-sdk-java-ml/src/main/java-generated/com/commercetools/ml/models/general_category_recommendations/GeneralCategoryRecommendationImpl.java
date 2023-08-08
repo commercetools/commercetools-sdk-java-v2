@@ -76,6 +76,8 @@ public class GeneralCategoryRecommendationImpl implements GeneralCategoryRecomme
 
         return new EqualsBuilder().append(categoryName, that.categoryName)
                 .append(confidence, that.confidence)
+                .append(categoryName, that.categoryName)
+                .append(confidence, that.confidence)
                 .isEquals();
     }
 

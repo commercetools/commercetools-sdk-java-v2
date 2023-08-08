@@ -18,14 +18,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderImportCustomLineItemStateAction
+ *  <p>The import of States does not follow any predefined rules and should be only used if no transitions are defined. The <code>quantity</code> of the ItemStates must match the sum of all Custom Line Item states' quantities.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderImportCustomLineItemStateAction stagedOrderImportCustomLineItemStateAction = StagedOrderImportCustomLineItemStateAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .plusState(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
@@ -41,15 +40,23 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
     String IMPORT_CUSTOM_LINE_ITEM_STATE = "importCustomLineItemState";
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
-    @NotNull
+
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
+     *  <p>New status of the Custom Line Items.</p>
      * @return state
      */
     @NotNull
@@ -58,14 +65,21 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
     public List<ItemState> getState();
 
     /**
-     * set customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     * set state
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
+
+    /**
+     *  <p>New status of the Custom Line Items.</p>
      * @param state values to be set
      */
 
@@ -73,7 +87,7 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
     public void setState(final ItemState... state);
 
     /**
-     * set state
+     *  <p>New status of the Custom Line Items.</p>
      * @param state values to be set
      */
 
@@ -96,6 +110,7 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
             final StagedOrderImportCustomLineItemStateAction template) {
         StagedOrderImportCustomLineItemStateActionImpl instance = new StagedOrderImportCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setState(template.getState());
         return instance;
     }
@@ -113,6 +128,7 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
         }
         StagedOrderImportCustomLineItemStateActionImpl instance = new StagedOrderImportCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setState(Optional.ofNullable(template.getState())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.ItemState::deepCopy)

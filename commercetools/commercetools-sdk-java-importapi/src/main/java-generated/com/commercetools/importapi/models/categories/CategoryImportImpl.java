@@ -249,6 +249,18 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
                 .append(metaKeywords, that.metaKeywords)
                 .append(assets, that.assets)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(parent, that.parent)
+                .append(orderHint, that.orderHint)
+                .append(externalId, that.externalId)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(assets, that.assets)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

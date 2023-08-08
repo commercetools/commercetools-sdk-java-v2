@@ -33,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLAttributeNameDoesNotExistErrorImpl.class, name = GraphQLAttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLBadGatewayErrorImpl.class, name = GraphQLBadGatewayError.BAD_GATEWAY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLConcurrentModificationErrorImpl.class, name = GraphQLConcurrentModificationError.CONCURRENT_MODIFICATION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLContentTooLargeErrorImpl.class, name = GraphQLContentTooLargeError.CONTENT_TOO_LARGE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreErrorImpl.class, name = GraphQLCountryNotConfiguredInStoreError.COUNTRY_NOT_CONFIGURED_IN_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLDiscountCodeNonApplicableErrorImpl.class, name = GraphQLDiscountCodeNonApplicableError.DISCOUNT_CODE_NON_APPLICABLE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLDuplicateAttributeValueErrorImpl.class, name = GraphQLDuplicateAttributeValueError.DUPLICATE_ATTRIBUTE_VALUE),
@@ -168,6 +169,10 @@ public interface GraphQLErrorObject {
         if (template instanceof com.commercetools.api.models.error.GraphQLConcurrentModificationError) {
             return com.commercetools.api.models.error.GraphQLConcurrentModificationError
                     .deepCopy((com.commercetools.api.models.error.GraphQLConcurrentModificationError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLContentTooLargeError) {
+            return com.commercetools.api.models.error.GraphQLContentTooLargeError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLContentTooLargeError) template);
         }
         if (template instanceof com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreError) {
             return com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreError
@@ -500,6 +505,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLConcurrentModificationErrorBuilder concurrentModificationBuilder() {
         return com.commercetools.api.models.error.GraphQLConcurrentModificationErrorBuilder.of();
+    }
+
+    /**
+     * builder for contentTooLarge subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLContentTooLargeErrorBuilder contentTooLargeBuilder() {
+        return com.commercetools.api.models.error.GraphQLContentTooLargeErrorBuilder.of();
     }
 
     /**

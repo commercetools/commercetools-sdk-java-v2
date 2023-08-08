@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetLineItemTotalPriceAction
+ *  <p>Sets the LineItem <code>totalPrice</code> and <code>price</code>, and changes the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -53,7 +53,7 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
     public String getLineItemKey();
 
     /**
-     *
+     *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @return externalTotalPrice
      */
     @Valid
@@ -75,7 +75,7 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     * set externalTotalPrice
+     *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param externalTotalPrice value to be set
      */
 

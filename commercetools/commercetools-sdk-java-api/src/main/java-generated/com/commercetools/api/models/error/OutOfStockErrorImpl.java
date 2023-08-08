@@ -139,6 +139,11 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
                 .append(values, that.values)
                 .append(lineItems, that.lineItems)
                 .append(skus, that.skus)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(lineItems, that.lineItems)
+                .append(skus, that.skus)
                 .isEquals();
     }
 

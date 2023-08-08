@@ -90,6 +90,9 @@ public class ProductSetMetaDescriptionActionImpl implements ProductSetMetaDescri
         return new EqualsBuilder().append(action, that.action)
                 .append(metaDescription, that.metaDescription)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(metaDescription, that.metaDescription)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

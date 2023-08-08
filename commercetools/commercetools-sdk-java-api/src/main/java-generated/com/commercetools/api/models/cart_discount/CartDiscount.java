@@ -130,7 +130,7 @@ public interface CartDiscount
     public LocalizedString getDescription();
 
     /**
-     *  <p>Effect of the CartDiscount.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      * @return value
      */
     @NotNull
@@ -147,7 +147,8 @@ public interface CartDiscount
     public String getCartPredicate();
 
     /**
-     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     *  <p>Segment of the Cart that is discounted.</p>
+     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @return target
      */
     @Valid
@@ -295,7 +296,7 @@ public interface CartDiscount
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Effect of the CartDiscount.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      * @param value value to be set
      */
 
@@ -309,7 +310,8 @@ public interface CartDiscount
     public void setCartPredicate(final String cartPredicate);
 
     /**
-     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     *  <p>Segment of the Cart that is discounted.</p>
+     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param target value to be set
      */
 

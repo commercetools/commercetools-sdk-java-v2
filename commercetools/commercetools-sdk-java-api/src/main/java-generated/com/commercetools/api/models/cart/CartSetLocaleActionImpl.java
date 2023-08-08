@@ -70,7 +70,11 @@ public class CartSetLocaleActionImpl implements CartSetLocaleAction, ModelBase {
 
         CartSetLocaleActionImpl that = (CartSetLocaleActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(locale, that.locale).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(locale, that.locale)
+                .append(action, that.action)
+                .append(locale, that.locale)
+                .isEquals();
     }
 
     @Override

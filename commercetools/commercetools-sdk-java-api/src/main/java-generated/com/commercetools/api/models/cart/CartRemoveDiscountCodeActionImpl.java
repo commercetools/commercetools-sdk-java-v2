@@ -71,7 +71,11 @@ public class CartRemoveDiscountCodeActionImpl implements CartRemoveDiscountCodeA
 
         CartRemoveDiscountCodeActionImpl that = (CartRemoveDiscountCodeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(discountCode, that.discountCode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(discountCode, that.discountCode)
+                .append(action, that.action)
+                .append(discountCode, that.discountCode)
+                .isEquals();
     }
 
     @Override

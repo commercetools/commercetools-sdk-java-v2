@@ -33,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .name(nameBuilder -> nameBuilder)
  *             .money(moneyBuilder -> moneyBuilder)
+ *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .slug("{slug}")
  *             .quantity(0.3)
@@ -91,6 +92,15 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public TaxedItemPrice getTaxedPrice();
 
     /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @return taxedPricePortions
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("taxedPricePortions")
+    public List<MethodTaxedPrice> getTaxedPricePortions();
+
+    /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
      *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
      * @return totalPrice
@@ -109,7 +119,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public String getSlug();
 
     /**
-     *  <p>Number of Custom Line Items in the Cart.</p>
+     *  <p>Number of Custom Line Items in the Cart or Order.</p>
      * @return quantity
      */
     @NotNull
@@ -117,7 +127,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public Long getQuantity();
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      * @return state
      */
     @NotNull
@@ -222,6 +232,21 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
     /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param taxedPricePortions values to be set
+     */
+
+    @JsonIgnore
+    public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param taxedPricePortions values to be set
+     */
+
+    public void setTaxedPricePortions(final List<MethodTaxedPrice> taxedPricePortions);
+
+    /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
      *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
      * @param totalPrice value to be set
@@ -237,14 +262,14 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setSlug(final String slug);
 
     /**
-     *  <p>Number of Custom Line Items in the Cart.</p>
+     *  <p>Number of Custom Line Items in the Cart or Order.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      * @param state values to be set
      */
 
@@ -252,7 +277,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setState(final ItemState... state);
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      * @param state values to be set
      */
 
@@ -347,6 +372,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         instance.setName(template.getName());
         instance.setMoney(template.getMoney());
         instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setTaxedPricePortions(template.getTaxedPricePortions());
         instance.setTotalPrice(template.getTotalPrice());
         instance.setSlug(template.getSlug());
         instance.setQuantity(template.getQuantity());
@@ -377,6 +403,11 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setMoney(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getMoney()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
+        instance.setTaxedPricePortions(Optional.ofNullable(template.getTaxedPricePortions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.MethodTaxedPrice::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setTotalPrice(
             com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalPrice()));
         instance.setSlug(template.getSlug());

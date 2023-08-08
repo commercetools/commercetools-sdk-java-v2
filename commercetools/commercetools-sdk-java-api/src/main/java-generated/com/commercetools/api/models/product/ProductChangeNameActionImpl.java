@@ -89,6 +89,9 @@ public class ProductChangeNameActionImpl implements ProductChangeNameAction, Mod
         return new EqualsBuilder().append(action, that.action)
                 .append(name, that.name)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(name, that.name)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

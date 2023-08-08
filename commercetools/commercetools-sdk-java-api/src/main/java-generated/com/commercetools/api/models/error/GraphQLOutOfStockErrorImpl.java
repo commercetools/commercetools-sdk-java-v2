@@ -122,6 +122,10 @@ public class GraphQLOutOfStockErrorImpl implements GraphQLOutOfStockError, Model
                 .append(values, that.values)
                 .append(lineItems, that.lineItems)
                 .append(skus, that.skus)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(lineItems, that.lineItems)
+                .append(skus, that.skus)
                 .isEquals();
     }
 

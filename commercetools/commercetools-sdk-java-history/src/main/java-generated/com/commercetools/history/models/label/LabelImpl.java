@@ -54,7 +54,7 @@ public class LabelImpl implements Label, ModelBase {
 
         LabelImpl that = (LabelImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

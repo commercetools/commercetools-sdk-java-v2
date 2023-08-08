@@ -71,7 +71,11 @@ public class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessage
 
         CustomerCreatedMessagePayloadImpl that = (CustomerCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(customer, that.customer).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(customer, that.customer)
+                .append(type, that.type)
+                .append(customer, that.customer)
+                .isEquals();
     }
 
     @Override

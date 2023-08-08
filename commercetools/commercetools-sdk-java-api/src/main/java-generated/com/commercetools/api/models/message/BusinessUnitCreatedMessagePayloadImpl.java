@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Create Business Unit request.</p>
+ *  <p>Generated after a successful Create BusinessUnit request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitCreatedMessagePayloadImpl implements BusinessUnitCreatedMessagePayload, ModelBase {
@@ -71,7 +71,11 @@ public class BusinessUnitCreatedMessagePayloadImpl implements BusinessUnitCreate
 
         BusinessUnitCreatedMessagePayloadImpl that = (BusinessUnitCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(businessUnit, that.businessUnit).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(businessUnit, that.businessUnit)
+                .append(type, that.type)
+                .append(businessUnit, that.businessUnit)
+                .isEquals();
     }
 
     @Override

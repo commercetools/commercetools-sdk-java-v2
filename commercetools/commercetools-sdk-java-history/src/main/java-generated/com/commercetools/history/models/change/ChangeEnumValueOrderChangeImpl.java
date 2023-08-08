@@ -132,6 +132,11 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(fieldName, that.fieldName)
                 .isEquals();
     }
 

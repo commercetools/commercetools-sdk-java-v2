@@ -127,6 +127,11 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(deliveryId, that.deliveryId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(deliveryId, that.deliveryId)
                 .isEquals();
     }
 

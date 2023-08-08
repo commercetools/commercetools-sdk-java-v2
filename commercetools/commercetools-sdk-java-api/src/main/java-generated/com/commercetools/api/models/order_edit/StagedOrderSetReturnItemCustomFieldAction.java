@@ -22,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetReturnItemCustomFieldAction stagedOrderSetReturnItemCustomFieldAction = StagedOrderSetReturnItemCustomFieldAction.builder()
- *             .returnItemId("{returnItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -38,12 +37,20 @@ public interface StagedOrderSetReturnItemCustomFieldAction extends StagedOrderUp
     String SET_RETURN_ITEM_CUSTOM_FIELD = "setReturnItemCustomField";
 
     /**
-     *
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
-    @NotNull
+
     @JsonProperty("returnItemId")
     public String getReturnItemId();
+
+    /**
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @return returnItemKey
+     */
+
+    @JsonProperty("returnItemKey")
+    public String getReturnItemKey();
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -62,11 +69,18 @@ public interface StagedOrderSetReturnItemCustomFieldAction extends StagedOrderUp
     public Object getValue();
 
     /**
-     * set returnItemId
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      */
 
     public void setReturnItemId(final String returnItemId);
+
+    /**
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @param returnItemKey value to be set
+     */
+
+    public void setReturnItemKey(final String returnItemKey);
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -99,6 +113,7 @@ public interface StagedOrderSetReturnItemCustomFieldAction extends StagedOrderUp
             final StagedOrderSetReturnItemCustomFieldAction template) {
         StagedOrderSetReturnItemCustomFieldActionImpl instance = new StagedOrderSetReturnItemCustomFieldActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
+        instance.setReturnItemKey(template.getReturnItemKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
@@ -117,6 +132,7 @@ public interface StagedOrderSetReturnItemCustomFieldAction extends StagedOrderUp
         }
         StagedOrderSetReturnItemCustomFieldActionImpl instance = new StagedOrderSetReturnItemCustomFieldActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
+        instance.setReturnItemKey(template.getReturnItemKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;

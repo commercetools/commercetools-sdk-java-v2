@@ -38,7 +38,7 @@ public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction 
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
-     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     *  <p>Defines the Type that extends the Order Edit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order Edit.</p>
      * @return type
      */
     @Valid
@@ -46,7 +46,7 @@ public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction 
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     *  <p>Sets the Custom Fields fields for the Order Edit.</p>
      * @return fields
      */
     @Valid
@@ -54,14 +54,14 @@ public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction 
     public FieldContainer getFields();
 
     /**
-     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     *  <p>Defines the Type that extends the Order Edit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order Edit.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     *  <p>Sets the Custom Fields fields for the Order Edit.</p>
      * @param fields value to be set
      */
 

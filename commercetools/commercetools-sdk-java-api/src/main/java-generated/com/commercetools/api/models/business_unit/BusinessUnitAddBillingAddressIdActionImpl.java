@@ -89,6 +89,9 @@ public class BusinessUnitAddBillingAddressIdActionImpl implements BusinessUnitAd
         return new EqualsBuilder().append(action, that.action)
                 .append(addressId, that.addressId)
                 .append(addressKey, that.addressKey)
+                .append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(addressKey, that.addressKey)
                 .isEquals();
     }
 

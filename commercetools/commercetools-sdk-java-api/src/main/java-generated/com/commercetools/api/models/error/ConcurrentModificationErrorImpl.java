@@ -109,6 +109,10 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(currentVersion, that.currentVersion)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(currentVersion, that.currentVersion)
                 .isEquals();
     }
 

@@ -123,6 +123,11 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
                 .append(price, that.price)
                 .append(priceFunction, that.priceFunction)
                 .append(isMatching, that.isMatching)
+                .append(type, that.type)
+                .append(score, that.score)
+                .append(price, that.price)
+                .append(priceFunction, that.priceFunction)
+                .append(isMatching, that.isMatching)
                 .isEquals();
     }
 

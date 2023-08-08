@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -43,27 +42,12 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
     String PAYMENT_STATUS_INTERFACE_CODE_SET = "PaymentStatusInterfaceCodeSet";
 
     /**
-     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
-     * @return paymentId
-     */
-    @NotNull
-    @JsonProperty("paymentId")
-    public String getPaymentId();
-
-    /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      * @return interfaceCode
      */
 
     @JsonProperty("interfaceCode")
     public String getInterfaceCode();
-
-    /**
-     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
-     * @param paymentId value to be set
-     */
-
-    public void setPaymentId(final String paymentId);
 
     /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
@@ -97,7 +81,6 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
-        instance.setPaymentId(template.getPaymentId());
         instance.setInterfaceCode(template.getInterfaceCode());
         return instance;
     }
@@ -126,7 +109,6 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
-        instance.setPaymentId(template.getPaymentId());
         instance.setInterfaceCode(template.getInterfaceCode());
         return instance;
     }

@@ -48,7 +48,7 @@ public class ProductUnpublishActionImpl implements ProductUnpublishAction, Model
 
         ProductUnpublishActionImpl that = (ProductUnpublishActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override

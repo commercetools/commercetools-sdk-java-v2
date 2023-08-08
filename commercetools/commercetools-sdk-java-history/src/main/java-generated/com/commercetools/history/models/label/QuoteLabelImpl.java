@@ -123,6 +123,11 @@ public class QuoteLabelImpl implements QuoteLabel, ModelBase {
                 .append(customer, that.customer)
                 .append(stagedQuote, that.stagedQuote)
                 .append(quoteRequest, that.quoteRequest)
+                .append(type, that.type)
+                .append(key, that.key)
+                .append(customer, that.customer)
+                .append(stagedQuote, that.stagedQuote)
+                .append(quoteRequest, that.quoteRequest)
                 .isEquals();
     }
 

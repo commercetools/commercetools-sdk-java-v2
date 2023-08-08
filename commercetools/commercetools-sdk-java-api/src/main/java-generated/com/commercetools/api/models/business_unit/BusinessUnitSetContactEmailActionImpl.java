@@ -70,7 +70,11 @@ public class BusinessUnitSetContactEmailActionImpl implements BusinessUnitSetCon
 
         BusinessUnitSetContactEmailActionImpl that = (BusinessUnitSetContactEmailActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(contactEmail, that.contactEmail).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(contactEmail, that.contactEmail)
+                .append(action, that.action)
+                .append(contactEmail, that.contactEmail)
+                .isEquals();
     }
 
     @Override

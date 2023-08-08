@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Set Discounted Embedded Price update action.</p>
+ *  <p>Generated after a successful Set Discounted Price update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceExternalDiscountSetMessagePayloadImpl
@@ -151,6 +151,13 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
         ProductPriceExternalDiscountSetMessagePayloadImpl that = (ProductPriceExternalDiscountSetMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(variantId, that.variantId)
+                .append(variantKey, that.variantKey)
+                .append(sku, that.sku)
+                .append(priceId, that.priceId)
+                .append(discounted, that.discounted)
+                .append(staged, that.staged)
+                .append(type, that.type)
                 .append(variantId, that.variantId)
                 .append(variantKey, that.variantKey)
                 .append(sku, that.sku)

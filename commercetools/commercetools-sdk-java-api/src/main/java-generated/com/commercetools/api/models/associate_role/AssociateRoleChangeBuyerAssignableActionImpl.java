@@ -71,7 +71,11 @@ public class AssociateRoleChangeBuyerAssignableActionImpl
 
         AssociateRoleChangeBuyerAssignableActionImpl that = (AssociateRoleChangeBuyerAssignableActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(buyerAssignable, that.buyerAssignable).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(buyerAssignable, that.buyerAssignable)
+                .append(action, that.action)
+                .append(buyerAssignable, that.buyerAssignable)
+                .isEquals();
     }
 
     @Override

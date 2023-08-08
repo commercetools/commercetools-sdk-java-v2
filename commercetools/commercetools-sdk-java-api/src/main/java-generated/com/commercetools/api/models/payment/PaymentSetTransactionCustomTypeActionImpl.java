@@ -106,6 +106,10 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
                 .append(transactionId, that.transactionId)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(transactionId, that.transactionId)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 

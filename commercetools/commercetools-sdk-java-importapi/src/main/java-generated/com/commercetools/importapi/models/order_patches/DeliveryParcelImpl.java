@@ -114,6 +114,10 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
+                .append(deliveryId, that.deliveryId)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
                 .isEquals();
     }
 

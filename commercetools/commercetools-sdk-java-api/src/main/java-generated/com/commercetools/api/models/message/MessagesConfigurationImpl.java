@@ -76,6 +76,8 @@ public class MessagesConfigurationImpl implements MessagesConfiguration, ModelBa
 
         return new EqualsBuilder().append(enabled, that.enabled)
                 .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
+                .append(enabled, that.enabled)
+                .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
                 .isEquals();
     }
 

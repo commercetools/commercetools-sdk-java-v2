@@ -202,6 +202,15 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
                 .append(deliveries, that.deliveries)
                 .append(discountedPrice, that.discountedPrice)
                 .append(shippingMethodState, that.shippingMethodState)
+                .append(shippingMethodName, that.shippingMethodName)
+                .append(price, that.price)
+                .append(shippingRate, that.shippingRate)
+                .append(taxRate, that.taxRate)
+                .append(taxCategory, that.taxCategory)
+                .append(shippingMethod, that.shippingMethod)
+                .append(deliveries, that.deliveries)
+                .append(discountedPrice, that.discountedPrice)
+                .append(shippingMethodState, that.shippingMethodState)
                 .isEquals();
     }
 

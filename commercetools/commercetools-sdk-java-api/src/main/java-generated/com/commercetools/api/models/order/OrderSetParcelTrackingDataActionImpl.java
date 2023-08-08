@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderSetParcelTrackingDataAction
+ *  <p>Produces the ParcelTrackingDataUpdated Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrackingDataAction, ModelBase {
@@ -57,7 +57,8 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelId() {
@@ -65,7 +66,8 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelKey() {
@@ -73,7 +75,7 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
@@ -103,6 +105,10 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
         OrderSetParcelTrackingDataActionImpl that = (OrderSetParcelTrackingDataActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(parcelId, that.parcelId)
+                .append(parcelKey, that.parcelKey)
+                .append(trackingData, that.trackingData)
+                .append(action, that.action)
                 .append(parcelId, that.parcelId)
                 .append(parcelKey, that.parcelKey)
                 .append(trackingData, that.trackingData)

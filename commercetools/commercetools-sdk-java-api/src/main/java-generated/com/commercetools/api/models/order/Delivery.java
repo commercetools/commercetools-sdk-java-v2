@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * Delivery
+ *  <p>Contains information on how items are shipped to Customers, for example, a delivery note.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -55,7 +55,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public String getKey();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Delivery was created.</p>
      * @return createdAt
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      * @return items
      */
     @NotNull
@@ -72,7 +72,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      * @return parcels
      */
     @NotNull
@@ -81,7 +81,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public List<Parcel> getParcels();
 
     /**
-     *
+     *  <p>Address to which Parcels are delivered.</p>
      * @return address
      */
     @Valid
@@ -89,7 +89,7 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public Address getAddress();
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields of the Delivery.</p>
      * @return custom
      */
     @Valid
@@ -111,14 +111,14 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public void setKey(final String key);
 
     /**
-     * set createdAt
+     *  <p>Date and time (UTC) the Delivery was created.</p>
      * @param createdAt value to be set
      */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      * @param items values to be set
      */
 
@@ -126,14 +126,14 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      * @param parcels values to be set
      */
 
@@ -141,21 +141,21 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
     public void setParcels(final Parcel... parcels);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      * @param parcels values to be set
      */
 
     public void setParcels(final List<Parcel> parcels);
 
     /**
-     * set address
+     *  <p>Address to which Parcels are delivered.</p>
      * @param address value to be set
      */
 
     public void setAddress(final Address address);
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields of the Delivery.</p>
      * @param custom value to be set
      */
 

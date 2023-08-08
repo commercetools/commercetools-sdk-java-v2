@@ -106,6 +106,10 @@ public class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNam
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
                 .append(name, that.name)
+                .append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(name, that.name)
                 .isEquals();
     }
 

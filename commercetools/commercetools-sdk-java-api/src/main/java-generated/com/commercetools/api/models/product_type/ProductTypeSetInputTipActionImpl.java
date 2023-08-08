@@ -89,6 +89,9 @@ public class ProductTypeSetInputTipActionImpl implements ProductTypeSetInputTipA
         return new EqualsBuilder().append(action, that.action)
                 .append(attributeName, that.attributeName)
                 .append(inputTip, that.inputTip)
+                .append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(inputTip, that.inputTip)
                 .isEquals();
     }
 

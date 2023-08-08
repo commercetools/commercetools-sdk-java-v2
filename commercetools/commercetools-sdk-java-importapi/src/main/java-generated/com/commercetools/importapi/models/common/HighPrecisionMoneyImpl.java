@@ -122,6 +122,11 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
                 .append(centAmount, that.centAmount)
                 .append(currencyCode, that.currencyCode)
                 .append(preciseAmount, that.preciseAmount)
+                .append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
+                .append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .append(preciseAmount, that.preciseAmount)
                 .isEquals();
     }
 

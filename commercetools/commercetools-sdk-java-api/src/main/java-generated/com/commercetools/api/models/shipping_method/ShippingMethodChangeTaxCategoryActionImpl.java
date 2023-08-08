@@ -72,7 +72,11 @@ public class ShippingMethodChangeTaxCategoryActionImpl implements ShippingMethod
 
         ShippingMethodChangeTaxCategoryActionImpl that = (ShippingMethodChangeTaxCategoryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(taxCategory, that.taxCategory).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(taxCategory, that.taxCategory)
+                .append(action, that.action)
+                .append(taxCategory, that.taxCategory)
+                .isEquals();
     }
 
     @Override

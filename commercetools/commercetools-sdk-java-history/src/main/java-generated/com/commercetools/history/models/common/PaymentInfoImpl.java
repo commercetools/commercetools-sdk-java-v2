@@ -63,7 +63,7 @@ public class PaymentInfoImpl implements PaymentInfo, ModelBase {
 
         PaymentInfoImpl that = (PaymentInfoImpl) o;
 
-        return new EqualsBuilder().append(payments, that.payments).isEquals();
+        return new EqualsBuilder().append(payments, that.payments).append(payments, that.payments).isEquals();
     }
 
     @Override

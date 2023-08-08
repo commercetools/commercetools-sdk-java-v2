@@ -147,6 +147,12 @@ public class ProductSetAttributeActionImpl implements ProductSetAttributeAction,
                 .append(name, that.name)
                 .append(value, that.value)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

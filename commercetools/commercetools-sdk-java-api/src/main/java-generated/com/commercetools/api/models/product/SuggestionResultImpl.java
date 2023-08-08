@@ -62,7 +62,7 @@ public class SuggestionResultImpl implements SuggestionResult, ModelBase {
 
         SuggestionResultImpl that = (SuggestionResultImpl) o;
 
-        return new EqualsBuilder().append(values, that.values).isEquals();
+        return new EqualsBuilder().append(values, that.values).append(values, that.values).isEquals();
     }
 
     @Override

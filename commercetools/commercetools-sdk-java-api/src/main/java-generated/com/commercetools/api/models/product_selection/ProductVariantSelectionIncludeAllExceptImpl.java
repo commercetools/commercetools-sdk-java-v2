@@ -74,7 +74,11 @@ public class ProductVariantSelectionIncludeAllExceptImpl implements ProductVaria
 
         ProductVariantSelectionIncludeAllExceptImpl that = (ProductVariantSelectionIncludeAllExceptImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(skus, that.skus).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(skus, that.skus)
+                .append(type, that.type)
+                .append(skus, that.skus)
+                .isEquals();
     }
 
     @Override

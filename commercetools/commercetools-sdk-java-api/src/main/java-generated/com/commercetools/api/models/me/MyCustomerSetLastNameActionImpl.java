@@ -70,7 +70,11 @@ public class MyCustomerSetLastNameActionImpl implements MyCustomerSetLastNameAct
 
         MyCustomerSetLastNameActionImpl that = (MyCustomerSetLastNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lastName, that.lastName).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lastName, that.lastName)
+                .append(action, that.action)
+                .append(lastName, that.lastName)
+                .isEquals();
     }
 
     @Override

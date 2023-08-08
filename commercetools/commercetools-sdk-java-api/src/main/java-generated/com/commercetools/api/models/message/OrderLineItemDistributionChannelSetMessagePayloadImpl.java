@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Set Line Item Distribution Channel update action.</p>
+ *  <p>Generated after a successful Set LineItem DistributionChannel update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemDistributionChannelSetMessagePayloadImpl
@@ -25,6 +25,8 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
     /**
@@ -32,8 +34,10 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
      */
     @JsonCreator
     OrderLineItemDistributionChannelSetMessagePayloadImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelReference distributionChannel) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.distributionChannel = distributionChannel;
         this.type = ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET;
     }
@@ -62,6 +66,14 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Distribution Channel that was set.</p>
      */
 
@@ -71,6 +83,10 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setDistributionChannel(
@@ -90,13 +106,22 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(distributionChannel, that.distributionChannel)
+                .append(type, that.type)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(distributionChannel, that.distributionChannel)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(lineItemId).append(distributionChannel).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(distributionChannel)
+                .toHashCode();
     }
 
 }

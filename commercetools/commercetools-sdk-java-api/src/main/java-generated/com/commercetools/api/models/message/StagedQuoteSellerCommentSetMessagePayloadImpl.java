@@ -71,7 +71,11 @@ public class StagedQuoteSellerCommentSetMessagePayloadImpl
 
         StagedQuoteSellerCommentSetMessagePayloadImpl that = (StagedQuoteSellerCommentSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(sellerComment, that.sellerComment).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(sellerComment, that.sellerComment)
+                .append(type, that.type)
+                .append(sellerComment, that.sellerComment)
+                .isEquals();
     }
 
     @Override

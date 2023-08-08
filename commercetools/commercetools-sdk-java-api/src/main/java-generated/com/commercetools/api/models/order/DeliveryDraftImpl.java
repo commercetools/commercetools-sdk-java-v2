@@ -61,7 +61,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -69,7 +69,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ParcelDraft> getParcels() {
@@ -77,7 +77,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Address to which the Parcels are delivered.</p>
      */
 
     public com.commercetools.api.models.common.AddressDraft getAddress() {
@@ -85,7 +85,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -131,6 +131,11 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
         DeliveryDraftImpl that = (DeliveryDraftImpl) o;
 
         return new EqualsBuilder().append(key, that.key)
+                .append(items, that.items)
+                .append(parcels, that.parcels)
+                .append(address, that.address)
+                .append(custom, that.custom)
+                .append(key, that.key)
                 .append(items, that.items)
                 .append(parcels, that.parcels)
                 .append(address, that.address)

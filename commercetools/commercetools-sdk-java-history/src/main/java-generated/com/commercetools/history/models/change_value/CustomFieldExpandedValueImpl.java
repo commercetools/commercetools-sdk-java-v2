@@ -93,6 +93,9 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
         return new EqualsBuilder().append(name, that.name)
                 .append(value, that.value)
                 .append(label, that.label)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(label, that.label)
                 .isEquals();
     }
 

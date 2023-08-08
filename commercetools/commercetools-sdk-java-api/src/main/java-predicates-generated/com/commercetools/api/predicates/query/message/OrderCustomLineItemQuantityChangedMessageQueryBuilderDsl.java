@@ -97,6 +97,12 @@ public class OrderCustomLineItemQuantityChangedMessageQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderCustomLineItemQuantityChangedMessageQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderCustomLineItemQuantityChangedMessageQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderCustomLineItemQuantityChangedMessageQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<OrderCustomLineItemQuantityChangedMessageQueryBuilderDsl> quantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),

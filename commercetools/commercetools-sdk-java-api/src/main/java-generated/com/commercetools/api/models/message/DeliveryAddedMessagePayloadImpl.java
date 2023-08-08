@@ -54,7 +54,7 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
     }
 
     /**
-     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional Parcel Added To Delivery Message containing information about the Parcels.</p>
      */
 
     public com.commercetools.api.models.order.Delivery getDelivery() {
@@ -62,7 +62,7 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -88,6 +88,9 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
         DeliveryAddedMessagePayloadImpl that = (DeliveryAddedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(delivery, that.delivery)
+                .append(shippingKey, that.shippingKey)
+                .append(type, that.type)
                 .append(delivery, that.delivery)
                 .append(shippingKey, that.shippingKey)
                 .isEquals();

@@ -149,6 +149,12 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
                 .append(stagedQuoteStateToSent, that.stagedQuoteStateToSent)
                 .append(state, that.state)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(stagedQuote, that.stagedQuote)
+                .append(stagedQuoteVersion, that.stagedQuoteVersion)
+                .append(stagedQuoteStateToSent, that.stagedQuoteStateToSent)
+                .append(state, that.state)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

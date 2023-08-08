@@ -110,6 +110,10 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(deliveryId, that.deliveryId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(deliveryId, that.deliveryId)
                 .isEquals();
     }
 

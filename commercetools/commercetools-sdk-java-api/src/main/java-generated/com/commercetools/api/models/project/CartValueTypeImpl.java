@@ -48,7 +48,7 @@ public class CartValueTypeImpl implements CartValueType, ModelBase {
 
         CartValueTypeImpl that = (CartValueTypeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

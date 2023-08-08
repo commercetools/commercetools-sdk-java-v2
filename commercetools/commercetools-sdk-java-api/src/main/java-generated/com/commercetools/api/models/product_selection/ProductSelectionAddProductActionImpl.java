@@ -92,6 +92,9 @@ public class ProductSelectionAddProductActionImpl implements ProductSelectionAdd
         return new EqualsBuilder().append(action, that.action)
                 .append(product, that.product)
                 .append(variantSelection, that.variantSelection)
+                .append(action, that.action)
+                .append(product, that.product)
+                .append(variantSelection, that.variantSelection)
                 .isEquals();
     }
 

@@ -74,7 +74,11 @@ public class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOr
 
         CategoryChangeAssetOrderActionImpl that = (CategoryChangeAssetOrderActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(assetOrder, that.assetOrder).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(assetOrder, that.assetOrder)
+                .append(action, that.action)
+                .append(assetOrder, that.assetOrder)
+                .isEquals();
     }
 
     @Override

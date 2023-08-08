@@ -181,6 +181,14 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
                 .append(paymentMethodInfo, that.paymentMethodInfo)
                 .append(transactions, that.transactions)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .append(amountPlanned, that.amountPlanned)
+                .append(paymentMethodInfo, that.paymentMethodInfo)
+                .append(transactions, that.transactions)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

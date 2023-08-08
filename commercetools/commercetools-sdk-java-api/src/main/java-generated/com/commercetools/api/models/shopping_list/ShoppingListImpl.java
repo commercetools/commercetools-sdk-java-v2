@@ -340,6 +340,23 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append(custom, that.custom)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(customer, that.customer)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(lineItems, that.lineItems)
+                .append(textLineItems, that.textLineItems)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(anonymousId, that.anonymousId)
+                .append(store, that.store)
+                .append(custom, that.custom)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
                 .isEquals();
     }
 

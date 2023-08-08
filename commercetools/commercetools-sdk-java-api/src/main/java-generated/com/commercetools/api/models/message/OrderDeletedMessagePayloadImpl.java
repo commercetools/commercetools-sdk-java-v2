@@ -70,7 +70,11 @@ public class OrderDeletedMessagePayloadImpl implements OrderDeletedMessagePayloa
 
         OrderDeletedMessagePayloadImpl that = (OrderDeletedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(order, that.order).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(order, that.order)
+                .append(type, that.type)
+                .append(order, that.order)
+                .isEquals();
     }
 
     @Override

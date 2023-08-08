@@ -74,7 +74,11 @@ public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraf
 
         ImportContainerUpdateDraftImpl that = (ImportContainerUpdateDraftImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(resourceType, that.resourceType).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(resourceType, that.resourceType)
+                .append(version, that.version)
+                .append(resourceType, that.resourceType)
+                .isEquals();
     }
 
     @Override

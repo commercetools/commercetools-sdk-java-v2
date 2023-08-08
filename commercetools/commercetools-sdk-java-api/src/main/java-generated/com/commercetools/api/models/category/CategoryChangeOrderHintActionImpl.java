@@ -70,7 +70,11 @@ public class CategoryChangeOrderHintActionImpl implements CategoryChangeOrderHin
 
         CategoryChangeOrderHintActionImpl that = (CategoryChangeOrderHintActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(orderHint, that.orderHint).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(orderHint, that.orderHint)
+                .append(action, that.action)
+                .append(orderHint, that.orderHint)
+                .isEquals();
     }
 
     @Override

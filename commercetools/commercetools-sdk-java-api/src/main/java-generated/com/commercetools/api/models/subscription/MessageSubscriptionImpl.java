@@ -81,7 +81,11 @@ public class MessageSubscriptionImpl implements MessageSubscription, ModelBase {
 
         MessageSubscriptionImpl that = (MessageSubscriptionImpl) o;
 
-        return new EqualsBuilder().append(resourceTypeId, that.resourceTypeId).append(types, that.types).isEquals();
+        return new EqualsBuilder().append(resourceTypeId, that.resourceTypeId)
+                .append(types, that.types)
+                .append(resourceTypeId, that.resourceTypeId)
+                .append(types, that.types)
+                .isEquals();
     }
 
     @Override

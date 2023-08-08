@@ -75,7 +75,11 @@ public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPric
 
         ExternalLineItemTotalPriceImpl that = (ExternalLineItemTotalPriceImpl) o;
 
-        return new EqualsBuilder().append(price, that.price).append(totalPrice, that.totalPrice).isEquals();
+        return new EqualsBuilder().append(price, that.price)
+                .append(totalPrice, that.totalPrice)
+                .append(price, that.price)
+                .append(totalPrice, that.totalPrice)
+                .isEquals();
     }
 
     @Override

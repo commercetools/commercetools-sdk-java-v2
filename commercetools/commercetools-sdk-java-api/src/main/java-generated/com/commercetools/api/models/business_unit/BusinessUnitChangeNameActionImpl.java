@@ -70,7 +70,11 @@ public class BusinessUnitChangeNameActionImpl implements BusinessUnitChangeNameA
 
         BusinessUnitChangeNameActionImpl that = (BusinessUnitChangeNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(name, that.name)
+                .append(action, that.action)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override

@@ -94,6 +94,9 @@ public class StoreNameSetMessagePayloadImpl implements StoreNameSetMessagePayloa
         return new EqualsBuilder().append(type, that.type)
                 .append(name, that.name)
                 .append(nameAllLocales, that.nameAllLocales)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(nameAllLocales, that.nameAllLocales)
                 .isEquals();
     }
 

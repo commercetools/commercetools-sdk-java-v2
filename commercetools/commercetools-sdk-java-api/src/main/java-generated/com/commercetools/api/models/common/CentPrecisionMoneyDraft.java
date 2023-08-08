@@ -20,7 +20,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CentPrecisionMoneyDraft centPrecisionMoneyDraft = CentPrecisionMoneyDraft.builder()
- *             .centAmount(0.3)
  *             .currencyCode("{currencyCode}")
  *             .build()
  * </code></pre>

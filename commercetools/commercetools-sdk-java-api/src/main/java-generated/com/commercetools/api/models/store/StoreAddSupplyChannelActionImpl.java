@@ -73,7 +73,11 @@ public class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChannelAct
 
         StoreAddSupplyChannelActionImpl that = (StoreAddSupplyChannelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(supplyChannel, that.supplyChannel).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(supplyChannel, that.supplyChannel)
+                .append(action, that.action)
+                .append(supplyChannel, that.supplyChannel)
+                .isEquals();
     }
 
     @Override

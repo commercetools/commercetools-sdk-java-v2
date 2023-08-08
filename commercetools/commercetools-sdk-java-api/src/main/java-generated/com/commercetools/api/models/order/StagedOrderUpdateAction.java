@@ -56,6 +56,7 @@ import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCust
 import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomFieldAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomTypeAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomTypeAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomFieldAction;
@@ -89,6 +90,7 @@ import com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodActio
 import com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxAmountAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxRateAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetStoreAction;
 import com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction;
 import com.commercetools.api.models.order_edit.StagedOrderTransitionLineItemStateAction;
 import com.commercetools.api.models.order_edit.StagedOrderTransitionStateAction;
@@ -163,6 +165,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomFieldActionImpl.class, name = StagedOrderSetDeliveryCustomFieldAction.SET_DELIVERY_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomTypeActionImpl.class, name = StagedOrderSetDeliveryCustomTypeAction.SET_DELIVERY_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsActionImpl.class, name = StagedOrderSetDeliveryItemsAction.SET_DELIVERY_ITEMS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsActionImpl.class, name = StagedOrderSetDirectDiscountsAction.SET_DIRECT_DISCOUNTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldActionImpl.class, name = StagedOrderSetItemShippingAddressCustomFieldAction.SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomTypeActionImpl.class, name = StagedOrderSetItemShippingAddressCustomTypeAction.SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomFieldActionImpl.class, name = StagedOrderSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD),
@@ -196,6 +199,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxAmountActionImpl.class, name = StagedOrderSetShippingMethodTaxAmountAction.SET_SHIPPING_METHOD_TAX_AMOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxRateActionImpl.class, name = StagedOrderSetShippingMethodTaxRateAction.SET_SHIPPING_METHOD_TAX_RATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputActionImpl.class, name = StagedOrderSetShippingRateInputAction.SET_SHIPPING_RATE_INPUT),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetStoreActionImpl.class, name = StagedOrderSetStoreAction.SET_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateActionImpl.class, name = StagedOrderTransitionCustomLineItemStateAction.TRANSITION_CUSTOM_LINE_ITEM_STATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderTransitionLineItemStateActionImpl.class, name = StagedOrderTransitionLineItemStateAction.TRANSITION_LINE_ITEM_STATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderTransitionStateActionImpl.class, name = StagedOrderTransitionStateAction.TRANSITION_STATE),
@@ -417,6 +421,10 @@ public interface StagedOrderUpdateAction
             return com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsAction
                     .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsAction) template);
         }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsAction) template);
+        }
         if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldAction) {
             return com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldAction.deepCopy(
                 (com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldAction) template);
@@ -550,6 +558,10 @@ public interface StagedOrderUpdateAction
         if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputAction) {
             return com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputAction
                     .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetStoreAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetStoreAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetStoreAction) template);
         }
         if (template instanceof com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction) {
             return com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction.deepCopy(
@@ -960,6 +972,14 @@ public interface StagedOrderUpdateAction
     }
 
     /**
+     * builder for setDirectDiscounts subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsActionBuilder setDirectDiscountsBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsActionBuilder.of();
+    }
+
+    /**
      * builder for setItemShippingAddressCustomField subtype
      * @return builder
      */
@@ -1222,6 +1242,14 @@ public interface StagedOrderUpdateAction
      */
     public static com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputActionBuilder setShippingRateInputBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputActionBuilder.of();
+    }
+
+    /**
+     * builder for setStore subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.order_edit.StagedOrderSetStoreActionBuilder setStoreBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetStoreActionBuilder.of();
     }
 
     /**

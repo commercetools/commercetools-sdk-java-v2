@@ -51,7 +51,7 @@ class MigrationInfoPlugin : Plugin<Project> {
             val hash = gitHash(project)
             val result = javaFiles.flatMap { file ->
                 javaFileInfo(file, project, hash, extension.includePackages.orNull, extension.v2BaseFolder.getOrElse(listOf("src/main")))
-            }.associate { entry -> entry.key to entry.value }.toSortedMap()
+            }.associate { entry -> entry.key to entry.value }.filterNot { ignoreClasses.contains(it.key) }.toSortedMap()
 
             val createCommands = javaFiles.flatMap { file ->
                 createCommandFileInfo(file, project, hash, extension.includePackages.orNull, extension.v2BaseFolder.getOrElse(listOf("src/main")))
@@ -371,6 +371,10 @@ class MigrationInfoPlugin : Plugin<Project> {
         }
     }
 
+    val ignoreClasses = listOf(
+            "io.sphere.sdk.subscriptions.commands.updateactions.ChangeStatus"
+    )
+
     val packageMapping = mapOf(
             "io.sphere.sdk.apiclient" to "com.commercetools.api.models.api_client",
             "io.sphere.sdk.carts" to "com.commercetools.api.models.cart",
@@ -472,7 +476,6 @@ class MigrationInfoPlugin : Plugin<Project> {
             "io.sphere.sdk.carts.CartsConfiguration" to "com.commercetools.api.models.project.CartsConfiguration",
             "io.sphere.sdk.orders.CustomLineItemReturnItemDraft" to "com.commercetools.api.models.order.CustomLineItemReturnItem",
             "io.sphere.sdk.orders.LineItemReturnItemDraft" to "com.commercetools.api.models.order.LineItemReturnItem",
-            "io.sphere.sdk.orders.CustomLineItemImportDraft" to "com.commercetools.api.models.cart.CustomLineItemImportDraft",
             "io.sphere.sdk.orders.OrderShippingInfo" to "com.commercetools.api.models.cart.ShippingInfo",
             "io.sphere.sdk.productdiscounts.DiscountedPrice" to "com.commercetools.api.models.common.DiscountedPrice",
             "io.sphere.sdk.cartdiscounts.DiscountedLineItemPriceForQuantity" to "com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity",

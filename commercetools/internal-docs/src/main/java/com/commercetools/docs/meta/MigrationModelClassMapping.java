@@ -1026,7 +1026,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.orders.CustomLineItemImportDraft}</td>
- *   <td>{@link com.commercetools.api.models.cart.CustomLineItemImportDraft}</td>
+ *   <td>{@link com.commercetools.api.models.order.CustomLineItemImportDraft}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.orders.CustomLineItemReturnItem}</td>
@@ -2716,9 +2716,6 @@ package com.commercetools.docs.meta;
  * <tr>
  *   <td>{@link io.sphere.sdk.subscriptions.IronMqDestination}</td>
  * </tr>
- * <tr>
- *   <td>{@link io.sphere.sdk.subscriptions.commands.updateactions.ChangeStatus}</td>
- * </tr>
  * </table>
  *
  * <h2 id="command-mapping">Mapping of commands from SDK v1 to v2</h2>
@@ -3200,7 +3197,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.orders}</td>
- *   <td>{@link com.commercetools.api.models.cart}, {@link com.commercetools.api.models.order}</td>
+ *   <td>{@link com.commercetools.api.models.order}, {@link com.commercetools.api.models.cart}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.orders.commands.updateactions}</td>

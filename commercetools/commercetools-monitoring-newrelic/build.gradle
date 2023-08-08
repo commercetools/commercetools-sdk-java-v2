@@ -1,7 +1,7 @@
 
 dependencies {
     api project(":rmf:rmf-java-base")
-    implementation 'com.newrelic.agent.java:newrelic-api:8.1.0'
+    implementation 'com.newrelic.agent.java:newrelic-api:8.5.0'
 
     testImplementation project(":commercetools:commercetools-sdk-java-api")
 }

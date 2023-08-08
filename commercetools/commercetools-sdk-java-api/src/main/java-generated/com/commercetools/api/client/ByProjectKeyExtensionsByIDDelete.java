@@ -39,7 +39,6 @@ public class ByProjectKeyExtensionsByIDDelete
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyExtensionsByIDDelete, com.commercetools.api.models.extension.Extension>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyExtensionsByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyExtensionsByIDDelete>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyExtensionsByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyExtensionsByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyExtensionsByIDDelete> {
 

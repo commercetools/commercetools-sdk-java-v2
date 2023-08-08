@@ -35,8 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeySubscriptionsPostString extends
         StringBodyApiMethod<ByProjectKeySubscriptionsPostString, com.commercetools.api.models.subscription.Subscription>
-        implements com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsPostString>,
-        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeySubscriptionsPostString>,
+        implements com.commercetools.api.client.Deprecatable201Trait<ByProjectKeySubscriptionsPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsPostString> {
 
     private String projectKey;

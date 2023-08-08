@@ -37,7 +37,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyExtensionsKeyByKeyPostString extends
         StringBodyApiMethod<ByProjectKeyExtensionsKeyByKeyPostString, com.commercetools.api.models.extension.Extension>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyExtensionsKeyByKeyPostString>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyExtensionsKeyByKeyPostString>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyExtensionsKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyExtensionsKeyByKeyPostString> {
 

@@ -35,7 +35,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeySubscriptionsGet extends
         ApiMethod<ByProjectKeySubscriptionsGet, com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse>
         implements ByProjectKeySubscriptionsGetMixin,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeySubscriptionsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeySubscriptionsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeySubscriptionsGet>,

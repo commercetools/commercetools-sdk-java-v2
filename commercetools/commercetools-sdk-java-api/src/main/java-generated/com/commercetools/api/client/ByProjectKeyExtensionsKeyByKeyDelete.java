@@ -39,7 +39,6 @@ public class ByProjectKeyExtensionsKeyByKeyDelete extends
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyExtensionsKeyByKeyDelete, com.commercetools.api.models.extension.Extension>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyExtensionsKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyExtensionsKeyByKeyDelete>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyExtensionsKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyExtensionsKeyByKeyDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyExtensionsKeyByKeyDelete> {
 

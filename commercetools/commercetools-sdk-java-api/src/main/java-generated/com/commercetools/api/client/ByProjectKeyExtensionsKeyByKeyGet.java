@@ -35,8 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyExtensionsKeyByKeyGet
         extends ApiMethod<ByProjectKeyExtensionsKeyByKeyGet, com.commercetools.api.models.extension.Extension>
-        implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyExtensionsKeyByKeyGet>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyExtensionsKeyByKeyGet>,
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyExtensionsKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyExtensionsKeyByKeyGet> {
 
     private String projectKey;

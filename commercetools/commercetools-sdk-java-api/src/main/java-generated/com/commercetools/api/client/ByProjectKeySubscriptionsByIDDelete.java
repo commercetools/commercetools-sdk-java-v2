@@ -40,7 +40,6 @@ public class ByProjectKeySubscriptionsByIDDelete
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeySubscriptionsByIDDelete, com.commercetools.api.models.subscription.Subscription>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeySubscriptionsByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeySubscriptionsByIDDelete>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeySubscriptionsByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeySubscriptionsByIDDelete> {
 

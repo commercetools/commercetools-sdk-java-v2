@@ -32,13 +32,13 @@ tasks.register('runMainMethodThreadLeakTest', JavaExec) {
 apply plugin: com.commercetools.sdk.plugins.MigrationInfoPlugin
 
 migration {
-    outputFolder = "../internal-docs/src/main/java/com/commercetools/docs/meta"
+    outputFolder = project.projectDir.toPath().resolve("../internal-docs/src/main/java/com/commercetools/docs/meta").toString()
     v1BaseFolder = [
             '/Users/jensschulze/workspace/commercetools-jvm-sdk/commercetools-models/src/main',
             '/Users/jensschulze/workspace/commercetools-jvm-sdk/commercetools-models/target/generated-sources/annotations'
     ]
     v2BaseFolder = [
-            '/Users/jensschulze/workspace/commercetools-java-sdks/commercetools/commercetools-sdk-java-api/src/main/java',
-            '/Users/jensschulze/workspace/commercetools-java-sdks/commercetools/commercetools-sdk-java-api/src/main/java-generated'
+           project.rootDir.toPath().resolve('commercetools/commercetools-sdk-java-api/src/main/java').toAbsolutePath().toString(),
+           project.rootDir.toPath().resolve('commercetools/commercetools-sdk-java-api/src/main/java-generated').toAbsolutePath().toString()
     ]
 }

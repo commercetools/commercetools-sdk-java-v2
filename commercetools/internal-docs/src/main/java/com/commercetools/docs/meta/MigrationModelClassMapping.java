@@ -361,14 +361,6 @@ package com.commercetools.docs.meta;
  *   <td>{@link com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction}</td>
  * </tr>
  * <tr>
- *   <td>{@link io.sphere.sdk.carts.commands.updateactions.SetDeliveryAddressCustomField}</td>
- *   <td>{@link com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldAction}</td>
- * </tr>
- * <tr>
- *   <td>{@link io.sphere.sdk.carts.commands.updateactions.SetDeliveryAddressCustomType}</td>
- *   <td>{@link com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeAction}</td>
- * </tr>
- * <tr>
  *   <td>{@link io.sphere.sdk.carts.commands.updateactions.SetItemShippingAddressCustomField}</td>
  *   <td>{@link com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldAction}</td>
  * </tr>
@@ -1495,6 +1487,10 @@ package com.commercetools.docs.meta;
  * <tr>
  *   <td>{@link io.sphere.sdk.productdiscounts.commands.updateactions.SetValidUntil}</td>
  *   <td>{@link com.commercetools.api.models.product_discount.ProductDiscountSetValidUntilAction}</td>
+ * </tr>
+ * <tr>
+ *   <td>{@link io.sphere.sdk.products.AttributeContainer}</td>
+ *   <td>{@link com.commercetools.api.models.product.AttributeContainer}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.ByIdVariantIdentifier}</td>
@@ -2646,7 +2642,7 @@ package com.commercetools.docs.meta;
  * </tr>
  * </table>
  *
- * <h2>Classes with no representation in the v2 SDK</h2>
+ * <h2 id="class-no-representation">Classes with no representation in the v2 SDK</h2>
  *
  * <table>
  * <caption></caption>
@@ -2661,6 +2657,12 @@ package com.commercetools.docs.meta;
  *   <td>{@link io.sphere.sdk.carts.LineItemLike}</td>
  * </tr>
  * <tr>
+ *   <td>{@link io.sphere.sdk.carts.commands.updateactions.SetDeliveryAddressCustomField}</td>
+ * </tr>
+ * <tr>
+ *   <td>{@link io.sphere.sdk.carts.commands.updateactions.SetDeliveryAddressCustomType}</td>
+ * </tr>
+ * <tr>
  *   <td>{@link io.sphere.sdk.inventory.AvailabilityInfo}</td>
  * </tr>
  * <tr>
@@ -2671,9 +2673,6 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.productdiscounts.ProductDiscountPredicate}</td>
- * </tr>
- * <tr>
- *   <td>{@link io.sphere.sdk.products.AttributeContainer}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.products.AttributeContainerDraft}</td>
@@ -2716,6 +2715,9 @@ package com.commercetools.docs.meta;
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.subscriptions.IronMqDestination}</td>
+ * </tr>
+ * <tr>
+ *   <td>{@link io.sphere.sdk.subscriptions.commands.updateactions.ChangeStatus}</td>
  * </tr>
  * </table>
  *

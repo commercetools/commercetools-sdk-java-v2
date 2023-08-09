@@ -268,7 +268,7 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      * @param supplier supplier for the value to be set
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final Supplier<Double> supplier) {
+    public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final Supplier<Integer> supplier) {
         return copy().withQueryParam("fuzzyLevel", supplier.get());
     }
 
@@ -277,7 +277,7 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      * @param supplier supplier for the value to be added
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Supplier<Double> supplier) {
+    public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Supplier<Integer> supplier) {
         return copy().addQueryParam("fuzzyLevel", supplier.get());
     }
 

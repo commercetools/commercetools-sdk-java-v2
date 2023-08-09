@@ -77,9 +77,9 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withFuzzyLevel(0.110830665)
+                                .withFuzzyLevel(9)
                                 .createHttpRequest(),
-                        "get", "test_projectKey/product-projections/search?fuzzyLevel=0.110830665", },
+                        "get", "test_projectKey/product-projections/search?fuzzyLevel=9", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -238,7 +238,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
                         .productProjections()
                         .search()
                         .get()
-                        .withFuzzyLevel(0.110830665), },
+                        .withFuzzyLevel(9), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .search()

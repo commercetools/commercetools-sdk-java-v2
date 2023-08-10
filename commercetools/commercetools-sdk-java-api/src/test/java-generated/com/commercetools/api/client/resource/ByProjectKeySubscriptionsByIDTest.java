@@ -63,24 +63,9 @@ public class ByProjectKeySubscriptionsByIDTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .withId("test_ID")
-                        .get()
-                        .withExpand("expand")
-                        .createHttpRequest(), "get", "test_projectKey/subscriptions/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .withId("test_ID")
-                        .get()
-                        .createHttpRequest(), "get", "test_projectKey/subscriptions/test_ID", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .withId("test_ID")
-                        .post(com.commercetools.api.models.subscription.SubscriptionUpdate.of())
-                        .withExpand("expand")
-                        .createHttpRequest(), "post", "test_projectKey/subscriptions/test_ID?expand=expand", },
+        return new Object[][] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").subscriptions().withId("test_ID").get().createHttpRequest(),
+                "get", "test_projectKey/subscriptions/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .withId("test_ID")
@@ -92,14 +77,6 @@ public class ByProjectKeySubscriptionsByIDTest {
                         .delete()
                         .withVersion(2)
                         .createHttpRequest(), "delete", "test_projectKey/subscriptions/test_ID?version=2", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .subscriptions()
-                                .withId("test_ID")
-                                .delete()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "delete", "test_projectKey/subscriptions/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .withId("test_ID")
@@ -110,17 +87,7 @@ public class ByProjectKeySubscriptionsByIDTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .withId("test_ID")
-                        .get()
-                        .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().withId("test_ID").get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .withId("test_ID")
-                        .post(com.commercetools.api.models.subscription.SubscriptionUpdate.of())
-                        .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .withId("test_ID")
@@ -130,11 +97,6 @@ public class ByProjectKeySubscriptionsByIDTest {
                         .withId("test_ID")
                         .delete()
                         .withVersion(2), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .subscriptions()
-                        .withId("test_ID")
-                        .delete()
-                        .withExpand("expand"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").subscriptions().withId("test_ID").delete(), } };
     }

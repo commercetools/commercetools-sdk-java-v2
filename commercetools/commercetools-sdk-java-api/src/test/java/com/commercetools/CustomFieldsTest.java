@@ -51,6 +51,8 @@ public class CustomFieldsTest {
             localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
         assertThat(fields.get("datetime")).isInstanceOfSatisfying(ZonedDateTime.class,
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+        assertThat(fields.get("datetime-zero")).isInstanceOfSatisfying(ZonedDateTime.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.000Z"));
         assertThat(fields.get("time-simple")).isInstanceOfSatisfying(LocalTime.class,
             localTime -> assertThat(localTime).isEqualTo("13:15:00"));
         assertThat(fields.get("datetime-simple")).isInstanceOfSatisfying(ZonedDateTime.class,

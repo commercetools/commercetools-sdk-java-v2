@@ -33,7 +33,7 @@ jobs:
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         run: ./gradlew spotlessApply
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
             commit_message: "spotless: Fix code style"
@@ -45,7 +45,7 @@ jobs:
         if: steps.auto-commit-action.outputs.changes_detected == 'true'
         run: echo "${{steps.auto-commit-action.outputs.commit_hash}}" >> .git-blame-ignore-revs
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
             file_pattern: '.git-blame-ignore-revs'
@@ -57,7 +57,7 @@ jobs:
       - name: License check
         run: ./gradlew checkLicense
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
             file_pattern: 'licenses/index.json licenses/**/index.json'
@@ -108,7 +108,7 @@ jobs:
       -   name: Checkout
           uses: actions/checkout@v3
 
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: gradle/wrapper-validation-action@56b90f209b02bf6d1deae490e9ef18b21a389cd4
 
       -   name: Setup Java
           uses: actions/setup-java@v3
@@ -117,7 +117,7 @@ jobs:
               java-version: '17'
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@v1
+        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
 
       -   name: build javadoc
           if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'

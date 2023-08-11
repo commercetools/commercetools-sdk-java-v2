@@ -109,7 +109,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Asset.</p>
+     *  <p>User-defined identifier of the Asset. It is unique per Category or ProductVariant.</p>
      */
 
     public String getKey() {

@@ -21,7 +21,7 @@ jobs:
 
       - uses: gradle/wrapper-validation-action@56b90f209b02bf6d1deae490e9ef18b21a389cd4
 
-      - uses: jenschude/auto-create-pr-action@v0.3.1
+      - uses: jenschude/auto-create-pr-action@v8733ffe7f93fbeab30113ed3964dfb02bb6984b5
         with:
             request_title: "Update generated SDKs"
             github_token: ${{ secrets.GITHUB_TOKEN }}

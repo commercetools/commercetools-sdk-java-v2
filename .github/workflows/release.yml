@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: gradle/wrapper-validation-action@56b90f209b02bf6d1deae490e9ef18b21a389cd4
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -57,7 +57,7 @@ jobs:
         with:
             ref: main
 
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: gradle/wrapper-validation-action@56b90f209b02bf6d1deae490e9ef18b21a389cd4
 
       - run: ./gradlew -Pversion=${{ github.ref_name }} writeVersionToReadme setVersion nextMinorVersion snapshotVersion
 
@@ -102,7 +102,7 @@ jobs:
           java-version: '17'
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@v1
+        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
 
       - run: ./gradlew -Pversion=${{ github.ref_name }} alljavadoc
         working-directory: sdk

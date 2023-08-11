@@ -56,6 +56,8 @@ public class AttributesTest {
             enumValue -> assertThat(enumValue.getLabel().values().get("en")).isEqualTo("foo"));
         assertThat(attributes.get("date")).isInstanceOfSatisfying(LocalDate.class,
             localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
+        assertThat(attributes.get("date-text")).isInstanceOfSatisfying(String.class,
+            localDate -> assertThat(localDate).isEqualTo("2020-01-01T"));
         assertThat(attributes.get("time")).isInstanceOfSatisfying(LocalTime.class,
             localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
         assertThat(attributes.get("time-simple")).isInstanceOfSatisfying(LocalTime.class,

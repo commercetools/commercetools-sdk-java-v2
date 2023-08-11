@@ -45,6 +45,8 @@ public class CustomFieldsTest {
             enumValue -> assertThat(enumValue.getLabel().values().get("en")).isEqualTo("foo"));
         assertThat(fields.get("date")).isInstanceOfSatisfying(LocalDate.class,
             localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
+        assertThat(fields.get("date-text")).isInstanceOfSatisfying(String.class,
+            localDate -> assertThat(localDate).isEqualTo("2020-01-01T"));
         assertThat(fields.get("time")).isInstanceOfSatisfying(LocalTime.class,
             localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
         assertThat(fields.get("datetime")).isInstanceOfSatisfying(ZonedDateTime.class,

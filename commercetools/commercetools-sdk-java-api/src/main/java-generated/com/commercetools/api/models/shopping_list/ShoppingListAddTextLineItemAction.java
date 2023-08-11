@@ -50,6 +50,14 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
     public LocalizedString getName();
 
     /**
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Description of the TextLineItem.</p>
      * @return description
      */
@@ -87,6 +95,13 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
      */
 
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Description of the TextLineItem.</p>
@@ -132,6 +147,7 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
     public static ShoppingListAddTextLineItemAction of(final ShoppingListAddTextLineItemAction template) {
         ShoppingListAddTextLineItemActionImpl instance = new ShoppingListAddTextLineItemActionImpl();
         instance.setName(template.getName());
+        instance.setKey(template.getKey());
         instance.setDescription(template.getDescription());
         instance.setQuantity(template.getQuantity());
         instance.setAddedAt(template.getAddedAt());
@@ -152,6 +168,7 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
         }
         ShoppingListAddTextLineItemActionImpl instance = new ShoppingListAddTextLineItemActionImpl();
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setKey(template.getKey());
         instance.setDescription(
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setQuantity(template.getQuantity());

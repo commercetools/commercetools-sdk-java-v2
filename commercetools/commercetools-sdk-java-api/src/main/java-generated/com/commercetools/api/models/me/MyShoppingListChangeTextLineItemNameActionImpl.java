@@ -25,6 +25,8 @@ public class MyShoppingListChangeTextLineItemNameActionImpl
 
     private String textLineItemId;
 
+    private String textLineItemKey;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
@@ -32,8 +34,10 @@ public class MyShoppingListChangeTextLineItemNameActionImpl
      */
     @JsonCreator
     MyShoppingListChangeTextLineItemNameActionImpl(@JsonProperty("textLineItemId") final String textLineItemId,
+            @JsonProperty("textLineItemKey") final String textLineItemKey,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.textLineItemId = textLineItemId;
+        this.textLineItemKey = textLineItemKey;
         this.name = name;
         this.action = CHANGE_TEXT_LINE_ITEM_NAME;
     }
@@ -54,11 +58,19 @@ public class MyShoppingListChangeTextLineItemNameActionImpl
     }
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getTextLineItemId() {
         return this.textLineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getTextLineItemKey() {
+        return this.textLineItemKey;
     }
 
     /**
@@ -71,6 +83,10 @@ public class MyShoppingListChangeTextLineItemNameActionImpl
 
     public void setTextLineItemId(final String textLineItemId) {
         this.textLineItemId = textLineItemId;
+    }
+
+    public void setTextLineItemKey(final String textLineItemKey) {
+        this.textLineItemKey = textLineItemKey;
     }
 
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
@@ -89,16 +105,22 @@ public class MyShoppingListChangeTextLineItemNameActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(textLineItemId, that.textLineItemId)
+                .append(textLineItemKey, that.textLineItemKey)
                 .append(name, that.name)
                 .append(action, that.action)
                 .append(textLineItemId, that.textLineItemId)
+                .append(textLineItemKey, that.textLineItemKey)
                 .append(name, that.name)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(textLineItemId).append(name).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(textLineItemId)
+                .append(textLineItemKey)
+                .append(name)
+                .toHashCode();
     }
 
 }

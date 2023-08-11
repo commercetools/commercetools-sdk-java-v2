@@ -76,6 +76,14 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public String getId();
 
     /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Name of the Product.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
      * @return name
@@ -166,6 +174,13 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public void setId(final String id);
 
     /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
      *  <p>Name of the Product.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
      * @param name value to be set
@@ -236,6 +251,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
         instance.setCustom(template.getCustom());
         instance.setDeactivatedAt(template.getDeactivatedAt());
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setProductId(template.getProductId());
         instance.setProductType(template.getProductType());
@@ -261,6 +277,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setDeactivatedAt(template.getDeactivatedAt());
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setProductId(template.getProductId());
         instance.setProductType(

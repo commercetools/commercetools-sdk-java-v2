@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppingListAddLineItemAction> {
 
     @Nullable
+    private String key;
+
+    @Nullable
     private String sku;
 
     @Nullable
@@ -40,6 +43,17 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public MyShoppingListAddLineItemActionBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
@@ -133,6 +147,16 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
     }
 
     /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p><code>sku</code> of the ProductVariant.</p>
      * @return sku
      */
@@ -197,7 +221,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
      * @return MyShoppingListAddLineItemAction
      */
     public MyShoppingListAddLineItemAction build() {
-        return new MyShoppingListAddLineItemActionImpl(sku, productId, variantId, quantity, addedAt, custom);
+        return new MyShoppingListAddLineItemActionImpl(key, sku, productId, variantId, quantity, addedAt, custom);
     }
 
     /**
@@ -205,7 +229,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
      * @return MyShoppingListAddLineItemAction
      */
     public MyShoppingListAddLineItemAction buildUnchecked() {
-        return new MyShoppingListAddLineItemActionImpl(sku, productId, variantId, quantity, addedAt, custom);
+        return new MyShoppingListAddLineItemActionImpl(key, sku, productId, variantId, quantity, addedAt, custom);
     }
 
     /**
@@ -223,6 +247,7 @@ public class MyShoppingListAddLineItemActionBuilder implements Builder<MyShoppin
      */
     public static MyShoppingListAddLineItemActionBuilder of(final MyShoppingListAddLineItemAction template) {
         MyShoppingListAddLineItemActionBuilder builder = new MyShoppingListAddLineItemActionBuilder();
+        builder.key = template.getKey();
         builder.sku = template.getSku();
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();

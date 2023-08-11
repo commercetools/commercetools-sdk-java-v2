@@ -4,6 +4,8 @@ package com.commercetools.api.models.shopping_list;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShoppingListChangeTextLineItemNameAction shoppingListChangeTextLineItemNameAction = ShoppingListChangeTextLineItemNameAction.builder()
- *             .textLineItemId("{textLineItemId}")
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
@@ -24,18 +25,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ShoppingListChangeTextLineItemNameActionBuilder
         implements Builder<ShoppingListChangeTextLineItemNameAction> {
 
+    @Nullable
     private String textLineItemId;
+
+    @Nullable
+    private String textLineItemKey;
 
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      * @return Builder
      */
 
-    public ShoppingListChangeTextLineItemNameActionBuilder textLineItemId(final String textLineItemId) {
+    public ShoppingListChangeTextLineItemNameActionBuilder textLineItemId(@Nullable final String textLineItemId) {
         this.textLineItemId = textLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param textLineItemKey value to be set
+     * @return Builder
+     */
+
+    public ShoppingListChangeTextLineItemNameActionBuilder textLineItemKey(@Nullable final String textLineItemKey) {
+        this.textLineItemKey = textLineItemKey;
         return this;
     }
 
@@ -76,12 +92,23 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
     }
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
 
+    @Nullable
     public String getTextLineItemId() {
         return this.textLineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return textLineItemKey
+     */
+
+    @Nullable
+    public String getTextLineItemKey() {
+        return this.textLineItemKey;
     }
 
     /**
@@ -98,10 +125,8 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
      * @return ShoppingListChangeTextLineItemNameAction
      */
     public ShoppingListChangeTextLineItemNameAction build() {
-        Objects.requireNonNull(textLineItemId,
-            ShoppingListChangeTextLineItemNameAction.class + ": textLineItemId is missing");
         Objects.requireNonNull(name, ShoppingListChangeTextLineItemNameAction.class + ": name is missing");
-        return new ShoppingListChangeTextLineItemNameActionImpl(textLineItemId, name);
+        return new ShoppingListChangeTextLineItemNameActionImpl(textLineItemId, textLineItemKey, name);
     }
 
     /**
@@ -109,7 +134,7 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
      * @return ShoppingListChangeTextLineItemNameAction
      */
     public ShoppingListChangeTextLineItemNameAction buildUnchecked() {
-        return new ShoppingListChangeTextLineItemNameActionImpl(textLineItemId, name);
+        return new ShoppingListChangeTextLineItemNameActionImpl(textLineItemId, textLineItemKey, name);
     }
 
     /**
@@ -129,6 +154,7 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
             final ShoppingListChangeTextLineItemNameAction template) {
         ShoppingListChangeTextLineItemNameActionBuilder builder = new ShoppingListChangeTextLineItemNameActionBuilder();
         builder.textLineItemId = template.getTextLineItemId();
+        builder.textLineItemKey = template.getTextLineItemKey();
         builder.name = template.getName();
         return builder;
     }

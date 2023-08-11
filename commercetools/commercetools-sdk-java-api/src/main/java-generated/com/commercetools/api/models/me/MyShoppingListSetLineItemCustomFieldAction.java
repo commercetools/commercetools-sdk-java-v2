@@ -21,7 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyShoppingListSetLineItemCustomFieldAction myShoppingListSetLineItemCustomFieldAction = MyShoppingListSetLineItemCustomFieldAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -37,12 +36,20 @@ public interface MyShoppingListSetLineItemCustomFieldAction extends MyShoppingLi
     String SET_LINE_ITEM_CUSTOM_FIELD = "setLineItemCustomField";
 
     /**
-     *  <p>Unique identifier of an existing ShoppingListLineItem in the ShoppingList.</p>
+     *  <p>Unique identifier of an the ShoppingListLineItem. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -61,11 +68,18 @@ public interface MyShoppingListSetLineItemCustomFieldAction extends MyShoppingLi
     public Object getValue();
 
     /**
-     *  <p>Unique identifier of an existing ShoppingListLineItem in the ShoppingList.</p>
+     *  <p>Unique identifier of an the ShoppingListLineItem. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -98,6 +112,7 @@ public interface MyShoppingListSetLineItemCustomFieldAction extends MyShoppingLi
             final MyShoppingListSetLineItemCustomFieldAction template) {
         MyShoppingListSetLineItemCustomFieldActionImpl instance = new MyShoppingListSetLineItemCustomFieldActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
@@ -116,6 +131,7 @@ public interface MyShoppingListSetLineItemCustomFieldAction extends MyShoppingLi
         }
         MyShoppingListSetLineItemCustomFieldActionImpl instance = new MyShoppingListSetLineItemCustomFieldActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;

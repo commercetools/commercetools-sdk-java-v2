@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShoppingListSetTextLineItemDescriptionAction shoppingListSetTextLineItemDescriptionAction = ShoppingListSetTextLineItemDescriptionAction.builder()
- *             .textLineItemId("{textLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -25,19 +24,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ShoppingListSetTextLineItemDescriptionActionBuilder
         implements Builder<ShoppingListSetTextLineItemDescriptionAction> {
 
+    @Nullable
     private String textLineItemId;
+
+    @Nullable
+    private String textLineItemKey;
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      * @return Builder
      */
 
-    public ShoppingListSetTextLineItemDescriptionActionBuilder textLineItemId(final String textLineItemId) {
+    public ShoppingListSetTextLineItemDescriptionActionBuilder textLineItemId(@Nullable final String textLineItemId) {
         this.textLineItemId = textLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param textLineItemKey value to be set
+     * @return Builder
+     */
+
+    public ShoppingListSetTextLineItemDescriptionActionBuilder textLineItemKey(@Nullable final String textLineItemKey) {
+        this.textLineItemKey = textLineItemKey;
         return this;
     }
 
@@ -78,12 +92,23 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
     }
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
 
+    @Nullable
     public String getTextLineItemId() {
         return this.textLineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return textLineItemKey
+     */
+
+    @Nullable
+    public String getTextLineItemKey() {
+        return this.textLineItemKey;
     }
 
     /**
@@ -101,9 +126,7 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
      * @return ShoppingListSetTextLineItemDescriptionAction
      */
     public ShoppingListSetTextLineItemDescriptionAction build() {
-        Objects.requireNonNull(textLineItemId,
-            ShoppingListSetTextLineItemDescriptionAction.class + ": textLineItemId is missing");
-        return new ShoppingListSetTextLineItemDescriptionActionImpl(textLineItemId, description);
+        return new ShoppingListSetTextLineItemDescriptionActionImpl(textLineItemId, textLineItemKey, description);
     }
 
     /**
@@ -111,7 +134,7 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
      * @return ShoppingListSetTextLineItemDescriptionAction
      */
     public ShoppingListSetTextLineItemDescriptionAction buildUnchecked() {
-        return new ShoppingListSetTextLineItemDescriptionActionImpl(textLineItemId, description);
+        return new ShoppingListSetTextLineItemDescriptionActionImpl(textLineItemId, textLineItemKey, description);
     }
 
     /**
@@ -131,6 +154,7 @@ public class ShoppingListSetTextLineItemDescriptionActionBuilder
             final ShoppingListSetTextLineItemDescriptionAction template) {
         ShoppingListSetTextLineItemDescriptionActionBuilder builder = new ShoppingListSetTextLineItemDescriptionActionBuilder();
         builder.textLineItemId = template.getTextLineItemId();
+        builder.textLineItemKey = template.getTextLineItemKey();
         builder.description = template.getDescription();
         return builder;
     }

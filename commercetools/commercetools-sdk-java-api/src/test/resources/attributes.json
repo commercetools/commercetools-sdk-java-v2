@@ -71,6 +71,14 @@
             "value": "2020-01-01T13:15:00Z"
         },
         {
+            "name": "datetime-text",
+            "value": "2018-09-24T00:00:00-0400"
+        },
+        {
+            "name": "datetime-offset",
+            "value": "2018-09-24T00:00:00-04:00"
+        },
+        {
             "name": "boolean",
             "value": true
         },

@@ -39,7 +39,7 @@ public interface InvalidStateTransitionError extends ErrorObject {
     String INVALID_TRANSITION = "InvalidTransition";
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     *  <p>Every Import Operation is assigned one of the following states.</p>
      * @return currentState
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface InvalidStateTransitionError extends ErrorObject {
     public ProcessingState getCurrentState();
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     *  <p>Every Import Operation is assigned one of the following states.</p>
      * @return newState
      */
     @NotNull
@@ -55,14 +55,14 @@ public interface InvalidStateTransitionError extends ErrorObject {
     public ProcessingState getNewState();
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     *  <p>Every Import Operation is assigned one of the following states.</p>
      * @param currentState value to be set
      */
 
     public void setCurrentState(final ProcessingState currentState);
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     *  <p>Every Import Operation is assigned one of the following states.</p>
      * @param newState value to be set
      */
 

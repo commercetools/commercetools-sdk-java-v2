@@ -83,13 +83,21 @@ public class ByProjectKeyTest {
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withUserId("userId").createHttpRequest(),
                         "get", "test_projectKey?userId=userId", },
-                new Object[] {
-                        apiRoot.withProjectKeyValue("test_projectKey").get().withType("type").createHttpRequest(),
-                        "get", "test_projectKey?type=type", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withClientId("clientId")
                         .createHttpRequest(), "get", "test_projectKey?clientId=clientId", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
+                        .withCustomerId("customerId")
+                        .createHttpRequest(), "get", "test_projectKey?customerId=customerId", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
+                        .withAssociateId("associateId")
+                        .createHttpRequest(), "get", "test_projectKey?associateId=associateId", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey").get().withType("type").createHttpRequest(),
+                        "get", "test_projectKey?type=type", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withResourceId("resourceId")
@@ -107,10 +115,6 @@ public class ByProjectKeyTest {
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withStores("stores").createHttpRequest(),
                         "get", "test_projectKey?stores=stores", },
-                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
-                        .get()
-                        .withCustomerId("customerId")
-                        .createHttpRequest(), "get", "test_projectKey?customerId=customerId", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .get()
@@ -138,14 +142,15 @@ public class ByProjectKeyTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withLimit(7), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withOffset(3), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withUserId("userId"), },
-                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withType("type"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withClientId("clientId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withCustomerId("customerId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withAssociateId("associateId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withType("type"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceId("resourceId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceKey("resourceKey"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withSource("source"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withChanges("changes"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withStores("stores"), },
-                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withCustomerId("customerId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .get()
                         .withExcludePlatformInitiatedChanges(

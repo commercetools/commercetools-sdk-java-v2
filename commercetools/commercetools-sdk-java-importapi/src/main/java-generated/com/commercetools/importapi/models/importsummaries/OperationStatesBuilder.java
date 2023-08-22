@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .waitForMasterVariant(1)
  *             .imported(1)
  *             .rejected(1)
+ *             .canceled(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -37,6 +38,8 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     private Long imported;
 
     private Long rejected;
+
+    private Long canceled;
 
     /**
      *  <p>The number of resources in the <code>processing</code> state.</p>
@@ -105,6 +108,17 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
+     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     * @param canceled value to be set
+     * @return Builder
+     */
+
+    public OperationStatesBuilder canceled(final Long canceled) {
+        this.canceled = canceled;
+        return this;
+    }
+
+    /**
      *  <p>The number of resources in the <code>processing</code> state.</p>
      * @return processing
      */
@@ -159,6 +173,15 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
+     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     * @return canceled
+     */
+
+    public Long getCanceled() {
+        return this.canceled;
+    }
+
+    /**
      * builds OperationStates with checking for non-null required values
      * @return OperationStates
      */
@@ -169,8 +192,9 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
         Objects.requireNonNull(waitForMasterVariant, OperationStates.class + ": waitForMasterVariant is missing");
         Objects.requireNonNull(imported, OperationStates.class + ": imported is missing");
         Objects.requireNonNull(rejected, OperationStates.class + ": rejected is missing");
+        Objects.requireNonNull(canceled, OperationStates.class + ": canceled is missing");
         return new OperationStatesImpl(processing, validationFailed, unresolved, waitForMasterVariant, imported,
-            rejected);
+            rejected, canceled);
     }
 
     /**
@@ -179,7 +203,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
      */
     public OperationStates buildUnchecked() {
         return new OperationStatesImpl(processing, validationFailed, unresolved, waitForMasterVariant, imported,
-            rejected);
+            rejected, canceled);
     }
 
     /**
@@ -203,6 +227,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
         builder.waitForMasterVariant = template.getWaitForMasterVariant();
         builder.imported = template.getImported();
         builder.rejected = template.getRejected();
+        builder.canceled = template.getCanceled();
         return builder;
     }
 

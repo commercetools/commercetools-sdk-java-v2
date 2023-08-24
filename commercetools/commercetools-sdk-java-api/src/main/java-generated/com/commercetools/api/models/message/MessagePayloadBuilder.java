@@ -539,6 +539,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.QuoteDeletedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.QuoteRenegotiationRequestedMessagePayloadBuilder quoteRenegotiationRequestedBuilder() {
+        return com.commercetools.api.models.message.QuoteRenegotiationRequestedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadBuilder quoteRequestCreatedBuilder() {
         return com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadBuilder.of();
     }

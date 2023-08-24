@@ -159,6 +159,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteCreatedMessagePayloadImpl.class, name = QuoteCreatedMessagePayload.QUOTE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteCustomerChangedMessagePayloadImpl.class, name = QuoteCustomerChangedMessagePayload.QUOTE_CUSTOMER_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteDeletedMessagePayloadImpl.class, name = QuoteDeletedMessagePayload.QUOTE_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRenegotiationRequestedMessagePayloadImpl.class, name = QuoteRenegotiationRequestedMessagePayload.QUOTE_RENEGOTIATION_REQUESTED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadImpl.class, name = QuoteRequestCreatedMessagePayload.QUOTE_REQUEST_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestCustomerChangedMessagePayloadImpl.class, name = QuoteRequestCustomerChangedMessagePayload.QUOTE_REQUEST_CUSTOMER_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestDeletedMessagePayloadImpl.class, name = QuoteRequestDeletedMessagePayload.QUOTE_REQUEST_DELETED),
@@ -574,6 +575,10 @@ public interface MessagePayload {
         if (template instanceof com.commercetools.api.models.message.QuoteDeletedMessagePayload) {
             return com.commercetools.api.models.message.QuoteDeletedMessagePayload
                     .deepCopy((com.commercetools.api.models.message.QuoteDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.QuoteRenegotiationRequestedMessagePayload) {
+            return com.commercetools.api.models.message.QuoteRenegotiationRequestedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.QuoteRenegotiationRequestedMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.QuoteRequestCreatedMessagePayload) {
             return com.commercetools.api.models.message.QuoteRequestCreatedMessagePayload
@@ -1789,6 +1794,14 @@ public interface MessagePayload {
      */
     public static com.commercetools.api.models.message.QuoteDeletedMessagePayloadBuilder quoteDeletedBuilder() {
         return com.commercetools.api.models.message.QuoteDeletedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for quoteRenegotiationRequested subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.QuoteRenegotiationRequestedMessagePayloadBuilder quoteRenegotiationRequestedBuilder() {
+        return com.commercetools.api.models.message.QuoteRenegotiationRequestedMessagePayloadBuilder.of();
     }
 
     /**

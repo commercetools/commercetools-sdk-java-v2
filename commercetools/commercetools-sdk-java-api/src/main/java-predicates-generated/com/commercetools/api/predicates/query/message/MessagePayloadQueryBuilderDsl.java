@@ -689,6 +689,14 @@ public class MessagePayloadQueryBuilderDsl {
             MessagePayloadQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asQuoteRenegotiationRequested(
+            Function<com.commercetools.api.predicates.query.message.QuoteRenegotiationRequestedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.QuoteRenegotiationRequestedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.QuoteRenegotiationRequestedMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asQuoteRequestCreated(
             Function<com.commercetools.api.predicates.query.message.QuoteRequestCreatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.QuoteRequestCreatedMessagePayloadQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

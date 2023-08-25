@@ -97,8 +97,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     private ClientBuilder(final HandlerStack stack) {
         this.stack = () -> stack;
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
+        this.serializer = ResponseSerializer::of;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
         this.useAuthCircuitBreaker = false;
         this.authRetries = 1;
@@ -108,8 +107,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         this.httpClient = HttpClientSupplier.of(new ForkJoinPool()).get();
         this.oauthHttpClient = httpClient;
         this.stack = stackSupplier();
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
+        this.serializer = ResponseSerializer::of;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
         this.useAuthCircuitBreaker = false;
         this.authRetries = 1;
@@ -119,8 +117,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         this.httpClient = HttpClientSupplier.of(httpClientExecutorService).get();
         this.oauthHttpClient = httpClient;
         this.stack = stackSupplier();
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
+        this.serializer = ResponseSerializer::of;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
         this.useAuthCircuitBreaker = false;
         this.authRetries = 1;
@@ -130,8 +127,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         this.httpClient = httpClient;
         this.oauthHttpClient = HttpClientSupplier.of(new ForkJoinPool()).get();
         this.stack = stackSupplier();
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
+        this.serializer = ResponseSerializer::of;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
         this.authRetries = 1;
     }
@@ -140,8 +136,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         this.httpClient = httpClient;
         this.oauthHttpClient = httpClient;
         this.stack = stackSupplier();
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
+        this.serializer = ResponseSerializer::of;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
         this.authRetries = 1;
     }
@@ -317,7 +312,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      */
     public ClientBuilder defaultClient(final URI apiBaseUrl) {
         return withApiBaseUrl(apiBaseUrl).withErrorMiddleware()
-                .withSerializer(ResponseSerializer.of())
+                .withSerializer(ResponseSerializer::of)
                 .withInternalLoggerFactory((request, topic) -> InternalLogger.getLogger(COMMERCETOOLS + "." + topic))
                 .withUserAgentSupplier(ClientBuilder::buildDefaultUserAgent)
                 .addAcceptGZipMiddleware();

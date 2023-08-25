@@ -18,9 +18,14 @@ public abstract class BaseAuthTokenSupplier extends AutoCloseableService impleme
     protected final ResponseSerializer serializer;
 
     public BaseAuthTokenSupplier(final VrapHttpClient vrapHttpClient, ApiHttpRequest apiHttpRequest) {
+        this(vrapHttpClient, apiHttpRequest, ResponseSerializer.of());
+    }
+
+    public BaseAuthTokenSupplier(final VrapHttpClient vrapHttpClient, ApiHttpRequest apiHttpRequest,
+            ResponseSerializer serializer) {
         this.vrapHttpClient = vrapHttpClient;
         this.apiHttpRequest = apiHttpRequest;
-        this.serializer = ResponseSerializer.of();
+        this.serializer = serializer;
     }
 
     @Override

@@ -21,6 +21,12 @@ public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements R
         this.tokenStorage = tokenStorage;
     }
 
+    public RefreshFlowTokenSupplier(final String clientId, final String clientSecret, final String tokenEndpoint,
+            final TokenStorage tokenStorage, final VrapHttpClient vrapHttpClient, final ResponseSerializer serializer) {
+        super(vrapHttpClient, constructApiHttpRequest(clientId, clientSecret, tokenEndpoint), serializer);
+        this.tokenStorage = tokenStorage;
+    }
+
     @Override
     public CompletableFuture<AuthenticationToken> refreshToken() {
         final AuthenticationToken token = tokenStorage.getToken();

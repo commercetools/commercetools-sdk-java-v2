@@ -398,7 +398,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      */
     @Deprecated
     public ClientBuilder withClientCredentials(final ClientCredentials credentials, final String tokenEndpoint,
-            VrapHttpClient httpClient) {
+            final VrapHttpClient httpClient) {
         return withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);
     }
 
@@ -420,7 +420,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,
-            Supplier<HandlerStack> httpClientSupplier) {
+            final Supplier<HandlerStack> httpClientSupplier) {
         return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClientSupplier);
     }
 
@@ -432,14 +432,14 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,
-            VrapHttpClient httpClient) {
+            final VrapHttpClient httpClient) {
         return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClient);
     }
 
     private TokenSupplier createClientCredentialsTokenSupplier(final ClientCredentials credentials,
-            final String tokenEndpoint, final VrapHttpClient httpClient) {
+            final String tokenEndpoint, final VrapHttpClient httpClient, final ResponseSerializer serializer) {
         return new ClientCredentialsTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),
-            credentials.getScopes(), tokenEndpoint, httpClient);
+            credentials.getScopes(), tokenEndpoint, httpClient, serializer);
     }
 
     /**
@@ -460,9 +460,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
-            Supplier<HandlerStack> httpClientSupplier) {
-        return withTokenSupplier(() -> createInMemoryTokenSupplier(
-            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));
+            final Supplier<HandlerStack> httpClientSupplier) {
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(createClientCredentialsTokenSupplier(credentials,
+            tokenEndpoint, httpClientSupplier.get(), serializer.get())));
     }
 
     /**
@@ -473,9 +473,23 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
-            VrapHttpClient httpClient) {
+            final VrapHttpClient httpClient) {
         return withTokenSupplier(() -> createInMemoryTokenSupplier(
-            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient)));
+            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient, serializer.get())));
+    }
+
+    /**
+     * configure the client to use client credentials flow
+     * @param credentials {@link ClientCredentials} to be used for authentication
+     * @param tokenEndpoint URI to be used for authentication
+     * @param httpClient {@link VrapHttpClient} to use for authentication
+     * @param serializer {@link ResponseSerializer} to be used for token deserialization
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
+            final VrapHttpClient httpClient, final ResponseSerializer serializer) {
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient, serializer)));
     }
 
     /**
@@ -505,9 +519,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
-            Supplier<HandlerStack> httpClientSupplier) {
-        return withTokenSupplier(() -> createInMemoryTokenSupplier(
-            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));
+            final Supplier<HandlerStack> httpClientSupplier) {
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(createAnonymousSessionTokenSupplier(credentials,
+            tokenEndpoint, httpClientSupplier.get(), serializer.get())));
     }
 
     /**
@@ -518,15 +532,29 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
-            VrapHttpClient httpClient) {
+            final VrapHttpClient httpClient) {
         return withTokenSupplier(() -> createInMemoryTokenSupplier(
-            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient)));
+            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient, serializer.get())));
+    }
+
+    /**
+     * configure the client to use anonymous session flow
+     * @param credentials {@link ClientCredentials} to be used for authentication
+     * @param tokenEndpoint URI to be used for authentication
+     * @param httpClient {@link VrapHttpClient} to use for authentication
+     * @param serializer {@link ResponseSerializer} to be used for token deserialization
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
+            final VrapHttpClient httpClient, final ResponseSerializer serializer) {
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient, serializer)));
     }
 
     private TokenSupplier createAnonymousSessionTokenSupplier(final ClientCredentials credentials,
-            final String tokenEndpoint, final VrapHttpClient httpClient) {
+            final String tokenEndpoint, final VrapHttpClient httpClient, final ResponseSerializer serializer) {
         return new AnonymousSessionTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),
-            credentials.getScopes(), tokenEndpoint, httpClient);
+            credentials.getScopes(), tokenEndpoint, httpClient, serializer);
     }
 
     /**
@@ -553,9 +581,10 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
-            final String refreshTokenEndpoint, final TokenStorage storage, Supplier<HandlerStack> httpClientSupplier) {
+            final String refreshTokenEndpoint, final TokenStorage storage,
+            final Supplier<HandlerStack> httpClientSupplier) {
         return withTokenSupplier(() -> createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
-            refreshTokenEndpoint, storage, httpClientSupplier.get()));
+            refreshTokenEndpoint, storage, httpClientSupplier.get(), serializer.get()));
     }
 
     /**
@@ -568,12 +597,29 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
-            final String refreshTokenEndpoint, final TokenStorage storage, VrapHttpClient httpClient) {
+            final String refreshTokenEndpoint, final TokenStorage storage, final VrapHttpClient httpClient) {
         return withTokenSupplier(() -> createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
-            refreshTokenEndpoint, storage, httpClient));
+            refreshTokenEndpoint, storage, httpClient, serializer.get()));
     }
 
-    private TokenSupplier createInMemoryTokenSupplier(TokenSupplier tokenSupplier) {
+    /**
+     * configure the client to use anonymous & refresh token flow
+     * @param credentials {@link ClientCredentials} to be used for authentication
+     * @param anonTokenEndpoint URI to be used for anonymous token authentication
+     * @param refreshTokenEndpoint URI to be used for refresh token authentication
+     * @param storage {@link TokenStorage} for the authentication tokens
+     * @param httpClient {@link VrapHttpClient} to be used for authentication
+     * @param serializer {@link ResponseSerializer} to be used for token deserialization
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
+            final String refreshTokenEndpoint, final TokenStorage storage, final VrapHttpClient httpClient,
+            final ResponseSerializer serializer) {
+        return withTokenSupplier(() -> createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
+            refreshTokenEndpoint, storage, httpClient, serializer));
+    }
+
+    private TokenSupplier createInMemoryTokenSupplier(final TokenSupplier tokenSupplier) {
         return Optional.ofNullable(oauthExecutorService)
                 .map(executorService -> new InMemoryTokenSupplier(executorService.get(), tokenSupplier))
                 .orElse(new InMemoryTokenSupplier(tokenSupplier));
@@ -581,21 +627,22 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     private TokenSupplier createAnonymousRefreshFlowSupplier(final ClientCredentials credentials,
             final String anonTokenEndpoint, final String refreshTokenEndpoint, final TokenStorage tokenStorage,
-            final VrapHttpClient httpClient) {
+            final VrapHttpClient httpClient, final ResponseSerializer serializer) {
         final RefreshFlowTokenSupplier refreshFlowTokenSupplier = createRefreshFlowSupplier(credentials,
-            refreshTokenEndpoint, tokenStorage, httpClient);
+            refreshTokenEndpoint, tokenStorage, httpClient, serializer);
 
         final AnonymousFlowTokenSupplier anonymousFlowTokenSupplier = new AnonymousFlowTokenSupplier(
             credentials.getClientId(), credentials.getClientSecret(), credentials.getScopes(), anonTokenEndpoint,
-            refreshFlowTokenSupplier, httpClient);
+            refreshFlowTokenSupplier, httpClient, serializer);
 
         return new TokenStorageSupplier(tokenStorage, anonymousFlowTokenSupplier);
     }
 
     private RefreshFlowTokenSupplier createRefreshFlowSupplier(final ClientCredentials credentials,
-            final String tokenEndpoint, final TokenStorage tokenStorage, final VrapHttpClient httpClient) {
+            final String tokenEndpoint, final TokenStorage tokenStorage, final VrapHttpClient httpClient,
+            final ResponseSerializer serializer) {
         return new RefreshFlowTokenSupplier(credentials.getClientId(), credentials.getClientSecret(), tokenEndpoint,
-            tokenStorage, httpClient);
+            tokenStorage, httpClient, serializer);
     }
 
     /**
@@ -621,10 +668,10 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
-            final String password, final String tokenEndpoint, Supplier<HandlerStack> httpClientSupplier) {
+            final String password, final String tokenEndpoint, final Supplier<HandlerStack> httpClientSupplier) {
         return withTokenSupplier(
             () -> createInMemoryTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password,
-                tokenEndpoint, httpClientSupplier.get())));
+                tokenEndpoint, httpClientSupplier.get(), serializer.get())));
     }
 
     /**
@@ -637,15 +684,35 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
-            final String password, final String tokenEndpoint, VrapHttpClient httpClient) {
-        return withTokenSupplier(() -> createInMemoryTokenSupplier(
-            createGlobalCustomerPasswordTokenSupplier(credentials, email, password, tokenEndpoint, httpClient)));
+            final String password, final String tokenEndpoint, final VrapHttpClient httpClient) {
+        return withTokenSupplier(
+            () -> createInMemoryTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password,
+                tokenEndpoint, httpClient, serializer.get())));
+    }
+
+    /**
+     * configure the client to use password flow
+     * @param credentials {@link ClientCredentials} to be used for authentication
+     * @param tokenEndpoint URI to be used for password flow authentication
+     * @param email customer email
+     * @param password customer password
+     * @param httpClient {@link VrapHttpClient} to use for authentication
+     * @param serializer {@link ResponseSerializer} to be used for token deserialization
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
+            final String password, final String tokenEndpoint, final VrapHttpClient httpClient,
+            final ResponseSerializer serializer) {
+        return withTokenSupplier(
+            () -> createInMemoryTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password,
+                tokenEndpoint, httpClient, serializer)));
     }
 
     private TokenSupplier createGlobalCustomerPasswordTokenSupplier(final ClientCredentials credentials,
-            final String email, final String password, final String tokenEndpoint, final VrapHttpClient httpClient) {
+            final String email, final String password, final String tokenEndpoint, final VrapHttpClient httpClient,
+            final ResponseSerializer serializer) {
         return new GlobalCustomerPasswordTokenSupplier(credentials.getClientId(), credentials.getClientSecret(), email,
-            password, credentials.getScopes(), tokenEndpoint, httpClient);
+            password, credentials.getScopes(), tokenEndpoint, httpClient, serializer);
     }
 
     /**

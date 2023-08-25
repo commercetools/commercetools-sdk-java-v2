@@ -24,7 +24,7 @@ import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModu
 public class JsonUtils {
 
     private static class ObjectMapperHolder {
-        private static final ObjectMapper OBJECT_MAPPER = createObjectMapper();
+        static final ObjectMapper OBJECT_MAPPER = createObjectMapper();
     }
 
     /**

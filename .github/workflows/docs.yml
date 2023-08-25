@@ -36,14 +36,14 @@ jobs:
           java-version: '17'
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@v1
+        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
 
       - run: ./gradlew -Pversion=${{ github.event.inputs.version }} alljavadoc
         working-directory: sdk
 
       - run: rsync -r sdk/build/docs/javadoc/ doc/javadoc
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
         with:
           repository: doc
           commit_message: "Update javadoc"

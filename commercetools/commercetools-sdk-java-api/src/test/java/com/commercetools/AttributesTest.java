@@ -56,6 +56,8 @@ public class AttributesTest {
             enumValue -> assertThat(enumValue.getLabel().values().get("en")).isEqualTo("foo"));
         assertThat(attributes.get("date")).isInstanceOfSatisfying(LocalDate.class,
             localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
+        assertThat(attributes.get("date-text")).isInstanceOfSatisfying(String.class,
+            localDate -> assertThat(localDate).isEqualTo("2020-01-01T"));
         assertThat(attributes.get("time")).isInstanceOfSatisfying(LocalTime.class,
             localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
         assertThat(attributes.get("time-simple")).isInstanceOfSatisfying(LocalTime.class,
@@ -64,6 +66,12 @@ public class AttributesTest {
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
         assertThat(attributes.get("datetime-simple")).isInstanceOfSatisfying(ZonedDateTime.class,
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00Z"));
+        assertThat(attributes.get("datetime-text")).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2018-09-24T00:00:00-0400"));
+        assertThat(attributes.get("datetime-offset")).isInstanceOfSatisfying(ZonedDateTime.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2018-09-24T00:00:00-04:00"));
+        assertThat(attributes.get("datetime-no-offset")).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2018-09-24T00:00:00"));
         assertThat(attributes.get("boolean")).isInstanceOfSatisfying(Boolean.class,
             aBoolean -> assertThat(aBoolean).isTrue());
         assertThat(attributes.get("integer")).isInstanceOfSatisfying(Long.class,
@@ -190,6 +198,12 @@ public class AttributesTest {
             localTime -> assertThat(localTime).isEqualTo("13:15:00"));
         assertThat(attributes.get("datetime-simple").getValue()).isInstanceOfSatisfying(String.class,
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00Z"));
+        assertThat(attributes.get("datetime-text").getValue()).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2018-09-24T00:00:00-0400"));
+        assertThat(attributes.get("datetime-offset").getValue()).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2018-09-24T00:00:00-04:00"));
+        assertThat(attributes.get("datetime-no-offset").getValue()).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2018-09-24T00:00:00"));
         assertThat(attributes.get("date").withAttribute(AttributeAccessor::asDate))
                 .isInstanceOfSatisfying(LocalDate.class, localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
         assertThat(attributes.get("time").withAttribute(AttributeAccessor::asTime))

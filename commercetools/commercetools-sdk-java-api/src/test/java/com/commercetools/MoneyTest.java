@@ -363,6 +363,154 @@ public class MoneyTest {
         Assertions.assertThat(price.getValue().getCurrency()).isEqualTo(DefaultCurrencyUnits.EUR);
     }
 
+    @Test
+    public void ofMoney() {
+        Money centPrecisionMoney = Money.of(FastMoney.of(1.32, DefaultCurrencyUnits.EUR));
+        Assertions.assertThat(centPrecisionMoney).isInstanceOf(CentPrecisionMoney.class);
+
+        Money centPrecisionMoneyDraft = Money.draftOf(FastMoney.of(1.32, DefaultCurrencyUnits.EUR));
+        Assertions.assertThat(centPrecisionMoneyDraft).isInstanceOf(CentPrecisionMoneyDraft.class);
+
+        Money highPrecisionMoney = Money.of(FastMoney.of(1.32, DefaultCurrencyUnits.EUR), 4);
+        Assertions.assertThat(highPrecisionMoney).isInstanceOf(HighPrecisionMoney.class);
+
+        Money highPrecisionMoneyDraft = Money.draftOf(FastMoney.of(1.32, DefaultCurrencyUnits.EUR), 4);
+        Assertions.assertThat(highPrecisionMoneyDraft).isInstanceOf(HighPrecisionMoneyDraft.class);
+
+        Money highPrecisionMoneyDraftCopy = Money.of(
+            HighPrecisionMoneyDraft.builder().currencyCode("EUR").preciseAmount(1324L).fractionDigits(3).build());
+        Assertions.assertThat(highPrecisionMoneyDraftCopy).isInstanceOf(HighPrecisionMoneyDraft.class);
+
+        Money highPrecisionMoneyCopy = Money.of(HighPrecisionMoney.builder()
+                .currencyCode("EUR")
+                .centAmount(123L)
+                .preciseAmount(1324L)
+                .fractionDigits(3)
+                .build());
+        Assertions.assertThat(highPrecisionMoneyCopy).isInstanceOf(HighPrecisionMoney.class);
+
+        Money centPrecisionMoneyDraftCopy = Money.of(CentPrecisionMoneyDraft.builder().currencyCode("EUR").build());
+        Assertions.assertThat(centPrecisionMoneyDraftCopy).isInstanceOf(CentPrecisionMoneyDraft.class);
+
+        Money centPrecisionMoneyCopy = Money
+                .of(CentPrecisionMoney.builder().currencyCode("EUR").centAmount(123L).fractionDigits(2).build());
+        Assertions.assertThat(centPrecisionMoneyCopy).isInstanceOf(CentPrecisionMoney.class);
+    }
+
+    @Test
+    public void ofCentPrecisionMoney() {
+        CentPrecisionMoney fastMoney = CentPrecisionMoney.of(FastMoney.of(1.32, DefaultCurrencyUnits.EUR));
+        Assertions.assertThat(fastMoney).isInstanceOf(CentPrecisionMoney.class);
+
+        CentPrecisionMoney highPrecisionMoneyDraft = CentPrecisionMoney.of(HighPrecisionMoneyDraft.builder()
+                .currencyCode("EUR")
+                .centAmount(123L)
+                .preciseAmount(1324L)
+                .fractionDigits(3)
+                .build());
+        Assertions.assertThat(highPrecisionMoneyDraft).isInstanceOf(CentPrecisionMoney.class);
+
+        CentPrecisionMoney highPrecisionMoney = CentPrecisionMoney.of(HighPrecisionMoney.builder()
+                .currencyCode("EUR")
+                .centAmount(123L)
+                .preciseAmount(1324L)
+                .fractionDigits(3)
+                .build());
+        Assertions.assertThat(highPrecisionMoney).isInstanceOf(CentPrecisionMoney.class);
+
+        CentPrecisionMoney centPrecisionMoneyDraft = CentPrecisionMoney
+                .of(CentPrecisionMoneyDraft.builder().currencyCode("EUR").centAmount(123L).build());
+        Assertions.assertThat(centPrecisionMoneyDraft).isInstanceOf(CentPrecisionMoney.class);
+
+        CentPrecisionMoney centPrecisionMoneyCopy = CentPrecisionMoney
+                .of(CentPrecisionMoney.builder().currencyCode("EUR").centAmount(123L).fractionDigits(2).build());
+        Assertions.assertThat(centPrecisionMoneyCopy).isInstanceOf(CentPrecisionMoney.class);
+    }
+
+    @Test
+    public void ofHighPrecisionMoney() {
+        HighPrecisionMoney fastMoney = HighPrecisionMoney.of(FastMoney.of(1.32, DefaultCurrencyUnits.EUR), 4);
+        Assertions.assertThat(fastMoney).isInstanceOf(HighPrecisionMoney.class);
+
+        HighPrecisionMoney highPrecisionMoneyDraft = HighPrecisionMoney.of(
+            HighPrecisionMoneyDraft.builder().currencyCode("EUR").preciseAmount(1324L).fractionDigits(3).build(), 4);
+        Assertions.assertThat(highPrecisionMoneyDraft).isInstanceOf(HighPrecisionMoney.class);
+
+        HighPrecisionMoney highPrecisionMoney = HighPrecisionMoney.of(HighPrecisionMoney.builder()
+                .currencyCode("EUR")
+                .centAmount(123L)
+                .preciseAmount(1324L)
+                .fractionDigits(3)
+                .build(),
+            4);
+        Assertions.assertThat(highPrecisionMoney).isInstanceOf(HighPrecisionMoney.class);
+
+        HighPrecisionMoney centPrecisionMoneyDraft = HighPrecisionMoney
+                .of(CentPrecisionMoneyDraft.builder().currencyCode("EUR").centAmount(123L).build(), 4);
+        Assertions.assertThat(centPrecisionMoneyDraft).isInstanceOf(HighPrecisionMoney.class);
+
+        HighPrecisionMoney centPrecisionMoney = HighPrecisionMoney
+                .of(CentPrecisionMoney.builder().currencyCode("EUR").centAmount(123L).fractionDigits(2).build(), 4);
+        Assertions.assertThat(centPrecisionMoney).isInstanceOf(HighPrecisionMoney.class);
+    }
+
+    @Test
+    public void ofCentPrecisionMoneyDraft() {
+        CentPrecisionMoneyDraft fastMoney = CentPrecisionMoneyDraft.of(FastMoney.of(1.32, DefaultCurrencyUnits.EUR));
+        Assertions.assertThat(fastMoney).isInstanceOf(CentPrecisionMoneyDraft.class);
+
+        CentPrecisionMoneyDraft highPrecisionMoneyDraft = CentPrecisionMoneyDraft.of(HighPrecisionMoneyDraft.builder()
+                .currencyCode("EUR")
+                .centAmount(123L)
+                .preciseAmount(1324L)
+                .fractionDigits(3)
+                .build());
+        Assertions.assertThat(highPrecisionMoneyDraft).isInstanceOf(CentPrecisionMoneyDraft.class);
+
+        CentPrecisionMoneyDraft highPrecisionMoney = CentPrecisionMoneyDraft.of(HighPrecisionMoney.builder()
+                .currencyCode("EUR")
+                .centAmount(123L)
+                .preciseAmount(1324L)
+                .fractionDigits(3)
+                .build());
+        Assertions.assertThat(highPrecisionMoney).isInstanceOf(CentPrecisionMoneyDraft.class);
+
+        CentPrecisionMoneyDraft centPrecisionMoneyDraft = CentPrecisionMoneyDraft
+                .of(CentPrecisionMoneyDraft.builder().currencyCode("EUR").centAmount(123L).build());
+        Assertions.assertThat(centPrecisionMoneyDraft).isInstanceOf(CentPrecisionMoneyDraft.class);
+
+        CentPrecisionMoneyDraft centPrecisionMoneyCopy = CentPrecisionMoneyDraft
+                .of(CentPrecisionMoney.builder().currencyCode("EUR").centAmount(123L).fractionDigits(2).build());
+        Assertions.assertThat(centPrecisionMoneyCopy).isInstanceOf(CentPrecisionMoneyDraft.class);
+    }
+
+    @Test
+    public void ofHighPrecisionMoneyDraft() {
+        HighPrecisionMoneyDraft fastMoney = HighPrecisionMoneyDraft.of(FastMoney.of(1.32, DefaultCurrencyUnits.EUR), 4);
+        Assertions.assertThat(fastMoney).isInstanceOf(HighPrecisionMoneyDraft.class);
+
+        HighPrecisionMoneyDraft highPrecisionMoneyDraft = HighPrecisionMoneyDraft.of(
+            HighPrecisionMoneyDraft.builder().currencyCode("EUR").preciseAmount(1324L).fractionDigits(3).build(), 4);
+        Assertions.assertThat(highPrecisionMoneyDraft).isInstanceOf(HighPrecisionMoneyDraft.class);
+
+        HighPrecisionMoneyDraft highPrecisionMoney = HighPrecisionMoneyDraft.of(HighPrecisionMoney.builder()
+                .currencyCode("EUR")
+                .centAmount(123L)
+                .preciseAmount(1324L)
+                .fractionDigits(3)
+                .build(),
+            4);
+        Assertions.assertThat(highPrecisionMoney).isInstanceOf(HighPrecisionMoneyDraft.class);
+
+        HighPrecisionMoneyDraft centPrecisionMoneyDraft = HighPrecisionMoneyDraft
+                .of(CentPrecisionMoneyDraft.builder().currencyCode("EUR").centAmount(123L).build(), 4);
+        Assertions.assertThat(centPrecisionMoneyDraft).isInstanceOf(HighPrecisionMoneyDraft.class);
+
+        HighPrecisionMoneyDraft centPrecisionMoney = HighPrecisionMoneyDraft
+                .of(CentPrecisionMoney.builder().currencyCode("EUR").centAmount(123L).fractionDigits(2).build(), 4);
+        Assertions.assertThat(centPrecisionMoney).isInstanceOf(HighPrecisionMoneyDraft.class);
+    }
+
     private static TaxedItemPrice taxedPriceOf() {
         return TaxedItemPriceBuilder.of()
                 .totalNet(centMonetaryAmountOf(100))

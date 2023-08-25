@@ -63,10 +63,38 @@ public interface Money extends com.commercetools.api.models.common.MonetaryAmoun
     }
 
     public static Money of(final Money template) {
+        if (template instanceof CentPrecisionMoney) {
+            return CentPrecisionMoney.of((CentPrecisionMoney) template);
+        }
+        if (template instanceof CentPrecisionMoneyDraft) {
+            return CentPrecisionMoneyDraft.of((CentPrecisionMoneyDraft) template);
+        }
+        if (template instanceof HighPrecisionMoney) {
+            return HighPrecisionMoney.of((HighPrecisionMoney) template);
+        }
+        if (template instanceof HighPrecisionMoneyDraft) {
+            return HighPrecisionMoneyDraft.of((HighPrecisionMoneyDraft) template);
+        }
         MoneyImpl instance = new MoneyImpl();
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());
         return instance;
+    }
+
+    public static CentPrecisionMoney of(final MonetaryAmount monetaryAmount) {
+        return MoneyUtil.of(monetaryAmount);
+    }
+
+    public static HighPrecisionMoney of(final MonetaryAmount monetaryAmount, int fractionDigits) {
+        return MoneyUtil.of(monetaryAmount, fractionDigits);
+    }
+
+    public static CentPrecisionMoneyDraft draftOf(final MonetaryAmount monetaryAmount) {
+        return MoneyUtil.draftOf(monetaryAmount);
+    }
+
+    public static HighPrecisionMoneyDraft draftOf(final MonetaryAmount monetaryAmount, int fractionDigits) {
+        return MoneyUtil.draftOf(monetaryAmount, fractionDigits);
     }
 
     @Nullable

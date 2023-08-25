@@ -10,7 +10,6 @@ import java.util.concurrent.CompletionException;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.InternalLogger;
 import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 public abstract class BaseAuthTokenSupplier extends AutoCloseableService implements TokenSupplier {
     protected final VrapHttpClient vrapHttpClient;
@@ -50,7 +49,8 @@ public abstract class BaseAuthTokenSupplier extends AutoCloseableService impleme
             }
             return apiHttpResponse;
         })
-                .thenApply(Utils.wrapToCompletionException(response -> serializer.convertResponse(response, AuthenticationToken.class).getBody()));
+                .thenApply(Utils.wrapToCompletionException(
+                    response -> serializer.convertResponse(response, AuthenticationToken.class).getBody()));
     }
 
     static String urlEncode(String value) {

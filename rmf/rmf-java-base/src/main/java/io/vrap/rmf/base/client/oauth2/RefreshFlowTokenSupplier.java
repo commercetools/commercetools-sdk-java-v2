@@ -11,7 +11,6 @@ import java.util.concurrent.CompletionException;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements RefreshableTokenSupplier {
     private final TokenStorage tokenStorage;
@@ -48,7 +47,8 @@ public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements R
             return apiHttpResponse;
         })
                 .thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> serializer
-                        .convertResponse(response, AuthenticationToken.class).getBody()));
+                        .convertResponse(response, AuthenticationToken.class)
+                        .getBody()));
     }
 
     @Override

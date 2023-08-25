@@ -5,6 +5,7 @@ import static commercetools.product.ProductFixtures.*;
 import static commercetools.utils.CommercetoolsTestUtils.assertEventually;
 
 import java.time.Duration;
+import java.util.List;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.product.*;
@@ -12,6 +13,7 @@ import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.assertj.core.api.Assertions;
+import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 
 public class ProductProjectionIntegrationTests {
@@ -86,11 +88,16 @@ public class ProductProjectionIntegrationTests {
         withProduct(product1 -> {
             withProduct(product2 -> {
                 withUpdateableProduct(product3 -> {
+                    List<String> categories = Lists.list(
+                        product1.getMasterData().getCurrent().getCategories().get(0).getId(),
+                        product2.getMasterData().getCurrent().getCategories().get(0).getId(),
+                        product3.getMasterData().getCurrent().getCategories().get(0).getId());
                     assertEventually(Duration.ofSeconds(60), Duration.ofMillis(500), () -> {
                         ProductProjectionPagedSearchResponse searchResponse = apiRoot.productProjections()
                                 .search()
                                 .get()
                                 .withFilter("variants.attributes.testboolean:true")
+                                .addFilter("categories.id:\"" + String.join("\",\"", categories) + "\"")
                                 .withStaged(true)
                                 .executeBlocking()
                                 .getBody();
@@ -109,6 +116,7 @@ public class ProductProjectionIntegrationTests {
                                 .search()
                                 .get()
                                 .withFilter("variants.attributes.testboolean:true")
+                                .addFilter("categories.id:\"" + String.join("\",\"", categories) + "\"")
                                 .withStaged(true)
                                 .executeBlocking()
                                 .getBody();

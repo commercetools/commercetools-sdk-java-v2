@@ -47,8 +47,8 @@ public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements R
             }
             return apiHttpResponse;
         })
-                .thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> JsonUtils
-                        .fromJsonByteArray(response.getBody(), AuthenticationToken.class)));
+                .thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> serializer
+                        .convertResponse(response, AuthenticationToken.class).getBody()));
     }
 
     @Override

@@ -3,10 +3,7 @@ package com.commercetools.api.defaultconfig;
 
 import java.net.URI;
 import java.time.Duration;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Function;
@@ -57,6 +54,22 @@ public class ApiRootBuilder {
 
     public static ApiRootBuilder of(final VrapHttpClient httpClient) {
         return new ApiRootBuilder(ClientBuilder.of(httpClient));
+    }
+
+    public static ApiRootBuilder ofEnvironmentVariables() {
+        return ApiRootBuilderUtil.ofEnvironmentVariables("CTP", System::getenv);
+    }
+
+    public static ApiRootBuilder ofEnvironmentVariables(final String prefix) {
+        return ApiRootBuilderUtil.ofEnvironmentVariables(prefix, System::getenv);
+    }
+
+    public static ApiRootBuilder ofProperties(final Properties properties) {
+        return ofProperties(properties, "CTP");
+    }
+
+    public static ApiRootBuilder ofProperties(final Properties properties, final String prefix) {
+        return ApiRootBuilderUtil.ofProperties(properties, prefix);
     }
 
     public static ApiRootBuilder of(final HandlerStack stack) {

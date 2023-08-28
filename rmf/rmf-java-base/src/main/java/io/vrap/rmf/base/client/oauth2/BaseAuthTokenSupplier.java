@@ -10,16 +10,22 @@ import java.util.concurrent.CompletionException;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.InternalLogger;
 import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 public abstract class BaseAuthTokenSupplier extends AutoCloseableService implements TokenSupplier {
     protected final VrapHttpClient vrapHttpClient;
     protected final ApiHttpRequest apiHttpRequest;
     protected final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
+    protected final ResponseSerializer serializer;
 
     public BaseAuthTokenSupplier(final VrapHttpClient vrapHttpClient, ApiHttpRequest apiHttpRequest) {
+        this(vrapHttpClient, apiHttpRequest, ResponseSerializer.of());
+    }
+
+    public BaseAuthTokenSupplier(final VrapHttpClient vrapHttpClient, ApiHttpRequest apiHttpRequest,
+            ResponseSerializer serializer) {
         this.vrapHttpClient = vrapHttpClient;
         this.apiHttpRequest = apiHttpRequest;
+        this.serializer = serializer;
     }
 
     @Override
@@ -48,8 +54,8 @@ public abstract class BaseAuthTokenSupplier extends AutoCloseableService impleme
             }
             return apiHttpResponse;
         })
-                .thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> JsonUtils
-                        .fromJsonByteArray(response.getBody(), AuthenticationToken.class)));
+                .thenApply(Utils.wrapToCompletionException(
+                    response -> serializer.convertResponse(response, AuthenticationToken.class).getBody()));
     }
 
     static String urlEncode(String value) {

@@ -12,7 +12,7 @@ public abstract class HttpClientBase implements VrapHttpClient, Closeable {
     private final ExecutorService executorService;
 
     protected HttpClientBase() {
-        this.executorService = new ForkJoinPool();
+        this(new ForkJoinPool());
     }
 
     protected HttpClientBase(ExecutorService executorService) {

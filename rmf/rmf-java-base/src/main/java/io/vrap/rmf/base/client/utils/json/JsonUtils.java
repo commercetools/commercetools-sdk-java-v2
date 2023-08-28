@@ -23,10 +23,8 @@ import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModu
  */
 public class JsonUtils {
 
-    private static final ObjectMapper OBJECT_MAPPER;
-
-    static {
-        OBJECT_MAPPER = createObjectMapper();
+    private static class ObjectMapperHolder {
+        static final ObjectMapper OBJECT_MAPPER = createObjectMapper();
     }
 
     /**
@@ -70,7 +68,7 @@ public class JsonUtils {
      * @throws JsonProcessingException serialization errors
      */
     public static byte[] toJsonByteArray(final Object value) throws JsonProcessingException {
-        return OBJECT_MAPPER.writeValueAsBytes(value);
+        return getConfiguredObjectMapper().writeValueAsBytes(value);
     }
 
     /**
@@ -80,7 +78,7 @@ public class JsonUtils {
      * @throws JsonProcessingException serialization errors
      */
     public static String toJsonString(final Object value) throws JsonProcessingException {
-        return OBJECT_MAPPER.writeValueAsString(value);
+        return getConfiguredObjectMapper().writeValueAsString(value);
     }
 
     /**
@@ -91,7 +89,7 @@ public class JsonUtils {
      * @return deserialized object
      */
     public static <T> T fromJsonString(final String content, final Class<T> clazz) {
-        return executing(() -> OBJECT_MAPPER.readValue(content, clazz));
+        return executing(() -> getConfiguredObjectMapper().readValue(content, clazz));
     }
 
     /**
@@ -103,7 +101,7 @@ public class JsonUtils {
      * @return the created objected
      */
     public static <T> T fromJsonString(final String jsonAsString, final TypeReference<T> typeReference) {
-        return executing(() -> OBJECT_MAPPER.readValue(jsonAsString, typeReference));
+        return executing(() -> getConfiguredObjectMapper().readValue(jsonAsString, typeReference));
     }
 
     /**
@@ -116,7 +114,7 @@ public class JsonUtils {
      * @return the created objected
      */
     public static <T> T fromJsonNode(final JsonNode jsonNode, final TypeReference<T> typeReference) {
-        return executing(() -> OBJECT_MAPPER.readerFor(typeReference).readValue(jsonNode));
+        return executing(() -> getConfiguredObjectMapper().readerFor(typeReference).readValue(jsonNode));
     }
 
     /**
@@ -129,7 +127,7 @@ public class JsonUtils {
      * @return new json
      */
     public static JsonNode toJsonNode(final Object value) {
-        return OBJECT_MAPPER.valueToTree(value);
+        return getConfiguredObjectMapper().valueToTree(value);
     }
 
     /**
@@ -139,7 +137,7 @@ public class JsonUtils {
      * @return new JsonNode
      */
     public static JsonNode parse(final String jsonAsString) {
-        return executing(() -> OBJECT_MAPPER.readTree(jsonAsString));
+        return executing(() -> getConfiguredObjectMapper().readTree(jsonAsString));
     }
 
     /**
@@ -151,7 +149,7 @@ public class JsonUtils {
      * @param <T> type of the result
      */
     public static <T> T fromJsonByteArray(final byte[] content, final Class<T> clazz) {
-        return executing(() -> OBJECT_MAPPER.readValue(content, clazz));
+        return executing(() -> getConfiguredObjectMapper().readValue(content, clazz));
     }
 
     /**
@@ -163,7 +161,7 @@ public class JsonUtils {
      * @param <T> type of the result
      */
     public static <T> T fromInputStream(final InputStream content, final Class<T> clazz) {
-        return executing(() -> OBJECT_MAPPER.readValue(content, clazz));
+        return executing(() -> getConfiguredObjectMapper().readValue(content, clazz));
     }
 
     /**
@@ -175,7 +173,7 @@ public class JsonUtils {
      * @param <T> type of the result
      */
     public static <T> T fromInputStream(final InputStream content, final TypeReference<T> typeReference) {
-        return executing(() -> OBJECT_MAPPER.readValue(content, typeReference));
+        return executing(() -> getConfiguredObjectMapper().readValue(content, typeReference));
     }
 
     /**
@@ -183,7 +181,7 @@ public class JsonUtils {
      * @return ObjectMapper
      */
     public static ObjectMapper getConfiguredObjectMapper() {
-        return OBJECT_MAPPER;
+        return ObjectMapperHolder.OBJECT_MAPPER;
     }
 
     /**

@@ -11,7 +11,6 @@ import java.util.concurrent.CompletionException;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements RefreshableTokenSupplier {
     private final TokenStorage tokenStorage;
@@ -19,6 +18,12 @@ public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements R
     public RefreshFlowTokenSupplier(final String clientId, final String clientSecret, final String tokenEndpoint,
             final TokenStorage tokenStorage, final VrapHttpClient vrapHttpClient) {
         super(vrapHttpClient, constructApiHttpRequest(clientId, clientSecret, tokenEndpoint));
+        this.tokenStorage = tokenStorage;
+    }
+
+    public RefreshFlowTokenSupplier(final String clientId, final String clientSecret, final String tokenEndpoint,
+            final TokenStorage tokenStorage, final VrapHttpClient vrapHttpClient, final ResponseSerializer serializer) {
+        super(vrapHttpClient, constructApiHttpRequest(clientId, clientSecret, tokenEndpoint), serializer);
         this.tokenStorage = tokenStorage;
     }
 
@@ -47,8 +52,9 @@ public class RefreshFlowTokenSupplier extends BaseAuthTokenSupplier implements R
             }
             return apiHttpResponse;
         })
-                .thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> JsonUtils
-                        .fromJsonByteArray(response.getBody(), AuthenticationToken.class)));
+                .thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> serializer
+                        .convertResponse(response, AuthenticationToken.class)
+                        .getBody()));
     }
 
     @Override

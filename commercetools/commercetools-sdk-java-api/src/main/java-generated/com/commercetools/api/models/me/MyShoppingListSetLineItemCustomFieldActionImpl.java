@@ -25,6 +25,8 @@ public class MyShoppingListSetLineItemCustomFieldActionImpl
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private String name;
 
     private java.lang.Object value;
@@ -34,8 +36,10 @@ public class MyShoppingListSetLineItemCustomFieldActionImpl
      */
     @JsonCreator
     MyShoppingListSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+            @JsonProperty("lineItemKey") final String lineItemKey, @JsonProperty("name") final String name,
+            @JsonProperty("value") final java.lang.Object value) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.name = name;
         this.value = value;
         this.action = SET_LINE_ITEM_CUSTOM_FIELD;
@@ -57,11 +61,19 @@ public class MyShoppingListSetLineItemCustomFieldActionImpl
     }
 
     /**
-     *  <p>Unique identifier of an existing ShoppingListLineItem in the ShoppingList.</p>
+     *  <p>Unique identifier of an the ShoppingListLineItem. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -84,6 +96,10 @@ public class MyShoppingListSetLineItemCustomFieldActionImpl
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setName(final String name) {
         this.name = name;
     }
@@ -104,10 +120,12 @@ public class MyShoppingListSetLineItemCustomFieldActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(name, that.name)
                 .append(value, that.value)
                 .append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
@@ -115,7 +133,12 @@ public class MyShoppingListSetLineItemCustomFieldActionImpl
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(name).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(name)
+                .append(value)
+                .toHashCode();
     }
 
 }

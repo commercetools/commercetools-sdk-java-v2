@@ -24,6 +24,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLineItemDraft> {
 
     @Nullable
+    private String key;
+
+    @Nullable
     private String productId;
 
     @Nullable
@@ -40,6 +43,17 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
 
     @Nullable
     private Long quantity;
+
+    /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public ShoppingListLineItemDraftBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p>Unique identifier of a Product.</p>
@@ -133,6 +147,16 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
     }
 
     /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Unique identifier of a Product.</p>
      * @return productId
      */
@@ -197,7 +221,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
      * @return ShoppingListLineItemDraft
      */
     public ShoppingListLineItemDraft build() {
-        return new ShoppingListLineItemDraftImpl(productId, variantId, sku, addedAt, custom, quantity);
+        return new ShoppingListLineItemDraftImpl(key, productId, variantId, sku, addedAt, custom, quantity);
     }
 
     /**
@@ -205,7 +229,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
      * @return ShoppingListLineItemDraft
      */
     public ShoppingListLineItemDraft buildUnchecked() {
-        return new ShoppingListLineItemDraftImpl(productId, variantId, sku, addedAt, custom, quantity);
+        return new ShoppingListLineItemDraftImpl(key, productId, variantId, sku, addedAt, custom, quantity);
     }
 
     /**
@@ -223,6 +247,7 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
      */
     public static ShoppingListLineItemDraftBuilder of(final ShoppingListLineItemDraft template) {
         ShoppingListLineItemDraftBuilder builder = new ShoppingListLineItemDraftBuilder();
+        builder.key = template.getKey();
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();

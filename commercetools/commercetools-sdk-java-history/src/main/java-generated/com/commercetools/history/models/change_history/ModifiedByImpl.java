@@ -24,11 +24,13 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
 
     private String type;
 
-    private com.commercetools.history.models.common.Reference customer;
+    private String clientId;
 
     private String anonymousId;
 
-    private String clientId;
+    private com.commercetools.history.models.common.Reference customer;
+
+    private com.commercetools.history.models.common.Reference associate;
 
     private Boolean isPlatformClient;
 
@@ -37,14 +39,16 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
      */
     @JsonCreator
     ModifiedByImpl(@JsonProperty("id") final String id, @JsonProperty("type") final String type,
+            @JsonProperty("clientId") final String clientId, @JsonProperty("anonymousId") final String anonymousId,
             @JsonProperty("customer") final com.commercetools.history.models.common.Reference customer,
-            @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("clientId") final String clientId,
+            @JsonProperty("associate") final com.commercetools.history.models.common.Reference associate,
             @JsonProperty("isPlatformClient") final Boolean isPlatformClient) {
         this.id = id;
         this.type = type;
-        this.customer = customer;
-        this.anonymousId = anonymousId;
         this.clientId = clientId;
+        this.anonymousId = anonymousId;
+        this.customer = customer;
+        this.associate = associate;
         this.isPlatformClient = isPlatformClient;
     }
 
@@ -68,6 +72,7 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
      *  <ul>
      *   <li>If the change was made by a user, the value is <code>"user"</code>.</li>
      *   <li>If the change was made by an API Client with or without an external user ID, the value is <code>"external-user"</code>.</li>
+     *   <li>If the change was made by an Associate, the value is <code>"associate"</code>.</li>
      *  </ul>
      */
 
@@ -76,12 +81,12 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Customer who made the change.</p>
-     *  <p>Present only if the change was made using a token from the password flow.</p>
+     *  <p>ID of the API Client that made the change.</p>
+     *  <p>Present only if the change was made using an API Client.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getCustomer() {
-        return this.customer;
+    public String getClientId() {
+        return this.clientId;
     }
 
     /**
@@ -93,12 +98,20 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>ID of the API Client that made the change.</p>
-     *  <p>Present only if the change was made using an API Client.</p>
+     *  <p>The Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
      */
 
-    public String getClientId() {
-        return this.clientId;
+    public com.commercetools.history.models.common.Reference getCustomer() {
+        return this.customer;
+    }
+
+    /**
+     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     */
+
+    public com.commercetools.history.models.common.Reference getAssociate() {
+        return this.associate;
     }
 
     /**
@@ -117,16 +130,20 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
         this.type = type;
     }
 
-    public void setCustomer(final com.commercetools.history.models.common.Reference customer) {
-        this.customer = customer;
+    public void setClientId(final String clientId) {
+        this.clientId = clientId;
     }
 
     public void setAnonymousId(final String anonymousId) {
         this.anonymousId = anonymousId;
     }
 
-    public void setClientId(final String clientId) {
-        this.clientId = clientId;
+    public void setCustomer(final com.commercetools.history.models.common.Reference customer) {
+        this.customer = customer;
+    }
+
+    public void setAssociate(final com.commercetools.history.models.common.Reference associate) {
+        this.associate = associate;
     }
 
     public void setIsPlatformClient(final Boolean isPlatformClient) {
@@ -145,15 +162,17 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
 
         return new EqualsBuilder().append(id, that.id)
                 .append(type, that.type)
-                .append(customer, that.customer)
-                .append(anonymousId, that.anonymousId)
                 .append(clientId, that.clientId)
+                .append(anonymousId, that.anonymousId)
+                .append(customer, that.customer)
+                .append(associate, that.associate)
                 .append(isPlatformClient, that.isPlatformClient)
                 .append(id, that.id)
                 .append(type, that.type)
-                .append(customer, that.customer)
-                .append(anonymousId, that.anonymousId)
                 .append(clientId, that.clientId)
+                .append(anonymousId, that.anonymousId)
+                .append(customer, that.customer)
+                .append(associate, that.associate)
                 .append(isPlatformClient, that.isPlatformClient)
                 .isEquals();
     }
@@ -162,9 +181,10 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
                 .append(type)
-                .append(customer)
-                .append(anonymousId)
                 .append(clientId)
+                .append(anonymousId)
+                .append(customer)
+                .append(associate)
                 .append(isPlatformClient)
                 .toHashCode();
     }

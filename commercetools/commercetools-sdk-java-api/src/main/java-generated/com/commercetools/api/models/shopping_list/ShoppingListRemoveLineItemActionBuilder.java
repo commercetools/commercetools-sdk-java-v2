@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShoppingListRemoveLineItemAction shoppingListRemoveLineItemAction = ShoppingListRemoveLineItemAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -23,19 +22,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListRemoveLineItemActionBuilder implements Builder<ShoppingListRemoveLineItemAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private Long quantity;
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public ShoppingListRemoveLineItemActionBuilder lineItemId(final String lineItemId) {
+    public ShoppingListRemoveLineItemActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public ShoppingListRemoveLineItemActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -51,12 +65,23 @@ public class ShoppingListRemoveLineItemActionBuilder implements Builder<Shopping
     }
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -74,8 +99,7 @@ public class ShoppingListRemoveLineItemActionBuilder implements Builder<Shopping
      * @return ShoppingListRemoveLineItemAction
      */
     public ShoppingListRemoveLineItemAction build() {
-        Objects.requireNonNull(lineItemId, ShoppingListRemoveLineItemAction.class + ": lineItemId is missing");
-        return new ShoppingListRemoveLineItemActionImpl(lineItemId, quantity);
+        return new ShoppingListRemoveLineItemActionImpl(lineItemId, lineItemKey, quantity);
     }
 
     /**
@@ -83,7 +107,7 @@ public class ShoppingListRemoveLineItemActionBuilder implements Builder<Shopping
      * @return ShoppingListRemoveLineItemAction
      */
     public ShoppingListRemoveLineItemAction buildUnchecked() {
-        return new ShoppingListRemoveLineItemActionImpl(lineItemId, quantity);
+        return new ShoppingListRemoveLineItemActionImpl(lineItemId, lineItemKey, quantity);
     }
 
     /**
@@ -102,6 +126,7 @@ public class ShoppingListRemoveLineItemActionBuilder implements Builder<Shopping
     public static ShoppingListRemoveLineItemActionBuilder of(final ShoppingListRemoveLineItemAction template) {
         ShoppingListRemoveLineItemActionBuilder builder = new ShoppingListRemoveLineItemActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.quantity = template.getQuantity();
         return builder;
     }

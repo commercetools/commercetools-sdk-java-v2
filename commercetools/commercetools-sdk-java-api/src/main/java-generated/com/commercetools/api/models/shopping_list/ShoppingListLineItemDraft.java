@@ -34,6 +34,14 @@ public interface ShoppingListLineItemDraft
         io.vrap.rmf.base.client.Draft<ShoppingListLineItemDraft> {
 
     /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Unique identifier of a Product.</p>
      * @return productId
      */
@@ -80,6 +88,13 @@ public interface ShoppingListLineItemDraft
 
     @JsonProperty("quantity")
     public Long getQuantity();
+
+    /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Unique identifier of a Product.</p>
@@ -138,6 +153,7 @@ public interface ShoppingListLineItemDraft
      */
     public static ShoppingListLineItemDraft of(final ShoppingListLineItemDraft template) {
         ShoppingListLineItemDraftImpl instance = new ShoppingListLineItemDraftImpl();
+        instance.setKey(template.getKey());
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -158,6 +174,7 @@ public interface ShoppingListLineItemDraft
             return null;
         }
         ShoppingListLineItemDraftImpl instance = new ShoppingListLineItemDraftImpl();
+        instance.setKey(template.getKey());
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());

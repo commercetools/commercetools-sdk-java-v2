@@ -274,6 +274,15 @@ public class QuoteRequestQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, QuoteRequestQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<QuoteRequestQueryBuilderDsl> cart(
+            Function<com.commercetools.api.predicates.query.cart.CartReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("cart"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.CartReferenceQueryBuilderDsl.of())),
+            QuoteRequestQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<QuoteRequestQueryBuilderDsl> businessUnit(
             Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitKeyReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

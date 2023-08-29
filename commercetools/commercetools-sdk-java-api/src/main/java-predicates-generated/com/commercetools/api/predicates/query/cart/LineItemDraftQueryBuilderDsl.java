@@ -94,6 +94,22 @@ public class LineItemDraftQueryBuilderDsl {
             LineItemDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<LineItemDraftQueryBuilderDsl> perMethodExternalTaxRate(
+            Function<com.commercetools.api.predicates.query.cart.MethodExternalTaxRateDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.MethodExternalTaxRateDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("perMethodExternalTaxRate"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.cart.MethodExternalTaxRateDraftQueryBuilderDsl.of())),
+            LineItemDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<LineItemDraftQueryBuilderDsl> perMethodExternalTaxRate() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("perMethodExternalTaxRate")),
+            p -> new CombinationQueryPredicate<>(p, LineItemDraftQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<LineItemDraftQueryBuilderDsl> inventoryMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("inventoryMode")),

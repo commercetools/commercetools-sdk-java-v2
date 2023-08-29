@@ -42,6 +42,11 @@ public class TextLineItemQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, TextLineItemQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<TextLineItemQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, TextLineItemQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<TextLineItemQueryBuilderDsl> name(
             Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

@@ -172,6 +172,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteCreatedMessageImpl.class, name = QuoteCreatedMessage.QUOTE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteCustomerChangedMessageImpl.class, name = QuoteCustomerChangedMessage.QUOTE_CUSTOMER_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteDeletedMessageImpl.class, name = QuoteDeletedMessage.QUOTE_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRenegotiationRequestedMessageImpl.class, name = QuoteRenegotiationRequestedMessage.QUOTE_RENEGOTIATION_REQUESTED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestCreatedMessageImpl.class, name = QuoteRequestCreatedMessage.QUOTE_REQUEST_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestCustomerChangedMessageImpl.class, name = QuoteRequestCustomerChangedMessage.QUOTE_REQUEST_CUSTOMER_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestDeletedMessageImpl.class, name = QuoteRequestDeletedMessage.QUOTE_REQUEST_DELETED),
@@ -737,6 +738,10 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.QuoteDeletedMessage) {
             return com.commercetools.api.models.message.QuoteDeletedMessage
                     .deepCopy((com.commercetools.api.models.message.QuoteDeletedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.QuoteRenegotiationRequestedMessage) {
+            return com.commercetools.api.models.message.QuoteRenegotiationRequestedMessage
+                    .deepCopy((com.commercetools.api.models.message.QuoteRenegotiationRequestedMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.QuoteRequestCreatedMessage) {
             return com.commercetools.api.models.message.QuoteRequestCreatedMessage
@@ -1960,6 +1965,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.QuoteDeletedMessageBuilder quoteDeletedBuilder() {
         return com.commercetools.api.models.message.QuoteDeletedMessageBuilder.of();
+    }
+
+    /**
+     * builder for quoteRenegotiationRequested subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.QuoteRenegotiationRequestedMessageBuilder quoteRenegotiationRequestedBuilder() {
+        return com.commercetools.api.models.message.QuoteRenegotiationRequestedMessageBuilder.of();
     }
 
     /**

@@ -82,6 +82,8 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
 
     private String purchaseOrderNumber;
 
+    private com.commercetools.api.models.cart.CartReference cart;
+
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
     /**
@@ -118,6 +120,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
             @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
+            @JsonProperty("cart") final com.commercetools.api.models.cart.CartReference cart,
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.id = id;
         this.version = version;
@@ -150,6 +153,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.custom = custom;
         this.state = state;
         this.purchaseOrderNumber = purchaseOrderNumber;
+        this.cart = cart;
         this.businessUnit = businessUnit;
     }
 
@@ -408,6 +412,14 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
+     *  <p>The Cart from which a Quote is requested.</p>
+     */
+
+    public com.commercetools.api.models.cart.CartReference getCart() {
+        return this.cart;
+    }
+
+    /**
      *  <p>The BusinessUnit for the Quote Request.</p>
      */
 
@@ -560,6 +572,10 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.purchaseOrderNumber = purchaseOrderNumber;
     }
 
+    public void setCart(final com.commercetools.api.models.cart.CartReference cart) {
+        this.cart = cart;
+    }
+
     public void setBusinessUnit(
             final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.businessUnit = businessUnit;
@@ -606,6 +622,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(custom, that.custom)
                 .append(state, that.state)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(cart, that.cart)
                 .append(businessUnit, that.businessUnit)
                 .append(id, that.id)
                 .append(version, that.version)
@@ -638,6 +655,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(custom, that.custom)
                 .append(state, that.state)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(cart, that.cart)
                 .append(businessUnit, that.businessUnit)
                 .isEquals();
     }
@@ -675,6 +693,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(custom)
                 .append(state)
                 .append(purchaseOrderNumber)
+                .append(cart)
                 .append(businessUnit)
                 .toHashCode();
     }

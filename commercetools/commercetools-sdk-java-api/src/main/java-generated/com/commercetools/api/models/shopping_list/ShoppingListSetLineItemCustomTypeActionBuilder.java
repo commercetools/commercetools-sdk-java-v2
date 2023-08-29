@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShoppingListSetLineItemCustomTypeAction shoppingListSetLineItemCustomTypeAction = ShoppingListSetLineItemCustomTypeAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -25,7 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ShoppingListSetLineItemCustomTypeActionBuilder
         implements Builder<ShoppingListSetLineItemCustomTypeAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -34,13 +37,24 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public ShoppingListSetLineItemCustomTypeActionBuilder lineItemId(final String lineItemId) {
+    public ShoppingListSetLineItemCustomTypeActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public ShoppingListSetLineItemCustomTypeActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -117,12 +131,23 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
     }
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -150,8 +175,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
      * @return ShoppingListSetLineItemCustomTypeAction
      */
     public ShoppingListSetLineItemCustomTypeAction build() {
-        Objects.requireNonNull(lineItemId, ShoppingListSetLineItemCustomTypeAction.class + ": lineItemId is missing");
-        return new ShoppingListSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
+        return new ShoppingListSetLineItemCustomTypeActionImpl(lineItemId, lineItemKey, type, fields);
     }
 
     /**
@@ -159,7 +183,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
      * @return ShoppingListSetLineItemCustomTypeAction
      */
     public ShoppingListSetLineItemCustomTypeAction buildUnchecked() {
-        return new ShoppingListSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
+        return new ShoppingListSetLineItemCustomTypeActionImpl(lineItemId, lineItemKey, type, fields);
     }
 
     /**
@@ -179,6 +203,7 @@ public class ShoppingListSetLineItemCustomTypeActionBuilder
             final ShoppingListSetLineItemCustomTypeAction template) {
         ShoppingListSetLineItemCustomTypeActionBuilder builder = new ShoppingListSetLineItemCustomTypeActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

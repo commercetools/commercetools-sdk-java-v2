@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -21,7 +20,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyShoppingListRemoveTextLineItemAction myShoppingListRemoveTextLineItemAction = MyShoppingListRemoveTextLineItemAction.builder()
- *             .textLineItemId("{textLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -36,12 +34,20 @@ public interface MyShoppingListRemoveTextLineItemAction extends MyShoppingListUp
     String REMOVE_TEXT_LINE_ITEM = "removeTextLineItem";
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
-    @NotNull
+
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return textLineItemKey
+     */
+
+    @JsonProperty("textLineItemKey")
+    public String getTextLineItemKey();
 
     /**
      *  <p>Amount to remove from the <code>quantity</code> of the TextLineItem. If not set, the TextLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the TextLineItem, the TextLineItem is removed from the ShoppingList.</p>
@@ -52,11 +58,18 @@ public interface MyShoppingListRemoveTextLineItemAction extends MyShoppingListUp
     public Long getQuantity();
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      */
 
     public void setTextLineItemId(final String textLineItemId);
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param textLineItemKey value to be set
+     */
+
+    public void setTextLineItemKey(final String textLineItemKey);
 
     /**
      *  <p>Amount to remove from the <code>quantity</code> of the TextLineItem. If not set, the TextLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the TextLineItem, the TextLineItem is removed from the ShoppingList.</p>
@@ -81,6 +94,7 @@ public interface MyShoppingListRemoveTextLineItemAction extends MyShoppingListUp
     public static MyShoppingListRemoveTextLineItemAction of(final MyShoppingListRemoveTextLineItemAction template) {
         MyShoppingListRemoveTextLineItemActionImpl instance = new MyShoppingListRemoveTextLineItemActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setTextLineItemKey(template.getTextLineItemKey());
         instance.setQuantity(template.getQuantity());
         return instance;
     }
@@ -98,6 +112,7 @@ public interface MyShoppingListRemoveTextLineItemAction extends MyShoppingListUp
         }
         MyShoppingListRemoveTextLineItemActionImpl instance = new MyShoppingListRemoveTextLineItemActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setTextLineItemKey(template.getTextLineItemKey());
         instance.setQuantity(template.getQuantity());
         return instance;
     }

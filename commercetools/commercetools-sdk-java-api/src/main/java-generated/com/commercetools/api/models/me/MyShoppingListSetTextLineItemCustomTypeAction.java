@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
@@ -24,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyShoppingListSetTextLineItemCustomTypeAction myShoppingListSetTextLineItemCustomTypeAction = MyShoppingListSetTextLineItemCustomTypeAction.builder()
- *             .textLineItemId("{textLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -39,12 +37,20 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
     String SET_TEXT_LINE_ITEM_CUSTOM_TYPE = "setTextLineItemCustomType";
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
-    @NotNull
+
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return textLineItemKey
+     */
+
+    @JsonProperty("textLineItemKey")
+    public String getTextLineItemKey();
 
     /**
      *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
@@ -63,11 +69,18 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
     public FieldContainer getFields();
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      */
 
     public void setTextLineItemId(final String textLineItemId);
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param textLineItemKey value to be set
+     */
+
+    public void setTextLineItemKey(final String textLineItemKey);
 
     /**
      *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
@@ -100,6 +113,7 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
             final MyShoppingListSetTextLineItemCustomTypeAction template) {
         MyShoppingListSetTextLineItemCustomTypeActionImpl instance = new MyShoppingListSetTextLineItemCustomTypeActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setTextLineItemKey(template.getTextLineItemKey());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
@@ -118,6 +132,7 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
         }
         MyShoppingListSetTextLineItemCustomTypeActionImpl instance = new MyShoppingListSetTextLineItemCustomTypeActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setTextLineItemKey(template.getTextLineItemKey());
         instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
         instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;

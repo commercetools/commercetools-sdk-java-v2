@@ -92,13 +92,27 @@ public class ByProjectKeyByResourceTypeTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
-                        .withType("type")
-                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?type=type", },
+                        .withClientId("clientId")
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?clientId=clientId", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey")
+                                .withResourceTypeValue("test_resourceType")
+                                .get()
+                                .withCustomerId("customerId")
+                                .createHttpRequest(),
+                        "get", "test_projectKey/test_resourceType?customerId=customerId", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey")
+                                .withResourceTypeValue("test_resourceType")
+                                .get()
+                                .withAssociateId("associateId")
+                                .createHttpRequest(),
+                        "get", "test_projectKey/test_resourceType?associateId=associateId", },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
-                        .withClientId("clientId")
-                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?clientId=clientId", },
+                        .withType("type")
+                        .createHttpRequest(), "get", "test_projectKey/test_resourceType?type=type", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .withResourceTypeValue("test_resourceType")
@@ -121,13 +135,6 @@ public class ByProjectKeyByResourceTypeTest {
                         .get()
                         .withStores("stores")
                         .createHttpRequest(), "get", "test_projectKey/test_resourceType?stores=stores", },
-                new Object[] {
-                        apiRoot.withProjectKeyValue("test_projectKey")
-                                .withResourceTypeValue("test_resourceType")
-                                .get()
-                                .withCustomerId("customerId")
-                                .createHttpRequest(),
-                        "get", "test_projectKey/test_resourceType?customerId=customerId", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .withResourceTypeValue("test_resourceType")
@@ -175,11 +182,19 @@ public class ByProjectKeyByResourceTypeTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
-                        .withType("type"), },
+                        .withClientId("clientId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
-                        .withClientId("clientId"), },
+                        .withCustomerId("customerId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
+                        .withAssociateId("associateId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .withResourceTypeValue("test_resourceType")
+                        .get()
+                        .withType("type"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()
@@ -196,10 +211,6 @@ public class ByProjectKeyByResourceTypeTest {
                         .withResourceTypeValue("test_resourceType")
                         .get()
                         .withStores("stores"), },
-                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
-                        .withResourceTypeValue("test_resourceType")
-                        .get()
-                        .withCustomerId("customerId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .get()

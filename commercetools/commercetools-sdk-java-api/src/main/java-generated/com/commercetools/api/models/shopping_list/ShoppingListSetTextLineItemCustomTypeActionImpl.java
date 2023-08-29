@@ -25,6 +25,8 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
 
     private String textLineItemId;
 
+    private String textLineItemKey;
+
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private com.commercetools.api.models.type.FieldContainer fields;
@@ -34,9 +36,11 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
      */
     @JsonCreator
     ShoppingListSetTextLineItemCustomTypeActionImpl(@JsonProperty("textLineItemId") final String textLineItemId,
+            @JsonProperty("textLineItemKey") final String textLineItemKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.textLineItemId = textLineItemId;
+        this.textLineItemKey = textLineItemKey;
         this.type = type;
         this.fields = fields;
         this.action = SET_TEXT_LINE_ITEM_CUSTOM_TYPE;
@@ -58,11 +62,19 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
     }
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getTextLineItemId() {
         return this.textLineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getTextLineItemKey() {
+        return this.textLineItemKey;
     }
 
     /**
@@ -85,6 +97,10 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
         this.textLineItemId = textLineItemId;
     }
 
+    public void setTextLineItemKey(final String textLineItemKey) {
+        this.textLineItemKey = textLineItemKey;
+    }
+
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
     }
@@ -105,10 +121,12 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(textLineItemId, that.textLineItemId)
+                .append(textLineItemKey, that.textLineItemKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .append(action, that.action)
                 .append(textLineItemId, that.textLineItemId)
+                .append(textLineItemKey, that.textLineItemKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();
@@ -118,6 +136,7 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(textLineItemId)
+                .append(textLineItemKey)
                 .append(type)
                 .append(fields)
                 .toHashCode();

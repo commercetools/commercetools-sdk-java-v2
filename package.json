@@ -12,7 +12,7 @@
     "packageManager": "yarn@3.6.3",
     "dependencies": {
         "husky": "8.0.3",
-        "lint-staged": "13.3.0"
+        "lint-staged": "14.0.1"
     },
     "scripts": {
         "postinstall": "husky install",

@@ -647,6 +647,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessagePayloadBuilder standalonePriceStagedChangesRemovedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StandalonePriceTierAddedMessagePayloadBuilder standalonePriceTierAddedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceTierAddedMessagePayloadBuilder.of();
     }

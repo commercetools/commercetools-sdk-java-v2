@@ -57,6 +57,9 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @Nullable
+    private com.commercetools.api.models.standalone_price.StagedPriceDraft staged;
+
+    @Nullable
     private Boolean active;
 
     /**
@@ -387,6 +390,42 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
+     *  <p>Staged changes for the StandalonePrice.</p>
+     * @param builder function to build the staged value
+     * @return Builder
+     */
+
+    public StandalonePriceDraftBuilder staged(
+            Function<com.commercetools.api.models.standalone_price.StagedPriceDraftBuilder, com.commercetools.api.models.standalone_price.StagedPriceDraftBuilder> builder) {
+        this.staged = builder.apply(com.commercetools.api.models.standalone_price.StagedPriceDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Staged changes for the StandalonePrice.</p>
+     * @param builder function to build the staged value
+     * @return Builder
+     */
+
+    public StandalonePriceDraftBuilder withStaged(
+            Function<com.commercetools.api.models.standalone_price.StagedPriceDraftBuilder, com.commercetools.api.models.standalone_price.StagedPriceDraft> builder) {
+        this.staged = builder.apply(com.commercetools.api.models.standalone_price.StagedPriceDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Staged changes for the StandalonePrice.</p>
+     * @param staged value to be set
+     * @return Builder
+     */
+
+    public StandalonePriceDraftBuilder staged(
+            @Nullable final com.commercetools.api.models.standalone_price.StagedPriceDraft staged) {
+        this.staged = staged;
+        return this;
+    }
+
+    /**
      *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
      * @param active value to be set
      * @return Builder
@@ -506,6 +545,16 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
+     *  <p>Staged changes for the StandalonePrice.</p>
+     * @return staged
+     */
+
+    @Nullable
+    public com.commercetools.api.models.standalone_price.StagedPriceDraft getStaged() {
+        return this.staged;
+    }
+
+    /**
      *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
      * @return active
      */
@@ -523,7 +572,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         Objects.requireNonNull(sku, StandalonePriceDraft.class + ": sku is missing");
         Objects.requireNonNull(value, StandalonePriceDraft.class + ": value is missing");
         return new StandalonePriceDraftImpl(key, sku, value, country, customerGroup, channel, validFrom, validUntil,
-            tiers, discounted, custom, active);
+            tiers, discounted, custom, staged, active);
     }
 
     /**
@@ -532,7 +581,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
      */
     public StandalonePriceDraft buildUnchecked() {
         return new StandalonePriceDraftImpl(key, sku, value, country, customerGroup, channel, validFrom, validUntil,
-            tiers, discounted, custom, active);
+            tiers, discounted, custom, staged, active);
     }
 
     /**
@@ -561,6 +610,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
         builder.tiers = template.getTiers();
         builder.discounted = template.getDiscounted();
         builder.custom = template.getCustom();
+        builder.staged = template.getStaged();
         builder.active = template.getActive();
         return builder;
     }

@@ -913,6 +913,14 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asStandalonePriceStagedChangesRemoved(
+            Function<com.commercetools.api.predicates.query.message.StandalonePriceStagedChangesRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StandalonePriceStagedChangesRemovedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.StandalonePriceStagedChangesRemovedMessageQueryBuilderDsl
+                    .of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asStandalonePriceTierAdded(
             Function<com.commercetools.api.predicates.query.message.StandalonePriceTierAddedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StandalonePriceTierAddedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

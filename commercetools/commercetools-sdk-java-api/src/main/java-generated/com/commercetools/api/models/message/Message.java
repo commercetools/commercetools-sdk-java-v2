@@ -198,6 +198,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessageImpl.class, name = StandalonePriceExternalDiscountSetMessage.STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceKeySetMessageImpl.class, name = StandalonePriceKeySetMessage.STANDALONE_PRICE_KEY_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessageImpl.class, name = StandalonePriceStagedChangesAppliedMessage.STANDALONE_PRICE_STAGED_CHANGES_APPLIED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessageImpl.class, name = StandalonePriceStagedChangesRemovedMessage.STANDALONE_PRICE_STAGED_CHANGES_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTierAddedMessageImpl.class, name = StandalonePriceTierAddedMessage.STANDALONE_PRICE_TIER_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTierRemovedMessageImpl.class, name = StandalonePriceTierRemovedMessage.STANDALONE_PRICE_TIER_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTiersSetMessageImpl.class, name = StandalonePriceTiersSetMessage.STANDALONE_PRICE_TIERS_SET),
@@ -834,6 +835,10 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessage) {
             return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessage.deepCopy(
                 (com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessage) {
+            return com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessage.deepCopy(
+                (com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.StandalonePriceTierAddedMessage) {
             return com.commercetools.api.models.message.StandalonePriceTierAddedMessage
@@ -2173,6 +2178,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessageBuilder standalonePriceStagedChangesAppliedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessageBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceStagedChangesRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessageBuilder standalonePriceStagedChangesRemovedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessageBuilder.of();
     }
 
     /**

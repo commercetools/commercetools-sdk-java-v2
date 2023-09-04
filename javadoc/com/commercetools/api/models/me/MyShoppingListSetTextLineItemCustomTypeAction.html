@@ -85,7 +85,6 @@ extends <a href="MyShoppingListUpdateAction.html" title="interface in com.commer
  <div class=code-example>
  <pre><code class='java'>
      MyShoppingListSetTextLineItemCustomTypeAction myShoppingListSetTextLineItemCustomTypeAction = MyShoppingListSetTextLineItemCustomTypeAction.builder()
-             .textLineItemId("{textLineItemId}")
              .build()
  </code></pre>
  </div></div>
@@ -140,35 +139,45 @@ extends <a href="MyShoppingListUpdateAction.html" title="interface in com.commer
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Sets the Custom Fields fields for the TextLineItem.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTextLineItemId()" class="member-name-link">getTextLineItemId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The <code>id</code> of the TextLineItem to update.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTextLineItemKey()" class="member-name-link">getTextLineItemKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The <code>key</code> of the TextLineItem to update.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Defines the Type that extends the TextLineItem with Custom Fields.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="MyShoppingListSetTextLineItemCustomTypeAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListSetTextLineItemCustomTypeAction</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="MyShoppingListSetTextLineItemCustomTypeAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListSetTextLineItemCustomTypeAction</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="MyShoppingListSetTextLineItemCustomTypeAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListSetTextLineItemCustomTypeAction</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.me.MyShoppingListSetTextLineItemCustomTypeAction)" class="member-name-link">of</a><wbr>(<a href="MyShoppingListSetTextLineItemCustomTypeAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListSetTextLineItemCustomTypeAction</a>&nbsp;template)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="MyShoppingListSetTextLineItemCustomTypeAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListSetTextLineItemCustomTypeAction</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.me.MyShoppingListSetTextLineItemCustomTypeAction)" class="member-name-link">of</a><wbr>(<a href="MyShoppingListSetTextLineItemCustomTypeAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListSetTextLineItemCustomTypeAction</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy MyShoppingListSetTextLineItemCustomTypeAction</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFields(com.commercetools.api.models.type.FieldContainer)" class="member-name-link">setFields</a><wbr>(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFields(com.commercetools.api.models.type.FieldContainer)" class="member-name-link">setFields</a><wbr>(<a href="../type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Sets the Custom Fields fields for the TextLineItem.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTextLineItemId(java.lang.String)" class="member-name-link">setTextLineItemId</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemId)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTextLineItemId(java.lang.String)" class="member-name-link">setTextLineItemId</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemId)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The <code>id</code> of the TextLineItem to update.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTextLineItemKey(java.lang.String)" class="member-name-link">setTextLineItemKey</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemKey)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The <code>key</code> of the TextLineItem to update.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setType(com.commercetools.api.models.type.TypeResourceIdentifier)" class="member-name-link">setType</a><wbr>(<a href="../type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</code></div>
@@ -231,12 +240,22 @@ extends <a href="MyShoppingListUpdateAction.html" title="interface in com.commer
 <li>
 <section class="detail" id="getTextLineItemId()">
 <h3>getTextLineItemId</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTextLineItemId</span>()</div>
-<div class="block"><p>The <code>id</code> of the TextLineItem to update.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTextLineItemId</span>()</div>
+<div class="block"><p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>textLineItemId</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTextLineItemKey()">
+<h3>getTextLineItemKey</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTextLineItemKey</span>()</div>
+<div class="block"><p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>textLineItemKey</dd>
 </dl>
 </section>
 </li>
@@ -268,10 +287,21 @@ extends <a href="MyShoppingListUpdateAction.html" title="interface in com.commer
 <section class="detail" id="setTextLineItemId(java.lang.String)">
 <h3>setTextLineItemId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTextLineItemId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemId)</span></div>
-<div class="block"><p>The <code>id</code> of the TextLineItem to update.</p></div>
+<div class="block"><p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>textLineItemId</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTextLineItemKey(java.lang.String)">
+<h3>setTextLineItemKey</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTextLineItemKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemKey)</span></div>
+<div class="block"><p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>textLineItemKey</code> - value to be set</dd>
 </dl>
 </section>
 </li>

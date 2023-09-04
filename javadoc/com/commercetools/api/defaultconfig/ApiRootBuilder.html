@@ -202,6 +202,19 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(java.util.concurrent.ExecutorService)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;httpClientExecutorService)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofEnvironmentVariables()" class="member-name-link">ofEnvironmentVariables</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofEnvironmentVariables(java.lang.String)" class="member-name-link">ofEnvironmentVariables</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;prefix)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofProperties(java.util.Properties)" class="member-name-link">ofProperties</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html" title="class or interface in java.util" class="external-link">Properties</a>&nbsp;properties)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#ofProperties(java.util.Properties,java.lang.String)" class="member-name-link">ofProperties</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html" title="class or interface in java.util" class="external-link">Properties</a>&nbsp;properties,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;prefix)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#with(java.util.function.UnaryOperator)" class="member-name-link">with</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/UnaryOperator.html" title="class or interface in java.util.function" class="external-link">UnaryOperator</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client">ClientBuilder</a>&gt;&nbsp;builderUnaryOperator)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -590,6 +603,31 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="of(io.vrap.rmf.base.client.VrapHttpClient)">
 <h3>of</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="ofEnvironmentVariables()">
+<h3>ofEnvironmentVariables</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name">ofEnvironmentVariables</span>()</div>
+</section>
+</li>
+<li>
+<section class="detail" id="ofEnvironmentVariables(java.lang.String)">
+<h3>ofEnvironmentVariables</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name">ofEnvironmentVariables</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;prefix)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="ofProperties(java.util.Properties)">
+<h3>ofProperties</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name">ofProperties</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html" title="class or interface in java.util" class="external-link">Properties</a>&nbsp;properties)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="ofProperties(java.util.Properties,java.lang.String)">
+<h3>ofProperties</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name">ofProperties</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html" title="class or interface in java.util" class="external-link">Properties</a>&nbsp;properties,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;prefix)</span></div>
 </section>
 </li>
 <li>

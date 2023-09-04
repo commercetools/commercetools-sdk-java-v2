@@ -135,6 +135,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Amount in the smallest indivisible unit of a currency, such as:</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#centPrecision(javax.money.MonetaryAmount)" class="member-name-link">centPrecision</a><wbr>(javax.money.MonetaryAmount&nbsp;monetaryAmount)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CentPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#centPrecisionDraft(javax.money.MonetaryAmount)" class="member-name-link">centPrecisionDraft</a><wbr>(javax.money.MonetaryAmount&nbsp;monetaryAmount)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#currencyCode(java.lang.String)" class="member-name-link">currencyCode</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;currencyCode)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -145,6 +151,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrencyCode()" class="member-name-link">getCurrencyCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HighPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#highPrecision(javax.money.MonetaryAmount,int)" class="member-name-link">highPrecision</a><wbr>(javax.money.MonetaryAmount&nbsp;monetaryAmount,
+ int&nbsp;fractionDigits)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#highPrecisionDraft(javax.money.MonetaryAmount,int)" class="member-name-link">highPrecisionDraft</a><wbr>(javax.money.MonetaryAmount&nbsp;monetaryAmount,
+ int&nbsp;fractionDigits)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -260,6 +274,32 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="of(com.commercetools.api.models.common.Money)">
 <h3>of</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;template)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="centPrecision(javax.money.MonetaryAmount)">
+<h3>centPrecision</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a></span>&nbsp;<span class="element-name">centPrecision</span><wbr><span class="parameters">(javax.money.MonetaryAmount&nbsp;monetaryAmount)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="centPrecisionDraft(javax.money.MonetaryAmount)">
+<h3>centPrecisionDraft</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CentPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyDraftBuilder</a></span>&nbsp;<span class="element-name">centPrecisionDraft</span><wbr><span class="parameters">(javax.money.MonetaryAmount&nbsp;monetaryAmount)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="highPrecision(javax.money.MonetaryAmount,int)">
+<h3>highPrecision</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyBuilder</a></span>&nbsp;<span class="element-name">highPrecision</span><wbr><span class="parameters">(javax.money.MonetaryAmount&nbsp;monetaryAmount,
+ int&nbsp;fractionDigits)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="highPrecisionDraft(javax.money.MonetaryAmount,int)">
+<h3>highPrecisionDraft</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraftBuilder.html" title="class in com.commercetools.api.models.common">HighPrecisionMoneyDraftBuilder</a></span>&nbsp;<span class="element-name">highPrecisionDraft</span><wbr><span class="parameters">(javax.money.MonetaryAmount&nbsp;monetaryAmount,
+ int&nbsp;fractionDigits)</span></div>
 </section>
 </li>
 </ul>

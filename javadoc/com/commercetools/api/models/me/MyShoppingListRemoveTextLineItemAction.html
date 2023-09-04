@@ -85,7 +85,6 @@ extends <a href="MyShoppingListUpdateAction.html" title="interface in com.commer
  <div class=code-example>
  <pre><code class='java'>
      MyShoppingListRemoveTextLineItemAction myShoppingListRemoveTextLineItemAction = MyShoppingListRemoveTextLineItemAction.builder()
-             .textLineItemId("{textLineItemId}")
              .build()
  </code></pre>
  </div></div>
@@ -140,30 +139,40 @@ extends <a href="MyShoppingListUpdateAction.html" title="interface in com.commer
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Amount to remove from the <code>quantity</code> of the TextLineItem.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTextLineItemId()" class="member-name-link">getTextLineItemId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The <code>id</code> of the TextLineItem to update.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="MyShoppingListRemoveTextLineItemAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListRemoveTextLineItemAction</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTextLineItemKey()" class="member-name-link">getTextLineItemKey</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The <code>key</code> of the TextLineItem to update.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="MyShoppingListRemoveTextLineItemAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListRemoveTextLineItemAction</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.me.MyShoppingListRemoveTextLineItemAction)" class="member-name-link">of</a><wbr>(<a href="MyShoppingListRemoveTextLineItemAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListRemoveTextLineItemAction</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="MyShoppingListRemoveTextLineItemAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListRemoveTextLineItemAction</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.me.MyShoppingListRemoveTextLineItemAction)" class="member-name-link">of</a><wbr>(<a href="MyShoppingListRemoveTextLineItemAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListRemoveTextLineItemAction</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy MyShoppingListRemoveTextLineItemAction</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQuantity(java.lang.Long)" class="member-name-link">setQuantity</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQuantity(java.lang.Long)" class="member-name-link">setQuantity</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Amount to remove from the <code>quantity</code> of the TextLineItem.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTextLineItemId(java.lang.String)" class="member-name-link">setTextLineItemId</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemId)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTextLineItemId(java.lang.String)" class="member-name-link">setTextLineItemId</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemId)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The <code>id</code> of the TextLineItem to update.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTextLineItemKey(java.lang.String)" class="member-name-link">setTextLineItemKey</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemKey)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The <code>key</code> of the TextLineItem to update.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="MyShoppingListRemoveTextLineItemAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListRemoveTextLineItemAction</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -221,12 +230,22 @@ extends <a href="MyShoppingListUpdateAction.html" title="interface in com.commer
 <li>
 <section class="detail" id="getTextLineItemId()">
 <h3>getTextLineItemId</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTextLineItemId</span>()</div>
-<div class="block"><p>The <code>id</code> of the TextLineItem to update.</p></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTextLineItemId</span>()</div>
+<div class="block"><p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>textLineItemId</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTextLineItemKey()">
+<h3>getTextLineItemKey</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTextLineItemKey</span>()</div>
+<div class="block"><p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>textLineItemKey</dd>
 </dl>
 </section>
 </li>
@@ -245,10 +264,21 @@ extends <a href="MyShoppingListUpdateAction.html" title="interface in com.commer
 <section class="detail" id="setTextLineItemId(java.lang.String)">
 <h3>setTextLineItemId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTextLineItemId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemId)</span></div>
-<div class="block"><p>The <code>id</code> of the TextLineItem to update.</p></div>
+<div class="block"><p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>textLineItemId</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTextLineItemKey(java.lang.String)">
+<h3>setTextLineItemKey</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTextLineItemKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;textLineItemKey)</span></div>
+<div class="block"><p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>textLineItemKey</code> - value to be set</dd>
 </dl>
 </section>
 </li>

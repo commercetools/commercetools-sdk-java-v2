@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ProcessingState</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="interface in io.vrap.rmf.base.client">JsonEnum</a></span></div>
-<div class="block"><p>Every Import Operation is assigned with one of the following states.</p></div>
+<div class="block"><p>Every Import Operation is assigned one of the following states.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -113,34 +113,39 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
-<div class="col-second even-row-color"><code><a href="#IMPORTED" class="member-name-link">IMPORTED</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CANCELED" class="member-name-link">CANCELED</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Resource was successfully imported.</div>
+<div class="block">The import request was canceled and the resource was not imported.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#PROCESSING" class="member-name-link">PROCESSING</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#IMPORTED" class="member-name-link">IMPORTED</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Initial state assigned if the format (JSON structure and fields) meets the Import API's specification.</div>
+<div class="block">The resource was successfully imported.</div>
 </div>
 <div class="col-first even-row-color"><code>static final <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
-<div class="col-second even-row-color"><code><a href="#REJECTED" class="member-name-link">REJECTED</a></code></div>
+<div class="col-second even-row-color"><code><a href="#PROCESSING" class="member-name-link">PROCESSING</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Resource could not be imported.</div>
+<div class="block">The initial state assigned if the request payload (JSON structure and fields) meets Import API specifications.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#UNRESOLVED" class="member-name-link">UNRESOLVED</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#REJECTED" class="member-name-link">REJECTED</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Import Request contains key references to resources that are currently not present in commercetools Composable Commerce.</div>
+<div class="block">The resource could not be imported.</div>
 </div>
 <div class="col-first even-row-color"><code>static final <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
-<div class="col-second even-row-color"><code><a href="#VALIDATION_FAILED" class="member-name-link">VALIDATION_FAILED</a></code></div>
+<div class="col-second even-row-color"><code><a href="#UNRESOLVED" class="member-name-link">UNRESOLVED</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Either the request payload is missing the data as per the Import API's specification or even though the references were resolved, the data does not meet the validation constraints.</div>
+<div class="block">The import request contains <a href="ctp:import:type:KeyReference">KeyReferences</a> to resources that do not exist in your Composable Commerce Project.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#WAIT_FOR_MASTER_VARIANT" class="member-name-link">WAIT_FOR_MASTER_VARIANT</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#VALIDATION_FAILED" class="member-name-link">VALIDATION_FAILED</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Waiting for a master variant to arrive.</div>
+<div class="block">Either the request payload is missing the data as per Import API specifications, or even though the references were resolved, the data does not meet validation constraints.</div>
+</div>
+<div class="col-first even-row-color"><code>static final <a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></code></div>
+<div class="col-second even-row-color"><code><a href="#WAIT_FOR_MASTER_VARIANT" class="member-name-link">WAIT_FOR_MASTER_VARIANT</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">Products must have at least one Product Variant, also known as the Master Variant.</div>
 </div>
 </div>
 </section>
@@ -205,42 +210,49 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="PROCESSING">
 <h3>PROCESSING</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">PROCESSING</span></div>
-<div class="block"><p>Initial state assigned if the format (JSON structure and fields) meets the Import API's specification. The resource import is in progress.</p></div>
+<div class="block"><p>The initial state assigned if the request payload (JSON structure and fields) meets Import API specifications. The resource import is in progress.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="VALIDATION_FAILED">
 <h3>VALIDATION_FAILED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">VALIDATION_FAILED</span></div>
-<div class="block"><p>Either the request payload is missing the data as per the Import API's specification or even though the references were resolved, the data does not meet the validation constraints.</p></div>
+<div class="block"><p>Either the request payload is missing the data as per Import API specifications, or even though the references were resolved, the data does not meet validation constraints.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="UNRESOLVED">
 <h3>UNRESOLVED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">UNRESOLVED</span></div>
-<div class="block"><p>Import Request contains key references to resources that are currently not present in commercetools Composable Commerce.</p></div>
+<div class="block"><p>The import request contains <a href="ctp:import:type:KeyReference">KeyReferences</a> to resources that do not exist in your Composable Commerce Project.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="WAIT_FOR_MASTER_VARIANT">
 <h3>WAIT_FOR_MASTER_VARIANT</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">WAIT_FOR_MASTER_VARIANT</span></div>
-<div class="block"><p>Waiting for a master variant to arrive. The Product Import has required attributes and thus a master variant that provides those is required.</p></div>
+<div class="block"><p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant, the import request will have this status until another import request includes Master Variant data for the Product.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="IMPORTED">
 <h3>IMPORTED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">IMPORTED</span></div>
-<div class="block"><p>Resource was successfully imported.</p></div>
+<div class="block"><p>The resource was successfully imported.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="REJECTED">
 <h3>REJECTED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">REJECTED</span></div>
-<div class="block"><p>Resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the limit of retry has been reached.</p></div>
+<div class="block"><p>The resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the retry limit was reached.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="CANCELED">
+<h3>CANCELED</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="ProcessingState.html" title="interface in com.commercetools.importapi.models.common">ProcessingState</a></span>&nbsp;<span class="element-name">CANCELED</span></div>
+<div class="block"><p>The import request was canceled and the resource was not imported.</p></div>
 </section>
 </li>
 </ul>

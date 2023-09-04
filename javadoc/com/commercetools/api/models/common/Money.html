@@ -157,6 +157,13 @@ extends <a href="MonetaryAmountConvertable.html" title="interface in com.commerc
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default javax.money.MonetaryAmount</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#divideToIntegralValue(java.lang.Number)" class="member-name-link">divideToIntegralValue</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html" title="class or interface in java.lang" class="external-link">Number</a>&nbsp;divisor)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CentPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoneyDraft</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#draftOf(javax.money.MonetaryAmount)" class="member-name-link">draftOf</a><wbr>(javax.money.MonetaryAmount&nbsp;monetaryAmount)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#draftOf(javax.money.MonetaryAmount,int)" class="member-name-link">draftOf</a><wbr>(javax.money.MonetaryAmount&nbsp;monetaryAmount,
+ int&nbsp;fractionDigits)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCentAmount()" class="member-name-link">getCentAmount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -211,6 +218,13 @@ extends <a href="MonetaryAmountConvertable.html" title="interface in com.commerc
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.common.Money)" class="member-name-link">of</a><wbr>(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(javax.money.MonetaryAmount)" class="member-name-link">of</a><wbr>(javax.money.MonetaryAmount&nbsp;monetaryAmount)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="HighPrecisionMoney.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoney</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(javax.money.MonetaryAmount,int)" class="member-name-link">of</a><wbr>(javax.money.MonetaryAmount&nbsp;monetaryAmount,
+ int&nbsp;fractionDigits)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default javax.money.MonetaryAmount</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#plus()" class="member-name-link">plus</a>()</code></div>
@@ -327,6 +341,32 @@ extends <a href="MonetaryAmountConvertable.html" title="interface in com.commerc
 <section class="detail" id="of(com.commercetools.api.models.common.Money)">
 <h3>of</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;template)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="of(javax.money.MonetaryAmount)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(javax.money.MonetaryAmount&nbsp;monetaryAmount)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="of(javax.money.MonetaryAmount,int)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoney.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoney</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(javax.money.MonetaryAmount&nbsp;monetaryAmount,
+ int&nbsp;fractionDigits)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="draftOf(javax.money.MonetaryAmount)">
+<h3>draftOf</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CentPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoneyDraft</a></span>&nbsp;<span class="element-name">draftOf</span><wbr><span class="parameters">(javax.money.MonetaryAmount&nbsp;monetaryAmount)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="draftOf(javax.money.MonetaryAmount,int)">
+<h3>draftOf</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="HighPrecisionMoneyDraft.html" title="interface in com.commercetools.api.models.common">HighPrecisionMoneyDraft</a></span>&nbsp;<span class="element-name">draftOf</span><wbr><span class="parameters">(javax.money.MonetaryAmount&nbsp;monetaryAmount,
+ int&nbsp;fractionDigits)</span></div>
 </section>
 </li>
 <li>

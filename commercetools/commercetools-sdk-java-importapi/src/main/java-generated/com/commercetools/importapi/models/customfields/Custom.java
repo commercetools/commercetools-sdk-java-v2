@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+ *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface Custom {
     public TypeKeyReference getType();
 
     /**
-     *  <p>The custom fields of this object.</p>
+     *  <p>The Custom Fields of this object.</p>
      * @return fields
      */
     @Valid
@@ -57,7 +57,7 @@ public interface Custom {
     public void setType(final TypeKeyReference type);
 
     /**
-     *  <p>The custom fields of this object.</p>
+     *  <p>The Custom Fields of this object.</p>
      * @param fields value to be set
      */
 

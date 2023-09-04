@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Maps the custom field names to the actual values.</p>
+ *  <p>Maps the Custom Field names to actual values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface FieldContainer {
 
     /**
-     *  <p>Mapping from the custom field name to the actual value.</p>
+     *  <p>Mapping from the Custom Field name to the actual value.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface FieldContainer {
     public Map<String, CustomField> values();
 
     /**
-     *  <p>Mapping from the custom field name to the actual value.</p>
+     *  <p>Mapping from the Custom Field name to the actual value.</p>
      * @param key property name
      * @param value property value
      */

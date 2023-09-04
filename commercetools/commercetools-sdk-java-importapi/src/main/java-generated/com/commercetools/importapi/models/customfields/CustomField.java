@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Provides the value for a custom field of a specific type.</p>
+ *  <p>Provides the value for a Custom Field of a specific type.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern

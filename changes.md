@@ -1,11 +1,26 @@
 **Api changes**
 
 <details>
-<summary>Added Type(s)</summary>
+<summary>Required Property(s)</summary>
 
-- added type `MethodExternalTaxRateDraft`
-- added type `QuoteRenegotiationRequestedMessage`
-- added type `QuoteRenegotiationRequestedMessagePayload`
+- changed property `textLineItemId` of type `MyShoppingListChangeTextLineItemNameAction` to be optional
+- changed property `textLineItemId` of type `MyShoppingListChangeTextLineItemQuantityAction` to be optional
+- changed property `lineItemId` of type `MyShoppingListRemoveLineItemAction` to be optional
+- changed property `textLineItemId` of type `MyShoppingListRemoveTextLineItemAction` to be optional
+- changed property `lineItemId` of type `MyShoppingListSetLineItemCustomFieldAction` to be optional
+- changed property `textLineItemId` of type `MyShoppingListSetTextLineItemCustomFieldAction` to be optional
+- changed property `textLineItemId` of type `MyShoppingListSetTextLineItemCustomTypeAction` to be optional
+- changed property `textLineItemId` of type `MyShoppingListSetTextLineItemDescriptionAction` to be optional
+- changed property `lineItemId` of type `ShoppingListChangeLineItemQuantityAction` to be optional
+- changed property `textLineItemId` of type `ShoppingListChangeTextLineItemNameAction` to be optional
+- changed property `textLineItemId` of type `ShoppingListChangeTextLineItemQuantityAction` to be optional
+- changed property `lineItemId` of type `ShoppingListRemoveLineItemAction` to be optional
+- changed property `textLineItemId` of type `ShoppingListRemoveTextLineItemAction` to be optional
+- changed property `lineItemId` of type `ShoppingListSetLineItemCustomFieldAction` to be optional
+- changed property `lineItemId` of type `ShoppingListSetLineItemCustomTypeAction` to be optional
+- changed property `textLineItemId` of type `ShoppingListSetTextLineItemCustomFieldAction` to be optional
+- changed property `textLineItemId` of type `ShoppingListSetTextLineItemCustomTypeAction` to be optional
+- changed property `textLineItemId` of type `ShoppingListSetTextLineItemDescriptionAction` to be optional
 </details>
 
 
@@ -40,30 +55,57 @@
 - added property `textLineItemKey` to type `ShoppingListSetTextLineItemCustomFieldAction`
 - added property `textLineItemKey` to type `ShoppingListSetTextLineItemCustomTypeAction`
 - added property `textLineItemKey` to type `ShoppingListSetTextLineItemDescriptionAction`
+- added property `staged` to type `StandalonePriceDraft`
 </details>
 
 
 <details>
-<summary>Required Property(s)</summary>
+<summary>Added Type(s)</summary>
 
-- changed property `textLineItemId` of type `MyShoppingListChangeTextLineItemNameAction` to be optional
-- changed property `textLineItemId` of type `MyShoppingListChangeTextLineItemQuantityAction` to be optional
-- changed property `lineItemId` of type `MyShoppingListRemoveLineItemAction` to be optional
-- changed property `textLineItemId` of type `MyShoppingListRemoveTextLineItemAction` to be optional
-- changed property `lineItemId` of type `MyShoppingListSetLineItemCustomFieldAction` to be optional
-- changed property `textLineItemId` of type `MyShoppingListSetTextLineItemCustomFieldAction` to be optional
-- changed property `textLineItemId` of type `MyShoppingListSetTextLineItemCustomTypeAction` to be optional
-- changed property `textLineItemId` of type `MyShoppingListSetTextLineItemDescriptionAction` to be optional
-- changed property `lineItemId` of type `ShoppingListChangeLineItemQuantityAction` to be optional
-- changed property `textLineItemId` of type `ShoppingListChangeTextLineItemNameAction` to be optional
-- changed property `textLineItemId` of type `ShoppingListChangeTextLineItemQuantityAction` to be optional
-- changed property `lineItemId` of type `ShoppingListRemoveLineItemAction` to be optional
-- changed property `textLineItemId` of type `ShoppingListRemoveTextLineItemAction` to be optional
-- changed property `lineItemId` of type `ShoppingListSetLineItemCustomFieldAction` to be optional
-- changed property `lineItemId` of type `ShoppingListSetLineItemCustomTypeAction` to be optional
-- changed property `textLineItemId` of type `ShoppingListSetTextLineItemCustomFieldAction` to be optional
-- changed property `textLineItemId` of type `ShoppingListSetTextLineItemCustomTypeAction` to be optional
-- changed property `textLineItemId` of type `ShoppingListSetTextLineItemDescriptionAction` to be optional
+- added type `MethodExternalTaxRateDraft`
+- added type `CustomerAddressCustomFieldAddedMessage`
+- added type `CustomerAddressCustomFieldChangedMessage`
+- added type `CustomerAddressCustomFieldRemovedMessage`
+- added type `CustomerAddressCustomTypeRemovedMessage`
+- added type `CustomerAddressCustomTypeSetMessage`
+- added type `CustomerCustomFieldAddedMessage`
+- added type `CustomerCustomFieldChangedMessage`
+- added type `CustomerCustomFieldRemovedMessage`
+- added type `CustomerCustomTypeRemovedMessage`
+- added type `CustomerCustomTypeSetMessage`
+- added type `QuoteRenegotiationRequestedMessage`
+- added type `StandalonePriceStagedChangesRemovedMessage`
+- added type `CustomerAddressCustomFieldAddedMessagePayload`
+- added type `CustomerAddressCustomFieldChangedMessagePayload`
+- added type `CustomerAddressCustomFieldRemovedMessagePayload`
+- added type `CustomerAddressCustomTypeRemovedMessagePayload`
+- added type `CustomerAddressCustomTypeSetMessagePayload`
+- added type `CustomerCustomFieldAddedMessagePayload`
+- added type `CustomerCustomFieldChangedMessagePayload`
+- added type `CustomerCustomFieldRemovedMessagePayload`
+- added type `CustomerCustomTypeRemovedMessagePayload`
+- added type `CustomerCustomTypeSetMessagePayload`
+- added type `CustomerMessagePayload`
+- added type `QuoteRenegotiationRequestedMessagePayload`
+- added type `StandalonePriceStagedChangesRemovedMessagePayload`
+- added type `StagedPriceDraft`
+- added type `StandalonePriceRemoveStagedChangesAction`
+</details>
+
+
+<details>
+<summary>Removed Method(s)</summary>
+
+- :warning: removed method `apiRoot.withProjectKey().me().payments().withKey().get()`
+- :warning: removed method `apiRoot.withProjectKey().me().payments().withKey().post()`
+- :warning: removed method `apiRoot.withProjectKey().me().payments().withKey().delete()`
+</details>
+
+
+<details>
+<summary>Removed Resource(s)</summary>
+
+- :warning: removed resource `/{projectKey}/me/payments/key={key}`
 </details>
 
 

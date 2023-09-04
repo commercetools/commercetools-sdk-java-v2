@@ -59,6 +59,14 @@ public class StandalonePriceUpdateActionQueryBuilderDsl {
             StandalonePriceUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> asRemoveStagedChanges(
+            Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceRemoveStagedChangesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceRemoveStagedChangesActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.standalone_price.StandalonePriceRemoveStagedChangesActionQueryBuilderDsl
+                    .of()),
+            StandalonePriceUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<StandalonePriceUpdateActionQueryBuilderDsl> asSetCustomField(
             Function<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StandalonePriceSetCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

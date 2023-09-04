@@ -33,10 +33,6 @@ public class ByProjectKeyMePaymentsRequestBuilder {
         return post(op.apply(com.commercetools.api.models.me.MyPaymentDraftBuilder.of()).build());
     }
 
-    public ByProjectKeyMePaymentsKeyByKeyRequestBuilder withKey(String key) {
-        return new ByProjectKeyMePaymentsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
-    }
-
     public ByProjectKeyMePaymentsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyMePaymentsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }

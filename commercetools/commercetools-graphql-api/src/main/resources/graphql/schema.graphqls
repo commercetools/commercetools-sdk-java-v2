@@ -2706,6 +2706,7 @@ input CreateStandalonePrice {
   key: String
   sku: String!
   value: BaseMoneyInput!
+  staged: StagedPriceDraft
   country: Country
   customerGroup: ResourceIdentifierInput
   channel: ResourceIdentifierInput
@@ -3066,6 +3067,35 @@ type CustomerAddressChanged implements MessagePayload {
   type: String!
 }
 
+type CustomerAddressCustomFieldAdded implements MessagePayload {
+  name: String!
+  value: Json!
+  type: String!
+}
+
+type CustomerAddressCustomFieldChanged implements MessagePayload {
+  name: String!
+  value: Json!
+  previousValue: Json
+  type: String!
+}
+
+type CustomerAddressCustomFieldRemoved implements MessagePayload {
+  name: String!
+  type: String!
+}
+
+type CustomerAddressCustomTypeRemoved implements MessagePayload {
+  previousTypeId: String
+  type: String!
+}
+
+type CustomerAddressCustomTypeSet implements MessagePayload {
+  customFields: CustomFieldsType!
+  previousTypeId: String
+  type: String!
+}
+
 type CustomerAddressRemoved implements MessagePayload {
   address: Address!
   type: String!
@@ -3078,6 +3108,35 @@ type CustomerCompanyNameSet implements MessagePayload {
 
 type CustomerCreated implements MessagePayload {
   customer: Customer!
+  type: String!
+}
+
+type CustomerCustomFieldAdded implements MessagePayload {
+  name: String!
+  value: Json!
+  type: String!
+}
+
+type CustomerCustomFieldChanged implements MessagePayload {
+  name: String!
+  value: Json!
+  previousValue: Json
+  type: String!
+}
+
+type CustomerCustomFieldRemoved implements MessagePayload {
+  name: String!
+  type: String!
+}
+
+type CustomerCustomTypeRemoved implements MessagePayload {
+  previousTypeId: String
+  type: String!
+}
+
+type CustomerCustomTypeSet implements MessagePayload {
+  customFields: CustomFieldsType!
+  previousTypeId: String
   type: String!
 }
 
@@ -8914,6 +8973,10 @@ input RemoveShoppingListTextLineItem {
   quantity: Int
 }
 
+input RemoveStagedChanges {
+  dummy: String
+}
+
 input RemoveStagedOrderCustomLineItem {
   customLineItemId: String
   customLineItemKey: String
@@ -12327,6 +12390,10 @@ interface StagedOrderUpdateActionOutput {
   type: String!
 }
 
+input StagedPriceDraft {
+  value: BaseMoneyInput!
+}
+
 type StagedQuote implements Versioned {
   key: String
   stagedQuoteState: StagedQuoteState!
@@ -12500,6 +12567,11 @@ type StandalonePriceStagedChangesApplied implements MessagePayload {
   type: String!
 }
 
+type StandalonePriceStagedChangesRemoved implements MessagePayload {
+  stagedChanges: StagedStandalonePrice
+  type: String!
+}
+
 type StandalonePriceTierAdded implements MessagePayload {
   tier: ProductPriceTier!
   type: String!
@@ -12529,6 +12601,7 @@ input StandalonePriceUpdateAction {
   setValidUntil: SetStandalonePriceValidUntil
   addPriceTier: AddStandalonePriceTier
   removePriceTier: RemoveStandalonePriceTier
+  removeStagedChanges: RemoveStagedChanges
   setPriceTiers: SetStandalonePriceTiers
 }
 

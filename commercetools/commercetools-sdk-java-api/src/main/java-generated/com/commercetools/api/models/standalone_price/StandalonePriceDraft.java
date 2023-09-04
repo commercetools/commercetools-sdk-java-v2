@@ -132,6 +132,14 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Staged changes for the StandalonePrice.</p>
+     * @return staged
+     */
+    @Valid
+    @JsonProperty("staged")
+    public StagedPriceDraft getStaged();
+
+    /**
      *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
      * @return active
      */
@@ -225,6 +233,13 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>Staged changes for the StandalonePrice.</p>
+     * @param staged value to be set
+     */
+
+    public void setStaged(final StagedPriceDraft staged);
+
+    /**
      *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
      * @param active value to be set
      */
@@ -257,6 +272,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
         instance.setTiers(template.getTiers());
         instance.setDiscounted(template.getDiscounted());
         instance.setCustom(template.getCustom());
+        instance.setStaged(template.getStaged());
         instance.setActive(template.getActive());
         return instance;
     }
@@ -290,6 +306,8 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
         instance.setDiscounted(
             com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setStaged(
+            com.commercetools.api.models.standalone_price.StagedPriceDraft.deepCopy(template.getStaged()));
         instance.setActive(template.getActive());
         return instance;
     }

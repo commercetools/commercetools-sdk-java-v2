@@ -441,13 +441,6 @@ public class MessagePayloadQueryBuilderDsl {
             MessagePayloadQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asCustomerMessagePayload(
-            Function<com.commercetools.api.predicates.query.message.CustomerMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerMessagePayloadQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.message.CustomerMessagePayloadQueryBuilderDsl.of()),
-            MessagePayloadQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asCustomerPasswordUpdated(
             Function<com.commercetools.api.predicates.query.message.CustomerPasswordUpdatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerPasswordUpdatedMessagePayloadQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

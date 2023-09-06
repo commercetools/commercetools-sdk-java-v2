@@ -455,10 +455,6 @@ public interface MessagePayload {
             return com.commercetools.api.models.message.CustomerLastNameSetMessagePayload
                     .deepCopy((com.commercetools.api.models.message.CustomerLastNameSetMessagePayload) template);
         }
-        if (template instanceof com.commercetools.api.models.message.CustomerMessagePayload) {
-            return com.commercetools.api.models.message.CustomerMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.CustomerMessagePayload) template);
-        }
         if (template instanceof com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayload) {
             return com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayload
                     .deepCopy((com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayload) template);

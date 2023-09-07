@@ -290,8 +290,9 @@ tasks.register('internaldocs', Javadoc) {
         setAuthor false
         noTimestamp = true
         splitIndex = true
-        docTitle 'commercetools-java-sdks'
-        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/'
+        noTree = true
+        title = "commercetools Java SDK"
+        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
         overview = "src/main/javadoc/overview.html"
         bottom = """
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
@@ -301,13 +302,14 @@ tasks.register('internaldocs', Javadoc) {
             <script src="{@docRoot}/resources/javascripts/main.js"></script>
             <link rel="stylesheet" href="{@docRoot}/resources/stylesheets/main.css">
         """
-        taglets = ['com.commercetools.taglets.CodeTaglet','com.commercetools.taglets.ToCTaglet', 'com.commercetools.taglets.FileIncludeTaglet', 'org.jdrupes.taglets.plantUml.StartUml', 'org.jdrupes.taglets.plantUml.EndUml', 'org.jdrupes.taglets.plantUml.PlantUml']
+        taglets = ['com.commercetools.taglets.CodeTaglet', 'com.commercetools.taglets.ToCTaglet', 'com.commercetools.taglets.FileIncludeTaglet', 'org.jdrupes.taglets.plantUml.StartUml', 'org.jdrupes.taglets.plantUml.EndUml', 'org.jdrupes.taglets.plantUml.PlantUml']
         tagletPath = configurations.taglet.files as List
         maxMemory = '2g'
-        encoding = 'utf-8'
+        excludes = ['com/commercetools/graphql/api/client/**', 'com/commercetools/graphql/api/Dgs**','com/commercetools/graphql/api/types/**', 'com/commercetools/api/predicates/query/**/*Dsl.java', 'com/commercetools/**/*Impl.java']
         addBooleanOption('-allow-script-in-comments', true)
         addStringOption('Xdoclint:missing,accessibility,reference', '-quiet')
-        addBooleanOption('linksource', true)
+//        addBooleanOption('linksource', true)
+        encoding = 'utf-8'
         groups = [
                 "API"          : ["com.commercetools.api.*"],
                 "History"      : ["com.commercetools.history.*"],
@@ -317,7 +319,8 @@ tasks.register('internaldocs', Javadoc) {
                 "HTTP Clients" : [
                         "com.commercetools.http.*",
                         "io.vrap.rmf.okhttp.*"
-                ]
+                ],
+                "Monitoring"   : ["com.commercetools.monitoring.*"]
         ]
         addStringOption('source', '8')
     }

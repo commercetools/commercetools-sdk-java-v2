@@ -72,7 +72,9 @@ public interface LocalizedString {
     @NotNull
     @JsonIgnore
     default public Map<Locale, String> localeValues() {
-        return values().entrySet().stream().collect(Collectors.toMap(e -> new Locale(e.getKey()), Map.Entry::getValue));
+        return values().entrySet()
+                .stream()
+                .collect(Collectors.toMap(e -> Locale.forLanguageTag(e.getKey()), Map.Entry::getValue));
     }
 
     /**

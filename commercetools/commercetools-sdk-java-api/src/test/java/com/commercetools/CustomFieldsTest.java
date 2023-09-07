@@ -18,6 +18,7 @@ import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.type.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
@@ -92,6 +93,15 @@ public class CustomFieldsTest {
         assertThat(fields.get("set-reference")).asList().first().isInstanceOf(ProductReference.class);
         assertThat(fields.get("set-money")).asList().first().isInstanceOf(TypedMoney.class);
         assertThat(fields.get("set-empty")).asList().isEmpty();
+    }
+
+    @Test
+    public void fieldsAsJsonNode() throws IOException {
+        ApiModuleOptions options = ApiModuleOptions.of().withCustomFieldAsJsonNode(true);
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+        CustomFields customFields = mapper.readValue(stringFromResource("customfields.json"), CustomFields.class);
+        assertThat(customFields.getFields().values()).isNotEmpty();
+        assertThat(customFields.getFields().values().values()).allMatch(o -> o instanceof JsonNode);
     }
 
     @Test

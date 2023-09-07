@@ -19,6 +19,7 @@ import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
@@ -165,6 +166,17 @@ public class AttributesTest {
         Assertions.assertThat(JsonUtils.toJsonString(setStringAttribute))
                 .isEqualTo("{\"name\":\"setString\",\"value\":[\"foo\",\"bar\"]}");
 
+    }
+
+    @Test
+    public void attributesAsJsonNode() throws JsonProcessingException {
+        ApiModuleOptions options = ApiModuleOptions.of().withAttributeAsJsonNode(true);
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+        ProductVariant variant = mapper.readValue(stringFromResource("attributes.json"), ProductVariant.class);
+
+        assertThat(variant.getAttributes()).isNotEmpty();
+        assertThat(variant.getAttributes().stream().map(Attribute::getValue)).allMatch(o -> o instanceof JsonNode);
     }
 
     @Test

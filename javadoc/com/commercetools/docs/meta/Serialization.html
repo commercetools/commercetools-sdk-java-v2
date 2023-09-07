@@ -95,7 +95,6 @@ package com.commercetools.api.json;
 
 import java.util.Optional;
 
-import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.product.AttributeImpl;
 import com.commercetools.api.models.type.FieldContainerImpl;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -115,8 +114,25 @@ public class ApiModule extends SimpleModule {
         boolean customFieldAsDateString = Boolean
                 .parseBoolean(Optional.ofNullable(options.getOption(ApiModuleOptions.DESERIALIZE_DATE_FIELD_AS_STRING))
                         .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_DATE_FIELD_AS_STRING)));
-        addDeserializer(AttributeImpl.class, new AtrributeDeserializer(attributeAsDateString));
-        addDeserializer(FieldContainerImpl.class, new CustomFieldDeserializer(customFieldAsDateString));
+        boolean attributeAsJsonNode = Boolean.parseBoolean(
+            Optional.ofNullable(options.getOption(ApiModuleOptions.DESERIALIZE_ATTRIBUTE_AS_JSON_NODE))
+                    .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_ATTRIBUTE_AS_JSON_NODE)));
+        boolean customFieldAsJsonNode = Boolean.parseBoolean(
+            Optional.ofNullable(options.getOption(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_AS_JSON_NODE))
+                    .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_AS_JSON_NODE)));
+
+        if (attributeAsJsonNode) {
+            setMixInAnnotation(AttributeImpl.class, AttributeJsonNodeMixin.class);
+        }
+        else {
+            addDeserializer(AttributeImpl.class, new AtrributeDeserializer(attributeAsDateString));
+        }
+        if (customFieldAsJsonNode) {
+            addDeserializer(FieldContainerImpl.class, new CustomFieldJsonNodeDeserializer());
+        }
+        else {
+            addDeserializer(FieldContainerImpl.class, new CustomFieldDeserializer(customFieldAsDateString));
+        }
     }
 }
 </code></pre></div>

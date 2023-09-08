@@ -44,7 +44,7 @@ public interface CustomerAddressCustomFieldChangedMessagePayload extends Message
     public String getName();
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set Custom Field update action.</p>
+     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
      * @return value
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface CustomerAddressCustomFieldChangedMessagePayload extends Message
     public void setName(final String name);
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set Custom Field update action.</p>
+     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
      * @param value value to be set
      */
 

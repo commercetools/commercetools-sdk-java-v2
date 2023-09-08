@@ -66,7 +66,7 @@ public class CustomerCustomFieldChangedMessagePayloadImpl
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set Custom Field update action.</p>
+     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
      */
 
     public java.lang.Object getValue() {

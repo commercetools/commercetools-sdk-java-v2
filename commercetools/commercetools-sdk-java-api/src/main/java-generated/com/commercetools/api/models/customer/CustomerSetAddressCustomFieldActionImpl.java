@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerSetAddressCustomFieldAction
+ *  <p>Adding a Custom Field to an Address of a Customer generates the CustomerAddressCustomFieldAdded Message, removing one generates the CustomerAddressCustomFieldRemoved Message, and updating an existing one generates the CustomerAddressCustomFieldChanged Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetAddressCustomFieldActionImpl implements CustomerSetAddressCustomFieldAction, ModelBase {

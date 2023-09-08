@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after changing an existing Custom Field on the Address using the Set CustomField in Address update action.</p>
+ *  <p>Generated after changing an existing Custom Field on an Address of a Customer using the Set CustomField in Address update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

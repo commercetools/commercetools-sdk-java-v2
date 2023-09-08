@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Set Custom Type update action with empty parameters.</p>
+ *  <p>Generated after adding a Custom Type to a Customer using the Set Custom Type update action with empty parameters.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCustomTypeRemovedMessagePayloadImpl implements CustomerCustomTypeRemovedMessagePayload, ModelBase {

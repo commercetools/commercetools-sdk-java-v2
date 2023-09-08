@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after adding a Custom Field to a Business Unit using the Set CustomField update action. If a Custom Field exists already exists with the same name, a BusinessUnitCustomFieldChanged Message is generated instead.</p>
+ *  <p>Generated after adding a Custom Field to a Business Unit using the Set CustomField update action. If a Custom Field already exists with the same name, a BusinessUnitCustomFieldChanged Message is generated instead.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitCustomFieldAddedMessageImpl implements BusinessUnitCustomFieldAddedMessage, ModelBase {

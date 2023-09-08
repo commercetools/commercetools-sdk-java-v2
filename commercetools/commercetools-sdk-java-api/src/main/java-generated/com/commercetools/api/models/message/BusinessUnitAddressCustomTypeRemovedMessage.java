@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after removing a Custom Type from an address of a Business Unit using the Set CustomType in Address update action.</p>
+ *  <p>Generated after removing a Custom Type from an address of a Business Unit using the Set Custom Type in Address update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

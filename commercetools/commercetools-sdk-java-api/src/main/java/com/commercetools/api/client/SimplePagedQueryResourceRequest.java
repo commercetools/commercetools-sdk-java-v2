@@ -1,10 +1,12 @@
 
 package com.commercetools.api.client;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import com.commercetools.api.predicates.query.QueryPredicate;
 
@@ -87,29 +89,33 @@ public interface SimplePagedQueryResourceRequest<T extends SimplePagedQueryResou
     @SuppressWarnings("unchecked")
     default T withQuery(Function<TQuery, QueryPredicate> fn, final Map<String, Collection<String>> predicateVar) {
         SimplePagedQueryResourceRequest<T, TResult, TQuery> request = withWhere(fn.apply(queryDsl()).render());
-        predicateVar.forEach(request::withPredicateVar);
+        for (Map.Entry<String, Collection<String>> entry : predicateVar.entrySet()) {
+            request = request.withPredicateVar(entry.getKey(), entry.getValue());
+        }
         return (T) request;
     }
 
     @SuppressWarnings("unchecked")
     default T addQuery(Function<TQuery, QueryPredicate> fn, final Map<String, Collection<String>> predicateVar) {
         SimplePagedQueryResourceRequest<T, TResult, TQuery> request = addWhere(fn.apply(queryDsl()).render());
-        predicateVar.forEach(request::withPredicateVar);
+        for (Map.Entry<String, Collection<String>> entry : predicateVar.entrySet()) {
+            request = request.withPredicateVar(entry.getKey(), entry.getValue());
+        }
         return (T) request;
     }
 
-    @SuppressWarnings("unchecked")
     default T withQuery(Function<TQuery, QueryPredicate> fn, Collection<Map.Entry<String, String>> predicateVar) {
-        SimplePagedQueryResourceRequest<T, TResult, TQuery> request = withWhere(fn.apply(queryDsl()).render());
-        predicateVar.forEach(pair -> request.withPredicateVar(pair.getKey(), pair.getValue()));
-        return (T) request;
+        Map<String, Collection<String>> collect = predicateVar.stream()
+                .collect(Collectors.groupingBy(Map.Entry::getKey,
+                    Collectors.mapping(Map.Entry::getValue, Collectors.toCollection(ArrayList::new))));
+        return withQuery(fn, collect);
     }
 
-    @SuppressWarnings("unchecked")
     default T addQuery(Function<TQuery, QueryPredicate> fn, Collection<Map.Entry<String, String>> predicateVar) {
-        SimplePagedQueryResourceRequest<T, TResult, TQuery> request = addWhere(fn.apply(queryDsl()).render());
-        predicateVar.forEach(pair -> request.withPredicateVar(pair.getKey(), pair.getValue()));
-        return (T) request;
+        Map<String, Collection<String>> collect = predicateVar.stream()
+                .collect(Collectors.groupingBy(Map.Entry::getKey,
+                    Collectors.mapping(Map.Entry::getValue, Collectors.toCollection(ArrayList::new))));
+        return addQuery(fn, collect);
     }
 
     @SuppressWarnings("unchecked")
@@ -125,29 +131,33 @@ public interface SimplePagedQueryResourceRequest<T extends SimplePagedQueryResou
     @SuppressWarnings("unchecked")
     default T withWhere(final String where, final Map<String, Collection<String>> predicateVar) {
         SimplePagedQueryResourceRequest<T, TResult, TQuery> request = withWhere(where);
-        predicateVar.forEach(request::withPredicateVar);
+        for (Map.Entry<String, Collection<String>> entry : predicateVar.entrySet()) {
+            request = request.withPredicateVar(entry.getKey(), entry.getValue());
+        }
         return (T) request;
     }
 
     @SuppressWarnings("unchecked")
     default T addWhere(final String where, final Map<String, Collection<String>> predicateVar) {
         SimplePagedQueryResourceRequest<T, TResult, TQuery> request = addWhere(where);
-        predicateVar.forEach(request::withPredicateVar);
+        for (Map.Entry<String, Collection<String>> entry : predicateVar.entrySet()) {
+            request = request.withPredicateVar(entry.getKey(), entry.getValue());
+        }
         return (T) request;
     }
 
-    @SuppressWarnings("unchecked")
     default T withWhere(final String where, final Collection<Map.Entry<String, String>> predicateVar) {
-        SimplePagedQueryResourceRequest<T, TResult, TQuery> request = withWhere(where);
-        predicateVar.forEach(pair -> request.withPredicateVar(pair.getKey(), pair.getValue()));
-        return (T) request;
+        Map<String, Collection<String>> collect = predicateVar.stream()
+                .collect(Collectors.groupingBy(Map.Entry::getKey,
+                    Collectors.mapping(Map.Entry::getValue, Collectors.toCollection(ArrayList::new))));
+        return withWhere(where, collect);
     }
 
-    @SuppressWarnings("unchecked")
     default T addWhere(final String where, final Collection<Map.Entry<String, String>> predicateVar) {
-        SimplePagedQueryResourceRequest<T, TResult, TQuery> request = addWhere(where);
-        predicateVar.forEach(pair -> request.withPredicateVar(pair.getKey(), pair.getValue()));
-        return (T) request;
+        Map<String, Collection<String>> collect = predicateVar.stream()
+                .collect(Collectors.groupingBy(Map.Entry::getKey,
+                    Collectors.mapping(Map.Entry::getValue, Collectors.toCollection(ArrayList::new))));
+        return addWhere(where, collect);
     }
 
     @SuppressWarnings("unchecked")

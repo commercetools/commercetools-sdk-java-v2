@@ -33,7 +33,7 @@ jobs:
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         run: ./gradlew spotlessApply
 
-      - uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
+      - uses: stefanzweifel/git-auto-commit-action@3d1b5e078a85df99db0cb2441cd4309b09d86253
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
             commit_message: "spotless: Fix code style"
@@ -45,7 +45,7 @@ jobs:
         if: steps.auto-commit-action.outputs.changes_detected == 'true'
         run: echo "${{steps.auto-commit-action.outputs.commit_hash}}" >> .git-blame-ignore-revs
 
-      - uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
+      - uses: stefanzweifel/git-auto-commit-action@3d1b5e078a85df99db0cb2441cd4309b09d86253
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
             file_pattern: '.git-blame-ignore-revs'
@@ -57,7 +57,7 @@ jobs:
       - name: License check
         run: ./gradlew checkLicense
 
-      - uses: stefanzweifel/git-auto-commit-action@3ea6ae190baf489ba007f7c92608f33ce20ef04a
+      - uses: stefanzweifel/git-auto-commit-action@3d1b5e078a85df99db0cb2441cd4309b09d86253
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
             file_pattern: 'licenses/index.json licenses/**/index.json'

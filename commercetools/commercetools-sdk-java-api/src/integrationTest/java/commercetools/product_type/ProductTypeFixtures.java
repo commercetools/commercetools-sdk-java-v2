@@ -1,10 +1,12 @@
 
 package commercetools.product_type;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.product_type.*;
 import commercetools.utils.CommercetoolsTestUtils;
 
@@ -13,6 +15,27 @@ import io.vrap.rmf.base.client.error.NotFoundException;
 import org.junit.jupiter.api.Assertions;
 
 public class ProductTypeFixtures {
+
+    public static ProductType defaultProductType(final ProjectApiRoot client) {
+        final String name = "referenceable-product-1";
+        return createProductType(client, name);
+    }
+
+    public static ProductType createProductType(final ProjectApiRoot client, final String name) {
+        final ProductTypeDraft productTypeDraft = ProductTypeDraft.builder()
+                .key(CommercetoolsTestUtils.randomKey())
+                .name(name)
+                .description("")
+                .attributes(new ArrayList<>())
+                .build();
+        return client.productTypes()
+                .get()
+                .addQuery(q -> q.name().is(name))
+                .executeBlocking()
+                .getBody()
+                .head()
+                .orElseGet(() -> client.productTypes().create(productTypeDraft).executeBlocking().getBody());
+    }
 
     public static void withProductType(final ProductTypeDraft productTypeDraft, final Consumer<ProductType> consumer) {
         ProductType productType = createProductType(productTypeDraft);

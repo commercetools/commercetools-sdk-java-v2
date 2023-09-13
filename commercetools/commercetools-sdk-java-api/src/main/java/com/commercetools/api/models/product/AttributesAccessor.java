@@ -161,7 +161,7 @@ public class AttributesAccessor extends MapAccessor<Attribute> {
 
     @Nullable
     public AttributesAccessor asNested(final String key) {
-        return AttributesAccessor.of((List<Attribute>) get(key, AttributeAccessor::asNested));
+        return AttributesAccessor.of(get(key, AttributeAccessor::asNested));
     }
 
     @Nullable

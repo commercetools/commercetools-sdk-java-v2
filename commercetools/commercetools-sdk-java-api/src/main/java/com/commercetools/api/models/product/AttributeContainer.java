@@ -13,12 +13,12 @@ public interface AttributeContainer {
     List<Attribute> getAttributes();
 
     @Nullable
-    public default AttributeAccessor getAttributeByName(final String attributeName) {
+    public default AttributeAccess getAttributeByName(final String attributeName) {
         return findAttributeByName(attributeName).orElse(null);
     }
 
-    public default Optional<AttributeAccessor> findAttributeByName(final String attributeName) {
-        return findAttribute(attributeName).map(AttributeAccessor::of);
+    public default Optional<AttributeAccess> findAttributeByName(final String attributeName) {
+        return findAttribute(attributeName).map(AttributeAccess::of);
     }
 
     public default <T> Optional<T> findAttribute(final String attributeName, Function<Attribute, T> accessor) {

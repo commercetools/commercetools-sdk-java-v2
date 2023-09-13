@@ -8,4 +8,8 @@ import com.commercetools.api.models.error.ErrorResponse;
  */
 public interface ErrorResponseException {
     public ErrorResponse getErrorResponse();
+
+    default boolean hasErrorCode(final String errorCode) {
+        return getErrorResponse().getErrors().stream().anyMatch(error -> error.getCode().equals(errorCode));
+    }
 }

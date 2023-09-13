@@ -7,6 +7,10 @@ import io.vrap.rmf.base.client.error.BaseException;
 public class JsonException extends BaseException {
     private static final long serialVersionUID = 0L;
 
+    public JsonException(final String message) {
+        super(message);
+    }
+
     public JsonException(final Throwable cause) {
         super(cause);
     }

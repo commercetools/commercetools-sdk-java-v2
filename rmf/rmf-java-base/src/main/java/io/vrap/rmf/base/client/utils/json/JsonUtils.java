@@ -3,6 +3,8 @@ package io.vrap.rmf.base.client.utils.json;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -174,6 +176,44 @@ public class JsonUtils {
      */
     public static <T> T fromInputStream(final InputStream content, final TypeReference<T> typeReference) {
         return executing(() -> getConfiguredObjectMapper().readValue(content, typeReference));
+    }
+
+    /**
+     * Reads a UTF-8 JSON text file from the classpath of the current thread and transforms it into a Java object.
+     *
+     * @param resourcePath  the path to the resource. Example: If the file is located in "src/test/resources/foo/bar/product.json" then the path should be "foo/bar/product.json"
+     * @param typeReference the full generic type information about the object to create
+     * @param <T>           the type of the result
+     * @return the created objected
+     */
+    public static <T> T readObjectFromResource(final String resourcePath, final TypeReference<T> typeReference) {
+        return executing(() -> {
+            final InputStream resourceAsStream = Thread.currentThread()
+                    .getContextClassLoader()
+                    .getResourceAsStream(resourcePath);
+            return getConfiguredObjectMapper()
+                    .readValue(new InputStreamReader(resourceAsStream, StandardCharsets.UTF_8.name()), typeReference);
+        });
+    }
+
+    public static <T> T readObjectFromResource(final String resourcePath, final JavaType javaType) {
+        return executing(() -> {
+            final InputStream resourceAsStream = Thread.currentThread()
+                    .getContextClassLoader()
+                    .getResourceAsStream(resourcePath);
+            return getConfiguredObjectMapper()
+                    .readValue(new InputStreamReader(resourceAsStream, StandardCharsets.UTF_8.name()), javaType);
+        });
+    }
+
+    public static <T> T readObjectFromResource(final String resourcePath, final Class<T> clazz) {
+        return executing(() -> {
+            final InputStream resourceAsStream = Thread.currentThread()
+                    .getContextClassLoader()
+                    .getResourceAsStream(resourcePath);
+            return getConfiguredObjectMapper()
+                    .readValue(new InputStreamReader(resourceAsStream, StandardCharsets.UTF_8.name()), clazz);
+        });
     }
 
     /**

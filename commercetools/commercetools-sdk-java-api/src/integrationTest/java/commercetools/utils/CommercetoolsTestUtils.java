@@ -1,7 +1,12 @@
 
 package commercetools.utils;
 
+import static java.util.Arrays.asList;
+
 import java.time.Duration;
+import java.util.LinkedHashSet;
+import java.util.Locale;
+import java.util.Set;
 import java.util.UUID;
 
 import com.commercetools.api.client.ProjectApiRoot;
@@ -38,6 +43,16 @@ public class CommercetoolsTestUtils {
         LocalizedString localizedString = new LocalizedStringImpl();
         localizedString.setValue(randomString(), randomString());
         return localizedString;
+    }
+
+    @SafeVarargs
+    @SuppressWarnings("varargs")
+    public static <T> Set<T> asSet(final T... params) {
+        return new LinkedHashSet<>(asList(params));
+    }
+
+    public static LocalizedString randomSlug() {
+        return LocalizedString.of(Locale.ENGLISH, CommercetoolsTestUtils.randomKey());
     }
 
     public static String getProjectKey() {

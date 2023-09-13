@@ -12,15 +12,15 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.category.Category;
 import com.commercetools.api.models.category.CategoryResourceIdentifierBuilder;
 import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.product.*;
-import com.commercetools.api.models.product_discount.*;
 import com.commercetools.api.models.product_type.*;
-import com.commercetools.api.models.state.*;
 import com.commercetools.api.models.tax_category.TaxCategory;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder;
+import commercetools.product_type.ProductTypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
@@ -28,6 +28,11 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 import org.junit.jupiter.api.Assertions;
 
 public class ProductFixtures {
+
+    public static final PriceDraft PRICE = PriceDraft.builder()
+            .value(Money.builder().centAmount(1234L).currencyCode("EUR").build())
+            .country("DE")
+            .build();
 
     public static void withProduct(final Consumer<Product> consumer) {
         withTaxCategory(
@@ -130,6 +135,26 @@ public class ProductFixtures {
                                     .build())
                             .build())
                 .build();
+    }
+
+    public static Product referenceableProduct(final ProjectApiRoot client) {
+        final ProductType productType = ProductTypeFixtures.defaultProductType(client);
+        final ProductVariantDraft variantDraft = ProductVariantDraft.builder().prices(PRICE).build();
+        final LocalizedString slugEn = LocalizedString.ofEnglish("referenceable-product-2");
+        final ProductDraft productDraft = ProductDraft.builder()
+                .productType(productType.toResourceIdentifier())
+                .name(slugEn)
+                .slug(slugEn)
+                .variants(variantDraft)
+                .build();
+        return client.products()
+                .get()
+                .addQuery(q -> q.masterData(
+                    m -> m.staged(s -> s.slug(slug -> slug.with(Locale.ENGLISH).is(slugEn.get(Locale.ENGLISH))))))
+                .executeBlocking()
+                .getBody()
+                .head()
+                .orElseGet(() -> client.products().create(productDraft).executeBlocking().getBody());
     }
 
     public static Product createProduct(ProductType productType, Category category, TaxCategory taxCategory) {

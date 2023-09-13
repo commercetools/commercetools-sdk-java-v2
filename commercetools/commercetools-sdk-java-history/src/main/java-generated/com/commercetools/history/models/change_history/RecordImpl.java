@@ -41,6 +41,8 @@ public class RecordImpl implements Record, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.KeyReference> stores;
 
+    private com.commercetools.history.models.common.KeyReference businessUnit;
+
     private Boolean withoutChanges;
 
     /**
@@ -56,6 +58,7 @@ public class RecordImpl implements Record, ModelBase {
             @JsonProperty("changes") final java.util.List<com.commercetools.history.models.change.Change> changes,
             @JsonProperty("resource") final com.commercetools.history.models.common.ResourceIdentifier resource,
             @JsonProperty("stores") final java.util.List<com.commercetools.history.models.common.KeyReference> stores,
+            @JsonProperty("businessUnit") final com.commercetools.history.models.common.KeyReference businessUnit,
             @JsonProperty("withoutChanges") final Boolean withoutChanges) {
         this.version = version;
         this.previousVersion = previousVersion;
@@ -67,6 +70,7 @@ public class RecordImpl implements Record, ModelBase {
         this.changes = changes;
         this.resource = resource;
         this.stores = stores;
+        this.businessUnit = businessUnit;
         this.withoutChanges = withoutChanges;
     }
 
@@ -159,6 +163,14 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
+     *  <p>Reference to the Business Unit associated with the Change.</p>
+     */
+
+    public com.commercetools.history.models.common.KeyReference getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    /**
      *  <p><code>true</code> if no change was detected.</p>
      *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      */
@@ -215,6 +227,10 @@ public class RecordImpl implements Record, ModelBase {
         this.stores = stores;
     }
 
+    public void setBusinessUnit(final com.commercetools.history.models.common.KeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     public void setWithoutChanges(final Boolean withoutChanges) {
         this.withoutChanges = withoutChanges;
     }
@@ -239,6 +255,7 @@ public class RecordImpl implements Record, ModelBase {
                 .append(changes, that.changes)
                 .append(resource, that.resource)
                 .append(stores, that.stores)
+                .append(businessUnit, that.businessUnit)
                 .append(withoutChanges, that.withoutChanges)
                 .append(version, that.version)
                 .append(previousVersion, that.previousVersion)
@@ -250,6 +267,7 @@ public class RecordImpl implements Record, ModelBase {
                 .append(changes, that.changes)
                 .append(resource, that.resource)
                 .append(stores, that.stores)
+                .append(businessUnit, that.businessUnit)
                 .append(withoutChanges, that.withoutChanges)
                 .isEquals();
     }
@@ -266,6 +284,7 @@ public class RecordImpl implements Record, ModelBase {
                 .append(changes)
                 .append(resource)
                 .append(stores)
+                .append(businessUnit)
                 .append(withoutChanges)
                 .toHashCode();
     }

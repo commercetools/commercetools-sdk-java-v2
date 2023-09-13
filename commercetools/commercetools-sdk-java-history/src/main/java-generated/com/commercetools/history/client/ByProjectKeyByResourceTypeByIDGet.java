@@ -124,6 +124,10 @@ public class ByProjectKeyByResourceTypeByIDGet extends
         return this.getQueryParam("associateId");
     }
 
+    public List<String> getBusinessUnit() {
+        return this.getQueryParam("businessUnit");
+    }
+
     public List<String> getType() {
         return this.getQueryParam("type");
     }
@@ -794,6 +798,87 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     public <TValue> ByProjectKeyByResourceTypeByIDGet addAssociateId(final Collection<TValue> associateId) {
         return copy().addQueryParams(
             associateId.stream().map(s -> new ParamEntry<>("associateId", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set businessUnit with the specified value
+     * @param businessUnit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withBusinessUnit(final TValue businessUnit) {
+        return copy().withQueryParam("businessUnit", businessUnit);
+    }
+
+    /**
+     * add additional businessUnit query parameter
+     * @param businessUnit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addBusinessUnit(final TValue businessUnit) {
+        return copy().addQueryParam("businessUnit", businessUnit);
+    }
+
+    /**
+     * set businessUnit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet withBusinessUnit(final Supplier<String> supplier) {
+        return copy().withQueryParam("businessUnit", supplier.get());
+    }
+
+    /**
+     * add additional businessUnit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet addBusinessUnit(final Supplier<String> supplier) {
+        return copy().addQueryParam("businessUnit", supplier.get());
+    }
+
+    /**
+     * set businessUnit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet withBusinessUnit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("businessUnit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional businessUnit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public ByProjectKeyByResourceTypeByIDGet addBusinessUnit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("businessUnit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set businessUnit with the specified values
+     * @param businessUnit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet withBusinessUnit(final Collection<TValue> businessUnit) {
+        return copy().withoutQueryParam("businessUnit")
+                .addQueryParams(businessUnit.stream()
+                        .map(s -> new ParamEntry<>("businessUnit", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional businessUnit query parameters
+     * @param businessUnit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeByIDGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeByIDGet addBusinessUnit(final Collection<TValue> businessUnit) {
+        return copy().addQueryParams(businessUnit.stream()
+                .map(s -> new ParamEntry<>("businessUnit", s.toString()))
+                .collect(Collectors.toList()));
     }
 
     /**

@@ -95,6 +95,10 @@ public class ByProjectKeyTest {
                         .get()
                         .withAssociateId("associateId")
                         .createHttpRequest(), "get", "test_projectKey?associateId=associateId", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
+                        .withBusinessUnit("businessUnit")
+                        .createHttpRequest(), "get", "test_projectKey?businessUnit=businessUnit", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withType("type").createHttpRequest(),
                         "get", "test_projectKey?type=type", },
@@ -145,6 +149,7 @@ public class ByProjectKeyTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withClientId("clientId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withCustomerId("customerId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withAssociateId("associateId"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withBusinessUnit("businessUnit"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withType("type"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceId("resourceId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceKey("resourceKey"), },

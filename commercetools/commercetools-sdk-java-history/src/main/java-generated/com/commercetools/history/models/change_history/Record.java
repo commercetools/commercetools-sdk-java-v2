@@ -136,6 +136,14 @@ public interface Record {
     public List<KeyReference> getStores();
 
     /**
+     *  <p>Reference to the Business Unit associated with the Change.</p>
+     * @return businessUnit
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public KeyReference getBusinessUnit();
+
+    /**
      *  <p><code>true</code> if no change was detected.</p>
      *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      * @return withoutChanges
@@ -234,6 +242,13 @@ public interface Record {
     public void setStores(final List<KeyReference> stores);
 
     /**
+     *  <p>Reference to the Business Unit associated with the Change.</p>
+     * @param businessUnit value to be set
+     */
+
+    public void setBusinessUnit(final KeyReference businessUnit);
+
+    /**
      *  <p><code>true</code> if no change was detected.</p>
      *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      * @param withoutChanges value to be set
@@ -266,6 +281,7 @@ public interface Record {
         instance.setChanges(template.getChanges());
         instance.setResource(template.getResource());
         instance.setStores(template.getStores());
+        instance.setBusinessUnit(template.getBusinessUnit());
         instance.setWithoutChanges(template.getWithoutChanges());
         return instance;
     }
@@ -301,6 +317,8 @@ public interface Record {
                         .map(com.commercetools.history.models.common.KeyReference::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setBusinessUnit(
+            com.commercetools.history.models.common.KeyReference.deepCopy(template.getBusinessUnit()));
         instance.setWithoutChanges(template.getWithoutChanges());
         return instance;
     }

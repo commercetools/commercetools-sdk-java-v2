@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after changing an existing Custom Field using the Set CustomField update action.</p>
+ *  <p>Generated after changing an existing Custom Field on a Customer using the Set CustomField update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,7 +44,7 @@ public interface CustomerCustomFieldChangedMessagePayload extends MessagePayload
     public String getName();
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set Custom Field update action.</p>
+     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
      * @return value
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface CustomerCustomFieldChangedMessagePayload extends MessagePayload
     public void setName(final String name);
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set Custom Field update action.</p>
+     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
      * @param value value to be set
      */
 

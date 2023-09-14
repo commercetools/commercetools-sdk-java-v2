@@ -96,7 +96,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {

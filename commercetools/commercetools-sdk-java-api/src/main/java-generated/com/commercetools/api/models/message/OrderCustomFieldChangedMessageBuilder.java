@@ -274,7 +274,7 @@ public class OrderCustomFieldChangedMessageBuilder implements Builder<OrderCusto
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set Custom Field update action.</p>
+     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -398,7 +398,7 @@ public class OrderCustomFieldChangedMessageBuilder implements Builder<OrderCusto
     }
 
     /**
-     *  <p>CustomFieldValue based on the FieldType after the Set Custom Field update action.</p>
+     *  <p>CustomFieldValue based on the FieldType after the Set CustomField update action.</p>
      * @return value
      */
 

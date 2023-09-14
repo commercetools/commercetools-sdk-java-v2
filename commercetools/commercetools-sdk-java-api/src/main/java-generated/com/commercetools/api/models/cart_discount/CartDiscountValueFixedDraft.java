@@ -40,7 +40,8 @@ public interface CartDiscountValueFixedDraft
     String FIXED = "fixed";
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty, the discount does not apply.</p>
      * @return money
      */
     @NotNull
@@ -49,7 +50,8 @@ public interface CartDiscountValueFixedDraft
     public List<Money> getMoney();
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty, the discount does not apply.</p>
      * @param money values to be set
      */
 
@@ -57,7 +59,8 @@ public interface CartDiscountValueFixedDraft
     public void setMoney(final Money... money);
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty, the discount does not apply.</p>
      * @param money values to be set
      */
 

@@ -76,7 +76,7 @@ public interface Parcel {
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
      * @return custom
      */
     @Valid
@@ -127,7 +127,7 @@ public interface Parcel {
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
      * @param custom value to be set
      */
 

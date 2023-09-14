@@ -24,7 +24,7 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
     private Map<String, com.commercetools.importapi.models.customfields.CustomField> values = new HashMap<>();
 
     /**
-     *  <p>Mapping from the custom field name to the actual value.</p>
+     *  <p>Mapping from the Custom Field name to the actual value.</p>
      * @param values properties to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
     }
 
     /**
-     *  <p>Mapping from the custom field name to the actual value.</p>
+     *  <p>Mapping from the Custom Field name to the actual value.</p>
      * @param key property name
      * @param value property value
      * @return Builder
@@ -52,7 +52,7 @@ public class FieldContainerBuilder implements Builder<FieldContainer> {
     }
 
     /**
-     *  <p>Mapping from the custom field name to the actual value.</p>
+     *  <p>Mapping from the Custom Field name to the actual value.</p>
      * @return pattern properties
      */
 

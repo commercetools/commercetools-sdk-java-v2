@@ -47,6 +47,26 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.BusinessUnitAddressChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder businessUnitAddressCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder businessUnitAddressCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessagePayloadBuilder businessUnitAddressCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessagePayloadBuilder businessUnitAddressCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessagePayloadBuilder businessUnitAddressCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.BusinessUnitAddressRemovedMessagePayloadBuilder businessUnitAddressRemovedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAddressRemovedMessagePayloadBuilder.of();
     }
@@ -85,6 +105,26 @@ public class MessagePayloadBuilder {
 
     public com.commercetools.api.models.message.BusinessUnitCreatedMessagePayloadBuilder businessUnitCreatedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessagePayloadBuilder businessUnitCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessagePayloadBuilder businessUnitCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessagePayloadBuilder businessUnitCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessagePayloadBuilder businessUnitCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessagePayloadBuilder businessUnitCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder businessUnitDefaultBillingAddressSetBuilder() {

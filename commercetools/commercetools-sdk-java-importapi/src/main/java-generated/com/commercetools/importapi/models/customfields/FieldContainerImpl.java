@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Maps the custom field names to the actual values.</p>
+ *  <p>Maps the Custom Field names to actual values.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class FieldContainerImpl implements FieldContainer, ModelBase {
@@ -38,7 +38,7 @@ public class FieldContainerImpl implements FieldContainer, ModelBase {
     }
 
     /**
-     *  <p>Mapping from the custom field name to the actual value.</p>
+     *  <p>Mapping from the Custom Field name to the actual value.</p>
      */
 
     public Map<String, com.commercetools.importapi.models.customfields.CustomField> values() {

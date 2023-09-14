@@ -89,6 +89,9 @@ public class PaymentChangeTransactionStateActionImpl implements PaymentChangeTra
         return new EqualsBuilder().append(action, that.action)
                 .append(transactionId, that.transactionId)
                 .append(state, that.state)
+                .append(action, that.action)
+                .append(transactionId, that.transactionId)
+                .append(state, that.state)
                 .isEquals();
     }
 

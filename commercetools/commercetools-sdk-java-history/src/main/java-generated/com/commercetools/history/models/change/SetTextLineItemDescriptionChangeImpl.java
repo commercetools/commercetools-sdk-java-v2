@@ -123,6 +123,11 @@ public class SetTextLineItemDescriptionChangeImpl implements SetTextLineItemDesc
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(textLineItem, that.textLineItem)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(textLineItem, that.textLineItem)
                 .isEquals();
     }
 

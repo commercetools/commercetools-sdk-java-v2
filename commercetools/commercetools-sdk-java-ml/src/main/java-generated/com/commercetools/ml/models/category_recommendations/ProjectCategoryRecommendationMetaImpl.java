@@ -97,6 +97,9 @@ public class ProjectCategoryRecommendationMetaImpl implements ProjectCategoryRec
         return new EqualsBuilder().append(productName, that.productName)
                 .append(productImageUrl, that.productImageUrl)
                 .append(generalCategoryNames, that.generalCategoryNames)
+                .append(productName, that.productName)
+                .append(productImageUrl, that.productImageUrl)
+                .append(generalCategoryNames, that.generalCategoryNames)
                 .isEquals();
     }
 

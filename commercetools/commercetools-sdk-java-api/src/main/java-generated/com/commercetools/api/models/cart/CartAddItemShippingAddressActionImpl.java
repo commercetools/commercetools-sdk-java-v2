@@ -51,7 +51,7 @@ public class CartAddItemShippingAddressActionImpl implements CartAddItemShipping
 
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
-     *  <p>The new Address must have a <code>key</code> that is unique accross this Cart.</p>
+     *  <p>The new Address must have a <code>key</code> that is unique across this Cart.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -72,7 +72,11 @@ public class CartAddItemShippingAddressActionImpl implements CartAddItemShipping
 
         CartAddItemShippingAddressActionImpl that = (CartAddItemShippingAddressActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(address, that.address)
+                .append(action, that.action)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override

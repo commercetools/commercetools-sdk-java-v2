@@ -70,7 +70,11 @@ public class CartRemoveShippingMethodActionImpl implements CartRemoveShippingMet
 
         CartRemoveShippingMethodActionImpl that = (CartRemoveShippingMethodActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(shippingKey, that.shippingKey).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(shippingKey, that.shippingKey)
+                .append(action, that.action)
+                .append(shippingKey, that.shippingKey)
+                .isEquals();
     }
 
     @Override

@@ -60,6 +60,9 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
 
     private String customLineItemId;
 
+    @Nullable
+    private String customLineItemKey;
+
     private java.time.ZonedDateTime transitionDate;
 
     private Long quantity;
@@ -281,6 +284,17 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public CustomLineItemStateTransitionMessageBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
      * @param transitionDate value to be set
      * @return Builder
@@ -477,6 +491,16 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
      * @return transitionDate
      */
@@ -536,7 +560,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
         Objects.requireNonNull(toState, CustomLineItemStateTransitionMessage.class + ": toState is missing");
         return new CustomLineItemStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
-            transitionDate, quantity, fromState, toState);
+            customLineItemKey, transitionDate, quantity, fromState, toState);
     }
 
     /**
@@ -546,7 +570,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
     public CustomLineItemStateTransitionMessage buildUnchecked() {
         return new CustomLineItemStateTransitionMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
-            transitionDate, quantity, fromState, toState);
+            customLineItemKey, transitionDate, quantity, fromState, toState);
     }
 
     /**
@@ -575,6 +599,7 @@ public class CustomLineItemStateTransitionMessageBuilder implements Builder<Cust
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.transitionDate = template.getTransitionDate();
         builder.quantity = template.getQuantity();
         builder.fromState = template.getFromState();

@@ -113,6 +113,10 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
                 .append(sort, that.sort)
                 .append(limit, that.limit)
                 .append(offset, that.offset)
+                .append(query, that.query)
+                .append(sort, that.sort)
+                .append(limit, that.limit)
+                .append(offset, that.offset)
                 .isEquals();
     }
 

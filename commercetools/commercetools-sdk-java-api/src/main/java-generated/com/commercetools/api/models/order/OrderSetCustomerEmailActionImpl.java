@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderSetCustomerEmailAction
+ *  <p>This action updates the <code>customerEmail</code> on the Order, but it does not change the Customer email on the Cart the Order has been created from.</p>
+ *  <p>Produces the Order Customer Email Set Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetCustomerEmailActionImpl implements OrderSetCustomerEmailAction, ModelBase {
@@ -49,7 +50,7 @@ public class OrderSetCustomerEmailActionImpl implements OrderSetCustomerEmailAct
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public String getEmail() {
@@ -70,7 +71,11 @@ public class OrderSetCustomerEmailActionImpl implements OrderSetCustomerEmailAct
 
         OrderSetCustomerEmailActionImpl that = (OrderSetCustomerEmailActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(email, that.email).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(email, that.email)
+                .append(action, that.action)
+                .append(email, that.email)
+                .isEquals();
     }
 
     @Override

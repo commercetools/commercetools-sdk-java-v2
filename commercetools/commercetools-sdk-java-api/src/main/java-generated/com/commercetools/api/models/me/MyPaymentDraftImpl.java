@@ -110,6 +110,10 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
                 .append(paymentMethodInfo, that.paymentMethodInfo)
                 .append(custom, that.custom)
                 .append(transaction, that.transaction)
+                .append(amountPlanned, that.amountPlanned)
+                .append(paymentMethodInfo, that.paymentMethodInfo)
+                .append(custom, that.custom)
+                .append(transaction, that.transaction)
                 .isEquals();
     }
 

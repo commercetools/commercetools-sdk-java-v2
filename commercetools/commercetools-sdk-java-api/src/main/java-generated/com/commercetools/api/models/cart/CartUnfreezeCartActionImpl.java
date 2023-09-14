@@ -47,7 +47,7 @@ public class CartUnfreezeCartActionImpl implements CartUnfreezeCartAction, Model
 
         CartUnfreezeCartActionImpl that = (CartUnfreezeCartActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override

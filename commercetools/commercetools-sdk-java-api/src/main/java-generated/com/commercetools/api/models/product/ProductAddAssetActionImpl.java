@@ -139,6 +139,12 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
                 .append(staged, that.staged)
                 .append(asset, that.asset)
                 .append(position, that.position)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(asset, that.asset)
+                .append(position, that.position)
                 .isEquals();
     }
 

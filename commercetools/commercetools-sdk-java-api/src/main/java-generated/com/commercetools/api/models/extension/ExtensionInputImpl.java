@@ -74,7 +74,11 @@ public class ExtensionInputImpl implements ExtensionInput, ModelBase {
 
         ExtensionInputImpl that = (ExtensionInputImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(resource, that.resource).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(resource, that.resource)
+                .append(action, that.action)
+                .append(resource, that.resource)
+                .isEquals();
     }
 
     @Override

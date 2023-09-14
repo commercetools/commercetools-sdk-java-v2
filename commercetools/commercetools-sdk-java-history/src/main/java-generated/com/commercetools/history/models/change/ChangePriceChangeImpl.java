@@ -142,6 +142,12 @@ public class ChangePriceChangeImpl implements ChangePriceChange, ModelBase {
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(priceId, that.priceId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(priceId, that.priceId)
                 .isEquals();
     }
 

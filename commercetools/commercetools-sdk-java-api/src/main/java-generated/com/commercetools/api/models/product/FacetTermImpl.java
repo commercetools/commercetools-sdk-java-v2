@@ -92,6 +92,9 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
         return new EqualsBuilder().append(term, that.term)
                 .append(count, that.count)
                 .append(productCount, that.productCount)
+                .append(term, that.term)
+                .append(count, that.count)
+                .append(productCount, that.productCount)
                 .isEquals();
     }
 

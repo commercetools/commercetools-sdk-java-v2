@@ -86,7 +86,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     public CustomFields getCustom();
 
     /**
-     *  <p>User-defined unique identifier of the Asset.</p>
+     *  <p>User-defined identifier of the Asset. It is unique per Category or ProductVariant.</p>
      * @return key
      */
 
@@ -152,7 +152,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     public void setCustom(final CustomFields custom);
 
     /**
-     *  <p>User-defined unique identifier of the Asset.</p>
+     *  <p>User-defined identifier of the Asset. It is unique per Category or ProductVariant.</p>
      * @param key value to be set
      */
 

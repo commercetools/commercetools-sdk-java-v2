@@ -90,6 +90,9 @@ public class HttpDestinationImpl implements HttpDestination, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(url, that.url)
                 .append(authentication, that.authentication)
+                .append(type, that.type)
+                .append(url, that.url)
+                .append(authentication, that.authentication)
                 .isEquals();
     }
 

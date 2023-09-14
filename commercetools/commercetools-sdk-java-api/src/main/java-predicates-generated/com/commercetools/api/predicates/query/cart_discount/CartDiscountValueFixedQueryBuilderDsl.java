@@ -20,10 +20,11 @@ public class CartDiscountValueFixedQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<CartDiscountValueFixedQueryBuilderDsl> money(
-            Function<com.commercetools.api.predicates.query.common.CentPrecisionMoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.CentPrecisionMoneyQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("money"))
-                .inner(fn.apply(com.commercetools.api.predicates.query.common.CentPrecisionMoneyQueryBuilderDsl.of())),
+            Function<com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("money"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl.of())),
             CartDiscountValueFixedQueryBuilderDsl::of);
     }
 

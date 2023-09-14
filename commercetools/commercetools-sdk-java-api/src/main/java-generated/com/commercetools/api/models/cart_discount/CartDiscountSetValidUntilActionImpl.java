@@ -70,7 +70,11 @@ public class CartDiscountSetValidUntilActionImpl implements CartDiscountSetValid
 
         CartDiscountSetValidUntilActionImpl that = (CartDiscountSetValidUntilActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(validUntil, that.validUntil).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(validUntil, that.validUntil)
+                .append(action, that.action)
+                .append(validUntil, that.validUntil)
+                .isEquals();
     }
 
     @Override

@@ -88,6 +88,9 @@ public class CustomObjectLabelImpl implements CustomObjectLabel, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(key, that.key)
                 .append(container, that.container)
+                .append(type, that.type)
+                .append(key, that.key)
+                .append(container, that.container)
                 .isEquals();
     }
 

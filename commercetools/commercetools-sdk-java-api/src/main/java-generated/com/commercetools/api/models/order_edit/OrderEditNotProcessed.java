@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -13,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderEditNotProcessed
+ *  <p>Indicates that the edit has not been applied or processed in any way.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +33,14 @@ public interface OrderEditNotProcessed extends OrderEditResult {
      * discriminator value for OrderEditNotProcessed
      */
     String NOT_PROCESSED = "NotProcessed";
+
+    /**
+     *  <p>This field is queryable.</p>
+     * @return type
+     */
+    @NotNull
+    @JsonProperty("type")
+    public String getType();
 
     /**
      * factory method

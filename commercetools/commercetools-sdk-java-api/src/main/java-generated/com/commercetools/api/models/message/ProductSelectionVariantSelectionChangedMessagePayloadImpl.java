@@ -110,6 +110,10 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadImpl
                 .append(product, that.product)
                 .append(oldVariantSelection, that.oldVariantSelection)
                 .append(newVariantSelection, that.newVariantSelection)
+                .append(type, that.type)
+                .append(product, that.product)
+                .append(oldVariantSelection, that.oldVariantSelection)
+                .append(newVariantSelection, that.newVariantSelection)
                 .isEquals();
     }
 

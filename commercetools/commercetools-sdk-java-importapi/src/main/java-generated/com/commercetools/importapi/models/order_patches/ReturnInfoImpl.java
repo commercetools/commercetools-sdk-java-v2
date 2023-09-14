@@ -98,6 +98,9 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
         return new EqualsBuilder().append(items, that.items)
                 .append(returnTrackingId, that.returnTrackingId)
                 .append(returnDate, that.returnDate)
+                .append(items, that.items)
+                .append(returnTrackingId, that.returnTrackingId)
+                .append(returnDate, that.returnDate)
                 .isEquals();
     }
 

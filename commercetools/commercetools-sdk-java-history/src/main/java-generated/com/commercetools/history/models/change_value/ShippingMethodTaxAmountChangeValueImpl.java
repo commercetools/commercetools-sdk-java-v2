@@ -75,7 +75,11 @@ public class ShippingMethodTaxAmountChangeValueImpl implements ShippingMethodTax
 
         ShippingMethodTaxAmountChangeValueImpl that = (ShippingMethodTaxAmountChangeValueImpl) o;
 
-        return new EqualsBuilder().append(taxedPrice, that.taxedPrice).append(taxRate, that.taxRate).isEquals();
+        return new EqualsBuilder().append(taxedPrice, that.taxedPrice)
+                .append(taxRate, that.taxRate)
+                .append(taxedPrice, that.taxedPrice)
+                .append(taxRate, that.taxRate)
+                .isEquals();
     }
 
     @Override

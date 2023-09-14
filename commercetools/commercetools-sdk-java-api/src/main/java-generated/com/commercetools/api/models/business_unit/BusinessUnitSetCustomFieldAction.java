@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * BusinessUnitSetCustomFieldAction
+ *  <p>Adding a Custom Field to a Business Unit generates the BusinessUnitCustomFieldAdded Message, removing one generates the BusinessUnitCustomFieldRemoved Message, and updating an existing one generates the BusinessUnitCustomFieldChanged Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +36,7 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
     String SET_CUSTOM_FIELD = "setCustomField";
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the Custom Field to add, update, or remove.</p>
      * @return name
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
     public Object getValue();
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the Custom Field to add, update, or remove.</p>
      * @param name value to be set
      */
 

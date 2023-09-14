@@ -62,7 +62,7 @@ public class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessage
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -88,6 +88,9 @@ public class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessage
         DeliveryRemovedMessagePayloadImpl that = (DeliveryRemovedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(delivery, that.delivery)
+                .append(shippingKey, that.shippingKey)
+                .append(type, that.type)
                 .append(delivery, that.delivery)
                 .append(shippingKey, that.shippingKey)
                 .isEquals();

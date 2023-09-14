@@ -90,6 +90,9 @@ public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCat
         return new EqualsBuilder().append(action, that.action)
                 .append(category, that.category)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(category, that.category)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

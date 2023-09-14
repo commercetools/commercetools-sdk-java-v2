@@ -46,7 +46,7 @@ public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnItemDraft> getItems() {
@@ -54,7 +54,7 @@ public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
     }
 
     /**
-     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     *  <p>User-defined identifier for tracking the return.</p>
      */
 
     public String getReturnTrackingId() {
@@ -62,7 +62,7 @@ public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the return is initiated.</p>
      */
 
     public java.time.ZonedDateTime getReturnDate() {
@@ -96,6 +96,9 @@ public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
         ReturnInfoDraftImpl that = (ReturnInfoDraftImpl) o;
 
         return new EqualsBuilder().append(items, that.items)
+                .append(returnTrackingId, that.returnTrackingId)
+                .append(returnDate, that.returnDate)
+                .append(items, that.items)
                 .append(returnTrackingId, that.returnTrackingId)
                 .append(returnDate, that.returnDate)
                 .isEquals();

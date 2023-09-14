@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Create Quote Request request.</p>
+ *  <p>Generated after a successful Create QuoteRequest request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class QuoteRequestCreatedMessagePayloadImpl implements QuoteRequestCreatedMessagePayload, ModelBase {
@@ -71,7 +71,11 @@ public class QuoteRequestCreatedMessagePayloadImpl implements QuoteRequestCreate
 
         QuoteRequestCreatedMessagePayloadImpl that = (QuoteRequestCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(quoteRequest, that.quoteRequest).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(quoteRequest, that.quoteRequest)
+                .append(type, that.type)
+                .append(quoteRequest, that.quoteRequest)
+                .isEquals();
     }
 
     @Override

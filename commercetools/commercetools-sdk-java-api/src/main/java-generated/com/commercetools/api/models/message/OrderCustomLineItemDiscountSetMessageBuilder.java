@@ -57,6 +57,9 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
 
     private String customLineItemId;
 
+    @Nullable
+    private String customLineItemKey;
+
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
     @Nullable
@@ -271,6 +274,17 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
 
     public OrderCustomLineItemDiscountSetMessageBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderCustomLineItemDiscountSetMessageBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -506,6 +520,16 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      * @return discountedPricePerQuantity
      */
@@ -545,7 +569,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
             OrderCustomLineItemDiscountSetMessage.class + ": discountedPricePerQuantity is missing");
         return new OrderCustomLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
-            discountedPricePerQuantity, taxedPrice);
+            customLineItemKey, discountedPricePerQuantity, taxedPrice);
     }
 
     /**
@@ -555,7 +579,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     public OrderCustomLineItemDiscountSetMessage buildUnchecked() {
         return new OrderCustomLineItemDiscountSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
-            discountedPricePerQuantity, taxedPrice);
+            customLineItemKey, discountedPricePerQuantity, taxedPrice);
     }
 
     /**
@@ -585,6 +609,7 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.discountedPricePerQuantity = template.getDiscountedPricePerQuantity();
         builder.taxedPrice = template.getTaxedPrice();
         return builder;

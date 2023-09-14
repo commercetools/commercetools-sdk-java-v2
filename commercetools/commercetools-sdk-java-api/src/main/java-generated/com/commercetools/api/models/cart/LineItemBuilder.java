@@ -138,8 +138,8 @@ public class LineItemBuilder implements Builder<LineItem> {
      *  <p><code>key</code> of the Product.</p>
      *  <p>This field is only present on:</p>
      *  <ul>
-     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item was created or updated on the Cart.</li>
-     *   <li>Orders when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
+     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the LineItem was created or updated on the Cart.</li>
+     *   <li>Line Items in an Order when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
      *  </ul>
      *  <p>Present on resources created or updated after 3 December 2021.</p>
      * @param productKey value to be set
@@ -333,7 +333,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>Number of Line Items of the given Product Variant present in the Cart.</p>
+     *  <p>Number of Line Items of the given Product Variant present in the Cart or Order.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -598,7 +598,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -609,7 +609,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -620,7 +620,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -634,7 +634,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -649,7 +649,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -662,7 +662,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -673,7 +673,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -1047,8 +1047,8 @@ public class LineItemBuilder implements Builder<LineItem> {
      *  <p><code>key</code> of the Product.</p>
      *  <p>This field is only present on:</p>
      *  <ul>
-     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item was created or updated on the Cart.</li>
-     *   <li>Orders when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
+     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the LineItem was created or updated on the Cart.</li>
+     *   <li>Line Items in an Order when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
      *  </ul>
      *  <p>Present on resources created or updated after 3 December 2021.</p>
      * @return productKey
@@ -1107,7 +1107,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>Number of Line Items of the given Product Variant present in the Cart.</p>
+     *  <p>Number of Line Items of the given Product Variant present in the Cart or Order.</p>
      * @return quantity
      */
 
@@ -1153,7 +1153,7 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      * @return state
      */
 

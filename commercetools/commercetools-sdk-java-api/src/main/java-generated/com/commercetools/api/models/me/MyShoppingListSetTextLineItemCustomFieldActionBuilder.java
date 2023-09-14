@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyShoppingListSetTextLineItemCustomFieldAction myShoppingListSetTextLineItemCustomFieldAction = MyShoppingListSetTextLineItemCustomFieldAction.builder()
- *             .textLineItemId("{textLineItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -25,7 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class MyShoppingListSetTextLineItemCustomFieldActionBuilder
         implements Builder<MyShoppingListSetTextLineItemCustomFieldAction> {
 
+    @Nullable
     private String textLineItemId;
+
+    @Nullable
+    private String textLineItemKey;
 
     private String name;
 
@@ -33,13 +36,25 @@ public class MyShoppingListSetTextLineItemCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      * @return Builder
      */
 
-    public MyShoppingListSetTextLineItemCustomFieldActionBuilder textLineItemId(final String textLineItemId) {
+    public MyShoppingListSetTextLineItemCustomFieldActionBuilder textLineItemId(@Nullable final String textLineItemId) {
         this.textLineItemId = textLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param textLineItemKey value to be set
+     * @return Builder
+     */
+
+    public MyShoppingListSetTextLineItemCustomFieldActionBuilder textLineItemKey(
+            @Nullable final String textLineItemKey) {
+        this.textLineItemKey = textLineItemKey;
         return this;
     }
 
@@ -66,12 +81,23 @@ public class MyShoppingListSetTextLineItemCustomFieldActionBuilder
     }
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
 
+    @Nullable
     public String getTextLineItemId() {
         return this.textLineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return textLineItemKey
+     */
+
+    @Nullable
+    public String getTextLineItemKey() {
+        return this.textLineItemKey;
     }
 
     /**
@@ -98,10 +124,8 @@ public class MyShoppingListSetTextLineItemCustomFieldActionBuilder
      * @return MyShoppingListSetTextLineItemCustomFieldAction
      */
     public MyShoppingListSetTextLineItemCustomFieldAction build() {
-        Objects.requireNonNull(textLineItemId,
-            MyShoppingListSetTextLineItemCustomFieldAction.class + ": textLineItemId is missing");
         Objects.requireNonNull(name, MyShoppingListSetTextLineItemCustomFieldAction.class + ": name is missing");
-        return new MyShoppingListSetTextLineItemCustomFieldActionImpl(textLineItemId, name, value);
+        return new MyShoppingListSetTextLineItemCustomFieldActionImpl(textLineItemId, textLineItemKey, name, value);
     }
 
     /**
@@ -109,7 +133,7 @@ public class MyShoppingListSetTextLineItemCustomFieldActionBuilder
      * @return MyShoppingListSetTextLineItemCustomFieldAction
      */
     public MyShoppingListSetTextLineItemCustomFieldAction buildUnchecked() {
-        return new MyShoppingListSetTextLineItemCustomFieldActionImpl(textLineItemId, name, value);
+        return new MyShoppingListSetTextLineItemCustomFieldActionImpl(textLineItemId, textLineItemKey, name, value);
     }
 
     /**
@@ -129,6 +153,7 @@ public class MyShoppingListSetTextLineItemCustomFieldActionBuilder
             final MyShoppingListSetTextLineItemCustomFieldAction template) {
         MyShoppingListSetTextLineItemCustomFieldActionBuilder builder = new MyShoppingListSetTextLineItemCustomFieldActionBuilder();
         builder.textLineItemId = template.getTextLineItemId();
+        builder.textLineItemKey = template.getTextLineItemKey();
         builder.name = template.getName();
         builder.value = template.getValue();
         return builder;

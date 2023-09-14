@@ -31,6 +31,10 @@ public class StandalonePriceUpdateActionBuilder {
         return com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierActionBuilder.of();
     }
 
+    public com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesActionBuilder removeStagedChangesBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesActionBuilder.of();
+    }
+
     public com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionBuilder.of();
     }
@@ -47,7 +51,7 @@ public class StandalonePriceUpdateActionBuilder {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder.of();
     }
 
-    public com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionBuilder setPriceTierBuilder() {
+    public com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionBuilder setPriceTiersBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionBuilder.of();
     }
 

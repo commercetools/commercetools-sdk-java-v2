@@ -91,6 +91,9 @@ public class StoreAddProductSelectionActionImpl implements StoreAddProductSelect
         return new EqualsBuilder().append(action, that.action)
                 .append(productSelection, that.productSelection)
                 .append(active, that.active)
+                .append(action, that.action)
+                .append(productSelection, that.productSelection)
+                .append(active, that.active)
                 .isEquals();
     }
 

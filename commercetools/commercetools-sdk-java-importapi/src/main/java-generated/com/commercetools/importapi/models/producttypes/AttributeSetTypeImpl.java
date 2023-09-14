@@ -71,7 +71,11 @@ public class AttributeSetTypeImpl implements AttributeSetType, ModelBase {
 
         AttributeSetTypeImpl that = (AttributeSetTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(elementType, that.elementType).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(elementType, that.elementType)
+                .append(name, that.name)
+                .append(elementType, that.elementType)
+                .isEquals();
     }
 
     @Override

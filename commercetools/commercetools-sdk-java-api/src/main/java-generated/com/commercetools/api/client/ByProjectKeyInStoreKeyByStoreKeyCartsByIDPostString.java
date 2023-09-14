@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Updates a Cart in the Store specified by <code>storeKey</code>. If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, a ResourceNotFound error is returned.</p>
+ *  <p>Updates a Cart in the Store specified by <code>storeKey</code>. If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</p>
  *
  * <hr>
  * <div class=code-example>

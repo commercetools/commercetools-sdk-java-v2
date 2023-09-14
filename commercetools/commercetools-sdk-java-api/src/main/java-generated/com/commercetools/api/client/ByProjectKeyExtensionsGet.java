@@ -35,7 +35,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyExtensionsGet
         extends ApiMethod<ByProjectKeyExtensionsGet, com.commercetools.api.models.extension.ExtensionPagedQueryResponse>
         implements ByProjectKeyExtensionsGetMixin,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyExtensionsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyExtensionsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyExtensionsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyExtensionsGet>,
@@ -81,10 +80,6 @@ public class ByProjectKeyExtensionsGet
         return this.projectKey;
     }
 
-    public List<String> getExpand() {
-        return this.getQueryParam("expand");
-    }
-
     public List<String> getSort() {
         return this.getQueryParam("sort");
     }
@@ -107,85 +102,6 @@ public class ByProjectKeyExtensionsGet
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
-    }
-
-    /**
-     * set expand with the specified value
-     * @param expand value to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyExtensionsGet
-     */
-    public <TValue> ByProjectKeyExtensionsGet withExpand(final TValue expand) {
-        return copy().withQueryParam("expand", expand);
-    }
-
-    /**
-     * add additional expand query parameter
-     * @param expand value to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyExtensionsGet
-     */
-    public <TValue> ByProjectKeyExtensionsGet addExpand(final TValue expand) {
-        return copy().addQueryParam("expand", expand);
-    }
-
-    /**
-     * set expand with the specified value
-     * @param supplier supplier for the value to be set
-     * @return ByProjectKeyExtensionsGet
-     */
-    public ByProjectKeyExtensionsGet withExpand(final Supplier<String> supplier) {
-        return copy().withQueryParam("expand", supplier.get());
-    }
-
-    /**
-     * add additional expand query parameter
-     * @param supplier supplier for the value to be added
-     * @return ByProjectKeyExtensionsGet
-     */
-    public ByProjectKeyExtensionsGet addExpand(final Supplier<String> supplier) {
-        return copy().addQueryParam("expand", supplier.get());
-    }
-
-    /**
-     * set expand with the specified value
-     * @param op builder for the value to be set
-     * @return ByProjectKeyExtensionsGet
-     */
-    public ByProjectKeyExtensionsGet withExpand(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional expand query parameter
-     * @param op builder for the value to be added
-     * @return ByProjectKeyExtensionsGet
-     */
-    public ByProjectKeyExtensionsGet addExpand(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set expand with the specified values
-     * @param expand values to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyExtensionsGet
-     */
-    public <TValue> ByProjectKeyExtensionsGet withExpand(final Collection<TValue> expand) {
-        return copy().withoutQueryParam("expand")
-                .addQueryParams(
-                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional expand query parameters
-     * @param expand values to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyExtensionsGet
-     */
-    public <TValue> ByProjectKeyExtensionsGet addExpand(final Collection<TValue> expand) {
-        return copy().addQueryParams(
-            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
 
     /**

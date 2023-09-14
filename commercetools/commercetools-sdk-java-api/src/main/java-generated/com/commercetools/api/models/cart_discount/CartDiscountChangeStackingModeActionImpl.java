@@ -71,7 +71,11 @@ public class CartDiscountChangeStackingModeActionImpl implements CartDiscountCha
 
         CartDiscountChangeStackingModeActionImpl that = (CartDiscountChangeStackingModeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(stackingMode, that.stackingMode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(stackingMode, that.stackingMode)
+                .append(action, that.action)
+                .append(stackingMode, that.stackingMode)
+                .isEquals();
     }
 
     @Override

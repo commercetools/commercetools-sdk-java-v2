@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * BusinessUnitSetCustomTypeAction
+ *  <p>Adding or updating a Custom Type on a Business Unit generates the BusinessUnitCustomTypeSet Message, removing one generates the BusinessUnitCustomTypeRemoved Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitSetCustomTypeActionImpl implements BusinessUnitSetCustomTypeAction, ModelBase {
@@ -88,6 +88,9 @@ public class BusinessUnitSetCustomTypeActionImpl implements BusinessUnitSetCusto
         BusinessUnitSetCustomTypeActionImpl that = (BusinessUnitSetCustomTypeActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(action, that.action)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();

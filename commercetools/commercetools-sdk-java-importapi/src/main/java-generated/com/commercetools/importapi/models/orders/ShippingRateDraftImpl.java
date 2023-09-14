@@ -97,6 +97,9 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
         return new EqualsBuilder().append(price, that.price)
                 .append(freeAbove, that.freeAbove)
                 .append(tiers, that.tiers)
+                .append(price, that.price)
+                .append(freeAbove, that.freeAbove)
+                .append(tiers, that.tiers)
                 .isEquals();
     }
 

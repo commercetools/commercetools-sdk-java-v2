@@ -24,6 +24,8 @@ public class CartSetLineItemCustomTypeActionImpl implements CartSetLineItemCusto
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private com.commercetools.api.models.type.FieldContainer fields;
@@ -33,9 +35,11 @@ public class CartSetLineItemCustomTypeActionImpl implements CartSetLineItemCusto
      */
     @JsonCreator
     CartSetLineItemCustomTypeActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.type = type;
         this.fields = fields;
         this.action = SET_LINE_ITEM_CUSTOM_TYPE;
@@ -57,11 +61,19 @@ public class CartSetLineItemCustomTypeActionImpl implements CartSetLineItemCusto
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -84,6 +96,10 @@ public class CartSetLineItemCustomTypeActionImpl implements CartSetLineItemCusto
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
     }
@@ -104,6 +120,12 @@ public class CartSetLineItemCustomTypeActionImpl implements CartSetLineItemCusto
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();
@@ -111,7 +133,12 @@ public class CartSetLineItemCustomTypeActionImpl implements CartSetLineItemCusto
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(type).append(fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(type)
+                .append(fields)
+                .toHashCode();
     }
 
 }

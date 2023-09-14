@@ -16,6 +16,7 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -38,6 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .value(valueBuilder -> valueBuilder)
  *             .cartPredicate("{cartPredicate}")
  *             .sortOrder("{sortOrder}")
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .isActive(true)
  *             .requiresDiscountCode(true)
  *             .plusReferences(referencesBuilder -> referencesBuilder)
@@ -128,7 +130,7 @@ public interface CartDiscount
     public LocalizedString getDescription();
 
     /**
-     *  <p>Effect of the CartDiscount.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      * @return value
      */
     @NotNull
@@ -145,7 +147,8 @@ public interface CartDiscount
     public String getCartPredicate();
 
     /**
-     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     *  <p>Segment of the Cart that is discounted.</p>
+     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @return target
      */
     @Valid
@@ -159,6 +162,18 @@ public interface CartDiscount
     @NotNull
     @JsonProperty("sortOrder")
     public String getSortOrder();
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     * @return stores
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("stores")
+    public List<StoreKeyReference> getStores();
 
     /**
      *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
@@ -281,7 +296,7 @@ public interface CartDiscount
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Effect of the CartDiscount.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      * @param value value to be set
      */
 
@@ -295,7 +310,8 @@ public interface CartDiscount
     public void setCartPredicate(final String cartPredicate);
 
     /**
-     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     *  <p>Segment of the Cart that is discounted.</p>
+     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param target value to be set
      */
 
@@ -307,6 +323,27 @@ public interface CartDiscount
      */
 
     public void setSortOrder(final String sortOrder);
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores values to be set
+     */
+
+    @JsonIgnore
+    public void setStores(final StoreKeyReference... stores);
+
+    /**
+     *  <ul>
+     *   <li>If a value exists, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If empty, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     * @param stores values to be set
+     */
+
+    public void setStores(final List<StoreKeyReference> stores);
 
     /**
      *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
@@ -393,6 +430,7 @@ public interface CartDiscount
         instance.setCartPredicate(template.getCartPredicate());
         instance.setTarget(template.getTarget());
         instance.setSortOrder(template.getSortOrder());
+        instance.setStores(template.getStores());
         instance.setIsActive(template.getIsActive());
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
@@ -430,6 +468,11 @@ public interface CartDiscount
         instance.setTarget(
             com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
         instance.setSortOrder(template.getSortOrder());
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setIsActive(template.getIsActive());
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());

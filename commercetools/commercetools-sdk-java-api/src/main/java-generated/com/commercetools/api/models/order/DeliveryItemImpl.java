@@ -40,7 +40,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the DeliveryItem.</p>
+     *  <p><code>id</code> of the LineItem or CustomLineItem delivered.</p>
      */
 
     public String getId() {
@@ -48,7 +48,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items delivered.</p>
      */
 
     public Long getQuantity() {
@@ -73,7 +73,11 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
 
         DeliveryItemImpl that = (DeliveryItemImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(quantity, that.quantity).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(quantity, that.quantity)
+                .append(id, that.id)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override

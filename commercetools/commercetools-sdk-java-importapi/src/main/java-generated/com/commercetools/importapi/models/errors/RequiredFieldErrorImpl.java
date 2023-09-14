@@ -88,6 +88,9 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
                 .append(field, that.field)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(field, that.field)
                 .isEquals();
     }
 

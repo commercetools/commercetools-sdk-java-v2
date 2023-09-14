@@ -112,6 +112,10 @@ public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChang
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 

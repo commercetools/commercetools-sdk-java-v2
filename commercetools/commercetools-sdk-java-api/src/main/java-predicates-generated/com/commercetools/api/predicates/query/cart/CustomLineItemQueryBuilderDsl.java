@@ -18,6 +18,11 @@ public class CustomLineItemQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomLineItemQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CustomLineItemQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, CustomLineItemQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> name(
             Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -43,6 +48,21 @@ public class CustomLineItemQueryBuilderDsl {
                     .parent(ConstantQueryPredicate.of().constant("taxedPrice"))
                     .inner(fn.apply(com.commercetools.api.predicates.query.cart.TaxedItemPriceQueryBuilderDsl.of())),
             CustomLineItemQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> taxedPricePortions(
+            Function<com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("taxedPricePortions"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.MethodTaxedPriceQueryBuilderDsl.of())),
+            CustomLineItemQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CustomLineItemQueryBuilderDsl> taxedPricePortions() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxedPricePortions")),
+            p -> new CombinationQueryPredicate<>(p, CustomLineItemQueryBuilderDsl::of));
     }
 
     public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> totalPrice(
@@ -96,6 +116,21 @@ public class CustomLineItemQueryBuilderDsl {
                     .parent(ConstantQueryPredicate.of().constant("taxRate"))
                     .inner(fn.apply(com.commercetools.api.predicates.query.tax_category.TaxRateQueryBuilderDsl.of())),
             CustomLineItemQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> perMethodTaxRate(
+            Function<com.commercetools.api.predicates.query.cart.MethodTaxRateQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.MethodTaxRateQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("perMethodTaxRate"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.MethodTaxRateQueryBuilderDsl.of())),
+            CustomLineItemQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CustomLineItemQueryBuilderDsl> perMethodTaxRate() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("perMethodTaxRate")),
+            p -> new CombinationQueryPredicate<>(p, CustomLineItemQueryBuilderDsl::of));
     }
 
     public CombinationQueryPredicate<CustomLineItemQueryBuilderDsl> discountedPricePerQuantity(

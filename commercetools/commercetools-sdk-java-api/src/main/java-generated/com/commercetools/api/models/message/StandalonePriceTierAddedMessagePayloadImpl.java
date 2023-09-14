@@ -71,7 +71,11 @@ public class StandalonePriceTierAddedMessagePayloadImpl implements StandalonePri
 
         StandalonePriceTierAddedMessagePayloadImpl that = (StandalonePriceTierAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(tier, that.tier).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(tier, that.tier)
+                .append(type, that.type)
+                .append(tier, that.tier)
+                .isEquals();
     }
 
     @Override

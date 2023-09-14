@@ -93,6 +93,9 @@ public class SimilarProductImpl implements SimilarProduct, ModelBase {
         return new EqualsBuilder().append(product, that.product)
                 .append(variantId, that.variantId)
                 .append(meta, that.meta)
+                .append(product, that.product)
+                .append(variantId, that.variantId)
+                .append(meta, that.meta)
                 .isEquals();
     }
 

@@ -65,7 +65,9 @@ public class ImportResponseImpl implements ImportResponse, ModelBase {
 
         ImportResponseImpl that = (ImportResponseImpl) o;
 
-        return new EqualsBuilder().append(operationStatus, that.operationStatus).isEquals();
+        return new EqualsBuilder().append(operationStatus, that.operationStatus)
+                .append(operationStatus, that.operationStatus)
+                .isEquals();
     }
 
     @Override

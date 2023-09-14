@@ -98,6 +98,9 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
         return new EqualsBuilder().append(product, that.product)
                 .append(variantSelection, that.variantSelection)
                 .append(variantExclusion, that.variantExclusion)
+                .append(product, that.product)
+                .append(variantSelection, that.variantSelection)
+                .append(variantExclusion, that.variantExclusion)
                 .isEquals();
     }
 

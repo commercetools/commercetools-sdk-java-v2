@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderSetParcelItemsAction
+ *  <p>Produces the ParcelItemsUpdated Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,8 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     String SET_PARCEL_ITEMS = "setParcelItems";
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
 
@@ -46,7 +47,8 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     public String getParcelId();
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
 
@@ -54,7 +56,7 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     public String getParcelKey();
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return items
      */
     @NotNull
@@ -63,21 +65,23 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      */
 
     public void setParcelKey(final String parcelKey);
 
     /**
-     * set items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items values to be set
      */
 
@@ -85,7 +89,7 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items values to be set
      */
 

@@ -110,6 +110,10 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadImpl
                 .append(product, that.product)
                 .append(oldVariantExclusion, that.oldVariantExclusion)
                 .append(newVariantExclusion, that.newVariantExclusion)
+                .append(type, that.type)
+                .append(product, that.product)
+                .append(oldVariantExclusion, that.oldVariantExclusion)
+                .append(newVariantExclusion, that.newVariantExclusion)
                 .isEquals();
     }
 

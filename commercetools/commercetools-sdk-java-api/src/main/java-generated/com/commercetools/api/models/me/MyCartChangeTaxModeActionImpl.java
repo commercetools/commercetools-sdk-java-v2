@@ -73,7 +73,11 @@ public class MyCartChangeTaxModeActionImpl implements MyCartChangeTaxModeAction,
 
         MyCartChangeTaxModeActionImpl that = (MyCartChangeTaxModeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(taxMode, that.taxMode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(taxMode, that.taxMode)
+                .append(action, that.action)
+                .append(taxMode, that.taxMode)
+                .isEquals();
     }
 
     @Override

@@ -71,7 +71,11 @@ public class AssociateRoleCreatedMessagePayloadImpl implements AssociateRoleCrea
 
         AssociateRoleCreatedMessagePayloadImpl that = (AssociateRoleCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(associateRole, that.associateRole).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(associateRole, that.associateRole)
+                .append(type, that.type)
+                .append(associateRole, that.associateRole)
+                .isEquals();
     }
 
     @Override

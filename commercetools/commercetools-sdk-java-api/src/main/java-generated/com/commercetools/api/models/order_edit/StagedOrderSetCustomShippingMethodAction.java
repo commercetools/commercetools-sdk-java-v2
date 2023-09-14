@@ -19,7 +19,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetCustomShippingMethodAction
+ *  <p>To set the Cart's custom Shipping Method (independent of the ShippingMethods managed through the Shipping Methods API) the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
+ *  <p>To unset a custom Shipping Method on a Cart, use the Set ShippingMethod update action without the <code>shippingMethod</code> field instead.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +43,7 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     String SET_CUSTOM_SHIPPING_METHOD = "setCustomShippingMethod";
 
     /**
-     *
+     *  <p>Name of the custom Shipping Method.</p>
      * @return shippingMethodName
      */
     @NotNull
@@ -50,7 +51,7 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     public String getShippingMethodName();
 
     /**
-     *
+     *  <p>Determines the shipping price.</p>
      * @return shippingRate
      */
     @NotNull
@@ -59,7 +60,7 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     public ShippingRateDraft getShippingRate();
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
      * @return taxCategory
      */
     @Valid
@@ -67,7 +68,7 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -75,28 +76,28 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     * set shippingMethodName
+     *  <p>Name of the custom Shipping Method.</p>
      * @param shippingMethodName value to be set
      */
 
     public void setShippingMethodName(final String shippingMethodName);
 
     /**
-     * set shippingRate
+     *  <p>Determines the shipping price.</p>
      * @param shippingRate value to be set
      */
 
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      */
 

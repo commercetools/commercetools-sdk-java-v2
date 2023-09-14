@@ -129,6 +129,11 @@ public class ProductPresentWithDifferentVariantSelectionErrorImpl
                 .append(values, that.values)
                 .append(product, that.product)
                 .append(existingVariantSelection, that.existingVariantSelection)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(product, that.product)
+                .append(existingVariantSelection, that.existingVariantSelection)
                 .isEquals();
     }
 

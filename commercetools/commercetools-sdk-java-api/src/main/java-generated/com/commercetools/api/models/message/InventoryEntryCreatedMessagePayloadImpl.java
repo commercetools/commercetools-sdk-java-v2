@@ -71,7 +71,11 @@ public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCr
 
         InventoryEntryCreatedMessagePayloadImpl that = (InventoryEntryCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(inventoryEntry, that.inventoryEntry).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(inventoryEntry, that.inventoryEntry)
+                .append(type, that.type)
+                .append(inventoryEntry, that.inventoryEntry)
+                .isEquals();
     }
 
     @Override

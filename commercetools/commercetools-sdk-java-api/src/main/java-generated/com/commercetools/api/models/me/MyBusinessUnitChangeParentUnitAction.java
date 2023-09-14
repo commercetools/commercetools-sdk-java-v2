@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentUnitChanged Message.</p>
+ *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentChanged Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpda
     String CHANGE_PARENT_UNIT = "changeParentUnit";
 
     /**
-     *  <p>New parent unit of the Business Unit.</p>
+     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
      * @return parentUnit
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface MyBusinessUnitChangeParentUnitAction extends MyBusinessUnitUpda
     public BusinessUnitResourceIdentifier getParentUnit();
 
     /**
-     *  <p>New parent unit of the Business Unit.</p>
+     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
      * @param parentUnit value to be set
      */
 

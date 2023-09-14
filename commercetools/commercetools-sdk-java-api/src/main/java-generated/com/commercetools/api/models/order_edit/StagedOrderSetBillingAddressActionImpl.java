@@ -15,7 +15,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetBillingAddressAction
+ *  <p>This action updates the <code>billingAddress</code> on the Order, but it does not change the billing address on the referenced Cart from which the Order is created.</p>
+ *  <p>Produces the Order Billing Address Set Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetBillingAddressActionImpl implements StagedOrderSetBillingAddressAction, ModelBase {
@@ -50,7 +51,7 @@ public class StagedOrderSetBillingAddressActionImpl implements StagedOrderSetBil
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -71,7 +72,11 @@ public class StagedOrderSetBillingAddressActionImpl implements StagedOrderSetBil
 
         StagedOrderSetBillingAddressActionImpl that = (StagedOrderSetBillingAddressActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(address, that.address)
+                .append(action, that.action)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override

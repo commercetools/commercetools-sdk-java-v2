@@ -93,6 +93,9 @@ public class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError, ModelBase
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
                 .append(values, that.values)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
                 .isEquals();
     }
 

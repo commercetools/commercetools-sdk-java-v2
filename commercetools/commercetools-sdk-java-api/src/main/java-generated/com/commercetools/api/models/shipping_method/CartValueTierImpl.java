@@ -106,6 +106,10 @@ public class CartValueTierImpl implements CartValueTier, ModelBase {
                 .append(minimumCentAmount, that.minimumCentAmount)
                 .append(price, that.price)
                 .append(isMatching, that.isMatching)
+                .append(type, that.type)
+                .append(minimumCentAmount, that.minimumCentAmount)
+                .append(price, that.price)
+                .append(isMatching, that.isMatching)
                 .isEquals();
     }
 

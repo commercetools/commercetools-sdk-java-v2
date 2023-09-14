@@ -97,6 +97,9 @@ public class StoreLanguagesChangedMessagePayloadImpl implements StoreLanguagesCh
         return new EqualsBuilder().append(type, that.type)
                 .append(addedLanguages, that.addedLanguages)
                 .append(removedLanguages, that.removedLanguages)
+                .append(type, that.type)
+                .append(addedLanguages, that.addedLanguages)
+                .append(removedLanguages, that.removedLanguages)
                 .isEquals();
     }
 

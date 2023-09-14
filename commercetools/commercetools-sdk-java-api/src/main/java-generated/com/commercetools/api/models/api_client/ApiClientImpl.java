@@ -193,6 +193,15 @@ public class ApiClientImpl implements ApiClient, ModelBase {
                 .append(createdAt, that.createdAt)
                 .append(accessTokenValiditySeconds, that.accessTokenValiditySeconds)
                 .append(refreshTokenValiditySeconds, that.refreshTokenValiditySeconds)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(scope, that.scope)
+                .append(secret, that.secret)
+                .append(lastUsedAt, that.lastUsedAt)
+                .append(deleteAt, that.deleteAt)
+                .append(createdAt, that.createdAt)
+                .append(accessTokenValiditySeconds, that.accessTokenValiditySeconds)
+                .append(refreshTokenValiditySeconds, that.refreshTokenValiditySeconds)
                 .isEquals();
     }
 

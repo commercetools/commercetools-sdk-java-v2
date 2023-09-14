@@ -65,7 +65,7 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
 

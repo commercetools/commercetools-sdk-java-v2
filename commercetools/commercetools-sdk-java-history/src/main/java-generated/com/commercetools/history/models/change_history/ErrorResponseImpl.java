@@ -130,6 +130,11 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
                 .append(error, that.error)
                 .append(errorDescription, that.errorDescription)
                 .append(errors, that.errors)
+                .append(statusCode, that.statusCode)
+                .append(message, that.message)
+                .append(error, that.error)
+                .append(errorDescription, that.errorDescription)
+                .append(errors, that.errors)
                 .isEquals();
     }
 

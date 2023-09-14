@@ -150,6 +150,12 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
                 .append(key, that.key)
                 .append(custom, that.custom)
                 .append(state, that.state)
+                .append(quoteRequest, that.quoteRequest)
+                .append(quoteRequestVersion, that.quoteRequestVersion)
+                .append(quoteRequestStateToAccepted, that.quoteRequestStateToAccepted)
+                .append(key, that.key)
+                .append(custom, that.custom)
+                .append(state, that.state)
                 .isEquals();
     }
 

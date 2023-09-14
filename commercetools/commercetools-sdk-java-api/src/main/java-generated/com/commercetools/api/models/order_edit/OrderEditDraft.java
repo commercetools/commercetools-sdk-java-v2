@@ -37,7 +37,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
         com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<OrderEditDraft> {
 
     /**
-     *  <p>User-defined unique identifier for the OrderEdit.</p>
+     *  <p>User-defined unique identifier for the Order Edit.</p>
      * @return key
      */
 
@@ -45,7 +45,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public String getKey();
 
     /**
-     *  <p>The order to be updated with this edit.</p>
+     *  <p>Reference to the Order updated with this edit.</p>
      * @return resource
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public OrderReference getResource();
 
     /**
-     *  <p>The actions to apply to <code>resource</code>.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
      * @return stagedActions
      */
     @Valid
@@ -62,7 +62,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public List<StagedOrderUpdateAction> getStagedActions();
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the Order Edit.</p>
      * @return custom
      */
     @Valid
@@ -70,7 +70,7 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>This field can be used to add additional textual information regarding the edit.</p>
+     *  <p>User-defined description regarding the Order Edit.</p>
      * @return comment
      */
 
@@ -78,7 +78,8 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public String getComment();
 
     /**
-     *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
+     *  <p>Set to <code>true</code> if you want to peview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Order API Extensions, if any, are also called in dry runs.</p>
      * @return dryRun
      */
 
@@ -86,21 +87,21 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public Boolean getDryRun();
 
     /**
-     *  <p>User-defined unique identifier for the OrderEdit.</p>
+     *  <p>User-defined unique identifier for the Order Edit.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>The order to be updated with this edit.</p>
+     *  <p>Reference to the Order updated with this edit.</p>
      * @param resource value to be set
      */
 
     public void setResource(final OrderReference resource);
 
     /**
-     *  <p>The actions to apply to <code>resource</code>.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
      * @param stagedActions values to be set
      */
 
@@ -108,28 +109,29 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
     public void setStagedActions(final StagedOrderUpdateAction... stagedActions);
 
     /**
-     *  <p>The actions to apply to <code>resource</code>.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
      * @param stagedActions values to be set
      */
 
     public void setStagedActions(final List<StagedOrderUpdateAction> stagedActions);
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the Order Edit.</p>
      * @param custom value to be set
      */
 
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>This field can be used to add additional textual information regarding the edit.</p>
+     *  <p>User-defined description regarding the Order Edit.</p>
      * @param comment value to be set
      */
 
     public void setComment(final String comment);
 
     /**
-     *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
+     *  <p>Set to <code>true</code> if you want to peview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Order API Extensions, if any, are also called in dry runs.</p>
      * @param dryRun value to be set
      */
 

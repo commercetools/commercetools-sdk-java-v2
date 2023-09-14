@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartSetCustomLineItemShippingDetailsAction cartSetCustomLineItemShippingDetailsAction = CartSetCustomLineItemShippingDetailsAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -25,19 +24,35 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartSetCustomLineItemShippingDetailsActionBuilder
         implements Builder<CartSetCustomLineItemShippingDetailsAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public CartSetCustomLineItemShippingDetailsActionBuilder customLineItemId(final String customLineItemId) {
+    public CartSetCustomLineItemShippingDetailsActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartSetCustomLineItemShippingDetailsActionBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -79,12 +94,23 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -102,9 +128,7 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
      * @return CartSetCustomLineItemShippingDetailsAction
      */
     public CartSetCustomLineItemShippingDetailsAction build() {
-        Objects.requireNonNull(customLineItemId,
-            CartSetCustomLineItemShippingDetailsAction.class + ": customLineItemId is missing");
-        return new CartSetCustomLineItemShippingDetailsActionImpl(customLineItemId, shippingDetails);
+        return new CartSetCustomLineItemShippingDetailsActionImpl(customLineItemId, customLineItemKey, shippingDetails);
     }
 
     /**
@@ -112,7 +136,7 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
      * @return CartSetCustomLineItemShippingDetailsAction
      */
     public CartSetCustomLineItemShippingDetailsAction buildUnchecked() {
-        return new CartSetCustomLineItemShippingDetailsActionImpl(customLineItemId, shippingDetails);
+        return new CartSetCustomLineItemShippingDetailsActionImpl(customLineItemId, customLineItemKey, shippingDetails);
     }
 
     /**
@@ -132,6 +156,7 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
             final CartSetCustomLineItemShippingDetailsAction template) {
         CartSetCustomLineItemShippingDetailsActionBuilder builder = new CartSetCustomLineItemShippingDetailsActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.shippingDetails = template.getShippingDetails();
         return builder;
     }

@@ -157,6 +157,13 @@ public class SetCustomLineItemTaxAmountChangeImpl implements SetCustomLineItemTa
                 .append(customLineItem, that.customLineItem)
                 .append(customLineItemId, that.customLineItemId)
                 .append(taxMode, that.taxMode)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(customLineItem, that.customLineItem)
+                .append(customLineItemId, that.customLineItemId)
+                .append(taxMode, that.taxMode)
                 .isEquals();
     }
 

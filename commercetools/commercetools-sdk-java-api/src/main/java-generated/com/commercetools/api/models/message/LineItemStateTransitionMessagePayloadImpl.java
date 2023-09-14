@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Transition Line Item State update action.</p>
+ *  <p>Generated after a successful Transition LineItem State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateTransitionMessagePayload, ModelBase {
@@ -23,6 +23,8 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     private String type;
 
     private String lineItemId;
+
+    private String lineItemKey;
 
     private java.time.ZonedDateTime transitionDate;
 
@@ -37,11 +39,13 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
      */
     @JsonCreator
     LineItemStateTransitionMessagePayloadImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("fromState") final com.commercetools.api.models.state.StateReference fromState,
             @JsonProperty("toState") final com.commercetools.api.models.state.StateReference toState) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.transitionDate = transitionDate;
         this.quantity = quantity;
         this.fromState = fromState;
@@ -70,6 +74,14 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -108,6 +120,10 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setTransitionDate(final java.time.ZonedDateTime transitionDate) {
         this.transitionDate = transitionDate;
     }
@@ -136,6 +152,14 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
 
         return new EqualsBuilder().append(type, that.type)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(transitionDate, that.transitionDate)
+                .append(quantity, that.quantity)
+                .append(fromState, that.fromState)
+                .append(toState, that.toState)
+                .append(type, that.type)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(transitionDate, that.transitionDate)
                 .append(quantity, that.quantity)
                 .append(fromState, that.fromState)
@@ -147,6 +171,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(transitionDate)
                 .append(quantity)
                 .append(fromState)

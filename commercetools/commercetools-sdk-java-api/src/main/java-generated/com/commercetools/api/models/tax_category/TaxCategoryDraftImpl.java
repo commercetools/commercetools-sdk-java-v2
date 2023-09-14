@@ -113,6 +113,10 @@ public class TaxCategoryDraftImpl implements TaxCategoryDraft, ModelBase {
                 .append(description, that.description)
                 .append(rates, that.rates)
                 .append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(rates, that.rates)
+                .append(key, that.key)
                 .isEquals();
     }
 

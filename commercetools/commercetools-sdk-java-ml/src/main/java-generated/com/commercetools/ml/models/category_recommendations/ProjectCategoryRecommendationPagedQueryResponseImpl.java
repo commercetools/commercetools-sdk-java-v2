@@ -134,6 +134,11 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
                 .append(offset, that.offset)
                 .append(results, that.results)
                 .append(meta, that.meta)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(results, that.results)
+                .append(meta, that.meta)
                 .isEquals();
     }
 

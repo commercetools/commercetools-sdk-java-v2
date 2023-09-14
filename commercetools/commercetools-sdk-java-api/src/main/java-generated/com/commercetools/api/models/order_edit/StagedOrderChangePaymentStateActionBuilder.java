@@ -3,8 +3,6 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,6 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderChangePaymentStateAction stagedOrderChangePaymentStateAction = StagedOrderChangePaymentStateAction.builder()
+ *             .paymentState(PaymentState.BALANCE_DUE)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,27 +21,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangePaymentStateActionBuilder implements Builder<StagedOrderChangePaymentStateAction> {
 
-    @Nullable
     private com.commercetools.api.models.order.PaymentState paymentState;
 
     /**
-     * set the value to the paymentState
+     *  <p>New payment status of the Order.</p>
      * @param paymentState value to be set
      * @return Builder
      */
 
     public StagedOrderChangePaymentStateActionBuilder paymentState(
-            @Nullable final com.commercetools.api.models.order.PaymentState paymentState) {
+            final com.commercetools.api.models.order.PaymentState paymentState) {
         this.paymentState = paymentState;
         return this;
     }
 
     /**
-     * value of paymentState}
+     *  <p>New payment status of the Order.</p>
      * @return paymentState
      */
 
-    @Nullable
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
         return this.paymentState;
     }
@@ -52,6 +49,7 @@ public class StagedOrderChangePaymentStateActionBuilder implements Builder<Stage
      * @return StagedOrderChangePaymentStateAction
      */
     public StagedOrderChangePaymentStateAction build() {
+        Objects.requireNonNull(paymentState, StagedOrderChangePaymentStateAction.class + ": paymentState is missing");
         return new StagedOrderChangePaymentStateActionImpl(paymentState);
     }
 

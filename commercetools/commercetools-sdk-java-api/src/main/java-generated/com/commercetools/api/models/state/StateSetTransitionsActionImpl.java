@@ -79,7 +79,11 @@ public class StateSetTransitionsActionImpl implements StateSetTransitionsAction,
 
         StateSetTransitionsActionImpl that = (StateSetTransitionsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(transitions, that.transitions).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(transitions, that.transitions)
+                .append(action, that.action)
+                .append(transitions, that.transitions)
+                .isEquals();
     }
 
     @Override

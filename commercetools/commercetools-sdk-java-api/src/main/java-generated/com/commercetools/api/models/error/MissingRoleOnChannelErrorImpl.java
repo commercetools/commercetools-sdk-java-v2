@@ -138,6 +138,11 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
                 .append(values, that.values)
                 .append(channel, that.channel)
                 .append(missingRole, that.missingRole)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(channel, that.channel)
+                .append(missingRole, that.missingRole)
                 .isEquals();
     }
 

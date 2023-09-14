@@ -72,7 +72,11 @@ public class StandalonePriceExternalDiscountSetMessagePayloadImpl
 
         StandalonePriceExternalDiscountSetMessagePayloadImpl that = (StandalonePriceExternalDiscountSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(discounted, that.discounted).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(discounted, that.discounted)
+                .append(type, that.type)
+                .append(discounted, that.discounted)
+                .isEquals();
     }
 
     @Override

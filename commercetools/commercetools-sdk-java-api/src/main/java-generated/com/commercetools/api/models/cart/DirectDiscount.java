@@ -52,7 +52,7 @@ public interface DirectDiscount {
     public CartDiscountValue getValue();
 
     /**
-     *  <p>Part of the Cart that is discounted.</p>
+     *  <p>Segment of the Cart that is discounted.</p>
      *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
      * @return target
      */
@@ -75,7 +75,7 @@ public interface DirectDiscount {
     public void setValue(final CartDiscountValue value);
 
     /**
-     *  <p>Part of the Cart that is discounted.</p>
+     *  <p>Segment of the Cart that is discounted.</p>
      *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
      * @param target value to be set
      */

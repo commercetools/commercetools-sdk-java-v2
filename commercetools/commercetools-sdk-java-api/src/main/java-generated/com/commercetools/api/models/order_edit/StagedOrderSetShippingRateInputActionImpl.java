@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetShippingRateInputAction
+ *  <p>Input used to select a ShippingRatePriceTier. If no matching tier can be found, or the input is not set, the default price for the shipping rate is used.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSetShippingRateInputAction, ModelBase {
@@ -50,7 +50,12 @@ public class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSet
     }
 
     /**
-     *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
+     *  <p>The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
      */
 
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
@@ -72,6 +77,8 @@ public class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSet
         StagedOrderSetShippingRateInputActionImpl that = (StagedOrderSetShippingRateInputActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(action, that.action)
                 .append(shippingRateInput, that.shippingRateInput)
                 .isEquals();
     }

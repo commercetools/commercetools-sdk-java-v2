@@ -33,7 +33,8 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -44,7 +45,8 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      * @return Builder
      */
@@ -55,7 +57,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     * set values to the items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -66,7 +68,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     * set value to the items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -78,7 +80,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     * add values to the items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -93,7 +95,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -108,7 +110,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -121,7 +123,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -132,7 +134,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -143,7 +145,8 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
 
@@ -153,7 +156,8 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
 
@@ -163,7 +167,7 @@ public class OrderSetDeliveryItemsActionBuilder implements Builder<OrderSetDeliv
     }
 
     /**
-     * value of items}
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return items
      */
 

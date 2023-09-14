@@ -136,6 +136,11 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(deliveryId, that.deliveryId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(deliveryId, that.deliveryId)
                 .isEquals();
     }
 

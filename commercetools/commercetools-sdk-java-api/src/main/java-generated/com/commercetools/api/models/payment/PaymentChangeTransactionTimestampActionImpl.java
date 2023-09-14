@@ -89,6 +89,9 @@ public class PaymentChangeTransactionTimestampActionImpl implements PaymentChang
         return new EqualsBuilder().append(action, that.action)
                 .append(transactionId, that.transactionId)
                 .append(timestamp, that.timestamp)
+                .append(action, that.action)
+                .append(transactionId, that.transactionId)
+                .append(timestamp, that.timestamp)
                 .isEquals();
     }
 

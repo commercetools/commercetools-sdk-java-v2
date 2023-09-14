@@ -74,7 +74,11 @@ public class DiscountedPriceImpl implements DiscountedPrice, ModelBase {
 
         DiscountedPriceImpl that = (DiscountedPriceImpl) o;
 
-        return new EqualsBuilder().append(value, that.value).append(discount, that.discount).isEquals();
+        return new EqualsBuilder().append(value, that.value)
+                .append(discount, that.discount)
+                .append(value, that.value)
+                .append(discount, that.discount)
+                .isEquals();
     }
 
     @Override

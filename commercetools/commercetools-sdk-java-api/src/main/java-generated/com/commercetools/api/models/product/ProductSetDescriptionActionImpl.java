@@ -90,6 +90,9 @@ public class ProductSetDescriptionActionImpl implements ProductSetDescriptionAct
         return new EqualsBuilder().append(action, that.action)
                 .append(description, that.description)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(description, that.description)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

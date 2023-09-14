@@ -238,6 +238,17 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(expiresAt, that.expiresAt)
+                .append(version, that.version)
+                .append(importContainerKey, that.importContainerKey)
+                .append(resourceKey, that.resourceKey)
+                .append(id, that.id)
+                .append(state, that.state)
+                .append(resourceVersion, that.resourceVersion)
+                .append(errors, that.errors)
+                .append(unresolvedReferences, that.unresolvedReferences)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(expiresAt, that.expiresAt)
                 .isEquals();
     }
 

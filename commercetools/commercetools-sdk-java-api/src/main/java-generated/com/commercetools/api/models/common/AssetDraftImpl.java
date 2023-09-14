@@ -98,7 +98,7 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Asset.</p>
+     *  <p>User-defined identifier for the Asset. Must be unique per Category or ProductVariant.</p>
      */
 
     public String getKey() {
@@ -148,6 +148,12 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
         AssetDraftImpl that = (AssetDraftImpl) o;
 
         return new EqualsBuilder().append(sources, that.sources)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(tags, that.tags)
+                .append(custom, that.custom)
+                .append(key, that.key)
+                .append(sources, that.sources)
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(tags, that.tags)

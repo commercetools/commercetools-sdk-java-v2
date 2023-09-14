@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyBusinessUnitSetAddressCustomTypeAction
+ *  <p>Adding or updating a Custom Type to an Address of a Business Unit generates the BusinessUnitAddressCustomTypeSet Message, and removing one generates the BusinessUnitAddressCustomTypeRemoved Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyBusinessUnitSetAddressCustomTypeActionImpl
@@ -105,6 +105,10 @@ public class MyBusinessUnitSetAddressCustomTypeActionImpl
         MyBusinessUnitSetAddressCustomTypeActionImpl that = (MyBusinessUnitSetAddressCustomTypeActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(addressId, that.addressId)
+                .append(action, that.action)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .append(addressId, that.addressId)

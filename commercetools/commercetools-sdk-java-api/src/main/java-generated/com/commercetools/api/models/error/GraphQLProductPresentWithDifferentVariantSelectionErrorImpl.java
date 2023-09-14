@@ -113,6 +113,10 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorImpl
                 .append(values, that.values)
                 .append(product, that.product)
                 .append(existingVariantSelection, that.existingVariantSelection)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(product, that.product)
+                .append(existingVariantSelection, that.existingVariantSelection)
                 .isEquals();
     }
 

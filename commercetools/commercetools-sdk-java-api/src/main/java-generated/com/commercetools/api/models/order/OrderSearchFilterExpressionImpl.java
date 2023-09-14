@@ -63,7 +63,7 @@ public class OrderSearchFilterExpressionImpl implements OrderSearchFilterExpress
 
         OrderSearchFilterExpressionImpl that = (OrderSearchFilterExpressionImpl) o;
 
-        return new EqualsBuilder().append(filter, that.filter).isEquals();
+        return new EqualsBuilder().append(filter, that.filter).append(filter, that.filter).isEquals();
     }
 
     @Override

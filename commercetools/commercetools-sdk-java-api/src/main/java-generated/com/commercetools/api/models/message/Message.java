@@ -49,6 +49,11 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionsSetMessageImpl.class, name = AssociateRolePermissionsSetMessage.ASSOCIATE_ROLE_PERMISSIONS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressAddedMessageImpl.class, name = BusinessUnitAddressAddedMessage.BUSINESS_UNIT_ADDRESS_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressChangedMessageImpl.class, name = BusinessUnitAddressChangedMessage.BUSINESS_UNIT_ADDRESS_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessageImpl.class, name = BusinessUnitAddressCustomFieldAddedMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessageImpl.class, name = BusinessUnitAddressCustomFieldChangedMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessageImpl.class, name = BusinessUnitAddressCustomFieldRemovedMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessageImpl.class, name = BusinessUnitAddressCustomTypeRemovedMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_TYPE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessageImpl.class, name = BusinessUnitAddressCustomTypeSetMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageImpl.class, name = BusinessUnitAddressRemovedMessage.BUSINESS_UNIT_ADDRESS_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateAddedMessageImpl.class, name = BusinessUnitAssociateAddedMessage.BUSINESS_UNIT_ASSOCIATE_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateChangedMessageImpl.class, name = BusinessUnitAssociateChangedMessage.BUSINESS_UNIT_ASSOCIATE_CHANGED),
@@ -59,11 +64,16 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessageImpl.class, name = BusinessUnitBillingAddressRemovedMessage.BUSINESS_UNIT_BILLING_ADDRESS_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitContactEmailSetMessageImpl.class, name = BusinessUnitContactEmailSetMessage.BUSINESS_UNIT_CONTACT_EMAIL_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCreatedMessageImpl.class, name = BusinessUnitCreatedMessage.BUSINESS_UNIT_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessageImpl.class, name = BusinessUnitCustomFieldAddedMessage.BUSINESS_UNIT_CUSTOM_FIELD_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessageImpl.class, name = BusinessUnitCustomFieldChangedMessage.BUSINESS_UNIT_CUSTOM_FIELD_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessageImpl.class, name = BusinessUnitCustomFieldRemovedMessage.BUSINESS_UNIT_CUSTOM_FIELD_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessageImpl.class, name = BusinessUnitCustomTypeRemovedMessage.BUSINESS_UNIT_CUSTOM_TYPE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessageImpl.class, name = BusinessUnitCustomTypeSetMessage.BUSINESS_UNIT_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageImpl.class, name = BusinessUnitDefaultBillingAddressSetMessage.BUSINESS_UNIT_DEFAULT_BILLING_ADDRESS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessageImpl.class, name = BusinessUnitDefaultShippingAddressSetMessage.BUSINESS_UNIT_DEFAULT_SHIPPING_ADDRESS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitDeletedMessageImpl.class, name = BusinessUnitDeletedMessage.BUSINESS_UNIT_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitNameChangedMessageImpl.class, name = BusinessUnitNameChangedMessage.BUSINESS_UNIT_NAME_CHANGED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageImpl.class, name = BusinessUnitParentUnitChangedMessage.BUSINESS_UNIT_PARENT_UNIT_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitParentChangedMessageImpl.class, name = BusinessUnitParentChangedMessage.BUSINESS_UNIT_PARENT_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessageImpl.class, name = BusinessUnitShippingAddressAddedMessage.BUSINESS_UNIT_SHIPPING_ADDRESS_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessageImpl.class, name = BusinessUnitShippingAddressRemovedMessage.BUSINESS_UNIT_SHIPPING_ADDRESS_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStatusChangedMessageImpl.class, name = BusinessUnitStatusChangedMessage.BUSINESS_UNIT_STATUS_CHANGED),
@@ -76,9 +86,19 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomLineItemStateTransitionMessageImpl.class, name = CustomLineItemStateTransitionMessage.CUSTOM_LINE_ITEM_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressAddedMessageImpl.class, name = CustomerAddressAddedMessage.CUSTOMER_ADDRESS_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressChangedMessageImpl.class, name = CustomerAddressChangedMessage.CUSTOMER_ADDRESS_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessageImpl.class, name = CustomerAddressCustomFieldAddedMessage.CUSTOMER_ADDRESS_CUSTOM_FIELD_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessageImpl.class, name = CustomerAddressCustomFieldChangedMessage.CUSTOMER_ADDRESS_CUSTOM_FIELD_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessageImpl.class, name = CustomerAddressCustomFieldRemovedMessage.CUSTOMER_ADDRESS_CUSTOM_FIELD_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessageImpl.class, name = CustomerAddressCustomTypeRemovedMessage.CUSTOMER_ADDRESS_CUSTOM_TYPE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessageImpl.class, name = CustomerAddressCustomTypeSetMessage.CUSTOMER_ADDRESS_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerAddressRemovedMessageImpl.class, name = CustomerAddressRemovedMessage.CUSTOMER_ADDRESS_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCompanyNameSetMessageImpl.class, name = CustomerCompanyNameSetMessage.CUSTOMER_COMPANY_NAME_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCreatedMessageImpl.class, name = CustomerCreatedMessage.CUSTOMER_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCustomFieldAddedMessageImpl.class, name = CustomerCustomFieldAddedMessage.CUSTOMER_CUSTOM_FIELD_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCustomFieldChangedMessageImpl.class, name = CustomerCustomFieldChangedMessage.CUSTOMER_CUSTOM_FIELD_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCustomFieldRemovedMessageImpl.class, name = CustomerCustomFieldRemovedMessage.CUSTOMER_CUSTOM_FIELD_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCustomTypeRemovedMessageImpl.class, name = CustomerCustomTypeRemovedMessage.CUSTOMER_CUSTOM_TYPE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerCustomTypeSetMessageImpl.class, name = CustomerCustomTypeSetMessage.CUSTOMER_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerDateOfBirthSetMessageImpl.class, name = CustomerDateOfBirthSetMessage.CUSTOMER_DATE_OF_BIRTH_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerDeletedMessageImpl.class, name = CustomerDeletedMessage.CUSTOMER_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailChangedMessageImpl.class, name = CustomerEmailChangedMessage.CUSTOMER_EMAIL_CHANGED),
@@ -98,10 +118,15 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.LineItemStateTransitionMessageImpl.class, name = LineItemStateTransitionMessage.LINE_ITEM_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderBillingAddressSetMessageImpl.class, name = OrderBillingAddressSetMessage.ORDER_BILLING_ADDRESS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCreatedMessageImpl.class, name = OrderCreatedMessage.ORDER_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldAddedMessageImpl.class, name = OrderCustomFieldAddedMessage.ORDER_CUSTOM_FIELD_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldChangedMessageImpl.class, name = OrderCustomFieldChangedMessage.ORDER_CUSTOM_FIELD_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldRemovedMessageImpl.class, name = OrderCustomFieldRemovedMessage.ORDER_CUSTOM_FIELD_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemAddedMessageImpl.class, name = OrderCustomLineItemAddedMessage.ORDER_CUSTOM_LINE_ITEM_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessageImpl.class, name = OrderCustomLineItemDiscountSetMessage.ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessageImpl.class, name = OrderCustomLineItemQuantityChangedMessage.ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageImpl.class, name = OrderCustomLineItemRemovedMessage.ORDER_CUSTOM_LINE_ITEM_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomTypeRemovedMessageImpl.class, name = OrderCustomTypeRemovedMessage.ORDER_CUSTOM_TYPE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomTypeSetMessageImpl.class, name = OrderCustomTypeSetMessage.ORDER_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerEmailSetMessageImpl.class, name = OrderCustomerEmailSetMessage.ORDER_CUSTOMER_EMAIL_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerGroupSetMessageImpl.class, name = OrderCustomerGroupSetMessage.ORDER_CUSTOMER_GROUP_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomerSetMessageImpl.class, name = OrderCustomerSetMessage.ORDER_CUSTOMER_SET),
@@ -167,6 +192,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteCreatedMessageImpl.class, name = QuoteCreatedMessage.QUOTE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteCustomerChangedMessageImpl.class, name = QuoteCustomerChangedMessage.QUOTE_CUSTOMER_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteDeletedMessageImpl.class, name = QuoteDeletedMessage.QUOTE_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRenegotiationRequestedMessageImpl.class, name = QuoteRenegotiationRequestedMessage.QUOTE_RENEGOTIATION_REQUESTED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestCreatedMessageImpl.class, name = QuoteRequestCreatedMessage.QUOTE_REQUEST_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestCustomerChangedMessageImpl.class, name = QuoteRequestCustomerChangedMessage.QUOTE_REQUEST_CUSTOMER_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.QuoteRequestDeletedMessageImpl.class, name = QuoteRequestDeletedMessage.QUOTE_REQUEST_DELETED),
@@ -192,6 +218,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessageImpl.class, name = StandalonePriceExternalDiscountSetMessage.STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceKeySetMessageImpl.class, name = StandalonePriceKeySetMessage.STANDALONE_PRICE_KEY_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessageImpl.class, name = StandalonePriceStagedChangesAppliedMessage.STANDALONE_PRICE_STAGED_CHANGES_APPLIED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessageImpl.class, name = StandalonePriceStagedChangesRemovedMessage.STANDALONE_PRICE_STAGED_CHANGES_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTierAddedMessageImpl.class, name = StandalonePriceTierAddedMessage.STANDALONE_PRICE_TIER_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTierRemovedMessageImpl.class, name = StandalonePriceTierRemovedMessage.STANDALONE_PRICE_TIER_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StandalonePriceTiersSetMessageImpl.class, name = StandalonePriceTiersSetMessage.STANDALONE_PRICE_TIERS_SET),
@@ -417,6 +444,26 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
             return com.commercetools.api.models.message.BusinessUnitAddressChangedMessage
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressChangedMessage) template);
         }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessage.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessage.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessage.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessage.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessage) {
+            return com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessage
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessage) template);
+        }
         if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressRemovedMessage) {
             return com.commercetools.api.models.message.BusinessUnitAddressRemovedMessage
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressRemovedMessage) template);
@@ -457,6 +504,26 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
             return com.commercetools.api.models.message.BusinessUnitCreatedMessage
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitCreatedMessage) template);
         }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessage
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessage
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessage) {
+            return com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessage
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessage) template);
+        }
         if (template instanceof com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessage) {
             return com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessage.deepCopy(
                 (com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessage) template);
@@ -473,9 +540,9 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
             return com.commercetools.api.models.message.BusinessUnitNameChangedMessage
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitNameChangedMessage) template);
         }
-        if (template instanceof com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessage) {
-            return com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessage) template);
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitParentChangedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitParentChangedMessage
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitParentChangedMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessage) {
             return com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessage
@@ -521,6 +588,26 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
             return com.commercetools.api.models.message.CustomerAddressChangedMessage
                     .deepCopy((com.commercetools.api.models.message.CustomerAddressChangedMessage) template);
         }
+        if (template instanceof com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessage) {
+            return com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessage) {
+            return com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessage) {
+            return com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessage) {
+            return com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessage) {
+            return com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessage) template);
+        }
         if (template instanceof com.commercetools.api.models.message.CustomerAddressRemovedMessage) {
             return com.commercetools.api.models.message.CustomerAddressRemovedMessage
                     .deepCopy((com.commercetools.api.models.message.CustomerAddressRemovedMessage) template);
@@ -532,6 +619,26 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.CustomerCreatedMessage) {
             return com.commercetools.api.models.message.CustomerCreatedMessage
                     .deepCopy((com.commercetools.api.models.message.CustomerCreatedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerCustomFieldAddedMessage) {
+            return com.commercetools.api.models.message.CustomerCustomFieldAddedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerCustomFieldAddedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerCustomFieldChangedMessage) {
+            return com.commercetools.api.models.message.CustomerCustomFieldChangedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerCustomFieldChangedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerCustomFieldRemovedMessage) {
+            return com.commercetools.api.models.message.CustomerCustomFieldRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerCustomFieldRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerCustomTypeRemovedMessage) {
+            return com.commercetools.api.models.message.CustomerCustomTypeRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerCustomTypeRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerCustomTypeSetMessage) {
+            return com.commercetools.api.models.message.CustomerCustomTypeSetMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerCustomTypeSetMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.CustomerDateOfBirthSetMessage) {
             return com.commercetools.api.models.message.CustomerDateOfBirthSetMessage
@@ -733,6 +840,10 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
             return com.commercetools.api.models.message.QuoteDeletedMessage
                     .deepCopy((com.commercetools.api.models.message.QuoteDeletedMessage) template);
         }
+        if (template instanceof com.commercetools.api.models.message.QuoteRenegotiationRequestedMessage) {
+            return com.commercetools.api.models.message.QuoteRenegotiationRequestedMessage
+                    .deepCopy((com.commercetools.api.models.message.QuoteRenegotiationRequestedMessage) template);
+        }
         if (template instanceof com.commercetools.api.models.message.QuoteRequestCreatedMessage) {
             return com.commercetools.api.models.message.QuoteRequestCreatedMessage
                     .deepCopy((com.commercetools.api.models.message.QuoteRequestCreatedMessage) template);
@@ -824,6 +935,10 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessage) {
             return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessage.deepCopy(
                 (com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessage) {
+            return com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessage.deepCopy(
+                (com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.StandalonePriceTierAddedMessage) {
             return com.commercetools.api.models.message.StandalonePriceTierAddedMessage
@@ -974,6 +1089,46 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for businessUnitAddressCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessageBuilder businessUnitAddressCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitAddressCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessageBuilder businessUnitAddressCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitAddressCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessageBuilder businessUnitAddressCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitAddressCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessageBuilder businessUnitAddressCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitAddressCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessageBuilder businessUnitAddressCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessageBuilder.of();
+    }
+
+    /**
      * builder for businessUnitAddressRemoved subtype
      * @return builder
      */
@@ -1054,6 +1209,46 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for businessUnitCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessageBuilder businessUnitCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessageBuilder businessUnitCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessageBuilder businessUnitCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessageBuilder businessUnitCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessageBuilder businessUnitCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessageBuilder.of();
+    }
+
+    /**
      * builder for businessUnitDefaultBillingAddressSet subtype
      * @return builder
      */
@@ -1086,11 +1281,11 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
-     * builder for businessUnitParentUnitChanged subtype
+     * builder for businessUnitParentChanged subtype
      * @return builder
      */
-    public static com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageBuilder businessUnitParentUnitChangedBuilder() {
-        return com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageBuilder.of();
+    public static com.commercetools.api.models.message.BusinessUnitParentChangedMessageBuilder businessUnitParentChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitParentChangedMessageBuilder.of();
     }
 
     /**
@@ -1190,6 +1385,46 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for customerAddressCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessageBuilder customerAddressCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerAddressCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessageBuilder customerAddressCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerAddressCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessageBuilder customerAddressCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerAddressCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessageBuilder customerAddressCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerAddressCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessageBuilder customerAddressCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessageBuilder.of();
+    }
+
+    /**
      * builder for customerAddressRemoved subtype
      * @return builder
      */
@@ -1211,6 +1446,46 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.CustomerCreatedMessageBuilder customerCreatedBuilder() {
         return com.commercetools.api.models.message.CustomerCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerCustomFieldAddedMessageBuilder customerCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerCustomFieldChangedMessageBuilder customerCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.CustomerCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerCustomFieldRemovedMessageBuilder customerCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerCustomTypeRemovedMessageBuilder customerCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerCustomTypeSetMessageBuilder customerCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.CustomerCustomTypeSetMessageBuilder.of();
     }
 
     /**
@@ -1366,6 +1641,30 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for orderCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomFieldAddedMessageBuilder orderCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomFieldChangedMessageBuilder orderCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomFieldRemovedMessageBuilder orderCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
      * builder for orderCustomLineItemAdded subtype
      * @return builder
      */
@@ -1395,6 +1694,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageBuilder orderCustomLineItemRemovedBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomTypeRemovedMessageBuilder orderCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCustomTypeSetMessageBuilder orderCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.OrderCustomTypeSetMessageBuilder.of();
     }
 
     /**
@@ -1918,6 +2233,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for quoteRenegotiationRequested subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.QuoteRenegotiationRequestedMessageBuilder quoteRenegotiationRequestedBuilder() {
+        return com.commercetools.api.models.message.QuoteRenegotiationRequestedMessageBuilder.of();
+    }
+
+    /**
      * builder for quoteRequestCreated subtype
      * @return builder
      */
@@ -2115,6 +2438,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessageBuilder standalonePriceStagedChangesAppliedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessageBuilder.of();
+    }
+
+    /**
+     * builder for standalonePriceStagedChangesRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessageBuilder standalonePriceStagedChangesRemovedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessageBuilder.of();
     }
 
     /**

@@ -116,6 +116,10 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
                 .append(totalGross, that.totalGross)
                 .append(taxPortions, that.taxPortions)
                 .append(totalTax, that.totalTax)
+                .append(totalNet, that.totalNet)
+                .append(totalGross, that.totalGross)
+                .append(taxPortions, that.taxPortions)
+                .append(totalTax, that.totalTax)
                 .isEquals();
     }
 

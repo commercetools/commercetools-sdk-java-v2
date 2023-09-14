@@ -90,6 +90,9 @@ public class QuoteTransitionStateActionImpl implements QuoteTransitionStateActio
         return new EqualsBuilder().append(action, that.action)
                 .append(state, that.state)
                 .append(force, that.force)
+                .append(action, that.action)
+                .append(state, that.state)
+                .append(force, that.force)
                 .isEquals();
     }
 

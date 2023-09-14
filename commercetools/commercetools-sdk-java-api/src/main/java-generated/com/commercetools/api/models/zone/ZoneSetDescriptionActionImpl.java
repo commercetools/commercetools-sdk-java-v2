@@ -70,7 +70,11 @@ public class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAction, M
 
         ZoneSetDescriptionActionImpl that = (ZoneSetDescriptionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(description, that.description).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(description, that.description)
+                .append(action, that.action)
+                .append(description, that.description)
+                .isEquals();
     }
 
     @Override

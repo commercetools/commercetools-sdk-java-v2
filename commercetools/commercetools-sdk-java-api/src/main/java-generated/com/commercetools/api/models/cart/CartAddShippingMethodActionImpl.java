@@ -184,6 +184,14 @@ public class CartAddShippingMethodActionImpl implements CartAddShippingMethodAct
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(deliveries, that.deliveries)
                 .append(custom, that.custom)
+                .append(action, that.action)
+                .append(shippingKey, that.shippingKey)
+                .append(shippingMethod, that.shippingMethod)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(deliveries, that.deliveries)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

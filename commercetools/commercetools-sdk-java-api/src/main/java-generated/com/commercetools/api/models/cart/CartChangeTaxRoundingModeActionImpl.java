@@ -71,7 +71,11 @@ public class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxRoundin
 
         CartChangeTaxRoundingModeActionImpl that = (CartChangeTaxRoundingModeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(taxRoundingMode, that.taxRoundingMode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(action, that.action)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .isEquals();
     }
 
     @Override

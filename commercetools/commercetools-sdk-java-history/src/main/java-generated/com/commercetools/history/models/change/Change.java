@@ -32,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddAddressChangeImpl.class, name = AddAddressChange.ADD_ADDRESS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddAssetChangeImpl.class, name = AddAssetChange.ADD_ASSET_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddAssociateChangeImpl.class, name = AddAssociateChange.ADD_ASSOCIATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddAttributeDefinitionChangeImpl.class, name = AddAttributeDefinitionChange.ADD_ATTRIBUTE_DEFINITION_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddBillingAddressIdChangeImpl.class, name = AddBillingAddressIdChange.ADD_BILLING_ADDRESS_ID_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddChannelRolesChangeImpl.class, name = AddChannelRolesChange.ADD_CHANNEL_ROLES_CHANGE),
@@ -41,6 +42,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddEnumValueChangeImpl.class, name = AddEnumValueChange.ADD_ENUM_VALUE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddExternalImageChangeImpl.class, name = AddExternalImageChange.ADD_EXTERNAL_IMAGE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddFieldDefinitionChangeImpl.class, name = AddFieldDefinitionChange.ADD_FIELD_DEFINITION_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddInheritedAssociateChangeImpl.class, name = AddInheritedAssociateChange.ADD_INHERITED_ASSOCIATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddInterfaceInteractionChangeImpl.class, name = AddInterfaceInteractionChange.ADD_INTERFACE_INTERACTION_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddItemShippingAddressesChangeImpl.class, name = AddItemShippingAddressesChange.ADD_ITEM_SHIPPING_ADDRESSES_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddLocalizedEnumValueChangeImpl.class, name = AddLocalizedEnumValueChange.ADD_LOCALIZED_ENUM_VALUE_CHANGE),
@@ -51,6 +53,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddPlainEnumValueChangeImpl.class, name = AddPlainEnumValueChange.ADD_PLAIN_ENUM_VALUE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddPriceChangeImpl.class, name = AddPriceChange.ADD_PRICE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddProductChangeImpl.class, name = AddProductChange.ADD_PRODUCT_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddProductSelectionChangeImpl.class, name = AddProductSelectionChange.ADD_PRODUCT_SELECTION_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddPropertyChangeImpl.class, name = AddPropertyChange.ADD_PROPERTY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddReturnInfoChangeImpl.class, name = AddReturnInfoChange.ADD_RETURN_INFO_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.AddShippingAddressIdChangeImpl.class, name = AddShippingAddressIdChange.ADD_SHIPPING_ADDRESS_ID_CHANGE),
@@ -66,8 +69,11 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeAmountPlannedChangeImpl.class, name = ChangeAmountPlannedChange.CHANGE_AMOUNT_PLANNED_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeAssetNameChangeImpl.class, name = ChangeAssetNameChange.CHANGE_ASSET_NAME_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeAssetOrderChangeImpl.class, name = ChangeAssetOrderChange.CHANGE_ASSET_ORDER_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeAssociateChangeImpl.class, name = ChangeAssociateChange.CHANGE_ASSOCIATE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeAssociateModeChangeImpl.class, name = ChangeAssociateModeChange.CHANGE_ASSOCIATE_MODE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeAttributeConstraintChangeImpl.class, name = ChangeAttributeConstraintChange.CHANGE_ATTRIBUTE_CONSTRAINT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeAttributeOrderByNameChangeImpl.class, name = ChangeAttributeOrderByNameChange.CHANGE_ATTRIBUTE_ORDER_BY_NAME_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeBuyerAssignableChangeImpl.class, name = ChangeBuyerAssignableChange.CHANGE_BUYER_ASSIGNABLE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeCartDiscountsChangeImpl.class, name = ChangeCartDiscountsChange.CHANGE_CART_DISCOUNTS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeCartPredicateChangeImpl.class, name = ChangeCartPredicateChange.CHANGE_CART_PREDICATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeCustomLineItemQuantityChangeImpl.class, name = ChangeCustomLineItemQuantityChange.CHANGE_CUSTOM_LINE_ITEM_QUANTITY_CHANGE),
@@ -77,6 +83,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeEnumValueOrderChangeImpl.class, name = ChangeEnumValueOrderChange.CHANGE_ENUM_VALUE_ORDER_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeFieldDefinitionOrderChangeImpl.class, name = ChangeFieldDefinitionOrderChange.CHANGE_FIELD_DEFINITION_ORDER_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeGroupsChangeImpl.class, name = ChangeGroupsChange.CHANGE_GROUPS_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeInheritedAssociateChangeImpl.class, name = ChangeInheritedAssociateChange.CHANGE_INHERITED_ASSOCIATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeInitialChangeImpl.class, name = ChangeInitialChange.CHANGE_INITIAL_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeInputHintChangeImpl.class, name = ChangeInputHintChange.CHANGE_INPUT_HINT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeIsActiveChangeImpl.class, name = ChangeIsActiveChange.CHANGE_IS_ACTIVE_CHANGE),
@@ -93,11 +100,13 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeOrderHintChangeImpl.class, name = ChangeOrderHintChange.CHANGE_ORDER_HINT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeOrderStateChangeImpl.class, name = ChangeOrderStateChange.CHANGE_ORDER_STATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeParentChangeImpl.class, name = ChangeParentChange.CHANGE_PARENT_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeParentUnitChangeImpl.class, name = ChangeParentUnitChange.CHANGE_PARENT_UNIT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangePaymentStateChangeImpl.class, name = ChangePaymentStateChange.CHANGE_PAYMENT_STATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangePlainEnumValueLabelChangeImpl.class, name = ChangePlainEnumValueLabelChange.CHANGE_PLAIN_ENUM_VALUE_LABEL_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangePlainEnumValueOrderChangeImpl.class, name = ChangePlainEnumValueOrderChange.CHANGE_PLAIN_ENUM_VALUE_ORDER_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangePredicateChangeImpl.class, name = ChangePredicateChange.CHANGE_PREDICATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangePriceChangeImpl.class, name = ChangePriceChange.CHANGE_PRICE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeProductSelectionActiveChangeImpl.class, name = ChangeProductSelectionActiveChange.CHANGE_PRODUCT_SELECTION_ACTIVE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeQuantityChangeImpl.class, name = ChangeQuantityChange.CHANGE_QUANTITY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeQuoteRequestStateChangeImpl.class, name = ChangeQuoteRequestStateChange.CHANGE_QUOTE_REQUEST_STATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeQuoteStateChangeImpl.class, name = ChangeQuoteStateChange.CHANGE_QUOTE_STATE_CHANGE),
@@ -111,6 +120,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeStackingModeChangeImpl.class, name = ChangeStackingModeChange.CHANGE_STACKING_MODE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeStagedQuoteStateChangeImpl.class, name = ChangeStagedQuoteStateChange.CHANGE_STAGED_QUOTE_STATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeStateTypeChangeImpl.class, name = ChangeStateTypeChange.CHANGE_STATE_TYPE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeStatusChangeImpl.class, name = ChangeStatusChange.CHANGE_STATUS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeTargetChangeImpl.class, name = ChangeTargetChange.CHANGE_TARGET_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeTaxCalculationModeChangeImpl.class, name = ChangeTaxCalculationModeChange.CHANGE_TAX_CALCULATION_MODE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.ChangeTaxModeChangeImpl.class, name = ChangeTaxModeChange.CHANGE_TAX_MODE_CHANGE),
@@ -126,6 +136,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.PublishChangeImpl.class, name = PublishChange.PUBLISH_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveAddressChangeImpl.class, name = RemoveAddressChange.REMOVE_ADDRESS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveAssetChangeImpl.class, name = RemoveAssetChange.REMOVE_ASSET_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveAssociateChangeImpl.class, name = RemoveAssociateChange.REMOVE_ASSOCIATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveAttributeDefinitionChangeImpl.class, name = RemoveAttributeDefinitionChange.REMOVE_ATTRIBUTE_DEFINITION_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveBillingAddressIdChangeImpl.class, name = RemoveBillingAddressIdChange.REMOVE_BILLING_ADDRESS_ID_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveChannelRolesChangeImpl.class, name = RemoveChannelRolesChange.REMOVE_CHANNEL_ROLES_CHANGE),
@@ -136,6 +147,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveFieldDefinitionChangeImpl.class, name = RemoveFieldDefinitionChange.REMOVE_FIELD_DEFINITION_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveFromCategoryChangeImpl.class, name = RemoveFromCategoryChange.REMOVE_FROM_CATEGORY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveImageChangeImpl.class, name = RemoveImageChange.REMOVE_IMAGE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveInheritedAssociateChangeImpl.class, name = RemoveInheritedAssociateChange.REMOVE_INHERITED_ASSOCIATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveItemShippingAddressesChangeImpl.class, name = RemoveItemShippingAddressesChange.REMOVE_ITEM_SHIPPING_ADDRESSES_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveLocalizedEnumValuesChangeImpl.class, name = RemoveLocalizedEnumValuesChange.REMOVE_LOCALIZED_ENUM_VALUES_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveLocationChangeImpl.class, name = RemoveLocationChange.REMOVE_LOCATION_CHANGE),
@@ -144,6 +156,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemovePaymentChangeImpl.class, name = RemovePaymentChange.REMOVE_PAYMENT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemovePriceChangeImpl.class, name = RemovePriceChange.REMOVE_PRICE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveProductChangeImpl.class, name = RemoveProductChange.REMOVE_PRODUCT_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveProductSelectionChangeImpl.class, name = RemoveProductSelectionChange.REMOVE_PRODUCT_SELECTION_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemovePropertyChangeImpl.class, name = RemovePropertyChange.REMOVE_PROPERTY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveShippingAddressIdChangeImpl.class, name = RemoveShippingAddressIdChange.REMOVE_SHIPPING_ADDRESS_ID_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveShoppingListLineItemChangeImpl.class, name = RemoveShoppingListLineItemChange.REMOVE_SHOPPING_LIST_LINE_ITEM_CHANGE),
@@ -151,7 +164,10 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveTaxRateChangeImpl.class, name = RemoveTaxRateChange.REMOVE_TAX_RATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveTextLineItemChangeImpl.class, name = RemoveTextLineItemChange.REMOVE_TEXT_LINE_ITEM_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.RemoveVariantChangeImpl.class, name = RemoveVariantChange.REMOVE_VARIANT_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.RequestQuoteRenegotiationChangeImpl.class, name = RequestQuoteRenegotiationChange.REQUEST_QUOTE_RENEGOTIATION_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetAddressChangeImpl.class, name = SetAddressChange.SET_ADDRESS_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetAddressCustomFieldChangeImpl.class, name = SetAddressCustomFieldChange.SET_ADDRESS_CUSTOM_FIELD_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetAddressCustomTypeChangeImpl.class, name = SetAddressCustomTypeChange.SET_ADDRESS_CUSTOM_TYPE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetAnonymousIdChangeImpl.class, name = SetAnonymousIdChange.SET_ANONYMOUS_ID_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetApplicationVersionChangeImpl.class, name = SetApplicationVersionChange.SET_APPLICATION_VERSION_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetAssetCustomFieldChangeImpl.class, name = SetAssetCustomFieldChange.SET_ASSET_CUSTOM_FIELD_CHANGE),
@@ -168,6 +184,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCategoryOrderHintChangeImpl.class, name = SetCategoryOrderHintChange.SET_CATEGORY_ORDER_HINT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetChannelRolesChangeImpl.class, name = SetChannelRolesChange.SET_CHANNEL_ROLES_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCompanyNameChangeImpl.class, name = SetCompanyNameChange.SET_COMPANY_NAME_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetContactEmailChangeImpl.class, name = SetContactEmailChange.SET_CONTACT_EMAIL_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCountriesChangeImpl.class, name = SetCountriesChange.SET_COUNTRIES_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCountryChangeImpl.class, name = SetCountryChange.SET_COUNTRY_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetCustomFieldChangeImpl.class, name = SetCustomFieldChange.SET_CUSTOM_FIELD_CHANGE),
@@ -221,6 +238,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLineItemTotalPriceChangeImpl.class, name = SetLineItemTotalPriceChange.SET_LINE_ITEM_TOTAL_PRICE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLocaleChangeImpl.class, name = SetLocaleChange.SET_LOCALE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLocalizedDescriptionChangeImpl.class, name = SetLocalizedDescriptionChange.SET_LOCALIZED_DESCRIPTION_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetLocalizedNameChangeImpl.class, name = SetLocalizedNameChange.SET_LOCALIZED_NAME_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetMaxApplicationsChangeImpl.class, name = SetMaxApplicationsChange.SET_MAX_APPLICATIONS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetMaxApplicationsPerCustomerChangeImpl.class, name = SetMaxApplicationsPerCustomerChange.SET_MAX_APPLICATIONS_PER_CUSTOMER_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetMetaDescriptionChangeImpl.class, name = SetMetaDescriptionChange.SET_META_DESCRIPTION_CHANGE),
@@ -240,6 +258,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetParcelItemsChangeImpl.class, name = SetParcelItemsChange.SET_PARCEL_ITEMS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetParcelMeasurementsChangeImpl.class, name = SetParcelMeasurementsChange.SET_PARCEL_MEASUREMENTS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetParcelTrackingDataChangeImpl.class, name = SetParcelTrackingDataChange.SET_PARCEL_TRACKING_DATA_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetPermissionsChangeImpl.class, name = SetPermissionsChange.SET_PERMISSIONS_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetPricesChangeImpl.class, name = SetPricesChange.SET_PRICES_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetProductCountChangeImpl.class, name = SetProductCountChange.SET_PRODUCT_COUNT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetProductPriceCustomFieldChangeImpl.class, name = SetProductPriceCustomFieldChange.SET_PRODUCT_PRICE_CUSTOM_FIELD_CHANGE),
@@ -272,6 +291,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetStatusInterfaceCodeChangeImpl.class, name = SetStatusInterfaceCodeChange.SET_STATUS_INTERFACE_CODE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetStatusInterfaceTextChangeImpl.class, name = SetStatusInterfaceTextChange.SET_STATUS_INTERFACE_TEXT_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetStoreChangeImpl.class, name = SetStoreChange.SET_STORE_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetStoreModeChangeImpl.class, name = SetStoreModeChange.SET_STORE_MODE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetStoresChangeImpl.class, name = SetStoresChange.SET_STORES_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetSupplyChannelChangeImpl.class, name = SetSupplyChannelChange.SET_SUPPLY_CHANNEL_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetSupplyChannelsChangeImpl.class, name = SetSupplyChannelsChange.SET_SUPPLY_CHANNELS_CHANGE),
@@ -289,6 +309,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetValidUntilChangeImpl.class, name = SetValidUntilChange.SET_VALID_UNTIL_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetValueChangeImpl.class, name = SetValueChange.SET_VALUE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetVariantAvailabilityChangeImpl.class, name = SetVariantAvailabilityChange.SET_VARIANT_AVAILABILITY_CHANGE),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetVariantSelectionChangeImpl.class, name = SetVariantSelectionChange.SET_VARIANT_SELECTION_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.SetVatIdChangeImpl.class, name = SetVatIdChange.SET_VAT_ID_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.TransitionCustomLineItemStateChangeImpl.class, name = TransitionCustomLineItemStateChange.TRANSITION_CUSTOM_LINE_ITEM_STATE_CHANGE),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change.TransitionLineItemStateChangeImpl.class, name = TransitionLineItemStateChange.TRANSITION_LINE_ITEM_STATE_CHANGE),
@@ -345,6 +366,10 @@ public interface Change {
             return com.commercetools.history.models.change.AddAssetChange
                     .deepCopy((com.commercetools.history.models.change.AddAssetChange) template);
         }
+        if (template instanceof com.commercetools.history.models.change.AddAssociateChange) {
+            return com.commercetools.history.models.change.AddAssociateChange
+                    .deepCopy((com.commercetools.history.models.change.AddAssociateChange) template);
+        }
         if (template instanceof com.commercetools.history.models.change.AddAttributeDefinitionChange) {
             return com.commercetools.history.models.change.AddAttributeDefinitionChange
                     .deepCopy((com.commercetools.history.models.change.AddAttributeDefinitionChange) template);
@@ -380,6 +405,10 @@ public interface Change {
         if (template instanceof com.commercetools.history.models.change.AddFieldDefinitionChange) {
             return com.commercetools.history.models.change.AddFieldDefinitionChange
                     .deepCopy((com.commercetools.history.models.change.AddFieldDefinitionChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.AddInheritedAssociateChange) {
+            return com.commercetools.history.models.change.AddInheritedAssociateChange
+                    .deepCopy((com.commercetools.history.models.change.AddInheritedAssociateChange) template);
         }
         if (template instanceof com.commercetools.history.models.change.AddInterfaceInteractionChange) {
             return com.commercetools.history.models.change.AddInterfaceInteractionChange
@@ -420,6 +449,10 @@ public interface Change {
         if (template instanceof com.commercetools.history.models.change.AddProductChange) {
             return com.commercetools.history.models.change.AddProductChange
                     .deepCopy((com.commercetools.history.models.change.AddProductChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.AddProductSelectionChange) {
+            return com.commercetools.history.models.change.AddProductSelectionChange
+                    .deepCopy((com.commercetools.history.models.change.AddProductSelectionChange) template);
         }
         if (template instanceof com.commercetools.history.models.change.AddPropertyChange) {
             return com.commercetools.history.models.change.AddPropertyChange
@@ -481,6 +514,14 @@ public interface Change {
             return com.commercetools.history.models.change.ChangeAssetOrderChange
                     .deepCopy((com.commercetools.history.models.change.ChangeAssetOrderChange) template);
         }
+        if (template instanceof com.commercetools.history.models.change.ChangeAssociateChange) {
+            return com.commercetools.history.models.change.ChangeAssociateChange
+                    .deepCopy((com.commercetools.history.models.change.ChangeAssociateChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.ChangeAssociateModeChange) {
+            return com.commercetools.history.models.change.ChangeAssociateModeChange
+                    .deepCopy((com.commercetools.history.models.change.ChangeAssociateModeChange) template);
+        }
         if (template instanceof com.commercetools.history.models.change.ChangeAttributeConstraintChange) {
             return com.commercetools.history.models.change.ChangeAttributeConstraintChange
                     .deepCopy((com.commercetools.history.models.change.ChangeAttributeConstraintChange) template);
@@ -488,6 +529,10 @@ public interface Change {
         if (template instanceof com.commercetools.history.models.change.ChangeAttributeOrderByNameChange) {
             return com.commercetools.history.models.change.ChangeAttributeOrderByNameChange
                     .deepCopy((com.commercetools.history.models.change.ChangeAttributeOrderByNameChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.ChangeBuyerAssignableChange) {
+            return com.commercetools.history.models.change.ChangeBuyerAssignableChange
+                    .deepCopy((com.commercetools.history.models.change.ChangeBuyerAssignableChange) template);
         }
         if (template instanceof com.commercetools.history.models.change.ChangeCartDiscountsChange) {
             return com.commercetools.history.models.change.ChangeCartDiscountsChange
@@ -524,6 +569,10 @@ public interface Change {
         if (template instanceof com.commercetools.history.models.change.ChangeGroupsChange) {
             return com.commercetools.history.models.change.ChangeGroupsChange
                     .deepCopy((com.commercetools.history.models.change.ChangeGroupsChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.ChangeInheritedAssociateChange) {
+            return com.commercetools.history.models.change.ChangeInheritedAssociateChange
+                    .deepCopy((com.commercetools.history.models.change.ChangeInheritedAssociateChange) template);
         }
         if (template instanceof com.commercetools.history.models.change.ChangeInitialChange) {
             return com.commercetools.history.models.change.ChangeInitialChange
@@ -589,6 +638,10 @@ public interface Change {
             return com.commercetools.history.models.change.ChangeParentChange
                     .deepCopy((com.commercetools.history.models.change.ChangeParentChange) template);
         }
+        if (template instanceof com.commercetools.history.models.change.ChangeParentUnitChange) {
+            return com.commercetools.history.models.change.ChangeParentUnitChange
+                    .deepCopy((com.commercetools.history.models.change.ChangeParentUnitChange) template);
+        }
         if (template instanceof com.commercetools.history.models.change.ChangePaymentStateChange) {
             return com.commercetools.history.models.change.ChangePaymentStateChange
                     .deepCopy((com.commercetools.history.models.change.ChangePaymentStateChange) template);
@@ -608,6 +661,10 @@ public interface Change {
         if (template instanceof com.commercetools.history.models.change.ChangePriceChange) {
             return com.commercetools.history.models.change.ChangePriceChange
                     .deepCopy((com.commercetools.history.models.change.ChangePriceChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.ChangeProductSelectionActiveChange) {
+            return com.commercetools.history.models.change.ChangeProductSelectionActiveChange
+                    .deepCopy((com.commercetools.history.models.change.ChangeProductSelectionActiveChange) template);
         }
         if (template instanceof com.commercetools.history.models.change.ChangeQuantityChange) {
             return com.commercetools.history.models.change.ChangeQuantityChange
@@ -660,6 +717,10 @@ public interface Change {
         if (template instanceof com.commercetools.history.models.change.ChangeStateTypeChange) {
             return com.commercetools.history.models.change.ChangeStateTypeChange
                     .deepCopy((com.commercetools.history.models.change.ChangeStateTypeChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.ChangeStatusChange) {
+            return com.commercetools.history.models.change.ChangeStatusChange
+                    .deepCopy((com.commercetools.history.models.change.ChangeStatusChange) template);
         }
         if (template instanceof com.commercetools.history.models.change.ChangeTargetChange) {
             return com.commercetools.history.models.change.ChangeTargetChange
@@ -721,6 +782,10 @@ public interface Change {
             return com.commercetools.history.models.change.RemoveAssetChange
                     .deepCopy((com.commercetools.history.models.change.RemoveAssetChange) template);
         }
+        if (template instanceof com.commercetools.history.models.change.RemoveAssociateChange) {
+            return com.commercetools.history.models.change.RemoveAssociateChange
+                    .deepCopy((com.commercetools.history.models.change.RemoveAssociateChange) template);
+        }
         if (template instanceof com.commercetools.history.models.change.RemoveAttributeDefinitionChange) {
             return com.commercetools.history.models.change.RemoveAttributeDefinitionChange
                     .deepCopy((com.commercetools.history.models.change.RemoveAttributeDefinitionChange) template);
@@ -761,6 +826,10 @@ public interface Change {
             return com.commercetools.history.models.change.RemoveImageChange
                     .deepCopy((com.commercetools.history.models.change.RemoveImageChange) template);
         }
+        if (template instanceof com.commercetools.history.models.change.RemoveInheritedAssociateChange) {
+            return com.commercetools.history.models.change.RemoveInheritedAssociateChange
+                    .deepCopy((com.commercetools.history.models.change.RemoveInheritedAssociateChange) template);
+        }
         if (template instanceof com.commercetools.history.models.change.RemoveItemShippingAddressesChange) {
             return com.commercetools.history.models.change.RemoveItemShippingAddressesChange
                     .deepCopy((com.commercetools.history.models.change.RemoveItemShippingAddressesChange) template);
@@ -793,6 +862,10 @@ public interface Change {
             return com.commercetools.history.models.change.RemoveProductChange
                     .deepCopy((com.commercetools.history.models.change.RemoveProductChange) template);
         }
+        if (template instanceof com.commercetools.history.models.change.RemoveProductSelectionChange) {
+            return com.commercetools.history.models.change.RemoveProductSelectionChange
+                    .deepCopy((com.commercetools.history.models.change.RemoveProductSelectionChange) template);
+        }
         if (template instanceof com.commercetools.history.models.change.RemovePropertyChange) {
             return com.commercetools.history.models.change.RemovePropertyChange
                     .deepCopy((com.commercetools.history.models.change.RemovePropertyChange) template);
@@ -821,9 +894,21 @@ public interface Change {
             return com.commercetools.history.models.change.RemoveVariantChange
                     .deepCopy((com.commercetools.history.models.change.RemoveVariantChange) template);
         }
+        if (template instanceof com.commercetools.history.models.change.RequestQuoteRenegotiationChange) {
+            return com.commercetools.history.models.change.RequestQuoteRenegotiationChange
+                    .deepCopy((com.commercetools.history.models.change.RequestQuoteRenegotiationChange) template);
+        }
         if (template instanceof com.commercetools.history.models.change.SetAddressChange) {
             return com.commercetools.history.models.change.SetAddressChange
                     .deepCopy((com.commercetools.history.models.change.SetAddressChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.SetAddressCustomFieldChange) {
+            return com.commercetools.history.models.change.SetAddressCustomFieldChange
+                    .deepCopy((com.commercetools.history.models.change.SetAddressCustomFieldChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.SetAddressCustomTypeChange) {
+            return com.commercetools.history.models.change.SetAddressCustomTypeChange
+                    .deepCopy((com.commercetools.history.models.change.SetAddressCustomTypeChange) template);
         }
         if (template instanceof com.commercetools.history.models.change.SetAnonymousIdChange) {
             return com.commercetools.history.models.change.SetAnonymousIdChange
@@ -888,6 +973,10 @@ public interface Change {
         if (template instanceof com.commercetools.history.models.change.SetCompanyNameChange) {
             return com.commercetools.history.models.change.SetCompanyNameChange
                     .deepCopy((com.commercetools.history.models.change.SetCompanyNameChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.SetContactEmailChange) {
+            return com.commercetools.history.models.change.SetContactEmailChange
+                    .deepCopy((com.commercetools.history.models.change.SetContactEmailChange) template);
         }
         if (template instanceof com.commercetools.history.models.change.SetCountriesChange) {
             return com.commercetools.history.models.change.SetCountriesChange
@@ -1101,6 +1190,10 @@ public interface Change {
             return com.commercetools.history.models.change.SetLocalizedDescriptionChange
                     .deepCopy((com.commercetools.history.models.change.SetLocalizedDescriptionChange) template);
         }
+        if (template instanceof com.commercetools.history.models.change.SetLocalizedNameChange) {
+            return com.commercetools.history.models.change.SetLocalizedNameChange
+                    .deepCopy((com.commercetools.history.models.change.SetLocalizedNameChange) template);
+        }
         if (template instanceof com.commercetools.history.models.change.SetMaxApplicationsChange) {
             return com.commercetools.history.models.change.SetMaxApplicationsChange
                     .deepCopy((com.commercetools.history.models.change.SetMaxApplicationsChange) template);
@@ -1176,6 +1269,10 @@ public interface Change {
         if (template instanceof com.commercetools.history.models.change.SetParcelTrackingDataChange) {
             return com.commercetools.history.models.change.SetParcelTrackingDataChange
                     .deepCopy((com.commercetools.history.models.change.SetParcelTrackingDataChange) template);
+        }
+        if (template instanceof com.commercetools.history.models.change.SetPermissionsChange) {
+            return com.commercetools.history.models.change.SetPermissionsChange
+                    .deepCopy((com.commercetools.history.models.change.SetPermissionsChange) template);
         }
         if (template instanceof com.commercetools.history.models.change.SetPricesChange) {
             return com.commercetools.history.models.change.SetPricesChange
@@ -1305,6 +1402,10 @@ public interface Change {
             return com.commercetools.history.models.change.SetStoreChange
                     .deepCopy((com.commercetools.history.models.change.SetStoreChange) template);
         }
+        if (template instanceof com.commercetools.history.models.change.SetStoreModeChange) {
+            return com.commercetools.history.models.change.SetStoreModeChange
+                    .deepCopy((com.commercetools.history.models.change.SetStoreModeChange) template);
+        }
         if (template instanceof com.commercetools.history.models.change.SetStoresChange) {
             return com.commercetools.history.models.change.SetStoresChange
                     .deepCopy((com.commercetools.history.models.change.SetStoresChange) template);
@@ -1373,6 +1474,10 @@ public interface Change {
             return com.commercetools.history.models.change.SetVariantAvailabilityChange
                     .deepCopy((com.commercetools.history.models.change.SetVariantAvailabilityChange) template);
         }
+        if (template instanceof com.commercetools.history.models.change.SetVariantSelectionChange) {
+            return com.commercetools.history.models.change.SetVariantSelectionChange
+                    .deepCopy((com.commercetools.history.models.change.SetVariantSelectionChange) template);
+        }
         if (template instanceof com.commercetools.history.models.change.SetVatIdChange) {
             return com.commercetools.history.models.change.SetVatIdChange
                     .deepCopy((com.commercetools.history.models.change.SetVatIdChange) template);
@@ -1424,6 +1529,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.AddAssetChangeBuilder addAssetChangeBuilder() {
         return com.commercetools.history.models.change.AddAssetChangeBuilder.of();
+    }
+
+    /**
+     * builder for addAssociateChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.AddAssociateChangeBuilder addAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.AddAssociateChangeBuilder.of();
     }
 
     /**
@@ -1496,6 +1609,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.AddFieldDefinitionChangeBuilder addFieldDefinitionChangeBuilder() {
         return com.commercetools.history.models.change.AddFieldDefinitionChangeBuilder.of();
+    }
+
+    /**
+     * builder for addInheritedAssociateChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.AddInheritedAssociateChangeBuilder addInheritedAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.AddInheritedAssociateChangeBuilder.of();
     }
 
     /**
@@ -1576,6 +1697,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.AddProductChangeBuilder addProductChangeBuilder() {
         return com.commercetools.history.models.change.AddProductChangeBuilder.of();
+    }
+
+    /**
+     * builder for addProductSelectionChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.AddProductSelectionChangeBuilder addProductSelectionChangeBuilder() {
+        return com.commercetools.history.models.change.AddProductSelectionChangeBuilder.of();
     }
 
     /**
@@ -1699,6 +1828,22 @@ public interface Change {
     }
 
     /**
+     * builder for changeAssociateChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeAssociateChangeBuilder changeAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeAssociateChangeBuilder.of();
+    }
+
+    /**
+     * builder for changeAssociateModeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeAssociateModeChangeBuilder changeAssociateModeChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeAssociateModeChangeBuilder.of();
+    }
+
+    /**
      * builder for changeAttributeConstraintChange subtype
      * @return builder
      */
@@ -1712,6 +1857,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.ChangeAttributeOrderByNameChangeBuilder changeAttributeOrderByNameChangeBuilder() {
         return com.commercetools.history.models.change.ChangeAttributeOrderByNameChangeBuilder.of();
+    }
+
+    /**
+     * builder for changeBuyerAssignableChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeBuyerAssignableChangeBuilder changeBuyerAssignableChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeBuyerAssignableChangeBuilder.of();
     }
 
     /**
@@ -1784,6 +1937,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.ChangeGroupsChangeBuilder changeGroupsChangeBuilder() {
         return com.commercetools.history.models.change.ChangeGroupsChangeBuilder.of();
+    }
+
+    /**
+     * builder for changeInheritedAssociateChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeInheritedAssociateChangeBuilder changeInheritedAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeInheritedAssociateChangeBuilder.of();
     }
 
     /**
@@ -1915,6 +2076,14 @@ public interface Change {
     }
 
     /**
+     * builder for changeParentUnitChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeParentUnitChangeBuilder changeParentUnitChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeParentUnitChangeBuilder.of();
+    }
+
+    /**
      * builder for changePaymentStateChange subtype
      * @return builder
      */
@@ -1952,6 +2121,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.ChangePriceChangeBuilder changePriceChangeBuilder() {
         return com.commercetools.history.models.change.ChangePriceChangeBuilder.of();
+    }
+
+    /**
+     * builder for changeProductSelectionActiveChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeProductSelectionActiveChangeBuilder changeProductSelectionActiveChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeProductSelectionActiveChangeBuilder.of();
     }
 
     /**
@@ -2056,6 +2233,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.ChangeStateTypeChangeBuilder changeStateTypeChangeBuilder() {
         return com.commercetools.history.models.change.ChangeStateTypeChangeBuilder.of();
+    }
+
+    /**
+     * builder for changeStatusChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.ChangeStatusChangeBuilder changeStatusChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeStatusChangeBuilder.of();
     }
 
     /**
@@ -2179,6 +2364,14 @@ public interface Change {
     }
 
     /**
+     * builder for removeAssociateChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.RemoveAssociateChangeBuilder removeAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.RemoveAssociateChangeBuilder.of();
+    }
+
+    /**
      * builder for removeAttributeDefinitionChange subtype
      * @return builder
      */
@@ -2259,6 +2452,14 @@ public interface Change {
     }
 
     /**
+     * builder for removeInheritedAssociateChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.RemoveInheritedAssociateChangeBuilder removeInheritedAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.RemoveInheritedAssociateChangeBuilder.of();
+    }
+
+    /**
      * builder for removeItemShippingAddressesChange subtype
      * @return builder
      */
@@ -2323,6 +2524,14 @@ public interface Change {
     }
 
     /**
+     * builder for removeProductSelectionChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.RemoveProductSelectionChangeBuilder removeProductSelectionChangeBuilder() {
+        return com.commercetools.history.models.change.RemoveProductSelectionChangeBuilder.of();
+    }
+
+    /**
      * builder for removePropertyChange subtype
      * @return builder
      */
@@ -2379,11 +2588,35 @@ public interface Change {
     }
 
     /**
+     * builder for requestQuoteRenegotiationChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.RequestQuoteRenegotiationChangeBuilder requestQuoteRenegotiationChangeBuilder() {
+        return com.commercetools.history.models.change.RequestQuoteRenegotiationChangeBuilder.of();
+    }
+
+    /**
      * builder for setAddressChange subtype
      * @return builder
      */
     public static com.commercetools.history.models.change.SetAddressChangeBuilder setAddressChangeBuilder() {
         return com.commercetools.history.models.change.SetAddressChangeBuilder.of();
+    }
+
+    /**
+     * builder for setAddressCustomFieldChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetAddressCustomFieldChangeBuilder setAddressCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetAddressCustomFieldChangeBuilder.of();
+    }
+
+    /**
+     * builder for setAddressCustomTypeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetAddressCustomTypeChangeBuilder setAddressCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetAddressCustomTypeChangeBuilder.of();
     }
 
     /**
@@ -2512,6 +2745,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetCompanyNameChangeBuilder setCompanyNameChangeBuilder() {
         return com.commercetools.history.models.change.SetCompanyNameChangeBuilder.of();
+    }
+
+    /**
+     * builder for setContactEmailChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetContactEmailChangeBuilder setContactEmailChangeBuilder() {
+        return com.commercetools.history.models.change.SetContactEmailChangeBuilder.of();
     }
 
     /**
@@ -2939,6 +3180,14 @@ public interface Change {
     }
 
     /**
+     * builder for setLocalizedNameChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetLocalizedNameChangeBuilder setLocalizedNameChangeBuilder() {
+        return com.commercetools.history.models.change.SetLocalizedNameChangeBuilder.of();
+    }
+
+    /**
      * builder for setMaxApplicationsChange subtype
      * @return builder
      */
@@ -3088,6 +3337,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetParcelTrackingDataChangeBuilder setParcelTrackingDataChangeBuilder() {
         return com.commercetools.history.models.change.SetParcelTrackingDataChangeBuilder.of();
+    }
+
+    /**
+     * builder for setPermissionsChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetPermissionsChangeBuilder setPermissionsChangeBuilder() {
+        return com.commercetools.history.models.change.SetPermissionsChangeBuilder.of();
     }
 
     /**
@@ -3347,6 +3604,14 @@ public interface Change {
     }
 
     /**
+     * builder for setStoreModeChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetStoreModeChangeBuilder setStoreModeChangeBuilder() {
+        return com.commercetools.history.models.change.SetStoreModeChangeBuilder.of();
+    }
+
+    /**
      * builder for setStoresChange subtype
      * @return builder
      */
@@ -3480,6 +3745,14 @@ public interface Change {
      */
     public static com.commercetools.history.models.change.SetVariantAvailabilityChangeBuilder setVariantAvailabilityChangeBuilder() {
         return com.commercetools.history.models.change.SetVariantAvailabilityChangeBuilder.of();
+    }
+
+    /**
+     * builder for setVariantSelectionChange subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change.SetVariantSelectionChangeBuilder setVariantSelectionChangeBuilder() {
+        return com.commercetools.history.models.change.SetVariantSelectionChangeBuilder.of();
     }
 
     /**

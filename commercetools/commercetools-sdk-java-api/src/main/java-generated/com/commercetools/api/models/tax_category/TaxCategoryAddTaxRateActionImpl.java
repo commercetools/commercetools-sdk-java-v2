@@ -71,7 +71,11 @@ public class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAct
 
         TaxCategoryAddTaxRateActionImpl that = (TaxCategoryAddTaxRateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(taxRate, that.taxRate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(taxRate, that.taxRate)
+                .append(action, that.action)
+                .append(taxRate, that.taxRate)
+                .isEquals();
     }
 
     @Override

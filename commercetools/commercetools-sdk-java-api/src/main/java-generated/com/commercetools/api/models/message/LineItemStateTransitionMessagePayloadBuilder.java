@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -28,6 +30,9 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     private String lineItemId;
 
+    @Nullable
+    private String lineItemKey;
+
     private java.time.ZonedDateTime transitionDate;
 
     private Long quantity;
@@ -44,6 +49,17 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     public LineItemStateTransitionMessagePayloadBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public LineItemStateTransitionMessagePayloadBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -151,6 +167,16 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
      * @return transitionDate
      */
@@ -197,7 +223,8 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
         Objects.requireNonNull(quantity, LineItemStateTransitionMessagePayload.class + ": quantity is missing");
         Objects.requireNonNull(fromState, LineItemStateTransitionMessagePayload.class + ": fromState is missing");
         Objects.requireNonNull(toState, LineItemStateTransitionMessagePayload.class + ": toState is missing");
-        return new LineItemStateTransitionMessagePayloadImpl(lineItemId, transitionDate, quantity, fromState, toState);
+        return new LineItemStateTransitionMessagePayloadImpl(lineItemId, lineItemKey, transitionDate, quantity,
+            fromState, toState);
     }
 
     /**
@@ -205,7 +232,8 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
      * @return LineItemStateTransitionMessagePayload
      */
     public LineItemStateTransitionMessagePayload buildUnchecked() {
-        return new LineItemStateTransitionMessagePayloadImpl(lineItemId, transitionDate, quantity, fromState, toState);
+        return new LineItemStateTransitionMessagePayloadImpl(lineItemId, lineItemKey, transitionDate, quantity,
+            fromState, toState);
     }
 
     /**
@@ -225,6 +253,7 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
             final LineItemStateTransitionMessagePayload template) {
         LineItemStateTransitionMessagePayloadBuilder builder = new LineItemStateTransitionMessagePayloadBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.transitionDate = template.getTransitionDate();
         builder.quantity = template.getQuantity();
         builder.fromState = template.getFromState();

@@ -90,6 +90,9 @@ public class QuoteStateChangedMessagePayloadImpl implements QuoteStateChangedMes
         return new EqualsBuilder().append(type, that.type)
                 .append(quoteState, that.quoteState)
                 .append(oldQuoteState, that.oldQuoteState)
+                .append(type, that.type)
+                .append(quoteState, that.quoteState)
+                .append(oldQuoteState, that.oldQuoteState)
                 .isEquals();
     }
 

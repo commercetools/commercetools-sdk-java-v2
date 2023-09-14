@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Delete Staged Quote request.</p>
+ *  <p>Generated after a successful Delete StagedQuote request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteDeletedMessagePayloadImpl implements StagedQuoteDeletedMessagePayload, ModelBase {
@@ -47,7 +47,7 @@ public class StagedQuoteDeletedMessagePayloadImpl implements StagedQuoteDeletedM
 
         StagedQuoteDeletedMessagePayloadImpl that = (StagedQuoteDeletedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

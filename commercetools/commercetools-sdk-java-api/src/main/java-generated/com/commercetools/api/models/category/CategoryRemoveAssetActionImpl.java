@@ -89,6 +89,9 @@ public class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction,
         return new EqualsBuilder().append(action, that.action)
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
+                .append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
                 .isEquals();
     }
 

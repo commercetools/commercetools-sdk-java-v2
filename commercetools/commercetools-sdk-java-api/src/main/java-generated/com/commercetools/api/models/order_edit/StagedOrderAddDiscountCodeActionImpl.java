@@ -15,7 +15,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderAddDiscountCodeAction
+ *  <p>Adds a DiscountCode to the Cart to activate the related Cart Discounts. Adding a Discount Code is only possible if no DirectDiscount has been applied to the Order.</p>
+ *  <p>The maximum number of Discount Codes in a Cart is restricted by a limit.</p>
+ *  <p>Specific Error Code: MatchingPriceNotFound</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAddDiscountCodeAction, ModelBase {
@@ -49,7 +51,7 @@ public class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAddDisco
     }
 
     /**
-     *
+     *  <p><code>code</code> of a DiscountCode.</p>
      */
 
     public String getCode() {
@@ -70,7 +72,11 @@ public class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAddDisco
 
         StagedOrderAddDiscountCodeActionImpl that = (StagedOrderAddDiscountCodeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(code, that.code).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(code, that.code)
+                .append(action, that.action)
+                .append(code, that.code)
+                .isEquals();
     }
 
     @Override

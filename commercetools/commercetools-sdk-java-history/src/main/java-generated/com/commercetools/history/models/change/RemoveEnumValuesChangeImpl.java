@@ -106,6 +106,10 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(attributeName, that.attributeName)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(attributeName, that.attributeName)
                 .isEquals();
     }
 

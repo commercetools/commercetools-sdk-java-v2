@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
@@ -25,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetLineItemCustomTypeAction stagedOrderSetLineItemCustomTypeAction = StagedOrderSetLineItemCustomTypeAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -40,15 +38,23 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     String SET_LINE_ITEM_CUSTOM_TYPE = "setLineItemCustomType";
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
+
+    /**
+     *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      * @return type
      */
     @Valid
@@ -56,7 +62,7 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     public TypeResourceIdentifier getType();
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
      * @return fields
      */
     @Valid
@@ -64,21 +70,28 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     public FieldContainer getFields();
 
     /**
-     * set lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
+
+    /**
+     *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      * @param type value to be set
      */
 
     public void setType(final TypeResourceIdentifier type);
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
      * @param fields value to be set
      */
 
@@ -100,6 +113,7 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     public static StagedOrderSetLineItemCustomTypeAction of(final StagedOrderSetLineItemCustomTypeAction template) {
         StagedOrderSetLineItemCustomTypeActionImpl instance = new StagedOrderSetLineItemCustomTypeActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
@@ -118,6 +132,7 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
         }
         StagedOrderSetLineItemCustomTypeActionImpl instance = new StagedOrderSetLineItemCustomTypeActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
         instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;

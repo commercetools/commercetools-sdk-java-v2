@@ -47,7 +47,7 @@ public class WhitespaceTokenizerImpl implements WhitespaceTokenizer, ModelBase {
 
         WhitespaceTokenizerImpl that = (WhitespaceTokenizerImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

@@ -70,7 +70,11 @@ public class DiscountCodeSetMaxApplicationsActionImpl implements DiscountCodeSet
 
         DiscountCodeSetMaxApplicationsActionImpl that = (DiscountCodeSetMaxApplicationsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(maxApplications, that.maxApplications).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(maxApplications, that.maxApplications)
+                .append(action, that.action)
+                .append(maxApplications, that.maxApplications)
+                .isEquals();
     }
 
     @Override

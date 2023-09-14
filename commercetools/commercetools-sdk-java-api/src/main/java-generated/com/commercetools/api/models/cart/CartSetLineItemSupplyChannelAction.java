@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
@@ -23,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartSetLineItemSupplyChannelAction cartSetLineItemSupplyChannelAction = CartSetLineItemSupplyChannelAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -38,12 +36,20 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
     String SET_LINE_ITEM_SUPPLY_CHANNEL = "setLineItemSupplyChannel";
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
 
     /**
      *  <ul>
@@ -57,11 +63,18 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
     public ChannelResourceIdentifier getSupplyChannel();
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
 
     /**
      *  <ul>
@@ -89,6 +102,7 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
     public static CartSetLineItemSupplyChannelAction of(final CartSetLineItemSupplyChannelAction template) {
         CartSetLineItemSupplyChannelActionImpl instance = new CartSetLineItemSupplyChannelActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
@@ -106,6 +120,7 @@ public interface CartSetLineItemSupplyChannelAction extends CartUpdateAction {
         }
         CartSetLineItemSupplyChannelActionImpl instance = new CartSetLineItemSupplyChannelActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setSupplyChannel(
             com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         return instance;

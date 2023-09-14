@@ -67,7 +67,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the createdAt
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the measurements
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param measurements value to be set
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -126,7 +126,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * set the value to the trackingData
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @param trackingData value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -171,7 +171,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -200,7 +200,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -213,7 +213,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -224,7 +224,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -235,7 +235,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     *  <p>Custom Fields of the Parcel.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -247,7 +247,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     *  <p>Custom Fields of the Parcel.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -259,7 +259,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     *  <p>Custom Fields of the Parcel.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -289,7 +289,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * value of createdAt}
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @return createdAt
      */
 
@@ -298,7 +298,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * value of measurements}
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @return measurements
      */
 
@@ -308,7 +308,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     * value of trackingData}
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @return trackingData
      */
 
@@ -318,7 +318,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @return items
      */
 
@@ -328,7 +328,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     *  <p>Custom Fields of the Parcel.</p>
      * @return custom
      */
 

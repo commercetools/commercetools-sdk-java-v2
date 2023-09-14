@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderRemoveParcelFromDeliveryAction
+ *  <p>Produces the ParcelRemovedFromDelivery Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderRemoveParcelFromDeliveryActionImpl
@@ -54,7 +54,8 @@ public class StagedOrderRemoveParcelFromDeliveryActionImpl
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelId() {
@@ -62,7 +63,8 @@ public class StagedOrderRemoveParcelFromDeliveryActionImpl
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelKey() {
@@ -88,6 +90,9 @@ public class StagedOrderRemoveParcelFromDeliveryActionImpl
         StagedOrderRemoveParcelFromDeliveryActionImpl that = (StagedOrderRemoveParcelFromDeliveryActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(parcelId, that.parcelId)
+                .append(parcelKey, that.parcelKey)
+                .append(action, that.action)
                 .append(parcelId, that.parcelId)
                 .append(parcelKey, that.parcelKey)
                 .isEquals();

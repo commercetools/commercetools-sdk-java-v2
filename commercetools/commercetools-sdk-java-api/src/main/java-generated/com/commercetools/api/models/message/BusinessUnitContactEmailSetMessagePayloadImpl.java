@@ -71,7 +71,11 @@ public class BusinessUnitContactEmailSetMessagePayloadImpl
 
         BusinessUnitContactEmailSetMessagePayloadImpl that = (BusinessUnitContactEmailSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(contactEmail, that.contactEmail).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(contactEmail, that.contactEmail)
+                .append(type, that.type)
+                .append(contactEmail, that.contactEmail)
+                .isEquals();
     }
 
     @Override

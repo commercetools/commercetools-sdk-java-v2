@@ -83,6 +83,8 @@ public class StoreSetProductSelectionsActionImpl implements StoreSetProductSelec
 
         return new EqualsBuilder().append(action, that.action)
                 .append(productSelections, that.productSelections)
+                .append(action, that.action)
+                .append(productSelections, that.productSelections)
                 .isEquals();
     }
 

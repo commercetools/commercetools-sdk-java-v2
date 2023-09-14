@@ -60,7 +60,8 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryId() {
@@ -68,7 +69,8 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryKey() {
@@ -118,6 +120,11 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
         StagedOrderSetDeliveryCustomFieldActionImpl that = (StagedOrderSetDeliveryCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(action, that.action)
                 .append(deliveryId, that.deliveryId)
                 .append(deliveryKey, that.deliveryKey)
                 .append(name, that.name)

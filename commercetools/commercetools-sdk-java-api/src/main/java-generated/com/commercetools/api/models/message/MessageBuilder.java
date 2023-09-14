@@ -47,6 +47,26 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.BusinessUnitAddressChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessageBuilder businessUnitAddressCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessageBuilder businessUnitAddressCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessageBuilder businessUnitAddressCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomFieldRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessageBuilder businessUnitAddressCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessageBuilder businessUnitAddressCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageBuilder businessUnitAddressRemovedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageBuilder.of();
     }
@@ -87,6 +107,26 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.BusinessUnitCreatedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessageBuilder businessUnitCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomFieldAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessageBuilder businessUnitCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomFieldChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessageBuilder businessUnitCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomFieldRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessageBuilder businessUnitCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomTypeRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessageBuilder businessUnitCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitCustomTypeSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageBuilder businessUnitDefaultBillingAddressSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessageBuilder.of();
     }
@@ -103,8 +143,8 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.BusinessUnitNameChangedMessageBuilder.of();
     }
 
-    public com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageBuilder businessUnitParentUnitChangedBuilder() {
-        return com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessageBuilder.of();
+    public com.commercetools.api.models.message.BusinessUnitParentChangedMessageBuilder businessUnitParentChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitParentChangedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessageBuilder businessUnitShippingAddressAddedBuilder() {
@@ -155,6 +195,26 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CustomerAddressChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessageBuilder customerAddressCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerAddressCustomFieldAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessageBuilder customerAddressCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.CustomerAddressCustomFieldChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessageBuilder customerAddressCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerAddressCustomFieldRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessageBuilder customerAddressCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerAddressCustomTypeRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessageBuilder customerAddressCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.CustomerAddressCustomTypeSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerAddressRemovedMessageBuilder customerAddressRemovedBuilder() {
         return com.commercetools.api.models.message.CustomerAddressRemovedMessageBuilder.of();
     }
@@ -165,6 +225,26 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.CustomerCreatedMessageBuilder customerCreatedBuilder() {
         return com.commercetools.api.models.message.CustomerCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerCustomFieldAddedMessageBuilder customerCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerCustomFieldAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerCustomFieldChangedMessageBuilder customerCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.CustomerCustomFieldChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerCustomFieldRemovedMessageBuilder customerCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerCustomFieldRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerCustomTypeRemovedMessageBuilder customerCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerCustomTypeRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerCustomTypeSetMessageBuilder customerCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.CustomerCustomTypeSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.CustomerDateOfBirthSetMessageBuilder customerDateOfBirthSetBuilder() {
@@ -243,6 +323,18 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.OrderCreatedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.OrderCustomFieldAddedMessageBuilder orderCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderCustomFieldChangedMessageBuilder orderCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderCustomFieldRemovedMessageBuilder orderCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomFieldRemovedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.OrderCustomLineItemAddedMessageBuilder orderCustomLineItemAddedBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemAddedMessageBuilder.of();
     }
@@ -257,6 +349,14 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageBuilder orderCustomLineItemRemovedBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderCustomTypeRemovedMessageBuilder orderCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.OrderCustomTypeRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.OrderCustomTypeSetMessageBuilder orderCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.OrderCustomTypeSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.OrderCustomerEmailSetMessageBuilder orderCustomerEmailSetBuilder() {
@@ -519,6 +619,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.QuoteDeletedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.QuoteRenegotiationRequestedMessageBuilder quoteRenegotiationRequestedBuilder() {
+        return com.commercetools.api.models.message.QuoteRenegotiationRequestedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.QuoteRequestCreatedMessageBuilder quoteRequestCreatedBuilder() {
         return com.commercetools.api.models.message.QuoteRequestCreatedMessageBuilder.of();
     }
@@ -617,6 +721,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessageBuilder standalonePriceStagedChangesAppliedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessageBuilder standalonePriceStagedChangesRemovedBuilder() {
+        return com.commercetools.api.models.message.StandalonePriceStagedChangesRemovedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.StandalonePriceTierAddedMessageBuilder standalonePriceTierAddedBuilder() {

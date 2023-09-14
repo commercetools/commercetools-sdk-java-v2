@@ -75,7 +75,11 @@ public class BusinessUnitSetStoresActionImpl implements BusinessUnitSetStoresAct
 
         BusinessUnitSetStoresActionImpl that = (BusinessUnitSetStoresActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(stores, that.stores).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(stores, that.stores)
+                .append(action, that.action)
+                .append(stores, that.stores)
+                .isEquals();
     }
 
     @Override

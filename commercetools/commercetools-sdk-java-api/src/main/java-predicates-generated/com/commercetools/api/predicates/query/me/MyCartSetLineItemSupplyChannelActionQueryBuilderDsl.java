@@ -25,6 +25,12 @@ public class MyCartSetLineItemSupplyChannelActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, MyCartSetLineItemSupplyChannelActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<MyCartSetLineItemSupplyChannelActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, MyCartSetLineItemSupplyChannelActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<MyCartSetLineItemSupplyChannelActionQueryBuilderDsl> supplyChannel(
             Function<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

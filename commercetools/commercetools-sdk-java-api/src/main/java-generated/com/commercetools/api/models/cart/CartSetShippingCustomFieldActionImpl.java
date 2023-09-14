@@ -105,6 +105,10 @@ public class CartSetShippingCustomFieldActionImpl implements CartSetShippingCust
                 .append(shippingKey, that.shippingKey)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(shippingKey, that.shippingKey)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 

@@ -171,6 +171,13 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(store, that.store)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(lineItems, that.lineItems)
+                .append(textLineItems, that.textLineItems)
+                .append(custom, that.custom)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(store, that.store)
                 .isEquals();
     }
 

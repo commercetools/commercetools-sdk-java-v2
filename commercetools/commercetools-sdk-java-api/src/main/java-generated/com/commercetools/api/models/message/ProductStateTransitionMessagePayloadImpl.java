@@ -90,6 +90,9 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
         return new EqualsBuilder().append(type, that.type)
                 .append(state, that.state)
                 .append(force, that.force)
+                .append(type, that.type)
+                .append(state, that.state)
+                .append(force, that.force)
                 .isEquals();
     }
 

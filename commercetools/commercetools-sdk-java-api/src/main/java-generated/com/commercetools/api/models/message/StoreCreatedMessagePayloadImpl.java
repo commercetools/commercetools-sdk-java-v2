@@ -199,6 +199,14 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
                 .append(supplyChannels, that.supplyChannels)
                 .append(productSelections, that.productSelections)
                 .append(custom, that.custom)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(languages, that.languages)
+                .append(countries, that.countries)
+                .append(distributionChannels, that.distributionChannels)
+                .append(supplyChannels, that.supplyChannels)
+                .append(productSelections, that.productSelections)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

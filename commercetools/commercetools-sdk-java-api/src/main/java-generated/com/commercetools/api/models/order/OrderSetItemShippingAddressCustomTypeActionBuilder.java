@@ -34,7 +34,7 @@ public class OrderSetItemShippingAddressCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     * set the value to the addressKey
+     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
      * @param addressKey value to be set
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class OrderSetItemShippingAddressCustomTypeActionBuilder
     }
 
     /**
-     * value of addressKey}
+     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
      * @return addressKey
      */
 

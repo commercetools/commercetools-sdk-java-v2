@@ -127,6 +127,11 @@ public class AssetImpl implements Asset, ModelBase {
                 .append(description, that.description)
                 .append(custom, that.custom)
                 .append(key, that.key)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(custom, that.custom)
+                .append(key, that.key)
                 .isEquals();
     }
 

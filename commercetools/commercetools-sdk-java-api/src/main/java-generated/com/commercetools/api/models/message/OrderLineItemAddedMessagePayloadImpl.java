@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Add Line Item update action.</p>
+ *  <p>Generated after a successful Add LineItem update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedMessagePayload, ModelBase {
@@ -88,6 +88,9 @@ public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedM
         OrderLineItemAddedMessagePayloadImpl that = (OrderLineItemAddedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(lineItem, that.lineItem)
+                .append(addedQuantity, that.addedQuantity)
+                .append(type, that.type)
                 .append(lineItem, that.lineItem)
                 .append(addedQuantity, that.addedQuantity)
                 .isEquals();

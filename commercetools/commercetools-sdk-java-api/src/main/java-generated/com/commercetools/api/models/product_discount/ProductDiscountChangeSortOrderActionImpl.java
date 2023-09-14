@@ -70,7 +70,11 @@ public class ProductDiscountChangeSortOrderActionImpl implements ProductDiscount
 
         ProductDiscountChangeSortOrderActionImpl that = (ProductDiscountChangeSortOrderActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(sortOrder, that.sortOrder).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(sortOrder, that.sortOrder)
+                .append(action, that.action)
+                .append(sortOrder, that.sortOrder)
+                .isEquals();
     }
 
     @Override

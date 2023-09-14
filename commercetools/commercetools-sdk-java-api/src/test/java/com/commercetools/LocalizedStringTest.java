@@ -351,6 +351,15 @@ public class LocalizedStringTest {
     }
 
     @Test
+    public void deserializeWithFullLocaleLocaleValues() {
+        final LocalizedString localizedString = JsonUtils.fromJsonString(FULL_LOCALE_JSON_STRING,
+            LocalizedString.class);
+        assertThat(localizedString.localeValues().get(Locale.US)).isEqualTo("kids");
+        assertThat(localizedString.localeValues().get(Locale.UK)).isEqualTo("children");
+
+    }
+
+    @Test
     public void ofStringToStringMap() {
         final Map<String, String> map = new HashMap<>();
         map.put("de", "Jacken");

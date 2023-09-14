@@ -109,6 +109,10 @@ public class BaseResourceImpl implements BaseResource, ModelBase {
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
                 .isEquals();
     }
 

@@ -75,7 +75,11 @@ public class ShoppingListChangeLineItemsOrderActionImpl implements ShoppingListC
 
         ShoppingListChangeLineItemsOrderActionImpl that = (ShoppingListChangeLineItemsOrderActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemOrder, that.lineItemOrder).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemOrder, that.lineItemOrder)
+                .append(action, that.action)
+                .append(lineItemOrder, that.lineItemOrder)
+                .isEquals();
     }
 
     @Override

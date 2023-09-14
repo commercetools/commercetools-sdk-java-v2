@@ -122,6 +122,11 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
                 .append(sku, that.sku)
                 .append(price, that.price)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(price, that.price)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

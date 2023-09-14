@@ -77,7 +77,11 @@ public class ProductTypeImportRequestImpl implements ProductTypeImportRequest, M
 
         ProductTypeImportRequestImpl that = (ProductTypeImportRequestImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(resources, that.resources).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(resources, that.resources)
+                .append(type, that.type)
+                .append(resources, that.resources)
+                .isEquals();
     }
 
     @Override

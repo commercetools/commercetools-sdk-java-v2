@@ -14,14 +14,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderSetReturnPaymentStateAction
+ *  <p>To set a ReturnPaymentState, the Order <code>returnInfo</code> must have at least one ReturnItem.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetReturnPaymentStateAction orderSetReturnPaymentStateAction = OrderSetReturnPaymentStateAction.builder()
- *             .returnItemId("{returnItemId}")
  *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
  *             .build()
  * </code></pre>
@@ -37,15 +36,23 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
     String SET_RETURN_PAYMENT_STATE = "setReturnPaymentState";
 
     /**
-     *
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
-    @NotNull
+
     @JsonProperty("returnItemId")
     public String getReturnItemId();
 
     /**
-     *
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @return returnItemKey
+     */
+
+    @JsonProperty("returnItemKey")
+    public String getReturnItemKey();
+
+    /**
+     *  <p>New Payment status of the ReturnItem.</p>
      * @return paymentState
      */
     @NotNull
@@ -53,14 +60,21 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
     public ReturnPaymentState getPaymentState();
 
     /**
-     * set returnItemId
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      */
 
     public void setReturnItemId(final String returnItemId);
 
     /**
-     * set paymentState
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @param returnItemKey value to be set
+     */
+
+    public void setReturnItemKey(final String returnItemKey);
+
+    /**
+     *  <p>New Payment status of the ReturnItem.</p>
      * @param paymentState value to be set
      */
 
@@ -82,6 +96,7 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
     public static OrderSetReturnPaymentStateAction of(final OrderSetReturnPaymentStateAction template) {
         OrderSetReturnPaymentStateActionImpl instance = new OrderSetReturnPaymentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
+        instance.setReturnItemKey(template.getReturnItemKey());
         instance.setPaymentState(template.getPaymentState());
         return instance;
     }
@@ -98,6 +113,7 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
         }
         OrderSetReturnPaymentStateActionImpl instance = new OrderSetReturnPaymentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
+        instance.setReturnItemKey(template.getReturnItemKey());
         instance.setPaymentState(template.getPaymentState());
         return instance;
     }

@@ -19,6 +19,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.AddAssetChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.AddAssociateChangeBuilder addAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.AddAssociateChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.AddAttributeDefinitionChangeBuilder addAttributeDefinitionChangeBuilder() {
         return com.commercetools.history.models.change.AddAttributeDefinitionChangeBuilder.of();
     }
@@ -53,6 +57,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.AddFieldDefinitionChangeBuilder addFieldDefinitionChangeBuilder() {
         return com.commercetools.history.models.change.AddFieldDefinitionChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.AddInheritedAssociateChangeBuilder addInheritedAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.AddInheritedAssociateChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.AddInterfaceInteractionChangeBuilder addInterfaceInteractionChangeBuilder() {
@@ -93,6 +101,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.AddProductChangeBuilder addProductChangeBuilder() {
         return com.commercetools.history.models.change.AddProductChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.AddProductSelectionChangeBuilder addProductSelectionChangeBuilder() {
+        return com.commercetools.history.models.change.AddProductSelectionChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.AddPropertyChangeBuilder addPropertyChangeBuilder() {
@@ -155,12 +167,24 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.ChangeAssetOrderChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.ChangeAssociateChangeBuilder changeAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeAssociateChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.ChangeAssociateModeChangeBuilder changeAssociateModeChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeAssociateModeChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.ChangeAttributeConstraintChangeBuilder changeAttributeConstraintChangeBuilder() {
         return com.commercetools.history.models.change.ChangeAttributeConstraintChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.ChangeAttributeOrderByNameChangeBuilder changeAttributeOrderByNameChangeBuilder() {
         return com.commercetools.history.models.change.ChangeAttributeOrderByNameChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.ChangeBuyerAssignableChangeBuilder changeBuyerAssignableChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeBuyerAssignableChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.ChangeCartDiscountsChangeBuilder changeCartDiscountsChangeBuilder() {
@@ -197,6 +221,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.ChangeGroupsChangeBuilder changeGroupsChangeBuilder() {
         return com.commercetools.history.models.change.ChangeGroupsChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.ChangeInheritedAssociateChangeBuilder changeInheritedAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeInheritedAssociateChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.ChangeInitialChangeBuilder changeInitialChangeBuilder() {
@@ -263,6 +291,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.ChangeParentChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.ChangeParentUnitChangeBuilder changeParentUnitChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeParentUnitChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.ChangePaymentStateChangeBuilder changePaymentStateChangeBuilder() {
         return com.commercetools.history.models.change.ChangePaymentStateChangeBuilder.of();
     }
@@ -281,6 +313,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.ChangePriceChangeBuilder changePriceChangeBuilder() {
         return com.commercetools.history.models.change.ChangePriceChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.ChangeProductSelectionActiveChangeBuilder changeProductSelectionActiveChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeProductSelectionActiveChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.ChangeQuantityChangeBuilder changeQuantityChangeBuilder() {
@@ -333,6 +369,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.ChangeStateTypeChangeBuilder changeStateTypeChangeBuilder() {
         return com.commercetools.history.models.change.ChangeStateTypeChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.ChangeStatusChangeBuilder changeStatusChangeBuilder() {
+        return com.commercetools.history.models.change.ChangeStatusChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.ChangeTargetChangeBuilder changeTargetChangeBuilder() {
@@ -395,6 +435,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.RemoveAssetChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.RemoveAssociateChangeBuilder removeAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.RemoveAssociateChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.RemoveAttributeDefinitionChangeBuilder removeAttributeDefinitionChangeBuilder() {
         return com.commercetools.history.models.change.RemoveAttributeDefinitionChangeBuilder.of();
     }
@@ -435,6 +479,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.RemoveImageChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.RemoveInheritedAssociateChangeBuilder removeInheritedAssociateChangeBuilder() {
+        return com.commercetools.history.models.change.RemoveInheritedAssociateChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.RemoveItemShippingAddressesChangeBuilder removeItemShippingAddressesChangeBuilder() {
         return com.commercetools.history.models.change.RemoveItemShippingAddressesChangeBuilder.of();
     }
@@ -467,6 +515,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.RemoveProductChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.RemoveProductSelectionChangeBuilder removeProductSelectionChangeBuilder() {
+        return com.commercetools.history.models.change.RemoveProductSelectionChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.RemovePropertyChangeBuilder removePropertyChangeBuilder() {
         return com.commercetools.history.models.change.RemovePropertyChangeBuilder.of();
     }
@@ -495,8 +547,20 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.RemoveVariantChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.RequestQuoteRenegotiationChangeBuilder requestQuoteRenegotiationChangeBuilder() {
+        return com.commercetools.history.models.change.RequestQuoteRenegotiationChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.SetAddressChangeBuilder setAddressChangeBuilder() {
         return com.commercetools.history.models.change.SetAddressChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetAddressCustomFieldChangeBuilder setAddressCustomFieldChangeBuilder() {
+        return com.commercetools.history.models.change.SetAddressCustomFieldChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetAddressCustomTypeChangeBuilder setAddressCustomTypeChangeBuilder() {
+        return com.commercetools.history.models.change.SetAddressCustomTypeChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.SetAnonymousIdChangeBuilder setAnonymousIdChangeBuilder() {
@@ -561,6 +625,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.SetCompanyNameChangeBuilder setCompanyNameChangeBuilder() {
         return com.commercetools.history.models.change.SetCompanyNameChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetContactEmailChangeBuilder setContactEmailChangeBuilder() {
+        return com.commercetools.history.models.change.SetContactEmailChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.SetCountriesChangeBuilder setCountriesChangeBuilder() {
@@ -775,6 +843,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.SetLocalizedDescriptionChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.SetLocalizedNameChangeBuilder setLocalizedNameChangeBuilder() {
+        return com.commercetools.history.models.change.SetLocalizedNameChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.SetMaxApplicationsChangeBuilder setMaxApplicationsChangeBuilder() {
         return com.commercetools.history.models.change.SetMaxApplicationsChangeBuilder.of();
     }
@@ -849,6 +921,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.SetParcelTrackingDataChangeBuilder setParcelTrackingDataChangeBuilder() {
         return com.commercetools.history.models.change.SetParcelTrackingDataChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetPermissionsChangeBuilder setPermissionsChangeBuilder() {
+        return com.commercetools.history.models.change.SetPermissionsChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.SetPricesChangeBuilder setPricesChangeBuilder() {
@@ -979,6 +1055,10 @@ public class ChangeBuilder {
         return com.commercetools.history.models.change.SetStoreChangeBuilder.of();
     }
 
+    public com.commercetools.history.models.change.SetStoreModeChangeBuilder setStoreModeChangeBuilder() {
+        return com.commercetools.history.models.change.SetStoreModeChangeBuilder.of();
+    }
+
     public com.commercetools.history.models.change.SetStoresChangeBuilder setStoresChangeBuilder() {
         return com.commercetools.history.models.change.SetStoresChangeBuilder.of();
     }
@@ -1045,6 +1125,10 @@ public class ChangeBuilder {
 
     public com.commercetools.history.models.change.SetVariantAvailabilityChangeBuilder setVariantAvailabilityChangeBuilder() {
         return com.commercetools.history.models.change.SetVariantAvailabilityChangeBuilder.of();
+    }
+
+    public com.commercetools.history.models.change.SetVariantSelectionChangeBuilder setVariantSelectionChangeBuilder() {
+        return com.commercetools.history.models.change.SetVariantSelectionChangeBuilder.of();
     }
 
     public com.commercetools.history.models.change.SetVatIdChangeBuilder setVatIdChangeBuilder() {

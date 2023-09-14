@@ -89,6 +89,9 @@ public class CartSetShippingMethodTaxAmountActionImpl implements CartSetShipping
         return new EqualsBuilder().append(action, that.action)
                 .append(shippingKey, that.shippingKey)
                 .append(externalTaxAmount, that.externalTaxAmount)
+                .append(action, that.action)
+                .append(shippingKey, that.shippingKey)
+                .append(externalTaxAmount, that.externalTaxAmount)
                 .isEquals();
     }
 

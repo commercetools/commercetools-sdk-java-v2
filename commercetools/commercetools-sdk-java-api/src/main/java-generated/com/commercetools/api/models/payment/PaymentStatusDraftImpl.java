@@ -93,6 +93,9 @@ public class PaymentStatusDraftImpl implements PaymentStatusDraft, ModelBase {
         return new EqualsBuilder().append(interfaceCode, that.interfaceCode)
                 .append(interfaceText, that.interfaceText)
                 .append(state, that.state)
+                .append(interfaceCode, that.interfaceCode)
+                .append(interfaceText, that.interfaceText)
+                .append(state, that.state)
                 .isEquals();
     }
 

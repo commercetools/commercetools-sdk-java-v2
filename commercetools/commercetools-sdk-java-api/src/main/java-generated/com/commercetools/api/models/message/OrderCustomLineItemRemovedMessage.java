@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Remove Custom Line Item update action.</p>
+ *  <p>Generated after a successful Remove CustomLineItem update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -54,6 +54,14 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
     public String getCustomLineItemId();
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
      *  <p>Custom Line Item that was removed from the Order.</p>
      * @return customLineItem
      */
@@ -68,6 +76,13 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
      *  <p>Custom Line Item that was removed from the Order.</p>
@@ -102,6 +117,7 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setCustomLineItem(template.getCustomLineItem());
         return instance;
     }
@@ -131,6 +147,7 @@ public interface OrderCustomLineItemRemovedMessage extends OrderMessage {
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setCustomLineItem(
             com.commercetools.api.models.cart.CustomLineItem.deepCopy(template.getCustomLineItem()));
         return instance;

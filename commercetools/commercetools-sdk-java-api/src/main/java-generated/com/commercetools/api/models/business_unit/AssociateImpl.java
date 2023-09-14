@@ -22,9 +22,6 @@ public class AssociateImpl implements Associate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignment> associateRoleAssignments;
 
-    @Deprecated
-    private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles;
-
     private com.commercetools.api.models.customer.CustomerReference customer;
 
     /**
@@ -33,10 +30,8 @@ public class AssociateImpl implements Associate, ModelBase {
     @JsonCreator
     AssociateImpl(
             @JsonProperty("associateRoleAssignments") final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignment> associateRoleAssignments,
-            @JsonProperty("roles") final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer) {
         this.associateRoleAssignments = associateRoleAssignments;
-        this.roles = roles;
         this.customer = customer;
     }
 
@@ -52,14 +47,6 @@ public class AssociateImpl implements Associate, ModelBase {
 
     public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignment> getAssociateRoleAssignments() {
         return this.associateRoleAssignments;
-    }
-
-    /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     */
-    @Deprecated
-    public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> getRoles() {
-        return this.roles;
     }
 
     /**
@@ -80,17 +67,6 @@ public class AssociateImpl implements Associate, ModelBase {
         this.associateRoleAssignments = associateRoleAssignments;
     }
 
-    @Deprecated
-    public void setRoles(final com.commercetools.api.models.business_unit.AssociateRoleDeprecated... roles) {
-        this.roles = new ArrayList<>(Arrays.asList(roles));
-    }
-
-    @Deprecated
-    public void setRoles(
-            final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles) {
-        this.roles = roles;
-    }
-
     public void setCustomer(final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
     }
@@ -106,14 +82,15 @@ public class AssociateImpl implements Associate, ModelBase {
         AssociateImpl that = (AssociateImpl) o;
 
         return new EqualsBuilder().append(associateRoleAssignments, that.associateRoleAssignments)
-                .append(roles, that.roles)
+                .append(customer, that.customer)
+                .append(associateRoleAssignments, that.associateRoleAssignments)
                 .append(customer, that.customer)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(associateRoleAssignments).append(roles).append(customer).toHashCode();
+        return new HashCodeBuilder(17, 37).append(associateRoleAssignments).append(customer).toHashCode();
     }
 
 }

@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Staged changes on a Standalone Price. To update the <code>value</code> property of a Staged Standalone Price, use the corresponding update action. To apply all staged changes to the Standalone Price, use the <code>applyStagedChanges</code> update action.</p>
+ *  <p>Staged changes on a Standalone Price. To update the <code>value</code> property of a Staged Standalone Price, use the Change Value update action. To apply all staged changes to the Standalone Price, use the Apply Staged Changes update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -163,6 +163,13 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .append(country, that.country)
                 .append(state, that.state)
                 .append(subRates, that.subRates)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(amount, that.amount)
+                .append(includedInPrice, that.includedInPrice)
+                .append(country, that.country)
+                .append(state, that.state)
+                .append(subRates, that.subRates)
                 .isEquals();
     }
 

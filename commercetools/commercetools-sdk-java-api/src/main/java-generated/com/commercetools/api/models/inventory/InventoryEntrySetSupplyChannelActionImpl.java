@@ -71,7 +71,11 @@ public class InventoryEntrySetSupplyChannelActionImpl implements InventoryEntryS
 
         InventoryEntrySetSupplyChannelActionImpl that = (InventoryEntrySetSupplyChannelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(supplyChannel, that.supplyChannel).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(supplyChannel, that.supplyChannel)
+                .append(action, that.action)
+                .append(supplyChannel, that.supplyChannel)
+                .isEquals();
     }
 
     @Override

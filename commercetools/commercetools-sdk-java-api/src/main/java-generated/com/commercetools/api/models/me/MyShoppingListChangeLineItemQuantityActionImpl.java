@@ -25,6 +25,8 @@ public class MyShoppingListChangeLineItemQuantityActionImpl
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private Long quantity;
 
     /**
@@ -32,8 +34,9 @@ public class MyShoppingListChangeLineItemQuantityActionImpl
      */
     @JsonCreator
     MyShoppingListChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("quantity") final Long quantity) {
+            @JsonProperty("lineItemKey") final String lineItemKey, @JsonProperty("quantity") final Long quantity) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.quantity = quantity;
         this.action = CHANGE_LINE_ITEM_QUANTITY;
     }
@@ -54,11 +57,19 @@ public class MyShoppingListChangeLineItemQuantityActionImpl
     }
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p><code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -71,6 +82,10 @@ public class MyShoppingListChangeLineItemQuantityActionImpl
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setQuantity(final Long quantity) {
@@ -89,13 +104,22 @@ public class MyShoppingListChangeLineItemQuantityActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(quantity, that.quantity)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(quantity, that.quantity)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(quantity).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(quantity)
+                .toHashCode();
     }
 
 }

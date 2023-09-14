@@ -25,6 +25,8 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta;
 
     /**
@@ -33,8 +35,10 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
     @JsonCreator
     CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl(
             @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("targetsDelta") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.targetsDelta = targetsDelta;
         this.action = APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
     }
@@ -55,11 +59,19 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -72,6 +84,10 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
     }
 
     public void setTargetsDelta(final com.commercetools.api.models.cart.ItemShippingTarget... targetsDelta) {
@@ -95,13 +111,22 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(targetsDelta, that.targetsDelta)
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(targetsDelta, that.targetsDelta)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).append(targetsDelta).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(customLineItemId)
+                .append(customLineItemKey)
+                .append(targetsDelta)
+                .toHashCode();
     }
 
 }

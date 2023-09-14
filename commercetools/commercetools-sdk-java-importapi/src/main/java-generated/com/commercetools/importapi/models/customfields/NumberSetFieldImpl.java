@@ -74,7 +74,11 @@ public class NumberSetFieldImpl implements NumberSetField, ModelBase {
 
         NumberSetFieldImpl that = (NumberSetFieldImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(value, that.value)
+                .append(type, that.type)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

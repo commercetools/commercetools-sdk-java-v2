@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -17,14 +16,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetLineItemTotalPriceAction
+ *  <p>Sets the LineItem <code>totalPrice</code> and <code>price</code>, and changes the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetLineItemTotalPriceAction stagedOrderSetLineItemTotalPriceAction = StagedOrderSetLineItemTotalPriceAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -39,15 +37,23 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
     String SET_LINE_ITEM_TOTAL_PRICE = "setLineItemTotalPrice";
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
+
+    /**
+     *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @return externalTotalPrice
      */
     @Valid
@@ -55,14 +61,21 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
-     * set lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     * set externalTotalPrice
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
+
+    /**
+     *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param externalTotalPrice value to be set
      */
 
@@ -84,6 +97,7 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
     public static StagedOrderSetLineItemTotalPriceAction of(final StagedOrderSetLineItemTotalPriceAction template) {
         StagedOrderSetLineItemTotalPriceActionImpl instance = new StagedOrderSetLineItemTotalPriceActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
         return instance;
     }
@@ -101,6 +115,7 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
         }
         StagedOrderSetLineItemTotalPriceActionImpl instance = new StagedOrderSetLineItemTotalPriceActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setExternalTotalPrice(
             com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         return instance;

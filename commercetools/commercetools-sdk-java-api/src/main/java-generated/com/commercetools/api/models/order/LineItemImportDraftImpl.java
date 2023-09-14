@@ -15,63 +15,66 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * LineItemImportDraft
+ *  <p>Represents a snapshot of a Product Variant at the time it was imported with the Order. The Product Variant can be specified by providing a <code>productId</code> and <code>variant.id</code>, or by providing a <code>variant.sku</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
 
-    private String productId;
-
     private com.commercetools.api.models.common.LocalizedString name;
+
+    private String key;
 
     private com.commercetools.api.models.order.ProductVariantImportDraft variant;
 
-    private com.commercetools.api.models.common.PriceDraft price;
+    private String productId;
 
     private Long quantity;
 
-    private java.util.List<com.commercetools.api.models.order.ItemState> state;
-
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+    private com.commercetools.api.models.common.PriceDraft price;
 
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
 
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    private java.util.List<com.commercetools.api.models.order.ItemState> state;
+
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    LineItemImportDraftImpl(@JsonProperty("productId") final String productId,
-            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
+    LineItemImportDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
+            @JsonProperty("key") final String key,
             @JsonProperty("variant") final com.commercetools.api.models.order.ProductVariantImportDraft variant,
+            @JsonProperty("productId") final String productId, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price,
-            @JsonProperty("quantity") final Long quantity,
-            @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state,
-            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
-            @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
+            @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
-            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
-        this.productId = productId;
+            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
+            @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.name = name;
+        this.key = key;
         this.variant = variant;
-        this.price = price;
+        this.productId = productId;
         this.quantity = quantity;
-        this.state = state;
-        this.supplyChannel = supplyChannel;
-        this.distributionChannel = distributionChannel;
+        this.price = price;
         this.taxRate = taxRate;
-        this.custom = custom;
+        this.distributionChannel = distributionChannel;
+        this.supplyChannel = supplyChannel;
         this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
+        this.state = state;
+        this.custom = custom;
     }
 
     /**
@@ -81,15 +84,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
-     */
-
-    public String getProductId() {
-        return this.productId;
-    }
-
-    /**
-     *  <p>The product name.</p>
+     *  <p>Name of the Line Item.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -97,7 +92,15 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Line Item.</p>
+     */
+
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>The Product Variant to use as a Line Item.</p>
      */
 
     public com.commercetools.api.models.order.ProductVariantImportDraft getVariant() {
@@ -105,15 +108,16 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Product the Product Variant belongs to.</p>
+     *  <p>If provided, you must also set <code>variant.id</code>.</p>
      */
 
-    public com.commercetools.api.models.common.PriceDraft getPrice() {
-        return this.price;
+    public String getProductId() {
+        return this.productId;
     }
 
     /**
-     *
+     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
      */
 
     public Long getQuantity() {
@@ -121,31 +125,15 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>The Line Item price for <code>quantity</code> = <code>1</code>. The amount can be negative.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
-        return this.state;
+    public com.commercetools.api.models.common.PriceDraft getPrice() {
+        return this.price;
     }
 
     /**
-     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
-     */
-
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
-        return this.supplyChannel;
-    }
-
-    /**
-     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
-     */
-
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
-        return this.distributionChannel;
-    }
-
-    /**
-     *
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
@@ -153,15 +141,23 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>The Channel used to select a Price. This Channel must have the <code>ProductDistribution</code> role.</p>
      */
 
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
+        return this.distributionChannel;
     }
 
     /**
-     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify Inventory entries that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
+     */
+
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+        return this.supplyChannel;
+    }
+
+    /**
+     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
      */
 
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
@@ -169,31 +165,72 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Container for Line Item-specific addresses.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
 
-    public void setProductId(final String productId) {
-        this.productId = productId;
+    /**
+     *  <p>States of the Line Item.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
+        return this.state;
+    }
+
+    /**
+     *  <p>Custom Fields of the LineItem.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setVariant(final com.commercetools.api.models.order.ProductVariantImportDraft variant) {
         this.variant = variant;
+    }
+
+    public void setProductId(final String productId) {
+        this.productId = productId;
+    }
+
+    public void setQuantity(final Long quantity) {
+        this.quantity = quantity;
     }
 
     public void setPrice(final com.commercetools.api.models.common.PriceDraft price) {
         this.price = price;
     }
 
-    public void setQuantity(final Long quantity) {
-        this.quantity = quantity;
+    public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRate taxRate) {
+        this.taxRate = taxRate;
+    }
+
+    public void setDistributionChannel(
+            final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+        this.distributionChannel = distributionChannel;
+    }
+
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
+    }
+
+    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
+    }
+
+    public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+        this.shippingDetails = shippingDetails;
     }
 
     public void setState(final com.commercetools.api.models.order.ItemState... state) {
@@ -204,29 +241,8 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
         this.state = state;
     }
 
-    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
-        this.supplyChannel = supplyChannel;
-    }
-
-    public void setDistributionChannel(
-            final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
-        this.distributionChannel = distributionChannel;
-    }
-
-    public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRate taxRate) {
-        this.taxRate = taxRate;
-    }
-
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
-    }
-
-    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
-        this.inventoryMode = inventoryMode;
-    }
-
-    public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
-        this.shippingDetails = shippingDetails;
     }
 
     @Override
@@ -239,35 +255,50 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
 
         LineItemImportDraftImpl that = (LineItemImportDraftImpl) o;
 
-        return new EqualsBuilder().append(productId, that.productId)
-                .append(name, that.name)
+        return new EqualsBuilder().append(name, that.name)
+                .append(key, that.key)
                 .append(variant, that.variant)
-                .append(price, that.price)
+                .append(productId, that.productId)
                 .append(quantity, that.quantity)
-                .append(state, that.state)
-                .append(supplyChannel, that.supplyChannel)
-                .append(distributionChannel, that.distributionChannel)
+                .append(price, that.price)
                 .append(taxRate, that.taxRate)
-                .append(custom, that.custom)
+                .append(distributionChannel, that.distributionChannel)
+                .append(supplyChannel, that.supplyChannel)
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
+                .append(state, that.state)
+                .append(custom, that.custom)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(variant, that.variant)
+                .append(productId, that.productId)
+                .append(quantity, that.quantity)
+                .append(price, that.price)
+                .append(taxRate, that.taxRate)
+                .append(distributionChannel, that.distributionChannel)
+                .append(supplyChannel, that.supplyChannel)
+                .append(inventoryMode, that.inventoryMode)
+                .append(shippingDetails, that.shippingDetails)
+                .append(state, that.state)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productId)
-                .append(name)
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(key)
                 .append(variant)
-                .append(price)
+                .append(productId)
                 .append(quantity)
-                .append(state)
-                .append(supplyChannel)
-                .append(distributionChannel)
+                .append(price)
                 .append(taxRate)
-                .append(custom)
+                .append(distributionChannel)
+                .append(supplyChannel)
                 .append(inventoryMode)
                 .append(shippingDetails)
+                .append(state)
+                .append(custom)
                 .toHashCode();
     }
 

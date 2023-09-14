@@ -122,14 +122,6 @@ public interface ProductSelection
 
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
-     * @return type
-     */
-    @Deprecated
-    @JsonProperty("type")
-    public ProductSelectionTypeEnum getType();
-
-    /**
-     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @return mode
      */
     @NotNull
@@ -209,13 +201,6 @@ public interface ProductSelection
 
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
-     * @param type value to be set
-     */
-    @Deprecated
-    public void setType(final ProductSelectionTypeEnum type);
-
-    /**
-     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @param mode value to be set
      */
 
@@ -252,7 +237,6 @@ public interface ProductSelection
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setProductCount(template.getProductCount());
-        instance.setType(template.getType());
         instance.setMode(template.getMode());
         instance.setCustom(template.getCustom());
         return instance;
@@ -279,7 +263,6 @@ public interface ProductSelection
         instance.setKey(template.getKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setProductCount(template.getProductCount());
-        instance.setType(template.getType());
         instance.setMode(template.getMode());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;

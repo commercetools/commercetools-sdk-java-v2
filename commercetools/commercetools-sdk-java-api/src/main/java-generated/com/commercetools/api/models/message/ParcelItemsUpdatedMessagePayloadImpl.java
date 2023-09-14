@@ -97,7 +97,7 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -143,6 +143,12 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
         ParcelItemsUpdatedMessagePayloadImpl that = (ParcelItemsUpdatedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(parcelId, that.parcelId)
+                .append(deliveryId, that.deliveryId)
+                .append(items, that.items)
+                .append(oldItems, that.oldItems)
+                .append(shippingKey, that.shippingKey)
+                .append(type, that.type)
                 .append(parcelId, that.parcelId)
                 .append(deliveryId, that.deliveryId)
                 .append(items, that.items)

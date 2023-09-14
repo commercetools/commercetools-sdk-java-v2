@@ -27,6 +27,9 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     private String deliveryKey;
 
     @Nullable
+    private String shippingKey;
+
+    @Nullable
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     @Nullable
@@ -39,7 +42,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined unique identifier of a Delivery.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
      * @param deliveryKey value to be set
      * @return Builder
      */
@@ -50,7 +53,18 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * set values to the items
+     *  <p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddDeliveryActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
+    /**
+     *  <p>Items to be included in the Delivery.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -62,7 +76,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * set value to the items
+     *  <p>Items to be included in the Delivery.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -74,7 +88,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * add values to the items
+     *  <p>Items to be included in the Delivery.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -89,7 +103,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Items to be included in the Delivery.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -104,7 +118,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Items to be included in the Delivery.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -117,7 +131,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Items to be included in the Delivery.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -128,7 +142,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Items to be included in the Delivery.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -139,7 +153,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address the <code>parcels</code> should be delivered to.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -151,7 +165,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address the <code>parcels</code> should be delivered to.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -163,7 +177,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address the <code>parcels</code> should be delivered to.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -175,7 +189,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * set values to the parcels
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -187,7 +202,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * set value to the parcels
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -199,7 +215,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * add values to the parcels
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -214,7 +231,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * add the value to the parcels using the builder function
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -229,7 +247,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * set the value to the parcels using the builder function
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -242,7 +261,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * add the value to the parcels using the builder function
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -253,7 +273,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * set the value to the parcels using the builder function
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -264,7 +285,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -276,7 +297,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -288,7 +309,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -300,7 +321,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>User-defined unique identifier of a Delivery.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
      * @return deliveryKey
      */
 
@@ -310,7 +331,17 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * value of items}
+     *  <p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
+     *  <p>Items to be included in the Delivery.</p>
      * @return items
      */
 
@@ -320,7 +351,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address the <code>parcels</code> should be delivered to.</p>
      * @return address
      */
 
@@ -330,7 +361,8 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * value of parcels}
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action also produces the Parcel Added To Delivery Message.</p>
      * @return parcels
      */
 
@@ -340,7 +372,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      * @return custom
      */
 
@@ -354,7 +386,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
      * @return StagedOrderAddDeliveryAction
      */
     public StagedOrderAddDeliveryAction build() {
-        return new StagedOrderAddDeliveryActionImpl(deliveryKey, items, address, parcels, custom);
+        return new StagedOrderAddDeliveryActionImpl(deliveryKey, shippingKey, items, address, parcels, custom);
     }
 
     /**
@@ -362,7 +394,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
      * @return StagedOrderAddDeliveryAction
      */
     public StagedOrderAddDeliveryAction buildUnchecked() {
-        return new StagedOrderAddDeliveryActionImpl(deliveryKey, items, address, parcels, custom);
+        return new StagedOrderAddDeliveryActionImpl(deliveryKey, shippingKey, items, address, parcels, custom);
     }
 
     /**
@@ -381,6 +413,7 @@ public class StagedOrderAddDeliveryActionBuilder implements Builder<StagedOrderA
     public static StagedOrderAddDeliveryActionBuilder of(final StagedOrderAddDeliveryAction template) {
         StagedOrderAddDeliveryActionBuilder builder = new StagedOrderAddDeliveryActionBuilder();
         builder.deliveryKey = template.getDeliveryKey();
+        builder.shippingKey = template.getShippingKey();
         builder.items = template.getItems();
         builder.address = template.getAddress();
         builder.parcels = template.getParcels();

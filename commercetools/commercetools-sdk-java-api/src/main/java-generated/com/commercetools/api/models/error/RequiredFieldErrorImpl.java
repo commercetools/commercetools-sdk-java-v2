@@ -109,6 +109,10 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(field, that.field)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(field, that.field)
                 .isEquals();
     }
 

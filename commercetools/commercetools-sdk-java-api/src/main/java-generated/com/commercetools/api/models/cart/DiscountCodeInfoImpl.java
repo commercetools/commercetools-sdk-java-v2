@@ -75,7 +75,11 @@ public class DiscountCodeInfoImpl implements DiscountCodeInfo, ModelBase {
 
         DiscountCodeInfoImpl that = (DiscountCodeInfoImpl) o;
 
-        return new EqualsBuilder().append(discountCode, that.discountCode).append(state, that.state).isEquals();
+        return new EqualsBuilder().append(discountCode, that.discountCode)
+                .append(state, that.state)
+                .append(discountCode, that.discountCode)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override

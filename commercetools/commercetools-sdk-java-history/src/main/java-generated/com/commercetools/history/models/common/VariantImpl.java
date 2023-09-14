@@ -89,7 +89,13 @@ public class VariantImpl implements Variant, ModelBase {
 
         VariantImpl that = (VariantImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(sku, that.sku).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(id, that.id)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

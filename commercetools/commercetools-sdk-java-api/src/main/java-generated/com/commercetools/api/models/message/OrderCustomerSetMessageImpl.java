@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Set Customer Id update action.</p>
+ *  <p>Generated after a successful Set Customer ID update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, ModelBase {
@@ -180,7 +180,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     *  <p>Customer on the Order after the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -188,7 +188,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -196,7 +196,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     *  <p>Customer on the Order before the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getOldCustomer() {
@@ -204,7 +204,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {
@@ -281,6 +281,21 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
         OrderCustomerSetMessageImpl that = (OrderCustomerSetMessageImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(customer, that.customer)
+                .append(customerGroup, that.customerGroup)
+                .append(oldCustomer, that.oldCustomer)
+                .append(oldCustomerGroup, that.oldCustomerGroup)
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)

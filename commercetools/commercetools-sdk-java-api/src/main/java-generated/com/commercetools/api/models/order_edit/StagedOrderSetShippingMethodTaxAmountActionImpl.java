@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetShippingMethodTaxAmountAction
+ *  <p>A Shipping Method tax amount can be set if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingMethodTaxAmountActionImpl
@@ -62,12 +62,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionImpl
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
@@ -93,6 +88,9 @@ public class StagedOrderSetShippingMethodTaxAmountActionImpl
         StagedOrderSetShippingMethodTaxAmountActionImpl that = (StagedOrderSetShippingMethodTaxAmountActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(shippingKey, that.shippingKey)
+                .append(externalTaxAmount, that.externalTaxAmount)
+                .append(action, that.action)
                 .append(shippingKey, that.shippingKey)
                 .append(externalTaxAmount, that.externalTaxAmount)
                 .isEquals();

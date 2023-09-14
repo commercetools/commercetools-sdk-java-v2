@@ -54,7 +54,7 @@ public class CustomerUpdateActionImpl implements CustomerUpdateAction, ModelBase
 
         CustomerUpdateActionImpl that = (CustomerUpdateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).isEquals();
+        return new EqualsBuilder().append(action, that.action).append(action, that.action).isEquals();
     }
 
     @Override

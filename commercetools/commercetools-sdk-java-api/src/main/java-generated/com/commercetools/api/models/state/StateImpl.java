@@ -290,6 +290,20 @@ public class StateImpl implements State, ModelBase {
                 .append(builtIn, that.builtIn)
                 .append(roles, that.roles)
                 .append(transitions, that.transitions)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(initial, that.initial)
+                .append(builtIn, that.builtIn)
+                .append(roles, that.roles)
+                .append(transitions, that.transitions)
                 .isEquals();
     }
 

@@ -212,6 +212,16 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(quantity, that.quantity)
                 .append(variant, that.variant)
                 .append(variantId, that.variantId)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(productId, that.productId)
+                .append(productSlug, that.productSlug)
+                .append(productType, that.productType)
+                .append(quantity, that.quantity)
+                .append(variant, that.variant)
+                .append(variantId, that.variantId)
                 .isEquals();
     }
 

@@ -93,6 +93,9 @@ public class TaxPortionDraftImpl implements TaxPortionDraft, ModelBase {
         return new EqualsBuilder().append(name, that.name)
                 .append(rate, that.rate)
                 .append(amount, that.amount)
+                .append(name, that.name)
+                .append(rate, that.rate)
+                .append(amount, that.amount)
                 .isEquals();
     }
 

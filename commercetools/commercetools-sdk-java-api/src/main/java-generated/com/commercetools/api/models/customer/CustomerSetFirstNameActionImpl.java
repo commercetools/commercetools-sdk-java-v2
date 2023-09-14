@@ -70,7 +70,11 @@ public class CustomerSetFirstNameActionImpl implements CustomerSetFirstNameActio
 
         CustomerSetFirstNameActionImpl that = (CustomerSetFirstNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(firstName, that.firstName).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(firstName, that.firstName)
+                .append(action, that.action)
+                .append(firstName, that.firstName)
+                .isEquals();
     }
 
     @Override

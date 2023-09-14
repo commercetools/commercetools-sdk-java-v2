@@ -103,6 +103,16 @@ public class StandalonePriceDraftQueryBuilderDsl {
             StandalonePriceDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StandalonePriceDraftQueryBuilderDsl> staged(
+            Function<com.commercetools.api.predicates.query.standalone_price.StagedPriceDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StagedPriceDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("staged"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.standalone_price.StagedPriceDraftQueryBuilderDsl.of())),
+            StandalonePriceDraftQueryBuilderDsl::of);
+    }
+
     public BooleanComparisonPredicateBuilder<StandalonePriceDraftQueryBuilderDsl> active() {
         return new BooleanComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("active")),

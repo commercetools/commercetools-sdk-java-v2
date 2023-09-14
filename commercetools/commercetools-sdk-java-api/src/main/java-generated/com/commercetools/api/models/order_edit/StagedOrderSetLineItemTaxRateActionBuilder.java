@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetLineItemTaxRateAction stagedOrderSetLineItemTaxRateAction = StagedOrderSetLineItemTaxRateAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<StagedOrderSetLineItemTaxRateAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
@@ -33,18 +36,29 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
     private String shippingKey;
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetLineItemTaxRateActionBuilder lineItemId(final String lineItemId) {
+    public StagedOrderSetLineItemTaxRateActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetLineItemTaxRateActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -57,7 +71,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -69,7 +83,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -92,16 +106,27 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return externalTaxRate
      */
 
@@ -125,8 +150,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
      * @return StagedOrderSetLineItemTaxRateAction
      */
     public StagedOrderSetLineItemTaxRateAction build() {
-        Objects.requireNonNull(lineItemId, StagedOrderSetLineItemTaxRateAction.class + ": lineItemId is missing");
-        return new StagedOrderSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate, shippingKey);
+        return new StagedOrderSetLineItemTaxRateActionImpl(lineItemId, lineItemKey, externalTaxRate, shippingKey);
     }
 
     /**
@@ -134,7 +158,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
      * @return StagedOrderSetLineItemTaxRateAction
      */
     public StagedOrderSetLineItemTaxRateAction buildUnchecked() {
-        return new StagedOrderSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate, shippingKey);
+        return new StagedOrderSetLineItemTaxRateActionImpl(lineItemId, lineItemKey, externalTaxRate, shippingKey);
     }
 
     /**
@@ -153,6 +177,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
     public static StagedOrderSetLineItemTaxRateActionBuilder of(final StagedOrderSetLineItemTaxRateAction template) {
         StagedOrderSetLineItemTaxRateActionBuilder builder = new StagedOrderSetLineItemTaxRateActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.externalTaxRate = template.getExternalTaxRate();
         builder.shippingKey = template.getShippingKey();
         return builder;

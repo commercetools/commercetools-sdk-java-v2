@@ -70,7 +70,11 @@ public class CustomFieldSetTypeImpl implements CustomFieldSetType, ModelBase {
 
         CustomFieldSetTypeImpl that = (CustomFieldSetTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(elementType, that.elementType).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(elementType, that.elementType)
+                .append(name, that.name)
+                .append(elementType, that.elementType)
+                .isEquals();
     }
 
     @Override

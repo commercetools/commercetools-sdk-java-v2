@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CartDiscountChangeValueAction
+ *  <p>Changes the CartDiscountValue for relative, absolute and fixed price CartDiscounts. Changing to Gift Line Item is not supported.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountChangeValueActionImpl implements CartDiscountChangeValueAction, ModelBase {
@@ -50,7 +50,7 @@ public class CartDiscountChangeValueActionImpl implements CartDiscountChangeValu
     }
 
     /**
-     *  <p>New value to set.</p>
+     *  <p>New value to set. When trying to set a CartDiscountValueGiftLineItemDraft an InvalidInput error is returned.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {
@@ -71,7 +71,11 @@ public class CartDiscountChangeValueActionImpl implements CartDiscountChangeValu
 
         CartDiscountChangeValueActionImpl that = (CartDiscountChangeValueActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(value, that.value)
+                .append(action, that.action)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

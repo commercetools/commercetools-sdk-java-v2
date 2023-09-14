@@ -102,6 +102,9 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
         return new EqualsBuilder().append(sku, that.sku)
                 .append(prices, that.prices)
                 .append(attributes, that.attributes)
+                .append(sku, that.sku)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 

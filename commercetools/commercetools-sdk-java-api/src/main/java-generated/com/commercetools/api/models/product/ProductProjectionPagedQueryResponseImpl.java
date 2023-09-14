@@ -130,6 +130,11 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
                 .append(total, that.total)
                 .append(offset, that.offset)
                 .append(results, that.results)
+                .append(limit, that.limit)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(results, that.results)
                 .isEquals();
     }
 

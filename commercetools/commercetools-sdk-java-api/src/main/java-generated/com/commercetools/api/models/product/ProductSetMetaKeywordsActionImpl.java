@@ -90,6 +90,9 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
         return new EqualsBuilder().append(action, that.action)
                 .append(metaKeywords, that.metaKeywords)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(metaKeywords, that.metaKeywords)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

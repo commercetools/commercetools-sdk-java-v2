@@ -32,6 +32,9 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
 
     private String id;
 
+    @Nullable
+    private String key;
+
     private Long quantity;
 
     @Nullable
@@ -51,7 +54,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     private String lineItemId;
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the Return Item.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -62,7 +65,18 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * set the value to the quantity
+     *  <p>User-defined unique identifier of the LineItemReturnItem.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public LineItemReturnItemBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    /**
+     *  <p>Number of Line Items returned.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -73,7 +87,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * set the value to the comment
+     *  <p>User-defined description for the return.</p>
      * @param comment value to be set
      * @return Builder
      */
@@ -84,7 +98,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * set the value to the shipmentState
+     *  <p>Shipment status of the Return Item.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -96,7 +110,11 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * set the value to the paymentState
+     *  <p>Payment status of the Return Item:</p>
+     *  <ul>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *  </ul>
      * @param paymentState value to be set
      * @return Builder
      */
@@ -108,7 +126,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields of the Return Item.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -120,7 +138,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields of the Return Item.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -132,7 +150,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields of the Return Item.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -143,7 +161,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * set the value to the lastModifiedAt
+     *  <p>Date and time (UTC) the Return Item was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
@@ -154,7 +172,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * set the value to the createdAt
+     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -165,7 +183,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the returned LineItem.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -176,7 +194,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the Return Item.</p>
      * @return id
      */
 
@@ -185,7 +203,17 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * value of quantity}
+     *  <p>User-defined unique identifier of the LineItemReturnItem.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Number of Line Items returned.</p>
      * @return quantity
      */
 
@@ -194,7 +222,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * value of comment}
+     *  <p>User-defined description for the return.</p>
      * @return comment
      */
 
@@ -204,7 +232,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * value of shipmentState}
+     *  <p>Shipment status of the Return Item.</p>
      * @return shipmentState
      */
 
@@ -213,7 +241,11 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * value of paymentState}
+     *  <p>Payment status of the Return Item:</p>
+     *  <ul>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *  </ul>
      * @return paymentState
      */
 
@@ -222,7 +254,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields of the Return Item.</p>
      * @return custom
      */
 
@@ -232,7 +264,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * value of lastModifiedAt}
+     *  <p>Date and time (UTC) the Return Item was last updated.</p>
      * @return lastModifiedAt
      */
 
@@ -241,7 +273,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * value of createdAt}
+     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
      * @return createdAt
      */
 
@@ -250,7 +282,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the returned LineItem.</p>
      * @return lineItemId
      */
 
@@ -270,8 +302,8 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
         Objects.requireNonNull(lastModifiedAt, LineItemReturnItem.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(createdAt, LineItemReturnItem.class + ": createdAt is missing");
         Objects.requireNonNull(lineItemId, LineItemReturnItem.class + ": lineItemId is missing");
-        return new LineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, custom, lastModifiedAt,
-            createdAt, lineItemId);
+        return new LineItemReturnItemImpl(id, key, quantity, comment, shipmentState, paymentState, custom,
+            lastModifiedAt, createdAt, lineItemId);
     }
 
     /**
@@ -279,8 +311,8 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
      * @return LineItemReturnItem
      */
     public LineItemReturnItem buildUnchecked() {
-        return new LineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, custom, lastModifiedAt,
-            createdAt, lineItemId);
+        return new LineItemReturnItemImpl(id, key, quantity, comment, shipmentState, paymentState, custom,
+            lastModifiedAt, createdAt, lineItemId);
     }
 
     /**
@@ -299,6 +331,7 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
     public static LineItemReturnItemBuilder of(final LineItemReturnItem template) {
         LineItemReturnItemBuilder builder = new LineItemReturnItemBuilder();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.quantity = template.getQuantity();
         builder.comment = template.getComment();
         builder.shipmentState = template.getShipmentState();

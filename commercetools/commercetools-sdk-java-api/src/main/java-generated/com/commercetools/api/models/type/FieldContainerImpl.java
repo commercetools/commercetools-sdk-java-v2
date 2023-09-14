@@ -61,7 +61,7 @@ public class FieldContainerImpl implements FieldContainer, ModelBase {
 
         FieldContainerImpl that = (FieldContainerImpl) o;
 
-        return new EqualsBuilder().append(values, that.values).isEquals();
+        return new EqualsBuilder().append(values, that.values).append(values, that.values).isEquals();
     }
 
     @Override

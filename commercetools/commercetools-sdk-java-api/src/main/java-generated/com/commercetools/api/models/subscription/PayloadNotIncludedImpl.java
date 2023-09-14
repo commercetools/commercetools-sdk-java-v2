@@ -74,7 +74,11 @@ public class PayloadNotIncludedImpl implements PayloadNotIncluded, ModelBase {
 
         PayloadNotIncludedImpl that = (PayloadNotIncludedImpl) o;
 
-        return new EqualsBuilder().append(reason, that.reason).append(payloadType, that.payloadType).isEquals();
+        return new EqualsBuilder().append(reason, that.reason)
+                .append(payloadType, that.payloadType)
+                .append(reason, that.reason)
+                .append(payloadType, that.payloadType)
+                .isEquals();
     }
 
     @Override

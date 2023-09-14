@@ -3,6 +3,8 @@ package com.commercetools.api.models.me;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyShoppingListChangeLineItemQuantityAction myShoppingListChangeLineItemQuantityAction = MyShoppingListChangeLineItemQuantityAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -23,18 +24,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class MyShoppingListChangeLineItemQuantityActionBuilder
         implements Builder<MyShoppingListChangeLineItemQuantityAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     private Long quantity;
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p><code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public MyShoppingListChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
+    public MyShoppingListChangeLineItemQuantityActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public MyShoppingListChangeLineItemQuantityActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -50,12 +66,23 @@ public class MyShoppingListChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p><code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -72,10 +99,8 @@ public class MyShoppingListChangeLineItemQuantityActionBuilder
      * @return MyShoppingListChangeLineItemQuantityAction
      */
     public MyShoppingListChangeLineItemQuantityAction build() {
-        Objects.requireNonNull(lineItemId,
-            MyShoppingListChangeLineItemQuantityAction.class + ": lineItemId is missing");
         Objects.requireNonNull(quantity, MyShoppingListChangeLineItemQuantityAction.class + ": quantity is missing");
-        return new MyShoppingListChangeLineItemQuantityActionImpl(lineItemId, quantity);
+        return new MyShoppingListChangeLineItemQuantityActionImpl(lineItemId, lineItemKey, quantity);
     }
 
     /**
@@ -83,7 +108,7 @@ public class MyShoppingListChangeLineItemQuantityActionBuilder
      * @return MyShoppingListChangeLineItemQuantityAction
      */
     public MyShoppingListChangeLineItemQuantityAction buildUnchecked() {
-        return new MyShoppingListChangeLineItemQuantityActionImpl(lineItemId, quantity);
+        return new MyShoppingListChangeLineItemQuantityActionImpl(lineItemId, lineItemKey, quantity);
     }
 
     /**
@@ -103,6 +128,7 @@ public class MyShoppingListChangeLineItemQuantityActionBuilder
             final MyShoppingListChangeLineItemQuantityAction template) {
         MyShoppingListChangeLineItemQuantityActionBuilder builder = new MyShoppingListChangeLineItemQuantityActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.quantity = template.getQuantity();
         return builder;
     }

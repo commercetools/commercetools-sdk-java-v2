@@ -2,7 +2,6 @@
 package com.commercetools.api.models.me;
 
 import java.util.*;
-import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -16,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyCartChangeLineItemQuantityAction myCartChangeLineItemQuantityAction = MyCartChangeLineItemQuantityAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -25,24 +23,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCartChangeLineItemQuantityAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     private Long quantity;
 
-    @Nullable
-    private com.commercetools.api.models.common.Money externalPrice;
-
-    @Nullable
-    private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
-
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public MyCartChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
+    public MyCartChangeLineItemQuantityActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public MyCartChangeLineItemQuantityActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -59,87 +66,23 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @param builder function to build the externalPrice value
-     * @return Builder
-     */
-
-    public MyCartChangeLineItemQuantityActionBuilder externalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
-        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @param builder function to build the externalPrice value
-     * @return Builder
-     */
-
-    public MyCartChangeLineItemQuantityActionBuilder withExternalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
-        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @param externalPrice value to be set
-     * @return Builder
-     */
-
-    public MyCartChangeLineItemQuantityActionBuilder externalPrice(
-            @Nullable final com.commercetools.api.models.common.Money externalPrice) {
-        this.externalPrice = externalPrice;
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @param builder function to build the externalTotalPrice value
-     * @return Builder
-     */
-
-    public MyCartChangeLineItemQuantityActionBuilder externalTotalPrice(
-            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder> builder) {
-        this.externalTotalPrice = builder
-                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @param builder function to build the externalTotalPrice value
-     * @return Builder
-     */
-
-    public MyCartChangeLineItemQuantityActionBuilder withExternalTotalPrice(
-            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPrice> builder) {
-        this.externalTotalPrice = builder
-                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @param externalTotalPrice value to be set
-     * @return Builder
-     */
-
-    public MyCartChangeLineItemQuantityActionBuilder externalTotalPrice(
-            @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
-        this.externalTotalPrice = externalTotalPrice;
-        return this;
-    }
-
-    /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -153,33 +96,12 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     }
 
     /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @return externalPrice
-     */
-
-    @Nullable
-    public com.commercetools.api.models.common.Money getExternalPrice() {
-        return this.externalPrice;
-    }
-
-    /**
-     *  <p>Deprecated. Will be ignored.</p>
-     * @return externalTotalPrice
-     */
-
-    @Nullable
-    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
-        return this.externalTotalPrice;
-    }
-
-    /**
      * builds MyCartChangeLineItemQuantityAction with checking for non-null required values
      * @return MyCartChangeLineItemQuantityAction
      */
     public MyCartChangeLineItemQuantityAction build() {
-        Objects.requireNonNull(lineItemId, MyCartChangeLineItemQuantityAction.class + ": lineItemId is missing");
         Objects.requireNonNull(quantity, MyCartChangeLineItemQuantityAction.class + ": quantity is missing");
-        return new MyCartChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
+        return new MyCartChangeLineItemQuantityActionImpl(lineItemId, lineItemKey, quantity);
     }
 
     /**
@@ -187,7 +109,7 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
      * @return MyCartChangeLineItemQuantityAction
      */
     public MyCartChangeLineItemQuantityAction buildUnchecked() {
-        return new MyCartChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
+        return new MyCartChangeLineItemQuantityActionImpl(lineItemId, lineItemKey, quantity);
     }
 
     /**
@@ -206,9 +128,8 @@ public class MyCartChangeLineItemQuantityActionBuilder implements Builder<MyCart
     public static MyCartChangeLineItemQuantityActionBuilder of(final MyCartChangeLineItemQuantityAction template) {
         MyCartChangeLineItemQuantityActionBuilder builder = new MyCartChangeLineItemQuantityActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.quantity = template.getQuantity();
-        builder.externalPrice = template.getExternalPrice();
-        builder.externalTotalPrice = template.getExternalTotalPrice();
         return builder;
     }
 

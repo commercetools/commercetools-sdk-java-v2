@@ -25,6 +25,12 @@ public class CartSetLineItemCustomTypeActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartSetLineItemCustomTypeActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartSetLineItemCustomTypeActionQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, CartSetLineItemCustomTypeActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CartSetLineItemCustomTypeActionQueryBuilderDsl> type(
             Function<com.commercetools.api.predicates.query.type.TypeResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.TypeResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

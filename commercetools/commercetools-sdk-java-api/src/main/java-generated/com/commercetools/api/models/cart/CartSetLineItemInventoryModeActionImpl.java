@@ -24,6 +24,8 @@ public class CartSetLineItemInventoryModeActionImpl implements CartSetLineItemIn
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     /**
@@ -31,8 +33,10 @@ public class CartSetLineItemInventoryModeActionImpl implements CartSetLineItemIn
      */
     @JsonCreator
     CartSetLineItemInventoryModeActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.inventoryMode = inventoryMode;
         this.action = SET_LINE_ITEM_INVENTORY_MODE;
     }
@@ -53,11 +57,19 @@ public class CartSetLineItemInventoryModeActionImpl implements CartSetLineItemIn
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -70,6 +82,10 @@ public class CartSetLineItemInventoryModeActionImpl implements CartSetLineItemIn
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
@@ -88,13 +104,22 @@ public class CartSetLineItemInventoryModeActionImpl implements CartSetLineItemIn
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(inventoryMode, that.inventoryMode)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(inventoryMode, that.inventoryMode)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(inventoryMode).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(inventoryMode)
+                .toHashCode();
     }
 
 }

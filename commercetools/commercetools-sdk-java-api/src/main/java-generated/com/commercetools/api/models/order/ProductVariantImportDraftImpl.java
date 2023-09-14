@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * ProductVariantImportDraft
+ *  <p>Contains the Product Variant to be used in the LineItemImportDraft.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantImportDraftImpl implements ProductVariantImportDraft, ModelBase {
@@ -52,7 +52,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p>
+     *  <p>The <code>id</code> of the ProductVariant. Required if you do not set a value for <code>sku</code>. If set, you must specify a <code>productId</code> in the LineItemImportDraft also.</p>
      */
 
     public Long getId() {
@@ -60,7 +60,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>The SKU of the existing variant.</p>
+     *  <p>The <code>sku</code> of the ProductVariant. Required if you do not set a value for <code>id</code>.</p>
      */
 
     public String getSku() {
@@ -68,7 +68,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Prices of the Product Variant if you want to override the <code>prices</code> property in the referenced ProductVariant. If not set, the <code>prices</code> from the referenced ProductVariant are used in the resulting Order. If set, each Price must have its unique price scope (same <code>value.currencyCode</code>, <code>country</code>, <code>customerGroup</code>, <code>channel</code>, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
@@ -76,7 +76,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Attributes of the Product Variant if you want to override the <code>attributes</code> property in the referenced ProductVariant. If not set, the <code>attributes</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
@@ -84,7 +84,7 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
     }
 
     /**
-     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     *  <p>The Images of the Product Variant if you want to override the <code>images</code> property in the referenced ProductVariant. If not set, the <code>images</code> from the referenced ProductVariant are copied to the resulting Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
@@ -134,6 +134,11 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
         ProductVariantImportDraftImpl that = (ProductVariantImportDraftImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(sku, that.sku)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .append(images, that.images)
+                .append(id, that.id)
                 .append(sku, that.sku)
                 .append(prices, that.prices)
                 .append(attributes, that.attributes)

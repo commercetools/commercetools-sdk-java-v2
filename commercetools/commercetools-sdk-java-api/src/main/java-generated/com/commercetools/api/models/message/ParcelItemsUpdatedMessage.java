@@ -83,7 +83,7 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
     public List<DeliveryItem> getOldItems();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
 
@@ -135,7 +135,7 @@ public interface ParcelItemsUpdatedMessage extends OrderMessage {
     public void setOldItems(final List<DeliveryItem> oldItems);
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
 

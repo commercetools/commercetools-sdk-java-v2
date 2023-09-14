@@ -71,7 +71,11 @@ public class AttributeReferenceTypeImpl implements AttributeReferenceType, Model
 
         AttributeReferenceTypeImpl that = (AttributeReferenceTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(referenceTypeId, that.referenceTypeId).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(referenceTypeId, that.referenceTypeId)
+                .append(name, that.name)
+                .append(referenceTypeId, that.referenceTypeId)
+                .isEquals();
     }
 
     @Override

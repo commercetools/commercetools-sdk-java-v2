@@ -42,7 +42,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.14.2",
+            "moduleVersion": "2.15.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -55,7 +55,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.14.2",
+            "moduleVersion": "2.15.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -68,7 +68,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.14.2",
+            "moduleVersion": "2.15.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -81,7 +81,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.14.2",
+            "moduleVersion": "2.15.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-dataformats-binary"
             ],
@@ -94,7 +94,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.14.2",
+            "moduleVersion": "2.15.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -107,7 +107,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.14.2",
+            "moduleVersion": "2.15.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
             ],
@@ -172,7 +172,7 @@
         },
         {
             "moduleName": "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core",
-            "moduleVersion": "5.10.0",
+            "moduleVersion": "5.12.4",
             "moduleUrls": [
                 "https://github.com/Netflix/dgs-codegen"
             ],
@@ -193,7 +193,7 @@
         },
         {
             "moduleName": "com.newrelic.agent.java:newrelic-api",
-            "moduleVersion": "8.1.0",
+            "moduleVersion": "8.6.0",
             "moduleUrls": [
                 "https://github.com/newrelic/newrelic-java-agent"
             ],
@@ -265,11 +265,11 @@
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.3.0"
+            "moduleVersion": "3.5.0"
         },
         {
             "moduleName": "com.squareup.okio:okio-jvm",
-            "moduleVersion": "3.3.0",
+            "moduleVersion": "3.5.0",
             "moduleUrls": [
                 "https://github.com/square/okio/"
             ],
@@ -342,7 +342,7 @@
         },
         {
             "moduleName": "dev.failsafe:failsafe",
-            "moduleVersion": "3.3.1",
+            "moduleVersion": "3.3.2",
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
@@ -369,7 +369,7 @@
         },
         {
             "moduleName": "io.netty:netty-buffer",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -395,7 +395,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -408,7 +408,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-dns",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -434,7 +434,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -447,7 +447,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http2",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -473,7 +473,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-socks",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -499,7 +499,7 @@
         },
         {
             "moduleName": "io.netty:netty-common",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -525,7 +525,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -551,7 +551,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler-proxy",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -577,7 +577,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -590,7 +590,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver-dns",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -603,7 +603,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver-dns-classes-macos",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -616,7 +616,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver-dns-native-macos",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -642,7 +642,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -655,7 +655,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-classes-epoll",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -681,7 +681,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-epoll",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -720,7 +720,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-unix-common",
-            "moduleVersion": "4.1.91.Final",
+            "moduleVersion": "4.1.97.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -733,7 +733,7 @@
         },
         {
             "moduleName": "io.projectreactor.netty:reactor-netty-core",
-            "moduleVersion": "1.1.6",
+            "moduleVersion": "1.1.11",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-netty"
             ],
@@ -746,7 +746,7 @@
         },
         {
             "moduleName": "io.projectreactor.netty:reactor-netty-http",
-            "moduleVersion": "1.1.6",
+            "moduleVersion": "1.1.11",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-netty"
             ],
@@ -759,7 +759,7 @@
         },
         {
             "moduleName": "io.projectreactor:reactor-core",
-            "moduleVersion": "3.5.5",
+            "moduleVersion": "3.5.10",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-core"
             ],
@@ -821,7 +821,7 @@
         },
         {
             "moduleName": "org.apache.commons:commons-lang3",
-            "moduleVersion": "3.12.0",
+            "moduleVersion": "3.13.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-lang/"
             ],
@@ -1003,7 +1003,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
-            "moduleVersion": "1.8.0",
+            "moduleVersion": "1.9.0",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -1029,7 +1029,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common",
-            "moduleVersion": "1.8.0",
+            "moduleVersion": "1.9.0",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -1055,7 +1055,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
-            "moduleVersion": "1.8.0",
+            "moduleVersion": "1.9.0",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -1081,7 +1081,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
-            "moduleVersion": "1.8.0",
+            "moduleVersion": "1.9.0",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],

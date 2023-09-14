@@ -42,7 +42,6 @@ import io.sphere.sdk.customers.commands.CustomerDeleteCommand;
 import io.sphere.sdk.discountcodes.commands.DiscountCodeDeleteCommand;
 import io.sphere.sdk.expansion.ExpansionPath;
 import io.sphere.sdk.expansion.MetaModelReferenceExpansionDsl;
-import io.sphere.sdk.extensions.commands.ExtensionDeleteCommand;
 import io.sphere.sdk.inventory.commands.InventoryEntryDeleteCommand;
 import io.sphere.sdk.orders.commands.OrderDeleteCommand;
 import io.sphere.sdk.payments.commands.PaymentDeleteCommand;
@@ -54,7 +53,6 @@ import io.sphere.sdk.shippingmethods.commands.ShippingMethodDeleteCommand;
 import io.sphere.sdk.shoppinglists.commands.ShoppingListDeleteCommand;
 import io.sphere.sdk.states.commands.StateDeleteCommand;
 import io.sphere.sdk.stores.commands.StoreDeleteCommand;
-import io.sphere.sdk.subscriptions.commands.SubscriptionDeleteCommand;
 import io.sphere.sdk.taxcategories.commands.TaxCategoryDeleteCommand;
 import io.sphere.sdk.types.commands.TypeDeleteCommand;
 import io.sphere.sdk.zones.commands.ZoneDeleteCommand;
@@ -71,13 +69,13 @@ public class DeleteBuilder {
         return new DeleteBuilder(apiRoot);
     }
 
+    @SuppressWarnings("unchecked")
     public static <T extends ApiMethod<T, TResult> & ExpandableTrait<T> & VersionedTrait<T>, TResult, TQuery extends MetaModelReferenceExpansionDsl<?, ? extends DeleteCommand<?>, ?>> T delete(
             final T request, final long version, final TQuery deleteDsl) {
-        T deleteRequest = request;
+        T deleteRequest = (T) request.withVersion(version);
         for (ExpansionPath<?> expansionPath : deleteDsl.expansionPaths()) {
             deleteRequest = (T) deleteRequest.addExpand(expansionPath.toSphereExpand());
         }
-        request.withVersion(version);
         return deleteRequest;
     }
 
@@ -335,32 +333,22 @@ public class DeleteBuilder {
             deleteDsl);
     }
 
-    public ByProjectKeyExtensionsByIDDelete extension(final String id, final Long version,
-            final Function<ExtensionDeleteCommand, ExtensionDeleteCommand> deleteDsl) {
+    public ByProjectKeyExtensionsByIDDelete extension(final String id, final Long version) {
         requireNonNull(id);
-        return delete(apiRoot.extensions().withId(id).delete(), version,
-            () -> ExtensionDeleteCommand.of(io.sphere.sdk.models.Versioned.of(id, version)), deleteDsl);
+        return apiRoot.extensions().withId(id).delete().withVersion(version);
     }
 
-    public ByProjectKeyExtensionsByIDDelete extension(final Versioned<Extension> extension,
-            final Function<ExtensionDeleteCommand, ExtensionDeleteCommand> deleteDsl) {
+    public ByProjectKeyExtensionsByIDDelete extension(final Versioned<Extension> extension) {
         requireNonNull(extension.getId());
         requireNonNull(extension.getVersion());
-        return delete(apiRoot.extensions().withId(extension.getId()).delete(), extension.getVersion(),
-            () -> ExtensionDeleteCommand
-                    .of(io.sphere.sdk.models.Versioned.of(extension.getId(), extension.getVersion())),
-            deleteDsl);
+        return apiRoot.extensions().withId(extension.getId()).delete().withVersion(extension.getVersion());
     }
 
     public ByProjectKeyExtensionsByIDDelete extension(
-            final io.sphere.sdk.models.Versioned<io.sphere.sdk.extensions.Extension> extension,
-            final Function<ExtensionDeleteCommand, ExtensionDeleteCommand> deleteDsl) {
+            final io.sphere.sdk.models.Versioned<io.sphere.sdk.extensions.Extension> extension) {
         requireNonNull(extension.getId());
         requireNonNull(extension.getVersion());
-        return delete(apiRoot.extensions().withId(extension.getId()).delete(), extension.getVersion(),
-            () -> ExtensionDeleteCommand
-                    .of(io.sphere.sdk.models.Versioned.of(extension.getId(), extension.getVersion())),
-            deleteDsl);
+        return apiRoot.extensions().withId(extension.getId()).delete().withVersion(extension.getVersion());
     }
 
     public ByProjectKeyInventoryByIDDelete inventory(final String id, final Long version,
@@ -630,32 +618,22 @@ public class DeleteBuilder {
             deleteDsl);
     }
 
-    public ByProjectKeySubscriptionsByIDDelete subscription(final String id, final Long version,
-            final Function<SubscriptionDeleteCommand, SubscriptionDeleteCommand> deleteDsl) {
+    public ByProjectKeySubscriptionsByIDDelete subscription(final String id, final Long version) {
         requireNonNull(id);
-        return delete(apiRoot.subscriptions().withId(id).delete(), version,
-            () -> SubscriptionDeleteCommand.of(io.sphere.sdk.models.Versioned.of(id, version)), deleteDsl);
+        return apiRoot.subscriptions().withId(id).delete().withVersion(version);
     }
 
-    public ByProjectKeySubscriptionsByIDDelete subscription(final Versioned<Subscription> subscription,
-            final Function<SubscriptionDeleteCommand, SubscriptionDeleteCommand> deleteDsl) {
+    public ByProjectKeySubscriptionsByIDDelete subscription(final Versioned<Subscription> subscription) {
         requireNonNull(subscription.getId());
         requireNonNull(subscription.getVersion());
-        return delete(apiRoot.subscriptions().withId(subscription.getId()).delete(), subscription.getVersion(),
-            () -> SubscriptionDeleteCommand
-                    .of(io.sphere.sdk.models.Versioned.of(subscription.getId(), subscription.getVersion())),
-            deleteDsl);
+        return apiRoot.subscriptions().withId(subscription.getId()).delete().withVersion(subscription.getVersion());
     }
 
     public ByProjectKeySubscriptionsByIDDelete subscription(
-            final io.sphere.sdk.models.Versioned<io.sphere.sdk.subscriptions.Subscription> subscription,
-            final Function<SubscriptionDeleteCommand, SubscriptionDeleteCommand> deleteDsl) {
+            final io.sphere.sdk.models.Versioned<io.sphere.sdk.subscriptions.Subscription> subscription) {
         requireNonNull(subscription.getId());
         requireNonNull(subscription.getVersion());
-        return delete(apiRoot.subscriptions().withId(subscription.getId()).delete(), subscription.getVersion(),
-            () -> SubscriptionDeleteCommand
-                    .of(io.sphere.sdk.models.Versioned.of(subscription.getId(), subscription.getVersion())),
-            deleteDsl);
+        return apiRoot.subscriptions().withId(subscription.getId()).delete().withVersion(subscription.getVersion());
     }
 
     public ByProjectKeyTaxCategoriesByIDDelete taxCategory(final String id, final Long version,

@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Remove Line Item update action.</p>
+ *  <p>Generated after a successful Remove LineItem update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -60,6 +60,14 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
 
     /**
      *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
@@ -125,6 +133,13 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
 
     /**
      *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
@@ -209,6 +224,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setRemovedQuantity(template.getRemovedQuantity());
         instance.setNewQuantity(template.getNewQuantity());
         instance.setNewState(template.getNewState());
@@ -243,6 +259,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setRemovedQuantity(template.getRemovedQuantity());
         instance.setNewQuantity(template.getNewQuantity());
         instance.setNewState(Optional.ofNullable(template.getNewState())

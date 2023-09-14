@@ -126,6 +126,11 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
                 .append(lowestRating, that.lowestRating)
                 .append(count, that.count)
                 .append(ratingsDistribution, that.ratingsDistribution)
+                .append(averageRating, that.averageRating)
+                .append(highestRating, that.highestRating)
+                .append(lowestRating, that.lowestRating)
+                .append(count, that.count)
+                .append(ratingsDistribution, that.ratingsDistribution)
                 .isEquals();
     }
 

@@ -70,7 +70,11 @@ public class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction, M
 
         CategoryChangeSlugActionImpl that = (CategoryChangeSlugActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(slug, that.slug).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(slug, that.slug)
+                .append(action, that.action)
+                .append(slug, that.slug)
+                .isEquals();
     }
 
     @Override

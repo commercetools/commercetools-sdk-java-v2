@@ -187,14 +187,6 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationActionBuilder.of();
     }
 
-    public com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldActionBuilder setDeliveryAddressCustomFieldBuilder() {
-        return com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldActionBuilder.of();
-    }
-
-    public com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeActionBuilder setDeliveryAddressCustomTypeBuilder() {
-        return com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeActionBuilder.of();
-    }
-
     public com.commercetools.api.models.cart.CartSetDirectDiscountsActionBuilder setDirectDiscountsBuilder() {
         return com.commercetools.api.models.cart.CartSetDirectDiscountsActionBuilder.of();
     }

@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetDeliveryItemsAction
+ *  <p>Produces the Delivery Items Updated Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,8 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
     String SET_DELIVERY_ITEMS = "setDeliveryItems";
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
 
@@ -48,7 +49,8 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
     public String getDeliveryId();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
 
@@ -56,7 +58,7 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
     public String getDeliveryKey();
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return items
      */
     @NotNull
@@ -65,21 +67,23 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      */
 
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     * set items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items values to be set
      */
 
@@ -87,7 +91,7 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items values to be set
      */
 

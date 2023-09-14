@@ -24,6 +24,8 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private com.commercetools.api.models.type.FieldContainer fields;
@@ -33,9 +35,11 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
      */
     @JsonCreator
     OrderSetLineItemCustomTypeActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.type = type;
         this.fields = fields;
         this.action = SET_LINE_ITEM_CUSTOM_TYPE;
@@ -57,7 +61,7 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -65,7 +69,15 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -73,7 +85,7 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -82,6 +94,10 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -104,6 +120,12 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();
@@ -111,7 +133,12 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(type).append(fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(type)
+                .append(fields)
+                .toHashCode();
     }
 
 }

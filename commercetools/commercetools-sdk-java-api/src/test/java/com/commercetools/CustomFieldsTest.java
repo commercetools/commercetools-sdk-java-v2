@@ -18,6 +18,7 @@ import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.type.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
@@ -45,10 +46,24 @@ public class CustomFieldsTest {
             enumValue -> assertThat(enumValue.getLabel().values().get("en")).isEqualTo("foo"));
         assertThat(fields.get("date")).isInstanceOfSatisfying(LocalDate.class,
             localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
+        assertThat(fields.get("date-text")).isInstanceOfSatisfying(String.class,
+            localDate -> assertThat(localDate).isEqualTo("2020-01-01T"));
         assertThat(fields.get("time")).isInstanceOfSatisfying(LocalTime.class,
             localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
         assertThat(fields.get("datetime")).isInstanceOfSatisfying(ZonedDateTime.class,
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+        assertThat(fields.get("datetime-zero")).isInstanceOfSatisfying(ZonedDateTime.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.000Z"));
+        assertThat(fields.get("time-simple")).isInstanceOfSatisfying(LocalTime.class,
+            localTime -> assertThat(localTime).isEqualTo("13:15:00"));
+        assertThat(fields.get("datetime-simple")).isInstanceOfSatisfying(ZonedDateTime.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00Z"));
+        assertThat(fields.get("datetime-offset")).isInstanceOfSatisfying(ZonedDateTime.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00-04:00"));
+        assertThat(fields.get("datetime-no-offset")).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00"));
+        assertThat(fields.get("datetime-text")).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00-0400"));
         assertThat(fields.get("boolean")).isInstanceOfSatisfying(Boolean.class,
             aBoolean -> assertThat(aBoolean).isTrue());
         assertThat(fields.get("integer")).isInstanceOfSatisfying(Long.class,
@@ -81,6 +96,15 @@ public class CustomFieldsTest {
     }
 
     @Test
+    public void fieldsAsJsonNode() throws IOException {
+        ApiModuleOptions options = ApiModuleOptions.of().withCustomFieldAsJsonNode(true);
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+        CustomFields customFields = mapper.readValue(stringFromResource("customfields.json"), CustomFields.class);
+        assertThat(customFields.getFields().values()).isNotEmpty();
+        assertThat(customFields.getFields().values().values()).allMatch(o -> o instanceof JsonNode);
+    }
+
+    @Test
     public void fieldsAsDateFalse() throws IOException {
         ApiModuleOptions options = ApiModuleOptions.of()
                 .withDateAttributeAsString(true)
@@ -106,6 +130,16 @@ public class CustomFieldsTest {
             localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
         assertThat(fields.get("datetime")).isInstanceOfSatisfying(String.class,
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+        assertThat(fields.get("time-simple")).isInstanceOfSatisfying(String.class,
+            localTime -> assertThat(localTime).isEqualTo("13:15:00"));
+        assertThat(fields.get("datetime-simple")).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00Z"));
+        assertThat(fields.get("datetime-offset")).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00-04:00"));
+        assertThat(fields.get("datetime-no-offset")).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00"));
+        assertThat(fields.get("datetime-text")).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00-0400"));
 
         assertThat(fields.get("boolean")).isInstanceOfSatisfying(Boolean.class,
             aBoolean -> assertThat(aBoolean).isTrue());

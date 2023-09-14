@@ -74,6 +74,8 @@ public class ProjectChangeCartsConfigurationActionImpl implements ProjectChangeC
 
         return new EqualsBuilder().append(action, that.action)
                 .append(cartsConfiguration, that.cartsConfiguration)
+                .append(action, that.action)
+                .append(cartsConfiguration, that.cartsConfiguration)
                 .isEquals();
     }
 

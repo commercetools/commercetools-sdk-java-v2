@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderAddItemShippingAddressAction
+ *  <p>Adds an address to an Order when shipping to multiple addresses is desired.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface StagedOrderAddItemShippingAddressAction extends StagedOrderUpda
     String ADD_ITEM_SHIPPING_ADDRESS = "addItemShippingAddress";
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address to append to <code>itemShippingAddresses</code>. The new Address must have a <code>key</code> that is unique across this Order.</p>
      * @return address
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface StagedOrderAddItemShippingAddressAction extends StagedOrderUpda
     public BaseAddress getAddress();
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Address to append to <code>itemShippingAddresses</code>. The new Address must have a <code>key</code> that is unique across this Order.</p>
      * @param address value to be set
      */
 

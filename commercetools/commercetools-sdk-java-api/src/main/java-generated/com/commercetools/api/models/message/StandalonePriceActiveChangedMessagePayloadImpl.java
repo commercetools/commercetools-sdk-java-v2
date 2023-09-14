@@ -90,6 +90,9 @@ public class StandalonePriceActiveChangedMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(active, that.active)
                 .append(oldActive, that.oldActive)
+                .append(type, that.type)
+                .append(active, that.active)
+                .append(oldActive, that.oldActive)
                 .isEquals();
     }
 

@@ -58,7 +58,7 @@ public class SuggestTokenizerImpl implements SuggestTokenizer, ModelBase {
 
         SuggestTokenizerImpl that = (SuggestTokenizerImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

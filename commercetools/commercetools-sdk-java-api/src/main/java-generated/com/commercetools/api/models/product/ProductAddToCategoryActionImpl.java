@@ -106,6 +106,10 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
                 .append(category, that.category)
                 .append(orderHint, that.orderHint)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(category, that.category)
+                .append(orderHint, that.orderHint)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

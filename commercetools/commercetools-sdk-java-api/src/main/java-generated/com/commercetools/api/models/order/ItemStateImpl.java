@@ -41,7 +41,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items in this State.</p>
      */
 
     public Long getQuantity() {
@@ -49,7 +49,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
     }
 
     /**
-     *
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -74,7 +74,11 @@ public class ItemStateImpl implements ItemState, ModelBase {
 
         ItemStateImpl that = (ItemStateImpl) o;
 
-        return new EqualsBuilder().append(quantity, that.quantity).append(state, that.state).isEquals();
+        return new EqualsBuilder().append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override

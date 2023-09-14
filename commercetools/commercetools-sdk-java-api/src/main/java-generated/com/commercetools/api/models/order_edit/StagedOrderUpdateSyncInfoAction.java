@@ -40,7 +40,15 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     String UPDATE_SYNC_INFO = "updateSyncInfo";
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Set this to identify an external order instance, file, or other resource.</p>
+     * @return externalId
+     */
+
+    @JsonProperty("externalId")
+    public String getExternalId();
+
+    /**
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
      * @return channel
      */
     @NotNull
@@ -49,15 +57,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     public ChannelResourceIdentifier getChannel();
 
     /**
-     *
-     * @return externalId
-     */
-
-    @JsonProperty("externalId")
-    public String getExternalId();
-
-    /**
-     *
+     *  <p>If not set, it defaults to the current date and time.</p>
      * @return syncedAt
      */
 
@@ -65,21 +65,21 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     public ZonedDateTime getSyncedAt();
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     * @param channel value to be set
-     */
-
-    public void setChannel(final ChannelResourceIdentifier channel);
-
-    /**
-     * set externalId
+     *  <p>Set this to identify an external order instance, file, or other resource.</p>
      * @param externalId value to be set
      */
 
     public void setExternalId(final String externalId);
 
     /**
-     * set syncedAt
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     * @param channel value to be set
+     */
+
+    public void setChannel(final ChannelResourceIdentifier channel);
+
+    /**
+     *  <p>If not set, it defaults to the current date and time.</p>
      * @param syncedAt value to be set
      */
 
@@ -100,8 +100,8 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
      */
     public static StagedOrderUpdateSyncInfoAction of(final StagedOrderUpdateSyncInfoAction template) {
         StagedOrderUpdateSyncInfoActionImpl instance = new StagedOrderUpdateSyncInfoActionImpl();
-        instance.setChannel(template.getChannel());
         instance.setExternalId(template.getExternalId());
+        instance.setChannel(template.getChannel());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
     }
@@ -117,9 +117,9 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
             return null;
         }
         StagedOrderUpdateSyncInfoActionImpl instance = new StagedOrderUpdateSyncInfoActionImpl();
+        instance.setExternalId(template.getExternalId());
         instance.setChannel(
             com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
-        instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
     }

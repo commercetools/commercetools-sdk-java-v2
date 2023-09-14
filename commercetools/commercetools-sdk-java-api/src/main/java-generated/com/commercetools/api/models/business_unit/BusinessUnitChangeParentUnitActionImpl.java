@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentUnitChanged Message.</p>
+ *  <p>Changing the parent of a Business Unit generates a BusinessUnitParentChanged Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitChangeParentUnitActionImpl implements BusinessUnitChangeParentUnitAction, ModelBase {
@@ -50,7 +50,7 @@ public class BusinessUnitChangeParentUnitActionImpl implements BusinessUnitChang
     }
 
     /**
-     *  <p>New parent unit of the Business Unit.</p>
+     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit() {
@@ -72,7 +72,11 @@ public class BusinessUnitChangeParentUnitActionImpl implements BusinessUnitChang
 
         BusinessUnitChangeParentUnitActionImpl that = (BusinessUnitChangeParentUnitActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(parentUnit, that.parentUnit).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(parentUnit, that.parentUnit)
+                .append(action, that.action)
+                .append(parentUnit, that.parentUnit)
+                .isEquals();
     }
 
     @Override

@@ -113,6 +113,10 @@ public class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValu
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(attributes, that.attributes)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 

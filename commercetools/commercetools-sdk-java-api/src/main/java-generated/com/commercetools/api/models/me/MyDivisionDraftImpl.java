@@ -238,6 +238,17 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(parentUnit, that.parentUnit)
+                .append(key, that.key)
+                .append(unitType, that.unitType)
+                .append(name, that.name)
+                .append(contactEmail, that.contactEmail)
+                .append(custom, that.custom)
+                .append(addresses, that.addresses)
+                .append(shippingAddresses, that.shippingAddresses)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
+                .append(billingAddresses, that.billingAddresses)
+                .append(defaultBillingAddress, that.defaultBillingAddress)
+                .append(parentUnit, that.parentUnit)
                 .isEquals();
     }
 

@@ -25,7 +25,7 @@ public class StagedOrderRemoveItemShippingAddressActionBuilder
     private String addressKey;
 
     /**
-     * set the value to the addressKey
+     *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
      * @param addressKey value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class StagedOrderRemoveItemShippingAddressActionBuilder
     }
 
     /**
-     * value of addressKey}
+     *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
      * @return addressKey
      */
 

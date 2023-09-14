@@ -54,7 +54,7 @@ public interface DeliveryRemovedMessage extends OrderMessage {
     public Delivery getDelivery();
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
 
@@ -69,7 +69,7 @@ public interface DeliveryRemovedMessage extends OrderMessage {
     public void setDelivery(final Delivery delivery);
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      */
 

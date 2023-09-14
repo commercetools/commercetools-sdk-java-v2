@@ -25,6 +25,12 @@ public class OrderLineItemRemovedMessagePayloadQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderLineItemRemovedMessagePayloadQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderLineItemRemovedMessagePayloadQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderLineItemRemovedMessagePayloadQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<OrderLineItemRemovedMessagePayloadQueryBuilderDsl> removedQuantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("removedQuantity")),

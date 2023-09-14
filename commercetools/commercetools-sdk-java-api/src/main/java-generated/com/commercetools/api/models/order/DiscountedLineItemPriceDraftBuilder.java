@@ -28,7 +28,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts;
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Discounted money value.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Discounted money value.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Discounted money value.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     * set values to the includedDiscounts
+     *  <p>Discounts to be applied.</p>
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     * set value to the includedDiscounts
+     *  <p>Discounts to be applied.</p>
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     * add values to the includedDiscounts
+     *  <p>Discounts to be applied.</p>
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     * add the value to the includedDiscounts using the builder function
+     *  <p>Discounts to be applied.</p>
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     * set the value to the includedDiscounts using the builder function
+     *  <p>Discounts to be applied.</p>
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     * add the value to the includedDiscounts using the builder function
+     *  <p>Discounts to be applied.</p>
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -144,7 +144,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     * set the value to the includedDiscounts using the builder function
+     *  <p>Discounts to be applied.</p>
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -156,7 +156,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Discounted money value.</p>
      * @return value
      */
 
@@ -165,7 +165,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     * value of includedDiscounts}
+     *  <p>Discounts to be applied.</p>
      * @return includedDiscounts
      */
 

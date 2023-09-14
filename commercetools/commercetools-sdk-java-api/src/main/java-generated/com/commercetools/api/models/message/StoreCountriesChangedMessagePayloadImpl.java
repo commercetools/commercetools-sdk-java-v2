@@ -100,6 +100,9 @@ public class StoreCountriesChangedMessagePayloadImpl implements StoreCountriesCh
         return new EqualsBuilder().append(type, that.type)
                 .append(addedCountries, that.addedCountries)
                 .append(removedCountries, that.removedCountries)
+                .append(type, that.type)
+                .append(addedCountries, that.addedCountries)
+                .append(removedCountries, that.removedCountries)
                 .isEquals();
     }
 

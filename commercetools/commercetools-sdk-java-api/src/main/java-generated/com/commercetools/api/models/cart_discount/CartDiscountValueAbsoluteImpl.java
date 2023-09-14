@@ -75,7 +75,11 @@ public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute,
 
         CartDiscountValueAbsoluteImpl that = (CartDiscountValueAbsoluteImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(money, that.money).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(money, that.money)
+                .append(type, that.type)
+                .append(money, that.money)
+                .isEquals();
     }
 
     @Override

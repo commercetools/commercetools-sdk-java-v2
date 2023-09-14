@@ -119,6 +119,10 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
                 .append(locations, that.locations)
                 .append(path, that.path)
                 .append(extensions, that.extensions)
+                .append(message, that.message)
+                .append(locations, that.locations)
+                .append(path, that.path)
+                .append(extensions, that.extensions)
                 .isEquals();
     }
 

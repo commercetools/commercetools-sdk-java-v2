@@ -72,7 +72,11 @@ public class BusinessUnitAssociateAddedMessagePayloadImpl
 
         BusinessUnitAssociateAddedMessagePayloadImpl that = (BusinessUnitAssociateAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(associate, that.associate).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(associate, that.associate)
+                .append(type, that.type)
+                .append(associate, that.associate)
+                .isEquals();
     }
 
     @Override

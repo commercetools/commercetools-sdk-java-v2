@@ -60,7 +60,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     }
 
     /**
-     *  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>
+     *  <p>Number of Custom Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      * @param discountedQuantity value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     }
 
     /**
-     *  <p>Maximum number of times this Discount can be applied.</p>
+     *  <p>Maximum number of times this Discount can be applied. Do not set if the Discount should be applied an unlimited number of times.</p>
      * @param maxOccurrence value to be set
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     }
 
     /**
-     *  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>
+     *  <p>Number of Custom Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      * @return discountedQuantity
      */
 
@@ -121,7 +121,7 @@ public class MultiBuyCustomLineItemsTargetBuilder implements Builder<MultiBuyCus
     }
 
     /**
-     *  <p>Maximum number of times this Discount can be applied.</p>
+     *  <p>Maximum number of times this Discount can be applied. Do not set if the Discount should be applied an unlimited number of times.</p>
      * @return maxOccurrence
      */
 

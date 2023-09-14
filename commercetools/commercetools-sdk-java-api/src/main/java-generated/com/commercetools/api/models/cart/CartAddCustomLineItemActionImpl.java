@@ -28,6 +28,8 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    private String key;
+
     private Long quantity;
 
     private String slug;
@@ -48,7 +50,8 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
     @JsonCreator
     CartAddCustomLineItemActionImpl(@JsonProperty("money") final com.commercetools.api.models.common.Money money,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
-            @JsonProperty("quantity") final Long quantity, @JsonProperty("slug") final String slug,
+            @JsonProperty("key") final String key, @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("slug") final String slug,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
@@ -56,6 +59,7 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
             @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
         this.money = money;
         this.name = name;
+        this.key = key;
         this.quantity = quantity;
         this.slug = slug;
         this.taxCategory = taxCategory;
@@ -95,6 +99,14 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -165,6 +177,10 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
         this.name = name;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
@@ -207,6 +223,18 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
         return new EqualsBuilder().append(action, that.action)
                 .append(money, that.money)
                 .append(name, that.name)
+                .append(key, that.key)
+                .append(quantity, that.quantity)
+                .append(slug, that.slug)
+                .append(taxCategory, that.taxCategory)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
+                .append(priceMode, that.priceMode)
+                .append(action, that.action)
+                .append(money, that.money)
+                .append(name, that.name)
+                .append(key, that.key)
                 .append(quantity, that.quantity)
                 .append(slug, that.slug)
                 .append(taxCategory, that.taxCategory)
@@ -222,6 +250,7 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
         return new HashCodeBuilder(17, 37).append(action)
                 .append(money)
                 .append(name)
+                .append(key)
                 .append(quantity)
                 .append(slug)
                 .append(taxCategory)

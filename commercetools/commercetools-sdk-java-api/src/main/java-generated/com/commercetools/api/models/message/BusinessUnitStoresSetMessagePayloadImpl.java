@@ -75,7 +75,11 @@ public class BusinessUnitStoresSetMessagePayloadImpl implements BusinessUnitStor
 
         BusinessUnitStoresSetMessagePayloadImpl that = (BusinessUnitStoresSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(stores, that.stores).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(stores, that.stores)
+                .append(type, that.type)
+                .append(stores, that.stores)
+                .isEquals();
     }
 
     @Override

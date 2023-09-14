@@ -21,7 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShoppingListSetTextLineItemCustomFieldAction shoppingListSetTextLineItemCustomFieldAction = ShoppingListSetTextLineItemCustomFieldAction.builder()
- *             .textLineItemId("{textLineItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -37,12 +36,20 @@ public interface ShoppingListSetTextLineItemCustomFieldAction extends ShoppingLi
     String SET_TEXT_LINE_ITEM_CUSTOM_FIELD = "setTextLineItemCustomField";
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
-    @NotNull
+
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return textLineItemKey
+     */
+
+    @JsonProperty("textLineItemKey")
+    public String getTextLineItemKey();
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -61,11 +68,18 @@ public interface ShoppingListSetTextLineItemCustomFieldAction extends ShoppingLi
     public Object getValue();
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      */
 
     public void setTextLineItemId(final String textLineItemId);
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param textLineItemKey value to be set
+     */
+
+    public void setTextLineItemKey(final String textLineItemKey);
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -98,6 +112,7 @@ public interface ShoppingListSetTextLineItemCustomFieldAction extends ShoppingLi
             final ShoppingListSetTextLineItemCustomFieldAction template) {
         ShoppingListSetTextLineItemCustomFieldActionImpl instance = new ShoppingListSetTextLineItemCustomFieldActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setTextLineItemKey(template.getTextLineItemKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
@@ -116,6 +131,7 @@ public interface ShoppingListSetTextLineItemCustomFieldAction extends ShoppingLi
         }
         ShoppingListSetTextLineItemCustomFieldActionImpl instance = new ShoppingListSetTextLineItemCustomFieldActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setTextLineItemKey(template.getTextLineItemKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;

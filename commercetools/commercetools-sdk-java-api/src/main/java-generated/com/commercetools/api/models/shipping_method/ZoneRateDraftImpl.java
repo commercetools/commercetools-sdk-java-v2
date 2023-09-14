@@ -80,7 +80,11 @@ public class ZoneRateDraftImpl implements ZoneRateDraft, ModelBase {
 
         ZoneRateDraftImpl that = (ZoneRateDraftImpl) o;
 
-        return new EqualsBuilder().append(zone, that.zone).append(shippingRates, that.shippingRates).isEquals();
+        return new EqualsBuilder().append(zone, that.zone)
+                .append(shippingRates, that.shippingRates)
+                .append(zone, that.zone)
+                .append(shippingRates, that.shippingRates)
+                .isEquals();
     }
 
     @Override

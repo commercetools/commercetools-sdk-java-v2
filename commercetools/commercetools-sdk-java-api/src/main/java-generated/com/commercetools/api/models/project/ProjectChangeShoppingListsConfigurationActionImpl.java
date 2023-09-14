@@ -75,6 +75,8 @@ public class ProjectChangeShoppingListsConfigurationActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(shoppingListsConfiguration, that.shoppingListsConfiguration)
+                .append(action, that.action)
+                .append(shoppingListsConfiguration, that.shoppingListsConfiguration)
                 .isEquals();
     }
 

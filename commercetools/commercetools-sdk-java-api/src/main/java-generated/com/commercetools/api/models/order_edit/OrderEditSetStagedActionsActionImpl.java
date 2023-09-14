@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderEditSetStagedActionsAction
+ *  <p>If the edit is applied, <code>stagedActions</code> cannot be updated.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedActionsAction, ModelBase {
@@ -50,7 +50,7 @@ public class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedAc
     }
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     *  <p>Value to replace the <code>stagedActions</code> of the Order Edit.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
@@ -76,7 +76,11 @@ public class OrderEditSetStagedActionsActionImpl implements OrderEditSetStagedAc
 
         OrderEditSetStagedActionsActionImpl that = (OrderEditSetStagedActionsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(stagedActions, that.stagedActions).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(stagedActions, that.stagedActions)
+                .append(action, that.action)
+                .append(stagedActions, that.stagedActions)
+                .isEquals();
     }
 
     @Override

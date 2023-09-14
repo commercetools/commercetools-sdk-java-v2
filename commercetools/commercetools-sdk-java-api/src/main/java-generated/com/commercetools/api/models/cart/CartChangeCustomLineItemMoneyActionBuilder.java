@@ -4,6 +4,8 @@ package com.commercetools.api.models.cart;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartChangeCustomLineItemMoneyAction cartChangeCustomLineItemMoneyAction = CartChangeCustomLineItemMoneyAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .money(moneyBuilder -> moneyBuilder)
  *             .build()
  * </code></pre>
@@ -23,18 +24,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartChangeCustomLineItemMoneyAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     private com.commercetools.api.models.common.Money money;
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public CartChangeCustomLineItemMoneyActionBuilder customLineItemId(final String customLineItemId) {
+    public CartChangeCustomLineItemMoneyActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartChangeCustomLineItemMoneyActionBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -74,12 +90,23 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -96,10 +123,8 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
      * @return CartChangeCustomLineItemMoneyAction
      */
     public CartChangeCustomLineItemMoneyAction build() {
-        Objects.requireNonNull(customLineItemId,
-            CartChangeCustomLineItemMoneyAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(money, CartChangeCustomLineItemMoneyAction.class + ": money is missing");
-        return new CartChangeCustomLineItemMoneyActionImpl(customLineItemId, money);
+        return new CartChangeCustomLineItemMoneyActionImpl(customLineItemId, customLineItemKey, money);
     }
 
     /**
@@ -107,7 +132,7 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
      * @return CartChangeCustomLineItemMoneyAction
      */
     public CartChangeCustomLineItemMoneyAction buildUnchecked() {
-        return new CartChangeCustomLineItemMoneyActionImpl(customLineItemId, money);
+        return new CartChangeCustomLineItemMoneyActionImpl(customLineItemId, customLineItemKey, money);
     }
 
     /**
@@ -126,6 +151,7 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
     public static CartChangeCustomLineItemMoneyActionBuilder of(final CartChangeCustomLineItemMoneyAction template) {
         CartChangeCustomLineItemMoneyActionBuilder builder = new CartChangeCustomLineItemMoneyActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.money = template.getMoney();
         return builder;
     }

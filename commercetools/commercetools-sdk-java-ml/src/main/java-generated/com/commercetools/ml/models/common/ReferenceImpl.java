@@ -70,7 +70,11 @@ public class ReferenceImpl implements Reference, ModelBase {
 
         ReferenceImpl that = (ReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .isEquals();
     }
 
     @Override

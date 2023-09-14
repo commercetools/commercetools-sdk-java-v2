@@ -47,7 +47,7 @@ public class AttributeDateTimeTypeImpl implements AttributeDateTimeType, ModelBa
 
         AttributeDateTimeTypeImpl that = (AttributeDateTimeTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).isEquals();
+        return new EqualsBuilder().append(name, that.name).append(name, that.name).isEquals();
     }
 
     @Override

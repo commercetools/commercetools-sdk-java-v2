@@ -71,7 +71,11 @@ public class ProductSelectionRemoveProductActionImpl implements ProductSelection
 
         ProductSelectionRemoveProductActionImpl that = (ProductSelectionRemoveProductActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(product, that.product).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(product, that.product)
+                .append(action, that.action)
+                .append(product, that.product)
+                .isEquals();
     }
 
     @Override

@@ -71,7 +71,11 @@ public class AzureFunctionsAuthenticationImpl implements AzureFunctionsAuthentic
 
         AzureFunctionsAuthenticationImpl that = (AzureFunctionsAuthenticationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(key, that.key)
+                .append(type, that.type)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

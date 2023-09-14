@@ -90,6 +90,9 @@ public class CategorySlugChangedMessagePayloadImpl implements CategorySlugChange
         return new EqualsBuilder().append(type, that.type)
                 .append(slug, that.slug)
                 .append(oldSlug, that.oldSlug)
+                .append(type, that.type)
+                .append(slug, that.slug)
+                .append(oldSlug, that.oldSlug)
                 .isEquals();
     }
 

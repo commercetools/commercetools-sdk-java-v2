@@ -62,7 +62,7 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
     }
 
     /**
-     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
+     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with Reference Expansion for Order Edits.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderEdit getObj() {
@@ -87,7 +87,13 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
 
         OrderEditReferenceImpl that = (OrderEditReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(obj, that.obj).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .isEquals();
     }
 
     @Override

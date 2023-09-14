@@ -13,6 +13,11 @@ public class TextLineItemDraftQueryBuilderDsl {
         return new TextLineItemDraftQueryBuilderDsl();
     }
 
+    public StringComparisonPredicateBuilder<TextLineItemDraftQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, TextLineItemDraftQueryBuilderDsl::of));
+    }
+
     public DateTimeComparisonPredicateBuilder<TextLineItemDraftQueryBuilderDsl> addedAt() {
         return new DateTimeComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("addedAt")),

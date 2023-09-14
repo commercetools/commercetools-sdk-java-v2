@@ -109,7 +109,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Asset.</p>
+     *  <p>User-defined identifier of the Asset. It is unique per Category or ProductVariant.</p>
      */
 
     public String getKey() {
@@ -163,6 +163,13 @@ public class AssetImpl implements Asset, ModelBase {
         AssetImpl that = (AssetImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(sources, that.sources)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(tags, that.tags)
+                .append(custom, that.custom)
+                .append(key, that.key)
+                .append(id, that.id)
                 .append(sources, that.sources)
                 .append(name, that.name)
                 .append(description, that.description)

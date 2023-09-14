@@ -146,6 +146,12 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
                 .append(total, that.total)
                 .append(results, that.results)
                 .append(meta, that.meta)
+                .append(limit, that.limit)
+                .append(offset, that.offset)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(results, that.results)
+                .append(meta, that.meta)
                 .isEquals();
     }
 

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Shipping Method and Set Custom Shipping Method update actions.</p>
+ *  <p>Generated after a successful Set ShippingMethod and Set Custom ShippingMethod update actions.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

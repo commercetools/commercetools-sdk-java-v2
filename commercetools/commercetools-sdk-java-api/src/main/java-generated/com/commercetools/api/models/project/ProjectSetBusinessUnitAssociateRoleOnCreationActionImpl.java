@@ -73,7 +73,11 @@ public class ProjectSetBusinessUnitAssociateRoleOnCreationActionImpl
 
         ProjectSetBusinessUnitAssociateRoleOnCreationActionImpl that = (ProjectSetBusinessUnitAssociateRoleOnCreationActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(associateRole, that.associateRole).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(associateRole, that.associateRole)
+                .append(action, that.action)
+                .append(associateRole, that.associateRole)
+                .isEquals();
     }
 
     @Override

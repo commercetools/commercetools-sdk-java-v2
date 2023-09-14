@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>ResourceIdentifier to an OrderEdit.</p>
+ *  <p>ResourceIdentifier to an OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentifier, ModelBase {
@@ -53,7 +53,7 @@ public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentif
     }
 
     /**
-     *  <p>Unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced OrderEdit.</p>
      */
 
     public String getId() {
@@ -61,7 +61,7 @@ public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentif
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced OrderEdit.</p>
      */
 
     public String getKey() {
@@ -86,7 +86,13 @@ public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentif
 
         OrderEditResourceIdentifierImpl that = (OrderEditResourceIdentifierImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

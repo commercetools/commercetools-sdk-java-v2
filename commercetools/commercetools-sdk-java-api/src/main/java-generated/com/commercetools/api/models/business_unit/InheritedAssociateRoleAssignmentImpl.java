@@ -76,7 +76,11 @@ public class InheritedAssociateRoleAssignmentImpl implements InheritedAssociateR
 
         InheritedAssociateRoleAssignmentImpl that = (InheritedAssociateRoleAssignmentImpl) o;
 
-        return new EqualsBuilder().append(associateRole, that.associateRole).append(source, that.source).isEquals();
+        return new EqualsBuilder().append(associateRole, that.associateRole)
+                .append(source, that.source)
+                .append(associateRole, that.associateRole)
+                .append(source, that.source)
+                .isEquals();
     }
 
     @Override

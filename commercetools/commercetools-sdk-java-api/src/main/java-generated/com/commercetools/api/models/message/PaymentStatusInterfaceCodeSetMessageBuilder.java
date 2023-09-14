@@ -54,8 +54,6 @@ public class PaymentStatusInterfaceCodeSetMessageBuilder implements Builder<Paym
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private String paymentId;
-
     @Nullable
     private String interfaceCode;
 
@@ -261,17 +259,6 @@ public class PaymentStatusInterfaceCodeSetMessageBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
-     * @param paymentId value to be set
-     * @return Builder
-     */
-
-    public PaymentStatusInterfaceCodeSetMessageBuilder paymentId(final String paymentId) {
-        this.paymentId = paymentId;
-        return this;
-    }
-
-    /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      * @param interfaceCode value to be set
      * @return Builder
@@ -376,15 +363,6 @@ public class PaymentStatusInterfaceCodeSetMessageBuilder implements Builder<Paym
     }
 
     /**
-     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
-     * @return paymentId
-     */
-
-    public String getPaymentId() {
-        return this.paymentId;
-    }
-
-    /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      * @return interfaceCode
      */
@@ -409,10 +387,8 @@ public class PaymentStatusInterfaceCodeSetMessageBuilder implements Builder<Paym
         Objects.requireNonNull(resource, PaymentStatusInterfaceCodeSetMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion,
             PaymentStatusInterfaceCodeSetMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(paymentId, PaymentStatusInterfaceCodeSetMessage.class + ": paymentId is missing");
         return new PaymentStatusInterfaceCodeSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentId,
-            interfaceCode);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, interfaceCode);
     }
 
     /**
@@ -421,8 +397,7 @@ public class PaymentStatusInterfaceCodeSetMessageBuilder implements Builder<Paym
      */
     public PaymentStatusInterfaceCodeSetMessage buildUnchecked() {
         return new PaymentStatusInterfaceCodeSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, paymentId,
-            interfaceCode);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, interfaceCode);
     }
 
     /**
@@ -450,7 +425,6 @@ public class PaymentStatusInterfaceCodeSetMessageBuilder implements Builder<Paym
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
-        builder.paymentId = template.getPaymentId();
         builder.interfaceCode = template.getInterfaceCode();
         return builder;
     }

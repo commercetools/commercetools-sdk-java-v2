@@ -54,7 +54,7 @@ public class OrderEditResultImpl implements OrderEditResult, ModelBase {
 
         OrderEditResultImpl that = (OrderEditResultImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

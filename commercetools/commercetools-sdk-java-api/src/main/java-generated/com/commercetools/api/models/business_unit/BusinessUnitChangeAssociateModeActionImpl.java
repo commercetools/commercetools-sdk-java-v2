@@ -72,7 +72,11 @@ public class BusinessUnitChangeAssociateModeActionImpl implements BusinessUnitCh
 
         BusinessUnitChangeAssociateModeActionImpl that = (BusinessUnitChangeAssociateModeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(associateMode, that.associateMode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(associateMode, that.associateMode)
+                .append(action, that.action)
+                .append(associateMode, that.associateMode)
+                .isEquals();
     }
 
     @Override

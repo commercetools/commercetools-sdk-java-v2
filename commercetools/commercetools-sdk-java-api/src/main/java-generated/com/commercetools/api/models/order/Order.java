@@ -15,6 +15,7 @@ import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.cart.CartOrigin;
 import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.cart.CustomLineItem;
+import com.commercetools.api.models.cart.DirectDiscount;
 import com.commercetools.api.models.cart.DiscountCodeInfo;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.LineItem;
@@ -59,10 +60,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .shippingMode(ShippingMode.SINGLE)
  *             .plusShipping(shippingBuilder -> shippingBuilder)
+ *             .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
+ *             .origin(CartOrigin.CUSTOMER)
  *             .orderState(OrderState.OPEN)
  *             .plusSyncInfo(syncInfoBuilder -> syncInfoBuilder)
- *             .origin(CartOrigin.CUSTOMER)
- *             .plusRefusedGifts(refusedGiftsBuilder -> refusedGiftsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -82,7 +83,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public String getId();
 
     /**
-     *  <p>The current version of the order.</p>
+     *  <p>Current version of the Order.</p>
      * @return version
      */
     @NotNull
@@ -90,7 +91,374 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public Long getVersion();
 
     /**
-     *
+     *  <p>User-defined identifier of the Order that is unique across a Project.</p>
+     * @return orderNumber
+     */
+
+    @JsonProperty("orderNumber")
+    public String getOrderNumber();
+
+    /**
+     *  <p>User-defined identifier of a purchase Order.</p>
+     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     * @return purchaseOrderNumber
+     */
+
+    @JsonProperty("purchaseOrderNumber")
+    public String getPurchaseOrderNumber();
+
+    /**
+     *  <p><code>id</code> of the Customer that the Order belongs to.</p>
+     * @return customerId
+     */
+
+    @JsonProperty("customerId")
+    public String getCustomerId();
+
+    /**
+     *  <p>Email address of the Customer that the Order belongs to.</p>
+     * @return customerEmail
+     */
+
+    @JsonProperty("customerEmail")
+    public String getCustomerEmail();
+
+    /**
+     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for LineItem Price selection.</p>
+     * @return customerGroup
+     */
+    @Valid
+    @JsonProperty("customerGroup")
+    public CustomerGroupReference getCustomerGroup();
+
+    /**
+     *  <p>Anonymous session associated with the Order.</p>
+     * @return anonymousId
+     */
+
+    @JsonProperty("anonymousId")
+    public String getAnonymousId();
+
+    /**
+     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     * @return businessUnit
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public BusinessUnitKeyReference getBusinessUnit();
+
+    /**
+     *  <p>Reference to a Store the Order belongs to.</p>
+     * @return store
+     */
+    @Valid
+    @JsonProperty("store")
+    public StoreKeyReference getStore();
+
+    /**
+     *  <p>Line Items that are part of the Order.</p>
+     * @return lineItems
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("lineItems")
+    public List<LineItem> getLineItems();
+
+    /**
+     *  <p>Custom Line Items that are part of the Order.</p>
+     * @return customLineItems
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("customLineItems")
+    public List<CustomLineItem> getCustomLineItems();
+
+    /**
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @return totalPrice
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("totalPrice")
+    public TypedMoney getTotalPrice();
+
+    /**
+     *  <ul>
+     *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
+     *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *  </ul>
+     * @return taxedPrice
+     */
+    @Valid
+    @JsonProperty("taxedPrice")
+    public TaxedPrice getTaxedPrice();
+
+    /**
+     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     * @return taxedShippingPrice
+     */
+    @Valid
+    @JsonProperty("taxedShippingPrice")
+    public TaxedPrice getTaxedShippingPrice();
+
+    /**
+     *  <p>Indicates how Tax Rates are set.</p>
+     * @return taxMode
+     */
+
+    @JsonProperty("taxMode")
+    public TaxMode getTaxMode();
+
+    /**
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @return taxRoundingMode
+     */
+
+    @JsonProperty("taxRoundingMode")
+    public RoundingMode getTaxRoundingMode();
+
+    /**
+     *  <p>Indicates how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     * @return taxCalculationMode
+     */
+
+    @JsonProperty("taxCalculationMode")
+    public TaxCalculationMode getTaxCalculationMode();
+
+    /**
+     *  <p>Indicates how stock quantities are tracked for Line Items in the Order.</p>
+     * @return inventoryMode
+     */
+
+    @JsonProperty("inventoryMode")
+    public InventoryMode getInventoryMode();
+
+    /**
+     *  <p>Billing address associated with the Order.</p>
+     * @return billingAddress
+     */
+    @Valid
+    @JsonProperty("billingAddress")
+    public Address getBillingAddress();
+
+    /**
+     *  <p>Shipping address associated with the Order. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @return shippingAddress
+     */
+    @Valid
+    @JsonProperty("shippingAddress")
+    public Address getShippingAddress();
+
+    /**
+     *  <p>Indicates whether there can be one or multiple Shipping Methods.</p>
+     * @return shippingMode
+     */
+    @NotNull
+    @JsonProperty("shippingMode")
+    public ShippingMode getShippingMode();
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod for <code>Single</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
+     *  <p>Shipping-related information for <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     * @return shippingInfo
+     */
+    @Valid
+    @JsonProperty("shippingInfo")
+    public ShippingInfo getShippingInfo();
+
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @return shippingRateInput
+     */
+    @Valid
+    @JsonProperty("shippingRateInput")
+    public ShippingRateInput getShippingRateInput();
+
+    /**
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     * @return shippingCustomFields
+     */
+    @Valid
+    @JsonProperty("shippingCustomFields")
+    public CustomFields getShippingCustomFields();
+
+    /**
+     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @return shipping
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("shipping")
+    public List<Shipping> getShipping();
+
+    /**
+     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @return itemShippingAddresses
+     */
+    @Valid
+    @JsonProperty("itemShippingAddresses")
+    public List<Address> getItemShippingAddresses();
+
+    /**
+     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @return discountCodes
+     */
+    @Valid
+    @JsonProperty("discountCodes")
+    public List<DiscountCodeInfo> getDiscountCodes();
+
+    /**
+     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @return directDiscounts
+     */
+    @Valid
+    @JsonProperty("directDiscounts")
+    public List<DirectDiscount> getDirectDiscounts();
+
+    /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     * @return refusedGifts
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("refusedGifts")
+    public List<CartDiscountReference> getRefusedGifts();
+
+    /**
+     *  <p>Payment information related to the Order.</p>
+     * @return paymentInfo
+     */
+    @Valid
+    @JsonProperty("paymentInfo")
+    public PaymentInfo getPaymentInfo();
+
+    /**
+     *  <p>Used for LineItem Price selection.</p>
+     * @return country
+     */
+
+    @JsonProperty("country")
+    public String getCountry();
+
+    /**
+     *  <p>Languages of the Order. Can only contain languages supported by the Project.</p>
+     * @return locale
+     */
+
+    @JsonProperty("locale")
+    public String getLocale();
+
+    /**
+     *  <p>Indicates the origin of the Cart from which the Order was created.</p>
+     * @return origin
+     */
+    @NotNull
+    @JsonProperty("origin")
+    public CartOrigin getOrigin();
+
+    /**
+     *  <p>Reference to the Cart for an Order created from Cart. The referenced Cart will have the <code>Ordered</code> CartState.</p>
+     * @return cart
+     */
+    @Valid
+    @JsonProperty("cart")
+    public CartReference getCart();
+
+    /**
+     *  <p>Reference to the Quote for an Order created from Quote.</p>
+     * @return quote
+     */
+    @Valid
+    @JsonProperty("quote")
+    public QuoteReference getQuote();
+
+    /**
+     *  <p>Current status of the Order.</p>
+     * @return orderState
+     */
+    @NotNull
+    @JsonProperty("orderState")
+    public OrderState getOrderState();
+
+    /**
+     *  <p>Shipment status of the Order.</p>
+     * @return shipmentState
+     */
+
+    @JsonProperty("shipmentState")
+    public ShipmentState getShipmentState();
+
+    /**
+     *  <p>Payment status of the Order.</p>
+     * @return paymentState
+     */
+
+    @JsonProperty("paymentState")
+    public PaymentState getPaymentState();
+
+    /**
+     *  <p>State of the Order. This reference can point to a State in a custom workflow.</p>
+     * @return state
+     */
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
+
+    /**
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     * @return syncInfo
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("syncInfo")
+    public List<SyncInfo> getSyncInfo();
+
+    /**
+     *  <p>Contains information regarding the returns associated with the Order.</p>
+     * @return returnInfo
+     */
+    @Valid
+    @JsonProperty("returnInfo")
+    public List<ReturnInfo> getReturnInfo();
+
+    /**
+     *  <p>Internal-only field.</p>
+     * @return lastMessageSequenceNumber
+     */
+    @Deprecated
+    @JsonProperty("lastMessageSequenceNumber")
+    public Long getLastMessageSequenceNumber();
+
+    /**
+     *  <p>Custom Fields of the Order.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
+    /**
+     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using Order Import.</p>
+     * @return completedAt
+     */
+
+    @JsonProperty("completedAt")
+    public ZonedDateTime getCompletedAt();
+
+    /**
+     *  <p>Date and time (UTC) the Order was initially created.</p>
      * @return createdAt
      */
     @NotNull
@@ -98,7 +466,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Order was last updated.</p>
      * @return lastModifiedAt
      */
     @NotNull
@@ -122,331 +490,192 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>This field will only be present if it was set for Order Import</p>
-     * @return completedAt
+     *  <p>Unique identifier of the Order.</p>
+     * @param id value to be set
      */
 
-    @JsonProperty("completedAt")
-    public ZonedDateTime getCompletedAt();
+    public void setId(final String id);
 
     /**
-     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
-     * @return orderNumber
+     *  <p>Current version of the Order.</p>
+     * @param version value to be set
      */
 
-    @JsonProperty("orderNumber")
-    public String getOrderNumber();
+    public void setVersion(final Long version);
 
     /**
-     *
-     * @return customerId
+     *  <p>User-defined identifier of the Order that is unique across a Project.</p>
+     * @param orderNumber value to be set
      */
 
-    @JsonProperty("customerId")
-    public String getCustomerId();
+    public void setOrderNumber(final String orderNumber);
 
     /**
-     *
-     * @return customerEmail
+     *  <p>User-defined identifier of a purchase Order.</p>
+     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     * @param purchaseOrderNumber value to be set
      */
 
-    @JsonProperty("customerEmail")
-    public String getCustomerEmail();
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
-     * @return anonymousId
+     *  <p><code>id</code> of the Customer that the Order belongs to.</p>
+     * @param customerId value to be set
      */
 
-    @JsonProperty("anonymousId")
-    public String getAnonymousId();
+    public void setCustomerId(final String customerId);
 
     /**
-     *  <p>The Business Unit the Order belongs to.</p>
-     * @return businessUnit
+     *  <p>Email address of the Customer that the Order belongs to.</p>
+     * @param customerEmail value to be set
      */
-    @Valid
-    @JsonProperty("businessUnit")
-    public BusinessUnitKeyReference getBusinessUnit();
+
+    public void setCustomerEmail(final String customerEmail);
 
     /**
-     *
-     * @return store
+     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for LineItem Price selection.</p>
+     * @param customerGroup value to be set
      */
-    @Valid
-    @JsonProperty("store")
-    public StoreKeyReference getStore();
+
+    public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
     /**
-     *
-     * @return lineItems
+     *  <p>Anonymous session associated with the Order.</p>
+     * @param anonymousId value to be set
      */
-    @NotNull
-    @Valid
-    @JsonProperty("lineItems")
-    public List<LineItem> getLineItems();
+
+    public void setAnonymousId(final String anonymousId);
 
     /**
-     *
-     * @return customLineItems
+     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     * @param businessUnit value to be set
      */
-    @NotNull
-    @Valid
-    @JsonProperty("customLineItems")
-    public List<CustomLineItem> getCustomLineItems();
+
+    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     /**
-     *
-     * @return totalPrice
+     *  <p>Reference to a Store the Order belongs to.</p>
+     * @param store value to be set
      */
-    @NotNull
-    @Valid
-    @JsonProperty("totalPrice")
-    public TypedMoney getTotalPrice();
+
+    public void setStore(final StoreKeyReference store);
 
     /**
-     *  <p>The taxes are calculated based on the shipping address.</p>
-     * @return taxedPrice
+     *  <p>Line Items that are part of the Order.</p>
+     * @param lineItems values to be set
      */
-    @Valid
-    @JsonProperty("taxedPrice")
-    public TaxedPrice getTaxedPrice();
+
+    @JsonIgnore
+    public void setLineItems(final LineItem... lineItems);
 
     /**
-     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
-     * @return taxedShippingPrice
+     *  <p>Line Items that are part of the Order.</p>
+     * @param lineItems values to be set
      */
-    @Valid
-    @JsonProperty("taxedShippingPrice")
-    public TaxedPrice getTaxedShippingPrice();
+
+    public void setLineItems(final List<LineItem> lineItems);
 
     /**
-     *  <p>Holds all shipping-related information per Shipping Method.</p>
-     *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
-     * @return shippingAddress
+     *  <p>Custom Line Items that are part of the Order.</p>
+     * @param customLineItems values to be set
      */
-    @Valid
-    @JsonProperty("shippingAddress")
-    public Address getShippingAddress();
+
+    @JsonIgnore
+    public void setCustomLineItems(final CustomLineItem... customLineItems);
 
     /**
-     *
-     * @return billingAddress
+     *  <p>Custom Line Items that are part of the Order.</p>
+     * @param customLineItems values to be set
      */
-    @Valid
-    @JsonProperty("billingAddress")
-    public Address getBillingAddress();
+
+    public void setCustomLineItems(final List<CustomLineItem> customLineItems);
 
     /**
-     *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
-     * @return shippingMode
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @param totalPrice value to be set
      */
-    @NotNull
-    @JsonProperty("shippingMode")
-    public ShippingMode getShippingMode();
+
+    public void setTotalPrice(final TypedMoney totalPrice);
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method with <code>Single</code> ShippingMode.</p>
-     * @return shippingKey
+     *  <ul>
+     *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
+     *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *  </ul>
+     * @param taxedPrice value to be set
      */
 
-    @JsonProperty("shippingKey")
-    public String getShippingKey();
+    public void setTaxedPrice(final TaxedPrice taxedPrice);
 
     /**
-     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
-     * @return shippingCustomFields
+     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     * @param taxedShippingPrice value to be set
      */
-    @Valid
-    @JsonProperty("shippingCustomFields")
-    public CustomFields getShippingCustomFields();
+
+    public void setTaxedShippingPrice(final TaxedPrice taxedShippingPrice);
 
     /**
-     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
-     *  <p>It is updated automatically after the Shipping Method is added.</p>
-     * @return shipping
+     *  <p>Indicates how Tax Rates are set.</p>
+     * @param taxMode value to be set
      */
-    @NotNull
-    @Valid
-    @JsonProperty("shipping")
-    public List<Shipping> getShipping();
+
+    public void setTaxMode(final TaxMode taxMode);
 
     /**
-     *
-     * @return taxMode
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @param taxRoundingMode value to be set
      */
 
-    @JsonProperty("taxMode")
-    public TaxMode getTaxMode();
+    public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
     /**
-     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
-     * @return taxRoundingMode
+     *  <p>Indicates how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     * @param taxCalculationMode value to be set
      */
 
-    @JsonProperty("taxRoundingMode")
-    public RoundingMode getTaxRoundingMode();
+    public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
 
     /**
-     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
-     * @return customerGroup
+     *  <p>Indicates how stock quantities are tracked for Line Items in the Order.</p>
+     * @param inventoryMode value to be set
      */
-    @Valid
-    @JsonProperty("customerGroup")
-    public CustomerGroupReference getCustomerGroup();
+
+    public void setInventoryMode(final InventoryMode inventoryMode);
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
-     * @return country
+     *  <p>Billing address associated with the Order.</p>
+     * @param billingAddress value to be set
      */
 
-    @JsonProperty("country")
-    public String getCountry();
+    public void setBillingAddress(final Address billingAddress);
 
     /**
-     *  <p>One of the four predefined OrderStates.</p>
-     * @return orderState
+     *  <p>Shipping address associated with the Order. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @param shippingAddress value to be set
      */
-    @NotNull
-    @JsonProperty("orderState")
-    public OrderState getOrderState();
+
+    public void setShippingAddress(final Address shippingAddress);
 
     /**
-     *  <p>This reference can point to a state in a custom workflow.</p>
-     * @return state
+     *  <p>Indicates whether there can be one or multiple Shipping Methods.</p>
+     * @param shippingMode value to be set
      */
-    @Valid
-    @JsonProperty("state")
-    public StateReference getState();
+
+    public void setShippingMode(final ShippingMode shippingMode);
 
     /**
-     *
-     * @return shipmentState
+     *  <p><code>key</code> of the ShippingMethod for <code>Single</code> ShippingMode.</p>
+     * @param shippingKey value to be set
      */
 
-    @JsonProperty("shipmentState")
-    public ShipmentState getShipmentState();
+    public void setShippingKey(final String shippingKey);
 
     /**
-     *
-     * @return paymentState
+     *  <p>Shipping-related information for <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     * @param shippingInfo value to be set
      */
 
-    @JsonProperty("paymentState")
-    public PaymentState getPaymentState();
-
-    /**
-     *  <p>Set if the ShippingMethod is set.</p>
-     * @return shippingInfo
-     */
-    @Valid
-    @JsonProperty("shippingInfo")
-    public ShippingInfo getShippingInfo();
-
-    /**
-     *
-     * @return syncInfo
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("syncInfo")
-    public List<SyncInfo> getSyncInfo();
-
-    /**
-     *
-     * @return returnInfo
-     */
-    @Valid
-    @JsonProperty("returnInfo")
-    public List<ReturnInfo> getReturnInfo();
-
-    /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
-     * @return purchaseOrderNumber
-     */
-
-    @JsonProperty("purchaseOrderNumber")
-    public String getPurchaseOrderNumber();
-
-    /**
-     *
-     * @return discountCodes
-     */
-    @Valid
-    @JsonProperty("discountCodes")
-    public List<DiscountCodeInfo> getDiscountCodes();
-
-    /**
-     *  <p>Internal-only field.</p>
-     * @return lastMessageSequenceNumber
-     */
-    @Deprecated
-    @JsonProperty("lastMessageSequenceNumber")
-    public Long getLastMessageSequenceNumber();
-
-    /**
-     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
-     * @return cart
-     */
-    @Valid
-    @JsonProperty("cart")
-    public CartReference getCart();
-
-    /**
-     *  <p>Set when this order was created from a quote.</p>
-     * @return quote
-     */
-    @Valid
-    @JsonProperty("quote")
-    public QuoteReference getQuote();
-
-    /**
-     *
-     * @return custom
-     */
-    @Valid
-    @JsonProperty("custom")
-    public CustomFields getCustom();
-
-    /**
-     *
-     * @return paymentInfo
-     */
-    @Valid
-    @JsonProperty("paymentInfo")
-    public PaymentInfo getPaymentInfo();
-
-    /**
-     *
-     * @return locale
-     */
-
-    @JsonProperty("locale")
-    public String getLocale();
-
-    /**
-     *
-     * @return inventoryMode
-     */
-
-    @JsonProperty("inventoryMode")
-    public InventoryMode getInventoryMode();
-
-    /**
-     *
-     * @return origin
-     */
-    @NotNull
-    @JsonProperty("origin")
-    public CartOrigin getOrigin();
-
-    /**
-     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
-     * @return taxCalculationMode
-     */
-
-    @JsonProperty("taxCalculationMode")
-    public TaxCalculationMode getTaxCalculationMode();
+    public void setShippingInfo(final ShippingInfo shippingInfo);
 
     /**
      *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
@@ -455,52 +684,223 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
      *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
      *   <li>If <code>CartValue</code>, it cannot be used.</li>
      *  </ul>
-     * @return shippingRateInput
-     */
-    @Valid
-    @JsonProperty("shippingRateInput")
-    public ShippingRateInput getShippingRateInput();
-
-    /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-     * @return itemShippingAddresses
-     */
-    @Valid
-    @JsonProperty("itemShippingAddresses")
-    public List<Address> getItemShippingAddresses();
-
-    /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
-     * @return refusedGifts
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("refusedGifts")
-    public List<CartDiscountReference> getRefusedGifts();
-
-    /**
-     *  <p>Unique identifier of the Order.</p>
-     * @param id value to be set
+     * @param shippingRateInput value to be set
      */
 
-    public void setId(final String id);
+    public void setShippingRateInput(final ShippingRateInput shippingRateInput);
 
     /**
-     *  <p>The current version of the order.</p>
-     * @param version value to be set
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     * @param shippingCustomFields value to be set
      */
 
-    public void setVersion(final Long version);
+    public void setShippingCustomFields(final CustomFields shippingCustomFields);
 
     /**
-     * set createdAt
+     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param shipping values to be set
+     */
+
+    @JsonIgnore
+    public void setShipping(final Shipping... shipping);
+
+    /**
+     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param shipping values to be set
+     */
+
+    public void setShipping(final List<Shipping> shipping);
+
+    /**
+     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses values to be set
+     */
+
+    @JsonIgnore
+    public void setItemShippingAddresses(final Address... itemShippingAddresses);
+
+    /**
+     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses values to be set
+     */
+
+    public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
+
+    /**
+     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param discountCodes values to be set
+     */
+
+    @JsonIgnore
+    public void setDiscountCodes(final DiscountCodeInfo... discountCodes);
+
+    /**
+     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param discountCodes values to be set
+     */
+
+    public void setDiscountCodes(final List<DiscountCodeInfo> discountCodes);
+
+    /**
+     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param directDiscounts values to be set
+     */
+
+    @JsonIgnore
+    public void setDirectDiscounts(final DirectDiscount... directDiscounts);
+
+    /**
+     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param directDiscounts values to be set
+     */
+
+    public void setDirectDiscounts(final List<DirectDiscount> directDiscounts);
+
+    /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     * @param refusedGifts values to be set
+     */
+
+    @JsonIgnore
+    public void setRefusedGifts(final CartDiscountReference... refusedGifts);
+
+    /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     * @param refusedGifts values to be set
+     */
+
+    public void setRefusedGifts(final List<CartDiscountReference> refusedGifts);
+
+    /**
+     *  <p>Payment information related to the Order.</p>
+     * @param paymentInfo value to be set
+     */
+
+    public void setPaymentInfo(final PaymentInfo paymentInfo);
+
+    /**
+     *  <p>Used for LineItem Price selection.</p>
+     * @param country value to be set
+     */
+
+    public void setCountry(final String country);
+
+    /**
+     *  <p>Languages of the Order. Can only contain languages supported by the Project.</p>
+     * @param locale value to be set
+     */
+
+    public void setLocale(final String locale);
+
+    /**
+     *  <p>Indicates the origin of the Cart from which the Order was created.</p>
+     * @param origin value to be set
+     */
+
+    public void setOrigin(final CartOrigin origin);
+
+    /**
+     *  <p>Reference to the Cart for an Order created from Cart. The referenced Cart will have the <code>Ordered</code> CartState.</p>
+     * @param cart value to be set
+     */
+
+    public void setCart(final CartReference cart);
+
+    /**
+     *  <p>Reference to the Quote for an Order created from Quote.</p>
+     * @param quote value to be set
+     */
+
+    public void setQuote(final QuoteReference quote);
+
+    /**
+     *  <p>Current status of the Order.</p>
+     * @param orderState value to be set
+     */
+
+    public void setOrderState(final OrderState orderState);
+
+    /**
+     *  <p>Shipment status of the Order.</p>
+     * @param shipmentState value to be set
+     */
+
+    public void setShipmentState(final ShipmentState shipmentState);
+
+    /**
+     *  <p>Payment status of the Order.</p>
+     * @param paymentState value to be set
+     */
+
+    public void setPaymentState(final PaymentState paymentState);
+
+    /**
+     *  <p>State of the Order. This reference can point to a State in a custom workflow.</p>
+     * @param state value to be set
+     */
+
+    public void setState(final StateReference state);
+
+    /**
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     * @param syncInfo values to be set
+     */
+
+    @JsonIgnore
+    public void setSyncInfo(final SyncInfo... syncInfo);
+
+    /**
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     * @param syncInfo values to be set
+     */
+
+    public void setSyncInfo(final List<SyncInfo> syncInfo);
+
+    /**
+     *  <p>Contains information regarding the returns associated with the Order.</p>
+     * @param returnInfo values to be set
+     */
+
+    @JsonIgnore
+    public void setReturnInfo(final ReturnInfo... returnInfo);
+
+    /**
+     *  <p>Contains information regarding the returns associated with the Order.</p>
+     * @param returnInfo values to be set
+     */
+
+    public void setReturnInfo(final List<ReturnInfo> returnInfo);
+
+    /**
+     *  <p>Internal-only field.</p>
+     * @param lastMessageSequenceNumber value to be set
+     */
+    @Deprecated
+    public void setLastMessageSequenceNumber(final Long lastMessageSequenceNumber);
+
+    /**
+     *  <p>Custom Fields of the Order.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using Order Import.</p>
+     * @param completedAt value to be set
+     */
+
+    public void setCompletedAt(final ZonedDateTime completedAt);
+
+    /**
+     *  <p>Date and time (UTC) the Order was initially created.</p>
      * @param createdAt value to be set
      */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     * set lastModifiedAt
+     *  <p>Date and time (UTC) the Order was last updated.</p>
      * @param lastModifiedAt value to be set
      */
 
@@ -521,379 +921,6 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setCreatedBy(final CreatedBy createdBy);
 
     /**
-     *  <p>This field will only be present if it was set for Order Import</p>
-     * @param completedAt value to be set
-     */
-
-    public void setCompletedAt(final ZonedDateTime completedAt);
-
-    /**
-     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
-     * @param orderNumber value to be set
-     */
-
-    public void setOrderNumber(final String orderNumber);
-
-    /**
-     * set customerId
-     * @param customerId value to be set
-     */
-
-    public void setCustomerId(final String customerId);
-
-    /**
-     * set customerEmail
-     * @param customerEmail value to be set
-     */
-
-    public void setCustomerEmail(final String customerEmail);
-
-    /**
-     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
-     * @param anonymousId value to be set
-     */
-
-    public void setAnonymousId(final String anonymousId);
-
-    /**
-     *  <p>The Business Unit the Order belongs to.</p>
-     * @param businessUnit value to be set
-     */
-
-    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
-
-    /**
-     * set store
-     * @param store value to be set
-     */
-
-    public void setStore(final StoreKeyReference store);
-
-    /**
-     * set lineItems
-     * @param lineItems values to be set
-     */
-
-    @JsonIgnore
-    public void setLineItems(final LineItem... lineItems);
-
-    /**
-     * set lineItems
-     * @param lineItems values to be set
-     */
-
-    public void setLineItems(final List<LineItem> lineItems);
-
-    /**
-     * set customLineItems
-     * @param customLineItems values to be set
-     */
-
-    @JsonIgnore
-    public void setCustomLineItems(final CustomLineItem... customLineItems);
-
-    /**
-     * set customLineItems
-     * @param customLineItems values to be set
-     */
-
-    public void setCustomLineItems(final List<CustomLineItem> customLineItems);
-
-    /**
-     * set totalPrice
-     * @param totalPrice value to be set
-     */
-
-    public void setTotalPrice(final TypedMoney totalPrice);
-
-    /**
-     *  <p>The taxes are calculated based on the shipping address.</p>
-     * @param taxedPrice value to be set
-     */
-
-    public void setTaxedPrice(final TaxedPrice taxedPrice);
-
-    /**
-     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
-     * @param taxedShippingPrice value to be set
-     */
-
-    public void setTaxedShippingPrice(final TaxedPrice taxedShippingPrice);
-
-    /**
-     *  <p>Holds all shipping-related information per Shipping Method.</p>
-     *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
-     * @param shippingAddress value to be set
-     */
-
-    public void setShippingAddress(final Address shippingAddress);
-
-    /**
-     * set billingAddress
-     * @param billingAddress value to be set
-     */
-
-    public void setBillingAddress(final Address billingAddress);
-
-    /**
-     *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
-     * @param shippingMode value to be set
-     */
-
-    public void setShippingMode(final ShippingMode shippingMode);
-
-    /**
-     *  <p>User-defined unique identifier of the Shipping Method with <code>Single</code> ShippingMode.</p>
-     * @param shippingKey value to be set
-     */
-
-    public void setShippingKey(final String shippingKey);
-
-    /**
-     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
-     * @param shippingCustomFields value to be set
-     */
-
-    public void setShippingCustomFields(final CustomFields shippingCustomFields);
-
-    /**
-     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
-     *  <p>It is updated automatically after the Shipping Method is added.</p>
-     * @param shipping values to be set
-     */
-
-    @JsonIgnore
-    public void setShipping(final Shipping... shipping);
-
-    /**
-     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
-     *  <p>It is updated automatically after the Shipping Method is added.</p>
-     * @param shipping values to be set
-     */
-
-    public void setShipping(final List<Shipping> shipping);
-
-    /**
-     * set taxMode
-     * @param taxMode value to be set
-     */
-
-    public void setTaxMode(final TaxMode taxMode);
-
-    /**
-     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
-     * @param taxRoundingMode value to be set
-     */
-
-    public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
-
-    /**
-     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
-     * @param customerGroup value to be set
-     */
-
-    public void setCustomerGroup(final CustomerGroupReference customerGroup);
-
-    /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
-     * @param country value to be set
-     */
-
-    public void setCountry(final String country);
-
-    /**
-     *  <p>One of the four predefined OrderStates.</p>
-     * @param orderState value to be set
-     */
-
-    public void setOrderState(final OrderState orderState);
-
-    /**
-     *  <p>This reference can point to a state in a custom workflow.</p>
-     * @param state value to be set
-     */
-
-    public void setState(final StateReference state);
-
-    /**
-     * set shipmentState
-     * @param shipmentState value to be set
-     */
-
-    public void setShipmentState(final ShipmentState shipmentState);
-
-    /**
-     * set paymentState
-     * @param paymentState value to be set
-     */
-
-    public void setPaymentState(final PaymentState paymentState);
-
-    /**
-     *  <p>Set if the ShippingMethod is set.</p>
-     * @param shippingInfo value to be set
-     */
-
-    public void setShippingInfo(final ShippingInfo shippingInfo);
-
-    /**
-     * set syncInfo
-     * @param syncInfo values to be set
-     */
-
-    @JsonIgnore
-    public void setSyncInfo(final SyncInfo... syncInfo);
-
-    /**
-     * set syncInfo
-     * @param syncInfo values to be set
-     */
-
-    public void setSyncInfo(final List<SyncInfo> syncInfo);
-
-    /**
-     * set returnInfo
-     * @param returnInfo values to be set
-     */
-
-    @JsonIgnore
-    public void setReturnInfo(final ReturnInfo... returnInfo);
-
-    /**
-     * set returnInfo
-     * @param returnInfo values to be set
-     */
-
-    public void setReturnInfo(final List<ReturnInfo> returnInfo);
-
-    /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
-     * @param purchaseOrderNumber value to be set
-     */
-
-    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
-
-    /**
-     * set discountCodes
-     * @param discountCodes values to be set
-     */
-
-    @JsonIgnore
-    public void setDiscountCodes(final DiscountCodeInfo... discountCodes);
-
-    /**
-     * set discountCodes
-     * @param discountCodes values to be set
-     */
-
-    public void setDiscountCodes(final List<DiscountCodeInfo> discountCodes);
-
-    /**
-     *  <p>Internal-only field.</p>
-     * @param lastMessageSequenceNumber value to be set
-     */
-    @Deprecated
-    public void setLastMessageSequenceNumber(final Long lastMessageSequenceNumber);
-
-    /**
-     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
-     * @param cart value to be set
-     */
-
-    public void setCart(final CartReference cart);
-
-    /**
-     *  <p>Set when this order was created from a quote.</p>
-     * @param quote value to be set
-     */
-
-    public void setQuote(final QuoteReference quote);
-
-    /**
-     * set custom
-     * @param custom value to be set
-     */
-
-    public void setCustom(final CustomFields custom);
-
-    /**
-     * set paymentInfo
-     * @param paymentInfo value to be set
-     */
-
-    public void setPaymentInfo(final PaymentInfo paymentInfo);
-
-    /**
-     * set locale
-     * @param locale value to be set
-     */
-
-    public void setLocale(final String locale);
-
-    /**
-     * set inventoryMode
-     * @param inventoryMode value to be set
-     */
-
-    public void setInventoryMode(final InventoryMode inventoryMode);
-
-    /**
-     * set origin
-     * @param origin value to be set
-     */
-
-    public void setOrigin(final CartOrigin origin);
-
-    /**
-     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
-     * @param taxCalculationMode value to be set
-     */
-
-    public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
-
-    /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
-     *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
-     *   <li>If <code>CartValue</code>, it cannot be used.</li>
-     *  </ul>
-     * @param shippingRateInput value to be set
-     */
-
-    public void setShippingRateInput(final ShippingRateInput shippingRateInput);
-
-    /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-     * @param itemShippingAddresses values to be set
-     */
-
-    @JsonIgnore
-    public void setItemShippingAddresses(final Address... itemShippingAddresses);
-
-    /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-     * @param itemShippingAddresses values to be set
-     */
-
-    public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
-
-    /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
-     * @param refusedGifts values to be set
-     */
-
-    @JsonIgnore
-    public void setRefusedGifts(final CartDiscountReference... refusedGifts);
-
-    /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
-     * @param refusedGifts values to be set
-     */
-
-    public void setRefusedGifts(final List<CartDiscountReference> refusedGifts);
-
-    /**
      * factory method
      * @return instance of Order
      */
@@ -912,12 +939,11 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(template.getLastModifiedBy());
-        instance.setCreatedBy(template.getCreatedBy());
-        instance.setCompletedAt(template.getCompletedAt());
         instance.setOrderNumber(template.getOrderNumber());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setCustomerId(template.getCustomerId());
         instance.setCustomerEmail(template.getCustomerEmail());
+        instance.setCustomerGroup(template.getCustomerGroup());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setBusinessUnit(template.getBusinessUnit());
         instance.setStore(template.getStore());
@@ -926,37 +952,39 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxedShippingPrice(template.getTaxedShippingPrice());
-        instance.setShippingAddress(template.getShippingAddress());
-        instance.setBillingAddress(template.getBillingAddress());
-        instance.setShippingMode(template.getShippingMode());
-        instance.setShippingKey(template.getShippingKey());
-        instance.setShippingCustomFields(template.getShippingCustomFields());
-        instance.setShipping(template.getShipping());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
-        instance.setCustomerGroup(template.getCustomerGroup());
-        instance.setCountry(template.getCountry());
-        instance.setOrderState(template.getOrderState());
-        instance.setState(template.getState());
-        instance.setShipmentState(template.getShipmentState());
-        instance.setPaymentState(template.getPaymentState());
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setBillingAddress(template.getBillingAddress());
+        instance.setShippingAddress(template.getShippingAddress());
+        instance.setShippingMode(template.getShippingMode());
+        instance.setShippingKey(template.getShippingKey());
         instance.setShippingInfo(template.getShippingInfo());
-        instance.setSyncInfo(template.getSyncInfo());
-        instance.setReturnInfo(template.getReturnInfo());
-        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
+        instance.setShippingRateInput(template.getShippingRateInput());
+        instance.setShippingCustomFields(template.getShippingCustomFields());
+        instance.setShipping(template.getShipping());
+        instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDiscountCodes(template.getDiscountCodes());
-        instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
+        instance.setDirectDiscounts(template.getDirectDiscounts());
+        instance.setRefusedGifts(template.getRefusedGifts());
+        instance.setPaymentInfo(template.getPaymentInfo());
+        instance.setCountry(template.getCountry());
+        instance.setLocale(template.getLocale());
+        instance.setOrigin(template.getOrigin());
         instance.setCart(template.getCart());
         instance.setQuote(template.getQuote());
+        instance.setOrderState(template.getOrderState());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setState(template.getState());
+        instance.setSyncInfo(template.getSyncInfo());
+        instance.setReturnInfo(template.getReturnInfo());
+        instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCustom(template.getCustom());
-        instance.setPaymentInfo(template.getPaymentInfo());
-        instance.setLocale(template.getLocale());
-        instance.setInventoryMode(template.getInventoryMode());
-        instance.setOrigin(template.getOrigin());
-        instance.setTaxCalculationMode(template.getTaxCalculationMode());
-        instance.setShippingRateInput(template.getShippingRateInput());
-        instance.setItemShippingAddresses(template.getItemShippingAddresses());
-        instance.setRefusedGifts(template.getRefusedGifts());
+        instance.setCompletedAt(template.getCompletedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
+        instance.setCreatedBy(template.getCreatedBy());
         return instance;
     }
 
@@ -979,13 +1007,12 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(
-            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
-        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
-        instance.setCompletedAt(template.getCompletedAt());
         instance.setOrderNumber(template.getOrderNumber());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setCustomerId(template.getCustomerId());
         instance.setCustomerEmail(template.getCustomerEmail());
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
         instance.setAnonymousId(template.getAnonymousId());
         instance.setBusinessUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));
@@ -1004,11 +1031,18 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedShippingPrice(
             com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedShippingPrice()));
+        instance.setTaxMode(template.getTaxMode());
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));
         instance.setShippingAddress(
             com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));
-        instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));
         instance.setShippingMode(template.getShippingMode());
         instance.setShippingKey(template.getShippingKey());
+        instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
         instance.setShippingCustomFields(
             com.commercetools.api.models.type.CustomFields.deepCopy(template.getShippingCustomFields()));
         instance.setShipping(Optional.ofNullable(template.getShipping())
@@ -1016,16 +1050,36 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
                         .map(com.commercetools.api.models.cart.Shipping::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTaxMode(template.getTaxMode());
-        instance.setTaxRoundingMode(template.getTaxRoundingMode());
-        instance.setCustomerGroup(
-            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Address::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDiscountCodes(Optional.ofNullable(template.getDiscountCodes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.DiscountCodeInfo::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDirectDiscounts(Optional.ofNullable(template.getDirectDiscounts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.DirectDiscount::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setRefusedGifts(Optional.ofNullable(template.getRefusedGifts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart_discount.CartDiscountReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setPaymentInfo(com.commercetools.api.models.order.PaymentInfo.deepCopy(template.getPaymentInfo()));
         instance.setCountry(template.getCountry());
+        instance.setLocale(template.getLocale());
+        instance.setOrigin(template.getOrigin());
+        instance.setCart(com.commercetools.api.models.cart.CartReference.deepCopy(template.getCart()));
+        instance.setQuote(com.commercetools.api.models.quote.QuoteReference.deepCopy(template.getQuote()));
         instance.setOrderState(template.getOrderState());
-        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
-        instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setSyncInfo(Optional.ofNullable(template.getSyncInfo())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.SyncInfo::deepCopy)
@@ -1036,33 +1090,12 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
                         .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
-        instance.setDiscountCodes(Optional.ofNullable(template.getDiscountCodes())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.DiscountCodeInfo::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
-        instance.setCart(com.commercetools.api.models.cart.CartReference.deepCopy(template.getCart()));
-        instance.setQuote(com.commercetools.api.models.quote.QuoteReference.deepCopy(template.getQuote()));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
-        instance.setPaymentInfo(com.commercetools.api.models.order.PaymentInfo.deepCopy(template.getPaymentInfo()));
-        instance.setLocale(template.getLocale());
-        instance.setInventoryMode(template.getInventoryMode());
-        instance.setOrigin(template.getOrigin());
-        instance.setTaxCalculationMode(template.getTaxCalculationMode());
-        instance.setShippingRateInput(
-            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
-        instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.Address::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
-        instance.setRefusedGifts(Optional.ofNullable(template.getRefusedGifts())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart_discount.CartDiscountReference::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
+        instance.setCompletedAt(template.getCompletedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         return instance;
     }
 

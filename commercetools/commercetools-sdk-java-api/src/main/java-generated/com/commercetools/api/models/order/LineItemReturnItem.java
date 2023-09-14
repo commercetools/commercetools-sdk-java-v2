@@ -42,7 +42,15 @@ public interface LineItemReturnItem extends ReturnItem {
     String LINE_ITEM_RETURN_ITEM = "LineItemReturnItem";
 
     /**
-     *
+     *  <p>User-defined unique identifier of the LineItemReturnItem.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p><code>id</code> of the returned LineItem.</p>
      * @return lineItemId
      */
     @NotNull
@@ -50,11 +58,33 @@ public interface LineItemReturnItem extends ReturnItem {
     public String getLineItemId();
 
     /**
-     * set lineItemId
+     *  <p>Number of Line Items returned.</p>
+     * @return quantity
+     */
+    @NotNull
+    @JsonProperty("quantity")
+    public Long getQuantity();
+
+    /**
+     *  <p>User-defined unique identifier of the LineItemReturnItem.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p><code>id</code> of the returned LineItem.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>Number of Line Items returned.</p>
+     * @param quantity value to be set
+     */
+
+    public void setQuantity(final Long quantity);
 
     /**
      * factory method
@@ -72,6 +102,7 @@ public interface LineItemReturnItem extends ReturnItem {
     public static LineItemReturnItem of(final LineItemReturnItem template) {
         LineItemReturnItemImpl instance = new LineItemReturnItemImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setComment(template.getComment());
         instance.setShipmentState(template.getShipmentState());
@@ -95,6 +126,7 @@ public interface LineItemReturnItem extends ReturnItem {
         }
         LineItemReturnItemImpl instance = new LineItemReturnItemImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setComment(template.getComment());
         instance.setShipmentState(template.getShipmentState());

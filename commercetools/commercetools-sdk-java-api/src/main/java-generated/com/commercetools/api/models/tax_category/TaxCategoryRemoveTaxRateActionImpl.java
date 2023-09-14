@@ -89,6 +89,9 @@ public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxR
         return new EqualsBuilder().append(action, that.action)
                 .append(taxRateId, that.taxRateId)
                 .append(taxRateKey, that.taxRateKey)
+                .append(action, that.action)
+                .append(taxRateId, that.taxRateId)
+                .append(taxRateKey, that.taxRateKey)
                 .isEquals();
     }
 

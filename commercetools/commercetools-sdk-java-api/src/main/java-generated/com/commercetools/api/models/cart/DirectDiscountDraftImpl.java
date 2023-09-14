@@ -52,7 +52,7 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Defines what part of the Cart will be discounted.</p>
+     *  <p>Defines what segment of the Cart will be discounted.</p>
      *  <p>If <code>value</code> is set to <code>giftLineItem</code>, this must not be set.</p>
      */
 
@@ -78,7 +78,11 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
 
         DirectDiscountDraftImpl that = (DirectDiscountDraftImpl) o;
 
-        return new EqualsBuilder().append(value, that.value).append(target, that.target).isEquals();
+        return new EqualsBuilder().append(value, that.value)
+                .append(target, that.target)
+                .append(value, that.value)
+                .append(target, that.target)
+                .isEquals();
     }
 
     @Override

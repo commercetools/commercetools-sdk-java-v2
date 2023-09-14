@@ -156,6 +156,13 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
                 .append(name, that.name)
                 .append(customTypeId, that.customTypeId)
                 .append(textLineItem, that.textLineItem)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(name, that.name)
+                .append(customTypeId, that.customTypeId)
+                .append(textLineItem, that.textLineItem)
                 .isEquals();
     }
 

@@ -92,6 +92,9 @@ public class GraphQLDuplicateVariantValuesErrorImpl implements GraphQLDuplicateV
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(variantValues, that.variantValues)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(variantValues, that.variantValues)
                 .isEquals();
     }
 

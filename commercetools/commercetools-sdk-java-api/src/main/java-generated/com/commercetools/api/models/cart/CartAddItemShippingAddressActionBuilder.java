@@ -26,7 +26,7 @@ public class CartAddItemShippingAddressActionBuilder implements Builder<CartAddI
 
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
-     *  <p>The new Address must have a <code>key</code> that is unique accross this Cart.</p>
+     *  <p>The new Address must have a <code>key</code> that is unique across this Cart.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class CartAddItemShippingAddressActionBuilder implements Builder<CartAddI
 
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
-     *  <p>The new Address must have a <code>key</code> that is unique accross this Cart.</p>
+     *  <p>The new Address must have a <code>key</code> that is unique across this Cart.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class CartAddItemShippingAddressActionBuilder implements Builder<CartAddI
 
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
-     *  <p>The new Address must have a <code>key</code> that is unique accross this Cart.</p>
+     *  <p>The new Address must have a <code>key</code> that is unique across this Cart.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class CartAddItemShippingAddressActionBuilder implements Builder<CartAddI
 
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
-     *  <p>The new Address must have a <code>key</code> that is unique accross this Cart.</p>
+     *  <p>The new Address must have a <code>key</code> that is unique across this Cart.</p>
      * @return address
      */
 

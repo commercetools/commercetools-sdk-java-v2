@@ -70,7 +70,11 @@ public class StandalonePriceChangeActiveActionImpl implements StandalonePriceCha
 
         StandalonePriceChangeActiveActionImpl that = (StandalonePriceChangeActiveActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(active, that.active).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(active, that.active)
+                .append(action, that.action)
+                .append(active, that.active)
+                .isEquals();
     }
 
     @Override

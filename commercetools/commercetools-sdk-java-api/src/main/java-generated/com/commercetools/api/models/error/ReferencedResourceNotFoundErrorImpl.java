@@ -142,6 +142,12 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
                 .append(typeId, that.typeId)
                 .append(id, that.id)
                 .append(key, that.key)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
                 .isEquals();
     }
 

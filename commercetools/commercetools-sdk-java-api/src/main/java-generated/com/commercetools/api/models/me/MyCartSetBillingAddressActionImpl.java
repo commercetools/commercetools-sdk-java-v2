@@ -71,7 +71,11 @@ public class MyCartSetBillingAddressActionImpl implements MyCartSetBillingAddres
 
         MyCartSetBillingAddressActionImpl that = (MyCartSetBillingAddressActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(address, that.address)
+                .append(action, that.action)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override

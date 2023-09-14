@@ -65,7 +65,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     *  <p>Every Import Operation is assigned one of the following states.</p>
      */
 
     public com.commercetools.importapi.models.common.ProcessingState getCurrentState() {
@@ -73,7 +73,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     *  <p>Every Import Operation is assigned one of the following states.</p>
      */
 
     public com.commercetools.importapi.models.common.ProcessingState getNewState() {
@@ -103,6 +103,10 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
         InvalidStateTransitionErrorImpl that = (InvalidStateTransitionErrorImpl) o;
 
         return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(currentState, that.currentState)
+                .append(newState, that.newState)
+                .append(code, that.code)
                 .append(message, that.message)
                 .append(currentState, that.currentState)
                 .append(newState, that.newState)

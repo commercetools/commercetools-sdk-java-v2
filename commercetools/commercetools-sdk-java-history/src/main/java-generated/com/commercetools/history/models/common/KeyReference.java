@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     KeyReference keyReference = KeyReference.builder()
  *             .key("{key}")
- *             .typeId(ReferenceTypeId.CART)
+ *             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
  * </div>

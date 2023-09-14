@@ -29,6 +29,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
 
     private String id;
 
+    private String key;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     private String productId;
@@ -50,7 +52,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     ShoppingListLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("deactivatedAt") final java.time.ZonedDateTime deactivatedAt,
-            @JsonProperty("id") final String id,
+            @JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("productId") final String productId,
             @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType,
@@ -61,6 +63,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         this.custom = custom;
         this.deactivatedAt = deactivatedAt;
         this.id = id;
+        this.key = key;
         this.name = name;
         this.productId = productId;
         this.productType = productType;
@@ -107,6 +110,14 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -184,6 +195,10 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         this.id = id;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -226,6 +241,19 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(custom, that.custom)
                 .append(deactivatedAt, that.deactivatedAt)
                 .append(id, that.id)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(productId, that.productId)
+                .append(productType, that.productType)
+                .append(quantity, that.quantity)
+                .append(variantId, that.variantId)
+                .append(variant, that.variant)
+                .append(productSlug, that.productSlug)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(deactivatedAt, that.deactivatedAt)
+                .append(id, that.id)
+                .append(key, that.key)
                 .append(name, that.name)
                 .append(productId, that.productId)
                 .append(productType, that.productType)
@@ -242,6 +270,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(custom)
                 .append(deactivatedAt)
                 .append(id)
+                .append(key)
                 .append(name)
                 .append(productId)
                 .append(productType)

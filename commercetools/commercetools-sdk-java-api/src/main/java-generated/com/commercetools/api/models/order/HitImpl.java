@@ -92,6 +92,9 @@ public class HitImpl implements Hit, ModelBase {
         return new EqualsBuilder().append(id, that.id)
                 .append(version, that.version)
                 .append(relevance, that.relevance)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(relevance, that.relevance)
                 .isEquals();
     }
 

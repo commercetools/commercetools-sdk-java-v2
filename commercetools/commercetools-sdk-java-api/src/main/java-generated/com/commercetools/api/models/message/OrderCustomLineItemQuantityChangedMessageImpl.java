@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Change Custom Line Item Quantity update action.</p>
+ *  <p>Generated after a successful Change CustomLineItem Quantity update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomLineItemQuantityChangedMessageImpl
@@ -45,6 +45,8 @@ public class OrderCustomLineItemQuantityChangedMessageImpl
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private Long quantity;
 
     private Long oldQuantity;
@@ -64,6 +66,7 @@ public class OrderCustomLineItemQuantityChangedMessageImpl
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("quantity") final Long quantity, @JsonProperty("oldQuantity") final Long oldQuantity) {
         this.id = id;
         this.version = version;
@@ -76,6 +79,7 @@ public class OrderCustomLineItemQuantityChangedMessageImpl
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.quantity = quantity;
         this.oldQuantity = oldQuantity;
         this.type = ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED;
@@ -185,6 +189,14 @@ public class OrderCustomLineItemQuantityChangedMessageImpl
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      */
 
@@ -245,6 +257,10 @@ public class OrderCustomLineItemQuantityChangedMessageImpl
         this.customLineItemId = customLineItemId;
     }
 
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+    }
+
     public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
@@ -275,6 +291,22 @@ public class OrderCustomLineItemQuantityChangedMessageImpl
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(quantity, that.quantity)
+                .append(oldQuantity, that.oldQuantity)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(quantity, that.quantity)
                 .append(oldQuantity, that.oldQuantity)
                 .isEquals();
@@ -294,6 +326,7 @@ public class OrderCustomLineItemQuantityChangedMessageImpl
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(customLineItemId)
+                .append(customLineItemKey)
                 .append(quantity)
                 .append(oldQuantity)
                 .toHashCode();

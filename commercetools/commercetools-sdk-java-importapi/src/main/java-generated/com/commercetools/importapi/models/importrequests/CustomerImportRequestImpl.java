@@ -77,7 +77,11 @@ public class CustomerImportRequestImpl implements CustomerImportRequest, ModelBa
 
         CustomerImportRequestImpl that = (CustomerImportRequestImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(resources, that.resources).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(resources, that.resources)
+                .append(type, that.type)
+                .append(resources, that.resources)
+                .isEquals();
     }
 
     @Override

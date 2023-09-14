@@ -318,6 +318,22 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(locale, that.locale)
                 .append(stores, that.stores)
+                .append(email, that.email)
+                .append(password, that.password)
+                .append(firstName, that.firstName)
+                .append(lastName, that.lastName)
+                .append(middleName, that.middleName)
+                .append(title, that.title)
+                .append(salutation, that.salutation)
+                .append(dateOfBirth, that.dateOfBirth)
+                .append(companyName, that.companyName)
+                .append(vatId, that.vatId)
+                .append(addresses, that.addresses)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
+                .append(defaultBillingAddress, that.defaultBillingAddress)
+                .append(custom, that.custom)
+                .append(locale, that.locale)
+                .append(stores, that.stores)
                 .isEquals();
     }
 

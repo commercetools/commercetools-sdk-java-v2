@@ -70,7 +70,11 @@ public class StateChangeTypeActionImpl implements StateChangeTypeAction, ModelBa
 
         StateChangeTypeActionImpl that = (StateChangeTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(type, that.type).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(action, that.action)
+                .append(type, that.type)
+                .isEquals();
     }
 
     @Override

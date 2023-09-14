@@ -86,7 +86,13 @@ public class CustomerResourceIdentifierImpl implements CustomerResourceIdentifie
 
         CustomerResourceIdentifierImpl that = (CustomerResourceIdentifierImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

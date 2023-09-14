@@ -79,6 +79,8 @@ public class BusinessUnitConfigurationImpl implements BusinessUnitConfiguration,
 
         return new EqualsBuilder().append(myBusinessUnitStatusOnCreation, that.myBusinessUnitStatusOnCreation)
                 .append(myBusinessUnitAssociateRoleOnCreation, that.myBusinessUnitAssociateRoleOnCreation)
+                .append(myBusinessUnitStatusOnCreation, that.myBusinessUnitStatusOnCreation)
+                .append(myBusinessUnitAssociateRoleOnCreation, that.myBusinessUnitAssociateRoleOnCreation)
                 .isEquals();
     }
 

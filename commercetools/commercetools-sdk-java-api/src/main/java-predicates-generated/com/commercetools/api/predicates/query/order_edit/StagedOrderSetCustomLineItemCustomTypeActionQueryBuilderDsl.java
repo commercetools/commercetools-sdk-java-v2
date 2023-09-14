@@ -25,6 +25,12 @@ public class StagedOrderSetCustomLineItemCustomTypeActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderSetCustomLineItemCustomTypeActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderSetCustomLineItemCustomTypeActionQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderSetCustomLineItemCustomTypeActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<StagedOrderSetCustomLineItemCustomTypeActionQueryBuilderDsl> type(
             Function<com.commercetools.api.predicates.query.type.TypeResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.TypeResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

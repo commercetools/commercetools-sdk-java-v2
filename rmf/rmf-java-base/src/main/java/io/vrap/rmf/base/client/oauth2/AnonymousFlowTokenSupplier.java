@@ -22,6 +22,13 @@ public class AnonymousFlowTokenSupplier extends BaseAuthTokenSupplier implements
         this.refreshFlowTokenSupplier = refreshFlowTokenSupplier;
     }
 
+    public AnonymousFlowTokenSupplier(final String clientId, final String clientSecret, final String scope,
+            final String tokenEndpoint, final RefreshFlowTokenSupplier refreshFlowTokenSupplier,
+            final VrapHttpClient vrapHttpClient, ResponseSerializer serializer) {
+        super(vrapHttpClient, constructApiHttpRequest(clientId, clientSecret, scope, tokenEndpoint), serializer);
+        this.refreshFlowTokenSupplier = refreshFlowTokenSupplier;
+    }
+
     @Override
     public CompletableFuture<AuthenticationToken> refreshToken() {
         return refreshFlowTokenSupplier.refreshToken().exceptionally(throwable -> {

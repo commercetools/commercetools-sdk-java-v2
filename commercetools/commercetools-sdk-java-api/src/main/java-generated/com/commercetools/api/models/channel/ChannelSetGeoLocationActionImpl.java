@@ -71,7 +71,11 @@ public class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocationAct
 
         ChannelSetGeoLocationActionImpl that = (ChannelSetGeoLocationActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(geoLocation, that.geoLocation).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(geoLocation, that.geoLocation)
+                .append(action, that.action)
+                .append(geoLocation, that.geoLocation)
+                .isEquals();
     }
 
     @Override

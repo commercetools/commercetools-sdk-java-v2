@@ -150,6 +150,12 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(variant, that.variant)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 

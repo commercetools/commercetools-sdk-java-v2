@@ -70,7 +70,11 @@ public class InvalidScopeErrorImpl implements InvalidScopeError, ModelBase {
 
         InvalidScopeErrorImpl that = (InvalidScopeErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(code, that.code)
+                .append(message, that.message)
+                .isEquals();
     }
 
     @Override

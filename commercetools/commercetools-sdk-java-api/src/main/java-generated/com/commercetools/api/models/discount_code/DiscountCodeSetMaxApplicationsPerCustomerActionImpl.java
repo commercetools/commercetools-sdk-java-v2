@@ -74,6 +74,8 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(maxApplicationsPerCustomer, that.maxApplicationsPerCustomer)
+                .append(action, that.action)
+                .append(maxApplicationsPerCustomer, that.maxApplicationsPerCustomer)
                 .isEquals();
     }
 

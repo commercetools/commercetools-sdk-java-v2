@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -17,14 +16,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetCustomLineItemTaxAmountAction
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetCustomLineItemTaxAmountAction stagedOrderSetCustomLineItemTaxAmountAction = StagedOrderSetCustomLineItemTaxAmountAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -39,20 +37,23 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
     String SET_CUSTOM_LINE_ITEM_TAX_AMOUNT = "setCustomLineItemTaxAmount";
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
-    @NotNull
+
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return externalTaxAmount
      */
     @Valid
@@ -60,23 +61,40 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
     public ExternalTaxAmountDraft getExternalTaxAmount();
 
     /**
-     * set customLineItemId
+     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param externalTaxAmount value to be set
      */
 
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
 
     /**
      * factory method
@@ -95,7 +113,9 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
             final StagedOrderSetCustomLineItemTaxAmountAction template) {
         StagedOrderSetCustomLineItemTaxAmountActionImpl instance = new StagedOrderSetCustomLineItemTaxAmountActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
@@ -112,8 +132,10 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
         }
         StagedOrderSetCustomLineItemTaxAmountActionImpl instance = new StagedOrderSetCustomLineItemTaxAmountActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setExternalTaxAmount(
             com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
+        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 

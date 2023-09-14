@@ -91,6 +91,9 @@ public class OrderShippingRateInputSetMessagePayloadImpl implements OrderShippin
         return new EqualsBuilder().append(type, that.type)
                 .append(shippingRateInput, that.shippingRateInput)
                 .append(oldShippingRateInput, that.oldShippingRateInput)
+                .append(type, that.type)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(oldShippingRateInput, that.oldShippingRateInput)
                 .isEquals();
     }
 

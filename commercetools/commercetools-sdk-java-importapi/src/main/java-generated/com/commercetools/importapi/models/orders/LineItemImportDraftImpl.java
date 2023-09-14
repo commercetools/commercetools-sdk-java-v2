@@ -237,6 +237,17 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .append(taxRate, that.taxRate)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
+                .append(product, that.product)
+                .append(name, that.name)
+                .append(variant, that.variant)
+                .append(price, that.price)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
+                .append(taxRate, that.taxRate)
+                .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

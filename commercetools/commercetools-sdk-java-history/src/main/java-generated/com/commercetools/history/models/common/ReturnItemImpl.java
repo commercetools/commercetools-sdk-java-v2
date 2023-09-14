@@ -176,6 +176,14 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
                 .append(paymentState, that.paymentState)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(createdAt, that.createdAt)
+                .append(id, that.id)
+                .append(quantity, that.quantity)
+                .append(type, that.type)
+                .append(comment, that.comment)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(createdAt, that.createdAt)
                 .isEquals();
     }
 

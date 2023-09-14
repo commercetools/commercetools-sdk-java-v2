@@ -70,7 +70,11 @@ public class BusinessUnitNameChangedMessagePayloadImpl implements BusinessUnitNa
 
         BusinessUnitNameChangedMessagePayloadImpl that = (BusinessUnitNameChangedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(name, that.name)
+                .append(type, that.type)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override

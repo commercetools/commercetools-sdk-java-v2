@@ -71,7 +71,11 @@ public class QuoteChangeQuoteStateActionImpl implements QuoteChangeQuoteStateAct
 
         QuoteChangeQuoteStateActionImpl that = (QuoteChangeQuoteStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(quoteState, that.quoteState).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(quoteState, that.quoteState)
+                .append(action, that.action)
+                .append(quoteState, that.quoteState)
+                .isEquals();
     }
 
     @Override

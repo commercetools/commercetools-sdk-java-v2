@@ -132,6 +132,11 @@ public class ShippingImpl implements Shipping, ModelBase {
                 .append(shippingAddress, that.shippingAddress)
                 .append(shippingRateInput, that.shippingRateInput)
                 .append(shippingCustomFields, that.shippingCustomFields)
+                .append(shippingKey, that.shippingKey)
+                .append(shippingInfo, that.shippingInfo)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(shippingCustomFields, that.shippingCustomFields)
                 .isEquals();
     }
 

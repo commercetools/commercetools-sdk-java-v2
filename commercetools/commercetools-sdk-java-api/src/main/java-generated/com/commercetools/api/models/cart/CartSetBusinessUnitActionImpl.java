@@ -72,7 +72,11 @@ public class CartSetBusinessUnitActionImpl implements CartSetBusinessUnitAction,
 
         CartSetBusinessUnitActionImpl that = (CartSetBusinessUnitActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(businessUnit, that.businessUnit).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(businessUnit, that.businessUnit)
+                .append(action, that.action)
+                .append(businessUnit, that.businessUnit)
+                .isEquals();
     }
 
     @Override

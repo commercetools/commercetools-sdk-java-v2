@@ -50,6 +50,7 @@ public class CartDiscountChangeIsActiveActionImpl implements CartDiscountChangeI
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
+     *  <p>If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
      */
 
     public Boolean getIsActive() {
@@ -70,7 +71,11 @@ public class CartDiscountChangeIsActiveActionImpl implements CartDiscountChangeI
 
         CartDiscountChangeIsActiveActionImpl that = (CartDiscountChangeIsActiveActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(isActive, that.isActive).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(isActive, that.isActive)
+                .append(action, that.action)
+                .append(isActive, that.isActive)
+                .isEquals();
     }
 
     @Override

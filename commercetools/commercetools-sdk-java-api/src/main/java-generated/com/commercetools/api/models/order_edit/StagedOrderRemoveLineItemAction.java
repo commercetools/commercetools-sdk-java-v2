@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
@@ -19,14 +18,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderRemoveLineItemAction
+ *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderRemoveLineItemAction stagedOrderRemoveLineItemAction = StagedOrderRemoveLineItemAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -41,15 +39,23 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     String REMOVE_LINE_ITEM = "removeLineItem";
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
+
+    /**
+     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
      * @return quantity
      */
 
@@ -57,7 +63,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     public Long getQuantity();
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      * @return externalPrice
      */
     @Valid
@@ -65,7 +71,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     public Money getExternalPrice();
 
     /**
-     *
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @return externalTotalPrice
      */
     @Valid
@@ -73,7 +79,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Container for Line Item-specific addresses to remove.</p>
      * @return shippingDetailsToRemove
      */
     @Valid
@@ -81,35 +87,42 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     public ItemShippingDetailsDraft getShippingDetailsToRemove();
 
     /**
-     * set lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     * set quantity
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
+
+    /**
+     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      * @param externalPrice value to be set
      */
 
     public void setExternalPrice(final Money externalPrice);
 
     /**
-     * set externalTotalPrice
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param externalTotalPrice value to be set
      */
 
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Container for Line Item-specific addresses to remove.</p>
      * @param shippingDetailsToRemove value to be set
      */
 
@@ -131,6 +144,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     public static StagedOrderRemoveLineItemAction of(final StagedOrderRemoveLineItemAction template) {
         StagedOrderRemoveLineItemActionImpl instance = new StagedOrderRemoveLineItemActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
@@ -150,6 +164,7 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
         }
         StagedOrderRemoveLineItemActionImpl instance = new StagedOrderRemoveLineItemActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setExternalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getExternalPrice()));
         instance.setExternalTotalPrice(

@@ -24,16 +24,24 @@ public class CartSetCustomLineItemTaxRateActionImpl implements CartSetCustomLine
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+
+    private String shippingKey;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     CartSetCustomLineItemTaxRateActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
-            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
+            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
+            @JsonProperty("shippingKey") final String shippingKey) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.externalTaxRate = externalTaxRate;
+        this.shippingKey = shippingKey;
         this.action = SET_CUSTOM_LINE_ITEM_TAX_RATE;
     }
 
@@ -53,11 +61,19 @@ public class CartSetCustomLineItemTaxRateActionImpl implements CartSetCustomLine
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -68,12 +84,28 @@ public class CartSetCustomLineItemTaxRateActionImpl implements CartSetCustomLine
         return this.externalTaxRate;
     }
 
+    /**
+     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
     }
 
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+    }
+
     public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
+    }
+
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -88,13 +120,25 @@ public class CartSetCustomLineItemTaxRateActionImpl implements CartSetCustomLine
 
         return new EqualsBuilder().append(action, that.action)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(shippingKey, that.shippingKey)
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).append(externalTaxRate).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(customLineItemId)
+                .append(customLineItemKey)
+                .append(externalTaxRate)
+                .append(shippingKey)
+                .toHashCode();
     }
 
 }

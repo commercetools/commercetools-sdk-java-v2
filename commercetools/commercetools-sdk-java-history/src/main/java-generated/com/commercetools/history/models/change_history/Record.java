@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.change.Change;
 import com.commercetools.history.models.common.KeyReference;
-import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.common.ResourceIdentifier;
 import com.commercetools.history.models.label.Label;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -118,13 +118,13 @@ public interface Record {
     public List<Change> getChanges();
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     *  <p>ResourceIdentifier of the changed resource.</p>
      * @return resource
      */
     @NotNull
     @Valid
     @JsonProperty("resource")
-    public Reference getResource();
+    public ResourceIdentifier getResource();
 
     /**
      *  <p>References to the Stores associated with the Change.</p>
@@ -134,6 +134,14 @@ public interface Record {
     @Valid
     @JsonProperty("stores")
     public List<KeyReference> getStores();
+
+    /**
+     *  <p>Reference to the Business Unit associated with the Change.</p>
+     * @return businessUnit
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public KeyReference getBusinessUnit();
 
     /**
      *  <p><code>true</code> if no change was detected.</p>
@@ -212,11 +220,11 @@ public interface Record {
     public void setChanges(final List<Change> changes);
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     *  <p>ResourceIdentifier of the changed resource.</p>
      * @param resource value to be set
      */
 
-    public void setResource(final Reference resource);
+    public void setResource(final ResourceIdentifier resource);
 
     /**
      *  <p>References to the Stores associated with the Change.</p>
@@ -232,6 +240,13 @@ public interface Record {
      */
 
     public void setStores(final List<KeyReference> stores);
+
+    /**
+     *  <p>Reference to the Business Unit associated with the Change.</p>
+     * @param businessUnit value to be set
+     */
+
+    public void setBusinessUnit(final KeyReference businessUnit);
 
     /**
      *  <p><code>true</code> if no change was detected.</p>
@@ -266,6 +281,7 @@ public interface Record {
         instance.setChanges(template.getChanges());
         instance.setResource(template.getResource());
         instance.setStores(template.getStores());
+        instance.setBusinessUnit(template.getBusinessUnit());
         instance.setWithoutChanges(template.getWithoutChanges());
         return instance;
     }
@@ -294,12 +310,15 @@ public interface Record {
                         .map(com.commercetools.history.models.change.Change::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setResource(com.commercetools.history.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResource(
+            com.commercetools.history.models.common.ResourceIdentifier.deepCopy(template.getResource()));
         instance.setStores(Optional.ofNullable(template.getStores())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.KeyReference::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setBusinessUnit(
+            com.commercetools.history.models.common.KeyReference.deepCopy(template.getBusinessUnit()));
         instance.setWithoutChanges(template.getWithoutChanges());
         return instance;
     }

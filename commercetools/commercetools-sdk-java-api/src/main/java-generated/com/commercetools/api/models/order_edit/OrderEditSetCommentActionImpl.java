@@ -49,7 +49,7 @@ public class OrderEditSetCommentActionImpl implements OrderEditSetCommentAction,
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public String getComment() {
@@ -70,7 +70,11 @@ public class OrderEditSetCommentActionImpl implements OrderEditSetCommentAction,
 
         OrderEditSetCommentActionImpl that = (OrderEditSetCommentActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(comment, that.comment).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(comment, that.comment)
+                .append(action, that.action)
+                .append(comment, that.comment)
+                .isEquals();
     }
 
     @Override

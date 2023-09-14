@@ -310,6 +310,20 @@ public class StoreImpl implements Store, ModelBase {
                 .append(supplyChannels, that.supplyChannels)
                 .append(productSelections, that.productSelections)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(languages, that.languages)
+                .append(countries, that.countries)
+                .append(distributionChannels, that.distributionChannels)
+                .append(supplyChannels, that.supplyChannels)
+                .append(productSelections, that.productSelections)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

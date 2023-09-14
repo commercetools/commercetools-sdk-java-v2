@@ -74,7 +74,11 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
 
         CustomerCreatePasswordResetTokenImpl that = (CustomerCreatePasswordResetTokenImpl) o;
 
-        return new EqualsBuilder().append(email, that.email).append(ttlMinutes, that.ttlMinutes).isEquals();
+        return new EqualsBuilder().append(email, that.email)
+                .append(ttlMinutes, that.ttlMinutes)
+                .append(email, that.email)
+                .append(ttlMinutes, that.ttlMinutes)
+                .isEquals();
     }
 
     @Override

@@ -59,6 +59,9 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
 
     private String customLineItemId;
 
+    @Nullable
+    private String customLineItemKey;
+
     private Long quantity;
 
     private Long oldQuantity;
@@ -277,6 +280,18 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderCustomLineItemQuantityChangedMessageBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      * @param quantity value to be set
      * @return Builder
@@ -401,6 +416,16 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      * @return quantity
      */
@@ -440,7 +465,7 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
             OrderCustomLineItemQuantityChangedMessage.class + ": oldQuantity is missing");
         return new OrderCustomLineItemQuantityChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
-            quantity, oldQuantity);
+            customLineItemKey, quantity, oldQuantity);
     }
 
     /**
@@ -450,7 +475,7 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
     public OrderCustomLineItemQuantityChangedMessage buildUnchecked() {
         return new OrderCustomLineItemQuantityChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customLineItemId,
-            quantity, oldQuantity);
+            customLineItemKey, quantity, oldQuantity);
     }
 
     /**
@@ -480,6 +505,7 @@ public class OrderCustomLineItemQuantityChangedMessageBuilder
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.quantity = template.getQuantity();
         builder.oldQuantity = template.getOldQuantity();
         return builder;

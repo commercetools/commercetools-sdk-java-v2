@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderTransitionCustomLineItemStateAction
+ *  <p>Produces the Custom Line Item State Transition Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderTransitionCustomLineItemStateActionImpl
@@ -24,6 +24,8 @@ public class OrderTransitionCustomLineItemStateActionImpl
     private String action;
 
     private String customLineItemId;
+
+    private String customLineItemKey;
 
     private Long quantity;
 
@@ -38,11 +40,13 @@ public class OrderTransitionCustomLineItemStateActionImpl
      */
     @JsonCreator
     OrderTransitionCustomLineItemStateActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("fromState") final com.commercetools.api.models.state.StateResourceIdentifier fromState,
             @JsonProperty("toState") final com.commercetools.api.models.state.StateResourceIdentifier toState,
             @JsonProperty("actualTransitionDate") final java.time.ZonedDateTime actualTransitionDate) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.quantity = quantity;
         this.fromState = fromState;
         this.toState = toState;
@@ -66,7 +70,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
@@ -74,7 +78,15 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>Number of Custom Line Items that should transition State.</p>
      */
 
     public Long getQuantity() {
@@ -82,7 +94,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition from.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
@@ -90,7 +102,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition to.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
@@ -98,7 +110,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) to perform the State transition.</p>
      */
 
     public java.time.ZonedDateTime getActualTransitionDate() {
@@ -107,6 +119,10 @@ public class OrderTransitionCustomLineItemStateActionImpl
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
     }
 
     public void setQuantity(final Long quantity) {
@@ -137,6 +153,14 @@ public class OrderTransitionCustomLineItemStateActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(quantity, that.quantity)
+                .append(fromState, that.fromState)
+                .append(toState, that.toState)
+                .append(actualTransitionDate, that.actualTransitionDate)
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(quantity, that.quantity)
                 .append(fromState, that.fromState)
                 .append(toState, that.toState)
@@ -148,6 +172,7 @@ public class OrderTransitionCustomLineItemStateActionImpl
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(customLineItemId)
+                .append(customLineItemKey)
                 .append(quantity)
                 .append(fromState)
                 .append(toState)

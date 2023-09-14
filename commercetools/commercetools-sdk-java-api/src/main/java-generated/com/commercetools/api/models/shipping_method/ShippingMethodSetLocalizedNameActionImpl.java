@@ -71,7 +71,11 @@ public class ShippingMethodSetLocalizedNameActionImpl implements ShippingMethodS
 
         ShippingMethodSetLocalizedNameActionImpl that = (ShippingMethodSetLocalizedNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(localizedName, that.localizedName).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(localizedName, that.localizedName)
+                .append(action, that.action)
+                .append(localizedName, that.localizedName)
+                .isEquals();
     }
 
     @Override

@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartSetLineItemSupplyChannelAction cartSetLineItemSupplyChannelAction = CartSetLineItemSupplyChannelAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,19 +23,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSetLineItemSupplyChannelAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public CartSetLineItemSupplyChannelActionBuilder lineItemId(final String lineItemId) {
+    public CartSetLineItemSupplyChannelActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartSetLineItemSupplyChannelActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -87,12 +101,23 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -113,8 +138,7 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
      * @return CartSetLineItemSupplyChannelAction
      */
     public CartSetLineItemSupplyChannelAction build() {
-        Objects.requireNonNull(lineItemId, CartSetLineItemSupplyChannelAction.class + ": lineItemId is missing");
-        return new CartSetLineItemSupplyChannelActionImpl(lineItemId, supplyChannel);
+        return new CartSetLineItemSupplyChannelActionImpl(lineItemId, lineItemKey, supplyChannel);
     }
 
     /**
@@ -122,7 +146,7 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
      * @return CartSetLineItemSupplyChannelAction
      */
     public CartSetLineItemSupplyChannelAction buildUnchecked() {
-        return new CartSetLineItemSupplyChannelActionImpl(lineItemId, supplyChannel);
+        return new CartSetLineItemSupplyChannelActionImpl(lineItemId, lineItemKey, supplyChannel);
     }
 
     /**
@@ -141,6 +165,7 @@ public class CartSetLineItemSupplyChannelActionBuilder implements Builder<CartSe
     public static CartSetLineItemSupplyChannelActionBuilder of(final CartSetLineItemSupplyChannelAction template) {
         CartSetLineItemSupplyChannelActionBuilder builder = new CartSetLineItemSupplyChannelActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.supplyChannel = template.getSupplyChannel();
         return builder;
     }

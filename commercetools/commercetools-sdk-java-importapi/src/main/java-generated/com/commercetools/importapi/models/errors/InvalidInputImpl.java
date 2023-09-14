@@ -70,7 +70,11 @@ public class InvalidInputImpl implements InvalidInput, ModelBase {
 
         InvalidInputImpl that = (InvalidInputImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(code, that.code)
+                .append(message, that.message)
+                .isEquals();
     }
 
     @Override

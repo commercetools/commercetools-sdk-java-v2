@@ -73,7 +73,7 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
     }
 
     /**
-     *  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
+     *  <p>Type of money used.</p>
      */
 
     public com.commercetools.api.models.common.MoneyType getType() {
@@ -123,6 +123,11 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
         HighPrecisionMoneyImpl that = (HighPrecisionMoneyImpl) o;
 
         return new EqualsBuilder().append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
+                .append(preciseAmount, that.preciseAmount)
+                .append(centAmount, that.centAmount)
                 .append(currencyCode, that.currencyCode)
                 .append(type, that.type)
                 .append(fractionDigits, that.fractionDigits)

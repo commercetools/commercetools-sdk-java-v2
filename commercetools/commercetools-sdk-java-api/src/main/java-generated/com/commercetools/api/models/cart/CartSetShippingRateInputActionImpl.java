@@ -78,6 +78,8 @@ public class CartSetShippingRateInputActionImpl implements CartSetShippingRateIn
 
         return new EqualsBuilder().append(action, that.action)
                 .append(shippingRateInput, that.shippingRateInput)
+                .append(action, that.action)
+                .append(shippingRateInput, that.shippingRateInput)
                 .isEquals();
     }
 

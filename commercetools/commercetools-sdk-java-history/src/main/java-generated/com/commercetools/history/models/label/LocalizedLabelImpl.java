@@ -70,7 +70,11 @@ public class LocalizedLabelImpl implements LocalizedLabel, ModelBase {
 
         LocalizedLabelImpl that = (LocalizedLabelImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(value, that.value)
+                .append(type, that.type)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

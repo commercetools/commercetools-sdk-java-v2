@@ -144,6 +144,12 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
                 .append(field, that.field)
                 .append(duplicateValue, that.duplicateValue)
                 .append(conflictingResource, that.conflictingResource)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(field, that.field)
+                .append(duplicateValue, that.duplicateValue)
+                .append(conflictingResource, that.conflictingResource)
                 .isEquals();
     }
 

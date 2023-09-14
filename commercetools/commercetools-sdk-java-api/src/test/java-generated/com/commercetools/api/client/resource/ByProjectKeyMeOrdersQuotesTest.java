@@ -66,7 +66,7 @@ public class ByProjectKeyMeOrdersQuotesTest {
         return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
                 .me()
                 .orders()
-                .quotes()
+                .orderQuote()
                 .post(com.commercetools.api.models.me.MyOrderFromQuoteDraft.of())
                 .createHttpRequest(), "post", "test_projectKey/me/orders/quotes", } };
     }
@@ -76,7 +76,7 @@ public class ByProjectKeyMeOrdersQuotesTest {
         return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
                 .me()
                 .orders()
-                .quotes()
+                .orderQuote()
                 .post(com.commercetools.api.models.me.MyOrderFromQuoteDraft.of()), } };
     }
 }

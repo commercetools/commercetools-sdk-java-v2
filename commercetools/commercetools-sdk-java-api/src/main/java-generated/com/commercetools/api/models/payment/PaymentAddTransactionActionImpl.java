@@ -71,7 +71,11 @@ public class PaymentAddTransactionActionImpl implements PaymentAddTransactionAct
 
         PaymentAddTransactionActionImpl that = (PaymentAddTransactionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(transaction, that.transaction).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(transaction, that.transaction)
+                .append(action, that.action)
+                .append(transaction, that.transaction)
+                .isEquals();
     }
 
     @Override

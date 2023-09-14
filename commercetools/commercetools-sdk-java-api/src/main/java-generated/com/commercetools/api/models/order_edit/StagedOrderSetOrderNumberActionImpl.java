@@ -49,7 +49,7 @@ public class StagedOrderSetOrderNumberActionImpl implements StagedOrderSetOrderN
     }
 
     /**
-     *
+     *  <p>Value to set. Must be unique across a Project. Once set, the value cannot be changed.</p>
      */
 
     public String getOrderNumber() {
@@ -70,7 +70,11 @@ public class StagedOrderSetOrderNumberActionImpl implements StagedOrderSetOrderN
 
         StagedOrderSetOrderNumberActionImpl that = (StagedOrderSetOrderNumberActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(orderNumber, that.orderNumber).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(orderNumber, that.orderNumber)
+                .append(action, that.action)
+                .append(orderNumber, that.orderNumber)
+                .isEquals();
     }
 
     @Override

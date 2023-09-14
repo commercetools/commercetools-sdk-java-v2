@@ -22,6 +22,8 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
 
     private String id;
 
+    private String key;
+
     private Long quantity;
 
     private String type;
@@ -44,8 +46,8 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
      * create instance with all properties
      */
     @JsonCreator
-    CustomLineItemReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Long quantity,
-            @JsonProperty("comment") final String comment,
+    CustomLineItemReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
+            @JsonProperty("quantity") final Long quantity, @JsonProperty("comment") final String comment,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState,
             @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
@@ -53,6 +55,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("customLineItemId") final String customLineItemId) {
         this.id = id;
+        this.key = key;
         this.quantity = quantity;
         this.comment = comment;
         this.shipmentState = shipmentState;
@@ -72,7 +75,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the Return Item.</p>
      */
 
     public String getId() {
@@ -80,7 +83,15 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     */
+
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Number of Custom Line Items returned.</p>
      */
 
     public Long getQuantity() {
@@ -96,7 +107,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     *
+     *  <p>User-defined description for the return.</p>
      */
 
     public String getComment() {
@@ -104,7 +115,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     *
+     *  <p>Shipment status of the Return Item.</p>
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
@@ -112,7 +123,11 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     *
+     *  <p>Payment status of the Return Item:</p>
+     *  <ul>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *  </ul>
      */
 
     public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {
@@ -120,7 +135,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields of the Return Item.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -128,7 +143,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Return Item was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -136,7 +151,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -144,7 +159,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     }
 
     /**
-     *
+     *  <p><code>id</code> of the returned CustomLineItem.</p>
      */
 
     public String getCustomLineItemId() {
@@ -153,6 +168,10 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
 
     public void setId(final String id) {
         this.id = id;
+    }
+
+    public void setKey(final String key) {
+        this.key = key;
     }
 
     public void setQuantity(final Long quantity) {
@@ -198,6 +217,18 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
         CustomLineItemReturnItemImpl that = (CustomLineItemReturnItemImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
+                .append(quantity, that.quantity)
+                .append(type, that.type)
+                .append(comment, that.comment)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(custom, that.custom)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(createdAt, that.createdAt)
+                .append(customLineItemId, that.customLineItemId)
+                .append(id, that.id)
+                .append(key, that.key)
                 .append(quantity, that.quantity)
                 .append(type, that.type)
                 .append(comment, that.comment)
@@ -213,6 +244,7 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(quantity)
                 .append(type)
                 .append(comment)

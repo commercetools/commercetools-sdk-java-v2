@@ -41,4 +41,14 @@ public class LastModifiedByQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, LastModifiedByQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<LastModifiedByQueryBuilderDsl> associate(
+            Function<com.commercetools.api.predicates.query.customer.CustomerReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("associate"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.customer.CustomerReferenceQueryBuilderDsl.of())),
+            LastModifiedByQueryBuilderDsl::of);
+    }
+
 }

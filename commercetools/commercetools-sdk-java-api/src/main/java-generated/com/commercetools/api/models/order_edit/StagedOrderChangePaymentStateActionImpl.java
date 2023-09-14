@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderChangePaymentStateAction
+ *  <p>Produces the Order Payment State Changed Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangePaymentStateActionImpl implements StagedOrderChangePaymentStateAction, ModelBase {
@@ -50,7 +50,7 @@ public class StagedOrderChangePaymentStateActionImpl implements StagedOrderChang
     }
 
     /**
-     *
+     *  <p>New payment status of the Order.</p>
      */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
@@ -71,7 +71,11 @@ public class StagedOrderChangePaymentStateActionImpl implements StagedOrderChang
 
         StagedOrderChangePaymentStateActionImpl that = (StagedOrderChangePaymentStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(paymentState, that.paymentState).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(paymentState, that.paymentState)
+                .append(action, that.action)
+                .append(paymentState, that.paymentState)
+                .isEquals();
     }
 
     @Override

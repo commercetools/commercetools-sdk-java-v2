@@ -70,7 +70,11 @@ public class CategorySetExternalIdActionImpl implements CategorySetExternalIdAct
 
         CategorySetExternalIdActionImpl that = (CategorySetExternalIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(externalId, that.externalId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(externalId, that.externalId)
+                .append(action, that.action)
+                .append(externalId, that.externalId)
+                .isEquals();
     }
 
     @Override

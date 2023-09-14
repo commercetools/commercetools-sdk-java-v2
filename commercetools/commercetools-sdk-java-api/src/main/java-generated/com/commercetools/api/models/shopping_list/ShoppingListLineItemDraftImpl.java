@@ -20,6 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft, ModelBase {
 
+    private String key;
+
     private String productId;
 
     private Long variantId;
@@ -36,11 +38,12 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
      * create instance with all properties
      */
     @JsonCreator
-    ShoppingListLineItemDraftImpl(@JsonProperty("productId") final String productId,
-            @JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
-            @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
+    ShoppingListLineItemDraftImpl(@JsonProperty("key") final String key,
+            @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId,
+            @JsonProperty("sku") final String sku, @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("quantity") final Long quantity) {
+        this.key = key;
         this.productId = productId;
         this.variantId = variantId;
         this.sku = sku;
@@ -53,6 +56,14 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
      * create empty instance
      */
     public ShoppingListLineItemDraftImpl() {
+    }
+
+    /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -103,6 +114,10 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
         return this.quantity;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setProductId(final String productId) {
         this.productId = productId;
     }
@@ -137,7 +152,15 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
 
         ShoppingListLineItemDraftImpl that = (ShoppingListLineItemDraftImpl) o;
 
-        return new EqualsBuilder().append(productId, that.productId)
+        return new EqualsBuilder().append(key, that.key)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(quantity, that.quantity)
+                .append(key, that.key)
+                .append(productId, that.productId)
                 .append(variantId, that.variantId)
                 .append(sku, that.sku)
                 .append(addedAt, that.addedAt)
@@ -148,7 +171,8 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productId)
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(productId)
                 .append(variantId)
                 .append(sku)
                 .append(addedAt)

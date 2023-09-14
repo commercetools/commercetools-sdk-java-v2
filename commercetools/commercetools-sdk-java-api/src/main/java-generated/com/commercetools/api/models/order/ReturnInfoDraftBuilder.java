@@ -33,7 +33,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     private java.time.ZonedDateTime returnDate;
 
     /**
-     * set values to the items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-     * set value to the items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-     * add values to the items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     *  <p>User-defined identifier for tracking the return.</p>
      * @param returnTrackingId value to be set
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-     * set the value to the returnDate
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @param returnDate value to be set
      * @return Builder
      */
@@ -142,7 +142,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-     * value of items}
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @return items
      */
 
@@ -151,7 +151,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     *  <p>User-defined identifier for tracking the return.</p>
      * @return returnTrackingId
      */
 
@@ -161,7 +161,7 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
-     * value of returnDate}
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @return returnDate
      */
 

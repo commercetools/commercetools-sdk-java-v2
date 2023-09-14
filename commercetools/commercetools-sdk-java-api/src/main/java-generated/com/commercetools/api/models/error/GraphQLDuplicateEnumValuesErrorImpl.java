@@ -96,6 +96,9 @@ public class GraphQLDuplicateEnumValuesErrorImpl implements GraphQLDuplicateEnum
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(duplicates, that.duplicates)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(duplicates, that.duplicates)
                 .isEquals();
     }
 

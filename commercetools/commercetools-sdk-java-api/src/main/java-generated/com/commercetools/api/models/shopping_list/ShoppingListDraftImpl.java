@@ -239,6 +239,17 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .append(textLineItems, that.textLineItems)
                 .append(store, that.store)
                 .append(custom, that.custom)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(customer, that.customer)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(anonymousId, that.anonymousId)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(lineItems, that.lineItems)
+                .append(textLineItems, that.textLineItems)
+                .append(store, that.store)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

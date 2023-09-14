@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCustomerSetCustomFieldAction
+ *  <p>Adding a Custom Field to a Customer generates the CustomerCustomFieldAdded Message, removing one generates the CustomerCustomFieldRemoved Message, and updating an existing one generates the CustomerCustomFieldChanged Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetCustomFieldActionImpl implements MyCustomerSetCustomFieldAction, ModelBase {
@@ -87,6 +87,9 @@ public class MyCustomerSetCustomFieldActionImpl implements MyCustomerSetCustomFi
         MyCustomerSetCustomFieldActionImpl that = (MyCustomerSetCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(action, that.action)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();

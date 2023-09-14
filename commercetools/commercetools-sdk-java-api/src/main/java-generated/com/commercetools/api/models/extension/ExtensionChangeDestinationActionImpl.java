@@ -71,7 +71,11 @@ public class ExtensionChangeDestinationActionImpl implements ExtensionChangeDest
 
         ExtensionChangeDestinationActionImpl that = (ExtensionChangeDestinationActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(destination, that.destination).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(destination, that.destination)
+                .append(action, that.action)
+                .append(destination, that.destination)
+                .isEquals();
     }
 
     @Override

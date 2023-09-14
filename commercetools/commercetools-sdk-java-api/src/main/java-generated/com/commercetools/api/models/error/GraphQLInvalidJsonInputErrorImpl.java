@@ -93,6 +93,9 @@ public class GraphQLInvalidJsonInputErrorImpl implements GraphQLInvalidJsonInput
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(detailedErrorMessage, that.detailedErrorMessage)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(detailedErrorMessage, that.detailedErrorMessage)
                 .isEquals();
     }
 

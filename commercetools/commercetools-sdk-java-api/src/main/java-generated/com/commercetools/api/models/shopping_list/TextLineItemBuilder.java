@@ -37,6 +37,9 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
 
     private String id;
 
+    @Nullable
+    private String key;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     private Long quantity;
@@ -135,6 +138,17 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
+     *  <p>User-defined identifier of the TextLineItem. It is unique per ShoppingList.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public TextLineItemBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    /**
      *  <p>Name of the TextLineItem.</p>
      * @param builder function to build the name value
      * @return Builder
@@ -219,6 +233,16 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
+     *  <p>User-defined identifier of the TextLineItem. It is unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Name of the TextLineItem.</p>
      * @return name
      */
@@ -245,7 +269,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         Objects.requireNonNull(id, TextLineItem.class + ": id is missing");
         Objects.requireNonNull(name, TextLineItem.class + ": name is missing");
         Objects.requireNonNull(quantity, TextLineItem.class + ": quantity is missing");
-        return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);
+        return new TextLineItemImpl(addedAt, custom, description, id, key, name, quantity);
     }
 
     /**
@@ -253,7 +277,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
      * @return TextLineItem
      */
     public TextLineItem buildUnchecked() {
-        return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);
+        return new TextLineItemImpl(addedAt, custom, description, id, key, name, quantity);
     }
 
     /**
@@ -275,6 +299,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         builder.custom = template.getCustom();
         builder.description = template.getDescription();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.name = template.getName();
         builder.quantity = template.getQuantity();
         return builder;

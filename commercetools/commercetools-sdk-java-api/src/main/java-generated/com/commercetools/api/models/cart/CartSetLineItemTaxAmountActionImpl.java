@@ -24,6 +24,8 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
     private String shippingKey;
@@ -33,9 +35,11 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
      */
     @JsonCreator
     CartSetLineItemTaxAmountActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount,
             @JsonProperty("shippingKey") final String shippingKey) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.externalTaxAmount = externalTaxAmount;
         this.shippingKey = shippingKey;
         this.action = SET_LINE_ITEM_TAX_AMOUNT;
@@ -57,11 +61,19 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -84,6 +96,10 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
         this.externalTaxAmount = externalTaxAmount;
     }
@@ -104,6 +120,12 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(externalTaxAmount, that.externalTaxAmount)
+                .append(shippingKey, that.shippingKey)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(externalTaxAmount, that.externalTaxAmount)
                 .append(shippingKey, that.shippingKey)
                 .isEquals();
@@ -113,6 +135,7 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(externalTaxAmount)
                 .append(shippingKey)
                 .toHashCode();

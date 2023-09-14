@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MyCustomerSetCustomFieldAction
+ *  <p>Adding a Custom Field to a Customer generates the CustomerCustomFieldAdded Message, removing one generates the CustomerCustomFieldRemoved Message, and updating an existing one generates the CustomerCustomFieldChanged Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -92,6 +92,9 @@ public class GraphQLReferenceExistsErrorImpl implements GraphQLReferenceExistsEr
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(referencedBy, that.referencedBy)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(referencedBy, that.referencedBy)
                 .isEquals();
     }
 

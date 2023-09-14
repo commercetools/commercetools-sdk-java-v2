@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * BusinessUnitStoreRemovedMessage
+ *  <p>Generated after a successful Remove Store update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitStoreRemovedMessageImpl implements BusinessUnitStoreRemovedMessage, ModelBase {
@@ -232,6 +232,18 @@ public class BusinessUnitStoreRemovedMessageImpl implements BusinessUnitStoreRem
         BusinessUnitStoreRemovedMessageImpl that = (BusinessUnitStoreRemovedMessageImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(store, that.store)
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)

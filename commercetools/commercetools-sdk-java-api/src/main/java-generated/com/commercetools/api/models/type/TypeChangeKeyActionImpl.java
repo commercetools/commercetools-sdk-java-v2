@@ -70,7 +70,11 @@ public class TypeChangeKeyActionImpl implements TypeChangeKeyAction, ModelBase {
 
         TypeChangeKeyActionImpl that = (TypeChangeKeyActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(key, that.key)
+                .append(action, that.action)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

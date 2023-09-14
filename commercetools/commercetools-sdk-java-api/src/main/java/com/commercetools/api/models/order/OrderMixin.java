@@ -6,6 +6,7 @@ import com.commercetools.api.models.ResourceIdentifiable;
 
 public interface OrderMixin extends Referencable<Order>, ResourceIdentifiable<Order> {
     @Override
+    @Deprecated
     public default OrderResourceIdentifier toResourceIdentifier() {
         return OrderResourceIdentifier.builder().id(getId()).build();
     }

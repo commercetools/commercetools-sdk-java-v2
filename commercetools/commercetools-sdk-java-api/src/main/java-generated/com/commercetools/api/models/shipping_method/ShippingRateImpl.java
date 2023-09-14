@@ -115,6 +115,10 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
                 .append(freeAbove, that.freeAbove)
                 .append(isMatching, that.isMatching)
                 .append(tiers, that.tiers)
+                .append(price, that.price)
+                .append(freeAbove, that.freeAbove)
+                .append(isMatching, that.isMatching)
+                .append(tiers, that.tiers)
                 .isEquals();
     }
 

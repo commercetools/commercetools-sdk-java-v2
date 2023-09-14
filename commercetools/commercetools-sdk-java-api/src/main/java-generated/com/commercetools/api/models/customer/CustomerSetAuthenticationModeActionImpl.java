@@ -90,6 +90,9 @@ public class CustomerSetAuthenticationModeActionImpl implements CustomerSetAuthe
         return new EqualsBuilder().append(action, that.action)
                 .append(authMode, that.authMode)
                 .append(password, that.password)
+                .append(action, that.action)
+                .append(authMode, that.authMode)
+                .append(password, that.password)
                 .isEquals();
     }
 

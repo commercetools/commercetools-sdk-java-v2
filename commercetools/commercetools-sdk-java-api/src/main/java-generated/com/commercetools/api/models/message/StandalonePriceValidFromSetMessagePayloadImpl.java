@@ -90,6 +90,9 @@ public class StandalonePriceValidFromSetMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(validFrom, that.validFrom)
                 .append(previousValidFrom, that.previousValidFrom)
+                .append(type, that.type)
+                .append(validFrom, that.validFrom)
+                .append(previousValidFrom, that.previousValidFrom)
                 .isEquals();
     }
 

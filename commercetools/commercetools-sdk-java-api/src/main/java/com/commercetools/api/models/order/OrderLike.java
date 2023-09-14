@@ -114,6 +114,9 @@ public interface OrderLike<T extends OrderLike<T>> {
     @Valid
     public List<Address> getItemShippingAddresses();
 
+    @Valid
+    public CustomFields getShippingCustomFields();
+
     default public MonetaryAmount calculateSubTotalPrice() {
         final MonetaryAmount lineItemTotal = this.getLineItems()
                 .stream()

@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetReturnItemCustomFieldAction stagedOrderSetReturnItemCustomFieldAction = StagedOrderSetReturnItemCustomFieldAction.builder()
- *             .returnItemId("{returnItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -25,7 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderSetReturnItemCustomFieldActionBuilder
         implements Builder<StagedOrderSetReturnItemCustomFieldAction> {
 
+    @Nullable
     private String returnItemId;
+
+    @Nullable
+    private String returnItemKey;
 
     private String name;
 
@@ -33,13 +36,24 @@ public class StagedOrderSetReturnItemCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     * set the value to the returnItemId
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetReturnItemCustomFieldActionBuilder returnItemId(final String returnItemId) {
+    public StagedOrderSetReturnItemCustomFieldActionBuilder returnItemId(@Nullable final String returnItemId) {
         this.returnItemId = returnItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @param returnItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetReturnItemCustomFieldActionBuilder returnItemKey(@Nullable final String returnItemKey) {
+        this.returnItemKey = returnItemKey;
         return this;
     }
 
@@ -66,12 +80,23 @@ public class StagedOrderSetReturnItemCustomFieldActionBuilder
     }
 
     /**
-     * value of returnItemId}
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
+    @Nullable
     public String getReturnItemId() {
         return this.returnItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @return returnItemKey
+     */
+
+    @Nullable
+    public String getReturnItemKey() {
+        return this.returnItemKey;
     }
 
     /**
@@ -98,10 +123,8 @@ public class StagedOrderSetReturnItemCustomFieldActionBuilder
      * @return StagedOrderSetReturnItemCustomFieldAction
      */
     public StagedOrderSetReturnItemCustomFieldAction build() {
-        Objects.requireNonNull(returnItemId,
-            StagedOrderSetReturnItemCustomFieldAction.class + ": returnItemId is missing");
         Objects.requireNonNull(name, StagedOrderSetReturnItemCustomFieldAction.class + ": name is missing");
-        return new StagedOrderSetReturnItemCustomFieldActionImpl(returnItemId, name, value);
+        return new StagedOrderSetReturnItemCustomFieldActionImpl(returnItemId, returnItemKey, name, value);
     }
 
     /**
@@ -109,7 +132,7 @@ public class StagedOrderSetReturnItemCustomFieldActionBuilder
      * @return StagedOrderSetReturnItemCustomFieldAction
      */
     public StagedOrderSetReturnItemCustomFieldAction buildUnchecked() {
-        return new StagedOrderSetReturnItemCustomFieldActionImpl(returnItemId, name, value);
+        return new StagedOrderSetReturnItemCustomFieldActionImpl(returnItemId, returnItemKey, name, value);
     }
 
     /**
@@ -129,6 +152,7 @@ public class StagedOrderSetReturnItemCustomFieldActionBuilder
             final StagedOrderSetReturnItemCustomFieldAction template) {
         StagedOrderSetReturnItemCustomFieldActionBuilder builder = new StagedOrderSetReturnItemCustomFieldActionBuilder();
         builder.returnItemId = template.getReturnItemId();
+        builder.returnItemKey = template.getReturnItemKey();
         builder.name = template.getName();
         builder.value = template.getValue();
         return builder;

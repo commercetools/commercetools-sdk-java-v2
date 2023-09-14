@@ -123,6 +123,11 @@ public class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessage
                 .append(newRating, that.newRating)
                 .append(includedInStatistics, that.includedInStatistics)
                 .append(target, that.target)
+                .append(type, that.type)
+                .append(oldRating, that.oldRating)
+                .append(newRating, that.newRating)
+                .append(includedInStatistics, that.includedInStatistics)
+                .append(target, that.target)
                 .isEquals();
     }
 

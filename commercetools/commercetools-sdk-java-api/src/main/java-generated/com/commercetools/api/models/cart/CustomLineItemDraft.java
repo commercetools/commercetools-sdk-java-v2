@@ -49,6 +49,14 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     public LocalizedString getName();
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Number of Custom Line Items to add to the Cart.</p>
      * @return quantity
      */
@@ -122,6 +130,13 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
      */
 
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Number of Custom Line Items to add to the Cart.</p>
@@ -198,6 +213,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     public static CustomLineItemDraft of(final CustomLineItemDraft template) {
         CustomLineItemDraftImpl instance = new CustomLineItemDraftImpl();
         instance.setName(template.getName());
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setMoney(template.getMoney());
         instance.setSlug(template.getSlug());
@@ -221,6 +237,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
         }
         CustomLineItemDraftImpl instance = new CustomLineItemDraftImpl();
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
         instance.setSlug(template.getSlug());

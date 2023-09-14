@@ -33,7 +33,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     private java.time.ZonedDateTime returnDate;
 
     /**
-     * set the value to the returnTrackingId
+     *  <p>Value to set.</p>
      * @param returnTrackingId value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * set values to the items
+     *  <p>Items to be returned. Must not be empty.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * set value to the items
+     *  <p>Items to be returned. Must not be empty.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * add values to the items
+     *  <p>Items to be returned. Must not be empty.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Items to be returned. Must not be empty.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Items to be returned. Must not be empty.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Items to be returned. Must not be empty.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Items to be returned. Must not be empty.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * set the value to the returnDate
+     *  <p>Value to set. If not set, it defaults to the current date and time.</p>
      * @param returnDate value to be set
      * @return Builder
      */
@@ -144,7 +144,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * value of returnTrackingId}
+     *  <p>Value to set.</p>
      * @return returnTrackingId
      */
 
@@ -154,7 +154,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * value of items}
+     *  <p>Items to be returned. Must not be empty.</p>
      * @return items
      */
 
@@ -163,7 +163,7 @@ public class StagedOrderAddReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     * value of returnDate}
+     *  <p>Value to set. If not set, it defaults to the current date and time.</p>
      * @return returnDate
      */
 

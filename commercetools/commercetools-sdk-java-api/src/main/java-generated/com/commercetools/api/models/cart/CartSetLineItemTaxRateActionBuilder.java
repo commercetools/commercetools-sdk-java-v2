@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartSetLineItemTaxRateAction cartSetLineItemTaxRateAction = CartSetLineItemTaxRateAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineItemTaxRateAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
@@ -33,13 +36,24 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
     private String shippingKey;
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public CartSetLineItemTaxRateActionBuilder lineItemId(final String lineItemId) {
+    public CartSetLineItemTaxRateActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartSetLineItemTaxRateActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -92,12 +106,23 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
     }
 
     /**
-     *  <p><code>id</code> of the LineItem to update.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -125,8 +150,7 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
      * @return CartSetLineItemTaxRateAction
      */
     public CartSetLineItemTaxRateAction build() {
-        Objects.requireNonNull(lineItemId, CartSetLineItemTaxRateAction.class + ": lineItemId is missing");
-        return new CartSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate, shippingKey);
+        return new CartSetLineItemTaxRateActionImpl(lineItemId, lineItemKey, externalTaxRate, shippingKey);
     }
 
     /**
@@ -134,7 +158,7 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
      * @return CartSetLineItemTaxRateAction
      */
     public CartSetLineItemTaxRateAction buildUnchecked() {
-        return new CartSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate, shippingKey);
+        return new CartSetLineItemTaxRateActionImpl(lineItemId, lineItemKey, externalTaxRate, shippingKey);
     }
 
     /**
@@ -153,6 +177,7 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
     public static CartSetLineItemTaxRateActionBuilder of(final CartSetLineItemTaxRateAction template) {
         CartSetLineItemTaxRateActionBuilder builder = new CartSetLineItemTaxRateActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.externalTaxRate = template.getExternalTaxRate();
         builder.shippingKey = template.getShippingKey();
         return builder;

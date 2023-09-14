@@ -215,6 +215,16 @@ public class ExtensionImpl implements Extension, ModelBase {
                 .append(destination, that.destination)
                 .append(triggers, that.triggers)
                 .append(timeoutInMs, that.timeoutInMs)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(destination, that.destination)
+                .append(triggers, that.triggers)
+                .append(timeoutInMs, that.timeoutInMs)
                 .isEquals();
     }
 

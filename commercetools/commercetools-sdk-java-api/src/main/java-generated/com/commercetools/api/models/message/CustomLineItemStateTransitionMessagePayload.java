@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Transition Custom Line Item State update action.</p>
+ *  <p>Generated after a successful Transition CustomLineItem State update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -49,6 +49,14 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
 
     /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
@@ -90,6 +98,13 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
@@ -136,6 +151,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
             final CustomLineItemStateTransitionMessagePayload template) {
         CustomLineItemStateTransitionMessagePayloadImpl instance = new CustomLineItemStateTransitionMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setTransitionDate(template.getTransitionDate());
         instance.setQuantity(template.getQuantity());
         instance.setFromState(template.getFromState());
@@ -156,6 +172,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
         }
         CustomLineItemStateTransitionMessagePayloadImpl instance = new CustomLineItemStateTransitionMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setTransitionDate(template.getTransitionDate());
         instance.setQuantity(template.getQuantity());
         instance.setFromState(com.commercetools.api.models.state.StateReference.deepCopy(template.getFromState()));

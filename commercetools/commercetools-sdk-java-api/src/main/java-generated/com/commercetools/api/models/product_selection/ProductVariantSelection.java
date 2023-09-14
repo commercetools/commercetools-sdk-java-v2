@@ -27,10 +27,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionExclusionImpl.class, name = ProductVariantSelectionExclusion.EXCLUSION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExceptImpl.class, name = ProductVariantSelectionIncludeAllExcept.INCLUDE_ALL_EXCEPT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyImpl.class, name = ProductVariantSelectionIncludeOnly.INCLUDE_ONLY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionInclusionImpl.class, name = ProductVariantSelectionInclusion.INCLUSION) })
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyImpl.class, name = ProductVariantSelectionIncludeOnly.INCLUDE_ONLY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductVariantSelectionImpl.class, visible = true)
 @JsonDeserialize(as = ProductVariantSelectionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -54,10 +52,6 @@ public interface ProductVariantSelection {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductVariantSelectionExclusion) {
-            return com.commercetools.api.models.product_selection.ProductVariantSelectionExclusion.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductVariantSelectionExclusion) template);
-        }
         if (template instanceof com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept) {
             return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept.deepCopy(
                 (com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept) template);
@@ -66,20 +60,8 @@ public interface ProductVariantSelection {
             return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnly.deepCopy(
                 (com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnly) template);
         }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductVariantSelectionInclusion) {
-            return com.commercetools.api.models.product_selection.ProductVariantSelectionInclusion.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductVariantSelectionInclusion) template);
-        }
         ProductVariantSelectionImpl instance = new ProductVariantSelectionImpl();
         return instance;
-    }
-
-    /**
-     * builder for exclusion subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.product_selection.ProductVariantSelectionExclusionBuilder exclusionBuilder() {
-        return com.commercetools.api.models.product_selection.ProductVariantSelectionExclusionBuilder.of();
     }
 
     /**
@@ -96,14 +78,6 @@ public interface ProductVariantSelection {
      */
     public static com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyBuilder includeOnlyBuilder() {
         return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyBuilder.of();
-    }
-
-    /**
-     * builder for inclusion subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.product_selection.ProductVariantSelectionInclusionBuilder inclusionBuilder() {
-        return com.commercetools.api.models.product_selection.ProductVariantSelectionInclusionBuilder.of();
     }
 
     /**

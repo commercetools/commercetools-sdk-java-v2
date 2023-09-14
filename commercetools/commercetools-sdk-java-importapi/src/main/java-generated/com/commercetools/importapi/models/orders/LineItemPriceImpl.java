@@ -200,6 +200,15 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
                 .append(discounted, that.discounted)
                 .append(tiers, that.tiers)
                 .append(custom, that.custom)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(discounted, that.discounted)
+                .append(tiers, that.tiers)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

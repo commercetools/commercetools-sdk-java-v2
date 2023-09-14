@@ -56,7 +56,7 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the AssetSource.</p>
+     *  <p>User-defined identifier of the AssetSource. Must be unique per Asset.</p>
      */
 
     public String getKey() {
@@ -106,6 +106,10 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
         AssetSourceImpl that = (AssetSourceImpl) o;
 
         return new EqualsBuilder().append(uri, that.uri)
+                .append(key, that.key)
+                .append(dimensions, that.dimensions)
+                .append(contentType, that.contentType)
+                .append(uri, that.uri)
                 .append(key, that.key)
                 .append(dimensions, that.dimensions)
                 .append(contentType, that.contentType)

@@ -73,6 +73,8 @@ public class StagedQuoteChangeStagedQuoteStateActionImpl implements StagedQuoteC
 
         return new EqualsBuilder().append(action, that.action)
                 .append(stagedQuoteState, that.stagedQuoteState)
+                .append(action, that.action)
+                .append(stagedQuoteState, that.stagedQuoteState)
                 .isEquals();
     }
 

@@ -135,6 +135,11 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(asset, that.asset)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(asset, that.asset)
                 .isEquals();
     }
 

@@ -142,6 +142,12 @@ public class OrderSearchAnyValueImpl implements OrderSearchAnyValue, ModelBase {
                 .append(value, that.value)
                 .append(language, that.language)
                 .append(caseInsensitive, that.caseInsensitive)
+                .append(field, that.field)
+                .append(boost, that.boost)
+                .append(customType, that.customType)
+                .append(value, that.value)
+                .append(language, that.language)
+                .append(caseInsensitive, that.caseInsensitive)
                 .isEquals();
     }
 

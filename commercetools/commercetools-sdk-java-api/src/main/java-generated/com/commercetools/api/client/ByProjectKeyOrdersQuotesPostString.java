@@ -15,7 +15,15 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Create an Order from a Quote</p>
+ *  <p>Creating an Order produces the OrderCreated Message.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li>OutOfStock</li>
+ *   <li>PriceChanged</li>
+ *   <li>InvalidItemShippingDetails</li>
+ *   <li>InvalidOperation</li>
+ *   <li>CountryNotConfiguredInStore</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

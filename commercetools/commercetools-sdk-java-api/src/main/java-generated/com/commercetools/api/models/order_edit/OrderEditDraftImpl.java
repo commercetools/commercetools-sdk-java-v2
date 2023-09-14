@@ -56,7 +56,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the OrderEdit.</p>
+     *  <p>User-defined unique identifier for the Order Edit.</p>
      */
 
     public String getKey() {
@@ -64,7 +64,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     *  <p>The order to be updated with this edit.</p>
+     *  <p>Reference to the Order updated with this edit.</p>
      */
 
     public com.commercetools.api.models.order.OrderReference getResource() {
@@ -72,7 +72,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     *  <p>The actions to apply to <code>resource</code>.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
@@ -80,7 +80,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the Order Edit.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -88,7 +88,7 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     *  <p>This field can be used to add additional textual information regarding the edit.</p>
+     *  <p>User-defined description regarding the Order Edit.</p>
      */
 
     public String getComment() {
@@ -96,7 +96,8 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
     }
 
     /**
-     *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
+     *  <p>Set to <code>true</code> if you want to peview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Order API Extensions, if any, are also called in dry runs.</p>
      */
 
     public Boolean getDryRun() {
@@ -143,6 +144,12 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
         OrderEditDraftImpl that = (OrderEditDraftImpl) o;
 
         return new EqualsBuilder().append(key, that.key)
+                .append(resource, that.resource)
+                .append(stagedActions, that.stagedActions)
+                .append(custom, that.custom)
+                .append(comment, that.comment)
+                .append(dryRun, that.dryRun)
+                .append(key, that.key)
                 .append(resource, that.resource)
                 .append(stagedActions, that.stagedActions)
                 .append(custom, that.custom)

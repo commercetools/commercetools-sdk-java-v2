@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Staged changes on a Standalone Price. To update the <code>value</code> property of a Staged Standalone Price, use the corresponding update action. To apply all staged changes to the Standalone Price, use the <code>applyStagedChanges</code> update action.</p>
+ *  <p>Staged changes on a Standalone Price. To update the <code>value</code> property of a Staged Standalone Price, use the Change Value update action. To apply all staged changes to the Standalone Price, use the Apply Staged Changes update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedStandalonePriceImpl implements StagedStandalonePrice, ModelBase {
@@ -74,7 +74,11 @@ public class StagedStandalonePriceImpl implements StagedStandalonePrice, ModelBa
 
         StagedStandalonePriceImpl that = (StagedStandalonePriceImpl) o;
 
-        return new EqualsBuilder().append(value, that.value).append(discounted, that.discounted).isEquals();
+        return new EqualsBuilder().append(value, that.value)
+                .append(discounted, that.discounted)
+                .append(value, that.value)
+                .append(discounted, that.discounted)
+                .isEquals();
     }
 
     @Override

@@ -70,7 +70,11 @@ public class MyCustomerSetCompanyNameActionImpl implements MyCustomerSetCompanyN
 
         MyCustomerSetCompanyNameActionImpl that = (MyCustomerSetCompanyNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(companyName, that.companyName).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(companyName, that.companyName)
+                .append(action, that.action)
+                .append(companyName, that.companyName)
+                .isEquals();
     }
 
     @Override

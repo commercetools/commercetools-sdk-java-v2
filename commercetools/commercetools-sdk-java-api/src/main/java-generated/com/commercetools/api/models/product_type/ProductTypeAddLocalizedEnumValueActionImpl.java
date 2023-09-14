@@ -89,6 +89,9 @@ public class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAd
         return new EqualsBuilder().append(action, that.action)
                 .append(attributeName, that.attributeName)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(value, that.value)
                 .isEquals();
     }
 

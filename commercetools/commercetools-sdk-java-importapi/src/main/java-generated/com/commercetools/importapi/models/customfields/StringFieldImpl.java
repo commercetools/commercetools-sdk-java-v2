@@ -70,7 +70,11 @@ public class StringFieldImpl implements StringField, ModelBase {
 
         StringFieldImpl that = (StringFieldImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(value, that.value)
+                .append(type, that.type)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

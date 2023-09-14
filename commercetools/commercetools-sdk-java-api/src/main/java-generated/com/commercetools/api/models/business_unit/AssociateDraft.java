@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     AssociateDraft associateDraft = AssociateDraft.builder()
+ *             .plusAssociateRoleAssignments(associateRoleAssignmentsBuilder -> associateRoleAssignmentsBuilder)
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
@@ -37,17 +38,10 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
      *  <p>Roles assigned to the Associate within a Business Unit.</p>
      * @return associateRoleAssignments
      */
+    @NotNull
     @Valid
     @JsonProperty("associateRoleAssignments")
     public List<AssociateRoleAssignmentDraft> getAssociateRoleAssignments();
-
-    /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @return roles
-     */
-    @Deprecated
-    @JsonProperty("roles")
-    public List<AssociateRoleDeprecated> getRoles();
 
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
@@ -74,21 +68,6 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
     public void setAssociateRoleAssignments(final List<AssociateRoleAssignmentDraft> associateRoleAssignments);
 
     /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @param roles values to be set
-     */
-    @Deprecated
-    @JsonIgnore
-    public void setRoles(final AssociateRoleDeprecated... roles);
-
-    /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @param roles values to be set
-     */
-    @Deprecated
-    public void setRoles(final List<AssociateRoleDeprecated> roles);
-
-    /**
      *  <p>The Customer to be part of the Business Unit.</p>
      * @param customer value to be set
      */
@@ -111,7 +90,6 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
     public static AssociateDraft of(final AssociateDraft template) {
         AssociateDraftImpl instance = new AssociateDraftImpl();
         instance.setAssociateRoleAssignments(template.getAssociateRoleAssignments());
-        instance.setRoles(template.getRoles());
         instance.setCustomer(template.getCustomer());
         return instance;
     }
@@ -132,7 +110,6 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
                         .map(com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
         instance.setCustomer(
             com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         return instance;

@@ -23,6 +23,12 @@ public class MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl> textLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("textLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<MyShoppingListSetTextLineItemCustomFieldActionQueryBuilderDsl> name() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("name")),

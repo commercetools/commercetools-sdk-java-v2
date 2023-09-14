@@ -70,7 +70,11 @@ public class LocalizedEnumFieldImpl implements LocalizedEnumField, ModelBase {
 
         LocalizedEnumFieldImpl that = (LocalizedEnumFieldImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(value, that.value)
+                .append(type, that.type)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

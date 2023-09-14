@@ -45,6 +45,9 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     private String sortOrder;
 
     @Nullable
+    private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
+
+    @Nullable
     private Boolean isActive;
 
     @Nullable
@@ -145,7 +148,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -157,7 +160,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -181,7 +184,8 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+     *  <p>Segment of the Cart that will be discounted.</p>
+     *  <p>Must not be set if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param target value to be set
      * @return Builder
      */
@@ -193,7 +197,8 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+     *  <p>Segment of the Cart that will be discounted.</p>
+     *  <p>Must not be set if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param builder function to build the target value
      * @return Builder
      */
@@ -216,7 +221,131 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Only active Discounts can be applied to the Cart.</p>
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder stores(
+            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder stores(
+            @Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+        this.stores = stores;
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     * @param stores value to be set
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder plusStores(
+            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.addAll(Arrays.asList(stores));
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder plusStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        if (this.stores == null) {
+            this.stores = new ArrayList<>();
+        }
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder withStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
+        this.stores = new ArrayList<>();
+        this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Only active Discounts can be applied to the Cart. If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
      * @param isActive value to be set
      * @return Builder
      */
@@ -336,7 +465,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      * @return value
      */
 
@@ -354,7 +483,8 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+     *  <p>Segment of the Cart that will be discounted.</p>
+     *  <p>Must not be set if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @return target
      */
 
@@ -373,7 +503,22 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Only active Discounts can be applied to the Cart.</p>
+     *  <ul>
+     *   <li>If defined, the Cart Discount applies on Carts having a Store matching any Store defined for this field.</li>
+     *   <li>If not defined, the Cart Discount applies on all Carts, irrespective of a Store.</li>
+     *  </ul>
+     *  <p>If the referenced Stores exceed the limit, a MaxStoreReferencesReached error is returned.</p>
+     *  <p>If the referenced Stores exceed the limit for Cart Discounts that do not require a Discount Code, a StoreCartDiscountsLimitReached error is returned.</p>
+     * @return stores
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
+        return this.stores;
+    }
+
+    /**
+     *  <p>Only active Discounts can be applied to the Cart. If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
      * @return isActive
      */
 
@@ -441,8 +586,8 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         Objects.requireNonNull(value, CartDiscountDraft.class + ": value is missing");
         Objects.requireNonNull(cartPredicate, CartDiscountDraft.class + ": cartPredicate is missing");
         Objects.requireNonNull(sortOrder, CartDiscountDraft.class + ": sortOrder is missing");
-        return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, isActive,
-            validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
+        return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, stores,
+            isActive, validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
     }
 
     /**
@@ -450,8 +595,8 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
      * @return CartDiscountDraft
      */
     public CartDiscountDraft buildUnchecked() {
-        return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, isActive,
-            validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
+        return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, stores,
+            isActive, validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
     }
 
     /**
@@ -476,6 +621,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         builder.cartPredicate = template.getCartPredicate();
         builder.target = template.getTarget();
         builder.sortOrder = template.getSortOrder();
+        builder.stores = template.getStores();
         builder.isActive = template.getIsActive();
         builder.validFrom = template.getValidFrom();
         builder.validUntil = template.getValidUntil();

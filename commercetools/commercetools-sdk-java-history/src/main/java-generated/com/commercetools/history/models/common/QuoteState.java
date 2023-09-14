@@ -20,6 +20,8 @@ public interface QuoteState extends JsonEnum {
 
     QuoteState DECLINED = QuoteStateEnum.DECLINED;
 
+    QuoteState DECLINED_FOR_RENEGOTIATION = QuoteStateEnum.DECLINED_FOR_RENEGOTIATION;
+
     QuoteState ACCEPTED = QuoteStateEnum.ACCEPTED;
 
     QuoteState FAILED = QuoteStateEnum.FAILED;
@@ -39,6 +41,11 @@ public interface QuoteState extends JsonEnum {
          * Declined
          */
         DECLINED("Declined"),
+
+        /**
+         * DeclinedForRenegotiation
+         */
+        DECLINED_FOR_RENEGOTIATION("DeclinedForRenegotiation"),
 
         /**
          * Accepted

@@ -71,7 +71,11 @@ public class AttributeGroupSetDescriptionActionImpl implements AttributeGroupSet
 
         AttributeGroupSetDescriptionActionImpl that = (AttributeGroupSetDescriptionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(description, that.description).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(description, that.description)
+                .append(action, that.action)
+                .append(description, that.description)
+                .isEquals();
     }
 
     @Override

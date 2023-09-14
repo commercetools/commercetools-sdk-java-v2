@@ -3,6 +3,8 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderRemoveCustomLineItemAction stagedOrderRemoveCustomLineItemAction = StagedOrderRemoveCustomLineItemAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -21,26 +22,52 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<StagedOrderRemoveCustomLineItemAction> {
 
+    @Nullable
     private String customLineItemId;
 
+    @Nullable
+    private String customLineItemKey;
+
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderRemoveCustomLineItemActionBuilder customLineItemId(final String customLineItemId) {
+    public StagedOrderRemoveCustomLineItemActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderRemoveCustomLineItemActionBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -48,9 +75,7 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
      * @return StagedOrderRemoveCustomLineItemAction
      */
     public StagedOrderRemoveCustomLineItemAction build() {
-        Objects.requireNonNull(customLineItemId,
-            StagedOrderRemoveCustomLineItemAction.class + ": customLineItemId is missing");
-        return new StagedOrderRemoveCustomLineItemActionImpl(customLineItemId);
+        return new StagedOrderRemoveCustomLineItemActionImpl(customLineItemId, customLineItemKey);
     }
 
     /**
@@ -58,7 +83,7 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
      * @return StagedOrderRemoveCustomLineItemAction
      */
     public StagedOrderRemoveCustomLineItemAction buildUnchecked() {
-        return new StagedOrderRemoveCustomLineItemActionImpl(customLineItemId);
+        return new StagedOrderRemoveCustomLineItemActionImpl(customLineItemId, customLineItemKey);
     }
 
     /**
@@ -78,6 +103,7 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
             final StagedOrderRemoveCustomLineItemAction template) {
         StagedOrderRemoveCustomLineItemActionBuilder builder = new StagedOrderRemoveCustomLineItemActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         return builder;
     }
 

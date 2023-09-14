@@ -4,6 +4,8 @@ package com.commercetools.history.models.change_history;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -48,9 +50,12 @@ public class RecordBuilder implements Builder<Record> {
 
     private java.util.List<com.commercetools.history.models.change.Change> changes;
 
-    private com.commercetools.history.models.common.Reference resource;
+    private com.commercetools.history.models.common.ResourceIdentifier resource;
 
     private java.util.List<com.commercetools.history.models.common.KeyReference> stores;
+
+    @Nullable
+    private com.commercetools.history.models.common.KeyReference businessUnit;
 
     private Boolean withoutChanges;
 
@@ -250,36 +255,36 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     *  <p>ResourceIdentifier of the changed resource.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
 
     public RecordBuilder resource(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.resource = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+            Function<com.commercetools.history.models.common.ResourceIdentifierBuilder, com.commercetools.history.models.common.ResourceIdentifierBuilder> builder) {
+        this.resource = builder.apply(com.commercetools.history.models.common.ResourceIdentifierBuilder.of()).build();
         return this;
     }
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     *  <p>ResourceIdentifier of the changed resource.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
 
     public RecordBuilder withResource(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.resource = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+            Function<com.commercetools.history.models.common.ResourceIdentifierBuilder, com.commercetools.history.models.common.ResourceIdentifier> builder) {
+        this.resource = builder.apply(com.commercetools.history.models.common.ResourceIdentifierBuilder.of());
         return this;
     }
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     *  <p>ResourceIdentifier of the changed resource.</p>
      * @param resource value to be set
      * @return Builder
      */
 
-    public RecordBuilder resource(final com.commercetools.history.models.common.Reference resource) {
+    public RecordBuilder resource(final com.commercetools.history.models.common.ResourceIdentifier resource) {
         this.resource = resource;
         return this;
     }
@@ -371,6 +376,42 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
+     *  <p>Reference to the Business Unit associated with the Change.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public RecordBuilder businessUnit(
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReferenceBuilder> builder) {
+        this.businessUnit = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Business Unit associated with the Change.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public RecordBuilder withBusinessUnit(
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
+        this.businessUnit = builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Business Unit associated with the Change.</p>
+     * @param businessUnit value to be set
+     * @return Builder
+     */
+
+    public RecordBuilder businessUnit(
+            @Nullable final com.commercetools.history.models.common.KeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+        return this;
+    }
+
+    /**
      *  <p><code>true</code> if no change was detected.</p>
      *  <p>The version number of the resource can be increased even without any change in the resource.</p>
      * @param withoutChanges value to be set
@@ -457,11 +498,11 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     *  <p>ResourceIdentifier of the changed resource.</p>
      * @return resource
      */
 
-    public com.commercetools.history.models.common.Reference getResource() {
+    public com.commercetools.history.models.common.ResourceIdentifier getResource() {
         return this.resource;
     }
 
@@ -472,6 +513,16 @@ public class RecordBuilder implements Builder<Record> {
 
     public java.util.List<com.commercetools.history.models.common.KeyReference> getStores() {
         return this.stores;
+    }
+
+    /**
+     *  <p>Reference to the Business Unit associated with the Change.</p>
+     * @return businessUnit
+     */
+
+    @Nullable
+    public com.commercetools.history.models.common.KeyReference getBusinessUnit() {
+        return this.businessUnit;
     }
 
     /**
@@ -501,7 +552,7 @@ public class RecordBuilder implements Builder<Record> {
         Objects.requireNonNull(stores, Record.class + ": stores is missing");
         Objects.requireNonNull(withoutChanges, Record.class + ": withoutChanges is missing");
         return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
-            resource, stores, withoutChanges);
+            resource, stores, businessUnit, withoutChanges);
     }
 
     /**
@@ -510,7 +561,7 @@ public class RecordBuilder implements Builder<Record> {
      */
     public Record buildUnchecked() {
         return new RecordImpl(version, previousVersion, type, modifiedBy, modifiedAt, label, previousLabel, changes,
-            resource, stores, withoutChanges);
+            resource, stores, businessUnit, withoutChanges);
     }
 
     /**
@@ -538,6 +589,7 @@ public class RecordBuilder implements Builder<Record> {
         builder.changes = template.getChanges();
         builder.resource = template.getResource();
         builder.stores = template.getStores();
+        builder.businessUnit = template.getBusinessUnit();
         builder.withoutChanges = template.getWithoutChanges();
         return builder;
     }

@@ -283,7 +283,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Asset.</p>
+     *  <p>User-defined identifier of the Asset. It is unique per Category or ProductVariant.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -351,7 +351,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Asset.</p>
+     *  <p>User-defined identifier of the Asset. It is unique per Category or ProductVariant.</p>
      * @return key
      */
 

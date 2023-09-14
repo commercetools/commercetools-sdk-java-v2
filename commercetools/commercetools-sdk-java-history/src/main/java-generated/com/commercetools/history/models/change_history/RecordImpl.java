@@ -37,9 +37,11 @@ public class RecordImpl implements Record, ModelBase {
 
     private java.util.List<com.commercetools.history.models.change.Change> changes;
 
-    private com.commercetools.history.models.common.Reference resource;
+    private com.commercetools.history.models.common.ResourceIdentifier resource;
 
     private java.util.List<com.commercetools.history.models.common.KeyReference> stores;
+
+    private com.commercetools.history.models.common.KeyReference businessUnit;
 
     private Boolean withoutChanges;
 
@@ -54,8 +56,9 @@ public class RecordImpl implements Record, ModelBase {
             @JsonProperty("label") final com.commercetools.history.models.label.Label label,
             @JsonProperty("previousLabel") final com.commercetools.history.models.label.Label previousLabel,
             @JsonProperty("changes") final java.util.List<com.commercetools.history.models.change.Change> changes,
-            @JsonProperty("resource") final com.commercetools.history.models.common.Reference resource,
+            @JsonProperty("resource") final com.commercetools.history.models.common.ResourceIdentifier resource,
             @JsonProperty("stores") final java.util.List<com.commercetools.history.models.common.KeyReference> stores,
+            @JsonProperty("businessUnit") final com.commercetools.history.models.common.KeyReference businessUnit,
             @JsonProperty("withoutChanges") final Boolean withoutChanges) {
         this.version = version;
         this.previousVersion = previousVersion;
@@ -67,6 +70,7 @@ public class RecordImpl implements Record, ModelBase {
         this.changes = changes;
         this.resource = resource;
         this.stores = stores;
+        this.businessUnit = businessUnit;
         this.withoutChanges = withoutChanges;
     }
 
@@ -143,10 +147,10 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p>Reference to the changed resource.</p>
+     *  <p>ResourceIdentifier of the changed resource.</p>
      */
 
-    public com.commercetools.history.models.common.Reference getResource() {
+    public com.commercetools.history.models.common.ResourceIdentifier getResource() {
         return this.resource;
     }
 
@@ -156,6 +160,14 @@ public class RecordImpl implements Record, ModelBase {
 
     public java.util.List<com.commercetools.history.models.common.KeyReference> getStores() {
         return this.stores;
+    }
+
+    /**
+     *  <p>Reference to the Business Unit associated with the Change.</p>
+     */
+
+    public com.commercetools.history.models.common.KeyReference getBusinessUnit() {
+        return this.businessUnit;
     }
 
     /**
@@ -203,7 +215,7 @@ public class RecordImpl implements Record, ModelBase {
         this.changes = changes;
     }
 
-    public void setResource(final com.commercetools.history.models.common.Reference resource) {
+    public void setResource(final com.commercetools.history.models.common.ResourceIdentifier resource) {
         this.resource = resource;
     }
 
@@ -213,6 +225,10 @@ public class RecordImpl implements Record, ModelBase {
 
     public void setStores(final java.util.List<com.commercetools.history.models.common.KeyReference> stores) {
         this.stores = stores;
+    }
+
+    public void setBusinessUnit(final com.commercetools.history.models.common.KeyReference businessUnit) {
+        this.businessUnit = businessUnit;
     }
 
     public void setWithoutChanges(final Boolean withoutChanges) {
@@ -239,6 +255,19 @@ public class RecordImpl implements Record, ModelBase {
                 .append(changes, that.changes)
                 .append(resource, that.resource)
                 .append(stores, that.stores)
+                .append(businessUnit, that.businessUnit)
+                .append(withoutChanges, that.withoutChanges)
+                .append(version, that.version)
+                .append(previousVersion, that.previousVersion)
+                .append(type, that.type)
+                .append(modifiedBy, that.modifiedBy)
+                .append(modifiedAt, that.modifiedAt)
+                .append(label, that.label)
+                .append(previousLabel, that.previousLabel)
+                .append(changes, that.changes)
+                .append(resource, that.resource)
+                .append(stores, that.stores)
+                .append(businessUnit, that.businessUnit)
                 .append(withoutChanges, that.withoutChanges)
                 .isEquals();
     }
@@ -255,6 +284,7 @@ public class RecordImpl implements Record, ModelBase {
                 .append(changes)
                 .append(resource)
                 .append(stores)
+                .append(businessUnit)
                 .append(withoutChanges)
                 .toHashCode();
     }

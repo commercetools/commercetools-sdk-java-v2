@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<OrderFromQuoteDraft> {
 
     /**
-     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     *  <p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p>
      * @return quote
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public QuoteResourceIdentifier getQuote();
 
     /**
-     *  <p><code>version</code> of the Quote from which an Order is created.</p>
+     *  <p><code>version</code> of the Quote from which the Order is created.</p>
      * @return version
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public Boolean getQuoteStateToAccepted();
 
     /**
-     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     *  <p>User-defined identifier for the Order that is unique across a Project. Once set, the value cannot be changed.</p>
      * @return orderNumber
      */
 
@@ -68,7 +68,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public String getOrderNumber();
 
     /**
-     *  <p>Payment state of the Order.</p>
+     *  <p>Payment status for the Order.</p>
      * @return paymentState
      */
 
@@ -76,7 +76,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public PaymentState getPaymentState();
 
     /**
-     *  <p>Shipment state of the Order.</p>
+     *  <p>Shipment status for the Order.</p>
      * @return shipmentState
      */
 
@@ -84,7 +84,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public ShipmentState getShipmentState();
 
     /**
-     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     *  <p>Current status for the Order.</p>
      * @return orderState
      */
 
@@ -92,7 +92,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public OrderState getOrderState();
 
     /**
-     *  <p>Reference to a State indicating the Order's state.</p>
+     *  <p>State of the Order in a custom workflow.</p>
      * @return state
      */
     @Valid
@@ -100,14 +100,14 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     *  <p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p>
      * @param quote value to be set
      */
 
     public void setQuote(final QuoteResourceIdentifier quote);
 
     /**
-     *  <p><code>version</code> of the Quote from which an Order is created.</p>
+     *  <p><code>version</code> of the Quote from which the Order is created.</p>
      * @param version value to be set
      */
 
@@ -121,35 +121,35 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public void setQuoteStateToAccepted(final Boolean quoteStateToAccepted);
 
     /**
-     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     *  <p>User-defined identifier for the Order that is unique across a Project. Once set, the value cannot be changed.</p>
      * @param orderNumber value to be set
      */
 
     public void setOrderNumber(final String orderNumber);
 
     /**
-     *  <p>Payment state of the Order.</p>
+     *  <p>Payment status for the Order.</p>
      * @param paymentState value to be set
      */
 
     public void setPaymentState(final PaymentState paymentState);
 
     /**
-     *  <p>Shipment state of the Order.</p>
+     *  <p>Shipment status for the Order.</p>
      * @param shipmentState value to be set
      */
 
     public void setShipmentState(final ShipmentState shipmentState);
 
     /**
-     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     *  <p>Current status for the Order.</p>
      * @param orderState value to be set
      */
 
     public void setOrderState(final OrderState orderState);
 
     /**
-     *  <p>Reference to a State indicating the Order's state.</p>
+     *  <p>State of the Order in a custom workflow.</p>
      * @param state value to be set
      */
 

@@ -214,6 +214,15 @@ public class OrderFieldImpl implements OrderField, ModelBase {
                 .append(setParcelMeasurements, that.setParcelMeasurements)
                 .append(setParcelTrackingData, that.setParcelTrackingData)
                 .append(setParcelItems, that.setParcelItems)
+                .append(addReturnInfo, that.addReturnInfo)
+                .append(addParcelToDelivery, that.addParcelToDelivery)
+                .append(addDeliveries, that.addDeliveries)
+                .append(removeDelivery, that.removeDelivery)
+                .append(removeParcelFromDelivery, that.removeParcelFromDelivery)
+                .append(setDeliveryAddress, that.setDeliveryAddress)
+                .append(setParcelMeasurements, that.setParcelMeasurements)
+                .append(setParcelTrackingData, that.setParcelTrackingData)
+                .append(setParcelItems, that.setParcelItems)
                 .isEquals();
     }
 

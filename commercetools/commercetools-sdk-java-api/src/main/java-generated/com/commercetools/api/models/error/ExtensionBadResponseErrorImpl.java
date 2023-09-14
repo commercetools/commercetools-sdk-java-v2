@@ -216,6 +216,16 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
                 .append(extensionStatusCode, that.extensionStatusCode)
                 .append(extensionId, that.extensionId)
                 .append(extensionKey, that.extensionKey)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(localizedMessage, that.localizedMessage)
+                .append(extensionExtraInfo, that.extensionExtraInfo)
+                .append(extensionErrors, that.extensionErrors)
+                .append(extensionBody, that.extensionBody)
+                .append(extensionStatusCode, that.extensionStatusCode)
+                .append(extensionId, that.extensionId)
+                .append(extensionKey, that.extensionKey)
                 .isEquals();
     }
 

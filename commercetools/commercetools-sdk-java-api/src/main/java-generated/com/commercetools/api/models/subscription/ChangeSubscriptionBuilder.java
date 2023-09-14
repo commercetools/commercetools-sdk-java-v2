@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ChangeSubscription changeSubscription = ChangeSubscription.builder()
- *             .resourceTypeId(ChangeSubscriptionResourceTypeId.BUSINESS_UNIT)
+ *             .resourceTypeId(ChangeSubscriptionResourceTypeId.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
  * </div>

@@ -32,6 +32,8 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
 
     private Long rejected;
 
+    private Long canceled;
+
     /**
      * create instance with all properties
      */
@@ -40,13 +42,15 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
             @JsonProperty("validationFailed") final Long validationFailed,
             @JsonProperty("unresolved") final Long unresolved,
             @JsonProperty("waitForMasterVariant") final Long waitForMasterVariant,
-            @JsonProperty("imported") final Long imported, @JsonProperty("rejected") final Long rejected) {
+            @JsonProperty("imported") final Long imported, @JsonProperty("rejected") final Long rejected,
+            @JsonProperty("canceled") final Long canceled) {
         this.processing = processing;
         this.validationFailed = validationFailed;
         this.unresolved = unresolved;
         this.waitForMasterVariant = waitForMasterVariant;
         this.imported = imported;
         this.rejected = rejected;
+        this.canceled = canceled;
     }
 
     /**
@@ -103,6 +107,14 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
         return this.rejected;
     }
 
+    /**
+     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     */
+
+    public Long getCanceled() {
+        return this.canceled;
+    }
+
     public void setProcessing(final Long processing) {
         this.processing = processing;
     }
@@ -127,6 +139,10 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
         this.rejected = rejected;
     }
 
+    public void setCanceled(final Long canceled) {
+        this.canceled = canceled;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -143,6 +159,14 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
                 .append(waitForMasterVariant, that.waitForMasterVariant)
                 .append(imported, that.imported)
                 .append(rejected, that.rejected)
+                .append(canceled, that.canceled)
+                .append(processing, that.processing)
+                .append(validationFailed, that.validationFailed)
+                .append(unresolved, that.unresolved)
+                .append(waitForMasterVariant, that.waitForMasterVariant)
+                .append(imported, that.imported)
+                .append(rejected, that.rejected)
+                .append(canceled, that.canceled)
                 .isEquals();
     }
 
@@ -154,6 +178,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
                 .append(waitForMasterVariant)
                 .append(imported)
                 .append(rejected)
+                .append(canceled)
                 .toHashCode();
     }
 

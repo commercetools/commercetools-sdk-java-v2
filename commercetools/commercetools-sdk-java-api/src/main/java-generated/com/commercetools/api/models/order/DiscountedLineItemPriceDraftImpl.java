@@ -41,7 +41,7 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Discounted money value.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {
@@ -49,7 +49,7 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
     }
 
     /**
-     *
+     *  <p>Discounts to be applied.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> getIncludedDiscounts() {
@@ -81,6 +81,8 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
         DiscountedLineItemPriceDraftImpl that = (DiscountedLineItemPriceDraftImpl) o;
 
         return new EqualsBuilder().append(value, that.value)
+                .append(includedDiscounts, that.includedDiscounts)
+                .append(value, that.value)
                 .append(includedDiscounts, that.includedDiscounts)
                 .isEquals();
     }

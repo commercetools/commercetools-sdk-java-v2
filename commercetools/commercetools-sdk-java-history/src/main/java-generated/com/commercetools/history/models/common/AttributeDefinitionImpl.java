@@ -179,6 +179,14 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
                 .append(isSearchable, that.isSearchable)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(label, that.label)
+                .append(isRequired, that.isRequired)
+                .append(attributeConstraint, that.attributeConstraint)
+                .append(inputTip, that.inputTip)
+                .append(inputHint, that.inputHint)
+                .append(isSearchable, that.isSearchable)
                 .isEquals();
     }
 

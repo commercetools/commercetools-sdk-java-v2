@@ -23,7 +23,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * LineItemImportDraft
+ *  <p>Represents a snapshot of a Product Variant at the time it was imported with the Order. The Product Variant can be specified by providing a <code>productId</code> and <code>variant.id</code>, or by providing a <code>variant.sku</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,8 +32,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     LineItemImportDraft lineItemImportDraft = LineItemImportDraft.builder()
  *             .name(nameBuilder -> nameBuilder)
  *             .variant(variantBuilder -> variantBuilder)
- *             .price(priceBuilder -> priceBuilder)
  *             .quantity(0.3)
+ *             .price(priceBuilder -> priceBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -44,15 +44,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
         io.vrap.rmf.base.client.Draft<LineItemImportDraft> {
 
     /**
-     *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
-     * @return productId
-     */
-
-    @JsonProperty("productId")
-    public String getProductId();
-
-    /**
-     *  <p>The product name.</p>
+     *  <p>Name of the Line Item.</p>
      * @return name
      */
     @NotNull
@@ -61,7 +53,15 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Line Item.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>The Product Variant to use as a Line Item.</p>
      * @return variant
      */
     @NotNull
@@ -70,7 +70,24 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public ProductVariantImportDraft getVariant();
 
     /**
-     *
+     *  <p><code>id</code> of the Product the Product Variant belongs to.</p>
+     *  <p>If provided, you must also set <code>variant.id</code>.</p>
+     * @return productId
+     */
+
+    @JsonProperty("productId")
+    public String getProductId();
+
+    /**
+     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
+     * @return quantity
+     */
+    @NotNull
+    @JsonProperty("quantity")
+    public Long getQuantity();
+
+    /**
+     *  <p>The Line Item price for <code>quantity</code> = <code>1</code>. The amount can be negative.</p>
      * @return price
      */
     @NotNull
@@ -79,39 +96,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public PriceDraft getPrice();
 
     /**
-     *
-     * @return quantity
-     */
-    @NotNull
-    @JsonProperty("quantity")
-    public Long getQuantity();
-
-    /**
-     *
-     * @return state
-     */
-    @Valid
-    @JsonProperty("state")
-    public List<ItemState> getState();
-
-    /**
-     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
-     * @return supplyChannel
-     */
-    @Valid
-    @JsonProperty("supplyChannel")
-    public ChannelResourceIdentifier getSupplyChannel();
-
-    /**
-     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
-     * @return distributionChannel
-     */
-    @Valid
-    @JsonProperty("distributionChannel")
-    public ChannelResourceIdentifier getDistributionChannel();
-
-    /**
-     *
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
      * @return taxRate
      */
     @Valid
@@ -119,15 +104,23 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public TaxRate getTaxRate();
 
     /**
-     *  <p>The custom fields.</p>
-     * @return custom
+     *  <p>The Channel used to select a Price. This Channel must have the <code>ProductDistribution</code> role.</p>
+     * @return distributionChannel
      */
     @Valid
-    @JsonProperty("custom")
-    public CustomFieldsDraft getCustom();
+    @JsonProperty("distributionChannel")
+    public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify Inventory entries that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
+     * @return supplyChannel
+     */
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
+
+    /**
+     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
      * @return inventoryMode
      */
 
@@ -135,7 +128,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public InventoryMode getInventoryMode();
 
     /**
-     *
+     *  <p>Container for Line Item-specific addresses.</p>
      * @return shippingDetails
      */
     @Valid
@@ -143,42 +136,101 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public ItemShippingDetailsDraft getShippingDetails();
 
     /**
-     *  <p>ID of the existing product. You also need to specify the ID of the variant if this property is set or alternatively you can just specify SKU of the product variant.</p>
-     * @param productId value to be set
+     *  <p>States of the Line Item.</p>
+     * @return state
      */
-
-    public void setProductId(final String productId);
+    @Valid
+    @JsonProperty("state")
+    public List<ItemState> getState();
 
     /**
-     *  <p>The product name.</p>
+     *  <p>Custom Fields of the LineItem.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>Name of the Line Item.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     * set variant
+     *  <p>User-defined unique identifier of the Line Item.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p>The Product Variant to use as a Line Item.</p>
      * @param variant value to be set
      */
 
     public void setVariant(final ProductVariantImportDraft variant);
 
     /**
-     * set price
-     * @param price value to be set
+     *  <p><code>id</code> of the Product the Product Variant belongs to.</p>
+     *  <p>If provided, you must also set <code>variant.id</code>.</p>
+     * @param productId value to be set
      */
 
-    public void setPrice(final PriceDraft price);
+    public void setProductId(final String productId);
 
     /**
-     * set quantity
+     *  <p>The number of Product Variants in the LineItem. Can be a negative value.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     * set state
+     *  <p>The Line Item price for <code>quantity</code> = <code>1</code>. The amount can be negative.</p>
+     * @param price value to be set
+     */
+
+    public void setPrice(final PriceDraft price);
+
+    /**
+     *  <p>The tax rate used to calculate the <code>taxedPrice</code> of the Order.</p>
+     * @param taxRate value to be set
+     */
+
+    public void setTaxRate(final TaxRate taxRate);
+
+    /**
+     *  <p>The Channel used to select a Price. This Channel must have the <code>ProductDistribution</code> role.</p>
+     * @param distributionChannel value to be set
+     */
+
+    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
+
+    /**
+     *  <p>The Channel used to supply Line Items. By providing supply Channel information, you can uniquely identify Inventory entries that should be reserved. This Channel must have the <code>InventorySupply</code> role.</p>
+     * @param supplyChannel value to be set
+     */
+
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
+
+    /**
+     *  <p>Inventory mode specific to the LineItem, valid for the entire <code>quantity</code> of the LineItem. Set only if Inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
+     * @param inventoryMode value to be set
+     */
+
+    public void setInventoryMode(final InventoryMode inventoryMode);
+
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
+     * @param shippingDetails value to be set
+     */
+
+    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
+
+    /**
+     *  <p>States of the Line Item.</p>
      * @param state values to be set
      */
 
@@ -186,53 +238,18 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     public void setState(final ItemState... state);
 
     /**
-     * set state
+     *  <p>States of the Line Item.</p>
      * @param state values to be set
      */
 
     public void setState(final List<ItemState> state);
 
     /**
-     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
-     * @param supplyChannel value to be set
-     */
-
-    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
-    /**
-     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
-     * @param distributionChannel value to be set
-     */
-
-    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
-
-    /**
-     * set taxRate
-     * @param taxRate value to be set
-     */
-
-    public void setTaxRate(final TaxRate taxRate);
-
-    /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields of the LineItem.</p>
      * @param custom value to be set
      */
 
     public void setCustom(final CustomFieldsDraft custom);
-
-    /**
-     *  <p>Inventory mode specific to the line item only, valid for the entire <code>quantity</code> of the line item. Set only if inventory mode should be different from the <code>inventoryMode</code> specified on the OrderImportDraft.</p>
-     * @param inventoryMode value to be set
-     */
-
-    public void setInventoryMode(final InventoryMode inventoryMode);
-
-    /**
-     * set shippingDetails
-     * @param shippingDetails value to be set
-     */
-
-    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
     /**
      * factory method
@@ -249,18 +266,19 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
      */
     public static LineItemImportDraft of(final LineItemImportDraft template) {
         LineItemImportDraftImpl instance = new LineItemImportDraftImpl();
-        instance.setProductId(template.getProductId());
         instance.setName(template.getName());
+        instance.setKey(template.getKey());
         instance.setVariant(template.getVariant());
-        instance.setPrice(template.getPrice());
+        instance.setProductId(template.getProductId());
         instance.setQuantity(template.getQuantity());
-        instance.setState(template.getState());
-        instance.setSupplyChannel(template.getSupplyChannel());
-        instance.setDistributionChannel(template.getDistributionChannel());
+        instance.setPrice(template.getPrice());
         instance.setTaxRate(template.getTaxRate());
-        instance.setCustom(template.getCustom());
+        instance.setDistributionChannel(template.getDistributionChannel());
+        instance.setSupplyChannel(template.getSupplyChannel());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
+        instance.setState(template.getState());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 
@@ -275,26 +293,27 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
             return null;
         }
         LineItemImportDraftImpl instance = new LineItemImportDraftImpl();
-        instance.setProductId(template.getProductId());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setKey(template.getKey());
         instance.setVariant(
             com.commercetools.api.models.order.ProductVariantImportDraft.deepCopy(template.getVariant()));
-        instance.setPrice(com.commercetools.api.models.common.PriceDraft.deepCopy(template.getPrice()));
+        instance.setProductId(template.getProductId());
         instance.setQuantity(template.getQuantity());
+        instance.setPrice(com.commercetools.api.models.common.PriceDraft.deepCopy(template.getPrice()));
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         instance.setState(Optional.ofNullable(template.getState())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.ItemState::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setSupplyChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
-        instance.setDistributionChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
-        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
-        instance.setInventoryMode(template.getInventoryMode());
-        instance.setShippingDetails(
-            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         return instance;
     }
 

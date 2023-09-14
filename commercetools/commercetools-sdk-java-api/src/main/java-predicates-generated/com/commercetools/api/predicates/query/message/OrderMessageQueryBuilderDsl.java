@@ -147,6 +147,27 @@ public class OrderMessageQueryBuilderDsl {
             OrderMessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> asOrderCustomFieldAdded(
+            Function<com.commercetools.api.predicates.query.message.OrderCustomFieldAddedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderCustomFieldAddedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.OrderCustomFieldAddedMessageQueryBuilderDsl.of()),
+            OrderMessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> asOrderCustomFieldChanged(
+            Function<com.commercetools.api.predicates.query.message.OrderCustomFieldChangedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderCustomFieldChangedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.OrderCustomFieldChangedMessageQueryBuilderDsl.of()),
+            OrderMessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> asOrderCustomFieldRemoved(
+            Function<com.commercetools.api.predicates.query.message.OrderCustomFieldRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderCustomFieldRemovedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.OrderCustomFieldRemovedMessageQueryBuilderDsl.of()),
+            OrderMessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> asOrderCustomLineItemAdded(
             Function<com.commercetools.api.predicates.query.message.OrderCustomLineItemAddedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderCustomLineItemAddedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -175,6 +196,20 @@ public class OrderMessageQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.message.OrderCustomLineItemRemovedMessageQueryBuilderDsl.of()),
+            OrderMessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> asOrderCustomTypeRemoved(
+            Function<com.commercetools.api.predicates.query.message.OrderCustomTypeRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderCustomTypeRemovedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.OrderCustomTypeRemovedMessageQueryBuilderDsl.of()),
+            OrderMessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<OrderMessageQueryBuilderDsl> asOrderCustomTypeSet(
+            Function<com.commercetools.api.predicates.query.message.OrderCustomTypeSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderCustomTypeSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.OrderCustomTypeSetMessageQueryBuilderDsl.of()),
             OrderMessageQueryBuilderDsl::of);
     }
 

@@ -71,7 +71,11 @@ public class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessagePayl
 
         OrderStoreSetMessagePayloadImpl that = (OrderStoreSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(store, that.store).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(store, that.store)
+                .append(type, that.type)
+                .append(store, that.store)
+                .isEquals();
     }
 
     @Override

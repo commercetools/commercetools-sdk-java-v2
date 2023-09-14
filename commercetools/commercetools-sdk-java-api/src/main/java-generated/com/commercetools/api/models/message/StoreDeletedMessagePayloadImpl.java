@@ -47,7 +47,7 @@ public class StoreDeletedMessagePayloadImpl implements StoreDeletedMessagePayloa
 
         StoreDeletedMessagePayloadImpl that = (StoreDeletedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

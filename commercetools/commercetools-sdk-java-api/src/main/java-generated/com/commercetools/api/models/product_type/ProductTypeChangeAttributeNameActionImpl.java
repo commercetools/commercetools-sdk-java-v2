@@ -91,6 +91,9 @@ public class ProductTypeChangeAttributeNameActionImpl implements ProductTypeChan
         return new EqualsBuilder().append(action, that.action)
                 .append(attributeName, that.attributeName)
                 .append(newAttributeName, that.newAttributeName)
+                .append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(newAttributeName, that.newAttributeName)
                 .isEquals();
     }
 

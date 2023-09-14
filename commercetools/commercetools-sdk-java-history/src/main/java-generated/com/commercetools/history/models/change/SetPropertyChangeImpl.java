@@ -122,6 +122,11 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(path, that.path)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(path, that.path)
                 .isEquals();
     }
 

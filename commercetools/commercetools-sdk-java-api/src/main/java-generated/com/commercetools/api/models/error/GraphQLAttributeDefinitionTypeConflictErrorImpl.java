@@ -128,6 +128,11 @@ public class GraphQLAttributeDefinitionTypeConflictErrorImpl
                 .append(conflictingProductTypeId, that.conflictingProductTypeId)
                 .append(conflictingProductTypeName, that.conflictingProductTypeName)
                 .append(conflictingAttributeName, that.conflictingAttributeName)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(conflictingProductTypeId, that.conflictingProductTypeId)
+                .append(conflictingProductTypeName, that.conflictingProductTypeName)
+                .append(conflictingAttributeName, that.conflictingAttributeName)
                 .isEquals();
     }
 

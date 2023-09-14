@@ -109,6 +109,10 @@ public class GraphQLInvalidItemShippingDetailsErrorImpl implements GraphQLInvali
                 .append(values, that.values)
                 .append(subject, that.subject)
                 .append(itemId, that.itemId)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(subject, that.subject)
+                .append(itemId, that.itemId)
                 .isEquals();
     }
 

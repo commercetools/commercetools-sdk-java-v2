@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderChangeTaxCalculationModeAction
+ *  <p>Changing the tax calculation mode leads to recalculation of taxes.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangeTaxCalculationModeActionImpl
@@ -51,7 +51,7 @@ public class StagedOrderChangeTaxCalculationModeActionImpl
     }
 
     /**
-     *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
+     *  <p>New value to set.</p>
      */
 
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
@@ -73,6 +73,8 @@ public class StagedOrderChangeTaxCalculationModeActionImpl
         StagedOrderChangeTaxCalculationModeActionImpl that = (StagedOrderChangeTaxCalculationModeActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .append(action, that.action)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .isEquals();
     }

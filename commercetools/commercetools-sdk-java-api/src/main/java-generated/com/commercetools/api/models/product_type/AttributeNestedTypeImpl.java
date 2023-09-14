@@ -71,7 +71,11 @@ public class AttributeNestedTypeImpl implements AttributeNestedType, ModelBase {
 
         AttributeNestedTypeImpl that = (AttributeNestedTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(typeReference, that.typeReference).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(typeReference, that.typeReference)
+                .append(name, that.name)
+                .append(typeReference, that.typeReference)
+                .isEquals();
     }
 
     @Override

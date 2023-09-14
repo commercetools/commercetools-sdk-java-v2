@@ -110,6 +110,10 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(result, that.result)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(result, that.result)
                 .isEquals();
     }
 

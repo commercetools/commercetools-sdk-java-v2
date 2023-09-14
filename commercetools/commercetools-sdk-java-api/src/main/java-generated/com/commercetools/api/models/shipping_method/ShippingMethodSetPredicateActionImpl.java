@@ -70,7 +70,11 @@ public class ShippingMethodSetPredicateActionImpl implements ShippingMethodSetPr
 
         ShippingMethodSetPredicateActionImpl that = (ShippingMethodSetPredicateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(predicate, that.predicate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(predicate, that.predicate)
+                .append(action, that.action)
+                .append(predicate, that.predicate)
+                .isEquals();
     }
 
     @Override

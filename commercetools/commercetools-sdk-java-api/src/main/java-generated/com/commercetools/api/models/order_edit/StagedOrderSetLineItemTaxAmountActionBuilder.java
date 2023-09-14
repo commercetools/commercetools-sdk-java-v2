@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetLineItemTaxAmountAction stagedOrderSetLineItemTaxAmountAction = StagedOrderSetLineItemTaxAmountAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<StagedOrderSetLineItemTaxAmountAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
@@ -33,23 +36,29 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     private String shippingKey;
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetLineItemTaxAmountActionBuilder lineItemId(final String lineItemId) {
+    public StagedOrderSetLineItemTaxAmountActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetLineItemTaxAmountActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
@@ -62,12 +71,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the externalTaxAmount value
      * @return Builder
      */
@@ -79,12 +83,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param externalTaxAmount value to be set
      * @return Builder
      */
@@ -96,7 +95,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -107,21 +106,27 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return externalTaxAmount
      */
 
@@ -131,7 +136,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
 
@@ -145,8 +150,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
      * @return StagedOrderSetLineItemTaxAmountAction
      */
     public StagedOrderSetLineItemTaxAmountAction build() {
-        Objects.requireNonNull(lineItemId, StagedOrderSetLineItemTaxAmountAction.class + ": lineItemId is missing");
-        return new StagedOrderSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount, shippingKey);
+        return new StagedOrderSetLineItemTaxAmountActionImpl(lineItemId, lineItemKey, externalTaxAmount, shippingKey);
     }
 
     /**
@@ -154,7 +158,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
      * @return StagedOrderSetLineItemTaxAmountAction
      */
     public StagedOrderSetLineItemTaxAmountAction buildUnchecked() {
-        return new StagedOrderSetLineItemTaxAmountActionImpl(lineItemId, externalTaxAmount, shippingKey);
+        return new StagedOrderSetLineItemTaxAmountActionImpl(lineItemId, lineItemKey, externalTaxAmount, shippingKey);
     }
 
     /**
@@ -174,6 +178,7 @@ public class StagedOrderSetLineItemTaxAmountActionBuilder implements Builder<Sta
             final StagedOrderSetLineItemTaxAmountAction template) {
         StagedOrderSetLineItemTaxAmountActionBuilder builder = new StagedOrderSetLineItemTaxAmountActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.externalTaxAmount = template.getExternalTaxAmount();
         builder.shippingKey = template.getShippingKey();
         return builder;

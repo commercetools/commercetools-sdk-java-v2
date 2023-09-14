@@ -47,7 +47,7 @@ public class QuoteDeletedMessagePayloadImpl implements QuoteDeletedMessagePayloa
 
         QuoteDeletedMessagePayloadImpl that = (QuoteDeletedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

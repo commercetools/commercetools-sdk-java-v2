@@ -6,7 +6,7 @@ import com.commercetools.api.predicates.query.QueryPredicateDsl;
 import com.commercetools.api.predicates.query.subscription.SubscriptionQueryBuilderDsl;
 
 public interface ByProjectKeySubscriptionsGetMixin extends
-        PagedQueryResourceRequest<ByProjectKeySubscriptionsGet, SubscriptionPagedQueryResponse, SubscriptionQueryBuilderDsl> {
+        SimplePagedQueryResourceRequest<ByProjectKeySubscriptionsGet, SubscriptionPagedQueryResponse, SubscriptionQueryBuilderDsl> {
     @Override
     default SubscriptionQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.subscription();

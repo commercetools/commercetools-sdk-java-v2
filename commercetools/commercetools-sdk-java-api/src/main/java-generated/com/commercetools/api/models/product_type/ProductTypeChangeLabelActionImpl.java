@@ -89,6 +89,9 @@ public class ProductTypeChangeLabelActionImpl implements ProductTypeChangeLabelA
         return new EqualsBuilder().append(action, that.action)
                 .append(attributeName, that.attributeName)
                 .append(label, that.label)
+                .append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(label, that.label)
                 .isEquals();
     }
 

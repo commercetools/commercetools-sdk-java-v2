@@ -27,7 +27,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     QuoteRequestDraft quoteRequestDraft = QuoteRequestDraft.builder()
  *             .cart(cartBuilder -> cartBuilder)
  *             .cartVersion(0.3)
- *             .comment("{comment}")
  *             .build()
  * </code></pre>
  * </div>
@@ -66,7 +65,7 @@ public interface QuoteRequestDraft
      *  <p>Message from the Buyer included in the Quote Request.</p>
      * @return comment
      */
-    @NotNull
+
     @JsonProperty("comment")
     public String getComment();
 

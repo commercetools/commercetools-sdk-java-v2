@@ -7,7 +7,9 @@ import java.util.concurrent.CompletableFuture;
 public interface RequestCommand<TResult> {
     CompletableFuture<ApiHttpResponse<TResult>> execute();
 
-    ApiHttpResponse<TResult> executeBlocking();
+    default ApiHttpResponse<TResult> executeBlocking() {
+        return executeBlocking(ApiHttpClient.DEFAULT_TIMEOUT);
+    }
 
     ApiHttpResponse<TResult> executeBlocking(final Duration timeout);
 }

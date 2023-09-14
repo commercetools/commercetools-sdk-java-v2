@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * BusinessUnitSetAddressCustomFieldAction
+ *  <p>Adding a Custom Field to an Address of a Business Unit generates the BusinessUnitAddressCustomFieldAdded Message, removing one generates the BusinessUnitAddressCustomFieldRemoved Message, and updating an existing one generates the BusinessUnitAddressCustomFieldChanged Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitSetAddressCustomFieldActionImpl implements BusinessUnitSetAddressCustomFieldAction, ModelBase {
@@ -102,6 +102,10 @@ public class BusinessUnitSetAddressCustomFieldActionImpl implements BusinessUnit
         BusinessUnitSetAddressCustomFieldActionImpl that = (BusinessUnitSetAddressCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(action, that.action)
                 .append(addressId, that.addressId)
                 .append(name, that.name)
                 .append(value, that.value)

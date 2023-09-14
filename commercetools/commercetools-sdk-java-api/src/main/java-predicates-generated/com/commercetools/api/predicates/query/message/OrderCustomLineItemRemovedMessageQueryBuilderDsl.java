@@ -97,6 +97,12 @@ public class OrderCustomLineItemRemovedMessageQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderCustomLineItemRemovedMessageQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderCustomLineItemRemovedMessageQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderCustomLineItemRemovedMessageQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<OrderCustomLineItemRemovedMessageQueryBuilderDsl> customLineItem(
             Function<com.commercetools.api.predicates.query.cart.CustomLineItemQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CustomLineItemQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

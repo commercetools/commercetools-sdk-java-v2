@@ -45,7 +45,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
      */
 
     public Long getVersion() {
@@ -53,7 +53,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Order Edit.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> getActions() {
@@ -61,7 +61,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
      */
 
     public Boolean getDryRun() {
@@ -96,6 +96,9 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
         OrderEditUpdateImpl that = (OrderEditUpdateImpl) o;
 
         return new EqualsBuilder().append(version, that.version)
+                .append(actions, that.actions)
+                .append(dryRun, that.dryRun)
+                .append(version, that.version)
                 .append(actions, that.actions)
                 .append(dryRun, that.dryRun)
                 .isEquals();

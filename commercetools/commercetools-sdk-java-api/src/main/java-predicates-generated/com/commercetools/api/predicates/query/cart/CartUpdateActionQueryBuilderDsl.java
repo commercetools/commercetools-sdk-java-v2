@@ -340,21 +340,6 @@ public class CartUpdateActionQueryBuilderDsl {
             CartUpdateActionQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetDeliveryAddressCustomField(
-            Function<com.commercetools.api.predicates.query.cart.CartSetDeliveryAddressCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetDeliveryAddressCustomFieldActionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(fn.apply(
-            com.commercetools.api.predicates.query.cart.CartSetDeliveryAddressCustomFieldActionQueryBuilderDsl.of()),
-            CartUpdateActionQueryBuilderDsl::of);
-    }
-
-    public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetDeliveryAddressCustomType(
-            Function<com.commercetools.api.predicates.query.cart.CartSetDeliveryAddressCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetDeliveryAddressCustomTypeActionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(
-                com.commercetools.api.predicates.query.cart.CartSetDeliveryAddressCustomTypeActionQueryBuilderDsl.of()),
-            CartUpdateActionQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asSetDirectDiscounts(
             Function<com.commercetools.api.predicates.query.cart.CartSetDirectDiscountsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartSetDirectDiscountsActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

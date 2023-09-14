@@ -65,7 +65,7 @@ public interface ConfluentCloudDestination extends Destination {
     public String getApiSecret();
 
     /**
-     *  <p>The Kafka <code>acks</code> value. Can be <code>"0"</code>, <code>"1"</code>, or <code>"all"</code>.</p>
+     *  <p>The Kafka <code>acks</code> value.</p>
      * @return acks
      */
     @NotNull
@@ -110,7 +110,7 @@ public interface ConfluentCloudDestination extends Destination {
     public void setApiSecret(final String apiSecret);
 
     /**
-     *  <p>The Kafka <code>acks</code> value. Can be <code>"0"</code>, <code>"1"</code>, or <code>"all"</code>.</p>
+     *  <p>The Kafka <code>acks</code> value.</p>
      * @param acks value to be set
      */
 

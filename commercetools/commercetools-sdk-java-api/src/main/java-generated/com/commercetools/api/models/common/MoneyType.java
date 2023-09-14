@@ -11,18 +11,18 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
+ *  <p>Determines the type of money used.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface MoneyType extends JsonEnum {
 
     /**
-    	<p>for <a href="#centprecisionmoney">CentPrecisionMoney</a>.</p>
+    	<p>Use to set currency in cent precision.</p>
 
     */
     MoneyType CENT_PRECISION = MoneyTypeEnum.CENT_PRECISION;
     /**
-    	<p>for <a href="#highprecisionmoney">HighPrecisionMoney</a>.</p>
+    	<p>Use to set currency in high precision.</p>
 
     */
     MoneyType HIGH_PRECISION = MoneyTypeEnum.HIGH_PRECISION;

@@ -4,6 +4,8 @@ package com.commercetools.api.models.order;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderImportCustomLineItemStateAction orderImportCustomLineItemStateAction = OrderImportCustomLineItemStateAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .plusState(stateBuilder -> stateBuilder)
  *             .build()
  * </code></pre>
@@ -23,23 +24,38 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderImportCustomLineItemStateActionBuilder implements Builder<OrderImportCustomLineItemStateAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public OrderImportCustomLineItemStateActionBuilder customLineItemId(final String customLineItemId) {
+    public OrderImportCustomLineItemStateActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     * set values to the state
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderImportCustomLineItemStateActionBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>New status of the Custom Line Items.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -51,7 +67,7 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
     }
 
     /**
-     * set value to the state
+     *  <p>New status of the Custom Line Items.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -63,7 +79,7 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
     }
 
     /**
-     * add values to the state
+     *  <p>New status of the Custom Line Items.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -78,7 +94,7 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
     }
 
     /**
-     * add the value to the state using the builder function
+     *  <p>New status of the Custom Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -93,7 +109,7 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>New status of the Custom Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -106,7 +122,7 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
     }
 
     /**
-     * add the value to the state using the builder function
+     *  <p>New status of the Custom Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -117,7 +133,7 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>New status of the Custom Line Items.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -128,16 +144,27 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
     /**
-     * value of state}
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>New status of the Custom Line Items.</p>
      * @return state
      */
 
@@ -150,10 +177,8 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
      * @return OrderImportCustomLineItemStateAction
      */
     public OrderImportCustomLineItemStateAction build() {
-        Objects.requireNonNull(customLineItemId,
-            OrderImportCustomLineItemStateAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(state, OrderImportCustomLineItemStateAction.class + ": state is missing");
-        return new OrderImportCustomLineItemStateActionImpl(customLineItemId, state);
+        return new OrderImportCustomLineItemStateActionImpl(customLineItemId, customLineItemKey, state);
     }
 
     /**
@@ -161,7 +186,7 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
      * @return OrderImportCustomLineItemStateAction
      */
     public OrderImportCustomLineItemStateAction buildUnchecked() {
-        return new OrderImportCustomLineItemStateActionImpl(customLineItemId, state);
+        return new OrderImportCustomLineItemStateActionImpl(customLineItemId, customLineItemKey, state);
     }
 
     /**
@@ -180,6 +205,7 @@ public class OrderImportCustomLineItemStateActionBuilder implements Builder<Orde
     public static OrderImportCustomLineItemStateActionBuilder of(final OrderImportCustomLineItemStateAction template) {
         OrderImportCustomLineItemStateActionBuilder builder = new OrderImportCustomLineItemStateActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.state = template.getState();
         return builder;
     }

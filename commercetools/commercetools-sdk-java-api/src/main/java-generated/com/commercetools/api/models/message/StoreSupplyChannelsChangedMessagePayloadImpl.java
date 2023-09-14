@@ -103,6 +103,9 @@ public class StoreSupplyChannelsChangedMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(addedSupplyChannels, that.addedSupplyChannels)
                 .append(removedSupplyChannels, that.removedSupplyChannels)
+                .append(type, that.type)
+                .append(addedSupplyChannels, that.addedSupplyChannels)
+                .append(removedSupplyChannels, that.removedSupplyChannels)
                 .isEquals();
     }
 

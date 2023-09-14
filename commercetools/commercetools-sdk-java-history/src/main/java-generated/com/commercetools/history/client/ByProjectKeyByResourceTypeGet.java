@@ -103,16 +103,28 @@ public class ByProjectKeyByResourceTypeGet extends
         return this.getQueryParam("userId");
     }
 
-    public List<String> getType() {
-        return this.getQueryParam("type");
-    }
-
     public List<String> getClientId() {
         return this.getQueryParam("clientId");
     }
 
-    public List<String> getResourceId() {
-        return this.getQueryParam("resourceId");
+    public List<String> getCustomerId() {
+        return this.getQueryParam("customerId");
+    }
+
+    public List<String> getAssociateId() {
+        return this.getQueryParam("associateId");
+    }
+
+    public List<String> getBusinessUnit() {
+        return this.getQueryParam("businessUnit");
+    }
+
+    public List<String> getType() {
+        return this.getQueryParam("type");
+    }
+
+    public List<String> getResourceKey() {
+        return this.getQueryParam("resourceKey");
     }
 
     public List<String> getSource() {
@@ -125,10 +137,6 @@ public class ByProjectKeyByResourceTypeGet extends
 
     public List<String> getStores() {
         return this.getQueryParam("stores");
-    }
-
-    public List<String> getCustomerId() {
-        return this.getQueryParam("customerId");
     }
 
     public List<String> getExcludePlatformInitiatedChanges() {
@@ -544,85 +552,6 @@ public class ByProjectKeyByResourceTypeGet extends
     }
 
     /**
-     * set type with the specified value
-     * @param type value to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public <TValue> ByProjectKeyByResourceTypeGet withType(final TValue type) {
-        return copy().withQueryParam("type", type);
-    }
-
-    /**
-     * add additional type query parameter
-     * @param type value to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public <TValue> ByProjectKeyByResourceTypeGet addType(final TValue type) {
-        return copy().addQueryParam("type", type);
-    }
-
-    /**
-     * set type with the specified value
-     * @param supplier supplier for the value to be set
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public ByProjectKeyByResourceTypeGet withType(final Supplier<String> supplier) {
-        return copy().withQueryParam("type", supplier.get());
-    }
-
-    /**
-     * add additional type query parameter
-     * @param supplier supplier for the value to be added
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public ByProjectKeyByResourceTypeGet addType(final Supplier<String> supplier) {
-        return copy().addQueryParam("type", supplier.get());
-    }
-
-    /**
-     * set type with the specified value
-     * @param op builder for the value to be set
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public ByProjectKeyByResourceTypeGet withType(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("type", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional type query parameter
-     * @param op builder for the value to be added
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public ByProjectKeyByResourceTypeGet addType(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("type", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set type with the specified values
-     * @param type values to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public <TValue> ByProjectKeyByResourceTypeGet withType(final Collection<TValue> type) {
-        return copy().withoutQueryParam("type")
-                .addQueryParams(
-                    type.stream().map(s -> new ParamEntry<>("type", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional type query parameters
-     * @param type values to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public <TValue> ByProjectKeyByResourceTypeGet addType(final Collection<TValue> type) {
-        return copy().addQueryParams(
-            type.stream().map(s -> new ParamEntry<>("type", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
      * set clientId with the specified value
      * @param clientId value to be set
      * @param <TValue> value type
@@ -703,83 +632,403 @@ public class ByProjectKeyByResourceTypeGet extends
     }
 
     /**
-     * set resourceId with the specified value
-     * @param resourceId value to be set
+     * set customerId with the specified value
+     * @param customerId value to be set
      * @param <TValue> value type
      * @return ByProjectKeyByResourceTypeGet
      */
-    public <TValue> ByProjectKeyByResourceTypeGet withResourceId(final TValue resourceId) {
-        return copy().withQueryParam("resourceId", resourceId);
+    public <TValue> ByProjectKeyByResourceTypeGet withCustomerId(final TValue customerId) {
+        return copy().withQueryParam("customerId", customerId);
     }
 
     /**
-     * add additional resourceId query parameter
-     * @param resourceId value to be added
+     * add additional customerId query parameter
+     * @param customerId value to be added
      * @param <TValue> value type
      * @return ByProjectKeyByResourceTypeGet
      */
-    public <TValue> ByProjectKeyByResourceTypeGet addResourceId(final TValue resourceId) {
-        return copy().addQueryParam("resourceId", resourceId);
+    public <TValue> ByProjectKeyByResourceTypeGet addCustomerId(final TValue customerId) {
+        return copy().addQueryParam("customerId", customerId);
     }
 
     /**
-     * set resourceId with the specified value
+     * set customerId with the specified value
      * @param supplier supplier for the value to be set
      * @return ByProjectKeyByResourceTypeGet
      */
-    public ByProjectKeyByResourceTypeGet withResourceId(final Supplier<String> supplier) {
-        return copy().withQueryParam("resourceId", supplier.get());
+    public ByProjectKeyByResourceTypeGet withCustomerId(final Supplier<String> supplier) {
+        return copy().withQueryParam("customerId", supplier.get());
     }
 
     /**
-     * add additional resourceId query parameter
+     * add additional customerId query parameter
      * @param supplier supplier for the value to be added
      * @return ByProjectKeyByResourceTypeGet
      */
-    public ByProjectKeyByResourceTypeGet addResourceId(final Supplier<String> supplier) {
-        return copy().addQueryParam("resourceId", supplier.get());
+    public ByProjectKeyByResourceTypeGet addCustomerId(final Supplier<String> supplier) {
+        return copy().addQueryParam("customerId", supplier.get());
     }
 
     /**
-     * set resourceId with the specified value
+     * set customerId with the specified value
      * @param op builder for the value to be set
      * @return ByProjectKeyByResourceTypeGet
      */
-    public ByProjectKeyByResourceTypeGet withResourceId(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("resourceId", op.apply(new StringBuilder()));
+    public ByProjectKeyByResourceTypeGet withCustomerId(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("customerId", op.apply(new StringBuilder()));
     }
 
     /**
-     * add additional resourceId query parameter
+     * add additional customerId query parameter
      * @param op builder for the value to be added
      * @return ByProjectKeyByResourceTypeGet
      */
-    public ByProjectKeyByResourceTypeGet addResourceId(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("resourceId", op.apply(new StringBuilder()));
+    public ByProjectKeyByResourceTypeGet addCustomerId(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("customerId", op.apply(new StringBuilder()));
     }
 
     /**
-     * set resourceId with the specified values
-     * @param resourceId values to be set
+     * set customerId with the specified values
+     * @param customerId values to be set
      * @param <TValue> value type
      * @return ByProjectKeyByResourceTypeGet
      */
-    public <TValue> ByProjectKeyByResourceTypeGet withResourceId(final Collection<TValue> resourceId) {
-        return copy().withoutQueryParam("resourceId")
-                .addQueryParams(resourceId.stream()
-                        .map(s -> new ParamEntry<>("resourceId", s.toString()))
+    public <TValue> ByProjectKeyByResourceTypeGet withCustomerId(final Collection<TValue> customerId) {
+        return copy().withoutQueryParam("customerId")
+                .addQueryParams(customerId.stream()
+                        .map(s -> new ParamEntry<>("customerId", s.toString()))
                         .collect(Collectors.toList()));
     }
 
     /**
-     * add additional resourceId query parameters
-     * @param resourceId values to be added
+     * add additional customerId query parameters
+     * @param customerId values to be added
      * @param <TValue> value type
      * @return ByProjectKeyByResourceTypeGet
      */
-    public <TValue> ByProjectKeyByResourceTypeGet addResourceId(final Collection<TValue> resourceId) {
+    public <TValue> ByProjectKeyByResourceTypeGet addCustomerId(final Collection<TValue> customerId) {
         return copy().addQueryParams(
-            resourceId.stream().map(s -> new ParamEntry<>("resourceId", s.toString())).collect(Collectors.toList()));
+            customerId.stream().map(s -> new ParamEntry<>("customerId", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set associateId with the specified value
+     * @param associateId value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet withAssociateId(final TValue associateId) {
+        return copy().withQueryParam("associateId", associateId);
+    }
+
+    /**
+     * add additional associateId query parameter
+     * @param associateId value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet addAssociateId(final TValue associateId) {
+        return copy().addQueryParam("associateId", associateId);
+    }
+
+    /**
+     * set associateId with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet withAssociateId(final Supplier<String> supplier) {
+        return copy().withQueryParam("associateId", supplier.get());
+    }
+
+    /**
+     * add additional associateId query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet addAssociateId(final Supplier<String> supplier) {
+        return copy().addQueryParam("associateId", supplier.get());
+    }
+
+    /**
+     * set associateId with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet withAssociateId(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("associateId", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional associateId query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet addAssociateId(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("associateId", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set associateId with the specified values
+     * @param associateId values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet withAssociateId(final Collection<TValue> associateId) {
+        return copy().withoutQueryParam("associateId")
+                .addQueryParams(associateId.stream()
+                        .map(s -> new ParamEntry<>("associateId", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional associateId query parameters
+     * @param associateId values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet addAssociateId(final Collection<TValue> associateId) {
+        return copy().addQueryParams(
+            associateId.stream().map(s -> new ParamEntry<>("associateId", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set businessUnit with the specified value
+     * @param businessUnit value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet withBusinessUnit(final TValue businessUnit) {
+        return copy().withQueryParam("businessUnit", businessUnit);
+    }
+
+    /**
+     * add additional businessUnit query parameter
+     * @param businessUnit value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet addBusinessUnit(final TValue businessUnit) {
+        return copy().addQueryParam("businessUnit", businessUnit);
+    }
+
+    /**
+     * set businessUnit with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet withBusinessUnit(final Supplier<String> supplier) {
+        return copy().withQueryParam("businessUnit", supplier.get());
+    }
+
+    /**
+     * add additional businessUnit query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet addBusinessUnit(final Supplier<String> supplier) {
+        return copy().addQueryParam("businessUnit", supplier.get());
+    }
+
+    /**
+     * set businessUnit with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet withBusinessUnit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("businessUnit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional businessUnit query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet addBusinessUnit(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("businessUnit", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set businessUnit with the specified values
+     * @param businessUnit values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet withBusinessUnit(final Collection<TValue> businessUnit) {
+        return copy().withoutQueryParam("businessUnit")
+                .addQueryParams(businessUnit.stream()
+                        .map(s -> new ParamEntry<>("businessUnit", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional businessUnit query parameters
+     * @param businessUnit values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet addBusinessUnit(final Collection<TValue> businessUnit) {
+        return copy().addQueryParams(businessUnit.stream()
+                .map(s -> new ParamEntry<>("businessUnit", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set type with the specified value
+     * @param type value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet withType(final TValue type) {
+        return copy().withQueryParam("type", type);
+    }
+
+    /**
+     * add additional type query parameter
+     * @param type value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet addType(final TValue type) {
+        return copy().addQueryParam("type", type);
+    }
+
+    /**
+     * set type with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet withType(final Supplier<String> supplier) {
+        return copy().withQueryParam("type", supplier.get());
+    }
+
+    /**
+     * add additional type query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet addType(final Supplier<String> supplier) {
+        return copy().addQueryParam("type", supplier.get());
+    }
+
+    /**
+     * set type with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet withType(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("type", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional type query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet addType(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("type", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set type with the specified values
+     * @param type values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet withType(final Collection<TValue> type) {
+        return copy().withoutQueryParam("type")
+                .addQueryParams(
+                    type.stream().map(s -> new ParamEntry<>("type", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional type query parameters
+     * @param type values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet addType(final Collection<TValue> type) {
+        return copy().addQueryParams(
+            type.stream().map(s -> new ParamEntry<>("type", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set resourceKey with the specified value
+     * @param resourceKey value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet withResourceKey(final TValue resourceKey) {
+        return copy().withQueryParam("resourceKey", resourceKey);
+    }
+
+    /**
+     * add additional resourceKey query parameter
+     * @param resourceKey value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet addResourceKey(final TValue resourceKey) {
+        return copy().addQueryParam("resourceKey", resourceKey);
+    }
+
+    /**
+     * set resourceKey with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet withResourceKey(final Supplier<String> supplier) {
+        return copy().withQueryParam("resourceKey", supplier.get());
+    }
+
+    /**
+     * add additional resourceKey query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet addResourceKey(final Supplier<String> supplier) {
+        return copy().addQueryParam("resourceKey", supplier.get());
+    }
+
+    /**
+     * set resourceKey with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet withResourceKey(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("resourceKey", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional resourceKey query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public ByProjectKeyByResourceTypeGet addResourceKey(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("resourceKey", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set resourceKey with the specified values
+     * @param resourceKey values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet withResourceKey(final Collection<TValue> resourceKey) {
+        return copy().withoutQueryParam("resourceKey")
+                .addQueryParams(resourceKey.stream()
+                        .map(s -> new ParamEntry<>("resourceKey", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional resourceKey query parameters
+     * @param resourceKey values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyByResourceTypeGet
+     */
+    public <TValue> ByProjectKeyByResourceTypeGet addResourceKey(final Collection<TValue> resourceKey) {
+        return copy().addQueryParams(
+            resourceKey.stream().map(s -> new ParamEntry<>("resourceKey", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -1017,86 +1266,6 @@ public class ByProjectKeyByResourceTypeGet extends
     public <TValue> ByProjectKeyByResourceTypeGet addStores(final Collection<TValue> stores) {
         return copy().addQueryParams(
             stores.stream().map(s -> new ParamEntry<>("stores", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * set customerId with the specified value
-     * @param customerId value to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public <TValue> ByProjectKeyByResourceTypeGet withCustomerId(final TValue customerId) {
-        return copy().withQueryParam("customerId", customerId);
-    }
-
-    /**
-     * add additional customerId query parameter
-     * @param customerId value to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public <TValue> ByProjectKeyByResourceTypeGet addCustomerId(final TValue customerId) {
-        return copy().addQueryParam("customerId", customerId);
-    }
-
-    /**
-     * set customerId with the specified value
-     * @param supplier supplier for the value to be set
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public ByProjectKeyByResourceTypeGet withCustomerId(final Supplier<String> supplier) {
-        return copy().withQueryParam("customerId", supplier.get());
-    }
-
-    /**
-     * add additional customerId query parameter
-     * @param supplier supplier for the value to be added
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public ByProjectKeyByResourceTypeGet addCustomerId(final Supplier<String> supplier) {
-        return copy().addQueryParam("customerId", supplier.get());
-    }
-
-    /**
-     * set customerId with the specified value
-     * @param op builder for the value to be set
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public ByProjectKeyByResourceTypeGet withCustomerId(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("customerId", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional customerId query parameter
-     * @param op builder for the value to be added
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public ByProjectKeyByResourceTypeGet addCustomerId(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("customerId", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set customerId with the specified values
-     * @param customerId values to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public <TValue> ByProjectKeyByResourceTypeGet withCustomerId(final Collection<TValue> customerId) {
-        return copy().withoutQueryParam("customerId")
-                .addQueryParams(customerId.stream()
-                        .map(s -> new ParamEntry<>("customerId", s.toString()))
-                        .collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional customerId query parameters
-     * @param customerId values to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyByResourceTypeGet
-     */
-    public <TValue> ByProjectKeyByResourceTypeGet addCustomerId(final Collection<TValue> customerId) {
-        return copy().addQueryParams(
-            customerId.stream().map(s -> new ParamEntry<>("customerId", s.toString())).collect(Collectors.toList()));
     }
 
     /**

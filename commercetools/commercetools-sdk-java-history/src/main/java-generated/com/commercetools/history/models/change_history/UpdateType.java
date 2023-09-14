@@ -20,11 +20,17 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType ADD_ASSET = UpdateTypeEnum.ADD_ASSET;
 
+    UpdateType ADD_ASSOCIATE = UpdateTypeEnum.ADD_ASSOCIATE;
+
     UpdateType ADD_ATTRIBUTE_DEFINITION = UpdateTypeEnum.ADD_ATTRIBUTE_DEFINITION;
 
     UpdateType ADD_BILLING_ADDRESS_ID = UpdateTypeEnum.ADD_BILLING_ADDRESS_ID;
 
+    UpdateType ADD_CUSTOM_LINE_ITEM = UpdateTypeEnum.ADD_CUSTOM_LINE_ITEM;
+
     UpdateType ADD_DELIVERY = UpdateTypeEnum.ADD_DELIVERY;
+
+    UpdateType ADD_DISCOUNT_CODE = UpdateTypeEnum.ADD_DISCOUNT_CODE;
 
     UpdateType ADD_ENUM_VALUE = UpdateTypeEnum.ADD_ENUM_VALUE;
 
@@ -50,6 +56,12 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType ADD_PRICE = UpdateTypeEnum.ADD_PRICE;
 
+    UpdateType ADD_PRODUCT = UpdateTypeEnum.ADD_PRODUCT;
+
+    UpdateType ADD_PRODUCT_SELECTION = UpdateTypeEnum.ADD_PRODUCT_SELECTION;
+
+    UpdateType ADD_PROPERTY = UpdateTypeEnum.ADD_PROPERTY;
+
     UpdateType ADD_RETURN_INFO = UpdateTypeEnum.ADD_RETURN_INFO;
 
     UpdateType ADD_ROLES = UpdateTypeEnum.ADD_ROLES;
@@ -68,11 +80,17 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType CHANGE_ADDRESS = UpdateTypeEnum.CHANGE_ADDRESS;
 
+    UpdateType CHANGE_AMOUNT_AUTHORIZED = UpdateTypeEnum.CHANGE_AMOUNT_AUTHORIZED;
+
     UpdateType CHANGE_AMOUNT_PLANNED = UpdateTypeEnum.CHANGE_AMOUNT_PLANNED;
 
     UpdateType CHANGE_ASSET_NAME = UpdateTypeEnum.CHANGE_ASSET_NAME;
 
     UpdateType CHANGE_ASSET_ORDER = UpdateTypeEnum.CHANGE_ASSET_ORDER;
+
+    UpdateType CHANGE_ASSOCIATE = UpdateTypeEnum.CHANGE_ASSOCIATE;
+
+    UpdateType CHANGE_ASSOCIATE_MODE = UpdateTypeEnum.CHANGE_ASSOCIATE_MODE;
 
     UpdateType CHANGE_ATTRIBUTE_CONSTRAINT = UpdateTypeEnum.CHANGE_ATTRIBUTE_CONSTRAINT;
 
@@ -83,6 +101,8 @@ public interface UpdateType extends JsonEnum {
     UpdateType CHANGE_CART_DISCOUNTS = UpdateTypeEnum.CHANGE_CART_DISCOUNTS;
 
     UpdateType CHANGE_CART_PREDICATE = UpdateTypeEnum.CHANGE_CART_PREDICATE;
+
+    UpdateType CHANGE_CUSTOM_LINE_ITEM_QUANTITY = UpdateTypeEnum.CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
 
     UpdateType CHANGE_DESCRIPTION = UpdateTypeEnum.CHANGE_DESCRIPTION;
 
@@ -110,6 +130,8 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType CHANGE_LABEL = UpdateTypeEnum.CHANGE_LABEL;
 
+    UpdateType CHANGE_LINE_ITEM_NAME = UpdateTypeEnum.CHANGE_LINE_ITEM_NAME;
+
     UpdateType CHANGE_LINE_ITEM_QUANTITY = UpdateTypeEnum.CHANGE_LINE_ITEM_QUANTITY;
 
     UpdateType CHANGE_LINE_ITEMS_ORDER = UpdateTypeEnum.CHANGE_LINE_ITEMS_ORDER;
@@ -128,6 +150,8 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType CHANGE_PARENT = UpdateTypeEnum.CHANGE_PARENT;
 
+    UpdateType CHANGE_PARENT_UNIT = UpdateTypeEnum.CHANGE_PARENT_UNIT;
+
     UpdateType CHANGE_PAYMENT_STATE = UpdateTypeEnum.CHANGE_PAYMENT_STATE;
 
     UpdateType CHANGE_PLAIN_ENUM_VALUE_LABEL = UpdateTypeEnum.CHANGE_PLAIN_ENUM_VALUE_LABEL;
@@ -136,7 +160,13 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType CHANGE_PRICE = UpdateTypeEnum.CHANGE_PRICE;
 
+    UpdateType CHANGE_PRODUCT_SELECTION_ACTIVE = UpdateTypeEnum.CHANGE_PRODUCT_SELECTION_ACTIVE;
+
     UpdateType CHANGE_QUANTITY = UpdateTypeEnum.CHANGE_QUANTITY;
+
+    UpdateType CHANGE_QUOTE_REQUEST_STATE = UpdateTypeEnum.CHANGE_QUOTE_REQUEST_STATE;
+
+    UpdateType CHANGE_QUOTE_STATE = UpdateTypeEnum.CHANGE_QUOTE_STATE;
 
     UpdateType CHANGE_REQUIRES_DISCOUNT_CODE = UpdateTypeEnum.CHANGE_REQUIRES_DISCOUNT_CODE;
 
@@ -150,7 +180,17 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType CHANGE_STACKING_MODE = UpdateTypeEnum.CHANGE_STACKING_MODE;
 
+    UpdateType CHANGE_STAGED_QUOTE_STATE = UpdateTypeEnum.CHANGE_STAGED_QUOTE_STATE;
+
+    UpdateType CHANGE_STATUS = UpdateTypeEnum.CHANGE_STATUS;
+
     UpdateType CHANGE_TARGET = UpdateTypeEnum.CHANGE_TARGET;
+
+    UpdateType CHANGE_TAX_CALCULATION_MODE = UpdateTypeEnum.CHANGE_TAX_CALCULATION_MODE;
+
+    UpdateType CHANGE_TAX_MODE = UpdateTypeEnum.CHANGE_TAX_MODE;
+
+    UpdateType CHANGE_TAX_ROUNDING_MODE = UpdateTypeEnum.CHANGE_TAX_ROUNDING_MODE;
 
     UpdateType CHANGE_TEXT_LINE_ITEM_NAME = UpdateTypeEnum.CHANGE_TEXT_LINE_ITEM_NAME;
 
@@ -168,17 +208,25 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType CHANGE_VALUE = UpdateTypeEnum.CHANGE_VALUE;
 
+    UpdateType MOVE_IMAGE_TO_POSITION = UpdateTypeEnum.MOVE_IMAGE_TO_POSITION;
+
     UpdateType PUBLISH = UpdateTypeEnum.PUBLISH;
 
     UpdateType REMOVE_ADDRESS = UpdateTypeEnum.REMOVE_ADDRESS;
 
     UpdateType REMOVE_ASSET = UpdateTypeEnum.REMOVE_ASSET;
 
+    UpdateType REMOVE_ASSOCIATE = UpdateTypeEnum.REMOVE_ASSOCIATE;
+
     UpdateType REMOVE_ATTRIBUTE_DEFINITION = UpdateTypeEnum.REMOVE_ATTRIBUTE_DEFINITION;
 
     UpdateType REMOVE_BILLING_ADDRESS_ID = UpdateTypeEnum.REMOVE_BILLING_ADDRESS_ID;
 
+    UpdateType REMOVE_CUSTOM_LINE_ITEM = UpdateTypeEnum.REMOVE_CUSTOM_LINE_ITEM;
+
     UpdateType REMOVE_DELIVERY = UpdateTypeEnum.REMOVE_DELIVERY;
+
+    UpdateType REMOVE_DISCOUNT_CODE = UpdateTypeEnum.REMOVE_DISCOUNT_CODE;
 
     UpdateType REMOVE_ENUM_VALUES = UpdateTypeEnum.REMOVE_ENUM_VALUES;
 
@@ -200,6 +248,12 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType REMOVE_PRICE = UpdateTypeEnum.REMOVE_PRICE;
 
+    UpdateType REMOVE_PRODUCT = UpdateTypeEnum.REMOVE_PRODUCT;
+
+    UpdateType REMOVE_PRODUCT_SELECTION = UpdateTypeEnum.REMOVE_PRODUCT_SELECTION;
+
+    UpdateType REMOVE_PROPERTY = UpdateTypeEnum.REMOVE_PROPERTY;
+
     UpdateType REMOVE_ROLES = UpdateTypeEnum.REMOVE_ROLES;
 
     UpdateType REMOVE_SHIPPING_ADDRESS_ID = UpdateTypeEnum.REMOVE_SHIPPING_ADDRESS_ID;
@@ -210,9 +264,17 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType REMOVE_VARIANT = UpdateTypeEnum.REMOVE_VARIANT;
 
+    UpdateType REQUEST_QUOTE_RENEGOTIATION = UpdateTypeEnum.REQUEST_QUOTE_RENEGOTIATION;
+
     UpdateType SET_ADDRESS = UpdateTypeEnum.SET_ADDRESS;
 
+    UpdateType SET_ADDRESS_CUSTOM_FIELD = UpdateTypeEnum.SET_ADDRESS_CUSTOM_FIELD;
+
+    UpdateType SET_ADDRESS_CUSTOM_TYPE = UpdateTypeEnum.SET_ADDRESS_CUSTOM_TYPE;
+
     UpdateType SET_ANONYMOUS_ID = UpdateTypeEnum.SET_ANONYMOUS_ID;
+
+    UpdateType SET_APPLICATION_VERSION = UpdateTypeEnum.SET_APPLICATION_VERSION;
 
     UpdateType SET_ASSET_CUSTOM_FIELD = UpdateTypeEnum.SET_ASSET_CUSTOM_FIELD;
 
@@ -228,6 +290,8 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType SET_ATTRIBUTE = UpdateTypeEnum.SET_ATTRIBUTE;
 
+    UpdateType SET_AUTHENTICATION_MODE = UpdateTypeEnum.SET_AUTHENTICATION_MODE;
+
     UpdateType SET_AUTHOR_NAME = UpdateTypeEnum.SET_AUTHOR_NAME;
 
     UpdateType SET_BILLING_ADDRESS = UpdateTypeEnum.SET_BILLING_ADDRESS;
@@ -238,13 +302,33 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType SET_COMPANY_NAME = UpdateTypeEnum.SET_COMPANY_NAME;
 
+    UpdateType SET_CONTACT_EMAIL = UpdateTypeEnum.SET_CONTACT_EMAIL;
+
+    UpdateType SET_COUNTRIES = UpdateTypeEnum.SET_COUNTRIES;
+
+    UpdateType SET_COUNTRY = UpdateTypeEnum.SET_COUNTRY;
+
     UpdateType SET_CUSTOM_FIELD = UpdateTypeEnum.SET_CUSTOM_FIELD;
 
     UpdateType SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD = UpdateTypeEnum.SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD;
 
     UpdateType SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE = UpdateTypeEnum.SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE;
 
+    UpdateType SET_CUSTOM_LINE_ITEM_MONEY = UpdateTypeEnum.SET_CUSTOM_LINE_ITEM_MONEY;
+
     UpdateType SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS = UpdateTypeEnum.SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS;
+
+    UpdateType SET_CUSTOM_LINE_ITEM_TAX_AMOUNT = UpdateTypeEnum.SET_CUSTOM_LINE_ITEM_TAX_AMOUNT;
+
+    UpdateType SET_CUSTOM_LINE_ITEM_TAX_CATEGORY = UpdateTypeEnum.SET_CUSTOM_LINE_ITEM_TAX_CATEGORY;
+
+    UpdateType SET_CUSTOM_LINE_ITEM_TAX_RATE = UpdateTypeEnum.SET_CUSTOM_LINE_ITEM_TAX_RATE;
+
+    UpdateType SET_CUSTOM_LINE_ITEM_TAXED_PRICE = UpdateTypeEnum.SET_CUSTOM_LINE_ITEM_TAXED_PRICE;
+
+    UpdateType SET_CUSTOM_LINE_ITEM_TOTAL_PRICE = UpdateTypeEnum.SET_CUSTOM_LINE_ITEM_TOTAL_PRICE;
+
+    UpdateType SET_CUSTOM_SHIPPING_METHOD = UpdateTypeEnum.SET_CUSTOM_SHIPPING_METHOD;
 
     UpdateType SET_CUSTOM_TYPE = UpdateTypeEnum.SET_CUSTOM_TYPE;
 
@@ -290,6 +374,8 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType SET_INTERFACE_ID = UpdateTypeEnum.SET_INTERFACE_ID;
 
+    UpdateType SET_IS_VALID = UpdateTypeEnum.SET_IS_VALID;
+
     UpdateType SET_KEY = UpdateTypeEnum.SET_KEY;
 
     UpdateType SET_LANGUAGES = UpdateTypeEnum.SET_LANGUAGES;
@@ -300,7 +386,29 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType SET_LINE_ITEM_CUSTOM_TYPE = UpdateTypeEnum.SET_LINE_ITEM_CUSTOM_TYPE;
 
+    UpdateType SET_LINE_ITEM_DEACTIVATED_AT = UpdateTypeEnum.SET_LINE_ITEM_DEACTIVATED_AT;
+
+    UpdateType SET_LINE_ITEM_DISCOUNTED_PRICE = UpdateTypeEnum.SET_LINE_ITEM_DISCOUNTED_PRICE;
+
+    UpdateType SET_LINE_ITEM_DISCOUNTED_PRICE_PER_QUANTITY = UpdateTypeEnum.SET_LINE_ITEM_DISCOUNTED_PRICE_PER_QUANTITY;
+
+    UpdateType SET_LINE_ITEM_DISTRIBUTION_CHANNEL = UpdateTypeEnum.SET_LINE_ITEM_DISTRIBUTION_CHANNEL;
+
+    UpdateType SET_LINE_ITEM_PRICE = UpdateTypeEnum.SET_LINE_ITEM_PRICE;
+
+    UpdateType SET_LINE_ITEM_PRODUCT_KEY = UpdateTypeEnum.SET_LINE_ITEM_PRODUCT_KEY;
+
+    UpdateType SET_LINE_ITEM_PRODUCT_SLUG = UpdateTypeEnum.SET_LINE_ITEM_PRODUCT_SLUG;
+
     UpdateType SET_LINE_ITEM_SHIPPING_DETAILS = UpdateTypeEnum.SET_LINE_ITEM_SHIPPING_DETAILS;
+
+    UpdateType SET_LINE_ITEM_TAX_AMOUNT = UpdateTypeEnum.SET_LINE_ITEM_TAX_AMOUNT;
+
+    UpdateType SET_LINE_ITEM_TAX_RATE = UpdateTypeEnum.SET_LINE_ITEM_TAX_RATE;
+
+    UpdateType SET_LINE_ITEM_TAXED_PRICE = UpdateTypeEnum.SET_LINE_ITEM_TAXED_PRICE;
+
+    UpdateType SET_LINE_ITEM_TOTAL_PRICE = UpdateTypeEnum.SET_LINE_ITEM_TOTAL_PRICE;
 
     UpdateType SET_LOCALE = UpdateTypeEnum.SET_LOCALE;
 
@@ -326,6 +434,12 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType SET_ORDER_NUMBER = UpdateTypeEnum.SET_ORDER_NUMBER;
 
+    UpdateType SET_ORDER_TAXED_PRICE = UpdateTypeEnum.SET_ORDER_TAXED_PRICE;
+
+    UpdateType SET_ORDER_TOTAL_PRICE = UpdateTypeEnum.SET_ORDER_TOTAL_PRICE;
+
+    UpdateType SET_ORDER_TOTAL_TAX = UpdateTypeEnum.SET_ORDER_TOTAL_TAX;
+
     UpdateType SET_PARCEL_ITEMS = UpdateTypeEnum.SET_PARCEL_ITEMS;
 
     UpdateType SET_PARCEL_MEASUREMENTS = UpdateTypeEnum.SET_PARCEL_MEASUREMENTS;
@@ -334,13 +448,25 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType SET_PASSWORD = UpdateTypeEnum.SET_PASSWORD;
 
+    UpdateType SET_PRICES = UpdateTypeEnum.SET_PRICES;
+
+    UpdateType SET_PRODUCT_COUNT = UpdateTypeEnum.SET_PRODUCT_COUNT;
+
     UpdateType SET_PRODUCT_PRICE_CUSTOM_FIELD = UpdateTypeEnum.SET_PRODUCT_PRICE_CUSTOM_FIELD;
 
     UpdateType SET_PRODUCT_PRICE_CUSTOM_TYPE = UpdateTypeEnum.SET_PRODUCT_PRICE_CUSTOM_TYPE;
 
+    UpdateType SET_PRODUCT_SELECTIONS = UpdateTypeEnum.SET_PRODUCT_SELECTIONS;
+
     UpdateType SET_PRODUCT_VARIANT_KEY = UpdateTypeEnum.SET_PRODUCT_VARIANT_KEY;
 
+    UpdateType SET_PROPERTY = UpdateTypeEnum.SET_PROPERTY;
+
+    UpdateType SET_PURCHASE_ORDER_NUMBER = UpdateTypeEnum.SET_PURCHASE_ORDER_NUMBER;
+
     UpdateType SET_RATING = UpdateTypeEnum.SET_RATING;
+
+    UpdateType SET_RESERVATIONS = UpdateTypeEnum.SET_RESERVATIONS;
 
     UpdateType SET_RESTOCKABLE_IN_DAYS = UpdateTypeEnum.SET_RESTOCKABLE_IN_DAYS;
 
@@ -354,7 +480,23 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType SET_SEARCH_KEYWORDS = UpdateTypeEnum.SET_SEARCH_KEYWORDS;
 
+    UpdateType SET_SELLER_COMMENT = UpdateTypeEnum.SET_SELLER_COMMENT;
+
     UpdateType SET_SHIPPING_ADDRESS = UpdateTypeEnum.SET_SHIPPING_ADDRESS;
+
+    UpdateType SET_SHIPPING_INFO_PRICE = UpdateTypeEnum.SET_SHIPPING_INFO_PRICE;
+
+    UpdateType SET_SHIPPING_INFO_TAXED_PRICE = UpdateTypeEnum.SET_SHIPPING_INFO_TAXED_PRICE;
+
+    UpdateType SET_SHIPPING_METHOD = UpdateTypeEnum.SET_SHIPPING_METHOD;
+
+    UpdateType SET_SHIPPING_METHOD_TAX_AMOUNT = UpdateTypeEnum.SET_SHIPPING_METHOD_TAX_AMOUNT;
+
+    UpdateType SET_SHIPPING_METHOD_TAX_RATE = UpdateTypeEnum.SET_SHIPPING_METHOD_TAX_RATE;
+
+    UpdateType SET_SHIPPING_RATE = UpdateTypeEnum.SET_SHIPPING_RATE;
+
+    UpdateType SET_SHIPPING_RATE_INPUT = UpdateTypeEnum.SET_SHIPPING_RATE_INPUT;
 
     UpdateType SET_SKU = UpdateTypeEnum.SET_SKU;
 
@@ -366,9 +508,13 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType SET_STORE = UpdateTypeEnum.SET_STORE;
 
+    UpdateType SET_STORE_MODE = UpdateTypeEnum.SET_STORE_MODE;
+
     UpdateType SET_STORES = UpdateTypeEnum.SET_STORES;
 
     UpdateType SET_SUPPLY_CHANNEL = UpdateTypeEnum.SET_SUPPLY_CHANNEL;
+
+    UpdateType SET_SUPPLY_CHANNELS = UpdateTypeEnum.SET_SUPPLY_CHANNELS;
 
     UpdateType SET_TARGET = UpdateTypeEnum.SET_TARGET;
 
@@ -390,9 +536,15 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType SET_VALID_FROM_AND_UNTIL = UpdateTypeEnum.SET_VALID_FROM_AND_UNTIL;
 
+    UpdateType SET_VALID_TO = UpdateTypeEnum.SET_VALID_TO;
+
     UpdateType SET_VALID_UNTIL = UpdateTypeEnum.SET_VALID_UNTIL;
 
+    UpdateType SET_VALUE = UpdateTypeEnum.SET_VALUE;
+
     UpdateType SET_VARIANT_AVAILABILITY = UpdateTypeEnum.SET_VARIANT_AVAILABILITY;
+
+    UpdateType SET_VARIANT_SELECTION = UpdateTypeEnum.SET_VARIANT_SELECTION;
 
     UpdateType SET_VAT_ID = UpdateTypeEnum.SET_VAT_ID;
 
@@ -425,6 +577,11 @@ public interface UpdateType extends JsonEnum {
         ADD_ASSET("addAsset"),
 
         /**
+         * addAssociate
+         */
+        ADD_ASSOCIATE("addAssociate"),
+
+        /**
          * addAttributeDefinition
          */
         ADD_ATTRIBUTE_DEFINITION("addAttributeDefinition"),
@@ -435,9 +592,19 @@ public interface UpdateType extends JsonEnum {
         ADD_BILLING_ADDRESS_ID("addBillingAddressId"),
 
         /**
+         * addCustomLineItem
+         */
+        ADD_CUSTOM_LINE_ITEM("addCustomLineItem"),
+
+        /**
          * addDelivery
          */
         ADD_DELIVERY("addDelivery"),
+
+        /**
+         * addDiscountCode
+         */
+        ADD_DISCOUNT_CODE("addDiscountCode"),
 
         /**
          * addEnumValue
@@ -500,6 +667,21 @@ public interface UpdateType extends JsonEnum {
         ADD_PRICE("addPrice"),
 
         /**
+         * addProduct
+         */
+        ADD_PRODUCT("addProduct"),
+
+        /**
+         * addProductSelection
+         */
+        ADD_PRODUCT_SELECTION("addProductSelection"),
+
+        /**
+         * addProperty
+         */
+        ADD_PROPERTY("addProperty"),
+
+        /**
          * addReturnInfo
          */
         ADD_RETURN_INFO("addReturnInfo"),
@@ -545,6 +727,11 @@ public interface UpdateType extends JsonEnum {
         CHANGE_ADDRESS("changeAddress"),
 
         /**
+         * changeAmountAuthorized
+         */
+        CHANGE_AMOUNT_AUTHORIZED("changeAmountAuthorized"),
+
+        /**
          * changeAmountPlanned
          */
         CHANGE_AMOUNT_PLANNED("changeAmountPlanned"),
@@ -558,6 +745,16 @@ public interface UpdateType extends JsonEnum {
          * changeAssetOrder
          */
         CHANGE_ASSET_ORDER("changeAssetOrder"),
+
+        /**
+         * changeAssociate
+         */
+        CHANGE_ASSOCIATE("changeAssociate"),
+
+        /**
+         * changeAssociateMode
+         */
+        CHANGE_ASSOCIATE_MODE("changeAssociateMode"),
 
         /**
          * changeAttributeConstraint
@@ -583,6 +780,11 @@ public interface UpdateType extends JsonEnum {
          * changeCartPredicate
          */
         CHANGE_CART_PREDICATE("changeCartPredicate"),
+
+        /**
+         * changeCustomLineItemQuantity
+         */
+        CHANGE_CUSTOM_LINE_ITEM_QUANTITY("changeCustomLineItemQuantity"),
 
         /**
          * changeDescription
@@ -650,6 +852,11 @@ public interface UpdateType extends JsonEnum {
         CHANGE_LABEL("changeLabel"),
 
         /**
+         * changeLineItemName
+         */
+        CHANGE_LINE_ITEM_NAME("changeLineItemName"),
+
+        /**
          * changeLineItemQuantity
          */
         CHANGE_LINE_ITEM_QUANTITY("changeLineItemQuantity"),
@@ -695,6 +902,11 @@ public interface UpdateType extends JsonEnum {
         CHANGE_PARENT("changeParent"),
 
         /**
+         * changeParentUnit
+         */
+        CHANGE_PARENT_UNIT("changeParentUnit"),
+
+        /**
          * changePaymentState
          */
         CHANGE_PAYMENT_STATE("changePaymentState"),
@@ -715,9 +927,24 @@ public interface UpdateType extends JsonEnum {
         CHANGE_PRICE("changePrice"),
 
         /**
+         * changeProductSelectionActive
+         */
+        CHANGE_PRODUCT_SELECTION_ACTIVE("changeProductSelectionActive"),
+
+        /**
          * changeQuantity
          */
         CHANGE_QUANTITY("changeQuantity"),
+
+        /**
+         * changeQuoteRequestState
+         */
+        CHANGE_QUOTE_REQUEST_STATE("changeQuoteRequestState"),
+
+        /**
+         * changeQuoteState
+         */
+        CHANGE_QUOTE_STATE("changeQuoteState"),
 
         /**
          * changeRequiresDiscountCode
@@ -750,9 +977,34 @@ public interface UpdateType extends JsonEnum {
         CHANGE_STACKING_MODE("changeStackingMode"),
 
         /**
+         * changeStagedQuoteState
+         */
+        CHANGE_STAGED_QUOTE_STATE("changeStagedQuoteState"),
+
+        /**
+         * changeStatus
+         */
+        CHANGE_STATUS("changeStatus"),
+
+        /**
          * changeTarget
          */
         CHANGE_TARGET("changeTarget"),
+
+        /**
+         * changeTaxCalculationMode
+         */
+        CHANGE_TAX_CALCULATION_MODE("changeTaxCalculationMode"),
+
+        /**
+         * changeTaxMode
+         */
+        CHANGE_TAX_MODE("changeTaxMode"),
+
+        /**
+         * changeTaxRoundingMode
+         */
+        CHANGE_TAX_ROUNDING_MODE("changeTaxRoundingMode"),
 
         /**
          * changeTextLineItemName
@@ -795,6 +1047,11 @@ public interface UpdateType extends JsonEnum {
         CHANGE_VALUE("changeValue"),
 
         /**
+         * moveImageToPosition
+         */
+        MOVE_IMAGE_TO_POSITION("moveImageToPosition"),
+
+        /**
          * publish
          */
         PUBLISH("publish"),
@@ -810,6 +1067,11 @@ public interface UpdateType extends JsonEnum {
         REMOVE_ASSET("removeAsset"),
 
         /**
+         * removeAssociate
+         */
+        REMOVE_ASSOCIATE("removeAssociate"),
+
+        /**
          * removeAttributeDefinition
          */
         REMOVE_ATTRIBUTE_DEFINITION("removeAttributeDefinition"),
@@ -820,9 +1082,19 @@ public interface UpdateType extends JsonEnum {
         REMOVE_BILLING_ADDRESS_ID("removeBillingAddressId"),
 
         /**
+         * removeCustomLineItem
+         */
+        REMOVE_CUSTOM_LINE_ITEM("removeCustomLineItem"),
+
+        /**
          * removeDelivery
          */
         REMOVE_DELIVERY("removeDelivery"),
+
+        /**
+         * removeDiscountCode
+         */
+        REMOVE_DISCOUNT_CODE("removeDiscountCode"),
 
         /**
          * removeEnumValues
@@ -875,6 +1147,21 @@ public interface UpdateType extends JsonEnum {
         REMOVE_PRICE("removePrice"),
 
         /**
+         * removeProduct
+         */
+        REMOVE_PRODUCT("removeProduct"),
+
+        /**
+         * removeProductSelection
+         */
+        REMOVE_PRODUCT_SELECTION("removeProductSelection"),
+
+        /**
+         * removeProperty
+         */
+        REMOVE_PROPERTY("removeProperty"),
+
+        /**
          * removeRoles
          */
         REMOVE_ROLES("removeRoles"),
@@ -900,14 +1187,34 @@ public interface UpdateType extends JsonEnum {
         REMOVE_VARIANT("removeVariant"),
 
         /**
+         * requestQuoteRenegotiation
+         */
+        REQUEST_QUOTE_RENEGOTIATION("requestQuoteRenegotiation"),
+
+        /**
          * setAddress
          */
         SET_ADDRESS("setAddress"),
 
         /**
+         * setAddressCustomField
+         */
+        SET_ADDRESS_CUSTOM_FIELD("setAddressCustomField"),
+
+        /**
+         * setAddressCustomType
+         */
+        SET_ADDRESS_CUSTOM_TYPE("setAddressCustomType"),
+
+        /**
          * setAnonymousId
          */
         SET_ANONYMOUS_ID("setAnonymousId"),
+
+        /**
+         * setApplicationVersion
+         */
+        SET_APPLICATION_VERSION("setApplicationVersion"),
 
         /**
          * setAssetCustomField
@@ -945,6 +1252,11 @@ public interface UpdateType extends JsonEnum {
         SET_ATTRIBUTE("setAttribute"),
 
         /**
+         * setAuthenticationMode
+         */
+        SET_AUTHENTICATION_MODE("setAuthenticationMode"),
+
+        /**
          * setAuthorName
          */
         SET_AUTHOR_NAME("setAuthorName"),
@@ -970,6 +1282,21 @@ public interface UpdateType extends JsonEnum {
         SET_COMPANY_NAME("setCompanyName"),
 
         /**
+         * setContactEmail
+         */
+        SET_CONTACT_EMAIL("setContactEmail"),
+
+        /**
+         * setCountries
+         */
+        SET_COUNTRIES("setCountries"),
+
+        /**
+         * setCountry
+         */
+        SET_COUNTRY("setCountry"),
+
+        /**
          * setCustomField
          */
         SET_CUSTOM_FIELD("setCustomField"),
@@ -985,9 +1312,44 @@ public interface UpdateType extends JsonEnum {
         SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE("setCustomLineItemCustomType"),
 
         /**
+         * setCustomLineItemMoney
+         */
+        SET_CUSTOM_LINE_ITEM_MONEY("setCustomLineItemMoney"),
+
+        /**
          * setCustomLineItemShippingDetails
          */
         SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS("setCustomLineItemShippingDetails"),
+
+        /**
+         * setCustomLineItemTaxAmount
+         */
+        SET_CUSTOM_LINE_ITEM_TAX_AMOUNT("setCustomLineItemTaxAmount"),
+
+        /**
+         * setCustomLineItemTaxCategory
+         */
+        SET_CUSTOM_LINE_ITEM_TAX_CATEGORY("setCustomLineItemTaxCategory"),
+
+        /**
+         * setCustomLineItemTaxRate
+         */
+        SET_CUSTOM_LINE_ITEM_TAX_RATE("setCustomLineItemTaxRate"),
+
+        /**
+         * setCustomLineItemTaxedPrice
+         */
+        SET_CUSTOM_LINE_ITEM_TAXED_PRICE("setCustomLineItemTaxedPrice"),
+
+        /**
+         * setCustomLineItemTotalPrice
+         */
+        SET_CUSTOM_LINE_ITEM_TOTAL_PRICE("setCustomLineItemTotalPrice"),
+
+        /**
+         * setCustomShippingMethod
+         */
+        SET_CUSTOM_SHIPPING_METHOD("setCustomShippingMethod"),
 
         /**
          * setCustomType
@@ -1100,6 +1462,11 @@ public interface UpdateType extends JsonEnum {
         SET_INTERFACE_ID("setInterfaceId"),
 
         /**
+         * setIsValid
+         */
+        SET_IS_VALID("setIsValid"),
+
+        /**
          * setKey
          */
         SET_KEY("setKey"),
@@ -1125,9 +1492,64 @@ public interface UpdateType extends JsonEnum {
         SET_LINE_ITEM_CUSTOM_TYPE("setLineItemCustomType"),
 
         /**
+         * setLineItemDeactivatedAt
+         */
+        SET_LINE_ITEM_DEACTIVATED_AT("setLineItemDeactivatedAt"),
+
+        /**
+         * setLineItemDiscountedPrice
+         */
+        SET_LINE_ITEM_DISCOUNTED_PRICE("setLineItemDiscountedPrice"),
+
+        /**
+         * setLineItemDiscountedPricePerQuantity
+         */
+        SET_LINE_ITEM_DISCOUNTED_PRICE_PER_QUANTITY("setLineItemDiscountedPricePerQuantity"),
+
+        /**
+         * setLineItemDistributionChannel
+         */
+        SET_LINE_ITEM_DISTRIBUTION_CHANNEL("setLineItemDistributionChannel"),
+
+        /**
+         * setLineItemPrice
+         */
+        SET_LINE_ITEM_PRICE("setLineItemPrice"),
+
+        /**
+         * setLineItemProductKey
+         */
+        SET_LINE_ITEM_PRODUCT_KEY("setLineItemProductKey"),
+
+        /**
+         * setLineItemProductSlug
+         */
+        SET_LINE_ITEM_PRODUCT_SLUG("setLineItemProductSlug"),
+
+        /**
          * setLineItemShippingDetails
          */
         SET_LINE_ITEM_SHIPPING_DETAILS("setLineItemShippingDetails"),
+
+        /**
+         * setLineItemTaxAmount
+         */
+        SET_LINE_ITEM_TAX_AMOUNT("setLineItemTaxAmount"),
+
+        /**
+         * setLineItemTaxRate
+         */
+        SET_LINE_ITEM_TAX_RATE("setLineItemTaxRate"),
+
+        /**
+         * setLineItemTaxedPrice
+         */
+        SET_LINE_ITEM_TAXED_PRICE("setLineItemTaxedPrice"),
+
+        /**
+         * setLineItemTotalPrice
+         */
+        SET_LINE_ITEM_TOTAL_PRICE("setLineItemTotalPrice"),
 
         /**
          * setLocale
@@ -1190,6 +1612,21 @@ public interface UpdateType extends JsonEnum {
         SET_ORDER_NUMBER("setOrderNumber"),
 
         /**
+         * setOrderTaxedPrice
+         */
+        SET_ORDER_TAXED_PRICE("setOrderTaxedPrice"),
+
+        /**
+         * setOrderTotalPrice
+         */
+        SET_ORDER_TOTAL_PRICE("setOrderTotalPrice"),
+
+        /**
+         * setOrderTotalTax
+         */
+        SET_ORDER_TOTAL_TAX("setOrderTotalTax"),
+
+        /**
          * setParcelItems
          */
         SET_PARCEL_ITEMS("setParcelItems"),
@@ -1210,6 +1647,16 @@ public interface UpdateType extends JsonEnum {
         SET_PASSWORD("setPassword"),
 
         /**
+         * setPrices
+         */
+        SET_PRICES("setPrices"),
+
+        /**
+         * setProductCount
+         */
+        SET_PRODUCT_COUNT("setProductCount"),
+
+        /**
          * setProductPriceCustomField
          */
         SET_PRODUCT_PRICE_CUSTOM_FIELD("setProductPriceCustomField"),
@@ -1220,14 +1667,34 @@ public interface UpdateType extends JsonEnum {
         SET_PRODUCT_PRICE_CUSTOM_TYPE("setProductPriceCustomType"),
 
         /**
+         * setProductSelections
+         */
+        SET_PRODUCT_SELECTIONS("setProductSelections"),
+
+        /**
          * setProductVariantKey
          */
         SET_PRODUCT_VARIANT_KEY("setProductVariantKey"),
 
         /**
+         * setProperty
+         */
+        SET_PROPERTY("setProperty"),
+
+        /**
+         * setPurchaseOrderNumber
+         */
+        SET_PURCHASE_ORDER_NUMBER("setPurchaseOrderNumber"),
+
+        /**
          * setRating
          */
         SET_RATING("setRating"),
+
+        /**
+         * setReservations
+         */
+        SET_RESERVATIONS("setReservations"),
 
         /**
          * setRestockableInDays
@@ -1260,9 +1727,49 @@ public interface UpdateType extends JsonEnum {
         SET_SEARCH_KEYWORDS("setSearchKeywords"),
 
         /**
+         * setSellerComment
+         */
+        SET_SELLER_COMMENT("setSellerComment"),
+
+        /**
          * setShippingAddress
          */
         SET_SHIPPING_ADDRESS("setShippingAddress"),
+
+        /**
+         * setShippingInfoPrice
+         */
+        SET_SHIPPING_INFO_PRICE("setShippingInfoPrice"),
+
+        /**
+         * setShippingInfoTaxedPrice
+         */
+        SET_SHIPPING_INFO_TAXED_PRICE("setShippingInfoTaxedPrice"),
+
+        /**
+         * setShippingMethod
+         */
+        SET_SHIPPING_METHOD("setShippingMethod"),
+
+        /**
+         * setShippingMethodTaxAmount
+         */
+        SET_SHIPPING_METHOD_TAX_AMOUNT("setShippingMethodTaxAmount"),
+
+        /**
+         * setShippingMethodTaxRate
+         */
+        SET_SHIPPING_METHOD_TAX_RATE("setShippingMethodTaxRate"),
+
+        /**
+         * setShippingRate
+         */
+        SET_SHIPPING_RATE("setShippingRate"),
+
+        /**
+         * setShippingRateInput
+         */
+        SET_SHIPPING_RATE_INPUT("setShippingRateInput"),
 
         /**
          * setSku
@@ -1290,6 +1797,11 @@ public interface UpdateType extends JsonEnum {
         SET_STORE("setStore"),
 
         /**
+         * setStoreMode
+         */
+        SET_STORE_MODE("setStoreMode"),
+
+        /**
          * setStores
          */
         SET_STORES("setStores"),
@@ -1298,6 +1810,11 @@ public interface UpdateType extends JsonEnum {
          * setSupplyChannel
          */
         SET_SUPPLY_CHANNEL("setSupplyChannel"),
+
+        /**
+         * setSupplyChannels
+         */
+        SET_SUPPLY_CHANNELS("setSupplyChannels"),
 
         /**
          * setTarget
@@ -1350,14 +1867,29 @@ public interface UpdateType extends JsonEnum {
         SET_VALID_FROM_AND_UNTIL("setValidFromAndUntil"),
 
         /**
+         * setValidTo
+         */
+        SET_VALID_TO("setValidTo"),
+
+        /**
          * setValidUntil
          */
         SET_VALID_UNTIL("setValidUntil"),
 
         /**
+         * setValue
+         */
+        SET_VALUE("setValue"),
+
+        /**
          * setVariantAvailability
          */
         SET_VARIANT_AVAILABILITY("setVariantAvailability"),
+
+        /**
+         * setVariantSelection
+         */
+        SET_VARIANT_SELECTION("setVariantSelection"),
 
         /**
          * setVatId

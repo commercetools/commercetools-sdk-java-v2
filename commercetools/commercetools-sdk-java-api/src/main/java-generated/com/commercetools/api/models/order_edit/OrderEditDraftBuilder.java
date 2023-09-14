@@ -42,7 +42,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     private Boolean dryRun;
 
     /**
-     *  <p>User-defined unique identifier for the OrderEdit.</p>
+     *  <p>User-defined unique identifier for the Order Edit.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The order to be updated with this edit.</p>
+     *  <p>Reference to the Order updated with this edit.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The order to be updated with this edit.</p>
+     *  <p>Reference to the Order updated with this edit.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The order to be updated with this edit.</p>
+     *  <p>Reference to the Order updated with this edit.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The actions to apply to <code>resource</code>.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The actions to apply to <code>resource</code>.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The actions to apply to <code>resource</code>.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The actions to apply to <code>resource</code>.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
      * @param builder function to build the stagedActions value
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The actions to apply to <code>resource</code>.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
      * @param builder function to build the stagedActions value
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the Order Edit.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -169,7 +169,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the Order Edit.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -181,7 +181,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the Order Edit.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -192,7 +192,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>This field can be used to add additional textual information regarding the edit.</p>
+     *  <p>User-defined description regarding the Order Edit.</p>
      * @param comment value to be set
      * @return Builder
      */
@@ -203,7 +203,8 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
+     *  <p>Set to <code>true</code> if you want to peview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Order API Extensions, if any, are also called in dry runs.</p>
      * @param dryRun value to be set
      * @return Builder
      */
@@ -214,7 +215,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the OrderEdit.</p>
+     *  <p>User-defined unique identifier for the Order Edit.</p>
      * @return key
      */
 
@@ -224,7 +225,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The order to be updated with this edit.</p>
+     *  <p>Reference to the Order updated with this edit.</p>
      * @return resource
      */
 
@@ -233,7 +234,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The actions to apply to <code>resource</code>.</p>
+     *  <p>Update actions to apply to the Order referenced in <code>resource</code>. Cannot be updated if the edit has been applied.</p>
      * @return stagedActions
      */
 
@@ -243,7 +244,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>The custom fields.</p>
+     *  <p>Custom Fields for the Order Edit.</p>
      * @return custom
      */
 
@@ -253,7 +254,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>This field can be used to add additional textual information regarding the edit.</p>
+     *  <p>User-defined description regarding the Order Edit.</p>
      * @return comment
      */
 
@@ -263,7 +264,8 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>When set to <code>true</code> the edit is applied on the Order without persisting it.</p>
+     *  <p>Set to <code>true</code> if you want to peview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Order API Extensions, if any, are also called in dry runs.</p>
      * @return dryRun
      */
 

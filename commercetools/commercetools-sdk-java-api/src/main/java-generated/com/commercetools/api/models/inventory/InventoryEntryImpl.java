@@ -278,6 +278,20 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
                 .append(restockableInDays, that.restockableInDays)
                 .append(expectedDelivery, that.expectedDelivery)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(supplyChannel, that.supplyChannel)
+                .append(quantityOnStock, that.quantityOnStock)
+                .append(availableQuantity, that.availableQuantity)
+                .append(restockableInDays, that.restockableInDays)
+                .append(expectedDelivery, that.expectedDelivery)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

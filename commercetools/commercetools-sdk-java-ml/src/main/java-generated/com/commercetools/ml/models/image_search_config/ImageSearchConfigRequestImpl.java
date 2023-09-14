@@ -65,7 +65,7 @@ public class ImageSearchConfigRequestImpl implements ImageSearchConfigRequest, M
 
         ImageSearchConfigRequestImpl that = (ImageSearchConfigRequestImpl) o;
 
-        return new EqualsBuilder().append(actions, that.actions).isEquals();
+        return new EqualsBuilder().append(actions, that.actions).append(actions, that.actions).isEquals();
     }
 
     @Override

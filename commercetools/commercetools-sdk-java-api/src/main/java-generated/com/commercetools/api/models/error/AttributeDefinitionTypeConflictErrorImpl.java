@@ -144,6 +144,12 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
                 .append(conflictingProductTypeId, that.conflictingProductTypeId)
                 .append(conflictingProductTypeName, that.conflictingProductTypeName)
                 .append(conflictingAttributeName, that.conflictingAttributeName)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(conflictingProductTypeId, that.conflictingProductTypeId)
+                .append(conflictingProductTypeName, that.conflictingProductTypeName)
+                .append(conflictingAttributeName, that.conflictingAttributeName)
                 .isEquals();
     }
 

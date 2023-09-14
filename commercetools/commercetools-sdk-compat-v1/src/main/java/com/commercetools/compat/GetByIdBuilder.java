@@ -42,7 +42,6 @@ import io.sphere.sdk.customergroups.queries.CustomerGroupByIdGet;
 import io.sphere.sdk.customers.queries.CustomerByIdGet;
 import io.sphere.sdk.discountcodes.queries.DiscountCodeByIdGet;
 import io.sphere.sdk.expansion.ExpansionPath;
-import io.sphere.sdk.extensions.queries.ExtensionByIdGet;
 import io.sphere.sdk.inventory.queries.InventoryEntryByIdGet;
 import io.sphere.sdk.messages.queries.MessageByIdGet;
 import io.sphere.sdk.orders.queries.OrderByIdGet;
@@ -58,7 +57,6 @@ import io.sphere.sdk.shippingmethods.queries.ShippingMethodByIdGet;
 import io.sphere.sdk.shoppinglists.queries.ShoppingListByIdGet;
 import io.sphere.sdk.states.queries.StateByIdGet;
 import io.sphere.sdk.stores.queries.StoreByIdGet;
-import io.sphere.sdk.subscriptions.queries.SubscriptionByIdGet;
 import io.sphere.sdk.taxcategories.queries.TaxCategoryByIdGet;
 import io.sphere.sdk.types.queries.TypeByIdGet;
 import io.sphere.sdk.zones.queries.ZoneByIdGet;
@@ -329,25 +327,20 @@ public class GetByIdBuilder {
             () -> CustomerGroupByIdGet.of(identifiable.getId()), getDsl);
     }
 
-    public ByProjectKeyExtensionsByIDGet extension(final String id,
-            final Function<ExtensionByIdGet, ExtensionByIdGet> getDsl) {
+    public ByProjectKeyExtensionsByIDGet extension(final String id) {
         requireNonNull(id);
-        return get(apiRoot.extensions().withId(id).get(), () -> ExtensionByIdGet.of(id), getDsl);
+        return apiRoot.extensions().withId(id).get();
     }
 
-    public ByProjectKeyExtensionsByIDGet extension(final Identifiable<Extension> identifiable,
-            final Function<ExtensionByIdGet, ExtensionByIdGet> getDsl) {
+    public ByProjectKeyExtensionsByIDGet extension(final Identifiable<Extension> identifiable) {
         requireNonNull(identifiable.getId());
-        return get(apiRoot.extensions().withId(identifiable.getId()).get(),
-            () -> ExtensionByIdGet.of(identifiable.getId()), getDsl);
+        return apiRoot.extensions().withId(identifiable.getId()).get();
     }
 
     public ByProjectKeyExtensionsByIDGet extension(
-            final io.sphere.sdk.models.Identifiable<io.sphere.sdk.extensions.Extension> identifiable,
-            final Function<ExtensionByIdGet, ExtensionByIdGet> getDsl) {
+            final io.sphere.sdk.models.Identifiable<io.sphere.sdk.extensions.Extension> identifiable) {
         requireNonNull(identifiable.getId());
-        return get(apiRoot.extensions().withId(identifiable.getId()).get(),
-            () -> ExtensionByIdGet.of(identifiable.getId()), getDsl);
+        return apiRoot.extensions().withId(identifiable.getId()).get();
     }
 
     public ByProjectKeyInventoryByIDGet inventory(final String id,
@@ -575,25 +568,20 @@ public class GetByIdBuilder {
             getDsl);
     }
 
-    public ByProjectKeySubscriptionsByIDGet subscription(final String id,
-            final Function<SubscriptionByIdGet, SubscriptionByIdGet> getDsl) {
+    public ByProjectKeySubscriptionsByIDGet subscription(final String id) {
         requireNonNull(id);
-        return get(apiRoot.subscriptions().withId(id).get(), () -> SubscriptionByIdGet.of(id), getDsl);
+        return apiRoot.subscriptions().withId(id).get();
     }
 
-    public ByProjectKeySubscriptionsByIDGet subscription(final Identifiable<Subscription> identifiable,
-            final Function<SubscriptionByIdGet, SubscriptionByIdGet> getDsl) {
+    public ByProjectKeySubscriptionsByIDGet subscription(final Identifiable<Subscription> identifiable) {
         requireNonNull(identifiable.getId());
-        return get(apiRoot.subscriptions().withId(identifiable.getId()).get(),
-            () -> SubscriptionByIdGet.of(identifiable.getId()), getDsl);
+        return apiRoot.subscriptions().withId(identifiable.getId()).get();
     }
 
     public ByProjectKeySubscriptionsByIDGet subscription(
-            final io.sphere.sdk.models.Identifiable<io.sphere.sdk.subscriptions.Subscription> identifiable,
-            final Function<SubscriptionByIdGet, SubscriptionByIdGet> getDsl) {
+            final io.sphere.sdk.models.Identifiable<io.sphere.sdk.subscriptions.Subscription> identifiable) {
         requireNonNull(identifiable.getId());
-        return get(apiRoot.subscriptions().withId(identifiable.getId()).get(),
-            () -> SubscriptionByIdGet.of(identifiable.getId()), getDsl);
+        return apiRoot.subscriptions().withId(identifiable.getId()).get();
     }
 
     public ByProjectKeyTaxCategoriesByIDGet taxCategory(final String id,

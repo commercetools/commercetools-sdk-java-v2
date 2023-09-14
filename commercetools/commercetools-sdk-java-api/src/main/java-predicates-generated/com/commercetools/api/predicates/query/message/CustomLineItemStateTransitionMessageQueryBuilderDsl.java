@@ -97,6 +97,12 @@ public class CustomLineItemStateTransitionMessageQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomLineItemStateTransitionMessageQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CustomLineItemStateTransitionMessageQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, CustomLineItemStateTransitionMessageQueryBuilderDsl::of));
+    }
+
     public DateTimeComparisonPredicateBuilder<CustomLineItemStateTransitionMessageQueryBuilderDsl> transitionDate() {
         return new DateTimeComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("transitionDate")),

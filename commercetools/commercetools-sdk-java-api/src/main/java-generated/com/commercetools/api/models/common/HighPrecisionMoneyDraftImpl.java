@@ -71,7 +71,7 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
     }
 
     /**
-     *
+     *  <p>Determines the type of money used.</p>
      */
 
     public com.commercetools.api.models.common.MoneyType getType() {
@@ -121,6 +121,11 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
         HighPrecisionMoneyDraftImpl that = (HighPrecisionMoneyDraftImpl) o;
 
         return new EqualsBuilder().append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
+                .append(preciseAmount, that.preciseAmount)
+                .append(centAmount, that.centAmount)
                 .append(currencyCode, that.currencyCode)
                 .append(type, that.type)
                 .append(fractionDigits, that.fractionDigits)

@@ -75,7 +75,11 @@ public class CustomFieldEnumTypeImpl implements CustomFieldEnumType, ModelBase {
 
         CustomFieldEnumTypeImpl that = (CustomFieldEnumTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(values, that.values).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(values, that.values)
+                .append(name, that.name)
+                .append(values, that.values)
+                .isEquals();
     }
 
     @Override

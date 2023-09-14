@@ -19,6 +19,14 @@ public class CartDiscountUpdateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartDiscountUpdateActionQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> asAddStore(
+            Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountAddStoreActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountAddStoreActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.cart_discount.CartDiscountAddStoreActionQueryBuilderDsl.of()),
+            CartDiscountUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> asChangeCartPredicate(
             Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountChangeCartPredicateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountChangeCartPredicateActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -80,6 +88,14 @@ public class CartDiscountUpdateActionQueryBuilderDsl {
             CartDiscountUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> asRemoveStore(
+            Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountRemoveStoreActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountRemoveStoreActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.cart_discount.CartDiscountRemoveStoreActionQueryBuilderDsl.of()),
+            CartDiscountUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> asSetCustomField(
             Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -105,6 +121,14 @@ public class CartDiscountUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetKeyActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.cart_discount.CartDiscountSetKeyActionQueryBuilderDsl.of()),
+            CartDiscountUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> asSetStores(
+            Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetStoresActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetStoresActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.cart_discount.CartDiscountSetStoresActionQueryBuilderDsl.of()),
             CartDiscountUpdateActionQueryBuilderDsl::of);
     }
 

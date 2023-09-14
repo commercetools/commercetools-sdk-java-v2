@@ -142,6 +142,11 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
                 .append(prices, that.prices)
                 .append(attributes, that.attributes)
                 .append(images, that.images)
+                .append(productVariant, that.productVariant)
+                .append(sku, that.sku)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .append(images, that.images)
                 .isEquals();
     }
 

@@ -89,6 +89,9 @@ public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction,
         return new EqualsBuilder().append(action, that.action)
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
+                .append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
                 .isEquals();
     }
 

@@ -74,7 +74,11 @@ public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
 
         CustomFieldsDraftImpl that = (CustomFieldsDraftImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(fields, that.fields).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(fields, that.fields)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

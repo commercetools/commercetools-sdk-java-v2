@@ -76,6 +76,13 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asContentTooLarge(
+            Function<com.commercetools.api.predicates.query.error.ContentTooLargeErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.ContentTooLargeErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.ContentTooLargeErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asCountryNotConfiguredInStore(
             Function<com.commercetools.api.predicates.query.error.CountryNotConfiguredInStoreErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.CountryNotConfiguredInStoreErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -331,10 +338,24 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMaxCartDiscountsReached(
+            Function<com.commercetools.api.predicates.query.error.MaxCartDiscountsReachedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.MaxCartDiscountsReachedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.MaxCartDiscountsReachedErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMaxResourceLimitExceeded(
             Function<com.commercetools.api.predicates.query.error.MaxResourceLimitExceededErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.MaxResourceLimitExceededErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.error.MaxResourceLimitExceededErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMaxStoreReferencesReached(
+            Function<com.commercetools.api.predicates.query.error.MaxStoreReferencesReachedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.MaxStoreReferencesReachedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.MaxStoreReferencesReachedErrorQueryBuilderDsl.of()),
             ErrorObjectQueryBuilderDsl::of);
     }
 
@@ -529,6 +550,14 @@ public class ErrorObjectQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.error.ShippingMethodDoesNotMatchCartErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asStoreCartDiscountsLimitReached(
+            Function<com.commercetools.api.predicates.query.error.StoreCartDiscountsLimitReachedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.StoreCartDiscountsLimitReachedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.error.StoreCartDiscountsLimitReachedErrorQueryBuilderDsl.of()),
             ErrorObjectQueryBuilderDsl::of);
     }
 

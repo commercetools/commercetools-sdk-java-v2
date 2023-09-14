@@ -160,6 +160,13 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(state, that.state)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(cart, that.cart)
+                .append(cartVersion, that.cartVersion)
+                .append(key, that.key)
+                .append(comment, that.comment)
+                .append(custom, that.custom)
+                .append(state, that.state)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .isEquals();
     }
 

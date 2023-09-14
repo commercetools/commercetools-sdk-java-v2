@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Provides the value for a custom field of a specific type.</p>
+ *  <p>Provides the value for a Custom Field of a specific type.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomFieldImpl implements CustomField, ModelBase {
@@ -54,7 +54,7 @@ public class CustomFieldImpl implements CustomField, ModelBase {
 
         CustomFieldImpl that = (CustomFieldImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

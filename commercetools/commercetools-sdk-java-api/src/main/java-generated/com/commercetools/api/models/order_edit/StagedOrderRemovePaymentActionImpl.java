@@ -50,7 +50,7 @@ public class StagedOrderRemovePaymentActionImpl implements StagedOrderRemovePaym
     }
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to remove from the PaymentInfo.</p>
      */
 
     public com.commercetools.api.models.payment.PaymentResourceIdentifier getPayment() {
@@ -71,7 +71,11 @@ public class StagedOrderRemovePaymentActionImpl implements StagedOrderRemovePaym
 
         StagedOrderRemovePaymentActionImpl that = (StagedOrderRemovePaymentActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(payment, that.payment).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(payment, that.payment)
+                .append(action, that.action)
+                .append(payment, that.payment)
+                .isEquals();
     }
 
     @Override

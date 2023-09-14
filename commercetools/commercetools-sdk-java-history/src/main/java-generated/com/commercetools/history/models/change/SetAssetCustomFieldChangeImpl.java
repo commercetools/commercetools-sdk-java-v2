@@ -160,6 +160,13 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
                 .append(name, that.name)
                 .append(customTypeId, that.customTypeId)
                 .append(asset, that.asset)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(name, that.name)
+                .append(customTypeId, that.customTypeId)
+                .append(asset, that.asset)
                 .isEquals();
     }
 

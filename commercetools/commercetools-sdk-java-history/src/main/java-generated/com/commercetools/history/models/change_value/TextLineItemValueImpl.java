@@ -74,7 +74,11 @@ public class TextLineItemValueImpl implements TextLineItemValue, ModelBase {
 
         TextLineItemValueImpl that = (TextLineItemValueImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(name, that.name)
+                .append(id, that.id)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override

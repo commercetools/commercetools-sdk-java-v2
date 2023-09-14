@@ -22,6 +22,11 @@ public class CustomLineItemDraftQueryBuilderDsl {
             CustomLineItemDraftQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<CustomLineItemDraftQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, CustomLineItemDraftQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<CustomLineItemDraftQueryBuilderDsl> quantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),

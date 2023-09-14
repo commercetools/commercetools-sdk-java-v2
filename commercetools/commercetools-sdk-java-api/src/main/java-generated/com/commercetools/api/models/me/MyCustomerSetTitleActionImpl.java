@@ -70,7 +70,11 @@ public class MyCustomerSetTitleActionImpl implements MyCustomerSetTitleAction, M
 
         MyCustomerSetTitleActionImpl that = (MyCustomerSetTitleActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(title, that.title).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(title, that.title)
+                .append(action, that.action)
+                .append(title, that.title)
+                .isEquals();
     }
 
     @Override

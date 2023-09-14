@@ -49,7 +49,7 @@ public class OrderSetLocaleActionImpl implements OrderSetLocaleAction, ModelBase
     }
 
     /**
-     *
+     *  <p>Value to set. Must be one of the Project's languages. If empty, any existing value is removed.</p>
      */
 
     public String getLocale() {
@@ -70,7 +70,11 @@ public class OrderSetLocaleActionImpl implements OrderSetLocaleAction, ModelBase
 
         OrderSetLocaleActionImpl that = (OrderSetLocaleActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(locale, that.locale).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(locale, that.locale)
+                .append(action, that.action)
+                .append(locale, that.locale)
+                .isEquals();
     }
 
     @Override

@@ -25,6 +25,12 @@ public class OrderSetCustomLineItemShippingDetailsActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderSetCustomLineItemShippingDetailsActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderSetCustomLineItemShippingDetailsActionQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderSetCustomLineItemShippingDetailsActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<OrderSetCustomLineItemShippingDetailsActionQueryBuilderDsl> shippingDetails(
             Function<com.commercetools.api.predicates.query.cart.ItemShippingDetailsDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ItemShippingDetailsDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

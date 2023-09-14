@@ -15,7 +15,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * TypedMoneyDraft
+ *  <p>Base polymorphic money type containing common fields for Money and HighPrecisionMoneyDraft.</p>
+ *  <ul>
+ *   <li>To set money in cent precision, use Money.</li>
+ *   <li>To set money in high precision, use HighPrecisionMoneyDraft.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypedMoneyDraftImpl implements TypedMoneyDraft, ModelBase {
@@ -49,11 +53,7 @@ public class TypedMoneyDraftImpl implements TypedMoneyDraft, ModelBase {
     }
 
     /**
-     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
-     *  <ul>
-     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
-     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
-     *  </ul>
+     *  <p>Amount in the smallest indivisible unit of a currency.</p>
      */
 
     public Long getCentAmount() {
@@ -69,7 +69,7 @@ public class TypedMoneyDraftImpl implements TypedMoneyDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Determines the type of money used.</p>
      */
 
     public com.commercetools.api.models.common.MoneyType getType() {
@@ -77,7 +77,7 @@ public class TypedMoneyDraftImpl implements TypedMoneyDraft, ModelBase {
     }
 
     /**
-     *  <p>Must be equal to the default number of fraction digits for the specified currency.</p>
+     *  <p>Number of fraction digits for a specified money.</p>
      */
 
     public Integer getFractionDigits() {
@@ -107,6 +107,10 @@ public class TypedMoneyDraftImpl implements TypedMoneyDraft, ModelBase {
         TypedMoneyDraftImpl that = (TypedMoneyDraftImpl) o;
 
         return new EqualsBuilder().append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
+                .append(centAmount, that.centAmount)
                 .append(currencyCode, that.currencyCode)
                 .append(type, that.type)
                 .append(fractionDigits, that.fractionDigits)

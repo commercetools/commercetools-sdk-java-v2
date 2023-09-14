@@ -31,6 +31,9 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     private com.commercetools.api.models.common.LocalizedString name;
 
     @Nullable
+    private String key;
+
+    @Nullable
     private Long quantity;
 
     private String slug;
@@ -39,16 +42,19 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     @Nullable
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+    private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @Nullable
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -60,7 +66,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -72,7 +78,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -83,7 +89,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Custom Line Item.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -95,7 +101,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Custom Line Item.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -107,7 +113,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Custom Line Item.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -119,7 +125,18 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     * set the value to the quantity
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    /**
+     *  <p>Number of Custom Line Items to add to the Cart.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -130,7 +147,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     * set the value to the slug
+     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -141,7 +158,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. If TaxMode is <code>Platform</code>, this field must not be empty.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -155,7 +172,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. If TaxMode is <code>Platform</code>, this field must not be empty.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -168,7 +185,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. If TaxMode is <code>Platform</code>, this field must not be empty.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -180,43 +197,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     * @param builder function to build the custom value
-     * @return Builder
-     */
-
-    public StagedOrderAddCustomLineItemActionBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     * @param builder function to build the custom value
-     * @return Builder
-     */
-
-    public StagedOrderAddCustomLineItemActionBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     * @param custom value to be set
-     * @return Builder
-     */
-
-    public StagedOrderAddCustomLineItemActionBuilder custom(
-            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
-        return this;
-    }
-
-    /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -229,7 +210,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -241,7 +222,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -249,6 +230,43 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     public StagedOrderAddCustomLineItemActionBuilder externalTaxRate(
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
+        return this;
+    }
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder shippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder withShippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param shippingDetails value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder shippingDetails(
+            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+        this.shippingDetails = shippingDetails;
         return this;
     }
 
@@ -268,7 +286,43 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
      * @return money
      */
 
@@ -277,7 +331,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Custom Line Item.</p>
      * @return name
      */
 
@@ -286,7 +340,17 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     * value of quantity}
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Number of Custom Line Items to add to the Cart.</p>
      * @return quantity
      */
 
@@ -296,7 +360,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     * value of slug}
+     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
      * @return slug
      */
 
@@ -305,7 +369,7 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. If TaxMode is <code>Platform</code>, this field must not be empty.</p>
      * @return taxCategory
      */
 
@@ -315,23 +379,23 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     * @return custom
-     */
-
-    @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
      */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
+    }
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @return shippingDetails
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
+        return this.shippingDetails;
     }
 
     /**
@@ -348,6 +412,16 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     }
 
     /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
+    /**
      * builds StagedOrderAddCustomLineItemAction with checking for non-null required values
      * @return StagedOrderAddCustomLineItemAction
      */
@@ -355,8 +429,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
         Objects.requireNonNull(money, StagedOrderAddCustomLineItemAction.class + ": money is missing");
         Objects.requireNonNull(name, StagedOrderAddCustomLineItemAction.class + ": name is missing");
         Objects.requireNonNull(slug, StagedOrderAddCustomLineItemAction.class + ": slug is missing");
-        return new StagedOrderAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom,
-            externalTaxRate, priceMode);
+        return new StagedOrderAddCustomLineItemActionImpl(money, name, key, quantity, slug, taxCategory,
+            externalTaxRate, shippingDetails, priceMode, custom);
     }
 
     /**
@@ -364,8 +438,8 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
      * @return StagedOrderAddCustomLineItemAction
      */
     public StagedOrderAddCustomLineItemAction buildUnchecked() {
-        return new StagedOrderAddCustomLineItemActionImpl(money, name, quantity, slug, taxCategory, custom,
-            externalTaxRate, priceMode);
+        return new StagedOrderAddCustomLineItemActionImpl(money, name, key, quantity, slug, taxCategory,
+            externalTaxRate, shippingDetails, priceMode, custom);
     }
 
     /**
@@ -385,12 +459,14 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
         StagedOrderAddCustomLineItemActionBuilder builder = new StagedOrderAddCustomLineItemActionBuilder();
         builder.money = template.getMoney();
         builder.name = template.getName();
+        builder.key = template.getKey();
         builder.quantity = template.getQuantity();
         builder.slug = template.getSlug();
         builder.taxCategory = template.getTaxCategory();
-        builder.custom = template.getCustom();
         builder.externalTaxRate = template.getExternalTaxRate();
+        builder.shippingDetails = template.getShippingDetails();
         builder.priceMode = template.getPriceMode();
+        builder.custom = template.getCustom();
         return builder;
     }
 

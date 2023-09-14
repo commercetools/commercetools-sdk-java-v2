@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetLineItemTaxAmountAction
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSetLineItemTaxAmountAction, ModelBase {
@@ -23,6 +23,8 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
     private String action;
 
     private String lineItemId;
+
+    private String lineItemKey;
 
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
@@ -33,9 +35,11 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
      */
     @JsonCreator
     StagedOrderSetLineItemTaxAmountActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount,
             @JsonProperty("shippingKey") final String shippingKey) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.externalTaxAmount = externalTaxAmount;
         this.shippingKey = shippingKey;
         this.action = SET_LINE_ITEM_TAX_AMOUNT;
@@ -57,7 +61,7 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -65,12 +69,15 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
@@ -78,7 +85,7 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
     }
 
     /**
-     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -87,6 +94,10 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setExternalTaxAmount(final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
@@ -109,6 +120,12 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(externalTaxAmount, that.externalTaxAmount)
+                .append(shippingKey, that.shippingKey)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(externalTaxAmount, that.externalTaxAmount)
                 .append(shippingKey, that.shippingKey)
                 .isEquals();
@@ -118,6 +135,7 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(externalTaxAmount)
                 .append(shippingKey)
                 .toHashCode();

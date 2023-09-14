@@ -78,7 +78,11 @@ public class UpdateImpl implements Update, ModelBase {
 
         UpdateImpl that = (UpdateImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(actions, that.actions).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(actions, that.actions)
+                .append(version, that.version)
+                .append(actions, that.actions)
+                .isEquals();
     }
 
     @Override

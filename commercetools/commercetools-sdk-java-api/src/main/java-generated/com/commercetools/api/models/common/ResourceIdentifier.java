@@ -18,7 +18,6 @@ import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifier;
 import com.commercetools.api.models.inventory.InventoryEntryResourceIdentifier;
-import com.commercetools.api.models.order.OrderResourceIdentifier;
 import com.commercetools.api.models.order_edit.OrderEditResourceIdentifier;
 import com.commercetools.api.models.payment.PaymentResourceIdentifier;
 import com.commercetools.api.models.product.ProductResourceIdentifier;
@@ -68,7 +67,6 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierImpl.class, name = DiscountCodeResourceIdentifier.DISCOUNT_CODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierImpl.class, name = InventoryEntryResourceIdentifier.INVENTORY_ENTRY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditResourceIdentifierImpl.class, name = OrderEditResourceIdentifier.ORDER_EDIT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderResourceIdentifierImpl.class, name = OrderResourceIdentifier.ORDER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentResourceIdentifierImpl.class, name = PaymentResourceIdentifier.PAYMENT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierImpl.class, name = ProductDiscountResourceIdentifier.PRODUCT_DISCOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductResourceIdentifierImpl.class, name = ProductResourceIdentifier.PRODUCT),
@@ -186,10 +184,6 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
         if (template instanceof com.commercetools.api.models.order_edit.OrderEditResourceIdentifier) {
             return com.commercetools.api.models.order_edit.OrderEditResourceIdentifier
                     .deepCopy((com.commercetools.api.models.order_edit.OrderEditResourceIdentifier) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderResourceIdentifier) {
-            return com.commercetools.api.models.order.OrderResourceIdentifier
-                    .deepCopy((com.commercetools.api.models.order.OrderResourceIdentifier) template);
         }
         if (template instanceof com.commercetools.api.models.payment.PaymentResourceIdentifier) {
             return com.commercetools.api.models.payment.PaymentResourceIdentifier
@@ -359,14 +353,6 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
      */
     public static com.commercetools.api.models.order_edit.OrderEditResourceIdentifierBuilder orderEditBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditResourceIdentifierBuilder.of();
-    }
-
-    /**
-     * builder for order subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.order.OrderResourceIdentifierBuilder orderBuilder() {
-        return com.commercetools.api.models.order.OrderResourceIdentifierBuilder.of();
     }
 
     /**

@@ -81,7 +81,11 @@ public class AttributeImpl implements Attribute, ModelBase {
 
         AttributeImpl that = (AttributeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(value, that.value)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

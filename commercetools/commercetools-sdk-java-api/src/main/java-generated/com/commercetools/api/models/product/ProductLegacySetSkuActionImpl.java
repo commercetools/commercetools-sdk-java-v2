@@ -89,6 +89,9 @@ public class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuAction,
         return new EqualsBuilder().append(action, that.action)
                 .append(sku, that.sku)
                 .append(variantId, that.variantId)
+                .append(action, that.action)
+                .append(sku, that.sku)
+                .append(variantId, that.variantId)
                 .isEquals();
     }
 

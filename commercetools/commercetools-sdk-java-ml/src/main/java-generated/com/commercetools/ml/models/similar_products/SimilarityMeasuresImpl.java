@@ -125,6 +125,11 @@ public class SimilarityMeasuresImpl implements SimilarityMeasures, ModelBase {
                 .append(attribute, that.attribute)
                 .append(variantCount, that.variantCount)
                 .append(price, that.price)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(attribute, that.attribute)
+                .append(variantCount, that.variantCount)
+                .append(price, that.price)
                 .isEquals();
     }
 

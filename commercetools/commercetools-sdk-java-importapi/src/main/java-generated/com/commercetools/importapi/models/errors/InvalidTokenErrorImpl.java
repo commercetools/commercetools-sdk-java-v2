@@ -70,7 +70,11 @@ public class InvalidTokenErrorImpl implements InvalidTokenError, ModelBase {
 
         InvalidTokenErrorImpl that = (InvalidTokenErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(code, that.code)
+                .append(message, that.message)
+                .isEquals();
     }
 
     @Override

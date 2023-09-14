@@ -38,7 +38,7 @@ public class ByProjectKeyMeOrdersRequestBuilder {
         return new ByProjectKeyMeOrdersByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
 
-    public ByProjectKeyMeOrdersQuotesRequestBuilder quotes() {
+    public ByProjectKeyMeOrdersQuotesRequestBuilder orderQuote() {
         return new ByProjectKeyMeOrdersQuotesRequestBuilder(apiHttpClient, projectKey);
     }
 

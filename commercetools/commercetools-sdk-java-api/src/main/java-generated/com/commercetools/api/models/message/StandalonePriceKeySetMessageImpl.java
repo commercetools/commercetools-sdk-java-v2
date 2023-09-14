@@ -258,6 +258,19 @@ public class StandalonePriceKeySetMessageImpl implements StandalonePriceKeySetMe
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(key, that.key)
                 .append(oldKey, that.oldKey)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(key, that.key)
+                .append(oldKey, that.oldKey)
                 .isEquals();
     }
 

@@ -30,7 +30,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
     private String shippingKey;
 
     /**
-     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional Parcel Added To Delivery Message containing information about the Parcels.</p>
      * @param builder function to build the delivery value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
     }
 
     /**
-     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional Parcel Added To Delivery Message containing information about the Parcels.</p>
      * @param builder function to build the delivery value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
     }
 
     /**
-     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional Parcel Added To Delivery Message containing information about the Parcels.</p>
      * @param delivery value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param shippingKey value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
     }
 
     /**
-     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional Parcel Added To Delivery Message containing information about the Parcels.</p>
      * @return delivery
      */
 
@@ -85,7 +85,7 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      * @return shippingKey
      */
 

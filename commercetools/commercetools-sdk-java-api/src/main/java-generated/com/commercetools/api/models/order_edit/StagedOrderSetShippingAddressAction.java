@@ -16,7 +16,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetShippingAddressAction
+ *  <p>This action updates the <code>shippingAddress</code> on the Order, but it does not change the shipping address on the referenced Cart from which the Order is created. Also, it does not recalculate the Cart as taxes may not fit to the shipping address anymore.</p>
+ *  <p>Produces the Order Shipping Address Set Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +38,7 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
     String SET_SHIPPING_ADDRESS = "setShippingAddress";
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return address
      */
     @Valid
@@ -45,7 +46,7 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
     public BaseAddress getAddress();
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param address value to be set
      */
 

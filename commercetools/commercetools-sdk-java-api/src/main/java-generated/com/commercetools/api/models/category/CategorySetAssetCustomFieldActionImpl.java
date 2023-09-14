@@ -122,6 +122,11 @@ public class CategorySetAssetCustomFieldActionImpl implements CategorySetAssetCu
                 .append(assetKey, that.assetKey)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 

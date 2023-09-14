@@ -4,6 +4,8 @@ package com.commercetools.api.models.message;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -29,6 +31,9 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     private String customLineItemId;
 
+    @Nullable
+    private String customLineItemKey;
+
     private java.time.ZonedDateTime transitionDate;
 
     private Long quantity;
@@ -45,6 +50,18 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
 
     public CustomLineItemStateTransitionMessagePayloadBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public CustomLineItemStateTransitionMessagePayloadBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -153,6 +170,16 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
      * @return transitionDate
      */
@@ -200,8 +227,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
         Objects.requireNonNull(quantity, CustomLineItemStateTransitionMessagePayload.class + ": quantity is missing");
         Objects.requireNonNull(fromState, CustomLineItemStateTransitionMessagePayload.class + ": fromState is missing");
         Objects.requireNonNull(toState, CustomLineItemStateTransitionMessagePayload.class + ": toState is missing");
-        return new CustomLineItemStateTransitionMessagePayloadImpl(customLineItemId, transitionDate, quantity,
-            fromState, toState);
+        return new CustomLineItemStateTransitionMessagePayloadImpl(customLineItemId, customLineItemKey, transitionDate,
+            quantity, fromState, toState);
     }
 
     /**
@@ -209,8 +236,8 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
      * @return CustomLineItemStateTransitionMessagePayload
      */
     public CustomLineItemStateTransitionMessagePayload buildUnchecked() {
-        return new CustomLineItemStateTransitionMessagePayloadImpl(customLineItemId, transitionDate, quantity,
-            fromState, toState);
+        return new CustomLineItemStateTransitionMessagePayloadImpl(customLineItemId, customLineItemKey, transitionDate,
+            quantity, fromState, toState);
     }
 
     /**
@@ -230,6 +257,7 @@ public class CustomLineItemStateTransitionMessagePayloadBuilder
             final CustomLineItemStateTransitionMessagePayload template) {
         CustomLineItemStateTransitionMessagePayloadBuilder builder = new CustomLineItemStateTransitionMessagePayloadBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.transitionDate = template.getTransitionDate();
         builder.quantity = template.getQuantity();
         builder.fromState = template.getFromState();

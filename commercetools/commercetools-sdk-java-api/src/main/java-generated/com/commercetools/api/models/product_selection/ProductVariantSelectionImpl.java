@@ -55,7 +55,7 @@ public class ProductVariantSelectionImpl implements ProductVariantSelection, Mod
 
         ProductVariantSelectionImpl that = (ProductVariantSelectionImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

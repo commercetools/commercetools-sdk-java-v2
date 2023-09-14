@@ -161,6 +161,13 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
                 .append(fieldName, that.fieldName)
                 .append(attributeName, that.attributeName)
                 .append(valueKey, that.valueKey)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(fieldName, that.fieldName)
+                .append(attributeName, that.attributeName)
+                .append(valueKey, that.valueKey)
                 .isEquals();
     }
 

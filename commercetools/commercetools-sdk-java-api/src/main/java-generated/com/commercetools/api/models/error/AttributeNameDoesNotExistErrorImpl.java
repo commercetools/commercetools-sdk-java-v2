@@ -110,6 +110,10 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(invalidAttributeName, that.invalidAttributeName)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(invalidAttributeName, that.invalidAttributeName)
                 .isEquals();
     }
 

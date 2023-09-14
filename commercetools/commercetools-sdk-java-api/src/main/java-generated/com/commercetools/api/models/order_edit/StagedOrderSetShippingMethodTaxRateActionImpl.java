@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetShippingMethodTaxRateAction
+ *  <p>A Shipping Method Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingMethodTaxRateActionImpl
@@ -62,7 +62,7 @@ public class StagedOrderSetShippingMethodTaxRateActionImpl
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -88,6 +88,9 @@ public class StagedOrderSetShippingMethodTaxRateActionImpl
         StagedOrderSetShippingMethodTaxRateActionImpl that = (StagedOrderSetShippingMethodTaxRateActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(shippingKey, that.shippingKey)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(action, that.action)
                 .append(shippingKey, that.shippingKey)
                 .append(externalTaxRate, that.externalTaxRate)
                 .isEquals();

@@ -21,7 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartChangeCustomLineItemPriceModeAction cartChangeCustomLineItemPriceModeAction = CartChangeCustomLineItemPriceModeAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .mode(CustomLineItemPriceMode.STANDARD)
  *             .build()
  * </code></pre>
@@ -37,12 +36,20 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
     String CHANGE_CUSTOM_LINE_ITEM_PRICE_MODE = "changeCustomLineItemPriceMode";
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
-    @NotNull
+
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
 
     /**
      *  <p>New value to set. Must not be empty.</p>
@@ -53,11 +60,18 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
     public CustomLineItemPriceMode getMode();
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
      *  <p>New value to set. Must not be empty.</p>
@@ -82,6 +96,7 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
     public static CartChangeCustomLineItemPriceModeAction of(final CartChangeCustomLineItemPriceModeAction template) {
         CartChangeCustomLineItemPriceModeActionImpl instance = new CartChangeCustomLineItemPriceModeActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setMode(template.getMode());
         return instance;
     }
@@ -99,6 +114,7 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
         }
         CartChangeCustomLineItemPriceModeActionImpl instance = new CartChangeCustomLineItemPriceModeActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setMode(template.getMode());
         return instance;
     }

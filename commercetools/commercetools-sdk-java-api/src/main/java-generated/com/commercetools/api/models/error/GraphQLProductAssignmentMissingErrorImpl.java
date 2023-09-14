@@ -92,6 +92,9 @@ public class GraphQLProductAssignmentMissingErrorImpl implements GraphQLProductA
         return new EqualsBuilder().append(code, that.code)
                 .append(values, that.values)
                 .append(product, that.product)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(product, that.product)
                 .isEquals();
     }
 

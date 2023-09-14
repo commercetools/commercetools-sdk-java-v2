@@ -71,7 +71,11 @@ public class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMessagePa
 
         PaymentCreatedMessagePayloadImpl that = (PaymentCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(payment, that.payment).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(payment, that.payment)
+                .append(type, that.type)
+                .append(payment, that.payment)
+                .isEquals();
     }
 
     @Override

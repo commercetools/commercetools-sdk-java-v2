@@ -1,36 +1,30 @@
 
 package commercetools.utils;
 
+import static java.util.Arrays.asList;
+
 import java.time.Duration;
+import java.util.LinkedHashSet;
+import java.util.Locale;
+import java.util.Set;
 import java.util.UUID;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
-import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringImpl;
 
 import io.vrap.rmf.base.client.http.ErrorMiddleware;
-import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 public class CommercetoolsTestUtils {
 
     private static final ProjectApiRoot projectApiRoot;
 
     static {
-        ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1
-                : ServiceRegion.valueOf(System.getenv("CTP_REGION"));
-        String authURL = System.getenv("CTP_AUTH_URL") == null ? region.getOAuthTokenUrl()
-                : System.getenv("CTP_AUTH_URL");
-        String apiUrl = System.getenv("CTP_API_URL") == null ? region.getApiUrl() : System.getenv("CTP_API_URL");
-        String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
-        ApiRootBuilder builder = ApiRootBuilder.of()
-                .defaultClient(
-                    ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
-                    authURL, apiUrl)
+        ApiRootBuilder builder = ApiRootBuilder.ofEnvironmentVariables()
                 .addConcurrentModificationMiddleware()
                 .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION);
-        projectApiRoot = builder.build(getProjectKey());
+        projectApiRoot = builder.buildProjectRoot();
     }
 
     public static String randomString() {
@@ -49,6 +43,16 @@ public class CommercetoolsTestUtils {
         LocalizedString localizedString = new LocalizedStringImpl();
         localizedString.setValue(randomString(), randomString());
         return localizedString;
+    }
+
+    @SafeVarargs
+    @SuppressWarnings("varargs")
+    public static <T> Set<T> asSet(final T... params) {
+        return new LinkedHashSet<>(asList(params));
+    }
+
+    public static LocalizedString randomSlug() {
+        return LocalizedString.of(Locale.ENGLISH, CommercetoolsTestUtils.randomKey());
     }
 
     public static String getProjectKey() {

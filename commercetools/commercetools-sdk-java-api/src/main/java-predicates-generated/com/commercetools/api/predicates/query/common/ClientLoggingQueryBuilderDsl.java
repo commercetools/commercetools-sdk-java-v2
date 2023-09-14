@@ -41,6 +41,16 @@ public class ClientLoggingQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ClientLoggingQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ClientLoggingQueryBuilderDsl> associate(
+            Function<com.commercetools.api.predicates.query.customer.CustomerReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("associate"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.customer.CustomerReferenceQueryBuilderDsl.of())),
+            ClientLoggingQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ClientLoggingQueryBuilderDsl> asCreatedBy(
             Function<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

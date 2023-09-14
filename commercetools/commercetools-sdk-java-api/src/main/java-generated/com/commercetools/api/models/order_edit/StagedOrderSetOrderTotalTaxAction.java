@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetOrderTotalTaxAction
+ *  <p>Updates the total tax amount of the Order if it has the <code>ExternalAmount</code> TaxMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -41,7 +41,7 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
     String SET_ORDER_TOTAL_TAX = "setOrderTotalTax";
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Total gross amount of the Order (totalNet + taxes).</p>
      * @return externalTotalGross
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
     public Money getExternalTotalGross();
 
     /**
-     *
+     *  <p>Value to set.</p>
      * @return externalTaxPortions
      */
     @Valid
@@ -58,14 +58,14 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
     public List<TaxPortionDraft> getExternalTaxPortions();
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Total gross amount of the Order (totalNet + taxes).</p>
      * @param externalTotalGross value to be set
      */
 
     public void setExternalTotalGross(final Money externalTotalGross);
 
     /**
-     * set externalTaxPortions
+     *  <p>Value to set.</p>
      * @param externalTaxPortions values to be set
      */
 
@@ -73,7 +73,7 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
     public void setExternalTaxPortions(final TaxPortionDraft... externalTaxPortions);
 
     /**
-     * set externalTaxPortions
+     *  <p>Value to set.</p>
      * @param externalTaxPortions values to be set
      */
 

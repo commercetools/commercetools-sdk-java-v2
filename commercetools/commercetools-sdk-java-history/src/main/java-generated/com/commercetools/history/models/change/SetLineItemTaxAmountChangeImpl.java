@@ -157,6 +157,13 @@ public class SetLineItemTaxAmountChangeImpl implements SetLineItemTaxAmountChang
                 .append(lineItem, that.lineItem)
                 .append(variant, that.variant)
                 .append(taxMode, that.taxMode)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(lineItem, that.lineItem)
+                .append(variant, that.variant)
+                .append(taxMode, that.taxMode)
                 .isEquals();
     }
 

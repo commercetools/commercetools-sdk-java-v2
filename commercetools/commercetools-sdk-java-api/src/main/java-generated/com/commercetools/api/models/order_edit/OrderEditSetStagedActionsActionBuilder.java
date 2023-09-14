@@ -25,7 +25,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     *  <p>Value to replace the <code>stagedActions</code> of the Order Edit.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     *  <p>Value to replace the <code>stagedActions</code> of the Order Edit.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     *  <p>Value to replace the <code>stagedActions</code> of the Order Edit.</p>
      * @param stagedActions value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     *  <p>Value to replace the <code>stagedActions</code> of the Order Edit.</p>
      * @param builder function to build the stagedActions value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     *  <p>Value to replace the <code>stagedActions</code> of the Order Edit.</p>
      * @param builder function to build the stagedActions value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class OrderEditSetStagedActionsActionBuilder implements Builder<OrderEdit
     }
 
     /**
-     *  <p>The actions to edit the <code>resource</code>.</p>
+     *  <p>Value to replace the <code>stagedActions</code> of the Order Edit.</p>
      * @return stagedActions
      */
 

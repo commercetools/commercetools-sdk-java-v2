@@ -54,7 +54,7 @@ public class ProductDiscountValueImpl implements ProductDiscountValue, ModelBase
 
         ProductDiscountValueImpl that = (ProductDiscountValueImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

@@ -90,6 +90,9 @@ public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywo
         return new EqualsBuilder().append(action, that.action)
                 .append(searchKeywords, that.searchKeywords)
                 .append(staged, that.staged)
+                .append(action, that.action)
+                .append(searchKeywords, that.searchKeywords)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

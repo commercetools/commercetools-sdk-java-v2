@@ -24,6 +24,13 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadQueryBuilderDsl {
                 OrderCustomLineItemQuantityChangedMessagePayloadQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderCustomLineItemQuantityChangedMessagePayloadQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p,
+                OrderCustomLineItemQuantityChangedMessagePayloadQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<OrderCustomLineItemQuantityChangedMessagePayloadQueryBuilderDsl> quantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("quantity")),

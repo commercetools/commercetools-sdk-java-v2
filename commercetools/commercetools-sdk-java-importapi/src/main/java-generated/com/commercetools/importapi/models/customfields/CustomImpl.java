@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+ *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomImpl implements Custom, ModelBase {
@@ -49,7 +49,7 @@ public class CustomImpl implements Custom, ModelBase {
     }
 
     /**
-     *  <p>The custom fields of this object.</p>
+     *  <p>The Custom Fields of this object.</p>
      */
 
     public com.commercetools.importapi.models.customfields.FieldContainer getFields() {
@@ -74,7 +74,11 @@ public class CustomImpl implements Custom, ModelBase {
 
         CustomImpl that = (CustomImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(fields, that.fields).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(fields, that.fields)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

@@ -138,6 +138,12 @@ public class ProductPriceKeySetMessagePayloadImpl implements ProductPriceKeySetM
                 .append(oldKey, that.oldKey)
                 .append(key, that.key)
                 .append(staged, that.staged)
+                .append(type, that.type)
+                .append(variantId, that.variantId)
+                .append(priceId, that.priceId)
+                .append(oldKey, that.oldKey)
+                .append(key, that.key)
+                .append(staged, that.staged)
                 .isEquals();
     }
 

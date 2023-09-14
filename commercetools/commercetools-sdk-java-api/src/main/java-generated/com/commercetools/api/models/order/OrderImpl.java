@@ -28,17 +28,15 @@ public class OrderImpl implements Order, ModelBase {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
-    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
-    private com.commercetools.api.models.common.CreatedBy createdBy;
-
-    private java.time.ZonedDateTime completedAt;
-
     private String orderNumber;
+
+    private String purchaseOrderNumber;
 
     private String customerId;
 
     private String customerEmail;
+
+    private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
     private String anonymousId;
 
@@ -56,68 +54,72 @@ public class OrderImpl implements Order, ModelBase {
 
     private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
 
-    private com.commercetools.api.models.common.Address shippingAddress;
+    private com.commercetools.api.models.cart.TaxMode taxMode;
+
+    private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
+
+    private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
+
+    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     private com.commercetools.api.models.common.Address billingAddress;
+
+    private com.commercetools.api.models.common.Address shippingAddress;
 
     private com.commercetools.api.models.cart.ShippingMode shippingMode;
 
     private String shippingKey;
 
+    private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
+
+    private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
+
     private com.commercetools.api.models.type.CustomFields shippingCustomFields;
 
     private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
 
-    private com.commercetools.api.models.cart.TaxMode taxMode;
-
-    private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
-
-    private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
-
-    private String country;
-
-    private com.commercetools.api.models.order.OrderState orderState;
-
-    private com.commercetools.api.models.state.StateReference state;
-
-    private com.commercetools.api.models.order.ShipmentState shipmentState;
-
-    private com.commercetools.api.models.order.PaymentState paymentState;
-
-    private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
-
-    private java.util.List<com.commercetools.api.models.order.SyncInfo> syncInfo;
-
-    private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
-
-    private String purchaseOrderNumber;
+    private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
 
     private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
-    @Deprecated
-    private Long lastMessageSequenceNumber;
+    private java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts;
+
+    private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
+
+    private com.commercetools.api.models.order.PaymentInfo paymentInfo;
+
+    private String country;
+
+    private String locale;
+
+    private com.commercetools.api.models.cart.CartOrigin origin;
 
     private com.commercetools.api.models.cart.CartReference cart;
 
     private com.commercetools.api.models.quote.QuoteReference quote;
 
+    private com.commercetools.api.models.order.OrderState orderState;
+
+    private com.commercetools.api.models.order.ShipmentState shipmentState;
+
+    private com.commercetools.api.models.order.PaymentState paymentState;
+
+    private com.commercetools.api.models.state.StateReference state;
+
+    private java.util.List<com.commercetools.api.models.order.SyncInfo> syncInfo;
+
+    private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
+
+    @Deprecated
+    private Long lastMessageSequenceNumber;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
-    private com.commercetools.api.models.order.PaymentInfo paymentInfo;
+    private java.time.ZonedDateTime completedAt;
 
-    private String locale;
+    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
-    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
-
-    private com.commercetools.api.models.cart.CartOrigin origin;
-
-    private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
-
-    private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
-
-    private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
-
-    private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
+    private com.commercetools.api.models.common.CreatedBy createdBy;
 
     /**
      * create instance with all properties
@@ -126,11 +128,11 @@ public class OrderImpl implements Order, ModelBase {
     OrderImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
-            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
-            @JsonProperty("completedAt") final java.time.ZonedDateTime completedAt,
-            @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("customerId") final String customerId,
+            @JsonProperty("orderNumber") final String orderNumber,
+            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
+            @JsonProperty("customerId") final String customerId,
             @JsonProperty("customerEmail") final String customerEmail,
+            @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
             @JsonProperty("anonymousId") final String anonymousId,
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
@@ -139,47 +141,47 @@ public class OrderImpl implements Order, ModelBase {
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
             @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice,
-            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
-            @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
-            @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
-            @JsonProperty("shippingKey") final String shippingKey,
-            @JsonProperty("shippingCustomFields") final com.commercetools.api.models.type.CustomFields shippingCustomFields,
-            @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.Shipping> shipping,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
-            @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
-            @JsonProperty("country") final String country,
-            @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState,
-            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
-            @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState,
-            @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState,
+            @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
+            @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
+            @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
+            @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
+            @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
+            @JsonProperty("shippingKey") final String shippingKey,
             @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo,
-            @JsonProperty("syncInfo") final java.util.List<com.commercetools.api.models.order.SyncInfo> syncInfo,
-            @JsonProperty("returnInfo") final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo,
-            @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
+            @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput,
+            @JsonProperty("shippingCustomFields") final com.commercetools.api.models.type.CustomFields shippingCustomFields,
+            @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.Shipping> shipping,
+            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
             @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes,
-            @JsonProperty("lastMessageSequenceNumber") final Long lastMessageSequenceNumber,
+            @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
+            @JsonProperty("refusedGifts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts,
+            @JsonProperty("paymentInfo") final com.commercetools.api.models.order.PaymentInfo paymentInfo,
+            @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
+            @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
             @JsonProperty("cart") final com.commercetools.api.models.cart.CartReference cart,
             @JsonProperty("quote") final com.commercetools.api.models.quote.QuoteReference quote,
+            @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState,
+            @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState,
+            @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState,
+            @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
+            @JsonProperty("syncInfo") final java.util.List<com.commercetools.api.models.order.SyncInfo> syncInfo,
+            @JsonProperty("returnInfo") final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo,
+            @JsonProperty("lastMessageSequenceNumber") final Long lastMessageSequenceNumber,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
-            @JsonProperty("paymentInfo") final com.commercetools.api.models.order.PaymentInfo paymentInfo,
-            @JsonProperty("locale") final String locale,
-            @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
-            @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
-            @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
-            @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput,
-            @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
-            @JsonProperty("refusedGifts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts) {
+            @JsonProperty("completedAt") final java.time.ZonedDateTime completedAt,
+            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
+            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
-        this.lastModifiedBy = lastModifiedBy;
-        this.createdBy = createdBy;
-        this.completedAt = completedAt;
         this.orderNumber = orderNumber;
+        this.purchaseOrderNumber = purchaseOrderNumber;
         this.customerId = customerId;
         this.customerEmail = customerEmail;
+        this.customerGroup = customerGroup;
         this.anonymousId = anonymousId;
         this.businessUnit = businessUnit;
         this.store = store;
@@ -188,37 +190,39 @@ public class OrderImpl implements Order, ModelBase {
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
         this.taxedShippingPrice = taxedShippingPrice;
-        this.shippingAddress = shippingAddress;
-        this.billingAddress = billingAddress;
-        this.shippingMode = shippingMode;
-        this.shippingKey = shippingKey;
-        this.shippingCustomFields = shippingCustomFields;
-        this.shipping = shipping;
         this.taxMode = taxMode;
         this.taxRoundingMode = taxRoundingMode;
-        this.customerGroup = customerGroup;
-        this.country = country;
-        this.orderState = orderState;
-        this.state = state;
-        this.shipmentState = shipmentState;
-        this.paymentState = paymentState;
+        this.taxCalculationMode = taxCalculationMode;
+        this.inventoryMode = inventoryMode;
+        this.billingAddress = billingAddress;
+        this.shippingAddress = shippingAddress;
+        this.shippingMode = shippingMode;
+        this.shippingKey = shippingKey;
         this.shippingInfo = shippingInfo;
-        this.syncInfo = syncInfo;
-        this.returnInfo = returnInfo;
-        this.purchaseOrderNumber = purchaseOrderNumber;
+        this.shippingRateInput = shippingRateInput;
+        this.shippingCustomFields = shippingCustomFields;
+        this.shipping = shipping;
+        this.itemShippingAddresses = itemShippingAddresses;
         this.discountCodes = discountCodes;
-        this.lastMessageSequenceNumber = lastMessageSequenceNumber;
+        this.directDiscounts = directDiscounts;
+        this.refusedGifts = refusedGifts;
+        this.paymentInfo = paymentInfo;
+        this.country = country;
+        this.locale = locale;
+        this.origin = origin;
         this.cart = cart;
         this.quote = quote;
+        this.orderState = orderState;
+        this.shipmentState = shipmentState;
+        this.paymentState = paymentState;
+        this.state = state;
+        this.syncInfo = syncInfo;
+        this.returnInfo = returnInfo;
+        this.lastMessageSequenceNumber = lastMessageSequenceNumber;
         this.custom = custom;
-        this.paymentInfo = paymentInfo;
-        this.locale = locale;
-        this.inventoryMode = inventoryMode;
-        this.origin = origin;
-        this.taxCalculationMode = taxCalculationMode;
-        this.shippingRateInput = shippingRateInput;
-        this.itemShippingAddresses = itemShippingAddresses;
-        this.refusedGifts = refusedGifts;
+        this.completedAt = completedAt;
+        this.lastModifiedBy = lastModifiedBy;
+        this.createdBy = createdBy;
     }
 
     /**
@@ -236,7 +240,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>The current version of the order.</p>
+     *  <p>Current version of the Order.</p>
      */
 
     public Long getVersion() {
@@ -244,7 +248,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Order was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -252,11 +256,372 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Order was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
+    }
+
+    /**
+     *  <p>User-defined identifier of the Order that is unique across a Project.</p>
+     */
+
+    public String getOrderNumber() {
+        return this.orderNumber;
+    }
+
+    /**
+     *  <p>User-defined identifier of a purchase Order.</p>
+     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
+     */
+
+    public String getPurchaseOrderNumber() {
+        return this.purchaseOrderNumber;
+    }
+
+    /**
+     *  <p><code>id</code> of the Customer that the Order belongs to.</p>
+     */
+
+    public String getCustomerId() {
+        return this.customerId;
+    }
+
+    /**
+     *  <p>Email address of the Customer that the Order belongs to.</p>
+     */
+
+    public String getCustomerEmail() {
+        return this.customerEmail;
+    }
+
+    /**
+     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for LineItem Price selection.</p>
+     */
+
+    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
+        return this.customerGroup;
+    }
+
+    /**
+     *  <p>Anonymous session associated with the Order.</p>
+     */
+
+    public String getAnonymousId() {
+        return this.anonymousId;
+    }
+
+    /**
+     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    /**
+     *  <p>Reference to a Store the Order belongs to.</p>
+     */
+
+    public com.commercetools.api.models.store.StoreKeyReference getStore() {
+        return this.store;
+    }
+
+    /**
+     *  <p>Line Items that are part of the Order.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
+        return this.lineItems;
+    }
+
+    /**
+     *  <p>Custom Line Items that are part of the Order.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
+        return this.customLineItems;
+    }
+
+    /**
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     */
+
+    public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
+        return this.totalPrice;
+    }
+
+    /**
+     *  <ul>
+     *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
+     *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *  </ul>
+     */
+
+    public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
+        return this.taxedPrice;
+    }
+
+    /**
+     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     */
+
+    public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
+        return this.taxedShippingPrice;
+    }
+
+    /**
+     *  <p>Indicates how Tax Rates are set.</p>
+     */
+
+    public com.commercetools.api.models.cart.TaxMode getTaxMode() {
+        return this.taxMode;
+    }
+
+    /**
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
+        return this.taxRoundingMode;
+    }
+
+    /**
+     *  <p>Indicates how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     */
+
+    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
+        return this.taxCalculationMode;
+    }
+
+    /**
+     *  <p>Indicates how stock quantities are tracked for Line Items in the Order.</p>
+     */
+
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+        return this.inventoryMode;
+    }
+
+    /**
+     *  <p>Billing address associated with the Order.</p>
+     */
+
+    public com.commercetools.api.models.common.Address getBillingAddress() {
+        return this.billingAddress;
+    }
+
+    /**
+     *  <p>Shipping address associated with the Order. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     */
+
+    public com.commercetools.api.models.common.Address getShippingAddress() {
+        return this.shippingAddress;
+    }
+
+    /**
+     *  <p>Indicates whether there can be one or multiple Shipping Methods.</p>
+     */
+
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+        return this.shippingMode;
+    }
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod for <code>Single</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
+     *  <p>Shipping-related information for <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     */
+
+    public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
+        return this.shippingInfo;
+    }
+
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     */
+
+    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
+        return this.shippingRateInput;
+    }
+
+    /**
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
+        return this.shippingCustomFields;
+    }
+
+    /**
+     *  <p>Shipping-related information for <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
+        return this.shipping;
+    }
+
+    /**
+     *  <p>Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field. Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
+        return this.itemShippingAddresses;
+    }
+
+    /**
+     *  <p>Discount Codes added to the Order. An Order that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
+        return this.discountCodes;
+    }
+
+    /**
+     *  <p>Direct Discounts added to the Order. An Order that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.DirectDiscount> getDirectDiscounts() {
+        return this.directDiscounts;
+    }
+
+    /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
+        return this.refusedGifts;
+    }
+
+    /**
+     *  <p>Payment information related to the Order.</p>
+     */
+
+    public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
+        return this.paymentInfo;
+    }
+
+    /**
+     *  <p>Used for LineItem Price selection.</p>
+     */
+
+    public String getCountry() {
+        return this.country;
+    }
+
+    /**
+     *  <p>Languages of the Order. Can only contain languages supported by the Project.</p>
+     */
+
+    public String getLocale() {
+        return this.locale;
+    }
+
+    /**
+     *  <p>Indicates the origin of the Cart from which the Order was created.</p>
+     */
+
+    public com.commercetools.api.models.cart.CartOrigin getOrigin() {
+        return this.origin;
+    }
+
+    /**
+     *  <p>Reference to the Cart for an Order created from Cart. The referenced Cart will have the <code>Ordered</code> CartState.</p>
+     */
+
+    public com.commercetools.api.models.cart.CartReference getCart() {
+        return this.cart;
+    }
+
+    /**
+     *  <p>Reference to the Quote for an Order created from Quote.</p>
+     */
+
+    public com.commercetools.api.models.quote.QuoteReference getQuote() {
+        return this.quote;
+    }
+
+    /**
+     *  <p>Current status of the Order.</p>
+     */
+
+    public com.commercetools.api.models.order.OrderState getOrderState() {
+        return this.orderState;
+    }
+
+    /**
+     *  <p>Shipment status of the Order.</p>
+     */
+
+    public com.commercetools.api.models.order.ShipmentState getShipmentState() {
+        return this.shipmentState;
+    }
+
+    /**
+     *  <p>Payment status of the Order.</p>
+     */
+
+    public com.commercetools.api.models.order.PaymentState getPaymentState() {
+        return this.paymentState;
+    }
+
+    /**
+     *  <p>State of the Order. This reference can point to a State in a custom workflow.</p>
+     */
+
+    public com.commercetools.api.models.state.StateReference getState() {
+        return this.state;
+    }
+
+    /**
+     *  <p>Contains synchronization activity information of the Order (like export or import). Can only be set with Update SyncInfo update action.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.order.SyncInfo> getSyncInfo() {
+        return this.syncInfo;
+    }
+
+    /**
+     *  <p>Contains information regarding the returns associated with the Order.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {
+        return this.returnInfo;
+    }
+
+    /**
+     *  <p>Internal-only field.</p>
+     */
+    @Deprecated
+    public Long getLastMessageSequenceNumber() {
+        return this.lastMessageSequenceNumber;
+    }
+
+    /**
+     *  <p>Custom Fields of the Order.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
+    /**
+     *  <p>User-defined date and time (UTC) of the Order. Present only on an Order created using Order Import.</p>
+     */
+
+    public java.time.ZonedDateTime getCompletedAt() {
+        return this.completedAt;
     }
 
     /**
@@ -275,357 +640,6 @@ public class OrderImpl implements Order, ModelBase {
         return this.createdBy;
     }
 
-    /**
-     *  <p>This field will only be present if it was set for Order Import</p>
-     */
-
-    public java.time.ZonedDateTime getCompletedAt() {
-        return this.completedAt;
-    }
-
-    /**
-     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
-     */
-
-    public String getOrderNumber() {
-        return this.orderNumber;
-    }
-
-    /**
-     *
-     */
-
-    public String getCustomerId() {
-        return this.customerId;
-    }
-
-    /**
-     *
-     */
-
-    public String getCustomerEmail() {
-        return this.customerEmail;
-    }
-
-    /**
-     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
-     */
-
-    public String getAnonymousId() {
-        return this.anonymousId;
-    }
-
-    /**
-     *  <p>The Business Unit the Order belongs to.</p>
-     */
-
-    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
-        return this.businessUnit;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.store.StoreKeyReference getStore() {
-        return this.store;
-    }
-
-    /**
-     *
-     */
-
-    public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
-        return this.lineItems;
-    }
-
-    /**
-     *
-     */
-
-    public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
-        return this.customLineItems;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
-        return this.totalPrice;
-    }
-
-    /**
-     *  <p>The taxes are calculated based on the shipping address.</p>
-     */
-
-    public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
-        return this.taxedPrice;
-    }
-
-    /**
-     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
-     */
-
-    public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
-        return this.taxedShippingPrice;
-    }
-
-    /**
-     *  <p>Holds all shipping-related information per Shipping Method.</p>
-     *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
-     */
-
-    public com.commercetools.api.models.common.Address getShippingAddress() {
-        return this.shippingAddress;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.common.Address getBillingAddress() {
-        return this.billingAddress;
-    }
-
-    /**
-     *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
-     */
-
-    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
-        return this.shippingMode;
-    }
-
-    /**
-     *  <p>User-defined unique identifier of the Shipping Method with <code>Single</code> ShippingMode.</p>
-     */
-
-    public String getShippingKey() {
-        return this.shippingKey;
-    }
-
-    /**
-     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
-     */
-
-    public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
-        return this.shippingCustomFields;
-    }
-
-    /**
-     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
-     *  <p>It is updated automatically after the Shipping Method is added.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
-        return this.shipping;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.cart.TaxMode getTaxMode() {
-        return this.taxMode;
-    }
-
-    /**
-     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
-     */
-
-    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
-        return this.taxRoundingMode;
-    }
-
-    /**
-     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
-     */
-
-    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
-        return this.customerGroup;
-    }
-
-    /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
-     */
-
-    public String getCountry() {
-        return this.country;
-    }
-
-    /**
-     *  <p>One of the four predefined OrderStates.</p>
-     */
-
-    public com.commercetools.api.models.order.OrderState getOrderState() {
-        return this.orderState;
-    }
-
-    /**
-     *  <p>This reference can point to a state in a custom workflow.</p>
-     */
-
-    public com.commercetools.api.models.state.StateReference getState() {
-        return this.state;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.order.ShipmentState getShipmentState() {
-        return this.shipmentState;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.order.PaymentState getPaymentState() {
-        return this.paymentState;
-    }
-
-    /**
-     *  <p>Set if the ShippingMethod is set.</p>
-     */
-
-    public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
-        return this.shippingInfo;
-    }
-
-    /**
-     *
-     */
-
-    public java.util.List<com.commercetools.api.models.order.SyncInfo> getSyncInfo() {
-        return this.syncInfo;
-    }
-
-    /**
-     *
-     */
-
-    public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {
-        return this.returnInfo;
-    }
-
-    /**
-     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
-     */
-
-    public String getPurchaseOrderNumber() {
-        return this.purchaseOrderNumber;
-    }
-
-    /**
-     *
-     */
-
-    public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
-        return this.discountCodes;
-    }
-
-    /**
-     *  <p>Internal-only field.</p>
-     */
-    @Deprecated
-    public Long getLastMessageSequenceNumber() {
-        return this.lastMessageSequenceNumber;
-    }
-
-    /**
-     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
-     */
-
-    public com.commercetools.api.models.cart.CartReference getCart() {
-        return this.cart;
-    }
-
-    /**
-     *  <p>Set when this order was created from a quote.</p>
-     */
-
-    public com.commercetools.api.models.quote.QuoteReference getQuote() {
-        return this.quote;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.type.CustomFields getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
-        return this.paymentInfo;
-    }
-
-    /**
-     *
-     */
-
-    public String getLocale() {
-        return this.locale;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
-        return this.inventoryMode;
-    }
-
-    /**
-     *
-     */
-
-    public com.commercetools.api.models.cart.CartOrigin getOrigin() {
-        return this.origin;
-    }
-
-    /**
-     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
-     */
-
-    public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
-        return this.taxCalculationMode;
-    }
-
-    /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
-     *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
-     *   <li>If <code>CartValue</code>, it cannot be used.</li>
-     *  </ul>
-     */
-
-    public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
-        return this.shippingRateInput;
-    }
-
-    /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
-        return this.itemShippingAddresses;
-    }
-
-    /**
-     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
-        return this.refusedGifts;
-    }
-
     public void setId(final String id) {
         this.id = id;
     }
@@ -642,20 +656,12 @@ public class OrderImpl implements Order, ModelBase {
         this.lastModifiedAt = lastModifiedAt;
     }
 
-    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-    }
-
-    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public void setCompletedAt(final java.time.ZonedDateTime completedAt) {
-        this.completedAt = completedAt;
-    }
-
     public void setOrderNumber(final String orderNumber) {
         this.orderNumber = orderNumber;
+    }
+
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
+        this.purchaseOrderNumber = purchaseOrderNumber;
     }
 
     public void setCustomerId(final String customerId) {
@@ -664,6 +670,11 @@ public class OrderImpl implements Order, ModelBase {
 
     public void setCustomerEmail(final String customerEmail) {
         this.customerEmail = customerEmail;
+    }
+
+    public void setCustomerGroup(
+            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
+        this.customerGroup = customerGroup;
     }
 
     public void setAnonymousId(final String anonymousId) {
@@ -708,12 +719,28 @@ public class OrderImpl implements Order, ModelBase {
         this.taxedShippingPrice = taxedShippingPrice;
     }
 
-    public void setShippingAddress(final com.commercetools.api.models.common.Address shippingAddress) {
-        this.shippingAddress = shippingAddress;
+    public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
+        this.taxMode = taxMode;
+    }
+
+    public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
+        this.taxRoundingMode = taxRoundingMode;
+    }
+
+    public void setTaxCalculationMode(final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
+        this.taxCalculationMode = taxCalculationMode;
+    }
+
+    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
     }
 
     public void setBillingAddress(final com.commercetools.api.models.common.Address billingAddress) {
         this.billingAddress = billingAddress;
+    }
+
+    public void setShippingAddress(final com.commercetools.api.models.common.Address shippingAddress) {
+        this.shippingAddress = shippingAddress;
     }
 
     public void setShippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
@@ -722,6 +749,14 @@ public class OrderImpl implements Order, ModelBase {
 
     public void setShippingKey(final String shippingKey) {
         this.shippingKey = shippingKey;
+    }
+
+    public void setShippingInfo(final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
+        this.shippingInfo = shippingInfo;
+    }
+
+    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
+        this.shippingRateInput = shippingRateInput;
     }
 
     public void setShippingCustomFields(final com.commercetools.api.models.type.CustomFields shippingCustomFields) {
@@ -736,29 +771,69 @@ public class OrderImpl implements Order, ModelBase {
         this.shipping = shipping;
     }
 
-    public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
-        this.taxMode = taxMode;
+    public void setItemShippingAddresses(final com.commercetools.api.models.common.Address... itemShippingAddresses) {
+        this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
     }
 
-    public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
-        this.taxRoundingMode = taxRoundingMode;
+    public void setItemShippingAddresses(
+            final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
+        this.itemShippingAddresses = itemShippingAddresses;
     }
 
-    public void setCustomerGroup(
-            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
-        this.customerGroup = customerGroup;
+    public void setDiscountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
+        this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
+    }
+
+    public void setDiscountCodes(
+            final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
+        this.discountCodes = discountCodes;
+    }
+
+    public void setDirectDiscounts(final com.commercetools.api.models.cart.DirectDiscount... directDiscounts) {
+        this.directDiscounts = new ArrayList<>(Arrays.asList(directDiscounts));
+    }
+
+    public void setDirectDiscounts(
+            final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts) {
+        this.directDiscounts = directDiscounts;
+    }
+
+    public void setRefusedGifts(
+            final com.commercetools.api.models.cart_discount.CartDiscountReference... refusedGifts) {
+        this.refusedGifts = new ArrayList<>(Arrays.asList(refusedGifts));
+    }
+
+    public void setRefusedGifts(
+            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts) {
+        this.refusedGifts = refusedGifts;
+    }
+
+    public void setPaymentInfo(final com.commercetools.api.models.order.PaymentInfo paymentInfo) {
+        this.paymentInfo = paymentInfo;
     }
 
     public void setCountry(final String country) {
         this.country = country;
     }
 
-    public void setOrderState(final com.commercetools.api.models.order.OrderState orderState) {
-        this.orderState = orderState;
+    public void setLocale(final String locale) {
+        this.locale = locale;
     }
 
-    public void setState(final com.commercetools.api.models.state.StateReference state) {
-        this.state = state;
+    public void setOrigin(final com.commercetools.api.models.cart.CartOrigin origin) {
+        this.origin = origin;
+    }
+
+    public void setCart(final com.commercetools.api.models.cart.CartReference cart) {
+        this.cart = cart;
+    }
+
+    public void setQuote(final com.commercetools.api.models.quote.QuoteReference quote) {
+        this.quote = quote;
+    }
+
+    public void setOrderState(final com.commercetools.api.models.order.OrderState orderState) {
+        this.orderState = orderState;
     }
 
     public void setShipmentState(final com.commercetools.api.models.order.ShipmentState shipmentState) {
@@ -769,8 +844,8 @@ public class OrderImpl implements Order, ModelBase {
         this.paymentState = paymentState;
     }
 
-    public void setShippingInfo(final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
-        this.shippingInfo = shippingInfo;
+    public void setState(final com.commercetools.api.models.state.StateReference state) {
+        this.state = state;
     }
 
     public void setSyncInfo(final com.commercetools.api.models.order.SyncInfo... syncInfo) {
@@ -789,77 +864,25 @@ public class OrderImpl implements Order, ModelBase {
         this.returnInfo = returnInfo;
     }
 
-    public void setPurchaseOrderNumber(final String purchaseOrderNumber) {
-        this.purchaseOrderNumber = purchaseOrderNumber;
-    }
-
-    public void setDiscountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo... discountCodes) {
-        this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
-    }
-
-    public void setDiscountCodes(
-            final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
-        this.discountCodes = discountCodes;
-    }
-
     @Deprecated
     public void setLastMessageSequenceNumber(final Long lastMessageSequenceNumber) {
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
-    }
-
-    public void setCart(final com.commercetools.api.models.cart.CartReference cart) {
-        this.cart = cart;
-    }
-
-    public void setQuote(final com.commercetools.api.models.quote.QuoteReference quote) {
-        this.quote = quote;
     }
 
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
 
-    public void setPaymentInfo(final com.commercetools.api.models.order.PaymentInfo paymentInfo) {
-        this.paymentInfo = paymentInfo;
+    public void setCompletedAt(final java.time.ZonedDateTime completedAt) {
+        this.completedAt = completedAt;
     }
 
-    public void setLocale(final String locale) {
-        this.locale = locale;
+    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+        this.lastModifiedBy = lastModifiedBy;
     }
 
-    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
-        this.inventoryMode = inventoryMode;
-    }
-
-    public void setOrigin(final com.commercetools.api.models.cart.CartOrigin origin) {
-        this.origin = origin;
-    }
-
-    public void setTaxCalculationMode(final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
-        this.taxCalculationMode = taxCalculationMode;
-    }
-
-    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
-        this.shippingRateInput = shippingRateInput;
-    }
-
-    public void setItemShippingAddresses(final com.commercetools.api.models.common.Address... itemShippingAddresses) {
-        this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
-    }
-
-    public void setItemShippingAddresses(
-            final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
-        this.itemShippingAddresses = itemShippingAddresses;
-    }
-
-    public void setRefusedGifts(
-            final com.commercetools.api.models.cart_discount.CartDiscountReference... refusedGifts) {
-        this.refusedGifts = new ArrayList<>(Arrays.asList(refusedGifts));
-    }
-
-    public void setRefusedGifts(
-            final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts) {
-        this.refusedGifts = refusedGifts;
+    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {
+        this.createdBy = createdBy;
     }
 
     @Override
@@ -876,12 +899,11 @@ public class OrderImpl implements Order, ModelBase {
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
-                .append(lastModifiedBy, that.lastModifiedBy)
-                .append(createdBy, that.createdBy)
-                .append(completedAt, that.completedAt)
                 .append(orderNumber, that.orderNumber)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(customerId, that.customerId)
                 .append(customerEmail, that.customerEmail)
+                .append(customerGroup, that.customerGroup)
                 .append(anonymousId, that.anonymousId)
                 .append(businessUnit, that.businessUnit)
                 .append(store, that.store)
@@ -890,37 +912,89 @@ public class OrderImpl implements Order, ModelBase {
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
                 .append(taxedShippingPrice, that.taxedShippingPrice)
-                .append(shippingAddress, that.shippingAddress)
-                .append(billingAddress, that.billingAddress)
-                .append(shippingMode, that.shippingMode)
-                .append(shippingKey, that.shippingKey)
-                .append(shippingCustomFields, that.shippingCustomFields)
-                .append(shipping, that.shipping)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
-                .append(customerGroup, that.customerGroup)
-                .append(country, that.country)
-                .append(orderState, that.orderState)
-                .append(state, that.state)
-                .append(shipmentState, that.shipmentState)
-                .append(paymentState, that.paymentState)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .append(inventoryMode, that.inventoryMode)
+                .append(billingAddress, that.billingAddress)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingMode, that.shippingMode)
+                .append(shippingKey, that.shippingKey)
                 .append(shippingInfo, that.shippingInfo)
-                .append(syncInfo, that.syncInfo)
-                .append(returnInfo, that.returnInfo)
-                .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(shippingCustomFields, that.shippingCustomFields)
+                .append(shipping, that.shipping)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
-                .append(lastMessageSequenceNumber, that.lastMessageSequenceNumber)
+                .append(directDiscounts, that.directDiscounts)
+                .append(refusedGifts, that.refusedGifts)
+                .append(paymentInfo, that.paymentInfo)
+                .append(country, that.country)
+                .append(locale, that.locale)
+                .append(origin, that.origin)
                 .append(cart, that.cart)
                 .append(quote, that.quote)
+                .append(orderState, that.orderState)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(state, that.state)
+                .append(syncInfo, that.syncInfo)
+                .append(returnInfo, that.returnInfo)
+                .append(lastMessageSequenceNumber, that.lastMessageSequenceNumber)
                 .append(custom, that.custom)
-                .append(paymentInfo, that.paymentInfo)
-                .append(locale, that.locale)
-                .append(inventoryMode, that.inventoryMode)
-                .append(origin, that.origin)
+                .append(completedAt, that.completedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(orderNumber, that.orderNumber)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(customerId, that.customerId)
+                .append(customerEmail, that.customerEmail)
+                .append(customerGroup, that.customerGroup)
+                .append(anonymousId, that.anonymousId)
+                .append(businessUnit, that.businessUnit)
+                .append(store, that.store)
+                .append(lineItems, that.lineItems)
+                .append(customLineItems, that.customLineItems)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(taxedShippingPrice, that.taxedShippingPrice)
+                .append(taxMode, that.taxMode)
+                .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
+                .append(inventoryMode, that.inventoryMode)
+                .append(billingAddress, that.billingAddress)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingMode, that.shippingMode)
+                .append(shippingKey, that.shippingKey)
+                .append(shippingInfo, that.shippingInfo)
                 .append(shippingRateInput, that.shippingRateInput)
+                .append(shippingCustomFields, that.shippingCustomFields)
+                .append(shipping, that.shipping)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(discountCodes, that.discountCodes)
+                .append(directDiscounts, that.directDiscounts)
                 .append(refusedGifts, that.refusedGifts)
+                .append(paymentInfo, that.paymentInfo)
+                .append(country, that.country)
+                .append(locale, that.locale)
+                .append(origin, that.origin)
+                .append(cart, that.cart)
+                .append(quote, that.quote)
+                .append(orderState, that.orderState)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(state, that.state)
+                .append(syncInfo, that.syncInfo)
+                .append(returnInfo, that.returnInfo)
+                .append(lastMessageSequenceNumber, that.lastMessageSequenceNumber)
+                .append(custom, that.custom)
+                .append(completedAt, that.completedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
                 .isEquals();
     }
 
@@ -930,12 +1004,11 @@ public class OrderImpl implements Order, ModelBase {
                 .append(version)
                 .append(createdAt)
                 .append(lastModifiedAt)
-                .append(lastModifiedBy)
-                .append(createdBy)
-                .append(completedAt)
                 .append(orderNumber)
+                .append(purchaseOrderNumber)
                 .append(customerId)
                 .append(customerEmail)
+                .append(customerGroup)
                 .append(anonymousId)
                 .append(businessUnit)
                 .append(store)
@@ -944,37 +1017,39 @@ public class OrderImpl implements Order, ModelBase {
                 .append(totalPrice)
                 .append(taxedPrice)
                 .append(taxedShippingPrice)
-                .append(shippingAddress)
-                .append(billingAddress)
-                .append(shippingMode)
-                .append(shippingKey)
-                .append(shippingCustomFields)
-                .append(shipping)
                 .append(taxMode)
                 .append(taxRoundingMode)
-                .append(customerGroup)
-                .append(country)
-                .append(orderState)
-                .append(state)
-                .append(shipmentState)
-                .append(paymentState)
+                .append(taxCalculationMode)
+                .append(inventoryMode)
+                .append(billingAddress)
+                .append(shippingAddress)
+                .append(shippingMode)
+                .append(shippingKey)
                 .append(shippingInfo)
-                .append(syncInfo)
-                .append(returnInfo)
-                .append(purchaseOrderNumber)
+                .append(shippingRateInput)
+                .append(shippingCustomFields)
+                .append(shipping)
+                .append(itemShippingAddresses)
                 .append(discountCodes)
-                .append(lastMessageSequenceNumber)
+                .append(directDiscounts)
+                .append(refusedGifts)
+                .append(paymentInfo)
+                .append(country)
+                .append(locale)
+                .append(origin)
                 .append(cart)
                 .append(quote)
+                .append(orderState)
+                .append(shipmentState)
+                .append(paymentState)
+                .append(state)
+                .append(syncInfo)
+                .append(returnInfo)
+                .append(lastMessageSequenceNumber)
                 .append(custom)
-                .append(paymentInfo)
-                .append(locale)
-                .append(inventoryMode)
-                .append(origin)
-                .append(taxCalculationMode)
-                .append(shippingRateInput)
-                .append(itemShippingAddresses)
-                .append(refusedGifts)
+                .append(completedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
                 .toHashCode();
     }
 

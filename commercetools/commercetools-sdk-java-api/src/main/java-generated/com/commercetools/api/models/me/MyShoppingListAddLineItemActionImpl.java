@@ -22,6 +22,8 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
 
     private String action;
 
+    private String key;
+
     private String sku;
 
     private String productId;
@@ -38,11 +40,12 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
      * create instance with all properties
      */
     @JsonCreator
-    MyShoppingListAddLineItemActionImpl(@JsonProperty("sku") final String sku,
+    MyShoppingListAddLineItemActionImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
             @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.key = key;
         this.sku = sku;
         this.productId = productId;
         this.variantId = variantId;
@@ -65,6 +68,14 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
 
     public String getAction() {
         return this.action;
+    }
+
+    /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -115,6 +126,10 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
         return this.custom;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setSku(final String sku) {
         this.sku = sku;
     }
@@ -150,6 +165,15 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
         MyShoppingListAddLineItemActionImpl that = (MyShoppingListAddLineItemActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(action, that.action)
+                .append(key, that.key)
                 .append(sku, that.sku)
                 .append(productId, that.productId)
                 .append(variantId, that.variantId)
@@ -162,6 +186,7 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
+                .append(key)
                 .append(sku)
                 .append(productId)
                 .append(variantId)

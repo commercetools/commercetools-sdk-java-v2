@@ -244,6 +244,18 @@ public class BusinessUnitDefaultBillingAddressSetMessageImpl
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(address, that.address)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(address, that.address)
                 .isEquals();
     }
 

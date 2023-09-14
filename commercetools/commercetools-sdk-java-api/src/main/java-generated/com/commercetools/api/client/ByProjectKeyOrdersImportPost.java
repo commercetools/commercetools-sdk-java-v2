@@ -14,7 +14,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Create an Order by Import</p>
+ *  <p>Importing an Order produces the Order Imported Message.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li>OutOfStock</li>
+ *   <li>CountryNotConfiguredInStore</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

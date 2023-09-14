@@ -224,7 +224,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -236,7 +236,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -248,7 +248,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -307,7 +307,7 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
      * @return custom
      */
 

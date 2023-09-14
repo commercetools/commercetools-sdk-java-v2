@@ -74,7 +74,11 @@ public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase
 
         DeliveryAddressDraftImpl that = (DeliveryAddressDraftImpl) o;
 
-        return new EqualsBuilder().append(deliveryId, that.deliveryId).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(deliveryId, that.deliveryId)
+                .append(address, that.address)
+                .append(deliveryId, that.deliveryId)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override

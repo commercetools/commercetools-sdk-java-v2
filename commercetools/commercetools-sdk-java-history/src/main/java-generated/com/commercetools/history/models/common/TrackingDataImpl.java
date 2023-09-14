@@ -126,6 +126,11 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
                 .append(provider, that.provider)
                 .append(providerTransaction, that.providerTransaction)
                 .append(isReturn, that.isReturn)
+                .append(trackingId, that.trackingId)
+                .append(carrier, that.carrier)
+                .append(provider, that.provider)
+                .append(providerTransaction, that.providerTransaction)
+                .append(isReturn, that.isReturn)
                 .isEquals();
     }
 

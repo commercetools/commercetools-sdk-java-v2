@@ -214,6 +214,16 @@ public class GraphQLDuplicateStandalonePriceScopeErrorImpl
                 .append(channel, that.channel)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(conflictingStandalonePrice, that.conflictingStandalonePrice)
+                .append(sku, that.sku)
+                .append(currency, that.currency)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
                 .isEquals();
     }
 

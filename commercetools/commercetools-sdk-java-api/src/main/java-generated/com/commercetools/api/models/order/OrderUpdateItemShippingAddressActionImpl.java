@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderUpdateItemShippingAddressAction
+ *  <p>Updates an address in <code>itemShippingAddresses</code> by keeping the Address <code>key</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderUpdateItemShippingAddressActionImpl implements OrderUpdateItemShippingAddressAction, ModelBase {
@@ -50,7 +50,7 @@ public class OrderUpdateItemShippingAddressActionImpl implements OrderUpdateItem
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -71,7 +71,11 @@ public class OrderUpdateItemShippingAddressActionImpl implements OrderUpdateItem
 
         OrderUpdateItemShippingAddressActionImpl that = (OrderUpdateItemShippingAddressActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(address, that.address)
+                .append(action, that.action)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override

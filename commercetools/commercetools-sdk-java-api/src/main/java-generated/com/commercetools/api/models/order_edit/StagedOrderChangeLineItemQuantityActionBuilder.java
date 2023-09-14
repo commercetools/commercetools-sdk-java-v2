@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderChangeLineItemQuantityAction stagedOrderChangeLineItemQuantityAction = StagedOrderChangeLineItemQuantityAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -26,7 +25,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderChangeLineItemQuantityActionBuilder
         implements Builder<StagedOrderChangeLineItemQuantityAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     private Long quantity;
 
@@ -37,18 +40,29 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
+    public StagedOrderChangeLineItemQuantityActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
     /**
-     * set the value to the quantity
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderChangeLineItemQuantityActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>New value to set. If <code>0</code>, the LineItem is removed from the Order.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -59,7 +73,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -71,7 +86,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -83,7 +99,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -95,7 +112,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * set the value to the externalTotalPrice using the builder function
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -109,7 +126,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * set the value to the externalTotalPrice using the builder function
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -122,7 +139,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * set the value to the externalTotalPrice
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -134,16 +151,27 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
     }
 
     /**
-     * value of quantity}
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>New value to set. If <code>0</code>, the LineItem is removed from the Order.</p>
      * @return quantity
      */
 
@@ -152,7 +180,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      * @return externalPrice
      */
 
@@ -162,7 +191,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
     }
 
     /**
-     * value of externalTotalPrice}
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @return externalTotalPrice
      */
 
@@ -176,9 +205,9 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
      * @return StagedOrderChangeLineItemQuantityAction
      */
     public StagedOrderChangeLineItemQuantityAction build() {
-        Objects.requireNonNull(lineItemId, StagedOrderChangeLineItemQuantityAction.class + ": lineItemId is missing");
         Objects.requireNonNull(quantity, StagedOrderChangeLineItemQuantityAction.class + ": quantity is missing");
-        return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
+        return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, lineItemKey, quantity, externalPrice,
+            externalTotalPrice);
     }
 
     /**
@@ -186,7 +215,8 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
      * @return StagedOrderChangeLineItemQuantityAction
      */
     public StagedOrderChangeLineItemQuantityAction buildUnchecked() {
-        return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, quantity, externalPrice, externalTotalPrice);
+        return new StagedOrderChangeLineItemQuantityActionImpl(lineItemId, lineItemKey, quantity, externalPrice,
+            externalTotalPrice);
     }
 
     /**
@@ -206,6 +236,7 @@ public class StagedOrderChangeLineItemQuantityActionBuilder
             final StagedOrderChangeLineItemQuantityAction template) {
         StagedOrderChangeLineItemQuantityActionBuilder builder = new StagedOrderChangeLineItemQuantityActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.quantity = template.getQuantity();
         builder.externalPrice = template.getExternalPrice();
         builder.externalTotalPrice = template.getExternalTotalPrice();

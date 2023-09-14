@@ -90,6 +90,9 @@ public class StandalonePriceValidUntilSetMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(validUntil, that.validUntil)
                 .append(previousValidUntil, that.previousValidUntil)
+                .append(type, that.type)
+                .append(validUntil, that.validUntil)
+                .append(previousValidUntil, that.previousValidUntil)
                 .isEquals();
     }
 

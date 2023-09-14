@@ -136,6 +136,11 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(parcel, that.parcel)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(parcel, that.parcel)
                 .isEquals();
     }
 

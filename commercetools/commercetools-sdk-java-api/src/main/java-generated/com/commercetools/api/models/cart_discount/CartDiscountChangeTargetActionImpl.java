@@ -71,7 +71,11 @@ public class CartDiscountChangeTargetActionImpl implements CartDiscountChangeTar
 
         CartDiscountChangeTargetActionImpl that = (CartDiscountChangeTargetActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(target, that.target).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(target, that.target)
+                .append(action, that.action)
+                .append(target, that.target)
+                .isEquals();
     }
 
     @Override

@@ -85,7 +85,13 @@ public class ReviewLabelImpl implements ReviewLabel, ModelBase {
 
         ReviewLabelImpl that = (ReviewLabelImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(key, that.key).append(title, that.title).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(key, that.key)
+                .append(title, that.title)
+                .append(type, that.type)
+                .append(key, that.key)
+                .append(title, that.title)
+                .isEquals();
     }
 
     @Override

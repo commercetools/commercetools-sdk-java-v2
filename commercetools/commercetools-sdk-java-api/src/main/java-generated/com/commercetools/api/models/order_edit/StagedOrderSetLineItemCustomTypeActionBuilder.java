@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetLineItemCustomTypeAction stagedOrderSetLineItemCustomTypeAction = StagedOrderSetLineItemCustomTypeAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,7 +23,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<StagedOrderSetLineItemCustomTypeAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -33,18 +36,29 @@ public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<St
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetLineItemCustomTypeActionBuilder lineItemId(final String lineItemId) {
+    public StagedOrderSetLineItemCustomTypeActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetLineItemCustomTypeActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -56,7 +70,7 @@ public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -68,7 +82,7 @@ public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -80,7 +94,7 @@ public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -92,7 +106,7 @@ public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -104,7 +118,7 @@ public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -116,16 +130,27 @@ public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      * @return type
      */
 
@@ -135,7 +160,7 @@ public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
      * @return fields
      */
 
@@ -149,8 +174,7 @@ public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<St
      * @return StagedOrderSetLineItemCustomTypeAction
      */
     public StagedOrderSetLineItemCustomTypeAction build() {
-        Objects.requireNonNull(lineItemId, StagedOrderSetLineItemCustomTypeAction.class + ": lineItemId is missing");
-        return new StagedOrderSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
+        return new StagedOrderSetLineItemCustomTypeActionImpl(lineItemId, lineItemKey, type, fields);
     }
 
     /**
@@ -158,7 +182,7 @@ public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<St
      * @return StagedOrderSetLineItemCustomTypeAction
      */
     public StagedOrderSetLineItemCustomTypeAction buildUnchecked() {
-        return new StagedOrderSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
+        return new StagedOrderSetLineItemCustomTypeActionImpl(lineItemId, lineItemKey, type, fields);
     }
 
     /**
@@ -178,6 +202,7 @@ public class StagedOrderSetLineItemCustomTypeActionBuilder implements Builder<St
             final StagedOrderSetLineItemCustomTypeAction template) {
         StagedOrderSetLineItemCustomTypeActionBuilder builder = new StagedOrderSetLineItemCustomTypeActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

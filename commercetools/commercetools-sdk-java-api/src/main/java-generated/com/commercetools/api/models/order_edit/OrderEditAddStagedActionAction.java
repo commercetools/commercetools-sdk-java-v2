@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderEditAddStagedActionAction
+ *  <p>If the edit was applied, this cannot be updated.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
     String ADD_STAGED_ACTION = "addStagedAction";
 
     /**
-     *
+     *  <p>Order update action to append to the <code>stagedActions</code> array.</p>
      * @return stagedAction
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
     public StagedOrderUpdateAction getStagedAction();
 
     /**
-     * set stagedAction
+     *  <p>Order update action to append to the <code>stagedActions</code> array.</p>
      * @param stagedAction value to be set
      */
 

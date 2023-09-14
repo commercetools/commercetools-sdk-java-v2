@@ -25,7 +25,7 @@ public class StagedOrderChangeTaxCalculationModeActionBuilder
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
 
     /**
-     *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
+     *  <p>New value to set.</p>
      * @param taxCalculationMode value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class StagedOrderChangeTaxCalculationModeActionBuilder
     }
 
     /**
-     *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
+     *  <p>New value to set.</p>
      * @return taxCalculationMode
      */
 

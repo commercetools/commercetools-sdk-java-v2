@@ -1,6 +1,7 @@
 
 package com.commercetools.http.netty;
 
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.function.BiFunction;
@@ -11,8 +12,10 @@ import javax.validation.constraints.NotNull;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelOption;
+import io.netty.handler.codec.http.HttpHeaderValues;
 import io.netty.handler.codec.http.HttpMethod;
 import io.netty.resolver.DefaultAddressResolverGroup;
+import io.netty.util.AsciiString;
 import io.vrap.rmf.base.client.ApiHttpHeaders;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
@@ -112,6 +115,17 @@ public class CtNettyHttpClient extends HttpClientBase {
             httpRequest.getHeaders().getHeaders().forEach(stringStringEntry -> {
                 nettyRequest.addHeader(stringStringEntry.getKey(), stringStringEntry.getValue());
             });
+
+            AsciiString mediaType = HttpHeaderValues.APPLICATION_JSON;
+            if (httpRequest.getHeaders()
+                    .getHeaders()
+                    .stream()
+                    .anyMatch(s -> s.getKey().equalsIgnoreCase(ApiHttpHeaders.CONTENT_TYPE))) {
+                mediaType = AsciiString
+                        .of(Objects.requireNonNull(httpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+            }
+            nettyRequest.requestHeaders().set(ApiHttpHeaders.CONTENT_TYPE, mediaType);
+
             final byte[] body = httpRequest.getBody();
             if (body != null) {
                 return nettyOutbound.send(Mono.just(Unpooled.wrappedBuffer(body)));

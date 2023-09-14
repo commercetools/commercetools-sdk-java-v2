@@ -59,7 +59,7 @@ public class OrderSearchLongRangeExpressionImpl implements OrderSearchLongRangeE
 
         OrderSearchLongRangeExpressionImpl that = (OrderSearchLongRangeExpressionImpl) o;
 
-        return new EqualsBuilder().append(range, that.range).isEquals();
+        return new EqualsBuilder().append(range, that.range).append(range, that.range).isEquals();
     }
 
     @Override

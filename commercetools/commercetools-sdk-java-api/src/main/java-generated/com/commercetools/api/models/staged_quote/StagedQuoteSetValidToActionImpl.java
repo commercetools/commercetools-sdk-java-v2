@@ -70,7 +70,11 @@ public class StagedQuoteSetValidToActionImpl implements StagedQuoteSetValidToAct
 
         StagedQuoteSetValidToActionImpl that = (StagedQuoteSetValidToActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(validTo, that.validTo).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(validTo, that.validTo)
+                .append(action, that.action)
+                .append(validTo, that.validTo)
+                .isEquals();
     }
 
     @Override

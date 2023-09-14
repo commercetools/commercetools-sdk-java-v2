@@ -141,6 +141,12 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(version, that.version)
                 .append(modifiedAt, that.modifiedAt)
+                .append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(version, that.version)
+                .append(modifiedAt, that.modifiedAt)
                 .isEquals();
     }
 

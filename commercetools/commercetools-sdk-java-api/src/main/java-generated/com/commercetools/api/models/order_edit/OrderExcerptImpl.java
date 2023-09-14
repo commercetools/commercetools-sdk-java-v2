@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderExcerpt
+ *  <p>Excerpt of the Order extracting the total and the taxed price.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
@@ -45,7 +45,7 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
     }
 
     /**
-     *
+     *  <p>Total price of the Order.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
@@ -53,7 +53,7 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
     }
 
     /**
-     *
+     *  <p>Taxed price of the Order.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
@@ -61,7 +61,7 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current version of the Order.</p>
      */
 
     public Long getVersion() {
@@ -91,6 +91,9 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
         OrderExcerptImpl that = (OrderExcerptImpl) o;
 
         return new EqualsBuilder().append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(version, that.version)
+                .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
                 .append(version, that.version)
                 .isEquals();

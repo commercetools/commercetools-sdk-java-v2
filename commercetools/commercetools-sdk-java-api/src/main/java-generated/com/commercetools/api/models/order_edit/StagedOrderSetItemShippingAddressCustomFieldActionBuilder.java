@@ -33,7 +33,7 @@ public class StagedOrderSetItemShippingAddressCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     * set the value to the addressKey
+     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
      * @param addressKey value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class StagedOrderSetItemShippingAddressCustomFieldActionBuilder
     }
 
     /**
-     * value of addressKey}
+     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
      * @return addressKey
      */
 

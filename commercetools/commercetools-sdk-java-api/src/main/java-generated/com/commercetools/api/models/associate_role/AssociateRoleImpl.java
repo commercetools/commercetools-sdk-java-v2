@@ -232,6 +232,17 @@ public class AssociateRoleImpl implements AssociateRole, ModelBase {
                 .append(name, that.name)
                 .append(permissions, that.permissions)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(buyerAssignable, that.buyerAssignable)
+                .append(name, that.name)
+                .append(permissions, that.permissions)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

@@ -39,7 +39,7 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
     String ADD_PAYMENT = "addPayment";
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
      * @return payment
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
     public PaymentResourceIdentifier getPayment();
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to add to the PaymentInfo. Must not be assigned to another Order or active Cart already.</p>
      * @param payment value to be set
      */
 

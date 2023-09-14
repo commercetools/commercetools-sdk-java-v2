@@ -70,7 +70,11 @@ public class CustomerFirstNameSetMessagePayloadImpl implements CustomerFirstName
 
         CustomerFirstNameSetMessagePayloadImpl that = (CustomerFirstNameSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(firstName, that.firstName).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(firstName, that.firstName)
+                .append(type, that.type)
+                .append(firstName, that.firstName)
+                .isEquals();
     }
 
     @Override

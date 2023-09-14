@@ -131,6 +131,11 @@ public class AssociateRoleDraftImpl implements AssociateRoleDraft, ModelBase {
                 .append(buyerAssignable, that.buyerAssignable)
                 .append(permissions, that.permissions)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(buyerAssignable, that.buyerAssignable)
+                .append(permissions, that.permissions)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

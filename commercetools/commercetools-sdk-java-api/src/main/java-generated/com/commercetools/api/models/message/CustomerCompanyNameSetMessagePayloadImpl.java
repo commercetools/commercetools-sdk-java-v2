@@ -70,7 +70,11 @@ public class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompany
 
         CustomerCompanyNameSetMessagePayloadImpl that = (CustomerCompanyNameSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(companyName, that.companyName).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(companyName, that.companyName)
+                .append(type, that.type)
+                .append(companyName, that.companyName)
+                .isEquals();
     }
 
     @Override

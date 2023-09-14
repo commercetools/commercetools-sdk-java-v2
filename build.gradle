@@ -21,17 +21,6 @@ plugins {
     id "jacoco"
 }
 
-configurations {
-    taglet {
-        resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2023.5")
-    }
-}
-
-dependencies {
-    taglet 'com.commercetools.build.taglets:commercetools-taglets:3.5.0'
-    taglet 'org.jdrupes.taglets:plantuml-taglet:2.0.1'
-}
-
 import java.text.SimpleDateFormat
 
 apply plugin: 'versioning'
@@ -71,6 +60,17 @@ class Version {
 allprojects {
     apply from: "$rootDir/gradle-scripts/repositories.gradle"
     description = "The e-commerce SDK from commercetools Composable Commerce for Java"
+
+    configurations {
+        taglet {
+            resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2023.11")
+        }
+    }
+
+    dependencies {
+        taglet 'com.commercetools.build.taglets:commercetools-taglets:3.6.1'
+        taglet 'org.jdrupes.taglets:plantuml-taglet:2.1.0'
+    }
 }
 
 apply from: "$rootDir/gradle-scripts/repositories.gradle"
@@ -183,30 +183,34 @@ subprojects { project ->
 
     }
 
-    task allDeps(type: DependencyReportTask) {}
+    tasks.register("allDeps", DependencyReportTask) {}
 }
 
 def documentationProjects= [
-        ":commercetools:commercetools-http-client",
-        ":commercetools:commercetools-sdk-java-api",
-        ":commercetools:commercetools-sdk-java-importapi",
-        ":commercetools:commercetools-sdk-java-ml",
-        ":commercetools:commercetools-sdk-compat-v1",
-        ":commercetools:commercetools-sdk-java-history",
-        ":rmf:rmf-java-base",
         ":commercetools:commercetools-apachehttp-client",
-        ":commercetools:commercetools-okhttp-client3",
-        ":commercetools:commercetools-okhttp-client4",
+        ":commercetools:commercetools-async-http-client",
+        ":commercetools:commercetools-graphql-api",
+        ":commercetools:commercetools-http-client",
+        ":commercetools:commercetools-javanet-client",
         ":commercetools:commercetools-money",
         ":commercetools:commercetools-monitoring-newrelic",
+        ":commercetools:commercetools-okhttp-client3",
+        ":commercetools:commercetools-okhttp-client4",
+        ":commercetools:commercetools-reactornetty-client",
+        ":commercetools:commercetools-sdk-compat-v1",
+        ":commercetools:commercetools-sdk-java-api",
+        ":commercetools:commercetools-sdk-java-history",
+        ":commercetools:commercetools-sdk-java-importapi",
+        ":commercetools:commercetools-sdk-java-ml",
         ":commercetools:internal-docs",
-        ":rmf:okhttp-client"
+        ":rmf:okhttp-client",
+        ":rmf:rmf-java-base"
 ]
 
 allprojects {
     project -> {
         if (project.file('src/jmh').exists())
-            task benchmark(type: Task) {
+            tasks.register("benchmark") {
                 dependsOn 'jmh'
             }
     }
@@ -225,7 +229,9 @@ tasks.register('alljavadoc', Javadoc) {
         setMemberLevel JavadocMemberLevel.PUBLIC
         setAuthor false
         noTimestamp = true
-
+        splitIndex = true
+        noTree = true
+        title = "commercetools Java SDK"
         links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
         overview = "src/main/javadoc/overview.html"
         bottom = """
@@ -239,9 +245,11 @@ tasks.register('alljavadoc', Javadoc) {
         taglets = ['com.commercetools.taglets.CodeTaglet', 'com.commercetools.taglets.ToCTaglet', 'com.commercetools.taglets.FileIncludeTaglet', 'org.jdrupes.taglets.plantUml.StartUml', 'org.jdrupes.taglets.plantUml.EndUml', 'org.jdrupes.taglets.plantUml.PlantUml']
         tagletPath = configurations.taglet.files as List
         maxMemory = '2g'
+        excludes = ['com/commercetools/graphql/api/client/**', 'com/commercetools/graphql/api/Dgs**','com/commercetools/graphql/api/types/**', 'com/commercetools/api/predicates/query/**/*Dsl.java', 'com/commercetools/**/*Impl.java']
         addBooleanOption('-allow-script-in-comments', true)
         addStringOption('Xdoclint:missing,accessibility,reference', '-quiet')
-        addBooleanOption('linksource', true)
+//        addBooleanOption('linksource', true)
+        encoding = 'utf-8'
         groups = [
                 "API"          : ["com.commercetools.api.*"],
                 "History"      : ["com.commercetools.history.*"],
@@ -281,8 +289,10 @@ tasks.register('internaldocs', Javadoc) {
         setMemberLevel JavadocMemberLevel.PUBLIC
         setAuthor false
         noTimestamp = true
-
-        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/'
+        splitIndex = true
+        noTree = true
+        title = "commercetools Java SDK"
+        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
         overview = "src/main/javadoc/overview.html"
         bottom = """
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
@@ -292,12 +302,14 @@ tasks.register('internaldocs', Javadoc) {
             <script src="{@docRoot}/resources/javascripts/main.js"></script>
             <link rel="stylesheet" href="{@docRoot}/resources/stylesheets/main.css">
         """
-        taglets = ['com.commercetools.taglets.CodeTaglet','com.commercetools.taglets.ToCTaglet', 'com.commercetools.taglets.FileIncludeTaglet', 'org.jdrupes.taglets.plantUml.StartUml', 'org.jdrupes.taglets.plantUml.EndUml', 'org.jdrupes.taglets.plantUml.PlantUml']
+        taglets = ['com.commercetools.taglets.CodeTaglet', 'com.commercetools.taglets.ToCTaglet', 'com.commercetools.taglets.FileIncludeTaglet', 'org.jdrupes.taglets.plantUml.StartUml', 'org.jdrupes.taglets.plantUml.EndUml', 'org.jdrupes.taglets.plantUml.PlantUml']
         tagletPath = configurations.taglet.files as List
         maxMemory = '2g'
+        excludes = ['com/commercetools/graphql/api/client/**', 'com/commercetools/graphql/api/Dgs**','com/commercetools/graphql/api/types/**', 'com/commercetools/api/predicates/query/**/*Dsl.java', 'com/commercetools/**/*Impl.java']
         addBooleanOption('-allow-script-in-comments', true)
         addStringOption('Xdoclint:missing,accessibility,reference', '-quiet')
-        addBooleanOption('linksource', true)
+//        addBooleanOption('linksource', true)
+        encoding = 'utf-8'
         groups = [
                 "API"          : ["com.commercetools.api.*"],
                 "History"      : ["com.commercetools.history.*"],
@@ -307,7 +319,8 @@ tasks.register('internaldocs', Javadoc) {
                 "HTTP Clients" : [
                         "com.commercetools.http.*",
                         "io.vrap.rmf.okhttp.*"
-                ]
+                ],
+                "Monitoring"   : ["com.commercetools.monitoring.*"]
         ]
         addStringOption('source', '8')
     }
@@ -336,7 +349,8 @@ tasks.register("writeVersionToExamples") {
         ant.replaceregexp(match: 'commercetools: \"[^\\s]+\"', replace: "commercetools: \"${globalVersion}\"", flags:'g', byline:true) {
             fileset(dir: projectDir) {
                 include(name: 'examples/spring/build.gradle')
-                include(name: 'examples/springmvc/build.gradle')
+                include(name: 'examples/spring-newrelic/build.gradle')
+                include(name: 'examples/spring-otel/build.gradle')
             }
         }
         ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {

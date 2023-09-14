@@ -95,6 +95,9 @@ public class ProductTypeChangePlainEnumValueOrderActionImpl
         return new EqualsBuilder().append(action, that.action)
                 .append(attributeName, that.attributeName)
                 .append(values, that.values)
+                .append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(values, that.values)
                 .isEquals();
     }
 

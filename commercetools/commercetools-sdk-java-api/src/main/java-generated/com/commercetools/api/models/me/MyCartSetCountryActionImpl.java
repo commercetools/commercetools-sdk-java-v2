@@ -71,7 +71,11 @@ public class MyCartSetCountryActionImpl implements MyCartSetCountryAction, Model
 
         MyCartSetCountryActionImpl that = (MyCartSetCountryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(country, that.country).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(country, that.country)
+                .append(action, that.action)
+                .append(country, that.country)
+                .isEquals();
     }
 
     @Override

@@ -24,6 +24,8 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private Long quantity;
 
     private com.commercetools.api.models.common.Money externalPrice;
@@ -37,11 +39,12 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
      */
     @JsonCreator
     CartRemoveLineItemActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("lineItemKey") final String lineItemKey, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
             @JsonProperty("shippingDetailsToRemove") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.quantity = quantity;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
@@ -65,7 +68,7 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *  <p><code>id</code> of the Line Item to remove.</p>
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -73,7 +76,15 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     }
 
     /**
-     *  <p>New value to set. If absent or <code>0</code>, the Line Item is removed from the Cart.</p>
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>Amount to subtract from the LineItem's <code>quantity</code>. If absent, the LineItem is removed from the Cart.</p>
      */
 
     public Long getQuantity() {
@@ -108,6 +119,10 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
@@ -138,6 +153,14 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(quantity, that.quantity)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(shippingDetailsToRemove, that.shippingDetailsToRemove)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(quantity, that.quantity)
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
@@ -149,6 +172,7 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(quantity)
                 .append(externalPrice)
                 .append(externalTotalPrice)

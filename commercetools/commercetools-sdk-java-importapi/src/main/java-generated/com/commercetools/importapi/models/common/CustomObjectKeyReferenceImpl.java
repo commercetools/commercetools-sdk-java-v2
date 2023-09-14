@@ -89,6 +89,9 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
         return new EqualsBuilder().append(key, that.key)
                 .append(typeId, that.typeId)
                 .append(container, that.container)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(container, that.container)
                 .isEquals();
     }
 

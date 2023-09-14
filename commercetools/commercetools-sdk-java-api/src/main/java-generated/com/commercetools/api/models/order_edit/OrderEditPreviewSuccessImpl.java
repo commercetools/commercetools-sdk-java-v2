@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * OrderEditPreviewSuccess
+ *  <p>The data is not persisted but is dynamically pulled by dry-running the update actions from <code>stagedActions</code> on the current version of the related Order, not from the Order version at the time the OrderEdit was created. Therefore, it cannot be queried.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, ModelBase {
@@ -54,7 +54,7 @@ public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, Mod
     }
 
     /**
-     *
+     *  <p>A preview of the edited Order as it will be after all <code>stagedActions</code> (incl. optional Order API Extensions) are applied.</p>
      */
 
     public com.commercetools.api.models.order_edit.StagedOrder getPreview() {
@@ -62,7 +62,7 @@ public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, Mod
     }
 
     /**
-     *
+     *  <p>Messages that will be generated if the edit is applied.</p>
      */
 
     public java.util.List<com.commercetools.api.models.message.MessagePayload> getMessagePayloads() {
@@ -93,6 +93,9 @@ public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, Mod
         OrderEditPreviewSuccessImpl that = (OrderEditPreviewSuccessImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(preview, that.preview)
+                .append(messagePayloads, that.messagePayloads)
+                .append(type, that.type)
                 .append(preview, that.preview)
                 .append(messagePayloads, that.messagePayloads)
                 .isEquals();

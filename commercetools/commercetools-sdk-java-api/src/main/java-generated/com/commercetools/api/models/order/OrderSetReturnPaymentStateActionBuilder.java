@@ -3,6 +3,8 @@ package com.commercetools.api.models.order;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetReturnPaymentStateAction orderSetReturnPaymentStateAction = OrderSetReturnPaymentStateAction.builder()
- *             .returnItemId("{returnItemId}")
  *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
  *             .build()
  * </code></pre>
@@ -22,23 +23,38 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSetReturnPaymentStateAction> {
 
+    @Nullable
     private String returnItemId;
+
+    @Nullable
+    private String returnItemKey;
 
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
     /**
-     * set the value to the returnItemId
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
 
-    public OrderSetReturnPaymentStateActionBuilder returnItemId(final String returnItemId) {
+    public OrderSetReturnPaymentStateActionBuilder returnItemId(@Nullable final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
 
     /**
-     * set the value to the paymentState
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @param returnItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderSetReturnPaymentStateActionBuilder returnItemKey(@Nullable final String returnItemKey) {
+        this.returnItemKey = returnItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>New Payment status of the ReturnItem.</p>
      * @param paymentState value to be set
      * @return Builder
      */
@@ -50,16 +66,27 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
     }
 
     /**
-     * value of returnItemId}
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
+    @Nullable
     public String getReturnItemId() {
         return this.returnItemId;
     }
 
     /**
-     * value of paymentState}
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @return returnItemKey
+     */
+
+    @Nullable
+    public String getReturnItemKey() {
+        return this.returnItemKey;
+    }
+
+    /**
+     *  <p>New Payment status of the ReturnItem.</p>
      * @return paymentState
      */
 
@@ -72,9 +99,8 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
      * @return OrderSetReturnPaymentStateAction
      */
     public OrderSetReturnPaymentStateAction build() {
-        Objects.requireNonNull(returnItemId, OrderSetReturnPaymentStateAction.class + ": returnItemId is missing");
         Objects.requireNonNull(paymentState, OrderSetReturnPaymentStateAction.class + ": paymentState is missing");
-        return new OrderSetReturnPaymentStateActionImpl(returnItemId, paymentState);
+        return new OrderSetReturnPaymentStateActionImpl(returnItemId, returnItemKey, paymentState);
     }
 
     /**
@@ -82,7 +108,7 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
      * @return OrderSetReturnPaymentStateAction
      */
     public OrderSetReturnPaymentStateAction buildUnchecked() {
-        return new OrderSetReturnPaymentStateActionImpl(returnItemId, paymentState);
+        return new OrderSetReturnPaymentStateActionImpl(returnItemId, returnItemKey, paymentState);
     }
 
     /**
@@ -101,6 +127,7 @@ public class OrderSetReturnPaymentStateActionBuilder implements Builder<OrderSet
     public static OrderSetReturnPaymentStateActionBuilder of(final OrderSetReturnPaymentStateAction template) {
         OrderSetReturnPaymentStateActionBuilder builder = new OrderSetReturnPaymentStateActionBuilder();
         builder.returnItemId = template.getReturnItemId();
+        builder.returnItemKey = template.getReturnItemKey();
         builder.paymentState = template.getPaymentState();
         return builder;
     }

@@ -27,7 +27,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     private java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> items;
 
     /**
-     * set values to the items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     * set value to the items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     * add values to the items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class OrderSetReturnInfoActionBuilder implements Builder<OrderSetReturnIn
     }
 
     /**
-     * value of items}
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return items
      */
 

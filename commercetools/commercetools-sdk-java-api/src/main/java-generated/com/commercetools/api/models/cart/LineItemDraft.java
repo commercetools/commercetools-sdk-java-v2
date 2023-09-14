@@ -5,6 +5,7 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
@@ -117,12 +118,20 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
-     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @return perMethodExternalTaxRate
+     */
+    @Valid
+    @JsonProperty("perMethodExternalTaxRate")
+    public List<MethodExternalTaxRateDraft> getPerMethodExternalTaxRate();
 
     /**
      *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
@@ -221,11 +230,26 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
     /**
-     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @param perMethodExternalTaxRate values to be set
+     */
+
+    @JsonIgnore
+    public void setPerMethodExternalTaxRate(final MethodExternalTaxRateDraft... perMethodExternalTaxRate);
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @param perMethodExternalTaxRate values to be set
+     */
+
+    public void setPerMethodExternalTaxRate(final List<MethodExternalTaxRateDraft> perMethodExternalTaxRate);
 
     /**
      *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
@@ -274,6 +298,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setPerMethodExternalTaxRate(template.getPerMethodExternalTaxRate());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setCustom(template.getCustom());
@@ -306,6 +331,11 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
             com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         instance.setExternalTaxRate(
             com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setPerMethodExternalTaxRate(Optional.ofNullable(template.getPerMethodExternalTaxRate())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.MethodExternalTaxRateDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(
             com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));

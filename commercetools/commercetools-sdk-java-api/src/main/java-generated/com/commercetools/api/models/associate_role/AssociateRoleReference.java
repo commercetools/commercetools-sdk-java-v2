@@ -30,7 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleReferenceImpl.class)
-public interface AssociateRoleReference extends Reference, com.commercetools.api.models.Identifiable<AssociateRole> {
+public interface AssociateRoleReference extends Reference {
 
     /**
      * discriminator value for AssociateRoleReference

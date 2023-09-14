@@ -73,6 +73,8 @@ public class InventoryEntrySetRestockableInDaysActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(restockableInDays, that.restockableInDays)
+                .append(action, that.action)
+                .append(restockableInDays, that.restockableInDays)
                 .isEquals();
     }
 

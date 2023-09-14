@@ -74,7 +74,11 @@ public class ParcelTrackingDataImpl implements ParcelTrackingData, ModelBase {
 
         ParcelTrackingDataImpl that = (ParcelTrackingDataImpl) o;
 
-        return new EqualsBuilder().append(parcelId, that.parcelId).append(trackingData, that.trackingData).isEquals();
+        return new EqualsBuilder().append(parcelId, that.parcelId)
+                .append(trackingData, that.trackingData)
+                .append(parcelId, that.parcelId)
+                .append(trackingData, that.trackingData)
+                .isEquals();
     }
 
     @Override

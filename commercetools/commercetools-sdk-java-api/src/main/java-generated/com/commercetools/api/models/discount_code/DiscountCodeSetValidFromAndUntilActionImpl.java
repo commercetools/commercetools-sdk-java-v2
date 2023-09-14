@@ -89,6 +89,9 @@ public class DiscountCodeSetValidFromAndUntilActionImpl implements DiscountCodeS
         return new EqualsBuilder().append(action, that.action)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
+                .append(action, that.action)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
                 .isEquals();
     }
 

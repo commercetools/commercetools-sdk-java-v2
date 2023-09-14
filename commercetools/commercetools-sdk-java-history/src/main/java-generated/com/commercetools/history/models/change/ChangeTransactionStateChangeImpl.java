@@ -123,6 +123,11 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(transaction, that.transaction)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(transaction, that.transaction)
                 .isEquals();
     }
 

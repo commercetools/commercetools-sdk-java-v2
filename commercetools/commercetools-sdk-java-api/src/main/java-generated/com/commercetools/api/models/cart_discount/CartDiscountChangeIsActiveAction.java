@@ -37,6 +37,7 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
+     *  <p>If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
      * @return isActive
      */
     @NotNull
@@ -45,6 +46,7 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
 
     /**
      *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
+     *  <p>If the limit for active Cart Discounts is reached, a MaxCartDiscountsReached error is returned.</p>
      * @param isActive value to be set
      */
 

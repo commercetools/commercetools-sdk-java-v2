@@ -23,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyShoppingListChangeTextLineItemNameAction myShoppingListChangeTextLineItemNameAction = MyShoppingListChangeTextLineItemNameAction.builder()
- *             .textLineItemId("{textLineItemId}")
  *             .name(nameBuilder -> nameBuilder)
  *             .build()
  * </code></pre>
@@ -39,12 +38,20 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
     String CHANGE_TEXT_LINE_ITEM_NAME = "changeTextLineItemName";
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
-    @NotNull
+
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return textLineItemKey
+     */
+
+    @JsonProperty("textLineItemKey")
+    public String getTextLineItemKey();
 
     /**
      *  <p>New value to set. Must not be empty.</p>
@@ -56,11 +63,18 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
     public LocalizedString getName();
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      */
 
     public void setTextLineItemId(final String textLineItemId);
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param textLineItemKey value to be set
+     */
+
+    public void setTextLineItemKey(final String textLineItemKey);
 
     /**
      *  <p>New value to set. Must not be empty.</p>
@@ -86,6 +100,7 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
             final MyShoppingListChangeTextLineItemNameAction template) {
         MyShoppingListChangeTextLineItemNameActionImpl instance = new MyShoppingListChangeTextLineItemNameActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setTextLineItemKey(template.getTextLineItemKey());
         instance.setName(template.getName());
         return instance;
     }
@@ -103,6 +118,7 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
         }
         MyShoppingListChangeTextLineItemNameActionImpl instance = new MyShoppingListChangeTextLineItemNameActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setTextLineItemKey(template.getTextLineItemKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }

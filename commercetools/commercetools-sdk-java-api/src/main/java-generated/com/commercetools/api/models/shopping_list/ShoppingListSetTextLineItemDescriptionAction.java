@@ -7,7 +7,6 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
@@ -23,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShoppingListSetTextLineItemDescriptionAction shoppingListSetTextLineItemDescriptionAction = ShoppingListSetTextLineItemDescriptionAction.builder()
- *             .textLineItemId("{textLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -38,12 +36,20 @@ public interface ShoppingListSetTextLineItemDescriptionAction extends ShoppingLi
     String SET_TEXT_LINE_ITEM_DESCRIPTION = "setTextLineItemDescription";
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
-    @NotNull
+
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return textLineItemKey
+     */
+
+    @JsonProperty("textLineItemKey")
+    public String getTextLineItemKey();
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
@@ -54,11 +60,18 @@ public interface ShoppingListSetTextLineItemDescriptionAction extends ShoppingLi
     public LocalizedString getDescription();
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      */
 
     public void setTextLineItemId(final String textLineItemId);
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param textLineItemKey value to be set
+     */
+
+    public void setTextLineItemKey(final String textLineItemKey);
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
@@ -84,6 +97,7 @@ public interface ShoppingListSetTextLineItemDescriptionAction extends ShoppingLi
             final ShoppingListSetTextLineItemDescriptionAction template) {
         ShoppingListSetTextLineItemDescriptionActionImpl instance = new ShoppingListSetTextLineItemDescriptionActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setTextLineItemKey(template.getTextLineItemKey());
         instance.setDescription(template.getDescription());
         return instance;
     }
@@ -101,6 +115,7 @@ public interface ShoppingListSetTextLineItemDescriptionAction extends ShoppingLi
         }
         ShoppingListSetTextLineItemDescriptionActionImpl instance = new ShoppingListSetTextLineItemDescriptionActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setTextLineItemKey(template.getTextLineItemKey());
         instance.setDescription(
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;

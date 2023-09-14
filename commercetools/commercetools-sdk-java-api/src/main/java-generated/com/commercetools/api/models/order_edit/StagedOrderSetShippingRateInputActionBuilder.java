@@ -27,7 +27,12 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
     /**
-     *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
+     *  <p>The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
      * @param shippingRateInput value to be set
      * @return Builder
      */
@@ -39,7 +44,12 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
+     *  <p>The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
      * @param builder function to build the shippingRateInput value
      * @return Builder
      */
@@ -52,7 +62,12 @@ public class StagedOrderSetShippingRateInputActionBuilder implements Builder<Sta
     }
 
     /**
-     *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
+     *  <p>The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
      * @return shippingRateInput
      */
 

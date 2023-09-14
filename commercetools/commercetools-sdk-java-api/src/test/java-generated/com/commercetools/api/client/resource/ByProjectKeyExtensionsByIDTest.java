@@ -63,24 +63,9 @@ public class ByProjectKeyExtensionsByIDTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .extensions()
-                        .withId("test_ID")
-                        .get()
-                        .withExpand("expand")
-                        .createHttpRequest(), "get", "test_projectKey/extensions/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .extensions()
-                        .withId("test_ID")
-                        .get()
-                        .createHttpRequest(), "get", "test_projectKey/extensions/test_ID", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .extensions()
-                        .withId("test_ID")
-                        .post(com.commercetools.api.models.extension.ExtensionUpdate.of())
-                        .withExpand("expand")
-                        .createHttpRequest(), "post", "test_projectKey/extensions/test_ID?expand=expand", },
+        return new Object[][] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").extensions().withId("test_ID").get().createHttpRequest(),
+                "get", "test_projectKey/extensions/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .withId("test_ID")
@@ -96,25 +81,13 @@ public class ByProjectKeyExtensionsByIDTest {
                         .extensions()
                         .withId("test_ID")
                         .delete()
-                        .withExpand("expand")
-                        .createHttpRequest(), "delete", "test_projectKey/extensions/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .extensions()
-                        .withId("test_ID")
-                        .delete()
                         .createHttpRequest(), "delete", "test_projectKey/extensions/test_ID", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").extensions().withId("test_ID").get().withExpand("expand"), },
+        return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().withId("test_ID").get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .extensions()
-                        .withId("test_ID")
-                        .post(com.commercetools.api.models.extension.ExtensionUpdate.of())
-                        .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .withId("test_ID")
@@ -124,11 +97,6 @@ public class ByProjectKeyExtensionsByIDTest {
                         .withId("test_ID")
                         .delete()
                         .withVersion(2), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .extensions()
-                        .withId("test_ID")
-                        .delete()
-                        .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().withId("test_ID").delete(), } };
     }
 }

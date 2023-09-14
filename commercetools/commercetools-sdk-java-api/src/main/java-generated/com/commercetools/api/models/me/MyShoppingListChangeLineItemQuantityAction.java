@@ -21,7 +21,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyShoppingListChangeLineItemQuantityAction myShoppingListChangeLineItemQuantityAction = MyShoppingListChangeLineItemQuantityAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -37,12 +36,20 @@ public interface MyShoppingListChangeLineItemQuantityAction extends MyShoppingLi
     String CHANGE_LINE_ITEM_QUANTITY = "changeLineItemQuantity";
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p><code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
+
+    /**
+     *  <p><code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
 
     /**
      *  <p>New value to set. If <code>0</code>, the ShoppingListLineItem is removed from the ShoppingList.</p>
@@ -53,11 +60,18 @@ public interface MyShoppingListChangeLineItemQuantityAction extends MyShoppingLi
     public Long getQuantity();
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p><code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p><code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
 
     /**
      *  <p>New value to set. If <code>0</code>, the ShoppingListLineItem is removed from the ShoppingList.</p>
@@ -83,6 +97,7 @@ public interface MyShoppingListChangeLineItemQuantityAction extends MyShoppingLi
             final MyShoppingListChangeLineItemQuantityAction template) {
         MyShoppingListChangeLineItemQuantityActionImpl instance = new MyShoppingListChangeLineItemQuantityActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
         return instance;
     }
@@ -100,6 +115,7 @@ public interface MyShoppingListChangeLineItemQuantityAction extends MyShoppingLi
         }
         MyShoppingListChangeLineItemQuantityActionImpl instance = new MyShoppingListChangeLineItemQuantityActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
         return instance;
     }

@@ -25,6 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     @Nullable
+    private String key;
+
+    @Nullable
     private java.time.ZonedDateTime addedAt;
 
     @Nullable
@@ -37,6 +40,17 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     @Nullable
     private Long quantity;
+
+    /**
+     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public TextLineItemDraftBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
@@ -167,6 +181,16 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
@@ -221,7 +245,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
      */
     public TextLineItemDraft build() {
         Objects.requireNonNull(name, TextLineItemDraft.class + ": name is missing");
-        return new TextLineItemDraftImpl(addedAt, custom, description, name, quantity);
+        return new TextLineItemDraftImpl(key, addedAt, custom, description, name, quantity);
     }
 
     /**
@@ -229,7 +253,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
      * @return TextLineItemDraft
      */
     public TextLineItemDraft buildUnchecked() {
-        return new TextLineItemDraftImpl(addedAt, custom, description, name, quantity);
+        return new TextLineItemDraftImpl(key, addedAt, custom, description, name, quantity);
     }
 
     /**
@@ -247,6 +271,7 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
      */
     public static TextLineItemDraftBuilder of(final TextLineItemDraft template) {
         TextLineItemDraftBuilder builder = new TextLineItemDraftBuilder();
+        builder.key = template.getKey();
         builder.addedAt = template.getAddedAt();
         builder.custom = template.getCustom();
         builder.description = template.getDescription();

@@ -105,6 +105,10 @@ public class AWSLambdaDestinationImpl implements AWSLambdaDestination, ModelBase
                 .append(arn, that.arn)
                 .append(accessKey, that.accessKey)
                 .append(accessSecret, that.accessSecret)
+                .append(type, that.type)
+                .append(arn, that.arn)
+                .append(accessKey, that.accessKey)
+                .append(accessSecret, that.accessSecret)
                 .isEquals();
     }
 

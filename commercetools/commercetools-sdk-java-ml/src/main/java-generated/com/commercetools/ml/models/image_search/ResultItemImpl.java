@@ -81,6 +81,8 @@ public class ResultItemImpl implements ResultItem, ModelBase {
 
         return new EqualsBuilder().append(imageUrl, that.imageUrl)
                 .append(productVariants, that.productVariants)
+                .append(imageUrl, that.imageUrl)
+                .append(productVariants, that.productVariants)
                 .isEquals();
     }
 

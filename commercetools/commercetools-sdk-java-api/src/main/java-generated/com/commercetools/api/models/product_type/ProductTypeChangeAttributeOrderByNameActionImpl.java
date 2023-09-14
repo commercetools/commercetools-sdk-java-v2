@@ -76,7 +76,11 @@ public class ProductTypeChangeAttributeOrderByNameActionImpl
 
         ProductTypeChangeAttributeOrderByNameActionImpl that = (ProductTypeChangeAttributeOrderByNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attributeNames, that.attributeNames).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attributeNames, that.attributeNames)
+                .append(action, that.action)
+                .append(attributeNames, that.attributeNames)
+                .isEquals();
     }
 
     @Override

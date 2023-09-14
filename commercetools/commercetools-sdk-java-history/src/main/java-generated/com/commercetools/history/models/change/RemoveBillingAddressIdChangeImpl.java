@@ -131,6 +131,11 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(address, that.address)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(address, that.address)
                 .isEquals();
     }
 

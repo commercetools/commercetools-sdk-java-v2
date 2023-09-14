@@ -71,7 +71,11 @@ public class StandalonePriceSetDiscountedPriceActionImpl implements StandalonePr
 
         StandalonePriceSetDiscountedPriceActionImpl that = (StandalonePriceSetDiscountedPriceActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(discounted, that.discounted).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(discounted, that.discounted)
+                .append(action, that.action)
+                .append(discounted, that.discounted)
+                .isEquals();
     }
 
     @Override

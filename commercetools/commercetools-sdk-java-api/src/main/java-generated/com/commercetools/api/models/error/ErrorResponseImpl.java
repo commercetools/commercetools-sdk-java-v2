@@ -98,6 +98,9 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
         return new EqualsBuilder().append(statusCode, that.statusCode)
                 .append(message, that.message)
                 .append(errors, that.errors)
+                .append(statusCode, that.statusCode)
+                .append(message, that.message)
+                .append(errors, that.errors)
                 .isEquals();
     }
 

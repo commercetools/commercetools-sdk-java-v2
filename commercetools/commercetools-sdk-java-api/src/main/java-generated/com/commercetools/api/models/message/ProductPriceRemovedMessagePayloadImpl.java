@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after a successful Remove Embedded Price update action.</p>
+ *  <p>Generated after a successful Remove Price update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceRemovedMessagePayloadImpl implements ProductPriceRemovedMessagePayload, ModelBase {
@@ -103,6 +103,10 @@ public class ProductPriceRemovedMessagePayloadImpl implements ProductPriceRemove
         ProductPriceRemovedMessagePayloadImpl that = (ProductPriceRemovedMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(variantId, that.variantId)
+                .append(price, that.price)
+                .append(staged, that.staged)
+                .append(type, that.type)
                 .append(variantId, that.variantId)
                 .append(price, that.price)
                 .append(staged, that.staged)

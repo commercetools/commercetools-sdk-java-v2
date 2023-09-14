@@ -85,7 +85,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -119,6 +119,11 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
         DeliveryAddressSetMessagePayloadImpl that = (DeliveryAddressSetMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(deliveryId, that.deliveryId)
+                .append(address, that.address)
+                .append(oldAddress, that.oldAddress)
+                .append(shippingKey, that.shippingKey)
+                .append(type, that.type)
                 .append(deliveryId, that.deliveryId)
                 .append(address, that.address)
                 .append(oldAddress, that.oldAddress)

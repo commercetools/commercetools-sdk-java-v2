@@ -243,7 +243,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has some changes staged.</p>
      */
 
     public com.commercetools.api.models.standalone_price.StagedStandalonePrice getStaged() {
@@ -350,6 +350,25 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         StandalonePriceImpl that = (StandalonePriceImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(tiers, that.tiers)
+                .append(discounted, that.discounted)
+                .append(custom, that.custom)
+                .append(staged, that.staged)
+                .append(active, that.active)
+                .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)

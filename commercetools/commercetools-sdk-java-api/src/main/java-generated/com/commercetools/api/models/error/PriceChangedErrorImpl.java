@@ -135,6 +135,11 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
                 .append(values, that.values)
                 .append(lineItems, that.lineItems)
                 .append(shipping, that.shipping)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(lineItems, that.lineItems)
+                .append(shipping, that.shipping)
                 .isEquals();
     }
 

@@ -58,7 +58,7 @@ public class StoreCountryImpl implements StoreCountry, ModelBase {
 
         StoreCountryImpl that = (StoreCountryImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).isEquals();
+        return new EqualsBuilder().append(code, that.code).append(code, that.code).isEquals();
     }
 
     @Override

@@ -198,6 +198,15 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
                 .append(validityCheckTime, that.validityCheckTime)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(discountCode, that.discountCode)
+                .append(reason, that.reason)
+                .append(discountCodeId, that.discountCodeId)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(validityCheckTime, that.validityCheckTime)
                 .isEquals();
     }
 

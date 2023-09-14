@@ -70,7 +70,11 @@ public class StateChangeInitialActionImpl implements StateChangeInitialAction, M
 
         StateChangeInitialActionImpl that = (StateChangeInitialActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(initial, that.initial).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(initial, that.initial)
+                .append(action, that.action)
+                .append(initial, that.initial)
+                .isEquals();
     }
 
     @Override

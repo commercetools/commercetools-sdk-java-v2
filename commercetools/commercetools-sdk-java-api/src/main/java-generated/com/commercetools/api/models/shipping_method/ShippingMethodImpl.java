@@ -318,6 +318,22 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(localizedName, that.localizedName)
+                .append(description, that.description)
+                .append(localizedDescription, that.localizedDescription)
+                .append(taxCategory, that.taxCategory)
+                .append(zoneRates, that.zoneRates)
+                .append(isDefault, that.isDefault)
+                .append(predicate, that.predicate)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

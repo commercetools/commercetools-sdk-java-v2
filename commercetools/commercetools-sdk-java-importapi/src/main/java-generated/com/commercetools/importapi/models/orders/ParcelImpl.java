@@ -96,7 +96,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -142,6 +142,12 @@ public class ParcelImpl implements Parcel, ModelBase {
         ParcelImpl that = (ParcelImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(createdAt, that.createdAt)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
+                .append(custom, that.custom)
+                .append(id, that.id)
                 .append(createdAt, that.createdAt)
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)

@@ -76,6 +76,8 @@ public class MethodTaxedPriceImpl implements MethodTaxedPrice, ModelBase {
 
         return new EqualsBuilder().append(shippingMethodKey, that.shippingMethodKey)
                 .append(taxedPrice, that.taxedPrice)
+                .append(shippingMethodKey, that.shippingMethodKey)
+                .append(taxedPrice, that.taxedPrice)
                 .isEquals();
     }
 

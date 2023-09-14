@@ -19,9 +19,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: gradle/wrapper-validation-action@56b90f209b02bf6d1deae490e9ef18b21a389cd4
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -33,7 +33,7 @@ jobs:
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         run: ./gradlew spotlessApply
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@3d1b5e078a85df99db0cb2441cd4309b09d86253
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
             commit_message: "spotless: Fix code style"
@@ -45,7 +45,7 @@ jobs:
         if: steps.auto-commit-action.outputs.changes_detected == 'true'
         run: echo "${{steps.auto-commit-action.outputs.commit_hash}}" >> .git-blame-ignore-revs
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@3d1b5e078a85df99db0cb2441cd4309b09d86253
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
             file_pattern: '.git-blame-ignore-revs'
@@ -57,7 +57,7 @@ jobs:
       - name: License check
         run: ./gradlew checkLicense
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@3d1b5e078a85df99db0cb2441cd4309b09d86253
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
             file_pattern: 'licenses/index.json licenses/**/index.json'
@@ -69,7 +69,7 @@ jobs:
 
       - name: Run integration tests for PR
         if: github.event_name == 'pull_request'
-        run: ./gradlew clean build runMainMethodThreadLeakTest
+        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest
         env:
           CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID_PR }}
           CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET_PR }}
@@ -79,7 +79,7 @@ jobs:
 
       - name: Run integration tests
         if: github.event_name != 'pull_request'
-        run: ./gradlew clean build runMainMethodThreadLeakTest
+        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest
         env:
             CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
             CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
@@ -89,7 +89,6 @@ jobs:
 
       - name: Test examples
         run: |
-          ./gradlew publishMavenPublicationToMavenLocal
           cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
           cd ../maven-okhttp4 && mvn verify --no-transfer-progress
 
@@ -107,9 +106,9 @@ jobs:
 
     steps:
       -   name: Checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
 
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: gradle/wrapper-validation-action@56b90f209b02bf6d1deae490e9ef18b21a389cd4
 
       -   name: Setup Java
           uses: actions/setup-java@v3
@@ -118,7 +117,7 @@ jobs:
               java-version: '17'
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@v1
+        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
 
       -   name: build javadoc
           if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'

@@ -72,7 +72,11 @@ public class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSetMessa
 
         CustomerGroupSetMessagePayloadImpl that = (CustomerGroupSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(customerGroup, that.customerGroup).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(customerGroup, that.customerGroup)
+                .append(type, that.type)
+                .append(customerGroup, that.customerGroup)
+                .isEquals();
     }
 
     @Override

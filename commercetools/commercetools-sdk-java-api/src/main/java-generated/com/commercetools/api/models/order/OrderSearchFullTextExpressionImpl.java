@@ -59,7 +59,7 @@ public class OrderSearchFullTextExpressionImpl implements OrderSearchFullTextExp
 
         OrderSearchFullTextExpressionImpl that = (OrderSearchFullTextExpressionImpl) o;
 
-        return new EqualsBuilder().append(fullText, that.fullText).isEquals();
+        return new EqualsBuilder().append(fullText, that.fullText).append(fullText, that.fullText).isEquals();
     }
 
     @Override

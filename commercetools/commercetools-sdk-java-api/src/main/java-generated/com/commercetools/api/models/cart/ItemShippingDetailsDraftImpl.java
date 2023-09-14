@@ -64,7 +64,7 @@ public class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDraft, M
 
         ItemShippingDetailsDraftImpl that = (ItemShippingDetailsDraftImpl) o;
 
-        return new EqualsBuilder().append(targets, that.targets).isEquals();
+        return new EqualsBuilder().append(targets, that.targets).append(targets, that.targets).isEquals();
     }
 
     @Override

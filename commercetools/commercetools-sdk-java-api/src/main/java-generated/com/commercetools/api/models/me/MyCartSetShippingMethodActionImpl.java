@@ -92,6 +92,9 @@ public class MyCartSetShippingMethodActionImpl implements MyCartSetShippingMetho
         return new EqualsBuilder().append(action, that.action)
                 .append(shippingMethod, that.shippingMethod)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(action, that.action)
+                .append(shippingMethod, that.shippingMethod)
+                .append(externalTaxRate, that.externalTaxRate)
                 .isEquals();
     }
 

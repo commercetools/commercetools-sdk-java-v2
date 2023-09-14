@@ -71,7 +71,11 @@ public class ChangeImpl implements Change, ModelBase {
 
         ChangeImpl that = (ChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(type, that.type)
+                .append(change, that.change)
+                .isEquals();
     }
 
     @Override

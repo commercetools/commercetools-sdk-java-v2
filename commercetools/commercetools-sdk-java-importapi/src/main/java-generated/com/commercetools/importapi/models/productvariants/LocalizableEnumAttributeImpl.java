@@ -85,7 +85,13 @@ public class LocalizableEnumAttributeImpl implements LocalizableEnumAttribute, M
 
         LocalizableEnumAttributeImpl that = (LocalizableEnumAttributeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(type, that.type).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(type, that.type)
+                .append(value, that.value)
+                .append(name, that.name)
+                .append(type, that.type)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

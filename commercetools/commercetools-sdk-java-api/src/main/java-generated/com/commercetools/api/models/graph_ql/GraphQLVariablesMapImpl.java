@@ -61,7 +61,7 @@ public class GraphQLVariablesMapImpl implements GraphQLVariablesMap, ModelBase {
 
         GraphQLVariablesMapImpl that = (GraphQLVariablesMapImpl) o;
 
-        return new EqualsBuilder().append(values, that.values).isEquals();
+        return new EqualsBuilder().append(values, that.values).append(values, that.values).isEquals();
     }
 
     @Override

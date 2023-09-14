@@ -126,6 +126,11 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
                 .append(values, that.values)
                 .append(conflictingEnumKey, that.conflictingEnumKey)
                 .append(conflictingAttributeName, that.conflictingAttributeName)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(conflictingEnumKey, that.conflictingEnumKey)
+                .append(conflictingAttributeName, that.conflictingAttributeName)
                 .isEquals();
     }
 

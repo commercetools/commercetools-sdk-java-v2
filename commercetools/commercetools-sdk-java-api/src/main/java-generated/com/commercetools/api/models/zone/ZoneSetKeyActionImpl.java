@@ -70,7 +70,11 @@ public class ZoneSetKeyActionImpl implements ZoneSetKeyAction, ModelBase {
 
         ZoneSetKeyActionImpl that = (ZoneSetKeyActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(key, that.key)
+                .append(action, that.action)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

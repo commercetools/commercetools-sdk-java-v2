@@ -71,7 +71,11 @@ public class StoreAddCountryActionImpl implements StoreAddCountryAction, ModelBa
 
         StoreAddCountryActionImpl that = (StoreAddCountryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(country, that.country).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(country, that.country)
+                .append(action, that.action)
+                .append(country, that.country)
+                .isEquals();
     }
 
     @Override

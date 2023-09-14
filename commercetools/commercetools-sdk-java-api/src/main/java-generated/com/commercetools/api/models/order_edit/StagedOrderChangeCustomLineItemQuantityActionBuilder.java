@@ -3,6 +3,8 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderChangeCustomLineItemQuantityAction stagedOrderChangeCustomLineItemQuantityAction = StagedOrderChangeCustomLineItemQuantityAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -23,23 +24,40 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderChangeCustomLineItemQuantityActionBuilder
         implements Builder<StagedOrderChangeCustomLineItemQuantityAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     private Long quantity;
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderChangeCustomLineItemQuantityActionBuilder customLineItemId(final String customLineItemId) {
+    public StagedOrderChangeCustomLineItemQuantityActionBuilder customLineItemId(
+            @Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     * set the value to the quantity
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderChangeCustomLineItemQuantityActionBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>New value to set. If <code>0</code>, the Custom Line Item is removed from the Order.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -50,16 +68,27 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
     /**
-     * value of quantity}
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>New value to set. If <code>0</code>, the Custom Line Item is removed from the Order.</p>
      * @return quantity
      */
 
@@ -72,10 +101,8 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
      * @return StagedOrderChangeCustomLineItemQuantityAction
      */
     public StagedOrderChangeCustomLineItemQuantityAction build() {
-        Objects.requireNonNull(customLineItemId,
-            StagedOrderChangeCustomLineItemQuantityAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(quantity, StagedOrderChangeCustomLineItemQuantityAction.class + ": quantity is missing");
-        return new StagedOrderChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);
+        return new StagedOrderChangeCustomLineItemQuantityActionImpl(customLineItemId, customLineItemKey, quantity);
     }
 
     /**
@@ -83,7 +110,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
      * @return StagedOrderChangeCustomLineItemQuantityAction
      */
     public StagedOrderChangeCustomLineItemQuantityAction buildUnchecked() {
-        return new StagedOrderChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);
+        return new StagedOrderChangeCustomLineItemQuantityActionImpl(customLineItemId, customLineItemKey, quantity);
     }
 
     /**
@@ -103,6 +130,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
             final StagedOrderChangeCustomLineItemQuantityAction template) {
         StagedOrderChangeCustomLineItemQuantityActionBuilder builder = new StagedOrderChangeCustomLineItemQuantityActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.quantity = template.getQuantity();
         return builder;
     }

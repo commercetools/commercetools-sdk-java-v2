@@ -90,6 +90,9 @@ public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAdd
         return new EqualsBuilder().append(type, that.type)
                 .append(address, that.address)
                 .append(oldAddress, that.oldAddress)
+                .append(type, that.type)
+                .append(address, that.address)
+                .append(oldAddress, that.oldAddress)
                 .isEquals();
     }
 

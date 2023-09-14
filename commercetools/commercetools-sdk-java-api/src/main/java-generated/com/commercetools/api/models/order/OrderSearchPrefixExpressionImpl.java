@@ -59,7 +59,7 @@ public class OrderSearchPrefixExpressionImpl implements OrderSearchPrefixExpress
 
         OrderSearchPrefixExpressionImpl that = (OrderSearchPrefixExpressionImpl) o;
 
-        return new EqualsBuilder().append(prefix, that.prefix).isEquals();
+        return new EqualsBuilder().append(prefix, that.prefix).append(prefix, that.prefix).isEquals();
     }
 
     @Override

@@ -37,7 +37,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     * set the value to the shippingMethodName
+     *  <p>Name of the custom Shipping Method.</p>
      * @param shippingMethodName value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     * set the value to the shippingRate using the builder function
+     *  <p>Determines the shipping price.</p>
      * @param builder function to build the shippingRate value
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     * set the value to the shippingRate using the builder function
+     *  <p>Determines the shipping price.</p>
      * @param builder function to build the shippingRate value
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     * set the value to the shippingRate
+     *  <p>Determines the shipping price.</p>
      * @param shippingRate value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     * value of shippingMethodName}
+     *  <p>Name of the custom Shipping Method.</p>
      * @return shippingMethodName
      */
 
@@ -170,7 +170,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     * value of shippingRate}
+     *  <p>Determines the shipping price.</p>
      * @return shippingRate
      */
 
@@ -179,7 +179,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
      * @return taxCategory
      */
 
@@ -189,7 +189,7 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
      */
 

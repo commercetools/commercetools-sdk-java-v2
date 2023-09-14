@@ -1,0 +1,13 @@
+
+dependencies {
+    api project(":rmf:rmf-java-base")
+
+    api commons.io version commons.io_version
+
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}

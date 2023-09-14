@@ -71,7 +71,11 @@ public class AuthorizationHeaderAuthenticationImpl implements AuthorizationHeade
 
         AuthorizationHeaderAuthenticationImpl that = (AuthorizationHeaderAuthenticationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(headerValue, that.headerValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(headerValue, that.headerValue)
+                .append(type, that.type)
+                .append(headerValue, that.headerValue)
+                .isEquals();
     }
 
     @Override

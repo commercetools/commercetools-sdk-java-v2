@@ -10,14 +10,14 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Sets the DiscountedLineItemPrice of the CartDiscountLineItemsTarget or CartDiscountCustomLineItemsTarget to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied.</p>
+ *  <p>Sets the DiscountedLineItemPrice of the CartDiscountLineItemsTarget or CartDiscountCustomLineItemsTarget to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied. If the <code>quantity</code> of the Line Item eligible for the Discount is greater than <code>1</code>, the fixed price discount is only applied to the Line Item portion for which the <code>money</code> value is lesser than their current price.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueFixedImpl.class)
-public interface CartDiscountValueFixed extends CartDiscountValue {
+public interface CartDiscountValueFixed extends CartDiscountValue, CartDiscountValueFixedMixin {
 
     /**
      * discriminator value for CartDiscountValueFixed
@@ -39,28 +39,28 @@ public interface CartDiscountValueFixed extends CartDiscountValue {
     String FIXED = "fixed";
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @return money
      */
     @NotNull
     @Valid
     @JsonProperty("money")
-    public List<CentPrecisionMoney> getMoney();
+    public List<TypedMoney> getMoney();
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @param money values to be set
      */
 
     @JsonIgnore
-    public void setMoney(final CentPrecisionMoney... money);
+    public void setMoney(final TypedMoney... money);
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @param money values to be set
      */
 
-    public void setMoney(final List<CentPrecisionMoney> money);
+    public void setMoney(final List<TypedMoney> money);
 
     /**
      * factory method
@@ -94,7 +94,7 @@ public interface CartDiscountValueFixed extends CartDiscountValue {
         CartDiscountValueFixedImpl instance = new CartDiscountValueFixedImpl();
         instance.setMoney(Optional.ofNullable(template.getMoney())
                 .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
+                        .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         return instance;

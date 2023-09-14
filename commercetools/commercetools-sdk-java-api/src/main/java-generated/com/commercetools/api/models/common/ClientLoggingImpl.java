@@ -28,6 +28,8 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
 
     private String anonymousId;
 
+    private com.commercetools.api.models.customer.CustomerReference associate;
+
     /**
      * create instance with all properties
      */
@@ -35,11 +37,13 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     ClientLoggingImpl(@JsonProperty("clientId") final String clientId,
             @JsonProperty("externalUserId") final String externalUserId,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer,
-            @JsonProperty("anonymousId") final String anonymousId) {
+            @JsonProperty("anonymousId") final String anonymousId,
+            @JsonProperty("associate") final com.commercetools.api.models.customer.CustomerReference associate) {
         this.clientId = clientId;
         this.externalUserId = externalUserId;
         this.customer = customer;
         this.anonymousId = anonymousId;
+        this.associate = associate;
     }
 
     /**
@@ -49,7 +53,7 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     *  <p><code>id</code> of the API Client which created the resource.</p>
      */
 
     public String getClientId() {
@@ -80,6 +84,14 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
         return this.anonymousId;
     }
 
+    /**
+     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     */
+
+    public com.commercetools.api.models.customer.CustomerReference getAssociate() {
+        return this.associate;
+    }
+
     public void setClientId(final String clientId) {
         this.clientId = clientId;
     }
@@ -96,6 +108,10 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
         this.anonymousId = anonymousId;
     }
 
+    public void setAssociate(final com.commercetools.api.models.customer.CustomerReference associate) {
+        this.associate = associate;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -110,6 +126,12 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
                 .append(externalUserId, that.externalUserId)
                 .append(customer, that.customer)
                 .append(anonymousId, that.anonymousId)
+                .append(associate, that.associate)
+                .append(clientId, that.clientId)
+                .append(externalUserId, that.externalUserId)
+                .append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .append(associate, that.associate)
                 .isEquals();
     }
 
@@ -119,6 +141,7 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
                 .append(externalUserId)
                 .append(customer)
                 .append(anonymousId)
+                .append(associate)
                 .toHashCode();
     }
 

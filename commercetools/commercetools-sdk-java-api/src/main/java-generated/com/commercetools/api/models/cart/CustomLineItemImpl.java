@@ -22,11 +22,15 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     private String id;
 
+    private String key;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     private com.commercetools.api.models.common.TypedMoney money;
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
+
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
 
     private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
@@ -40,6 +44,8 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     private com.commercetools.api.models.tax_category.TaxRate taxRate;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate;
+
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
     private com.commercetools.api.models.type.CustomFields custom;
@@ -52,29 +58,34 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    CustomLineItemImpl(@JsonProperty("id") final String id,
+    CustomLineItemImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("money") final com.commercetools.api.models.common.TypedMoney money,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
+            @JsonProperty("taxedPricePortions") final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice,
             @JsonProperty("slug") final String slug, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate,
+            @JsonProperty("perMethodTaxRate") final java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails,
             @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
         this.id = id;
+        this.key = key;
         this.name = name;
         this.money = money;
         this.taxedPrice = taxedPrice;
+        this.taxedPricePortions = taxedPricePortions;
         this.totalPrice = totalPrice;
         this.slug = slug;
         this.quantity = quantity;
         this.state = state;
         this.taxCategory = taxCategory;
         this.taxRate = taxRate;
+        this.perMethodTaxRate = perMethodTaxRate;
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.custom = custom;
         this.shippingDetails = shippingDetails;
@@ -93,6 +104,14 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -120,6 +139,14 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
+    }
+
+    /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
      *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
      */
@@ -137,7 +164,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>Number of Custom Line Items in the Cart.</p>
+     *  <p>Number of Custom Line Items in the Cart or Order.</p>
      */
 
     public Long getQuantity() {
@@ -145,7 +172,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
@@ -169,6 +196,14 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
+    }
+
+    /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxRate> getPerMethodTaxRate() {
+        return this.perMethodTaxRate;
     }
 
     /**
@@ -207,6 +242,10 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.id = id;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -217,6 +256,15 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
+    }
+
+    public void setTaxedPricePortions(final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        this.taxedPricePortions = new ArrayList<>(Arrays.asList(taxedPricePortions));
+    }
+
+    public void setTaxedPricePortions(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
+        this.taxedPricePortions = taxedPricePortions;
     }
 
     public void setTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
@@ -245,6 +293,15 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRate taxRate) {
         this.taxRate = taxRate;
+    }
+
+    public void setPerMethodTaxRate(final com.commercetools.api.models.cart.MethodTaxRate... perMethodTaxRate) {
+        this.perMethodTaxRate = new ArrayList<>(Arrays.asList(perMethodTaxRate));
+    }
+
+    public void setPerMethodTaxRate(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxRate> perMethodTaxRate) {
+        this.perMethodTaxRate = perMethodTaxRate;
     }
 
     public void setDiscountedPricePerQuantity(
@@ -280,15 +337,35 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         CustomLineItemImpl that = (CustomLineItemImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(name, that.name)
                 .append(money, that.money)
                 .append(taxedPrice, that.taxedPrice)
+                .append(taxedPricePortions, that.taxedPricePortions)
                 .append(totalPrice, that.totalPrice)
                 .append(slug, that.slug)
                 .append(quantity, that.quantity)
                 .append(state, that.state)
                 .append(taxCategory, that.taxCategory)
                 .append(taxRate, that.taxRate)
+                .append(perMethodTaxRate, that.perMethodTaxRate)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(custom, that.custom)
+                .append(shippingDetails, that.shippingDetails)
+                .append(priceMode, that.priceMode)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(money, that.money)
+                .append(taxedPrice, that.taxedPrice)
+                .append(taxedPricePortions, that.taxedPricePortions)
+                .append(totalPrice, that.totalPrice)
+                .append(slug, that.slug)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(taxCategory, that.taxCategory)
+                .append(taxRate, that.taxRate)
+                .append(perMethodTaxRate, that.perMethodTaxRate)
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(custom, that.custom)
                 .append(shippingDetails, that.shippingDetails)
@@ -299,15 +376,18 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(name)
                 .append(money)
                 .append(taxedPrice)
+                .append(taxedPricePortions)
                 .append(totalPrice)
                 .append(slug)
                 .append(quantity)
                 .append(state)
                 .append(taxCategory)
                 .append(taxRate)
+                .append(perMethodTaxRate)
                 .append(discountedPricePerQuantity)
                 .append(custom)
                 .append(shippingDetails)

@@ -126,6 +126,11 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
                 .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
                 .append(accessTokenValiditySeconds, that.accessTokenValiditySeconds)
                 .append(refreshTokenValiditySeconds, that.refreshTokenValiditySeconds)
+                .append(name, that.name)
+                .append(scope, that.scope)
+                .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
+                .append(accessTokenValiditySeconds, that.accessTokenValiditySeconds)
+                .append(refreshTokenValiditySeconds, that.refreshTokenValiditySeconds)
                 .isEquals();
     }
 

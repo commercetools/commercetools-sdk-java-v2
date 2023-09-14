@@ -109,6 +109,10 @@ public class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery,
                 .append(variantId, that.variantId)
                 .append(staged, that.staged)
                 .append(price, that.price)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(staged, that.staged)
+                .append(price, that.price)
                 .isEquals();
     }
 

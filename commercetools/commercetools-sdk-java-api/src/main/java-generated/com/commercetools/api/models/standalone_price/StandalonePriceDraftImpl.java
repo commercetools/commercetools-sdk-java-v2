@@ -43,6 +43,8 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.standalone_price.StagedPriceDraft staged;
+
     private Boolean active;
 
     /**
@@ -59,6 +61,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers,
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("staged") final com.commercetools.api.models.standalone_price.StagedPriceDraft staged,
             @JsonProperty("active") final Boolean active) {
         this.key = key;
         this.sku = sku;
@@ -71,6 +74,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.tiers = tiers;
         this.discounted = discounted;
         this.custom = custom;
+        this.staged = staged;
         this.active = active;
     }
 
@@ -169,7 +173,15 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     *  <p>Staged changes for the StandalonePrice.</p>
+     */
+
+    public com.commercetools.api.models.standalone_price.StagedPriceDraft getStaged() {
+        return this.staged;
+    }
+
+    /**
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
      */
 
     public Boolean getActive() {
@@ -225,6 +237,10 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.custom = custom;
     }
 
+    public void setStaged(final com.commercetools.api.models.standalone_price.StagedPriceDraft staged) {
+        this.staged = staged;
+    }
+
     public void setActive(final Boolean active) {
         this.active = active;
     }
@@ -250,6 +266,20 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers, that.tiers)
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
+                .append(staged, that.staged)
+                .append(active, that.active)
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(tiers, that.tiers)
+                .append(discounted, that.discounted)
+                .append(custom, that.custom)
+                .append(staged, that.staged)
                 .append(active, that.active)
                 .isEquals();
     }
@@ -267,6 +297,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers)
                 .append(discounted)
                 .append(custom)
+                .append(staged)
                 .append(active)
                 .toHashCode();
     }

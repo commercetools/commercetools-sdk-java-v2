@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyBusinessUnitSetCustomFieldAction
+ *  <p>Adding a Custom Field to a Business Unit generates the BusinessUnitCustomFieldAdded Message, removing one generates the BusinessUnitCustomFieldRemoved Message, and updating an existing one generates the BusinessUnitCustomFieldChanged Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyBusinessUnitSetCustomFieldActionImpl implements MyBusinessUnitSetCustomFieldAction, ModelBase {
@@ -87,6 +87,9 @@ public class MyBusinessUnitSetCustomFieldActionImpl implements MyBusinessUnitSet
         MyBusinessUnitSetCustomFieldActionImpl that = (MyBusinessUnitSetCustomFieldActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(action, that.action)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();

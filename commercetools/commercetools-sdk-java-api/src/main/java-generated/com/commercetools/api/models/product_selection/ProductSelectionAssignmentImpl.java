@@ -120,6 +120,10 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
                 .append(productSelection, that.productSelection)
                 .append(variantSelection, that.variantSelection)
                 .append(variantExclusion, that.variantExclusion)
+                .append(product, that.product)
+                .append(productSelection, that.productSelection)
+                .append(variantSelection, that.variantSelection)
+                .append(variantExclusion, that.variantExclusion)
                 .isEquals();
     }
 

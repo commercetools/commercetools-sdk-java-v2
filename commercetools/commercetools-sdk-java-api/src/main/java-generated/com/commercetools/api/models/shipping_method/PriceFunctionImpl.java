@@ -75,7 +75,11 @@ public class PriceFunctionImpl implements PriceFunction, ModelBase {
 
         PriceFunctionImpl that = (PriceFunctionImpl) o;
 
-        return new EqualsBuilder().append(currencyCode, that.currencyCode).append(function, that.function).isEquals();
+        return new EqualsBuilder().append(currencyCode, that.currencyCode)
+                .append(function, that.function)
+                .append(currencyCode, that.currencyCode)
+                .append(function, that.function)
+                .isEquals();
     }
 
     @Override

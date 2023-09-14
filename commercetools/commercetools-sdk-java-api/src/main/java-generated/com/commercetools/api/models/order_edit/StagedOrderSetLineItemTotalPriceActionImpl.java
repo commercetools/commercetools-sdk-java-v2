@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * StagedOrderSetLineItemTotalPriceAction
+ *  <p>Sets the LineItem <code>totalPrice</code> and <code>price</code>, and changes the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSetLineItemTotalPriceAction, ModelBase {
@@ -24,6 +24,8 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
@@ -31,8 +33,10 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
      */
     @JsonCreator
     StagedOrderSetLineItemTotalPriceActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.externalTotalPrice = externalTotalPrice;
         this.action = SET_LINE_ITEM_TOTAL_PRICE;
     }
@@ -53,7 +57,7 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -61,7 +65,15 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
     }
 
     /**
-     *
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -70,6 +82,10 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setExternalTotalPrice(
@@ -89,13 +105,22 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(externalTotalPrice, that.externalTotalPrice)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(externalTotalPrice).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(externalTotalPrice)
+                .toHashCode();
     }
 
 }

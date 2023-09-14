@@ -42,6 +42,8 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> perMethodExternalTaxRate;
+
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
@@ -61,6 +63,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
+            @JsonProperty("perMethodExternalTaxRate") final java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> perMethodExternalTaxRate,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -75,6 +78,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
         this.externalTaxRate = externalTaxRate;
+        this.perMethodExternalTaxRate = perMethodExternalTaxRate;
         this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
         this.custom = custom;
@@ -169,11 +173,19 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
+    }
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> getPerMethodExternalTaxRate() {
+        return this.perMethodExternalTaxRate;
     }
 
     /**
@@ -246,6 +258,16 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         this.externalTaxRate = externalTaxRate;
     }
 
+    public void setPerMethodExternalTaxRate(
+            final com.commercetools.api.models.cart.MethodExternalTaxRateDraft... perMethodExternalTaxRate) {
+        this.perMethodExternalTaxRate = new ArrayList<>(Arrays.asList(perMethodExternalTaxRate));
+    }
+
+    public void setPerMethodExternalTaxRate(
+            final java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> perMethodExternalTaxRate) {
+        this.perMethodExternalTaxRate = perMethodExternalTaxRate;
+    }
+
     public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
         this.inventoryMode = inventoryMode;
     }
@@ -279,6 +301,22 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(perMethodExternalTaxRate, that.perMethodExternalTaxRate)
+                .append(inventoryMode, that.inventoryMode)
+                .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
+                .append(key, that.key)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(distributionChannel, that.distributionChannel)
+                .append(supplyChannel, that.supplyChannel)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(perMethodExternalTaxRate, that.perMethodExternalTaxRate)
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
@@ -298,6 +336,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(externalPrice)
                 .append(externalTotalPrice)
                 .append(externalTaxRate)
+                .append(perMethodExternalTaxRate)
                 .append(inventoryMode)
                 .append(shippingDetails)
                 .append(custom)

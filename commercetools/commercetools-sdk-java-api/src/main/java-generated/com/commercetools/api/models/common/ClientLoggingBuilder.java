@@ -35,8 +35,11 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     @Nullable
     private String anonymousId;
 
+    @Nullable
+    private com.commercetools.api.models.customer.CustomerReference associate;
+
     /**
-     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     *  <p><code>id</code> of the API Client which created the resource.</p>
      * @param clientId value to be set
      * @return Builder
      */
@@ -105,7 +108,43 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     * @param builder function to build the associate value
+     * @return Builder
+     */
+
+    public ClientLoggingBuilder associate(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.associate = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     * @param builder function to build the associate value
+     * @return Builder
+     */
+
+    public ClientLoggingBuilder withAssociate(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReference> builder) {
+        this.associate = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     * @param associate value to be set
+     * @return Builder
+     */
+
+    public ClientLoggingBuilder associate(
+            @Nullable final com.commercetools.api.models.customer.CustomerReference associate) {
+        this.associate = associate;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the API Client which created the resource.</p>
      * @return clientId
      */
 
@@ -145,11 +184,21 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
+     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     * @return associate
+     */
+
+    @Nullable
+    public com.commercetools.api.models.customer.CustomerReference getAssociate() {
+        return this.associate;
+    }
+
+    /**
      * builds ClientLogging with checking for non-null required values
      * @return ClientLogging
      */
     public ClientLogging build() {
-        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);
+        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId, associate);
     }
 
     /**
@@ -157,7 +206,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
      * @return ClientLogging
      */
     public ClientLogging buildUnchecked() {
-        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);
+        return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId, associate);
     }
 
     /**
@@ -179,6 +228,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
         builder.externalUserId = template.getExternalUserId();
         builder.customer = template.getCustomer();
         builder.anonymousId = template.getAnonymousId();
+        builder.associate = template.getAssociate();
         return builder;
     }
 

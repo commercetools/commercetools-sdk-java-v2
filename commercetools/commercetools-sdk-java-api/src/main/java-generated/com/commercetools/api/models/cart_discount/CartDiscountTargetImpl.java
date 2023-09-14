@@ -54,7 +54,7 @@ public class CartDiscountTargetImpl implements CartDiscountTarget, ModelBase {
 
         CartDiscountTargetImpl that = (CartDiscountTargetImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

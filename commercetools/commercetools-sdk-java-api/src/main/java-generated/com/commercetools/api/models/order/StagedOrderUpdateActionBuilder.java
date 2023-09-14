@@ -203,6 +203,10 @@ public class StagedOrderUpdateActionBuilder {
         return com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsActionBuilder setDirectDiscountsBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetDirectDiscountsActionBuilder.of();
+    }
+
     public com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldActionBuilder setItemShippingAddressCustomFieldBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldActionBuilder.of();
     }
@@ -334,6 +338,10 @@ public class StagedOrderUpdateActionBuilder {
 
     public com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputActionBuilder setShippingRateInputBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.order_edit.StagedOrderSetStoreActionBuilder setStoreBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetStoreActionBuilder.of();
     }
 
     public com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateActionBuilder transitionCustomLineItemStateBuilder() {

@@ -107,6 +107,10 @@ public class CartSetItemShippingAddressCustomTypeActionImpl
                 .append(addressKey, that.addressKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(addressKey, that.addressKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 

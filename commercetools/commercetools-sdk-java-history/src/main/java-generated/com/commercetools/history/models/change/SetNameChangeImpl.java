@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
  *   <li>Set Name on Discount Codes.</li>
- *   <li>Set Name on States.</li>
+ *   <li>Set State Name on States.</li>
  *   <li>Set Name on Stores.</li>
  *  </ul>
  */
@@ -108,6 +108,10 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
         SetNameChangeImpl that = (SetNameChangeImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)

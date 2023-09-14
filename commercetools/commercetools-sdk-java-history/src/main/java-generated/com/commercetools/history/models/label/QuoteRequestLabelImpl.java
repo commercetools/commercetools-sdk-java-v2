@@ -89,6 +89,9 @@ public class QuoteRequestLabelImpl implements QuoteRequestLabel, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(key, that.key)
                 .append(customer, that.customer)
+                .append(type, that.type)
+                .append(key, that.key)
+                .append(customer, that.customer)
                 .isEquals();
     }
 

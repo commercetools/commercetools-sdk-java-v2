@@ -34,7 +34,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set for <code>shippingAddress</code>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set for <code>shippingAddress</code>.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set for <code>shippingAddress</code>.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     *  <p>Value to set.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     *  <p>Value to set.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     *  <p>Value to set.</p>
      * @param shippingMethod value to be set
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set for <code>shippingAddress</code>.</p>
      * @return address
      */
 
@@ -155,7 +155,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     *  <p>Value to set.</p>
      * @return shippingMethod
      */
 
@@ -165,7 +165,7 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
      */
 

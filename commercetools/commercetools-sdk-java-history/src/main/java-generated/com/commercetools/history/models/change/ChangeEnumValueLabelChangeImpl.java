@@ -139,6 +139,12 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
                 .append(nextValue, that.nextValue)
                 .append(fieldName, that.fieldName)
                 .append(valueKey, that.valueKey)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(fieldName, that.fieldName)
+                .append(valueKey, that.valueKey)
                 .isEquals();
     }
 

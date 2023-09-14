@@ -74,7 +74,11 @@ public class PriceTierImpl implements PriceTier, ModelBase {
 
         PriceTierImpl that = (PriceTierImpl) o;
 
-        return new EqualsBuilder().append(minimumQuantity, that.minimumQuantity).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(minimumQuantity, that.minimumQuantity)
+                .append(value, that.value)
+                .append(minimumQuantity, that.minimumQuantity)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

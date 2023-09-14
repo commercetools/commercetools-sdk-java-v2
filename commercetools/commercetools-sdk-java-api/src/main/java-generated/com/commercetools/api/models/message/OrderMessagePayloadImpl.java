@@ -54,7 +54,7 @@ public class OrderMessagePayloadImpl implements OrderMessagePayload, ModelBase {
 
         OrderMessagePayloadImpl that = (OrderMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

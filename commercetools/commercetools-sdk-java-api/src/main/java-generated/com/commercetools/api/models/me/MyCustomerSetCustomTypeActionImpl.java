@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * MyCustomerSetCustomTypeAction
+ *  <p>Adding or updating a Custom Type on a Customer generates the CustomerCustomTypeSet Message, removing one generates the CustomerCustomTypeRemoved Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyCustomerSetCustomTypeActionImpl implements MyCustomerSetCustomTypeAction, ModelBase {
@@ -88,6 +88,9 @@ public class MyCustomerSetCustomTypeActionImpl implements MyCustomerSetCustomTyp
         MyCustomerSetCustomTypeActionImpl that = (MyCustomerSetCustomTypeActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(action, that.action)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();

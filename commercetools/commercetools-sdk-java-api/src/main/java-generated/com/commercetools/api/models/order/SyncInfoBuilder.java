@@ -33,7 +33,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     private java.time.ZonedDateTime syncedAt;
 
     /**
-     *  <p>Connection to a particular synchronization destination.</p>
+     *  <p>Connection to a synchronization destination.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *  <p>Connection to a particular synchronization destination.</p>
+     *  <p>Connection to a synchronization destination.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *  <p>Connection to a particular synchronization destination.</p>
+     *  <p>Connection to a synchronization destination.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     *  <p>Identifier of an external order instance, file, or other resource.</p>
      * @param externalId value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     * set the value to the syncedAt
+     *  <p>Date and time (UTC) the information was synced.</p>
      * @param syncedAt value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *  <p>Connection to a particular synchronization destination.</p>
+     *  <p>Connection to a synchronization destination.</p>
      * @return channel
      */
 
@@ -99,7 +99,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     *  <p>Identifier of an external order instance, file, or other resource.</p>
      * @return externalId
      */
 
@@ -109,7 +109,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     * value of syncedAt}
+     *  <p>Date and time (UTC) the information was synced.</p>
      * @return syncedAt
      */
 

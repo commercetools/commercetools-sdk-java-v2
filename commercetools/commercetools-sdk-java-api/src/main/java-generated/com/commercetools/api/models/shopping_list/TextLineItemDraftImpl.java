@@ -20,6 +20,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
 
+    private String key;
+
     private java.time.ZonedDateTime addedAt;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -34,11 +36,13 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    TextLineItemDraftImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
+    TextLineItemDraftImpl(@JsonProperty("key") final String key,
+            @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("quantity") final Long quantity) {
+        this.key = key;
         this.addedAt = addedAt;
         this.custom = custom;
         this.description = description;
@@ -50,6 +54,14 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
      * create empty instance
      */
     public TextLineItemDraftImpl() {
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -92,6 +104,10 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
         return this.quantity;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setAddedAt(final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
     }
@@ -122,7 +138,14 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
 
         TextLineItemDraftImpl that = (TextLineItemDraftImpl) o;
 
-        return new EqualsBuilder().append(addedAt, that.addedAt)
+        return new EqualsBuilder().append(key, that.key)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(description, that.description)
+                .append(name, that.name)
+                .append(quantity, that.quantity)
+                .append(key, that.key)
+                .append(addedAt, that.addedAt)
                 .append(custom, that.custom)
                 .append(description, that.description)
                 .append(name, that.name)
@@ -132,7 +155,8 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(addedAt)
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(addedAt)
                 .append(custom)
                 .append(description)
                 .append(name)

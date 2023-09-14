@@ -74,6 +74,8 @@ public class StoreRemoveProductSelectionActionImpl implements StoreRemoveProduct
 
         return new EqualsBuilder().append(action, that.action)
                 .append(productSelection, that.productSelection)
+                .append(action, that.action)
+                .append(productSelection, that.productSelection)
                 .isEquals();
     }
 

@@ -113,6 +113,10 @@ public class ImageSearchResponseImpl implements ImageSearchResponse, ModelBase {
                 .append(offset, that.offset)
                 .append(total, that.total)
                 .append(results, that.results)
+                .append(count, that.count)
+                .append(offset, that.offset)
+                .append(total, that.total)
+                .append(results, that.results)
                 .isEquals();
     }
 

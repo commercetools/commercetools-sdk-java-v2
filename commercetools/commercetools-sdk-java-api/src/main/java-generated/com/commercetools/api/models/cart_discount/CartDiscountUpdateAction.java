@@ -20,13 +20,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     CartDiscountUpdateAction cartDiscountUpdateAction = CartDiscountUpdateAction.changeCartPredicateBuilder()
- *             cartPredicate("{cartPredicate}")
+ *     CartDiscountUpdateAction cartDiscountUpdateAction = CartDiscountUpdateAction.addStoreBuilder()
+ *             store(storeBuilder -> storeBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountAddStoreActionImpl.class, name = CartDiscountAddStoreAction.ADD_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateActionImpl.class, name = CartDiscountChangeCartPredicateAction.CHANGE_CART_PREDICATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeIsActiveActionImpl.class, name = CartDiscountChangeIsActiveAction.CHANGE_IS_ACTIVE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeNameActionImpl.class, name = CartDiscountChangeNameAction.CHANGE_NAME),
@@ -35,10 +36,12 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeStackingModeActionImpl.class, name = CartDiscountChangeStackingModeAction.CHANGE_STACKING_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeTargetActionImpl.class, name = CartDiscountChangeTargetAction.CHANGE_TARGET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountChangeValueActionImpl.class, name = CartDiscountChangeValueAction.CHANGE_VALUE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountRemoveStoreActionImpl.class, name = CartDiscountRemoveStoreAction.REMOVE_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldActionImpl.class, name = CartDiscountSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeActionImpl.class, name = CartDiscountSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetDescriptionActionImpl.class, name = CartDiscountSetDescriptionAction.SET_DESCRIPTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionImpl.class, name = CartDiscountSetKeyAction.SET_KEY),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetStoresActionImpl.class, name = CartDiscountSetStoresAction.SET_STORES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetValidFromActionImpl.class, name = CartDiscountSetValidFromAction.SET_VALID_FROM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAndUntilActionImpl.class, name = CartDiscountSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountSetValidUntilActionImpl.class, name = CartDiscountSetValidUntilAction.SET_VALID_UNTIL) })
@@ -65,6 +68,10 @@ public interface CartDiscountUpdateAction
     public static CartDiscountUpdateAction deepCopy(@Nullable final CartDiscountUpdateAction template) {
         if (template == null) {
             return null;
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountAddStoreAction) {
+            return com.commercetools.api.models.cart_discount.CartDiscountAddStoreAction
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountAddStoreAction) template);
         }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateAction) {
             return com.commercetools.api.models.cart_discount.CartDiscountChangeCartPredicateAction.deepCopy(
@@ -98,6 +105,10 @@ public interface CartDiscountUpdateAction
             return com.commercetools.api.models.cart_discount.CartDiscountChangeValueAction
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountChangeValueAction) template);
         }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountRemoveStoreAction) {
+            return com.commercetools.api.models.cart_discount.CartDiscountRemoveStoreAction
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountRemoveStoreAction) template);
+        }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldAction) {
             return com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldAction
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldAction) template);
@@ -114,6 +125,10 @@ public interface CartDiscountUpdateAction
             return com.commercetools.api.models.cart_discount.CartDiscountSetKeyAction
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountSetKeyAction) template);
         }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountSetStoresAction) {
+            return com.commercetools.api.models.cart_discount.CartDiscountSetStoresAction
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountSetStoresAction) template);
+        }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAction) {
             return com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAction
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountSetValidFromAction) template);
@@ -128,6 +143,14 @@ public interface CartDiscountUpdateAction
         }
         CartDiscountUpdateActionImpl instance = new CartDiscountUpdateActionImpl();
         return instance;
+    }
+
+    /**
+     * builder for addStore subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart_discount.CartDiscountAddStoreActionBuilder addStoreBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountAddStoreActionBuilder.of();
     }
 
     /**
@@ -195,6 +218,14 @@ public interface CartDiscountUpdateAction
     }
 
     /**
+     * builder for removeStore subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart_discount.CartDiscountRemoveStoreActionBuilder removeStoreBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountRemoveStoreActionBuilder.of();
+    }
+
+    /**
      * builder for setCustomField subtype
      * @return builder
      */
@@ -224,6 +255,14 @@ public interface CartDiscountUpdateAction
      */
     public static com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountSetKeyActionBuilder.of();
+    }
+
+    /**
+     * builder for setStores subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart_discount.CartDiscountSetStoresActionBuilder setStoresBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountSetStoresActionBuilder.of();
     }
 
     /**

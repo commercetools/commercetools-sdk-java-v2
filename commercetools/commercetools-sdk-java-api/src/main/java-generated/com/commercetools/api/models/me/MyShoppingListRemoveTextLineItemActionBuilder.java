@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MyShoppingListRemoveTextLineItemAction myShoppingListRemoveTextLineItemAction = MyShoppingListRemoveTextLineItemAction.builder()
- *             .textLineItemId("{textLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -23,19 +22,34 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<MyShoppingListRemoveTextLineItemAction> {
 
+    @Nullable
     private String textLineItemId;
+
+    @Nullable
+    private String textLineItemKey;
 
     @Nullable
     private Long quantity;
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      * @return Builder
      */
 
-    public MyShoppingListRemoveTextLineItemActionBuilder textLineItemId(final String textLineItemId) {
+    public MyShoppingListRemoveTextLineItemActionBuilder textLineItemId(@Nullable final String textLineItemId) {
         this.textLineItemId = textLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param textLineItemKey value to be set
+     * @return Builder
+     */
+
+    public MyShoppingListRemoveTextLineItemActionBuilder textLineItemKey(@Nullable final String textLineItemKey) {
+        this.textLineItemKey = textLineItemKey;
         return this;
     }
 
@@ -51,12 +65,23 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
     }
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
 
+    @Nullable
     public String getTextLineItemId() {
         return this.textLineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return textLineItemKey
+     */
+
+    @Nullable
+    public String getTextLineItemKey() {
+        return this.textLineItemKey;
     }
 
     /**
@@ -74,9 +99,7 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
      * @return MyShoppingListRemoveTextLineItemAction
      */
     public MyShoppingListRemoveTextLineItemAction build() {
-        Objects.requireNonNull(textLineItemId,
-            MyShoppingListRemoveTextLineItemAction.class + ": textLineItemId is missing");
-        return new MyShoppingListRemoveTextLineItemActionImpl(textLineItemId, quantity);
+        return new MyShoppingListRemoveTextLineItemActionImpl(textLineItemId, textLineItemKey, quantity);
     }
 
     /**
@@ -84,7 +107,7 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
      * @return MyShoppingListRemoveTextLineItemAction
      */
     public MyShoppingListRemoveTextLineItemAction buildUnchecked() {
-        return new MyShoppingListRemoveTextLineItemActionImpl(textLineItemId, quantity);
+        return new MyShoppingListRemoveTextLineItemActionImpl(textLineItemId, textLineItemKey, quantity);
     }
 
     /**
@@ -104,6 +127,7 @@ public class MyShoppingListRemoveTextLineItemActionBuilder implements Builder<My
             final MyShoppingListRemoveTextLineItemAction template) {
         MyShoppingListRemoveTextLineItemActionBuilder builder = new MyShoppingListRemoveTextLineItemActionBuilder();
         builder.textLineItemId = template.getTextLineItemId();
+        builder.textLineItemKey = template.getTextLineItemKey();
         builder.quantity = template.getQuantity();
         return builder;
     }

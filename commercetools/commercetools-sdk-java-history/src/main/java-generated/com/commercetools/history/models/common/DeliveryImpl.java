@@ -151,6 +151,12 @@ public class DeliveryImpl implements Delivery, ModelBase {
                 .append(parcels, that.parcels)
                 .append(address, that.address)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(createdAt, that.createdAt)
+                .append(items, that.items)
+                .append(parcels, that.parcels)
+                .append(address, that.address)
+                .append(custom, that.custom)
                 .isEquals();
     }
 

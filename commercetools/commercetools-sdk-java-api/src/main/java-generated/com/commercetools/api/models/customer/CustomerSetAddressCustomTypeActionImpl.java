@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * CustomerSetAddressCustomTypeAction
+ *  <p>Adding or updating a Custom Type on an Address of a Customer generates the CustomerAddressCustomTypeSet Message, and removing one generates the CustomerAddressCustomTypeRemoved Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddressCustomTypeAction, ModelBase {
@@ -103,6 +103,10 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
         CustomerSetAddressCustomTypeActionImpl that = (CustomerSetAddressCustomTypeActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(action, that.action)
                 .append(addressId, that.addressId)
                 .append(type, that.type)
                 .append(fields, that.fields)

@@ -92,7 +92,7 @@ public class ConfluentCloudDestinationImpl implements ConfluentCloudDestination,
     }
 
     /**
-     *  <p>The Kafka <code>acks</code> value. Can be <code>"0"</code>, <code>"1"</code>, or <code>"all"</code>.</p>
+     *  <p>The Kafka <code>acks</code> value.</p>
      */
 
     public String getAcks() {
@@ -150,6 +150,13 @@ public class ConfluentCloudDestinationImpl implements ConfluentCloudDestination,
         ConfluentCloudDestinationImpl that = (ConfluentCloudDestinationImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
+                .append(bootstrapServer, that.bootstrapServer)
+                .append(apiKey, that.apiKey)
+                .append(apiSecret, that.apiSecret)
+                .append(acks, that.acks)
+                .append(topic, that.topic)
+                .append(key, that.key)
+                .append(type, that.type)
                 .append(bootstrapServer, that.bootstrapServer)
                 .append(apiKey, that.apiKey)
                 .append(apiSecret, that.apiSecret)

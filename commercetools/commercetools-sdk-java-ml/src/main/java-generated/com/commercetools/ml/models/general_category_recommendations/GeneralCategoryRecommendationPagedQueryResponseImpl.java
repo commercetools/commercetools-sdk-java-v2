@@ -116,6 +116,10 @@ public class GeneralCategoryRecommendationPagedQueryResponseImpl
                 .append(total, that.total)
                 .append(offset, that.offset)
                 .append(results, that.results)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(results, that.results)
                 .isEquals();
     }
 

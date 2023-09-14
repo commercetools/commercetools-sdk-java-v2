@@ -76,6 +76,18 @@ public interface OrderMessage extends Message {
             return com.commercetools.api.models.message.OrderCreatedMessage
                     .deepCopy((com.commercetools.api.models.message.OrderCreatedMessage) template);
         }
+        if (template instanceof com.commercetools.api.models.message.OrderCustomFieldAddedMessage) {
+            return com.commercetools.api.models.message.OrderCustomFieldAddedMessage
+                    .deepCopy((com.commercetools.api.models.message.OrderCustomFieldAddedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.OrderCustomFieldChangedMessage) {
+            return com.commercetools.api.models.message.OrderCustomFieldChangedMessage
+                    .deepCopy((com.commercetools.api.models.message.OrderCustomFieldChangedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.OrderCustomFieldRemovedMessage) {
+            return com.commercetools.api.models.message.OrderCustomFieldRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.OrderCustomFieldRemovedMessage) template);
+        }
         if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemAddedMessage) {
             return com.commercetools.api.models.message.OrderCustomLineItemAddedMessage
                     .deepCopy((com.commercetools.api.models.message.OrderCustomLineItemAddedMessage) template);
@@ -91,6 +103,14 @@ public interface OrderMessage extends Message {
         if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemRemovedMessage) {
             return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessage
                     .deepCopy((com.commercetools.api.models.message.OrderCustomLineItemRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.OrderCustomTypeRemovedMessage) {
+            return com.commercetools.api.models.message.OrderCustomTypeRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.OrderCustomTypeRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.OrderCustomTypeSetMessage) {
+            return com.commercetools.api.models.message.OrderCustomTypeSetMessage
+                    .deepCopy((com.commercetools.api.models.message.OrderCustomTypeSetMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.OrderCustomerEmailSetMessage) {
             return com.commercetools.api.models.message.OrderCustomerEmailSetMessage

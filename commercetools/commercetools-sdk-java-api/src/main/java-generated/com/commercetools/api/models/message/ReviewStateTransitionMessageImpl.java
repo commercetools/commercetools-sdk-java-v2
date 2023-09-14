@@ -327,6 +327,23 @@ public class ReviewStateTransitionMessageImpl implements ReviewStateTransitionMe
                 .append(newIncludedInStatistics, that.newIncludedInStatistics)
                 .append(target, that.target)
                 .append(force, that.force)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(oldState, that.oldState)
+                .append(newState, that.newState)
+                .append(oldIncludedInStatistics, that.oldIncludedInStatistics)
+                .append(newIncludedInStatistics, that.newIncludedInStatistics)
+                .append(target, that.target)
+                .append(force, that.force)
                 .isEquals();
     }
 

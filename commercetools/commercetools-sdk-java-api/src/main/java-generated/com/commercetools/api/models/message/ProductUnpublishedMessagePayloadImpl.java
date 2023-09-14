@@ -47,7 +47,7 @@ public class ProductUnpublishedMessagePayloadImpl implements ProductUnpublishedM
 
         ProductUnpublishedMessagePayloadImpl that = (ProductUnpublishedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override

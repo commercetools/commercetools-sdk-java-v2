@@ -90,6 +90,9 @@ public class PaymentChangeTransactionInteractionIdActionImpl
         return new EqualsBuilder().append(action, that.action)
                 .append(transactionId, that.transactionId)
                 .append(interactionId, that.interactionId)
+                .append(action, that.action)
+                .append(transactionId, that.transactionId)
+                .append(interactionId, that.interactionId)
                 .isEquals();
     }
 

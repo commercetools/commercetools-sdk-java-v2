@@ -71,7 +71,11 @@ public class CartDiscountChangeNameActionImpl implements CartDiscountChangeNameA
 
         CartDiscountChangeNameActionImpl that = (CartDiscountChangeNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(name, that.name)
+                .append(action, that.action)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override

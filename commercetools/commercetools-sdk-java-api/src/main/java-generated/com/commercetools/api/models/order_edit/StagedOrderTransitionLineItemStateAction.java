@@ -18,14 +18,13 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderTransitionLineItemStateAction
+ *  <p>Produces the Line Item State Transition Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderTransitionLineItemStateAction stagedOrderTransitionLineItemStateAction = StagedOrderTransitionLineItemStateAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .quantity(0.3)
  *             .fromState(fromStateBuilder -> fromStateBuilder)
  *             .toState(toStateBuilder -> toStateBuilder)
@@ -43,15 +42,23 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     String TRANSITION_LINE_ITEM_STATE = "transitionLineItemState";
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
-    @NotNull
+
     @JsonProperty("lineItemId")
     public String getLineItemId();
 
     /**
-     *
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @JsonProperty("lineItemKey")
+    public String getLineItemKey();
+
+    /**
+     *  <p>Number of Line Items that should transition State.</p>
      * @return quantity
      */
     @NotNull
@@ -59,7 +66,7 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     public Long getQuantity();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition from.</p>
      * @return fromState
      */
     @NotNull
@@ -68,7 +75,7 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     public StateResourceIdentifier getFromState();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition to.</p>
      * @return toState
      */
     @NotNull
@@ -77,7 +84,7 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     public StateResourceIdentifier getToState();
 
     /**
-     *
+     *  <p>Date and time (UTC) to perform the State transition.</p>
      * @return actualTransitionDate
      */
 
@@ -85,35 +92,42 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     public ZonedDateTime getActualTransitionDate();
 
     /**
-     * set lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     * set quantity
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     */
+
+    public void setLineItemKey(final String lineItemKey);
+
+    /**
+     *  <p>Number of Line Items that should transition State.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition from.</p>
      * @param fromState value to be set
      */
 
     public void setFromState(final StateResourceIdentifier fromState);
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition to.</p>
      * @param toState value to be set
      */
 
     public void setToState(final StateResourceIdentifier toState);
 
     /**
-     * set actualTransitionDate
+     *  <p>Date and time (UTC) to perform the State transition.</p>
      * @param actualTransitionDate value to be set
      */
 
@@ -135,6 +149,7 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     public static StagedOrderTransitionLineItemStateAction of(final StagedOrderTransitionLineItemStateAction template) {
         StagedOrderTransitionLineItemStateActionImpl instance = new StagedOrderTransitionLineItemStateActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setFromState(template.getFromState());
         instance.setToState(template.getToState());
@@ -155,6 +170,7 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
         }
         StagedOrderTransitionLineItemStateActionImpl instance = new StagedOrderTransitionLineItemStateActionImpl();
         instance.setLineItemId(template.getLineItemId());
+        instance.setLineItemKey(template.getLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setFromState(
             com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getFromState()));

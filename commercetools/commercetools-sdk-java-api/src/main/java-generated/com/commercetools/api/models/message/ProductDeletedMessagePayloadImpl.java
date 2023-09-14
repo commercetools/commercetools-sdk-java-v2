@@ -93,6 +93,9 @@ public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePa
         return new EqualsBuilder().append(type, that.type)
                 .append(removedImageUrls, that.removedImageUrls)
                 .append(currentProjection, that.currentProjection)
+                .append(type, that.type)
+                .append(removedImageUrls, that.removedImageUrls)
+                .append(currentProjection, that.currentProjection)
                 .isEquals();
     }
 

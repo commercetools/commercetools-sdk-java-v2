@@ -45,7 +45,7 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
     }
 
     /**
-     *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     *  <p>Total net price of the Cart or Order.</p>
      */
 
     public com.commercetools.api.models.common.Money getTotalNet() {
@@ -53,7 +53,7 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
     }
 
     /**
-     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     *  <p>Total gross price of the Cart or Order.</p>
      */
 
     public com.commercetools.api.models.common.Money getTotalGross() {
@@ -96,6 +96,9 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
         TaxedPriceDraftImpl that = (TaxedPriceDraftImpl) o;
 
         return new EqualsBuilder().append(totalNet, that.totalNet)
+                .append(totalGross, that.totalGross)
+                .append(taxPortions, that.taxPortions)
+                .append(totalNet, that.totalNet)
                 .append(totalGross, that.totalGross)
                 .append(taxPortions, that.taxPortions)
                 .isEquals();

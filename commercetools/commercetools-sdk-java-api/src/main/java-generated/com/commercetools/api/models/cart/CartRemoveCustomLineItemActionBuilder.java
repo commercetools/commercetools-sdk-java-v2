@@ -3,6 +3,8 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartRemoveCustomLineItemAction cartRemoveCustomLineItemAction = CartRemoveCustomLineItemAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -21,26 +22,52 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemoveCustomLineItemAction> {
 
+    @Nullable
     private String customLineItemId;
 
+    @Nullable
+    private String customLineItemKey;
+
     /**
-     *  <p><code>id</code> of the Custom Line Item to remove.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public CartRemoveCustomLineItemActionBuilder customLineItemId(final String customLineItemId) {
+    public CartRemoveCustomLineItemActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     *  <p><code>id</code> of the Custom Line Item to remove.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartRemoveCustomLineItemActionBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -48,9 +75,7 @@ public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemove
      * @return CartRemoveCustomLineItemAction
      */
     public CartRemoveCustomLineItemAction build() {
-        Objects.requireNonNull(customLineItemId,
-            CartRemoveCustomLineItemAction.class + ": customLineItemId is missing");
-        return new CartRemoveCustomLineItemActionImpl(customLineItemId);
+        return new CartRemoveCustomLineItemActionImpl(customLineItemId, customLineItemKey);
     }
 
     /**
@@ -58,7 +83,7 @@ public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemove
      * @return CartRemoveCustomLineItemAction
      */
     public CartRemoveCustomLineItemAction buildUnchecked() {
-        return new CartRemoveCustomLineItemActionImpl(customLineItemId);
+        return new CartRemoveCustomLineItemActionImpl(customLineItemId, customLineItemKey);
     }
 
     /**
@@ -77,6 +102,7 @@ public class CartRemoveCustomLineItemActionBuilder implements Builder<CartRemove
     public static CartRemoveCustomLineItemActionBuilder of(final CartRemoveCustomLineItemAction template) {
         CartRemoveCustomLineItemActionBuilder builder = new CartRemoveCustomLineItemActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         return builder;
     }
 

@@ -38,7 +38,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
     String REMOVE_PAYMENT = "removePayment";
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to remove from the PaymentInfo.</p>
      * @return payment
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface OrderRemovePaymentAction extends OrderUpdateAction {
     public PaymentResourceIdentifier getPayment();
 
     /**
-     *  <p>ResourceIdentifier of a Payment.</p>
+     *  <p>Payment to remove from the PaymentInfo.</p>
      * @param payment value to be set
      */
 

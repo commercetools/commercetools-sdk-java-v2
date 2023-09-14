@@ -89,6 +89,9 @@ public class PaymentLabelImpl implements PaymentLabel, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(key, that.key)
                 .append(amountPlanned, that.amountPlanned)
+                .append(type, that.type)
+                .append(key, that.key)
+                .append(amountPlanned, that.amountPlanned)
                 .isEquals();
     }
 

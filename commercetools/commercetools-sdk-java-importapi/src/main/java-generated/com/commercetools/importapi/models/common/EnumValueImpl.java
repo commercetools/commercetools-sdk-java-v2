@@ -73,7 +73,11 @@ public class EnumValueImpl implements EnumValue, ModelBase {
 
         EnumValueImpl that = (EnumValueImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(label, that.label).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(label, that.label)
+                .append(key, that.key)
+                .append(label, that.label)
+                .isEquals();
     }
 
     @Override

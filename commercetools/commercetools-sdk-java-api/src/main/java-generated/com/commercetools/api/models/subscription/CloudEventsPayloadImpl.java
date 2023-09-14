@@ -208,6 +208,16 @@ public class CloudEventsPayloadImpl implements CloudEventsPayload, ModelBase {
                 .append(sequencetype, that.sequencetype)
                 .append(dataref, that.dataref)
                 .append(data, that.data)
+                .append(specversion, that.specversion)
+                .append(id, that.id)
+                .append(type, that.type)
+                .append(source, that.source)
+                .append(subject, that.subject)
+                .append(time, that.time)
+                .append(sequence, that.sequence)
+                .append(sequencetype, that.sequencetype)
+                .append(dataref, that.dataref)
+                .append(data, that.data)
                 .isEquals();
     }
 

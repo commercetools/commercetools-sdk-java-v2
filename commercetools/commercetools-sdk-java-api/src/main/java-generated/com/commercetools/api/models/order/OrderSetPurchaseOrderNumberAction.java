@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderSetPurchaseOrderNumberAction
+ *  <p>Produces the PurchaseOrderNumberSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
     String SET_PURCHASE_ORDER_NUMBER = "setPurchaseOrderNumber";
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return purchaseOrderNumber
      */
 
@@ -42,7 +42,7 @@ public interface OrderSetPurchaseOrderNumberAction extends OrderUpdateAction {
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param purchaseOrderNumber value to be set
      */
 

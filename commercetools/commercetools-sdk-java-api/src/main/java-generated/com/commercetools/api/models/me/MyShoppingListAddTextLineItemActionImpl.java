@@ -24,6 +24,8 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    private String key;
+
     private com.commercetools.api.models.common.LocalizedString description;
 
     private Long quantity;
@@ -38,11 +40,13 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     @JsonCreator
     MyShoppingListAddTextLineItemActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
+            @JsonProperty("key") final String key,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.name = name;
+        this.key = key;
         this.description = description;
         this.quantity = quantity;
         this.addedAt = addedAt;
@@ -71,6 +75,14 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
+    }
+
+    /**
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -109,6 +121,10 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
         this.name = name;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setDescription(final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
     }
@@ -137,6 +153,14 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
 
         return new EqualsBuilder().append(action, that.action)
                 .append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(action, that.action)
+                .append(name, that.name)
+                .append(key, that.key)
                 .append(description, that.description)
                 .append(quantity, that.quantity)
                 .append(addedAt, that.addedAt)
@@ -148,6 +172,7 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(name)
+                .append(key)
                 .append(description)
                 .append(quantity)
                 .append(addedAt)

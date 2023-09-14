@@ -60,7 +60,9 @@ public class SimilarProductSearchRequestMetaImpl implements SimilarProductSearch
 
         SimilarProductSearchRequestMetaImpl that = (SimilarProductSearchRequestMetaImpl) o;
 
-        return new EqualsBuilder().append(similarityMeasures, that.similarityMeasures).isEquals();
+        return new EqualsBuilder().append(similarityMeasures, that.similarityMeasures)
+                .append(similarityMeasures, that.similarityMeasures)
+                .isEquals();
     }
 
     @Override

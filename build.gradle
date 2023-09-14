@@ -349,7 +349,8 @@ tasks.register("writeVersionToExamples") {
         ant.replaceregexp(match: 'commercetools: \"[^\\s]+\"', replace: "commercetools: \"${globalVersion}\"", flags:'g', byline:true) {
             fileset(dir: projectDir) {
                 include(name: 'examples/spring/build.gradle')
-                include(name: 'examples/springmvc/build.gradle')
+                include(name: 'examples/spring-newrelic/build.gradle')
+                include(name: 'examples/spring-otel/build.gradle')
             }
         }
         ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {

@@ -1,6 +1,13 @@
 **Api changes**
 
 <details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `CustomerMessagePayload`
+</details>
+
+
+<details>
 <summary>Added Type(s)</summary>
 
 - added type `BusinessUnitAddressCustomFieldAddedMessage`
@@ -25,14 +32,14 @@
 - added type `BusinessUnitCustomTypeSetMessagePayload`
 </details>
 
+**History changes**
 
 <details>
-<summary>Removed Type(s)</summary>
+<summary>Added Property(s)</summary>
 
-- :warning: removed type `CustomerMessagePayload`
+- added property `businessUnit` to type `Record`
 </details>
 
-**History changes**
 
 <details>
 <summary>Added QueryParameter(s)</summary>
@@ -40,12 +47,5 @@
 - added query parameter `businessUnit` to method `get /{projectKey}`
 - added query parameter `businessUnit` to method `get /{projectKey}/{resourceType}`
 - added query parameter `businessUnit` to method `get /{projectKey}/{resourceType}/{ID}`
-</details>
-
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `businessUnit` to type `Record`
 </details>
 

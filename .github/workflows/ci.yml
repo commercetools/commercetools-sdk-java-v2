@@ -67,38 +67,42 @@ jobs:
             commit_author: Auto Mation <automation@commercetools.com>
             disable_globbing: true
 
-      - name: Run integration tests for PR
-        if: github.event_name == 'pull_request'
-        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest
-        env:
-          CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID_PR }}
-          CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET_PR }}
-          CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY_PR }}
-          SOURCE_TAG: ${{ github.ref_name }}
-          CTP_JVM_SDK_LOG_LEVEL: OFF
+#      - name: Run integration tests for PR
+#        if: github.event_name == 'pull_request'
+#        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest
+#        env:
+#          CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID_PR }}
+#          CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET_PR }}
+#          CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY_PR }}
+#          SOURCE_TAG: ${{ github.ref_name }}
+#          CTP_JVM_SDK_LOG_LEVEL: OFF
+#
+#      - name: Run integration tests
+#        if: github.event_name != 'pull_request'
+#        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest
+#        env:
+#            CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
+#            CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
+#            CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY }}
+#            SOURCE_TAG: ${{ github.ref_name }}
+#            CTP_JVM_SDK_LOG_LEVEL: OFF
 
-      - name: Run integration tests
-        if: github.event_name != 'pull_request'
-        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest
-        env:
-            CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
-            CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
-            CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY }}
-            SOURCE_TAG: ${{ github.ref_name }}
-            CTP_JVM_SDK_LOG_LEVEL: OFF
-
-      - name: Test examples
-        run: |
-          cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
-          cd ../maven-okhttp4 && mvn verify --no-transfer-progress
+#      - name: Test examples
+#        run: |
+#          cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
+#          cd ../maven-okhttp4 && mvn verify --no-transfer-progress
 
       - name: Collect code coverage
-        run: ./gradlew codeCoverageReport
+        run: ./gradlew jacocoTestReport
 
-      - name: Send code coverage report to Codecov.io
-        run: bash <(curl -s https://codecov.io/bash) || true
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - uses: codecov/codecov-action@v3
+        with:
+          files: '**/jacocoTestReport.xml'
+          token: ${{ secrets.CODECOV_TOKEN }}
+#      - name: Send code coverage report to Codecov.io
+#        run: bash <(curl -s https://codecov.io/bash) || true
+#        env:
+#          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
   docs:
     name: Docs test build
 

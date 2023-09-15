@@ -75,7 +75,6 @@ allprojects {
 
 apply from: "$rootDir/gradle-scripts/repositories.gradle"
 apply from: "$rootDir/gradle-scripts/extensions.gradle"
-apply from: "$rootDir/gradle-scripts/jacoco.gradle"
 apply from: "$rootDir/gradle-scripts/spotless.gradle"
 
 group='com.commercetools.sdk'
@@ -85,6 +84,7 @@ subprojects { project ->
     apply from: "$rootDir/gradle-scripts/subproject-plugins.gradle"
     apply from: "$rootDir/gradle-scripts/subproject-dependencies.gradle"
     apply from: "$rootDir/gradle-scripts/subproject-config.gradle"
+    apply from: "$rootDir/gradle-scripts/jacoco.gradle"
 
     group='com.commercetools.sdk'
 

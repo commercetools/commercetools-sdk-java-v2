@@ -1,20 +1,8 @@
-allprojects {
-    apply plugin: 'jacoco'
-}
-
-
-tasks.register('codeCoverageReport', JacocoReport) {
-    dependsOn subprojects*.test
-    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
-
-    subprojects.each {
-        sourceSets it.sourceSets.main
-    }
-
+jacocoTestReport {
+    dependsOn test
     reports {
         xml.required = true
-        xml.outputLocation = file("${buildDir}/reports/jacoco/report.xml")
-        html.required = false
         csv.required = false
+        html.required = false
     }
 }

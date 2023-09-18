@@ -267,6 +267,26 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageBuilder customerGroupCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessageBuilder customerGroupCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessageBuilder customerGroupCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessageBuilder customerGroupCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessageBuilder customerGroupCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerGroupSetMessageBuilder customerGroupSetBuilder() {
         return com.commercetools.api.models.message.CustomerGroupSetMessageBuilder.of();
     }

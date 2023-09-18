@@ -20,6 +20,11 @@
 - added type `BusinessUnitCustomFieldRemovedMessage`
 - added type `BusinessUnitCustomTypeRemovedMessage`
 - added type `BusinessUnitCustomTypeSetMessage`
+- added type `CustomerGroupCustomFieldAddedMessage`
+- added type `CustomerGroupCustomFieldChangedMessage`
+- added type `CustomerGroupCustomFieldRemovedMessage`
+- added type `CustomerGroupCustomTypeRemovedMessage`
+- added type `CustomerGroupCustomTypeSetMessage`
 - added type `BusinessUnitAddressCustomFieldAddedMessagePayload`
 - added type `BusinessUnitAddressCustomFieldChangedMessagePayload`
 - added type `BusinessUnitAddressCustomFieldRemovedMessagePayload`
@@ -30,6 +35,11 @@
 - added type `BusinessUnitCustomFieldRemovedMessagePayload`
 - added type `BusinessUnitCustomTypeRemovedMessagePayload`
 - added type `BusinessUnitCustomTypeSetMessagePayload`
+- added type `CustomerGroupCustomFieldAddedMessagePayload`
+- added type `CustomerGroupCustomFieldChangedMessagePayload`
+- added type `CustomerGroupCustomFieldRemovedMessagePayload`
+- added type `CustomerGroupCustomTypeRemovedMessagePayload`
+- added type `CustomerGroupCustomTypeSetMessagePayload`
 </details>
 
 **History changes**

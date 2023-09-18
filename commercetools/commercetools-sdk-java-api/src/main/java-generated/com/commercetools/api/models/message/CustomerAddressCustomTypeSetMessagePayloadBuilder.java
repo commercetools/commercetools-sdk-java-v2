@@ -67,8 +67,7 @@ public class CustomerAddressCustomTypeSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      * @return Builder
      */
@@ -88,8 +87,7 @@ public class CustomerAddressCustomTypeSetMessagePayloadBuilder
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 

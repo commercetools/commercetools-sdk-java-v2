@@ -104,6 +104,11 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailChangedMessageImpl.class, name = CustomerEmailChangedMessage.CUSTOMER_EMAIL_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailVerifiedMessageImpl.class, name = CustomerEmailVerifiedMessage.CUSTOMER_EMAIL_VERIFIED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerFirstNameSetMessageImpl.class, name = CustomerFirstNameSetMessage.CUSTOMER_FIRST_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageImpl.class, name = CustomerGroupCustomFieldAddedMessage.CUSTOMER_GROUP_CUSTOM_FIELD_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessageImpl.class, name = CustomerGroupCustomFieldChangedMessage.CUSTOMER_GROUP_CUSTOM_FIELD_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessageImpl.class, name = CustomerGroupCustomFieldRemovedMessage.CUSTOMER_GROUP_CUSTOM_FIELD_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessageImpl.class, name = CustomerGroupCustomTypeRemovedMessage.CUSTOMER_GROUP_CUSTOM_TYPE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessageImpl.class, name = CustomerGroupCustomTypeSetMessage.CUSTOMER_GROUP_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupSetMessageImpl.class, name = CustomerGroupSetMessage.CUSTOMER_GROUP_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerLastNameSetMessageImpl.class, name = CustomerLastNameSetMessage.CUSTOMER_LAST_NAME_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerPasswordUpdatedMessageImpl.class, name = CustomerPasswordUpdatedMessage.CUSTOMER_PASSWORD_UPDATED),
@@ -659,6 +664,26 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.CustomerFirstNameSetMessage) {
             return com.commercetools.api.models.message.CustomerFirstNameSetMessage
                     .deepCopy((com.commercetools.api.models.message.CustomerFirstNameSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessage) {
+            return com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessage) {
+            return com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessage) {
+            return com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessage) {
+            return com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessage) {
+            return com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.CustomerGroupSetMessage) {
             return com.commercetools.api.models.message.CustomerGroupSetMessage
@@ -1526,6 +1551,46 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder customerFirstNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageBuilder customerGroupCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessageBuilder customerGroupCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessageBuilder customerGroupCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessageBuilder customerGroupCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessageBuilder customerGroupCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessageBuilder.of();
     }
 
     /**

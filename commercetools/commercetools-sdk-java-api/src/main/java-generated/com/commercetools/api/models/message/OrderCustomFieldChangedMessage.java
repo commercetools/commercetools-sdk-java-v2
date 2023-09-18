@@ -43,7 +43,7 @@ public interface OrderCustomFieldChangedMessage extends OrderMessage {
     String ORDER_CUSTOM_FIELD_CHANGED = "OrderCustomFieldChanged";
 
     /**
-     *  <p>Name of the Custom Field that has been changed.</p>
+     *  <p>Name of the Custom Field that changed.</p>
      * @return name
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface OrderCustomFieldChangedMessage extends OrderMessage {
     public Object getPreviousValue();
 
     /**
-     *  <p>Name of the Custom Field that has been changed.</p>
+     *  <p>Name of the Custom Field that changed.</p>
      * @param name value to be set
      */
 

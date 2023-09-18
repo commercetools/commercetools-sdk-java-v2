@@ -170,7 +170,7 @@ public class CustomerAddressCustomFieldRemovedMessageImpl
     }
 
     /**
-     *  <p>Name of the Custom Field that has been removed.</p>
+     *  <p>Name of the Custom Field that was removed.</p>
      */
 
     public String getName() {

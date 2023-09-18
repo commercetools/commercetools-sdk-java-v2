@@ -42,7 +42,6 @@ public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPric
 
     /**
      *  <p>Price of the Line Item.</p>
-     *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
      */
 
     public com.commercetools.api.models.common.Money getPrice() {

@@ -26,7 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     Message message = Message.associateRoleBuyerAssignableChangedBuilder()
+ *     Message message = Message.approvalFlowApprovedBuilder()
  *             id("{id}")
  *             version(0.3)
  *             createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -34,12 +34,25 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             sequenceNumber(0.3)
  *             resource(resourceBuilder -> resourceBuilder)
  *             resourceVersion(0.3)
- *             buyerAssignable(true)
+ *             associate(associateBuilder -> associateBuilder)
+ *             order(orderBuilder -> orderBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowApprovedMessageImpl.class, name = ApprovalFlowApprovedMessage.APPROVAL_FLOW_APPROVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowCompletedMessageImpl.class, name = ApprovalFlowCompletedMessage.APPROVAL_FLOW_COMPLETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowCreatedMessageImpl.class, name = ApprovalFlowCreatedMessage.APPROVAL_FLOW_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowRejectedMessageImpl.class, name = ApprovalFlowRejectedMessage.APPROVAL_FLOW_REJECTED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleApproversSetMessageImpl.class, name = ApprovalRuleApproversSetMessage.APPROVAL_RULE_APPROVERS_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleCreatedMessageImpl.class, name = ApprovalRuleCreatedMessage.APPROVAL_RULE_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessageImpl.class, name = ApprovalRuleDescriptionSetMessage.APPROVAL_RULE_DESCRIPTION_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleKeySetMessageImpl.class, name = ApprovalRuleKeySetMessage.APPROVAL_RULE_KEY_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleNameSetMessageImpl.class, name = ApprovalRuleNameSetMessage.APPROVAL_RULE_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRulePredicateSetMessageImpl.class, name = ApprovalRulePredicateSetMessage.APPROVAL_RULE_PREDICATE_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleRequestersSetMessageImpl.class, name = ApprovalRuleRequestersSetMessage.APPROVAL_RULE_REQUESTERS_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleStatusSetMessageImpl.class, name = ApprovalRuleStatusSetMessage.APPROVAL_RULE_STATUS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessageImpl.class, name = AssociateRoleBuyerAssignableChangedMessage.ASSOCIATE_ROLE_BUYER_ASSIGNABLE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleCreatedMessageImpl.class, name = AssociateRoleCreatedMessage.ASSOCIATE_ROLE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleDeletedMessageImpl.class, name = AssociateRoleDeletedMessage.ASSOCIATE_ROLE_DELETED),
@@ -412,6 +425,54 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public static Message deepCopy(@Nullable final Message template) {
         if (template == null) {
             return null;
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalFlowApprovedMessage) {
+            return com.commercetools.api.models.message.ApprovalFlowApprovedMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowApprovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalFlowCompletedMessage) {
+            return com.commercetools.api.models.message.ApprovalFlowCompletedMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowCompletedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalFlowCreatedMessage) {
+            return com.commercetools.api.models.message.ApprovalFlowCreatedMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowCreatedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalFlowRejectedMessage) {
+            return com.commercetools.api.models.message.ApprovalFlowRejectedMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowRejectedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleApproversSetMessage) {
+            return com.commercetools.api.models.message.ApprovalRuleApproversSetMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleApproversSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleCreatedMessage) {
+            return com.commercetools.api.models.message.ApprovalRuleCreatedMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleCreatedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessage) {
+            return com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleKeySetMessage) {
+            return com.commercetools.api.models.message.ApprovalRuleKeySetMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleKeySetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleNameSetMessage) {
+            return com.commercetools.api.models.message.ApprovalRuleNameSetMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleNameSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRulePredicateSetMessage) {
+            return com.commercetools.api.models.message.ApprovalRulePredicateSetMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRulePredicateSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleRequestersSetMessage) {
+            return com.commercetools.api.models.message.ApprovalRuleRequestersSetMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleRequestersSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleStatusSetMessage) {
+            return com.commercetools.api.models.message.ApprovalRuleStatusSetMessage
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleStatusSetMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessage) {
             return com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessage.deepCopy(
@@ -1039,6 +1100,102 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         return instance;
+    }
+
+    /**
+     * builder for approvalFlowApproved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalFlowApprovedMessageBuilder approvalFlowApprovedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowApprovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for approvalFlowCompleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalFlowCompletedMessageBuilder approvalFlowCompletedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowCompletedMessageBuilder.of();
+    }
+
+    /**
+     * builder for approvalFlowCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalFlowCreatedMessageBuilder approvalFlowCreatedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for approvalFlowRejected subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalFlowRejectedMessageBuilder approvalFlowRejectedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowRejectedMessageBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleApproversSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleApproversSetMessageBuilder approvalRuleApproversSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleApproversSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleCreatedMessageBuilder approvalRuleCreatedBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleDescriptionSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessageBuilder approvalRuleDescriptionSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleKeySetMessageBuilder approvalRuleKeySetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleKeySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleNameSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleNameSetMessageBuilder approvalRuleNameSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleNameSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for approvalRulePredicateSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRulePredicateSetMessageBuilder approvalRulePredicateSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRulePredicateSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleRequestersSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleRequestersSetMessageBuilder approvalRuleRequestersSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleRequestersSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleStatusSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleStatusSetMessageBuilder approvalRuleStatusSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleStatusSetMessageBuilder.of();
     }
 
     /**

@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Permissions grant granular access to Business Units, Carts, Orders, Quotes, and QuoteRequests.</p>
+ *  <p>Permissions grant granular access to Approval Rules, Approval Flows, Business Units, Carts, Orders, Quotes, and Quote Requests.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface Permission extends JsonEnum {
@@ -196,6 +196,21 @@ public interface Permission extends JsonEnum {
 
     */
     Permission CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS = PermissionEnum.CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS;
+    /**
+    	<p>An Associate can create Approval Rules.</p>
+
+    */
+    Permission CREATE_APPROVAL_RULES = PermissionEnum.CREATE_APPROVAL_RULES;
+    /**
+    	<p>An Associate can update Approval Rules.</p>
+
+    */
+    Permission UPDATE_APPROVAL_RULES = PermissionEnum.UPDATE_APPROVAL_RULES;
+    /**
+    	<p>An Associate can update Approval Flows.</p>
+
+    */
+    Permission UPDATE_APPROVAL_FLOWS = PermissionEnum.UPDATE_APPROVAL_FLOWS;
 
     /**
      * possible values of Permission
@@ -379,7 +394,22 @@ public interface Permission extends JsonEnum {
         /**
          * CreateQuoteRequestsFromOthersCarts
          */
-        CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS("CreateQuoteRequestsFromOthersCarts");
+        CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS("CreateQuoteRequestsFromOthersCarts"),
+
+        /**
+         * CreateApprovalRules
+         */
+        CREATE_APPROVAL_RULES("CreateApprovalRules"),
+
+        /**
+         * UpdateApprovalRules
+         */
+        UPDATE_APPROVAL_RULES("UpdateApprovalRules"),
+
+        /**
+         * UpdateApprovalFlows
+         */
+        UPDATE_APPROVAL_FLOWS("UpdateApprovalFlows");
         private final String jsonName;
 
         private PermissionEnum(final String jsonName) {

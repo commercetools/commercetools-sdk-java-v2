@@ -11,6 +11,54 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessagePayloadBuilder {
 
+    public com.commercetools.api.models.message.ApprovalFlowApprovedMessagePayloadBuilder approvalFlowApprovedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowApprovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalFlowCompletedMessagePayloadBuilder approvalFlowCompletedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowCompletedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalFlowCreatedMessagePayloadBuilder approvalFlowCreatedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalFlowRejectedMessagePayloadBuilder approvalFlowRejectedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowRejectedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleApproversSetMessagePayloadBuilder approvalRuleApproversSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleApproversSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleCreatedMessagePayloadBuilder approvalRuleCreatedBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessagePayloadBuilder approvalRuleDescriptionSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleKeySetMessagePayloadBuilder approvalRuleKeySetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleKeySetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleNameSetMessagePayloadBuilder approvalRuleNameSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleNameSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRulePredicateSetMessagePayloadBuilder approvalRulePredicateSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRulePredicateSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleRequestersSetMessagePayloadBuilder approvalRuleRequestersSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleRequestersSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleStatusSetMessagePayloadBuilder approvalRuleStatusSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleStatusSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessagePayloadBuilder associateRoleBuyerAssignableChangedBuilder() {
         return com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessagePayloadBuilder.of();
     }

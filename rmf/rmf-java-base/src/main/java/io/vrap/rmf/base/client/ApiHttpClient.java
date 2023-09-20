@@ -42,10 +42,6 @@ public interface ApiHttpClient extends AutoCloseable, VrapHttpClient, Completabl
         return execute(request).thenApply(mapper);
     }
 
-    default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ClientRequestCommand<O> method) {
-        return method.execute(this);
-    }
-
     default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final HttpRequestCommand<O> method) {
         return execute(method.createHttpRequest(), method.resultType());
     }

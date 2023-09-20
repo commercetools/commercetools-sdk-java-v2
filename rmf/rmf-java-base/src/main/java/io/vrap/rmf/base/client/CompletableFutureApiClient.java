@@ -23,8 +23,6 @@ public interface CompletableFutureApiClient extends AsyncApiClient<CompletableFu
     <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
             final Function<ApiHttpResponse<byte[]>, ApiHttpResponse<O>> mapper);
 
-    <O> CompletableFuture<ApiHttpResponse<O>> execute(final ClientRequestCommand<O> method);
-
     @Override
     <O> CompletableFuture<ApiHttpResponse<O>> execute(final HttpRequestCommand<O> method);
 

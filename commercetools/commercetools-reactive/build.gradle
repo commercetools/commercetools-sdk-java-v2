@@ -1,0 +1,13 @@
+
+dependencies {
+    api project(":rmf:rmf-java-base")
+
+    implementation 'io.projectreactor:reactor-core:3.5.8'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+

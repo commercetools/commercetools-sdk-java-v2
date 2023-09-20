@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 import com.commercetools.api.client.ErrorableTrait;
+import com.fasterxml.jackson.core.type.TypeReference;
 
 import io.vrap.rmf.base.client.*;
 
@@ -31,6 +32,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyGraphqlQuery<T>
         extends BodyApiMethod<ByProjectKeyGraphqlQuery<T>, GraphQLResponse<T>, GraphQLRequest<T>>
         implements ErrorableTrait<ByProjectKeyGraphqlQuery<T>> {
+
+    @Override
+    public TypeReference<GraphQLResponse<T>> resultType() {
+        return new TypeReference<GraphQLResponse<T>>() {
+        };
+    }
 
     private String projectKey;
 

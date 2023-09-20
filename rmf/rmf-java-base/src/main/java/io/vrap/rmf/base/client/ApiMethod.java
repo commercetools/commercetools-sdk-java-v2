@@ -21,8 +21,8 @@ import com.fasterxml.jackson.databind.JavaType;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extends Base
-        implements RequestCommand<TResult>, ClientRequestCommand<TResult>, CreateHttpRequestCommand {
+public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extends Base implements
+        RequestCommand<TResult>, HttpRequestCommand<TResult>, ClientRequestCommand<TResult>, CreateHttpRequestCommand {
 
     public static class ParamEntry<K, V> extends Base implements Map.Entry<K, V> {
         protected final K key;
@@ -86,6 +86,8 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
     private ApiHttpHeaders headers = new ApiHttpHeaders();
     private List<ParamEntry<String, String>> queryParams = new ArrayList<>();
     private final ApiHttpClient apiHttpClient;
+
+    public abstract TypeReference<TResult> resultType();
 
     protected ApiHttpClient apiHttpClient() {
         return apiHttpClient;
@@ -266,7 +268,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
     }
 
     public CompletableFuture<ApiHttpResponse<TResult>> execute() {
-        return execute(apiHttpClient());
+        return execute(apiHttpClient(), resultType());
     }
 
     public abstract CompletableFuture<ApiHttpResponse<TResult>> execute(final ApiHttpClient client);

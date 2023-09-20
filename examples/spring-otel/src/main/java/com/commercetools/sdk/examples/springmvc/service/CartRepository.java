@@ -8,7 +8,6 @@ import com.commercetools.api.client.ProjectScopedApiRoot;
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.cart.CartBuilder;
 
-import com.newrelic.api.agent.Trace;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
 import jakarta.servlet.http.HttpSession;
@@ -30,7 +29,6 @@ public class CartRepository {
         return CartBuilder.of().lineItems(Collections.emptyList()).buildUnchecked();
     }
 
-    @Trace(async = true)
     public CompletableFuture<Cart> meCart() {
         if (session.getAttribute(SESSION_CART) == null) {
             return CompletableFuture.completedFuture(emptyCart());

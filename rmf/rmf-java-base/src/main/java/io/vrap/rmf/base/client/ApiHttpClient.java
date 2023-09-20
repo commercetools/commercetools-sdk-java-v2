@@ -31,7 +31,6 @@ public interface ApiHttpClient extends AutoCloseable, VrapHttpClient, Completabl
         return execute(request, apiHttpResponse -> getSerializerService().convertResponse(apiHttpResponse, outputType));
     }
 
-    @Override
     default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
             final JavaType outputType) {
         return execute(request, apiHttpResponse -> getSerializerService().convertResponse(apiHttpResponse, outputType));
@@ -40,6 +39,19 @@ public interface ApiHttpClient extends AutoCloseable, VrapHttpClient, Completabl
     default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request,
             final Function<ApiHttpResponse<byte[]>, ApiHttpResponse<O>> mapper) {
         return execute(request).thenApply(mapper);
+    }
+
+    /**
+     * @deprecated Will be removed with next major version. Methods will implement
+     * HttpRequestCommand so {@link #execute(HttpRequestCommand)} will replace this method.
+     * Custom implementations may need to implement HttpRequestCommand
+     * @param method command to be executed
+     * @return future of the response
+     * @param <O> response type
+     */
+    @Deprecated
+    default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ClientRequestCommand<O> method) {
+        return method.execute(this);
     }
 
     default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final HttpRequestCommand<O> method) {

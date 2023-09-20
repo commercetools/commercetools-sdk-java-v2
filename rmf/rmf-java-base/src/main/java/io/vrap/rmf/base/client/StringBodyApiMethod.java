@@ -4,7 +4,7 @@ package io.vrap.rmf.base.client;
 import java.util.List;
 
 public abstract class StringBodyApiMethod<T extends StringBodyApiMethod<T, TResult>, TResult>
-        extends TypeBodyApiMethod<T, TResult, String> {
+        extends BodyApiMethod<T, TResult, String> {
 
     public StringBodyApiMethod(ApiHttpClient apiHttpClient) {
         super(apiHttpClient);

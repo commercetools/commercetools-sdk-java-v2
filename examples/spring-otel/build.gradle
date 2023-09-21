@@ -52,6 +52,7 @@ tasks.register('downloadOtel', Download) {
 if (project.file("otel/opentelemetry-javaagent.jar").exists()) {
     tasks.withType(JavaExec)
             {
-                jvmArgs "-javaagent:otel/opentelemetry-javaagent.jar", "-Dotel.resource.attributes=service.name=spring-otel"
+                jvmArgs "-javaagent:otel/opentelemetry-javaagent.jar",
+                        "-Dotel.resource.attributes=service.name=spring-otel,process.command_args=bootRun" // sets the service name and fixes issues with overlength command args when running from an IDE
             }
 }

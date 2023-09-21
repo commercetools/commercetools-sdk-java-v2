@@ -32,14 +32,7 @@ public class CtpClientBeanService {
     }
 
     @Bean
-    public ApiHttpClient client() {
-        return ApiRootBuilder.of()
-                .defaultClient(credentials())
-                .buildClient();
-    }
-
-    @Bean
-    public ProjectScopedApiRoot apiRoot(ApiHttpClient client) {
+    public ProjectScopedApiRoot apiRoot() {
         return ApiRootBuilder.of()
                 .defaultClient(credentials())
                 .build(projectKey);

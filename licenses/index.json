@@ -732,6 +732,32 @@
             ]
         },
         {
+            "moduleName": "io.opentelemetry:opentelemetry-api",
+            "moduleVersion": "1.28.0",
+            "moduleUrls": [
+                "https://github.com/open-telemetry/opentelemetry-java"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.opentelemetry:opentelemetry-context",
+            "moduleVersion": "1.28.0",
+            "moduleUrls": [
+                "https://github.com/open-telemetry/opentelemetry-java"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "io.projectreactor.netty:reactor-netty-core",
             "moduleVersion": "1.1.11",
             "moduleUrls": [

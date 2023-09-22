@@ -34,8 +34,9 @@ public class OrderAddParcelToDeliveryActionTest {
                 new Object[] { OrderAddParcelToDeliveryAction.builder()
                         .trackingData(new com.commercetools.api.models.order.TrackingDataImpl()) },
                 new Object[] { OrderAddParcelToDeliveryAction.builder()
-                        .items(
-                            Collections.singletonList(new com.commercetools.api.models.order.DeliveryItemImpl())) } };
+                        .items(Collections.singletonList(new com.commercetools.api.models.order.DeliveryItemImpl())) },
+                new Object[] { OrderAddParcelToDeliveryAction.builder()
+                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 
     @Test
@@ -81,5 +82,13 @@ public class OrderAddParcelToDeliveryActionTest {
         value.setItems(Collections.singletonList(new com.commercetools.api.models.order.DeliveryItemImpl()));
         Assertions.assertThat(value.getItems())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.order.DeliveryItemImpl()));
+    }
+
+    @Test
+    public void custom() {
+        OrderAddParcelToDeliveryAction value = OrderAddParcelToDeliveryAction.of();
+        value.setCustom(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+        Assertions.assertThat(value.getCustom())
+                .isEqualTo(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
     }
 }

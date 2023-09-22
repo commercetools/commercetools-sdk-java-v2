@@ -11,7 +11,7 @@ import com.newrelic.api.agent.NewRelic;
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ContextApiHttpClient;
 
-public class ApiRootBuilderTest {
+public class NewRelicApiRootBuilderTest {
 
     String projectKey;
 

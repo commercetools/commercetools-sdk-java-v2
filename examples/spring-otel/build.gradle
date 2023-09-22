@@ -28,7 +28,8 @@ ext {
 dependencies {
     implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"
     implementation "com.commercetools.sdk:commercetools-apachehttp-client:${versions.commercetools}"
-
+    implementation "com.commercetools.sdk:commercetools-monitoring-opentelemetry:${versions.commercetools}"
+    implementation 'io.opentelemetry:opentelemetry-api:1.28.0'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'

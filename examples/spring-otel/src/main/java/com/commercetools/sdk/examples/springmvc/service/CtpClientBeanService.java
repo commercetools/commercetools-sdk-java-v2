@@ -5,6 +5,9 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.client.ProjectScopedApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 
+import com.commercetools.monitoring.opentelemetry.OpenTelemetryMiddleware;
+import com.commercetools.monitoring.opentelemetry.OpenTelemetryResponseSerializer;
+import io.opentelemetry.api.GlobalOpenTelemetry;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
@@ -35,6 +38,8 @@ public class CtpClientBeanService {
     public ProjectScopedApiRoot apiRoot() {
         return ApiRootBuilder.of()
                 .defaultClient(credentials())
+                .withSerializer(new OpenTelemetryResponseSerializer(ResponseSerializer.of(), GlobalOpenTelemetry.get()))
+                .withTelemetryMiddleware(new OpenTelemetryMiddleware(GlobalOpenTelemetry.get()))
                 .build(projectKey);
     }
 }

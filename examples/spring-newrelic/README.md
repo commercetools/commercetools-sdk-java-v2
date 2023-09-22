@@ -12,7 +12,7 @@ Example to show how Java SDK can be used in a Spring Boot application with NewRe
 ## Installation
 
 1. Clone/Download the example folder.
-2. Navigate to the path `springmvc/`.
+2. Navigate to the path `spring-newrelic/`.
 3. Register the client credentials in environment variables:
    `CTP_CLIENT_ID`, `CTP_CLIENT_SECRET` and `CTP_PROJECT_KEY`
 

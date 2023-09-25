@@ -216,7 +216,8 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</span>&nbsp;<span class="element-name">getMoney</span>()</div>
-<div class="block"><p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p></div>
+<div class="block"><p>Money values in different currencies. An absolute Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+  <p>If the array is empty, the discount does not apply.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>money</dd>
@@ -227,7 +228,8 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <section class="detail" id="setMoney(com.commercetools.api.models.common.Money...)">
 <h3>setMoney</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMoney</span><wbr><span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>...&nbsp;money)</span></div>
-<div class="block"><p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p></div>
+<div class="block"><p>Money values in different currencies. An absolute Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+  <p>If the array is empty, the discount does not apply.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>money</code> - values to be set</dd>
@@ -238,7 +240,8 @@ extends <a href="CartDiscountValueDraft.html" title="interface in com.commerceto
 <section class="detail" id="setMoney(java.util.List)">
 <h3>setMoney</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMoney</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;&nbsp;money)</span></div>
-<div class="block"><p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p></div>
+<div class="block"><p>Money values in different currencies. An absolute Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+  <p>If the array is empty, the discount does not apply.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>money</code> - values to be set</dd>

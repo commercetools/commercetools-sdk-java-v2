@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ClientTuning</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#retry-middleware">RetryMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li></ul></ul>
+<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#retry-middleware">RetryMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li><li><a href="#limit-requests">Timeouts</a></li></ul></ul>
  <h2 id=client-tuning>Tuning the client</h2>
 
  <h3 id=blocking-execution>Blocking execution</h3>
@@ -141,6 +141,59 @@ ApiRootBuilder.of(new CtApacheHttpClient(64, 64))
         // ...
         .addMiddleware(new QueueMiddleware(64, Duration.ofSeconds(10)))
         .build();
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <h3 id=limit-requests>Timeouts</h3>
+
+ <p>Underlying HTTP Clients are by default configured to timeout after 120 seconds. There are different ways to limit
+ the time a call can take. One is to develop a middleware which times out when necessary. This also is the most flexible
+ option as it leaves room to distinguish between different kind of requests like <a href="../../../../io/vrap/rmf/base/client/ApiHttpMethod.html#GET"><code>GET</code></a>
+ requests should timeout after 10 seconds where as POST requests should timeout after 120 seconds. It's best to use a
+ resilience library like <a href="https://failsafe.dev/">failsafe</a> to implement this functionality.</p>
+
+ <div id="example-ExamplesTest-timeoutMiddleware--%s" class=code-example><pre><code class='java'>dev.failsafe.Timeout&lt;ApiHttpResponse&lt;byte[]&gt;&gt; timeout = dev.failsafe.Timeout
+        .&lt;ApiHttpResponse&lt;byte[]&gt;&gt; builder(Duration.ofSeconds(10))
+        .build();
+FailsafeExecutor&lt;ApiHttpResponse&lt;byte[]&gt;&gt; failsafeExecutor = Failsafe.with(timeout);
+
+ProjectApiRoot apiRoot = ApiRootBuilder.of()
+        .defaultClient(ClientCredentials.of()
+                .withClientId("your-client-id")
+                .withClientSecret("your-client-secret")
+                .build(),
+            ServiceRegion.GCP_EUROPE_WEST1)
+        .addMiddleware((request, next) -&gt; failsafeExecutor.getStageAsync(() -&gt; next.apply(request)))
+        .build("my-project");
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <p>Alternatively the underlying HTTP can be configured to timeout after a specified amount of time.</p>
+
+ <div id="example-ExamplesTest-timeoutOkHttpClient--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = ApiRootBuilder
+        .of(new CtOkHttp4Client(builder -&gt; builder.callTimeout(Duration.ofSeconds(10))))
+        .defaultClient(ClientCredentials.of()
+                .withClientId("your-client-id")
+                .withClientSecret("your-client-secret")
+                .build(),
+            ServiceRegion.GCP_EUROPE_WEST1)
+        .build("my-project");
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+ <div id="example-ExamplesTest-timeoutApacheHttpClient--%s" class=code-example><pre><code class='java'>RequestConfig config = RequestConfig.custom().setResponseTimeout(Timeout.ofSeconds(10)).build();
+ProjectApiRoot apiRoot = ApiRootBuilder
+        .of(new CtApacheHttpClient(builder -&gt; builder.setDefaultRequestConfig(config)))
+        .defaultClient(ClientCredentials.of()
+                .withClientId("your-client-id")
+                .withClientSecret("your-client-secret")
+                .build(),
+            ServiceRegion.GCP_EUROPE_WEST1)
+        .build("my-project");
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <p>The third option is to use the timeout functionality of the futures</p>
+
+ <div id="example-ExamplesTest-timeoutFuture--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = createProjectClient();
+
+apiRoot.get().execute().get(10, TimeUnit.SECONDS);
+apiRoot.get().executeBlocking(Duration.ofSeconds(10));
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div></div>
 </section>
 <section class="summary">

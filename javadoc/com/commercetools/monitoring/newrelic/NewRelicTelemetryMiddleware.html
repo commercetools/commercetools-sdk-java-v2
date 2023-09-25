@@ -86,11 +86,11 @@ implements <a href="../../../../io/vrap/rmf/base/client/http/TelemetryMiddleware
  It can be registered as TelemetryMiddleware to the <a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html#withTelemetryMiddleware(io.vrap.rmf.base.client.http.TelemetryMiddleware)"><code>ClientBuilder</code></a>
  or the ApiRootBuilder.</p>
 
- <div id="example-ApiRootBuilderTest-addNewRelic--%s" class=code-example><pre><code class='java'>ApiHttpClient client = ApiRootBuilder.of()
+ <div id="example-NewRelicApiRootBuilderTest-addNewRelic--%s" class=code-example><pre><code class='java'>ApiHttpClient client = ApiRootBuilder.of()
         .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
         .withTelemetryMiddleware(new NewRelicTelemetryMiddleware())
         .buildClient();
-</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-monitoring-newrelic/src/test/java/example/ApiRootBuilderTest.java" target="_blank">test code</a>.</pre></div>
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-monitoring-newrelic/src/test/java/example/NewRelicApiRootBuilderTest.java" target="_blank">test code</a>.</pre></div>
 
  <p>The middleware reads the <a href="NewRelicContext.html" title="interface in com.commercetools.monitoring.newrelic"><code>NewRelicContext</code></a> from the Request and restores the transaction using a <a href="https://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/Token.html" title="class or interface in com.newrelic.api.agent" class="external-link"><code>Token</code></a>
  The details of the request and response are then reported as <a href="https://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/Segment.html" title="class or interface in com.newrelic.api.agent" class="external-link"><code>Segment</code></a> with <a href="https://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/HttpParameters.html" title="class or interface in com.newrelic.api.agent" class="external-link"><code>HttpParameters</code></a></p>
@@ -98,16 +98,16 @@ implements <a href="../../../../io/vrap/rmf/base/client/http/TelemetryMiddleware
  <p>The Context has to be attached in your application either to a <a href="../../../../io/vrap/rmf/base/client/ContextApiHttpClient.html" title="interface in io.vrap.rmf.base.client"><code>ContextApiHttpClient</code></a>
  or the <a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html#addContext(T)"><code>Request</code></a> itself.</p>
 
- <div id="example-ApiRootBuilderTest-contextClient--%s" class=code-example><pre><code class='java'>ContextApiHttpClient contextClient = ContextApiHttpClient.of(apiHttpClient,
+ <div id="example-NewRelicApiRootBuilderTest-contextClient--%s" class=code-example><pre><code class='java'>ContextApiHttpClient contextClient = ContextApiHttpClient.of(apiHttpClient,
     NewRelicContext.of(NewRelic.getAgent().getTransaction()), false // don't close the ApiHttpClient
 );
 ProjectApiRoot apiRoot = ProjectApiRoot.fromClient(projectKey, contextClient);
-</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-monitoring-newrelic/src/test/java/example/ApiRootBuilderTest.java" target="_blank">test code</a>.</pre></div>
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-monitoring-newrelic/src/test/java/example/NewRelicApiRootBuilderTest.java" target="_blank">test code</a>.</pre></div>
 
- <div id="example-ApiRootBuilderTest-contextApiRoot--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = ProjectApiRoot.withContext(projectKey, apiHttpClient,
+ <div id="example-NewRelicApiRootBuilderTest-contextApiRoot--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = ProjectApiRoot.withContext(projectKey, apiHttpClient,
     NewRelicContext.of(NewRelic.getAgent().getTransaction()), false // don't close the apiHttpClient
 );
-</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-monitoring-newrelic/src/test/java/example/ApiRootBuilderTest.java" target="_blank">test code</a>.</pre></div>
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-monitoring-newrelic/src/test/java/example/NewRelicApiRootBuilderTest.java" target="_blank">test code</a>.</pre></div>
 
  The <code>NewRelicContextImpl</code> will <a href="https://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/Token.html#expire()" title="class or interface in com.newrelic.api.agent" class="external-link"><code>expire</code></a> the <a href="https://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/Token.html" title="class or interface in com.newrelic.api.agent" class="external-link"><code>Token</code></a> when it's closed. Closing a <a href="../../../../io/vrap/rmf/base/client/Context.html" title="interface in io.vrap.rmf.base.client"><code>Context</code></a>
  is ensured by <a href="../../../../io/vrap/rmf/base/client/AutoCloseableService.html#close()"><code>ContextApiHttpClient</code></a> if it's implementing <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html" title="class or interface in java.io" class="external-link"><code>Closeable</code></a>

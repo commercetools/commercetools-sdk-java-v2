@@ -9566,7 +9566,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/docs/meta/ClientTuning.html" class="type-name-link" title="class in com.commercetools.docs.meta">ClientTuning</a> - Class in <a href="../com/commercetools/docs/meta/package-summary.html">com.commercetools.docs.meta</a></dt>
 <dd>
-<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#retry-middleware">RetryMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li></ul></ul></div>
+<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#retry-middleware">RetryMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li><li><a href="#limit-requests">Timeouts</a></li></ul></ul></div>
 </dd>
 <dt><a href="../com/commercetools/docs/meta/ClientTuning.html#%3Cinit%3E()" class="member-name-link">ClientTuning()</a> - Constructor for class com.commercetools.docs.meta.<a href="../com/commercetools/docs/meta/ClientTuning.html" title="class in com.commercetools.docs.meta">ClientTuning</a></dt>
 <dd>&nbsp;</dd>
@@ -9972,9 +9972,9 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">CollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/EqualityPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/EqualityPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">EqualityPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateTimeCollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/BooleanComparisonPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/BooleanComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">BooleanComparisonPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">TimeComparisonPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/query/EmptyPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/EmptyPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">EmptyPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -12017,6 +12017,26 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>
 <div class="block">Date and time (UTC) the Message was generated.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldAddedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomFieldAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldChangedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomFieldChangedMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldRemovedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomFieldRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeRemovedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomTypeRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomTypeSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressRemovedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressRemovedMessageBuilder</a></dt>
 <dd>
 <div class="block">Date and time (UTC) the Message was generated.</div>
@@ -12054,6 +12074,26 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <div class="block">Date and time (UTC) the Message was generated.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/BusinessUnitCreatedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCreatedMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldAddedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomFieldAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldChangedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomFieldChangedMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldRemovedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomFieldRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeRemovedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomTypeRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomTypeSetMessageBuilder</a></dt>
 <dd>
 <div class="block">Date and time (UTC) the Message was generated.</div>
 </dd>
@@ -12943,6 +12983,26 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldAddedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomFieldAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldChangedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomFieldChangedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldRemovedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomFieldRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeRemovedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomTypeRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomTypeSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressRemovedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressRemovedMessageBuilder</a></dt>
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
@@ -12980,6 +13040,26 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/BusinessUnitCreatedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCreatedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldAddedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomFieldAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldChangedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomFieldChangedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldRemovedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomFieldRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeRemovedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomTypeRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomTypeSetMessageBuilder</a></dt>
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
@@ -13821,6 +13901,26 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldAddedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomFieldAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldChangedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomFieldChangedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldRemovedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomFieldRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomFieldRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeRemovedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomTypeRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomTypeSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressRemovedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressRemovedMessageBuilder</a></dt>
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
@@ -13858,6 +13958,26 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/BusinessUnitCreatedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCreatedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldAddedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldAddedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomFieldAddedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldChangedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomFieldChangedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldRemovedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomFieldRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomFieldRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeRemovedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomTypeRemovedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomTypeSetMessageBuilder</a></dt>
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
@@ -15592,7 +15712,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </dd>
 <dt><a href="../com/commercetools/importapi/models/orders/ParcelBuilder.html#custom(com.commercetools.importapi.models.customfields.Custom)" class="member-name-link">custom(Custom)</a> - Method in class com.commercetools.importapi.models.orders.<a href="../com/commercetools/importapi/models/orders/ParcelBuilder.html" title="class in com.commercetools.importapi.models.orders">ParcelBuilder</a></dt>
 <dd>
-<div class="block">The representation to be sent to the server when creating a resource with custom fields.</div>
+<div class="block">The representation to be sent to the server when creating a resource with Custom Fields.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/prices/PriceImportBuilder.html#custom(com.commercetools.importapi.models.customfields.Custom)" class="member-name-link">custom(Custom)</a> - Method in class com.commercetools.importapi.models.prices.<a href="../com/commercetools/importapi/models/prices/PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></dt>
 <dd>
@@ -16064,7 +16184,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </dd>
 <dt><a href="../com/commercetools/importapi/models/orders/ParcelBuilder.html#custom(java.util.function.Function)" class="member-name-link">custom(Function&lt;CustomBuilder, CustomBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.orders.<a href="../com/commercetools/importapi/models/orders/ParcelBuilder.html" title="class in com.commercetools.importapi.models.orders">ParcelBuilder</a></dt>
 <dd>
-<div class="block">The representation to be sent to the server when creating a resource with custom fields.</div>
+<div class="block">The representation to be sent to the server when creating a resource with Custom Fields.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/prices/PriceImportBuilder.html#custom(java.util.function.Function)" class="member-name-link">custom(Function&lt;CustomBuilder, CustomBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.prices.<a href="../com/commercetools/importapi/models/prices/PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></dt>
 <dd>
@@ -16080,7 +16200,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </dd>
 <dt><a href="../com/commercetools/importapi/models/customfields/Custom.html" class="type-name-link" title="interface in com.commercetools.importapi.models.customfields">Custom</a> - Interface in <a href="../com/commercetools/importapi/models/customfields/package-summary.html">com.commercetools.importapi.models.customfields</a></dt>
 <dd>
-<div class="block">The representation to be sent to the server when creating a resource with custom fields.</div>
+<div class="block">The representation to be sent to the server when creating a resource with Custom Fields.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/CustomTokenizer.html#CUSTOM" class="member-name-link">CUSTOM</a> - Static variable in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/CustomTokenizer.html" title="interface in com.commercetools.api.models.product">CustomTokenizer</a></dt>
 <dd>
@@ -17070,7 +17190,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldAddedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerAddressCustomFieldAddedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after adding a Custom Field to the Address using the Set CustomField in Address update action.</div>
+<div class="block">Generated after adding a Custom Field to an Address of a Customer using the Set CustomField in Address update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldAddedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerAddressCustomFieldAddedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17083,7 +17203,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldAddedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerAddressCustomFieldAddedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after adding a Custom Field to the Address using the Set CustomField in Address update action.</div>
+<div class="block">Generated after adding a Custom Field to an Address of a Customer using the Set CustomField in Address update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldAddedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerAddressCustomFieldAddedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17108,7 +17228,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldChangedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerAddressCustomFieldChangedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after changing an existing Custom Field on the Address using the Set CustomField in Address update action.</div>
+<div class="block">Generated after changing an existing Custom Field on an Address of a Customer using the Set CustomField in Address update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldChangedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerAddressCustomFieldChangedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17121,7 +17241,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldChangedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerAddressCustomFieldChangedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after changing an existing Custom Field on the Address using the Set CustomField in Address update action.</div>
+<div class="block">Generated after changing an existing Custom Field on an Address of a Customer using the Set CustomField in Address update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldChangedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerAddressCustomFieldChangedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17146,7 +17266,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldRemovedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerAddressCustomFieldRemovedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after removing a Custom Field from the Address using the Set CustomField in Address update action.</div>
+<div class="block">Generated after removing a Custom Field from an Address of a Customer using the Set CustomField in Address update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldRemovedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerAddressCustomFieldRemovedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17159,7 +17279,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldRemovedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerAddressCustomFieldRemovedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after removing a Custom Field from the Address using the Set CustomField in Address update action.</div>
+<div class="block">Generated after removing a Custom Field from an Address of a Customer using the Set CustomField in Address update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomFieldRemovedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerAddressCustomFieldRemovedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17184,7 +17304,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeRemovedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerAddressCustomTypeRemovedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful Set CustomType in Address update action with empty parameters.</div>
+<div class="block">Generated after removing a Custom Type from an Address of a Customer using the Set Custom Type in Address update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeRemovedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerAddressCustomTypeRemovedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17197,7 +17317,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeRemovedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerAddressCustomTypeRemovedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful Set CustomType in Address update action with empty parameters.</div>
+<div class="block">Generated after removing a Custom Type from an Address of a Customer using the Set Custom Type in Address update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeRemovedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerAddressCustomTypeRemovedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17222,7 +17342,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeSetMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerAddressCustomTypeSetMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful Set CustomType in Address update action.</div>
+<div class="block">Generated after adding a Custom Type to an Address of a Customer using the Set Custom Type in Address update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeSetMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerAddressCustomTypeSetMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17235,7 +17355,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeSetMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerAddressCustomTypeSetMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful Set CustomType in Address update action.</div>
+<div class="block">Generated after adding a Custom Type to an Address of a Customer using the Set Custom Type in Address update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeSetMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerAddressCustomTypeSetMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17522,7 +17642,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldAddedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerCustomFieldAddedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after adding a Custom Field using the Set CustomField update action.</div>
+<div class="block">Generated after adding a Custom Field to a Customer using the Set CustomField update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldAddedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerCustomFieldAddedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17535,7 +17655,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldAddedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerCustomFieldAddedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after adding a Custom Field using the Set CustomField update action.</div>
+<div class="block">Generated after adding a Custom Field to a Customer using the Set CustomField update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldAddedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerCustomFieldAddedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17560,7 +17680,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldChangedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerCustomFieldChangedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after changing an existing Custom Field using the Set CustomField update action.</div>
+<div class="block">Generated after changing an existing Custom Field on a Customer using the Set CustomField update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldChangedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerCustomFieldChangedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17573,7 +17693,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldChangedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerCustomFieldChangedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after changing an existing Custom Field using the Set CustomField update action.</div>
+<div class="block">Generated after changing an existing Custom Field on a Customer using the Set CustomField update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldChangedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerCustomFieldChangedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17598,7 +17718,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldRemovedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerCustomFieldRemovedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after removing a Custom Field using the Set CustomField update action.</div>
+<div class="block">Generated after removing a Custom Field on a Customer using the Set CustomField update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldRemovedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerCustomFieldRemovedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17611,7 +17731,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldRemovedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerCustomFieldRemovedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after removing a Custom Field using the Set CustomField update action.</div>
+<div class="block">Generated after removing a Custom Field on a Customer using the Set CustomField update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomFieldRemovedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerCustomFieldRemovedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17636,7 +17756,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomTypeRemovedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerCustomTypeRemovedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful Set Custom Type update action with empty parameters.</div>
+<div class="block">Generated after adding a Custom Type to a Customer using the Set Custom Type update action with empty parameters.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomTypeRemovedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerCustomTypeRemovedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17649,7 +17769,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomTypeRemovedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerCustomTypeRemovedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful Set Custom Type update action with empty parameters.</div>
+<div class="block">Generated after adding a Custom Type to a Customer using the Set Custom Type update action with empty parameters.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomTypeRemovedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerCustomTypeRemovedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17674,7 +17794,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomTypeSetMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerCustomTypeSetMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful Set Custom Type update action.</div>
+<div class="block">Generated after removing a Custom Type from a Customer using the Set Custom Type update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomTypeSetMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerCustomTypeSetMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -17687,7 +17807,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomTypeSetMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerCustomTypeSetMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
-<div class="block">Generated after a successful Set Custom Type update action.</div>
+<div class="block">Generated after removing a Custom Type from a Customer using the Set Custom Type update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomTypeSetMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerCustomTypeSetMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
 <dd>
@@ -18657,14 +18777,6 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerLastNameSetMessagePayloadBuilder.html#%3Cinit%3E()" class="member-name-link">CustomerLastNameSetMessagePayloadBuilder()</a> - Constructor for class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerLastNameSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerLastNameSetMessagePayloadBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/models/message/CustomerMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
-<dd>
-<div class="block">CustomerMessagePayload
-
- 
- Example to create an instance using the builder pattern
- </div>
-</dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerMixin.html" class="type-name-link" title="interface in com.commercetools.api.models.customer">CustomerMixin</a> - Interface in <a href="../com/commercetools/api/models/customer/package-summary.html">com.commercetools.api.models.customer</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerBuilder.html#customerNumber(java.lang.String)" class="member-name-link">customerNumber(String)</a> - Method in class com.commercetools.api.models.customer.<a href="../com/commercetools/api/models/customer/CustomerBuilder.html" title="class in com.commercetools.api.models.customer">CustomerBuilder</a></dt>
@@ -18861,11 +18973,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerSetAddressCustomFieldAction.html" class="type-name-link" title="interface in com.commercetools.api.models.customer">CustomerSetAddressCustomFieldAction</a> - Interface in <a href="../com/commercetools/api/models/customer/package-summary.html">com.commercetools.api.models.customer</a></dt>
 <dd>
-<div class="block">CustomerSetAddressCustomFieldAction
-
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="block">Adding a Custom Field to an Address of a Customer generates the CustomerAddressCustomFieldAdded Message, removing one generates the CustomerAddressCustomFieldRemoved Message, and updating an existing one generates the CustomerAddressCustomFieldChanged Message.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerSetAddressCustomFieldActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.customer">CustomerSetAddressCustomFieldActionBuilder</a> - Class in <a href="../com/commercetools/api/models/customer/package-summary.html">com.commercetools.api.models.customer</a></dt>
 <dd>
@@ -18878,11 +18986,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerSetAddressCustomTypeAction.html" class="type-name-link" title="interface in com.commercetools.api.models.customer">CustomerSetAddressCustomTypeAction</a> - Interface in <a href="../com/commercetools/api/models/customer/package-summary.html">com.commercetools.api.models.customer</a></dt>
 <dd>
-<div class="block">CustomerSetAddressCustomTypeAction
-
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="block">Adding or updating a Custom Type on an Address of a Customer generates the CustomerAddressCustomTypeSet Message, and removing one generates the CustomerAddressCustomTypeRemoved Message.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerSetAddressCustomTypeActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.customer">CustomerSetAddressCustomTypeActionBuilder</a> - Class in <a href="../com/commercetools/api/models/customer/package-summary.html">com.commercetools.api.models.customer</a></dt>
 <dd>
@@ -18951,11 +19055,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerSetCustomFieldAction.html" class="type-name-link" title="interface in com.commercetools.api.models.customer">CustomerSetCustomFieldAction</a> - Interface in <a href="../com/commercetools/api/models/customer/package-summary.html">com.commercetools.api.models.customer</a></dt>
 <dd>
-<div class="block">CustomerSetCustomFieldAction
-
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="block">Adding a Custom Field to a Customer generates the CustomerCustomFieldAdded Message, removing one generates the CustomerCustomFieldRemoved Message, and updating an existing one generates the CustomerCustomFieldChanged Message.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerSetCustomFieldActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.customer">CustomerSetCustomFieldActionBuilder</a> - Class in <a href="../com/commercetools/api/models/customer/package-summary.html">com.commercetools.api.models.customer</a></dt>
 <dd>
@@ -18968,11 +19068,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerSetCustomTypeAction.html" class="type-name-link" title="interface in com.commercetools.api.models.customer">CustomerSetCustomTypeAction</a> - Interface in <a href="../com/commercetools/api/models/customer/package-summary.html">com.commercetools.api.models.customer</a></dt>
 <dd>
-<div class="block">CustomerSetCustomTypeAction
-
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="block">Adding or updating a Custom Type on a Customer generates the CustomerCustomTypeSet Message, removing one generates the CustomerCustomTypeRemoved Message.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerSetCustomTypeActionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.customer">CustomerSetCustomTypeActionBuilder</a> - Class in <a href="../com/commercetools/api/models/customer/package-summary.html">com.commercetools.api.models.customer</a></dt>
 <dd>
@@ -19310,7 +19406,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/importapi/models/customfields/CustomField.html" class="type-name-link" title="interface in com.commercetools.importapi.models.customfields">CustomField</a> - Interface in <a href="../com/commercetools/importapi/models/customfields/package-summary.html">com.commercetools.importapi.models.customfields</a></dt>
 <dd>
-<div class="block">Provides the value for a custom field of a specific type.</div>
+<div class="block">Provides the value for a Custom Field of a specific type.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/type/CustomFieldBooleanType.html" class="type-name-link" title="interface in com.commercetools.api.models.type">CustomFieldBooleanType</a> - Interface in <a href="../com/commercetools/api/models/type/package-summary.html">com.commercetools.api.models.type</a></dt>
 <dd>
@@ -19643,6 +19739,22 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>
 <div class="block">possible values of CustomFieldReferenceValue</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessageBuilder.html#customFields(com.commercetools.api.models.type.CustomFields)" class="member-name-link">customFields(CustomFields)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomTypeSetMessageBuilder</a></dt>
+<dd>
+<div class="block">The Custom Fields that were set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessagePayloadBuilder.html#customFields(com.commercetools.api.models.type.CustomFields)" class="member-name-link">customFields(CustomFields)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomTypeSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">The Custom Fields that were set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessageBuilder.html#customFields(com.commercetools.api.models.type.CustomFields)" class="member-name-link">customFields(CustomFields)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomTypeSetMessageBuilder</a></dt>
+<dd>
+<div class="block">The Custom Fields that were set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessagePayloadBuilder.html#customFields(com.commercetools.api.models.type.CustomFields)" class="member-name-link">customFields(CustomFields)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomTypeSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">The Custom Fields that were set.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeSetMessageBuilder.html#customFields(com.commercetools.api.models.type.CustomFields)" class="member-name-link">customFields(CustomFields)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressCustomTypeSetMessageBuilder</a></dt>
 <dd>
 <div class="block">The Custom Fields that have been set.</div>
@@ -19666,6 +19778,22 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dt><a href="../com/commercetools/api/models/message/OrderCustomTypeSetMessagePayloadBuilder.html#customFields(com.commercetools.api.models.type.CustomFields)" class="member-name-link">customFields(CustomFields)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderCustomTypeSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomTypeSetMessagePayloadBuilder</a></dt>
 <dd>
 <div class="block">The Custom Fields that have been set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessageBuilder.html#customFields(java.util.function.Function)" class="member-name-link">customFields(Function&lt;CustomFieldsBuilder, CustomFieldsBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomTypeSetMessageBuilder</a></dt>
+<dd>
+<div class="block">The Custom Fields that were set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessagePayloadBuilder.html#customFields(java.util.function.Function)" class="member-name-link">customFields(Function&lt;CustomFieldsBuilder, CustomFieldsBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitAddressCustomTypeSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitAddressCustomTypeSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">The Custom Fields that were set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessageBuilder.html#customFields(java.util.function.Function)" class="member-name-link">customFields(Function&lt;CustomFieldsBuilder, CustomFieldsBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomTypeSetMessageBuilder</a></dt>
+<dd>
+<div class="block">The Custom Fields that were set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessagePayloadBuilder.html#customFields(java.util.function.Function)" class="member-name-link">customFields(Function&lt;CustomFieldsBuilder, CustomFieldsBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitCustomTypeSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitCustomTypeSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">The Custom Fields that were set.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeSetMessageBuilder.html#customFields(java.util.function.Function)" class="member-name-link">customFields(Function&lt;CustomFieldsBuilder, CustomFieldsBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressCustomTypeSetMessageBuilder</a></dt>
 <dd>

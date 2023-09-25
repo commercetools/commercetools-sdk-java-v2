@@ -44,6 +44,25 @@ import io.vrap.rmf.base.client.ApiMethod;
  * the {@link io.vrap.rmf.base.client.http.QueueMiddleware}.</p>
  *
  * {@include.example example.ExamplesTest#queueConcurrentLimitation()}
+ *
+ * <h3 id=limit-requests>Timeouts</h3>
+ *
+ * <p>Underlying HTTP Clients are by default configured to timeout after 120 seconds. There are different ways to limit
+ * the time a call can take. One is to develop a middleware which times out when necessary. This also is the most flexible
+ * option as it leaves room to distinguish between different kind of requests like {@link io.vrap.rmf.base.client.ApiHttpMethod#GET GET}
+ * requests should timeout after 10 seconds where as POST requests should timeout after 120 seconds. It's best to use a
+ * resilience library like <a href="https://failsafe.dev/">failsafe</a> to implement this functionality.</p>
+ *
+ * {@include.example example.ExamplesTest#timeoutMiddleware()}
+ *
+ * <p>Alternatively the underlying HTTP can be configured to timeout after a specified amount of time.</p>
+ *
+ * {@include.example example.ExamplesTest#timeoutOkHttpClient()}
+ * {@include.example example.ExamplesTest#timeoutApacheHttpClient()}
+ *
+ * <p>The third option is to use the timeout functionality of the futures</p>
+ *
+ * {@include.example example.ExamplesTest#timeoutFuture()}
  */
 public class ClientTuning {
 }

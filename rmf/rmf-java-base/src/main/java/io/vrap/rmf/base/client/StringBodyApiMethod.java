@@ -3,7 +3,7 @@ package io.vrap.rmf.base.client;
 
 import java.util.List;
 
-public abstract class StringBodyApiMethod<T extends ApiMethod<T, TResult>, TResult>
+public abstract class StringBodyApiMethod<T extends StringBodyApiMethod<T, TResult>, TResult>
         extends BodyApiMethod<T, TResult, String> {
 
     public StringBodyApiMethod(ApiHttpClient apiHttpClient) {
@@ -15,7 +15,7 @@ public abstract class StringBodyApiMethod<T extends ApiMethod<T, TResult>, TResu
         super(apiHttpClient, headers, queryParams);
     }
 
-    public StringBodyApiMethod(ApiMethod<T, TResult> apiMethod) {
+    public StringBodyApiMethod(StringBodyApiMethod<T, TResult> apiMethod) {
         super(apiMethod);
     }
 

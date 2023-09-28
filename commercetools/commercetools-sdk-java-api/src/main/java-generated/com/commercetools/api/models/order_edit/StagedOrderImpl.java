@@ -54,6 +54,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
 
+    private com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice;
+
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
@@ -141,6 +143,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
             @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice,
+            @JsonProperty("discountOnTotalPrice") final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
@@ -190,6 +193,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
         this.taxedShippingPrice = taxedShippingPrice;
+        this.discountOnTotalPrice = discountOnTotalPrice;
         this.taxMode = taxMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
@@ -345,7 +349,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
@@ -357,6 +362,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
      *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
      *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
@@ -369,6 +375,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
         return this.taxedShippingPrice;
+    }
+
+    /**
+     *  <p>Discounts that apply on the total price of the Order.</p>
+     */
+
+    public com.commercetools.api.models.cart.DiscountOnTotalPrice getDiscountOnTotalPrice() {
+        return this.discountOnTotalPrice;
     }
 
     /**
@@ -719,6 +733,11 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.taxedShippingPrice = taxedShippingPrice;
     }
 
+    public void setDiscountOnTotalPrice(
+            final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice) {
+        this.discountOnTotalPrice = discountOnTotalPrice;
+    }
+
     public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
     }
@@ -912,6 +931,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
                 .append(taxedShippingPrice, that.taxedShippingPrice)
+                .append(discountOnTotalPrice, that.discountOnTotalPrice)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
@@ -962,6 +982,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
                 .append(taxedShippingPrice, that.taxedShippingPrice)
+                .append(discountOnTotalPrice, that.discountOnTotalPrice)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
@@ -1017,6 +1038,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(totalPrice)
                 .append(taxedPrice)
                 .append(taxedShippingPrice)
+                .append(discountOnTotalPrice)
                 .append(taxMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)

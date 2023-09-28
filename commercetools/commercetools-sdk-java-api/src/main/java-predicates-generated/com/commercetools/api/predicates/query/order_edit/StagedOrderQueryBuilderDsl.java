@@ -148,6 +148,14 @@ public class StagedOrderQueryBuilderDsl {
             StagedOrderQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> discountOnTotalPrice(
+            Function<com.commercetools.api.predicates.query.cart.DiscountOnTotalPriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountOnTotalPriceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("discountOnTotalPrice"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.cart.DiscountOnTotalPriceQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
+    }
+
     public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> taxMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxMode")),

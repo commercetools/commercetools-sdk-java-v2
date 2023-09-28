@@ -40,6 +40,9 @@
 - added type `RuleApproverDraft`
 - added type `RuleRequester`
 - added type `RuleRequesterDraft`
+- added type `CartDiscountTotalPriceTarget`
+- added type `DiscountOnTotalPrice`
+- added type `DiscountedTotalPricePortion`
 - added type `ApprovalFlowApprovedMessage`
 - added type `ApprovalFlowCompletedMessage`
 - added type `ApprovalFlowCreatedMessage`
@@ -124,7 +127,10 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `discountOnTotalPrice` to type `Cart`
+- added property `discountOnTotalPrice` to type `StagedOrder`
 - added property `custom` to type `StagedOrderAddParcelToDeliveryAction`
+- added property `discountOnTotalPrice` to type `Order`
 - added property `custom` to type `OrderAddParcelToDeliveryAction`
 </details>
 

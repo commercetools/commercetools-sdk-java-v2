@@ -48,6 +48,8 @@ public class OrderTest {
                 new Object[] { Order.builder().taxedPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
                 new Object[] {
                         Order.builder().taxedShippingPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
+                new Object[] { Order.builder()
+                        .discountOnTotalPrice(new com.commercetools.api.models.cart.DiscountOnTotalPriceImpl()) },
                 new Object[] {
                         Order.builder().taxMode(com.commercetools.api.models.cart.TaxMode.findEnum("Platform")) },
                 new Object[] { Order.builder()
@@ -222,6 +224,14 @@ public class OrderTest {
         value.setTaxedShippingPrice(new com.commercetools.api.models.cart.TaxedPriceImpl());
         Assertions.assertThat(value.getTaxedShippingPrice())
                 .isEqualTo(new com.commercetools.api.models.cart.TaxedPriceImpl());
+    }
+
+    @Test
+    public void discountOnTotalPrice() {
+        Order value = Order.of();
+        value.setDiscountOnTotalPrice(new com.commercetools.api.models.cart.DiscountOnTotalPriceImpl());
+        Assertions.assertThat(value.getDiscountOnTotalPrice())
+                .isEqualTo(new com.commercetools.api.models.cart.DiscountOnTotalPriceImpl());
     }
 
     @Test

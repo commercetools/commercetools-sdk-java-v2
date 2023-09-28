@@ -69,7 +69,7 @@ jobs:
 
       - name: Run integration tests for PR
         if: github.event_name == 'pull_request'
-        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest
+        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest
         env:
           CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID_PR }}
           CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET_PR }}
@@ -79,7 +79,7 @@ jobs:
 
       - name: Run integration tests
         if: github.event_name != 'pull_request'
-        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest
+        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest
         env:
             CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
             CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}

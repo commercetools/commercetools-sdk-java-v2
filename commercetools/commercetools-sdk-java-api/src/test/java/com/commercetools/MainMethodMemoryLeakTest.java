@@ -23,12 +23,12 @@ public class MainMethodMemoryLeakTest {
      * @param args unused command line parameters
      */
     public static void main(String[] args) throws InterruptedException {
+        long beforeUsedMem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         ApiRoot client = ApiRootBuilder.of()
                 .defaultClient(
                     ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
-        long beforeUsedMem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         Bulkhead<Object> bulkhead = Bulkhead.builder(30).build();
         int requests = 20000;
         ConcurrentHashMap<Integer, String> projectKeys = new ConcurrentHashMap<>(requests);

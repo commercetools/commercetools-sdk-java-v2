@@ -260,7 +260,7 @@ public class CustomerAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
-     *  <p>Name of the Custom Field that has been removed.</p>
+     *  <p>Name of the Custom Field that was removed.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -364,7 +364,7 @@ public class CustomerAddressCustomFieldRemovedMessageBuilder
     }
 
     /**
-     *  <p>Name of the Custom Field that has been removed.</p>
+     *  <p>Name of the Custom Field that was removed.</p>
      * @return name
      */
 

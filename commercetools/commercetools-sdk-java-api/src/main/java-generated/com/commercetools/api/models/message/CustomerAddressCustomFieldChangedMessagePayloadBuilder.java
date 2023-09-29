@@ -32,7 +32,7 @@ public class CustomerAddressCustomFieldChangedMessagePayloadBuilder
     private java.lang.Object previousValue;
 
     /**
-     *  <p>Name of the Custom Field that has been changed.</p>
+     *  <p>Name of the Custom Field that changed.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class CustomerAddressCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
-     *  <p>Name of the Custom Field that has been changed.</p>
+     *  <p>Name of the Custom Field that changed.</p>
      * @return name
      */
 

@@ -180,8 +180,7 @@ public class OrderCustomTypeSetMessageImpl implements OrderCustomTypeSetMessage,
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getPreviousTypeId() {

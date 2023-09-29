@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after removing a Custom Field on a Customer using the Set CustomField update action.</p>
+ *  <p>Generated after removing a Custom Field from a Customer using the Set CustomField update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCustomFieldRemovedMessageImpl implements CustomerCustomFieldRemovedMessage, ModelBase {
@@ -169,7 +169,7 @@ public class CustomerCustomFieldRemovedMessageImpl implements CustomerCustomFiel
     }
 
     /**
-     *  <p>Name of the Custom Field that has been removed.</p>
+     *  <p>Name of the Custom Field that was removed.</p>
      */
 
     public String getName() {

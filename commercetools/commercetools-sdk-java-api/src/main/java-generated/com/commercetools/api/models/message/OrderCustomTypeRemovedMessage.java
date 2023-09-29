@@ -41,8 +41,7 @@ public interface OrderCustomTypeRemovedMessage extends OrderMessage {
     String ORDER_CUSTOM_TYPE_REMOVED = "OrderCustomTypeRemoved";
 
     /**
-     *  <p><code>id</code> of the Custom Type that has been removed.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 
@@ -50,8 +49,7 @@ public interface OrderCustomTypeRemovedMessage extends OrderMessage {
     public String getPreviousTypeId();
 
     /**
-     *  <p><code>id</code> of the Custom Type that has been removed.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      */
 

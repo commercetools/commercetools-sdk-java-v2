@@ -11,6 +11,54 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MessageBuilder {
 
+    public com.commercetools.api.models.message.ApprovalFlowApprovedMessageBuilder approvalFlowApprovedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowApprovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalFlowCompletedMessageBuilder approvalFlowCompletedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowCompletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalFlowCreatedMessageBuilder approvalFlowCreatedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalFlowRejectedMessageBuilder approvalFlowRejectedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowRejectedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleApproversSetMessageBuilder approvalRuleApproversSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleApproversSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleCreatedMessageBuilder approvalRuleCreatedBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessageBuilder approvalRuleDescriptionSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleKeySetMessageBuilder approvalRuleKeySetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleKeySetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleNameSetMessageBuilder approvalRuleNameSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleNameSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRulePredicateSetMessageBuilder approvalRulePredicateSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRulePredicateSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleRequestersSetMessageBuilder approvalRuleRequestersSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleRequestersSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ApprovalRuleStatusSetMessageBuilder approvalRuleStatusSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleStatusSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessageBuilder associateRoleBuyerAssignableChangedBuilder() {
         return com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessageBuilder.of();
     }
@@ -265,6 +313,26 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder customerFirstNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageBuilder customerGroupCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessageBuilder customerGroupCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessageBuilder customerGroupCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessageBuilder customerGroupCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessageBuilder customerGroupCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.CustomerGroupSetMessageBuilder customerGroupSetBuilder() {

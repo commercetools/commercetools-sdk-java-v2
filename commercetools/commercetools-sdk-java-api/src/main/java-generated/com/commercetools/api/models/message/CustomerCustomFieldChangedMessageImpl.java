@@ -176,7 +176,7 @@ public class CustomerCustomFieldChangedMessageImpl implements CustomerCustomFiel
     }
 
     /**
-     *  <p>Name of the Custom Field that has been changed.</p>
+     *  <p>Name of the Custom Field that changed.</p>
      */
 
     public String getName() {

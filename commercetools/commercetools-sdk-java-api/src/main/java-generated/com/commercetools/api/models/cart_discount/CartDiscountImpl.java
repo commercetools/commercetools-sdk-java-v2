@@ -256,7 +256,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>
+     *  <p>Indicates if the Discount is used in connection with a DiscountCode.</p>
      */
 
     public Boolean getRequiresDiscountCode() {

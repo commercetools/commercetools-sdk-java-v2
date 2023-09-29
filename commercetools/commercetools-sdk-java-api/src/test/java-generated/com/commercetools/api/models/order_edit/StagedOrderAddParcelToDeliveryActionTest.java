@@ -36,8 +36,9 @@ public class StagedOrderAddParcelToDeliveryActionTest {
                 new Object[] { StagedOrderAddParcelToDeliveryAction.builder()
                         .trackingData(new com.commercetools.api.models.order.TrackingDataImpl()) },
                 new Object[] { StagedOrderAddParcelToDeliveryAction.builder()
-                        .items(
-                            Collections.singletonList(new com.commercetools.api.models.order.DeliveryItemImpl())) } };
+                        .items(Collections.singletonList(new com.commercetools.api.models.order.DeliveryItemImpl())) },
+                new Object[] { StagedOrderAddParcelToDeliveryAction.builder()
+                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 
     @Test
@@ -83,5 +84,13 @@ public class StagedOrderAddParcelToDeliveryActionTest {
         value.setItems(Collections.singletonList(new com.commercetools.api.models.order.DeliveryItemImpl()));
         Assertions.assertThat(value.getItems())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.order.DeliveryItemImpl()));
+    }
+
+    @Test
+    public void custom() {
+        StagedOrderAddParcelToDeliveryAction value = StagedOrderAddParcelToDeliveryAction.of();
+        value.setCustom(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+        Assertions.assertThat(value.getCustom())
+                .isEqualTo(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
     }
 }

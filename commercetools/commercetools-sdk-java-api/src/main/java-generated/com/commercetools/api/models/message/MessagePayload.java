@@ -20,13 +20,26 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     MessagePayload messagePayload = MessagePayload.associateRoleBuyerAssignableChangedBuilder()
- *             buyerAssignable(true)
+ *     MessagePayload messagePayload = MessagePayload.approvalFlowApprovedBuilder()
+ *             associate(associateBuilder -> associateBuilder)
+ *             order(orderBuilder -> orderBuilder)
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowApprovedMessagePayloadImpl.class, name = ApprovalFlowApprovedMessagePayload.APPROVAL_FLOW_APPROVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowCompletedMessagePayloadImpl.class, name = ApprovalFlowCompletedMessagePayload.APPROVAL_FLOW_COMPLETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowCreatedMessagePayloadImpl.class, name = ApprovalFlowCreatedMessagePayload.APPROVAL_FLOW_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalFlowRejectedMessagePayloadImpl.class, name = ApprovalFlowRejectedMessagePayload.APPROVAL_FLOW_REJECTED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleApproversSetMessagePayloadImpl.class, name = ApprovalRuleApproversSetMessagePayload.APPROVAL_RULE_APPROVERS_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleCreatedMessagePayloadImpl.class, name = ApprovalRuleCreatedMessagePayload.APPROVAL_RULE_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessagePayloadImpl.class, name = ApprovalRuleDescriptionSetMessagePayload.APPROVAL_RULE_DESCRIPTION_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleKeySetMessagePayloadImpl.class, name = ApprovalRuleKeySetMessagePayload.APPROVAL_RULE_KEY_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleNameSetMessagePayloadImpl.class, name = ApprovalRuleNameSetMessagePayload.APPROVAL_RULE_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRulePredicateSetMessagePayloadImpl.class, name = ApprovalRulePredicateSetMessagePayload.APPROVAL_RULE_PREDICATE_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleRequestersSetMessagePayloadImpl.class, name = ApprovalRuleRequestersSetMessagePayload.APPROVAL_RULE_REQUESTERS_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ApprovalRuleStatusSetMessagePayloadImpl.class, name = ApprovalRuleStatusSetMessagePayload.APPROVAL_RULE_STATUS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessagePayloadImpl.class, name = AssociateRoleBuyerAssignableChangedMessagePayload.ASSOCIATE_ROLE_BUYER_ASSIGNABLE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleCreatedMessagePayloadImpl.class, name = AssociateRoleCreatedMessagePayload.ASSOCIATE_ROLE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleDeletedMessagePayloadImpl.class, name = AssociateRoleDeletedMessagePayload.ASSOCIATE_ROLE_DELETED),
@@ -91,6 +104,11 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailChangedMessagePayloadImpl.class, name = CustomerEmailChangedMessagePayload.CUSTOMER_EMAIL_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayloadImpl.class, name = CustomerEmailVerifiedMessagePayload.CUSTOMER_EMAIL_VERIFIED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadImpl.class, name = CustomerFirstNameSetMessagePayload.CUSTOMER_FIRST_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessagePayloadImpl.class, name = CustomerGroupCustomFieldAddedMessagePayload.CUSTOMER_GROUP_CUSTOM_FIELD_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessagePayloadImpl.class, name = CustomerGroupCustomFieldChangedMessagePayload.CUSTOMER_GROUP_CUSTOM_FIELD_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessagePayloadImpl.class, name = CustomerGroupCustomFieldRemovedMessagePayload.CUSTOMER_GROUP_CUSTOM_FIELD_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessagePayloadImpl.class, name = CustomerGroupCustomTypeRemovedMessagePayload.CUSTOMER_GROUP_CUSTOM_TYPE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessagePayloadImpl.class, name = CustomerGroupCustomTypeSetMessagePayload.CUSTOMER_GROUP_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupSetMessagePayloadImpl.class, name = CustomerGroupSetMessagePayload.CUSTOMER_GROUP_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerLastNameSetMessagePayloadImpl.class, name = CustomerLastNameSetMessagePayload.CUSTOMER_LAST_NAME_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadImpl.class, name = CustomerPasswordUpdatedMessagePayload.CUSTOMER_PASSWORD_UPDATED),
@@ -244,6 +262,54 @@ public interface MessagePayload {
     public static MessagePayload deepCopy(@Nullable final MessagePayload template) {
         if (template == null) {
             return null;
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalFlowApprovedMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalFlowApprovedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowApprovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalFlowCompletedMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalFlowCompletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowCompletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalFlowCreatedMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalFlowCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalFlowRejectedMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalFlowRejectedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalFlowRejectedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleApproversSetMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalRuleApproversSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleApproversSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleCreatedMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalRuleCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleKeySetMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalRuleKeySetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleKeySetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleNameSetMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalRuleNameSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleNameSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRulePredicateSetMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalRulePredicateSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRulePredicateSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleRequestersSetMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalRuleRequestersSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleRequestersSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ApprovalRuleStatusSetMessagePayload) {
+            return com.commercetools.api.models.message.ApprovalRuleStatusSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ApprovalRuleStatusSetMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessagePayload) {
             return com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessagePayload.deepCopy(
@@ -496,6 +562,26 @@ public interface MessagePayload {
         if (template instanceof com.commercetools.api.models.message.CustomerFirstNameSetMessagePayload) {
             return com.commercetools.api.models.message.CustomerFirstNameSetMessagePayload
                     .deepCopy((com.commercetools.api.models.message.CustomerFirstNameSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessagePayload) {
+            return com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.CustomerGroupSetMessagePayload) {
             return com.commercetools.api.models.message.CustomerGroupSetMessagePayload
@@ -843,6 +929,102 @@ public interface MessagePayload {
         }
         MessagePayloadImpl instance = new MessagePayloadImpl();
         return instance;
+    }
+
+    /**
+     * builder for approvalFlowApproved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalFlowApprovedMessagePayloadBuilder approvalFlowApprovedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowApprovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for approvalFlowCompleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalFlowCompletedMessagePayloadBuilder approvalFlowCompletedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowCompletedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for approvalFlowCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalFlowCreatedMessagePayloadBuilder approvalFlowCreatedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowCreatedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for approvalFlowRejected subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalFlowRejectedMessagePayloadBuilder approvalFlowRejectedBuilder() {
+        return com.commercetools.api.models.message.ApprovalFlowRejectedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleApproversSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleApproversSetMessagePayloadBuilder approvalRuleApproversSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleApproversSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleCreatedMessagePayloadBuilder approvalRuleCreatedBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleCreatedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleDescriptionSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessagePayloadBuilder approvalRuleDescriptionSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleDescriptionSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleKeySetMessagePayloadBuilder approvalRuleKeySetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleKeySetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleNameSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleNameSetMessagePayloadBuilder approvalRuleNameSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleNameSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for approvalRulePredicateSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRulePredicateSetMessagePayloadBuilder approvalRulePredicateSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRulePredicateSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleRequestersSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleRequestersSetMessagePayloadBuilder approvalRuleRequestersSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleRequestersSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for approvalRuleStatusSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ApprovalRuleStatusSetMessagePayloadBuilder approvalRuleStatusSetBuilder() {
+        return com.commercetools.api.models.message.ApprovalRuleStatusSetMessagePayloadBuilder.of();
     }
 
     /**
@@ -1355,6 +1537,46 @@ public interface MessagePayload {
      */
     public static com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadBuilder customerFirstNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessagePayloadBuilder customerGroupCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessagePayloadBuilder customerGroupCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessagePayloadBuilder customerGroupCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessagePayloadBuilder customerGroupCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomTypeRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessagePayloadBuilder customerGroupCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessagePayloadBuilder.of();
     }
 
     /**

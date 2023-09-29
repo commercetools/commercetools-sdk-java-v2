@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Generated after removing a Custom Type from a Customer using the Set Custom Type update action.</p>
+ *  <p>Generated after adding a Custom Type to a Customer using the Set Custom Type update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCustomTypeSetMessageImpl implements CustomerCustomTypeSetMessage, ModelBase {
@@ -180,8 +180,7 @@ public class CustomerCustomTypeSetMessageImpl implements CustomerCustomTypeSetMe
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getPreviousTypeId() {

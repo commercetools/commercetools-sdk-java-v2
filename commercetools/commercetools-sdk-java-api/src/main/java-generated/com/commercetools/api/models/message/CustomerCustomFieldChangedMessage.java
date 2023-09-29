@@ -43,7 +43,7 @@ public interface CustomerCustomFieldChangedMessage extends Message {
     String CUSTOMER_CUSTOM_FIELD_CHANGED = "CustomerCustomFieldChanged";
 
     /**
-     *  <p>Name of the Custom Field that has been changed.</p>
+     *  <p>Name of the Custom Field that changed.</p>
      * @return name
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface CustomerCustomFieldChangedMessage extends Message {
     public Object getPreviousValue();
 
     /**
-     *  <p>Name of the Custom Field that has been changed.</p>
+     *  <p>Name of the Custom Field that changed.</p>
      * @param name value to be set
      */
 

@@ -35,6 +35,8 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     /**
      * create instance with all properties
      */
@@ -43,13 +45,15 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
             @JsonProperty("deliveryKey") final String deliveryKey, @JsonProperty("parcelKey") final String parcelKey,
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData,
-            @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+            @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.deliveryId = deliveryId;
         this.deliveryKey = deliveryKey;
         this.parcelKey = parcelKey;
         this.measurements = measurements;
         this.trackingData = trackingData;
         this.items = items;
+        this.custom = custom;
         this.action = ADD_PARCEL_TO_DELIVERY;
     }
 
@@ -118,6 +122,14 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
         return this.items;
     }
 
+    /**
+     *  <p>Custom Fields for the Parcel.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
     }
@@ -146,6 +158,10 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
         this.items = items;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -163,6 +179,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
+                .append(custom, that.custom)
                 .append(action, that.action)
                 .append(deliveryId, that.deliveryId)
                 .append(deliveryKey, that.deliveryKey)
@@ -170,6 +187,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -182,6 +200,7 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
                 .append(measurements)
                 .append(trackingData)
                 .append(items)
+                .append(custom)
                 .toHashCode();
     }
 

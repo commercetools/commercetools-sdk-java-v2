@@ -68,4 +68,13 @@ public class OrderAddParcelToDeliveryActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderAddParcelToDeliveryActionQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<OrderAddParcelToDeliveryActionQueryBuilderDsl> custom(
+            Function<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("custom"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl.of())),
+            OrderAddParcelToDeliveryActionQueryBuilderDsl::of);
+    }
+
 }

@@ -194,6 +194,7 @@ def documentationProjects= [
         ":commercetools:commercetools-javanet-client",
         ":commercetools:commercetools-money",
         ":commercetools:commercetools-monitoring-newrelic",
+        ":commercetools:commercetools-monitoring-opentelemetry",
         ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
         ":commercetools:commercetools-reactornetty-client",

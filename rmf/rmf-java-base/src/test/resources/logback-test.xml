@@ -9,7 +9,7 @@
         </encoder>
     </appender>
 
-    <logger name="commercetools" level="WARN"/>
+    <logger name="commercetools" level="INFO"/>
 
     <root level="INFO">
         <appender-ref ref="STDOUT" />

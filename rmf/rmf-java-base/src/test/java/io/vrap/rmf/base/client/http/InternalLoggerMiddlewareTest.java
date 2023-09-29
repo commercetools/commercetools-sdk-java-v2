@@ -37,9 +37,9 @@ public class InternalLoggerMiddlewareTest {
         loggerMiddleware.invoke(request, apiHttpRequest -> CompletableFuture.completedFuture(
             new ApiHttpResponse<>(200, new ApiHttpHeaders(), "".getBytes(StandardCharsets.UTF_8))));
 
-        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.INFO);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
+        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(1);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getLevel()).isEqualTo(Level.INFO);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getFormattedMessage())
                 .matches("GET https://api.commercetools.com/ 200 \\d+ - -");
 
         testLogAppender.stop();
@@ -62,9 +62,9 @@ public class InternalLoggerMiddlewareTest {
         loggerMiddleware.invoke(request, apiHttpRequest -> CompletableFuture.completedFuture(new ApiHttpResponse<>(200,
             new ApiHttpHeaders().withHeader("Server-timing", "projects;dur=10"), "".getBytes(StandardCharsets.UTF_8))));
 
-        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.INFO);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
+        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(1);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getLevel()).isEqualTo(Level.INFO);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getFormattedMessage())
                 .matches("GET https://api.commercetools.com/ 200 \\d+ projects;dur=10 -");
 
         testLogAppender.stop();
@@ -89,9 +89,9 @@ public class InternalLoggerMiddlewareTest {
                 new ApiHttpResponse<>(200, new ApiHttpHeaders().withHeader("X-correlation-id", "test-id/12345"),
                     "".getBytes(StandardCharsets.UTF_8))));
 
-        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.INFO);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
+        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(1);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getLevel()).isEqualTo(Level.INFO);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getFormattedMessage())
                 .matches("GET https://api.commercetools.com/ 200 \\d+ - test-id/12345");
 
         testLogAppender.stop();
@@ -118,9 +118,9 @@ public class InternalLoggerMiddlewareTest {
             response.getBodyAsString().orElse(""), response.getHeaders(), response)));
         loggerMiddleware.invoke(request, apiHttpRequest -> f);
 
-        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.ERROR);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
+        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(1);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getLevel()).isEqualTo(Level.ERROR);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getFormattedMessage())
                 .matches("GET https://api.commercetools.com/ 400 \\d+ - test-id/12345");
 
         testLogAppender.stop();
@@ -147,9 +147,9 @@ public class InternalLoggerMiddlewareTest {
             response.getBodyAsString().orElse(""), response.getHeaders(), response)));
         loggerMiddleware.invoke(request, apiHttpRequest -> f);
 
-        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.ERROR);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
+        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(1);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getLevel()).isEqualTo(Level.ERROR);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getFormattedMessage())
                 .matches("GET https://api.commercetools.com/ 400 \\d+ projects;dur=7 -");
 
         testLogAppender.stop();
@@ -176,9 +176,9 @@ public class InternalLoggerMiddlewareTest {
             response.getBodyAsString().orElse(""), response.getHeaders(), response)));
         loggerMiddleware.invoke(request, apiHttpRequest -> f);
 
-        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(3);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getLevel()).isEqualTo(Level.ERROR);
-        Assertions.assertThat(testLogAppender.loggingEvents.get(1).getFormattedMessage())
+        Assertions.assertThat(testLogAppender.loggingEvents).hasSize(1);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getLevel()).isEqualTo(Level.ERROR);
+        Assertions.assertThat(testLogAppender.loggingEvents.get(0).getFormattedMessage())
                 .matches("GET https://api.commercetools.com/ 400 \\d+ - -");
 
         testLogAppender.stop();

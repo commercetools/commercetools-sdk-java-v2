@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></code></dd>
+<dd><code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code>, <code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code>, <code><a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -85,7 +85,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ApiHttpClient</span><span class="extends-implements">
-extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a>, <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a></span></div>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a>, <a href="VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>, <a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></span></div>
 <div class="block">Interface for an HTTP client accessing the API and mapping to a known output type</div>
 </section>
 <section class="summary">
@@ -113,7 +113,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseab
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -135,9 +135,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseab
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#execute(io.vrap.rmf.base.client.ApiHttpRequest,java.util.function.Function)" class="member-name-link">execute</a><wbr>(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;,<wbr><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;&nbsp;mapper)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;O&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#execute(io.vrap.rmf.base.client.ClientRequestCommand)" class="member-name-link">execute</a><wbr>(<a href="ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;O&gt;&nbsp;method)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code>default &lt;O&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6"><code><a href="#execute(io.vrap.rmf.base.client.ClientRequestCommand)" class="member-name-link">execute</a><wbr>(<a href="ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;O&gt;&nbsp;method)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Will be removed with next major version.</div>
+</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;O&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#execute(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.core.type.TypeReference)" class="member-name-link">execute</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  com.fasterxml.jackson.core.type.TypeReference&lt;O&gt;&nbsp;outputType)</code></div>
@@ -155,57 +159,60 @@ O&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurre
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#execute(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.util.function.Function)" class="member-name-link">execute</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;,<wbr><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;&nbsp;mapper)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;O&gt;&nbsp;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.core.type.TypeReference,java.time.Duration)" class="member-name-link">executeBlocking</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;O&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#execute(io.vrap.rmf.base.client.HttpRequestCommand)" class="member-name-link">execute</a><wbr>(<a href="HttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">HttpRequestCommand</a>&lt;O&gt;&nbsp;method)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;O&gt;&nbsp;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.core.type.TypeReference,java.time.Duration)" class="member-name-link">executeBlocking</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  com.fasterxml.jackson.core.type.TypeReference&lt;O&gt;&nbsp;outputType,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;O&gt;&nbsp;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.databind.JavaType,java.time.Duration)" class="member-name-link">executeBlocking</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
+ <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.14.1/com/fasterxml/jackson/databind/JavaType.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JavaType</a>&nbsp;outputType,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;O&gt;&nbsp;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.databind.JavaType,java.time.Duration)" class="member-name-link">executeBlocking</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
- <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.14.1/com/fasterxml/jackson/databind/JavaType.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JavaType</a>&nbsp;outputType,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.lang.Class,java.time.Duration)" class="member-name-link">executeBlocking</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;O&gt;&nbsp;outputType,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;O&gt;&nbsp;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.lang.Class,java.time.Duration)" class="member-name-link">executeBlocking</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;O&gt;&nbsp;outputType,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;O&gt;&nbsp;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.util.function.Function,java.time.Duration)" class="member-name-link">executeBlocking</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.util.function.Function,java.time.Duration)" class="member-name-link">executeBlocking</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;,<wbr><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;&nbsp;mapper,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBaseUri()" class="member-name-link">getBaseUri</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSerializerService()" class="member-name-link">getSerializerService</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.lang.String,io.vrap.rmf.base.client.http.HandlerStack)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;baseUri,
- <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.lang.String,io.vrap.rmf.base.client.http.HandlerStack,io.vrap.rmf.base.client.ResponseSerializer)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;baseUri,
- <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack,
- <a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.net.URI,io.vrap.rmf.base.client.http.HandlerStack)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;baseUri,
- <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.net.URI,io.vrap.rmf.base.client.http.HandlerStack,io.vrap.rmf.base.client.ResponseSerializer)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;baseUri,
- <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack,
- <a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#send(io.vrap.rmf.base.client.CreateHttpRequestCommand)" class="member-name-link">send</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#sendBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.time.Duration)" class="member-name-link">sendBlocking</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBaseUri()" class="member-name-link">getBaseUri</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSerializerService()" class="member-name-link">getSerializerService</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.lang.String,io.vrap.rmf.base.client.http.HandlerStack)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;baseUri,
+ <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.lang.String,io.vrap.rmf.base.client.http.HandlerStack,io.vrap.rmf.base.client.ResponseSerializer)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;baseUri,
+ <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack,
+ <a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.net.URI,io.vrap.rmf.base.client.http.HandlerStack)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;baseUri,
+ <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.net.URI,io.vrap.rmf.base.client.http.HandlerStack,io.vrap.rmf.base.client.ResponseSerializer)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URI.html" title="class or interface in java.net" class="external-link">URI</a>&nbsp;baseUri,
+ <a href="http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http">HandlerStack</a>&nbsp;stack,
+ <a href="ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#send(io.vrap.rmf.base.client.CreateHttpRequestCommand)" class="member-name-link">send</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#sendBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.time.Duration)" class="member-name-link">sendBlocking</a><wbr>(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -259,6 +266,12 @@ O&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurre
 <h3>execute</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;O&gt;&nbsp;outputType)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#execute(io.vrap.rmf.base.client.ApiHttpRequest,java.lang.Class)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#execute(io.vrap.rmf.base.client.ApiHttpRequest,java.lang.Class)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -266,6 +279,12 @@ O&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurre
 <h3>execute</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  com.fasterxml.jackson.core.type.TypeReference&lt;O&gt;&nbsp;outputType)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#execute(io.vrap.rmf.base.client.ApiHttpRequest,com.fasterxml.jackson.core.type.TypeReference)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#execute(io.vrap.rmf.base.client.ApiHttpRequest,com.fasterxml.jackson.core.type.TypeReference)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -273,6 +292,12 @@ O&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurre
 <h3>execute</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.14.1/com/fasterxml/jackson/databind/JavaType.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JavaType</a>&nbsp;outputType)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#execute(io.vrap.rmf.base.client.ApiHttpRequest,com.fasterxml.jackson.databind.JavaType)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#execute(io.vrap.rmf.base.client.ApiHttpRequest,com.fasterxml.jackson.databind.JavaType)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -280,12 +305,44 @@ O&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurre
 <h3>execute</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;,<wbr><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;&nbsp;mapper)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#execute(io.vrap.rmf.base.client.ApiHttpRequest,java.util.function.Function)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#execute(io.vrap.rmf.base.client.ApiHttpRequest,java.util.function.Function)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="execute(io.vrap.rmf.base.client.ClientRequestCommand)">
 <h3>execute</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;O&gt;&nbsp;method)</span></div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="ClientRequestCommand.html" title="interface in io.vrap.rmf.base.client">ClientRequestCommand</a>&lt;O&gt;&nbsp;method)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">Will be removed with next major version. Methods will implement
+ HttpRequestCommand so <a href="#execute(io.vrap.rmf.base.client.HttpRequestCommand)"><code>execute(HttpRequestCommand)</code></a> will replace this method.
+ Custom implementations may need to implement HttpRequestCommand</div>
+</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><code>O</code> - response type</dd>
+<dt>Parameters:</dt>
+<dd><code>method</code> - command to be executed</dd>
+<dt>Returns:</dt>
+<dd>future of the response</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="execute(io.vrap.rmf.base.client.HttpRequestCommand)">
+<h3>execute</h3>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="HttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">HttpRequestCommand</a>&lt;O&gt;&nbsp;method)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#execute(io.vrap.rmf.base.client.HttpRequestCommand)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#execute(io.vrap.rmf.base.client.HttpRequestCommand)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -294,6 +351,12 @@ O&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurre
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T,<wbr>
 O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;O&gt;&nbsp;outputType)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#execute(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.lang.Class)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#execute(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.lang.Class)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -301,6 +364,12 @@ O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/jav
 <h3>execute</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.14.1/com/fasterxml/jackson/databind/JavaType.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JavaType</a>&nbsp;outputType)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#execute(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.databind.JavaType)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#execute(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.databind.JavaType)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -308,6 +377,12 @@ O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/jav
 <h3>execute</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  com.fasterxml.jackson.core.type.TypeReference&lt;O&gt;&nbsp;outputType)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#execute(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.core.type.TypeReference)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#execute(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.core.type.TypeReference)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -315,6 +390,12 @@ O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/jav
 <h3>execute</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;</span>&nbsp;<span class="element-name">execute</span><wbr><span class="parameters">(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;,<wbr><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;&nbsp;mapper)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#execute(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.util.function.Function)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#execute(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.util.function.Function)">execute</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -323,6 +404,12 @@ O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/jav
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;</span>&nbsp;<span class="element-name">executeBlocking</span><wbr><span class="parameters">(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;,<wbr><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;&gt;&nbsp;mapper,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.util.function.Function,java.time.Duration)">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.util.function.Function,java.time.Duration)">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -331,6 +418,12 @@ O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/jav
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;</span>&nbsp;<span class="element-name">executeBlocking</span><wbr><span class="parameters">(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;O&gt;&nbsp;outputType,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.lang.Class,java.time.Duration)">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.lang.Class,java.time.Duration)">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -339,6 +432,12 @@ O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/jav
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;</span>&nbsp;<span class="element-name">executeBlocking</span><wbr><span class="parameters">(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.14.1/com/fasterxml/jackson/databind/JavaType.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JavaType</a>&nbsp;outputType,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.databind.JavaType,java.time.Duration)">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.databind.JavaType,java.time.Duration)">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -347,12 +446,24 @@ O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/jav
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;</span>&nbsp;<span class="element-name">executeBlocking</span><wbr><span class="parameters">(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  com.fasterxml.jackson.core.type.TypeReference&lt;O&gt;&nbsp;outputType,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.core.type.TypeReference,java.time.Duration)">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#executeBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,com.fasterxml.jackson.core.type.TypeReference,java.time.Duration)">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="send(io.vrap.rmf.base.client.CreateHttpRequestCommand)">
 <h3>send</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</span>&nbsp;<span class="element-name">send</span><wbr><span class="parameters">(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#send(io.vrap.rmf.base.client.CreateHttpRequestCommand)">send</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#send(io.vrap.rmf.base.client.CreateHttpRequestCommand)">send</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>
@@ -360,6 +471,12 @@ O&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/jav
 <h3>sendBlocking</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;</span>&nbsp;<span class="element-name">sendBlocking</span><wbr><span class="parameters">(<a href="CreateHttpRequestCommand.html" title="interface in io.vrap.rmf.base.client">CreateHttpRequestCommand</a>&nbsp;method,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;timeout)</span></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="AsyncApiClient.html#sendBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.time.Duration)">sendBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="AsyncApiClient.html" title="interface in io.vrap.rmf.base.client">AsyncApiClient</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;?&gt;&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="CompletableFutureApiClient.html#sendBlocking(io.vrap.rmf.base.client.CreateHttpRequestCommand,java.time.Duration)">sendBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="CompletableFutureApiClient.html" title="interface in io.vrap.rmf.base.client">CompletableFutureApiClient</a></code></dd>
+</dl>
 </section>
 </li>
 <li>

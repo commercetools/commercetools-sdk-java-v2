@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CustomerCustomFieldRemovedMessagePayload</span><span class="extends-implements">
 extends <a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></span></div>
-<div class="block"><p>Generated after removing a Custom Field on a Customer using the Set CustomField update action.</p>
+<div class="block"><p>Generated after removing a Custom Field from a Customer using the Set CustomField update action.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -138,7 +138,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Name of the Custom Field that has been removed.</div>
+<div class="block">Name of the Custom Field that was removed.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerCustomFieldRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerCustomFieldRemovedMessagePayload</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -153,7 +153,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(java.lang.String)" class="member-name-link">setName</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Name of the Custom Field that has been removed.</div>
+<div class="block">Name of the Custom Field that was removed.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerCustomFieldRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerCustomFieldRemovedMessagePayload</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -210,7 +210,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block"><p>Name of the Custom Field that has been removed.</p></div>
+<div class="block"><p>Name of the Custom Field that was removed.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name</dd>
@@ -221,7 +221,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block"><p>Name of the Custom Field that has been removed.</p></div>
+<div class="block"><p>Name of the Custom Field that was removed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - value to be set</dd>

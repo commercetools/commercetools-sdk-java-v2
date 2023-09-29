@@ -73,10 +73,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Querying</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li>Querying the API</li><ul><li>Predicates</li><li>Get by id/key</li><li>Query all</li><li>Sorting</li><li><a href="#pagination">Pagination</a></li></ul></ul>
- <h2>Querying the API</h2>
+<div class="block"><b>Table of content</b><ul><li><a href="#querying-api">Querying the API</a></li><ul><li><a href="#predicates">Predicates</a></li><li><a href="#get-by-id">Get by id/key</a></li><li><a href="#query-all">Query all</a></li><li><a href="#sorting">Sorting</a></li><li><a href="#pagination">Pagination</a></li><li><a href="#tests">Test cases</a></li></ul></ul>
+ <h2 id="querying-api">Querying the API</h2>
 
- <h3>Predicates</h3>
+ <h3 id="predicates">Predicates</h3>
 
  <p>The system allows the use of <a href="https://docs.commercetools.com/api/predicates/query">predicates</a> when
  querying the API. Predicates are added as query parameter string to the request itself. The following example shows
@@ -126,7 +126,7 @@ apiRoot.productProjections()
         .addPredicateVar("skus", "def");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
- <h3>Get by id/key</h3>
+ <h3 id="get-by-id">Get by id/key</h3>
 
  <div id="example-ExamplesTest-getByIdOrKey--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = createProjectClient();
 apiRoot.productProjections().withKey("product-key").get();
@@ -134,7 +134,7 @@ apiRoot.productProjections().withKey("product-key").get();
 apiRoot.productProjections().withId("product-key").get();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
- <h3>Query all</h3>
+ <h3 id="query-all">Query all</h3>
 
  <div id="example-ExamplesTest-queryAll--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = createProjectClient();
 List&lt;String&gt; ids = QueryUtils.queryAll(apiRoot.productProjections().get(), (productProjections) -&gt; {
@@ -145,7 +145,7 @@ List&lt;String&gt; ids = QueryUtils.queryAll(apiRoot.productProjections().get(),
         .join();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
- <h3>Sorting</h3>
+ <h3 id="sorting">Sorting</h3>
 
  <p>Please see <a href="https://docs.commercetools.com/api/general-concepts#sorting">Sort</a> for details</p>
 
@@ -161,7 +161,7 @@ apiRoot.products().get().withSort("masterData.current.name.en asc");
 apiRoot.products().get().withSort("masterData.current.name.en asc").addSort("id asc");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
- <h3 id=pagination>Pagination</h3>
+ <h3 id="pagination">Pagination</h3>
 
  <p>Limiting the number of the returned documents or page size:</p>
 
@@ -176,7 +176,15 @@ apiRoot.products().get().withLimit(4).withOffset(4);
  <div id="example-ExamplesTest-limitOffsetPagination--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = createProjectClient();
 
 apiRoot.products().get().withLimit(4).withOffset(4);
-</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div></div>
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <h3 id="tests">Test cases</h3>
+
+ <p>The repository has test cases for each endpoint and query parameter. Please see in the following folder:
+ <a href="https://github.com/commercetools/commercetools-sdk-java-v2/tree/main/commercetools/commercetools-sdk-java-api/src/test/java-generated/com/commercetools/api/client/resource">Resource test cases</a></p>
+
+ <p>For more real world test cases you may also look into the integration test suite:
+ <a href="https://github.com/commercetools/commercetools-sdk-java-v2/tree/main/commercetools/commercetools-sdk-java-api/src/integrationTest/java/commercetools">Integration test cases</a></p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">

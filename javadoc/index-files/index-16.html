@@ -2320,6 +2320,10 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/payment/PaymentUpdateBuilder.html#%3Cinit%3E()" class="member-name-link">PaymentUpdateBuilder()</a> - Constructor for class com.commercetools.api.models.payment.<a href="../com/commercetools/api/models/payment/PaymentUpdateBuilder.html" title="class in com.commercetools.api.models.payment">PaymentUpdateBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowStatus.ApprovalFlowStatusEnum.html#PENDING" class="member-name-link">PENDING</a> - Enum constant in enum com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowStatus.ApprovalFlowStatusEnum.html" title="enum in com.commercetools.api.models.approval_flow">ApprovalFlowStatus.ApprovalFlowStatusEnum</a></dt>
+<dd>
+<div class="block">Pending</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/order/PaymentState.PaymentStateEnum.html#PENDING" class="member-name-link">PENDING</a> - Enum constant in enum com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/PaymentState.PaymentStateEnum.html" title="enum in com.commercetools.api.models.order">PaymentState.PaymentStateEnum</a></dt>
 <dd>
 <div class="block">Pending</div>
@@ -2364,6 +2368,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">PENDING</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowStatus.html#PENDING" class="member-name-link">PENDING</a> - Static variable in interface com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowStatus.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowStatus</a></dt>
+<dd>
+<div class="block">Default status of Approval Flows, indicating that the Approval Flow has not been fully approved or rejected.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/order/PaymentState.html#PENDING" class="member-name-link">PENDING</a> - Static variable in interface com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/PaymentState.html" title="interface in com.commercetools.api.models.order">PaymentState</a></dt>
 <dd>
 <div class="block">Indicates that payment for the Order is pending.</div>
@@ -2401,6 +2409,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/error/PendingOperationError.html#PENDING_OPERATION" class="member-name-link">PENDING_OPERATION</a> - Static variable in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a></dt>
 <dd>
 <div class="block">discriminator value for PendingOperationError</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#pendingApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">pendingApprovers(RuleApprover...)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#pendingApprovers(java.util.List)" class="member-name-link">pendingApprovers(List&lt;RuleApprover&gt;)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/ErrorObject.html#pendingOperationBuilder()" class="member-name-link">pendingOperationBuilder()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></dt>
 <dd>
@@ -2477,7 +2493,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.html" class="type-name-link" title="interface in com.commercetools.api.models.associate_role">Permission</a> - Interface in <a href="../com/commercetools/api/models/associate_role/package-summary.html">com.commercetools.api.models.associate_role</a></dt>
 <dd>
-<div class="block">Permissions grant granular access to Business Units, Carts, Orders, Quotes, and QuoteRequests.</div>
+<div class="block">Permissions grant granular access to Approval Rules, Approval Flows, Business Units, Carts, Orders, Quotes, and Quote Requests.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/Permission.html" class="type-name-link" title="interface in com.commercetools.history.models.common">Permission</a> - Interface in <a href="../com/commercetools/history/models/common/package-summary.html">com.commercetools.history.models.common</a></dt>
 <dd>
@@ -2680,6 +2696,14 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/UpdateActionBuilder.html#plus(TAction)" class="member-name-link">plus(TAction)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/UpdateActionBuilder.html" title="class in com.commercetools.api.client">UpdateActionBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowUpdateBuilder.html#plusActions(com.commercetools.api.models.approval_flow.ApprovalFlowUpdateAction...)" class="member-name-link">plusActions(ApprovalFlowUpdateAction...)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowUpdateBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowUpdateBuilder</a></dt>
+<dd>
+<div class="block">Update actions to be performed on the Approval Flow.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRuleUpdateBuilder.html#plusActions(com.commercetools.api.models.approval_rule.ApprovalRuleUpdateAction...)" class="member-name-link">plusActions(ApprovalRuleUpdateAction...)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRuleUpdateBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleUpdateBuilder</a></dt>
+<dd>
+<div class="block">Update actions to be performed on the ApprovalRule.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/AssociateRoleUpdateBuilder.html#plusActions(com.commercetools.api.models.associate_role.AssociateRoleUpdateAction...)" class="member-name-link">plusActions(AssociateRoleUpdateAction...)</a> - Method in class com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/AssociateRoleUpdateBuilder.html" title="class in com.commercetools.api.models.associate_role">AssociateRoleUpdateBuilder</a></dt>
 <dd>
 <div class="block">Update actions to be performed on the AssociateRole.</div>
@@ -2851,6 +2875,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/ml/models/image_search_config/ImageSearchConfigRequestBuilder.html#plusActions(com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction...)" class="member-name-link">plusActions(ImageSearchConfigUpdateAction...)</a> - Method in class com.commercetools.ml.models.image_search_config.<a href="../com/commercetools/ml/models/image_search_config/ImageSearchConfigRequestBuilder.html" title="class in com.commercetools.ml.models.image_search_config">ImageSearchConfigRequestBuilder</a></dt>
 <dd>
 <div class="block">The list of update actions to be performed on the project.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowUpdateBuilder.html#plusActions(java.util.function.Function)" class="member-name-link">plusActions(Function&lt;ApprovalFlowUpdateActionBuilder, Builder&lt;? extends ApprovalFlowUpdateAction&gt;&gt;)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowUpdateBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowUpdateBuilder</a></dt>
+<dd>
+<div class="block">Update actions to be performed on the Approval Flow.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRuleUpdateBuilder.html#plusActions(java.util.function.Function)" class="member-name-link">plusActions(Function&lt;ApprovalRuleUpdateActionBuilder, Builder&lt;? extends ApprovalRuleUpdateAction&gt;&gt;)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRuleUpdateBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleUpdateBuilder</a></dt>
+<dd>
+<div class="block">Update actions to be performed on the ApprovalRule.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/associate_role/AssociateRoleUpdateBuilder.html#plusActions(java.util.function.Function)" class="member-name-link">plusActions(Function&lt;AssociateRoleUpdateActionBuilder, Builder&lt;? extends AssociateRoleUpdateAction&gt;&gt;)</a> - Method in class com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/AssociateRoleUpdateBuilder.html" title="class in com.commercetools.api.models.associate_role">AssociateRoleUpdateBuilder</a></dt>
 <dd>
@@ -3200,13 +3232,37 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Contains the parent path towards the root Category.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverConjunctionBuilder.html#plusAnd(com.commercetools.api.models.approval_rule.ApproverDisjunction...)" class="member-name-link">plusAnd(ApproverDisjunction...)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverConjunctionBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverConjunctionBuilder</a></dt>
+<dd>
+<div class="block">All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverConjunctionDraftBuilder.html#plusAnd(com.commercetools.api.models.approval_rule.ApproverDisjunctionDraft...)" class="member-name-link">plusAnd(ApproverDisjunctionDraft...)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverConjunctionDraftBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverConjunctionDraftBuilder</a></dt>
+<dd>
+<div class="block">All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/order/OrderSearchAndExpressionBuilder.html#plusAnd(com.commercetools.api.models.order.OrderSearchQuery...)" class="member-name-link">plusAnd(OrderSearchQuery...)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSearchAndExpressionBuilder.html" title="class in com.commercetools.api.models.order">OrderSearchAndExpressionBuilder</a></dt>
 <dd>
 <div class="block">add values to the and</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverConjunctionBuilder.html#plusAnd(java.util.function.Function)" class="member-name-link">plusAnd(Function&lt;ApproverDisjunctionBuilder, ApproverDisjunctionBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverConjunctionBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverConjunctionBuilder</a></dt>
+<dd>
+<div class="block">All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverConjunctionDraftBuilder.html#plusAnd(java.util.function.Function)" class="member-name-link">plusAnd(Function&lt;ApproverDisjunctionDraftBuilder, ApproverDisjunctionDraftBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverConjunctionDraftBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverConjunctionDraftBuilder</a></dt>
+<dd>
+<div class="block">All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/order/OrderSearchAndExpressionBuilder.html#plusAnd(java.util.function.Function)" class="member-name-link">plusAnd(Function&lt;OrderSearchQueryBuilder, OrderSearchQueryBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSearchAndExpressionBuilder.html" title="class in com.commercetools.api.models.order">OrderSearchAndExpressionBuilder</a></dt>
 <dd>
 <div class="block">add the value to the and using the builder function</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#plusApprovals(com.commercetools.api.models.approval_flow.ApprovalFlowApproval...)" class="member-name-link">plusApprovals(ApprovalFlowApproval...)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Existing approvals in the Approval Flow.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#plusApprovals(java.util.function.Function)" class="member-name-link">plusApprovals(Function&lt;ApprovalFlowApprovalBuilder, ApprovalFlowApprovalBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Existing approvals in the Approval Flow.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/category/CategoryChangeAssetOrderActionBuilder.html#plusAssetOrder(java.lang.String...)" class="member-name-link">plusAssetOrder(String...)</a> - Method in class com.commercetools.api.models.category.<a href="../com/commercetools/api/models/category/CategoryChangeAssetOrderActionBuilder.html" title="class in com.commercetools.api.models.category">CategoryChangeAssetOrderActionBuilder</a></dt>
 <dd>
@@ -3728,6 +3784,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">New value to set.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#plusCurrentTierPendingApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">plusCurrentTierPendingApprovers(RuleApprover...)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> only for the currently active tier(s).</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#plusCurrentTierPendingApprovers(java.util.function.Function)" class="member-name-link">plusCurrentTierPendingApprovers(Function&lt;RuleApproverBuilder, RuleApproverBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> only for the currently active tier(s).</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart/CartBuilder.html#plusCustomLineItems(com.commercetools.api.models.cart.CustomLineItem...)" class="member-name-link">plusCustomLineItems(CustomLineItem...)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></dt>
 <dd>
 <div class="block">Custom Line Items added to the Cart.</div>
@@ -4052,6 +4116,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Duplicate keys.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#plusEligibleApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">plusEligibleApprovers(RuleApprover...)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#plusEligibleApprovers(java.util.function.Function)" class="member-name-link">plusEligibleApprovers(Function&lt;RuleApproverBuilder, RuleApproverBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/error/AuthErrorResponseBuilder.html#plusErrors(com.commercetools.api.models.error.ErrorObject...)" class="member-name-link">plusErrors(ErrorObject...)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/AuthErrorResponseBuilder.html" title="class in com.commercetools.api.models.error">AuthErrorResponseBuilder</a></dt>
 <dd>
 <div class="block">Authentication and authorization-related errors returned for a request.</div>
@@ -4296,6 +4368,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Discounts to be applied.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/cart/DiscountOnTotalPriceBuilder.html#plusIncludedDiscounts(com.commercetools.api.models.cart.DiscountedTotalPricePortion...)" class="member-name-link">plusIncludedDiscounts(DiscountedTotalPricePortion...)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/DiscountOnTotalPriceBuilder.html" title="class in com.commercetools.api.models.cart">DiscountOnTotalPriceBuilder</a></dt>
+<dd>
+<div class="block">Discounts that impact the total price of the Cart or Order.</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#plusIncludedDiscounts(com.commercetools.history.models.common.DiscountedLineItemPortion...)" class="member-name-link">plusIncludedDiscounts(DiscountedLineItemPortion...)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></dt>
 <dd>
 <div class="block">add values to the includedDiscounts</div>
@@ -4311,6 +4387,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/order/DiscountedLineItemPriceDraftBuilder.html#plusIncludedDiscounts(java.util.function.Function)" class="member-name-link">plusIncludedDiscounts(Function&lt;DiscountedLineItemPortionBuilder, DiscountedLineItemPortionBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/DiscountedLineItemPriceDraftBuilder.html" title="class in com.commercetools.api.models.order">DiscountedLineItemPriceDraftBuilder</a></dt>
 <dd>
 <div class="block">Discounts to be applied.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart/DiscountOnTotalPriceBuilder.html#plusIncludedDiscounts(java.util.function.Function)" class="member-name-link">plusIncludedDiscounts(Function&lt;DiscountedTotalPricePortionBuilder, DiscountedTotalPricePortionBuilder&gt;)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/DiscountOnTotalPriceBuilder.html" title="class in com.commercetools.api.models.cart">DiscountOnTotalPriceBuilder</a></dt>
+<dd>
+<div class="block">Discounts that impact the total price of the Cart or Order.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html#plusIncludedDiscounts(java.util.function.Function)" class="member-name-link">plusIncludedDiscounts(Function&lt;DiscountedLineItemPortionBuilder, DiscountedLineItemPortionBuilder&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/DiscountedLineItemPriceBuilder.html" title="class in com.commercetools.history.models.common">DiscountedLineItemPriceBuilder</a></dt>
 <dd>
@@ -5316,6 +5396,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Delivery Items before the Set Parcel Items update action.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessageBuilder.html#plusOldRequesters(com.commercetools.api.models.approval_rule.RuleRequester...)" class="member-name-link">plusOldRequesters(RuleRequester...)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessageBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRuleRequestersSetMessageBuilder</a></dt>
+<dd>
+<div class="block">RuleRequester of the ApprovalRule after the Set Requester update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessagePayloadBuilder.html#plusOldRequesters(com.commercetools.api.models.approval_rule.RuleRequester...)" class="member-name-link">plusOldRequesters(RuleRequester...)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRuleRequestersSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">RuleRequester of the ApprovalRule after the Set Requester update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessageBuilder.html#plusOldRequesters(java.util.function.Function)" class="member-name-link">plusOldRequesters(Function&lt;RuleRequesterBuilder, RuleRequesterBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessageBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRuleRequestersSetMessageBuilder</a></dt>
+<dd>
+<div class="block">RuleRequester of the ApprovalRule after the Set Requester update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessagePayloadBuilder.html#plusOldRequesters(java.util.function.Function)" class="member-name-link">plusOldRequesters(Function&lt;RuleRequesterBuilder, RuleRequesterBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRuleRequestersSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">RuleRequester of the ApprovalRule after the Set Requester update action.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/BusinessUnitStoreModeChangedMessageBuilder.html#plusOldStores(com.commercetools.api.models.store.StoreKeyReference...)" class="member-name-link">plusOldStores(StoreKeyReference...)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitStoreModeChangedMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitStoreModeChangedMessageBuilder</a></dt>
 <dd>
 <div class="block">Stores of the Business Unit before the Set Store Mode update action.</div>
@@ -5340,9 +5436,25 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">add the value to the operationStatus using the builder function</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverDisjunctionBuilder.html#plusOr(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">plusOr(RuleApprover...)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverDisjunctionBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverDisjunctionBuilder</a></dt>
+<dd>
+<div class="block">Any of the nested approvers must approve in order for the disjunction to be considered approved.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverDisjunctionDraftBuilder.html#plusOr(com.commercetools.api.models.approval_rule.RuleApproverDraft...)" class="member-name-link">plusOr(RuleApproverDraft...)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverDisjunctionDraftBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverDisjunctionDraftBuilder</a></dt>
+<dd>
+<div class="block">Any of the nested approvers must approve in order for the disjunction to be considered approved.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/order/OrderSearchOrExpressionBuilder.html#plusOr(com.commercetools.api.models.order.OrderSearchQuery...)" class="member-name-link">plusOr(OrderSearchQuery...)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSearchOrExpressionBuilder.html" title="class in com.commercetools.api.models.order">OrderSearchOrExpressionBuilder</a></dt>
 <dd>
 <div class="block">add values to the or</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverDisjunctionBuilder.html#plusOr(java.util.function.Function)" class="member-name-link">plusOr(Function&lt;RuleApproverBuilder, RuleApproverBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverDisjunctionBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverDisjunctionBuilder</a></dt>
+<dd>
+<div class="block">Any of the nested approvers must approve in order for the disjunction to be considered approved.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverDisjunctionDraftBuilder.html#plusOr(java.util.function.Function)" class="member-name-link">plusOr(Function&lt;RuleApproverDraftBuilder, RuleApproverDraftBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverDisjunctionDraftBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverDisjunctionDraftBuilder</a></dt>
+<dd>
+<div class="block">Any of the nested approvers must approve in order for the disjunction to be considered approved.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/OrderSearchOrExpressionBuilder.html#plusOr(java.util.function.Function)" class="member-name-link">plusOr(Function&lt;OrderSearchQueryBuilder, OrderSearchQueryBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSearchOrExpressionBuilder.html" title="class in com.commercetools.api.models.order">OrderSearchOrExpressionBuilder</a></dt>
 <dd>
@@ -5447,6 +5559,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/history/models/common/PaymentInfoBuilder.html#plusPayments(java.util.function.Function)" class="member-name-link">plusPayments(Function&lt;ReferenceBuilder, ReferenceBuilder&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/PaymentInfoBuilder.html" title="class in com.commercetools.history.models.common">PaymentInfoBuilder</a></dt>
 <dd>
 <div class="block">add the value to the payments using the builder function</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#plusPendingApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">plusPendingApprovers(RuleApprover...)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#plusPendingApprovers(java.util.function.Function)" class="member-name-link">plusPendingApprovers(Function&lt;RuleApproverBuilder, RuleApproverBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/LineItemDraftBuilder.html#plusPerMethodExternalTaxRate(com.commercetools.api.models.cart.MethodExternalTaxRateDraft...)" class="member-name-link">plusPerMethodExternalTaxRate(MethodExternalTaxRateDraft...)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/LineItemDraftBuilder.html" title="class in com.commercetools.api.models.cart">LineItemDraftBuilder</a></dt>
 <dd>
@@ -6120,6 +6240,46 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Inventory supply Channels that have been removed from the Store.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRuleBuilder.html#plusRequesters(com.commercetools.api.models.approval_rule.RuleRequester...)" class="member-name-link">plusRequesters(RuleRequester...)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRuleBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleBuilder</a></dt>
+<dd>
+<div class="block">The Associate Roles customers must hold for their Order to require approval.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessageBuilder.html#plusRequesters(com.commercetools.api.models.approval_rule.RuleRequester...)" class="member-name-link">plusRequesters(RuleRequester...)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessageBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRuleRequestersSetMessageBuilder</a></dt>
+<dd>
+<div class="block">RuleRequester of the ApprovalRule after the Set Requester update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessagePayloadBuilder.html#plusRequesters(com.commercetools.api.models.approval_rule.RuleRequester...)" class="member-name-link">plusRequesters(RuleRequester...)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRuleRequestersSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">RuleRequester of the ApprovalRule after the Set Requester update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRuleDraftBuilder.html#plusRequesters(com.commercetools.api.models.approval_rule.RuleRequesterDraft...)" class="member-name-link">plusRequesters(RuleRequesterDraft...)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRuleDraftBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleDraftBuilder</a></dt>
+<dd>
+<div class="block">The Associate Roles customers must hold for their Order to require approval.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRuleSetRequestersActionBuilder.html#plusRequesters(com.commercetools.api.models.approval_rule.RuleRequesterDraft...)" class="member-name-link">plusRequesters(RuleRequesterDraft...)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRuleSetRequestersActionBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleSetRequestersActionBuilder</a></dt>
+<dd>
+<div class="block">New requesters to set for the Approval Rule.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRuleBuilder.html#plusRequesters(java.util.function.Function)" class="member-name-link">plusRequesters(Function&lt;RuleRequesterBuilder, RuleRequesterBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRuleBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleBuilder</a></dt>
+<dd>
+<div class="block">The Associate Roles customers must hold for their Order to require approval.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessageBuilder.html#plusRequesters(java.util.function.Function)" class="member-name-link">plusRequesters(Function&lt;RuleRequesterBuilder, RuleRequesterBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessageBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRuleRequestersSetMessageBuilder</a></dt>
+<dd>
+<div class="block">RuleRequester of the ApprovalRule after the Set Requester update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessagePayloadBuilder.html#plusRequesters(java.util.function.Function)" class="member-name-link">plusRequesters(Function&lt;RuleRequesterBuilder, RuleRequesterBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRuleRequestersSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRuleRequestersSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">RuleRequester of the ApprovalRule after the Set Requester update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRuleDraftBuilder.html#plusRequesters(java.util.function.Function)" class="member-name-link">plusRequesters(Function&lt;RuleRequesterDraftBuilder, RuleRequesterDraftBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRuleDraftBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleDraftBuilder</a></dt>
+<dd>
+<div class="block">The Associate Roles customers must hold for their Order to require approval.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRuleSetRequestersActionBuilder.html#plusRequesters(java.util.function.Function)" class="member-name-link">plusRequesters(Function&lt;RuleRequesterDraftBuilder, RuleRequesterDraftBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRuleSetRequestersActionBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleSetRequestersActionBuilder</a></dt>
+<dd>
+<div class="block">New requesters to set for the Approval Rule.</div>
+</dd>
 <dt><a href="../com/commercetools/importapi/models/importrequests/CategoryImportRequestBuilder.html#plusResources(com.commercetools.importapi.models.categories.CategoryImport...)" class="member-name-link">plusResources(CategoryImport...)</a> - Method in class com.commercetools.importapi.models.importrequests.<a href="../com/commercetools/importapi/models/importrequests/CategoryImportRequestBuilder.html" title="class in com.commercetools.importapi.models.importrequests">CategoryImportRequestBuilder</a></dt>
 <dd>
 <div class="block">The category import resources of this request.</div>
@@ -6679,6 +6839,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/state/StateSetRolesActionBuilder.html#plusRoles(com.commercetools.api.models.state.StateRoleEnum...)" class="member-name-link">plusRoles(StateRoleEnum...)</a> - Method in class com.commercetools.api.models.state.<a href="../com/commercetools/api/models/state/StateSetRolesActionBuilder.html" title="class in com.commercetools.api.models.state">StateSetRolesActionBuilder</a></dt>
 <dd>
 <div class="block">Value to set.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#plusRules(com.commercetools.api.models.approval_rule.ApprovalRule...)" class="member-name-link">plusRules(ApprovalRule...)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Approval Rules that matched the Order.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html#plusRules(java.util.function.Function)" class="member-name-link">plusRules(Function&lt;ApprovalRuleBuilder, ApprovalRuleBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></dt>
+<dd>
+<div class="block">Approval Rules that matched the Order.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html#plusSetParcelItems(com.commercetools.importapi.models.order_patches.ParcelItems...)" class="member-name-link">plusSetParcelItems(ParcelItems...)</a> - Method in class com.commercetools.importapi.models.order_patches.<a href="../com/commercetools/importapi/models/order_patches/OrderFieldBuilder.html" title="class in com.commercetools.importapi.models.order_patches">OrderFieldBuilder</a></dt>
 <dd>
@@ -7412,6 +7580,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Line Items (containing text values) to add to the ShoppingList.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverHierarchyBuilder.html#plusTiers(com.commercetools.api.models.approval_rule.ApproverConjunction...)" class="member-name-link">plusTiers(ApproverConjunction...)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverHierarchyBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverHierarchyBuilder</a></dt>
+<dd>
+<div class="block">All of the nested conjunctions must be approved in order for the hierarchy to be considered approved.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverHierarchyDraftBuilder.html#plusTiers(com.commercetools.api.models.approval_rule.ApproverConjunctionDraft...)" class="member-name-link">plusTiers(ApproverConjunctionDraft...)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverHierarchyDraftBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverHierarchyDraftBuilder</a></dt>
+<dd>
+<div class="block">Nested conjunctions representing tiers of approvers in a hierarchy.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/common/PriceBuilder.html#plusTiers(com.commercetools.api.models.common.PriceTier...)" class="member-name-link">plusTiers(PriceTier...)</a> - Method in class com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></dt>
 <dd>
 <div class="block">Present if different Prices for certain LineItem quantities have been specified.</div>
@@ -7479,6 +7655,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/importapi/models/orders/ShippingRateDraftBuilder.html#plusTiers(com.commercetools.importapi.models.orders.ShippingRatePriceTier...)" class="member-name-link">plusTiers(ShippingRatePriceTier...)</a> - Method in class com.commercetools.importapi.models.orders.<a href="../com/commercetools/importapi/models/orders/ShippingRateDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ShippingRateDraftBuilder</a></dt>
 <dd>
 <div class="block">add values to the tiers</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverHierarchyBuilder.html#plusTiers(java.util.function.Function)" class="member-name-link">plusTiers(Function&lt;ApproverConjunctionBuilder, ApproverConjunctionBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverHierarchyBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverHierarchyBuilder</a></dt>
+<dd>
+<div class="block">All of the nested conjunctions must be approved in order for the hierarchy to be considered approved.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApproverHierarchyDraftBuilder.html#plusTiers(java.util.function.Function)" class="member-name-link">plusTiers(Function&lt;ApproverConjunctionDraftBuilder, ApproverConjunctionDraftBuilder&gt;)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApproverHierarchyDraftBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApproverHierarchyDraftBuilder</a></dt>
+<dd>
+<div class="block">Nested conjunctions representing tiers of approvers in a hierarchy.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/common/PriceBuilder.html#plusTiers(java.util.function.Function)" class="member-name-link">plusTiers(Function&lt;PriceTierBuilder, PriceTierBuilder&gt;)</a> - Method in class com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/PriceBuilder.html" title="class in com.commercetools.api.models.common">PriceBuilder</a></dt>
 <dd>
@@ -7966,6 +8150,14 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilderMixin.html#post(com.commercetools.api.models.api_client.ApiClientDraft)" class="member-name-link">post(ApiClientDraft)</a> - Method in interface com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilderMixin.html" title="interface in com.commercetools.api.client">ByProjectKeyApiClientsRequestBuilderMixin</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder.html#post(com.commercetools.api.models.approval_flow.ApprovalFlowUpdate)" class="member-name-link">post(ApprovalFlowUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesRequestBuilder.html#post(com.commercetools.api.models.approval_rule.ApprovalRuleDraft)" class="member-name-link">post(ApprovalRuleDraft)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDRequestBuilder.html#post(com.commercetools.api.models.approval_rule.ApprovalRuleUpdate)" class="member-name-link">post(ApprovalRuleUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesKeyByKeyRequestBuilder.html#post(com.commercetools.api.models.approval_rule.ApprovalRuleUpdate)" class="member-name-link">post(ApprovalRuleUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesKeyByKeyRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyAssociateRolesRequestBuilder.html#post(com.commercetools.api.models.associate_role.AssociateRoleDraft)" class="member-name-link">post(AssociateRoleDraft)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAssociateRolesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAssociateRolesRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyAssociateRolesByIDRequestBuilder.html#post(com.commercetools.api.models.associate_role.AssociateRoleUpdate)" class="member-name-link">post(AssociateRoleUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAssociateRolesByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAssociateRolesByIDRequestBuilder</a></dt>
@@ -8450,6 +8642,14 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdBusinessUnitsRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdBusinessUnitsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdBusinessUnitsRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesKeyByKeyRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesKeyByKeyRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsByIDRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsKeyByKeyRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsKeyByKeyRequestBuilder</a></dt>
@@ -8853,6 +9053,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyMeBusinessUnitsRequestBuilder.html#post(java.util.function.Function)" class="member-name-link">post(Function&lt;MyBusinessUnitDraftBuilder, Builder&lt;? extends MyBusinessUnitDraft&gt;&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyMeBusinessUnitsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeBusinessUnitsRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ApiClientDraftBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyApiClientsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyApiClientsRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ApprovalFlowUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ApprovalRuleDraftBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ApprovalRuleUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesKeyByKeyRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ApprovalRuleUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesKeyByKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyAssociateRolesRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;AssociateRoleDraftBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAssociateRolesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAssociateRolesRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -9292,12 +9500,24 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">CollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateTimeCollectionPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/ContainsPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/ContainsPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">ContainsPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">TimeComparisonPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/DateComparisonPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateComparisonPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/query/EmptyPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/EmptyPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">EmptyPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRuleBuilder.html#predicate(java.lang.String)" class="member-name-link">predicate(String)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRuleBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleBuilder</a></dt>
+<dd>
+<div class="block">The Order Predicate describing the Orders the Approval Rule should match against.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRuleDraftBuilder.html#predicate(java.lang.String)" class="member-name-link">predicate(String)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRuleDraftBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleDraftBuilder</a></dt>
+<dd>
+<div class="block">The predicate describing the Orders the Approval Rule should match against.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRuleSetPredicateActionBuilder.html#predicate(java.lang.String)" class="member-name-link">predicate(String)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRuleSetPredicateActionBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleSetPredicateActionBuilder</a></dt>
+<dd>
+<div class="block">A valid Order Predicate to set for the Approval Rule.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart_discount/CartDiscountCustomLineItemsTargetBuilder.html#predicate(java.lang.String)" class="member-name-link">predicate(String)</a> - Method in class com.commercetools.api.models.cart_discount.<a href="../com/commercetools/api/models/cart_discount/CartDiscountCustomLineItemsTargetBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountCustomLineItemsTargetBuilder</a></dt>
 <dd>
 <div class="block">Valid CustomLineItem target predicate.</div>
@@ -9313,6 +9533,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/cart_discount/MultiBuyLineItemsTargetBuilder.html#predicate(java.lang.String)" class="member-name-link">predicate(String)</a> - Method in class com.commercetools.api.models.cart_discount.<a href="../com/commercetools/api/models/cart_discount/MultiBuyLineItemsTargetBuilder.html" title="class in com.commercetools.api.models.cart_discount">MultiBuyLineItemsTargetBuilder</a></dt>
 <dd>
 <div class="block">Valid LineItem target predicate.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ApprovalRulePredicateSetMessageBuilder.html#predicate(java.lang.String)" class="member-name-link">predicate(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRulePredicateSetMessageBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRulePredicateSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Name of the ApprovalRule after the Set Predicate update action.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/ApprovalRulePredicateSetMessagePayloadBuilder.html#predicate(java.lang.String)" class="member-name-link">predicate(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRulePredicateSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRulePredicateSetMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Name of the ApprovalRule after the Set Predicate update action.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_discount/ProductDiscountBuilder.html#predicate(java.lang.String)" class="member-name-link">predicate(String)</a> - Method in class com.commercetools.api.models.product_discount.<a href="../com/commercetools/api/models/product_discount/ProductDiscountBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountBuilder</a></dt>
 <dd>
@@ -9379,6 +9607,8 @@ loadScripts(document, 'script');</script>
 <div class="block">set the value to the prefix using the builder function</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/OrderSearchQueryBuilderMixin.html#prefix(java.util.function.Function)" class="member-name-link">prefix(Function&lt;OrderSearchStringValueBuilder, OrderSearchStringValueBuilder&gt;)</a> - Method in interface com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSearchQueryBuilderMixin.html" title="interface in com.commercetools.api.models.order">OrderSearchQueryBuilderMixin</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/monitoring/opentelemetry/OpenTelemetryInfo.html#PREFIX" class="member-name-link">PREFIX</a> - Static variable in class com.commercetools.monitoring.opentelemetry.<a href="../com/commercetools/monitoring/opentelemetry/OpenTelemetryInfo.html" title="class in com.commercetools.monitoring.opentelemetry">OpenTelemetryInfo</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../io/vrap/rmf/base/client/utils/json/JsonUtils.html#prettyPrint(java.lang.String)" class="member-name-link">prettyPrint(String)</a> - Static method in class io.vrap.rmf.base.client.utils.json.<a href="../io/vrap/rmf/base/client/utils/json/JsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json">JsonUtils</a></dt>
 <dd>
@@ -9470,11 +9700,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeRemovedMessageBuilder.html#previousTypeId(java.lang.String)" class="member-name-link">previousTypeId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressCustomTypeRemovedMessageBuilder</a></dt>
 <dd>
-<div class="block"><code>id</code> of the Custom Type that has been removed.</div>
+<div class="block"><code>id</code> of the Custom Type that was removed.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeRemovedMessagePayloadBuilder.html#previousTypeId(java.lang.String)" class="member-name-link">previousTypeId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressCustomTypeRemovedMessagePayloadBuilder</a></dt>
 <dd>
-<div class="block"><code>id</code> of the Custom Type that has been removed.</div>
+<div class="block"><code>id</code> of the Custom Type that was removed.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeSetMessageBuilder.html#previousTypeId(java.lang.String)" class="member-name-link">previousTypeId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerAddressCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerAddressCustomTypeSetMessageBuilder</a></dt>
 <dd>
@@ -9486,11 +9716,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomTypeRemovedMessageBuilder.html#previousTypeId(java.lang.String)" class="member-name-link">previousTypeId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerCustomTypeRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerCustomTypeRemovedMessageBuilder</a></dt>
 <dd>
-<div class="block"><code>id</code> of the Custom Type that has been removed.</div>
+<div class="block"><code>id</code> of the Custom Type that was removed.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomTypeRemovedMessagePayloadBuilder.html#previousTypeId(java.lang.String)" class="member-name-link">previousTypeId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerCustomTypeRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerCustomTypeRemovedMessagePayloadBuilder</a></dt>
 <dd>
-<div class="block"><code>id</code> of the Custom Type that has been removed.</div>
+<div class="block"><code>id</code> of the Custom Type that was removed.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerCustomTypeSetMessageBuilder.html#previousTypeId(java.lang.String)" class="member-name-link">previousTypeId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerCustomTypeSetMessageBuilder</a></dt>
 <dd>
@@ -9502,11 +9732,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/OrderCustomTypeRemovedMessageBuilder.html#previousTypeId(java.lang.String)" class="member-name-link">previousTypeId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderCustomTypeRemovedMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomTypeRemovedMessageBuilder</a></dt>
 <dd>
-<div class="block"><code>id</code> of the Custom Type that has been removed.</div>
+<div class="block"><code>id</code> of the Custom Type that was removed.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/OrderCustomTypeRemovedMessagePayloadBuilder.html#previousTypeId(java.lang.String)" class="member-name-link">previousTypeId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderCustomTypeRemovedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomTypeRemovedMessagePayloadBuilder</a></dt>
 <dd>
-<div class="block"><code>id</code> of the Custom Type that has been removed.</div>
+<div class="block"><code>id</code> of the Custom Type that was removed.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/OrderCustomTypeSetMessageBuilder.html#previousTypeId(java.lang.String)" class="member-name-link">previousTypeId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderCustomTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderCustomTypeSetMessageBuilder</a></dt>
 <dd>

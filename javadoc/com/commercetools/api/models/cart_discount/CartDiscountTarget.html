@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="CartDiscountCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountCustomLineItemsTarget</a></code>, <code><a href="CartDiscountLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountLineItemsTarget</a></code>, <code><a href="CartDiscountShippingCostTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountShippingCostTarget</a></code>, <code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code>, <code><a href="MultiBuyLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyLineItemsTarget</a></code></dd>
+<dd><code><a href="CartDiscountCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountCustomLineItemsTarget</a></code>, <code><a href="CartDiscountLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountLineItemsTarget</a></code>, <code><a href="CartDiscountShippingCostTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountShippingCostTarget</a></code>, <code><a href="CartDiscountTotalPriceTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTotalPriceTarget</a></code>, <code><a href="MultiBuyCustomLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTarget</a></code>, <code><a href="MultiBuyLineItemsTarget.html" title="interface in com.commercetools.api.models.cart_discount">MultiBuyLineItemsTarget</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CartDiscountTarget</span></div>
@@ -135,14 +135,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for shipping subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CartDiscountTotalPriceTargetBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountTotalPriceTargetBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#totalPriceBuilder()" class="member-name-link">totalPriceBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for totalPrice subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withCartDiscountTarget(java.util.function.Function)" class="member-name-link">withCartDiscountTarget</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withCartDiscountTarget(java.util.function.Function)" class="member-name-link">withCartDiscountTarget</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CartDiscountTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountTarget</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -212,6 +217,17 @@ loadScripts(document, 'script');</script>
 <h3>shippingBuilder</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountShippingCostTargetBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountShippingCostTargetBuilder</a></span>&nbsp;<span class="element-name">shippingBuilder</span>()</div>
 <div class="block">builder for shipping subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="totalPriceBuilder()">
+<h3>totalPriceBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CartDiscountTotalPriceTargetBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountTotalPriceTargetBuilder</a></span>&nbsp;<span class="element-name">totalPriceBuilder</span>()</div>
+<div class="block">builder for totalPrice subtype</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>builder</dd>

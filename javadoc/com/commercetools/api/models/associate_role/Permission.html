@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Permission</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="interface in io.vrap.rmf.base.client">JsonEnum</a></span></div>
-<div class="block"><p>Permissions grant granular access to Business Units, Carts, Orders, Quotes, and QuoteRequests.</p></div>
+<div class="block"><p>Permissions grant granular access to Approval Rules, Approval Flows, Business Units, Carts, Orders, Quotes, and Quote Requests.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -128,168 +128,183 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="block">An Associate can create a child Business Unit.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#CREATE_MY_CARTS" class="member-name-link">CREATE_MY_CARTS</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#CREATE_APPROVAL_RULES" class="member-name-link">CREATE_APPROVAL_RULES</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">An Associate can create Approval Rules.</div>
+</div>
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CREATE_MY_CARTS" class="member-name-link">CREATE_MY_CARTS</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can create their own B2B Carts.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#CREATE_MY_ORDERS_FROM_MY_CARTS" class="member-name-link">CREATE_MY_ORDERS_FROM_MY_CARTS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#CREATE_MY_ORDERS_FROM_MY_CARTS" class="member-name-link">CREATE_MY_ORDERS_FROM_MY_CARTS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can create Orders from their own B2B Carts.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#CREATE_MY_ORDERS_FROM_MY_QUOTES" class="member-name-link">CREATE_MY_ORDERS_FROM_MY_QUOTES</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CREATE_MY_ORDERS_FROM_MY_QUOTES" class="member-name-link">CREATE_MY_ORDERS_FROM_MY_QUOTES</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can create Orders from their own B2B Quotes.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#CREATE_MY_QUOTE_REQUESTS_FROM_MY_CARTS" class="member-name-link">CREATE_MY_QUOTE_REQUESTS_FROM_MY_CARTS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#CREATE_MY_QUOTE_REQUESTS_FROM_MY_CARTS" class="member-name-link">CREATE_MY_QUOTE_REQUESTS_FROM_MY_CARTS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can create their own Quote Requests from their own B2B Carts.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#CREATE_ORDERS_FROM_OTHERS_CARTS" class="member-name-link">CREATE_ORDERS_FROM_OTHERS_CARTS</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CREATE_ORDERS_FROM_OTHERS_CARTS" class="member-name-link">CREATE_ORDERS_FROM_OTHERS_CARTS</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can create Orders from B2B Carts that belong to other Associates.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#CREATE_ORDERS_FROM_OTHERS_QUOTES" class="member-name-link">CREATE_ORDERS_FROM_OTHERS_QUOTES</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#CREATE_ORDERS_FROM_OTHERS_QUOTES" class="member-name-link">CREATE_ORDERS_FROM_OTHERS_QUOTES</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can create Orders from B2B Quotes that belong to other Associates.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#CREATE_OTHERS_CARTS" class="member-name-link">CREATE_OTHERS_CARTS</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#CREATE_OTHERS_CARTS" class="member-name-link">CREATE_OTHERS_CARTS</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can create B2B Carts that belong to other Associates.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS" class="member-name-link">CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS" class="member-name-link">CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can create Quote Requests from B2B Carts that belong to other Associates.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#DECLINE_MY_QUOTES" class="member-name-link">DECLINE_MY_QUOTES</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#DECLINE_MY_QUOTES" class="member-name-link">DECLINE_MY_QUOTES</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can decline their own B2B Quotes.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#DECLINE_OTHERS_QUOTES" class="member-name-link">DECLINE_OTHERS_QUOTES</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#DECLINE_OTHERS_QUOTES" class="member-name-link">DECLINE_OTHERS_QUOTES</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can decline B2B Quotes that belong to other Associates.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#DELETE_MY_CARTS" class="member-name-link">DELETE_MY_CARTS</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#DELETE_MY_CARTS" class="member-name-link">DELETE_MY_CARTS</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can delete their own B2B Carts.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#DELETE_OTHERS_CARTS" class="member-name-link">DELETE_OTHERS_CARTS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#DELETE_OTHERS_CARTS" class="member-name-link">DELETE_OTHERS_CARTS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can delete B2B Carts that belong to other Associates.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#REASSIGN_MY_QUOTES" class="member-name-link">REASSIGN_MY_QUOTES</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#REASSIGN_MY_QUOTES" class="member-name-link">REASSIGN_MY_QUOTES</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can reassign their own B2B Quotes to a different Associate.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#REASSIGN_OTHERS_QUOTES" class="member-name-link">REASSIGN_OTHERS_QUOTES</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#REASSIGN_OTHERS_QUOTES" class="member-name-link">REASSIGN_OTHERS_QUOTES</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can reassign B2B Quotes that belong to other Associates.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#RENEGOTIATE_MY_QUOTES" class="member-name-link">RENEGOTIATE_MY_QUOTES</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#RENEGOTIATE_MY_QUOTES" class="member-name-link">RENEGOTIATE_MY_QUOTES</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can renegotiate their own B2B Quotes.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#RENEGOTIATE_OTHERS_QUOTES" class="member-name-link">RENEGOTIATE_OTHERS_QUOTES</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#RENEGOTIATE_OTHERS_QUOTES" class="member-name-link">RENEGOTIATE_OTHERS_QUOTES</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can renegotiate B2B Quotes that belong to other Associates.</div>
 </div>
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#UPDATE_APPROVAL_FLOWS" class="member-name-link">UPDATE_APPROVAL_FLOWS</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">An Associate can update Approval Flows.</div>
+</div>
 <div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#UPDATE_ASSOCIATES" class="member-name-link">UPDATE_ASSOCIATES</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#UPDATE_APPROVAL_RULES" class="member-name-link">UPDATE_APPROVAL_RULES</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">An Associate can update Approval Rules.</div>
+</div>
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#UPDATE_ASSOCIATES" class="member-name-link">UPDATE_ASSOCIATES</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can manage other Associates.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#UPDATE_BUSINESS_UNIT_DETAILS" class="member-name-link">UPDATE_BUSINESS_UNIT_DETAILS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#UPDATE_BUSINESS_UNIT_DETAILS" class="member-name-link">UPDATE_BUSINESS_UNIT_DETAILS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can edit Business Unit details.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#UPDATE_MY_CARTS" class="member-name-link">UPDATE_MY_CARTS</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#UPDATE_MY_CARTS" class="member-name-link">UPDATE_MY_CARTS</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can update their own B2B Carts.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#UPDATE_MY_ORDERS" class="member-name-link">UPDATE_MY_ORDERS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#UPDATE_MY_ORDERS" class="member-name-link">UPDATE_MY_ORDERS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can update their own B2B Orders.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#UPDATE_MY_QUOTE_REQUESTS" class="member-name-link">UPDATE_MY_QUOTE_REQUESTS</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#UPDATE_MY_QUOTE_REQUESTS" class="member-name-link">UPDATE_MY_QUOTE_REQUESTS</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can update their own B2B Quote Requests.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#UPDATE_OTHERS_CARTS" class="member-name-link">UPDATE_OTHERS_CARTS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#UPDATE_OTHERS_CARTS" class="member-name-link">UPDATE_OTHERS_CARTS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can update B2B Carts that belong to other Associates.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#UPDATE_OTHERS_ORDERS" class="member-name-link">UPDATE_OTHERS_ORDERS</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#UPDATE_OTHERS_ORDERS" class="member-name-link">UPDATE_OTHERS_ORDERS</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can update B2B Orders that belong to other Associates.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#UPDATE_OTHERS_QUOTE_REQUESTS" class="member-name-link">UPDATE_OTHERS_QUOTE_REQUESTS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#UPDATE_OTHERS_QUOTE_REQUESTS" class="member-name-link">UPDATE_OTHERS_QUOTE_REQUESTS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can update B2B Quote Requests of other Associates.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#UPDATE_PARENT_UNIT" class="member-name-link">UPDATE_PARENT_UNIT</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#UPDATE_PARENT_UNIT" class="member-name-link">UPDATE_PARENT_UNIT</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can assign a Business Unit to be the parent unit.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#VIEW_MY_CARTS" class="member-name-link">VIEW_MY_CARTS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#VIEW_MY_CARTS" class="member-name-link">VIEW_MY_CARTS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can view their own B2B Carts.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#VIEW_MY_ORDERS" class="member-name-link">VIEW_MY_ORDERS</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#VIEW_MY_ORDERS" class="member-name-link">VIEW_MY_ORDERS</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can view their own B2B Orders.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#VIEW_MY_QUOTE_REQUESTS" class="member-name-link">VIEW_MY_QUOTE_REQUESTS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#VIEW_MY_QUOTE_REQUESTS" class="member-name-link">VIEW_MY_QUOTE_REQUESTS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can view their own B2B Quote Requests.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#VIEW_MY_QUOTES" class="member-name-link">VIEW_MY_QUOTES</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#VIEW_MY_QUOTES" class="member-name-link">VIEW_MY_QUOTES</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can view their own B2B Quotes.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#VIEW_OTHERS_CARTS" class="member-name-link">VIEW_OTHERS_CARTS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#VIEW_OTHERS_CARTS" class="member-name-link">VIEW_OTHERS_CARTS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can view B2B Carts that belong to other Associates.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#VIEW_OTHERS_ORDERS" class="member-name-link">VIEW_OTHERS_ORDERS</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#VIEW_OTHERS_ORDERS" class="member-name-link">VIEW_OTHERS_ORDERS</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can view B2B Orders that belong to other Associates.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second even-row-color"><code><a href="#VIEW_OTHERS_QUOTE_REQUESTS" class="member-name-link">VIEW_OTHERS_QUOTE_REQUESTS</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#VIEW_OTHERS_QUOTE_REQUESTS" class="member-name-link">VIEW_OTHERS_QUOTE_REQUESTS</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">An Associate can view B2B Quote Requests that belong to other Associates.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#VIEW_OTHERS_QUOTES" class="member-name-link">VIEW_OTHERS_QUOTES</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></code></div>
+<div class="col-second even-row-color"><code><a href="#VIEW_OTHERS_QUOTES" class="member-name-link">VIEW_OTHERS_QUOTES</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">An Associate can view B2B Quotes that belong to other Associates.</div>
 </div>
 </div>
@@ -601,6 +616,27 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <h3>CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></span>&nbsp;<span class="element-name">CREATE_QUOTE_REQUESTS_FROM_OTHERS_CARTS</span></div>
 <div class="block"><p>An Associate can create Quote Requests from B2B Carts that belong to other Associates.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="CREATE_APPROVAL_RULES">
+<h3>CREATE_APPROVAL_RULES</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></span>&nbsp;<span class="element-name">CREATE_APPROVAL_RULES</span></div>
+<div class="block"><p>An Associate can create Approval Rules.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="UPDATE_APPROVAL_RULES">
+<h3>UPDATE_APPROVAL_RULES</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></span>&nbsp;<span class="element-name">UPDATE_APPROVAL_RULES</span></div>
+<div class="block"><p>An Associate can update Approval Rules.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="UPDATE_APPROVAL_FLOWS">
+<h3>UPDATE_APPROVAL_FLOWS</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="Permission.html" title="interface in com.commercetools.api.models.associate_role">Permission</a></span>&nbsp;<span class="element-name">UPDATE_APPROVAL_FLOWS</span></div>
+<div class="block"><p>An Associate can update Approval Flows.</p></div>
 </section>
 </li>
 </ul>

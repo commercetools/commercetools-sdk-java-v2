@@ -5,6 +5,8 @@ com.commercetools.api.defaultconfig
 com.commercetools.api.json
 com.commercetools.api.models
 com.commercetools.api.models.api_client
+com.commercetools.api.models.approval_flow
+com.commercetools.api.models.approval_rule
 com.commercetools.api.models.associate_role
 com.commercetools.api.models.attribute_group
 com.commercetools.api.models.business_unit
@@ -97,6 +99,7 @@ com.commercetools.ml.models.image_search_config
 com.commercetools.ml.models.similar_products
 com.commercetools.money
 com.commercetools.monitoring.newrelic
+com.commercetools.monitoring.opentelemetry
 io.sphere.sdk.client
 io.vrap.rmf.base.client
 io.vrap.rmf.base.client.error

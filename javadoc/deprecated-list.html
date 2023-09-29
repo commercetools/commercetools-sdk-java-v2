@@ -499,22 +499,28 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="deprecation-comment">use <a href="com/commercetools/ml/defaultconfig/MLApiRootBuilder.html#build(java.lang.String)"><code>MLApiRootBuilder.build(String)</code></a>  instead</div>
 </div>
-<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/AuthenticationToken.html#getRefresherToken()">io.vrap.rmf.base.client.AuthenticationToken.getRefresherToken()</a></div>
-<div class="col-last even-row-color"></div>
-<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/AuthenticationToken.html#setRefresherToken(java.lang.String)">io.vrap.rmf.base.client.AuthenticationToken.setRefresherToken<wbr>(String)</a></div>
-<div class="col-last odd-row-color"></div>
-<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withClientCredentials(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">io.vrap.rmf.base.client.ClientBuilder.withClientCredentials<wbr>(ClientCredentials, String)</a></div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ApiHttpClient.html#execute(io.vrap.rmf.base.client.ClientRequestCommand)">io.vrap.rmf.base.client.ApiHttpClient.execute<wbr>(ClientRequestCommand&lt;O&gt;)</a></div>
 <div class="col-last even-row-color">
+<div class="deprecation-comment">Will be removed with next major version. Methods will implement
+ HttpRequestCommand so <a href="io/vrap/rmf/base/client/ApiHttpClient.html#execute(io.vrap.rmf.base.client.HttpRequestCommand)"><code>ApiHttpClient.execute(HttpRequestCommand)</code></a> will replace this method.
+ Custom implementations may need to implement HttpRequestCommand</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/AuthenticationToken.html#getRefresherToken()">io.vrap.rmf.base.client.AuthenticationToken.getRefresherToken()</a></div>
+<div class="col-last odd-row-color"></div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/AuthenticationToken.html#setRefresherToken(java.lang.String)">io.vrap.rmf.base.client.AuthenticationToken.setRefresherToken<wbr>(String)</a></div>
+<div class="col-last even-row-color"></div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withClientCredentials(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)">io.vrap.rmf.base.client.ClientBuilder.withClientCredentials<wbr>(ClientCredentials, String)</a></div>
+<div class="col-last odd-row-color">
 <div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String)"><code>ClientBuilder.withClientCredentialsFlow(ClientCredentials, String)</code></a> instead</div>
 </div>
-<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withClientCredentials(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">io.vrap.rmf.base.client.ClientBuilder.withClientCredentials<wbr>(ClientCredentials, String, VrapHttpClient)</a></div>
-<div class="col-last odd-row-color">
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withClientCredentials(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">io.vrap.rmf.base.client.ClientBuilder.withClientCredentials<wbr>(ClientCredentials, String, VrapHttpClient)</a></div>
+<div class="col-last even-row-color">
 <div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)"><code>ClientBuilder.withClientCredentialsFlow(ClientCredentials, String, VrapHttpClient)</code></a> instead</div>
 </div>
-<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/ErrorMiddleware.html#of(io.vrap.rmf.base.client.ResponseSerializer)">io.vrap.rmf.base.client.http.ErrorMiddleware.of<wbr>(ResponseSerializer)</a></div>
-<div class="col-last even-row-color"></div>
-<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/MiddlewareFactory.html#buildUserAgent()">io.vrap.rmf.base.client.MiddlewareFactory.buildUserAgent()</a></div>
-<div class="col-last odd-row-color">
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/http/ErrorMiddleware.html#of(io.vrap.rmf.base.client.ResponseSerializer)">io.vrap.rmf.base.client.http.ErrorMiddleware.of<wbr>(ResponseSerializer)</a></div>
+<div class="col-last odd-row-color"></div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/MiddlewareFactory.html#buildUserAgent()">io.vrap.rmf.base.client.MiddlewareFactory.buildUserAgent()</a></div>
+<div class="col-last even-row-color">
 <div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#buildDefaultUserAgent()"><code>ClientBuilder.buildDefaultUserAgent()</code></a> instead</div>
 </div>
 </div>

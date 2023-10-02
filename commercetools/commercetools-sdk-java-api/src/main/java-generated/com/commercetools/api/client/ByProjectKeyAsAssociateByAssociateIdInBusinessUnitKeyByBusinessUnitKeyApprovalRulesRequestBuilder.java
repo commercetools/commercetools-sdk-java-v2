@@ -23,6 +23,11 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
         this.businessUnitKey = businessUnitKey;
     }
 
+    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesGet get() {
+        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesGet(apiHttpClient,
+            projectKey, associateId, businessUnitKey);
+    }
+
     public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesPost post(
             com.commercetools.api.models.approval_rule.ApprovalRuleDraft approvalRuleDraft) {
         return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesPost(
@@ -38,11 +43,6 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
     public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesPost post(
             UnaryOperator<com.commercetools.api.models.approval_rule.ApprovalRuleDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.approval_rule.ApprovalRuleDraftBuilder.of()).build());
-    }
-
-    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesGet get() {
-        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesGet(apiHttpClient,
-            projectKey, associateId, businessUnitKey);
     }
 
     public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDRequestBuilder withId(

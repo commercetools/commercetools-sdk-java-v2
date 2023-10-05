@@ -19,6 +19,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeDeserializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModule;
+import io.vrap.rmf.base.client.utils.json.modules.deserializers.LocalDateDeserializationModule;
 
 /**
  * Class with methods to customize the JSON serialization/deserialization
@@ -55,6 +56,7 @@ public class JsonUtils {
         objectMapper.registerModule(new JavaTimeModule()) //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
                 .registerModule(new ZonedDateTimeSerializationModule()) //custom serializer for LocalDate, LocalTime and ZonedDateTime
                 .registerModule(new ZonedDateTimeDeserializationModule()) //custom deserializer for ZonedDateTime
+                .registerModule(new LocalDateDeserializationModule()) //custom deserializer for ZonedDateTime
                 .registerModules(loader)
                 .registerModules(moduleList)
                 .setSerializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields

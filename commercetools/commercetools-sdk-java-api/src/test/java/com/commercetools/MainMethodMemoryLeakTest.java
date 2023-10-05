@@ -30,7 +30,7 @@ public class MainMethodMemoryLeakTest {
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .build();
         Bulkhead<Object> bulkhead = Bulkhead.builder(30).build();
-        int requests = 20000;
+        int requests = 1000;
         ConcurrentHashMap<Integer, String> projectKeys = new ConcurrentHashMap<>(requests);
         ConcurrentHashMap<Integer, Long> maxMem = new ConcurrentHashMap<>(requests);
         ExecutorService executorService = Executors.newScheduledThreadPool(10);

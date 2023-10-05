@@ -56,7 +56,7 @@ public class JsonUtils {
         objectMapper.registerModule(new JavaTimeModule()) //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
                 .registerModule(new ZonedDateTimeSerializationModule()) //custom serializer for LocalDate, LocalTime and ZonedDateTime
                 .registerModule(new ZonedDateTimeDeserializationModule()) //custom deserializer for ZonedDateTime
-                .registerModule(new LocalDateDeserializationModule()) //custom deserializer for ZonedDateTime
+                .registerModule(new LocalDateDeserializationModule()) //custom deserializer for LocalDate
                 .registerModules(loader)
                 .registerModules(moduleList)
                 .setSerializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields

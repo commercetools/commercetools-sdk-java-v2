@@ -45,7 +45,7 @@ import io.vrap.rmf.base.client.ApiMethod;
  *
  * {@include.example example.ExamplesTest#queueConcurrentLimitation()}
  *
- * <h3 id=limit-requests>Timeouts</h3>
+ * <h3 id=timeouts>Timeouts</h3>
  *
  * <p>Underlying HTTP Clients are by default configured to timeout after 120 seconds. There are different ways to limit
  * the time a call can take. One is to develop a middleware which times out when necessary. This also is the most flexible

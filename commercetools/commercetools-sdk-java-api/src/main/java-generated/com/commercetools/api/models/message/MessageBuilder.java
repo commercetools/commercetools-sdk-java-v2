@@ -307,6 +307,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CustomerEmailChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerEmailTokenCreatedMessageBuilder customerEmailTokenCreatedBuilder() {
+        return com.commercetools.api.models.message.CustomerEmailTokenCreatedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerEmailVerifiedMessageBuilder customerEmailVerifiedBuilder() {
         return com.commercetools.api.models.message.CustomerEmailVerifiedMessageBuilder.of();
     }
@@ -341,6 +345,10 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.CustomerLastNameSetMessageBuilder customerLastNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerLastNameSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessageBuilder customerPasswordTokenCreatedBuilder() {
+        return com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.CustomerPasswordUpdatedMessageBuilder customerPasswordUpdatedBuilder() {

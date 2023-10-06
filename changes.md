@@ -13,6 +13,10 @@
 
 - added type `ApprovalFlowPagedQueryResponse`
 - added type `ApprovalRulePagedQueryResponse`
+- added type `CustomerEmailTokenCreatedMessage`
+- added type `CustomerPasswordTokenCreatedMessage`
+- added type `CustomerEmailTokenCreatedMessagePayload`
+- added type `CustomerPasswordTokenCreatedMessagePayload`
 </details>
 
 **Import changes**

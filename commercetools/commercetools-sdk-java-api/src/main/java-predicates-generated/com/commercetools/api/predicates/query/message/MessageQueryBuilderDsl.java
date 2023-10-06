@@ -639,6 +639,14 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCustomerEmailTokenCreated(
+            Function<com.commercetools.api.predicates.query.message.CustomerEmailTokenCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerEmailTokenCreatedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.CustomerEmailTokenCreatedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asCustomerEmailVerified(
             Function<com.commercetools.api.predicates.query.message.CustomerEmailVerifiedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerEmailVerifiedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -700,6 +708,14 @@ public class MessageQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.message.CustomerLastNameSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerLastNameSetMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.message.CustomerLastNameSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asCustomerPasswordTokenCreated(
+            Function<com.commercetools.api.predicates.query.message.CustomerPasswordTokenCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerPasswordTokenCreatedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.CustomerPasswordTokenCreatedMessageQueryBuilderDsl.of()),
             MessageQueryBuilderDsl::of);
     }
 

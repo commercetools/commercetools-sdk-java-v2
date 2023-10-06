@@ -582,6 +582,13 @@ public class MessagePayloadQueryBuilderDsl {
             MessagePayloadQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asCustomerEmailTokenCreated(
+            Function<com.commercetools.api.predicates.query.message.CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.CustomerEmailTokenCreatedMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asCustomerEmailVerified(
             Function<com.commercetools.api.predicates.query.message.CustomerEmailVerifiedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerEmailVerifiedMessagePayloadQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -650,6 +657,14 @@ public class MessagePayloadQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.message.CustomerLastNameSetMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asCustomerPasswordTokenCreated(
+            Function<com.commercetools.api.predicates.query.message.CustomerPasswordTokenCreatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CustomerPasswordTokenCreatedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.CustomerPasswordTokenCreatedMessagePayloadQueryBuilderDsl
+                    .of()),
             MessagePayloadQueryBuilderDsl::of);
     }
 

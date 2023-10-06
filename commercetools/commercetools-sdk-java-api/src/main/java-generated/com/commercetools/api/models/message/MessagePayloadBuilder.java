@@ -307,6 +307,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.CustomerEmailChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerEmailTokenCreatedMessagePayloadBuilder customerEmailTokenCreatedBuilder() {
+        return com.commercetools.api.models.message.CustomerEmailTokenCreatedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayloadBuilder customerEmailVerifiedBuilder() {
         return com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayloadBuilder.of();
     }
@@ -341,6 +345,10 @@ public class MessagePayloadBuilder {
 
     public com.commercetools.api.models.message.CustomerLastNameSetMessagePayloadBuilder customerLastNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerLastNameSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessagePayloadBuilder customerPasswordTokenCreatedBuilder() {
+        return com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadBuilder customerPasswordUpdatedBuilder() {

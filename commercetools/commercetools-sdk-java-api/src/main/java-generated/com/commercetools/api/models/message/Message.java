@@ -115,6 +115,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerDateOfBirthSetMessageImpl.class, name = CustomerDateOfBirthSetMessage.CUSTOMER_DATE_OF_BIRTH_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerDeletedMessageImpl.class, name = CustomerDeletedMessage.CUSTOMER_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailChangedMessageImpl.class, name = CustomerEmailChangedMessage.CUSTOMER_EMAIL_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailTokenCreatedMessageImpl.class, name = CustomerEmailTokenCreatedMessage.CUSTOMER_EMAIL_TOKEN_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailVerifiedMessageImpl.class, name = CustomerEmailVerifiedMessage.CUSTOMER_EMAIL_VERIFIED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerFirstNameSetMessageImpl.class, name = CustomerFirstNameSetMessage.CUSTOMER_FIRST_NAME_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageImpl.class, name = CustomerGroupCustomFieldAddedMessage.CUSTOMER_GROUP_CUSTOM_FIELD_ADDED),
@@ -124,6 +125,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessageImpl.class, name = CustomerGroupCustomTypeSetMessage.CUSTOMER_GROUP_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupSetMessageImpl.class, name = CustomerGroupSetMessage.CUSTOMER_GROUP_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerLastNameSetMessageImpl.class, name = CustomerLastNameSetMessage.CUSTOMER_LAST_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessageImpl.class, name = CustomerPasswordTokenCreatedMessage.CUSTOMER_PASSWORD_TOKEN_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerPasswordUpdatedMessageImpl.class, name = CustomerPasswordUpdatedMessage.CUSTOMER_PASSWORD_UPDATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerTitleSetMessageImpl.class, name = CustomerTitleSetMessage.CUSTOMER_TITLE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddedMessageImpl.class, name = DeliveryAddedMessage.DELIVERY_ADDED),
@@ -718,6 +720,10 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
             return com.commercetools.api.models.message.CustomerEmailChangedMessage
                     .deepCopy((com.commercetools.api.models.message.CustomerEmailChangedMessage) template);
         }
+        if (template instanceof com.commercetools.api.models.message.CustomerEmailTokenCreatedMessage) {
+            return com.commercetools.api.models.message.CustomerEmailTokenCreatedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerEmailTokenCreatedMessage) template);
+        }
         if (template instanceof com.commercetools.api.models.message.CustomerEmailVerifiedMessage) {
             return com.commercetools.api.models.message.CustomerEmailVerifiedMessage
                     .deepCopy((com.commercetools.api.models.message.CustomerEmailVerifiedMessage) template);
@@ -753,6 +759,10 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.CustomerLastNameSetMessage) {
             return com.commercetools.api.models.message.CustomerLastNameSetMessage
                     .deepCopy((com.commercetools.api.models.message.CustomerLastNameSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessage) {
+            return com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.CustomerPasswordUpdatedMessage) {
             return com.commercetools.api.models.message.CustomerPasswordUpdatedMessage
@@ -1695,6 +1705,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for customerEmailTokenCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerEmailTokenCreatedMessageBuilder customerEmailTokenCreatedBuilder() {
+        return com.commercetools.api.models.message.CustomerEmailTokenCreatedMessageBuilder.of();
+    }
+
+    /**
      * builder for customerEmailVerified subtype
      * @return builder
      */
@@ -1764,6 +1782,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.CustomerLastNameSetMessageBuilder customerLastNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerLastNameSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerPasswordTokenCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessageBuilder customerPasswordTokenCreatedBuilder() {
+        return com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessageBuilder.of();
     }
 
     /**

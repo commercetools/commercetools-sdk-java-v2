@@ -233,7 +233,7 @@ tasks.register('alljavadoc', Javadoc) {
         splitIndex = true
         noTree = true
         title = "commercetools Java SDK"
-        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
+        links 'https://docs.oracle.com/javase/8/docs/api/', "https://fasterxml.github.io/jackson-databind/javadoc/2.14/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
         overview = "src/main/javadoc/overview.html"
         bottom = """
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
@@ -293,7 +293,7 @@ tasks.register('internaldocs', Javadoc) {
         splitIndex = true
         noTree = true
         title = "commercetools Java SDK"
-        links 'https://docs.oracle.com/javase/8/docs/api/', "https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/${versions.jackson}/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
+        links 'https://docs.oracle.com/javase/8/docs/api/', "https://fasterxml.github.io/jackson-databind/javadoc/2.14/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
         overview = "src/main/javadoc/overview.html"
         bottom = """
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">

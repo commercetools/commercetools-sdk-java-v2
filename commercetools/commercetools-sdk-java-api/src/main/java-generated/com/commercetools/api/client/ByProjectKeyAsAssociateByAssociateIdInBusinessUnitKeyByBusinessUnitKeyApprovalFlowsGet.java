@@ -23,7 +23,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * <hr>
  * <div class=code-example>
  * <pre><code class='java'>{@code
- *   CompletableFuture<ApiHttpResponse<java.lang.Object>> result = apiRoot
+ *   CompletableFuture<ApiHttpResponse<com.commercetools.api.models.approval_flow.ApprovalFlowPagedQueryResponse>> result = apiRoot
  *            .withProjectKey("{projectKey}")
  *            .asAssociate()
  *            .withAssociateIdValue("{associateId}")
@@ -36,7 +36,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet extends
-        ApiMethod<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet, java.lang.Object>
+        ApiMethod<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet, com.commercetools.api.models.approval_flow.ApprovalFlowPagedQueryResponse>
         implements
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsGet>,
@@ -77,13 +77,16 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
     }
 
     @Override
-    public ApiHttpResponse<java.lang.Object> executeBlocking(final ApiHttpClient client, final Duration timeout) {
-        return executeBlocking(client, timeout, java.lang.Object.class);
+    public ApiHttpResponse<com.commercetools.api.models.approval_flow.ApprovalFlowPagedQueryResponse> executeBlocking(
+            final ApiHttpClient client, final Duration timeout) {
+        return executeBlocking(client, timeout,
+            com.commercetools.api.models.approval_flow.ApprovalFlowPagedQueryResponse.class);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute(final ApiHttpClient client) {
-        return execute(client, java.lang.Object.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.approval_flow.ApprovalFlowPagedQueryResponse>> execute(
+            final ApiHttpClient client) {
+        return execute(client, com.commercetools.api.models.approval_flow.ApprovalFlowPagedQueryResponse.class);
     }
 
     public String getProjectKey() {

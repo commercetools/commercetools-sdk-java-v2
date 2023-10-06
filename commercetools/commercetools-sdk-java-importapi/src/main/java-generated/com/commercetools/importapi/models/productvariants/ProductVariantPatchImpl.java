@@ -26,6 +26,8 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
 
     private Boolean staged;
 
+    private com.commercetools.importapi.models.common.ProductKeyReference product;
+
     /**
      * create instance with all properties
      */
@@ -33,10 +35,12 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
     ProductVariantPatchImpl(
             @JsonProperty("productVariant") final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant,
             @JsonProperty("attributes") final com.commercetools.importapi.models.productvariants.Attributes attributes,
-            @JsonProperty("staged") final Boolean staged) {
+            @JsonProperty("staged") final Boolean staged,
+            @JsonProperty("product") final com.commercetools.importapi.models.common.ProductKeyReference product) {
         this.productVariant = productVariant;
         this.attributes = attributes;
         this.staged = staged;
+        this.product = product;
     }
 
     /**
@@ -46,7 +50,7 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
     }
 
     /**
-     *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>Reference to the ProductVariant to update. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
@@ -75,6 +79,14 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
         return this.staged;
     }
 
+    /**
+     *  <p>Reference to the Product which contains the ProductVariant. Setting a value will batch process the import operations to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     */
+
+    public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
+        return this.product;
+    }
+
     public void setProductVariant(
             final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
         this.productVariant = productVariant;
@@ -86,6 +98,10 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
 
     public void setStaged(final Boolean staged) {
         this.staged = staged;
+    }
+
+    public void setProduct(final com.commercetools.importapi.models.common.ProductKeyReference product) {
+        this.product = product;
     }
 
     @Override
@@ -101,15 +117,21 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
         return new EqualsBuilder().append(productVariant, that.productVariant)
                 .append(attributes, that.attributes)
                 .append(staged, that.staged)
+                .append(product, that.product)
                 .append(productVariant, that.productVariant)
                 .append(attributes, that.attributes)
                 .append(staged, that.staged)
+                .append(product, that.product)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productVariant).append(attributes).append(staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(productVariant)
+                .append(attributes)
+                .append(staged)
+                .append(product)
+                .toHashCode();
     }
 
 }

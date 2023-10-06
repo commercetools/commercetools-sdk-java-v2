@@ -102,6 +102,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerDateOfBirthSetMessagePayloadImpl.class, name = CustomerDateOfBirthSetMessagePayload.CUSTOMER_DATE_OF_BIRTH_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerDeletedMessagePayloadImpl.class, name = CustomerDeletedMessagePayload.CUSTOMER_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailChangedMessagePayloadImpl.class, name = CustomerEmailChangedMessagePayload.CUSTOMER_EMAIL_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailTokenCreatedMessagePayloadImpl.class, name = CustomerEmailTokenCreatedMessagePayload.CUSTOMER_EMAIL_TOKEN_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayloadImpl.class, name = CustomerEmailVerifiedMessagePayload.CUSTOMER_EMAIL_VERIFIED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadImpl.class, name = CustomerFirstNameSetMessagePayload.CUSTOMER_FIRST_NAME_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessagePayloadImpl.class, name = CustomerGroupCustomFieldAddedMessagePayload.CUSTOMER_GROUP_CUSTOM_FIELD_ADDED),
@@ -111,6 +112,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomTypeSetMessagePayloadImpl.class, name = CustomerGroupCustomTypeSetMessagePayload.CUSTOMER_GROUP_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupSetMessagePayloadImpl.class, name = CustomerGroupSetMessagePayload.CUSTOMER_GROUP_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerLastNameSetMessagePayloadImpl.class, name = CustomerLastNameSetMessagePayload.CUSTOMER_LAST_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessagePayloadImpl.class, name = CustomerPasswordTokenCreatedMessagePayload.CUSTOMER_PASSWORD_TOKEN_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadImpl.class, name = CustomerPasswordUpdatedMessagePayload.CUSTOMER_PASSWORD_UPDATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerTitleSetMessagePayloadImpl.class, name = CustomerTitleSetMessagePayload.CUSTOMER_TITLE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddedMessagePayloadImpl.class, name = DeliveryAddedMessagePayload.DELIVERY_ADDED),
@@ -555,6 +557,10 @@ public interface MessagePayload {
             return com.commercetools.api.models.message.CustomerEmailChangedMessagePayload
                     .deepCopy((com.commercetools.api.models.message.CustomerEmailChangedMessagePayload) template);
         }
+        if (template instanceof com.commercetools.api.models.message.CustomerEmailTokenCreatedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerEmailTokenCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerEmailTokenCreatedMessagePayload) template);
+        }
         if (template instanceof com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayload) {
             return com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayload
                     .deepCopy((com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayload) template);
@@ -590,6 +596,10 @@ public interface MessagePayload {
         if (template instanceof com.commercetools.api.models.message.CustomerLastNameSetMessagePayload) {
             return com.commercetools.api.models.message.CustomerLastNameSetMessagePayload
                     .deepCopy((com.commercetools.api.models.message.CustomerLastNameSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayload) {
             return com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayload
@@ -1524,6 +1534,14 @@ public interface MessagePayload {
     }
 
     /**
+     * builder for customerEmailTokenCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerEmailTokenCreatedMessagePayloadBuilder customerEmailTokenCreatedBuilder() {
+        return com.commercetools.api.models.message.CustomerEmailTokenCreatedMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for customerEmailVerified subtype
      * @return builder
      */
@@ -1593,6 +1611,14 @@ public interface MessagePayload {
      */
     public static com.commercetools.api.models.message.CustomerLastNameSetMessagePayloadBuilder customerLastNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerLastNameSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerPasswordTokenCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessagePayloadBuilder customerPasswordTokenCreatedBuilder() {
+        return com.commercetools.api.models.message.CustomerPasswordTokenCreatedMessagePayloadBuilder.of();
     }
 
     /**

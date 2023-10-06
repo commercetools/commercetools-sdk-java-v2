@@ -69,32 +69,11 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                         .withAssociateIdValue("test_associateId")
                         .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                         .approvalRules()
-                        .post(com.commercetools.api.models.approval_rule.ApprovalRuleDraft.of())
+                        .get()
                         .withExpand("expand")
                         .createHttpRequest(),
-                "post",
+                "get",
                 "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/approval-rules?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .asAssociate()
-                                .withAssociateIdValue("test_associateId")
-                                .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
-                                .approvalRules()
-                                .post(com.commercetools.api.models.approval_rule.ApprovalRuleDraft.of())
-                                .createHttpRequest(),
-                        "post",
-                        "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/approval-rules", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .asAssociate()
-                                .withAssociateIdValue("test_associateId")
-                                .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
-                                .approvalRules()
-                                .get()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "get",
-                        "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/approval-rules?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .asAssociate()
@@ -170,25 +149,33 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                                 .get()
                                 .createHttpRequest(),
                         "get",
+                        "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/approval-rules", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                                .approvalRules()
+                                .post(com.commercetools.api.models.approval_rule.ApprovalRuleDraft.of())
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "post",
+                        "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/approval-rules?expand=expand", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                                .approvalRules()
+                                .post(com.commercetools.api.models.approval_rule.ApprovalRuleDraft.of())
+                                .createHttpRequest(),
+                        "post",
                         "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/approval-rules", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .asAssociate()
-                        .withAssociateIdValue("test_associateId")
-                        .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
-                        .approvalRules()
-                        .post(com.commercetools.api.models.approval_rule.ApprovalRuleDraft.of())
-                        .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .asAssociate()
-                        .withAssociateIdValue("test_associateId")
-                        .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
-                        .approvalRules()
-                        .post(com.commercetools.api.models.approval_rule.ApprovalRuleDraft.of()), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .asAssociate()
                         .withAssociateIdValue("test_associateId")
@@ -243,6 +230,19 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                         .withAssociateIdValue("test_associateId")
                         .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                         .approvalRules()
-                        .get(), } };
+                        .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                        .approvalRules()
+                        .post(com.commercetools.api.models.approval_rule.ApprovalRuleDraft.of())
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                        .approvalRules()
+                        .post(com.commercetools.api.models.approval_rule.ApprovalRuleDraft.of()), } };
     }
 }

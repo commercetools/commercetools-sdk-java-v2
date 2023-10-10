@@ -133,7 +133,7 @@ Assertions.assertThat(productsQuery.getQuery()).isEqualTo(query);
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/GraphQLModuleTest.java" target="_blank">test code</a>.</pre></div>
 
  <p>The module provides a <a href="../../graphql/api/GraphQLModule.html" title="class in com.commercetools.graphql.api"><code>Jackson module</code></a>. It's configured
- as SPI and gets automatically registered to the SDKs <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.14.1/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>ObjectMapper</code></a>. This module
+ as SPI and gets automatically registered to the SDKs <a href="https://fasterxml.github.io/jackson-databind/javadoc/2.14/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>ObjectMapper</code></a>. This module
  will configure the ObjectMapper to deserialize the response data object as <a href="../../graphql/api/GraphQLData.html" title="interface in com.commercetools.graphql.api"><code>GraphQLData</code></a>
  instance too and can access it's methods by casting it.</p>
 

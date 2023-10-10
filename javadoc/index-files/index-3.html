@@ -9585,7 +9585,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/docs/meta/ClientTuning.html" class="type-name-link" title="class in com.commercetools.docs.meta">ClientTuning</a> - Class in <a href="../com/commercetools/docs/meta/package-summary.html">com.commercetools.docs.meta</a></dt>
 <dd>
-<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#retry-middleware">RetryMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li><li><a href="#limit-requests">Timeouts</a></li></ul></ul></div>
+<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#retry-middleware">RetryMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li><li><a href="#timeouts">Timeouts</a></li></ul></ul></div>
 </dd>
 <dt><a href="../com/commercetools/docs/meta/ClientTuning.html#%3Cinit%3E()" class="member-name-link">ClientTuning()</a> - Constructor for class com.commercetools.docs.meta.<a href="../com/commercetools/docs/meta/ClientTuning.html" title="class in com.commercetools.docs.meta">ClientTuning</a></dt>
 <dd>&nbsp;</dd>
@@ -10952,6 +10952,14 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <div class="block">The maximum number of results to return from a query.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/api_client/ApiClientPagedQueryResponseBuilder.html#count(java.lang.Long)" class="member-name-link">count(Long)</a> - Method in class com.commercetools.api.models.api_client.<a href="../com/commercetools/api/models/api_client/ApiClientPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientPagedQueryResponseBuilder</a></dt>
+<dd>
+<div class="block">Actual number of results returned.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowPagedQueryResponseBuilder.html#count(java.lang.Long)" class="member-name-link">count(Long)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowPagedQueryResponseBuilder</a></dt>
+<dd>
+<div class="block">Actual number of results returned.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRulePagedQueryResponseBuilder.html#count(java.lang.Long)" class="member-name-link">count(Long)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRulePagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRulePagedQueryResponseBuilder</a></dt>
 <dd>
 <div class="block">Actual number of results returned.</div>
 </dd>
@@ -12324,6 +12332,10 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>
 <div class="block">Date and time (UTC) the Message was generated.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerEmailVerifiedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailVerifiedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailVerifiedMessageBuilder</a></dt>
 <dd>
 <div class="block">Date and time (UTC) the Message was generated.</div>
@@ -12357,6 +12369,10 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <div class="block">Date and time (UTC) the Message was generated.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerLastNameSetMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerLastNameSetMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerLastNameSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Message was generated.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessageBuilder.html#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessageBuilder</a></dt>
 <dd>
 <div class="block">Date and time (UTC) the Message was generated.</div>
 </dd>
@@ -13366,6 +13382,10 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerEmailVerifiedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailVerifiedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailVerifiedMessageBuilder</a></dt>
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
@@ -13399,6 +13419,10 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerLastNameSetMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerLastNameSetMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerLastNameSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessageBuilder.html#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy(CreatedBy)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessageBuilder</a></dt>
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
@@ -14360,6 +14384,10 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerEmailVerifiedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailVerifiedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailVerifiedMessageBuilder</a></dt>
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
@@ -14393,6 +14421,10 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerLastNameSetMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerLastNameSetMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerLastNameSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessageBuilder.html#createdBy(java.util.function.Function)" class="member-name-link">createdBy(Function&lt;CreatedByBuilder, CreatedByBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessageBuilder</a></dt>
 <dd>
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </dd>
@@ -15119,7 +15151,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../io/vrap/rmf/base/client/utils/json/JsonUtils.html#createObjectMapper()" class="member-name-link">createObjectMapper()</a> - Static method in class io.vrap.rmf.base.client.utils.json.<a href="../io/vrap/rmf/base/client/utils/json/JsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json">JsonUtils</a></dt>
 <dd>
-<div class="block">creates a new <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.14.1/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>ObjectMapper</code></a> instance</div>
+<div class="block">creates a new <a href="https://fasterxml.github.io/jackson-databind/javadoc/2.14/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>ObjectMapper</code></a> instance</div>
 </dd>
 <dt><a href="../io/vrap/rmf/base/client/utils/json/JsonUtils.html#createObjectMapper(io.vrap.rmf.base.client.utils.json.modules.ModuleOptions)" class="member-name-link">createObjectMapper(ModuleOptions)</a> - Static method in class io.vrap.rmf.base.client.utils.json.<a href="../io/vrap/rmf/base/client/utils/json/JsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json">JsonUtils</a></dt>
 <dd>&nbsp;</dd>
@@ -17218,6 +17250,14 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ReferenceTypeId.html#CUSTOMER_EMAIL_TOKEN" class="member-name-link">CUSTOMER_EMAIL_TOKEN</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessage.html#CUSTOMER_EMAIL_TOKEN_CREATED" class="member-name-link">CUSTOMER_EMAIL_TOKEN_CREATED</a> - Static variable in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessage.html" title="interface in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessage</a></dt>
+<dd>
+<div class="block">discriminator value for CustomerEmailTokenCreatedMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessagePayload.html#CUSTOMER_EMAIL_TOKEN_CREATED" class="member-name-link">CUSTOMER_EMAIL_TOKEN_CREATED</a> - Static variable in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessagePayload</a></dt>
+<dd>
+<div class="block">discriminator value for CustomerEmailTokenCreatedMessagePayload</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerEmailVerifiedMessage.html#CUSTOMER_EMAIL_VERIFIED" class="member-name-link">CUSTOMER_EMAIL_VERIFIED</a> - Static variable in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailVerifiedMessage.html" title="interface in com.commercetools.api.models.message">CustomerEmailVerifiedMessage</a></dt>
 <dd>
 <div class="block">discriminator value for CustomerEmailVerifiedMessage</div>
@@ -17378,6 +17418,14 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ReferenceTypeId.html#CUSTOMER_PASSWORD_TOKEN" class="member-name-link">CUSTOMER_PASSWORD_TOKEN</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessage.html#CUSTOMER_PASSWORD_TOKEN_CREATED" class="member-name-link">CUSTOMER_PASSWORD_TOKEN_CREATED</a> - Static variable in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessage.html" title="interface in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessage</a></dt>
+<dd>
+<div class="block">discriminator value for CustomerPasswordTokenCreatedMessage</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessagePayload.html#CUSTOMER_PASSWORD_TOKEN_CREATED" class="member-name-link">CUSTOMER_PASSWORD_TOKEN_CREATED</a> - Static variable in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessagePayload</a></dt>
+<dd>
+<div class="block">discriminator value for CustomerPasswordTokenCreatedMessagePayload</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerPasswordUpdatedMessage.html#CUSTOMER_PASSWORD_UPDATED" class="member-name-link">CUSTOMER_PASSWORD_UPDATED</a> - Static variable in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerPasswordUpdatedMessage.html" title="interface in com.commercetools.api.models.message">CustomerPasswordUpdatedMessage</a></dt>
 <dd>
 <div class="block">discriminator value for CustomerPasswordUpdatedMessage</div>
@@ -18318,6 +18366,44 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </dd>
 <dt><a href="../com/commercetools/api/models/message/CustomerEmailChangedMessagePayloadBuilder.html#%3Cinit%3E()" class="member-name-link">CustomerEmailChangedMessagePayloadBuilder()</a> - Constructor for class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailChangedMessagePayloadBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/Message.html#customerEmailTokenCreatedBuilder()" class="member-name-link">customerEmailTokenCreatedBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/Message.html" title="interface in com.commercetools.api.models.message">Message</a></dt>
+<dd>
+<div class="block">builder for customerEmailTokenCreated subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/MessageBuilder.html#customerEmailTokenCreatedBuilder()" class="member-name-link">customerEmailTokenCreatedBuilder()</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/MessageBuilder.html" title="class in com.commercetools.api.models.message">MessageBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/MessagePayload.html#customerEmailTokenCreatedBuilder()" class="member-name-link">customerEmailTokenCreatedBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></dt>
+<dd>
+<div class="block">builder for customerEmailTokenCreated subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/MessagePayloadBuilder.html#customerEmailTokenCreatedBuilder()" class="member-name-link">customerEmailTokenCreatedBuilder()</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/MessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">MessagePayloadBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">Generated after a successful Create email token for Customer request.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">CustomerEmailTokenCreatedMessageBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessageBuilder.html#%3Cinit%3E()" class="member-name-link">CustomerEmailTokenCreatedMessageBuilder()</a> - Constructor for class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessageBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">Generated after a successful Create email token for Customer request.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">CustomerEmailTokenCreatedMessagePayloadBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessagePayloadBuilder.html#%3Cinit%3E()" class="member-name-link">CustomerEmailTokenCreatedMessagePayloadBuilder()</a> - Constructor for class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessagePayloadBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/Message.html#customerEmailVerifiedBuilder()" class="member-name-link">customerEmailVerifiedBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/Message.html" title="interface in com.commercetools.api.models.message">Message</a></dt>
 <dd>
 <div class="block">builder for customerEmailVerified subtype</div>
@@ -19182,6 +19268,22 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>
 <div class="block">The <code>id</code> of the Customer.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessageBuilder.html#customerId(java.lang.String)" class="member-name-link">customerId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessageBuilder</a></dt>
+<dd>
+<div class="block">Unique identifier of the Customer.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessagePayloadBuilder.html#customerId(java.lang.String)" class="member-name-link">customerId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerEmailTokenCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Unique identifier of the Customer.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessageBuilder.html#customerId(java.lang.String)" class="member-name-link">customerId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessageBuilder</a></dt>
+<dd>
+<div class="block">Unique identifier of the Customer.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessagePayloadBuilder.html#customerId(java.lang.String)" class="member-name-link">customerId(String)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessagePayloadBuilder</a></dt>
+<dd>
+<div class="block">Unique identifier of the Customer.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html#customerId(java.lang.String)" class="member-name-link">customerId(String)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></dt>
 <dd>
 <div class="block"><code>id</code> of the Customer that the Order belongs to.</div>
@@ -19340,6 +19442,44 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
  </div>
 </dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerPagedQueryResponseBuilder.html#%3Cinit%3E()" class="member-name-link">CustomerPagedQueryResponseBuilder()</a> - Constructor for class com.commercetools.api.models.customer.<a href="../com/commercetools/api/models/customer/CustomerPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.customer">CustomerPagedQueryResponseBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/Message.html#customerPasswordTokenCreatedBuilder()" class="member-name-link">customerPasswordTokenCreatedBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/Message.html" title="interface in com.commercetools.api.models.message">Message</a></dt>
+<dd>
+<div class="block">builder for customerPasswordTokenCreated subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/MessageBuilder.html#customerPasswordTokenCreatedBuilder()" class="member-name-link">customerPasswordTokenCreatedBuilder()</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/MessageBuilder.html" title="class in com.commercetools.api.models.message">MessageBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/MessagePayload.html#customerPasswordTokenCreatedBuilder()" class="member-name-link">customerPasswordTokenCreatedBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></dt>
+<dd>
+<div class="block">builder for customerPasswordTokenCreated subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/MessagePayloadBuilder.html#customerPasswordTokenCreatedBuilder()" class="member-name-link">customerPasswordTokenCreatedBuilder()</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/MessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">MessagePayloadBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessage.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessage</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">Generated after a successful Create password reset token for Customer request.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessageBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessageBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">CustomerPasswordTokenCreatedMessageBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessageBuilder.html#%3Cinit%3E()" class="member-name-link">CustomerPasswordTokenCreatedMessageBuilder()</a> - Constructor for class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessageBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessagePayload.html" class="type-name-link" title="interface in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessagePayload</a> - Interface in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">Generated after a successful Create password reset token for Customer request.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessagePayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessagePayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/message/package-summary.html">com.commercetools.api.models.message</a></dt>
+<dd>
+<div class="block">CustomerPasswordTokenCreatedMessagePayloadBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessagePayloadBuilder.html#%3Cinit%3E()" class="member-name-link">CustomerPasswordTokenCreatedMessagePayloadBuilder()</a> - Constructor for class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CustomerPasswordTokenCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">CustomerPasswordTokenCreatedMessagePayloadBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/Message.html#customerPasswordUpdatedBuilder()" class="member-name-link">customerPasswordUpdatedBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/Message.html" title="interface in com.commercetools.api.models.message">Message</a></dt>
 <dd>

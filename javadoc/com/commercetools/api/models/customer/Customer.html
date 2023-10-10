@@ -476,7 +476,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <code><a href="../common/BaseResource.html#withBaseResource(java.util.function.Function)">withBaseResource</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.commercetools.api.models.customer.CustomerMixin">Methods inherited from interface&nbsp;com.commercetools.api.models.customer.<a href="CustomerMixin.html" title="interface in com.commercetools.api.models.customer">CustomerMixin</a></h3>
-<code><a href="CustomerMixin.html#toReference()">toReference</a>, <a href="CustomerMixin.html#toResourceIdentifier()">toResourceIdentifier</a></code></div>
+<code><a href="CustomerMixin.html#findAddressById(java.lang.String)">findAddressById</a>, <a href="CustomerMixin.html#findDefaultBillingAddress()">findDefaultBillingAddress</a>, <a href="CustomerMixin.html#findDefaultShippingAddress()">findDefaultShippingAddress</a>, <a href="CustomerMixin.html#getAddressById(java.lang.String)">getAddressById</a>, <a href="CustomerMixin.html#getBillingAddresses()">getBillingAddresses</a>, <a href="CustomerMixin.html#getDefaultBillingAddress()">getDefaultBillingAddress</a>, <a href="CustomerMixin.html#getDefaultShippingAddress()">getDefaultShippingAddress</a>, <a href="CustomerMixin.html#getShippingAddresses()">getShippingAddresses</a>, <a href="CustomerMixin.html#toReference()">toReference</a>, <a href="CustomerMixin.html#toResourceIdentifier()">toResourceIdentifier</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.commercetools.api.models.Customizable">Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../Customizable.html" title="interface in com.commercetools.api.models">Customizable</a></h3>
 <code><a href="../Customizable.html#unwrapCustomizable()">unwrapCustomizable</a></code></div>
@@ -728,6 +728,8 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</span>&nbsp;<span class="element-name">getAddresses</span>()</div>
 <div class="block"><p>Addresses used by the Customer.</p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="CustomerMixin.html#getAddresses()">getAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerMixin.html" title="interface in com.commercetools.api.models.customer">CustomerMixin</a></code></dd>
 <dt>Returns:</dt>
 <dd>addresses</dd>
 </dl>
@@ -739,6 +741,8 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDefaultShippingAddressId</span>()</div>
 <div class="block"><p>ID of the address in <code>addresses</code> used as the default shipping address.</p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="CustomerMixin.html#getDefaultShippingAddressId()">getDefaultShippingAddressId</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerMixin.html" title="interface in com.commercetools.api.models.customer">CustomerMixin</a></code></dd>
 <dt>Returns:</dt>
 <dd>defaultShippingAddressId</dd>
 </dl>
@@ -750,6 +754,8 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getShippingAddressIds</span>()</div>
 <div class="block"><p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="CustomerMixin.html#getShippingAddressIds()">getShippingAddressIds</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerMixin.html" title="interface in com.commercetools.api.models.customer">CustomerMixin</a></code></dd>
 <dt>Returns:</dt>
 <dd>shippingAddressIds</dd>
 </dl>
@@ -761,8 +767,16 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDefaultBillingAddressId</span>()</div>
 <div class="block"><p>ID of the address in <code>addresses</code> used as the default billing address.</p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="CustomerMixin.html#getDefaultBillingAddressId()">getDefaultBillingAddressId</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerMixin.html" title="interface in com.commercetools.api.models.customer">CustomerMixin</a></code></dd>
 <dt>Returns:</dt>
 <dd>defaultBillingAddressId</dd>
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list-long">
+<li><a href="CustomerSetDefaultBillingAddressAction.html" title="interface in com.commercetools.api.models.customer"><code>CustomerSetDefaultBillingAddressAction</code></a></li>
+</ul>
+</dd>
 </dl>
 </section>
 </li>
@@ -772,6 +786,8 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getBillingAddressIds</span>()</div>
 <div class="block"><p>IDs of addresses in <code>addresses</code> used as billing addresses.</p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="CustomerMixin.html#getBillingAddressIds()">getBillingAddressIds</a></code>&nbsp;in interface&nbsp;<code><a href="CustomerMixin.html" title="interface in com.commercetools.api.models.customer">CustomerMixin</a></code></dd>
 <dt>Returns:</dt>
 <dd>billingAddressIds</dd>
 </dl>

@@ -19895,6 +19895,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">APIClients matching the query.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowPagedQueryResponseBuilder.html#addResults(java.util.function.Function)" class="member-name-link">addResults(Function&lt;ApprovalFlowBuilder, ApprovalFlow&gt;)</a> - Method in class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowPagedQueryResponseBuilder</a></dt>
+<dd>
+<div class="block">Approval Flows matching the query.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRulePagedQueryResponseBuilder.html#addResults(java.util.function.Function)" class="member-name-link">addResults(Function&lt;ApprovalRuleBuilder, ApprovalRule&gt;)</a> - Method in class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRulePagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRulePagedQueryResponseBuilder</a></dt>
+<dd>
+<div class="block">Approval Rules matching the query.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/associate_role/AssociateRolePagedQueryResponseBuilder.html#addResults(java.util.function.Function)" class="member-name-link">addResults(Function&lt;AssociateRoleBuilder, AssociateRole&gt;)</a> - Method in class com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/AssociateRolePagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.associate_role">AssociateRolePagedQueryResponseBuilder</a></dt>
 <dd>
 <div class="block">AssociateRoles matching the query.</div>
@@ -27575,7 +27583,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/json/ApiModule.html" class="type-name-link" title="class in com.commercetools.api.json">ApiModule</a> - Class in <a href="../com/commercetools/api/json/package-summary.html">com.commercetools.api.json</a></dt>
 <dd>
-<div class="block">Module to configure the default jackson <a href="https://www.javadoc.io/doc/com.fasterxml.jackson.core/jackson-databind/2.14.1/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>ObjectMapper</code></a> e.g.</div>
+<div class="block">Module to configure the default jackson <a href="https://fasterxml.github.io/jackson-databind/javadoc/2.14/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>ObjectMapper</code></a> e.g.</div>
 </dd>
 <dt><a href="../com/commercetools/api/json/ApiModule.html#%3Cinit%3E(io.vrap.rmf.base.client.utils.json.modules.ModuleOptions)" class="member-name-link">ApiModule(ModuleOptions)</a> - Constructor for class com.commercetools.api.json.<a href="../com/commercetools/api/json/ApiModule.html" title="class in com.commercetools.api.json">ApiModule</a></dt>
 <dd>&nbsp;</dd>
@@ -27980,6 +27988,19 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/ApprovalFlowCreatedMessagePayloadBuilder.html#%3Cinit%3E()" class="member-name-link">ApprovalFlowCreatedMessagePayloadBuilder()</a> - Constructor for class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalFlowCreatedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ApprovalFlowCreatedMessagePayloadBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowPagedQueryResponse.html" class="type-name-link" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowPagedQueryResponse</a> - Interface in <a href="../com/commercetools/api/models/approval_flow/package-summary.html">com.commercetools.api.models.approval_flow</a></dt>
+<dd>
+<div class="block">PagedQueryResult with results containing an array of ApprovalFlow.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowPagedQueryResponseBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowPagedQueryResponseBuilder</a> - Class in <a href="../com/commercetools/api/models/approval_flow/package-summary.html">com.commercetools.api.models.approval_flow</a></dt>
+<dd>
+<div class="block">ApprovalFlowPagedQueryResponseBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowPagedQueryResponseBuilder.html#%3Cinit%3E()" class="member-name-link">ApprovalFlowPagedQueryResponseBuilder()</a> - Constructor for class com.commercetools.api.models.approval_flow.<a href="../com/commercetools/api/models/approval_flow/ApprovalFlowPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowPagedQueryResponseBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/approval_flow/ApprovalFlowRejectAction.html" class="type-name-link" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowRejectAction</a> - Interface in <a href="../com/commercetools/api/models/approval_flow/package-summary.html">com.commercetools.api.models.approval_flow</a></dt>
 <dd>
 <div class="block">This update action allows an Associate to reject an Approval Flow, setting its status to <code>Rejected</code>.</div>
@@ -28328,6 +28349,19 @@ loadScripts(document, 'script');</script>
  </div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/ApprovalRuleNameSetMessagePayloadBuilder.html#%3Cinit%3E()" class="member-name-link">ApprovalRuleNameSetMessagePayloadBuilder()</a> - Constructor for class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ApprovalRuleNameSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ApprovalRuleNameSetMessagePayloadBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRulePagedQueryResponse.html" class="type-name-link" title="interface in com.commercetools.api.models.approval_rule">ApprovalRulePagedQueryResponse</a> - Interface in <a href="../com/commercetools/api/models/approval_rule/package-summary.html">com.commercetools.api.models.approval_rule</a></dt>
+<dd>
+<div class="block">PagedQueryResult with results containing an array of ApprovalRule.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRulePagedQueryResponseBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.approval_rule">ApprovalRulePagedQueryResponseBuilder</a> - Class in <a href="../com/commercetools/api/models/approval_rule/package-summary.html">com.commercetools.api.models.approval_rule</a></dt>
+<dd>
+<div class="block">ApprovalRulePagedQueryResponseBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/approval_rule/ApprovalRulePagedQueryResponseBuilder.html#%3Cinit%3E()" class="member-name-link">ApprovalRulePagedQueryResponseBuilder()</a> - Constructor for class com.commercetools.api.models.approval_rule.<a href="../com/commercetools/api/models/approval_rule/ApprovalRulePagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRulePagedQueryResponseBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/Message.html#approvalRulePredicateSetBuilder()" class="member-name-link">approvalRulePredicateSetBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/Message.html" title="interface in com.commercetools.api.models.message">Message</a></dt>
 <dd>

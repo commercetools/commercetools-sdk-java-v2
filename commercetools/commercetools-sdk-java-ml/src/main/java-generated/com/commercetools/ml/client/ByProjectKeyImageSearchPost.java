@@ -14,6 +14,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -37,6 +39,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyImageSearchPost extends
         BodyApiMethod<ByProjectKeyImageSearchPost, com.commercetools.ml.models.image_search.ImageSearchResponse, java.io.File> {
+
+    public TypeReference<com.commercetools.ml.models.image_search.ImageSearchResponse> resultType() {
+        return new TypeReference<com.commercetools.ml.models.image_search.ImageSearchResponse>() {
+        };
+    }
 
     private String projectKey;
 

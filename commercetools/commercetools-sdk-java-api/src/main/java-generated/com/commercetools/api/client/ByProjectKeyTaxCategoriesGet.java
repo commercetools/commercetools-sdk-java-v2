@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -41,6 +43,11 @@ public class ByProjectKeyTaxCategoriesGet extends
         com.commercetools.api.client.QueryTrait<ByProjectKeyTaxCategoriesGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTaxCategoriesGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTaxCategoriesGet> {
+
+    public TypeReference<com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

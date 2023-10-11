@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -31,6 +33,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyImageSearchConfigGet extends
         ApiMethod<ByProjectKeyImageSearchConfigGet, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> {
+
+    public TypeReference<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> resultType() {
+        return new TypeReference<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse>() {
+        };
+    }
 
     private String projectKey;
 

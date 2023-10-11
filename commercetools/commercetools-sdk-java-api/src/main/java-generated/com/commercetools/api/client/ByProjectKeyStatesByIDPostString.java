@@ -12,6 +12,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -40,6 +42,11 @@ public class ByProjectKeyStatesByIDPostString
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStatesByIDPostString>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStatesByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStatesByIDPostString> {
+
+    public TypeReference<com.commercetools.api.models.state.State> resultType() {
+        return new TypeReference<com.commercetools.api.models.state.State>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

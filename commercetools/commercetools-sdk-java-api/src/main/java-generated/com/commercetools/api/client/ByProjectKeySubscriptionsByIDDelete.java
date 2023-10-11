@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -42,6 +44,11 @@ public class ByProjectKeySubscriptionsByIDDelete
         com.commercetools.api.client.ConflictingTrait<ByProjectKeySubscriptionsByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeySubscriptionsByIDDelete> {
+
+    public TypeReference<com.commercetools.api.models.subscription.Subscription> resultType() {
+        return new TypeReference<com.commercetools.api.models.subscription.Subscription>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -42,6 +44,11 @@ public class ByProjectKeyCustomObjectsByContainerGet extends
         com.commercetools.api.client.SortableTrait<ByProjectKeyCustomObjectsByContainerGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsByContainerGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomObjectsByContainerGet> {
+
+    public TypeReference<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
     private String container;

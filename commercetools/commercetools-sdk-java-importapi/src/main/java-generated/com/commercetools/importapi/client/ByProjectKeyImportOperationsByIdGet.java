@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,6 +35,11 @@ public class ByProjectKeyImportOperationsByIdGet extends
         ApiMethod<ByProjectKeyImportOperationsByIdGet, com.commercetools.importapi.models.importoperations.ImportOperation>
         implements
         com.commercetools.importapi.client.Secured_by_view_import_containersTrait<ByProjectKeyImportOperationsByIdGet> {
+
+    public TypeReference<com.commercetools.importapi.models.importoperations.ImportOperation> resultType() {
+        return new TypeReference<com.commercetools.importapi.models.importoperations.ImportOperation>() {
+        };
+    }
 
     private String projectKey;
     private String id;

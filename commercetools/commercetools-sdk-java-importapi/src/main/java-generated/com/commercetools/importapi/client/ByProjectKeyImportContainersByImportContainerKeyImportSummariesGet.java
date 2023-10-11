@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,6 +36,11 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet 
         ApiMethod<ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet, com.commercetools.importapi.models.importsummaries.ImportSummary>
         implements
         com.commercetools.importapi.client.Secured_by_view_import_containersTrait<ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet> {
+
+    public TypeReference<com.commercetools.importapi.models.importsummaries.ImportSummary> resultType() {
+        return new TypeReference<com.commercetools.importapi.models.importsummaries.ImportSummary>() {
+        };
+    }
 
     private String projectKey;
     private String importContainerKey;

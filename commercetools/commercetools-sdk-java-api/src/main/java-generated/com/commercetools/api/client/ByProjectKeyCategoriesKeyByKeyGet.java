@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +40,11 @@ public class ByProjectKeyCategoriesKeyByKeyGet
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCategoriesKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCategoriesKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCategoriesKeyByKeyGet> {
+
+    public TypeReference<com.commercetools.api.models.category.Category> resultType() {
+        return new TypeReference<com.commercetools.api.models.category.Category>() {
+        };
+    }
 
     private String projectKey;
     private String key;

@@ -12,6 +12,8 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +40,11 @@ public class ByProjectKeyProductProjectionsSearchPost extends
         ApiMethod<ByProjectKeyProductProjectionsSearchPost, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>
         implements ByProjectKeyProductProjectionsSearchPostMixin,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchPost> {
+
+    public TypeReference<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>() {
+        };
+    }
 
     private String projectKey;
 

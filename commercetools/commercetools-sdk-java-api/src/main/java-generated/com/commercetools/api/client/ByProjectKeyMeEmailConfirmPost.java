@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -32,6 +34,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyMeEmailConfirmPost extends
         BodyApiMethod<ByProjectKeyMeEmailConfirmPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.MyCustomerEmailVerify>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeEmailConfirmPost> {
+
+    public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
+        return new TypeReference<com.commercetools.api.models.customer.Customer>() {
+        };
+    }
 
     private String projectKey;
 

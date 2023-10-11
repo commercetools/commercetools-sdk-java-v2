@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -43,6 +45,11 @@ public class ByProjectKeyStandalonePricesByIDDelete extends
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStandalonePricesByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStandalonePricesByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStandalonePricesByIDDelete> {
+
+    public TypeReference<com.commercetools.api.models.standalone_price.StandalonePrice> resultType() {
+        return new TypeReference<com.commercetools.api.models.standalone_price.StandalonePrice>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

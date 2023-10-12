@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -42,6 +44,11 @@ public class ByProjectKeyInventoryKeyByKeyDelete extends
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInventoryKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryKeyByKeyDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInventoryKeyByKeyDelete> {
+
+    public TypeReference<com.commercetools.api.models.inventory.InventoryEntry> resultType() {
+        return new TypeReference<com.commercetools.api.models.inventory.InventoryEntry>() {
+        };
+    }
 
     private String projectKey;
     private String key;

@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -41,6 +43,11 @@ public class ByProjectKeyDiscountCodesGet extends
         com.commercetools.api.client.QueryTrait<ByProjectKeyDiscountCodesGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyDiscountCodesGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyDiscountCodesGet> {
+
+    public TypeReference<com.commercetools.api.models.discount_code.DiscountCodePagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.discount_code.DiscountCodePagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

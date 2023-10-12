@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -40,6 +42,11 @@ public class ByProjectKeyMePaymentsByIDPost extends
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMePaymentsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMePaymentsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePaymentsByIDPost> {
+
+    public TypeReference<com.commercetools.api.models.me.MyPayment> resultType() {
+        return new TypeReference<com.commercetools.api.models.me.MyPayment>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

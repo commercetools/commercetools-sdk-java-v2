@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -37,6 +39,11 @@ public class ByProjectKeyStagedQuotesPost extends
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyStagedQuotesPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyStagedQuotesPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStagedQuotesPost> {
+
+    public TypeReference<com.commercetools.api.models.staged_quote.StagedQuote> resultType() {
+        return new TypeReference<com.commercetools.api.models.staged_quote.StagedQuote>() {
+        };
+    }
 
     private String projectKey;
 

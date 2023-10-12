@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,6 +36,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost extends
         BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost, com.commercetools.api.models.customer.CustomerToken, com.commercetools.api.models.customer.CustomerCreatePasswordResetToken>
         implements
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost> {
+
+    public TypeReference<com.commercetools.api.models.customer.CustomerToken> resultType() {
+        return new TypeReference<com.commercetools.api.models.customer.CustomerToken>() {
+        };
+    }
 
     private String projectKey;
     private String storeKey;

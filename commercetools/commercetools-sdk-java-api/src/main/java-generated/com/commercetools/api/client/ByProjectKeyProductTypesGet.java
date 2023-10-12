@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -41,6 +43,11 @@ public class ByProjectKeyProductTypesGet extends
         com.commercetools.api.client.QueryTrait<ByProjectKeyProductTypesGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductTypesGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductTypesGet> {
+
+    public TypeReference<com.commercetools.api.models.product_type.ProductTypePagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.product_type.ProductTypePagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

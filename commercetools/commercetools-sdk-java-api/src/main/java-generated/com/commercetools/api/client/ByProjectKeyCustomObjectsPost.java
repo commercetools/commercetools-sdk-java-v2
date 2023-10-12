@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +40,11 @@ public class ByProjectKeyCustomObjectsPost extends
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomObjectsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyCustomObjectsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsPost> {
+
+    public TypeReference<com.commercetools.api.models.custom_object.CustomObject> resultType() {
+        return new TypeReference<com.commercetools.api.models.custom_object.CustomObject>() {
+        };
+    }
 
     private String projectKey;
 

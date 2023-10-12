@@ -12,6 +12,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import com.commercetools.importapi.models.common.ProcessingState;
+import com.fasterxml.jackson.core.type.TypeReference;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -40,6 +41,11 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
         ApiMethod<ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet, com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse>
         implements
         com.commercetools.importapi.client.Secured_by_view_import_containersTrait<ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet> {
+
+    public TypeReference<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> resultType() {
+        return new TypeReference<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse>() {
+        };
+    }
 
     private String projectKey;
     private String importContainerKey;

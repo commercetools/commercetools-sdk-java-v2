@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +40,11 @@ public class ByProjectKeyAttributeGroupsByIDGet extends
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyAttributeGroupsByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAttributeGroupsByIDGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAttributeGroupsByIDGet> {
+
+    public TypeReference<com.commercetools.api.models.attribute_group.AttributeGroup> resultType() {
+        return new TypeReference<com.commercetools.api.models.attribute_group.AttributeGroup>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

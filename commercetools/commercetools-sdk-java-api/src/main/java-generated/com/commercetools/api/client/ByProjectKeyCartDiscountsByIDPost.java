@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -39,6 +41,11 @@ public class ByProjectKeyCartDiscountsByIDPost extends
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartDiscountsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCartDiscountsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCartDiscountsByIDPost> {
+
+    public TypeReference<com.commercetools.api.models.cart_discount.CartDiscount> resultType() {
+        return new TypeReference<com.commercetools.api.models.cart_discount.CartDiscount>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

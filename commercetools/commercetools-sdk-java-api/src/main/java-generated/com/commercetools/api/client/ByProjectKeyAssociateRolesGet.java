@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -41,6 +43,11 @@ public class ByProjectKeyAssociateRolesGet extends
         com.commercetools.api.client.QueryTrait<ByProjectKeyAssociateRolesGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAssociateRolesGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAssociateRolesGet> {
+
+    public TypeReference<com.commercetools.api.models.associate_role.AssociateRolePagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.associate_role.AssociateRolePagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -32,6 +34,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeySubscriptionsByIDHealthGet
         extends ApiMethod<ByProjectKeySubscriptionsByIDHealthGet, com.fasterxml.jackson.databind.JsonNode> {
+
+    public TypeReference<com.fasterxml.jackson.databind.JsonNode> resultType() {
+        return new TypeReference<com.fasterxml.jackson.databind.JsonNode>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,6 +36,11 @@ public class ByProjectKeyCategoriesImportContainersByImportContainerKeyPost exte
         BodyApiMethod<ByProjectKeyCategoriesImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.CategoryImportRequest>
         implements
         com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyCategoriesImportContainersByImportContainerKeyPost> {
+
+    public TypeReference<com.commercetools.importapi.models.importrequests.ImportResponse> resultType() {
+        return new TypeReference<com.commercetools.importapi.models.importrequests.ImportResponse>() {
+        };
+    }
 
     private String projectKey;
     private String importContainerKey;

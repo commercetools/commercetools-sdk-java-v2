@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,6 +35,11 @@ public class ByProjectKeyProductsByIDHead
         extends ApiMethod<ByProjectKeyProductsByIDHead, com.fasterxml.jackson.databind.JsonNode>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsByIDHead>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductsByIDHead> {
+
+    public TypeReference<com.fasterxml.jackson.databind.JsonNode> resultType() {
+        return new TypeReference<com.fasterxml.jackson.databind.JsonNode>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

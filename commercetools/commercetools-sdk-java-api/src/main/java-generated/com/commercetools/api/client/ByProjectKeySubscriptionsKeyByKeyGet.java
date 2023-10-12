@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,6 +35,11 @@ public class ByProjectKeySubscriptionsKeyByKeyGet
         extends ApiMethod<ByProjectKeySubscriptionsKeyByKeyGet, com.commercetools.api.models.subscription.Subscription>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeySubscriptionsKeyByKeyGet> {
+
+    public TypeReference<com.commercetools.api.models.subscription.Subscription> resultType() {
+        return new TypeReference<com.commercetools.api.models.subscription.Subscription>() {
+        };
+    }
 
     private String projectKey;
     private String key;

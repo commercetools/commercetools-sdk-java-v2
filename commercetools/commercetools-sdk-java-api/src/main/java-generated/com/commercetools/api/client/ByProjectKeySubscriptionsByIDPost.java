@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,6 +36,11 @@ public class ByProjectKeySubscriptionsByIDPost extends
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeySubscriptionsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeySubscriptionsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsByIDPost> {
+
+    public TypeReference<com.commercetools.api.models.subscription.Subscription> resultType() {
+        return new TypeReference<com.commercetools.api.models.subscription.Subscription>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

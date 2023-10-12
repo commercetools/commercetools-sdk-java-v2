@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,6 +35,11 @@ public class ByProjectKeyApiClientsByIDDelete
         extends ApiMethod<ByProjectKeyApiClientsByIDDelete, com.commercetools.api.models.api_client.ApiClient>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyApiClientsByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyApiClientsByIDDelete> {
+
+    public TypeReference<com.commercetools.api.models.api_client.ApiClient> resultType() {
+        return new TypeReference<com.commercetools.api.models.api_client.ApiClient>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

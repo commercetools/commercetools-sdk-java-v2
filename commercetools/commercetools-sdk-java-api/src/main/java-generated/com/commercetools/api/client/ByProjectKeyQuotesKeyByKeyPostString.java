@@ -43,6 +43,7 @@ public class ByProjectKeyQuotesKeyByKeyPostString
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyQuotesKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyQuotesKeyByKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.quote.Quote> resultType() {
         return new TypeReference<com.commercetools.api.models.quote.Quote>() {
         };

@@ -35,10 +35,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductTypesHead
-        extends ApiMethod<ByProjectKeyProductTypesHead, com.fasterxml.jackson.databind.JsonNode>
+        extends TypeApiMethod<ByProjectKeyProductTypesHead, com.fasterxml.jackson.databind.JsonNode>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductTypesHead>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductTypesHead> {
 
+    @Override
     public TypeReference<com.fasterxml.jackson.databind.JsonNode> resultType() {
         return new TypeReference<com.fasterxml.jackson.databind.JsonNode>() {
         };

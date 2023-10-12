@@ -37,13 +37,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyBusinessUnitsKeyByKeyDelete extends
-        ApiMethod<ByProjectKeyBusinessUnitsKeyByKeyDelete, com.commercetools.api.models.business_unit.BusinessUnit>
+        TypeApiMethod<ByProjectKeyBusinessUnitsKeyByKeyDelete, com.commercetools.api.models.business_unit.BusinessUnit>
         implements com.commercetools.api.client.VersionedTrait<ByProjectKeyBusinessUnitsKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyBusinessUnitsKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyBusinessUnitsKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyBusinessUnitsKeyByKeyDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyBusinessUnitsKeyByKeyDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.business_unit.BusinessUnit> resultType() {
         return new TypeReference<com.commercetools.api.models.business_unit.BusinessUnit>() {
         };

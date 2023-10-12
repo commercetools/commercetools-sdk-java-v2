@@ -35,7 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyQuoteRequestsGet extends
-        ApiMethod<ByProjectKeyQuoteRequestsGet, com.commercetools.api.models.quote_request.QuoteRequestPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyQuoteRequestsGet, com.commercetools.api.models.quote_request.QuoteRequestPagedQueryResponse>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyQuoteRequestsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyQuoteRequestsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyQuoteRequestsGet>,
@@ -43,6 +43,7 @@ public class ByProjectKeyQuoteRequestsGet extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyQuoteRequestsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyQuoteRequestsGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.quote_request.QuoteRequestPagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.quote_request.QuoteRequestPagedQueryResponse>() {
         };

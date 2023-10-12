@@ -36,12 +36,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyReviewsKeyByKeyPost extends
-        BodyApiMethod<ByProjectKeyReviewsKeyByKeyPost, com.commercetools.api.models.review.Review, com.commercetools.api.models.review.ReviewUpdate>
+        TypeBodyApiMethod<ByProjectKeyReviewsKeyByKeyPost, com.commercetools.api.models.review.Review, com.commercetools.api.models.review.ReviewUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyReviewsKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyReviewsKeyByKeyPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyReviewsKeyByKeyPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsKeyByKeyPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.review.Review> resultType() {
         return new TypeReference<com.commercetools.api.models.review.Review>() {
         };

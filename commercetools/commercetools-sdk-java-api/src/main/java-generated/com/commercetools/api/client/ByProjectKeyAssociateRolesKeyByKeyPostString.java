@@ -43,6 +43,7 @@ public class ByProjectKeyAssociateRolesKeyByKeyPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAssociateRolesKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAssociateRolesKeyByKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.associate_role.AssociateRole> resultType() {
         return new TypeReference<com.commercetools.api.models.associate_role.AssociateRole>() {
         };

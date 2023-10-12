@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Create email token for Customer request.</p>
+ *  <p>Generated after a successful Create email token for Customer request. The <code>resource</code> property of the Message is a CustomerEmailTokenReference.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

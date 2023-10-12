@@ -40,6 +40,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyProductsByIDImagesPostString extends
         StringBodyApiMethod<ByProjectKeyProductsByIDImagesPostString, com.commercetools.api.models.product.Product> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.product.Product> resultType() {
         return new TypeReference<com.commercetools.api.models.product.Product>() {
         };

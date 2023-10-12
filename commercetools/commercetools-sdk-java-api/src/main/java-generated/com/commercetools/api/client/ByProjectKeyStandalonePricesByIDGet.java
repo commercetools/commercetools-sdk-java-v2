@@ -36,11 +36,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyStandalonePricesByIDGet extends
-        ApiMethod<ByProjectKeyStandalonePricesByIDGet, com.commercetools.api.models.standalone_price.StandalonePrice>
+        TypeApiMethod<ByProjectKeyStandalonePricesByIDGet, com.commercetools.api.models.standalone_price.StandalonePrice>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyStandalonePricesByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStandalonePricesByIDGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStandalonePricesByIDGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.standalone_price.StandalonePrice> resultType() {
         return new TypeReference<com.commercetools.api.models.standalone_price.StandalonePrice>() {
         };

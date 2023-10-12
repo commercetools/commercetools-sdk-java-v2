@@ -32,11 +32,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeySubscriptionsByIDPost extends
-        BodyApiMethod<ByProjectKeySubscriptionsByIDPost, com.commercetools.api.models.subscription.Subscription, com.commercetools.api.models.subscription.SubscriptionUpdate>
+        TypeBodyApiMethod<ByProjectKeySubscriptionsByIDPost, com.commercetools.api.models.subscription.Subscription, com.commercetools.api.models.subscription.SubscriptionUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeySubscriptionsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeySubscriptionsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsByIDPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.subscription.Subscription> resultType() {
         return new TypeReference<com.commercetools.api.models.subscription.Subscription>() {
         };

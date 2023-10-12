@@ -37,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductSelectionsByIDDelete extends
-        ApiMethod<ByProjectKeyProductSelectionsByIDDelete, com.commercetools.api.models.product_selection.ProductSelection>
+        TypeApiMethod<ByProjectKeyProductSelectionsByIDDelete, com.commercetools.api.models.product_selection.ProductSelection>
         implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductSelectionsByIDDelete, com.commercetools.api.models.product_selection.ProductSelection>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyProductSelectionsByIDDelete>,
@@ -46,6 +46,7 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductSelectionsByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductSelectionsByIDDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.product_selection.ProductSelection> resultType() {
         return new TypeReference<com.commercetools.api.models.product_selection.ProductSelection>() {
         };

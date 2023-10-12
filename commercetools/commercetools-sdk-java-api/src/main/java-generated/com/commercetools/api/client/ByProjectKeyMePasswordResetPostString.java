@@ -38,6 +38,7 @@ public class ByProjectKeyMePasswordResetPostString extends
         StringBodyApiMethod<ByProjectKeyMePasswordResetPostString, com.commercetools.api.models.customer.Customer>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePasswordResetPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

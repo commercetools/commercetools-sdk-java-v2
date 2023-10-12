@@ -43,6 +43,7 @@ public class ByProjectKeyReviewsKeyByKeyPostString
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyReviewsKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsKeyByKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.review.Review> resultType() {
         return new TypeReference<com.commercetools.api.models.review.Review>() {
         };

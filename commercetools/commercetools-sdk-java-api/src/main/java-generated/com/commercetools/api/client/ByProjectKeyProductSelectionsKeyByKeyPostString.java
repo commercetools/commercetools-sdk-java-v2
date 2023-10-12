@@ -43,6 +43,7 @@ public class ByProjectKeyProductSelectionsKeyByKeyPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductSelectionsKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductSelectionsKeyByKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.product_selection.ProductSelection> resultType() {
         return new TypeReference<com.commercetools.api.models.product_selection.ProductSelection>() {
         };

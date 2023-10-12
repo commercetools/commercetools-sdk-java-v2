@@ -36,7 +36,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @Deprecated
 public class ByProjectKeyCustomObjectsGet extends
-        ApiMethod<ByProjectKeyCustomObjectsGet, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyCustomObjectsGet, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>
         implements ByProjectKeyCustomObjectsGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomObjectsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyCustomObjectsGet>,
@@ -45,6 +45,7 @@ public class ByProjectKeyCustomObjectsGet extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomObjectsGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>() {
         };

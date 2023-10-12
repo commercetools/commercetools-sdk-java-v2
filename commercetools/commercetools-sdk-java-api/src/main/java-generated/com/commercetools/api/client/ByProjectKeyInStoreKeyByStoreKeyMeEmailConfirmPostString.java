@@ -38,6 +38,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPostString extends
         implements
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeEmailConfirmPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

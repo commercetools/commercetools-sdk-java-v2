@@ -38,6 +38,7 @@ public class ByProjectKeyTypesImportContainersByImportContainerKeyPostString ext
         implements
         com.commercetools.importapi.client.Secured_by_manage_typesTrait<ByProjectKeyTypesImportContainersByImportContainerKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.importapi.models.importrequests.ImportResponse> resultType() {
         return new TypeReference<com.commercetools.importapi.models.importrequests.ImportResponse>() {
         };

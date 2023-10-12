@@ -34,9 +34,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyMeSignupPost extends
-        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeSignupPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.me.MyCustomerDraft>
+        TypeBodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeSignupPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.me.MyCustomerDraft>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeSignupPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.CustomerSignInResult> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.CustomerSignInResult>() {
         };

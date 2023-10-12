@@ -37,8 +37,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
-        ApiMethod<ByProjectKeyRecommendationsGeneralCategoriesGet, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse> {
+        TypeApiMethod<ByProjectKeyRecommendationsGeneralCategoriesGet, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse> {
 
+    @Override
     public TypeReference<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse>() {
         };

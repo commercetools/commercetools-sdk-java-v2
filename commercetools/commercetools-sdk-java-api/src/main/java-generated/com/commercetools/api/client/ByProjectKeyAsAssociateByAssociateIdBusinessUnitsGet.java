@@ -37,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet extends
-        ApiMethod<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet, com.commercetools.api.models.business_unit.BusinessUnitPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet, com.commercetools.api.models.business_unit.BusinessUnitPagedQueryResponse>
         implements ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet>,
@@ -46,6 +46,7 @@ public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.business_unit.BusinessUnitPagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.business_unit.BusinessUnitPagedQueryResponse>() {
         };

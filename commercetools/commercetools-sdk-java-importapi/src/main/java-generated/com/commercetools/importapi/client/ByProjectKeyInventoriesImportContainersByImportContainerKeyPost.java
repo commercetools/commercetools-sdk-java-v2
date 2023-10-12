@@ -33,10 +33,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInventoriesImportContainersByImportContainerKeyPost extends
-        BodyApiMethod<ByProjectKeyInventoriesImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.InventoryImportRequest>
+        TypeBodyApiMethod<ByProjectKeyInventoriesImportContainersByImportContainerKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse, com.commercetools.importapi.models.importrequests.InventoryImportRequest>
         implements
         com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyInventoriesImportContainersByImportContainerKeyPost> {
 
+    @Override
     public TypeReference<com.commercetools.importapi.models.importrequests.ImportResponse> resultType() {
         return new TypeReference<com.commercetools.importapi.models.importrequests.ImportResponse>() {
         };

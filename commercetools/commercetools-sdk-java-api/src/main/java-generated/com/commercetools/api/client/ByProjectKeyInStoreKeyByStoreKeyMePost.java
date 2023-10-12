@@ -32,8 +32,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyMePost extends
-        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMePost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.me.MyCustomerUpdate> {
+        TypeBodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMePost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.me.MyCustomerUpdate> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

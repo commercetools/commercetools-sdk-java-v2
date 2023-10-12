@@ -44,6 +44,7 @@ public class ByProjectKeyMeQuotesByIDPostString
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeQuotesByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeQuotesByIDPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.quote.Quote> resultType() {
         return new TypeReference<com.commercetools.api.models.quote.Quote>() {
         };

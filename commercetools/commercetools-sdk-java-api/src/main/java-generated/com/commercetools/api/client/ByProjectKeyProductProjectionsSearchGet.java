@@ -36,7 +36,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductProjectionsSearchGet extends
-        ApiMethod<ByProjectKeyProductProjectionsSearchGet, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>
+        TypeApiMethod<ByProjectKeyProductProjectionsSearchGet, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>
         implements com.commercetools.api.client.SortableTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.ProjectionselectingTrait<ByProjectKeyProductProjectionsSearchGet>,
@@ -47,6 +47,7 @@ public class ByProjectKeyProductProjectionsSearchGet extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsSearchGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>() {
         };

@@ -43,6 +43,7 @@ public class ByProjectKeyTaxCategoriesByIDPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTaxCategoriesByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTaxCategoriesByIDPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.tax_category.TaxCategory> resultType() {
         return new TypeReference<com.commercetools.api.models.tax_category.TaxCategory>() {
         };

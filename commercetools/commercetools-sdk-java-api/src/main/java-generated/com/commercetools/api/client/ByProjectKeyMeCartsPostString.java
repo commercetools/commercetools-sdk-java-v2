@@ -42,6 +42,7 @@ public class ByProjectKeyMeCartsPostString
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyMeCartsPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.cart.Cart> resultType() {
         return new TypeReference<com.commercetools.api.models.cart.Cart>() {
         };

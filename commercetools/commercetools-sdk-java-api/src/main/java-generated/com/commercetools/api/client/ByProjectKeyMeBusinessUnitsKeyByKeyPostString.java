@@ -44,6 +44,7 @@ public class ByProjectKeyMeBusinessUnitsKeyByKeyPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeBusinessUnitsKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeBusinessUnitsKeyByKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.business_unit.BusinessUnit> resultType() {
         return new TypeReference<com.commercetools.api.models.business_unit.BusinessUnit>() {
         };

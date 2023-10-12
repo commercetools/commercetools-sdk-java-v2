@@ -38,6 +38,7 @@ public class ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPos
         implements
         com.commercetools.importapi.client.Secured_by_manage_standalone_pricesTrait<ByProjectKeyStandalonePricesImportContainersByImportContainerKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.importapi.models.importrequests.ImportResponse> resultType() {
         return new TypeReference<com.commercetools.importapi.models.importrequests.ImportResponse>() {
         };

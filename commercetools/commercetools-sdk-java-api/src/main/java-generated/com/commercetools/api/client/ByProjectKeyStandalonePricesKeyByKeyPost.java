@@ -36,12 +36,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyStandalonePricesKeyByKeyPost extends
-        BodyApiMethod<ByProjectKeyStandalonePricesKeyByKeyPost, com.commercetools.api.models.standalone_price.StandalonePrice, com.commercetools.api.models.standalone_price.StandalonePriceUpdate>
+        TypeBodyApiMethod<ByProjectKeyStandalonePricesKeyByKeyPost, com.commercetools.api.models.standalone_price.StandalonePrice, com.commercetools.api.models.standalone_price.StandalonePriceUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyStandalonePricesKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStandalonePricesKeyByKeyPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStandalonePricesKeyByKeyPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStandalonePricesKeyByKeyPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.standalone_price.StandalonePrice> resultType() {
         return new TypeReference<com.commercetools.api.models.standalone_price.StandalonePrice>() {
         };

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Create password reset token for Customer request.</p>
+ *  <p>Generated after a successful Create password reset token for Customer request. The <code>resource</code> property of the Message is a CustomerPasswordTokenReference.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

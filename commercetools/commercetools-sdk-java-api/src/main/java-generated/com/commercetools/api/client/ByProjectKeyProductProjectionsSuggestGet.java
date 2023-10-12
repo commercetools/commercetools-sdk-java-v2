@@ -36,13 +36,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductProjectionsSuggestGet extends
-        ApiMethod<ByProjectKeyProductProjectionsSuggestGet, com.commercetools.api.models.product.SuggestionResult>
+        TypeApiMethod<ByProjectKeyProductProjectionsSuggestGet, com.commercetools.api.models.product.SuggestionResult>
         implements com.commercetools.api.client.SortableTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.ProjectionselectingTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsSuggestGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.product.SuggestionResult> resultType() {
         return new TypeReference<com.commercetools.api.models.product.SuggestionResult>() {
         };

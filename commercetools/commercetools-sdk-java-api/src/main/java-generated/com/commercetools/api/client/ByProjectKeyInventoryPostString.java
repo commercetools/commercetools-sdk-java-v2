@@ -41,6 +41,7 @@ public class ByProjectKeyInventoryPostString extends
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInventoryPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.inventory.InventoryEntry> resultType() {
         return new TypeReference<com.commercetools.api.models.inventory.InventoryEntry>() {
         };

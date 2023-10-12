@@ -39,7 +39,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete, com.commercetools.api.models.customer.Customer>
+        TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete, com.commercetools.api.models.customer.Customer>
         implements com.commercetools.api.client.DataerasureTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete>,
@@ -47,6 +47,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

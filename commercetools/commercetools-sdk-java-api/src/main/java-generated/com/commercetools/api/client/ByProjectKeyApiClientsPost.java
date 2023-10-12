@@ -35,11 +35,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyApiClientsPost extends
-        BodyApiMethod<ByProjectKeyApiClientsPost, com.commercetools.api.models.api_client.ApiClient, com.commercetools.api.models.api_client.ApiClientDraft>
+        TypeBodyApiMethod<ByProjectKeyApiClientsPost, com.commercetools.api.models.api_client.ApiClient, com.commercetools.api.models.api_client.ApiClientDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyApiClientsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyApiClientsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyApiClientsPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.api_client.ApiClient> resultType() {
         return new TypeReference<com.commercetools.api.models.api_client.ApiClient>() {
         };

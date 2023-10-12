@@ -37,11 +37,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyShippingMethodsMatchingCartGet extends
-        ApiMethod<ByProjectKeyShippingMethodsMatchingCartGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyShippingMethodsMatchingCartGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsMatchingCartGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsMatchingCartGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsMatchingCartGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>() {
         };

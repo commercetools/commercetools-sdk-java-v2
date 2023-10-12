@@ -35,12 +35,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyAssociateRolesByIDGet
-        extends ApiMethod<ByProjectKeyAssociateRolesByIDGet, com.commercetools.api.models.associate_role.AssociateRole>
+public class ByProjectKeyAssociateRolesByIDGet extends
+        TypeApiMethod<ByProjectKeyAssociateRolesByIDGet, com.commercetools.api.models.associate_role.AssociateRole>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyAssociateRolesByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAssociateRolesByIDGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAssociateRolesByIDGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.associate_role.AssociateRole> resultType() {
         return new TypeReference<com.commercetools.api.models.associate_role.AssociateRole>() {
         };

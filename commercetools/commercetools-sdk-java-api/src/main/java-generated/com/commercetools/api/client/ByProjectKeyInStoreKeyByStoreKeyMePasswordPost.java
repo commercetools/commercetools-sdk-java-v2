@@ -33,10 +33,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyMePasswordPost extends
-        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMePasswordPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.MyCustomerChangePassword>
+        TypeBodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyMePasswordPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.MyCustomerChangePassword>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyMePasswordPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMePasswordPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

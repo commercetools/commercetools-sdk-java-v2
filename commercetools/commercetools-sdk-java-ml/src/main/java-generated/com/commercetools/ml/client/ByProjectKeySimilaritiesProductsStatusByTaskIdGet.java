@@ -34,8 +34,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends
-        ApiMethod<ByProjectKeySimilaritiesProductsStatusByTaskIdGet, com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus> {
+        TypeApiMethod<ByProjectKeySimilaritiesProductsStatusByTaskIdGet, com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus> {
 
+    @Override
     public TypeReference<com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus> resultType() {
         return new TypeReference<com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus>() {
         };

@@ -35,7 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyChannelsGet
-        extends ApiMethod<ByProjectKeyChannelsGet, com.commercetools.api.models.channel.ChannelPagedQueryResponse>
+        extends TypeApiMethod<ByProjectKeyChannelsGet, com.commercetools.api.models.channel.ChannelPagedQueryResponse>
         implements ByProjectKeyChannelsGetMixin, com.commercetools.api.client.ExpandableTrait<ByProjectKeyChannelsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyChannelsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyChannelsGet>,
@@ -43,6 +43,7 @@ public class ByProjectKeyChannelsGet
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyChannelsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyChannelsGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.channel.ChannelPagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.channel.ChannelPagedQueryResponse>() {
         };

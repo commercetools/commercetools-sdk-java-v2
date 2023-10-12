@@ -43,6 +43,7 @@ public class ByProjectKeyStoresKeyByKeyPostString
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStoresKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStoresKeyByKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.store.Store> resultType() {
         return new TypeReference<com.commercetools.api.models.store.Store>() {
         };

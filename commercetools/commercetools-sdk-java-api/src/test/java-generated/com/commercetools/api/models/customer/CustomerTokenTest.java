@@ -27,11 +27,11 @@ public class CustomerTokenTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { CustomerToken.builder().id("id") },
-                new Object[] { CustomerToken.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CustomerToken.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { CustomerToken.builder().customerId("customerId") },
+                new Object[] { CustomerToken.builder().value("value") },
                 new Object[] { CustomerToken.builder().expiresAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CustomerToken.builder().value("value") } };
+                new Object[] { CustomerToken.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { CustomerToken.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test
@@ -39,6 +39,27 @@ public class CustomerTokenTest {
         CustomerToken value = CustomerToken.of();
         value.setId("id");
         Assertions.assertThat(value.getId()).isEqualTo("id");
+    }
+
+    @Test
+    public void customerId() {
+        CustomerToken value = CustomerToken.of();
+        value.setCustomerId("customerId");
+        Assertions.assertThat(value.getCustomerId()).isEqualTo("customerId");
+    }
+
+    @Test
+    public void value() {
+        CustomerToken value = CustomerToken.of();
+        value.setValue("value");
+        Assertions.assertThat(value.getValue()).isEqualTo("value");
+    }
+
+    @Test
+    public void expiresAt() {
+        CustomerToken value = CustomerToken.of();
+        value.setExpiresAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
+        Assertions.assertThat(value.getExpiresAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
     }
 
     @Test
@@ -53,26 +74,5 @@ public class CustomerTokenTest {
         CustomerToken value = CustomerToken.of();
         value.setLastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
         Assertions.assertThat(value.getLastModifiedAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
-    }
-
-    @Test
-    public void customerId() {
-        CustomerToken value = CustomerToken.of();
-        value.setCustomerId("customerId");
-        Assertions.assertThat(value.getCustomerId()).isEqualTo("customerId");
-    }
-
-    @Test
-    public void expiresAt() {
-        CustomerToken value = CustomerToken.of();
-        value.setExpiresAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
-        Assertions.assertThat(value.getExpiresAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
-    }
-
-    @Test
-    public void value() {
-        CustomerToken value = CustomerToken.of();
-        value.setValue("value");
-        Assertions.assertThat(value.getValue()).isEqualTo("value");
     }
 }

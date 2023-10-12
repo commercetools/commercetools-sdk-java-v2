@@ -36,11 +36,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyTypesByIDGet
-        extends ApiMethod<ByProjectKeyTypesByIDGet, com.commercetools.api.models.type.Type>
+        extends TypeApiMethod<ByProjectKeyTypesByIDGet, com.commercetools.api.models.type.Type>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyTypesByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTypesByIDGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTypesByIDGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.type.Type> resultType() {
         return new TypeReference<com.commercetools.api.models.type.Type>() {
         };

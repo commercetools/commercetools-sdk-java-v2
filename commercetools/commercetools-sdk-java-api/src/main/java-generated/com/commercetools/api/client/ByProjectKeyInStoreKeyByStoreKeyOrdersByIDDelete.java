@@ -38,8 +38,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete, com.commercetools.api.models.order.Order>
+public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete extends
+        TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete, com.commercetools.api.models.order.Order>
         implements com.commercetools.api.client.DataerasureTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete>,
@@ -47,6 +47,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.Order> resultType() {
         return new TypeReference<com.commercetools.api.models.order.Order>() {
         };

@@ -44,6 +44,7 @@ public class ByProjectKeyOrdersEditsKeyByKeyPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyOrdersEditsKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsKeyByKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order_edit.OrderEdit> resultType() {
         return new TypeReference<com.commercetools.api.models.order_edit.OrderEdit>() {
         };

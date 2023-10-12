@@ -43,6 +43,7 @@ public class ByProjectKeyPaymentsByIDPostString
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyPaymentsByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyPaymentsByIDPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.payment.Payment> resultType() {
         return new TypeReference<com.commercetools.api.models.payment.Payment>() {
         };

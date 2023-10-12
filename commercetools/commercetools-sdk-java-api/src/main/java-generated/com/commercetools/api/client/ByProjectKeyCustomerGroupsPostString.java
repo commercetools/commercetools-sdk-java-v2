@@ -41,6 +41,7 @@ public class ByProjectKeyCustomerGroupsPostString extends
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyCustomerGroupsPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomerGroupsPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer_group.CustomerGroup> resultType() {
         return new TypeReference<com.commercetools.api.models.customer_group.CustomerGroup>() {
         };

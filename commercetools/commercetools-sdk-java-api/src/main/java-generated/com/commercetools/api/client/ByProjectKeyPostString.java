@@ -34,6 +34,7 @@ public class ByProjectKeyPostString
         extends StringBodyApiMethod<ByProjectKeyPostString, com.commercetools.api.models.project.Project>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.project.Project> resultType() {
         return new TypeReference<com.commercetools.api.models.project.Project>() {
         };

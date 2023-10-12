@@ -16,10 +16,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     CustomerToken customerToken = CustomerToken.builder()
  *             .id("{id}")
- *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .customerId("{customerId}")
- *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .value("{value}")
+ *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -29,16 +29,16 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     private String id;
 
+    private String customerId;
+
+    private String value;
+
+    private java.time.ZonedDateTime expiresAt;
+
     private java.time.ZonedDateTime createdAt;
 
     @Nullable
     private java.time.ZonedDateTime lastModifiedAt;
-
-    private String customerId;
-
-    private java.time.ZonedDateTime expiresAt;
-
-    private String value;
 
     /**
      *  <p>Unique identifier of the token.</p>
@@ -48,6 +48,39 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     public CustomerTokenBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    /**
+     *  <p>The <code>id</code> of the Customer.</p>
+     * @param customerId value to be set
+     * @return Builder
+     */
+
+    public CustomerTokenBuilder customerId(final String customerId) {
+        this.customerId = customerId;
+        return this;
+    }
+
+    /**
+     *  <p>Value of the token.</p>
+     * @param value value to be set
+     * @return Builder
+     */
+
+    public CustomerTokenBuilder value(final String value) {
+        this.value = value;
+        return this;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the token expires.</p>
+     * @param expiresAt value to be set
+     * @return Builder
+     */
+
+    public CustomerTokenBuilder expiresAt(final java.time.ZonedDateTime expiresAt) {
+        this.expiresAt = expiresAt;
         return this;
     }
 
@@ -74,45 +107,39 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     *  <p>The <code>id</code> of the Customer.</p>
-     * @param customerId value to be set
-     * @return Builder
-     */
-
-    public CustomerTokenBuilder customerId(final String customerId) {
-        this.customerId = customerId;
-        return this;
-    }
-
-    /**
-     *  <p>Date and time (UTC) the token expires.</p>
-     * @param expiresAt value to be set
-     * @return Builder
-     */
-
-    public CustomerTokenBuilder expiresAt(final java.time.ZonedDateTime expiresAt) {
-        this.expiresAt = expiresAt;
-        return this;
-    }
-
-    /**
-     *  <p>Value of the token.</p>
-     * @param value value to be set
-     * @return Builder
-     */
-
-    public CustomerTokenBuilder value(final String value) {
-        this.value = value;
-        return this;
-    }
-
-    /**
      *  <p>Unique identifier of the token.</p>
      * @return id
      */
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>The <code>id</code> of the Customer.</p>
+     * @return customerId
+     */
+
+    public String getCustomerId() {
+        return this.customerId;
+    }
+
+    /**
+     *  <p>Value of the token.</p>
+     * @return value
+     */
+
+    public String getValue() {
+        return this.value;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the token expires.</p>
+     * @return expiresAt
+     */
+
+    public java.time.ZonedDateTime getExpiresAt() {
+        return this.expiresAt;
     }
 
     /**
@@ -135,43 +162,16 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
-     *  <p>The <code>id</code> of the Customer.</p>
-     * @return customerId
-     */
-
-    public String getCustomerId() {
-        return this.customerId;
-    }
-
-    /**
-     *  <p>Date and time (UTC) the token expires.</p>
-     * @return expiresAt
-     */
-
-    public java.time.ZonedDateTime getExpiresAt() {
-        return this.expiresAt;
-    }
-
-    /**
-     *  <p>Value of the token.</p>
-     * @return value
-     */
-
-    public String getValue() {
-        return this.value;
-    }
-
-    /**
      * builds CustomerToken with checking for non-null required values
      * @return CustomerToken
      */
     public CustomerToken build() {
         Objects.requireNonNull(id, CustomerToken.class + ": id is missing");
-        Objects.requireNonNull(createdAt, CustomerToken.class + ": createdAt is missing");
         Objects.requireNonNull(customerId, CustomerToken.class + ": customerId is missing");
-        Objects.requireNonNull(expiresAt, CustomerToken.class + ": expiresAt is missing");
         Objects.requireNonNull(value, CustomerToken.class + ": value is missing");
-        return new CustomerTokenImpl(id, createdAt, lastModifiedAt, customerId, expiresAt, value);
+        Objects.requireNonNull(expiresAt, CustomerToken.class + ": expiresAt is missing");
+        Objects.requireNonNull(createdAt, CustomerToken.class + ": createdAt is missing");
+        return new CustomerTokenImpl(id, customerId, value, expiresAt, createdAt, lastModifiedAt);
     }
 
     /**
@@ -179,7 +179,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
      * @return CustomerToken
      */
     public CustomerToken buildUnchecked() {
-        return new CustomerTokenImpl(id, createdAt, lastModifiedAt, customerId, expiresAt, value);
+        return new CustomerTokenImpl(id, customerId, value, expiresAt, createdAt, lastModifiedAt);
     }
 
     /**
@@ -198,11 +198,11 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     public static CustomerTokenBuilder of(final CustomerToken template) {
         CustomerTokenBuilder builder = new CustomerTokenBuilder();
         builder.id = template.getId();
+        builder.customerId = template.getCustomerId();
+        builder.value = template.getValue();
+        builder.expiresAt = template.getExpiresAt();
         builder.createdAt = template.getCreatedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();
-        builder.customerId = template.getCustomerId();
-        builder.expiresAt = template.getExpiresAt();
-        builder.value = template.getValue();
         return builder;
     }
 

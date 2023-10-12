@@ -36,12 +36,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyShippingMethodsByIDPost extends
-        BodyApiMethod<ByProjectKeyShippingMethodsByIDPost, com.commercetools.api.models.shipping_method.ShippingMethod, com.commercetools.api.models.shipping_method.ShippingMethodUpdate>
+        TypeBodyApiMethod<ByProjectKeyShippingMethodsByIDPost, com.commercetools.api.models.shipping_method.ShippingMethod, com.commercetools.api.models.shipping_method.ShippingMethodUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyShippingMethodsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsByIDPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.shipping_method.ShippingMethod> resultType() {
         return new TypeReference<com.commercetools.api.models.shipping_method.ShippingMethod>() {
         };

@@ -34,8 +34,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyInventoryGet
-        extends ApiMethod<ByProjectKeyInventoryGet, com.commercetools.api.models.inventory.InventoryPagedQueryResponse>
+public class ByProjectKeyInventoryGet extends
+        TypeApiMethod<ByProjectKeyInventoryGet, com.commercetools.api.models.inventory.InventoryPagedQueryResponse>
         implements ByProjectKeyInventoryGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInventoryGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyInventoryGet>,
@@ -44,6 +44,7 @@ public class ByProjectKeyInventoryGet
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInventoryGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.inventory.InventoryPagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.inventory.InventoryPagedQueryResponse>() {
         };

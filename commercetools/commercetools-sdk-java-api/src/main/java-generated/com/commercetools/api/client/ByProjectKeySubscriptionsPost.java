@@ -31,10 +31,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeySubscriptionsPost extends
-        BodyApiMethod<ByProjectKeySubscriptionsPost, com.commercetools.api.models.subscription.Subscription, com.commercetools.api.models.subscription.SubscriptionDraft>
+        TypeBodyApiMethod<ByProjectKeySubscriptionsPost, com.commercetools.api.models.subscription.Subscription, com.commercetools.api.models.subscription.SubscriptionDraft>
         implements com.commercetools.api.client.Deprecatable201Trait<ByProjectKeySubscriptionsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.subscription.Subscription> resultType() {
         return new TypeReference<com.commercetools.api.models.subscription.Subscription>() {
         };

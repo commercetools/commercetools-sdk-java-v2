@@ -41,6 +41,7 @@ public class ByProjectKeyOrdersImportPostString
         extends StringBodyApiMethod<ByProjectKeyOrdersImportPostString, com.commercetools.api.models.order.Order>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersImportPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.Order> resultType() {
         return new TypeReference<com.commercetools.api.models.order.Order>() {
         };

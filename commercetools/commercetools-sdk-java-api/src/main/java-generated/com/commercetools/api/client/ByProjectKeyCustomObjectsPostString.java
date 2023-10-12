@@ -42,6 +42,7 @@ public class ByProjectKeyCustomObjectsPostString extends
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyCustomObjectsPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomObjectsPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.custom_object.CustomObject> resultType() {
         return new TypeReference<com.commercetools.api.models.custom_object.CustomObject>() {
         };

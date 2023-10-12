@@ -35,6 +35,7 @@ public class ByProjectKeyGraphqlPostString extends
         StringBodyApiMethod<ByProjectKeyGraphqlPostString, com.commercetools.api.models.graph_ql.GraphQLResponse>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyGraphqlPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.graph_ql.GraphQLResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.graph_ql.GraphQLResponse>() {
         };

@@ -36,12 +36,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyAttributeGroupsByIDPost extends
-        BodyApiMethod<ByProjectKeyAttributeGroupsByIDPost, com.commercetools.api.models.attribute_group.AttributeGroup, com.commercetools.api.models.attribute_group.AttributeGroupUpdate>
+        TypeBodyApiMethod<ByProjectKeyAttributeGroupsByIDPost, com.commercetools.api.models.attribute_group.AttributeGroup, com.commercetools.api.models.attribute_group.AttributeGroupUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyAttributeGroupsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyAttributeGroupsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAttributeGroupsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAttributeGroupsByIDPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.attribute_group.AttributeGroup> resultType() {
         return new TypeReference<com.commercetools.api.models.attribute_group.AttributeGroup>() {
         };

@@ -38,6 +38,7 @@ public class ByProjectKeyCartsReplicatePostString
         extends StringBodyApiMethod<ByProjectKeyCartsReplicatePostString, com.commercetools.api.models.cart.Cart>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyCartsReplicatePostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.cart.Cart> resultType() {
         return new TypeReference<com.commercetools.api.models.cart.Cart>() {
         };

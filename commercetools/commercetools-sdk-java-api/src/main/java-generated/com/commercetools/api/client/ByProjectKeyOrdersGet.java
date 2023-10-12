@@ -35,7 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyOrdersGet
-        extends ApiMethod<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse>
+        extends TypeApiMethod<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse>
         implements ByProjectKeyOrdersGetMixin, com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyOrdersGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyOrdersGet>,
@@ -43,6 +43,7 @@ public class ByProjectKeyOrdersGet
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyOrdersGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.OrderPagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.order.OrderPagedQueryResponse>() {
         };

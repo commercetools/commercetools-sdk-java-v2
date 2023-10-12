@@ -38,8 +38,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyImageSearchPost extends
-        BodyApiMethod<ByProjectKeyImageSearchPost, com.commercetools.ml.models.image_search.ImageSearchResponse, java.io.File> {
+        TypeBodyApiMethod<ByProjectKeyImageSearchPost, com.commercetools.ml.models.image_search.ImageSearchResponse, java.io.File> {
 
+    @Override
     public TypeReference<com.commercetools.ml.models.image_search.ImageSearchResponse> resultType() {
         return new TypeReference<com.commercetools.ml.models.image_search.ImageSearchResponse>() {
         };

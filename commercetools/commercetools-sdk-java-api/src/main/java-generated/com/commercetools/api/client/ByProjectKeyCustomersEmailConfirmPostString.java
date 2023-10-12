@@ -36,6 +36,7 @@ public class ByProjectKeyCustomersEmailConfirmPostString extends
         StringBodyApiMethod<ByProjectKeyCustomersEmailConfirmPostString, com.commercetools.api.models.customer.Customer>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersEmailConfirmPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

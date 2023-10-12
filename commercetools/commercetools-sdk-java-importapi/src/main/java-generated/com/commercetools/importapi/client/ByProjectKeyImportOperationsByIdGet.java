@@ -32,10 +32,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyImportOperationsByIdGet extends
-        ApiMethod<ByProjectKeyImportOperationsByIdGet, com.commercetools.importapi.models.importoperations.ImportOperation>
+        TypeApiMethod<ByProjectKeyImportOperationsByIdGet, com.commercetools.importapi.models.importoperations.ImportOperation>
         implements
         com.commercetools.importapi.client.Secured_by_view_import_containersTrait<ByProjectKeyImportOperationsByIdGet> {
 
+    @Override
     public TypeReference<com.commercetools.importapi.models.importoperations.ImportOperation> resultType() {
         return new TypeReference<com.commercetools.importapi.models.importoperations.ImportOperation>() {
         };

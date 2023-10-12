@@ -35,7 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyAssociateRolesGet extends
-        ApiMethod<ByProjectKeyAssociateRolesGet, com.commercetools.api.models.associate_role.AssociateRolePagedQueryResponse>
+        TypeApiMethod<ByProjectKeyAssociateRolesGet, com.commercetools.api.models.associate_role.AssociateRolePagedQueryResponse>
         implements ByProjectKeyAssociateRolesGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyAssociateRolesGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyAssociateRolesGet>,
@@ -44,6 +44,7 @@ public class ByProjectKeyAssociateRolesGet extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAssociateRolesGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAssociateRolesGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.associate_role.AssociateRolePagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.associate_role.AssociateRolePagedQueryResponse>() {
         };

@@ -36,7 +36,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>,
@@ -44,6 +44,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.OrderPagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.order.OrderPagedQueryResponse>() {
         };

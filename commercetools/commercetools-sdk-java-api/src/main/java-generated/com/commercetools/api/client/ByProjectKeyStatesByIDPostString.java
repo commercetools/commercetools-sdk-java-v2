@@ -43,6 +43,7 @@ public class ByProjectKeyStatesByIDPostString
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStatesByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStatesByIDPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.state.State> resultType() {
         return new TypeReference<com.commercetools.api.models.state.State>() {
         };

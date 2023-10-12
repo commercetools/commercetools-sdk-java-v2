@@ -57,10 +57,20 @@ public interface ReferenceTypeId extends JsonEnum {
     */
     ReferenceTypeId CUSTOMER = ReferenceTypeIdEnum.CUSTOMER;
     /**
+    	<p>References a <a href="ctp:api:type:CustomerToken">CustomerToken</a> for <a href="/../api/projects/customers#email-verification-of-customer">email verification</a>.</p>
+
+    */
+    ReferenceTypeId CUSTOMER_EMAIL_TOKEN = ReferenceTypeIdEnum.CUSTOMER_EMAIL_TOKEN;
+    /**
     	<p>References a <a href="ctp:api:type:CustomerGroup">CustomerGroup</a>.</p>
 
     */
     ReferenceTypeId CUSTOMER_GROUP = ReferenceTypeIdEnum.CUSTOMER_GROUP;
+    /**
+    	<p>References a <a href="ctp:api:type:CustomerToken">CustomerToken</a> for <a href="/../api/projects/customers#password-reset-of-customer">password reset</a>.</p>
+
+    */
+    ReferenceTypeId CUSTOMER_PASSWORD_TOKEN = ReferenceTypeIdEnum.CUSTOMER_PASSWORD_TOKEN;
     /**
     	<p>References a <a href="ctp:api:type:DirectDiscount">DirectDiscount</a>.</p>
 
@@ -237,9 +247,19 @@ public interface ReferenceTypeId extends JsonEnum {
         CUSTOMER("customer"),
 
         /**
+         * customer-email-token
+         */
+        CUSTOMER_EMAIL_TOKEN("customer-email-token"),
+
+        /**
          * customer-group
          */
         CUSTOMER_GROUP("customer-group"),
+
+        /**
+         * customer-password-token
+         */
+        CUSTOMER_PASSWORD_TOKEN("customer-password-token"),
 
         /**
          * direct-discount

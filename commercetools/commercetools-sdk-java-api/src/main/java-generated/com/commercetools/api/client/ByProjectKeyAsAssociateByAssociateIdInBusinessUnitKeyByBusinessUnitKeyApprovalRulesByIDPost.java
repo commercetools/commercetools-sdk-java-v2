@@ -39,13 +39,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDPost extends
-        BodyApiMethod<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDPost, com.commercetools.api.models.approval_rule.ApprovalRule, com.commercetools.api.models.approval_rule.ApprovalRuleUpdate>
+        TypeBodyApiMethod<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDPost, com.commercetools.api.models.approval_rule.ApprovalRule, com.commercetools.api.models.approval_rule.ApprovalRuleUpdate>
         implements
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalRulesByIDPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.approval_rule.ApprovalRule> resultType() {
         return new TypeReference<com.commercetools.api.models.approval_rule.ApprovalRule>() {
         };

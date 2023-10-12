@@ -34,9 +34,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyMePasswordResetPost extends
-        BodyApiMethod<ByProjectKeyMePasswordResetPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.MyCustomerResetPassword>
+        TypeBodyApiMethod<ByProjectKeyMePasswordResetPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.MyCustomerResetPassword>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePasswordResetPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

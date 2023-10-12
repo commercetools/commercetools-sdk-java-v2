@@ -36,6 +36,7 @@ public class ByProjectKeySubscriptionsPostString extends
         implements com.commercetools.api.client.Deprecatable201Trait<ByProjectKeySubscriptionsPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.subscription.Subscription> resultType() {
         return new TypeReference<com.commercetools.api.models.subscription.Subscription>() {
         };

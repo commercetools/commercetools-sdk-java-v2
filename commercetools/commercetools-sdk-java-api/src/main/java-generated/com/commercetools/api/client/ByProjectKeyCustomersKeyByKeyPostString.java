@@ -43,6 +43,7 @@ public class ByProjectKeyCustomersKeyByKeyPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCustomersKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersKeyByKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

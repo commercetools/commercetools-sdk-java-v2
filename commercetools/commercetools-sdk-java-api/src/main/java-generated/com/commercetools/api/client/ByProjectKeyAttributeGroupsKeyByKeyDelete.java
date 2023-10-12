@@ -37,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyAttributeGroupsKeyByKeyDelete extends
-        ApiMethod<ByProjectKeyAttributeGroupsKeyByKeyDelete, com.commercetools.api.models.attribute_group.AttributeGroup>
+        TypeApiMethod<ByProjectKeyAttributeGroupsKeyByKeyDelete, com.commercetools.api.models.attribute_group.AttributeGroup>
         implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyAttributeGroupsKeyByKeyDelete, com.commercetools.api.models.attribute_group.AttributeGroup>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyAttributeGroupsKeyByKeyDelete>,
@@ -46,6 +46,7 @@ public class ByProjectKeyAttributeGroupsKeyByKeyDelete extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAttributeGroupsKeyByKeyDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAttributeGroupsKeyByKeyDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.attribute_group.AttributeGroup> resultType() {
         return new TypeReference<com.commercetools.api.models.attribute_group.AttributeGroup>() {
         };

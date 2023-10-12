@@ -37,6 +37,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyPutString extends
         implements
         com.commercetools.importapi.client.Secured_by_manage_import_containersTrait<ByProjectKeyImportContainersByImportContainerKeyPutString> {
 
+    @Override
     public TypeReference<com.commercetools.importapi.models.importcontainers.ImportContainer> resultType() {
         return new TypeReference<com.commercetools.importapi.models.importcontainers.ImportContainer>() {
         };

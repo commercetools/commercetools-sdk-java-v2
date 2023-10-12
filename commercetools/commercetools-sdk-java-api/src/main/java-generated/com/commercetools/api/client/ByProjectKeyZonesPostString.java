@@ -41,6 +41,7 @@ public class ByProjectKeyZonesPostString
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyZonesPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.zone.Zone> resultType() {
         return new TypeReference<com.commercetools.api.models.zone.Zone>() {
         };

@@ -47,6 +47,7 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyOrdersByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyOrdersByIDPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.Order> resultType() {
         return new TypeReference<com.commercetools.api.models.order.Order>() {
         };

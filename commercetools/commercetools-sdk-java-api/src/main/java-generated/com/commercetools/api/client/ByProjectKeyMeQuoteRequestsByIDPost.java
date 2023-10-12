@@ -37,12 +37,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyMeQuoteRequestsByIDPost extends
-        BodyApiMethod<ByProjectKeyMeQuoteRequestsByIDPost, com.commercetools.api.models.quote_request.QuoteRequest, com.commercetools.api.models.me.MyQuoteRequestUpdate>
+        TypeBodyApiMethod<ByProjectKeyMeQuoteRequestsByIDPost, com.commercetools.api.models.quote_request.QuoteRequest, com.commercetools.api.models.me.MyQuoteRequestUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeQuoteRequestsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeQuoteRequestsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeQuoteRequestsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeQuoteRequestsByIDPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.quote_request.QuoteRequest> resultType() {
         return new TypeReference<com.commercetools.api.models.quote_request.QuoteRequest>() {
         };

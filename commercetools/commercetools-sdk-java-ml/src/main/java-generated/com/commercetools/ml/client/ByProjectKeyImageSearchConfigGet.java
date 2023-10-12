@@ -32,8 +32,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyImageSearchConfigGet extends
-        ApiMethod<ByProjectKeyImageSearchConfigGet, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> {
+        TypeApiMethod<ByProjectKeyImageSearchConfigGet, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> {
 
+    @Override
     public TypeReference<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> resultType() {
         return new TypeReference<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse>() {
         };

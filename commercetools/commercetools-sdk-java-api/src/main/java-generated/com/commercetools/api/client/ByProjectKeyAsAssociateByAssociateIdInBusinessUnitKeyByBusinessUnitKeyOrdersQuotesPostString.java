@@ -40,6 +40,7 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
         implements
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyOrdersQuotesPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.Order> resultType() {
         return new TypeReference<com.commercetools.api.models.order.Order>() {
         };

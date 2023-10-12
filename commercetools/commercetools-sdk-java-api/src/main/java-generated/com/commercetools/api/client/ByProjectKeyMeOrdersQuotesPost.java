@@ -42,9 +42,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyMeOrdersQuotesPost extends
-        BodyApiMethod<ByProjectKeyMeOrdersQuotesPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.me.MyOrderFromQuoteDraft>
+        TypeBodyApiMethod<ByProjectKeyMeOrdersQuotesPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.me.MyOrderFromQuoteDraft>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeOrdersQuotesPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.Order> resultType() {
         return new TypeReference<com.commercetools.api.models.order.Order>() {
         };

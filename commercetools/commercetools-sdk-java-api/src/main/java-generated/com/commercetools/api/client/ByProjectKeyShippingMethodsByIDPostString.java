@@ -43,6 +43,7 @@ public class ByProjectKeyShippingMethodsByIDPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsByIDPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.shipping_method.ShippingMethod> resultType() {
         return new TypeReference<com.commercetools.api.models.shipping_method.ShippingMethod>() {
         };

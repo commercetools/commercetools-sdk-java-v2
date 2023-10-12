@@ -44,6 +44,7 @@ public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsPostString extends
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.business_unit.BusinessUnit> resultType() {
         return new TypeReference<com.commercetools.api.models.business_unit.BusinessUnit>() {
         };

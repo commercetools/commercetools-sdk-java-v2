@@ -47,6 +47,7 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyApprovalFlowsByIDPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.approval_flow.ApprovalFlow> resultType() {
         return new TypeReference<com.commercetools.api.models.approval_flow.ApprovalFlow>() {
         };

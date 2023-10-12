@@ -37,11 +37,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet, com.commercetools.api.models.order.Order>
+        extends TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet, com.commercetools.api.models.order.Order>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.Order> resultType() {
         return new TypeReference<com.commercetools.api.models.order.Order>() {
         };

@@ -38,6 +38,7 @@ public class ByProjectKeyMePasswordPostString
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMePasswordPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePasswordPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

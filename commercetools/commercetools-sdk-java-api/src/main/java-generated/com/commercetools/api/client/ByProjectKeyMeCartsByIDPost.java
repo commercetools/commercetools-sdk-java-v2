@@ -37,12 +37,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyMeCartsByIDPost extends
-        BodyApiMethod<ByProjectKeyMeCartsByIDPost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.me.MyCartUpdate>
+        TypeBodyApiMethod<ByProjectKeyMeCartsByIDPost, com.commercetools.api.models.cart.Cart, com.commercetools.api.models.me.MyCartUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeCartsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeCartsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeCartsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsByIDPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.cart.Cart> resultType() {
         return new TypeReference<com.commercetools.api.models.cart.Cart>() {
         };

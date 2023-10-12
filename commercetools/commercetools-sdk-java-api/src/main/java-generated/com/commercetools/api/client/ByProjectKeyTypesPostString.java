@@ -41,6 +41,7 @@ public class ByProjectKeyTypesPostString
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyTypesPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTypesPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.type.Type> resultType() {
         return new TypeReference<com.commercetools.api.models.type.Type>() {
         };

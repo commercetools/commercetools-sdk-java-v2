@@ -36,8 +36,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete
-        extends ApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberDelete, com.commercetools.api.models.order.Order>
+public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete extends
+        TypeApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberDelete, com.commercetools.api.models.order.Order>
         implements com.commercetools.api.client.DataerasureTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>,
@@ -45,6 +45,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.Order> resultType() {
         return new TypeReference<com.commercetools.api.models.order.Order>() {
         };

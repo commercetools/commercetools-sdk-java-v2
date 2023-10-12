@@ -32,9 +32,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCustomersEmailConfirmPost extends
-        BodyApiMethod<ByProjectKeyCustomersEmailConfirmPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.CustomerEmailVerify>
+        TypeBodyApiMethod<ByProjectKeyCustomersEmailConfirmPost, com.commercetools.api.models.customer.Customer, com.commercetools.api.models.customer.CustomerEmailVerify>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersEmailConfirmPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

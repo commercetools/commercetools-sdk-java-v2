@@ -43,6 +43,7 @@ public class ByProjectKeyBusinessUnitsByIDPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyBusinessUnitsByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyBusinessUnitsByIDPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.business_unit.BusinessUnit> resultType() {
         return new TypeReference<com.commercetools.api.models.business_unit.BusinessUnit>() {
         };

@@ -45,6 +45,7 @@ public class ByProjectKeyProductsByIDPostString
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductsByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsByIDPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.product.Product> resultType() {
         return new TypeReference<com.commercetools.api.models.product.Product>() {
         };

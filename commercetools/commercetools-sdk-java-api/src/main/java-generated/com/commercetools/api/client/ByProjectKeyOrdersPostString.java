@@ -53,6 +53,7 @@ public class ByProjectKeyOrdersPostString
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyOrdersPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.Order> resultType() {
         return new TypeReference<com.commercetools.api.models.order.Order>() {
         };

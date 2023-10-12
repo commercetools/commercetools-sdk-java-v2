@@ -37,13 +37,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyAssociateRolesByIDDelete extends
-        ApiMethod<ByProjectKeyAssociateRolesByIDDelete, com.commercetools.api.models.associate_role.AssociateRole>
+        TypeApiMethod<ByProjectKeyAssociateRolesByIDDelete, com.commercetools.api.models.associate_role.AssociateRole>
         implements com.commercetools.api.client.VersionedTrait<ByProjectKeyAssociateRolesByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyAssociateRolesByIDDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyAssociateRolesByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAssociateRolesByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAssociateRolesByIDDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.associate_role.AssociateRole> resultType() {
         return new TypeReference<com.commercetools.api.models.associate_role.AssociateRole>() {
         };

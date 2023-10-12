@@ -36,12 +36,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyStagedQuotesKeyByKeyPost extends
-        BodyApiMethod<ByProjectKeyStagedQuotesKeyByKeyPost, com.commercetools.api.models.staged_quote.StagedQuote, com.commercetools.api.models.staged_quote.StagedQuoteUpdate>
+        TypeBodyApiMethod<ByProjectKeyStagedQuotesKeyByKeyPost, com.commercetools.api.models.staged_quote.StagedQuote, com.commercetools.api.models.staged_quote.StagedQuoteUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyStagedQuotesKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStagedQuotesKeyByKeyPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStagedQuotesKeyByKeyPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStagedQuotesKeyByKeyPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.staged_quote.StagedQuote> resultType() {
         return new TypeReference<com.commercetools.api.models.staged_quote.StagedQuote>() {
         };

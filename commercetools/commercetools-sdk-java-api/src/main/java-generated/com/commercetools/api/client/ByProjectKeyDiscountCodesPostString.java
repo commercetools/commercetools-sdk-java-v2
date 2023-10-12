@@ -41,6 +41,7 @@ public class ByProjectKeyDiscountCodesPostString extends
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyDiscountCodesPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyDiscountCodesPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.discount_code.DiscountCode> resultType() {
         return new TypeReference<com.commercetools.api.models.discount_code.DiscountCode>() {
         };

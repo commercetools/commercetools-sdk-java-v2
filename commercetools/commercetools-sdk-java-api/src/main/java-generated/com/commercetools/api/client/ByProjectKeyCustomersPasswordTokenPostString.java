@@ -36,6 +36,7 @@ public class ByProjectKeyCustomersPasswordTokenPostString extends
         StringBodyApiMethod<ByProjectKeyCustomersPasswordTokenPostString, com.commercetools.api.models.customer.CustomerToken>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersPasswordTokenPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.CustomerToken> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.CustomerToken>() {
         };

@@ -37,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyQuotesByIDDelete
-        extends ApiMethod<ByProjectKeyQuotesByIDDelete, com.commercetools.api.models.quote.Quote> implements
+        extends TypeApiMethod<ByProjectKeyQuotesByIDDelete, com.commercetools.api.models.quote.Quote> implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyQuotesByIDDelete, com.commercetools.api.models.quote.Quote>,
         com.commercetools.api.client.DataerasureTrait<ByProjectKeyQuotesByIDDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyQuotesByIDDelete>,
@@ -46,6 +46,7 @@ public class ByProjectKeyQuotesByIDDelete
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyQuotesByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyQuotesByIDDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.quote.Quote> resultType() {
         return new TypeReference<com.commercetools.api.models.quote.Quote>() {
         };

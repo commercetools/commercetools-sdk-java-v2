@@ -37,8 +37,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyByResourceTypeByIDGet extends
-        ApiMethod<ByProjectKeyByResourceTypeByIDGet, com.commercetools.history.models.change_history.RecordPagedQueryResponse> {
+        TypeApiMethod<ByProjectKeyByResourceTypeByIDGet, com.commercetools.history.models.change_history.RecordPagedQueryResponse> {
 
+    @Override
     public TypeReference<com.commercetools.history.models.change_history.RecordPagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.history.models.change_history.RecordPagedQueryResponse>() {
         };

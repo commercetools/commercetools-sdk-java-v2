@@ -35,6 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeySimilaritiesProductsPostString extends
         StringBodyApiMethod<ByProjectKeySimilaritiesProductsPostString, com.commercetools.ml.models.common.TaskToken> {
 
+    @Override
     public TypeReference<com.commercetools.ml.models.common.TaskToken> resultType() {
         return new TypeReference<com.commercetools.ml.models.common.TaskToken>() {
         };

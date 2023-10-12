@@ -37,10 +37,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductProjectionsSearchPost extends
-        ApiMethod<ByProjectKeyProductProjectionsSearchPost, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>
+        TypeApiMethod<ByProjectKeyProductProjectionsSearchPost, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>
         implements ByProjectKeyProductProjectionsSearchPostMixin,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>() {
         };

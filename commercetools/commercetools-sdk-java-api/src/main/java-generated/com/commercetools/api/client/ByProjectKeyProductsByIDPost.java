@@ -37,13 +37,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductsByIDPost extends
-        BodyApiMethod<ByProjectKeyProductsByIDPost, com.commercetools.api.models.product.Product, com.commercetools.api.models.product.ProductUpdate>
+        TypeBodyApiMethod<ByProjectKeyProductsByIDPost, com.commercetools.api.models.product.Product, com.commercetools.api.models.product.ProductUpdate>
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsByIDPost>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyProductsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsByIDPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.product.Product> resultType() {
         return new TypeReference<com.commercetools.api.models.product.Product>() {
         };

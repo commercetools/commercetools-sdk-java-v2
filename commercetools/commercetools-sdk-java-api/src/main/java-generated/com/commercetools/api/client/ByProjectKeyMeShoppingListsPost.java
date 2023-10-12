@@ -36,11 +36,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyMeShoppingListsPost extends
-        BodyApiMethod<ByProjectKeyMeShoppingListsPost, com.commercetools.api.models.shopping_list.ShoppingList, com.commercetools.api.models.me.MyShoppingListDraft>
+        TypeBodyApiMethod<ByProjectKeyMeShoppingListsPost, com.commercetools.api.models.shopping_list.ShoppingList, com.commercetools.api.models.me.MyShoppingListDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeShoppingListsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyMeShoppingListsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeShoppingListsPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.shopping_list.ShoppingList> resultType() {
         return new TypeReference<com.commercetools.api.models.shopping_list.ShoppingList>() {
         };

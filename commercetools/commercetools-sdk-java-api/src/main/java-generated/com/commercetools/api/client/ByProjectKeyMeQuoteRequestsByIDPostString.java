@@ -44,6 +44,7 @@ public class ByProjectKeyMeQuoteRequestsByIDPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeQuoteRequestsByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeQuoteRequestsByIDPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.quote_request.QuoteRequest> resultType() {
         return new TypeReference<com.commercetools.api.models.quote_request.QuoteRequest>() {
         };

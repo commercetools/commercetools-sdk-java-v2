@@ -41,6 +41,7 @@ public class ByProjectKeyChannelsPostString
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyChannelsPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyChannelsPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.channel.Channel> resultType() {
         return new TypeReference<com.commercetools.api.models.channel.Channel>() {
         };

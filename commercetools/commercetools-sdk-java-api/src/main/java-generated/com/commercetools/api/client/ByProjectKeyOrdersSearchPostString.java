@@ -36,6 +36,7 @@ public class ByProjectKeyOrdersSearchPostString extends
         StringBodyApiMethod<ByProjectKeyOrdersSearchPostString, com.commercetools.api.models.order.OrderPagedSearchResponse>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersSearchPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.OrderPagedSearchResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.order.OrderPagedSearchResponse>() {
         };

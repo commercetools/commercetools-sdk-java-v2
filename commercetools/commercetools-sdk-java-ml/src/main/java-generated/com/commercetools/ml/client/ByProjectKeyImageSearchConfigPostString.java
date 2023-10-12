@@ -35,6 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyImageSearchConfigPostString extends
         StringBodyApiMethod<ByProjectKeyImageSearchConfigPostString, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> {
 
+    @Override
     public TypeReference<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> resultType() {
         return new TypeReference<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse>() {
         };

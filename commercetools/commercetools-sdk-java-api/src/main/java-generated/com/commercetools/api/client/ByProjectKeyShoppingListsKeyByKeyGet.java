@@ -35,12 +35,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyShoppingListsKeyByKeyGet
-        extends ApiMethod<ByProjectKeyShoppingListsKeyByKeyGet, com.commercetools.api.models.shopping_list.ShoppingList>
+public class ByProjectKeyShoppingListsKeyByKeyGet extends
+        TypeApiMethod<ByProjectKeyShoppingListsKeyByKeyGet, com.commercetools.api.models.shopping_list.ShoppingList>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyShoppingListsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShoppingListsKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShoppingListsKeyByKeyGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.shopping_list.ShoppingList> resultType() {
         return new TypeReference<com.commercetools.api.models.shopping_list.ShoppingList>() {
         };

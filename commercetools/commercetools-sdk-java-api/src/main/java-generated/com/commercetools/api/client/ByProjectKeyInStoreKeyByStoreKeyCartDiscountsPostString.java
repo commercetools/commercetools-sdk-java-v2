@@ -35,6 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString extends
         StringBodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString, com.commercetools.api.models.cart_discount.CartDiscount> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.cart_discount.CartDiscount> resultType() {
         return new TypeReference<com.commercetools.api.models.cart_discount.CartDiscount>() {
         };

@@ -32,9 +32,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCustomersEmailTokenPost extends
-        BodyApiMethod<ByProjectKeyCustomersEmailTokenPost, com.commercetools.api.models.customer.CustomerToken, com.commercetools.api.models.customer.CustomerCreateEmailToken>
+        TypeBodyApiMethod<ByProjectKeyCustomersEmailTokenPost, com.commercetools.api.models.customer.CustomerToken, com.commercetools.api.models.customer.CustomerCreateEmailToken>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomersEmailTokenPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.CustomerToken> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.CustomerToken>() {
         };

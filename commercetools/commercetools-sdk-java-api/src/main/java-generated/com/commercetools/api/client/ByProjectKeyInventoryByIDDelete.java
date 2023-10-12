@@ -37,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInventoryByIDDelete extends
-        ApiMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.InventoryEntry> implements
+        TypeApiMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.InventoryEntry> implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.InventoryEntry>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyInventoryByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyInventoryByIDDelete>,
@@ -45,6 +45,7 @@ public class ByProjectKeyInventoryByIDDelete extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInventoryByIDDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.inventory.InventoryEntry> resultType() {
         return new TypeReference<com.commercetools.api.models.inventory.InventoryEntry>() {
         };

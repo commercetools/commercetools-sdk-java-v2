@@ -33,9 +33,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductDiscountsMatchingPost extends
-        BodyApiMethod<ByProjectKeyProductDiscountsMatchingPost, com.commercetools.api.models.product_discount.ProductDiscount, com.commercetools.api.models.product_discount.ProductDiscountMatchQuery>
+        TypeBodyApiMethod<ByProjectKeyProductDiscountsMatchingPost, com.commercetools.api.models.product_discount.ProductDiscount, com.commercetools.api.models.product_discount.ProductDiscountMatchQuery>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductDiscountsMatchingPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.product_discount.ProductDiscount> resultType() {
         return new TypeReference<com.commercetools.api.models.product_discount.ProductDiscount>() {
         };

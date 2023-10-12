@@ -35,6 +35,7 @@ public class ByProjectKeyMePostString
         extends StringBodyApiMethod<ByProjectKeyMePostString, com.commercetools.api.models.customer.Customer>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

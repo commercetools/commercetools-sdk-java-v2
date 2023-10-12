@@ -35,7 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyZonesGet
-        extends ApiMethod<ByProjectKeyZonesGet, com.commercetools.api.models.zone.ZonePagedQueryResponse>
+        extends TypeApiMethod<ByProjectKeyZonesGet, com.commercetools.api.models.zone.ZonePagedQueryResponse>
         implements ByProjectKeyZonesGetMixin, com.commercetools.api.client.ExpandableTrait<ByProjectKeyZonesGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyZonesGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyZonesGet>,
@@ -43,6 +43,7 @@ public class ByProjectKeyZonesGet
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyZonesGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.zone.ZonePagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.zone.ZonePagedQueryResponse>() {
         };

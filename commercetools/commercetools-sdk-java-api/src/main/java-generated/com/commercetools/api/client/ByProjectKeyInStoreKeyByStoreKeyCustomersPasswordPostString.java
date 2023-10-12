@@ -38,6 +38,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPostString extends
         implements
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.Customer>() {
         };

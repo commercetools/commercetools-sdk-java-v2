@@ -31,9 +31,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyGraphqlPost extends
-        BodyApiMethod<ByProjectKeyGraphqlPost, com.commercetools.api.models.graph_ql.GraphQLResponse, com.commercetools.api.models.graph_ql.GraphQLRequest>
+        TypeBodyApiMethod<ByProjectKeyGraphqlPost, com.commercetools.api.models.graph_ql.GraphQLResponse, com.commercetools.api.models.graph_ql.GraphQLRequest>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyGraphqlPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.graph_ql.GraphQLResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.graph_ql.GraphQLResponse>() {
         };

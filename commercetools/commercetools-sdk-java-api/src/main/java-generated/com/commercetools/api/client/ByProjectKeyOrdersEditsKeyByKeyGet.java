@@ -37,11 +37,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyOrdersEditsKeyByKeyGet
-        extends ApiMethod<ByProjectKeyOrdersEditsKeyByKeyGet, com.commercetools.api.models.order_edit.OrderEdit>
+        extends TypeApiMethod<ByProjectKeyOrdersEditsKeyByKeyGet, com.commercetools.api.models.order_edit.OrderEdit>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersEditsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyOrdersEditsKeyByKeyGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order_edit.OrderEdit> resultType() {
         return new TypeReference<com.commercetools.api.models.order_edit.OrderEdit>() {
         };

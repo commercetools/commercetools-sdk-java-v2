@@ -44,6 +44,7 @@ public class ByProjectKeyOrdersQuotesPostString
         extends StringBodyApiMethod<ByProjectKeyOrdersQuotesPostString, com.commercetools.api.models.order.Order>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersQuotesPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order.Order> resultType() {
         return new TypeReference<com.commercetools.api.models.order.Order>() {
         };

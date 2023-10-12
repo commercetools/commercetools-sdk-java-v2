@@ -41,6 +41,7 @@ public class ByProjectKeyReviewsPostString
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyReviewsPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.review.Review> resultType() {
         return new TypeReference<com.commercetools.api.models.review.Review>() {
         };

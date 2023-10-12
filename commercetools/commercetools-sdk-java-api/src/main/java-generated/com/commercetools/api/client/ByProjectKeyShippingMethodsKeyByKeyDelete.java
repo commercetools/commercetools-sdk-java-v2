@@ -37,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyShippingMethodsKeyByKeyDelete extends
-        ApiMethod<ByProjectKeyShippingMethodsKeyByKeyDelete, com.commercetools.api.models.shipping_method.ShippingMethod>
+        TypeApiMethod<ByProjectKeyShippingMethodsKeyByKeyDelete, com.commercetools.api.models.shipping_method.ShippingMethod>
         implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyShippingMethodsKeyByKeyDelete, com.commercetools.api.models.shipping_method.ShippingMethod>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyShippingMethodsKeyByKeyDelete>,
@@ -46,6 +46,7 @@ public class ByProjectKeyShippingMethodsKeyByKeyDelete extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsKeyByKeyDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsKeyByKeyDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.shipping_method.ShippingMethod> resultType() {
         return new TypeReference<com.commercetools.api.models.shipping_method.ShippingMethod>() {
         };

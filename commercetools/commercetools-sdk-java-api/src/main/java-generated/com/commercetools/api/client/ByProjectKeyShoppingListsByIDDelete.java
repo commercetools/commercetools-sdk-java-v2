@@ -36,8 +36,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyShoppingListsByIDDelete
-        extends ApiMethod<ByProjectKeyShoppingListsByIDDelete, com.commercetools.api.models.shopping_list.ShoppingList>
+public class ByProjectKeyShoppingListsByIDDelete extends
+        TypeApiMethod<ByProjectKeyShoppingListsByIDDelete, com.commercetools.api.models.shopping_list.ShoppingList>
         implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyShoppingListsByIDDelete, com.commercetools.api.models.shopping_list.ShoppingList>,
         com.commercetools.api.client.DataerasureTrait<ByProjectKeyShoppingListsByIDDelete>,
@@ -47,6 +47,7 @@ public class ByProjectKeyShoppingListsByIDDelete
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShoppingListsByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShoppingListsByIDDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.shopping_list.ShoppingList> resultType() {
         return new TypeReference<com.commercetools.api.models.shopping_list.ShoppingList>() {
         };

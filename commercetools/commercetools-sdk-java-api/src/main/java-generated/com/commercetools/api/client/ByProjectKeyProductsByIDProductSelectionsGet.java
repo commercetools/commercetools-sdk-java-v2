@@ -37,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductsByIDProductSelectionsGet extends
-        ApiMethod<ByProjectKeyProductsByIDProductSelectionsGet, com.commercetools.api.models.product_selection.AssignedProductSelectionPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyProductsByIDProductSelectionsGet, com.commercetools.api.models.product_selection.AssignedProductSelectionPagedQueryResponse>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsByIDProductSelectionsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyProductsByIDProductSelectionsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductsByIDProductSelectionsGet>,
@@ -45,6 +45,7 @@ public class ByProjectKeyProductsByIDProductSelectionsGet extends
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsByIDProductSelectionsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductsByIDProductSelectionsGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.product_selection.AssignedProductSelectionPagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.product_selection.AssignedProductSelectionPagedQueryResponse>() {
         };

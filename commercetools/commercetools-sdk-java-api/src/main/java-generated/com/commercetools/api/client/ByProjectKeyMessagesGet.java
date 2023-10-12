@@ -35,7 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyMessagesGet
-        extends ApiMethod<ByProjectKeyMessagesGet, com.commercetools.api.models.message.MessagePagedQueryResponse>
+        extends TypeApiMethod<ByProjectKeyMessagesGet, com.commercetools.api.models.message.MessagePagedQueryResponse>
         implements ByProjectKeyMessagesGetMixin, com.commercetools.api.client.ExpandableTrait<ByProjectKeyMessagesGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyMessagesGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyMessagesGet>,
@@ -43,6 +43,7 @@ public class ByProjectKeyMessagesGet
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMessagesGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMessagesGet> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.message.MessagePagedQueryResponse> resultType() {
         return new TypeReference<com.commercetools.api.models.message.MessagePagedQueryResponse>() {
         };

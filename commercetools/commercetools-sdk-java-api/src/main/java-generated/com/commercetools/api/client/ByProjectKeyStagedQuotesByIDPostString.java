@@ -43,6 +43,7 @@ public class ByProjectKeyStagedQuotesByIDPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStagedQuotesByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStagedQuotesByIDPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.staged_quote.StagedQuote> resultType() {
         return new TypeReference<com.commercetools.api.models.staged_quote.StagedQuote>() {
         };

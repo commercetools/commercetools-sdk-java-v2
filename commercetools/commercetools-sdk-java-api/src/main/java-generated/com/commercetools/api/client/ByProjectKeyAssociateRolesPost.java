@@ -35,11 +35,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyAssociateRolesPost extends
-        BodyApiMethod<ByProjectKeyAssociateRolesPost, com.commercetools.api.models.associate_role.AssociateRole, com.commercetools.api.models.associate_role.AssociateRoleDraft>
+        TypeBodyApiMethod<ByProjectKeyAssociateRolesPost, com.commercetools.api.models.associate_role.AssociateRole, com.commercetools.api.models.associate_role.AssociateRoleDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyAssociateRolesPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyAssociateRolesPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAssociateRolesPost> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.associate_role.AssociateRole> resultType() {
         return new TypeReference<com.commercetools.api.models.associate_role.AssociateRole>() {
         };

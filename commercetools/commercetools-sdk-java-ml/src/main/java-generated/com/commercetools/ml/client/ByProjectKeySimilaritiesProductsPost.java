@@ -32,8 +32,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeySimilaritiesProductsPost extends
-        BodyApiMethod<ByProjectKeySimilaritiesProductsPost, com.commercetools.ml.models.common.TaskToken, com.commercetools.ml.models.similar_products.SimilarProductSearchRequest> {
+        TypeBodyApiMethod<ByProjectKeySimilaritiesProductsPost, com.commercetools.ml.models.common.TaskToken, com.commercetools.ml.models.similar_products.SimilarProductSearchRequest> {
 
+    @Override
     public TypeReference<com.commercetools.ml.models.common.TaskToken> resultType() {
         return new TypeReference<com.commercetools.ml.models.common.TaskToken>() {
         };

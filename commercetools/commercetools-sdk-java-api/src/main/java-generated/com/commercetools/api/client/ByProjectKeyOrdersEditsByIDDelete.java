@@ -38,13 +38,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyOrdersEditsByIDDelete
-        extends ApiMethod<ByProjectKeyOrdersEditsByIDDelete, com.commercetools.api.models.order_edit.OrderEdit>
+        extends TypeApiMethod<ByProjectKeyOrdersEditsByIDDelete, com.commercetools.api.models.order_edit.OrderEdit>
         implements com.commercetools.api.client.VersionedTrait<ByProjectKeyOrdersEditsByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyOrdersEditsByIDDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersEditsByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyOrdersEditsByIDDelete> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.order_edit.OrderEdit> resultType() {
         return new TypeReference<com.commercetools.api.models.order_edit.OrderEdit>() {
         };

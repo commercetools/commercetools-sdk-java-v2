@@ -43,6 +43,7 @@ public class ByProjectKeyShoppingListsKeyByKeyPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShoppingListsKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShoppingListsKeyByKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.shopping_list.ShoppingList> resultType() {
         return new TypeReference<com.commercetools.api.models.shopping_list.ShoppingList>() {
         };

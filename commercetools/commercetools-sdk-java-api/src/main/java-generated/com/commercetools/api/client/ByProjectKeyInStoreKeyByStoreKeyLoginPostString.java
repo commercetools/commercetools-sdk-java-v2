@@ -37,6 +37,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyLoginPostString extends
         StringBodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyLoginPostString, com.commercetools.api.models.customer.CustomerSignInResult>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyLoginPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.CustomerSignInResult> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.CustomerSignInResult>() {
         };

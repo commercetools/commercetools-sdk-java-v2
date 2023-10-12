@@ -36,6 +36,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString extends
         StringBodyApiMethod<ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPostString, com.commercetools.api.models.customer.CustomerSignInResult> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.customer.CustomerSignInResult> resultType() {
         return new TypeReference<com.commercetools.api.models.customer.CustomerSignInResult>() {
         };

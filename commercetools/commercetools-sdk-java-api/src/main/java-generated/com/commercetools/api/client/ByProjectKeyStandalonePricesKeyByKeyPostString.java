@@ -43,6 +43,7 @@ public class ByProjectKeyStandalonePricesKeyByKeyPostString extends
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStandalonePricesKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStandalonePricesKeyByKeyPostString> {
 
+    @Override
     public TypeReference<com.commercetools.api.models.standalone_price.StandalonePrice> resultType() {
         return new TypeReference<com.commercetools.api.models.standalone_price.StandalonePrice>() {
         };

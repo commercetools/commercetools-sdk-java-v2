@@ -71,11 +71,11 @@ dependencies {
 
 ### Modules
 
-* `commercetools-http-client`: alias for commercetools-okhttp-client4
+* `commercetools-http-client`: alias for commercetools-async-http-client
 * `commercetools-okhttp-client3`: uses OkHttp client 3.0
 * `commercetools-okhttp-client4`: uses OkHttp client 4.0
 * `commercetools-apachehttp-client`: uses Apache HTTP async client 5.1
-* `commercetools-asynchttp-client`: uses Async HTTP client 2.12
+* `commercetools-async-http-client`: uses Async HTTP client 2.12
 * `commercetools-reactornetty-client`: uses Reactor Netty HTTP Client
 * `commercetools-javanet-client`: uses HTTP client (`java.net.http.HttpClient`) included in JDK 11+
 * `commercetools-sdk-java-api`: models and request builders for the product API

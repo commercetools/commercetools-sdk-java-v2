@@ -726,6 +726,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../io/vrap/rmf/base/client/oauth2/TokenStorageSupplier.html#refreshToken()" class="member-name-link">refreshToken()</a> - Method in class io.vrap.rmf.base.client.oauth2.<a href="../io/vrap/rmf/base/client/oauth2/TokenStorageSupplier.html" title="class in io.vrap.rmf.base.client.oauth2">TokenStorageSupplier</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../io/vrap/rmf/base/client/http/OAuthHandler.html#refreshTokenAsync()" class="member-name-link">refreshTokenAsync()</a> - Method in class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/OAuthHandler.html" title="class in io.vrap.rmf.base.client.http">OAuthHandler</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/api_client/ApiClientBuilder.html#refreshTokenValiditySeconds(java.lang.Integer)" class="member-name-link">refreshTokenValiditySeconds(Integer)</a> - Method in class com.commercetools.api.models.api_client.<a href="../com/commercetools/api/models/api_client/ApiClientBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientBuilder</a></dt>
 <dd>
 <div class="block">Inactivity expiration time in seconds for each refresh token obtained by the APIClient.</div>
@@ -9840,54 +9842,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html" class="type-name-link" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a> - Class in <a href="../io/vrap/rmf/base/client/http/package-summary.html">io.vrap.rmf.base.client.http</a></dt>
 <dd>
 <div class="block">Implementation for a retry of a requests upon configured response status codes</div>
-</dd>
-<dt><a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int)" class="member-name-link">RetryMiddleware(int)</a> - Constructor for class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#of(int)"><code>RetryRequestMiddleware.of(int)</code></a> instead</div>
-</div>
-</dd>
-<dt><a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int)" class="member-name-link">RetryMiddleware(int, int)</a> - Constructor for class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">max parallel requests are limited by underlying HTTP client</div>
-</div>
-</dd>
-<dt><a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int,long,long)" class="member-name-link">RetryMiddleware(int, int, long, long)</a> - Constructor for class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">max parallel requests are limited by underlying HTTP client</div>
-</div>
-</dd>
-<dt><a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int,long,long,java.util.List)" class="member-name-link">RetryMiddleware(int, int, long, long, List&lt;Integer&gt;)</a> - Constructor for class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">max parallel requests are limited by underlying HTTP client</div>
-</div>
-</dd>
-<dt><a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,int,java.util.List)" class="member-name-link">RetryMiddleware(int, int, List&lt;Integer&gt;)</a> - Constructor for class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">max parallel requests are limited by underlying HTTP client</div>
-</div>
-</dd>
-<dt><a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,long,long)" class="member-name-link">RetryMiddleware(int, long, long)</a> - Constructor for class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#of(int,long,long)"><code>RetryRequestMiddleware.of(int, long, long)</code></a> instead</div>
-</div>
-</dd>
-<dt><a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,long,long,java.util.List)" class="member-name-link">RetryMiddleware(int, long, long, List&lt;Integer&gt;)</a> - Constructor for class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#of(int,long,long,java.util.List)"><code>RetryRequestMiddleware.of(int, long, long, List)</code></a> instead</div>
-</div>
-</dd>
-<dt><a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html#%3Cinit%3E(int,java.util.List)" class="member-name-link">RetryMiddleware(int, List&lt;Integer&gt;)</a> - Constructor for class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></dt>
-<dd>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html#of(int,java.util.List)"><code>RetryRequestMiddleware.of(int, List)</code></a> instead</div>
-</div>
 </dd>
 <dt><a href="../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" class="type-name-link" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a> - Interface in <a href="../io/vrap/rmf/base/client/http/package-summary.html">io.vrap.rmf.base.client.http</a></dt>
 <dd>

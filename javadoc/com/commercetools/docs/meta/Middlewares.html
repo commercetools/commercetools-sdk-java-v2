@@ -127,8 +127,9 @@ return result;
     if (request.getHeaders().getFirst(ApiHttpHeaders.AUTHORIZATION) != null) {
         return next.apply(request);
     }
-    AuthenticationToken token = authHandler.getToken();
-    return next.apply(request.addHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token)));
+    return authHandler.getTokenAsync()
+            .thenCompose(token -&gt; next
+                    .apply(request.addHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token))));
 });
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/rmf/rmf-java-base/src/main/java/io/vrap/rmf/base/client/http/OAuthMiddlewareImpl.java" target="_blank">test code</a>.</pre></div>
 

@@ -89,10 +89,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <pre><code class='java'>
      CustomerToken customerToken = CustomerToken.builder()
              .id("{id}")
-             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .customerId("{customerId}")
-             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .value("{value}")
+             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .build()
  </code></pre>
  </div></div>
@@ -248,6 +248,45 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="customerId(java.lang.String)">
+<h3>customerId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerTokenBuilder</a></span>&nbsp;<span class="element-name">customerId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerId)</span></div>
+<div class="block"><p>The <code>id</code> of the Customer.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>customerId</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="value(java.lang.String)">
+<h3>value</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerTokenBuilder</a></span>&nbsp;<span class="element-name">value</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><p>Value of the token.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="expiresAt(java.time.ZonedDateTime)">
+<h3>expiresAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerTokenBuilder</a></span>&nbsp;<span class="element-name">expiresAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expiresAt)</span></div>
+<div class="block"><p>Date and time (UTC) the token expires.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>expiresAt</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="createdAt(java.time.ZonedDateTime)">
 <h3>createdAt</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerTokenBuilder</a></span>&nbsp;<span class="element-name">createdAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
@@ -275,45 +314,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="customerId(java.lang.String)">
-<h3>customerId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerTokenBuilder</a></span>&nbsp;<span class="element-name">customerId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerId)</span></div>
-<div class="block"><p>The <code>id</code> of the Customer.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>customerId</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="expiresAt(java.time.ZonedDateTime)">
-<h3>expiresAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerTokenBuilder</a></span>&nbsp;<span class="element-name">expiresAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expiresAt)</span></div>
-<div class="block"><p>Date and time (UTC) the token expires.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>expiresAt</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="value(java.lang.String)">
-<h3>value</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerTokenBuilder.html" title="class in com.commercetools.api.models.customer">CustomerTokenBuilder</a></span>&nbsp;<span class="element-name">value</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
-<div class="block"><p>Value of the token.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>value</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
@@ -321,6 +321,39 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>id</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCustomerId()">
+<h3>getCustomerId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCustomerId</span>()</div>
+<div class="block"><p>The <code>id</code> of the Customer.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>customerId</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getValue()">
+<h3>getValue</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getValue</span>()</div>
+<div class="block"><p>Value of the token.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getExpiresAt()">
+<h3>getExpiresAt</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getExpiresAt</span>()</div>
+<div class="block"><p>Date and time (UTC) the token expires.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>expiresAt</dd>
 </dl>
 </section>
 </li>
@@ -344,39 +377,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>lastModifiedAt</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCustomerId()">
-<h3>getCustomerId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCustomerId</span>()</div>
-<div class="block"><p>The <code>id</code> of the Customer.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>customerId</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getExpiresAt()">
-<h3>getExpiresAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getExpiresAt</span>()</div>
-<div class="block"><p>Date and time (UTC) the token expires.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>expiresAt</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getValue()">
-<h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getValue</span>()</div>
-<div class="block"><p>Value of the token.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>value</dd>
 </dl>
 </section>
 </li>

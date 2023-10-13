@@ -110,4 +110,3 @@ io.vrap.rmf.base.client.utils.json
 io.vrap.rmf.base.client.utils.json.modules
 io.vrap.rmf.base.client.utils.json.modules.deserializers
 io.vrap.rmf.base.client.utils.json.modules.serializers
-io.vrap.rmf.okhttp

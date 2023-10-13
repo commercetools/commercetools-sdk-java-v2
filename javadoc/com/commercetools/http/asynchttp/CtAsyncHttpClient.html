@@ -118,21 +118,6 @@ implements <a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" tit
 <div class="col-last odd-row-color">
 <div class="block">Uses a <code>ThrottleRequestFilter</code> to limit the number of concurrent requests</div>
 </div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,int)" class="member-name-link">CtAsyncHttpClient</a><wbr>(int&nbsp;maxConnTotal,
- int&nbsp;maxConnPerRoute)</code></div>
-<div class="col-last even-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC.</div>
-</div>
-</div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(int,int,com.commercetools.http.asynchttp.BuilderOptions)" class="member-name-link">CtAsyncHttpClient</a><wbr>(int&nbsp;maxConnTotal,
- int&nbsp;maxConnPerRoute,
- <a href="BuilderOptions.html" title="interface in com.commercetools.http.asynchttp">BuilderOptions</a>&nbsp;options)</code></div>
-<div class="col-last odd-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC.</div>
-</div>
-</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,com.commercetools.http.asynchttp.BuilderOptions)" class="member-name-link">CtAsyncHttpClient</a><wbr>(int&nbsp;maxConnections,
  <a href="BuilderOptions.html" title="interface in com.commercetools.http.asynchttp">BuilderOptions</a>&nbsp;options)</code></div>
 <div class="col-last even-row-color">
@@ -150,23 +135,6 @@ implements <a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" tit
  int&nbsp;maxConnections)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Uses a <code>ThrottleRequestFilter</code> to limit the number of concurrent requests</div>
-</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,int,int)" class="member-name-link">CtAsyncHttpClient</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
- int&nbsp;maxConnTotal,
- int&nbsp;maxConnPerRoute)</code></div>
-<div class="col-last even-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC.</div>
-</div>
-</div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,int,int,com.commercetools.http.asynchttp.BuilderOptions)" class="member-name-link">CtAsyncHttpClient</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
- int&nbsp;maxConnTotal,
- int&nbsp;maxConnPerRoute,
- <a href="BuilderOptions.html" title="interface in com.commercetools.http.asynchttp">BuilderOptions</a>&nbsp;options)</code></div>
-<div class="col-last odd-row-color">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC.</div>
-</div>
 </div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,int,com.commercetools.http.asynchttp.BuilderOptions)" class="member-name-link">CtAsyncHttpClient</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
  int&nbsp;maxConnections,
@@ -265,22 +233,6 @@ implements <a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" tit
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(int,int)">
-<h3>CtAsyncHttpClient</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="element-name">CtAsyncHttpClient</span><wbr><span class="parameters">(int&nbsp;maxConnTotal,
- int&nbsp;maxConnPerRoute)</span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC. Use <a href="#%3Cinit%3E(int)"><code>CtAsyncHttpClient(int)</code></a> instead.</div>
-</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>maxConnPerRoute</code> - maximum number of parallel connections to one host</dd>
-<dd><code>maxConnTotal</code> - maximum number of parallel connections</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="&lt;init&gt;(int)">
 <h3>CtAsyncHttpClient</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CtAsyncHttpClient</span><wbr><span class="parameters">(int&nbsp;maxConnections)</span></div>
@@ -298,24 +250,6 @@ implements <a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" tit
 <div class="block">creates a default instance of the AsyncHttpClient</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>options</code> - options to build the underlying HTTP client</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(int,int,com.commercetools.http.asynchttp.BuilderOptions)">
-<h3>CtAsyncHttpClient</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="element-name">CtAsyncHttpClient</span><wbr><span class="parameters">(int&nbsp;maxConnTotal,
- int&nbsp;maxConnPerRoute,
- <a href="BuilderOptions.html" title="interface in com.commercetools.http.asynchttp">BuilderOptions</a>&nbsp;options)</span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC. Use <a href="#%3Cinit%3E(int,com.commercetools.http.asynchttp.BuilderOptions)"><code>CtAsyncHttpClient(int, BuilderOptions)</code></a> instead.</div>
-</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>maxConnPerRoute</code> - maximum number of parallel connections to one host</dd>
-<dd><code>maxConnTotal</code> - maximum number of parallel connections</dd>
 <dd><code>options</code> - options to build the underlying HTTP client</dd>
 </dl>
 </section>
@@ -356,24 +290,6 @@ implements <a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" tit
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,int,int)">
-<h3>CtAsyncHttpClient</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="element-name">CtAsyncHttpClient</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
- int&nbsp;maxConnTotal,
- int&nbsp;maxConnPerRoute)</span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC. Use <a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,int)"><code>CtAsyncHttpClient(ExecutorService, int)</code></a> instead.</div>
-</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>maxConnPerRoute</code> - maximum number of parallel connections to one host</dd>
-<dd><code>maxConnTotal</code> - maximum number of parallel connections</dd>
-<dd><code>executor</code> - ExecutorService to be used</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,int)">
 <h3>CtAsyncHttpClient</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CtAsyncHttpClient</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
@@ -395,26 +311,6 @@ implements <a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" tit
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>executor</code> - ExecutorService to be used for the client</dd>
-<dd><code>options</code> - options to build the underlying HTTP client</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,int,int,com.commercetools.http.asynchttp.BuilderOptions)">
-<h3>CtAsyncHttpClient</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="element-name">CtAsyncHttpClient</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
- int&nbsp;maxConnTotal,
- int&nbsp;maxConnPerRoute,
- <a href="BuilderOptions.html" title="interface in com.commercetools.http.asynchttp">BuilderOptions</a>&nbsp;options)</span></div>
-<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">usage of maxConnTotal and maxConnPerRoute not advised as there is no pooling done by AHC. Use <a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,int,com.commercetools.http.asynchttp.BuilderOptions)"><code>CtAsyncHttpClient(ExecutorService, int, BuilderOptions)</code></a> instead.</div>
-</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>maxConnPerRoute</code> - maximum number of parallel connections to one host</dd>
-<dd><code>maxConnTotal</code> - maximum number of parallel connections</dd>
-<dd><code>executor</code> - ExecutorService to be used</dd>
 <dd><code>options</code> - options to build the underlying HTTP client</dd>
 </dl>
 </section>

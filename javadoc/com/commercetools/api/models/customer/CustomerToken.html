@@ -81,10 +81,10 @@ loadScripts(document, 'script');</script>
  <pre><code class='java'>
      CustomerToken customerToken = CustomerToken.builder()
              .id("{id}")
-             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .customerId("{customerId}")
-             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .value("{value}")
+             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .build()
  </code></pre>
  </div></div>
@@ -224,6 +224,42 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="getCustomerId()">
+<h3>getCustomerId</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCustomerId</span>()</div>
+<div class="block"><p>The <code>id</code> of the Customer.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>customerId</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getValue()">
+<h3>getValue</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getValue</span>()</div>
+<div class="block"><p>Value of the token.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getExpiresAt()">
+<h3>getExpiresAt</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getExpiresAt</span>()</div>
+<div class="block"><p>Date and time (UTC) the token expires.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>expiresAt</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
 <div class="member-signature"><span class="annotations">@NotNull
@@ -247,42 +283,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getCustomerId()">
-<h3>getCustomerId</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCustomerId</span>()</div>
-<div class="block"><p>The <code>id</code> of the Customer.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>customerId</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getExpiresAt()">
-<h3>getExpiresAt</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getExpiresAt</span>()</div>
-<div class="block"><p>Date and time (UTC) the token expires.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>expiresAt</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getValue()">
-<h3>getValue</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getValue</span>()</div>
-<div class="block"><p>Value of the token.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>value</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
@@ -290,6 +290,39 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>id</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustomerId(java.lang.String)">
+<h3>setCustomerId</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerId)</span></div>
+<div class="block"><p>The <code>id</code> of the Customer.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>customerId</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setValue(java.lang.String)">
+<h3>setValue</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><p>Value of the token.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setExpiresAt(java.time.ZonedDateTime)">
+<h3>setExpiresAt</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setExpiresAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expiresAt)</span></div>
+<div class="block"><p>Date and time (UTC) the token expires.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>expiresAt</code> - value to be set</dd>
 </dl>
 </section>
 </li>
@@ -312,39 +345,6 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>lastModifiedAt</code> - value to be set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setCustomerId(java.lang.String)">
-<h3>setCustomerId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerId)</span></div>
-<div class="block"><p>The <code>id</code> of the Customer.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>customerId</code> - value to be set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setExpiresAt(java.time.ZonedDateTime)">
-<h3>setExpiresAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setExpiresAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expiresAt)</span></div>
-<div class="block"><p>Date and time (UTC) the token expires.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>expiresAt</code> - value to be set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setValue(java.lang.String)">
-<h3>setValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
-<div class="block"><p>Value of the token.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>value</code> - value to be set</dd>
 </dl>
 </section>
 </li>

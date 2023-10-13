@@ -23,6 +23,10 @@ public class CartDiscountTargetBuilder {
         return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetBuilder.of();
     }
 
+    public com.commercetools.api.models.cart_discount.CartDiscountTotalPriceTargetBuilder totalPriceBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountTotalPriceTargetBuilder.of();
+    }
+
     public com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetBuilder multiBuyCustomLineItemsBuilder() {
         return com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetBuilder.of();
     }

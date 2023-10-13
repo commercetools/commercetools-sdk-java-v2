@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.http.HandlerStack;
 /**
  * Interface for an HTTP client accessing the API and mapping to a known output type
  */
-public interface ApiHttpClient extends AutoCloseable, VrapHttpClient {
+public interface ApiHttpClient extends AutoCloseable, VrapHttpClient, CompletableFutureApiClient {
     public String CLOSED_MESSAGE = "Client is already closed.";
 
     static Duration DEFAULT_TIMEOUT = Duration.ofSeconds(120);
@@ -41,8 +41,8 @@ public interface ApiHttpClient extends AutoCloseable, VrapHttpClient {
         return execute(request).thenApply(mapper);
     }
 
-    default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ClientRequestCommand<O> method) {
-        return method.execute(this);
+    default public <O> CompletableFuture<ApiHttpResponse<O>> execute(final HttpRequestCommand<O> method) {
+        return execute(method.createHttpRequest(), method.resultType());
     }
 
     default public <T, O> CompletableFuture<ApiHttpResponse<O>> execute(final CreateHttpRequestCommand method,

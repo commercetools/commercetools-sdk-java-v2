@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -35,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet, com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet, com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>
         implements ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet>,
@@ -43,6 +45,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet extends
         com.commercetools.api.client.QueryTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
     private String storeKey;

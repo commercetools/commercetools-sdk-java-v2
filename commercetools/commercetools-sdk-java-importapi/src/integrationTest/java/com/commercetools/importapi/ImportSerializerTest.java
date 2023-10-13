@@ -35,7 +35,7 @@ public class ImportSerializerTest {
                 .createHttpRequest()
                 .getSecuredBody())
                 .isEqualTo(
-                    "{\"patches\":[{\"productVariant\":{\"key\":\"GOR004436672\",\"typeId\":\"product-variant\"},\"attributes\":{\"custom_tag\":null},\"staged\":null}],\"type\":\"product-variant-patch\"}");
+                    "{\"patches\":[{\"productVariant\":{\"key\":\"GOR004436672\",\"typeId\":\"product-variant\"},\"attributes\":{\"custom_tag\":null},\"staged\":null,\"product\":null}],\"type\":\"product-variant-patch\"}");
     }
 
 }

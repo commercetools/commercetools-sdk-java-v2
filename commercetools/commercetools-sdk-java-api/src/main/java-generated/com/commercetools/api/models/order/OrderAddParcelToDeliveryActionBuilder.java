@@ -41,6 +41,9 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     @Nullable
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     /**
      *  <p><code>id</code> of an existing Delivery.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
@@ -238,6 +241,42 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
+     *  <p>Custom Fields for the Parcel.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public OrderAddParcelToDeliveryActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Parcel.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public OrderAddParcelToDeliveryActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Parcel.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public OrderAddParcelToDeliveryActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
      *  <p><code>id</code> of an existing Delivery.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
@@ -300,12 +339,22 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
     }
 
     /**
+     *  <p>Custom Fields for the Parcel.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
+    /**
      * builds OrderAddParcelToDeliveryAction with checking for non-null required values
      * @return OrderAddParcelToDeliveryAction
      */
     public OrderAddParcelToDeliveryAction build() {
         return new OrderAddParcelToDeliveryActionImpl(deliveryId, deliveryKey, parcelKey, measurements, trackingData,
-            items);
+            items, custom);
     }
 
     /**
@@ -314,7 +363,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
      */
     public OrderAddParcelToDeliveryAction buildUnchecked() {
         return new OrderAddParcelToDeliveryActionImpl(deliveryId, deliveryKey, parcelKey, measurements, trackingData,
-            items);
+            items, custom);
     }
 
     /**
@@ -338,6 +387,7 @@ public class OrderAddParcelToDeliveryActionBuilder implements Builder<OrderAddPa
         builder.measurements = template.getMeasurements();
         builder.trackingData = template.getTrackingData();
         builder.items = template.getItems();
+        builder.custom = template.getCustom();
         return builder;
     }
 

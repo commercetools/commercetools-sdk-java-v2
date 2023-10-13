@@ -26,7 +26,7 @@ public class OrderCustomFieldAddedMessagePayloadBuilder implements Builder<Order
     private java.lang.Object value;
 
     /**
-     *  <p>Name of the Custom Field that has been added.</p>
+     *  <p>Name of the Custom Field that was added.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class OrderCustomFieldAddedMessagePayloadBuilder implements Builder<Order
     }
 
     /**
-     *  <p>Name of the Custom Field that has been added.</p>
+     *  <p>Name of the Custom Field that was added.</p>
      * @return name
      */
 

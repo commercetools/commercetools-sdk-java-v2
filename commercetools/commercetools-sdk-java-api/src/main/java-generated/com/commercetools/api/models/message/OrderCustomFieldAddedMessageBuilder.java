@@ -259,7 +259,7 @@ public class OrderCustomFieldAddedMessageBuilder implements Builder<OrderCustomF
     }
 
     /**
-     *  <p>Name of the Custom Field that has been added.</p>
+     *  <p>Name of the Custom Field that was added.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -374,7 +374,7 @@ public class OrderCustomFieldAddedMessageBuilder implements Builder<OrderCustomF
     }
 
     /**
-     *  <p>Name of the Custom Field that has been added.</p>
+     *  <p>Name of the Custom Field that was added.</p>
      * @return name
      */
 

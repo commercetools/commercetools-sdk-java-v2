@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,10 +36,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyAssociateRolesKeyByKeyGet extends
-        ApiMethod<ByProjectKeyAssociateRolesKeyByKeyGet, com.commercetools.api.models.associate_role.AssociateRole>
+        TypeApiMethod<ByProjectKeyAssociateRolesKeyByKeyGet, com.commercetools.api.models.associate_role.AssociateRole>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyAssociateRolesKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAssociateRolesKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAssociateRolesKeyByKeyGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.associate_role.AssociateRole> resultType() {
+        return new TypeReference<com.commercetools.api.models.associate_role.AssociateRole>() {
+        };
+    }
 
     private String projectKey;
     private String key;

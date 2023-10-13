@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after removing a Custom Type from a Customer using the Set Custom Type update action.</p>
+ *  <p>Generated after adding a Custom Type to a Customer using the Set Custom Type update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -54,8 +54,7 @@ public interface CustomerCustomTypeSetMessage extends Message {
     public CustomFields getCustomFields();
 
     /**
-     *  <p><code>id</code> of the previous Custom Type.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 
@@ -70,8 +69,7 @@ public interface CustomerCustomTypeSetMessage extends Message {
     public void setCustomFields(final CustomFields customFields);
 
     /**
-     *  <p><code>id</code> of the previous Custom Type.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      */
 

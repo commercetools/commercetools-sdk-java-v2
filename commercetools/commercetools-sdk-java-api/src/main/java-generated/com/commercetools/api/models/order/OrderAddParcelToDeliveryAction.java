@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 import javax.validation.Valid;
 
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -87,6 +88,14 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public List<DeliveryItem> getItems();
 
     /**
+     *  <p>Custom Fields for the Parcel.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
+    /**
      *  <p><code>id</code> of an existing Delivery.</p>
      *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
@@ -139,6 +148,13 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public void setItems(final List<DeliveryItem> items);
 
     /**
+     *  <p>Custom Fields for the Parcel.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFieldsDraft custom);
+
+    /**
      * factory method
      * @return instance of OrderAddParcelToDeliveryAction
      */
@@ -159,6 +175,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 
@@ -184,6 +201,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
                         .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

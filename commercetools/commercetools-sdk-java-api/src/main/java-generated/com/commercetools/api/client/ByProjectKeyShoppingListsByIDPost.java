@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,11 +36,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyShoppingListsByIDPost extends
-        BodyApiMethod<ByProjectKeyShoppingListsByIDPost, com.commercetools.api.models.shopping_list.ShoppingList, com.commercetools.api.models.shopping_list.ShoppingListUpdate>
+        TypeBodyApiMethod<ByProjectKeyShoppingListsByIDPost, com.commercetools.api.models.shopping_list.ShoppingList, com.commercetools.api.models.shopping_list.ShoppingListUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyShoppingListsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyShoppingListsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShoppingListsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShoppingListsByIDPost> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.shopping_list.ShoppingList> resultType() {
+        return new TypeReference<com.commercetools.api.models.shopping_list.ShoppingList>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

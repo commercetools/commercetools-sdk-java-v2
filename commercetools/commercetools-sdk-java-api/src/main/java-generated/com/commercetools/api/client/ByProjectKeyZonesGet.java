@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,13 +35,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyZonesGet
-        extends ApiMethod<ByProjectKeyZonesGet, com.commercetools.api.models.zone.ZonePagedQueryResponse>
+        extends TypeApiMethod<ByProjectKeyZonesGet, com.commercetools.api.models.zone.ZonePagedQueryResponse>
         implements ByProjectKeyZonesGetMixin, com.commercetools.api.client.ExpandableTrait<ByProjectKeyZonesGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyZonesGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyZonesGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyZonesGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyZonesGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.zone.ZonePagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.zone.ZonePagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

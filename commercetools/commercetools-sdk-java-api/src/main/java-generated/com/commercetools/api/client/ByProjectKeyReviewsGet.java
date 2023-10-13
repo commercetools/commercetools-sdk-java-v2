@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,13 +35,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyReviewsGet
-        extends ApiMethod<ByProjectKeyReviewsGet, com.commercetools.api.models.review.ReviewPagedQueryResponse>
+        extends TypeApiMethod<ByProjectKeyReviewsGet, com.commercetools.api.models.review.ReviewPagedQueryResponse>
         implements ByProjectKeyReviewsGetMixin, com.commercetools.api.client.ExpandableTrait<ByProjectKeyReviewsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyReviewsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyReviewsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyReviewsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyReviewsGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.review.ReviewPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.review.ReviewPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

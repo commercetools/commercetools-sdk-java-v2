@@ -12,6 +12,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +40,12 @@ public class ByProjectKeyShippingMethodsPostString extends
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsPostString>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyShippingMethodsPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsPostString> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.shipping_method.ShippingMethod> resultType() {
+        return new TypeReference<com.commercetools.api.models.shipping_method.ShippingMethod>() {
+        };
+    }
 
     private String projectKey;
 

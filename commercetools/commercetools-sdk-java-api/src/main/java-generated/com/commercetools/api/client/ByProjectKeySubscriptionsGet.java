@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,13 +35,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeySubscriptionsGet extends
-        ApiMethod<ByProjectKeySubscriptionsGet, com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse>
+        TypeApiMethod<ByProjectKeySubscriptionsGet, com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse>
         implements ByProjectKeySubscriptionsGetMixin,
         com.commercetools.api.client.SortableTrait<ByProjectKeySubscriptionsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeySubscriptionsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeySubscriptionsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeySubscriptionsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeySubscriptionsGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

@@ -1,51 +1,20 @@
 **Api changes**
 
 <details>
+<summary>Added Enum(s)</summary>
+
+- added enum `customer-email-token` to type `ReferenceTypeId`
+- added enum `customer-password-token` to type `ReferenceTypeId`
+- added enum `customer-email-token` to type `MessageSubscriptionResourceTypeId`
+- added enum `customer-group` to type `MessageSubscriptionResourceTypeId`
+- added enum `customer-password-token` to type `MessageSubscriptionResourceTypeId`
+</details>
+
+
+<details>
 <summary>Added Type(s)</summary>
 
-- added type `BusinessUnitAddressCustomFieldAddedMessage`
-- added type `BusinessUnitAddressCustomFieldChangedMessage`
-- added type `BusinessUnitAddressCustomFieldRemovedMessage`
-- added type `BusinessUnitAddressCustomTypeRemovedMessage`
-- added type `BusinessUnitAddressCustomTypeSetMessage`
-- added type `BusinessUnitCustomFieldAddedMessage`
-- added type `BusinessUnitCustomFieldChangedMessage`
-- added type `BusinessUnitCustomFieldRemovedMessage`
-- added type `BusinessUnitCustomTypeRemovedMessage`
-- added type `BusinessUnitCustomTypeSetMessage`
-- added type `BusinessUnitAddressCustomFieldAddedMessagePayload`
-- added type `BusinessUnitAddressCustomFieldChangedMessagePayload`
-- added type `BusinessUnitAddressCustomFieldRemovedMessagePayload`
-- added type `BusinessUnitAddressCustomTypeRemovedMessagePayload`
-- added type `BusinessUnitAddressCustomTypeSetMessagePayload`
-- added type `BusinessUnitCustomFieldAddedMessagePayload`
-- added type `BusinessUnitCustomFieldChangedMessagePayload`
-- added type `BusinessUnitCustomFieldRemovedMessagePayload`
-- added type `BusinessUnitCustomTypeRemovedMessagePayload`
-- added type `BusinessUnitCustomTypeSetMessagePayload`
-</details>
-
-
-<details>
-<summary>Removed Type(s)</summary>
-
-- :warning: removed type `CustomerMessagePayload`
-</details>
-
-**History changes**
-
-<details>
-<summary>Added QueryParameter(s)</summary>
-
-- added query parameter `businessUnit` to method `get /{projectKey}`
-- added query parameter `businessUnit` to method `get /{projectKey}/{resourceType}`
-- added query parameter `businessUnit` to method `get /{projectKey}/{resourceType}/{ID}`
-</details>
-
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `businessUnit` to type `Record`
+- added type `CustomerEmailTokenReference`
+- added type `CustomerPasswordTokenReference`
 </details>
 

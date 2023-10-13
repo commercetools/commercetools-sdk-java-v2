@@ -21,7 +21,7 @@ The latest stable SDK release can be retrieved from [Maven Central](https://sear
 ```gradle
 ext {
     versions = [
-        commercetools: "16.2.0"
+        commercetools: "16.5.0"
     ]
 }
 
@@ -43,7 +43,7 @@ dependencies {
 
 ```maven
 <properties>
-    <commercetools.version>16.2.0</commercetools.version>
+    <commercetools.version>16.5.0</commercetools.version>
 </properties>
 <dependencies>
     <dependency>
@@ -85,6 +85,7 @@ dependencies {
 * `commercetools-sdk-compat-v1`: Compatibility layer for Java v1 SDK
 * `commercetools-money`: Provider for JSR-354 money instances
 * `commercetools-monitoring-newrelic`: Middleware to integrate NewRelic monitoring
+* `commercetools-monitoring-opentelemetry`: Middleware to collect metrics using OpenTelemetry
 * `commercetools-graphql-api`: type safe support for the commercetools GraphQL API
 
 ### Migration Guidelines

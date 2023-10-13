@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -35,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyStandalonePricesByIDDelete extends
-        ApiMethod<ByProjectKeyStandalonePricesByIDDelete, com.commercetools.api.models.standalone_price.StandalonePrice>
+        TypeApiMethod<ByProjectKeyStandalonePricesByIDDelete, com.commercetools.api.models.standalone_price.StandalonePrice>
         implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStandalonePricesByIDDelete, com.commercetools.api.models.standalone_price.StandalonePrice>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyStandalonePricesByIDDelete>,
@@ -43,6 +45,12 @@ public class ByProjectKeyStandalonePricesByIDDelete extends
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStandalonePricesByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStandalonePricesByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStandalonePricesByIDDelete> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.standalone_price.StandalonePrice> resultType() {
+        return new TypeReference<com.commercetools.api.models.standalone_price.StandalonePrice>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

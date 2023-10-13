@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,10 +36,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInventoryKeyByKeyGet
-        extends ApiMethod<ByProjectKeyInventoryKeyByKeyGet, com.commercetools.api.models.inventory.InventoryEntry>
+        extends TypeApiMethod<ByProjectKeyInventoryKeyByKeyGet, com.commercetools.api.models.inventory.InventoryEntry>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInventoryKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInventoryKeyByKeyGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.inventory.InventoryEntry> resultType() {
+        return new TypeReference<com.commercetools.api.models.inventory.InventoryEntry>() {
+        };
+    }
 
     private String projectKey;
     private String key;

@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,11 +35,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyTaxCategoriesKeyByKeyGet
-        extends ApiMethod<ByProjectKeyTaxCategoriesKeyByKeyGet, com.commercetools.api.models.tax_category.TaxCategory>
+public class ByProjectKeyTaxCategoriesKeyByKeyGet extends
+        TypeApiMethod<ByProjectKeyTaxCategoriesKeyByKeyGet, com.commercetools.api.models.tax_category.TaxCategory>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyTaxCategoriesKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTaxCategoriesKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTaxCategoriesKeyByKeyGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.tax_category.TaxCategory> resultType() {
+        return new TypeReference<com.commercetools.api.models.tax_category.TaxCategory>() {
+        };
+    }
 
     private String projectKey;
     private String key;

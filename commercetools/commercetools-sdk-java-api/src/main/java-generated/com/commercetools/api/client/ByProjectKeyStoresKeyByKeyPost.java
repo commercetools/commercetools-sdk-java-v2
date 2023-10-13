@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,11 +36,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyStoresKeyByKeyPost extends
-        BodyApiMethod<ByProjectKeyStoresKeyByKeyPost, com.commercetools.api.models.store.Store, com.commercetools.api.models.store.StoreUpdate>
+        TypeBodyApiMethod<ByProjectKeyStoresKeyByKeyPost, com.commercetools.api.models.store.Store, com.commercetools.api.models.store.StoreUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyStoresKeyByKeyPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStoresKeyByKeyPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStoresKeyByKeyPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStoresKeyByKeyPost> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.store.Store> resultType() {
+        return new TypeReference<com.commercetools.api.models.store.Store>() {
+        };
+    }
 
     private String projectKey;
     private String key;

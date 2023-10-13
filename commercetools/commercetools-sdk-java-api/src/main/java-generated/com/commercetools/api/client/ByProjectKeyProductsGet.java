@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -32,15 +34,22 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyProductsGet extends
-        ApiMethod<ByProjectKeyProductsGet, com.commercetools.api.models.product.ProductPagedQueryResponse> implements
-        ByProjectKeyProductsGetMixin, com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsGet>,
+public class ByProjectKeyProductsGet
+        extends TypeApiMethod<ByProjectKeyProductsGet, com.commercetools.api.models.product.ProductPagedQueryResponse>
+        implements ByProjectKeyProductsGetMixin,
+        com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyProductsGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductsGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyProductsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductsGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.product.ProductPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.product.ProductPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

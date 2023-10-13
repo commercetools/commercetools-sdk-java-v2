@@ -1,0 +1,44 @@
+
+package com.commercetools.api.models.inventory;
+
+import com.tngtech.junit.dataprovider.DataProvider;
+import com.tngtech.junit.dataprovider.DataProviderExtension;
+import com.tngtech.junit.dataprovider.UseDataProvider;
+import com.tngtech.junit.dataprovider.UseDataProviderExtension;
+
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestTemplate;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(UseDataProviderExtension.class)
+@ExtendWith(DataProviderExtension.class)
+public class InventoryEntryResourceIdentifierTest {
+
+    @TestTemplate
+    @UseDataProvider("objectBuilder")
+    public void buildUnchecked(InventoryEntryResourceIdentifierBuilder builder) {
+        InventoryEntryResourceIdentifier inventoryEntryResourceIdentifier = builder.buildUnchecked();
+        Assertions.assertThat(inventoryEntryResourceIdentifier).isInstanceOf(InventoryEntryResourceIdentifier.class);
+    }
+
+    @DataProvider
+    public static Object[][] objectBuilder() {
+        return new Object[][] { new Object[] { InventoryEntryResourceIdentifier.builder().id("id") },
+                new Object[] { InventoryEntryResourceIdentifier.builder().key("key") } };
+    }
+
+    @Test
+    public void id() {
+        InventoryEntryResourceIdentifier value = InventoryEntryResourceIdentifier.of();
+        value.setId("id");
+        Assertions.assertThat(value.getId()).isEqualTo("id");
+    }
+
+    @Test
+    public void key() {
+        InventoryEntryResourceIdentifier value = InventoryEntryResourceIdentifier.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
+    }
+}

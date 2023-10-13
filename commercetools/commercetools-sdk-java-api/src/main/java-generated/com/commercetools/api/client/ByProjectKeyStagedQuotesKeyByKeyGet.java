@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,11 +35,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyStagedQuotesKeyByKeyGet
-        extends ApiMethod<ByProjectKeyStagedQuotesKeyByKeyGet, com.commercetools.api.models.staged_quote.StagedQuote>
+public class ByProjectKeyStagedQuotesKeyByKeyGet extends
+        TypeApiMethod<ByProjectKeyStagedQuotesKeyByKeyGet, com.commercetools.api.models.staged_quote.StagedQuote>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyStagedQuotesKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStagedQuotesKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStagedQuotesKeyByKeyGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.staged_quote.StagedQuote> resultType() {
+        return new TypeReference<com.commercetools.api.models.staged_quote.StagedQuote>() {
+        };
+    }
 
     private String projectKey;
     private String key;

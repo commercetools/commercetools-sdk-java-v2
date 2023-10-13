@@ -1,0 +1,32 @@
+
+dependencies {
+    api project(":rmf:rmf-java-base")
+    implementation 'io.opentelemetry:opentelemetry-api:1.28.0'
+
+    testImplementation project(":commercetools:commercetools-sdk-java-api")
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'build/generated/src/main/java'
+        }
+    }
+}
+
+tasks.register('versionTxt') {
+    doLast {
+        new File(projectDir, "$buildInfoPath/com/commercetools/monitoring/opentelemetry/").mkdirs()
+        new File(projectDir, "$buildInfoPath/com/commercetools/monitoring/opentelemetry/BuildInfo.java").text = """
+package com.commercetools.monitoring.opentelemetry;
+
+public class BuildInfo {
+    public static final String VERSION = "$version";
+}
+"""
+    }
+}
+
+compileJava {
+    dependsOn versionTxt
+}

@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,13 +35,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyStagedQuotesGet extends
-        ApiMethod<ByProjectKeyStagedQuotesGet, com.commercetools.api.models.staged_quote.StagedQuotePagedQueryResponse>
+        TypeApiMethod<ByProjectKeyStagedQuotesGet, com.commercetools.api.models.staged_quote.StagedQuotePagedQueryResponse>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyStagedQuotesGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyStagedQuotesGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyStagedQuotesGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyStagedQuotesGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStagedQuotesGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStagedQuotesGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.staged_quote.StagedQuotePagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.staged_quote.StagedQuotePagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

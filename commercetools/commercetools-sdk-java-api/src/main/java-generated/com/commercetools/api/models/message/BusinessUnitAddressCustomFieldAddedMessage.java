@@ -43,7 +43,7 @@ public interface BusinessUnitAddressCustomFieldAddedMessage extends Message {
     String BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_ADDED = "BusinessUnitAddressCustomFieldAdded";
 
     /**
-     *  <p>Name of the Custom Field that has been added.</p>
+     *  <p>Name of the Custom Field that was added.</p>
      * @return name
      */
     @NotNull
@@ -59,7 +59,7 @@ public interface BusinessUnitAddressCustomFieldAddedMessage extends Message {
     public Object getValue();
 
     /**
-     *  <p>Name of the Custom Field that has been added.</p>
+     *  <p>Name of the Custom Field that was added.</p>
      * @param name value to be set
      */
 

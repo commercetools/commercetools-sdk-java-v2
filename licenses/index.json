@@ -241,19 +241,6 @@
             ]
         },
         {
-            "moduleName": "com.squareup.okhttp3:okhttp",
-            "moduleVersion": "4.9.3",
-            "moduleUrls": [
-                "https://square.github.io/okhttp/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "com.squareup.okio:okio",
             "moduleVersion": "1.17.2",
             "moduleLicenses": [

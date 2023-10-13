@@ -204,7 +204,6 @@ def documentationProjects= [
         ":commercetools:commercetools-sdk-java-importapi",
         ":commercetools:commercetools-sdk-java-ml",
         ":commercetools:internal-docs",
-        ":rmf:okhttp-client",
         ":rmf:rmf-java-base"
 ]
 

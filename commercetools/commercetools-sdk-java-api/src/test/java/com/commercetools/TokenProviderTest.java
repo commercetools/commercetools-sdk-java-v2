@@ -10,9 +10,7 @@ import java.util.concurrent.*;
 import java.util.function.Supplier;
 
 import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.http.HandlerStack;
-import io.vrap.rmf.base.client.http.HttpHandler;
-import io.vrap.rmf.base.client.http.Middleware;
+import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.*;
 import io.vrap.rmf.base.client.utils.ClientUtils;
 
@@ -22,8 +20,14 @@ import org.junit.jupiter.api.Test;
 public class TokenProviderTest {
 
     static class TestClient implements VrapHttpClient {
-        private ApiHttpResponse<byte[]> cannedResponse() {
-            return new ApiHttpResponse<>(200, null,
+        private ApiHttpResponse<byte[]> cannedResponse;
+
+        public ApiHttpResponse<byte[]> getCannedResponse() {
+            return cannedResponse;
+        }
+
+        public TestClient() {
+            this.cannedResponse = new ApiHttpResponse<>(200, null,
                 "{\"access_token\": \"abc\", \"expires_in\": 3600}".getBytes(StandardCharsets.UTF_8));
         }
 
@@ -31,7 +35,7 @@ public class TokenProviderTest {
         public CompletableFuture<ApiHttpResponse<byte[]>> execute(ApiHttpRequest request) {
             called++;
             lastUrl = request.getUri().toString();
-            return CompletableFuture.completedFuture(cannedResponse());
+            return CompletableFuture.completedFuture(cannedResponse);
         }
 
         private int called = 0;
@@ -52,6 +56,10 @@ public class TokenProviderTest {
 
         public void setLastUrl(String lastUrl) {
             this.lastUrl = lastUrl;
+        }
+
+        public void setCannedResponse(ApiHttpResponse<byte[]> response) {
+            cannedResponse = response;
         }
     }
     //
@@ -100,16 +108,16 @@ public class TokenProviderTest {
 
         Random random = new Random();
         tokenSupplier.refreshToken();
-        final ArrayList<CompletableFuture<AuthenticationToken>> completableFutures = new ArrayList<CompletableFuture<AuthenticationToken>>(
-            1000000);
+        final ArrayList<CompletableFuture<AuthenticationToken>> completableFutures = new ArrayList<>(1000000);
 
         for (int i = 0; i < 1000000; i++) {
-            if (random.nextInt(1000) < 5) {
+            if (random.nextInt(1000) < 100) {
                 tokenSupplier.refreshToken();
             }
             completableFutures.add(tokenSupplier.getToken());
         }
         ClientUtils.blockingWaitForEach(completableFutures, 3, TimeUnit.SECONDS);
+        Assertions.assertThat(client.getCalled()).isGreaterThan(1);
 
         completableFutures.forEach(authTokenFuture -> {
             try {
@@ -122,5 +130,52 @@ public class TokenProviderTest {
 
         token = tokenSupplier.getToken().get();
         Assertions.assertThat(token).isNotNull();
+    }
+
+    @Test
+    public void expiredTokensOAuthHandler() throws ExecutionException, InterruptedException, TimeoutException {
+        TestClient client = new TestClient();
+
+        AuthenticationToken token;
+        try (OAuthHandler handler = new OAuthHandler(
+            withClientCredentialsFlow(ClientCredentials.of().withClientId("").withClientSecret("").build(),
+                "http://auth.commercetools.com/oauth/token", oauthHandlerSupplier(client)))) {
+            token = handler.getTokenAsync().get();
+
+            Assertions.assertThat(token).isNotNull();
+            Assertions.assertThat(client.getCalled()).isEqualTo(1);
+            Assertions.assertThat(client.getLastUrl()).isEqualTo("http://auth.commercetools.com/oauth/token");
+
+            handler.getTokenAsync().get();
+            Assertions.assertThat(client.getCalled()).isEqualTo(1);
+
+            Random random = new Random();
+            handler.refreshTokenAsync();
+            final ArrayList<CompletableFuture<AuthenticationToken>> completableFutures = new ArrayList<>(1000000);
+
+            client.setCannedResponse(client.getCannedResponse()
+                    .withBody("{\"access_token\": \"def\", \"expires_in\": 3600}".getBytes(StandardCharsets.UTF_8)));
+            handler.refreshTokenAsync();
+            for (int i = 0; i < 1000000; i++) {
+                if (random.nextInt(1000) < 100) {
+                    handler.refreshTokenAsync();
+                }
+                completableFutures.add(handler.getTokenAsync());
+            }
+            ClientUtils.blockingWaitForEach(completableFutures, 3, TimeUnit.SECONDS);
+            Assertions.assertThat(client.getCalled()).isGreaterThan(1);
+
+            completableFutures.forEach(authTokenFuture -> {
+                try {
+                    Assertions.assertThat(authTokenFuture.get().getAccessToken()).isIn("abc", "def");
+                }
+                catch (InterruptedException | ExecutionException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+
+            token = handler.getTokenAsync().get();
+            Assertions.assertThat(token).isNotNull();
+        }
     }
 }

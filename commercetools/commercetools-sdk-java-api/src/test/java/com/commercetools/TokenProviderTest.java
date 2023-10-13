@@ -14,6 +14,7 @@ import io.vrap.rmf.base.client.http.HandlerStack;
 import io.vrap.rmf.base.client.http.HttpHandler;
 import io.vrap.rmf.base.client.http.Middleware;
 import io.vrap.rmf.base.client.oauth2.*;
+import io.vrap.rmf.base.client.utils.ClientUtils;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -99,15 +100,25 @@ public class TokenProviderTest {
 
         Random random = new Random();
         tokenSupplier.refreshToken();
-        final CompletableFuture[] completableFutures = new CompletableFuture[1000000];
+        final ArrayList<CompletableFuture<AuthenticationToken>> completableFutures = new ArrayList<CompletableFuture<AuthenticationToken>>(
+            1000000);
 
         for (int i = 0; i < 1000000; i++) {
             if (random.nextInt(1000) < 5) {
                 tokenSupplier.refreshToken();
             }
-            completableFutures[i] = tokenSupplier.getToken();
+            completableFutures.add(tokenSupplier.getToken());
         }
-        CompletableFuture.allOf(completableFutures).get(3, TimeUnit.SECONDS);
+        ClientUtils.blockingWaitForEach(completableFutures, 3, TimeUnit.SECONDS);
+
+        completableFutures.forEach(authTokenFuture -> {
+            try {
+                Assertions.assertThat(authTokenFuture.get().getAccessToken()).isEqualTo("abc");
+            }
+            catch (InterruptedException | ExecutionException e) {
+                throw new RuntimeException(e);
+            }
+        });
 
         token = tokenSupplier.getToken().get();
         Assertions.assertThat(token).isNotNull();

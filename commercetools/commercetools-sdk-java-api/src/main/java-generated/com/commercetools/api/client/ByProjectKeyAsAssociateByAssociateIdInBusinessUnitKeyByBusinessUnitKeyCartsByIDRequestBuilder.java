@@ -30,6 +30,11 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
             projectKey, associateId, businessUnitKey, ID);
     }
 
+    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsByIDHead head() {
+        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsByIDHead(apiHttpClient,
+            projectKey, associateId, businessUnitKey, ID);
+    }
+
     public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsByIDPost post(
             com.commercetools.api.models.cart.CartUpdate cartUpdate) {
         return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyCartsByIDPost(apiHttpClient,

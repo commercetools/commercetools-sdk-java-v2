@@ -24,6 +24,10 @@ public class ByProjectKeyProductSelectionsKeyByKeyRequestBuilder {
         return new ByProjectKeyProductSelectionsKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyProductSelectionsKeyByKeyHead head() {
+        return new ByProjectKeyProductSelectionsKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyProductSelectionsKeyByKeyPost post(
             com.commercetools.api.models.product_selection.ProductSelectionUpdate productSelectionUpdate) {
         return new ByProjectKeyProductSelectionsKeyByKeyPost(apiHttpClient, projectKey, key, productSelectionUpdate);

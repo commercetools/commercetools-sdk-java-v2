@@ -97,7 +97,15 @@ public class ByProjectKeyMeQuotesTest {
                         .withPredicateVar("varName", "var.varName")
                         .createHttpRequest(), "get", "test_projectKey/me/quotes?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().quotes().get().createHttpRequest(), "get",
-                        "test_projectKey/me/quotes", } };
+                        "test_projectKey/me/quotes", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quotes()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/me/quotes?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().quotes().head().createHttpRequest(),
+                        "head", "test_projectKey/me/quotes", } };
     }
 
     @DataProvider
@@ -114,6 +122,8 @@ public class ByProjectKeyMeQuotesTest {
                         .quotes()
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().quotes().get(), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().quotes().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().quotes().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().quotes().head(), } };
     }
 }

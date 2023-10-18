@@ -79,6 +79,12 @@ public class ByProjectKeyMeBusinessUnitsByIDTest {
                         .withId("test_ID")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/me/business-units/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .businessUnits()
+                        .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/me/business-units/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .me()
@@ -131,6 +137,8 @@ public class ByProjectKeyMeBusinessUnitsByIDTest {
                         .withExpand("expand"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").me().businessUnits().withId("test_ID").get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().businessUnits().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()

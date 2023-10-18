@@ -19,6 +19,10 @@ public class ByProjectKeyMeQuotesRequestBuilder {
         return new ByProjectKeyMeQuotesGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyMeQuotesHead head() {
+        return new ByProjectKeyMeQuotesHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyMeQuotesByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyMeQuotesByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }

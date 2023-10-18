@@ -141,7 +141,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyTest {
                                 .withKey("test_key")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key", } };
+                        "get", "test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productProjections()
+                                .withKey("test_key")
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key", } };
     }
 
     @DataProvider
@@ -193,6 +201,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .productProjections()
                         .withKey("test_key")
-                        .get(), } };
+                        .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productProjections()
+                        .withKey("test_key")
+                        .head(), } };
     }
 }

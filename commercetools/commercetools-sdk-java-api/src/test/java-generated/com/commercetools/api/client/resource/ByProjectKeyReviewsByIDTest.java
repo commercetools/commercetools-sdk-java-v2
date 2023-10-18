@@ -76,6 +76,11 @@ public class ByProjectKeyReviewsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .reviews()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/reviews/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .reviews()
+                        .withId("test_ID")
                         .post(com.commercetools.api.models.review.ReviewUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/reviews/test_ID?expand=expand", },
@@ -114,6 +119,7 @@ public class ByProjectKeyReviewsByIDTest {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").reviews().withId("test_ID").get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .reviews()
                         .withId("test_ID")

@@ -77,6 +77,11 @@ public class ByProjectKeyStagedQuotesKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/staged-quotes/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stagedQuotes()
+                        .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/staged-quotes/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .stagedQuotes()
@@ -130,6 +135,7 @@ public class ByProjectKeyStagedQuotesKeyByKeyTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .withKey("test_key")

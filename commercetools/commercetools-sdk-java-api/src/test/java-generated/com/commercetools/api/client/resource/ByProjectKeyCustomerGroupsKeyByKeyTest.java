@@ -77,6 +77,11 @@ public class ByProjectKeyCustomerGroupsKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/customer-groups/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/customer-groups/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
@@ -122,6 +127,7 @@ public class ByProjectKeyCustomerGroupsKeyByKeyTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withKey("test_key")

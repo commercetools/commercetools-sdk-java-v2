@@ -77,6 +77,11 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberTest {
                         .withOrderNumber("test_orderNumber")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/orders/order-number=test_orderNumber", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .withOrderNumber("test_orderNumber")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/orders/order-number=test_orderNumber", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
@@ -133,6 +138,10 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberTest {
                         .withExpand("expand"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").orders().withOrderNumber("test_orderNumber").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .withOrderNumber("test_orderNumber")
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .withOrderNumber("test_orderNumber")

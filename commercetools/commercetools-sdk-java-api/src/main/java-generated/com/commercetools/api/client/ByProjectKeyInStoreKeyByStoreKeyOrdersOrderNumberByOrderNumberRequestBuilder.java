@@ -28,6 +28,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberReque
             storeKey, orderNumber);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberHead head() {
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberHead(apiHttpClient, projectKey,
+            storeKey, orderNumber);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost post(
             com.commercetools.api.models.order.OrderUpdate orderUpdate) {
         return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(apiHttpClient, projectKey,

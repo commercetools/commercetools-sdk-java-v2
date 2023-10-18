@@ -19,4 +19,8 @@ public class ByProjectKeyMeActiveCartRequestBuilder {
         return new ByProjectKeyMeActiveCartGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyMeActiveCartHead head() {
+        return new ByProjectKeyMeActiveCartHead(apiHttpClient, projectKey);
+    }
+
 }

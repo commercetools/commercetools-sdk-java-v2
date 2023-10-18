@@ -132,7 +132,12 @@ public class ByProjectKeyProductProjectionsByIDTest {
                         .productProjections()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "test_projectKey/product-projections/test_ID", } };
+                        .createHttpRequest(), "get", "test_projectKey/product-projections/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/product-projections/test_ID", } };
     }
 
     @DataProvider
@@ -179,6 +184,8 @@ public class ByProjectKeyProductProjectionsByIDTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().withId("test_ID").get(), } };
+                        apiRoot.withProjectKey("test_projectKey").productProjections().withId("test_ID").get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productProjections().withId("test_ID").head(), } };
     }
 }

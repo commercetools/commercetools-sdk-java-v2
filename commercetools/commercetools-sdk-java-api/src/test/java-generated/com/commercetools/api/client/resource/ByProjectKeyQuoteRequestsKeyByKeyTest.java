@@ -77,6 +77,11 @@ public class ByProjectKeyQuoteRequestsKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/quote-requests/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quoteRequests()
+                        .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/quote-requests/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .quoteRequests()
@@ -130,6 +135,7 @@ public class ByProjectKeyQuoteRequestsKeyByKeyTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").quoteRequests().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").quoteRequests().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .withKey("test_key")

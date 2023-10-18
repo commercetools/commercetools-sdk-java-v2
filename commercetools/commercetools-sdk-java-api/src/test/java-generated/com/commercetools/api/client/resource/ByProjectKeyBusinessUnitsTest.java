@@ -105,6 +105,13 @@ public class ByProjectKeyBusinessUnitsTest {
                         "get", "test_projectKey/business-units", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/business-units?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().head().createHttpRequest(),
+                        "head", "test_projectKey/business-units", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .businessUnits()
                         .post(com.commercetools.api.models.business_unit.CompanyDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/business-units?expand=expand", },
@@ -128,6 +135,8 @@ public class ByProjectKeyBusinessUnitsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .post(com.commercetools.api.models.business_unit.CompanyDraft.of())

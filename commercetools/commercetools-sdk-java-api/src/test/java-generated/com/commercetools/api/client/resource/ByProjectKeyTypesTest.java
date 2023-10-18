@@ -87,6 +87,11 @@ public class ByProjectKeyTypesTest {
                         .createHttpRequest(), "get", "test_projectKey/types?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").types().get().createHttpRequest(), "get",
                         "test_projectKey/types", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").types().head().withWhere("where").createHttpRequest(),
+                        "head", "test_projectKey/types?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").types().head().createHttpRequest(), "head",
+                        "test_projectKey/types", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .types()
                         .post(com.commercetools.api.models.type.TypeDraft.of())
@@ -112,6 +117,8 @@ public class ByProjectKeyTypesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").types().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").types().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").types().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .types()
                         .post(com.commercetools.api.models.type.TypeDraft.of())

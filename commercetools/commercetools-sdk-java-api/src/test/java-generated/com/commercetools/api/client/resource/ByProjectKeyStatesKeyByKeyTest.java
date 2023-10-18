@@ -78,6 +78,11 @@ public class ByProjectKeyStatesKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
                         .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/states/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .states()
+                        .withKey("test_key")
                         .post(com.commercetools.api.models.state.StateUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/states/key=test_key?expand=expand", },
@@ -110,6 +115,7 @@ public class ByProjectKeyStatesKeyByKeyTest {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").states().withKey("test_key").get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").states().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").states().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
                         .withKey("test_key")

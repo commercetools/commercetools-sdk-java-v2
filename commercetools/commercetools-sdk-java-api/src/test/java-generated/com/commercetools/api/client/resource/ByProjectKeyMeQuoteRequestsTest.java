@@ -113,6 +113,15 @@ public class ByProjectKeyMeQuoteRequestsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/me/quote-requests?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().head().createHttpRequest(),
+                        "head", "test_projectKey/me/quote-requests", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quoteRequests()
                         .post(com.commercetools.api.models.me.MyQuoteRequestDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/me/quote-requests?expand=expand", },
@@ -141,6 +150,9 @@ public class ByProjectKeyMeQuoteRequestsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().quoteRequests().get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().quoteRequests().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()

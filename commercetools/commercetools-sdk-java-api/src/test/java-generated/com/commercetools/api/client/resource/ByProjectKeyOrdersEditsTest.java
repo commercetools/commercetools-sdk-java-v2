@@ -111,6 +111,14 @@ public class ByProjectKeyOrdersEditsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/orders/edits?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().head().createHttpRequest(),
+                        "head", "test_projectKey/orders/edits", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .edits()
                         .post(com.commercetools.api.models.order_edit.OrderEditDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/orders/edits?expand=expand", },
@@ -136,6 +144,8 @@ public class ByProjectKeyOrdersEditsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()

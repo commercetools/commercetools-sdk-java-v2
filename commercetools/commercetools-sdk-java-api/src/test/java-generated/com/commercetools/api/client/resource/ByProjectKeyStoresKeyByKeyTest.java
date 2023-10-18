@@ -78,6 +78,11 @@ public class ByProjectKeyStoresKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/stores/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stores()
+                        .withKey("test_key")
                         .post(com.commercetools.api.models.store.StoreUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/stores/key=test_key?expand=expand", },
@@ -110,6 +115,7 @@ public class ByProjectKeyStoresKeyByKeyTest {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").stores().withKey("test_key").get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").stores().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withKey("test_key")

@@ -21,6 +21,10 @@ public class ByProjectKeyStatesRequestBuilder implements ByProjectKeyStatesReque
         return new ByProjectKeyStatesGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyStatesHead head() {
+        return new ByProjectKeyStatesHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyStatesPost post(com.commercetools.api.models.state.StateDraft stateDraft) {
         return new ByProjectKeyStatesPost(apiHttpClient, projectKey, stateDraft);
     }

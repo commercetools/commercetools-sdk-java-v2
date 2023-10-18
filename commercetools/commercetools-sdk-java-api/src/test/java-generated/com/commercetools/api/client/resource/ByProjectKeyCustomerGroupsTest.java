@@ -102,6 +102,13 @@ public class ByProjectKeyCustomerGroupsTest {
                         "get", "test_projectKey/customer-groups", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/customer-groups?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().head().createHttpRequest(),
+                        "head", "test_projectKey/customer-groups", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
                         .post(com.commercetools.api.models.customer_group.CustomerGroupDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/customer-groups?expand=expand", },
@@ -125,6 +132,8 @@ public class ByProjectKeyCustomerGroupsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .post(com.commercetools.api.models.customer_group.CustomerGroupDraft.of())

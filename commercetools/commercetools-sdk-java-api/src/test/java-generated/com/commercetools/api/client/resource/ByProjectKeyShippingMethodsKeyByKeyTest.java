@@ -77,6 +77,11 @@ public class ByProjectKeyShippingMethodsKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/shipping-methods/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/shipping-methods/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
@@ -122,6 +127,8 @@ public class ByProjectKeyShippingMethodsKeyByKeyTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().withKey("test_key").get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").shippingMethods().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .withKey("test_key")

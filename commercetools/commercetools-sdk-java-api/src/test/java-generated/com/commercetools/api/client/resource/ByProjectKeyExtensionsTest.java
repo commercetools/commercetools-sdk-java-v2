@@ -91,6 +91,13 @@ public class ByProjectKeyExtensionsTest {
                         "test_projectKey/extensions", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/extensions?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().head().createHttpRequest(),
+                        "head", "test_projectKey/extensions", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .extensions()
                         .post(com.commercetools.api.models.extension.ExtensionDraft.of())
                         .createHttpRequest(), "post", "test_projectKey/extensions", } };
     }
@@ -108,6 +115,8 @@ public class ByProjectKeyExtensionsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .post(com.commercetools.api.models.extension.ExtensionDraft.of()), } };

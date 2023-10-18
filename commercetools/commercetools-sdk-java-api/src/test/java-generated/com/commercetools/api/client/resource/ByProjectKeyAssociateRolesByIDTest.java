@@ -75,6 +75,11 @@ public class ByProjectKeyAssociateRolesByIDTest {
                         .withId("test_ID")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/associate-roles/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .associateRoles()
+                        .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/associate-roles/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .associateRoles()
@@ -118,6 +123,7 @@ public class ByProjectKeyAssociateRolesByIDTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").associateRoles().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").associateRoles().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .associateRoles()
                         .withId("test_ID")

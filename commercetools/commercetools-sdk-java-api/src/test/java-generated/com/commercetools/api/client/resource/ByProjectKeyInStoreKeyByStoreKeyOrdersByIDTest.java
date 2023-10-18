@@ -86,6 +86,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .orders()
                                 .withId("test_ID")
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/orders/test_ID", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .orders()
+                                .withId("test_ID")
                                 .post(com.commercetools.api.models.order.OrderUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -149,6 +157,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDTest {
                         .orders()
                         .withId("test_ID")
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .orders()
+                        .withId("test_ID")
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .orders()

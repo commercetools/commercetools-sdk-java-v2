@@ -87,6 +87,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsKeyByKeyTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .cartDiscounts()
                                 .withKey("test_key")
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/cart-discounts/key=test_key", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .cartDiscounts()
+                                .withKey("test_key")
                                 .post(com.commercetools.api.models.cart_discount.CartDiscountUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -143,6 +151,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsKeyByKeyTest {
                         .cartDiscounts()
                         .withKey("test_key")
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .cartDiscounts()
+                        .withKey("test_key")
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .cartDiscounts()

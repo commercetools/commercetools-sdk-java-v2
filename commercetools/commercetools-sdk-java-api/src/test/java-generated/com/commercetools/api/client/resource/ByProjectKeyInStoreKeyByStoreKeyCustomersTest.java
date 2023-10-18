@@ -129,6 +129,19 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .customers()
+                                .head()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/customers?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .customers()
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/in-store/key=test_storeKey/customers", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .customers()
                                 .post(com.commercetools.api.models.customer.CustomerDraft.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -184,6 +197,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .customers()
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .customers()
+                        .head()
+                        .withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .customers()
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .customers()

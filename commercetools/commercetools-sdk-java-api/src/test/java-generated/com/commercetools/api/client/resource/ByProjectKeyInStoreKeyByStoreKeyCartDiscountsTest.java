@@ -75,6 +75,21 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .cartDiscounts()
+                                .head()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/cart-discounts?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .cartDiscounts()
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/cart-discounts", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .cartDiscounts()
                                 .post(com.commercetools.api.models.cart_discount.CartDiscountDraft.of())
                                 .createHttpRequest(),
                         "post", "test_projectKey/in-store/key=test_storeKey/cart-discounts", } };
@@ -87,6 +102,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .cartDiscounts()
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .cartDiscounts()
+                        .head()
+                        .withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .cartDiscounts()
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .cartDiscounts()

@@ -21,6 +21,10 @@ public class ByProjectKeyShoppingListsRequestBuilder implements ByProjectKeyShop
         return new ByProjectKeyShoppingListsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyShoppingListsHead head() {
+        return new ByProjectKeyShoppingListsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyShoppingListsPost post(
             com.commercetools.api.models.shopping_list.ShoppingListDraft shoppingListDraft) {
         return new ByProjectKeyShoppingListsPost(apiHttpClient, projectKey, shoppingListDraft);

@@ -21,6 +21,10 @@ public class ByProjectKeyDiscountCodesRequestBuilder implements ByProjectKeyDisc
         return new ByProjectKeyDiscountCodesGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyDiscountCodesHead head() {
+        return new ByProjectKeyDiscountCodesHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyDiscountCodesPost post(
             com.commercetools.api.models.discount_code.DiscountCodeDraft discountCodeDraft) {
         return new ByProjectKeyDiscountCodesPost(apiHttpClient, projectKey, discountCodeDraft);

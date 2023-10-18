@@ -73,6 +73,9 @@ public class ByProjectKeyStatesByIDTest {
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").states().withId("test_ID").get().createHttpRequest(),
                         "get", "test_projectKey/states/test_ID", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").states().withId("test_ID").head().createHttpRequest(),
+                        "head", "test_projectKey/states/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
                         .withId("test_ID")
@@ -108,6 +111,7 @@ public class ByProjectKeyStatesByIDTest {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").states().withId("test_ID").get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").states().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").states().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
                         .withId("test_ID")

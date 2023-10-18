@@ -105,6 +105,13 @@ public class ByProjectKeyProductDiscountsTest {
                         "get", "test_projectKey/product-discounts", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/product-discounts?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productDiscounts().head().createHttpRequest(),
+                        "head", "test_projectKey/product-discounts", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productDiscounts()
                         .post(com.commercetools.api.models.product_discount.ProductDiscountDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/product-discounts?expand=expand", },
@@ -130,6 +137,9 @@ public class ByProjectKeyProductDiscountsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productDiscounts().get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productDiscounts().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productDiscounts().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productDiscounts()
                         .post(com.commercetools.api.models.product_discount.ProductDiscountDraft.of())

@@ -73,6 +73,9 @@ public class ByProjectKeyStoresByIDTest {
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").stores().withId("test_ID").get().createHttpRequest(),
                         "get", "test_projectKey/stores/test_ID", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").stores().withId("test_ID").head().createHttpRequest(),
+                        "head", "test_projectKey/stores/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withId("test_ID")
@@ -108,6 +111,7 @@ public class ByProjectKeyStoresByIDTest {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").stores().withId("test_ID").get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").stores().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .withId("test_ID")

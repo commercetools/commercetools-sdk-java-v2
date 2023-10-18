@@ -24,6 +24,10 @@ public class ByProjectKeyStagedQuotesKeyByKeyRequestBuilder {
         return new ByProjectKeyStagedQuotesKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyStagedQuotesKeyByKeyHead head() {
+        return new ByProjectKeyStagedQuotesKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyStagedQuotesKeyByKeyPost post(
             com.commercetools.api.models.staged_quote.StagedQuoteUpdate stagedQuoteUpdate) {
         return new ByProjectKeyStagedQuotesKeyByKeyPost(apiHttpClient, projectKey, key, stagedQuoteUpdate);

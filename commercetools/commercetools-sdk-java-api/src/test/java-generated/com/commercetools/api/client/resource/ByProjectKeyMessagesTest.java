@@ -91,6 +91,13 @@ public class ByProjectKeyMessagesTest {
                         .withPredicateVar("varName", "var.varName")
                         .createHttpRequest(), "get", "test_projectKey/messages?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").messages().get().createHttpRequest(), "get",
+                        "test_projectKey/messages", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .messages()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/messages?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().head().createHttpRequest(), "head",
                         "test_projectKey/messages", } };
     }
 
@@ -107,6 +114,8 @@ public class ByProjectKeyMessagesTest {
                         .messages()
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().get(), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().head(), } };
     }
 }

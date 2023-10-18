@@ -111,6 +111,14 @@ public class ByProjectKeyMePaymentsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/me/payments?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().head().createHttpRequest(),
+                        "head", "test_projectKey/me/payments", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .payments()
                         .post(com.commercetools.api.models.me.MyPaymentDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/me/payments?expand=expand", },
@@ -136,6 +144,8 @@ public class ByProjectKeyMePaymentsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()

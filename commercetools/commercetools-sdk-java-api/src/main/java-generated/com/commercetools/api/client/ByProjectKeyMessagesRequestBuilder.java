@@ -19,6 +19,10 @@ public class ByProjectKeyMessagesRequestBuilder {
         return new ByProjectKeyMessagesGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyMessagesHead head() {
+        return new ByProjectKeyMessagesHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyMessagesByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyMessagesByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }

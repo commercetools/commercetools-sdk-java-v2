@@ -76,7 +76,12 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdTest {
                         .carts()
                         .withCustomerId("test_customerId")
                         .get()
-                        .createHttpRequest(), "get", "test_projectKey/carts/customer-id=test_customerId", } };
+                        .createHttpRequest(), "get", "test_projectKey/carts/customer-id=test_customerId", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .carts()
+                        .withCustomerId("test_customerId")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/carts/customer-id=test_customerId", } };
     }
 
     @DataProvider
@@ -88,6 +93,8 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").carts().withCustomerId("test_customerId").get(), } };
+                        apiRoot.withProjectKey("test_projectKey").carts().withCustomerId("test_customerId").get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").carts().withCustomerId("test_customerId").head(), } };
     }
 }

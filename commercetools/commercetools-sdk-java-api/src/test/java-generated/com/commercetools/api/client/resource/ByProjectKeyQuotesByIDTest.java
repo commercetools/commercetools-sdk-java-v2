@@ -73,6 +73,9 @@ public class ByProjectKeyQuotesByIDTest {
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").quotes().withId("test_ID").get().createHttpRequest(),
                         "get", "test_projectKey/quotes/test_ID", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").quotes().withId("test_ID").head().createHttpRequest(),
+                        "head", "test_projectKey/quotes/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")
@@ -114,6 +117,7 @@ public class ByProjectKeyQuotesByIDTest {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").quotes().withId("test_ID").get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .withId("test_ID")

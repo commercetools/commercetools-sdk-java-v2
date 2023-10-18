@@ -74,13 +74,19 @@ public class ByProjectKeyMessagesByIDTest {
                         .messages()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "test_projectKey/messages/test_ID", } };
+                        .createHttpRequest(), "get", "test_projectKey/messages/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .messages()
+                        .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/messages/test_ID", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").messages().withId("test_ID").get().withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().withId("test_ID").get(), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().withId("test_ID").head(), } };
     }
 }

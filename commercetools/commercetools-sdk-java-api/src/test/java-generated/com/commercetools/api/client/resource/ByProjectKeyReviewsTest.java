@@ -94,6 +94,13 @@ public class ByProjectKeyReviewsTest {
                         "test_projectKey/reviews", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .reviews()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/reviews?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().head().createHttpRequest(), "head",
+                        "test_projectKey/reviews", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .reviews()
                         .post(com.commercetools.api.models.review.ReviewDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/reviews?expand=expand", },
@@ -117,6 +124,8 @@ public class ByProjectKeyReviewsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .reviews()
                         .post(com.commercetools.api.models.review.ReviewDraft.of())

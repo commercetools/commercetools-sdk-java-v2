@@ -105,6 +105,13 @@ public class ByProjectKeyAttributeGroupsTest {
                         "get", "test_projectKey/attribute-groups", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .attributeGroups()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/attribute-groups?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().head().createHttpRequest(),
+                        "head", "test_projectKey/attribute-groups", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .attributeGroups()
                         .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/attribute-groups?expand=expand", },
@@ -129,6 +136,8 @@ public class ByProjectKeyAttributeGroupsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .attributeGroups()
                         .post(com.commercetools.api.models.attribute_group.AttributeGroupDraft.of())

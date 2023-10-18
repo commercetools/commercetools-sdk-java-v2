@@ -129,6 +129,19 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .orders()
+                                .head()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/orders?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .orders()
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/in-store/key=test_storeKey/orders", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .orders()
                                 .post(com.commercetools.api.models.order.OrderFromCartDraft.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -182,6 +195,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .orders()
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .orders()
+                        .head()
+                        .withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .orders()
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .orders()

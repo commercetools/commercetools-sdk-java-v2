@@ -78,6 +78,11 @@ public class ByProjectKeyCategoriesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/categories/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .categories()
+                        .withId("test_ID")
                         .post(com.commercetools.api.models.category.CategoryUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/categories/test_ID?expand=expand", },
@@ -110,6 +115,7 @@ public class ByProjectKeyCategoriesByIDTest {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").categories().withId("test_ID").get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").categories().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").categories().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .withId("test_ID")

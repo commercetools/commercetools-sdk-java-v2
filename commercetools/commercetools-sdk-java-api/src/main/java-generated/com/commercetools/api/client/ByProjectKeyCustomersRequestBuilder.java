@@ -21,6 +21,10 @@ public class ByProjectKeyCustomersRequestBuilder implements ByProjectKeyCustomer
         return new ByProjectKeyCustomersGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyCustomersHead head() {
+        return new ByProjectKeyCustomersHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyCustomersPost post(com.commercetools.api.models.customer.CustomerDraft customerDraft) {
         return new ByProjectKeyCustomersPost(apiHttpClient, projectKey, customerDraft);
     }

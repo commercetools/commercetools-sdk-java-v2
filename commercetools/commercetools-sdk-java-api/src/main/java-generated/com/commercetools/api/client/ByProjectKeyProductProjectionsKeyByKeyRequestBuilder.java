@@ -22,4 +22,8 @@ public class ByProjectKeyProductProjectionsKeyByKeyRequestBuilder {
         return new ByProjectKeyProductProjectionsKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyProductProjectionsKeyByKeyHead head() {
+        return new ByProjectKeyProductProjectionsKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
 }

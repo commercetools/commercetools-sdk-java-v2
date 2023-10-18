@@ -24,6 +24,10 @@ public class ByProjectKeyMeQuoteRequestsKeyByKeyRequestBuilder {
         return new ByProjectKeyMeQuoteRequestsKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyMeQuoteRequestsKeyByKeyHead head() {
+        return new ByProjectKeyMeQuoteRequestsKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyMeQuoteRequestsKeyByKeyPost post(
             com.commercetools.api.models.me.MyQuoteRequestUpdate myQuoteRequestUpdate) {
         return new ByProjectKeyMeQuoteRequestsKeyByKeyPost(apiHttpClient, projectKey, key, myQuoteRequestUpdate);

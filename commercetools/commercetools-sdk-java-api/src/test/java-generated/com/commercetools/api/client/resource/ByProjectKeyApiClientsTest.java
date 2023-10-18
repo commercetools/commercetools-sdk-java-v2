@@ -96,6 +96,13 @@ public class ByProjectKeyApiClientsTest {
                         "test_projectKey/api-clients", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .apiClients()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/api-clients?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().head().createHttpRequest(),
+                        "head", "test_projectKey/api-clients", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .apiClients()
                         .post(com.commercetools.api.models.api_client.ApiClientDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/api-clients?expand=expand", },
@@ -119,6 +126,8 @@ public class ByProjectKeyApiClientsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .apiClients()
                         .post(com.commercetools.api.models.api_client.ApiClientDraft.of())

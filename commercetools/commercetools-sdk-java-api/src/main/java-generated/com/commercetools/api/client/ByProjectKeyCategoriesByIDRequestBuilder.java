@@ -24,6 +24,10 @@ public class ByProjectKeyCategoriesByIDRequestBuilder {
         return new ByProjectKeyCategoriesByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyCategoriesByIDHead head() {
+        return new ByProjectKeyCategoriesByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyCategoriesByIDPost post(com.commercetools.api.models.category.CategoryUpdate categoryUpdate) {
         return new ByProjectKeyCategoriesByIDPost(apiHttpClient, projectKey, ID, categoryUpdate);
     }

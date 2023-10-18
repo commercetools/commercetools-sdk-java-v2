@@ -78,6 +78,11 @@ public class ByProjectKeyStagedQuotesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/staged-quotes/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stagedQuotes()
+                        .withId("test_ID")
                         .post(com.commercetools.api.models.staged_quote.StagedQuoteUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/staged-quotes/test_ID?expand=expand", },
@@ -124,6 +129,7 @@ public class ByProjectKeyStagedQuotesByIDTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .withId("test_ID")

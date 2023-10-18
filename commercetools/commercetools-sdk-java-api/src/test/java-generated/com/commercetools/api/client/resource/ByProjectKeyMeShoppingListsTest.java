@@ -113,6 +113,15 @@ public class ByProjectKeyMeShoppingListsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .shoppingLists()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/me/shopping-lists?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().shoppingLists().head().createHttpRequest(),
+                        "head", "test_projectKey/me/shopping-lists", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .shoppingLists()
                         .post(com.commercetools.api.models.me.MyShoppingListDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/me/shopping-lists?expand=expand", },
@@ -141,6 +150,9 @@ public class ByProjectKeyMeShoppingListsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().shoppingLists().get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().shoppingLists().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().shoppingLists().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .shoppingLists()

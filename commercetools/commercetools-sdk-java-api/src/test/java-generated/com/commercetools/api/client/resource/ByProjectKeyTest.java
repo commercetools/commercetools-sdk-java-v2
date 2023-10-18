@@ -66,6 +66,8 @@ public class ByProjectKeyTest {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").get().createHttpRequest(), "get",
                         "test_projectKey", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").head().createHttpRequest(), "head",
+                        "test_projectKey", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .post(com.commercetools.api.models.project.ProjectUpdate.of())
                         .createHttpRequest(), "post", "test_projectKey", } };
@@ -74,6 +76,7 @@ public class ByProjectKeyTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .post(com.commercetools.api.models.project.ProjectUpdate.of()), } };
     }

@@ -78,6 +78,11 @@ public class ByProjectKeyDiscountCodesByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/discount-codes/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .withId("test_ID")
                         .post(com.commercetools.api.models.discount_code.DiscountCodeUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/discount-codes/test_ID?expand=expand", },
@@ -124,6 +129,7 @@ public class ByProjectKeyDiscountCodesByIDTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
                         .withId("test_ID")

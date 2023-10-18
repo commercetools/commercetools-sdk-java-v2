@@ -75,6 +75,11 @@ public class ByProjectKeyCategoriesKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/categories/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .categories()
+                        .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/categories/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .categories()
@@ -118,6 +123,7 @@ public class ByProjectKeyCategoriesKeyByKeyTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").categories().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").categories().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .withKey("test_key")

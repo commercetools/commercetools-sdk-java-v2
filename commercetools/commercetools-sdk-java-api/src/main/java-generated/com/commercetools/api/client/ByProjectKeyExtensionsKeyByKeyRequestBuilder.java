@@ -24,6 +24,10 @@ public class ByProjectKeyExtensionsKeyByKeyRequestBuilder {
         return new ByProjectKeyExtensionsKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyExtensionsKeyByKeyHead head() {
+        return new ByProjectKeyExtensionsKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyExtensionsKeyByKeyPost post(
             com.commercetools.api.models.extension.ExtensionUpdate extensionUpdate) {
         return new ByProjectKeyExtensionsKeyByKeyPost(apiHttpClient, projectKey, key, extensionUpdate);

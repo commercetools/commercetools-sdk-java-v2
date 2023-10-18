@@ -24,6 +24,10 @@ public class ByProjectKeyCustomerGroupsKeyByKeyRequestBuilder {
         return new ByProjectKeyCustomerGroupsKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyCustomerGroupsKeyByKeyHead head() {
+        return new ByProjectKeyCustomerGroupsKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyCustomerGroupsKeyByKeyPost post(
             com.commercetools.api.models.customer_group.CustomerGroupUpdate customerGroupUpdate) {
         return new ByProjectKeyCustomerGroupsKeyByKeyPost(apiHttpClient, projectKey, key, customerGroupUpdate);

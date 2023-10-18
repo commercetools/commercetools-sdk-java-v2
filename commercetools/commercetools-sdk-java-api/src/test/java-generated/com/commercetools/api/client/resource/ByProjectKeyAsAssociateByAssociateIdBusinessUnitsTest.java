@@ -141,6 +141,23 @@ public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsTest {
                                 .asAssociate()
                                 .withAssociateIdValue("test_associateId")
                                 .businessUnits()
+                                .head()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/as-associate/test_associateId/business-units?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .businessUnits()
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/as-associate/test_associateId/business-units", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .businessUnits()
                                 .post(com.commercetools.api.models.business_unit.CompanyDraft.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -205,6 +222,17 @@ public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsTest {
                         .withAssociateIdValue("test_associateId")
                         .businessUnits()
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .businessUnits()
+                        .head()
+                        .withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .businessUnits()
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .asAssociate()
                         .withAssociateIdValue("test_associateId")

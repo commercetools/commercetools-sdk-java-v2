@@ -24,6 +24,10 @@ public class ByProjectKeyMeBusinessUnitsKeyByKeyRequestBuilder {
         return new ByProjectKeyMeBusinessUnitsKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyMeBusinessUnitsKeyByKeyHead head() {
+        return new ByProjectKeyMeBusinessUnitsKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyMeBusinessUnitsKeyByKeyPost post(
             com.commercetools.api.models.me.MyBusinessUnitUpdate myBusinessUnitUpdate) {
         return new ByProjectKeyMeBusinessUnitsKeyByKeyPost(apiHttpClient, projectKey, key, myBusinessUnitUpdate);

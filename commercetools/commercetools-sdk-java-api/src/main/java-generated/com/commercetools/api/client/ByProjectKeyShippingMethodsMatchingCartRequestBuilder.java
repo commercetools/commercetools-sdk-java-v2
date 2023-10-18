@@ -20,4 +20,8 @@ public class ByProjectKeyShippingMethodsMatchingCartRequestBuilder {
         return new ByProjectKeyShippingMethodsMatchingCartGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyShippingMethodsMatchingCartHead head() {
+        return new ByProjectKeyShippingMethodsMatchingCartHead(apiHttpClient, projectKey);
+    }
+
 }

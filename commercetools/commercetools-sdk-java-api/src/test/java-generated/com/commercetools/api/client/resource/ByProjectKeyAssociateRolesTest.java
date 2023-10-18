@@ -105,6 +105,13 @@ public class ByProjectKeyAssociateRolesTest {
                         "get", "test_projectKey/associate-roles", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .associateRoles()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/associate-roles?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").associateRoles().head().createHttpRequest(),
+                        "head", "test_projectKey/associate-roles", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .associateRoles()
                         .post(com.commercetools.api.models.associate_role.AssociateRoleDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/associate-roles?expand=expand", },
@@ -128,6 +135,8 @@ public class ByProjectKeyAssociateRolesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").associateRoles().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").associateRoles().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").associateRoles().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .associateRoles()
                         .post(com.commercetools.api.models.associate_role.AssociateRoleDraft.of())

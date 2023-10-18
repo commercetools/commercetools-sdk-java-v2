@@ -24,6 +24,10 @@ public class ByProjectKeyAssociateRolesKeyByKeyRequestBuilder {
         return new ByProjectKeyAssociateRolesKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyAssociateRolesKeyByKeyHead head() {
+        return new ByProjectKeyAssociateRolesKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyAssociateRolesKeyByKeyPost post(
             com.commercetools.api.models.associate_role.AssociateRoleUpdate associateRoleUpdate) {
         return new ByProjectKeyAssociateRolesKeyByKeyPost(apiHttpClient, projectKey, key, associateRoleUpdate);

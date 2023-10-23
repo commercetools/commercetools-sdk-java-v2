@@ -23,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ReferencedResourceNotFoundError referencedResourceNotFoundError = ReferencedResourceNotFoundError.builder()
  *             .message("{message}")
- *             .typeId(ReferenceTypeId.ASSOCIATE_ROLE)
+ *             .typeId(ReferenceTypeId.APPROVAL_FLOW)
  *             .build()
  * </code></pre>
  * </div>

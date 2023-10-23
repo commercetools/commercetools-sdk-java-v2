@@ -17,6 +17,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReferenceTypeId extends JsonEnum {
 
     /**
+    	<p>References an <a href="ctp:api:type:ApprovalFlow">ApprovalFlow</a>.</p>
+
+    */
+    ReferenceTypeId APPROVAL_FLOW = ReferenceTypeIdEnum.APPROVAL_FLOW;
+    /**
+    	<p>References an <a href="ctp:api:type:ApprovalRule">ApprovalRule</a>.</p>
+
+    */
+    ReferenceTypeId APPROVAL_RULE = ReferenceTypeIdEnum.APPROVAL_RULE;
+    /**
     	<p>References an <a href="ctp:api:type:AssociateRole">AssociateRole</a>.</p>
 
     */
@@ -206,6 +216,16 @@ public interface ReferenceTypeId extends JsonEnum {
      * possible values of ReferenceTypeId
      */
     enum ReferenceTypeIdEnum implements ReferenceTypeId {
+        /**
+         * approval-flow
+         */
+        APPROVAL_FLOW("approval-flow"),
+
+        /**
+         * approval-rule
+         */
+        APPROVAL_RULE("approval-rule"),
+
         /**
          * associate-role
          */

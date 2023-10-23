@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     GraphQLMaxResourceLimitExceededError graphQLMaxResourceLimitExceededError = GraphQLMaxResourceLimitExceededError.builder()
- *             .exceededResource(ReferenceTypeId.ASSOCIATE_ROLE)
+ *             .exceededResource(ReferenceTypeId.APPROVAL_FLOW)
  *             .build()
  * </code></pre>
  * </div>

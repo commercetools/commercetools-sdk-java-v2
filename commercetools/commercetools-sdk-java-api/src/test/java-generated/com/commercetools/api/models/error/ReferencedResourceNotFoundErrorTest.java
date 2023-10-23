@@ -26,7 +26,7 @@ public class ReferencedResourceNotFoundErrorTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { ReferencedResourceNotFoundError.builder().message("message") },
                 new Object[] { ReferencedResourceNotFoundError.builder()
-                        .typeId(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role")) },
+                        .typeId(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow")) },
                 new Object[] { ReferencedResourceNotFoundError.builder().id("id") },
                 new Object[] { ReferencedResourceNotFoundError.builder().key("key") } };
     }
@@ -41,9 +41,9 @@ public class ReferencedResourceNotFoundErrorTest {
     @Test
     public void typeId() {
         ReferencedResourceNotFoundError value = ReferencedResourceNotFoundError.of();
-        value.setTypeId(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+        value.setTypeId(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
         Assertions.assertThat(value.getTypeId())
-                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
     }
 
     @Test

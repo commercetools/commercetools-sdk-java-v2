@@ -27,7 +27,7 @@ public class ReferenceExistsErrorTest {
         return new Object[][] { new Object[] { ReferenceExistsError.builder().message("message") },
                 new Object[] { ReferenceExistsError.builder()
                         .referencedBy(
-                            com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role")) } };
+                            com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow")) } };
     }
 
     @Test
@@ -40,8 +40,8 @@ public class ReferenceExistsErrorTest {
     @Test
     public void referencedBy() {
         ReferenceExistsError value = ReferenceExistsError.of();
-        value.setReferencedBy(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+        value.setReferencedBy(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
         Assertions.assertThat(value.getReferencedBy())
-                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
     }
 }

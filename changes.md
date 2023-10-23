@@ -1,6 +1,18 @@
 **Api changes**
 
 <details>
+<summary>Added Enum(s)</summary>
+
+- added enum `approval-flow` to type `ReferenceTypeId`
+- added enum `approval-rule` to type `ReferenceTypeId`
+- added enum `approval-flow` to type `ChangeSubscriptionResourceTypeId`
+- added enum `approval-rule` to type `ChangeSubscriptionResourceTypeId`
+- added enum `approval-flow` to type `MessageSubscriptionResourceTypeId`
+- added enum `approval-rule` to type `MessageSubscriptionResourceTypeId`
+</details>
+
+
+<details>
 <summary>Added Method(s)</summary>
 
 - added method `apiRoot.withProjectKey().head()`

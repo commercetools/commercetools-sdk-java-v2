@@ -24,6 +24,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet(apiHttpClient, projectKey, storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyMeOrdersHead head() {
+        return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersHead(apiHttpClient, projectKey, storeKey);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost post(
             com.commercetools.api.models.me.MyOrderFromCartDraft myOrderFromCartDraft) {
         return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost(apiHttpClient, projectKey, storeKey,

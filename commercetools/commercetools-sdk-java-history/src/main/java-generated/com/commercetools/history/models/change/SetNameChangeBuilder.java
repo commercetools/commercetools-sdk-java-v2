@@ -2,7 +2,6 @@
 package com.commercetools.history.models.change;
 
 import java.util.*;
-import java.util.function.Function;
 
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -15,8 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetNameChange setNameChange = SetNameChange.builder()
  *             .change("{change}")
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,9 +25,9 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
 
     private String change;
 
-    private com.commercetools.history.models.common.LocalizedString previousValue;
+    private String previousValue;
 
-    private com.commercetools.history.models.common.LocalizedString nextValue;
+    private String nextValue;
 
     /**
      * set the value to the change
@@ -43,61 +42,12 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
 
     /**
      *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public SetNameChangeBuilder previousValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
-     * @param builder function to build the previousValue value
-     * @return Builder
-     */
-
-    public SetNameChangeBuilder withPreviousValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
-        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Value before the change.</p>
      * @param previousValue value to be set
      * @return Builder
      */
 
-    public SetNameChangeBuilder previousValue(
-            final com.commercetools.history.models.common.LocalizedString previousValue) {
+    public SetNameChangeBuilder previousValue(final String previousValue) {
         this.previousValue = previousValue;
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetNameChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public SetNameChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -107,7 +57,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
      * @return Builder
      */
 
-    public SetNameChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
+    public SetNameChangeBuilder nextValue(final String nextValue) {
         this.nextValue = nextValue;
         return this;
     }
@@ -126,7 +76,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
      * @return previousValue
      */
 
-    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
+    public String getPreviousValue() {
         return this.previousValue;
     }
 
@@ -135,7 +85,7 @@ public class SetNameChangeBuilder implements Builder<SetNameChange> {
      * @return nextValue
      */
 
-    public com.commercetools.history.models.common.LocalizedString getNextValue() {
+    public String getNextValue() {
         return this.nextValue;
     }
 

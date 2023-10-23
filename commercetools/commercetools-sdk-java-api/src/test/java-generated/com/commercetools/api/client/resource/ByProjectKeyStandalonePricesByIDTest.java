@@ -77,6 +77,11 @@ public class ByProjectKeyStandalonePricesByIDTest {
                         .withId("test_ID")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/standalone-prices/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .standalonePrices()
+                        .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/standalone-prices/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .standalonePrices()
@@ -122,6 +127,7 @@ public class ByProjectKeyStandalonePricesByIDTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").standalonePrices().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").standalonePrices().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .withId("test_ID")

@@ -27,7 +27,7 @@ public class MaxResourceLimitExceededErrorTest {
         return new Object[][] { new Object[] { MaxResourceLimitExceededError.builder().message("message") },
                 new Object[] { MaxResourceLimitExceededError.builder()
                         .exceededResource(
-                            com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role")) } };
+                            com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow")) } };
     }
 
     @Test
@@ -40,8 +40,8 @@ public class MaxResourceLimitExceededErrorTest {
     @Test
     public void exceededResource() {
         MaxResourceLimitExceededError value = MaxResourceLimitExceededError.of();
-        value.setExceededResource(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+        value.setExceededResource(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
         Assertions.assertThat(value.getExceededResource())
-                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
     }
 }

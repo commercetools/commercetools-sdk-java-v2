@@ -21,6 +21,10 @@ public class ByProjectKeyInventoryRequestBuilder implements ByProjectKeyInventor
         return new ByProjectKeyInventoryGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyInventoryHead head() {
+        return new ByProjectKeyInventoryHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyInventoryPost post(
             com.commercetools.api.models.inventory.InventoryEntryDraft inventoryEntryDraft) {
         return new ByProjectKeyInventoryPost(apiHttpClient, projectKey, inventoryEntryDraft);

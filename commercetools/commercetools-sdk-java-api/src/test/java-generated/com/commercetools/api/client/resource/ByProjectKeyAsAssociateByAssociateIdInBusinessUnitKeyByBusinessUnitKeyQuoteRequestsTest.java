@@ -156,6 +156,27 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                                 .withAssociateIdValue("test_associateId")
                                 .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                                 .quoteRequests()
+                                .head()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "head",
+                        "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/quote-requests?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                                .quoteRequests()
+                                .head()
+                                .createHttpRequest(),
+                        "head",
+                        "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/quote-requests", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                                .quoteRequests()
                                 .post(com.commercetools.api.models.quote_request.QuoteRequestDraft.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -231,6 +252,19 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                         .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                         .quoteRequests()
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                        .quoteRequests()
+                        .head()
+                        .withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                        .quoteRequests()
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .asAssociate()
                         .withAssociateIdValue("test_associateId")

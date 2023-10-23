@@ -149,6 +149,27 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                                 .get()
                                 .createHttpRequest(),
                         "get",
+                        "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/quotes", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                                .quotes()
+                                .head()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "head",
+                        "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/quotes?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                                .quotes()
+                                .head()
+                                .createHttpRequest(),
+                        "head",
                         "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/quotes", } };
     }
 
@@ -209,6 +230,19 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                         .withAssociateIdValue("test_associateId")
                         .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                         .quotes()
-                        .get(), } };
+                        .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                        .quotes()
+                        .head()
+                        .withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                        .quotes()
+                        .head(), } };
     }
 }

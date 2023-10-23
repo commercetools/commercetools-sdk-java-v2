@@ -20,4 +20,8 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder {
         return new ByProjectKeyShippingMethodsMatchingOrdereditGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyShippingMethodsMatchingOrdereditHead head() {
+        return new ByProjectKeyShippingMethodsMatchingOrdereditHead(apiHttpClient, projectKey);
+    }
+
 }

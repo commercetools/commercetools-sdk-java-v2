@@ -77,6 +77,11 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/shopping-lists/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shoppingLists()
+                        .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/shopping-lists/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shoppingLists()
@@ -130,6 +135,7 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").shoppingLists().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").shoppingLists().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withKey("test_key")

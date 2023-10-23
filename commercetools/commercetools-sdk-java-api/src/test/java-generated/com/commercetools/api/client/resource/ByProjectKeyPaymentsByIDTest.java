@@ -78,6 +78,11 @@ public class ByProjectKeyPaymentsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .payments()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/payments/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .payments()
+                        .withId("test_ID")
                         .post(com.commercetools.api.models.payment.PaymentUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/payments/test_ID?expand=expand", },
@@ -116,6 +121,7 @@ public class ByProjectKeyPaymentsByIDTest {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").payments().withId("test_ID").get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").payments().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").payments().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .payments()
                         .withId("test_ID")

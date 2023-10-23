@@ -25,14 +25,14 @@ public class GraphQLReferenceExistsErrorTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { GraphQLReferenceExistsError.builder()
-                .referencedBy(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role")) } };
+                .referencedBy(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow")) } };
     }
 
     @Test
     public void referencedBy() {
         GraphQLReferenceExistsError value = GraphQLReferenceExistsError.of();
-        value.setReferencedBy(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+        value.setReferencedBy(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
         Assertions.assertThat(value.getReferencedBy())
-                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
     }
 }

@@ -21,6 +21,10 @@ public class ByProjectKeyTypesRequestBuilder implements ByProjectKeyTypesRequest
         return new ByProjectKeyTypesGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyTypesHead head() {
+        return new ByProjectKeyTypesHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyTypesPost post(com.commercetools.api.models.type.TypeDraft typeDraft) {
         return new ByProjectKeyTypesPost(apiHttpClient, projectKey, typeDraft);
     }

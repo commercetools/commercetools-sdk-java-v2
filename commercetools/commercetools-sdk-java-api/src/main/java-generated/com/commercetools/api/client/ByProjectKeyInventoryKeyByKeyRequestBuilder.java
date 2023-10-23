@@ -24,6 +24,10 @@ public class ByProjectKeyInventoryKeyByKeyRequestBuilder {
         return new ByProjectKeyInventoryKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyInventoryKeyByKeyHead head() {
+        return new ByProjectKeyInventoryKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyInventoryKeyByKeyPost post(
             com.commercetools.api.models.inventory.InventoryEntryUpdate inventoryEntryUpdate) {
         return new ByProjectKeyInventoryKeyByKeyPost(apiHttpClient, projectKey, key, inventoryEntryUpdate);

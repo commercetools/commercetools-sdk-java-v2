@@ -77,6 +77,11 @@ public class ByProjectKeyTaxCategoriesKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/tax-categories/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/tax-categories/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .taxCategories()
@@ -122,6 +127,7 @@ public class ByProjectKeyTaxCategoriesKeyByKeyTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .withKey("test_key")

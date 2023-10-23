@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Check if Products exist. Responds with a <code>200 OK</code> status if any Products match the Query Predicate, or <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if a Product exists for a given Query Predicate. Returns a <code>200 OK</code> status if any Products match the Query Predicate or a <code>404 Not Found</code> otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

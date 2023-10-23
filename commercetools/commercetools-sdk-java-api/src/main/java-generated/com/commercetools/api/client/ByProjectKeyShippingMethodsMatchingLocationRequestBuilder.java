@@ -20,4 +20,8 @@ public class ByProjectKeyShippingMethodsMatchingLocationRequestBuilder {
         return new ByProjectKeyShippingMethodsMatchingLocationGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyShippingMethodsMatchingLocationHead head() {
+        return new ByProjectKeyShippingMethodsMatchingLocationHead(apiHttpClient, projectKey);
+    }
+
 }

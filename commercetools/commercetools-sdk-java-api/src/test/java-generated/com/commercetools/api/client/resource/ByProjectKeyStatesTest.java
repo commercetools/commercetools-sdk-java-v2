@@ -92,6 +92,13 @@ public class ByProjectKeyStatesTest {
                         "test_projectKey/states", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/states?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").states().head().createHttpRequest(), "head",
+                        "test_projectKey/states", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .states()
                         .post(com.commercetools.api.models.state.StateDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/states?expand=expand", },
@@ -115,6 +122,8 @@ public class ByProjectKeyStatesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").states().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").states().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").states().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
                         .post(com.commercetools.api.models.state.StateDraft.of())

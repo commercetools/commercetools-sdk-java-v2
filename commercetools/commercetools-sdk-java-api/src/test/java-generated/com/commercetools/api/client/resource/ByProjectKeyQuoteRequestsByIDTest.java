@@ -78,6 +78,11 @@ public class ByProjectKeyQuoteRequestsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/quote-requests/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quoteRequests()
+                        .withId("test_ID")
                         .post(com.commercetools.api.models.quote_request.QuoteRequestUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/quote-requests/test_ID?expand=expand", },
@@ -124,6 +129,7 @@ public class ByProjectKeyQuoteRequestsByIDTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").quoteRequests().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").quoteRequests().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quoteRequests()
                         .withId("test_ID")

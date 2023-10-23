@@ -21,6 +21,10 @@ public class ByProjectKeyChannelsRequestBuilder implements ByProjectKeyChannelsR
         return new ByProjectKeyChannelsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyChannelsHead head() {
+        return new ByProjectKeyChannelsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyChannelsPost post(com.commercetools.api.models.channel.ChannelDraft channelDraft) {
         return new ByProjectKeyChannelsPost(apiHttpClient, projectKey, channelDraft);
     }

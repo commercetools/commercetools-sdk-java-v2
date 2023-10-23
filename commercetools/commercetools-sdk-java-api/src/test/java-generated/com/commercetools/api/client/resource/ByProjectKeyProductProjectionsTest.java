@@ -149,7 +149,15 @@ public class ByProjectKeyProductProjectionsTest {
                                 .createHttpRequest(),
                         "get", "test_projectKey/product-projections?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get().createHttpRequest(),
-                        "get", "test_projectKey/product-projections", } };
+                        "get", "test_projectKey/product-projections", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/product-projections?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productProjections().head().createHttpRequest(),
+                        "head", "test_projectKey/product-projections", } };
     }
 
     @DataProvider
@@ -193,6 +201,9 @@ public class ByProjectKeyProductProjectionsTest {
                         .productProjections()
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get(), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productProjections().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().head(), } };
     }
 }

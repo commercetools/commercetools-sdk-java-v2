@@ -87,6 +87,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .shoppingLists()
                                 .withKey("test_key")
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/shopping-lists/key=test_key", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .shoppingLists()
+                                .withKey("test_key")
                                 .post(com.commercetools.api.models.shopping_list.ShoppingListUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -153,6 +161,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyTest {
                         .shoppingLists()
                         .withKey("test_key")
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .shoppingLists()
+                        .withKey("test_key")
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()

@@ -21,6 +21,10 @@ public class ByProjectKeyStoresRequestBuilder implements ByProjectKeyStoresReque
         return new ByProjectKeyStoresGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyStoresHead head() {
+        return new ByProjectKeyStoresHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyStoresPost post(com.commercetools.api.models.store.StoreDraft storeDraft) {
         return new ByProjectKeyStoresPost(apiHttpClient, projectKey, storeDraft);
     }

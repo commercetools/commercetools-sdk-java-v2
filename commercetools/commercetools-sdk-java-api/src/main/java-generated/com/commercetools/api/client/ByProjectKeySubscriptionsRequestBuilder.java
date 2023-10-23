@@ -21,6 +21,10 @@ public class ByProjectKeySubscriptionsRequestBuilder implements ByProjectKeySubs
         return new ByProjectKeySubscriptionsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeySubscriptionsHead head() {
+        return new ByProjectKeySubscriptionsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeySubscriptionsPost post(
             com.commercetools.api.models.subscription.SubscriptionDraft subscriptionDraft) {
         return new ByProjectKeySubscriptionsPost(apiHttpClient, projectKey, subscriptionDraft);

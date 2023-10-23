@@ -89,6 +89,11 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyHead head() {
+        return with().head();
+    }
+
+    @Override
     public ByProjectKeyPost post(com.commercetools.api.models.project.ProjectUpdate projectUpdate) {
         return with().post(projectUpdate);
     }

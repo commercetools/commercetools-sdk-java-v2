@@ -81,6 +81,12 @@ public class ByProjectKeyOrdersEditsByIDTest {
                         .orders()
                         .edits()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/orders/edits/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .edits()
+                        .withId("test_ID")
                         .post(com.commercetools.api.models.order_edit.OrderEditUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/orders/edits/test_ID?expand=expand", },
@@ -122,6 +128,7 @@ public class ByProjectKeyOrdersEditsByIDTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()

@@ -77,6 +77,11 @@ public class ByProjectKeyAttributeGroupsKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/attribute-groups/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .attributeGroups()
+                        .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/attribute-groups/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .attributeGroups()
@@ -122,6 +127,8 @@ public class ByProjectKeyAttributeGroupsKeyByKeyTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").attributeGroups().withKey("test_key").get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").attributeGroups().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .attributeGroups()
                         .withKey("test_key")

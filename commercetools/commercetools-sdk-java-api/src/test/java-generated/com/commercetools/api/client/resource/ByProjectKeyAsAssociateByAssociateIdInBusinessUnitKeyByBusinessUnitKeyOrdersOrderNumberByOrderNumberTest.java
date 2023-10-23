@@ -93,6 +93,17 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                                 .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
+                                .head()
+                                .createHttpRequest(),
+                        "head",
+                        "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/orders/order-number=test_orderNumber", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                                .orders()
+                                .withOrderNumber("test_orderNumber")
                                 .post(com.commercetools.api.models.order.OrderUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -129,6 +140,13 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                         .orders()
                         .withOrderNumber("test_orderNumber")
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                        .orders()
+                        .withOrderNumber("test_orderNumber")
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .asAssociate()
                         .withAssociateIdValue("test_associateId")

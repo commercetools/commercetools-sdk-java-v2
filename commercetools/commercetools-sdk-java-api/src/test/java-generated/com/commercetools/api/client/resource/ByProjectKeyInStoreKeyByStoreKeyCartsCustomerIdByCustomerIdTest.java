@@ -81,7 +81,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdTest {
                                 .withCustomerId("test_customerId")
                                 .get()
                                 .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/carts/customer-id=test_customerId", } };
+                        "get", "test_projectKey/in-store/key=test_storeKey/carts/customer-id=test_customerId", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .carts()
+                                .withCustomerId("test_customerId")
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/carts/customer-id=test_customerId", } };
     }
 
     @DataProvider
@@ -97,6 +105,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .carts()
                         .withCustomerId("test_customerId")
-                        .get(), } };
+                        .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .carts()
+                        .withCustomerId("test_customerId")
+                        .head(), } };
     }
 }

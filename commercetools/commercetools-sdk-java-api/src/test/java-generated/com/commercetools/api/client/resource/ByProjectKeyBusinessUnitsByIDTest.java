@@ -78,6 +78,11 @@ public class ByProjectKeyBusinessUnitsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/business-units/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .businessUnits()
+                        .withId("test_ID")
                         .post(com.commercetools.api.models.business_unit.BusinessUnitUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/business-units/test_ID?expand=expand", },
@@ -116,6 +121,7 @@ public class ByProjectKeyBusinessUnitsByIDTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .withId("test_ID")

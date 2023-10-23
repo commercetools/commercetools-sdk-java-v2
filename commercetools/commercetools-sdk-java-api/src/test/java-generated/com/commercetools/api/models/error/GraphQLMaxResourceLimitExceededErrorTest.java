@@ -26,14 +26,14 @@ public class GraphQLMaxResourceLimitExceededErrorTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { GraphQLMaxResourceLimitExceededError.builder()
-                .exceededResource(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role")) } };
+                .exceededResource(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow")) } };
     }
 
     @Test
     public void exceededResource() {
         GraphQLMaxResourceLimitExceededError value = GraphQLMaxResourceLimitExceededError.of();
-        value.setExceededResource(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+        value.setExceededResource(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
         Assertions.assertThat(value.getExceededResource())
-                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
     }
 }

@@ -21,6 +21,10 @@ public class ByProjectKeyOrdersRequestBuilder implements ByProjectKeyOrdersReque
         return new ByProjectKeyOrdersGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyOrdersHead head() {
+        return new ByProjectKeyOrdersHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyOrdersPost post(com.commercetools.api.models.order.OrderFromCartDraft orderFromCartDraft) {
         return new ByProjectKeyOrdersPost(apiHttpClient, projectKey, orderFromCartDraft);
     }

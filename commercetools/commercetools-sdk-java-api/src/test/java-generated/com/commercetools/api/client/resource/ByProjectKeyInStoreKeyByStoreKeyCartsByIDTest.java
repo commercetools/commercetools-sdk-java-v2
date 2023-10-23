@@ -86,6 +86,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsByIDTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .carts()
                                 .withId("test_ID")
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/carts/test_ID", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .carts()
+                                .withId("test_ID")
                                 .post(com.commercetools.api.models.cart.CartUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -149,6 +157,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsByIDTest {
                         .carts()
                         .withId("test_ID")
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .carts()
+                        .withId("test_ID")
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .carts()

@@ -24,6 +24,10 @@ public class ByProjectKeyReviewsKeyByKeyRequestBuilder {
         return new ByProjectKeyReviewsKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyReviewsKeyByKeyHead head() {
+        return new ByProjectKeyReviewsKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyReviewsKeyByKeyPost post(com.commercetools.api.models.review.ReviewUpdate reviewUpdate) {
         return new ByProjectKeyReviewsKeyByKeyPost(apiHttpClient, projectKey, key, reviewUpdate);
     }

@@ -95,6 +95,13 @@ public class ByProjectKeySubscriptionsTest {
                         "get", "test_projectKey/subscriptions", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/subscriptions?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().head().createHttpRequest(),
+                        "head", "test_projectKey/subscriptions", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
                         .post(com.commercetools.api.models.subscription.SubscriptionDraft.of())
                         .createHttpRequest(), "post", "test_projectKey/subscriptions", } };
     }
@@ -112,6 +119,8 @@ public class ByProjectKeySubscriptionsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .post(com.commercetools.api.models.subscription.SubscriptionDraft.of()), } };

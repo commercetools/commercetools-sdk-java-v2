@@ -90,6 +90,15 @@ public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsKeyByKeyTest {
                                 .withAssociateIdValue("test_associateId")
                                 .businessUnits()
                                 .withKey("test_key")
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/as-associate/test_associateId/business-units/key=test_key", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .businessUnits()
+                                .withKey("test_key")
                                 .post(com.commercetools.api.models.business_unit.BusinessUnitUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -122,6 +131,12 @@ public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsKeyByKeyTest {
                         .businessUnits()
                         .withKey("test_key")
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .businessUnits()
+                        .withKey("test_key")
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .asAssociate()
                         .withAssociateIdValue("test_associateId")

@@ -30,6 +30,11 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
             apiHttpClient, projectKey, associateId, businessUnitKey, orderNumber);
     }
 
+    public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyOrdersOrderNumberByOrderNumberHead head() {
+        return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyOrdersOrderNumberByOrderNumberHead(
+            apiHttpClient, projectKey, associateId, businessUnitKey, orderNumber);
+    }
+
     public ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyOrdersOrderNumberByOrderNumberPost post(
             com.commercetools.api.models.order.OrderUpdate orderUpdate) {
         return new ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyOrdersOrderNumberByOrderNumberPost(

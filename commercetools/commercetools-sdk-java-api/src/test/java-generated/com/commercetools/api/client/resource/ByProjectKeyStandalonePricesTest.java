@@ -105,6 +105,13 @@ public class ByProjectKeyStandalonePricesTest {
                         "get", "test_projectKey/standalone-prices", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/standalone-prices?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").standalonePrices().head().createHttpRequest(),
+                        "head", "test_projectKey/standalone-prices", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .standalonePrices()
                         .post(com.commercetools.api.models.standalone_price.StandalonePriceDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/standalone-prices?expand=expand", },
@@ -130,6 +137,9 @@ public class ByProjectKeyStandalonePricesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").standalonePrices().get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").standalonePrices().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").standalonePrices().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .standalonePrices()
                         .post(com.commercetools.api.models.standalone_price.StandalonePriceDraft.of())

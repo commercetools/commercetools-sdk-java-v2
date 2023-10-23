@@ -24,6 +24,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsGet(apiHttpClient, projectKey, storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead head() {
+        return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead(apiHttpClient, projectKey, storeKey);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost post(
             com.commercetools.api.models.cart_discount.CartDiscountDraft cartDiscountDraft) {
         return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPost(apiHttpClient, projectKey, storeKey,

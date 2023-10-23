@@ -17,6 +17,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MessageSubscriptionResourceTypeId extends JsonEnum {
 
     /**
+    	<p>Messages related to <a href="ctp:api:type:ApprovalFlow">ApprovalFlows</a>.</p>
+
+    */
+    MessageSubscriptionResourceTypeId APPROVAL_FLOW = MessageSubscriptionResourceTypeIdEnum.APPROVAL_FLOW;
+    /**
+    	<p>Messages related to <a href="ctp:api:type:ApprovalRule">ApprovalRules</a>.</p>
+
+    */
+    MessageSubscriptionResourceTypeId APPROVAL_RULE = MessageSubscriptionResourceTypeIdEnum.APPROVAL_RULE;
+    /**
     	<p>Messages related to <a href="ctp:api:type:AssociateRole">AssociateRoles</a>.</p>
 
     */
@@ -111,6 +121,16 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
      * possible values of MessageSubscriptionResourceTypeId
      */
     enum MessageSubscriptionResourceTypeIdEnum implements MessageSubscriptionResourceTypeId {
+        /**
+         * approval-flow
+         */
+        APPROVAL_FLOW("approval-flow"),
+
+        /**
+         * approval-rule
+         */
+        APPROVAL_RULE("approval-rule"),
+
         /**
          * associate-role
          */

@@ -22,6 +22,10 @@ public class ByProjectKeyApiClientsByIDRequestBuilder {
         return new ByProjectKeyApiClientsByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyApiClientsByIDHead head() {
+        return new ByProjectKeyApiClientsByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyApiClientsByIDDelete delete() {
         return new ByProjectKeyApiClientsByIDDelete(apiHttpClient, projectKey, ID);
     }

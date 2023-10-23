@@ -21,6 +21,10 @@ public class ByProjectKeyShippingMethodsRequestBuilder implements ByProjectKeySh
         return new ByProjectKeyShippingMethodsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyShippingMethodsHead head() {
+        return new ByProjectKeyShippingMethodsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyShippingMethodsPost post(
             com.commercetools.api.models.shipping_method.ShippingMethodDraft shippingMethodDraft) {
         return new ByProjectKeyShippingMethodsPost(apiHttpClient, projectKey, shippingMethodDraft);

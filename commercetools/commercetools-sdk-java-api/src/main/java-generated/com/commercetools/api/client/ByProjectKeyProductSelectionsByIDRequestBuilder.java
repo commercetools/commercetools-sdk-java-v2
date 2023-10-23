@@ -24,6 +24,10 @@ public class ByProjectKeyProductSelectionsByIDRequestBuilder {
         return new ByProjectKeyProductSelectionsByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyProductSelectionsByIDHead head() {
+        return new ByProjectKeyProductSelectionsByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyProductSelectionsByIDPost post(
             com.commercetools.api.models.product_selection.ProductSelectionUpdate productSelectionUpdate) {
         return new ByProjectKeyProductSelectionsByIDPost(apiHttpClient, projectKey, ID, productSelectionUpdate);

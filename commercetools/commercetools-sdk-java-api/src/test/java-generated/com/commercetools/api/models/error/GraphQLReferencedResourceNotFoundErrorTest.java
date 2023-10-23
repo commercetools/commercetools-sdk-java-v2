@@ -27,7 +27,7 @@ public class GraphQLReferencedResourceNotFoundErrorTest {
     public static Object[][] objectBuilder() {
         return new Object[][] {
                 new Object[] { GraphQLReferencedResourceNotFoundError.builder()
-                        .typeId(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role")) },
+                        .typeId(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow")) },
                 new Object[] { GraphQLReferencedResourceNotFoundError.builder().id("id") },
                 new Object[] { GraphQLReferencedResourceNotFoundError.builder().key("key") } };
     }
@@ -35,9 +35,9 @@ public class GraphQLReferencedResourceNotFoundErrorTest {
     @Test
     public void typeId() {
         GraphQLReferencedResourceNotFoundError value = GraphQLReferencedResourceNotFoundError.of();
-        value.setTypeId(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+        value.setTypeId(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
         Assertions.assertThat(value.getTypeId())
-                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("associate-role"));
+                .isEqualTo(com.commercetools.api.models.common.ReferenceTypeId.findEnum("approval-flow"));
     }
 
     @Test

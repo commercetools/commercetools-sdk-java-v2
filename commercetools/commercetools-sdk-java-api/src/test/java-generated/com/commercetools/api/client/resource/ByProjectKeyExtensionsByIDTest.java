@@ -69,6 +69,11 @@ public class ByProjectKeyExtensionsByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/extensions/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .extensions()
+                        .withId("test_ID")
                         .post(com.commercetools.api.models.extension.ExtensionUpdate.of())
                         .createHttpRequest(), "post", "test_projectKey/extensions/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
@@ -88,6 +93,7 @@ public class ByProjectKeyExtensionsByIDTest {
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .withId("test_ID")

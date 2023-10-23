@@ -93,6 +93,17 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                                 .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                                 .carts()
                                 .withId("test_ID")
+                                .head()
+                                .createHttpRequest(),
+                        "head",
+                        "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/carts/test_ID", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                                .carts()
+                                .withId("test_ID")
                                 .post(com.commercetools.api.models.cart.CartUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -176,6 +187,13 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                         .carts()
                         .withId("test_ID")
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                        .carts()
+                        .withId("test_ID")
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .asAssociate()
                         .withAssociateIdValue("test_associateId")

@@ -21,6 +21,10 @@ public class ByProjectKeyCustomObjectsRequestBuilder {
         return new ByProjectKeyCustomObjectsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyCustomObjectsHead head() {
+        return new ByProjectKeyCustomObjectsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyCustomObjectsPost post(
             com.commercetools.api.models.custom_object.CustomObjectDraft customObjectDraft) {
         return new ByProjectKeyCustomObjectsPost(apiHttpClient, projectKey, customObjectDraft);

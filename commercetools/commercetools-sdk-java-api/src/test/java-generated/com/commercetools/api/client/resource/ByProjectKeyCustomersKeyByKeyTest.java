@@ -78,6 +78,11 @@ public class ByProjectKeyCustomersKeyByKeyTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customers()
                         .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/customers/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customers()
+                        .withKey("test_key")
                         .post(com.commercetools.api.models.customer.CustomerUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/customers/key=test_key?expand=expand", },
@@ -120,6 +125,7 @@ public class ByProjectKeyCustomersKeyByKeyTest {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").customers().withKey("test_key").get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customers().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customers().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customers()
                         .withKey("test_key")

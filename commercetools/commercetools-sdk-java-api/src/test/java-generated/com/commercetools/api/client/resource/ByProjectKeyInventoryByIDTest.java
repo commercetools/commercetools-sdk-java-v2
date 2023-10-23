@@ -78,6 +78,11 @@ public class ByProjectKeyInventoryByIDTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/inventory/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inventory()
+                        .withId("test_ID")
                         .post(com.commercetools.api.models.inventory.InventoryEntryUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/inventory/test_ID?expand=expand", },
@@ -110,6 +115,7 @@ public class ByProjectKeyInventoryByIDTest {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").inventory().withId("test_ID").get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").inventory().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").inventory().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
                         .withId("test_ID")

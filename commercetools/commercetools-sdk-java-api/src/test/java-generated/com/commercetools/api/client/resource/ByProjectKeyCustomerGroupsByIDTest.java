@@ -75,6 +75,11 @@ public class ByProjectKeyCustomerGroupsByIDTest {
                         .withId("test_ID")
                         .get()
                         .createHttpRequest(), "get", "test_projectKey/customer-groups/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/customer-groups/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
@@ -118,6 +123,7 @@ public class ByProjectKeyCustomerGroupsByIDTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .withId("test_ID")

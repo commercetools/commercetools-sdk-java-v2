@@ -96,6 +96,13 @@ public class ByProjectKeyInventoryTest {
                         "test_projectKey/inventory", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/inventory?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").inventory().head().createHttpRequest(), "head",
+                        "test_projectKey/inventory", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inventory()
                         .post(com.commercetools.api.models.inventory.InventoryEntryDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/inventory?expand=expand", },
@@ -119,6 +126,8 @@ public class ByProjectKeyInventoryTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").inventory().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").inventory().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").inventory().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
                         .post(com.commercetools.api.models.inventory.InventoryEntryDraft.of())

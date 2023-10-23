@@ -131,6 +131,21 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsTest {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .shoppingLists()
+                                .head()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/shopping-lists?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .shoppingLists()
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/shopping-lists", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .shoppingLists()
                                 .post(com.commercetools.api.models.shopping_list.ShoppingListDraft.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -186,6 +201,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .shoppingLists()
+                        .head()
+                        .withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .shoppingLists()
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shoppingLists()

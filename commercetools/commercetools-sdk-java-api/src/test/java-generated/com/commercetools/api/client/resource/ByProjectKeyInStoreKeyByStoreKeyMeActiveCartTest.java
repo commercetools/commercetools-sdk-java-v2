@@ -80,7 +80,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartTest {
                                 .activeCart()
                                 .get()
                                 .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/active-cart", } };
+                        "get", "test_projectKey/in-store/key=test_storeKey/me/active-cart", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .me()
+                                .activeCart()
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/me/active-cart", } };
     }
 
     @DataProvider
@@ -96,6 +104,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()
                         .activeCart()
-                        .get(), } };
+                        .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .me()
+                        .activeCart()
+                        .head(), } };
     }
 }

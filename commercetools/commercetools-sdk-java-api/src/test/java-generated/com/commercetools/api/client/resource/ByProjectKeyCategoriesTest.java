@@ -96,6 +96,13 @@ public class ByProjectKeyCategoriesTest {
                         "test_projectKey/categories", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/categories?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").categories().head().createHttpRequest(),
+                        "head", "test_projectKey/categories", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .categories()
                         .post(com.commercetools.api.models.category.CategoryDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/categories?expand=expand", },
@@ -119,6 +126,8 @@ public class ByProjectKeyCategoriesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").categories().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").categories().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").categories().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .post(com.commercetools.api.models.category.CategoryDraft.of())

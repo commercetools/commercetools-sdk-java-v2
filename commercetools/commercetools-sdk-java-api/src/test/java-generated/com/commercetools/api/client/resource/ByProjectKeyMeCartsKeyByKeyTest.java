@@ -81,6 +81,12 @@ public class ByProjectKeyMeCartsKeyByKeyTest {
                         .me()
                         .carts()
                         .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/me/carts/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .carts()
+                        .withKey("test_key")
                         .post(com.commercetools.api.models.me.MyCartUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/me/carts/key=test_key?expand=expand", },
@@ -124,6 +130,7 @@ public class ByProjectKeyMeCartsKeyByKeyTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().carts().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().carts().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .carts()

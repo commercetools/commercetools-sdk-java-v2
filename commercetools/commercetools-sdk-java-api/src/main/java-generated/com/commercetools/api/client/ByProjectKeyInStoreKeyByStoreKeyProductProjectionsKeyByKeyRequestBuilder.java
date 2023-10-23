@@ -25,4 +25,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBu
             key);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyHead head() {
+        return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyHead(apiHttpClient, projectKey, storeKey,
+            key);
+    }
+
 }

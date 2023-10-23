@@ -91,7 +91,25 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartTest {
                                 .matchingCart()
                                 .get()
                                 .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart", } };
+                        "get", "test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .shippingMethods()
+                                .matchingCart()
+                                .head()
+                                .withCartId("cartId")
+                                .createHttpRequest(),
+                        "head",
+                        "test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart?cartId=cartId", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .shippingMethods()
+                                .matchingCart()
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart", } };
     }
 
     @DataProvider
@@ -113,6 +131,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shippingMethods()
                         .matchingCart()
-                        .get(), } };
+                        .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .shippingMethods()
+                        .matchingCart()
+                        .head()
+                        .withCartId("cartId"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .shippingMethods()
+                        .matchingCart()
+                        .head(), } };
     }
 }

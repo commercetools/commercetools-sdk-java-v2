@@ -93,6 +93,17 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                                 .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
                                 .quotes()
                                 .withKey("test_key")
+                                .head()
+                                .createHttpRequest(),
+                        "head",
+                        "test_projectKey/as-associate/test_associateId/in-business-unit/key=test_businessUnitKey/quotes/key=test_key", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .asAssociate()
+                                .withAssociateIdValue("test_associateId")
+                                .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                                .quotes()
+                                .withKey("test_key")
                                 .post(com.commercetools.api.models.quote.QuoteUpdate.of())
                                 .withExpand("expand")
                                 .createHttpRequest(),
@@ -129,6 +140,13 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
                         .quotes()
                         .withKey("test_key")
                         .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .asAssociate()
+                        .withAssociateIdValue("test_associateId")
+                        .inBusinessUnitKeyWithBusinessUnitKeyValue("test_businessUnitKey")
+                        .quotes()
+                        .withKey("test_key")
+                        .head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .asAssociate()
                         .withAssociateIdValue("test_associateId")

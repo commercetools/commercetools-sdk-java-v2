@@ -87,6 +87,11 @@ public class ByProjectKeyCartsTest {
                         .createHttpRequest(), "get", "test_projectKey/carts?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().createHttpRequest(), "get",
                         "test_projectKey/carts", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").carts().head().withWhere("where").createHttpRequest(),
+                        "head", "test_projectKey/carts?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().head().createHttpRequest(), "head",
+                        "test_projectKey/carts", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .carts()
                         .post(com.commercetools.api.models.cart.CartDraft.of())
@@ -112,6 +117,8 @@ public class ByProjectKeyCartsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .carts()
                         .post(com.commercetools.api.models.cart.CartDraft.of())

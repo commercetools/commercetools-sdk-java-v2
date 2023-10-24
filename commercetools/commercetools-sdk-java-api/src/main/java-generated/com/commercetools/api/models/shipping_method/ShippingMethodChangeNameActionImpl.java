@@ -49,7 +49,7 @@ public class ShippingMethodChangeNameActionImpl implements ShippingMethodChangeN
     }
 
     /**
-     *  <p>Value to set. Must not be empty.</p>
+     *  <p>Unique value to set within a Project. Must not be empty.</p>
      */
 
     public String getName() {

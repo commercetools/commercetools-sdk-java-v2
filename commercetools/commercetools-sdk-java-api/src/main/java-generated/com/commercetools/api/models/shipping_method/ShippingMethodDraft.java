@@ -48,7 +48,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public String getKey();
 
     /**
-     *  <p>Name of the ShippingMethod.</p>
+     *  <p>Unique name for the ShippingMethod within a Project.</p>
      * @return name
      */
     @NotNull
@@ -129,7 +129,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setKey(final String key);
 
     /**
-     *  <p>Name of the ShippingMethod.</p>
+     *  <p>Unique name for the ShippingMethod within a Project.</p>
      * @param name value to be set
      */
 

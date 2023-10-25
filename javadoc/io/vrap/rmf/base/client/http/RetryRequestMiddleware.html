@@ -78,7 +78,27 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">RetryRequestMiddleware</span><span class="extends-implements">
 extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></span></div>
-<div class="block">Middleware for retrying of a requests upon configured response status codes and/or exceptions</div>
+<div class="block"><h2>Retry failed requests</h2>
+
+ <p>Middleware for retrying of a requests upon configured response status codes and/or exceptions</p>
+
+ <h3>Retrying on HTTP status codes</h3>
+
+ <p><pre><code class='java'><code>
+    ApiRootBuilder.of()
+      ...
+      .withRetryMiddleware(3, Arrays.asList(HttpStatusCode.SERVICE_UNAVAILABLE_503, HttpStatusCode.INTERNAL_SERVER_ERROR_500))
+  </code></code></pre>
+  </p>
+
+ <h3>Retrying specific exceptions</h3>
+
+ <p><pre><code class='java'><code>
+    ApiRootBuilder.of()
+      ...
+      .addMiddleware(RetryRequestMiddleware.of(3, emptyList(), singletonList(JsonException.class)))
+  </code></code></pre>
+  </p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">

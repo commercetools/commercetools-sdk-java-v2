@@ -14,7 +14,27 @@ import io.vrap.rmf.base.client.ApiHttpException;
 import dev.failsafe.spi.Scheduler;
 
 /**
- * Middleware for retrying of a requests upon configured response status codes and/or exceptions
+ * <h2>Retry failed requests</h2>
+ *
+ * <p>Middleware for retrying of a requests upon configured response status codes and/or exceptions</p>
+ *
+ * <h3>Retrying on HTTP status codes</h3>
+ *
+ * <p><pre><code class='java'>{@code
+ *    ApiRootBuilder.of()
+ *      ...
+ *      .withRetryMiddleware(3, Arrays.asList(HttpStatusCode.SERVICE_UNAVAILABLE_503, HttpStatusCode.INTERNAL_SERVER_ERROR_500))
+ *  }</code></pre>
+ *  </p>
+ *
+ * <h3>Retrying specific exceptions</h3>
+ *
+ * <p><pre><code class='java'>{@code
+ *    ApiRootBuilder.of()
+ *      ...
+ *      .addMiddleware(RetryRequestMiddleware.of(3, emptyList(), singletonList(JsonException.class)))
+ *  }</code></pre>
+ *  </p>
  */
 public interface RetryRequestMiddleware extends Middleware {
     int DEFAULT_MAX_DELAY = 60000;

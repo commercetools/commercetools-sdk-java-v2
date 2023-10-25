@@ -89,8 +89,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <pre><code class='java'>
      SetNameChange setNameChange = SetNameChange.builder()
              .change("{change}")
-             .previousValue(previousValueBuilder -> previousValueBuilder)
-             .nextValue(nextValueBuilder -> nextValueBuilder)
+             .previousValue("{previousValue}")
+             .nextValue("{nextValue}")
              .build()
  </code></pre>
  </div></div>
@@ -141,53 +141,33 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">value of change}</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextValue()" class="member-name-link">getNextValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(com.commercetools.history.models.common.LocalizedString)" class="member-name-link">nextValue</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;nextValue)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(java.lang.String)" class="member-name-link">nextValue</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nextValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value after the change.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextValue(java.util.function.Function)" class="member-name-link">nextValue</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value after the change.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">factory method for an instance of SetNameChangeBuilder</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.history.models.change.SetNameChange)" class="member-name-link">of</a><wbr>(<a href="SetNameChange.html" title="interface in com.commercetools.history.models.change">SetNameChange</a>&nbsp;template)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">factory method for an instance of SetNameChangeBuilder</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.history.models.change.SetNameChange)" class="member-name-link">of</a><wbr>(<a href="SetNameChange.html" title="interface in com.commercetools.history.models.change">SetNameChange</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create builder for SetNameChange instance</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(com.commercetools.history.models.common.LocalizedString)" class="member-name-link">previousValue</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;previousValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value before the change.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(java.util.function.Function)" class="member-name-link">previousValue</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value before the change.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withNextValue(java.util.function.Function)" class="member-name-link">withNextValue</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Value after the change.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPreviousValue(java.util.function.Function)" class="member-name-link">withPreviousValue</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#previousValue(java.lang.String)" class="member-name-link">previousValue</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;previousValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Value before the change.</div>
 </div>
@@ -236,35 +216,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="previousValue(java.util.function.Function)">
+<section class="detail" id="previousValue(java.lang.String)">
 <h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></span>&nbsp;<span class="element-name">previousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Value before the change.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the previousValue value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withPreviousValue(java.util.function.Function)">
-<h3>withPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></span>&nbsp;<span class="element-name">withPreviousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Value before the change.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the previousValue value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="previousValue(com.commercetools.history.models.common.LocalizedString)">
-<h3>previousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></span>&nbsp;<span class="element-name">previousValue</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;previousValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></span>&nbsp;<span class="element-name">previousValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;previousValue)</span></div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -275,35 +229,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="nextValue(java.util.function.Function)">
+<section class="detail" id="nextValue(java.lang.String)">
 <h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></span>&nbsp;<span class="element-name">nextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Value after the change.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the nextValue value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withNextValue(java.util.function.Function)">
-<h3>withNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></span>&nbsp;<span class="element-name">withNextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.history.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Value after the change.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the nextValue value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="nextValue(com.commercetools.history.models.common.LocalizedString)">
-<h3>nextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></span>&nbsp;<span class="element-name">nextValue</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a>&nbsp;nextValue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SetNameChangeBuilder.html" title="class in com.commercetools.history.models.change">SetNameChangeBuilder</a></span>&nbsp;<span class="element-name">nextValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;nextValue)</span></div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -327,7 +255,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getPreviousValue()">
 <h3>getPreviousValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getPreviousValue</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPreviousValue</span>()</div>
 <div class="block"><p>Value before the change.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -338,7 +266,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.history.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getNextValue</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getNextValue</span>()</div>
 <div class="block"><p>Value after the change.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>

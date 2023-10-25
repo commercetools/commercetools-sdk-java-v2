@@ -13,7 +13,7 @@ import org.slf4j.event.Level;
  *
  * <p>Internal logging used by the commercetools Composable Commerce client itself. Uses slf4j logger named {@code commercetools}.</p>
  *
- * <h2 id=logger-configuration>Logger configuration</h2>
+ * <h3 id=logger-configuration>Logger configuration</h3>
  *
  * <p>The {@link io.vrap.rmf.base.client.ClientBuilder} allows the customization of the log levels used for different events. By default responses
  * will be logged with {@link org.slf4j.event.Level#INFO} and errors with {@link org.slf4j.event.Level#ERROR}. The
@@ -22,33 +22,33 @@ import org.slf4j.event.Level;
  *
  * {@include.example example.ExamplesTest#loggingConfiguration}
  *
- * <h2 id=log-information>Log Information</h2>
+ * <h3 id=log-information>Log Information</h3>
  *
  * The default logger middleware logs following information per level:
  *
- * <h3>Error</h3>
+ * <h4>Error</h4>
  *
  * In case of an {@link io.vrap.rmf.base.client.ApiHttpException} the requests HTTP method name, URI and response status code
  * will be logged. For any other exception happening the cause and the exception will be logged.
  *
- * <h3>Info</h3>
+ * <h4>Info</h4>
  *
  * <p>By default any response by the API will be logged with the requests HTTP method name, URI and response status code.
  * In case a deprecation header was submitted in the response an info entry with the deprecation notice will be logged.</p>
  *
  * <p>The used log level for these events can be configured while instantiating the InternalLoggerMiddleware.</p>
  *
- * <h3>Debug</h3>
+ * <h4>Debug</h4>
  *
  * <p>The request and the response object will be logged as a string representation including headers and body. Sensitive
  * data like auth token and passwords will be redacted.</p>
  *
- * <h3>Trace</h3>
+ * <h4>Trace</h4>
  *
  * </p>The request and response will be logged with a pretty printed output.  Sensitive data like auth token and passwords
  * will be redacted.</p>
  *
- * <h2 id=logger-hierarchy>Logger hierarchy</h2>
+ * <h3 id=logger-hierarchy>Logger hierarchy</h3>
  *
  * <p>The loggers form a hierarchy separated by a dot. The root logger is {@code commercetools}.</p>
  *
@@ -116,7 +116,7 @@ import org.slf4j.event.Level;
  * [pool-1-thread-1] DEBUG commercetools.products.request.queries - io.vrap.rmf.base.client.ApiHttpRequest@53667fdb[method=GET,uri="https://api.europe-west1.gcp.commercetools.com/test-php-dev-integration-1/products/ef745227-b115-4132-ba2c-4e46db80df79",headers=[...],textInterpretedBody=empty body]
  * }</pre>
  *
- * <h2 id=mdc_usage>Usage of Mapped Diagnostic Context</h2>
+ * <h3 id=mdc_usage>Usage of Mapped Diagnostic Context</h3>
  *
  * <p>The SDK uses {@link java.util.concurrent.CompletableFuture CompletableFutures} extensively and the {@link java.util.concurrent.ExecutorService} typically has a thread pool
  * to execute the futures. This could lead to the fact that the future is executed on different threads. In case the {@link org.slf4j.MDC} is used by the application the context

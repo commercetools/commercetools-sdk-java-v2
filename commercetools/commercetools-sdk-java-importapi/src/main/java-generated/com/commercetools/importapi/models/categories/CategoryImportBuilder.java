@@ -60,7 +60,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -467,7 +467,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @return key
      */
 

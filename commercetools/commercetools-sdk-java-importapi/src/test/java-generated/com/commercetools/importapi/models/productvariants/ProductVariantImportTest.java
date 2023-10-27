@@ -26,7 +26,8 @@ public class ProductVariantImportTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductVariantImport.builder().sku("sku") },
+        return new Object[][] { new Object[] { ProductVariantImport.builder().key("key") },
+                new Object[] { ProductVariantImport.builder().sku("sku") },
                 new Object[] { ProductVariantImport.builder().isMasterVariant(true) },
                 new Object[] { ProductVariantImport.builder()
                         .attributes(Collections.singletonList(
@@ -38,6 +39,13 @@ public class ProductVariantImportTest {
                 new Object[] { ProductVariantImport.builder().publish(true) },
                 new Object[] { ProductVariantImport.builder()
                         .product(new com.commercetools.importapi.models.common.ProductKeyReferenceImpl()) } };
+    }
+
+    @Test
+    public void key() {
+        ProductVariantImport value = ProductVariantImport.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
     }
 
     @Test

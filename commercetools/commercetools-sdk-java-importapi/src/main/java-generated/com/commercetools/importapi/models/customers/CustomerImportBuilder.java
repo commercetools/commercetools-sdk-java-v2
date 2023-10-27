@@ -96,7 +96,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     private com.commercetools.importapi.models.customers.AuthenticationMode authenticationMode;
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -624,7 +624,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @return key
      */
 

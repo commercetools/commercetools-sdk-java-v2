@@ -85,7 +85,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it will be updated with the imported data.</p>
      */
 
     public String getKey() {

@@ -64,7 +64,7 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it will be updated with the imported data.</p>
      */
 
     public String getKey() {

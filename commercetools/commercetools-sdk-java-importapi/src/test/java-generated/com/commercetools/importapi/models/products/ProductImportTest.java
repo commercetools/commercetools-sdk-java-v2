@@ -26,7 +26,7 @@ public class ProductImportTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] {
+        return new Object[][] { new Object[] { ProductImport.builder().key("key") },
                 new Object[] { ProductImport.builder()
                         .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
                 new Object[] { ProductImport.builder()
@@ -54,6 +54,13 @@ public class ProductImportTest {
                 new Object[] { ProductImport.builder()
                         .priceMode(
                             com.commercetools.importapi.models.common.ProductPriceModeEnum.findEnum("Embedded")) } };
+    }
+
+    @Test
+    public void key() {
+        ProductImport value = ProductImport.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
     }
 
     @Test

@@ -38,6 +38,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface InventoryImport extends ImportResource {
 
     /**
+     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Maps to <code>Inventory.sku</code></p>
      * @return sku
      */
@@ -84,6 +92,13 @@ public interface InventoryImport extends ImportResource {
     @Valid
     @JsonProperty("custom")
     public Custom getCustom();
+
+    /**
+     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Maps to <code>Inventory.sku</code></p>

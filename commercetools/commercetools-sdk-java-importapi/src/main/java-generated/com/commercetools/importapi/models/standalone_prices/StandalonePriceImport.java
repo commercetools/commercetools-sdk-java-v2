@@ -43,7 +43,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StandalonePriceImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -132,7 +132,7 @@ public interface StandalonePriceImport extends ImportResource {
     public Custom getCustom();
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @param key value to be set
      */
 

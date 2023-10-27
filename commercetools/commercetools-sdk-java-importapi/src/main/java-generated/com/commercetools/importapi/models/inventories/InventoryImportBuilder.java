@@ -45,7 +45,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @return key
      */
 

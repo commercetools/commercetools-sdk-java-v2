@@ -5,8 +5,12 @@ import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 
@@ -33,7 +37,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString extends
-        StringBodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString, com.commercetools.api.models.cart_discount.CartDiscount> {
+        StringBodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString, com.commercetools.api.models.cart_discount.CartDiscount>
+        implements
+        com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString>,
+        com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString> {
 
     @Override
     public TypeReference<com.commercetools.api.models.cart_discount.CartDiscount> resultType() {
@@ -94,12 +102,98 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString extends
         return this.storeKey;
     }
 
+    public List<String> getExpand() {
+        return this.getQueryParam("expand");
+    }
+
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
     }
 
     public void setStoreKey(final String storeKey) {
         this.storeKey = storeKey;
+    }
+
+    /**
+     * set expand with the specified value
+     * @param <TValue> value type
+     * @param expand value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString withExpand(final TValue expand) {
+        return copy().withQueryParam("expand", expand);
+    }
+
+    /**
+     * add additional expand query parameter
+     * @param <TValue> value type
+     * @param expand value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString addExpand(final TValue expand) {
+        return copy().addQueryParam("expand", expand);
+    }
+
+    /**
+     * set expand with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * add additional expand query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
+    }
+
+    /**
+     * set expand with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString withExpand(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional expand query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString addExpand(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set expand with the specified values
+     * @param <TValue> value type
+     * @param expand values to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString withExpand(
+            final Collection<TValue> expand) {
+        return copy().withoutQueryParam("expand")
+                .addQueryParams(
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional expand query parameters
+     * @param <TValue> value type
+     * @param expand values to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyCartDiscountsPostString addExpand(final Collection<TValue> expand) {
+        return copy().addQueryParams(
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
 
     public String getBody() {

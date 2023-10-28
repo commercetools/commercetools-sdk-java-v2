@@ -69,6 +69,62 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .cartDiscounts()
                                 .get()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "test_projectKey/in-store/key=test_storeKey/cart-discounts?expand=expand", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .cartDiscounts()
+                                .get()
+                                .withSort("sort")
+                                .createHttpRequest(),
+                        "get", "test_projectKey/in-store/key=test_storeKey/cart-discounts?sort=sort", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .cartDiscounts()
+                                .get()
+                                .withLimit(7)
+                                .createHttpRequest(),
+                        "get", "test_projectKey/in-store/key=test_storeKey/cart-discounts?limit=7", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .cartDiscounts()
+                                .get()
+                                .withOffset(3)
+                                .createHttpRequest(),
+                        "get", "test_projectKey/in-store/key=test_storeKey/cart-discounts?offset=3", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .cartDiscounts()
+                                .get()
+                                .withWithTotal(true)
+                                .createHttpRequest(),
+                        "get", "test_projectKey/in-store/key=test_storeKey/cart-discounts?withTotal=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .cartDiscounts()
+                                .get()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "get", "test_projectKey/in-store/key=test_storeKey/cart-discounts?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .cartDiscounts()
+                                .get()
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get", "test_projectKey/in-store/key=test_storeKey/cart-discounts?var.varName=var.varName", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .cartDiscounts()
+                                .get()
                                 .createHttpRequest(),
                         "get", "test_projectKey/in-store/key=test_storeKey/cart-discounts", },
                 new Object[] {
@@ -91,6 +147,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .cartDiscounts()
                                 .post(com.commercetools.api.models.cart_discount.CartDiscountDraft.of())
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "post", "test_projectKey/in-store/key=test_storeKey/cart-discounts?expand=expand", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .cartDiscounts()
+                                .post(com.commercetools.api.models.cart_discount.CartDiscountDraft.of())
                                 .createHttpRequest(),
                         "post", "test_projectKey/in-store/key=test_storeKey/cart-discounts", } };
     }
@@ -98,6 +162,41 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .cartDiscounts()
+                        .get()
+                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .cartDiscounts()
+                        .get()
+                        .withSort("sort"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .cartDiscounts()
+                        .get()
+                        .withLimit(7), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .cartDiscounts()
+                        .get()
+                        .withOffset(3), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .cartDiscounts()
+                        .get()
+                        .withWithTotal(true), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .cartDiscounts()
+                        .get()
+                        .withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .cartDiscounts()
+                        .get()
+                        .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .cartDiscounts()
@@ -111,6 +210,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .cartDiscounts()
                         .head(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .cartDiscounts()
+                        .post(com.commercetools.api.models.cart_discount.CartDiscountDraft.of())
+                        .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .cartDiscounts()

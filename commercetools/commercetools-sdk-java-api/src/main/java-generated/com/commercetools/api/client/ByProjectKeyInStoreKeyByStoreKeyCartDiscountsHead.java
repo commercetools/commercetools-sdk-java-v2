@@ -36,7 +36,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead extends
-        TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead, com.fasterxml.jackson.databind.JsonNode> {
+        TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead, com.fasterxml.jackson.databind.JsonNode>
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead>,
+        com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCartDiscountsHead> {
 
     @Override
     public TypeReference<com.fasterxml.jackson.databind.JsonNode> resultType() {

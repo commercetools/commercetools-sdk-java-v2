@@ -40,6 +40,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CategoryImport extends ImportResource {
 
     /**
+     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it will be updated with the imported data.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Maps to <code>Category.name</code>.</p>
      * @return name
      */
@@ -128,6 +136,13 @@ public interface CategoryImport extends ImportResource {
     @Valid
     @JsonProperty("custom")
     public Custom getCustom();
+
+    /**
+     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it will be updated with the imported data.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Maps to <code>Category.name</code>.</p>

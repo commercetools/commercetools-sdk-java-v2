@@ -39,6 +39,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantImport extends ImportResource {
 
     /**
+     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it will be updated with the imported data.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Maps to <code>ProductVariant.sku</code>.</p>
      * @return sku
      */
@@ -94,6 +102,13 @@ public interface ProductVariantImport extends ImportResource {
     @Valid
     @JsonProperty("product")
     public ProductKeyReference getProduct();
+
+    /**
+     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it will be updated with the imported data.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Maps to <code>ProductVariant.sku</code>.</p>

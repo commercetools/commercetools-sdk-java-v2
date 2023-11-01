@@ -22,6 +22,16 @@ public interface ImportResourceType extends JsonEnum {
     */
     ImportResourceType CATEGORY = ImportResourceTypeEnum.CATEGORY;
     /**
+    	<p>The <a href="ctp:import:type:CustomerImport">Customer import</a> resource type.</p>
+
+    */
+    ImportResourceType CUSTOMER = ImportResourceTypeEnum.CUSTOMER;
+    /**
+    	<p>The <a href="ctp:import:type:InventoryImport">Inventory import</a> resource type.</p>
+
+    */
+    ImportResourceType INVENTORY = ImportResourceTypeEnum.INVENTORY;
+    /**
     	<p>The <a href="ctp:import:type:OrderImport">Order import</a> resource type.</p>
 
     */
@@ -62,21 +72,14 @@ public interface ImportResourceType extends JsonEnum {
     */
     ImportResourceType PRODUCT_VARIANT_PATCH = ImportResourceTypeEnum.PRODUCT_VARIANT_PATCH;
     /**
-    	<p>The <a href="ctp:import:type:CustomerImport">Customer import</a> resource type.</p>
-
-    */
-    ImportResourceType CUSTOMER = ImportResourceTypeEnum.CUSTOMER;
-    /**
-    	<p>The <a href="ctp:import:type:InventoryImport">Inventory import</a> resource type.</p>
-
-    */
-    ImportResourceType INVENTORY = ImportResourceTypeEnum.INVENTORY;
-    /**
     	<p>The <a href="ctp:import:type:StandalonePriceImport">Standalone Price import</a> resource type.</p>
 
     */
     ImportResourceType STANDALONE_PRICE = ImportResourceTypeEnum.STANDALONE_PRICE;
+    /**
+    	<p>The <a href="ctp:import:type:TypeImport">Type import</a> resource type.</p>
 
+    */
     ImportResourceType TYPE = ImportResourceTypeEnum.TYPE;
 
     /**
@@ -87,6 +90,16 @@ public interface ImportResourceType extends JsonEnum {
          * category
          */
         CATEGORY("category"),
+
+        /**
+         * customer
+         */
+        CUSTOMER("customer"),
+
+        /**
+         * inventory
+         */
+        INVENTORY("inventory"),
 
         /**
          * order
@@ -127,16 +140,6 @@ public interface ImportResourceType extends JsonEnum {
          * product-variant-patch
          */
         PRODUCT_VARIANT_PATCH("product-variant-patch"),
-
-        /**
-         * customer
-         */
-        CUSTOMER("customer"),
-
-        /**
-         * inventory
-         */
-        INVENTORY("inventory"),
 
         /**
          * standalone-price

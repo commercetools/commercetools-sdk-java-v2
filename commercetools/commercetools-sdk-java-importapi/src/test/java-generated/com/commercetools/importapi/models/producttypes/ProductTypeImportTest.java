@@ -26,11 +26,19 @@ public class ProductTypeImportTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTypeImport.builder().name("name") },
+        return new Object[][] { new Object[] { ProductTypeImport.builder().key("key") },
+                new Object[] { ProductTypeImport.builder().name("name") },
                 new Object[] { ProductTypeImport.builder().description("description") },
                 new Object[] { ProductTypeImport.builder()
                         .attributes(Collections.singletonList(
                             new com.commercetools.importapi.models.producttypes.AttributeDefinitionImpl())) } };
+    }
+
+    @Test
+    public void key() {
+        ProductTypeImport value = ProductTypeImport.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
     }
 
     @Test

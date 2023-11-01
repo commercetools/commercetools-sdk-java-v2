@@ -199,7 +199,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Name of the ShippingMethod.</p>
+     *  <p>Unique name of the ShippingMethod within a Project.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -542,7 +542,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>Name of the ShippingMethod.</p>
+     *  <p>Unique name of the ShippingMethod within a Project.</p>
      * @return name
      */
 

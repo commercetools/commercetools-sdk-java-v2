@@ -63,7 +63,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it will be updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -448,7 +448,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it will be updated with the imported data.</p>
      * @return key
      */
 

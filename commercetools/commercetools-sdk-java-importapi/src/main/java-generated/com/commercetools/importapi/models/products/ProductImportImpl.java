@@ -90,7 +90,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
      */
 
     public String getKey() {

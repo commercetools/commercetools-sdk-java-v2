@@ -151,7 +151,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>Name of the ShippingMethod.</p>
+     *  <p>Unique name of the ShippingMethod within a Project.</p>
      */
 
     public String getName() {

@@ -107,7 +107,7 @@ public interface ShippingMethod
     public String getKey();
 
     /**
-     *  <p>Name of the ShippingMethod.</p>
+     *  <p>Unique name of the ShippingMethod within a Project.</p>
      * @return name
      */
     @NotNull
@@ -230,7 +230,7 @@ public interface ShippingMethod
     public void setKey(final String key);
 
     /**
-     *  <p>Name of the ShippingMethod.</p>
+     *  <p>Unique name of the ShippingMethod within a Project.</p>
      * @param name value to be set
      */
 

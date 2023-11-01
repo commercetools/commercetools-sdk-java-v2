@@ -80,7 +80,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     *  <p>Name of the ShippingMethod.</p>
+     *  <p>Unique name for the ShippingMethod within a Project.</p>
      */
 
     public String getName() {

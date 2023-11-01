@@ -53,7 +53,7 @@ public class TypeImportImpl implements TypeImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Type.</p>
+     *  <p>User-defined unique identifier for the Type. If a Type with this <code>key</code> exists, it will be updated with the imported data.</p>
      */
 
     public String getKey() {

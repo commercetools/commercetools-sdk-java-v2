@@ -44,6 +44,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductImport extends ImportResource {
 
     /**
+     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Maps to <code>Product.name</code>.</p>
      * @return name
      */
@@ -180,6 +188,13 @@ public interface ProductImport extends ImportResource {
 
     @JsonProperty("priceMode")
     public ProductPriceModeEnum getPriceMode();
+
+    /**
+     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Maps to <code>Product.name</code>.</p>

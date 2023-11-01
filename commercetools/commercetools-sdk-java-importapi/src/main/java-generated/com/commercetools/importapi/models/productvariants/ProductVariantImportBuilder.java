@@ -48,7 +48,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it will be updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -375,7 +375,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it will be updated with the imported data.</p>
      * @return key
      */
 

@@ -360,7 +360,7 @@ public class OrderImpl implements Order, ModelBase {
     /**
      *  <ul>
      *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      */

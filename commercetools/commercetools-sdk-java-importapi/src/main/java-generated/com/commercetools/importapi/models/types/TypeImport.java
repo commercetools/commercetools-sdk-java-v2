@@ -37,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TypeImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier for the Type.</p>
+     *  <p>User-defined unique identifier for the Type. If a Type with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -78,7 +78,7 @@ public interface TypeImport extends ImportResource {
     public List<FieldDefinition> getFieldDefinitions();
 
     /**
-     *  <p>User-defined unique identifier for the Type.</p>
+     *  <p>User-defined unique identifier for the Type. If a Type with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @param key value to be set
      */
 

@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">GraphQL</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li><a href="#graphql-endpoint">GraphQL endpoint</a></li><ul><li><a href="#graphql-module">GraphQL module</a></li></ul></ul>
+<div class="block"><b>Table of content</b><ul><li><a href="#graphql-endpoint">GraphQL endpoint</a></li><li><a href="#graphql-module">GraphQL module</a></li></ul>
 
  <h2 id=graphql-endpoint>GraphQL endpoint</h2>
  <p>The SDK provides support for the usage of the GraphQL endpoint.</p>
@@ -104,7 +104,7 @@ final ApiHttpResponse&lt;JsonNode&gt; response = apiRoot.graphql().post(request)
 Assertions.assertThat(response.getBody()).isInstanceOf(JsonNode.class);
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/GraphQLTest.java" target="_blank">test code</a>.</pre></div>
 
- <h3 id=graphql-module>GraphQL module</h3>
+ <h2 id=graphql-module>GraphQL module</h2>
 
  <p>The SDK comes with a module for enhanced GraphQL support. With the help of the <a href="https://netflix.github.io/dgs/generating-code-from-schema/">DGS codegen</a>
  we generate a type safe query and projection builder. The results will be mapped to the correct response type.</p>

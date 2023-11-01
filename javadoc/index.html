@@ -59,8 +59,14 @@ loadScripts(document, 'script');</script>
 
         <h2>First steps</h2>
         <ol>
-            <li><a href="com/commercetools/docs/meta/Installation.html" title="class in com.commercetools.docs.meta"><code>Installation</code></a></li>
-            <li><a href="com/commercetools/docs/meta/GettingStarted.html" title="class in com.commercetools.docs.meta"><code>Getting Started</code></a></li>
+            <li>
+                <a href="com/commercetools/docs/meta/Installation.html" title="class in com.commercetools.docs.meta"><code>Installation</code></a>
+                <ul><li><code>Modules</code></li><li><code>Gradle</code></li><li><code>Maven</code></li><li><code>Troubleshooting</code></li><ul><li><code>Spring Framework</code></li></ul></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/GettingStarted.html" title="class in com.commercetools.docs.meta"><code>Getting Started</code></a>
+                <ul><li><code>Instantiation</code></li><li><code>Performing requests</code></li><ul><li><code>Example</code></li></ul><li><code>Closing the client</code></li></ul>
+            </li>
             <li>
                 <a href="com/commercetools/docs/meta/Endpoints.html" title="class in com.commercetools.docs.meta"><code>Supported Endpoints</code></a>
                 <ul>
@@ -70,41 +76,96 @@ loadScripts(document, 'script');</script>
                     <li><a href="com/commercetools/history/client/ByProjectKeyRequestBuilder.html" title="class in com.commercetools.history.client"><code>Audit log API</code></a></li>
                 </ul>
             </li>
-            <li><a href="com/commercetools/docs/meta/Configuration.html" title="class in com.commercetools.docs.meta"><code>Configuration</code></a></li>
-            <li><a href="com/commercetools/docs/meta/Querying.html" title="class in com.commercetools.docs.meta"><code>Querying</code></a></li>
-            <li><a href="com/commercetools/docs/meta/Middlewares.html" title="class in com.commercetools.docs.meta"><code>Middlewares</code></a></li>
-            <li><a href="com/commercetools/docs/meta/GraphQL.html" title="class in com.commercetools.docs.meta"><code>GraphQL</code></a></li>
+            <li>
+                <a href="com/commercetools/docs/meta/Configuration.html" title="class in com.commercetools.docs.meta"><code>Configuration</code></a>
+                <ul><li><code>ApiRoot and ProjectApiRoot</code></li><li><code>Custom HTTP client</code></li><li><code>Error handling</code></li><ul><li><code>Unwrap exceptions</code></li><li><code>Not found</code></li></ul></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/Authentication.html" title="class in com.commercetools.docs.meta"><code>Authentication</code></a>
+                <ul><li><code>Client credentials flow</code></li><li><code>Static token</code></li><li><code>Anonymous and RefreshToken flow</code></li><ul><li><code>Standalone anonymous session flow</code></li><li><code>Password flow</code></li></ul><li><code>Introspection</code></li><li><code>Token revocation</code></li></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/Querying.html" title="class in com.commercetools.docs.meta"><code>Querying</code></a>
+                <ul><li><code>Predicates</code></li><li><code>Get by id/key</code></li><li><code>Query all</code></li><li><code>Sorting</code></li><li><code>Pagination</code></li><li><code>Test cases</code></li></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/Middlewares.html" title="class in com.commercetools.docs.meta"><code>Middlewares</code></a>
+                <ul><li><code>ErrorMiddleware</code></li><li><code>OAuthMiddleware</code></li><li><code>RetryMiddleware</code></li><li><code>ConcurrentModificationMiddleware</code></li><li><code>UserAgentMiddleware</code></li><li><code>AcceptGZipMiddleware</code></li><li><code>InternalLoggerMiddleware</code></li></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/GraphQL.html" title="class in com.commercetools.docs.meta"><code>GraphQL</code></a>
+                <ul><li><code>GraphQL module</code></li></ul>
+            </li>
         </ol>
         <h2>Products and ProductTypes</h2>
         <ol>
-            <li><a href="com/commercetools/docs/meta/ProductAttributeDocumentation.html" title="class in com.commercetools.docs.meta"><code>Product attributes</code></a></li>
+            <li>
+                <a href="com/commercetools/docs/meta/ProductAttributeDocumentation.html" title="class in com.commercetools.docs.meta"><code>Product attributes</code></a>
+                <ul><li><code>ProductType Creation</code></li><li><code>Product Creation</code></li><li><code>Reading Attributes</code></li><li><code>Update attribute values of a product</code></li><li><code>Create attributes for importing orders</code></li></ul>
+            </li>
         </ol>
         <h2>Preparing for the worst</h2>
         <ol>
-            <li><a href="com/commercetools/docs/meta/ExceptionDocumentation.html" title="class in com.commercetools.docs.meta"><code>Exception documentation</code></a></li>
-            <li><a href="com/commercetools/docs/meta/Logging.html" title="class in com.commercetools.docs.meta"><code>Logging</code></a></li>
+            <li>
+                <a href="com/commercetools/docs/meta/ExceptionDocumentation.html" title="class in com.commercetools.docs.meta"><code>Exception documentation</code></a>
+                <ul><li><code>Errors</code></li><li><code>Custom HttpExceptionFactory</code></li></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/Logging.html" title="class in com.commercetools.docs.meta"><code>Logging</code></a>
+                <ul><li><code>Logger configuration</code></li><li><code>Log Information</code></li><ul><li><code>Error</code></li><li><code>Info</code></li><li><code>Debug</code></li><li><code>Trace</code></li></ul><li><code>Logger hierarchy</code></li><li><code>Usage of Mapped Diagnostic Context</code></li></ul>
+            </li>
         </ol>
         <h2>Customization</h2>
         <ol>
-            <li><a href="com/commercetools/docs/meta/Serialization.html" title="class in com.commercetools.docs.meta"><code>Serialization</code></a></li>
-            <li><a href="com/commercetools/docs/meta/ClientTuning.html" title="class in com.commercetools.docs.meta"><code>Client Tuning</code></a></li>
+            <li>
+                <a href="com/commercetools/docs/meta/Serialization.html" title="class in com.commercetools.docs.meta"><code>Serialization</code></a>
+                <ul><li><code>Customization</code></li><li><code>Date and time attributes</code></li></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/ClientTuning.html" title="class in com.commercetools.docs.meta"><code>Client Tuning</code></a>
+                <ul><li><code>Blocking execution</code></li><li><code>RetryMiddleware</code></li><li><code>Configure the underlying http client</code></li><li><code>Limit concurrent requests</code></li><li><code>Timeouts</code></li></ul>
+            </li>
         </ol>
         <h2>Other</h2>
         <ol>
-            <li><a href="com/commercetools/docs/meta/GeneralConcept.html" title="class in com.commercetools.docs.meta"><code>General concepts</code></a></li>
-            <li><a href="com/commercetools/docs/meta/DataRepresentation.html" title="class in com.commercetools.docs.meta"><code>Data representation</code></a></li>
-            <li><a href="com/commercetools/docs/meta/Features.html" title="class in com.commercetools.docs.meta"><code>Features</code></a></li>
-            <li><a href="com/commercetools/docs/meta/Using.html" title="class in com.commercetools.docs.meta"><code>Using</code></a></li>
+            <li>
+                <a href="com/commercetools/docs/meta/GeneralConcept.html" title="class in com.commercetools.docs.meta"><code>General concepts</code></a>
+                <ul><li><code>ApiHttpClient</code></li><li><code>ApiRoot &amp; ProjectApiRoot</code></li><li><code>ApiMethod</code></li><li><code>Models</code></li></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/DataRepresentation.html" title="class in com.commercetools.docs.meta"><code>Data representation</code></a>
+                <ul><li><code>Interfaces</code></li><ul><li><code>Polymorphic types</code></li></ul><li><code>Builder</code></li><ul><li><code>Object property</code></li><li><code>Array property</code></li><li><code>Polymorphic types</code></li></ul><li><code>Implementation</code></li></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/Features.html" title="class in com.commercetools.docs.meta"><code>Features</code></a>
+                <ul><li><code>Embracing Java 8</code></li><li><code>Request builders</code></li><li><code>Good defaults for equals() and hashCode()</code></li><li><code>Client interfaces</code></li><li><code>Model factory methods</code></li><li><code>Middlewares</code></li></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/Using.html" title="class in com.commercetools.docs.meta"><code>Using</code></a>
+                <ul><li><code>Models and Builders</code></li><li><code>Request DSL</code></li></ul>
+            </li>
         </ol>
         <h2>Migration from SDK v1</h2>
         <ol>
-            <li><a href="com/commercetools/docs/meta/Migration.html" title="class in com.commercetools.docs.meta"><code>Overview</code></a></li>
-            <li><a href="com/commercetools/docs/meta/Compatibility.html" title="class in com.commercetools.docs.meta"><code>Compatibility JVM SDK (v1)</code></a></li>
-            <li><a href="com/commercetools/docs/meta/MigrationModelClassMapping.html" title="class in com.commercetools.docs.meta"><code>Model class mapping SDK v1 to v2</code></a></li>
+            <li>
+                <a href="com/commercetools/docs/meta/Migration.html" title="class in com.commercetools.docs.meta"><code>Overview</code></a>
+                <ul></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/Compatibility.html" title="class in com.commercetools.docs.meta"><code>Compatibility JVM SDK (v1)</code></a>
+                <ul><li><code>Creating a SphereClient with the v2 SDK</code></li><li><code>Using Requests from the JVM SDK (v1)</code></li></ul>
+            </li>
+            <li>
+                <a href="com/commercetools/docs/meta/MigrationModelClassMapping.html" title="class in com.commercetools.docs.meta"><code>Model class mapping SDK v1 to v2</code></a>
+                <ul></ul>
+            </li>
         </ol>
         <h2>Monitoring</h2>
         <ol>
-            <li><a href="com/commercetools/monitoring/newrelic/NewRelicTelemetryMiddleware.html" title="class in com.commercetools.monitoring.newrelic"><code>NewRelic</code></a></li>
+            <li>
+                <a href="com/commercetools/monitoring/newrelic/NewRelicTelemetryMiddleware.html" title="class in com.commercetools.monitoring.newrelic"><code>NewRelic</code></a>
+                <ul></ul>
+            </li>
         </ol>
     </div></div>
 <div id="all-packages-table">

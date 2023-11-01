@@ -1,6 +1,9 @@
 
 package com.commercetools.docs.meta;
 
+import com.commercetools.api.client.ByProjectKeyGraphqlRequestBuilder;
+import com.commercetools.api.client.ProjectRequestBuilder;
+
 /**
  * {@include.toc}
  *
@@ -31,7 +34,15 @@ package com.commercetools.docs.meta;
  * instance too and can access it's methods by casting it.</p>
  *
  * {@include.example example.GraphQLModuleTest#graphQLJacksonModule}
-
+ *
+ * <p>For retrieving data it's best to use the {@link ByProjectKeyGraphqlRequestBuilder#query(ProjectRequestBuilder) query} method. It's mapping the result to the response data class with information about the executed operation, so the result data can be accessed directly.</p>
+ *
+ * {@include.example example.GraphQLModuleTest#graphQLExecute}
+ *
+ * <p>It's also possible to execute a custom query from a string</p>
+ *
+ * {@include.example example.GraphQLModuleTest#graphQLCustom}
+ *
  * <p>Additionally for retrieving the result data it can be explicitly mapped to the {@link com.commercetools.graphql.api.GraphQLDataResponse} class which
  * uses the schema generated models.</p>
  *

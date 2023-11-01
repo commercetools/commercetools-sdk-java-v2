@@ -81,4 +81,38 @@ public class GraphQLModuleTest {
         GraphQLData data = (GraphQLData) response.getBody().getData();
         final ProductQueryResult products = data.get(productQuery);
     }
+
+    public void graphQLExecute() {
+        final GraphQLRequest<ProductQueryResult> productQuery = GraphQL
+                .products(query -> query.localeProjection(Collections.singletonList("en")))
+                .projection(root -> root.results().id().key().productType().key().getParent().createdAt());
+
+        final ApiHttpResponse<com.commercetools.graphql.api.GraphQLResponse<ProductQueryResult>> response = projectApiRoot
+                .graphql()
+                .query(productQuery)
+                .executeBlocking();
+
+        Assertions.assertThat(response.getBody()).isNotNull();
+
+        final ProductQueryResult data = response.getBody().getData();
+        Assertions.assertThat(data.getResults()).isNotNull();
+    }
+
+    public void graphQLCustom() {
+        final GraphQLRequest<ProductQueryResult> productQuery = GraphQL.query(
+            "query($localeProjection:[Locale!]) { products(localeProjection: $localeProjection) { results { id } } }")
+                .variables(b -> b.addValue("$localeProjection", Collections.singletonList("en")))
+                .dataMapper(GraphQLData::getProducts)
+                .build();
+
+        final ApiHttpResponse<com.commercetools.graphql.api.GraphQLResponse<ProductQueryResult>> response = projectApiRoot
+                .graphql()
+                .query(productQuery)
+                .executeBlocking();
+
+        Assertions.assertThat(response.getBody()).isNotNull();
+
+        final ProductQueryResult data = response.getBody().getData();
+        Assertions.assertThat(data.getResults()).isNotNull();
+    }
 }

@@ -92,6 +92,7 @@ jobs:
 
       - name: Test examples
         run: |
+          ./gradlew writeVersionToExamples
           cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
           cd ../maven-okhttp4 && mvn verify --no-transfer-progress
 

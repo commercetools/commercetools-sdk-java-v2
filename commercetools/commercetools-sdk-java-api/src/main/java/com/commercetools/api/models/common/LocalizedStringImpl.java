@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.ModelBase;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import static java.util.stream.Collectors.joining;
+
 /**
  * LocalizedString implementation
  */
@@ -55,6 +57,11 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(values).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return reflectionString();
     }
 
 }

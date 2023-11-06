@@ -13,8 +13,6 @@ import io.vrap.rmf.base.client.ModelBase;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-import static java.util.stream.Collectors.joining;
-
 /**
  * LocalizedString implementation
  */

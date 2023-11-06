@@ -13,8 +13,6 @@ import java.util.stream.Stream;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringEntry;
 
-import com.commercetools.api.models.common.LocalizedStringImpl;
-import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.apache.commons.lang3.StringUtils;

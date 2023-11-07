@@ -31,7 +31,15 @@ import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
  * using {@link System#getProperty(String)} e.g.: {@link com.commercetools.api.json.ApiModuleOptions#DESERIALIZE_DATE_ATTRIBUTE_AS_STRING commercetools.deserializeDateAttributeAsString}</p>
  * {@include.example example.SerializationTest#dateAsString()}</p>
  *
- * <h3 id="JsonNodes">Use JsonNodes</h3>
+ * <h3 id="number-attributes">Number attributes</h3>
+ *
+ * <p>When using numbers for attributes and custom fields they will be automatically deserialized as {@link Long} if they don't have a fraction part.
+ * This can be disabled with the options {@link com.commercetools.api.json.ApiModuleOptions#DESERIALIZE_ATTRIBUTE_NUMBER_AS_DOUBLE} and {@link com.commercetools.api.json.ApiModuleOptions#DESERIALIZE_CUSTOM_FIELD_NUMBER_AS_DOUBLE}</p>
+ *
+ * {@include.example com.commercetools.AttributesTest#attributesNumberAsDouble()}
+ * {@include.example com.commercetools.CustomFieldsTest#fieldNumbersAsDouble()}
+ *
+ * <h3 id="JsonNodes">Deserialize Attributes as JsonNode</h3>
  *
  * <p>In case the automatic deserialization of attributes or custom fields is not needed you can set the option {@link com.commercetools.api.json.ApiModuleOptions#DESERIALIZE_ATTRIBUTE_AS_JSON_NODE commercetools.deserializeAttributeAsJsonNode} and/or
  * {@link com.commercetools.api.json.ApiModuleOptions#DESERIALIZE_CUSTOM_FIELD_AS_JSON_NODE commercetools.deserializeCustomFieldAsJsonNode}</p>

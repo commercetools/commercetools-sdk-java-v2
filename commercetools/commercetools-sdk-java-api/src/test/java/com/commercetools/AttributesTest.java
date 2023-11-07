@@ -399,7 +399,7 @@ public class AttributesTest {
         assertThat(attributes.asLong("integer")).isInstanceOfSatisfying(Long.class,
             number -> assertThat(number).isEqualTo(10L));
         assertThat(attributes.asDouble("integer")).isInstanceOfSatisfying(Double.class,
-            number -> assertThat(number).isEqualTo(10L));
+            number -> assertThat(number).isEqualTo(10.0));
         assertThat(attributes.asDouble("double")).isInstanceOfSatisfying(Double.class,
             number -> assertThat(number).isEqualTo(11.0));
         assertThat(attributes.asLong("double")).isInstanceOfSatisfying(Long.class,

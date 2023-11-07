@@ -18,6 +18,11 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.TypedMoney;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
+
+import io.vrap.rmf.base.client.utils.json.JsonException;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 /**
  * Accessor for retrieving type safe custom field values
@@ -213,79 +218,170 @@ public class CustomFieldsAccessor extends MapAccessor<Object> {
     }
 
     private static Boolean mapAsBoolean(final Object value) {
-        return (Boolean) value;
+        if (value instanceof Boolean) {
+            return (Boolean) value;
+        }
+        if (value instanceof JsonNode) {
+            return ((JsonNode) value).asBoolean();
+        }
+        throw new JsonException("invalid type");
     }
 
     private static Double mapAsDouble(final Object value) {
-        return (Double) value;
+        if (value instanceof Double) {
+            return (Double) value;
+        }
+        if (value instanceof Number) {
+            return ((Number) value).doubleValue();
+        }
+        if (value instanceof JsonNode) {
+            return ((JsonNode) value).asDouble();
+        }
+        throw new JsonException("invalid type");
     }
 
     private static LocalizedString mapAsLocalizedString(final Object value) {
-        return (LocalizedString) value;
+        if (value instanceof LocalizedString) {
+            return (LocalizedString) value;
+        }
+        if (value instanceof JsonNode) {
+            return JsonUtils.createObjectMapper().convertValue(value, LocalizedString.class);
+        }
+        throw new JsonException("invalid type");
     }
 
     private static CustomFieldEnumValue mapAsEnum(final Object value) {
-        return (CustomFieldEnumValue) value;
+        if (value instanceof CustomFieldEnumValue) {
+            return (CustomFieldEnumValue) value;
+        }
+        if (value instanceof JsonNode) {
+            return JsonUtils.createObjectMapper().convertValue(value, CustomFieldEnumValue.class);
+        }
+        throw new JsonException("invalid type");
     }
 
     private static CustomFieldLocalizedEnumValue mapAsLocalizedEnum(final Object value) {
-        return (CustomFieldLocalizedEnumValue) value;
+        if (value instanceof CustomFieldLocalizedEnumValue) {
+            return (CustomFieldLocalizedEnumValue) value;
+        }
+        if (value instanceof JsonNode) {
+            return JsonUtils.createObjectMapper().convertValue(value, CustomFieldLocalizedEnumValue.class);
+        }
+        throw new JsonException("invalid type");
     }
 
     private static Long mapAsLong(final Object value) {
-        return (Long) value;
+        if (value instanceof Long) {
+            return (Long) value;
+        }
+        if (value instanceof Number) {
+            return ((Number) value).longValue();
+        }
+        if (value instanceof JsonNode) {
+            return ((JsonNode) value).asLong();
+        }
+        throw new JsonException("invalid type");
     }
 
     private static Reference mapAsReference(final Object value) {
-        return (Reference) value;
+        if (value instanceof Reference) {
+            return (Reference) value;
+        }
+        if (value instanceof JsonNode) {
+            return JsonUtils.createObjectMapper().convertValue(value, Reference.class);
+        }
+        throw new JsonException("invalid type");
     }
 
     private static TypedMoney mapAsMoney(final Object value) {
-        return (TypedMoney) value;
+        if (value instanceof TypedMoney) {
+            return (TypedMoney) value;
+        }
+        if (value instanceof JsonNode) {
+            return JsonUtils.createObjectMapper().convertValue(value, TypedMoney.class);
+        }
+        throw new JsonException("invalid type");
     }
 
     @SuppressWarnings("unchecked")
     private static List<String> mapAsSetString(final Object listValue) {
+        if (listValue instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) listValue, new TypeReference<List<String>>() {
+            });
+        }
         return (List<String>) listValue;
     }
 
     @SuppressWarnings("unchecked")
     private static List<Boolean> mapAsSetBoolean(final Object listValue) {
+        if (listValue instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) listValue, new TypeReference<List<Boolean>>() {
+            });
+        }
         return (List<Boolean>) listValue;
     }
 
     @SuppressWarnings("unchecked")
     private static List<Double> mapAsSetDouble(final Object listValue) {
+        if (listValue instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) listValue, new TypeReference<List<Double>>() {
+            });
+        }
         return (List<Double>) listValue;
     }
 
     @SuppressWarnings("unchecked")
     private static List<LocalizedString> mapAsSetLocalizedString(final Object listValue) {
+        if (listValue instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) listValue, new TypeReference<List<LocalizedString>>() {
+            });
+        }
         return (List<LocalizedString>) listValue;
     }
 
     @SuppressWarnings("unchecked")
     private static List<CustomFieldEnumValue> mapAsSetEnum(final Object listValue) {
+        if (listValue instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) listValue, new TypeReference<List<CustomFieldEnumValue>>() {
+            });
+        }
         return (List<CustomFieldEnumValue>) listValue;
     }
 
     @SuppressWarnings("unchecked")
     private static List<CustomFieldLocalizedEnumValue> mapAsSetLocalizedEnum(final Object listValue) {
+        if (listValue instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) listValue,
+                new TypeReference<List<CustomFieldLocalizedEnumValue>>() {
+                });
+        }
         return (List<CustomFieldLocalizedEnumValue>) listValue;
     }
 
     @SuppressWarnings("unchecked")
     private static List<Long> mapAsSetLong(final Object listValue) {
+        if (listValue instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) listValue, new TypeReference<List<Long>>() {
+            });
+        }
         return (List<Long>) listValue;
     }
 
     @SuppressWarnings("unchecked")
     private static List<Reference> mapAsSetReference(final Object listValue) {
+        if (listValue instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) listValue, new TypeReference<List<Reference>>() {
+            });
+        }
         return (List<Reference>) listValue;
     }
 
     @SuppressWarnings("unchecked")
     private static List<Money> mapAsSetMoney(final Object listValue) {
+        if (listValue instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) listValue, new TypeReference<List<Money>>() {
+            });
+        }
         return (List<Money>) listValue;
     }
 }

@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
  *
  * <h3 id="JsonNodes">Use JsonNodes</h3>
  *
- * <p>In case the automatic deserialization of attributes is not needed. You can set the {@link com.commercetools.api.json.ApiModuleOptions#DESERIALIZE_ATTRIBUTE_AS_JSON_NODE commercetools.deserializeAttributeAsJsonNode} an/or
+ * <p>In case the automatic deserialization of attributes or custom fields is not needed you can set the option {@link com.commercetools.api.json.ApiModuleOptions#DESERIALIZE_ATTRIBUTE_AS_JSON_NODE commercetools.deserializeAttributeAsJsonNode} and/or
  * {@link com.commercetools.api.json.ApiModuleOptions#DESERIALIZE_CUSTOM_FIELD_AS_JSON_NODE commercetools.deserializeCustomFieldAsJsonNode}</p>
  *
  * {@include.example example.SerializationTest#jsonNodes()}

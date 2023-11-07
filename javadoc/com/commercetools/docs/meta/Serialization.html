@@ -189,7 +189,7 @@ assertThat(attributes.get("set-datetime").withAttribute(AttributeAccessor::asSet
 
  <h3 id="JsonNodes">Use JsonNodes</h3>
 
- <p>In case the automatic deserialization of attributes is not needed. You can set the <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_ATTRIBUTE_AS_JSON_NODE"><code>commercetools.deserializeAttributeAsJsonNode</code></a> an/or
+ <p>In case the automatic deserialization of attributes or custom fields is not needed you can set the option <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_ATTRIBUTE_AS_JSON_NODE"><code>commercetools.deserializeAttributeAsJsonNode</code></a> and/or
  <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_CUSTOM_FIELD_AS_JSON_NODE"><code>commercetools.deserializeCustomFieldAsJsonNode</code></a></p>
 
  <div id="example-SerializationTest-jsonNodes--%s" class=code-example><pre><code class='java'>ApiModuleOptions options = ApiModuleOptions.of().withCustomFieldAsJsonNode(true).withAttributeAsJsonNode(true);

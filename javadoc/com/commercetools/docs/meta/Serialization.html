@@ -73,14 +73,14 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Serialization</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li>Serialization</li><ul><li>Customization</li><li>Date and time attributes</li></ul></ul>
+<div class="block"><b>Table of content</b><ul><li>Serialization</li><ul><li><a href="#customization">Customization</a></li><li><a href="#date-time-attributes">Date and time attributes</a></li><li><a href="#JsonNodes">Use JsonNodes</a></li></ul></ul>
  <h2>Serialization</h2>
 
  <p>The SDK uses <a href="https://github.com/FasterXML/jackson">Jackson</a> for searializing and deserializing JSON.
  The default configured <a href="https://fasterxml.github.io/jackson-databind/javadoc/2.14/com/fasterxml/jackson/databind/ObjectMapper.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link"><code>ObjectMapper</code></a> uses some modules to correctly work with our API.
  The details can be found in <a href="../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#createObjectMapper(io.vrap.rmf.base.client.utils.json.modules.ModuleOptions)"><code>JsonUtils.createObjectMapper(ModuleOptions)</code></a></p>
 
- <h3>Customization</h3>
+ <h3 id="customization">Customization</h3>
 
  <p>To allow customization of the ObjectMapper the SDK uses <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html" title="class or interface in java.util" class="external-link"><code>ServiceLoader</code></a> for
  <a href="../../../../io/vrap/rmf/base/client/utils/json/ModuleSupplier.html" title="interface in io.vrap.rmf.base.client.utils.json"><code>ModuleSupplier</code></a>. Adding a file
@@ -138,7 +138,7 @@ public class ApiModule extends SimpleModule {
 </code></pre></div>
  </p>
 
- <h3>Date and time attributes</h3>
+ <h3 id="date-time-attributes">Date and time attributes</h3>
 
  <p>When using Date, Time and DateTime types for product attributes or custom fields the SDK deserializes them as <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link"><code>LocalDate</code></a>,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html" title="class or interface in java.time" class="external-link"><code>LocalTime</code></a> and <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link"><code>ZonedDateTime</code></a>. As sometimes it may needed to serialize them as <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link"><code>String</code></a> the ObjectMapper
@@ -185,7 +185,21 @@ assertThat(attributes.get("set-time").withAttribute(AttributeAccessor::asSetTime
 assertThat(attributes.get("set-datetime").withAttribute(AttributeAccessor::asSetDateTime)).asList()
         .first()
         .isInstanceOf(ZonedDateTime.class);
-</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/SerializationTest.java" target="_blank">test code</a>.</pre></div></p></div>
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/SerializationTest.java" target="_blank">test code</a>.</pre></div></p>
+
+ <h3 id="JsonNodes">Use JsonNodes</h3>
+
+ <p>In case the automatic deserialization of attributes is not needed. You can set the <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_ATTRIBUTE_AS_JSON_NODE"><code>commercetools.deserializeAttributeAsJsonNode</code></a> an/or
+ <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_CUSTOM_FIELD_AS_JSON_NODE"><code>commercetools.deserializeCustomFieldAsJsonNode</code></a></p>
+
+ <div id="example-SerializationTest-jsonNodes--%s" class=code-example><pre><code class='java'>ApiModuleOptions options = ApiModuleOptions.of().withCustomFieldAsJsonNode(true).withAttributeAsJsonNode(true);
+ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+ProjectApiRoot apiRoot = ApiRootBuilder.of()
+        .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+        .withSerializer(ResponseSerializer.of(mapper))
+        .build("test");
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/SerializationTest.java" target="_blank">test code</a>.</pre></div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">

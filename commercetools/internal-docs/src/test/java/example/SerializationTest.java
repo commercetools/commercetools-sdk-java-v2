@@ -80,4 +80,15 @@ public class SerializationTest {
                 .withSerializer(ResponseSerializer.of(mapper))
                 .build("test");
     }
+
+    @Test
+    public void attributesNumberAsDouble() throws JsonProcessingException {
+        ApiModuleOptions options = ApiModuleOptions.of().withAttributeNumberAsDouble(true);
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+        ProductVariant variant = mapper.readValue(stringFromResource("attributes.json"), ProductVariant.class);
+
+        assertThat(variant.getAttribute("integer").getValue()).isEqualTo(10.0);
+    }
+
 }

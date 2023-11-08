@@ -4,7 +4,6 @@ package com.commercetools.api.models.subscription;
 import java.time.*;
 import java.util.*;
 
-import com.commercetools.api.models.message.MessagePayload;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -43,10 +42,10 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
 
     private com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded;
 
-    private MessagePayload messagePayload;
+    private com.commercetools.api.models.message.MessagePayload messagePayload;
 
     @Override
-    public MessagePayload getMessagePayload() {
+    public com.commercetools.api.models.message.MessagePayload getMessagePayload() {
         return messagePayload;
     }
 

@@ -1399,10 +1399,10 @@ types:
   MessageDeliveryPayload:
     (java-extends): MessageDeliveryPayloadMixin
     (java-impl-mixin): |
-      private MessagePayload messagePayload;
+      private com.commercetools.api.models.message.MessagePayload messagePayload;
 
       @Override
-      public MessagePayload getMessagePayload() {
+      public com.commercetools.api.models.message.MessagePayload getMessagePayload() {
           return messagePayload;
       }
   MessagePayload:

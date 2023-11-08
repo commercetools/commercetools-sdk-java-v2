@@ -34,6 +34,7 @@ public class MessagePayloadTest {
         Assertions.assertThat(delivery.getMessagePayload()).isInstanceOf(CustomerLastNameSetMessagePayload.class);
         Assertions.assertThat(delivery.getMessagePayload().as(CustomerLastNameSetMessagePayload.class))
                 .isInstanceOf(CustomerLastNameSetMessagePayload.class);
+        Assertions.assertThat(delivery.hasCompleteMessage()).isTrue();
         Assertions.assertThatThrownBy(() -> delivery.getMessagePayload().as(CustomerFirstNameSetMessagePayload.class))
                 .isInstanceOf(IllegalArgumentException.class);
     }

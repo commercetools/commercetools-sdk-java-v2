@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Serialization</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li>Serialization</li><ul><li><a href="#customization">Customization</a></li><li><a href="#date-time-attributes">Date and time attributes</a></li><li><a href="#JsonNodes">Use JsonNodes</a></li></ul></ul>
+<div class="block"><b>Table of content</b><ul><li>Serialization</li><ul><li><a href="#customization">Customization</a></li><li><a href="#date-time-attributes">Date and time attributes</a></li><li><a href="#number-attributes">Number attributes</a></li><li><a href="#JsonNodes">Deserialize Attributes as JsonNode</a></li></ul></ul>
  <h2>Serialization</h2>
 
  <p>The SDK uses <a href="https://github.com/FasterXML/jackson">Jackson</a> for searializing and deserializing JSON.
@@ -120,18 +120,26 @@ public class ApiModule extends SimpleModule {
         boolean customFieldAsJsonNode = Boolean.parseBoolean(
             Optional.ofNullable(options.getOption(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_AS_JSON_NODE))
                     .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_AS_JSON_NODE)));
+        boolean attributeNumberAsDouble = Boolean.parseBoolean(
+            Optional.ofNullable(options.getOption(ApiModuleOptions.DESERIALIZE_ATTRIBUTE_NUMBER_AS_DOUBLE))
+                    .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_ATTRIBUTE_NUMBER_AS_DOUBLE)));
+        boolean customFieldNumberAsDouble = Boolean.parseBoolean(
+            Optional.ofNullable(options.getOption(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_NUMBER_AS_DOUBLE))
+                    .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_NUMBER_AS_DOUBLE)));
 
         if (attributeAsJsonNode) {
             setMixInAnnotation(AttributeImpl.class, AttributeJsonNodeMixin.class);
         }
         else {
-            addDeserializer(AttributeImpl.class, new AtrributeDeserializer(attributeAsDateString));
+            addDeserializer(AttributeImpl.class,
+                new AtrributeDeserializer(attributeAsDateString, attributeNumberAsDouble));
         }
         if (customFieldAsJsonNode) {
             addDeserializer(FieldContainerImpl.class, new CustomFieldJsonNodeDeserializer());
         }
         else {
-            addDeserializer(FieldContainerImpl.class, new CustomFieldDeserializer(customFieldAsDateString));
+            addDeserializer(FieldContainerImpl.class,
+                new CustomFieldDeserializer(customFieldAsDateString, customFieldNumberAsDouble));
         }
     }
 }
@@ -187,7 +195,25 @@ assertThat(attributes.get("set-datetime").withAttribute(AttributeAccessor::asSet
         .isInstanceOf(ZonedDateTime.class);
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/SerializationTest.java" target="_blank">test code</a>.</pre></div></p>
 
- <h3 id="JsonNodes">Use JsonNodes</h3>
+ <h3 id="number-attributes">Number attributes</h3>
+
+ <p>When using numbers for attributes and custom fields they will be automatically deserialized as <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link"><code>Long</code></a> if they don't have a fraction part.
+ This can be disabled with the options <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_ATTRIBUTE_NUMBER_AS_DOUBLE"><code>ApiModuleOptions.DESERIALIZE_ATTRIBUTE_NUMBER_AS_DOUBLE</code></a> and <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_CUSTOM_FIELD_NUMBER_AS_DOUBLE"><code>ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_NUMBER_AS_DOUBLE</code></a></p>
+
+ <div id="com-commercetools-AttributesTest-attributesNumberAsDouble--%s" class=code-example><pre><code class='java'>ApiModuleOptions options = ApiModuleOptions.of().withAttributeNumberAsDouble(true);
+ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+ProductVariant variant = mapper.readValue(stringFromResource("attributes.json"), ProductVariant.class);
+
+assertThat(variant.getAttribute("integer").getValue()).isEqualTo(10.0);
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-sdk-java-api/src/test/java/com/commercetools/AttributesTest.java" target="_blank">test code</a>.</pre></div>
+ <div id="com-commercetools-CustomFieldsTest-fieldNumbersAsDouble--%s" class=code-example><pre><code class='java'>ApiModuleOptions options = ApiModuleOptions.of().withCustomFieldNumberAsDouble(true);
+ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+CustomFields customFields = mapper.readValue(stringFromResource("customfields.json"), CustomFields.class);
+assertThat(customFields.getFields().values().get("integer")).isEqualTo(10.0);
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-sdk-java-api/src/test/java/com/commercetools/CustomFieldsTest.java" target="_blank">test code</a>.</pre></div>
+
+ <h3 id="JsonNodes">Deserialize Attributes as JsonNode</h3>
 
  <p>In case the automatic deserialization of attributes or custom fields is not needed you can set the option <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_ATTRIBUTE_AS_JSON_NODE"><code>commercetools.deserializeAttributeAsJsonNode</code></a> and/or
  <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_CUSTOM_FIELD_AS_JSON_NODE"><code>commercetools.deserializeCustomFieldAsJsonNode</code></a></p>

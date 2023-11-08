@@ -1399,11 +1399,11 @@ types:
   MessageDeliveryPayload:
     (java-extends): MessageDeliveryPayloadMixin
     (java-impl-mixin): |
-      private MessagePayload message;
+      private MessagePayload messagePayload;
 
       @Override
       public MessagePayload getMessagePayload() {
-          return message;
+          return messagePayload;
       }
   MessagePayload:
     (java-extends): MessagePayloadMixin

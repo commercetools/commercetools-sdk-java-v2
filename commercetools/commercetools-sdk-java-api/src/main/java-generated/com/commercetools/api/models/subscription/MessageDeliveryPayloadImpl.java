@@ -43,11 +43,11 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
 
     private com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded;
 
-    private MessagePayload message;
+    private MessagePayload messagePayload;
 
     @Override
-    public MessagePayload getMessage() {
-        return message;
+    public MessagePayload getMessagePayload() {
+        return messagePayload;
     }
 
     /**

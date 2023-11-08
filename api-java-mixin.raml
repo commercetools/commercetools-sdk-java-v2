@@ -20,6 +20,9 @@ annotationTypes:
   java-implements:
     type: string
     allowedTargets: TypeDeclaration
+  java-impl-mixin:
+    type: string
+    allowedTargets: TypeDeclaration
 
 types:
   BaseAddress:
@@ -1393,7 +1396,17 @@ types:
     (java-extends): 'com.commercetools.api.models.Identifiable<AssociateRole>'
   AssociateRoleUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<AssociateRoleUpdateAction>'
+  MessageDeliveryPayload:
+    (java-extends): MessageDeliveryPayloadMixin
+    (java-impl-mixin): |
+      private MessagePayload messagePayload;
 
+      @Override
+      public MessagePayload getMessagePayload() {
+          return messagePayload;
+      }
+  MessagePayload:
+    (java-extends): MessagePayloadMixin
 /{projectKey}:
   /categories:
     (java-implements): 'ByProjectKeyCategoriesRequestBuilderMixin'

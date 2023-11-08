@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.subscription.MessagePayloadMixin;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -245,7 +246,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = MessagePayloadImpl.class, visible = true)
 @JsonDeserialize(as = MessagePayloadImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface MessagePayload {
+public interface MessagePayload extends MessagePayloadMixin {
 
     /**
      *

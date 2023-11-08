@@ -69,4 +69,26 @@ public class SerializationTest {
                 .first()
                 .isInstanceOf(ZonedDateTime.class);
     }
+
+    @Test
+    public void jsonNodes() throws JsonProcessingException {
+        ApiModuleOptions options = ApiModuleOptions.of().withCustomFieldAsJsonNode(true).withAttributeAsJsonNode(true);
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+        ProjectApiRoot apiRoot = ApiRootBuilder.of()
+                .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .withSerializer(ResponseSerializer.of(mapper))
+                .build("test");
+    }
+
+    @Test
+    public void attributesNumberAsDouble() throws JsonProcessingException {
+        ApiModuleOptions options = ApiModuleOptions.of().withAttributeNumberAsDouble(true);
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+        ProductVariant variant = mapper.readValue(stringFromResource("attributes.json"), ProductVariant.class);
+
+        assertThat(variant.getAttribute("integer").getValue()).isEqualTo(10.0);
+    }
+
 }

@@ -105,6 +105,14 @@ public class CustomFieldsTest {
     }
 
     @Test
+    public void fieldNumbersAsDouble() throws IOException {
+        ApiModuleOptions options = ApiModuleOptions.of().withCustomFieldNumberAsDouble(true);
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+        CustomFields customFields = mapper.readValue(stringFromResource("customfields.json"), CustomFields.class);
+        assertThat(customFields.getFields().values().get("integer")).isEqualTo(10.0);
+    }
+
+    @Test
     public void fieldsAsDateFalse() throws IOException {
         ApiModuleOptions options = ApiModuleOptions.of()
                 .withDateAttributeAsString(true)
@@ -212,8 +220,12 @@ public class CustomFieldsTest {
             aBoolean -> assertThat(aBoolean).isTrue());
         assertThat(fields.asLong("integer")).isInstanceOfSatisfying(Long.class,
             number -> assertThat(number).isEqualTo(10L));
+        assertThat(fields.asDouble("integer")).isInstanceOfSatisfying(Double.class,
+            number -> assertThat(number).isEqualTo(10.0));
         assertThat(fields.asDouble("double")).isInstanceOfSatisfying(Double.class,
             number -> assertThat(number).isEqualTo(11.0));
+        assertThat(fields.asLong("double")).isInstanceOfSatisfying(Long.class,
+            number -> assertThat(number).isEqualTo(11L));
         assertThat(fields.asBoolean("boolean")).isInstanceOfSatisfying(Boolean.class,
             aBoolean -> assertThat(aBoolean).isTrue());
         assertThat(fields.asReference("reference")).isInstanceOfSatisfying(ProductReference.class,

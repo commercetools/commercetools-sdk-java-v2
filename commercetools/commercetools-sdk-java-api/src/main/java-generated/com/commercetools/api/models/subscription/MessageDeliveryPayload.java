@@ -37,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MessageDeliveryPayloadImpl.class)
-public interface MessageDeliveryPayload extends DeliveryPayload {
+public interface MessageDeliveryPayload extends DeliveryPayload, MessageDeliveryPayloadMixin {
 
     /**
      * discriminator value for MessageDeliveryPayload

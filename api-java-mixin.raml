@@ -1397,7 +1397,7 @@ types:
   AssociateRoleUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<AssociateRoleUpdateAction>'
   MessageDeliveryPayload:
-    (java-implements): MessageDeliveryPayloadMixin
+    (java-extends): MessageDeliveryPayloadMixin
     (java-impl-mixin): |
       private MessagePayload message;
 
@@ -1406,7 +1406,7 @@ types:
           return message;
       }
   MessagePayload:
-    (java-implements): MessagePayloadMixin
+    (java-extends): MessagePayloadMixin
 /{projectKey}:
   /categories:
     (java-implements): 'ByProjectKeyCategoriesRequestBuilderMixin'

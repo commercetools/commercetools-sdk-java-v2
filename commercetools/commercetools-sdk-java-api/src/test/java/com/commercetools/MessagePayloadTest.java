@@ -31,10 +31,10 @@ public class MessagePayloadTest {
         MessageDeliveryPayload delivery = JsonUtils.fromJsonString(stringFromResource("messagedeliverypayload.json"),
             MessageDeliveryPayload.class);
 
-        Assertions.assertThat(delivery.getMessage()).isInstanceOf(CustomerLastNameSetMessagePayload.class);
-        Assertions.assertThat(delivery.getMessage().as(CustomerLastNameSetMessagePayload.class))
+        Assertions.assertThat(delivery.getMessagePayload()).isInstanceOf(CustomerLastNameSetMessagePayload.class);
+        Assertions.assertThat(delivery.getMessagePayload().as(CustomerLastNameSetMessagePayload.class))
                 .isInstanceOf(CustomerLastNameSetMessagePayload.class);
-        Assertions.assertThatThrownBy(() -> delivery.getMessage().as(CustomerFirstNameSetMessagePayload.class))
+        Assertions.assertThatThrownBy(() -> delivery.getMessagePayload().as(CustomerFirstNameSetMessagePayload.class))
                 .isInstanceOf(IllegalArgumentException.class);
     }
 }

@@ -8,7 +8,6 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.subscription.MessagePayloadMixin;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 

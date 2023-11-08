@@ -1,6 +1,8 @@
 
 package com.commercetools.api.models.message;
 
+import java.time.*;
+import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;

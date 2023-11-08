@@ -42,13 +42,6 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
 
     private com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded;
 
-    private com.commercetools.api.models.message.MessagePayload messagePayload;
-
-    @Override
-    public com.commercetools.api.models.message.MessagePayload getMessagePayload() {
-        return messagePayload;
-    }
-
     /**
      * create instance with all properties
      */
@@ -261,6 +254,13 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
                 .append(resourceVersion)
                 .append(payloadNotIncluded)
                 .toHashCode();
+    }
+
+    private com.commercetools.api.models.message.MessagePayload messagePayload;
+
+    @Override
+    public com.commercetools.api.models.message.MessagePayload getMessagePayload() {
+        return messagePayload;
     }
 
 }

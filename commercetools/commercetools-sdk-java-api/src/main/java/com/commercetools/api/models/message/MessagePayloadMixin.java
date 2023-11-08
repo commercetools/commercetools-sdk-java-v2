@@ -1,7 +1,5 @@
 
-package com.commercetools.api.models.subscription;
-
-import com.commercetools.api.models.message.MessagePayload;
+package com.commercetools.api.models.message;
 
 public interface MessagePayloadMixin {
     @SuppressWarnings("unchecked")

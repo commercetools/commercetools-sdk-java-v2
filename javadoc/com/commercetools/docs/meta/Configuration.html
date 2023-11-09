@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Configuration</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li><a href="#configuration">Configuration</a></li><ul><li><a href="#api-root">ApiRoot and ProjectApiRoot</a></li><li><a href="#custom-client">Custom HTTP client</a></li><li><a href="#error-handling">Error handling</a></li><ul><li><a href="#unwrap-exceptions">Unwrap exceptions</a></li><li><a href="#not-found">Not found</a></li></ul></ul></ul>
+<div class="block"><b>Table of content</b><ul><li><a href="#configuration">Configuration</a></li><ul><li><a href="#api-root">ApiRoot and ProjectApiRoot</a></li><li><a href="#custom-urls">Custom URLs</a></li><li><a href="#custom-client">Custom HTTP client</a></li><li><a href="#error-handling">Error handling</a></li><ul><li><a href="#unwrap-exceptions">Unwrap exceptions</a></li><li><a href="#not-found">Not found</a></li></ul></ul></ul>
  <h2 id=configuration>Configuration</h2>
 
  <h3 id="api-root">ApiRoot and ProjectApiRoot</h3>
@@ -102,6 +102,15 @@ ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
                 .build(),
             ServiceRegion.GCP_EUROPE_WEST1)
         .build("my-project");
+
+// Project scoped ApiRoot config for Europe projects
+ProjectApiRoot projectApiRootGcpEu = ApiRootBuilder.of()
+        .defaultClient(ClientCredentials.of()
+                .withClientId("your-client-id")
+                .withClientSecret("your-client-secret")
+                .build(),
+            ServiceRegion.valueOf("GCP_EUROPE_WEST1"))
+        .build("my-project");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
  <p>Similar configuration to create the root instances for the Import API</p>
@@ -122,6 +131,32 @@ ProjectApiRoot projectApiRoot = ImportApiRootBuilder.of()
             ServiceRegion.GCP_EUROPE_WEST1)
         .build("my-projectkey");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ImportExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <h3 id="custom-urls">Custom URLs</h3>
+
+ To use custom URLs for API endpoints and authentication you have to provide the base URIs to the defaultClient method
+
+ <div id="example-ExamplesTest-customUrls--%s" class=code-example><pre><code class='java'>// Project scoped ApiRoot config using ServiceRegion class
+ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+        .defaultClient(
+            ClientCredentials.of()
+                    .withClientId("your-client-id")
+                    .withClientSecret("your-client-secret")
+                    .build(),
+            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+        .build("my-project");
+
+// Project scoped ApiRoot config using URI strings
+ProjectApiRoot projectApiRoot2 = ApiRootBuilder.of()
+        .defaultClient(
+            ClientCredentials.of()
+                    .withClientId("your-client-id")
+                    .withClientSecret("your-client-secret")
+                    .build(),
+            "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
+            "https://api.europe-west1.gcp.commercetools.com/")
+        .build("my-project");
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
  <h3 id="custom-client">Custom HTTP client</h3>
 

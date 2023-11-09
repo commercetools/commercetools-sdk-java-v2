@@ -104,6 +104,15 @@ ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
                 .build(),
             ServiceRegion.GCP_EUROPE_WEST1)
         .build("my-project");
+
+// Project scoped ApiRoot config for Europe projects
+ProjectApiRoot projectApiRootGcpEu = ApiRootBuilder.of()
+        .defaultClient(ClientCredentials.of()
+                .withClientId("your-client-id")
+                .withClientSecret("your-client-secret")
+                .build(),
+            ServiceRegion.valueOf("GCP_EUROPE_WEST1"))
+        .build("my-project");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
  <h3 id=perform-requests>Performing requests</h3>

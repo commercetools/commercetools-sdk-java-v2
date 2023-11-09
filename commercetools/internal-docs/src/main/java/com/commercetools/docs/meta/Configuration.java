@@ -27,7 +27,7 @@ import io.vrap.rmf.base.client.http.ErrorMiddleware;
  *
  * To use custom URLs for API endpoints and authentication you have to provide the base URIs to the defaultClient method
  *
- * {@include.example example.ImportExamplesTest#customUrls()}
+ * {@include.example example.ExamplesTest#customUrls()}
  *
  * <h3 id="custom-client">Custom HTTP client</h3>
  *

@@ -79,6 +79,38 @@ public class ExamplesTest {
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .build("my-project");
+
+        // Project scoped ApiRoot config for Europe projects
+        ProjectApiRoot projectApiRootGcpEu = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.valueOf("GCP_EUROPE_WEST1"))
+                .build("my-project");
+    }
+
+    public void customUrls() {
+        // Project scoped ApiRoot config using ServiceRegion class
+        ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .build("my-project");
+
+        // Project scoped ApiRoot config using URI strings
+        ProjectApiRoot projectApiRoot2 = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .build(),
+                    "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
+                    "https://api.europe-west1.gcp.commercetools.com/")
+                .build("my-project");
     }
 
     public void timeoutMiddleware() {

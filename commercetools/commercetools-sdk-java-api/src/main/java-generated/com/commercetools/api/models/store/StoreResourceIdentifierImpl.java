@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>ResourceIdentifier to a Store.</p>
+ *  <p>ResourceIdentifier to a Store. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, ModelBase {
@@ -53,7 +53,7 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
     }
 
     /**
-     *  <p>Unique ID of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique ID of the referenced Store. Required if <code>key</code> is absent.</p>
      */
 
     public String getId() {
@@ -61,7 +61,7 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
     }
 
     /**
-     *  <p>Unique key of the referenced Store. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique key of the referenced Store. Required if <code>id</code> is absent.</p>
      */
 
     public String getKey() {

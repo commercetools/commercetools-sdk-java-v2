@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>ResourceIdentifier to an OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+ *  <p>ResourceIdentifier to an OrderEdit. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentifier, ModelBase {
@@ -53,7 +53,7 @@ public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentif
     }
 
     /**
-     *  <p>Unique identifier of the referenced OrderEdit.</p>
+     *  <p>Unique identifier of the referenced OrderEdit. Required if <code>key</code> is absent.</p>
      */
 
     public String getId() {
@@ -61,7 +61,7 @@ public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentif
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced OrderEdit.</p>
+     *  <p>User-defined unique identifier of the referenced OrderEdit. Required if <code>id</code> is absent.</p>
      */
 
     public String getKey() {

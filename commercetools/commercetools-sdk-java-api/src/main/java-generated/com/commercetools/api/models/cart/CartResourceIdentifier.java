@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>ResourceIdentifier to a Cart.</p>
+ *  <p>ResourceIdentifier to a Cart. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface CartResourceIdentifier extends ResourceIdentifier, com.commerce
     String CART = "cart";
 
     /**
-     *  <p>Unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced Cart. Required if <code>key</code> is absent.</p>
      * @return id
      */
 
@@ -43,7 +43,7 @@ public interface CartResourceIdentifier extends ResourceIdentifier, com.commerce
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced Cart. Required if <code>id</code> is absent.</p>
      * @return key
      */
 
@@ -51,14 +51,14 @@ public interface CartResourceIdentifier extends ResourceIdentifier, com.commerce
     public String getKey();
 
     /**
-     *  <p>Unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced Cart. Required if <code>key</code> is absent.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>User-defined unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced Cart. Required if <code>id</code> is absent.</p>
      * @param key value to be set
      */
 

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>ResourceIdentifier to a ShoppingList.</p>
+ *  <p>ResourceIdentifier to a ShoppingList. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListResourceIdentifierImpl implements ShoppingListResourceIdentifier, ModelBase {
@@ -53,7 +53,7 @@ public class ShoppingListResourceIdentifierImpl implements ShoppingListResourceI
     }
 
     /**
-     *  <p>Unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced ShoppingList. Required if <code>key</code> is absent.</p>
      */
 
     public String getId() {
@@ -61,7 +61,7 @@ public class ShoppingListResourceIdentifierImpl implements ShoppingListResourceI
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced ShoppingList. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced ShoppingList. Required if <code>id</code> is absent.</p>
      */
 
     public String getKey() {

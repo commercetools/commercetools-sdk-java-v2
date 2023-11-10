@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>ResourceIdentifier to a DiscountCode.</p>
+ *  <p>ResourceIdentifier to a DiscountCode. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeResourceIdentifierImpl implements DiscountCodeResourceIdentifier, ModelBase {
@@ -53,7 +53,7 @@ public class DiscountCodeResourceIdentifierImpl implements DiscountCodeResourceI
     }
 
     /**
-     *  <p>Unique identifier of the referenced DiscountCode. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced DiscountCode. Required if <code>key</code> is absent.</p>
      */
 
     public String getId() {
@@ -61,7 +61,7 @@ public class DiscountCodeResourceIdentifierImpl implements DiscountCodeResourceI
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced DiscountCode. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced DiscountCode. Required if <code>id</code> is absent.</p>
      */
 
     public String getKey() {

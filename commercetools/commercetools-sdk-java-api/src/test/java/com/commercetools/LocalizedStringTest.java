@@ -189,7 +189,7 @@ public class LocalizedStringTest {
         assertThat(((ModelBase) LOCALIZED_STRING).reflectionString())
                 .isEqualTo(format("LocalizedStringImpl[values={de=%s, en=%s}]", DEFAULT_STRING_1, DEFAULT_STRING_2));
         assertThat(LOCALIZED_STRING.toString())
-                .isEqualTo(format("LocalizedStringImpl(de->%s, en->%s)", DEFAULT_STRING_1, DEFAULT_STRING_2));
+                .isEqualTo(format("LocalizedStringImpl(de -> %s, en -> %s)", DEFAULT_STRING_1, DEFAULT_STRING_2));
     }
 
     @Test

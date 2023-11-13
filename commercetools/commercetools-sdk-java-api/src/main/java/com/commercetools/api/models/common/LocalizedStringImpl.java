@@ -14,6 +14,8 @@ import io.vrap.rmf.base.client.ModelBase;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * LocalizedString implementation
@@ -61,11 +63,9 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
 
     @Override
     public String toString() {
-        return "LocalizedStringImpl(" + values.entrySet()
-                .stream()
-                .sorted(Comparator.comparing(Map.Entry::getKey))
-                .map(entry -> entry.getKey() + " -> " + entry.getValue())
-                .collect(joining(", ")) + ")";
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+                .append("values", values)
+                .build();
     }
 
 }

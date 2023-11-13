@@ -1,8 +1,6 @@
 
 package com.commercetools.api.models.common;
 
-import static java.util.stream.Collectors.joining;
-
 import java.time.*;
 import java.util.*;
 
@@ -63,9 +61,7 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
-                .append("values", values)
-                .build();
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
 }

@@ -1,6 +1,8 @@
 
 package com.commercetools.api.models.common;
 
+import static java.util.stream.Collectors.joining;
+
 import java.time.*;
 import java.util.*;
 
@@ -12,8 +14,6 @@ import io.vrap.rmf.base.client.ModelBase;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-
-import static java.util.stream.Collectors.joining;
 
 /**
  * LocalizedString implementation
@@ -61,14 +61,11 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
 
     @Override
     public String toString() {
-        return "LocalizedStringImpl(" +
-                values
-                        .entrySet()
-                        .stream()
-                        .sorted(Comparator.comparing(Map.Entry::getKey))
-                        .map(entry -> entry.getKey() + " -> " + entry.getValue())
-                        .collect(joining(", "))
-                + ")";
+        return "LocalizedStringImpl(" + values.entrySet()
+                .stream()
+                .sorted(Comparator.comparing(Map.Entry::getKey))
+                .map(entry -> entry.getKey() + " -> " + entry.getValue())
+                .collect(joining(", ")) + ")";
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * QuoteRequestDraft
@@ -180,6 +182,18 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
                 .append(state)
                 .append(purchaseOrderNumber)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("cart", cart)
+                .append("cartVersion", cartVersion)
+                .append("key", key)
+                .append("comment", comment)
+                .append("custom", custom)
+                .append("state", state)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
+                .build();
     }
 
 }

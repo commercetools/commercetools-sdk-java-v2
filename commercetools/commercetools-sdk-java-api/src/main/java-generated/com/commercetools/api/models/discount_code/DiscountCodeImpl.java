@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * DiscountCode
@@ -440,6 +442,31 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .append(validUntil)
                 .append(applicationVersion)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("name", name)
+                .append("description", description)
+                .append("code", code)
+                .append("cartDiscounts", cartDiscounts)
+                .append("cartPredicate", cartPredicate)
+                .append("isActive", isActive)
+                .append("references", references)
+                .append("maxApplications", maxApplications)
+                .append("maxApplicationsPerCustomer", maxApplicationsPerCustomer)
+                .append("custom", custom)
+                .append("groups", groups)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("applicationVersion", applicationVersion)
+                .build();
     }
 
 }

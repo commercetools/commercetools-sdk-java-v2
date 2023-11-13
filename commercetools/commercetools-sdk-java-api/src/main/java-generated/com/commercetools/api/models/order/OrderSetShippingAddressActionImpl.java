@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This action updates the <code>shippingAddress</code> on the Order, but it does not change the shipping address on the referenced Cart from which the Order is created. Also, it does not recalculate the Cart as taxes may not fit to the shipping address anymore.</p>
@@ -82,6 +84,13 @@ public class OrderSetShippingAddressActionImpl implements OrderSetShippingAddres
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(address).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("address", address)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderFromQuoteDraft
@@ -201,6 +203,19 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
                 .append(orderState)
                 .append(state)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("quote", quote)
+                .append("version", version)
+                .append("quoteStateToAccepted", quoteStateToAccepted)
+                .append("orderNumber", orderNumber)
+                .append("paymentState", paymentState)
+                .append("shipmentState", shipmentState)
+                .append("orderState", orderState)
+                .append("state", state)
+                .build();
     }
 
 }

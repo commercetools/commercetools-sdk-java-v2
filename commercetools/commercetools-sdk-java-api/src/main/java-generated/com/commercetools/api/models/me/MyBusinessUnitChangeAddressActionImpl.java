@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Changing the address on a Business Unit generates the BusinessUnitAddressChanged Message.</p>
@@ -120,6 +122,15 @@ public class MyBusinessUnitChangeAddressActionImpl implements MyBusinessUnitChan
                 .append(addressKey)
                 .append(address)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("addressId", addressId)
+                .append("addressKey", addressKey)
+                .append("address", address)
+                .build();
     }
 
 }

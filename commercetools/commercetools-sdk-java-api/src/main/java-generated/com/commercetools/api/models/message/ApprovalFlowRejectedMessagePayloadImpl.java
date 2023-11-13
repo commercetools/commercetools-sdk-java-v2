@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after an Approval Flow is rejected.</p>
@@ -121,6 +123,15 @@ public class ApprovalFlowRejectedMessagePayloadImpl implements ApprovalFlowRejec
                 .append(rejectionReason)
                 .append(order)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("associate", associate)
+                .append("rejectionReason", rejectionReason)
+                .append("order", order)
+                .build();
     }
 
 }

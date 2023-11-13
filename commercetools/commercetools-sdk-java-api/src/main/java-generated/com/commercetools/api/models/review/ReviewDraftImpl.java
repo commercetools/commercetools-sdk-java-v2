@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>When creating a new Review, at least one of <code>title</code>, <code>text</code> or <code>rating</code> should be set.</p>
@@ -256,6 +258,22 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
                 .append(customer)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("uniquenessValue", uniquenessValue)
+                .append("locale", locale)
+                .append("authorName", authorName)
+                .append("title", title)
+                .append("text", text)
+                .append("target", target)
+                .append("state", state)
+                .append("rating", rating)
+                .append("customer", customer)
+                .append("custom", custom)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * AssetDraft
@@ -171,6 +173,17 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
                 .append(custom)
                 .append(key)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("sources", sources)
+                .append("name", name)
+                .append("description", description)
+                .append("tags", tags)
+                .append("custom", custom)
+                .append("key", key)
+                .build();
     }
 
 }

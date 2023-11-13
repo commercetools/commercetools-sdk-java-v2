@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The CloudEventsFormat represents event data in a way that conforms to a common specification. The message payload can be found inside the <code>data</code> field.</p>
@@ -234,6 +236,21 @@ public class CloudEventsPayloadImpl implements CloudEventsPayload, ModelBase {
                 .append(dataref)
                 .append(data)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("specversion", specversion)
+                .append("id", id)
+                .append("type", type)
+                .append("source", source)
+                .append("subject", subject)
+                .append("time", time)
+                .append("sequence", sequence)
+                .append("sequencetype", sequencetype)
+                .append("dataref", dataref)
+                .append("data", data)
+                .build();
     }
 
 }

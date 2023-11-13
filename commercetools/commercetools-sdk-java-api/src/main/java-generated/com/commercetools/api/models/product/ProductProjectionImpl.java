@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProductProjection
@@ -495,6 +497,34 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
                 .append(reviewRatingStatistics)
                 .append(priceMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("key", key)
+                .append("productType", productType)
+                .append("name", name)
+                .append("description", description)
+                .append("slug", slug)
+                .append("categories", categories)
+                .append("categoryOrderHints", categoryOrderHints)
+                .append("metaTitle", metaTitle)
+                .append("metaDescription", metaDescription)
+                .append("metaKeywords", metaKeywords)
+                .append("searchKeywords", searchKeywords)
+                .append("hasStagedChanges", hasStagedChanges)
+                .append("published", published)
+                .append("masterVariant", masterVariant)
+                .append("variants", variants)
+                .append("taxCategory", taxCategory)
+                .append("state", state)
+                .append("reviewRatingStatistics", reviewRatingStatistics)
+                .append("priceMode", priceMode)
+                .build();
     }
 
 }

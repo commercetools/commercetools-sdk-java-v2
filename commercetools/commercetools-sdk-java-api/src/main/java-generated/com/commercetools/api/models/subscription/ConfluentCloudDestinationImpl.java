@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This destination can be used to push events and messages to Confluent Cloud. To set up a Subscription of this type, first, create a topic in Confluent Cloud. Then, to allow Composable Commerce to push events and messages to your topic, generate API keys for your topic, and create the Subscription destination using the generated credentials.</p>
@@ -176,6 +178,18 @@ public class ConfluentCloudDestinationImpl implements ConfluentCloudDestination,
                 .append(topic)
                 .append(key)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("bootstrapServer", bootstrapServer)
+                .append("apiKey", apiKey)
+                .append("apiSecret", apiSecret)
+                .append("acks", acks)
+                .append("topic", topic)
+                .append("key", key)
+                .build();
     }
 
 }

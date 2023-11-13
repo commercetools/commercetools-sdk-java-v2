@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StagedOrderSetReturnItemCustomFieldAction
@@ -139,6 +141,16 @@ public class StagedOrderSetReturnItemCustomFieldActionImpl
                 .append(name)
                 .append(value)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("returnItemId", returnItemId)
+                .append("returnItemKey", returnItemKey)
+                .append("name", name)
+                .append("value", value)
+                .build();
     }
 
 }

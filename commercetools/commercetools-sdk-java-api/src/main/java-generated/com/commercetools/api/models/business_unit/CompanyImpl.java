@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Business Unit type to represent the top level of a business. Contains specific fields and values that differentiate a Company from the generic BusinessUnit.</p>
@@ -528,6 +530,35 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(parentUnit)
                 .append(topLevelUnit)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("key", key)
+                .append("status", status)
+                .append("stores", stores)
+                .append("storeMode", storeMode)
+                .append("unitType", unitType)
+                .append("name", name)
+                .append("contactEmail", contactEmail)
+                .append("custom", custom)
+                .append("addresses", addresses)
+                .append("shippingAddressIds", shippingAddressIds)
+                .append("defaultShippingAddressId", defaultShippingAddressId)
+                .append("billingAddressIds", billingAddressIds)
+                .append("defaultBillingAddressId", defaultBillingAddressId)
+                .append("associateMode", associateMode)
+                .append("associates", associates)
+                .append("inheritedAssociates", inheritedAssociates)
+                .append("parentUnit", parentUnit)
+                .append("topLevelUnit", topLevelUnit)
+                .build();
     }
 
 }

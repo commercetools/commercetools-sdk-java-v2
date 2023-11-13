@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>These objects represent information about which API Client created or modified a resource. For more information, see Client Logging.</p>
@@ -143,6 +145,16 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
                 .append(anonymousId)
                 .append(associate)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("clientId", clientId)
+                .append("externalUserId", externalUserId)
+                .append("customer", customer)
+                .append("anonymousId", anonymousId)
+                .append("associate", associate)
+                .build();
     }
 
 }

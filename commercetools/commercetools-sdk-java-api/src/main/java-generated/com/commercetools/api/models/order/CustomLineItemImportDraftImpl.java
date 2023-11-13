@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Custom Line Items contain generic user-defined items that are not linked to Products.</p>
@@ -264,6 +266,22 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
                 .append(state)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("key", key)
+                .append("slug", slug)
+                .append("quantity", quantity)
+                .append("money", money)
+                .append("taxRate", taxRate)
+                .append("taxCategory", taxCategory)
+                .append("priceMode", priceMode)
+                .append("shippingDetails", shippingDetails)
+                .append("state", state)
+                .append("custom", custom)
+                .build();
     }
 
 }

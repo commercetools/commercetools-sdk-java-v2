@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Result of a succesful application of <code>stagedActions</code> to the Order.</p>
@@ -120,6 +122,15 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
                 .append(excerptBeforeEdit)
                 .append(excerptAfterEdit)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("appliedAt", appliedAt)
+                .append("excerptBeforeEdit", excerptBeforeEdit)
+                .append("excerptAfterEdit", excerptAfterEdit)
+                .build();
     }
 
 }

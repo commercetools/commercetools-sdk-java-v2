@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>SKU cannot be changed or removed if it is associated with an InventoryEntry. If the SKU to set or unset is part of a ProductSelectionAssignment it will be automatically added or removed from the respective ProductVariantSelection.</p>
@@ -115,6 +117,15 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(variantId).append(sku).append(staged).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("variantId", variantId)
+                .append("sku", sku)
+                .append("staged", staged)
+                .build();
     }
 
 }

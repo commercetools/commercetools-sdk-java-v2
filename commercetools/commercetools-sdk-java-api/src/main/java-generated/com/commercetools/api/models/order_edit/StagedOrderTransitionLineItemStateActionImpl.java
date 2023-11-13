@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Produces the Line Item State Transition Message.</p>
@@ -177,6 +179,18 @@ public class StagedOrderTransitionLineItemStateActionImpl
                 .append(toState)
                 .append(actualTransitionDate)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("quantity", quantity)
+                .append("fromState", fromState)
+                .append("toState", toState)
+                .append("actualTransitionDate", actualTransitionDate)
+                .build();
     }
 
 }

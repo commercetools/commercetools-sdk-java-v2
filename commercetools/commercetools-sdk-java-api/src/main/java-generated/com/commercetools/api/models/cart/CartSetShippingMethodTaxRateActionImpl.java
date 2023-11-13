@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A Shipping Method Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
@@ -98,6 +100,14 @@ public class CartSetShippingMethodTaxRateActionImpl implements CartSetShippingMe
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(shippingKey).append(externalTaxRate).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("shippingKey", shippingKey)
+                .append("externalTaxRate", externalTaxRate)
+                .build();
     }
 
 }

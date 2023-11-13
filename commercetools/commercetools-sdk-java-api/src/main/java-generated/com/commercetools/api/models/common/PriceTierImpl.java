@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A Price tier is selected instead of the default Price when a certain quantity of the ProductVariant is added to a Cart and ordered. <em>For example: the Price can be lower if more than 10 items are ordered.</em> If no Price tier is found for the Order quantity, the base Price is used. A Price tier is applied for the entire quantity of a Product Variant put as LineItem in a Cart as soon as the minimum quantity for the Price tier is reached. The Price tier is applied per Line Item of the Product Variant. If, for example, the same Product Variant appears in the same Cart as several Line Items, (what can be achieved by different values of a Custom Field on the Line Items) for each Line Item the minimum quantity must be reached to get the Price tier.</p>
@@ -86,6 +88,13 @@ public class PriceTierImpl implements PriceTier, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(minimumQuantity).append(value).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("minimumQuantity", minimumQuantity)
+                .append("value", value)
+                .build();
     }
 
 }

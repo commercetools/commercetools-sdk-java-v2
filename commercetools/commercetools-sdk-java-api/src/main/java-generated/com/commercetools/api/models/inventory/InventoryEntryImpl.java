@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * InventoryEntry
@@ -312,6 +314,25 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
                 .append(expectedDelivery)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("key", key)
+                .append("sku", sku)
+                .append("supplyChannel", supplyChannel)
+                .append("quantityOnStock", quantityOnStock)
+                .append("availableQuantity", availableQuantity)
+                .append("restockableInDays", restockableInDays)
+                .append("expectedDelivery", expectedDelivery)
+                .append("custom", custom)
+                .build();
     }
 
 }

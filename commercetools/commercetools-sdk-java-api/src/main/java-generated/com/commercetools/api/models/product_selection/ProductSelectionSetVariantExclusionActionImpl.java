@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Updates the Product Variant Exclusion of an existing Product Selection Assignment. A ProductVariantExclusion can only be set if the Product has already been excluded from the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
@@ -102,6 +104,14 @@ public class ProductSelectionSetVariantExclusionActionImpl
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(product).append(variantExclusion).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("product", product)
+                .append("variantExclusion", variantExclusion)
+                .build();
     }
 
 }

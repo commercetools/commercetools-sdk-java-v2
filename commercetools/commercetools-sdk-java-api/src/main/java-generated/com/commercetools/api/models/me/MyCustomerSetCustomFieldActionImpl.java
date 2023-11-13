@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Adding a Custom Field to a Customer generates the CustomerCustomFieldAdded Message, removing one generates the CustomerCustomFieldRemoved Message, and updating an existing one generates the CustomerCustomFieldChanged Message.</p>
@@ -98,6 +100,14 @@ public class MyCustomerSetCustomFieldActionImpl implements MyCustomerSetCustomFi
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(name).append(value).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("name", name)
+                .append("value", value)
+                .build();
     }
 
 }

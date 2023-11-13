@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * PaymentDraft
@@ -250,6 +252,21 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
                 .append(custom)
                 .append(key)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("customer", customer)
+                .append("anonymousId", anonymousId)
+                .append("interfaceId", interfaceId)
+                .append("amountPlanned", amountPlanned)
+                .append("paymentMethodInfo", paymentMethodInfo)
+                .append("paymentStatus", paymentStatus)
+                .append("transactions", transactions)
+                .append("interfaceInteractions", interfaceInteractions)
+                .append("custom", custom)
+                .append("key", key)
+                .build();
     }
 
 }

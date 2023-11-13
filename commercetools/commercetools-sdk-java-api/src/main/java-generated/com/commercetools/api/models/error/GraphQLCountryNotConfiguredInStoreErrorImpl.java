@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a Cart or an Order in a Store references a country that is not included in the countries configured for the Store.</p>
@@ -138,6 +140,15 @@ public class GraphQLCountryNotConfiguredInStoreErrorImpl implements GraphQLCount
                 .append(storeCountries)
                 .append(country)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("values", values)
+                .append("storeCountries", storeCountries)
+                .append("country", country)
+                .build();
     }
 
 }

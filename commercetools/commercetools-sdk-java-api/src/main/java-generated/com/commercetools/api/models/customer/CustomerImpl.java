@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>If <code>stores</code> is not empty, the Customer is specific to those Stores.</p>
@@ -634,6 +636,41 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(stores)
                 .append(authenticationMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("key", key)
+                .append("customerNumber", customerNumber)
+                .append("externalId", externalId)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("email", email)
+                .append("password", password)
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .append("middleName", middleName)
+                .append("title", title)
+                .append("dateOfBirth", dateOfBirth)
+                .append("companyName", companyName)
+                .append("vatId", vatId)
+                .append("addresses", addresses)
+                .append("defaultShippingAddressId", defaultShippingAddressId)
+                .append("shippingAddressIds", shippingAddressIds)
+                .append("defaultBillingAddressId", defaultBillingAddressId)
+                .append("billingAddressIds", billingAddressIds)
+                .append("isEmailVerified", isEmailVerified)
+                .append("customerGroup", customerGroup)
+                .append("custom", custom)
+                .append("locale", locale)
+                .append("salutation", salutation)
+                .append("stores", stores)
+                .append("authenticationMode", authenticationMode)
+                .build();
     }
 
 }

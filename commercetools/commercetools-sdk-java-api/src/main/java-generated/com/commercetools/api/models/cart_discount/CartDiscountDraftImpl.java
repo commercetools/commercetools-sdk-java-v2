@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CartDiscountDraft
@@ -324,6 +326,25 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(stackingMode)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("key", key)
+                .append("description", description)
+                .append("value", value)
+                .append("cartPredicate", cartPredicate)
+                .append("target", target)
+                .append("sortOrder", sortOrder)
+                .append("stores", stores)
+                .append("isActive", isActive)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("requiresDiscountCode", requiresDiscountCode)
+                .append("stackingMode", stackingMode)
+                .append("custom", custom)
+                .build();
     }
 
 }

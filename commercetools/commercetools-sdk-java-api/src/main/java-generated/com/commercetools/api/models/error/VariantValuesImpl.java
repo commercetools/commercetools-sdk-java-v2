@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * VariantValues
@@ -110,6 +112,14 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(sku).append(prices).append(attributes).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("sku", sku)
+                .append("prices", prices)
+                .append("attributes", attributes)
+                .build();
     }
 
 }

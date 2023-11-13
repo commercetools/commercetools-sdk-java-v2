@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>PagedQueryResult with <code>results</code> containing an array of DiscountCode.</p>
@@ -146,6 +148,16 @@ public class DiscountCodePagedQueryResponseImpl implements DiscountCodePagedQuer
                 .append(total)
                 .append(results)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("limit", limit)
+                .append("offset", offset)
+                .append("count", count)
+                .append("total", total)
+                .append("results", results)
+                .build();
     }
 
 }

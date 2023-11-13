@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>To set the Cart's Shipping Method the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
@@ -101,6 +103,14 @@ public class MyCartSetShippingMethodActionImpl implements MyCartSetShippingMetho
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(shippingMethod).append(externalTaxRate).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("shippingMethod", shippingMethod)
+                .append("externalTaxRate", externalTaxRate)
+                .build();
     }
 
 }

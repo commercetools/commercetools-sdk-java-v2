@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StagedOrder
@@ -1073,6 +1075,62 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(lastModifiedBy)
                 .append(createdBy)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("orderNumber", orderNumber)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
+                .append("customerId", customerId)
+                .append("customerEmail", customerEmail)
+                .append("customerGroup", customerGroup)
+                .append("anonymousId", anonymousId)
+                .append("businessUnit", businessUnit)
+                .append("store", store)
+                .append("lineItems", lineItems)
+                .append("customLineItems", customLineItems)
+                .append("totalPrice", totalPrice)
+                .append("taxedPrice", taxedPrice)
+                .append("taxedShippingPrice", taxedShippingPrice)
+                .append("discountOnTotalPrice", discountOnTotalPrice)
+                .append("taxMode", taxMode)
+                .append("taxRoundingMode", taxRoundingMode)
+                .append("taxCalculationMode", taxCalculationMode)
+                .append("inventoryMode", inventoryMode)
+                .append("billingAddress", billingAddress)
+                .append("shippingAddress", shippingAddress)
+                .append("shippingMode", shippingMode)
+                .append("shippingKey", shippingKey)
+                .append("shippingInfo", shippingInfo)
+                .append("shippingRateInput", shippingRateInput)
+                .append("shippingCustomFields", shippingCustomFields)
+                .append("shipping", shipping)
+                .append("itemShippingAddresses", itemShippingAddresses)
+                .append("discountCodes", discountCodes)
+                .append("directDiscounts", directDiscounts)
+                .append("refusedGifts", refusedGifts)
+                .append("paymentInfo", paymentInfo)
+                .append("country", country)
+                .append("locale", locale)
+                .append("origin", origin)
+                .append("cart", cart)
+                .append("quote", quote)
+                .append("orderState", orderState)
+                .append("shipmentState", shipmentState)
+                .append("paymentState", paymentState)
+                .append("state", state)
+                .append("syncInfo", syncInfo)
+                .append("returnInfo", returnInfo)
+                .append("lastMessageSequenceNumber", lastMessageSequenceNumber)
+                .append("custom", custom)
+                .append("completedAt", completedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .build();
     }
 
 }

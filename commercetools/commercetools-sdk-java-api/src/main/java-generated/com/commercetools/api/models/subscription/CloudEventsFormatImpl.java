@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The CloudEventsFormat can be used with any Destination, and the payload is delivered in the <code>JSON Event Format</code>. AzureEventGridDestination offers native support to filter and route CloudEvents.</p>
@@ -80,6 +82,13 @@ public class CloudEventsFormatImpl implements CloudEventsFormat, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(cloudEventsVersion).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("cloudEventsVersion", cloudEventsVersion)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Transition State update action.</p>
@@ -178,6 +180,18 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
                 .append(target)
                 .append(force)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("oldState", oldState)
+                .append("newState", newState)
+                .append("oldIncludedInStatistics", oldIncludedInStatistics)
+                .append("newIncludedInStatistics", newIncludedInStatistics)
+                .append("target", target)
+                .append("force", force)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated when an existing Custom Field has been changed using the Set CustomField action.</p>
@@ -116,6 +118,15 @@ public class OrderCustomFieldChangedMessagePayloadImpl implements OrderCustomFie
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(name).append(value).append(previousValue).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("name", name)
+                .append("value", value)
+                .append("previousValue", previousValue)
+                .build();
     }
 
 }

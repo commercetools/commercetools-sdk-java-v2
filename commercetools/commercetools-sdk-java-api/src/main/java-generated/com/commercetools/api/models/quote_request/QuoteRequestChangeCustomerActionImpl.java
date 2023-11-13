@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Changes the owner of a Quote Request to a different Customer. Customer Group is not updated. This update action produces the Quote Request Customer Changed Message.</p>
@@ -81,6 +83,13 @@ public class QuoteRequestChangeCustomerActionImpl implements QuoteRequestChangeC
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(customer).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("customer", customer)
+                .build();
     }
 
 }

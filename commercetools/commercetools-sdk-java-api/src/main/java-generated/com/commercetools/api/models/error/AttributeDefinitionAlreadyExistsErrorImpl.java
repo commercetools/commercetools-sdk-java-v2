@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the <code>name</code> of the AttributeDefinition conflicts with an existing Attribute.</p>
@@ -162,6 +164,17 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
                 .append(conflictingProductTypeName)
                 .append(conflictingAttributeName)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("conflictingProductTypeId", conflictingProductTypeId)
+                .append("conflictingProductTypeName", conflictingProductTypeName)
+                .append("conflictingAttributeName", conflictingAttributeName)
+                .build();
     }
 
 }

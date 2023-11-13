@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ExtensionTrigger
@@ -107,6 +109,14 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(resourceTypeId).append(actions).append(condition).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("resourceTypeId", resourceTypeId)
+                .append("actions", actions)
+                .append("condition", condition)
+                .build();
     }
 
 }

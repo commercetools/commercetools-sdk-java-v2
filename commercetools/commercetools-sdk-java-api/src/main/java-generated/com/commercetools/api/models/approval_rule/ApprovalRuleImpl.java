@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ApprovalRule
@@ -318,6 +320,25 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
                 .append(requesters)
                 .append(businessUnit)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("createdBy", createdBy)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("key", key)
+                .append("name", name)
+                .append("description", description)
+                .append("status", status)
+                .append("predicate", predicate)
+                .append("approvers", approvers)
+                .append("requesters", requesters)
+                .append("businessUnit", businessUnit)
+                .build();
     }
 
 }

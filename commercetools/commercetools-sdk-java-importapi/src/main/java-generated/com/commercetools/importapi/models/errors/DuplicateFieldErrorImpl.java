@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The given value already exists for a field that is checked for unique values.</p>
@@ -119,6 +121,15 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
                 .append(field)
                 .append(duplicateValue)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("field", field)
+                .append("duplicateValue", duplicateValue)
+                .build();
     }
 
 }

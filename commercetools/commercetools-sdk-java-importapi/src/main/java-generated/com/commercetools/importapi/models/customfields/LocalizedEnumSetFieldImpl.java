@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A field with a localized enum set value.</p>
@@ -84,6 +86,13 @@ public class LocalizedEnumSetFieldImpl implements LocalizedEnumSetField, ModelBa
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(value).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("value", value)
+                .build();
     }
 
 }

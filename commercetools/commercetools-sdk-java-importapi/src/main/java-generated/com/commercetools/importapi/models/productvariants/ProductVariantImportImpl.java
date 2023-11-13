@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The data representation for a ProductVariant to be imported that is persisted as a ProductVariant in the Project.</p>
@@ -212,6 +214,19 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
                 .append(publish)
                 .append(product)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("sku", sku)
+                .append("isMasterVariant", isMasterVariant)
+                .append("attributes", attributes)
+                .append("images", images)
+                .append("assets", assets)
+                .append("publish", publish)
+                .append("product", product)
+                .build();
     }
 
 }

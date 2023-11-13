@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Change triggered by the Set Custom ShippingMethod update action.</p>
@@ -122,6 +124,15 @@ public class SetCustomShippingMethodChangeImpl implements SetCustomShippingMetho
                 .append(previousValue)
                 .append(nextValue)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("change", change)
+                .append("previousValue", previousValue)
+                .append("nextValue", nextValue)
+                .build();
     }
 
 }

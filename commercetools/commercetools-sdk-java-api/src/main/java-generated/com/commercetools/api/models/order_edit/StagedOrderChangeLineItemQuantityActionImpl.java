@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>When multiple shipping addresses are set for a Line Item, use the Remove LineItem and Add LineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Line Item quantity should be distributed over the sub-quantities, the <code>shippingDetails</code> field is kept in its current state to avoid data loss.</p>
@@ -161,6 +163,17 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
                 .append(externalPrice)
                 .append(externalTotalPrice)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("quantity", quantity)
+                .append("externalPrice", externalPrice)
+                .append("externalTotalPrice", externalTotalPrice)
+                .build();
     }
 
 }

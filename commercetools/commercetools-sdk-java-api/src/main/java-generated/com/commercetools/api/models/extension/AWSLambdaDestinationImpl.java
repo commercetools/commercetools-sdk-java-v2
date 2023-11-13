@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>We recommend creating an Identify and Access Management (IAM) user with an <code>accessKey</code> and <code>accessSecret</code> pair, specifically for each Extension that only has the <code>lambda:InvokeFunction</code> permission on this function.</p>
@@ -115,6 +117,15 @@ public class AWSLambdaDestinationImpl implements AWSLambdaDestination, ModelBase
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(arn).append(accessKey).append(accessSecret).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("arn", arn)
+                .append("accessKey", accessKey)
+                .append("accessSecret", accessSecret)
+                .build();
     }
 
 }

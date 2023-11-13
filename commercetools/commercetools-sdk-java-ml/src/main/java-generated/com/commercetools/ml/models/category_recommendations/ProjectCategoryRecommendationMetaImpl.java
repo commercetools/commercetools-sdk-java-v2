@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProjectCategoryRecommendationMeta
@@ -109,6 +111,14 @@ public class ProjectCategoryRecommendationMetaImpl implements ProjectCategoryRec
                 .append(productImageUrl)
                 .append(generalCategoryNames)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("productName", productName)
+                .append("productImageUrl", productImageUrl)
+                .append("generalCategoryNames", generalCategoryNames)
+                .build();
     }
 
 }

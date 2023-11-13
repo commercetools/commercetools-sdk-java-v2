@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProductProjectionPagedSearchResponse
@@ -165,6 +167,17 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
                 .append(results)
                 .append(facets)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("limit", limit)
+                .append("count", count)
+                .append("total", total)
+                .append("offset", offset)
+                .append("results", results)
+                .append("facets", facets)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>For Product Variant identification, either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
@@ -341,6 +343,26 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(shippingDetails)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("productId", productId)
+                .append("variantId", variantId)
+                .append("sku", sku)
+                .append("quantity", quantity)
+                .append("addedAt", addedAt)
+                .append("distributionChannel", distributionChannel)
+                .append("supplyChannel", supplyChannel)
+                .append("externalPrice", externalPrice)
+                .append("externalTotalPrice", externalTotalPrice)
+                .append("externalTaxRate", externalTaxRate)
+                .append("perMethodExternalTaxRate", perMethodExternalTaxRate)
+                .append("inventoryMode", inventoryMode)
+                .append("shippingDetails", shippingDetails)
+                .append("custom", custom)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Adds a DirectDiscount, but only if no DiscountCode has been added to the Order. Either a Discount Code or a Direct Discount can exist on a Order at the same time.</p>
@@ -88,6 +90,13 @@ public class StagedOrderSetDirectDiscountsActionImpl implements StagedOrderSetDi
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(discounts).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("discounts", discounts)
+                .build();
     }
 
 }

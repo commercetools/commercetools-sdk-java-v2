@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set LineItem DistributionChannel update action.</p>
@@ -122,6 +124,15 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
                 .append(lineItemKey)
                 .append(distributionChannel)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("distributionChannel", distributionChannel)
+                .build();
     }
 
 }

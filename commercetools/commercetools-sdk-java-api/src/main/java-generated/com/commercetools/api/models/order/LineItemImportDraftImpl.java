@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Represents a snapshot of a Product Variant at the time it was imported with the Order. The Product Variant can be specified by providing a <code>productId</code> and <code>variant.id</code>, or by providing a <code>variant.sku</code>.</p>
@@ -300,6 +302,24 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .append(state)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("key", key)
+                .append("variant", variant)
+                .append("productId", productId)
+                .append("quantity", quantity)
+                .append("price", price)
+                .append("taxRate", taxRate)
+                .append("distributionChannel", distributionChannel)
+                .append("supplyChannel", supplyChannel)
+                .append("inventoryMode", inventoryMode)
+                .append("shippingDetails", shippingDetails)
+                .append("state", state)
+                .append("custom", custom)
+                .build();
     }
 
 }

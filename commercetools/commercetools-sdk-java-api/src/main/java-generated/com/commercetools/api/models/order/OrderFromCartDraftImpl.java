@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderFromCartDraft
@@ -245,6 +247,21 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
                 .append(state)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("cart", cart)
+                .append("version", version)
+                .append("orderNumber", orderNumber)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
+                .append("paymentState", paymentState)
+                .append("shipmentState", shipmentState)
+                .append("orderState", orderState)
+                .append("state", state)
+                .append("custom", custom)
+                .build();
     }
 
 }

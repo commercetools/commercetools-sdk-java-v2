@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Specifies a Price tier that applies when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
@@ -86,6 +88,13 @@ public class PriceTierDraftImpl implements PriceTierDraft, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(minimumQuantity).append(value).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("minimumQuantity", minimumQuantity)
+                .append("value", value)
+                .build();
     }
 
 }

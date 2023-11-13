@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * MyShoppingListAddTextLineItemAction
@@ -178,6 +180,18 @@ public class MyShoppingListAddTextLineItemActionImpl implements MyShoppingListAd
                 .append(addedAt)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("name", name)
+                .append("key", key)
+                .append("description", description)
+                .append("quantity", quantity)
+                .append("addedAt", addedAt)
+                .append("custom", custom)
+                .build();
     }
 
 }

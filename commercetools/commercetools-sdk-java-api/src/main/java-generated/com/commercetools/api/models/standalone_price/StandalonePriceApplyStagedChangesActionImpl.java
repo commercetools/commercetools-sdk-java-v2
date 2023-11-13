@@ -12,6 +12,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Applies all staged changes to the StandalonePrice by overwriting all current values with the values in the StagedStandalonePrice. After successfully applied, the StagedStandalonePrice will be removed from the StandalonePrice. An <code>applyStagedChanges</code> update action on a StandalonePrice that does not contain any staged changes will return a <code>400 Bad Request</code> error. Applying staged changes successfully will produce the StandalonePriceStagedChangesApplied Message.</p>
@@ -53,6 +55,11 @@ public class StandalonePriceApplyStagedChangesActionImpl implements StandalonePr
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
 }

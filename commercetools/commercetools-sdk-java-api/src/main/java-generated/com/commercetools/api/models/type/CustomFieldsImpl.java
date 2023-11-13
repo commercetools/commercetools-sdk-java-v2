@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Serves as value of the <code>custom</code> field on a resource or data type customized with a Type.</p>
@@ -84,6 +86,13 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(fields).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("fields", fields)
+                .build();
     }
 
 }

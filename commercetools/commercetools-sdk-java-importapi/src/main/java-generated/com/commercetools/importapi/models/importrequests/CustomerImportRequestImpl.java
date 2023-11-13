@@ -14,6 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The request body to import Customers. Contains data for Customers to be created or updated in a Project.</p>
@@ -87,6 +89,13 @@ public class CustomerImportRequestImpl implements CustomerImportRequest, ModelBa
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(resources).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("resources", resources)
+                .build();
     }
 
 }

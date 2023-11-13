@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * DiscountOnTotalPrice
@@ -131,6 +133,15 @@ public class DiscountOnTotalPriceImpl implements DiscountOnTotalPrice, ModelBase
                 .append(discountedNetAmount)
                 .append(discountedGrossAmount)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("discountedAmount", discountedAmount)
+                .append("includedDiscounts", includedDiscounts)
+                .append("discountedNetAmount", discountedNetAmount)
+                .append("discountedGrossAmount", discountedGrossAmount)
+                .build();
     }
 
 }

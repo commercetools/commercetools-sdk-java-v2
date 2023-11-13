@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection.</p>
@@ -300,6 +302,24 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(staged)
                 .append(active)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("sku", sku)
+                .append("value", value)
+                .append("country", country)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("tiers", tiers)
+                .append("discounted", discounted)
+                .append("custom", custom)
+                .append("staged", staged)
+                .append("active", active)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Information about the user or API Client who performed the change. This is a variant of LastModifiedBy.</p>
@@ -187,6 +189,18 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
                 .append(associate)
                 .append(isPlatformClient)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("type", type)
+                .append("clientId", clientId)
+                .append("anonymousId", anonymousId)
+                .append("customer", customer)
+                .append("associate", associate)
+                .append("isPlatformClient", isPlatformClient)
+                .build();
     }
 
 }

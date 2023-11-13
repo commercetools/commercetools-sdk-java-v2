@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ReturnItemDraft
@@ -182,6 +184,18 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
                 .append(shipmentState)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("quantity", quantity)
+                .append("lineItemId", lineItemId)
+                .append("customLineItemId", customLineItemId)
+                .append("comment", comment)
+                .append("shipmentState", shipmentState)
+                .append("custom", custom)
+                .build();
     }
 
 }

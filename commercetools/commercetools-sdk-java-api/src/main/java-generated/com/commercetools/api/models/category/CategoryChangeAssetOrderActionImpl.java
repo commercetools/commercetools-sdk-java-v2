@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This update action changes the order of the <code>assets</code> array. The new order is defined by listing the <code>id</code>s of the Assets.</p>
@@ -84,6 +86,13 @@ public class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOr
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(assetOrder).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("assetOrder", assetOrder)
+                .build();
     }
 
 }

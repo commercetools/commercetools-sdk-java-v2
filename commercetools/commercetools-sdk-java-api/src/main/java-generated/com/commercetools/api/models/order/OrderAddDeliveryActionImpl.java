@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A Delivery can only be added to an Order if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
@@ -187,6 +189,18 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
                 .append(parcels)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("deliveryKey", deliveryKey)
+                .append("shippingKey", shippingKey)
+                .append("items", items)
+                .append("address", address)
+                .append("parcels", parcels)
+                .append("custom", custom)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * TaxCategoryReplaceTaxRateAction
@@ -120,6 +122,15 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
                 .append(taxRateKey)
                 .append(taxRate)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("taxRateId", taxRateId)
+                .append("taxRateKey", taxRateKey)
+                .append("taxRate", taxRate)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A generic item that can be added to the Cart but is not bound to a Product that can be used for discounts (negative money), vouchers, complex cart rules, additional services, or fees. You control the lifecycle of this item.</p>
@@ -393,6 +395,28 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(shippingDetails)
                 .append(priceMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("key", key)
+                .append("name", name)
+                .append("money", money)
+                .append("taxedPrice", taxedPrice)
+                .append("taxedPricePortions", taxedPricePortions)
+                .append("totalPrice", totalPrice)
+                .append("slug", slug)
+                .append("quantity", quantity)
+                .append("state", state)
+                .append("taxCategory", taxCategory)
+                .append("taxRate", taxRate)
+                .append("perMethodTaxRate", perMethodTaxRate)
+                .append("discountedPricePerQuantity", discountedPricePerQuantity)
+                .append("custom", custom)
+                .append("shippingDetails", shippingDetails)
+                .append("priceMode", priceMode)
+                .build();
     }
 
 }

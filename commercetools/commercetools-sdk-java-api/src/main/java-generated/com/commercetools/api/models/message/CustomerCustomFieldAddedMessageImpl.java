@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after adding a Custom Field to a Customer using the Set CustomField update action. If a Custom Field already exists with the same name, a CustomerCustomFieldChanged Message is generated instead.</p>
@@ -291,6 +293,24 @@ public class CustomerCustomFieldAddedMessageImpl implements CustomerCustomFieldA
                 .append(name)
                 .append(value)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("name", name)
+                .append("value", value)
+                .build();
     }
 
 }

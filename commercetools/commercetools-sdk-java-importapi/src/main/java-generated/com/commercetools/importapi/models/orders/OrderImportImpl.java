@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The data representation for an Order to be imported that is persisted as an Order in the Project.</p>
@@ -525,6 +527,35 @@ public class OrderImportImpl implements OrderImport, ModelBase {
                 .append(store)
                 .append(state)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("orderNumber", orderNumber)
+                .append("customer", customer)
+                .append("customerEmail", customerEmail)
+                .append("lineItems", lineItems)
+                .append("customLineItems", customLineItems)
+                .append("totalPrice", totalPrice)
+                .append("taxedPrice", taxedPrice)
+                .append("shippingAddress", shippingAddress)
+                .append("billingAddress", billingAddress)
+                .append("customerGroup", customerGroup)
+                .append("country", country)
+                .append("orderState", orderState)
+                .append("shipmentState", shipmentState)
+                .append("paymentState", paymentState)
+                .append("shippingInfo", shippingInfo)
+                .append("completedAt", completedAt)
+                .append("custom", custom)
+                .append("inventoryMode", inventoryMode)
+                .append("taxRoundingMode", taxRoundingMode)
+                .append("taxCalculationMode", taxCalculationMode)
+                .append("origin", origin)
+                .append("itemShippingAddresses", itemShippingAddresses)
+                .append("store", store)
+                .append("state", state)
+                .build();
     }
 
 }

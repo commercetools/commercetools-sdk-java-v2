@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>If the Cart already contains a CustomLineItem with the same <code>slug</code>, <code>name</code>, <code>money</code>, <code>taxCategory</code>, <code>state</code>, and Custom Fields, then only the quantity of the existing Custom Line Item is increased. If CustomLineItem <code>shippingDetails</code> are set, they are merged with the <code>targets</code> that already exist on the ItemShippingDetails of the Custom Line Item. In case of overlapping address keys the ItemShippingTarget <code>quantity</code> is summed up.</p>
@@ -258,6 +260,22 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
                 .append(priceMode)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("money", money)
+                .append("name", name)
+                .append("key", key)
+                .append("quantity", quantity)
+                .append("slug", slug)
+                .append("taxCategory", taxCategory)
+                .append("externalTaxRate", externalTaxRate)
+                .append("shippingDetails", shippingDetails)
+                .append("priceMode", priceMode)
+                .append("custom", custom)
+                .build();
     }
 
 }

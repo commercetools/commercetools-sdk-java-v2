@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Becomes the <code>shippingInfo</code> of the imported Order.</p>
@@ -227,6 +229,21 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
                 .append(discountedPrice)
                 .append(shippingMethodState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+                .append("shippingMethodName", shippingMethodName)
+                .append("price", price)
+                .append("shippingRate", shippingRate)
+                .append("taxRate", taxRate)
+                .append("taxCategory", taxCategory)
+                .append("shippingMethod", shippingMethod)
+                .append("deliveries", deliveries)
+                .append("discountedPrice", discountedPrice)
+                .append("shippingMethodState", shippingMethodState)
+                .build();
     }
 
 }

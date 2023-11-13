@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Add Supply Channel, Remove Supply Channel, or Set Supply Channels update action.</p>
@@ -304,6 +306,24 @@ public class StoreSupplyChannelsChangedMessageImpl implements StoreSupplyChannel
                 .append(addedSupplyChannels)
                 .append(removedSupplyChannels)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("addedSupplyChannels", addedSupplyChannels)
+                .append("removedSupplyChannels", removedSupplyChannels)
+                .build();
     }
 
 }

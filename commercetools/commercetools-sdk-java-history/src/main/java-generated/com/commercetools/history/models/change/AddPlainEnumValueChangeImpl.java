@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Change triggered by the Add PlainEnumValue to AttributeDefinition update action.</p>
@@ -120,6 +122,15 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
                 .append(nextValue)
                 .append(attributeName)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("change", change)
+                .append("nextValue", nextValue)
+                .append("attributeName", attributeName)
+                .build();
     }
 
 }

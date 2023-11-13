@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomLineItemDraft
@@ -241,6 +243,21 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(shippingDetails)
                 .append(priceMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("key", key)
+                .append("quantity", quantity)
+                .append("money", money)
+                .append("slug", slug)
+                .append("taxCategory", taxCategory)
+                .append("externalTaxRate", externalTaxRate)
+                .append("custom", custom)
+                .append("shippingDetails", shippingDetails)
+                .append("priceMode", priceMode)
+                .build();
     }
 
 }

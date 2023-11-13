@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Notification about changes to a resource. The payload format differs for resource creation, update, and deletion.</p>
@@ -68,6 +70,12 @@ public class ChangeSubscriptionImpl implements ChangeSubscription, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(resourceTypeId).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("resourceTypeId", resourceTypeId)
+                .build();
     }
 
 }

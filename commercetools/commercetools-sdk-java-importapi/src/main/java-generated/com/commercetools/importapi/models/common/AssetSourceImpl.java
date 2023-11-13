@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>An AssetSource is a representation of an Asset in a specific format, for example, a video in a certain encoding or an image in a certain resolution.</p>
@@ -119,6 +121,15 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(uri).append(key).append(dimensions).append(contentType).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("uri", uri)
+                .append("key", key)
+                .append("dimensions", dimensions)
+                .append("contentType", contentType)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Representation for an update of an Order. Use this type to import updates for existing Orders in a Project.</p>
@@ -84,6 +86,13 @@ public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(orderNumber).append(fields).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("orderNumber", orderNumber)
+                .append("fields", fields)
+                .build();
     }
 
 }

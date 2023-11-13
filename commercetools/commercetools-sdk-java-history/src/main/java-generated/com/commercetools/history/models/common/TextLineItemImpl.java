@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * TextLineItem
@@ -162,6 +164,17 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
                 .append(name)
                 .append(quantity)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("addedAt", addedAt)
+                .append("custom", custom)
+                .append("description", description)
+                .append("id", id)
+                .append("name", name)
+                .append("quantity", quantity)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>ShoppingListLineItems are Line Items that contain references to ProductVariants in a Product.</p>
@@ -279,6 +281,23 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(variant)
                 .append(productSlug)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("addedAt", addedAt)
+                .append("custom", custom)
+                .append("deactivatedAt", deactivatedAt)
+                .append("id", id)
+                .append("key", key)
+                .append("name", name)
+                .append("productId", productId)
+                .append("productType", productType)
+                .append("quantity", quantity)
+                .append("variantId", variantId)
+                .append("variant", variant)
+                .append("productSlug", productSlug)
+                .build();
     }
 
 }

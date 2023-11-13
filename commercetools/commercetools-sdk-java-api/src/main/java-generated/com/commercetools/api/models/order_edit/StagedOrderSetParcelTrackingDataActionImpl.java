@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Produces the ParcelTrackingDataUpdated Message.</p>
@@ -122,6 +124,15 @@ public class StagedOrderSetParcelTrackingDataActionImpl implements StagedOrderSe
                 .append(parcelKey)
                 .append(trackingData)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("parcelId", parcelId)
+                .append("parcelKey", parcelKey)
+                .append("trackingData", trackingData)
+                .build();
     }
 
 }

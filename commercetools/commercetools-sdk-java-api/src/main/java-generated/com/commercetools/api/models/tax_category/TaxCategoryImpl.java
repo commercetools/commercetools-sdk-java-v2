@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * TaxCategory
@@ -240,6 +242,21 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
                 .append(rates)
                 .append(key)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("name", name)
+                .append("description", description)
+                .append("rates", rates)
+                .append("key", key)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Captures the differences between the previous and next version of a resource.</p>
@@ -287,6 +289,23 @@ public class RecordImpl implements Record, ModelBase {
                 .append(businessUnit)
                 .append(withoutChanges)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("version", version)
+                .append("previousVersion", previousVersion)
+                .append("type", type)
+                .append("modifiedBy", modifiedBy)
+                .append("modifiedAt", modifiedAt)
+                .append("label", label)
+                .append("previousLabel", previousLabel)
+                .append("changes", changes)
+                .append("resource", resource)
+                .append("stores", stores)
+                .append("businessUnit", businessUnit)
+                .append("withoutChanges", withoutChanges)
+                .build();
     }
 
 }

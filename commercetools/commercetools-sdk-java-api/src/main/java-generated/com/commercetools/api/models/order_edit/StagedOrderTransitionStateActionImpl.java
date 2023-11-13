@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>If the existing State has set <code>transitions</code>, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed.</p>
@@ -100,6 +102,14 @@ public class StagedOrderTransitionStateActionImpl implements StagedOrderTransiti
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(state).append(force).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("state", state)
+                .append("force", force)
+                .build();
     }
 
 }

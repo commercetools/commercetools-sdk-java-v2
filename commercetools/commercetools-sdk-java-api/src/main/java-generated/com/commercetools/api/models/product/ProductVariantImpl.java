@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
@@ -292,6 +294,23 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
                 .append(scopedPrice)
                 .append(scopedPriceDiscounted)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("sku", sku)
+                .append("key", key)
+                .append("prices", prices)
+                .append("attributes", attributes)
+                .append("price", price)
+                .append("images", images)
+                .append("assets", assets)
+                .append("availability", availability)
+                .append("isMatchingVariant", isMatchingVariant)
+                .append("scopedPrice", scopedPrice)
+                .append("scopedPriceDiscounted", scopedPriceDiscounted)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Add Quantity, Remove Quantity or Change Quantity update action. Inventory changes as a result of Order creation do not trigger this message.</p>
@@ -158,6 +160,17 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
                 .append(newAvailableQuantity)
                 .append(supplyChannel)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("oldQuantityOnStock", oldQuantityOnStock)
+                .append("newQuantityOnStock", newQuantityOnStock)
+                .append("oldAvailableQuantity", oldAvailableQuantity)
+                .append("newAvailableQuantity", newAvailableQuantity)
+                .append("supplyChannel", supplyChannel)
+                .build();
     }
 
 }

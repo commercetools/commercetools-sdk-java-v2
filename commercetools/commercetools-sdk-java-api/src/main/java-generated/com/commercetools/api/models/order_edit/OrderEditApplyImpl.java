@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>If the <code>editVersion</code> and/or <code>resourceVersion</code> do not match the actual version, a 409 Conflict will be returned.</p>
@@ -84,6 +86,13 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(editVersion).append(resourceVersion).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("editVersion", editVersion)
+                .append("resourceVersion", resourceVersion)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This update action does not support specifying quantities, unlike the Remove LineItem update action.</p>
@@ -102,6 +104,14 @@ public class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineI
                 .append(customLineItemId)
                 .append(customLineItemKey)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .build();
     }
 
 }

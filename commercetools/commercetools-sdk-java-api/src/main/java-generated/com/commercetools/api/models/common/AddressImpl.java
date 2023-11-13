@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Address type returned by read methods. Optionally, the <code>custom</code> field can be present in addition to the fields of a BaseAddress.</p>
@@ -532,6 +534,37 @@ public class AddressImpl implements Address, ModelBase {
                 .append(externalId)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("key", key)
+                .append("country", country)
+                .append("title", title)
+                .append("salutation", salutation)
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .append("streetName", streetName)
+                .append("streetNumber", streetNumber)
+                .append("additionalStreetInfo", additionalStreetInfo)
+                .append("postalCode", postalCode)
+                .append("city", city)
+                .append("region", region)
+                .append("state", state)
+                .append("company", company)
+                .append("department", department)
+                .append("building", building)
+                .append("apartment", apartment)
+                .append("pOBox", pOBox)
+                .append("phone", phone)
+                .append("mobile", mobile)
+                .append("email", email)
+                .append("fax", fax)
+                .append("additionalAddressInfo", additionalAddressInfo)
+                .append("externalId", externalId)
+                .append("custom", custom)
+                .build();
     }
 
 }

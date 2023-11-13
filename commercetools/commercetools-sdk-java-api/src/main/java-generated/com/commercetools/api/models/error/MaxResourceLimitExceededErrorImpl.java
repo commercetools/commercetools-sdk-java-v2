@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a resource type cannot be created as it has reached its limits.</p>
@@ -124,6 +126,15 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
                 .append(values)
                 .append(exceededResource)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("exceededResource", exceededResource)
+                .build();
     }
 
 }

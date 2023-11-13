@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>To make all included Products available to your customers of a given Store, add the Product Selections to the respective Store. This action has no effect if the given Product Selection is already present in the Store and has the same <code>active</code> flag.</p>
@@ -100,6 +102,14 @@ public class StoreAddProductSelectionActionImpl implements StoreAddProductSelect
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(productSelection).append(active).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("productSelection", productSelection)
+                .append("active", active)
+                .build();
     }
 
 }

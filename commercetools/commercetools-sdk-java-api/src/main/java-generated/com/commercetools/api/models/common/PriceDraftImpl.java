@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The draft representation for prices to be embedded into ProductVariantDrafts when the ProductPriceMode is <code>Embedded</code>. For the <code>Standalone</code> ProductPriceMode use StandalonePriceDraft.</p>
@@ -249,6 +251,21 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
                 .append(tiers)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("value", value)
+                .append("country", country)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("discounted", discounted)
+                .append("tiers", tiers)
+                .append("custom", custom)
+                .build();
     }
 
 }

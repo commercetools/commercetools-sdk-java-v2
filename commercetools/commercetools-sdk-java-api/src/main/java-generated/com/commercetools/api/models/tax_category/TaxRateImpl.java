@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * TaxRate
@@ -201,6 +203,19 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .append(state)
                 .append(subRates)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("key", key)
+                .append("name", name)
+                .append("amount", amount)
+                .append("includedInPrice", includedInPrice)
+                .append("country", country)
+                .append("state", state)
+                .append("subRates", subRates)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Remove Parcel from Delivery update action.</p>
@@ -120,6 +122,15 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
                 .append(parcel)
                 .append(shippingKey)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("deliveryId", deliveryId)
+                .append("parcel", parcel)
+                .append("shippingKey", shippingKey)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProductDiscountDraft
@@ -218,6 +220,20 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
                 .append(validFrom)
                 .append(validUntil)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("key", key)
+                .append("description", description)
+                .append("value", value)
+                .append("predicate", predicate)
+                .append("sortOrder", sortOrder)
+                .append("isActive", isActive)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .build();
     }
 
 }

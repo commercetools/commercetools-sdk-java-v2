@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The data is not persisted but is dynamically pulled by dry-running the update actions from <code>stagedActions</code> on the current version of the related Order, not from the Order version at the time the OrderEdit was created. Therefore, it cannot be queried.</p>
@@ -104,6 +106,14 @@ public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, Mod
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(preview).append(messagePayloads).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("preview", preview)
+                .append("messagePayloads", messagePayloads)
+                .build();
     }
 
 }

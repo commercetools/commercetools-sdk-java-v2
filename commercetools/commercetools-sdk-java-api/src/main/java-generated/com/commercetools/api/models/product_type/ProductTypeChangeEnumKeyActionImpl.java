@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Updates the key of a single enum <code>value</code> in an AttributeEnumType AttributeDefinition, AttributeLocalizedEnumType AttributeDefinition, AttributeSetType of AttributeEnumType AttributeDefinition, or AttributeSetType of AttributeLocalizedEnumType AttributeDefinition.</p>
@@ -117,6 +119,15 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(attributeName).append(key).append(newKey).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("attributeName", attributeName)
+                .append("key", key)
+                .append("newKey", newKey)
+                .build();
     }
 
 }

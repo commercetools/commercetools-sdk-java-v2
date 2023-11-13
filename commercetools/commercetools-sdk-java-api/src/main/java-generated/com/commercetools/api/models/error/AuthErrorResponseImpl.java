@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Represents errors related to authentication and authorization in a format conforming to the OAuth 2.0 specification.</p>
@@ -147,6 +149,16 @@ public class AuthErrorResponseImpl implements AuthErrorResponse, ModelBase {
                 .append(error)
                 .append(errorDescription)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("statusCode", statusCode)
+                .append("message", message)
+                .append("errors", errors)
+                .append("error", error)
+                .append("errorDescription", errorDescription)
+                .build();
     }
 
 }

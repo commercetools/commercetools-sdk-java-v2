@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomerDraft
@@ -583,6 +585,38 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(stores)
                 .append(authenticationMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("customerNumber", customerNumber)
+                .append("externalId", externalId)
+                .append("email", email)
+                .append("password", password)
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .append("middleName", middleName)
+                .append("title", title)
+                .append("anonymousCartId", anonymousCartId)
+                .append("anonymousCart", anonymousCart)
+                .append("anonymousId", anonymousId)
+                .append("dateOfBirth", dateOfBirth)
+                .append("companyName", companyName)
+                .append("vatId", vatId)
+                .append("addresses", addresses)
+                .append("defaultShippingAddress", defaultShippingAddress)
+                .append("shippingAddresses", shippingAddresses)
+                .append("defaultBillingAddress", defaultBillingAddress)
+                .append("billingAddresses", billingAddresses)
+                .append("isEmailVerified", isEmailVerified)
+                .append("customerGroup", customerGroup)
+                .append("custom", custom)
+                .append("locale", locale)
+                .append("salutation", salutation)
+                .append("stores", stores)
+                .append("authenticationMode", authenticationMode)
+                .build();
     }
 
 }

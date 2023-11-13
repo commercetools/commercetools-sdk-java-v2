@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * QueryPrice
@@ -243,6 +245,21 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
                 .append(custom)
                 .append(tiers)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("value", value)
+                .append("country", country)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("discounted", discounted)
+                .append("custom", custom)
+                .append("tiers", tiers)
+                .build();
     }
 
 }

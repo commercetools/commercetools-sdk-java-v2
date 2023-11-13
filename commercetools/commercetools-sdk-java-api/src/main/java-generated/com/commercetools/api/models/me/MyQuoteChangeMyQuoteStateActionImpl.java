@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>When accepting, declining, or renegotiating B2B Quotes, the Customer must have the <code>AcceptMyQuotes</code>, <code>DeclineMyQuotes</code>, or <code>RenegotiateMyQuotes</code> Permission, respectively. If the required Permission is missing, an AssociateMissingPermission error is returned.</p>
@@ -81,6 +83,13 @@ public class MyQuoteChangeMyQuoteStateActionImpl implements MyQuoteChangeMyQuote
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(quoteState).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("quoteState", quoteState)
+                .build();
     }
 
 }

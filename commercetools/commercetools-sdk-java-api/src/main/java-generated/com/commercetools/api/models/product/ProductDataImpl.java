@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Contains all the data of a Product and its Product Variants.</p>
@@ -267,6 +269,22 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append(variants)
                 .append(searchKeywords)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("categories", categories)
+                .append("categoryOrderHints", categoryOrderHints)
+                .append("description", description)
+                .append("slug", slug)
+                .append("metaTitle", metaTitle)
+                .append("metaDescription", metaDescription)
+                .append("metaKeywords", metaKeywords)
+                .append("masterVariant", masterVariant)
+                .append("variants", variants)
+                .append("searchKeywords", searchKeywords)
+                .build();
     }
 
 }

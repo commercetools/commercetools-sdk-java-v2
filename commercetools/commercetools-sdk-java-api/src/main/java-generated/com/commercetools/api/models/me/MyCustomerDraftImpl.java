@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * MyCustomerDraft
@@ -356,6 +358,27 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
                 .append(locale)
                 .append(stores)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("email", email)
+                .append("password", password)
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .append("middleName", middleName)
+                .append("title", title)
+                .append("salutation", salutation)
+                .append("dateOfBirth", dateOfBirth)
+                .append("companyName", companyName)
+                .append("vatId", vatId)
+                .append("addresses", addresses)
+                .append("defaultShippingAddress", defaultShippingAddress)
+                .append("defaultBillingAddress", defaultBillingAddress)
+                .append("custom", custom)
+                .append("locale", locale)
+                .append("stores", stores)
+                .build();
     }
 
 }

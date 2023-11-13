@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The representation of a Line Item in a Cart or in an Order.</p>
@@ -571,6 +573,37 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(addedAt)
                 .append(lastModifiedAt)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("key", key)
+                .append("productId", productId)
+                .append("productKey", productKey)
+                .append("name", name)
+                .append("productSlug", productSlug)
+                .append("productType", productType)
+                .append("variant", variant)
+                .append("price", price)
+                .append("quantity", quantity)
+                .append("totalPrice", totalPrice)
+                .append("discountedPricePerQuantity", discountedPricePerQuantity)
+                .append("taxedPrice", taxedPrice)
+                .append("taxedPricePortions", taxedPricePortions)
+                .append("state", state)
+                .append("taxRate", taxRate)
+                .append("perMethodTaxRate", perMethodTaxRate)
+                .append("supplyChannel", supplyChannel)
+                .append("distributionChannel", distributionChannel)
+                .append("priceMode", priceMode)
+                .append("lineItemMode", lineItemMode)
+                .append("inventoryMode", inventoryMode)
+                .append("shippingDetails", shippingDetails)
+                .append("custom", custom)
+                .append("addedAt", addedAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .build();
     }
 
 }

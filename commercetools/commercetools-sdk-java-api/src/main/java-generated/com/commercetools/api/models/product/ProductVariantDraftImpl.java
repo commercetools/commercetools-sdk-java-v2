@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Creates a Product Variant when included in the <code>masterVariant</code> and <code>variants</code> fields of the ProductDraft.</p>
@@ -177,6 +179,17 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
                 .append(images)
                 .append(assets)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("sku", sku)
+                .append("key", key)
+                .append("prices", prices)
+                .append("attributes", attributes)
+                .append("images", images)
+                .append("assets", assets)
+                .build();
     }
 
 }

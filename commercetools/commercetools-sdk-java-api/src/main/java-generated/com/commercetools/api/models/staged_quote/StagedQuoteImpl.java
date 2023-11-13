@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StagedQuote
@@ -371,6 +373,28 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(purchaseOrderNumber)
                 .append(businessUnit)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("key", key)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("stagedQuoteState", stagedQuoteState)
+                .append("customer", customer)
+                .append("quoteRequest", quoteRequest)
+                .append("quotationCart", quotationCart)
+                .append("validTo", validTo)
+                .append("sellerComment", sellerComment)
+                .append("custom", custom)
+                .append("state", state)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
+                .append("businessUnit", businessUnit)
+                .build();
     }
 
 }

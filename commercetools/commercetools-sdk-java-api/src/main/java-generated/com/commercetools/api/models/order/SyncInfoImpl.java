@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Contains synchronization activity information of the Order (like export or import).</p>
@@ -102,6 +104,14 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(channel).append(externalId).append(syncedAt).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("channel", channel)
+                .append("externalId", externalId)
+                .append("syncedAt", syncedAt)
+                .build();
     }
 
 }

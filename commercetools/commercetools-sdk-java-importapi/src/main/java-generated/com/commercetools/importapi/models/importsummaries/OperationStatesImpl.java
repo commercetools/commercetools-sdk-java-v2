@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OperationStates
@@ -180,6 +182,18 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
                 .append(rejected)
                 .append(canceled)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("processing", processing)
+                .append("validationFailed", validationFailed)
+                .append("unresolved", unresolved)
+                .append("waitForMasterVariant", waitForMasterVariant)
+                .append("imported", imported)
+                .append("rejected", rejected)
+                .append("canceled", canceled)
+                .build();
     }
 
 }

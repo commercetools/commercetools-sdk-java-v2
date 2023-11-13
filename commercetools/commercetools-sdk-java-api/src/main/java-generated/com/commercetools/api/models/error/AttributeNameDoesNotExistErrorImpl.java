@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when an AttributeDefinition does not exist for an Attribute <code>name</code>.</p>
@@ -124,6 +126,15 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
                 .append(values)
                 .append(invalidAttributeName)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("invalidAttributeName", invalidAttributeName)
+                .build();
     }
 
 }

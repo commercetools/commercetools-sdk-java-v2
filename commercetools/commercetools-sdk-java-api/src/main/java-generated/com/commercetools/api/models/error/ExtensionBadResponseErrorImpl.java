@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the response from the API Extension could not be parsed successfully (such as a <code>500</code> HTTP status code, or an invalid JSON response).</p>
@@ -242,6 +244,21 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
                 .append(extensionId)
                 .append(extensionKey)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("localizedMessage", localizedMessage)
+                .append("extensionExtraInfo", extensionExtraInfo)
+                .append("extensionErrors", extensionErrors)
+                .append("extensionBody", extensionBody)
+                .append("extensionStatusCode", extensionStatusCode)
+                .append("extensionId", extensionId)
+                .append("extensionKey", extensionKey)
+                .build();
     }
 
 }

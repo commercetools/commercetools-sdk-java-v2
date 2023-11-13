@@ -13,7 +13,6 @@ import java.util.stream.Stream;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringEntry;
 
-import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.apache.commons.lang3.StringUtils;
@@ -186,7 +185,7 @@ public class LocalizedStringTest {
 
     @Test
     public void implementToString() throws Exception {
-        assertThat(((ModelBase) LOCALIZED_STRING).reflectionString())
+        assertThat(LOCALIZED_STRING.toString())
                 .isEqualTo(format("LocalizedStringImpl[values={de=%s, en=%s}]", DEFAULT_STRING_1, DEFAULT_STRING_2));
     }
 

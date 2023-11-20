@@ -41,7 +41,7 @@ import dev.failsafe.spi.Scheduler;
  *
  * <p>Implementation of a Queue to limit the number of concurrent requests handled by the client</p>
  *
- * {@include.example io.vrap.rmf.base.client.PolicyMiddleware#queueConfiguration()}
+ * {@include.example io.vrap.rmf.base.client.http.PolicyMiddlewareTest#queueConfiguration()}
  */
 public class PolicyBuilder {
 

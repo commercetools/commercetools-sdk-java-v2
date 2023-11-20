@@ -2,7 +2,6 @@
 package io.vrap.rmf.base.client.http;
 
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
-import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
 
 import java.net.URI;
@@ -115,16 +114,17 @@ public class PolicyMiddlewareTest {
     public void retryConfigurationStatusCodes() {
         final ApiHttpClient build = ClientBuilder.of()
                 // ...
-                .withPolicies(policyBuilder -> policyBuilder.withRetry(3,
-                    Arrays.asList(HttpStatusCode.SERVICE_UNAVAILABLE_503, HttpStatusCode.INTERNAL_SERVER_ERROR_500)))
+                .withPolicies(policyBuilder -> policyBuilder.withRetry(retry -> retry.maxRetries(3)
+                        .statusCodes(Arrays.asList(HttpStatusCode.SERVICE_UNAVAILABLE_503,
+                            HttpStatusCode.INTERNAL_SERVER_ERROR_500))))
                 .build();
     }
 
     public void retryConfigurationExceptions() {
         final ApiHttpClient build = ClientBuilder.of()
                 // ...
-                .withPolicies(
-                    policyBuilder -> policyBuilder.withRetry(3, emptyList(), singletonList(JsonException.class)))
+                .withPolicies(policyBuilder -> policyBuilder
+                        .withRetry(retry -> retry.maxRetries(3).failures(singletonList(JsonException.class))))
                 .build();
     }
 

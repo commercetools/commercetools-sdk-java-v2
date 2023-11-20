@@ -848,7 +848,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      */
     @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries) {
-        return withPolicies(policies -> policies.withRetry(maxRetries));
+        return withPolicies(policies -> policies.withRetry(retry -> retry.maxRetries(maxRetries)));
     }
 
     /**
@@ -860,7 +860,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      */
     @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
-        return withPolicies(policies -> policies.withRetry(maxRetries, statusCodes));
+        return withPolicies(
+            policies -> policies.withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes)));
     }
 
     /**
@@ -874,7 +875,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        return withPolicies(policies -> policies.withRetry(maxRetries, statusCodes, failures));
+        return withPolicies(policies -> policies
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures)));
     }
 
     /**
@@ -892,7 +894,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return withPolicies(policies -> policies.withRetry(maxRetries, delay, maxDelay, statusCodes, failures, fn));
+        return withPolicies(policies -> policies.withRetry(retry -> retry.maxRetries(maxRetries)
+                .initialDelay(delay)
+                .maxDelay(maxDelay)
+                .statusCodes(statusCodes)
+                .failures(failures)
+                .options(fn)));
     }
 
     /**
@@ -907,7 +914,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return withPolicies(policies -> policies.withRetry(maxRetries, delay, maxDelay, fn));
+        return withPolicies(policies -> policies
+                .withRetry(retry -> retry.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn)));
     }
 
     /**
@@ -919,7 +927,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      */
     @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries) {
-        return withPolicies(policies -> policies.withScheduler(executorService).withRetry(maxRetries));
+        return withPolicies(
+            policies -> policies.withScheduler(executorService).withRetry(retry -> retry.maxRetries(maxRetries)));
     }
 
     /**
@@ -933,7 +942,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes) {
-        return withPolicies(policies -> policies.withScheduler(executorService).withRetry(maxRetries, statusCodes));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes)));
     }
 
     /**
@@ -948,8 +958,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
-        return withPolicies(
-            policies -> policies.withScheduler(executorService).withRetry(maxRetries, statusCodes, failures));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures)));
     }
 
     /**
@@ -969,7 +979,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             final long delay, final long maxDelay, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures, final FailsafeRetryPolicyBuilderOptions fn) {
         return withPolicies(policies -> policies.withScheduler(executorService)
-                .withRetry(maxRetries, delay, maxDelay, statusCodes, failures, fn));
+                .withRetry(retry -> retry.maxRetries(maxRetries)
+                        .initialDelay(delay)
+                        .maxDelay(maxDelay)
+                        .statusCodes(statusCodes)
+                        .failures(failures)
+                        .options(fn)));
     }
 
     /**
@@ -985,8 +1000,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withPolicies(
-            policies -> policies.withScheduler(executorService).withRetry(maxRetries, delay, maxDelay, fn));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn)));
     }
 
     /**
@@ -998,7 +1013,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      */
     @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries) {
-        return withPolicies(policies -> policies.withScheduler(executorService).withRetry(maxRetries));
+        return withPolicies(
+            policies -> policies.withScheduler(executorService).withRetry(retry -> retry.maxRetries(maxRetries)));
     }
 
     /**
@@ -1012,7 +1028,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes) {
-        return withPolicies(policies -> policies.withScheduler(executorService).withRetry(maxRetries, statusCodes));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes)));
     }
 
     /**
@@ -1027,8 +1044,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
-        return withPolicies(
-            policies -> policies.withScheduler(executorService).withRetry(maxRetries, statusCodes, failures));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures)));
     }
 
     /**
@@ -1048,7 +1065,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             final long delay, final long maxDelay, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures, final FailsafeRetryPolicyBuilderOptions fn) {
         return withPolicies(policies -> policies.withScheduler(executorService)
-                .withRetry(maxRetries, delay, maxDelay, statusCodes, failures, fn));
+                .withRetry(retry -> retry.maxRetries(maxRetries)
+                        .initialDelay(delay)
+                        .maxDelay(maxDelay)
+                        .statusCodes(statusCodes)
+                        .failures(failures)
+                        .options(fn)));
     }
 
     /**
@@ -1064,8 +1086,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withPolicies(
-            policies -> policies.withScheduler(executorService).withRetry(maxRetries, delay, maxDelay, fn));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn)));
     }
 
     /**
@@ -1077,7 +1099,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      */
     @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries) {
-        return withPolicies(policies -> policies.withScheduler(scheduler).withRetry(maxRetries));
+        return withPolicies(
+            policies -> policies.withScheduler(scheduler).withRetry(retry -> retry.maxRetries(maxRetries)));
     }
 
     /**
@@ -1091,7 +1114,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries,
             List<Integer> statusCodes) {
-        return withPolicies(policies -> policies.withScheduler(scheduler).withRetry(maxRetries, statusCodes));
+        return withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes)));
     }
 
     /**
@@ -1106,7 +1130,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        return withPolicies(policies -> policies.withScheduler(scheduler).withRetry(maxRetries, statusCodes, failures));
+        return withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures)));
     }
 
     /**
@@ -1126,7 +1151,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             final long maxDelay, List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
             final FailsafeRetryPolicyBuilderOptions fn) {
         return withPolicies(policies -> policies.withScheduler(scheduler)
-                .withRetry(maxRetries, delay, maxDelay, statusCodes, failures, fn));
+                .withRetry(retry -> retry.maxRetries(maxRetries)
+                        .initialDelay(delay)
+                        .maxDelay(maxDelay)
+                        .statusCodes(statusCodes)
+                        .failures(failures)
+                        .options(fn)));
     }
 
     /**
@@ -1142,7 +1172,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,
             final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withPolicies(policies -> policies.withScheduler(scheduler).withRetry(maxRetries, delay, maxDelay, fn));
+        return withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(retry -> retry.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn)));
     }
 
     /**

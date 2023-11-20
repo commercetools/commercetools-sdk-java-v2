@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import io.vrap.rmf.base.client.http.QueueMiddleware;
 
+@Deprecated
 public class QueueMiddlewareTest {
 
     public void queueConfiguration() {

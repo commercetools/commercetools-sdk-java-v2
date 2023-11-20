@@ -2,6 +2,9 @@
 package example;
 
 import static io.sphere.sdk.http.HttpStatusCode.*;
+import static io.vrap.rmf.base.client.http.HttpStatusCode.BAD_GATEWAY_502;
+import static io.vrap.rmf.base.client.http.HttpStatusCode.GATEWAY_TIMEOUT_504;
+import static io.vrap.rmf.base.client.http.HttpStatusCode.SERVICE_UNAVAILABLE_503;
 
 import java.net.InetSocketAddress;
 import java.net.Proxy;
@@ -36,7 +39,6 @@ import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.ErrorMiddleware;
-import io.vrap.rmf.base.client.http.QueueMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -394,7 +396,8 @@ public class ExamplesTest {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .withRetryMiddleware(5, Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))
+                .withPolicies(policies -> policies.withRetry(5,
+                    Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504)))
                 .build("my-project");
     }
 
@@ -582,7 +585,7 @@ public class ExamplesTest {
     public void queueConcurrentLimitation() {
         ApiRootBuilder.of()
                 // ...
-                .addMiddleware(new QueueMiddleware(64, Duration.ofSeconds(10)))
+                .withPolicies(policies -> policies.withBulkhead(64, Duration.ofSeconds(10)))
                 .build();
     }
 

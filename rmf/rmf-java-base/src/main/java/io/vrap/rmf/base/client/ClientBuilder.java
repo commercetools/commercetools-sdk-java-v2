@@ -40,6 +40,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private Supplier<ErrorMiddleware> errorMiddleware;
     private Supplier<OAuthMiddleware> oAuthMiddleware;
     private Supplier<RetryRequestMiddleware> retryMiddleware;
+    private PolicyBuilder policyBuilder;
+    private Supplier<PolicyMiddleware> policyMiddleware;
     private Supplier<QueueRequestMiddleware> queueMiddleware;
     private Supplier<Middleware> correlationIdMiddleware;
     private InternalLoggerMiddleware internalLoggerMiddleware;
@@ -153,6 +155,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             Optional.ofNullable(internalLoggerMiddleware).map(middlewareStack::add);
             Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);
             Optional.ofNullable(oAuthMiddleware).map(m -> middlewareStack.add(m.get()));
+            Optional.ofNullable(policyMiddleware).map(m -> middlewareStack.add(m.get()));
             Optional.ofNullable(retryMiddleware).map(m -> middlewareStack.add(m.get()));
             Optional.ofNullable(queueMiddleware).map(m -> middlewareStack.add(m.get()));
             Optional.ofNullable(correlationIdMiddleware).map(m -> middlewareStack.add(m.get()));
@@ -815,9 +818,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     /**
      * add middleware to retry failed requests
-     * @param retryMiddleware {@link RetryMiddleware} to be used
+     * @param retryMiddleware {@link RetryRequestMiddleware} to be used
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Supplier<RetryRequestMiddleware> retryMiddleware) {
         this.retryMiddleware = retryMiddleware;
         return this;
@@ -825,9 +830,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     /**
      * add middleware to retry failed requests
-     * @param retryMiddleware {@link RetryMiddleware} to be used
+     * @param retryMiddleware {@link RetryRequestMiddleware} to be used
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final RetryRequestMiddleware retryMiddleware) {
         return withRetryMiddleware(() -> retryMiddleware);
     }
@@ -837,9 +844,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * an incremental backoff strategy is applied
      * @param maxRetries number of retries before giving uo
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)}} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries));
+        return withPolicies(policies -> policies.withRetry(maxRetries));
     }
 
     /**
@@ -847,9 +856,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRetries number of retries before giving uo
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)}} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, statusCodes));
+        return withPolicies(policies -> policies.withRetry(maxRetries, statusCodes));
     }
 
     /**
@@ -858,10 +869,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @param failures {@link Throwable}s to be retried
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, statusCodes, failures));
+        return withPolicies(policies -> policies.withRetry(maxRetries, statusCodes, failures));
     }
 
     /**
@@ -873,13 +886,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param failures {@link Throwable}s to be retried
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(
-            RetryRequestMiddleware.of(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
-                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+        return withPolicies(policies -> policies.withRetry(maxRetries, delay, maxDelay, statusCodes, failures, fn));
     }
 
     /**
@@ -889,10 +902,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxDelay the maximum delay between each retry
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, delay, maxDelay, fn));
+        return withPolicies(policies -> policies.withRetry(maxRetries, delay, maxDelay, fn));
     }
 
     /**
@@ -900,9 +915,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param executorService {@link ExecutorService} to be used for the retry handler
      * @param maxRetries number of retries before giving uo
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries));
+        return withPolicies(policies -> policies.withScheduler(executorService).withRetry(maxRetries));
     }
 
     /**
@@ -911,10 +928,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRetries number of retries before giving uo
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes));
+        return withPolicies(policies -> policies.withScheduler(executorService).withRetry(maxRetries, statusCodes));
     }
 
     /**
@@ -924,10 +943,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @param failures {@link Throwable}s to be retried
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes, failures));
+        return withPolicies(
+            policies -> policies.withScheduler(executorService).withRetry(maxRetries, statusCodes, failures));
     }
 
     /**
@@ -940,13 +962,14 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param failures {@link Throwable}s to be retried
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay,
-            RetryRequestMiddleware.handleFailures(failures)
-                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(maxRetries, delay, maxDelay, statusCodes, failures, fn));
     }
 
     /**
@@ -957,10 +980,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxDelay the maximum delay between each retry
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, fn));
+        return withPolicies(
+            policies -> policies.withScheduler(executorService).withRetry(maxRetries, delay, maxDelay, fn));
     }
 
     /**
@@ -968,9 +994,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param executorService {@link ScheduledExecutorService} to be used for the retry handler
      * @param maxRetries number of retries before giving uo
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries));
+        return withPolicies(policies -> policies.withScheduler(executorService).withRetry(maxRetries));
     }
 
     /**
@@ -979,10 +1007,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRetries number of retries before giving uo
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes));
+        return withPolicies(policies -> policies.withScheduler(executorService).withRetry(maxRetries, statusCodes));
     }
 
     /**
@@ -992,10 +1022,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @param failures {@link Throwable}s to be retried
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes, failures));
+        return withPolicies(
+            policies -> policies.withScheduler(executorService).withRetry(maxRetries, statusCodes, failures));
     }
 
     /**
@@ -1008,13 +1041,14 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param failures {@link Throwable}s to be retried
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay,
-            RetryRequestMiddleware.handleFailures(failures)
-                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(maxRetries, delay, maxDelay, statusCodes, failures, fn));
     }
 
     /**
@@ -1025,10 +1059,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxDelay the maximum delay between each retry
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, fn));
+        return withPolicies(
+            policies -> policies.withScheduler(executorService).withRetry(maxRetries, delay, maxDelay, fn));
     }
 
     /**
@@ -1036,9 +1073,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param scheduler {@link Scheduler} to be used for the retry handler
      * @param maxRetries number of retries before giving uo
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries));
+        return withPolicies(policies -> policies.withScheduler(scheduler).withRetry(maxRetries));
     }
 
     /**
@@ -1047,10 +1086,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRetries number of retries before giving uo
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries,
             List<Integer> statusCodes) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, statusCodes));
+        return withPolicies(policies -> policies.withScheduler(scheduler).withRetry(maxRetries, statusCodes));
     }
 
     /**
@@ -1060,10 +1101,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @param failures {@link Throwable}s to be retried
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, statusCodes, failures));
+        return withPolicies(policies -> policies.withScheduler(scheduler).withRetry(maxRetries, statusCodes, failures));
     }
 
     /**
@@ -1076,13 +1119,14 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param failures {@link Throwable}s to be retried
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,
             final long maxDelay, List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, delay, maxDelay,
-            RetryRequestMiddleware.handleFailures(failures)
-                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+        return withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(maxRetries, delay, maxDelay, statusCodes, failures, fn));
     }
 
     /**
@@ -1093,17 +1137,21 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxDelay the maximum delay between each retry
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,
             final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, delay, maxDelay, fn));
+        return withPolicies(policies -> policies.withScheduler(scheduler).withRetry(maxRetries, delay, maxDelay, fn));
     }
 
     /**
      * add middleware to limit the concurrent requests to be executed
      * @param queueMiddleware {@link QueueRequestMiddleware} to be used
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final Supplier<QueueRequestMiddleware> queueMiddleware) {
         this.queueMiddleware = queueMiddleware;
         return this;
@@ -1113,7 +1161,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * add middleware to limit the concurrent requests to be executed
      * @param queueMiddleware {@link QueueRequestMiddleware} to be used
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final QueueRequestMiddleware queueMiddleware) {
         return withQueueMiddleware(() -> queueMiddleware);
     }
@@ -1123,7 +1173,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRequests maximum number of concurrent requests
      * @param maxWaitTime maximum time to wait before giving up
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final int maxRequests, final Duration maxWaitTime) {
         return withQueueMiddleware(() -> QueueRequestMiddleware.of(maxRequests, maxWaitTime));
     }
@@ -1134,7 +1186,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRequests maximum number of concurrent requests
      * @param maxWaitTime maximum time to wait before giving up
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final Scheduler scheduler, final int maxRequests,
             final Duration maxWaitTime) {
         return withQueueMiddleware(() -> QueueRequestMiddleware.of(scheduler, maxRequests, maxWaitTime));
@@ -1146,7 +1200,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRequests maximum number of concurrent requests
      * @param maxWaitTime maximum time to wait before giving up
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final ScheduledExecutorService executorService, final int maxRequests,
             final Duration maxWaitTime) {
         return withQueueMiddleware(() -> QueueRequestMiddleware.of(executorService, maxRequests, maxWaitTime));
@@ -1158,10 +1214,53 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRequests maximum number of concurrent requests
      * @param maxWaitTime maximum time to wait before giving up
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final ExecutorService executorService, final int maxRequests,
             final Duration maxWaitTime) {
         return withQueueMiddleware(() -> QueueRequestMiddleware.of(executorService, maxRequests, maxWaitTime));
+    }
+
+    /**
+     * add middleware for safe handling of failed requests
+     * @param policyBuilder the policy builder
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withPolicies(PolicyBuilder policyBuilder) {
+        this.policyBuilder = policyBuilder;
+        this.policyMiddleware = policyBuilder::build;
+        return this;
+    }
+
+    /**
+     * add middleware for safe handling of failed requests
+     * @param fn the policy builder function
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withPolicies(Function<PolicyBuilder, PolicyBuilder> fn) {
+        this.policyBuilder = fn.apply(Optional.ofNullable(policyBuilder).orElse(PolicyBuilder.of()));
+        this.policyMiddleware = policyBuilder::build;
+        return this;
+    }
+
+    /**
+     * add middleware for safe handling of failed requests
+     * @param policyMiddleware {@link PolicyMiddleware} to be used
+     * @return ClientBuilder
+     */
+    public ClientBuilder withPolicyMiddleware(PolicyMiddleware policyMiddleware) {
+        return withPolicyMiddleware(() -> policyMiddleware);
+    }
+
+    /**
+     * add middleware for safe handling of failed requests
+     * @param policyMiddleware {@link PolicyMiddleware} to be used
+     * @return ClientBuilder
+     */
+    public ClientBuilder withPolicyMiddleware(Supplier<PolicyMiddleware> policyMiddleware) {
+        this.policyMiddleware = policyMiddleware;
+        return this;
     }
 
     /**
@@ -1273,7 +1372,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     /**
-     * @param userAgentSupplier user agent to be send with the requests
+     * @param userAgentSupplier user agent to be sent with the requests
      * @return ClientBuilder instance
      */
     public ClientBuilder withUserAgentSupplier(final Supplier<String> userAgentSupplier) {

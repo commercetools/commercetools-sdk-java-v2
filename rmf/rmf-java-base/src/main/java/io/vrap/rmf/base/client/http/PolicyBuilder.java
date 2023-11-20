@@ -17,6 +17,8 @@ import dev.failsafe.*;
 import dev.failsafe.spi.Scheduler;
 
 /**
+ * <h2>PolicyBuilder</h2>
+ *
  * <p>The PolicyBuilder allows the combination of different policies for failing requests.</p>
  *
  * <p>The order of policies matters. For example applying a {@link #withTimeout(Duration) timeout} before

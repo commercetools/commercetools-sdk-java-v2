@@ -350,7 +350,8 @@ public class ApiRootBuilder {
      */
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final int maxRetries) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries));
+        return with(clientBuilder -> clientBuilder
+                .withPolicies(policies -> policies.withRetry(builder -> builder.maxRetries(maxRetries))));
     }
 
     /**
@@ -358,7 +359,8 @@ public class ApiRootBuilder {
      */
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, statusCodes));
+        return with(clientBuilder -> clientBuilder.withPolicies(
+            policies -> policies.withRetry(builder -> builder.maxRetries(maxRetries).statusCodes(statusCodes))));
     }
 
     /**
@@ -367,7 +369,8 @@ public class ApiRootBuilder {
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, statusCodes, failures));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies
+                .withRetry(builder -> builder.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures))));
     }
 
     /**
@@ -377,8 +380,13 @@ public class ApiRootBuilder {
     public ApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return with(
-            clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, delay, maxDelay, statusCodes, failures, fn));
+        return with(clientBuilder -> clientBuilder
+                .withPolicies(policies -> policies.withRetry(builder -> builder.maxRetries(maxRetries)
+                        .initialDelay(delay)
+                        .maxDelay(maxDelay)
+                        .statusCodes(statusCodes)
+                        .failures(failures)
+                        .options(fn))));
     }
 
     /**
@@ -387,7 +395,8 @@ public class ApiRootBuilder {
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(maxRetries, delay, maxDelay, fn));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withRetry(
+            builder -> builder.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn))));
     }
 
     /**
@@ -395,7 +404,8 @@ public class ApiRootBuilder {
      */
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries));
+        return with(clientBuilder -> clientBuilder.withPolicies(
+            policies -> policies.withScheduler(executorService).withRetry(builder -> builder.maxRetries(maxRetries))));
     }
 
     /**
@@ -404,7 +414,8 @@ public class ApiRootBuilder {
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, statusCodes));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(builder -> builder.maxRetries(maxRetries).statusCodes(statusCodes))));
     }
 
     /**
@@ -413,8 +424,8 @@ public class ApiRootBuilder {
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
-        return with(
-            clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, statusCodes, failures));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(builder -> builder.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures))));
     }
 
     /**
@@ -424,8 +435,13 @@ public class ApiRootBuilder {
     public ApiRootBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures, final FailsafeRetryPolicyBuilderOptions fn) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, delay, maxDelay,
-            statusCodes, failures, fn));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(builder -> builder.maxRetries(maxRetries)
+                        .initialDelay(delay)
+                        .maxDelay(maxDelay)
+                        .statusCodes(statusCodes)
+                        .failures(failures)
+                        .options(fn))));
     }
 
     /**
@@ -434,8 +450,9 @@ public class ApiRootBuilder {
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return with(
-            clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, delay, maxDelay, fn));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(
+                    builder -> builder.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn))));
     }
 
     /**
@@ -443,7 +460,8 @@ public class ApiRootBuilder {
      */
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries));
+        return with(clientBuilder -> clientBuilder.withPolicies(
+            policies -> policies.withScheduler(executorService).withRetry(builder -> builder.maxRetries(maxRetries))));
     }
 
     /**
@@ -452,7 +470,8 @@ public class ApiRootBuilder {
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, statusCodes));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(builder -> builder.maxRetries(maxRetries).statusCodes(statusCodes))));
     }
 
     /**
@@ -461,8 +480,8 @@ public class ApiRootBuilder {
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
-        return with(
-            clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, statusCodes, failures));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(builder -> builder.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures))));
     }
 
     /**
@@ -472,8 +491,13 @@ public class ApiRootBuilder {
     public ApiRootBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures, final FailsafeRetryPolicyBuilderOptions fn) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, delay, maxDelay,
-            statusCodes, failures, fn));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(builder -> builder.maxRetries(maxRetries)
+                        .initialDelay(delay)
+                        .maxDelay(maxDelay)
+                        .statusCodes(statusCodes)
+                        .failures(failures)
+                        .options(fn))));
     }
 
     /**
@@ -482,8 +506,9 @@ public class ApiRootBuilder {
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return with(
-            clientBuilder -> clientBuilder.withRetryMiddleware(executorService, maxRetries, delay, maxDelay, fn));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(
+                    builder -> builder.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn))));
     }
 
     /**
@@ -491,7 +516,8 @@ public class ApiRootBuilder {
      */
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(scheduler, maxRetries));
+        return with(clientBuilder -> clientBuilder.withPolicies(
+            policies -> policies.withScheduler(scheduler).withRetry(builder -> builder.maxRetries(maxRetries))));
     }
 
     /**
@@ -500,7 +526,8 @@ public class ApiRootBuilder {
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries,
             List<Integer> statusCodes) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(scheduler, maxRetries, statusCodes));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(builder -> builder.maxRetries(maxRetries).statusCodes(statusCodes))));
     }
 
     /**
@@ -509,7 +536,8 @@ public class ApiRootBuilder {
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(scheduler, maxRetries, statusCodes, failures));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(builder -> builder.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures))));
     }
 
     /**
@@ -519,8 +547,13 @@ public class ApiRootBuilder {
     public ApiRootBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,
             final long maxDelay, List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(scheduler, maxRetries, delay, maxDelay,
-            statusCodes, failures, fn));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(builder -> builder.maxRetries(maxRetries)
+                        .initialDelay(delay)
+                        .maxDelay(maxDelay)
+                        .statusCodes(statusCodes)
+                        .failures(failures)
+                        .options(fn))));
     }
 
     /**
@@ -529,7 +562,9 @@ public class ApiRootBuilder {
     @Deprecated
     public ApiRootBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,
             final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return with(clientBuilder -> clientBuilder.withRetryMiddleware(scheduler, maxRetries, delay, maxDelay, fn));
+        return with(clientBuilder -> clientBuilder.withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(
+                    builder -> builder.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn))));
     }
 
     /**

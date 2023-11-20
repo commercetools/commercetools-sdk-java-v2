@@ -2,12 +2,10 @@
 package commercetools.utils;
 
 import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 
 import java.time.Duration;
-import java.util.LinkedHashSet;
-import java.util.Locale;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
@@ -23,6 +21,7 @@ public class CommercetoolsTestUtils {
     static {
         ApiRootBuilder builder = ApiRootBuilder.ofEnvironmentVariables()
                 .addConcurrentModificationMiddleware()
+                .withPolicies(policyBuilder -> policyBuilder.withRetry(5, singletonList(503)))
                 .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION);
         projectApiRoot = builder.buildProjectRoot();
     }

@@ -24,7 +24,7 @@ public class PolicyMiddlewareTest {
 
     @Test
     public void testWithStatusCode() {
-        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(1).build();
+        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(builder -> builder.maxRetries(1)).build();
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();
@@ -39,7 +39,7 @@ public class PolicyMiddlewareTest {
 
     @Test
     public void testWithCoveredException() {
-        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(1).build();
+        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(builder -> builder.maxRetries(1)).build();
 
         final URI uri = URI.create("https://www.commercetools.com/");
 
@@ -59,7 +59,7 @@ public class PolicyMiddlewareTest {
 
     @Test
     public void testWithCoveredExceptionResponse() {
-        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(1).build();
+        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(builder -> builder.maxRetries(1)).build();
 
         final URI uri = URI.create("https://www.commercetools.com/");
 
@@ -80,7 +80,7 @@ public class PolicyMiddlewareTest {
 
     @Test
     public void testUncoveredException() {
-        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(1).build();
+        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(builder -> builder.maxRetries(1)).build();
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();
@@ -98,7 +98,7 @@ public class PolicyMiddlewareTest {
 
     @Test
     public void testRetrySuccess() {
-        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(1).build();
+        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(builder -> builder.maxRetries(1)).build();
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();

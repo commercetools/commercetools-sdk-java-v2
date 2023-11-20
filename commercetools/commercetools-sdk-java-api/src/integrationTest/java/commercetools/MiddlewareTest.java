@@ -44,7 +44,8 @@ public class MiddlewareTest {
                     count.getAndIncrement();
                     return next.apply(request);
                 })
-                .withPolicies(policies -> policies.withRetry(3, singletonList(HttpStatusCode.NOT_FOUND_404)))
+                .withPolicies(policies -> policies.withRetry(
+                    builder -> builder.maxRetries(3).statusCodes(singletonList(HttpStatusCode.NOT_FOUND_404))))
                 .build(projectKey);
 
         Assertions.assertThatExceptionOfType(NotFoundException.class).isThrownBy(() -> {

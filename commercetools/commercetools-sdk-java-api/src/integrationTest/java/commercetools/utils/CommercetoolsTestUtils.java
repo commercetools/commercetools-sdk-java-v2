@@ -21,7 +21,8 @@ public class CommercetoolsTestUtils {
     static {
         ApiRootBuilder builder = ApiRootBuilder.ofEnvironmentVariables()
                 .addConcurrentModificationMiddleware()
-                .withPolicies(policyBuilder -> policyBuilder.withRetry(5, singletonList(503)))
+                .withPolicies(
+                    policyBuilder -> policyBuilder.withRetry(b -> b.maxRetries(5).statusCodes(singletonList(503))))
                 .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION);
         projectApiRoot = builder.buildProjectRoot();
     }

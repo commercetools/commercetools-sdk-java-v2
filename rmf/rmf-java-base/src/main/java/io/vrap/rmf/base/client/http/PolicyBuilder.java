@@ -102,41 +102,6 @@ public class PolicyBuilder {
         return withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures));
     }
 
-    public PolicyBuilder withRetry(final int maxRetries, final long delay, final long maxDelay) {
-        return withRetry(retry -> retry.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay));
-    }
-
-    public PolicyBuilder withRetry(final int maxRetries, final long delay, final long maxDelay,
-            final List<Integer> statusCodes) {
-        return withRetry(
-            retry -> retry.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).statusCodes(statusCodes));
-    }
-
-    public PolicyBuilder withRetry(final int maxRetries, final long delay, final long maxDelay,
-            final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
-        return withRetry(retry -> retry.maxRetries(maxRetries)
-                .initialDelay(delay)
-                .maxDelay(maxDelay)
-                .statusCodes(statusCodes)
-                .failures(failures));
-    }
-
-    public PolicyBuilder withRetry(final int maxRetries, final long delay, final long maxDelay,
-            final List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
-            final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetry(retry -> retry.maxRetries(maxRetries)
-                .initialDelay(delay)
-                .maxDelay(maxDelay)
-                .statusCodes(statusCodes)
-                .failures(failures)
-                .options(fn));
-    }
-
-    public PolicyBuilder withRetry(final int maxRetries, final long delay, final long maxDelay,
-            final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetry(retry -> retry.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn));
-    }
-
     public PolicyBuilder withBulkhead(final int maxConcurrency) {
         return withPolicy(bulkhead(maxConcurrency));
     }

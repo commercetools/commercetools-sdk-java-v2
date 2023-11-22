@@ -109,20 +109,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -   name: Checkout
-          uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - uses: gradle/wrapper-validation-action@56b90f209b02bf6d1deae490e9ef18b21a389cd4
 
-      -   name: Setup Java
-          uses: actions/setup-java@v3
-          with:
-              distribution: 'temurin'
-              java-version: '17'
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
 
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
 
-      -   name: build javadoc
-          if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'
-          run: ./gradlew alljavadoc
+      - name: build javadoc
+        if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: ./gradlew alljavadoc
+      - name: "update changelog"
+        run: |
+            gp api /repos/commercetools/commercetools-sdk-java-v2/releases --paginate > releases.json
+            node scripts/changelog.js > CHANGELOG.md
+            cat CHANGELOG.md

@@ -61,9 +61,18 @@ jobs:
 
       - run: ./gradlew -Pversion=${{ github.ref_name }} writeVersionToExamples writeVersionToReadme setVersion nextMinorVersion snapshotVersion
 
+      - name: "update changelog"
+        run: |
+            gh api /repos/commercetools/commercetools-sdk-java-v2/releases --paginate > releases.json
+            node scripts/changelog.js > CHANGELOG.md
+            rm -rf releases.json
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - name: "remove API reference commit SHA"
         run: rm -rf reference.txt
         continue-on-error: true
+
 
       - uses: stefanzweifel/git-auto-commit-action@3d1b5e078a85df99db0cb2441cd4309b09d86253
         with:

@@ -119,6 +119,8 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+      - name: Setup Node
+        uses: actions/setup-node@v4
 
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
@@ -128,6 +130,7 @@ jobs:
         run: ./gradlew alljavadoc
       - name: "update changelog"
         run: |
+            yarn install
             gh api /repos/commercetools/commercetools-sdk-java-v2/releases --paginate > releases.json
             node scripts/changelog.js > CHANGELOG.md
             cat CHANGELOG.md

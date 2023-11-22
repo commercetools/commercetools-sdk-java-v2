@@ -1,5 +1,5 @@
 
-# 17.2.0 (2023-11-08T14:22:27Z)
+# 17.2.0 (2023-11-08)
 
 ## What's Changed
 * use a fixed version for the examples by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/513
@@ -10,7 +10,7 @@
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.1.0...17.2.0
 
-# 17.1.0 (2023-11-01T10:18:23Z)
+# 17.1.0 (2023-11-01)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/507
@@ -234,13 +234,13 @@
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.0.0...17.1.0
 
-# 17.0.1 (2023-11-01T12:20:38Z)
+# 17.0.1 (2023-11-01)
 
 - fix duplicate content-type header in AHC client 01199ca9
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.0.0...17.0.1
 
-# 17.0.0 (2023-10-13T09:27:25Z)
+# 17.0.0 (2023-10-13)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/505
@@ -310,7 +310,7 @@ Removed deprecations:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/16.5.0...17.0.0
 
-# 16.5.0 (2023-10-12T11:22:16Z)
+# 16.5.0 (2023-10-12)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/503
@@ -319,7 +319,7 @@ Removed deprecations:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/16.4.0...16.5.0
 
-# 16.4.0 (2023-10-10T09:46:29Z)
+# 16.4.0 (2023-10-10)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/496
@@ -358,7 +358,7 @@ Removed deprecations:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/16.3.0...16.4.0
 
-# 16.3.0 (2023-09-29T10:06:05Z)
+# 16.3.0 (2023-09-29)
 
 ## What's Changed
 * Update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/480
@@ -541,7 +541,7 @@ Removed deprecations:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/16.2.0...16.3.0
 
-# 16.2.0 (2023-09-07T11:40:30Z)
+# 16.2.0 (2023-09-07)
 
 ## What's Changed
 
@@ -555,7 +555,7 @@ Removed deprecations:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/16.1.0...16.2.0
 
-# 16.1.0 (2023-09-04T08:00:29Z)
+# 16.1.0 (2023-09-04)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/479
@@ -712,7 +712,7 @@ Removed deprecations:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/16.0.0...16.1.0
 
-# 16.0.0 (2023-09-04T07:30:47Z)
+# 16.0.0 (2023-09-04)
 
 ## What's Changed
 * add util to create ApiRootBuilder from environment variables or prope… by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/476
@@ -831,7 +831,7 @@ Removed deprecations:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/15.0.1...16.0.0
 
-# 15.0.1 (2023-08-11T08:40:23Z)
+# 15.0.1 (2023-08-11)
 
 ## Fixes
 
@@ -839,7 +839,7 @@ Removed deprecations:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/15.0.0...15.0.1
 
-# 15.0.0 (2023-08-10T11:03:48Z)
+# 15.0.0 (2023-08-10)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/467
@@ -1128,14 +1128,14 @@ Removed deprecations:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/14.6.1...15.0.0
 
-# 14.6.1 (2023-08-07T07:52:58Z)
+# 14.6.1 (2023-08-07)
 
 Minor Changes
 
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/14.6.0...14.6.1
 
-# 14.6.0 (2023-07-13T20:05:43Z)
+# 14.6.0 (2023-07-13)
 
 ## What's Changed
 * add Java 11 HTTP client module by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/463
@@ -1197,7 +1197,7 @@ Minor Changes
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/14.5.0...14.6.0
 
-# 14.5.0 (2023-07-03T09:50:19Z)
+# 14.5.0 (2023-07-03)
 
 ## What's Changed
 * add toDraft helper methods for CartDiscountValue and subtypes by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/457
@@ -1456,7 +1456,7 @@ Minor Changes
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/14.4.1...14.5.0
 
-# 14.4.1 (2023-06-26T11:22:00Z)
+# 14.4.1 (2023-06-26)
 
 ## What's Changed
 * use gradle toolchain config by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/455
@@ -1467,7 +1467,7 @@ Minor Changes
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/14.4.0...14.4.1
 
-# 14.4.0 (2023-06-20T19:53:09Z)
+# 14.4.0 (2023-06-20)
 
 ## What's Changed
 * Add withkey interface to CustomFieldLocalizedEnumValue and CustomFieldEnumValue by @salander85 in https://github.com/commercetools/commercetools-sdk-java-v2/pull/452
@@ -1581,7 +1581,7 @@ Minor Changes
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/14.3.0...14.4.0
 
-# 14.3.0 (2023-06-02T07:01:25Z)
+# 14.3.0 (2023-06-02)
 
 ## New Features
 
@@ -1684,7 +1684,7 @@ This release introduces support for [input variables](https://docs.commercetools
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/14.2.1...14.3.0
 
-# 14.2.1 (2023-05-24T11:57:33Z)
+# 14.2.1 (2023-05-24)
 
 ## What's Changed
 * fix query predicate helper method in PagedQueryResourceRequest by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/444
@@ -1692,7 +1692,7 @@ This release introduces support for [input variables](https://docs.commercetools
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/14.2.0...14.2.1
 
-# 14.2.0 (2023-05-24T10:29:56Z)
+# 14.2.0 (2023-05-24)
 
 ## New Features
 
@@ -2014,7 +2014,7 @@ More examples can be found in this [test class](https://github.com/commercetools
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/14.1.0...14.2.0
 
-# 14.1.0 (2023-05-02T09:04:48Z)
+# 14.1.0 (2023-05-02)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/435
@@ -2104,7 +2104,7 @@ More examples can be found in this [test class](https://github.com/commercetools
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/14.0.0...14.1.0
 
-# 14.0.0 (2023-04-18T11:14:34Z)
+# 14.0.0 (2023-04-18)
 
 ## What's Changed
 * add CompletableFutureUtils by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/430
@@ -2154,7 +2154,7 @@ With the introduction of DirectDiscounts the property `discount` in `DiscountedL
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/13.3.0...14.0.0
 
-# 13.3.0 (2023-04-12T07:43:29Z)
+# 13.3.0 (2023-04-12)
 
 ## What's Changed
 * Add new integration tests by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/408
@@ -2186,7 +2186,7 @@ With the introduction of DirectDiscounts the property `discount` in `DiscountedL
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/13.2.0...13.3.0
 
-# 13.2.0 (2023-03-31T09:37:30Z)
+# 13.2.0 (2023-03-31)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/421
@@ -2299,7 +2299,7 @@ With the introduction of DirectDiscounts the property `discount` in `DiscountedL
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/13.1.0...13.2.0
 
-# 13.1.0 (2023-03-27T11:28:38Z)
+# 13.1.0 (2023-03-27)
 
 ## What's Changed
 * Add NewRelic monitoring middleware by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/415
@@ -2365,7 +2365,7 @@ With the introduction of DirectDiscounts the property `discount` in `DiscountedL
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/13.0.1...13.1.0
 
-# 13.0.1 (2023-03-20T10:40:53Z)
+# 13.0.1 (2023-03-20)
 
 ## What's Changed
 * Javadoc by @barbara79 in https://github.com/commercetools/commercetools-sdk-java-v2/pull/413
@@ -2374,7 +2374,7 @@ With the introduction of DirectDiscounts the property `discount` in `DiscountedL
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/13.0.0...13.0.1
 
-# 13.0.0 (2023-03-06T12:20:35Z)
+# 13.0.0 (2023-03-06)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/398
@@ -2530,7 +2530,7 @@ With the introduction of DirectDiscounts the property `discount` in `DiscountedL
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/12.1.0...13.0.0
 
-# 12.1.0 (2023-02-10T14:54:13Z)
+# 12.1.0 (2023-02-10)
 
 ## What's Changed
 * create mixin interfaces to reduce the code in the mixin raml file by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/394
@@ -2541,7 +2541,7 @@ With the introduction of DirectDiscounts the property `discount` in `DiscountedL
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/12.0.0...12.1.0
 
-# 12.0.0 (2023-01-30T21:04:33Z)
+# 12.0.0 (2023-01-30)
 
 ## What's Changed
 * add retry handler for delete methods by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/385
@@ -2590,7 +2590,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/11.2.0...12.0.0
 
-# 11.2.0 (2023-01-10T12:55:10Z)
+# 11.2.0 (2023-01-10)
 
 ## What's Changed
 
@@ -2611,7 +2611,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/11.1.0...11.2.0
 
-# 11.1.0 (2023-01-09T20:42:25Z)
+# 11.1.0 (2023-01-09)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/378
@@ -2656,7 +2656,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/11.0.0...11.1.0
 
-# 11.0.0 (2022-12-21T14:14:31Z)
+# 11.0.0 (2022-12-21)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/377
@@ -2733,7 +2733,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/10.1.0...11.0.0
 
-# 10.1.0 (2022-12-14T13:51:40Z)
+# 10.1.0 (2022-12-14)
 
 ## What's Changed
 * add helper method equalsIgnoreId to BaseAddress by @jenschude
@@ -2774,7 +2774,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/10.0.0...10.1.0
 
-# 10.0.0 (2022-12-07T14:25:55Z)
+# 10.0.0 (2022-12-07)
 
 ## What's Changed
 * add test for order update by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/364
@@ -2898,7 +2898,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.5.0...10.0.0
 
-# 9.5.0 (2022-11-07T11:45:06Z)
+# 9.5.0 (2022-11-07)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/356
@@ -3017,7 +3017,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.4.0...9.5.0
 
-# 9.4.0 (2022-10-13T18:34:58Z)
+# 9.4.0 (2022-10-13)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/354
@@ -3030,7 +3030,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.3.0...9.4.0
 
-# 9.3.0 (2022-09-15T10:00:54Z)
+# 9.3.0 (2022-09-15)
 
 ## What's Changed
 * fix ProductDataLike serialization by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/346
@@ -3068,7 +3068,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.2.0...9.3.0
 
-# 9.2.2 (2022-08-31T15:46:14Z)
+# 9.2.2 (2022-08-31)
 
 ## What's Changed
 
@@ -3076,7 +3076,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.2.1...9.2.2
 
-# 7.6.3 (2022-08-31T12:30:21Z)
+# 7.6.3 (2022-08-31)
 
 ## Fixes
 
@@ -3084,19 +3084,19 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/7.6.2...7.6.3
 
-# 9.2.1 (2022-07-29T13:27:15Z)
+# 9.2.1 (2022-07-29)
 
 - fix ProductDataLike de-/serialization
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.2.0...9.2.1
 
-# 8.10.1 (2022-07-29T12:09:35Z)
+# 8.10.1 (2022-07-29)
 
 - fix ProductDataLike de-/serialization
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.10.0...8.10.1
 
-# 9.2.0 (2022-07-28T12:18:06Z)
+# 9.2.0 (2022-07-28)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/339
@@ -3119,7 +3119,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.1.0...9.2.0
 
-# 9.1.0 (2022-07-08T08:25:25Z)
+# 9.1.0 (2022-07-08)
 
 ## What's Changed
 * add convert methods customfields & references to their drafts by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/336
@@ -3142,7 +3142,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.0.0...9.1.0
 
-# 8.7.2 (2022-07-08T06:57:42Z)
+# 8.7.2 (2022-07-08)
 
 ### Fixes
 
@@ -3150,7 +3150,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.7.1...8.7.2
 
-# 9.0.0 (2022-07-04T07:54:00Z)
+# 9.0.0 (2022-07-04)
 
 ## What's Changed
 * add benchmark for SDK comparison by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/331
@@ -3182,7 +3182,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.10.0...9.0.0
 
-# 8.10.0 (2022-06-21T08:29:36Z)
+# 8.10.0 (2022-06-21)
 
 ## What's Changed
 * add support for AHC by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/326
@@ -3194,7 +3194,7 @@ The changes will only affect implementations relying on the URIs of the built re
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.9.0...8.10.0
 
-# 2.0.2 (2022-06-14T20:51:18Z)
+# 2.0.2 (2022-06-14)
 
 Fixes:
 
@@ -3202,7 +3202,7 @@ Fixes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/2.0.1...2.0.2
 
-# 8.9.0 (2022-06-10T10:35:24Z)
+# 8.9.0 (2022-06-10)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/321
@@ -3220,7 +3220,7 @@ Fixes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.8.1...8.9.0
 
-# 8.8.1 (2022-06-09T08:33:23Z)
+# 8.8.1 (2022-06-09)
 
 ## What's Changed
 * add option to filter requests for NotFoundRequestMiddleware by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/323
@@ -3228,7 +3228,7 @@ Fixes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.8.0...8.8.1
 
-# 8.8.0 (2022-06-08T09:13:25Z)
+# 8.8.0 (2022-06-08)
 
 ## What's Changed
 * add time information to the logger middleware by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/309
@@ -3258,13 +3258,13 @@ Interface API Change:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.7.0...8.8.0
 
-# 8.7.1 (2022-06-08T08:08:45Z)
+# 8.7.1 (2022-06-08)
 
 - fix exception to log level mapping in InternalLoggerMiddleware
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.7.0...8.7.1
 
-# 7.6.2 (2022-05-04T07:29:04Z)
+# 7.6.2 (2022-05-04)
 
 ### Fixes
 
@@ -3273,7 +3273,7 @@ Interface API Change:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/7.6.1...7.6.2
 
-# 8.7.0 (2022-05-02T10:57:12Z)
+# 8.7.0 (2022-05-02)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/301
@@ -3288,13 +3288,13 @@ Interface API Change:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.6.0...8.7.0
 
-# 8.6.1 (2022-05-02T09:39:32Z)
+# 8.6.1 (2022-05-02)
 
 * fix Import API product variant patch serializer
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.6.0...8.6.1
 
-# 8.6.0 (2022-04-20T12:27:33Z)
+# 8.6.0 (2022-04-20)
 
 ## What's Changed
 * fix importApi product variant patch serializer by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/299
@@ -3308,7 +3308,7 @@ Interface API Change:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.5.1...8.6.0
 
-# 8.5.1 (2022-04-12T20:25:49Z)
+# 8.5.1 (2022-04-12)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/294
@@ -3318,7 +3318,7 @@ Interface API Change:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.5.0...8.5.1
 
-# 8.5.0 (2022-04-11T07:33:22Z)
+# 8.5.0 (2022-04-11)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/291
@@ -3329,7 +3329,7 @@ Interface API Change:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.4.0...8.5.0
 
-# 8.4.0 (2022-04-08T12:19:10Z)
+# 8.4.0 (2022-04-08)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/287
@@ -3341,13 +3341,13 @@ Interface API Change:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.3.0...8.4.0
 
-# 7.6.1 (2022-04-07T12:42:58Z)
+# 7.6.1 (2022-04-07)
 
 - fix NPE in attribute deserializer if locale key is used in LocalizedStrings
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/7.6.0...7.6.1
 
-# 8.3.0 (2022-04-04T11:19:18Z)
+# 8.3.0 (2022-04-04)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/282
@@ -3359,7 +3359,7 @@ Interface API Change:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.2.0...8.3.0
 
-# 8.2.0 (2022-03-22T10:50:17Z)
+# 8.2.0 (2022-03-22)
 
 ## What's Changed
 * add option to handle failures in RetryMiddleware by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/281
@@ -3367,7 +3367,7 @@ Interface API Change:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.1.0...8.2.0
 
-# 8.1.0 (2022-03-21T13:11:09Z)
+# 8.1.0 (2022-03-21)
 
 ## What's Changed
 
@@ -3378,7 +3378,7 @@ Interface API Change:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.0.1...8.1.0
 
-# 8.0.1 (2022-03-17T10:21:39Z)
+# 8.0.1 (2022-03-17)
 
 ## What's Changed
 
@@ -3393,7 +3393,7 @@ Fixes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/8.0.0...8.0.1
 
-# 8.0.0 (2022-03-16T11:57:20Z)
+# 8.0.0 (2022-03-16)
 
 ## What's Changed
 
@@ -3486,7 +3486,7 @@ Breaking Changes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/7.6.0...8.0.0
 
-# 7.6.0 (2022-01-25T20:32:44Z)
+# 7.6.0 (2022-01-25)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/245
@@ -3501,7 +3501,7 @@ Breaking Changes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/7.5.0...7.6.0
 
-# 7.5.0 (2022-01-25T07:33:37Z)
+# 7.5.0 (2022-01-25)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/244
@@ -3513,7 +3513,7 @@ Breaking Changes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/7.4.0...7.5.0
 
-# 7.4.0 (2022-01-21T13:14:53Z)
+# 7.4.0 (2022-01-21)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/230
@@ -3541,7 +3541,7 @@ Breaking Changes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/7.3.0...7.4.0
 
-# 7.3.0 (2021-12-07T12:04:08Z)
+# 7.3.0 (2021-12-07)
 
 ## What's Changed
 * Support injecting custom executor to oauth middleware by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/225
@@ -3551,7 +3551,7 @@ Breaking Changes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/7.2.0...7.3.0
 
-# 7.2.0 (2021-11-22T09:01:02Z)
+# 7.2.0 (2021-11-22)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/218
@@ -3561,7 +3561,7 @@ Breaking Changes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/7.1.0...7.2.0
 
-# 7.1.0 (2021-11-19T09:27:39Z)
+# 7.1.0 (2021-11-19)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/215
@@ -3579,7 +3579,7 @@ Breaking Changes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/7.0.0...7.1.0
 
-# 7.0.0 (2021-10-25T09:09:07Z)
+# 7.0.0 (2021-10-25)
 
 ## What's Changed
 * Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/208
@@ -3591,7 +3591,7 @@ Breaking Changes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/6.4.0...7.0.0
 
-# 6.4.0 (2021-10-06T11:38:10Z)
+# 6.4.0 (2021-10-06)
 
 ## What's Changed
 * add querying helper by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/207
@@ -3605,24 +3605,24 @@ Breaking Changes:
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/6.3.0...6.4.0
 
-# 6.3.0 (2021-10-04T10:07:26Z)
+# 6.3.0 (2021-10-04)
 
 
 
-# 6.2.3 (2021-10-04T09:41:26Z)
+# 6.2.3 (2021-10-04)
 
 
 
-# 6.2.2 (2021-09-28T08:03:43Z)
+# 6.2.2 (2021-09-28)
 
 
 
-# 6.2.1 (2021-09-22T12:48:33Z)
+# 6.2.1 (2021-09-22)
 
 - fix package for ProjectApiRoot
   Package has been changed from com.commercetools.<module>.defaultconfig to com.commercetools.<module>.client, e.g.: `com.commercetools.api.client.ProjectApiRoot` instead of `com.commercetools.api.defaultconfig.ProjectApiRoot` 
 
-# 6.2.0 (2021-09-13T09:43:38Z)
+# 6.2.0 (2021-09-13)
 
 * adds ProjectApiRoot class to be used as project scoped api root.
   ```
@@ -3631,11 +3631,11 @@ Breaking Changes:
   ```
 * adds possibilities to add multiple query parameters at once
 
-# 6.1.0 (2021-09-02T12:06:09Z)
+# 6.1.0 (2021-09-02)
 
 - adds `equals` and `hashCode` to resource method classes
 
-# 6.0.0 (2021-08-30T07:22:43Z)
+# 6.0.0 (2021-08-30)
 
 ## New Features
 
@@ -3649,11 +3649,11 @@ Breaking Changes:
 
 
 
-# 5.2.0 (2021-08-02T13:16:29Z)
+# 5.2.0 (2021-08-02)
 
 
 
-# 5.1.0 (2021-07-13T07:07:19Z)
+# 5.1.0 (2021-07-13)
 
 Examples:
 - added examples and test for Maven configured projects
@@ -3677,7 +3677,7 @@ Import:
 ML:
 - image upload improved to detect the content type if not given for the request
 
-# 5.0.0 (2021-06-17T10:05:21Z)
+# 5.0.0 (2021-06-17)
 
 As some return types have been changed we released a new major version.
 
@@ -3685,7 +3685,7 @@ As some return types have been changed we released a new major version.
 - `DeprecatableTrait` has been split to `Deprecatable200Trait` and `Deprecatable201Trait`
 - fixed InventoryEntry supplyChannel type to `ChannelReference`
 
-# 4.1.0 (2021-04-28T08:39:02Z)
+# 4.1.0 (2021-04-28)
 
 * Fixes issue with HTTP/2 connections which result in shutdown of the HTTP client connection pool by forcing HTTP/1.1 connections
 * Introduces a compatibility layer for the JVM SDK
@@ -3695,11 +3695,11 @@ As some return types have been changed we released a new major version.
 * Fixed return types for Me endpoint methods
 * Improved Tracing of the RetryMiddleware
 
-# 4.0.1 (2021-04-28T08:22:07Z)
+# 4.0.1 (2021-04-28)
 
 Fixed type of quantity property for MyLineItemDraft
 
-# 4.0.0 (2021-04-28T08:21:59Z)
+# 4.0.0 (2021-04-28)
 
 Introduced ClientBuilder for easier creation of an ApiHttpClient instance
 Deprecated ClientFactory
@@ -3708,27 +3708,27 @@ Support for form parameters in product search requests
 Attribute with Numbers are now deserialized to a long if no decimal places are given
 added Audit log SDK
 
-# 3.1.2 (2021-04-09T08:32:47Z)
+# 3.1.2 (2021-04-09)
 
 Fixed legacy SDK HttpClient
 
-# 3.1.1 (2021-03-03T20:06:19Z)
+# 3.1.1 (2021-03-03)
 
 Fixes NPE with empty sets in custom fields
 
-# 3.1.0 (2021-03-01T07:49:49Z)
+# 3.1.0 (2021-03-01)
 
 From this release on the SDK modules will only made available on Maven Central due to the deprecation of Bintray and JCenter.
 
-# 3.0.2 (2021-02-16T08:01:39Z)
+# 3.0.2 (2021-02-16)
 
 
 
-# 3.0.1 (2021-02-08T12:52:27Z)
+# 3.0.1 (2021-02-08)
 
 Fixes a bug related to adding format to the quantity field for DeliveryItem
 
-# 3.0.0 (2021-02-03T08:22:51Z)
+# 3.0.0 (2021-02-03)
 
 Breaking Changes:
 - Properties accepting & returning JsonNode have been changed to accept and return Object. This mainly affects CustomFields, Attributes and CustomObjects.
@@ -3746,15 +3746,15 @@ Features:
 - added method to return the response body to ApiMethod class
 - added explicit Accept-Encoding header for GZip compression 
 
-# 1.6.1 (2021-02-02T10:19:51Z)
+# 1.6.1 (2021-02-02)
 
 Fixes a possible execution bottleneck in the OAuthMiddleware
 
-# 2.0.1 (2021-01-19T13:06:58Z)
+# 2.0.1 (2021-01-19)
 
 Fixes a possible execution bottleneck in the OAuthMiddleware
 
-# 2.0.0 (2021-01-11T13:40:55Z)
+# 2.0.0 (2021-01-11)
 
 It's now mandatory to add a http client module as a dependency to avoid resolving unsupported versions of the HTTP client
 
@@ -3776,56 +3776,56 @@ dependencies {
 }
 ```
 
-# 1.6.0 (2020-11-26T08:18:07Z)
+# 1.6.0 (2020-11-26)
 
 
 
-# 1.5.2 (2020-11-04T09:43:42Z)
+# 1.5.2 (2020-11-04)
 
 
 
-# 1.5.1 (2020-11-04T07:23:56Z)
+# 1.5.1 (2020-11-04)
 
 
 
-# 1.5.0 (2020-11-03T19:39:03Z)
+# 1.5.0 (2020-11-03)
 
 
 
-# 1.4.0 (2020-10-28T17:55:58Z)
+# 1.4.0 (2020-10-28)
 
 
 
-# 1.3.0 (2020-10-27T11:50:36Z)
+# 1.3.0 (2020-10-27)
 
 
 
-# 1.2.0 (2020-10-26T09:40:46Z)
+# 1.2.0 (2020-10-26)
 
 
 
-# 1.1.3 (2020-10-01T13:23:41Z)
+# 1.1.3 (2020-10-01)
 
 
 
-# 1.1.2 (2020-09-15T17:33:44Z)
+# 1.1.2 (2020-09-15)
 
 
 
-# 1.1.1 (2020-09-15T17:33:32Z)
+# 1.1.1 (2020-09-15)
 
 
 
-# 1.1.0 (2020-09-15T08:56:47Z)
+# 1.1.0 (2020-09-15)
 
 
 
-# 1.0.1 (2020-09-09T08:40:21Z)
+# 1.0.1 (2020-09-09)
 
 - fix deserialization of changed Enum. Closes #84 
 - fix resolving of transient dependencies. Closes #83 
 
-# 1.0.0 (2020-09-07T09:00:06Z)
+# 1.0.0 (2020-09-07)
 
 
 

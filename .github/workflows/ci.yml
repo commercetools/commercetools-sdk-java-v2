@@ -128,6 +128,6 @@ jobs:
         run: ./gradlew alljavadoc
       - name: "update changelog"
         run: |
-            gp api /repos/commercetools/commercetools-sdk-java-v2/releases --paginate > releases.json
+            gh api /repos/commercetools/commercetools-sdk-java-v2/releases --paginate > releases.json
             node scripts/changelog.js > CHANGELOG.md
             cat CHANGELOG.md

@@ -43,7 +43,7 @@ public class CartDiscountUpdateImpl implements CartDiscountUpdate, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the CartDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     *  <p>Expected version of the CartDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      */
 
     public Long getVersion() {

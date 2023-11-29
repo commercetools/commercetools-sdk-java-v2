@@ -35,7 +35,7 @@ public interface MyCartUpdate
         extends com.commercetools.api.models.ResourceUpdate<MyCartUpdate, MyCartUpdateAction, MyCartUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the Cart on which the changes apply. If it does not match the actual version, a 409 Conflict error is returned.</p>
+     *  <p>Expected version of the Cart on which the changes apply. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface MyCartUpdate
     public List<MyCartUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the Cart on which the changes apply. If it does not match the actual version, a 409 Conflict error is returned.</p>
+     *  <p>Expected version of the Cart on which the changes apply. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      */
 

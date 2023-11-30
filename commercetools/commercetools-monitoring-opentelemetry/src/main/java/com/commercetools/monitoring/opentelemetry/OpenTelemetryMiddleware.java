@@ -48,7 +48,8 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
                     .ofLongs()
                     .setUnit(OpenTelemetryInfo.UNIT_MS)
                     .build();
-        } else {
+        }
+        else {
             histogram = null;
         }
         errorCounter = meter.counterBuilder(prefix + "." + OpenTelemetryInfo.CLIENT_REQUEST_ERROR).build();

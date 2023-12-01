@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>AWS SQS is a pull-queue on AWS. The queue must be a Standard queue type with a <code>MaximumMessageSize</code> of <code>256 KB</code>.</p>
@@ -161,6 +163,17 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
                 .append(region)
                 .append(authenticationMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("accessKey", accessKey)
+                .append("accessSecret", accessSecret)
+                .append("queueUrl", queueUrl)
+                .append("region", region)
+                .append("authenticationMode", authenticationMode)
+                .build();
     }
 
 }

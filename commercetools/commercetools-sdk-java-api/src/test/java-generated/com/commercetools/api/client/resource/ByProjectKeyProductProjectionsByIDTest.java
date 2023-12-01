@@ -41,7 +41,7 @@ public class ByProjectKeyProductProjectionsByIDTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyProductProjectionsByIDTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -132,7 +132,12 @@ public class ByProjectKeyProductProjectionsByIDTest {
                         .productProjections()
                         .withId("test_ID")
                         .get()
-                        .createHttpRequest(), "get", "test_projectKey/product-projections/test_ID", } };
+                        .createHttpRequest(), "get", "test_projectKey/product-projections/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/product-projections/test_ID", } };
     }
 
     @DataProvider
@@ -179,6 +184,8 @@ public class ByProjectKeyProductProjectionsByIDTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().withId("test_ID").get(), } };
+                        apiRoot.withProjectKey("test_projectKey").productProjections().withId("test_ID").get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productProjections().withId("test_ID").head(), } };
     }
 }

@@ -29,6 +29,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
+
       - name: Fix code style
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         run: ./gradlew spotlessApply
@@ -69,7 +72,7 @@ jobs:
 
       - name: Run integration tests for PR
         if: github.event_name == 'pull_request'
-        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest
+        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest
         env:
           CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID_PR }}
           CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET_PR }}
@@ -79,7 +82,7 @@ jobs:
 
       - name: Run integration tests
         if: github.event_name != 'pull_request'
-        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest
+        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest
         env:
             CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
             CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
@@ -89,6 +92,7 @@ jobs:
 
       - name: Test examples
         run: |
+          ./gradlew writeVersionToExamples
           cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
           cd ../maven-okhttp4 && mvn verify --no-transfer-progress
 

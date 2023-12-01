@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated when a Custom Field has been removed from the Order using the Set CustomField action.</p>
@@ -49,7 +51,7 @@ public class OrderCustomFieldRemovedMessagePayloadImpl implements OrderCustomFie
     }
 
     /**
-     *  <p>Name of the Custom Field that has been removed.</p>
+     *  <p>Name of the Custom Field that was removed.</p>
      */
 
     public String getName() {
@@ -80,6 +82,13 @@ public class OrderCustomFieldRemovedMessagePayloadImpl implements OrderCustomFie
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(name).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("name", name)
+                .build();
     }
 
 }

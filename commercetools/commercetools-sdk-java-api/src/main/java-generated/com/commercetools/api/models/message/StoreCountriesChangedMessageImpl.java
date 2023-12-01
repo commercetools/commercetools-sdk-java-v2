@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Add Country, Remove Country, or Set Countries update action.</p>
@@ -301,6 +303,24 @@ public class StoreCountriesChangedMessageImpl implements StoreCountriesChangedMe
                 .append(addedCountries)
                 .append(removedCountries)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("addedCountries", addedCountries)
+                .append("removedCountries", removedCountries)
+                .build();
     }
 
 }

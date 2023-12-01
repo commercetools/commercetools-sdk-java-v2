@@ -41,7 +41,7 @@ public class ByProjectKeyMeQuotesKeyByKeyTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyMeQuotesKeyByKeyTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -81,6 +81,12 @@ public class ByProjectKeyMeQuotesKeyByKeyTest {
                         .me()
                         .quotes()
                         .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/me/quotes/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quotes()
+                        .withKey("test_key")
                         .post(com.commercetools.api.models.me.MyQuoteUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/me/quotes/key=test_key?expand=expand", },
@@ -102,6 +108,7 @@ public class ByProjectKeyMeQuotesKeyByKeyTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().quotes().withKey("test_key").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().quotes().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quotes()

@@ -36,7 +36,7 @@ public interface BusinessUnitAddressCustomFieldAddedMessagePayload extends Messa
     String BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_ADDED = "BusinessUnitAddressCustomFieldAdded";
 
     /**
-     *  <p>Name of the Custom Field that has been added.</p>
+     *  <p>Name of the Custom Field that was added.</p>
      * @return name
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface BusinessUnitAddressCustomFieldAddedMessagePayload extends Messa
     public Object getValue();
 
     /**
-     *  <p>Name of the Custom Field that has been added.</p>
+     *  <p>Name of the Custom Field that was added.</p>
      * @param name value to be set
      */
 

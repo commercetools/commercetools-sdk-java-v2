@@ -24,6 +24,10 @@ public class ByProjectKeyStandalonePricesKeyByKeyRequestBuilder {
         return new ByProjectKeyStandalonePricesKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyStandalonePricesKeyByKeyHead head() {
+        return new ByProjectKeyStandalonePricesKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyStandalonePricesKeyByKeyPost post(
             com.commercetools.api.models.standalone_price.StandalonePriceUpdate standalonePriceUpdate) {
         return new ByProjectKeyStandalonePricesKeyByKeyPost(apiHttpClient, projectKey, key, standalonePriceUpdate);

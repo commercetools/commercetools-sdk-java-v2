@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomShippingDraft
@@ -229,6 +231,20 @@ public class CustomShippingDraftImpl implements CustomShippingDraft, ModelBase {
                 .append(deliveries)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("shippingMethodName", shippingMethodName)
+                .append("shippingAddress", shippingAddress)
+                .append("shippingRate", shippingRate)
+                .append("shippingRateInput", shippingRateInput)
+                .append("taxCategory", taxCategory)
+                .append("externalTaxRate", externalTaxRate)
+                .append("deliveries", deliveries)
+                .append("custom", custom)
+                .build();
     }
 
 }

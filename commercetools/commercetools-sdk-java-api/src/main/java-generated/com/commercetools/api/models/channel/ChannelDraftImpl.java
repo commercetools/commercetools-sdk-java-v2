@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ChannelDraft
@@ -185,6 +187,18 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
                 .append(custom)
                 .append(geoLocation)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("roles", roles)
+                .append("name", name)
+                .append("description", description)
+                .append("address", address)
+                .append("custom", custom)
+                .append("geoLocation", geoLocation)
+                .build();
     }
 
 }

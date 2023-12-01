@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>To override the shipping details, see Set LineItem ShippingDetails.</p>
@@ -126,6 +128,15 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
                 .append(lineItemKey)
                 .append(targetsDelta)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("targetsDelta", targetsDelta)
+                .build();
     }
 
 }

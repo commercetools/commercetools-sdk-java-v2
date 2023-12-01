@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Shipping
@@ -148,6 +150,16 @@ public class ShippingImpl implements Shipping, ModelBase {
                 .append(shippingRateInput)
                 .append(shippingCustomFields)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("shippingKey", shippingKey)
+                .append("shippingInfo", shippingInfo)
+                .append("shippingAddress", shippingAddress)
+                .append("shippingRateInput", shippingRateInput)
+                .append("shippingCustomFields", shippingCustomFields)
+                .build();
     }
 
 }

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after removing a Custom Field on a Customer using the Set CustomField update action.</p>
+ *  <p>Generated after removing a Custom Field from a Customer using the Set CustomField update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -43,7 +43,7 @@ public interface CustomerCustomFieldRemovedMessage extends Message {
     String CUSTOMER_CUSTOM_FIELD_REMOVED = "CustomerCustomFieldRemoved";
 
     /**
-     *  <p>Name of the Custom Field that has been removed.</p>
+     *  <p>Name of the Custom Field that was removed.</p>
      * @return name
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface CustomerCustomFieldRemovedMessage extends Message {
     public String getName();
 
     /**
-     *  <p>Name of the Custom Field that has been removed.</p>
+     *  <p>Name of the Custom Field that was removed.</p>
      * @param name value to be set
      */
 

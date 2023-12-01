@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Custom Type with empty parameters.</p>
@@ -168,8 +170,7 @@ public class OrderCustomTypeRemovedMessageImpl implements OrderCustomTypeRemoved
     }
 
     /**
-     *  <p><code>id</code> of the Custom Type that has been removed.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getPreviousTypeId() {
@@ -273,6 +274,23 @@ public class OrderCustomTypeRemovedMessageImpl implements OrderCustomTypeRemoved
                 .append(resourceUserProvidedIdentifiers)
                 .append(previousTypeId)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("previousTypeId", previousTypeId)
+                .build();
     }
 
 }

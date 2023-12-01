@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after removing a Custom Type from a Customer using the Set Custom Type update action.</p>
+ *  <p>Generated after adding a Custom Type to a Customer using the Set Custom Type update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCustomTypeSetMessagePayloadImpl implements CustomerCustomTypeSetMessagePayload, ModelBase {
@@ -62,8 +64,7 @@ public class CustomerCustomTypeSetMessagePayloadImpl implements CustomerCustomTy
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getPreviousTypeId() {
@@ -100,6 +101,14 @@ public class CustomerCustomTypeSetMessagePayloadImpl implements CustomerCustomTy
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(customFields).append(previousTypeId).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("customFields", customFields)
+                .append("previousTypeId", previousTypeId)
+                .build();
     }
 
 }

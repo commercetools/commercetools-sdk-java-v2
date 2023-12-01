@@ -13,14 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Name on Discount Codes.</li>
- *   <li>Set State Name on States.</li>
- *   <li>Set Name on Stores.</li>
- *  </ul>
+ *  <p>Change triggered by the Set Name update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SetNameChangeImpl implements SetNameChange, ModelBase {
@@ -29,17 +26,17 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
 
     private String change;
 
-    private com.commercetools.history.models.common.LocalizedString previousValue;
+    private String previousValue;
 
-    private com.commercetools.history.models.common.LocalizedString nextValue;
+    private String nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SetNameChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.LocalizedString nextValue) {
+            @JsonProperty("previousValue") final String previousValue,
+            @JsonProperty("nextValue") final String nextValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
@@ -73,7 +70,7 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
+    public String getPreviousValue() {
         return this.previousValue;
     }
 
@@ -81,7 +78,7 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.LocalizedString getNextValue() {
+    public String getNextValue() {
         return this.nextValue;
     }
 
@@ -89,11 +86,11 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.LocalizedString previousValue) {
+    public void setPreviousValue(final String previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {
+    public void setNextValue(final String nextValue) {
         this.nextValue = nextValue;
     }
 
@@ -125,6 +122,15 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
                 .append(previousValue)
                 .append(nextValue)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("change", change)
+                .append("previousValue", previousValue)
+                .append("nextValue", nextValue)
+                .build();
     }
 
 }

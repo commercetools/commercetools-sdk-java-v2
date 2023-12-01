@@ -36,7 +36,7 @@ public interface CustomerCustomFieldChangedMessagePayload extends MessagePayload
     String CUSTOMER_CUSTOM_FIELD_CHANGED = "CustomerCustomFieldChanged";
 
     /**
-     *  <p>Name of the Custom Field that has been changed.</p>
+     *  <p>Name of the Custom Field that changed.</p>
      * @return name
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface CustomerCustomFieldChangedMessagePayload extends MessagePayload
     public Object getPreviousValue();
 
     /**
-     *  <p>Name of the Custom Field that has been changed.</p>
+     *  <p>Name of the Custom Field that changed.</p>
      * @param name value to be set
      */
 

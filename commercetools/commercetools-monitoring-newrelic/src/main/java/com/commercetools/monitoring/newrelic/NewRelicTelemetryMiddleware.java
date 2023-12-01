@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.http.TelemetryMiddleware;
  * It can be registered as TelemetryMiddleware to the {@link io.vrap.rmf.base.client.ClientBuilder#withTelemetryMiddleware(TelemetryMiddleware) ClientBuilder}
  * or the ApiRootBuilder.</p>
  *
- * {@include.example example.ApiRootBuilderTest#addNewRelic()}
+ * {@include.example example.NewRelicApiRootBuilderTest#addNewRelic()}
  *
  * <p>The middleware reads the {@link NewRelicContext} from the Request and restores the transaction using a {@link Token}
  * The details of the request and response are then reported as {@link Segment} with {@link HttpParameters}</p>
@@ -25,9 +25,9 @@ import io.vrap.rmf.base.client.http.TelemetryMiddleware;
  * <p>The Context has to be attached in your application either to a {@link io.vrap.rmf.base.client.ContextApiHttpClient}
  * or the {@link ApiHttpRequest#addContext(Object) Request} itself.</p>
  *
- * {@include.example example.ApiRootBuilderTest#contextClient()}
+ * {@include.example example.NewRelicApiRootBuilderTest#contextClient()}
  *
- * {@include.example example.ApiRootBuilderTest#contextApiRoot()}
+ * {@include.example example.NewRelicApiRootBuilderTest#contextApiRoot()}
  *
  * The {@link NewRelicContextImpl} will {@link Token#expire() expire} the {@link Token} when it's closed. Closing a {@link io.vrap.rmf.base.client.Context}
  * is ensured by {@link ContextApiHttpClientImpl#close() ContextApiHttpClient} if it's implementing {@link java.io.Closeable}

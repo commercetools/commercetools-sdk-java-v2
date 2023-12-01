@@ -19,6 +19,10 @@ public class ByProjectKeyProductProjectionsRequestBuilder {
         return new ByProjectKeyProductProjectionsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyProductProjectionsHead head() {
+        return new ByProjectKeyProductProjectionsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyProductProjectionsSearchRequestBuilder search() {
         return new ByProjectKeyProductProjectionsSearchRequestBuilder(apiHttpClient, projectKey);
     }

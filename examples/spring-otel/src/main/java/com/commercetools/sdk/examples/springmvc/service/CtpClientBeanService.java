@@ -5,10 +5,9 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.client.ProjectScopedApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 
-import com.commercetools.monitoring.newrelic.NewRelicContext;
-import com.commercetools.monitoring.newrelic.NewRelicTelemetryMiddleware;
-import com.newrelic.api.agent.NewRelic;
-import com.newrelic.api.agent.Trace;
+import com.commercetools.monitoring.opentelemetry.OpenTelemetryMiddleware;
+import com.commercetools.monitoring.opentelemetry.OpenTelemetryResponseSerializer;
+import io.opentelemetry.api.GlobalOpenTelemetry;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
@@ -36,19 +35,11 @@ public class CtpClientBeanService {
     }
 
     @Bean
-    public ApiHttpClient client() {
+    public ProjectScopedApiRoot apiRoot() {
         return ApiRootBuilder.of()
                 .defaultClient(credentials())
-                .withTelemetryMiddleware(new NewRelicTelemetryMiddleware())
-                .buildClient();
-    }
-
-    @Bean
-    @RequestScope
-    @Trace(dispatcher = true)
-    public ProjectScopedApiRoot apiRoot(ApiHttpClient client) {
-        ContextApiHttpClient contextClient = ContextApiHttpClient.of(client, new MDCContext(), false)
-                .addContext(NewRelicContext.of(NewRelic.getAgent().getTransaction()));
-        return ProjectApiRoot.fromClient(projectKey, contextClient);
+                .withSerializer(new OpenTelemetryResponseSerializer(ResponseSerializer.of(), GlobalOpenTelemetry.get()))
+                .withTelemetryMiddleware(new OpenTelemetryMiddleware(GlobalOpenTelemetry.get()))
+                .build(projectKey);
     }
 }

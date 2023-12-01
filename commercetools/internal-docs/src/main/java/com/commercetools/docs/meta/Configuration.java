@@ -23,6 +23,12 @@ import io.vrap.rmf.base.client.http.ErrorMiddleware;
  *
  * {@include.example example.ImportExamplesTest#instance()}
  *
+ * <h3 id="custom-urls">Custom URLs</h3>
+ *
+ * To use custom URLs for API endpoints and authentication you have to provide the base URIs to the defaultClient method
+ *
+ * {@include.example example.ExamplesTest#customUrls()}
+ *
  * <h3 id="custom-client">Custom HTTP client</h3>
  *
  * <p>The builder can be instantiated with a custom {@link io.vrap.rmf.base.client.VrapHttpClient} instance. For example a

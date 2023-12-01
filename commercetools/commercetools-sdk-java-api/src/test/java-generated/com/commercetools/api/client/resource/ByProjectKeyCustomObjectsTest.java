@@ -41,7 +41,7 @@ public class ByProjectKeyCustomObjectsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyCustomObjectsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -105,6 +105,13 @@ public class ByProjectKeyCustomObjectsTest {
                         "get", "test_projectKey/custom-objects", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/custom-objects?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().head().createHttpRequest(),
+                        "head", "test_projectKey/custom-objects", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
                         .post(com.commercetools.api.models.custom_object.CustomObjectDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/custom-objects?expand=expand", },
@@ -128,6 +135,8 @@ public class ByProjectKeyCustomObjectsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .post(com.commercetools.api.models.custom_object.CustomObjectDraft.of())

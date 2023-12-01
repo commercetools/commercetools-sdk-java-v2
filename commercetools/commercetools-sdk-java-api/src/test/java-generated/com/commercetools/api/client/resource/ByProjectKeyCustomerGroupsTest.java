@@ -41,7 +41,7 @@ public class ByProjectKeyCustomerGroupsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyCustomerGroupsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -102,6 +102,13 @@ public class ByProjectKeyCustomerGroupsTest {
                         "get", "test_projectKey/customer-groups", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/customer-groups?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().head().createHttpRequest(),
+                        "head", "test_projectKey/customer-groups", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
                         .post(com.commercetools.api.models.customer_group.CustomerGroupDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/customer-groups?expand=expand", },
@@ -125,6 +132,8 @@ public class ByProjectKeyCustomerGroupsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .post(com.commercetools.api.models.customer_group.CustomerGroupDraft.of())

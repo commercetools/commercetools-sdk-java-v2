@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,6 +35,12 @@ public class ByProjectKeyExtensionsPostString
         extends StringBodyApiMethod<ByProjectKeyExtensionsPostString, com.commercetools.api.models.extension.Extension>
         implements com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyExtensionsPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyExtensionsPostString> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.extension.Extension> resultType() {
+        return new TypeReference<com.commercetools.api.models.extension.Extension>() {
+        };
+    }
 
     private String projectKey;
 

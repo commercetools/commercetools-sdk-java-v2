@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Setting a distribution channel for a LineItem can lead to an updated <code>price</code> as described in LineItem Price selection.</p>
@@ -125,6 +127,15 @@ public class CartSetLineItemDistributionChannelActionImpl
                 .append(lineItemKey)
                 .append(distributionChannel)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("distributionChannel", distributionChannel)
+                .build();
     }
 
 }

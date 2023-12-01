@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>To set a <code>ReturnShipmentState</code>, the Order <code>returnInfo</code> must have at least one ReturnItem.</p>
@@ -121,6 +123,15 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
                 .append(returnItemKey)
                 .append(shipmentState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("returnItemId", returnItemId)
+                .append("returnItemKey", returnItemKey)
+                .append("shipmentState", shipmentState)
+                .build();
     }
 
 }

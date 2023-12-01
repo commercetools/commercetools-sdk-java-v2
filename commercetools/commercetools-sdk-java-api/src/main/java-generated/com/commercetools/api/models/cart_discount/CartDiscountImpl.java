@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CartDiscount
@@ -256,7 +258,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>
+     *  <p>Indicates if the Discount is used in connection with a DiscountCode.</p>
      */
 
     public Boolean getRequiresDiscountCode() {
@@ -458,6 +460,32 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(stackingMode)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("name", name)
+                .append("key", key)
+                .append("description", description)
+                .append("value", value)
+                .append("cartPredicate", cartPredicate)
+                .append("target", target)
+                .append("sortOrder", sortOrder)
+                .append("stores", stores)
+                .append("isActive", isActive)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("requiresDiscountCode", requiresDiscountCode)
+                .append("references", references)
+                .append("stackingMode", stackingMode)
+                .append("custom", custom)
+                .build();
     }
 
 }

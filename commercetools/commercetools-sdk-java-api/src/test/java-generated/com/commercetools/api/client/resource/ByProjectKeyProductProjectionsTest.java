@@ -41,7 +41,7 @@ public class ByProjectKeyProductProjectionsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyProductProjectionsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -149,7 +149,15 @@ public class ByProjectKeyProductProjectionsTest {
                                 .createHttpRequest(),
                         "get", "test_projectKey/product-projections?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get().createHttpRequest(),
-                        "get", "test_projectKey/product-projections", } };
+                        "get", "test_projectKey/product-projections", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/product-projections?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productProjections().head().createHttpRequest(),
+                        "head", "test_projectKey/product-projections", } };
     }
 
     @DataProvider
@@ -193,6 +201,9 @@ public class ByProjectKeyProductProjectionsTest {
                         .productProjections()
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get(), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productProjections().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().head(), } };
     }
 }

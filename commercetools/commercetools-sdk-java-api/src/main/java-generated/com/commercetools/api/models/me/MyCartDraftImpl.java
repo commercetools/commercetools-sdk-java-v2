@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The <code>customerId</code> is determined by a password flow token and automatically set on the resulting Cart. The <code>anonymousId</code> is determined by a token for an anonymous session and automatically set on the resulting Cart.</p>
@@ -369,6 +371,27 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
                 .append(deleteDaysAfterLastModification)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("currency", currency)
+                .append("customerEmail", customerEmail)
+                .append("businessUnit", businessUnit)
+                .append("store", store)
+                .append("lineItems", lineItems)
+                .append("taxMode", taxMode)
+                .append("inventoryMode", inventoryMode)
+                .append("billingAddress", billingAddress)
+                .append("shippingAddress", shippingAddress)
+                .append("shippingMethod", shippingMethod)
+                .append("itemShippingAddresses", itemShippingAddresses)
+                .append("discountCodes", discountCodes)
+                .append("country", country)
+                .append("locale", locale)
+                .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
+                .append("custom", custom)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Details about a Embedded Price that was updated due to a Discount. Specific to Product Price Discounts Set Message.</p>
@@ -161,6 +163,17 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
                 .append(discounted)
                 .append(staged)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("variantId", variantId)
+                .append("variantKey", variantKey)
+                .append("sku", sku)
+                .append("priceId", priceId)
+                .append("discounted", discounted)
+                .append("staged", staged)
+                .build();
     }
 
 }

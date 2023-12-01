@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The import of States does not follow any predefined rules and should be only used if no transitions are defined. The <code>quantity</code> in the ItemStates must match the sum of all Custom Line Item states' quantities.</p>
@@ -124,6 +126,15 @@ public class OrderImportCustomLineItemStateActionImpl implements OrderImportCust
                 .append(customLineItemKey)
                 .append(state)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .append("state", state)
+                .build();
     }
 
 }

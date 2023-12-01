@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,13 +35,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyOrdersGet
-        extends ApiMethod<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse>
+        extends TypeApiMethod<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse>
         implements ByProjectKeyOrdersGetMixin, com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyOrdersGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyOrdersGet>,
         com.commercetools.api.client.QueryTrait<ByProjectKeyOrdersGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyOrdersGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.order.OrderPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.order.OrderPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

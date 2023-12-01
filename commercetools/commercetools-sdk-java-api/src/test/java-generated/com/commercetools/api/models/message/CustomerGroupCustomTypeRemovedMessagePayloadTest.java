@@ -1,0 +1,39 @@
+
+package com.commercetools.api.models.message;
+
+import com.tngtech.junit.dataprovider.DataProvider;
+import com.tngtech.junit.dataprovider.DataProviderExtension;
+import com.tngtech.junit.dataprovider.UseDataProvider;
+import com.tngtech.junit.dataprovider.UseDataProviderExtension;
+
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestTemplate;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(UseDataProviderExtension.class)
+@ExtendWith(DataProviderExtension.class)
+public class CustomerGroupCustomTypeRemovedMessagePayloadTest {
+
+    @TestTemplate
+    @UseDataProvider("objectBuilder")
+    public void buildUnchecked(CustomerGroupCustomTypeRemovedMessagePayloadBuilder builder) {
+        CustomerGroupCustomTypeRemovedMessagePayload customerGroupCustomTypeRemovedMessagePayload = builder
+                .buildUnchecked();
+        Assertions.assertThat(customerGroupCustomTypeRemovedMessagePayload)
+                .isInstanceOf(CustomerGroupCustomTypeRemovedMessagePayload.class);
+    }
+
+    @DataProvider
+    public static Object[][] objectBuilder() {
+        return new Object[][] {
+                new Object[] { CustomerGroupCustomTypeRemovedMessagePayload.builder().oldTypeId("oldTypeId") } };
+    }
+
+    @Test
+    public void oldTypeId() {
+        CustomerGroupCustomTypeRemovedMessagePayload value = CustomerGroupCustomTypeRemovedMessagePayload.of();
+        value.setOldTypeId("oldTypeId");
+        Assertions.assertThat(value.getOldTypeId()).isEqualTo("oldTypeId");
+    }
+}

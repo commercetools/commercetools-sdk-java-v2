@@ -26,7 +26,7 @@ public class ProductDraftImportTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] {
+        return new Object[][] { new Object[] { ProductDraftImport.builder().key("key") },
                 new Object[] { ProductDraftImport.builder()
                         .productType(new com.commercetools.importapi.models.common.ProductTypeKeyReferenceImpl()) },
                 new Object[] { ProductDraftImport.builder()
@@ -60,6 +60,13 @@ public class ProductDraftImportTest {
                 new Object[] { ProductDraftImport.builder()
                         .priceMode(
                             com.commercetools.importapi.models.common.ProductPriceModeEnum.findEnum("Embedded")) } };
+    }
+
+    @Test
+    public void key() {
+        ProductDraftImport value = ProductDraftImport.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
     }
 
     @Test

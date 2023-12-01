@@ -41,7 +41,7 @@ public class ByProjectKeyProductSelectionsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyProductSelectionsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -105,6 +105,13 @@ public class ByProjectKeyProductSelectionsTest {
                         "get", "test_projectKey/product-selections", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/product-selections?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productSelections().head().createHttpRequest(),
+                        "head", "test_projectKey/product-selections", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productSelections()
                         .post(com.commercetools.api.models.product_selection.ProductSelectionDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/product-selections?expand=expand", },
@@ -131,6 +138,9 @@ public class ByProjectKeyProductSelectionsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productSelections().get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productSelections().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productSelections().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
                         .post(com.commercetools.api.models.product_selection.ProductSelectionDraft.of())

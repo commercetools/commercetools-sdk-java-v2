@@ -41,7 +41,7 @@ public class ByProjectKeyZonesTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyZonesTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -87,6 +87,11 @@ public class ByProjectKeyZonesTest {
                         .createHttpRequest(), "get", "test_projectKey/zones?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get().createHttpRequest(), "get",
                         "test_projectKey/zones", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").zones().head().withWhere("where").createHttpRequest(),
+                        "head", "test_projectKey/zones?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().head().createHttpRequest(), "head",
+                        "test_projectKey/zones", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .post(com.commercetools.api.models.zone.ZoneDraft.of())
@@ -112,6 +117,8 @@ public class ByProjectKeyZonesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .post(com.commercetools.api.models.zone.ZoneDraft.of())

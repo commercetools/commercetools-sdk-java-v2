@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,10 +35,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCustomerGroupsPost extends
-        BodyApiMethod<ByProjectKeyCustomerGroupsPost, com.commercetools.api.models.customer_group.CustomerGroup, com.commercetools.api.models.customer_group.CustomerGroupDraft>
+        TypeBodyApiMethod<ByProjectKeyCustomerGroupsPost, com.commercetools.api.models.customer_group.CustomerGroup, com.commercetools.api.models.customer_group.CustomerGroupDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomerGroupsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyCustomerGroupsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCustomerGroupsPost> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.customer_group.CustomerGroup> resultType() {
+        return new TypeReference<com.commercetools.api.models.customer_group.CustomerGroup>() {
+        };
+    }
 
     private String projectKey;
 

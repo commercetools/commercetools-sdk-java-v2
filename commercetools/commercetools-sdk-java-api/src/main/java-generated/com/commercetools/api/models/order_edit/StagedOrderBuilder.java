@@ -81,6 +81,9 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
 
     @Nullable
+    private com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice;
+
+    @Nullable
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
     @Nullable
@@ -563,7 +566,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param totalPrice value to be set
      * @return Builder
      */
@@ -574,7 +578,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
      */
@@ -588,8 +593,9 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <ul>
      *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -603,8 +609,9 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <ul>
      *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -618,8 +625,9 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <ul>
      *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -662,6 +670,43 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder taxedShippingPrice(
             @Nullable final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice) {
         this.taxedShippingPrice = taxedShippingPrice;
+        return this;
+    }
+
+    /**
+     *  <p>Discounts that apply on the total price of the Order.</p>
+     * @param builder function to build the discountOnTotalPrice value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder discountOnTotalPrice(
+            Function<com.commercetools.api.models.cart.DiscountOnTotalPriceBuilder, com.commercetools.api.models.cart.DiscountOnTotalPriceBuilder> builder) {
+        this.discountOnTotalPrice = builder.apply(com.commercetools.api.models.cart.DiscountOnTotalPriceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Discounts that apply on the total price of the Order.</p>
+     * @param builder function to build the discountOnTotalPrice value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withDiscountOnTotalPrice(
+            Function<com.commercetools.api.models.cart.DiscountOnTotalPriceBuilder, com.commercetools.api.models.cart.DiscountOnTotalPrice> builder) {
+        this.discountOnTotalPrice = builder.apply(com.commercetools.api.models.cart.DiscountOnTotalPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Discounts that apply on the total price of the Order.</p>
+     * @param discountOnTotalPrice value to be set
+     * @return Builder
+     */
+
+    public StagedOrderBuilder discountOnTotalPrice(
+            @Nullable final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice) {
+        this.discountOnTotalPrice = discountOnTotalPrice;
         return this;
     }
 
@@ -2004,7 +2049,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @return totalPrice
      */
 
@@ -2015,8 +2061,9 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <ul>
      *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @return taxedPrice
      */
 
@@ -2033,6 +2080,16 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     @Nullable
     public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
         return this.taxedShippingPrice;
+    }
+
+    /**
+     *  <p>Discounts that apply on the total price of the Order.</p>
+     * @return discountOnTotalPrice
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.DiscountOnTotalPrice getDiscountOnTotalPrice() {
+        return this.discountOnTotalPrice;
     }
 
     /**
@@ -2384,11 +2441,11 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         Objects.requireNonNull(syncInfo, StagedOrder.class + ": syncInfo is missing");
         return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, orderNumber, purchaseOrderNumber, customerId,
             customerEmail, customerGroup, anonymousId, businessUnit, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, taxedShippingPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode, billingAddress,
-            shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput, shippingCustomFields, shipping,
-            itemShippingAddresses, discountCodes, directDiscounts, refusedGifts, paymentInfo, country, locale, origin,
-            cart, quote, orderState, shipmentState, paymentState, state, syncInfo, returnInfo,
-            lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
+            taxedPrice, taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode,
+            inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
+            shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
+            paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState, state, syncInfo,
+            returnInfo, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2398,11 +2455,11 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrder buildUnchecked() {
         return new StagedOrderImpl(id, version, createdAt, lastModifiedAt, orderNumber, purchaseOrderNumber, customerId,
             customerEmail, customerGroup, anonymousId, businessUnit, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, taxedShippingPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode, billingAddress,
-            shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput, shippingCustomFields, shipping,
-            itemShippingAddresses, discountCodes, directDiscounts, refusedGifts, paymentInfo, country, locale, origin,
-            cart, quote, orderState, shipmentState, paymentState, state, syncInfo, returnInfo,
-            lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
+            taxedPrice, taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode,
+            inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
+            shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
+            paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState, state, syncInfo,
+            returnInfo, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2437,6 +2494,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         builder.totalPrice = template.getTotalPrice();
         builder.taxedPrice = template.getTaxedPrice();
         builder.taxedShippingPrice = template.getTaxedShippingPrice();
+        builder.discountOnTotalPrice = template.getDiscountOnTotalPrice();
         builder.taxMode = template.getTaxMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.taxCalculationMode = template.getTaxCalculationMode();

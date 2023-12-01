@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,11 +36,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyDiscountCodesByIDPost extends
-        BodyApiMethod<ByProjectKeyDiscountCodesByIDPost, com.commercetools.api.models.discount_code.DiscountCode, com.commercetools.api.models.discount_code.DiscountCodeUpdate>
+        TypeBodyApiMethod<ByProjectKeyDiscountCodesByIDPost, com.commercetools.api.models.discount_code.DiscountCode, com.commercetools.api.models.discount_code.DiscountCodeUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyDiscountCodesByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyDiscountCodesByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyDiscountCodesByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyDiscountCodesByIDPost> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.discount_code.DiscountCode> resultType() {
+        return new TypeReference<com.commercetools.api.models.discount_code.DiscountCode>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

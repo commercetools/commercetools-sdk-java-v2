@@ -28,7 +28,7 @@ public interface CartOrigin extends JsonEnum {
     */
     CartOrigin MERCHANT = CartOriginEnum.MERCHANT;
     /**
-    	<p>Cart was created as part of a Quote (BETA).</p>
+    	<p>Cart was created as part of a Quote.</p>
 
     */
     CartOrigin QUOTE = CartOriginEnum.QUOTE;

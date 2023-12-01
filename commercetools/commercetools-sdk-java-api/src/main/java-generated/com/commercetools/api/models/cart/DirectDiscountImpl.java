@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Represents a CartDiscount that is only associated with a single Cart or Order.</p>
@@ -103,6 +105,14 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id).append(value).append(target).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("value", value)
+                .append("target", target)
+                .build();
     }
 
 }

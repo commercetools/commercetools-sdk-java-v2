@@ -12,6 +12,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -51,6 +53,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersPostString extends
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPostString>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInStoreKeyByStoreKeyOrdersPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPostString> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.order.Order> resultType() {
+        return new TypeReference<com.commercetools.api.models.order.Order>() {
+        };
+    }
 
     private String projectKey;
     private String storeKey;

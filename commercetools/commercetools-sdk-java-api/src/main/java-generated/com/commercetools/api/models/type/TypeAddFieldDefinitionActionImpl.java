@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Defines a new field for a Type. Adding new required fields to a Type that is already referenced by existing entities can put those entities in a temporarily inconsistent state.</p>
@@ -82,6 +84,13 @@ public class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefinitionA
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(fieldDefinition).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("fieldDefinition", fieldDefinition)
+                .build();
     }
 
 }

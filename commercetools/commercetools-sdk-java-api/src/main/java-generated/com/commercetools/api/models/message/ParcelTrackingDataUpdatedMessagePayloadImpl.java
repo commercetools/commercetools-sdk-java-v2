@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Parcel Tracking Data update action.</p>
@@ -139,6 +141,16 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
                 .append(trackingData)
                 .append(shippingKey)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("deliveryId", deliveryId)
+                .append("parcelId", parcelId)
+                .append("trackingData", trackingData)
+                .append("shippingKey", shippingKey)
+                .build();
     }
 
 }

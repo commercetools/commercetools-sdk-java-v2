@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Contains the <code>current</code> and <code>staged</code> ProductData.</p>
@@ -124,6 +126,15 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
                 .append(staged)
                 .append(hasStagedChanges)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("published", published)
+                .append("current", current)
+                .append("staged", staged)
+                .append("hasStagedChanges", hasStagedChanges)
+                .build();
     }
 
 }

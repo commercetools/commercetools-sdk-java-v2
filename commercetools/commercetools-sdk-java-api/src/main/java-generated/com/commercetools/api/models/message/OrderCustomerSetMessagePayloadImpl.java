@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Customer ID update action.</p>
@@ -142,6 +144,16 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
                 .append(oldCustomer)
                 .append(oldCustomerGroup)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("customer", customer)
+                .append("customerGroup", customerGroup)
+                .append("oldCustomer", oldCustomer)
+                .append("oldCustomerGroup", oldCustomerGroup)
+                .build();
     }
 
 }

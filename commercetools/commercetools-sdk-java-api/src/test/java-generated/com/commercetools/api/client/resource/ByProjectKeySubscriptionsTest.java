@@ -41,7 +41,7 @@ public class ByProjectKeySubscriptionsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeySubscriptionsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -95,6 +95,13 @@ public class ByProjectKeySubscriptionsTest {
                         "get", "test_projectKey/subscriptions", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/subscriptions?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().head().createHttpRequest(),
+                        "head", "test_projectKey/subscriptions", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
                         .post(com.commercetools.api.models.subscription.SubscriptionDraft.of())
                         .createHttpRequest(), "post", "test_projectKey/subscriptions", } };
     }
@@ -112,6 +119,8 @@ public class ByProjectKeySubscriptionsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .post(com.commercetools.api.models.subscription.SubscriptionDraft.of()), } };

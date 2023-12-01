@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CartDraft
@@ -640,6 +642,40 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(deleteDaysAfterLastModification)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("currency", currency)
+                .append("key", key)
+                .append("customerId", customerId)
+                .append("customerEmail", customerEmail)
+                .append("customerGroup", customerGroup)
+                .append("anonymousId", anonymousId)
+                .append("businessUnit", businessUnit)
+                .append("store", store)
+                .append("lineItems", lineItems)
+                .append("customLineItems", customLineItems)
+                .append("taxMode", taxMode)
+                .append("externalTaxRateForShippingMethod", externalTaxRateForShippingMethod)
+                .append("taxRoundingMode", taxRoundingMode)
+                .append("taxCalculationMode", taxCalculationMode)
+                .append("inventoryMode", inventoryMode)
+                .append("billingAddress", billingAddress)
+                .append("shippingAddress", shippingAddress)
+                .append("shippingMethod", shippingMethod)
+                .append("shippingRateInput", shippingRateInput)
+                .append("shippingMode", shippingMode)
+                .append("customShipping", customShipping)
+                .append("shipping", shipping)
+                .append("itemShippingAddresses", itemShippingAddresses)
+                .append("discountCodes", discountCodes)
+                .append("country", country)
+                .append("locale", locale)
+                .append("origin", origin)
+                .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
+                .append("custom", custom)
+                .build();
     }
 
 }

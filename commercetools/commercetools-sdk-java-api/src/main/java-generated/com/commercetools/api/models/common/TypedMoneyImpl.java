@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Base polymorphic read-only money type that stores currency in cent precision or high precision, that is in sub-cents.</p>
@@ -128,6 +130,15 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
                 .append(type)
                 .append(fractionDigits)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("centAmount", centAmount)
+                .append("currencyCode", currencyCode)
+                .append("type", type)
+                .append("fractionDigits", fractionDigits)
+                .build();
     }
 
 }

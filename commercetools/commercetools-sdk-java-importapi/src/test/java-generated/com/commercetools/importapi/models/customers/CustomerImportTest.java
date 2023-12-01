@@ -27,7 +27,8 @@ public class CustomerImportTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerImport.builder().customerNumber("customerNumber") },
+        return new Object[][] { new Object[] { CustomerImport.builder().key("key") },
+                new Object[] { CustomerImport.builder().customerNumber("customerNumber") },
                 new Object[] { CustomerImport.builder().email("email") },
                 new Object[] { CustomerImport.builder().password("password") },
                 new Object[] { CustomerImport.builder()
@@ -58,6 +59,13 @@ public class CustomerImportTest {
                 new Object[] { CustomerImport.builder()
                         .authenticationMode(
                             com.commercetools.importapi.models.customers.AuthenticationMode.findEnum("Password")) } };
+    }
+
+    @Test
+    public void key() {
+        CustomerImport value = CustomerImport.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
     }
 
     @Test

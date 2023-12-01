@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,10 +35,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyPaymentsPost extends
-        BodyApiMethod<ByProjectKeyPaymentsPost, com.commercetools.api.models.payment.Payment, com.commercetools.api.models.payment.PaymentDraft>
+        TypeBodyApiMethod<ByProjectKeyPaymentsPost, com.commercetools.api.models.payment.Payment, com.commercetools.api.models.payment.PaymentDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyPaymentsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyPaymentsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyPaymentsPost> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.payment.Payment> resultType() {
+        return new TypeReference<com.commercetools.api.models.payment.Payment>() {
+        };
+    }
 
     private String projectKey;
 

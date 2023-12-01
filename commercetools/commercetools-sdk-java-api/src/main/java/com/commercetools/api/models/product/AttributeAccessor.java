@@ -108,6 +108,9 @@ public class AttributeAccessor {
         if (attribute.getValue() instanceof Double) {
             return (Double) attribute.getValue();
         }
+        if (attribute.getValue() instanceof Number) {
+            return ((Number) attribute.getValue()).doubleValue();
+        }
         if (attribute.getValue() instanceof JsonNode) {
             return ((JsonNode) attribute.getValue()).asDouble();
         }
@@ -147,6 +150,9 @@ public class AttributeAccessor {
     public static Long asLong(final Attribute attribute) {
         if (attribute.getValue() instanceof Long) {
             return (Long) attribute.getValue();
+        }
+        if (attribute.getValue() instanceof Number) {
+            return ((Number) attribute.getValue()).longValue();
         }
         if (attribute.getValue() instanceof JsonNode) {
             return ((JsonNode) attribute.getValue()).asLong();

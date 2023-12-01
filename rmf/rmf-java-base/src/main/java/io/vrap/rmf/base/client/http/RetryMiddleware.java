@@ -28,75 +28,15 @@ import dev.failsafe.spi.Scheduler;
 public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
     static final String loggerName = ClientBuilder.COMMERCETOOLS + ".retry";
 
-    /**
-     * @deprecated use {@link RetryRequestMiddleware#DEFAULT_MAX_DELAY} instead
-     */
-    @Deprecated
-    public static final int DEFAULT_MAX_DELAY = RetryRequestMiddleware.DEFAULT_MAX_DELAY;
-    /**
-     * @deprecated use {@link RetryRequestMiddleware#DEFAULT_INITIAL_DELAY} instead
-     */
-    @Deprecated
-    public static final int DEFAULT_INITIAL_DELAY = RetryRequestMiddleware.DEFAULT_INITIAL_DELAY;
-    /**
-     * @deprecated use {@link RetryRequestMiddleware#DEFAULT_RETRY_STATUS_CODES} instead
-     */
-    @Deprecated
-    public static final List<Integer> DEFAULT_RETRY_STATUS_CODES = RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES;
     private static final InternalLogger logger = InternalLogger.getLogger(loggerName);
     private static final Logger classLogger = LoggerFactory.getLogger(RetryMiddleware.class);
 
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
 
-    /**
-     * @deprecated use {@link RetryRequestMiddleware#of(int)} instead
-     * @param maxRetries number of retries before giving up
-     */
-    @Deprecated
-    public RetryMiddleware(final int maxRetries) {
-        this(Scheduler.DEFAULT, maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY,
-            RetryRequestMiddleware.DEFAULT_MAX_DELAY, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
-    }
-
-    /**
-     * @deprecated use {@link RetryRequestMiddleware#of(int, List)} instead
-     * @param maxRetries number of retries before giving up
-     * @param statusCodes response status codes to be retried
-     */
-    @Deprecated
-    public RetryMiddleware(final int maxRetries, final List<Integer> statusCodes) {
-        this(Scheduler.DEFAULT, maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY,
-            RetryRequestMiddleware.DEFAULT_MAX_DELAY, statusCodes, null);
-    }
-
     RetryMiddleware(final int maxRetries, final List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
         this(Scheduler.DEFAULT, maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY,
             RetryRequestMiddleware.DEFAULT_MAX_DELAY, statusCodes, failures);
-    }
-
-    /**
-     * @deprecated use {@link RetryRequestMiddleware#of(int, long, long)} instead
-     * @param maxRetries number of retries before giving up
-     * @param delay initial delay before retry
-     * @param maxDelay maximum delay before retry
-     */
-    @Deprecated
-    public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay) {
-        this(Scheduler.DEFAULT, maxRetries, delay, maxDelay, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
-    }
-
-    /**
-     * @deprecated use {@link RetryRequestMiddleware#of(int, long, long, List)} instead
-     * @param maxRetries number of retries before giving up
-     * @param delay initial delay before retry
-     * @param maxDelay maximum delay before retry
-     * @param statusCodes response status codes to be retried
-     */
-    @Deprecated
-    public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
-            final List<Integer> statusCodes) {
-        this(Scheduler.DEFAULT, maxRetries, delay, maxDelay, statusCodes, null);
     }
 
     RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, final List<Integer> statusCodes,
@@ -205,55 +145,6 @@ public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
                             .orElse("<no body>");
         }
         return output;
-    }
-
-    /**
-     * @deprecated max parallel requests are limited by underlying HTTP client
-     * @param maxRetries number of retries before giving up
-     * @param maxParallelRequests maximum number of parallel retry requests
-     */
-    @Deprecated
-    public RetryMiddleware(final int maxParallelRequests, final int maxRetries) {
-        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY,
-            RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
-    }
-
-    /**
-     * @deprecated max parallel requests are limited by underlying HTTP client
-     * @param maxRetries number of retries before giving up
-     * @param maxParallelRequests maximum number of parallel retry requests
-     * @param statusCodes response status codes to be retried
-     */
-    @Deprecated
-    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final List<Integer> statusCodes) {
-        this(maxRetries, RetryRequestMiddleware.DEFAULT_INITIAL_DELAY, RetryRequestMiddleware.DEFAULT_MAX_DELAY,
-            statusCodes, null);
-    }
-
-    /**
-     * @deprecated max parallel requests are limited by underlying HTTP client
-     * @param maxRetries number of retries before giving up
-     * @param maxParallelRequests maximum number of parallel retry requests
-     * @param delay initial delay before retry
-     * @param maxDelay maximum delay before retry
-     */
-    @Deprecated
-    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay) {
-        this(maxRetries, delay, maxDelay, RetryRequestMiddleware.DEFAULT_RETRY_STATUS_CODES, null);
-    }
-
-    /**
-     * @deprecated max parallel requests are limited by underlying HTTP client
-     * @param maxRetries number of retries before giving up
-     * @param maxParallelRequests maximum number of parallel retry requests
-     * @param delay initial delay before retry
-     * @param maxDelay maximum delay before retry
-     * @param statusCodes response status codes to be retried
-     */
-    @Deprecated
-    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay,
-            List<Integer> statusCodes) {
-        this(maxRetries, delay, maxDelay, statusCodes, null);
     }
 
     @Override

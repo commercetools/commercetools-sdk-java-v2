@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * AssociateRoleDraft
@@ -147,6 +149,16 @@ public class AssociateRoleDraftImpl implements AssociateRoleDraft, ModelBase {
                 .append(permissions)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("name", name)
+                .append("buyerAssignable", buyerAssignable)
+                .append("permissions", permissions)
+                .append("custom", custom)
+                .build();
     }
 
 }

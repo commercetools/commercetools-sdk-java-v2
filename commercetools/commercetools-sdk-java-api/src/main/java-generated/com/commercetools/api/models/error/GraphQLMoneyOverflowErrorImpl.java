@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a Money operation overflows the 64-bit integer range. See Money usage for more information.</p>
@@ -83,6 +85,13 @@ public class GraphQLMoneyOverflowErrorImpl implements GraphQLMoneyOverflowError,
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code).append(values).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("values", values)
+                .build();
     }
 
 }

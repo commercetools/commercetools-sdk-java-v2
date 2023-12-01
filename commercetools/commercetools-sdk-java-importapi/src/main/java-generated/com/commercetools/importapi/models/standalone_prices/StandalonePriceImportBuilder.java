@@ -57,7 +57,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -371,7 +371,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @return key
      */
 

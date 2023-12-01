@@ -6,22 +6,15 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.history.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Set Name on Discount Codes.</li>
- *   <li>Set State Name on States.</li>
- *   <li>Set Name on Stores.</li>
- *  </ul>
+ *  <p>Change triggered by the Set Name update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -29,8 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     SetNameChange setNameChange = SetNameChange.builder()
  *             .change("{change}")
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
+ *             .previousValue("{previousValue}")
+ *             .nextValue("{nextValue}")
  *             .build()
  * </code></pre>
  * </div>
@@ -65,18 +58,16 @@ public interface SetNameChange extends Change {
      * @return previousValue
      */
     @NotNull
-    @Valid
     @JsonProperty("previousValue")
-    public LocalizedString getPreviousValue();
+    public String getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
      * @return nextValue
      */
     @NotNull
-    @Valid
     @JsonProperty("nextValue")
-    public LocalizedString getNextValue();
+    public String getNextValue();
 
     /**
      * set change
@@ -90,14 +81,14 @@ public interface SetNameChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final LocalizedString previousValue);
+    public void setPreviousValue(final String previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final LocalizedString nextValue);
+    public void setNextValue(final String nextValue);
 
     /**
      * factory method
@@ -132,10 +123,8 @@ public interface SetNameChange extends Change {
         }
         SetNameChangeImpl instance = new SetNameChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
-        instance.setNextValue(
-            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 

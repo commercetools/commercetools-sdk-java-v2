@@ -28,7 +28,9 @@ public class ProductVariantPatchTest {
                 .productVariant(new com.commercetools.importapi.models.common.ProductVariantKeyReferenceImpl()) },
                 new Object[] { ProductVariantPatch.builder()
                         .attributes(new com.commercetools.importapi.models.productvariants.AttributesImpl()) },
-                new Object[] { ProductVariantPatch.builder().staged(true) } };
+                new Object[] { ProductVariantPatch.builder().staged(true) },
+                new Object[] { ProductVariantPatch.builder()
+                        .product(new com.commercetools.importapi.models.common.ProductKeyReferenceImpl()) } };
     }
 
     @Test
@@ -52,5 +54,13 @@ public class ProductVariantPatchTest {
         ProductVariantPatch value = ProductVariantPatch.of();
         value.setStaged(true);
         Assertions.assertThat(value.getStaged()).isEqualTo(true);
+    }
+
+    @Test
+    public void product() {
+        ProductVariantPatch value = ProductVariantPatch.of();
+        value.setProduct(new com.commercetools.importapi.models.common.ProductKeyReferenceImpl());
+        Assertions.assertThat(value.getProduct())
+                .isEqualTo(new com.commercetools.importapi.models.common.ProductKeyReferenceImpl());
     }
 }

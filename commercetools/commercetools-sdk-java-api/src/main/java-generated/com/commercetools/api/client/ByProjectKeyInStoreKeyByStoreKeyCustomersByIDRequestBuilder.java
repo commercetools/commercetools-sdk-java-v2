@@ -26,6 +26,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersByIDGet(apiHttpClient, projectKey, storeKey, ID);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDHead head() {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersByIDHead(apiHttpClient, projectKey, storeKey, ID);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost post(
             com.commercetools.api.models.customer.CustomerUpdate customerUpdate) {
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost(apiHttpClient, projectKey, storeKey, ID,

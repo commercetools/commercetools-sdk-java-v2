@@ -103,6 +103,14 @@ public interface BaseResource {
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.approval_flow.ApprovalFlow) {
+            return com.commercetools.api.models.approval_flow.ApprovalFlow
+                    .deepCopy((com.commercetools.api.models.approval_flow.ApprovalFlow) template);
+        }
+        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRule) {
+            return com.commercetools.api.models.approval_rule.ApprovalRule
+                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRule) template);
+        }
         if (template instanceof com.commercetools.api.models.associate_role.AssociateRole) {
             return com.commercetools.api.models.associate_role.AssociateRole
                     .deepCopy((com.commercetools.api.models.associate_role.AssociateRole) template);

@@ -11,6 +11,9 @@ import java.util.Collections;
 import java.util.ConcurrentModificationException;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.stream.Collectors;
 
 import com.commercetools.api.client.*;
@@ -43,6 +46,9 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.event.Level;
 
+import dev.failsafe.Failsafe;
+import dev.failsafe.FailsafeExecutor;
+
 public class ExamplesTest {
 
     private ProjectApiRoot createProjectClient() {
@@ -73,6 +79,84 @@ public class ExamplesTest {
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .build("my-project");
+
+        // Project scoped ApiRoot config for Europe projects
+        ProjectApiRoot projectApiRootGcpEu = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.valueOf("GCP_EUROPE_WEST1"))
+                .build("my-project");
+    }
+
+    public void customUrls() {
+        // Project scoped ApiRoot config using ServiceRegion class
+        ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .build("my-project");
+
+        // Project scoped ApiRoot config using URI strings
+        ProjectApiRoot projectApiRoot2 = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .build(),
+                    "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
+                    "https://api.europe-west1.gcp.commercetools.com/")
+                .build("my-project");
+    }
+
+    public void timeoutMiddleware() {
+        dev.failsafe.Timeout<ApiHttpResponse<byte[]>> timeout = dev.failsafe.Timeout
+                .<ApiHttpResponse<byte[]>> builder(Duration.ofSeconds(10))
+                .build();
+        FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor = Failsafe.with(timeout);
+
+        ProjectApiRoot apiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .addMiddleware((request, next) -> failsafeExecutor.getStageAsync(() -> next.apply(request)))
+                .build("my-project");
+    }
+
+    public void timeoutOkHttpClient() {
+        ProjectApiRoot apiRoot = ApiRootBuilder
+                .of(new CtOkHttp4Client(builder -> builder.callTimeout(Duration.ofSeconds(10))))
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build("my-project");
+    }
+
+    public void timeoutApacheHttpClient() {
+        RequestConfig config = RequestConfig.custom().setResponseTimeout(Timeout.ofSeconds(10)).build();
+        ProjectApiRoot apiRoot = ApiRootBuilder
+                .of(new CtApacheHttpClient(builder -> builder.setDefaultRequestConfig(config)))
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build("my-project");
+    }
+
+    public void timeoutFuture() throws ExecutionException, InterruptedException, TimeoutException {
+        ProjectApiRoot apiRoot = createProjectClient();
+
+        apiRoot.get().execute().get(10, TimeUnit.SECONDS);
+        apiRoot.get().executeBlocking(Duration.ofSeconds(10));
     }
 
     public void customHttpClient() {

@@ -21,6 +21,10 @@ public class ByProjectKeyProductSelectionsRequestBuilder implements ByProjectKey
         return new ByProjectKeyProductSelectionsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyProductSelectionsHead head() {
+        return new ByProjectKeyProductSelectionsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyProductSelectionsPost post(
             com.commercetools.api.models.product_selection.ProductSelectionDraft productSelectionDraft) {
         return new ByProjectKeyProductSelectionsPost(apiHttpClient, projectKey, productSelectionDraft);

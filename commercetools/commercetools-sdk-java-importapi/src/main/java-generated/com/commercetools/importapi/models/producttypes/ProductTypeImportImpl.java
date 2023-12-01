@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The data representation for a ProductType to be imported that is persisted as a ProductType in the Project.</p>
@@ -48,7 +50,7 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a ProductType with this <code>key</code> exists, it will be updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -124,6 +126,15 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(key).append(name).append(description).append(attributes).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("name", name)
+                .append("description", description)
+                .append("attributes", attributes)
+                .build();
     }
 
 }

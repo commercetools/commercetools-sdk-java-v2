@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ShippingMethodDraft
@@ -80,7 +82,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     *  <p>Name of the ShippingMethod.</p>
+     *  <p>Unique name for the ShippingMethod within a Project.</p>
      */
 
     public String getName() {
@@ -245,6 +247,21 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
                 .append(predicate)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("name", name)
+                .append("localizedName", localizedName)
+                .append("description", description)
+                .append("localizedDescription", localizedDescription)
+                .append("taxCategory", taxCategory)
+                .append("zoneRates", zoneRates)
+                .append("isDefault", isDefault)
+                .append("predicate", predicate)
+                .append("custom", custom)
+                .build();
     }
 
 }

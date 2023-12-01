@@ -41,7 +41,7 @@ public class ByProjectKeyReviewsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyReviewsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -94,6 +94,13 @@ public class ByProjectKeyReviewsTest {
                         "test_projectKey/reviews", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .reviews()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/reviews?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().head().createHttpRequest(), "head",
+                        "test_projectKey/reviews", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .reviews()
                         .post(com.commercetools.api.models.review.ReviewDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/reviews?expand=expand", },
@@ -117,6 +124,8 @@ public class ByProjectKeyReviewsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .reviews()
                         .post(com.commercetools.api.models.review.ReviewDraft.of())

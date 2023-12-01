@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A snapshot of an Order at the time it was imported.</p>
@@ -582,6 +584,38 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .append(completedAt)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("orderNumber", orderNumber)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
+                .append("customerId", customerId)
+                .append("customerEmail", customerEmail)
+                .append("customerGroup", customerGroup)
+                .append("businessUnit", businessUnit)
+                .append("store", store)
+                .append("lineItems", lineItems)
+                .append("customLineItems", customLineItems)
+                .append("totalPrice", totalPrice)
+                .append("taxedPrice", taxedPrice)
+                .append("taxRoundingMode", taxRoundingMode)
+                .append("taxCalculationMode", taxCalculationMode)
+                .append("inventoryMode", inventoryMode)
+                .append("billingAddress", billingAddress)
+                .append("shippingAddress", shippingAddress)
+                .append("itemShippingAddresses", itemShippingAddresses)
+                .append("shippingInfo", shippingInfo)
+                .append("paymentInfo", paymentInfo)
+                .append("paymentState", paymentState)
+                .append("shipmentState", shipmentState)
+                .append("orderState", orderState)
+                .append("state", state)
+                .append("country", country)
+                .append("origin", origin)
+                .append("completedAt", completedAt)
+                .append("custom", custom)
+                .build();
     }
 
 }

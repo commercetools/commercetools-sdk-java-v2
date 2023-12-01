@@ -41,7 +41,7 @@ public class ByProjectKeyDiscountCodesTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyDiscountCodesTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -105,6 +105,13 @@ public class ByProjectKeyDiscountCodesTest {
                         "get", "test_projectKey/discount-codes", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/discount-codes?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().head().createHttpRequest(),
+                        "head", "test_projectKey/discount-codes", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
                         .post(com.commercetools.api.models.discount_code.DiscountCodeDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/discount-codes?expand=expand", },
@@ -128,6 +135,8 @@ public class ByProjectKeyDiscountCodesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
                         .post(com.commercetools.api.models.discount_code.DiscountCodeDraft.of())

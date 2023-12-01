@@ -20,3 +20,4 @@ cache/
 dependencies-without-allowed-license.json
 project-licenses-for-check-license-task.json
 **/application.properties
+opentelemetry-javaagent.jar

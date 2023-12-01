@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The data representation for an Inventory to be imported that is persisted as a Inventory in the Project.</p>
@@ -60,7 +62,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -180,6 +182,18 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
                 .append(supplyChannel)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("sku", sku)
+                .append("quantityOnStock", quantityOnStock)
+                .append("restockableInDays", restockableInDays)
+                .append("expectedDelivery", expectedDelivery)
+                .append("supplyChannel", supplyChannel)
+                .append("custom", custom)
+                .build();
     }
 
 }

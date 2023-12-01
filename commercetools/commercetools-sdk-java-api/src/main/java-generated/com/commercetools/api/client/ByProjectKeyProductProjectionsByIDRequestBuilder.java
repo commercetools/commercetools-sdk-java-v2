@@ -22,4 +22,8 @@ public class ByProjectKeyProductProjectionsByIDRequestBuilder {
         return new ByProjectKeyProductProjectionsByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyProductProjectionsByIDHead head() {
+        return new ByProjectKeyProductProjectionsByIDHead(apiHttpClient, projectKey, ID);
+    }
+
 }

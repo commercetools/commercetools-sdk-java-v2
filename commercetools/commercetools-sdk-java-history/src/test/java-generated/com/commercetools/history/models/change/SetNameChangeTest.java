@@ -25,10 +25,8 @@ public class SetNameChangeTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { SetNameChange.builder().change("change") },
-                new Object[] { SetNameChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { SetNameChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.LocalizedStringImpl()) } };
+                new Object[] { SetNameChange.builder().previousValue("previousValue") },
+                new Object[] { SetNameChange.builder().nextValue("nextValue") } };
     }
 
     @Test
@@ -41,16 +39,14 @@ public class SetNameChangeTest {
     @Test
     public void previousValue() {
         SetNameChange value = SetNameChange.of();
-        value.setPreviousValue(new com.commercetools.history.models.common.LocalizedStringImpl());
-        Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+        value.setPreviousValue("previousValue");
+        Assertions.assertThat(value.getPreviousValue()).isEqualTo("previousValue");
     }
 
     @Test
     public void nextValue() {
         SetNameChange value = SetNameChange.of();
-        value.setNextValue(new com.commercetools.history.models.common.LocalizedStringImpl());
-        Assertions.assertThat(value.getNextValue())
-                .isEqualTo(new com.commercetools.history.models.common.LocalizedStringImpl());
+        value.setNextValue("nextValue");
+        Assertions.assertThat(value.getNextValue()).isEqualTo("nextValue");
     }
 }

@@ -21,6 +21,10 @@ public class ByProjectKeyExtensionsRequestBuilder implements ByProjectKeyExtensi
         return new ByProjectKeyExtensionsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyExtensionsHead head() {
+        return new ByProjectKeyExtensionsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyExtensionsPost post(com.commercetools.api.models.extension.ExtensionDraft extensionDraft) {
         return new ByProjectKeyExtensionsPost(apiHttpClient, projectKey, extensionDraft);
     }

@@ -14,9 +14,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>ResourceIdentifier to an OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+ *  <p>ResourceIdentifier to an OrderEdit. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentifier, ModelBase {
@@ -53,7 +55,7 @@ public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentif
     }
 
     /**
-     *  <p>Unique identifier of the referenced OrderEdit.</p>
+     *  <p>Unique identifier of the referenced OrderEdit. Required if <code>key</code> is absent.</p>
      */
 
     public String getId() {
@@ -61,7 +63,7 @@ public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentif
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced OrderEdit.</p>
+     *  <p>User-defined unique identifier of the referenced OrderEdit. Required if <code>id</code> is absent.</p>
      */
 
     public String getKey() {
@@ -98,6 +100,14 @@ public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentif
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(typeId).append(id).append(key).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("typeId", typeId)
+                .append("id", id)
+                .append("key", key)
+                .build();
     }
 
 }

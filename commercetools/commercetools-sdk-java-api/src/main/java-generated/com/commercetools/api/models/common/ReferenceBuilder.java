@@ -43,8 +43,16 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.custom_object.CustomObjectReferenceBuilder.of();
     }
 
+    public com.commercetools.api.models.customer.CustomerEmailTokenReferenceBuilder customerEmailTokenBuilder() {
+        return com.commercetools.api.models.customer.CustomerEmailTokenReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder customerGroupBuilder() {
         return com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of();
+    }
+
+    public com.commercetools.api.models.customer.CustomerPasswordTokenReferenceBuilder customerPasswordTokenBuilder() {
+        return com.commercetools.api.models.customer.CustomerPasswordTokenReferenceBuilder.of();
     }
 
     public com.commercetools.api.models.customer.CustomerReferenceBuilder customerBuilder() {

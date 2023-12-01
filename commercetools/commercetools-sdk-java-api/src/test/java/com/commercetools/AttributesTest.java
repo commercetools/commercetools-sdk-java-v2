@@ -180,6 +180,16 @@ public class AttributesTest {
     }
 
     @Test
+    public void attributesNumberAsDouble() throws JsonProcessingException {
+        ApiModuleOptions options = ApiModuleOptions.of().withAttributeNumberAsDouble(true);
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+        ProductVariant variant = mapper.readValue(stringFromResource("attributes.json"), ProductVariant.class);
+
+        assertThat(variant.getAttribute("integer").getValue()).isEqualTo(10.0);
+    }
+
+    @Test
     public void attributesAsDateFalse() throws IOException {
         ApiModuleOptions options = ApiModuleOptions.of()
                 .withDateAttributeAsString(true)
@@ -388,8 +398,12 @@ public class AttributesTest {
             aBoolean -> assertThat(aBoolean).isTrue());
         assertThat(attributes.asLong("integer")).isInstanceOfSatisfying(Long.class,
             number -> assertThat(number).isEqualTo(10L));
+        assertThat(attributes.asDouble("integer")).isInstanceOfSatisfying(Double.class,
+            number -> assertThat(number).isEqualTo(10.0));
         assertThat(attributes.asDouble("double")).isInstanceOfSatisfying(Double.class,
             number -> assertThat(number).isEqualTo(11.0));
+        assertThat(attributes.asLong("double")).isInstanceOfSatisfying(Long.class,
+            number -> assertThat(number).isEqualTo(11L));
         assertThat(attributes.asReference("reference")).isInstanceOfSatisfying(ProductReference.class,
             reference -> assertThat(reference.getId()).isEqualTo("12345"));
         assertThat(attributes.asMoney("money")).isInstanceOfSatisfying(TypedMoney.class,

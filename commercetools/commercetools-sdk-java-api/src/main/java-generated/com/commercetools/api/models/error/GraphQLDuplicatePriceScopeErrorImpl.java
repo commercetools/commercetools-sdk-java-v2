@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a Price scope conflicts with an existing one during an Update Product request.</p>
@@ -102,6 +104,14 @@ public class GraphQLDuplicatePriceScopeErrorImpl implements GraphQLDuplicatePric
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code).append(values).append(conflictingPrice).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("values", values)
+                .append("conflictingPrice", conflictingPrice)
+                .build();
     }
 
 }

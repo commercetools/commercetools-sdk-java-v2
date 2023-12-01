@@ -23,10 +23,10 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     CustomerToken customerToken = CustomerToken.builder()
  *             .id("{id}")
- *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .customerId("{customerId}")
- *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .value("{value}")
+ *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
  * </div>
@@ -42,6 +42,30 @@ public interface CustomerToken {
     @NotNull
     @JsonProperty("id")
     public String getId();
+
+    /**
+     *  <p>The <code>id</code> of the Customer.</p>
+     * @return customerId
+     */
+    @NotNull
+    @JsonProperty("customerId")
+    public String getCustomerId();
+
+    /**
+     *  <p>Value of the token.</p>
+     * @return value
+     */
+    @NotNull
+    @JsonProperty("value")
+    public String getValue();
+
+    /**
+     *  <p>Date and time (UTC) the token expires.</p>
+     * @return expiresAt
+     */
+    @NotNull
+    @JsonProperty("expiresAt")
+    public ZonedDateTime getExpiresAt();
 
     /**
      *  <p>Date and time (UTC) the token was initially created.</p>
@@ -60,35 +84,32 @@ public interface CustomerToken {
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>The <code>id</code> of the Customer.</p>
-     * @return customerId
-     */
-    @NotNull
-    @JsonProperty("customerId")
-    public String getCustomerId();
-
-    /**
-     *  <p>Date and time (UTC) the token expires.</p>
-     * @return expiresAt
-     */
-    @NotNull
-    @JsonProperty("expiresAt")
-    public ZonedDateTime getExpiresAt();
-
-    /**
-     *  <p>Value of the token.</p>
-     * @return value
-     */
-    @NotNull
-    @JsonProperty("value")
-    public String getValue();
-
-    /**
      *  <p>Unique identifier of the token.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
+
+    /**
+     *  <p>The <code>id</code> of the Customer.</p>
+     * @param customerId value to be set
+     */
+
+    public void setCustomerId(final String customerId);
+
+    /**
+     *  <p>Value of the token.</p>
+     * @param value value to be set
+     */
+
+    public void setValue(final String value);
+
+    /**
+     *  <p>Date and time (UTC) the token expires.</p>
+     * @param expiresAt value to be set
+     */
+
+    public void setExpiresAt(final ZonedDateTime expiresAt);
 
     /**
      *  <p>Date and time (UTC) the token was initially created.</p>
@@ -103,27 +124,6 @@ public interface CustomerToken {
      */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
-    /**
-     *  <p>The <code>id</code> of the Customer.</p>
-     * @param customerId value to be set
-     */
-
-    public void setCustomerId(final String customerId);
-
-    /**
-     *  <p>Date and time (UTC) the token expires.</p>
-     * @param expiresAt value to be set
-     */
-
-    public void setExpiresAt(final ZonedDateTime expiresAt);
-
-    /**
-     *  <p>Value of the token.</p>
-     * @param value value to be set
-     */
-
-    public void setValue(final String value);
 
     /**
      * factory method
@@ -141,11 +141,11 @@ public interface CustomerToken {
     public static CustomerToken of(final CustomerToken template) {
         CustomerTokenImpl instance = new CustomerTokenImpl();
         instance.setId(template.getId());
+        instance.setCustomerId(template.getCustomerId());
+        instance.setValue(template.getValue());
+        instance.setExpiresAt(template.getExpiresAt());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setCustomerId(template.getCustomerId());
-        instance.setExpiresAt(template.getExpiresAt());
-        instance.setValue(template.getValue());
         return instance;
     }
 
@@ -161,11 +161,11 @@ public interface CustomerToken {
         }
         CustomerTokenImpl instance = new CustomerTokenImpl();
         instance.setId(template.getId());
+        instance.setCustomerId(template.getCustomerId());
+        instance.setValue(template.getValue());
+        instance.setExpiresAt(template.getExpiresAt());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setCustomerId(template.getCustomerId());
-        instance.setExpiresAt(template.getExpiresAt());
-        instance.setValue(template.getValue());
         return instance;
     }
 

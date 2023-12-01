@@ -31,12 +31,21 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
 
     private final boolean deserializeAsDate;
 
+    private final boolean deserializeNumberAsDouble;
+
     public AtrributeDeserializer(boolean deserializeAsDateString) {
         this.deserializeAsDate = !deserializeAsDateString;
+        this.deserializeNumberAsDouble = false;
+    }
+
+    public AtrributeDeserializer(boolean deserializeAsDateString, boolean deserializeNumberAsDouble) {
+        this.deserializeAsDate = !deserializeAsDateString;
+        this.deserializeNumberAsDouble = deserializeNumberAsDouble;
     }
 
     public AtrributeDeserializer() {
         this.deserializeAsDate = true;
+        this.deserializeNumberAsDouble = false;
     }
 
     @Override
@@ -59,7 +68,7 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
                 return new TypeReference<Boolean>() {
                 };
             case NUMBER:
-                if (valueNode.isInt() || valueNode.isLong()) {
+                if (!deserializeNumberAsDouble && (valueNode.isInt() || valueNode.isLong())) {
                     return new TypeReference<Long>() {
                     };
                 }
@@ -189,7 +198,7 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
                 }
                 return ElemType.LOCALIZED_STRING;
             case NUMBER:
-                if (valueNode.isInt() || valueNode.isLong()) {
+                if (!deserializeNumberAsDouble && (valueNode.isInt() || valueNode.isLong())) {
                     return ElemType.LONG;
                 }
                 return ElemType.NUMBER;

@@ -21,6 +21,10 @@ public class ByProjectKeyZonesRequestBuilder implements ByProjectKeyZonesRequest
         return new ByProjectKeyZonesGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyZonesHead head() {
+        return new ByProjectKeyZonesHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyZonesPost post(com.commercetools.api.models.zone.ZoneDraft zoneDraft) {
         return new ByProjectKeyZonesPost(apiHttpClient, projectKey, zoneDraft);
     }

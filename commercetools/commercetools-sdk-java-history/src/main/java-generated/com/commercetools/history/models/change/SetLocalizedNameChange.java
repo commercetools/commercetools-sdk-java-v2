@@ -16,7 +16,12 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SetLocalizedNameChange
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Set Name on Discount Codes.</li>
+ *   <li>Set State Name on States.</li>
+ *   <li>Set Name on Stores.</li>
+ *  </ul>
  *
  * <hr>
  * Example to create an instance using the builder pattern

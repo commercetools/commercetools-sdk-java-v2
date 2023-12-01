@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Rating update action.</p>
@@ -139,6 +141,16 @@ public class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessage
                 .append(includedInStatistics)
                 .append(target)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("oldRating", oldRating)
+                .append("newRating", newRating)
+                .append("includedInStatistics", includedInStatistics)
+                .append("target", target)
+                .build();
     }
 
 }

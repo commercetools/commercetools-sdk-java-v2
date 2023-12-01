@@ -146,6 +146,14 @@ public class CartQueryBuilderDsl {
             CartQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartQueryBuilderDsl> discountOnTotalPrice(
+            Function<com.commercetools.api.predicates.query.cart.DiscountOnTotalPriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountOnTotalPriceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("discountOnTotalPrice"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.cart.DiscountOnTotalPriceQueryBuilderDsl.of())),
+            CartQueryBuilderDsl::of);
+    }
+
     public StringComparisonPredicateBuilder<CartQueryBuilderDsl> taxMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxMode")),

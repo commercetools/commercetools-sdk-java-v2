@@ -257,8 +257,7 @@ public class OrderCustomTypeRemovedMessageBuilder implements Builder<OrderCustom
     }
 
     /**
-     *  <p><code>id</code> of the Custom Type that has been removed.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      * @return Builder
      */
@@ -362,8 +361,7 @@ public class OrderCustomTypeRemovedMessageBuilder implements Builder<OrderCustom
     }
 
     /**
-     *  <p><code>id</code> of the Custom Type that has been removed.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
      * @return previousTypeId
      */
 

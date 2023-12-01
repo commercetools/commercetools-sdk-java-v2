@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
@@ -178,6 +180,18 @@ public class CartRemoveLineItemActionImpl implements CartRemoveLineItemAction, M
                 .append(externalTotalPrice)
                 .append(shippingDetailsToRemove)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("quantity", quantity)
+                .append("externalPrice", externalPrice)
+                .append("externalTotalPrice", externalTotalPrice)
+                .append("shippingDetailsToRemove", shippingDetailsToRemove)
+                .build();
     }
 
 }

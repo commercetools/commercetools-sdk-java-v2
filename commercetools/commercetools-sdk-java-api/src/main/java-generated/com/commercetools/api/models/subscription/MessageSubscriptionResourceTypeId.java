@@ -17,12 +17,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MessageSubscriptionResourceTypeId extends JsonEnum {
 
     /**
-    	<p>Messages related to <a href="ctp:api:type:AssociateRole">Associate Roles</a>.</p>
+    	<p>Messages related to <a href="ctp:api:type:ApprovalFlow">ApprovalFlows</a>.</p>
+
+    */
+    MessageSubscriptionResourceTypeId APPROVAL_FLOW = MessageSubscriptionResourceTypeIdEnum.APPROVAL_FLOW;
+    /**
+    	<p>Messages related to <a href="ctp:api:type:ApprovalRule">ApprovalRules</a>.</p>
+
+    */
+    MessageSubscriptionResourceTypeId APPROVAL_RULE = MessageSubscriptionResourceTypeIdEnum.APPROVAL_RULE;
+    /**
+    	<p>Messages related to <a href="ctp:api:type:AssociateRole">AssociateRoles</a>.</p>
 
     */
     MessageSubscriptionResourceTypeId ASSOCIATE_ROLE = MessageSubscriptionResourceTypeIdEnum.ASSOCIATE_ROLE;
     /**
-    	<p>Messages related to <a href="ctp:api:type:BusinessUnit">Business Units</a>.</p>
+    	<p>Messages related to <a href="ctp:api:type:BusinessUnit">BusinessUnits</a>.</p>
 
     */
     MessageSubscriptionResourceTypeId BUSINESS_UNIT = MessageSubscriptionResourceTypeIdEnum.BUSINESS_UNIT;
@@ -36,6 +46,21 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
 
     */
     MessageSubscriptionResourceTypeId CUSTOMER = MessageSubscriptionResourceTypeIdEnum.CUSTOMER;
+    /**
+    	<p>Messages related to <a href="ctp:api:type:CustomerToken">CustomerTokens</a> for email verification.</p>
+
+    */
+    MessageSubscriptionResourceTypeId CUSTOMER_EMAIL_TOKEN = MessageSubscriptionResourceTypeIdEnum.CUSTOMER_EMAIL_TOKEN;
+    /**
+    	<p>Messages related to <a href="ctp:api:type:CustomerGroup">CustomerGroups</a>.</p>
+
+    */
+    MessageSubscriptionResourceTypeId CUSTOMER_GROUP = MessageSubscriptionResourceTypeIdEnum.CUSTOMER_GROUP;
+    /**
+    	<p>Messages related to <a href="ctp:api:type:CustomerToken">CustomerTokens</a> for password reset.</p>
+
+    */
+    MessageSubscriptionResourceTypeId CUSTOMER_PASSWORD_TOKEN = MessageSubscriptionResourceTypeIdEnum.CUSTOMER_PASSWORD_TOKEN;
     /**
     	<p>Messages related to <a href="ctp:api:type:InventoryEntry">InventoryEntries</a>.</p>
 
@@ -97,6 +122,16 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
      */
     enum MessageSubscriptionResourceTypeIdEnum implements MessageSubscriptionResourceTypeId {
         /**
+         * approval-flow
+         */
+        APPROVAL_FLOW("approval-flow"),
+
+        /**
+         * approval-rule
+         */
+        APPROVAL_RULE("approval-rule"),
+
+        /**
          * associate-role
          */
         ASSOCIATE_ROLE("associate-role"),
@@ -115,6 +150,21 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
          * customer
          */
         CUSTOMER("customer"),
+
+        /**
+         * customer-email-token
+         */
+        CUSTOMER_EMAIL_TOKEN("customer-email-token"),
+
+        /**
+         * customer-group
+         */
+        CUSTOMER_GROUP("customer-group"),
+
+        /**
+         * customer-password-token
+         */
+        CUSTOMER_PASSWORD_TOKEN("customer-password-token"),
 
         /**
          * inventory-entry

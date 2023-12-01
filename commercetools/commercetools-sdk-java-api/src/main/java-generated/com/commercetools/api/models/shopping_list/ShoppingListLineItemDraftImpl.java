@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The ProductVariant to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>.</p>
@@ -179,6 +181,18 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
                 .append(custom)
                 .append(quantity)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("productId", productId)
+                .append("variantId", variantId)
+                .append("sku", sku)
+                .append("addedAt", addedAt)
+                .append("custom", custom)
+                .append("quantity", quantity)
+                .build();
     }
 
 }

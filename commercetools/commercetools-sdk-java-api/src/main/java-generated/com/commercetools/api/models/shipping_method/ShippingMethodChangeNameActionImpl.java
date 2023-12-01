@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ShippingMethodChangeNameAction
@@ -49,7 +51,7 @@ public class ShippingMethodChangeNameActionImpl implements ShippingMethodChangeN
     }
 
     /**
-     *  <p>Value to set. Must not be empty.</p>
+     *  <p>Unique value to set within a Project. Must not be empty.</p>
      */
 
     public String getName() {
@@ -80,6 +82,13 @@ public class ShippingMethodChangeNameActionImpl implements ShippingMethodChangeN
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(name).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("name", name)
+                .build();
     }
 
 }

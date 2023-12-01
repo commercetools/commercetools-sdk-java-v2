@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after removing a Custom Field on a Customer using the Set CustomField update action.</p>
+ *  <p>Generated after removing a Custom Field from a Customer using the Set CustomField update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerCustomFieldRemovedMessagePayloadImpl
@@ -50,7 +52,7 @@ public class CustomerCustomFieldRemovedMessagePayloadImpl
     }
 
     /**
-     *  <p>Name of the Custom Field that has been removed.</p>
+     *  <p>Name of the Custom Field that was removed.</p>
      */
 
     public String getName() {
@@ -81,6 +83,13 @@ public class CustomerCustomFieldRemovedMessagePayloadImpl
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(name).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("name", name)
+                .build();
     }
 
 }

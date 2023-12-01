@@ -21,6 +21,10 @@ public class ByProjectKeyOrdersEditsRequestBuilder {
         return new ByProjectKeyOrdersEditsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyOrdersEditsHead head() {
+        return new ByProjectKeyOrdersEditsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyOrdersEditsPost post(com.commercetools.api.models.order_edit.OrderEditDraft orderEditDraft) {
         return new ByProjectKeyOrdersEditsPost(apiHttpClient, projectKey, orderEditDraft);
     }

@@ -24,6 +24,10 @@ public class ByProjectKeyOrdersEditsKeyByKeyRequestBuilder {
         return new ByProjectKeyOrdersEditsKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyOrdersEditsKeyByKeyHead head() {
+        return new ByProjectKeyOrdersEditsKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyOrdersEditsKeyByKeyPost post(
             com.commercetools.api.models.order_edit.OrderEditUpdate orderEditUpdate) {
         return new ByProjectKeyOrdersEditsKeyByKeyPost(apiHttpClient, projectKey, key, orderEditUpdate);

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after adding a Custom Field using the Set CustomField.</p>
@@ -53,7 +55,7 @@ public class OrderCustomFieldAddedMessagePayloadImpl implements OrderCustomField
     }
 
     /**
-     *  <p>Name of the Custom Field that has been added.</p>
+     *  <p>Name of the Custom Field that was added.</p>
      */
 
     public String getName() {
@@ -98,6 +100,14 @@ public class OrderCustomFieldAddedMessagePayloadImpl implements OrderCustomField
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(name).append(value).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("name", name)
+                .append("value", value)
+                .build();
     }
 
 }

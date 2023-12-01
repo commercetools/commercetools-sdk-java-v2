@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the API Extension does not respond within the time limit, or could not be reached.</p>
@@ -123,6 +125,15 @@ public class GraphQLExtensionNoResponseErrorImpl implements GraphQLExtensionNoRe
                 .append(extensionId)
                 .append(extensionKey)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("values", values)
+                .append("extensionId", extensionId)
+                .append("extensionKey", extensionKey)
+                .build();
     }
 
 }

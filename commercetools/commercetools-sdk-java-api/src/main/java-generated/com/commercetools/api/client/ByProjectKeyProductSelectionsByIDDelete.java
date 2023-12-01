@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -35,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductSelectionsByIDDelete extends
-        ApiMethod<ByProjectKeyProductSelectionsByIDDelete, com.commercetools.api.models.product_selection.ProductSelection>
+        TypeApiMethod<ByProjectKeyProductSelectionsByIDDelete, com.commercetools.api.models.product_selection.ProductSelection>
         implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductSelectionsByIDDelete, com.commercetools.api.models.product_selection.ProductSelection>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyProductSelectionsByIDDelete>,
@@ -43,6 +45,12 @@ public class ByProjectKeyProductSelectionsByIDDelete extends
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductSelectionsByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductSelectionsByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductSelectionsByIDDelete> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.product_selection.ProductSelection> resultType() {
+        return new TypeReference<com.commercetools.api.models.product_selection.ProductSelection>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

@@ -29,7 +29,7 @@ public class ProductSelectionResourceIdentifierBuilder implements Builder<Produc
     private String key;
 
     /**
-     *  <p>Unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced ProductSelection. Required if <code>key</code> is absent.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProductSelectionResourceIdentifierBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced ProductSelection. Required if <code>id</code> is absent.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ProductSelectionResourceIdentifierBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>Unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Unique identifier of the referenced ProductSelection. Required if <code>key</code> is absent.</p>
      * @return id
      */
 
@@ -61,7 +61,7 @@ public class ProductSelectionResourceIdentifierBuilder implements Builder<Produc
     }
 
     /**
-     *  <p>User-defined unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-defined unique identifier of the referenced ProductSelection. Required if <code>id</code> is absent.</p>
      * @return key
      */
 

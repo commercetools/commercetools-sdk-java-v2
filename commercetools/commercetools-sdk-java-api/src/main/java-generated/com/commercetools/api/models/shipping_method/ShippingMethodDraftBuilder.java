@@ -66,7 +66,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>Name of the ShippingMethod.</p>
+     *  <p>Unique name for the ShippingMethod within a Project.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -359,7 +359,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>Name of the ShippingMethod.</p>
+     *  <p>Unique name for the ShippingMethod within a Project.</p>
      * @return name
      */
 

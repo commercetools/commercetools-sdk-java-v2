@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Adding or updating a Custom Type on an Address of a Customer generates the CustomerAddressCustomTypeSet Message, and removing one generates the CustomerAddressCustomTypeRemoved Message.</p>
@@ -116,6 +118,15 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(addressId).append(type).append(fields).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("addressId", addressId)
+                .append("type", type)
+                .append("fields", fields)
+                .build();
     }
 
 }

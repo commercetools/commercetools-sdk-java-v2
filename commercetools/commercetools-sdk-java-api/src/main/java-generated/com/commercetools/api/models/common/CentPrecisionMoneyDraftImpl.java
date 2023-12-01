@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This draft type is the alternative to Money.</p>
@@ -120,6 +122,15 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
                 .append(type)
                 .append(fractionDigits)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("centAmount", centAmount)
+                .append("currencyCode", currencyCode)
+                .append("type", type)
+                .append("fractionDigits", fractionDigits)
+                .build();
     }
 
 }

@@ -41,7 +41,7 @@ public class ByProjectKeyShippingMethodsMatchingCartLocationTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyShippingMethodsMatchingCartLocationTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -102,7 +102,38 @@ public class ByProjectKeyShippingMethodsMatchingCartLocationTest {
                                 .matchingCartLocation()
                                 .get()
                                 .createHttpRequest(),
-                        "get", "test_projectKey/shipping-methods/matching-cart-location", } };
+                        "get", "test_projectKey/shipping-methods/matching-cart-location", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingCartLocation()
+                                .head()
+                                .withCountry("country")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/shipping-methods/matching-cart-location?country=country", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingCartLocation()
+                                .head()
+                                .withState("state")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/shipping-methods/matching-cart-location?state=state", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingCartLocation()
+                                .head()
+                                .withCartId("cartId")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/shipping-methods/matching-cart-location?cartId=cartId", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingCartLocation()
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/shipping-methods/matching-cart-location", } };
     }
 
     @DataProvider
@@ -129,6 +160,23 @@ public class ByProjectKeyShippingMethodsMatchingCartLocationTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingCartLocation().get(), } };
+                        apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingCartLocation().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingCartLocation()
+                        .head()
+                        .withCountry("country"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingCartLocation()
+                        .head()
+                        .withState("state"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingCartLocation()
+                        .head()
+                        .withCartId("cartId"), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingCartLocation().head(), } };
     }
 }

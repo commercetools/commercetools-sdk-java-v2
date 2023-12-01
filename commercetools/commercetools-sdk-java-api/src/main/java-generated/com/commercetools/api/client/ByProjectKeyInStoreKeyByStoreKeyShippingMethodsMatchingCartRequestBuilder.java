@@ -22,4 +22,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartRequestB
         return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet(apiHttpClient, projectKey, storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartHead head() {
+        return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartHead(apiHttpClient, projectKey, storeKey);
+    }
+
 }

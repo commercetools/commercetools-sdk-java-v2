@@ -41,7 +41,7 @@ public class ByProjectKeyBusinessUnitsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyBusinessUnitsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -105,6 +105,13 @@ public class ByProjectKeyBusinessUnitsTest {
                         "get", "test_projectKey/business-units", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/business-units?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().head().createHttpRequest(),
+                        "head", "test_projectKey/business-units", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .businessUnits()
                         .post(com.commercetools.api.models.business_unit.CompanyDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/business-units?expand=expand", },
@@ -128,6 +135,8 @@ public class ByProjectKeyBusinessUnitsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").businessUnits().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .businessUnits()
                         .post(com.commercetools.api.models.business_unit.CompanyDraft.of())

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart assosciated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
@@ -226,6 +228,21 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
                 .append(discountedPrice)
                 .append(shippingMethodState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+                .append("shippingMethodName", shippingMethodName)
+                .append("price", price)
+                .append("shippingRate", shippingRate)
+                .append("taxRate", taxRate)
+                .append("taxCategory", taxCategory)
+                .append("shippingMethod", shippingMethod)
+                .append("deliveries", deliveries)
+                .append("discountedPrice", discountedPrice)
+                .append("shippingMethodState", shippingMethodState)
+                .build();
     }
 
 }

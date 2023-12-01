@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>To set the Cart's custom Shipping Method (independent of the ShippingMethods managed through the Shipping Methods API) the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
@@ -142,6 +144,16 @@ public class StagedOrderSetCustomShippingMethodActionImpl
                 .append(taxCategory)
                 .append(externalTaxRate)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("shippingMethodName", shippingMethodName)
+                .append("shippingRate", shippingRate)
+                .append("taxCategory", taxCategory)
+                .append("externalTaxRate", externalTaxRate)
+                .build();
     }
 
 }

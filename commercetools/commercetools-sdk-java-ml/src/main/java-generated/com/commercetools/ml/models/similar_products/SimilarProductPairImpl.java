@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A pair of SimilarProducts</p>
@@ -89,6 +91,13 @@ public class SimilarProductPairImpl implements SimilarProductPair, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(confidence).append(products).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("confidence", confidence)
+                .append("products", products)
+                .build();
     }
 
 }

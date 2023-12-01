@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -35,13 +37,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyChannelsByIDDelete
-        extends ApiMethod<ByProjectKeyChannelsByIDDelete, com.commercetools.api.models.channel.Channel> implements
+        extends TypeApiMethod<ByProjectKeyChannelsByIDDelete, com.commercetools.api.models.channel.Channel> implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyChannelsByIDDelete, com.commercetools.api.models.channel.Channel>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyChannelsByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyChannelsByIDDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyChannelsByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyChannelsByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyChannelsByIDDelete> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.channel.Channel> resultType() {
+        return new TypeReference<com.commercetools.api.models.channel.Channel>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

@@ -41,7 +41,7 @@ public class ByProjectKeyChannelsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyChannelsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -94,6 +94,13 @@ public class ByProjectKeyChannelsTest {
                         "test_projectKey/channels", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/channels?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().head().createHttpRequest(), "head",
+                        "test_projectKey/channels", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .channels()
                         .post(com.commercetools.api.models.channel.ChannelDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/channels?expand=expand", },
@@ -117,6 +124,8 @@ public class ByProjectKeyChannelsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").channels().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .post(com.commercetools.api.models.channel.ChannelDraft.of())

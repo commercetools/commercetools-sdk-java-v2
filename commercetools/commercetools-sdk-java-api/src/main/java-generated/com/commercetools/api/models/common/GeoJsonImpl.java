@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>GeoJSON Geometry represents a Geometry Object as defined in the GeoJSON standard.</p>
@@ -60,6 +62,11 @@ public class GeoJsonImpl implements GeoJson, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
 }

@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,11 +36,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyChannelsByIDPost extends
-        BodyApiMethod<ByProjectKeyChannelsByIDPost, com.commercetools.api.models.channel.Channel, com.commercetools.api.models.channel.ChannelUpdate>
+        TypeBodyApiMethod<ByProjectKeyChannelsByIDPost, com.commercetools.api.models.channel.Channel, com.commercetools.api.models.channel.ChannelUpdate>
         implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyChannelsByIDPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyChannelsByIDPost>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyChannelsByIDPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyChannelsByIDPost> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.channel.Channel> resultType() {
+        return new TypeReference<com.commercetools.api.models.channel.Channel>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

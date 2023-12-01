@@ -21,6 +21,10 @@ public class ByProjectKeyReviewsRequestBuilder implements ByProjectKeyReviewsReq
         return new ByProjectKeyReviewsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyReviewsHead head() {
+        return new ByProjectKeyReviewsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyReviewsPost post(com.commercetools.api.models.review.ReviewDraft reviewDraft) {
         return new ByProjectKeyReviewsPost(apiHttpClient, projectKey, reviewDraft);
     }

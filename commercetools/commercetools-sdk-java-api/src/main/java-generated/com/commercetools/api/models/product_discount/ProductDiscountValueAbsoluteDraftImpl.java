@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Discounts the Product Price by a fixed amount, defined by the <code>money</code> field.</p>
@@ -86,6 +88,13 @@ public class ProductDiscountValueAbsoluteDraftImpl implements ProductDiscountVal
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(money).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("money", money)
+                .build();
     }
 
 }

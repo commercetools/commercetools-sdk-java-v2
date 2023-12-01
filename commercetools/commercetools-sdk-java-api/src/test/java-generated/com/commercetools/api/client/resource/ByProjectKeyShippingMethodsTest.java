@@ -41,7 +41,7 @@ public class ByProjectKeyShippingMethodsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyShippingMethodsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -105,6 +105,13 @@ public class ByProjectKeyShippingMethodsTest {
                         "get", "test_projectKey/shipping-methods", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/shipping-methods?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().head().createHttpRequest(),
+                        "head", "test_projectKey/shipping-methods", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
                         .post(com.commercetools.api.models.shipping_method.ShippingMethodDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/shipping-methods?expand=expand", },
@@ -129,6 +136,8 @@ public class ByProjectKeyShippingMethodsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .post(com.commercetools.api.models.shipping_method.ShippingMethodDraft.of())

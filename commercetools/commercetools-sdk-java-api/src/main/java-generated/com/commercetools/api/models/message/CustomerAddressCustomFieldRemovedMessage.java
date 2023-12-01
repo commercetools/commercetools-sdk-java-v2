@@ -43,7 +43,7 @@ public interface CustomerAddressCustomFieldRemovedMessage extends Message {
     String CUSTOMER_ADDRESS_CUSTOM_FIELD_REMOVED = "CustomerAddressCustomFieldRemoved";
 
     /**
-     *  <p>Name of the Custom Field that has been removed.</p>
+     *  <p>Name of the Custom Field that was removed.</p>
      * @return name
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface CustomerAddressCustomFieldRemovedMessage extends Message {
     public String getName();
 
     /**
-     *  <p>Name of the Custom Field that has been removed.</p>
+     *  <p>Name of the Custom Field that was removed.</p>
      * @param name value to be set
      */
 

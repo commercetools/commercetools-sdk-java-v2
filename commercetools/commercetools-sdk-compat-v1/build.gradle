@@ -23,6 +23,7 @@ dependencies {
 
     jmhImplementation project(':commercetools:commercetools-async-http-client')
     jmhImplementation project(':commercetools:commercetools-apachehttp-client')
+    testImplementation project(':commercetools:commercetools-okhttp-client4')
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation ctsdkv1.client version ctsdkv1.version
     testImplementation ctsdkv1.models version ctsdkv1.version

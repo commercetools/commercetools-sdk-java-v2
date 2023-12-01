@@ -26,7 +26,8 @@ public class InventoryImportTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { InventoryImport.builder().sku("sku") },
+        return new Object[][] { new Object[] { InventoryImport.builder().key("key") },
+                new Object[] { InventoryImport.builder().sku("sku") },
                 new Object[] { InventoryImport.builder().quantityOnStock(2L) },
                 new Object[] { InventoryImport.builder().restockableInDays(4L) },
                 new Object[] { InventoryImport.builder().expectedDelivery(ZonedDateTime.parse("2023-06-01T12:00Z")) },
@@ -34,6 +35,13 @@ public class InventoryImportTest {
                         .supplyChannel(new com.commercetools.importapi.models.common.ChannelKeyReferenceImpl()) },
                 new Object[] { InventoryImport.builder()
                         .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) } };
+    }
+
+    @Test
+    public void key() {
+        InventoryImport value = InventoryImport.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
     }
 
     @Test

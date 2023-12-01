@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Order
@@ -53,6 +55,8 @@ public class OrderImpl implements Order, ModelBase {
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
 
     private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
+
+    private com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice;
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
@@ -141,6 +145,7 @@ public class OrderImpl implements Order, ModelBase {
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
             @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice,
+            @JsonProperty("discountOnTotalPrice") final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
@@ -190,6 +195,7 @@ public class OrderImpl implements Order, ModelBase {
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
         this.taxedShippingPrice = taxedShippingPrice;
+        this.discountOnTotalPrice = discountOnTotalPrice;
         this.taxMode = taxMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
@@ -345,7 +351,8 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
@@ -355,8 +362,9 @@ public class OrderImpl implements Order, ModelBase {
     /**
      *  <ul>
      *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
@@ -369,6 +377,14 @@ public class OrderImpl implements Order, ModelBase {
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
         return this.taxedShippingPrice;
+    }
+
+    /**
+     *  <p>Discounts that apply on the total price of the Order.</p>
+     */
+
+    public com.commercetools.api.models.cart.DiscountOnTotalPrice getDiscountOnTotalPrice() {
+        return this.discountOnTotalPrice;
     }
 
     /**
@@ -719,6 +735,11 @@ public class OrderImpl implements Order, ModelBase {
         this.taxedShippingPrice = taxedShippingPrice;
     }
 
+    public void setDiscountOnTotalPrice(
+            final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice) {
+        this.discountOnTotalPrice = discountOnTotalPrice;
+    }
+
     public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
     }
@@ -912,6 +933,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
                 .append(taxedShippingPrice, that.taxedShippingPrice)
+                .append(discountOnTotalPrice, that.discountOnTotalPrice)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
@@ -962,6 +984,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
                 .append(taxedShippingPrice, that.taxedShippingPrice)
+                .append(discountOnTotalPrice, that.discountOnTotalPrice)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
@@ -1017,6 +1040,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(totalPrice)
                 .append(taxedPrice)
                 .append(taxedShippingPrice)
+                .append(discountOnTotalPrice)
                 .append(taxMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)
@@ -1051,6 +1075,62 @@ public class OrderImpl implements Order, ModelBase {
                 .append(lastModifiedBy)
                 .append(createdBy)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("orderNumber", orderNumber)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
+                .append("customerId", customerId)
+                .append("customerEmail", customerEmail)
+                .append("customerGroup", customerGroup)
+                .append("anonymousId", anonymousId)
+                .append("businessUnit", businessUnit)
+                .append("store", store)
+                .append("lineItems", lineItems)
+                .append("customLineItems", customLineItems)
+                .append("totalPrice", totalPrice)
+                .append("taxedPrice", taxedPrice)
+                .append("taxedShippingPrice", taxedShippingPrice)
+                .append("discountOnTotalPrice", discountOnTotalPrice)
+                .append("taxMode", taxMode)
+                .append("taxRoundingMode", taxRoundingMode)
+                .append("taxCalculationMode", taxCalculationMode)
+                .append("inventoryMode", inventoryMode)
+                .append("billingAddress", billingAddress)
+                .append("shippingAddress", shippingAddress)
+                .append("shippingMode", shippingMode)
+                .append("shippingKey", shippingKey)
+                .append("shippingInfo", shippingInfo)
+                .append("shippingRateInput", shippingRateInput)
+                .append("shippingCustomFields", shippingCustomFields)
+                .append("shipping", shipping)
+                .append("itemShippingAddresses", itemShippingAddresses)
+                .append("discountCodes", discountCodes)
+                .append("directDiscounts", directDiscounts)
+                .append("refusedGifts", refusedGifts)
+                .append("paymentInfo", paymentInfo)
+                .append("country", country)
+                .append("locale", locale)
+                .append("origin", origin)
+                .append("cart", cart)
+                .append("quote", quote)
+                .append("orderState", orderState)
+                .append("shipmentState", shipmentState)
+                .append("paymentState", paymentState)
+                .append("state", state)
+                .append("syncInfo", syncInfo)
+                .append("returnInfo", returnInfo)
+                .append("lastMessageSequenceNumber", lastMessageSequenceNumber)
+                .append("custom", custom)
+                .append("completedAt", completedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .build();
     }
 
 }

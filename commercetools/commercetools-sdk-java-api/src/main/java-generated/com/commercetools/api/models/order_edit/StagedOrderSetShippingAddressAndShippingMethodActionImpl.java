@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Sets the shipping address and Shipping Method together to prevent an inconsistent state.</p>
@@ -123,6 +125,15 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionImpl
                 .append(shippingMethod)
                 .append(externalTaxRate)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("address", address)
+                .append("shippingMethod", shippingMethod)
+                .append("externalTaxRate", externalTaxRate)
+                .build();
     }
 
 }

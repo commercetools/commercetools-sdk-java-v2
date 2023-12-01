@@ -17,6 +17,7 @@ import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.cart.CustomLineItem;
 import com.commercetools.api.models.cart.DirectDiscount;
 import com.commercetools.api.models.cart.DiscountCodeInfo;
+import com.commercetools.api.models.cart.DiscountOnTotalPrice;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.LineItem;
 import com.commercetools.api.models.cart.RoundingMode;
@@ -174,7 +175,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public List<CustomLineItem> getCustomLineItems();
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @return totalPrice
      */
     @NotNull
@@ -185,8 +187,9 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     /**
      *  <ul>
      *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @return taxedPrice
      */
     @Valid
@@ -200,6 +203,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("taxedShippingPrice")
     public TaxedPrice getTaxedShippingPrice();
+
+    /**
+     *  <p>Discounts that apply on the total price of the Order.</p>
+     * @return discountOnTotalPrice
+     */
+    @Valid
+    @JsonProperty("discountOnTotalPrice")
+    public DiscountOnTotalPrice getDiscountOnTotalPrice();
 
     /**
      *  <p>Indicates how Tax Rates are set.</p>
@@ -591,7 +602,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setCustomLineItems(final List<CustomLineItem> customLineItems);
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param totalPrice value to be set
      */
 
@@ -600,8 +612,9 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     /**
      *  <ul>
      *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @param taxedPrice value to be set
      */
 
@@ -613,6 +626,13 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
      */
 
     public void setTaxedShippingPrice(final TaxedPrice taxedShippingPrice);
+
+    /**
+     *  <p>Discounts that apply on the total price of the Order.</p>
+     * @param discountOnTotalPrice value to be set
+     */
+
+    public void setDiscountOnTotalPrice(final DiscountOnTotalPrice discountOnTotalPrice);
 
     /**
      *  <p>Indicates how Tax Rates are set.</p>
@@ -952,6 +972,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxedShippingPrice(template.getTaxedShippingPrice());
+        instance.setDiscountOnTotalPrice(template.getDiscountOnTotalPrice());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
@@ -1031,6 +1052,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedShippingPrice(
             com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedShippingPrice()));
+        instance.setDiscountOnTotalPrice(
+            com.commercetools.api.models.cart.DiscountOnTotalPrice.deepCopy(template.getDiscountOnTotalPrice()));
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());

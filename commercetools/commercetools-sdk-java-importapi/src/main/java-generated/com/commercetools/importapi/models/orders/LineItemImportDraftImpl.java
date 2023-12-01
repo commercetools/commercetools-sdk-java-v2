@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
@@ -265,6 +267,22 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
                 .append(shippingDetails)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("product", product)
+                .append("name", name)
+                .append("variant", variant)
+                .append("price", price)
+                .append("quantity", quantity)
+                .append("state", state)
+                .append("supplyChannel", supplyChannel)
+                .append("distributionChannel", distributionChannel)
+                .append("taxRate", taxRate)
+                .append("shippingDetails", shippingDetails)
+                .append("custom", custom)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Custom Type.</p>
@@ -62,8 +64,7 @@ public class OrderCustomTypeSetMessagePayloadImpl implements OrderCustomTypeSetM
     }
 
     /**
-     *  <p><code>id</code> of the previous Custom Type.</p>
-     *  <p>Absent when there has not been a Custom Type before.</p>
+     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
      */
 
     public String getPreviousTypeId() {
@@ -100,6 +101,14 @@ public class OrderCustomTypeSetMessagePayloadImpl implements OrderCustomTypeSetM
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(customFields).append(previousTypeId).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("customFields", customFields)
+                .append("previousTypeId", previousTypeId)
+                .build();
     }
 
 }

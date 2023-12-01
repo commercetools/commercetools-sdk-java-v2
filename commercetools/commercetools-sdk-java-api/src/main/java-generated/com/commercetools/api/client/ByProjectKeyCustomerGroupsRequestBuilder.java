@@ -21,6 +21,10 @@ public class ByProjectKeyCustomerGroupsRequestBuilder implements ByProjectKeyCus
         return new ByProjectKeyCustomerGroupsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyCustomerGroupsHead head() {
+        return new ByProjectKeyCustomerGroupsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyCustomerGroupsPost post(
             com.commercetools.api.models.customer_group.CustomerGroupDraft customerGroupDraft) {
         return new ByProjectKeyCustomerGroupsPost(apiHttpClient, projectKey, customerGroupDraft);

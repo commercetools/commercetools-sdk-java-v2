@@ -24,4 +24,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet(apiHttpClient, projectKey, storeKey, ID);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDHead head() {
+        return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDHead(apiHttpClient, projectKey, storeKey, ID);
+    }
+
 }

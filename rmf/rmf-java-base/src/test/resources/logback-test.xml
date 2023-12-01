@@ -9,9 +9,9 @@
         </encoder>
     </appender>
 
-    <logger name="commercetools" level="DEBUG"/>
+    <logger name="commercetools" level="INFO"/>
 
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>

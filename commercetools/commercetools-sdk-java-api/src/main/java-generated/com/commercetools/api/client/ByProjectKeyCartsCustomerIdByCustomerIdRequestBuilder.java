@@ -22,4 +22,8 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdRequestBuilder {
         return new ByProjectKeyCartsCustomerIdByCustomerIdGet(apiHttpClient, projectKey, customerId);
     }
 
+    public ByProjectKeyCartsCustomerIdByCustomerIdHead head() {
+        return new ByProjectKeyCartsCustomerIdByCustomerIdHead(apiHttpClient, projectKey, customerId);
+    }
+
 }

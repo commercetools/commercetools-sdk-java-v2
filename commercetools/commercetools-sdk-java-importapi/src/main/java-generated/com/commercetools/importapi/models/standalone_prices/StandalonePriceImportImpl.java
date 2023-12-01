@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price in the Project.</p>
@@ -76,7 +78,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -261,6 +263,22 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
                 .append(discounted)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("sku", sku)
+                .append("value", value)
+                .append("country", country)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("tiers", tiers)
+                .append("discounted", discounted)
+                .append("custom", custom)
+                .build();
     }
 
 }

@@ -29,7 +29,7 @@ public class AttributeGroupResourceIdentifierBuilder implements Builder<Attribut
     private String key;
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Platform-generated unique identifier of the referenced AttributeGroup. Required if <code>key</code> is absent.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class AttributeGroupResourceIdentifierBuilder implements Builder<Attribut
     }
 
     /**
-     *  <p>User-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-generated unique identifier of the referenced AttributeGroup. Required if <code>id</code> is absent.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AttributeGroupResourceIdentifierBuilder implements Builder<Attribut
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Platform-generated unique identifier of the referenced AttributeGroup. Required if <code>key</code> is absent.</p>
      * @return id
      */
 
@@ -61,7 +61,7 @@ public class AttributeGroupResourceIdentifierBuilder implements Builder<Attribut
     }
 
     /**
-     *  <p>User-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-generated unique identifier of the referenced AttributeGroup. Required if <code>id</code> is absent.</p>
      * @return key
      */
 

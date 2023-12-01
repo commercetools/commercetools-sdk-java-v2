@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * MyBusinessUnitDraft
@@ -245,6 +247,21 @@ public class MyBusinessUnitDraftImpl implements MyBusinessUnitDraft, ModelBase {
                 .append(billingAddresses)
                 .append(defaultBillingAddress)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("unitType", unitType)
+                .append("name", name)
+                .append("contactEmail", contactEmail)
+                .append("custom", custom)
+                .append("addresses", addresses)
+                .append("shippingAddresses", shippingAddresses)
+                .append("defaultShippingAddress", defaultShippingAddress)
+                .append("billingAddresses", billingAddresses)
+                .append("defaultBillingAddress", defaultBillingAddress)
+                .build();
     }
 
 }

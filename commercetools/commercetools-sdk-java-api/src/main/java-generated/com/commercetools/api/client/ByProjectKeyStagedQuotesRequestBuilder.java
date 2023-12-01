@@ -21,6 +21,10 @@ public class ByProjectKeyStagedQuotesRequestBuilder implements ByProjectKeyStage
         return new ByProjectKeyStagedQuotesGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyStagedQuotesHead head() {
+        return new ByProjectKeyStagedQuotesHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyStagedQuotesPost post(
             com.commercetools.api.models.staged_quote.StagedQuoteDraft stagedQuoteDraft) {
         return new ByProjectKeyStagedQuotesPost(apiHttpClient, projectKey, stagedQuoteDraft);

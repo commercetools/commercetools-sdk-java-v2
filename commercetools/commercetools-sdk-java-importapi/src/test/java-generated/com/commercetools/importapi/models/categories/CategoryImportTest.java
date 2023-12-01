@@ -26,7 +26,7 @@ public class CategoryImportTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] {
+        return new Object[][] { new Object[] { CategoryImport.builder().key("key") },
                 new Object[] { CategoryImport.builder()
                         .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
                 new Object[] { CategoryImport.builder()
@@ -47,6 +47,13 @@ public class CategoryImportTest {
                         .assets(Collections.singletonList(new com.commercetools.importapi.models.common.AssetImpl())) },
                 new Object[] { CategoryImport.builder()
                         .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) } };
+    }
+
+    @Test
+    public void key() {
+        CategoryImport value = CategoryImport.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
     }
 
     @Test

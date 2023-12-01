@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This type represents an attribute whose value is a localized enum. The attribute value refers to the key of the enum value.</p>
@@ -102,6 +104,14 @@ public class LocalizableEnumSetAttributeImpl implements LocalizableEnumSetAttrib
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(name).append(type).append(value).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("type", type)
+                .append("value", value)
+                .build();
     }
 
 }

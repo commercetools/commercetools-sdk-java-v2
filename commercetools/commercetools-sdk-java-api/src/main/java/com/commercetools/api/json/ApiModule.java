@@ -28,18 +28,26 @@ public class ApiModule extends SimpleModule {
         boolean customFieldAsJsonNode = Boolean.parseBoolean(
             Optional.ofNullable(options.getOption(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_AS_JSON_NODE))
                     .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_AS_JSON_NODE)));
+        boolean attributeNumberAsDouble = Boolean.parseBoolean(
+            Optional.ofNullable(options.getOption(ApiModuleOptions.DESERIALIZE_ATTRIBUTE_NUMBER_AS_DOUBLE))
+                    .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_ATTRIBUTE_NUMBER_AS_DOUBLE)));
+        boolean customFieldNumberAsDouble = Boolean.parseBoolean(
+            Optional.ofNullable(options.getOption(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_NUMBER_AS_DOUBLE))
+                    .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_NUMBER_AS_DOUBLE)));
 
         if (attributeAsJsonNode) {
             setMixInAnnotation(AttributeImpl.class, AttributeJsonNodeMixin.class);
         }
         else {
-            addDeserializer(AttributeImpl.class, new AtrributeDeserializer(attributeAsDateString));
+            addDeserializer(AttributeImpl.class,
+                new AtrributeDeserializer(attributeAsDateString, attributeNumberAsDouble));
         }
         if (customFieldAsJsonNode) {
             addDeserializer(FieldContainerImpl.class, new CustomFieldJsonNodeDeserializer());
         }
         else {
-            addDeserializer(FieldContainerImpl.class, new CustomFieldDeserializer(customFieldAsDateString));
+            addDeserializer(FieldContainerImpl.class,
+                new CustomFieldDeserializer(customFieldAsDateString, customFieldNumberAsDouble));
         }
     }
 }

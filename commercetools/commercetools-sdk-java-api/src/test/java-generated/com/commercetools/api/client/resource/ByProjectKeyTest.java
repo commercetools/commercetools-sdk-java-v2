@@ -41,7 +41,7 @@ public class ByProjectKeyTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -66,6 +66,8 @@ public class ByProjectKeyTest {
         return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").get().createHttpRequest(), "get",
                         "test_projectKey", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").head().createHttpRequest(), "head",
+                        "test_projectKey", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .post(com.commercetools.api.models.project.ProjectUpdate.of())
                         .createHttpRequest(), "post", "test_projectKey", } };
@@ -74,6 +76,7 @@ public class ByProjectKeyTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .post(com.commercetools.api.models.project.ProjectUpdate.of()), } };
     }

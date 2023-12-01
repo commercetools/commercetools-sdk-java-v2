@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderEditDraft
@@ -167,6 +169,17 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
                 .append(comment)
                 .append(dryRun)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("resource", resource)
+                .append("stagedActions", stagedActions)
+                .append("custom", custom)
+                .append("comment", comment)
+                .append("dryRun", dryRun)
+                .build();
     }
 
 }

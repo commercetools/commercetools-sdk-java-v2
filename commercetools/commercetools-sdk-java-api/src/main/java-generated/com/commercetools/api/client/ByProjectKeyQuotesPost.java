@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,10 +35,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyQuotesPost extends
-        BodyApiMethod<ByProjectKeyQuotesPost, com.commercetools.api.models.quote.Quote, com.commercetools.api.models.quote.QuoteDraft>
+        TypeBodyApiMethod<ByProjectKeyQuotesPost, com.commercetools.api.models.quote.Quote, com.commercetools.api.models.quote.QuoteDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyQuotesPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyQuotesPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyQuotesPost> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.quote.Quote> resultType() {
+        return new TypeReference<com.commercetools.api.models.quote.Quote>() {
+        };
+    }
 
     private String projectKey;
 

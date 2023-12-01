@@ -26,6 +26,11 @@ public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsByIDRequestBuilder
         return new ByProjectKeyAsAssociateByAssociateIdBusinessUnitsByIDGet(apiHttpClient, projectKey, associateId, ID);
     }
 
+    public ByProjectKeyAsAssociateByAssociateIdBusinessUnitsByIDHead head() {
+        return new ByProjectKeyAsAssociateByAssociateIdBusinessUnitsByIDHead(apiHttpClient, projectKey, associateId,
+            ID);
+    }
+
     public ByProjectKeyAsAssociateByAssociateIdBusinessUnitsByIDPost post(
             com.commercetools.api.models.business_unit.BusinessUnitUpdate businessUnitUpdate) {
         return new ByProjectKeyAsAssociateByAssociateIdBusinessUnitsByIDPost(apiHttpClient, projectKey, associateId, ID,

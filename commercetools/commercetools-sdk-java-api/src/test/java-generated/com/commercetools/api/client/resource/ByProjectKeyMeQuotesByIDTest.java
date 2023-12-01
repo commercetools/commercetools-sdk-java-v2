@@ -41,7 +41,7 @@ public class ByProjectKeyMeQuotesByIDTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyMeQuotesByIDTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -81,6 +81,12 @@ public class ByProjectKeyMeQuotesByIDTest {
                         .me()
                         .quotes()
                         .withId("test_ID")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/me/quotes/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quotes()
+                        .withId("test_ID")
                         .post(com.commercetools.api.models.me.MyQuoteUpdate.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/me/quotes/test_ID?expand=expand", },
@@ -97,6 +103,7 @@ public class ByProjectKeyMeQuotesByIDTest {
         return new Object[][] { new Object[] {
                 apiRoot.withProjectKey("test_projectKey").me().quotes().withId("test_ID").get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().quotes().withId("test_ID").get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().quotes().withId("test_ID").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quotes()

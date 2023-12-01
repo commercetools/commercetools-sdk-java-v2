@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Change TransactionState update action.</p>
@@ -99,6 +101,14 @@ public class PaymentTransactionStateChangedMessagePayloadImpl
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(transactionId).append(state).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("transactionId", transactionId)
+                .append("state", state)
+                .build();
     }
 
 }

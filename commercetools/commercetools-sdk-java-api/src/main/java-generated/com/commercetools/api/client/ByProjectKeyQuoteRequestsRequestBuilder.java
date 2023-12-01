@@ -21,6 +21,10 @@ public class ByProjectKeyQuoteRequestsRequestBuilder implements ByProjectKeyQuot
         return new ByProjectKeyQuoteRequestsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyQuoteRequestsHead head() {
+        return new ByProjectKeyQuoteRequestsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyQuoteRequestsPost post(
             com.commercetools.api.models.quote_request.QuoteRequestDraft quoteRequestDraft) {
         return new ByProjectKeyQuoteRequestsPost(apiHttpClient, projectKey, quoteRequestDraft);

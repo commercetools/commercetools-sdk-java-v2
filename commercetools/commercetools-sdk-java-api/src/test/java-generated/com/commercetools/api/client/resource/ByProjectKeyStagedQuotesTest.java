@@ -41,7 +41,7 @@ public class ByProjectKeyStagedQuotesTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyStagedQuotesTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -98,6 +98,13 @@ public class ByProjectKeyStagedQuotesTest {
                         "get", "test_projectKey/staged-quotes", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/staged-quotes?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().head().createHttpRequest(),
+                        "head", "test_projectKey/staged-quotes", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stagedQuotes()
                         .post(com.commercetools.api.models.staged_quote.StagedQuoteDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/staged-quotes?expand=expand", },
@@ -121,6 +128,8 @@ public class ByProjectKeyStagedQuotesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").stagedQuotes().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stagedQuotes()
                         .post(com.commercetools.api.models.staged_quote.StagedQuoteDraft.of())

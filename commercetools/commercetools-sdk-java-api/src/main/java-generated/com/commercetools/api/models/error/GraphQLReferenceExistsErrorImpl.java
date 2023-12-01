@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a resource cannot be deleted because it is being referenced by another resource.</p>
@@ -101,6 +103,14 @@ public class GraphQLReferenceExistsErrorImpl implements GraphQLReferenceExistsEr
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code).append(values).append(referencedBy).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("values", values)
+                .append("referencedBy", referencedBy)
+                .build();
     }
 
 }

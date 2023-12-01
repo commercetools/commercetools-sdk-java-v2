@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Project
@@ -345,6 +347,26 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(searchIndexing)
                 .append(businessUnits)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("version", version)
+                .append("key", key)
+                .append("name", name)
+                .append("countries", countries)
+                .append("currencies", currencies)
+                .append("languages", languages)
+                .append("createdAt", createdAt)
+                .append("trialUntil", trialUntil)
+                .append("messages", messages)
+                .append("carts", carts)
+                .append("shoppingLists", shoppingLists)
+                .append("shippingRateInputType", shippingRateInputType)
+                .append("externalOAuth", externalOAuth)
+                .append("searchIndexing", searchIndexing)
+                .append("businessUnits", businessUnits)
+                .build();
     }
 
 }

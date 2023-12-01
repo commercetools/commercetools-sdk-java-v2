@@ -21,6 +21,10 @@ public class ByProjectKeyAttributeGroupsRequestBuilder implements ByProjectKeyAt
         return new ByProjectKeyAttributeGroupsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyAttributeGroupsHead head() {
+        return new ByProjectKeyAttributeGroupsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyAttributeGroupsPost post(
             com.commercetools.api.models.attribute_group.AttributeGroupDraft attributeGroupDraft) {
         return new ByProjectKeyAttributeGroupsPost(apiHttpClient, projectKey, attributeGroupDraft);

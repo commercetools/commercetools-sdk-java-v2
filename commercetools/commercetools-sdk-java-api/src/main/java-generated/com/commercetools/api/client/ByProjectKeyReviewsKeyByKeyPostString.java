@@ -12,6 +12,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -40,6 +42,12 @@ public class ByProjectKeyReviewsKeyByKeyPostString
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyReviewsKeyByKeyPostString>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyReviewsKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsKeyByKeyPostString> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.review.Review> resultType() {
+        return new TypeReference<com.commercetools.api.models.review.Review>() {
+        };
+    }
 
     private String projectKey;
     private String key;

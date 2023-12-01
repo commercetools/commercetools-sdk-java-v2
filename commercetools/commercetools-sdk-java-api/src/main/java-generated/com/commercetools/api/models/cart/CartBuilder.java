@@ -86,6 +86,9 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
 
+    @Nullable
+    private com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice;
+
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
@@ -535,7 +538,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
@@ -548,7 +551,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
@@ -561,7 +564,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param totalPrice value to be set
      * @return Builder
@@ -575,8 +578,9 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <ul>
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -590,8 +594,9 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <ul>
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -605,8 +610,9 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <ul>
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -649,6 +655,43 @@ public class CartBuilder implements Builder<Cart> {
     public CartBuilder taxedShippingPrice(
             @Nullable final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice) {
         this.taxedShippingPrice = taxedShippingPrice;
+        return this;
+    }
+
+    /**
+     *  <p>Discounts that apply on the Cart <code>totalPrice</code>.</p>
+     * @param builder function to build the discountOnTotalPrice value
+     * @return Builder
+     */
+
+    public CartBuilder discountOnTotalPrice(
+            Function<com.commercetools.api.models.cart.DiscountOnTotalPriceBuilder, com.commercetools.api.models.cart.DiscountOnTotalPriceBuilder> builder) {
+        this.discountOnTotalPrice = builder.apply(com.commercetools.api.models.cart.DiscountOnTotalPriceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Discounts that apply on the Cart <code>totalPrice</code>.</p>
+     * @param builder function to build the discountOnTotalPrice value
+     * @return Builder
+     */
+
+    public CartBuilder withDiscountOnTotalPrice(
+            Function<com.commercetools.api.models.cart.DiscountOnTotalPriceBuilder, com.commercetools.api.models.cart.DiscountOnTotalPrice> builder) {
+        this.discountOnTotalPrice = builder.apply(com.commercetools.api.models.cart.DiscountOnTotalPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Discounts that apply on the Cart <code>totalPrice</code>.</p>
+     * @param discountOnTotalPrice value to be set
+     * @return Builder
+     */
+
+    public CartBuilder discountOnTotalPrice(
+            @Nullable final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice) {
+        this.discountOnTotalPrice = discountOnTotalPrice;
         return this;
     }
 
@@ -1674,7 +1717,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @return totalPrice
      */
@@ -1686,8 +1729,9 @@ public class CartBuilder implements Builder<Cart> {
     /**
      *  <ul>
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @return taxedPrice
      */
 
@@ -1704,6 +1748,16 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
         return this.taxedShippingPrice;
+    }
+
+    /**
+     *  <p>Discounts that apply on the Cart <code>totalPrice</code>.</p>
+     * @return discountOnTotalPrice
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.DiscountOnTotalPrice getDiscountOnTotalPrice() {
+        return this.discountOnTotalPrice;
     }
 
     /**
@@ -1976,10 +2030,10 @@ public class CartBuilder implements Builder<Cart> {
         Objects.requireNonNull(origin, Cart.class + ": origin is missing");
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
-            taxedShippingPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode, cartState, billingAddress,
-            shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput, shippingCustomFields, shipping,
-            itemShippingAddresses, discountCodes, directDiscounts, refusedGifts, paymentInfo, country, locale, origin,
-            custom, deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode,
+            cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
+            shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
+            paymentInfo, country, locale, origin, custom, deleteDaysAfterLastModification, lastModifiedBy, createdBy);
     }
 
     /**
@@ -1989,10 +2043,10 @@ public class CartBuilder implements Builder<Cart> {
     public Cart buildUnchecked() {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
-            taxedShippingPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode, cartState, billingAddress,
-            shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput, shippingCustomFields, shipping,
-            itemShippingAddresses, discountCodes, directDiscounts, refusedGifts, paymentInfo, country, locale, origin,
-            custom, deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode,
+            cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
+            shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
+            paymentInfo, country, locale, origin, custom, deleteDaysAfterLastModification, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2027,6 +2081,7 @@ public class CartBuilder implements Builder<Cart> {
         builder.totalPrice = template.getTotalPrice();
         builder.taxedPrice = template.getTaxedPrice();
         builder.taxedShippingPrice = template.getTaxedShippingPrice();
+        builder.discountOnTotalPrice = template.getDiscountOnTotalPrice();
         builder.taxMode = template.getTaxMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.taxCalculationMode = template.getTaxCalculationMode();

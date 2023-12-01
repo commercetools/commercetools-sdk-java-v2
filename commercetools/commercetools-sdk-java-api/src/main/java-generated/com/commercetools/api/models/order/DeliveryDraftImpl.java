@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * DeliveryDraft
@@ -151,6 +153,16 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
                 .append(address)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("items", items)
+                .append("parcels", parcels)
+                .append("address", address)
+                .append("custom", custom)
+                .build();
     }
 
 }

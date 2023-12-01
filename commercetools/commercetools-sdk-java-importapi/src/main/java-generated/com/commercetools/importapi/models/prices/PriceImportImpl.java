@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The data representation for a price to be imported that is persisted as a Price in the Project.</p>
@@ -85,7 +87,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it will be updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -301,6 +303,24 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .append(productVariant)
                 .append(product)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("value", value)
+                .append("country", country)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .append("discounted", discounted)
+                .append("publish", publish)
+                .append("tiers", tiers)
+                .append("custom", custom)
+                .append("productVariant", productVariant)
+                .append("product", product)
+                .build();
     }
 
 }

@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,7 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyShippingMethodsGet extends
-        ApiMethod<ByProjectKeyShippingMethodsGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyShippingMethodsGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>
         implements ByProjectKeyShippingMethodsGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyShippingMethodsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyShippingMethodsGet>,
@@ -41,6 +43,12 @@ public class ByProjectKeyShippingMethodsGet extends
         com.commercetools.api.client.QueryTrait<ByProjectKeyShippingMethodsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyShippingMethodsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyShippingMethodsGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Transition LineItem State update action.</p>
@@ -177,6 +179,18 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
                 .append(fromState)
                 .append(toState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("transitionDate", transitionDate)
+                .append("quantity", quantity)
+                .append("fromState", fromState)
+                .append("toState", toState)
+                .build();
     }
 
 }

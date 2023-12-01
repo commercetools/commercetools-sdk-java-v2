@@ -36,6 +36,18 @@ public class CommercetoolsObjectMapperTests {
     }
 
     @Test
+    public void serializeLocalDateExceeding() throws JsonProcessingException {
+        String serializedLocalDate = JsonUtils.toJsonString(LocalDate.of(20010, TEST_MONTH, TEST_DAY));
+        Assertions.assertEquals("\"+20010-11-12\"", serializedLocalDate);
+    }
+
+    @Test
+    public void serializeLocalDateExceedingNegative() throws JsonProcessingException {
+        String serializedLocalDate = JsonUtils.toJsonString(LocalDate.of(-20010, TEST_MONTH, TEST_DAY));
+        Assertions.assertEquals("\"-20010-11-12\"", serializedLocalDate);
+    }
+
+    @Test
     public void serializeLocalTime() throws JsonProcessingException {
         String serializedLocalTime = JsonUtils.toJsonString(TEST_LOCAL_TIME);
         Assertions.assertEquals(serializedLocalTime, "\"10:11:12\"");
@@ -54,9 +66,63 @@ public class CommercetoolsObjectMapperTests {
     }
 
     @Test
+    public void deserializeZonedDateTimeExceeding() throws IOException {
+        String zonedDateTimeSerialized = "\"20010-11-12T09:11:12.000Z\"";
+        ZonedDateTime zonedDateTime = JsonUtils.fromJsonString(zonedDateTimeSerialized, ZonedDateTime.class);
+        Assertions.assertEquals(20010, zonedDateTime.getYear());
+        Assertions.assertEquals(zonedDateTime.getMonth(), Month.of(TEST_MONTH));
+        Assertions.assertEquals(zonedDateTime.getDayOfMonth(), TEST_DAY);
+        Assertions.assertEquals(zonedDateTime.getHour(), TEST_HOUR_UTC);
+        Assertions.assertEquals(zonedDateTime.getMinute(), TEST_MINUTE);
+        Assertions.assertEquals(zonedDateTime.getSecond(), TEST_SECOND);
+    }
+
+    @Test
+    public void deserializeZonedDateTimeExceedingNegative() throws IOException {
+        String zonedDateTimeSerialized = "\"-20010-11-12T09:11:12.000Z\"";
+        ZonedDateTime zonedDateTime = JsonUtils.fromJsonString(zonedDateTimeSerialized, ZonedDateTime.class);
+        Assertions.assertEquals(-20010, zonedDateTime.getYear());
+        Assertions.assertEquals(zonedDateTime.getMonth(), Month.of(TEST_MONTH));
+        Assertions.assertEquals(zonedDateTime.getDayOfMonth(), TEST_DAY);
+        Assertions.assertEquals(zonedDateTime.getHour(), TEST_HOUR_UTC);
+        Assertions.assertEquals(zonedDateTime.getMinute(), TEST_MINUTE);
+        Assertions.assertEquals(zonedDateTime.getSecond(), TEST_SECOND);
+    }
+
+    @Test
     public void deserializeLocalDate() throws IOException {
         String localDateSerialized = "\"2010-11-12\"";
         LocalDate localDate = JsonUtils.fromJsonString(localDateSerialized, LocalDate.class);
+        Assertions.assertEquals(localDate.getDayOfMonth(), TEST_DAY);
+        Assertions.assertEquals(localDate.getMonth(), Month.of(TEST_MONTH));
+        Assertions.assertEquals(localDate.getDayOfMonth(), TEST_DAY);
+    }
+
+    @Test
+    public void deserializeLocalDateExceeding() {
+        String localDateSerialized = "\"20010-11-12\"";
+        LocalDate localDate = JsonUtils.fromJsonString(localDateSerialized, LocalDate.class);
+        Assertions.assertEquals(20010, localDate.getYear());
+        Assertions.assertEquals(localDate.getDayOfMonth(), TEST_DAY);
+        Assertions.assertEquals(localDate.getMonth(), Month.of(TEST_MONTH));
+        Assertions.assertEquals(localDate.getDayOfMonth(), TEST_DAY);
+    }
+
+    @Test
+    public void deserializeLocalDateExceedingPositive() {
+        String localDateSerialized = "\"+20010-11-12\"";
+        LocalDate localDate = JsonUtils.fromJsonString(localDateSerialized, LocalDate.class);
+        Assertions.assertEquals(20010, localDate.getYear());
+        Assertions.assertEquals(localDate.getDayOfMonth(), TEST_DAY);
+        Assertions.assertEquals(localDate.getMonth(), Month.of(TEST_MONTH));
+        Assertions.assertEquals(localDate.getDayOfMonth(), TEST_DAY);
+    }
+
+    @Test
+    public void deserializeLocalDateExceedingNegative() {
+        String localDateSerialized = "\"-20010-11-12\"";
+        LocalDate localDate = JsonUtils.fromJsonString(localDateSerialized, LocalDate.class);
+        Assertions.assertEquals(-20010, localDate.getYear());
         Assertions.assertEquals(localDate.getDayOfMonth(), TEST_DAY);
         Assertions.assertEquals(localDate.getMonth(), Month.of(TEST_MONTH));
         Assertions.assertEquals(localDate.getDayOfMonth(), TEST_DAY);

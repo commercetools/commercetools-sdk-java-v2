@@ -29,7 +29,7 @@ public class MessageSubscriptionTest {
         return new Object[][] {
                 new Object[] { MessageSubscription.builder()
                         .resourceTypeId(com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId
-                                .findEnum("associate-role")) },
+                                .findEnum("approval-flow")) },
                 new Object[] { MessageSubscription.builder().types(Collections.singletonList("types")) } };
     }
 
@@ -37,10 +37,10 @@ public class MessageSubscriptionTest {
     public void resourceTypeId() {
         MessageSubscription value = MessageSubscription.of();
         value.setResourceTypeId(
-            com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId.findEnum("associate-role"));
+            com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId.findEnum("approval-flow"));
         Assertions.assertThat(value.getResourceTypeId())
                 .isEqualTo(com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId
-                        .findEnum("associate-role"));
+                        .findEnum("approval-flow"));
     }
 
     @Test

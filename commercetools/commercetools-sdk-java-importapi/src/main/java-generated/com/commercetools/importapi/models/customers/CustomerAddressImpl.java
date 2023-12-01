@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Different from Address in that <code>key</code> is required and <code>id</code> is not supported.</p>
@@ -513,6 +515,36 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
                 .append(externalId)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("title", title)
+                .append("salutation", salutation)
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .append("streetName", streetName)
+                .append("streetNumber", streetNumber)
+                .append("additionalStreetInfo", additionalStreetInfo)
+                .append("postalCode", postalCode)
+                .append("city", city)
+                .append("region", region)
+                .append("state", state)
+                .append("country", country)
+                .append("company", company)
+                .append("department", department)
+                .append("building", building)
+                .append("apartment", apartment)
+                .append("pOBox", pOBox)
+                .append("phone", phone)
+                .append("mobile", mobile)
+                .append("email", email)
+                .append("fax", fax)
+                .append("additionalAddressInfo", additionalAddressInfo)
+                .append("externalId", externalId)
+                .append("custom", custom)
+                .build();
     }
 
 }

@@ -21,6 +21,10 @@ public class ByProjectKeyStandalonePricesRequestBuilder implements ByProjectKeyS
         return new ByProjectKeyStandalonePricesGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyStandalonePricesHead head() {
+        return new ByProjectKeyStandalonePricesHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyStandalonePricesPost post(
             com.commercetools.api.models.standalone_price.StandalonePriceDraft standalonePriceDraft) {
         return new ByProjectKeyStandalonePricesPost(apiHttpClient, projectKey, standalonePriceDraft);

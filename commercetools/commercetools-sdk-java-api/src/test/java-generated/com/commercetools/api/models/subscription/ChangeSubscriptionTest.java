@@ -26,16 +26,16 @@ public class ChangeSubscriptionTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { ChangeSubscription.builder()
                 .resourceTypeId(com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId
-                        .findEnum("associate-role")) } };
+                        .findEnum("approval-flow")) } };
     }
 
     @Test
     public void resourceTypeId() {
         ChangeSubscription value = ChangeSubscription.of();
         value.setResourceTypeId(
-            com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId.findEnum("associate-role"));
+            com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId.findEnum("approval-flow"));
         Assertions.assertThat(value.getResourceTypeId())
                 .isEqualTo(com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId
-                        .findEnum("associate-role"));
+                        .findEnum("approval-flow"));
     }
 }

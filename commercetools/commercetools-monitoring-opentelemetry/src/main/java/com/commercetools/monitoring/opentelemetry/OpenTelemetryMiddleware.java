@@ -68,7 +68,8 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
                 builder.put(OpenTelemetryInfo.SERVER_PORT, request.getUri().getPort());
             }
             Attributes attributes = builder.build();
-            Optional.ofNullable(histogram).ifPresent(h -> h.record(Duration.between(start, Instant.now()).toMillis(), attributes));
+            Optional.ofNullable(histogram)
+                    .ifPresent(h -> h.record(Duration.between(start, Instant.now()).toMillis(), attributes));
             requestCounter.add(1, attributes);
             if (response.getStatusCode() >= 400) {
                 errorCounter.add(1, attributes);

@@ -3,6 +3,7 @@ package com.commercetools.monitoring.opentelemetry;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
@@ -30,7 +31,6 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
     private final LongHistogram histogram;
     private final LongCounter errorCounter;
     private final LongCounter requestCounter;
-    private final boolean enableHistogram;
 
     public OpenTelemetryMiddleware(final OpenTelemetry otel) {
         this(otel, true, OpenTelemetryInfo.PREFIX);
@@ -42,7 +42,6 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
 
     public OpenTelemetryMiddleware(final OpenTelemetry otel, final boolean enableHistogram, final String prefix) {
         Meter meter = otel.meterBuilder(OpenTelemetryResponseSerializer.class.getPackage().getName()).build();
-        this.enableHistogram = enableHistogram;
         if (enableHistogram) {
             histogram = meter.histogramBuilder(prefix + "." + OpenTelemetryInfo.CLIENT_DURATION)
                     .ofLongs()
@@ -69,9 +68,7 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
                 builder.put(OpenTelemetryInfo.SERVER_PORT, request.getUri().getPort());
             }
             Attributes attributes = builder.build();
-            if (enableHistogram) {
-                histogram.record(Duration.between(start, Instant.now()).toMillis(), attributes);
-            }
+            Optional.ofNullable(histogram).ifPresent(h -> h.record(Duration.between(start, Instant.now()).toMillis(), attributes));
             requestCounter.add(1, attributes);
             if (response.getStatusCode() >= 400) {
                 errorCounter.add(1, attributes);

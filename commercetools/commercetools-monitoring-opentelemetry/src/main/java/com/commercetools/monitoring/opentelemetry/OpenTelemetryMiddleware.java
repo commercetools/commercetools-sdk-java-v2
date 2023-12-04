@@ -3,6 +3,7 @@ package com.commercetools.monitoring.opentelemetry;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
@@ -32,15 +33,24 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
     private final LongCounter requestCounter;
 
     public OpenTelemetryMiddleware(final OpenTelemetry otel) {
-        this(otel, OpenTelemetryInfo.PREFIX);
+        this(otel, true, OpenTelemetryInfo.PREFIX);
     }
 
-    public OpenTelemetryMiddleware(final OpenTelemetry otel, final String prefix) {
+    public OpenTelemetryMiddleware(final OpenTelemetry otel, final boolean enableHistogram) {
+        this(otel, enableHistogram, OpenTelemetryInfo.PREFIX);
+    }
+
+    public OpenTelemetryMiddleware(final OpenTelemetry otel, final boolean enableHistogram, final String prefix) {
         Meter meter = otel.meterBuilder(OpenTelemetryResponseSerializer.class.getPackage().getName()).build();
-        histogram = meter.histogramBuilder(prefix + "." + OpenTelemetryInfo.CLIENT_DURATION)
-                .ofLongs()
-                .setUnit(OpenTelemetryInfo.UNIT_MS)
-                .build();
+        if (enableHistogram) {
+            histogram = meter.histogramBuilder(prefix + "." + OpenTelemetryInfo.CLIENT_DURATION)
+                    .ofLongs()
+                    .setUnit(OpenTelemetryInfo.UNIT_MS)
+                    .build();
+        }
+        else {
+            histogram = null;
+        }
         errorCounter = meter.counterBuilder(prefix + "." + OpenTelemetryInfo.CLIENT_REQUEST_ERROR).build();
         requestCounter = meter.counterBuilder(prefix + "." + OpenTelemetryInfo.CLIENT_REQUEST_TOTAL).build();
     }
@@ -58,7 +68,8 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
                 builder.put(OpenTelemetryInfo.SERVER_PORT, request.getUri().getPort());
             }
             Attributes attributes = builder.build();
-            histogram.record(Duration.between(start, Instant.now()).toMillis(), attributes);
+            Optional.ofNullable(histogram)
+                    .ifPresent(h -> h.record(Duration.between(start, Instant.now()).toMillis(), attributes));
             requestCounter.add(1, attributes);
             if (response.getStatusCode() >= 400) {
                 errorCounter.add(1, attributes);

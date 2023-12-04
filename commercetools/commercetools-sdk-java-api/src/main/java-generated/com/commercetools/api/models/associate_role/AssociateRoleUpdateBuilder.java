@@ -28,7 +28,7 @@ public class AssociateRoleUpdateBuilder implements Builder<AssociateRoleUpdate> 
     private java.util.List<com.commercetools.api.models.associate_role.AssociateRoleUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the AssociateRole on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the AssociateRole on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class AssociateRoleUpdateBuilder implements Builder<AssociateRoleUpdate> 
     }
 
     /**
-     *  <p>Expected version of the AssociateRole on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the AssociateRole on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
 

@@ -35,7 +35,7 @@ public interface ShoppingListUpdate extends
         com.commercetools.api.models.ResourceUpdate<ShoppingListUpdate, ShoppingListUpdateAction, ShoppingListUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface ShoppingListUpdate extends
     public List<ShoppingListUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      */
 

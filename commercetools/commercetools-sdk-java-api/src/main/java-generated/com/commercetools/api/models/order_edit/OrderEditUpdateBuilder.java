@@ -33,7 +33,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     private Boolean dryRun;
 
     /**
-     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
 

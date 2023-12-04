@@ -43,7 +43,7 @@ public class CartUpdateImpl implements CartUpdate, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the Cart on which the changes apply. If the expected version does not match the actual version, a 409 Conflict is returned.</p>
+     *  <p>Expected version of the Cart on which the changes apply. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      */
 
     public Long getVersion() {

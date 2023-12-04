@@ -35,7 +35,7 @@ public interface CustomerUpdate extends
         com.commercetools.api.models.ResourceUpdate<CustomerUpdate, CustomerUpdateAction, CustomerUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface CustomerUpdate extends
     public List<CustomerUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the Customer on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      */
 

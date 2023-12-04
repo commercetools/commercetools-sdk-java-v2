@@ -43,7 +43,7 @@ public class StagedQuoteUpdateImpl implements StagedQuoteUpdate, ModelBase {
     }
 
     /**
-     *  <p>Expected version of the StagedQuote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the StagedQuote to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      */
 
     public Long getVersion() {

@@ -35,7 +35,7 @@ public interface ProductDiscountUpdate extends
         com.commercetools.api.models.ResourceUpdate<ProductDiscountUpdate, ProductDiscountUpdateAction, ProductDiscountUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface ProductDiscountUpdate extends
     public List<ProductDiscountUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      */
 

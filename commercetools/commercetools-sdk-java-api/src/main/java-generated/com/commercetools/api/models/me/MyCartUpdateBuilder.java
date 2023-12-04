@@ -28,7 +28,7 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
     private java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the Cart on which the changes apply. If it does not match the actual version, a 409 Conflict error is returned.</p>
+     *  <p>Expected version of the Cart on which the changes apply. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
     }
 
     /**
-     *  <p>Expected version of the Cart on which the changes apply. If it does not match the actual version, a 409 Conflict error is returned.</p>
+     *  <p>Expected version of the Cart on which the changes apply. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
 

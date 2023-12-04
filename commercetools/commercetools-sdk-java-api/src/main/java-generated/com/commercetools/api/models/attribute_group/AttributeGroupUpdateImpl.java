@@ -43,7 +43,7 @@ public class AttributeGroupUpdateImpl implements AttributeGroupUpdate, ModelBase
     }
 
     /**
-     *  <p>Expected version of the AttributeGroup on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the AttributeGroup on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      */
 
     public Long getVersion() {

@@ -63,7 +63,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
      */
 
     public String getExternalUserId() {

@@ -11,7 +11,10 @@ import dev.failsafe.spi.Scheduler;
  * Middleware to limit the number of concurrent request using a Queue
  *
  * @include.example io.vrap.rmf.base.client.QueueMiddlewareTest#queueConfiguration()
+ *
+ * @deprecated use {@link PolicyMiddleware} instead
  */
+@Deprecated
 public interface QueueRequestMiddleware extends Middleware {
     public static QueueRequestMiddleware of(final ExecutorService executorService, final int maxRequests,
             final Duration maxWaitTime) {

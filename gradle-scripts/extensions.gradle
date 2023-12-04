@@ -14,8 +14,8 @@ ext {
     ]
 
     commons = [
-            lang3: 'org.apache.commons:commons-lang3:3.13.0',
-            io: 'commons-io:commons-io:2.13.0',
+            lang3: 'org.apache.commons:commons-lang3:3.14.0',
+            io: 'commons-io:commons-io:2.15.1',
             io_version: {
                     strictly '[2.8.0,)'
                     prefer '2.11.0'
@@ -31,10 +31,10 @@ ext {
     ]
 
     jackson_core = [
-            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.15.2',
-            databind: 'com.fasterxml.jackson.core:jackson-databind:2.15.2',
-            core: 'com.fasterxml.jackson.core:jackson-core:2.15.2',
-            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.2',
+            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.16.0',
+            databind: 'com.fasterxml.jackson.core:jackson-databind:2.16.0',
+            core: 'com.fasterxml.jackson.core:jackson-core:2.16.0',
+            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.16.0',
     ]
 
     google = [
@@ -51,7 +51,7 @@ ext {
     ]
 
     junit = [
-            junit: 'org.junit.jupiter:junit-jupiter:5.10.0',
+            junit: 'org.junit.jupiter:junit-jupiter:5.10.1',
             dataprovider: 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.10',
             jsonassert: 'org.skyscreamer:jsonassert:1.5.1',
             assertj: 'org.assertj:assertj-core:3.24.2'

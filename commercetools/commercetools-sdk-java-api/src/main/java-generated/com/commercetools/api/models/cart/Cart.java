@@ -250,7 +250,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public Address getBillingAddress();
 
     /**
-     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
      * @return shippingAddress
      */
     @Valid
@@ -313,7 +313,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @return itemShippingAddresses
      */
     @NotNull
@@ -604,7 +604,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setBillingAddress(final Address billingAddress);
 
     /**
-     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
      * @param shippingAddress value to be set
      */
 
@@ -667,7 +667,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
@@ -676,7 +676,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 

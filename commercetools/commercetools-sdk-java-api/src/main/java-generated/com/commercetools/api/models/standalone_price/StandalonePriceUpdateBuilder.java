@@ -28,7 +28,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
     private java.util.List<com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class StandalonePriceUpdateBuilder implements Builder<StandalonePriceUpda
     }
 
     /**
-     *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     *  <p>Expected version of the StandalonePrice on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
 

@@ -50,7 +50,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
      * @param externalUserId value to be set
      * @return Builder
      */
@@ -154,7 +154,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
      * @return externalUserId
      */
 

@@ -46,7 +46,8 @@ public class TimeoutTest {
                     }
                 }))
                 .addMiddleware((request, next) -> failsafeExecutor.getStageAsync(() -> next.apply(request)))
-                .withRetryMiddleware(3, singletonList(HttpStatusCode.NOT_FOUND_404))
+                .withPolicies(policyBuilder -> policyBuilder.withRetry(
+                    builder -> builder.maxRetries(3).statusCodes(singletonList(HttpStatusCode.NOT_FOUND_404))))
                 .build(projectKey);
 
         Assertions.assertThatExceptionOfType(TimeoutExceededException.class).isThrownBy(() -> {

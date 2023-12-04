@@ -24,7 +24,9 @@ import dev.failsafe.spi.Scheduler;
 
 /**
  * Implementation for a retry of a requests upon configured response status codes
+ * @deprecated use {@link PolicyMiddleware} instead
  */
+@Deprecated
 public class RetryMiddleware implements RetryRequestMiddleware, AutoCloseable {
     static final String loggerName = ClientBuilder.COMMERCETOOLS + ".retry";
 

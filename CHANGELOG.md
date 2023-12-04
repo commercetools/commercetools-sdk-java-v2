@@ -1,4 +1,14 @@
 
+# 17.3.0 (2023-12-04)
+
+## What's Changed
+* Override toString method. by @salander85 in https://github.com/commercetools/commercetools-sdk-java-v2/pull/519
+* Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/518
+* Add option to turn off histogram in opentelemetry by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/523
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.2.0...17.3.0
+
 # 17.2.0 (2023-11-08)
 
 ## What's Changed

@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Draft<MyBusinessUnitAssociateDraft> {
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public List<AssociateRoleAssignmentDraft> getAssociateRoleAssignments();
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      */
 

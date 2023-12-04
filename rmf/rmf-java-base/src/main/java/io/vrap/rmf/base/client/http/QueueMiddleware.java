@@ -18,8 +18,11 @@ import dev.failsafe.spi.Scheduler;
 /**
  * Implementation of a Queue to limit the number of concurrent requests handled by the client
  *
- * @include.example io.vrap.rmf.base.client.QueueMiddlewareTest#queueConfiguration()
+ * {@include.example io.vrap.rmf.base.client.QueueMiddlewareTest#queueConfiguration()}
+ *
+ * @deprecated use {@link PolicyMiddleware} instead
  */
+@Deprecated
 public class QueueMiddleware implements QueueRequestMiddleware, AutoCloseable {
 
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;

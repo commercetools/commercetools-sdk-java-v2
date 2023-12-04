@@ -35,7 +35,7 @@ public interface MyPaymentUpdate extends
         com.commercetools.api.models.ResourceUpdate<MyPaymentUpdate, MyPaymentUpdateAction, MyPaymentUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface MyPaymentUpdate extends
     public List<MyPaymentUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      */
 

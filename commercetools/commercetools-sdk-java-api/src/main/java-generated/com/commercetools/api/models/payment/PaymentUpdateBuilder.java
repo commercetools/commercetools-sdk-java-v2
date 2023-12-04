@@ -28,7 +28,7 @@ public class PaymentUpdateBuilder implements Builder<PaymentUpdate> {
     private java.util.List<com.commercetools.api.models.payment.PaymentUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class PaymentUpdateBuilder implements Builder<PaymentUpdate> {
     }
 
     /**
-     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the Payment on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
 

@@ -28,7 +28,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class CategoryUpdateBuilder implements Builder<CategoryUpdate> {
     }
 
     /**
-     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     *  <p>Expected version of the Category on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
 

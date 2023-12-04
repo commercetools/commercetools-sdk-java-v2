@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>If the <code>editVersion</code> and/or <code>resourceVersion</code> do not match the actual version, a 409 Conflict will be returned.</p>
+ *  <p>If the <code>editVersion</code> and/or <code>resourceVersion</code> do not match the actual version, a ConcurrentModification error will be returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -14,8 +14,8 @@ OpenTelemetry auto instrumentation.
 ### OpenTelemetry collector
 
 The [OpenTelemetry collector example](https://github.com/commercetools/opentelemetry-collector-example) repository includes
-a docker compose setup for starting a local OpenTelemetry collector in combination with Prometheus, Grafana, JaegerUI
-and NewRelic as exporter target.
+a docker compose setup for starting a local OpenTelemetry collector in combination with Prometheus, Grafana, JaegerUI,
+NewRelic and Dynatrace as exporter target.
 
 ## Installation
 
@@ -49,3 +49,7 @@ see the traces in the Jaeger UI.
 Grafana dashboards are to be found at http://localhost:3000/grafana/dashboards/
 
 Prometheus is located at http://localhost:9090
+
+### Choose your OpenTelemetry provider
+To choose exporting to either NewRelic or Dynatrace you need to set the environment variable `OTEL_PROVIDER`
+to either `newrelic` or `dynatrace`. By default, the NewRelic settings are used.

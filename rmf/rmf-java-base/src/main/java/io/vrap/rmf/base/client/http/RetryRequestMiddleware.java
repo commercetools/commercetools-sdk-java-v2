@@ -35,7 +35,9 @@ import dev.failsafe.spi.Scheduler;
  *      .addMiddleware(RetryRequestMiddleware.of(3, emptyList(), singletonList(JsonException.class)))
  *  }</code></pre>
  *  </p>
+ * @deprecated use {@link PolicyMiddleware} instead
  */
+@Deprecated
 public interface RetryRequestMiddleware extends Middleware {
     int DEFAULT_MAX_DELAY = 60000;
     int DEFAULT_INITIAL_DELAY = 200;

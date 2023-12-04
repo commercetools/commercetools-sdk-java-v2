@@ -2,25 +2,29 @@
 package io.vrap.rmf.base.client.http;
 
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import static java.util.Collections.singletonList;
 
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.utils.json.JsonException;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-@Deprecated
-public class RetryMiddlewareTest {
+import dev.failsafe.TimeoutBuilder;
+
+public class PolicyMiddlewareTest {
 
     @Test
     public void testWithStatusCode() {
-        RetryRequestMiddleware middleware = RetryRequestMiddleware.of(1);
+        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(builder -> builder.maxRetries(1)).build();
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();
@@ -35,7 +39,7 @@ public class RetryMiddlewareTest {
 
     @Test
     public void testWithCoveredException() {
-        RetryRequestMiddleware middleware = RetryRequestMiddleware.of(1);
+        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(builder -> builder.maxRetries(1)).build();
 
         final URI uri = URI.create("https://www.commercetools.com/");
 
@@ -55,7 +59,7 @@ public class RetryMiddlewareTest {
 
     @Test
     public void testWithCoveredExceptionResponse() {
-        RetryRequestMiddleware middleware = RetryRequestMiddleware.of(1);
+        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(builder -> builder.maxRetries(1)).build();
 
         final URI uri = URI.create("https://www.commercetools.com/");
 
@@ -76,7 +80,7 @@ public class RetryMiddlewareTest {
 
     @Test
     public void testUncoveredException() {
-        RetryRequestMiddleware middleware = RetryRequestMiddleware.of(1);
+        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(builder -> builder.maxRetries(1)).build();
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();
@@ -94,7 +98,7 @@ public class RetryMiddlewareTest {
 
     @Test
     public void testRetrySuccess() {
-        RetryRequestMiddleware middleware = RetryRequestMiddleware.of(1);
+        PolicyMiddleware middleware = PolicyBuilder.of().withRetry(builder -> builder.maxRetries(1)).build();
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();
@@ -105,5 +109,37 @@ public class RetryMiddlewareTest {
         }), Duration.ofSeconds(1));
         Assertions.assertThat(apiHttpResponse.getStatusCode()).isEqualTo(200);
         Assertions.assertThat(count.get()).isEqualTo(1);
+    }
+
+    public void retryConfigurationStatusCodes() {
+        final ApiHttpClient build = ClientBuilder.of()
+                // ...
+                .withPolicies(policyBuilder -> policyBuilder.withRetry(retry -> retry.maxRetries(3)
+                        .statusCodes(Arrays.asList(HttpStatusCode.SERVICE_UNAVAILABLE_503,
+                            HttpStatusCode.INTERNAL_SERVER_ERROR_500))))
+                .build();
+    }
+
+    public void retryConfigurationExceptions() {
+        final ApiHttpClient build = ClientBuilder.of()
+                // ...
+                .withPolicies(policyBuilder -> policyBuilder
+                        .withRetry(retry -> retry.maxRetries(3).failures(singletonList(JsonException.class))))
+                .build();
+    }
+
+    public void queueConfiguration() {
+        final ApiHttpClient build = ClientBuilder.of()
+                // ...
+                .withPolicies(policyBuilder -> policyBuilder.withBulkhead(64, Duration.ofSeconds(10)))
+                .build();
+    }
+
+    public void timeoutConfiguration() {
+        final ApiHttpClient build = ClientBuilder.of()
+                // ...
+                .withPolicies(
+                    policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(10), TimeoutBuilder::withInterrupt))
+                .build();
     }
 }

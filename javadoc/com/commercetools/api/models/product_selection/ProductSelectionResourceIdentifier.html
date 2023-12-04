@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ProductSelectionResourceIdentifier</span><span class="extends-implements">
 extends <a href="../common/ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a>, <a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="ProductSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductSelection</a>&gt;</span></div>
-<div class="block"><p>ResourceIdentifier to a ProductSelection.</p>
+<div class="block"><p>ResourceIdentifier to a ProductSelection. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -218,7 +218,7 @@ extends <a href="../common/ResourceIdentifier.html" title="interface in com.comm
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
-<div class="block"><p>Unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p></div>
+<div class="block"><p>Unique identifier of the referenced ProductSelection. Required if <code>key</code> is absent.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../Identifiable.html#getId()">getId</a></code>&nbsp;in interface&nbsp;<code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="ProductSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductSelection</a>&gt;</code></dd>
@@ -233,7 +233,7 @@ extends <a href="../common/ResourceIdentifier.html" title="interface in com.comm
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p></div>
+<div class="block"><p>User-defined unique identifier of the referenced ProductSelection. Required if <code>id</code> is absent.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ResourceIdentifier.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a></code></dd>
@@ -248,7 +248,7 @@ extends <a href="../common/ResourceIdentifier.html" title="interface in com.comm
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
-<div class="block"><p>Unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p></div>
+<div class="block"><p>Unique identifier of the referenced ProductSelection. Required if <code>key</code> is absent.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ResourceIdentifier.html#setId(java.lang.String)">setId</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a></code></dd>
@@ -261,7 +261,7 @@ extends <a href="../common/ResourceIdentifier.html" title="interface in com.comm
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier of the referenced ProductSelection. Either <code>id</code> or <code>key</code> is required.</p></div>
+<div class="block"><p>User-defined unique identifier of the referenced ProductSelection. Required if <code>id</code> is absent.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ResourceIdentifier.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ResourceIdentifier.html" title="interface in com.commercetools.api.models.common">ResourceIdentifier</a></code></dd>

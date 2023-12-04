@@ -45,7 +45,7 @@ public class ApiHttpClientImpl implements ApiHttpClient {
     @Override
     public <O> Publisher<ApiHttpResponse<O>> execute(ApiHttpRequest request,
             Function<ApiHttpResponse<byte[]>, ApiHttpResponse<O>> mapper) {
-        return Mono.from(stack.invoke(request)).map(mapper);
+        return Mono.from(stack.execute(request.resolve(baseUri))).map(mapper);
     }
 
     @Override

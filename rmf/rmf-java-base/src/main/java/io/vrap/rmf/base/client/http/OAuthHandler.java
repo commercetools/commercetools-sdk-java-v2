@@ -35,7 +35,7 @@ public class OAuthHandler extends AutoCloseableService {
         this.waitTimeout = waitTimeout;
     }
 
-    static String authHeader(final AuthenticationToken token) {
+    public static String authHeader(final AuthenticationToken token) {
         return "Bearer " + token.getAccessToken();
     }
 

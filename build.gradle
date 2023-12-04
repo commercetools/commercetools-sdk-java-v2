@@ -197,6 +197,7 @@ def documentationProjects= [
         ":commercetools:commercetools-monitoring-opentelemetry",
         ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
+        ":commercetools:commercetools-reactive",
         ":commercetools:commercetools-reactornetty-client",
         ":commercetools:commercetools-sdk-compat-v1",
         ":commercetools:commercetools-sdk-java-api",

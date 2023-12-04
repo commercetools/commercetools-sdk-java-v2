@@ -3,6 +3,9 @@ dependencies {
     api project(":rmf:rmf-java-base")
 
     implementation 'io.projectreactor:reactor-core:3.5.8'
+
+    testImplementation project(':commercetools:commercetools-sdk-java-api')
+    implementation project(':commercetools:commercetools-reactornetty-client')
 }
 
 java {

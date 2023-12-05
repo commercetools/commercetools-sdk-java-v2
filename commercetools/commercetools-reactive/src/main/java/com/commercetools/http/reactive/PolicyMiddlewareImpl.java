@@ -12,9 +12,12 @@ import reactor.core.publisher.Mono;
 
 public class PolicyMiddlewareImpl implements PolicyMiddleware {
 
+    Function<Mono<ApiHttpResponse<byte[]>>, Mono<ApiHttpResponse<byte[]>>> policyFn;
+
     @Override
     public Publisher<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
             Function<ApiHttpRequest, Publisher<ApiHttpResponse<byte[]>>> next) {
-        return Mono.from(next.apply(request));
+
+        return policyFn.apply(Mono.from(next.apply(request)));
     }
 }

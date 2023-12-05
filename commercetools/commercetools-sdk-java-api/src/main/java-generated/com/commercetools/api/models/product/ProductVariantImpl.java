@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A concrete sellable good for which inventory can be tracked. Product Variants are generally mapped to specific SKUs.</p>
@@ -262,6 +264,18 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
                 .append(isMatchingVariant, that.isMatchingVariant)
                 .append(scopedPrice, that.scopedPrice)
                 .append(scopedPriceDiscounted, that.scopedPriceDiscounted)
+                .append(id, that.id)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .append(price, that.price)
+                .append(images, that.images)
+                .append(assets, that.assets)
+                .append(availability, that.availability)
+                .append(isMatchingVariant, that.isMatchingVariant)
+                .append(scopedPrice, that.scopedPrice)
+                .append(scopedPriceDiscounted, that.scopedPriceDiscounted)
                 .isEquals();
     }
 
@@ -280,6 +294,23 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
                 .append(scopedPrice)
                 .append(scopedPriceDiscounted)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("sku", sku)
+                .append("key", key)
+                .append("prices", prices)
+                .append("attributes", attributes)
+                .append("price", price)
+                .append("images", images)
+                .append("assets", assets)
+                .append("availability", availability)
+                .append("isMatchingVariant", isMatchingVariant)
+                .append("scopedPrice", scopedPrice)
+                .append("scopedPriceDiscounted", scopedPriceDiscounted)
+                .build();
     }
 
 }

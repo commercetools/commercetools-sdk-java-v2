@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the <code>type</code> is different for an AttributeDefinition using the same <code>name</code> in multiple Product Types.</p>
@@ -144,6 +146,12 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
                 .append(conflictingProductTypeId, that.conflictingProductTypeId)
                 .append(conflictingProductTypeName, that.conflictingProductTypeName)
                 .append(conflictingAttributeName, that.conflictingAttributeName)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(conflictingProductTypeId, that.conflictingProductTypeId)
+                .append(conflictingProductTypeName, that.conflictingProductTypeName)
+                .append(conflictingAttributeName, that.conflictingAttributeName)
                 .isEquals();
     }
 
@@ -156,6 +164,17 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
                 .append(conflictingProductTypeName)
                 .append(conflictingAttributeName)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("conflictingProductTypeId", conflictingProductTypeId)
+                .append("conflictingProductTypeName", conflictingProductTypeName)
+                .append("conflictingAttributeName", conflictingAttributeName)
+                .build();
     }
 
 }

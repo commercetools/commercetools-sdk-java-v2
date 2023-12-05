@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * PaymentMethodInfo
@@ -93,12 +95,23 @@ public class PaymentMethodInfoImpl implements PaymentMethodInfo, ModelBase {
         return new EqualsBuilder().append(paymentInterface, that.paymentInterface)
                 .append(method, that.method)
                 .append(name, that.name)
+                .append(paymentInterface, that.paymentInterface)
+                .append(method, that.method)
+                .append(name, that.name)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(paymentInterface).append(method).append(name).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("paymentInterface", paymentInterface)
+                .append("method", method)
+                .append("name", name)
+                .build();
     }
 
 }

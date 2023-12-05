@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * OrderSetParcelMeasurementsAction
+ *  <p>Produces the ParcelMeasurementsUpdated Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetParcelMeasurementsActionImpl implements OrderSetParcelMeasurementsAction, ModelBase {
@@ -57,7 +59,8 @@ public class OrderSetParcelMeasurementsActionImpl implements OrderSetParcelMeasu
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelId() {
@@ -65,7 +68,8 @@ public class OrderSetParcelMeasurementsActionImpl implements OrderSetParcelMeasu
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelKey() {
@@ -73,7 +77,7 @@ public class OrderSetParcelMeasurementsActionImpl implements OrderSetParcelMeasu
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
@@ -106,6 +110,10 @@ public class OrderSetParcelMeasurementsActionImpl implements OrderSetParcelMeasu
                 .append(parcelId, that.parcelId)
                 .append(parcelKey, that.parcelKey)
                 .append(measurements, that.measurements)
+                .append(action, that.action)
+                .append(parcelId, that.parcelId)
+                .append(parcelKey, that.parcelKey)
+                .append(measurements, that.measurements)
                 .isEquals();
     }
 
@@ -116,6 +124,15 @@ public class OrderSetParcelMeasurementsActionImpl implements OrderSetParcelMeasu
                 .append(parcelKey)
                 .append(measurements)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("parcelId", parcelId)
+                .append("parcelKey", parcelKey)
+                .append("measurements", measurements)
+                .build();
     }
 
 }

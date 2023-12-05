@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the given Price scope conflicts with the Price scope of an existing Standalone Price. Every Standalone Price associated with the same SKU must have a distinct combination of currency, country, Customer Group, Channel, and validity periods (<code>validFrom</code> and <code>validUntil</code>).</p>
@@ -230,6 +232,17 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
                 .append(channel, that.channel)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(conflictingStandalonePrice, that.conflictingStandalonePrice)
+                .append(sku, that.sku)
+                .append(currency, that.currency)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
                 .isEquals();
     }
 
@@ -247,6 +260,22 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
                 .append(validFrom)
                 .append(validUntil)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("conflictingStandalonePrice", conflictingStandalonePrice)
+                .append("sku", sku)
+                .append("currency", currency)
+                .append("country", country)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .build();
     }
 
 }

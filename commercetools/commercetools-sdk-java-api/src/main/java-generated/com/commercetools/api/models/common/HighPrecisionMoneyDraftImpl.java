@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Money draft object to store an amount of a fraction of the smallest indivisible unit of the specified currency.</p>
@@ -71,7 +73,7 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
     }
 
     /**
-     *
+     *  <p>Determines the type of money used.</p>
      */
 
     public com.commercetools.api.models.common.MoneyType getType() {
@@ -125,6 +127,11 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
                 .append(type, that.type)
                 .append(fractionDigits, that.fractionDigits)
                 .append(preciseAmount, that.preciseAmount)
+                .append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
+                .append(preciseAmount, that.preciseAmount)
                 .isEquals();
     }
 
@@ -136,6 +143,16 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
                 .append(fractionDigits)
                 .append(preciseAmount)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("centAmount", centAmount)
+                .append("currencyCode", currencyCode)
+                .append("type", type)
+                .append("fractionDigits", fractionDigits)
+                .append("preciseAmount", preciseAmount)
+                .build();
     }
 
 }

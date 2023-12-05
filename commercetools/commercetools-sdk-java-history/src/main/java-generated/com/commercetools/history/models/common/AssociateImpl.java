@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Associate
@@ -83,12 +85,22 @@ public class AssociateImpl implements Associate, ModelBase {
 
         return new EqualsBuilder().append(associateRoleAssignments, that.associateRoleAssignments)
                 .append(customer, that.customer)
+                .append(associateRoleAssignments, that.associateRoleAssignments)
+                .append(customer, that.customer)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(associateRoleAssignments).append(customer).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+                .append("associateRoleAssignments", associateRoleAssignments)
+                .append("customer", customer)
+                .build();
     }
 
 }

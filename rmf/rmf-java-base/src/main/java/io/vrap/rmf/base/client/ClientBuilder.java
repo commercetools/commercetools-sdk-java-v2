@@ -40,6 +40,8 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     private Supplier<ErrorMiddleware> errorMiddleware;
     private Supplier<OAuthMiddleware> oAuthMiddleware;
     private Supplier<RetryRequestMiddleware> retryMiddleware;
+    private PolicyBuilder policyBuilder;
+    private Supplier<PolicyMiddleware> policyMiddleware;
     private Supplier<QueueRequestMiddleware> queueMiddleware;
     private Supplier<Middleware> correlationIdMiddleware;
     private InternalLoggerMiddleware internalLoggerMiddleware;
@@ -97,8 +99,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     private ClientBuilder(final HandlerStack stack) {
         this.stack = () -> stack;
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
+        this.serializer = ResponseSerializer::of;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
         this.useAuthCircuitBreaker = false;
         this.authRetries = 1;
@@ -108,8 +109,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         this.httpClient = HttpClientSupplier.of(new ForkJoinPool()).get();
         this.oauthHttpClient = httpClient;
         this.stack = stackSupplier();
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
+        this.serializer = ResponseSerializer::of;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
         this.useAuthCircuitBreaker = false;
         this.authRetries = 1;
@@ -119,8 +119,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         this.httpClient = HttpClientSupplier.of(httpClientExecutorService).get();
         this.oauthHttpClient = httpClient;
         this.stack = stackSupplier();
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
+        this.serializer = ResponseSerializer::of;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
         this.useAuthCircuitBreaker = false;
         this.authRetries = 1;
@@ -130,8 +129,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         this.httpClient = httpClient;
         this.oauthHttpClient = HttpClientSupplier.of(new ForkJoinPool()).get();
         this.stack = stackSupplier();
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
+        this.serializer = ResponseSerializer::of;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
         this.authRetries = 1;
     }
@@ -140,8 +138,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         this.httpClient = httpClient;
         this.oauthHttpClient = httpClient;
         this.stack = stackSupplier();
-        ResponseSerializer serializer = ResponseSerializer.of();
-        this.serializer = () -> serializer;
+        this.serializer = ResponseSerializer::of;
         this.httpExceptionFactory = () -> HttpExceptionFactory.of(this.serializer.get());
         this.authRetries = 1;
     }
@@ -158,6 +155,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             Optional.ofNullable(internalLoggerMiddleware).map(middlewareStack::add);
             Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);
             Optional.ofNullable(oAuthMiddleware).map(m -> middlewareStack.add(m.get()));
+            Optional.ofNullable(policyMiddleware).map(m -> middlewareStack.add(m.get()));
             Optional.ofNullable(retryMiddleware).map(m -> middlewareStack.add(m.get()));
             Optional.ofNullable(queueMiddleware).map(m -> middlewareStack.add(m.get()));
             Optional.ofNullable(correlationIdMiddleware).map(m -> middlewareStack.add(m.get()));
@@ -317,7 +315,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      */
     public ClientBuilder defaultClient(final URI apiBaseUrl) {
         return withApiBaseUrl(apiBaseUrl).withErrorMiddleware()
-                .withSerializer(ResponseSerializer.of())
+                .withSerializer(ResponseSerializer::of)
                 .withInternalLoggerFactory((request, topic) -> InternalLogger.getLogger(COMMERCETOOLS + "." + topic))
                 .withUserAgentSupplier(ClientBuilder::buildDefaultUserAgent)
                 .addAcceptGZipMiddleware();
@@ -403,7 +401,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      */
     @Deprecated
     public ClientBuilder withClientCredentials(final ClientCredentials credentials, final String tokenEndpoint,
-            VrapHttpClient httpClient) {
+            final VrapHttpClient httpClient) {
         return withClientCredentialsFlow(credentials, tokenEndpoint, httpClient);
     }
 
@@ -425,7 +423,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,
-            Supplier<HandlerStack> httpClientSupplier) {
+            final Supplier<HandlerStack> httpClientSupplier) {
         return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClientSupplier);
     }
 
@@ -437,14 +435,14 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final URI tokenEndpoint,
-            VrapHttpClient httpClient) {
+            final VrapHttpClient httpClient) {
         return withClientCredentialsFlow(credentials, tokenEndpoint.toString(), httpClient);
     }
 
     private TokenSupplier createClientCredentialsTokenSupplier(final ClientCredentials credentials,
-            final String tokenEndpoint, final VrapHttpClient httpClient) {
+            final String tokenEndpoint, final VrapHttpClient httpClient, final ResponseSerializer serializer) {
         return new ClientCredentialsTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),
-            credentials.getScopes(), tokenEndpoint, httpClient);
+            credentials.getScopes(), tokenEndpoint, httpClient, serializer);
     }
 
     /**
@@ -465,9 +463,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
-            Supplier<HandlerStack> httpClientSupplier) {
-        return withTokenSupplier(() -> createInMemoryTokenSupplier(
-            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));
+            final Supplier<HandlerStack> httpClientSupplier) {
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(createClientCredentialsTokenSupplier(credentials,
+            tokenEndpoint, httpClientSupplier.get(), serializer.get())));
     }
 
     /**
@@ -478,9 +476,23 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
-            VrapHttpClient httpClient) {
+            final VrapHttpClient httpClient) {
         return withTokenSupplier(() -> createInMemoryTokenSupplier(
-            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient)));
+            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient, serializer.get())));
+    }
+
+    /**
+     * configure the client to use client credentials flow
+     * @param credentials {@link ClientCredentials} to be used for authentication
+     * @param tokenEndpoint URI to be used for authentication
+     * @param httpClient {@link VrapHttpClient} to use for authentication
+     * @param serializer {@link ResponseSerializer} to be used for token deserialization
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withClientCredentialsFlow(final ClientCredentials credentials, final String tokenEndpoint,
+            final VrapHttpClient httpClient, final ResponseSerializer serializer) {
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient, serializer)));
     }
 
     /**
@@ -510,9 +522,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
-            Supplier<HandlerStack> httpClientSupplier) {
-        return withTokenSupplier(() -> createInMemoryTokenSupplier(
-            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClientSupplier.get())));
+            final Supplier<HandlerStack> httpClientSupplier) {
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(createAnonymousSessionTokenSupplier(credentials,
+            tokenEndpoint, httpClientSupplier.get(), serializer.get())));
     }
 
     /**
@@ -523,15 +535,29 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
-            VrapHttpClient httpClient) {
+            final VrapHttpClient httpClient) {
         return withTokenSupplier(() -> createInMemoryTokenSupplier(
-            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient)));
+            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient, serializer.get())));
+    }
+
+    /**
+     * configure the client to use anonymous session flow
+     * @param credentials {@link ClientCredentials} to be used for authentication
+     * @param tokenEndpoint URI to be used for authentication
+     * @param httpClient {@link VrapHttpClient} to use for authentication
+     * @param serializer {@link ResponseSerializer} to be used for token deserialization
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withAnonymousSessionFlow(final ClientCredentials credentials, final String tokenEndpoint,
+            final VrapHttpClient httpClient, final ResponseSerializer serializer) {
+        return withTokenSupplier(() -> createInMemoryTokenSupplier(
+            createAnonymousSessionTokenSupplier(credentials, tokenEndpoint, httpClient, serializer)));
     }
 
     private TokenSupplier createAnonymousSessionTokenSupplier(final ClientCredentials credentials,
-            final String tokenEndpoint, final VrapHttpClient httpClient) {
+            final String tokenEndpoint, final VrapHttpClient httpClient, final ResponseSerializer serializer) {
         return new AnonymousSessionTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),
-            credentials.getScopes(), tokenEndpoint, httpClient);
+            credentials.getScopes(), tokenEndpoint, httpClient, serializer);
     }
 
     /**
@@ -558,9 +584,10 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
-            final String refreshTokenEndpoint, final TokenStorage storage, Supplier<HandlerStack> httpClientSupplier) {
+            final String refreshTokenEndpoint, final TokenStorage storage,
+            final Supplier<HandlerStack> httpClientSupplier) {
         return withTokenSupplier(() -> createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
-            refreshTokenEndpoint, storage, httpClientSupplier.get()));
+            refreshTokenEndpoint, storage, httpClientSupplier.get(), serializer.get()));
     }
 
     /**
@@ -573,12 +600,29 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
-            final String refreshTokenEndpoint, final TokenStorage storage, VrapHttpClient httpClient) {
+            final String refreshTokenEndpoint, final TokenStorage storage, final VrapHttpClient httpClient) {
         return withTokenSupplier(() -> createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
-            refreshTokenEndpoint, storage, httpClient));
+            refreshTokenEndpoint, storage, httpClient, serializer.get()));
     }
 
-    private TokenSupplier createInMemoryTokenSupplier(TokenSupplier tokenSupplier) {
+    /**
+     * configure the client to use anonymous & refresh token flow
+     * @param credentials {@link ClientCredentials} to be used for authentication
+     * @param anonTokenEndpoint URI to be used for anonymous token authentication
+     * @param refreshTokenEndpoint URI to be used for refresh token authentication
+     * @param storage {@link TokenStorage} for the authentication tokens
+     * @param httpClient {@link VrapHttpClient} to be used for authentication
+     * @param serializer {@link ResponseSerializer} to be used for token deserialization
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withAnonymousRefreshFlow(final ClientCredentials credentials, final String anonTokenEndpoint,
+            final String refreshTokenEndpoint, final TokenStorage storage, final VrapHttpClient httpClient,
+            final ResponseSerializer serializer) {
+        return withTokenSupplier(() -> createAnonymousRefreshFlowSupplier(credentials, anonTokenEndpoint,
+            refreshTokenEndpoint, storage, httpClient, serializer));
+    }
+
+    private TokenSupplier createInMemoryTokenSupplier(final TokenSupplier tokenSupplier) {
         return Optional.ofNullable(oauthExecutorService)
                 .map(executorService -> new InMemoryTokenSupplier(executorService.get(), tokenSupplier))
                 .orElse(new InMemoryTokenSupplier(tokenSupplier));
@@ -586,21 +630,22 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     private TokenSupplier createAnonymousRefreshFlowSupplier(final ClientCredentials credentials,
             final String anonTokenEndpoint, final String refreshTokenEndpoint, final TokenStorage tokenStorage,
-            final VrapHttpClient httpClient) {
+            final VrapHttpClient httpClient, final ResponseSerializer serializer) {
         final RefreshFlowTokenSupplier refreshFlowTokenSupplier = createRefreshFlowSupplier(credentials,
-            refreshTokenEndpoint, tokenStorage, httpClient);
+            refreshTokenEndpoint, tokenStorage, httpClient, serializer);
 
         final AnonymousFlowTokenSupplier anonymousFlowTokenSupplier = new AnonymousFlowTokenSupplier(
             credentials.getClientId(), credentials.getClientSecret(), credentials.getScopes(), anonTokenEndpoint,
-            refreshFlowTokenSupplier, httpClient);
+            refreshFlowTokenSupplier, httpClient, serializer);
 
         return new TokenStorageSupplier(tokenStorage, anonymousFlowTokenSupplier);
     }
 
     private RefreshFlowTokenSupplier createRefreshFlowSupplier(final ClientCredentials credentials,
-            final String tokenEndpoint, final TokenStorage tokenStorage, final VrapHttpClient httpClient) {
+            final String tokenEndpoint, final TokenStorage tokenStorage, final VrapHttpClient httpClient,
+            final ResponseSerializer serializer) {
         return new RefreshFlowTokenSupplier(credentials.getClientId(), credentials.getClientSecret(), tokenEndpoint,
-            tokenStorage, httpClient);
+            tokenStorage, httpClient, serializer);
     }
 
     /**
@@ -626,10 +671,10 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
-            final String password, final String tokenEndpoint, Supplier<HandlerStack> httpClientSupplier) {
+            final String password, final String tokenEndpoint, final Supplier<HandlerStack> httpClientSupplier) {
         return withTokenSupplier(
             () -> createInMemoryTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password,
-                tokenEndpoint, httpClientSupplier.get())));
+                tokenEndpoint, httpClientSupplier.get(), serializer.get())));
     }
 
     /**
@@ -642,15 +687,35 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @return ClientBuilder instance
      */
     public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
-            final String password, final String tokenEndpoint, VrapHttpClient httpClient) {
-        return withTokenSupplier(() -> createInMemoryTokenSupplier(
-            createGlobalCustomerPasswordTokenSupplier(credentials, email, password, tokenEndpoint, httpClient)));
+            final String password, final String tokenEndpoint, final VrapHttpClient httpClient) {
+        return withTokenSupplier(
+            () -> createInMemoryTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password,
+                tokenEndpoint, httpClient, serializer.get())));
+    }
+
+    /**
+     * configure the client to use password flow
+     * @param credentials {@link ClientCredentials} to be used for authentication
+     * @param tokenEndpoint URI to be used for password flow authentication
+     * @param email customer email
+     * @param password customer password
+     * @param httpClient {@link VrapHttpClient} to use for authentication
+     * @param serializer {@link ResponseSerializer} to be used for token deserialization
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withGlobalCustomerPasswordFlow(final ClientCredentials credentials, final String email,
+            final String password, final String tokenEndpoint, final VrapHttpClient httpClient,
+            final ResponseSerializer serializer) {
+        return withTokenSupplier(
+            () -> createInMemoryTokenSupplier(createGlobalCustomerPasswordTokenSupplier(credentials, email, password,
+                tokenEndpoint, httpClient, serializer)));
     }
 
     private TokenSupplier createGlobalCustomerPasswordTokenSupplier(final ClientCredentials credentials,
-            final String email, final String password, final String tokenEndpoint, final VrapHttpClient httpClient) {
+            final String email, final String password, final String tokenEndpoint, final VrapHttpClient httpClient,
+            final ResponseSerializer serializer) {
         return new GlobalCustomerPasswordTokenSupplier(credentials.getClientId(), credentials.getClientSecret(), email,
-            password, credentials.getScopes(), tokenEndpoint, httpClient);
+            password, credentials.getScopes(), tokenEndpoint, httpClient, serializer);
     }
 
     /**
@@ -753,9 +818,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     /**
      * add middleware to retry failed requests
-     * @param retryMiddleware {@link RetryMiddleware} to be used
+     * @param retryMiddleware {@link RetryRequestMiddleware} to be used
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Supplier<RetryRequestMiddleware> retryMiddleware) {
         this.retryMiddleware = retryMiddleware;
         return this;
@@ -763,9 +830,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
 
     /**
      * add middleware to retry failed requests
-     * @param retryMiddleware {@link RetryMiddleware} to be used
+     * @param retryMiddleware {@link RetryRequestMiddleware} to be used
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final RetryRequestMiddleware retryMiddleware) {
         return withRetryMiddleware(() -> retryMiddleware);
     }
@@ -775,9 +844,11 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * an incremental backoff strategy is applied
      * @param maxRetries number of retries before giving uo
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)}} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries));
+        return withPolicies(policies -> policies.withRetry(retry -> retry.maxRetries(maxRetries)));
     }
 
     /**
@@ -785,9 +856,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRetries number of retries before giving uo
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)}} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, statusCodes));
+        return withPolicies(
+            policies -> policies.withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes)));
     }
 
     /**
@@ -796,10 +870,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @param failures {@link Throwable}s to be retried
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, statusCodes, failures));
+        return withPolicies(policies -> policies
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures)));
     }
 
     /**
@@ -811,13 +888,18 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param failures {@link Throwable}s to be retried
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(
-            RetryRequestMiddleware.of(maxRetries, delay, maxDelay, RetryRequestMiddleware.handleFailures(failures)
-                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+        return withPolicies(policies -> policies.withRetry(retry -> retry.maxRetries(maxRetries)
+                .initialDelay(delay)
+                .maxDelay(maxDelay)
+                .statusCodes(statusCodes)
+                .failures(failures)
+                .options(fn)));
     }
 
     /**
@@ -827,10 +909,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxDelay the maximum delay between each retry
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(maxRetries, delay, maxDelay, fn));
+        return withPolicies(policies -> policies
+                .withRetry(retry -> retry.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn)));
     }
 
     /**
@@ -838,9 +923,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param executorService {@link ExecutorService} to be used for the retry handler
      * @param maxRetries number of retries before giving uo
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries));
+        return withPolicies(
+            policies -> policies.withScheduler(executorService).withRetry(retry -> retry.maxRetries(maxRetries)));
     }
 
     /**
@@ -849,10 +937,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRetries number of retries before giving uo
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes)));
     }
 
     /**
@@ -862,10 +953,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @param failures {@link Throwable}s to be retried
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes, failures));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures)));
     }
 
     /**
@@ -878,13 +972,19 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param failures {@link Throwable}s to be retried
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay,
-            RetryRequestMiddleware.handleFailures(failures)
-                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries)
+                        .initialDelay(delay)
+                        .maxDelay(maxDelay)
+                        .statusCodes(statusCodes)
+                        .failures(failures)
+                        .options(fn)));
     }
 
     /**
@@ -895,10 +995,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxDelay the maximum delay between each retry
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, fn));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn)));
     }
 
     /**
@@ -906,9 +1009,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param executorService {@link ScheduledExecutorService} to be used for the retry handler
      * @param maxRetries number of retries before giving uo
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries));
+        return withPolicies(
+            policies -> policies.withScheduler(executorService).withRetry(retry -> retry.maxRetries(maxRetries)));
     }
 
     /**
@@ -917,10 +1023,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRetries number of retries before giving uo
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes)));
     }
 
     /**
@@ -930,10 +1039,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @param failures {@link Throwable}s to be retried
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, statusCodes, failures));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures)));
     }
 
     /**
@@ -946,13 +1058,19 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param failures {@link Throwable}s to be retried
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay,
-            RetryRequestMiddleware.handleFailures(failures)
-                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries)
+                        .initialDelay(delay)
+                        .maxDelay(maxDelay)
+                        .statusCodes(statusCodes)
+                        .failures(failures)
+                        .options(fn)));
     }
 
     /**
@@ -963,10 +1081,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxDelay the maximum delay between each retry
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final ScheduledExecutorService executorService, final int maxRetries,
             final long delay, final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(executorService, maxRetries, delay, maxDelay, fn));
+        return withPolicies(policies -> policies.withScheduler(executorService)
+                .withRetry(retry -> retry.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn)));
     }
 
     /**
@@ -974,9 +1095,12 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param scheduler {@link Scheduler} to be used for the retry handler
      * @param maxRetries number of retries before giving uo
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries));
+        return withPolicies(
+            policies -> policies.withScheduler(scheduler).withRetry(retry -> retry.maxRetries(maxRetries)));
     }
 
     /**
@@ -985,10 +1109,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRetries number of retries before giving uo
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries,
             List<Integer> statusCodes) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, statusCodes));
+        return withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes)));
     }
 
     /**
@@ -998,10 +1125,13 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param statusCodes HTTP status codes to retry a failed request e.g. 500 & 503
      * @param failures {@link Throwable}s to be retried
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, statusCodes, failures));
+        return withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(retry -> retry.maxRetries(maxRetries).statusCodes(statusCodes).failures(failures)));
     }
 
     /**
@@ -1014,13 +1144,19 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param failures {@link Throwable}s to be retried
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,
             final long maxDelay, List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
             final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, delay, maxDelay,
-            RetryRequestMiddleware.handleFailures(failures)
-                    .andThen(RetryRequestMiddleware.handleStatusCodes(statusCodes).andThen(fn))));
+        return withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(retry -> retry.maxRetries(maxRetries)
+                        .initialDelay(delay)
+                        .maxDelay(maxDelay)
+                        .statusCodes(statusCodes)
+                        .failures(failures)
+                        .options(fn)));
     }
 
     /**
@@ -1031,17 +1167,22 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxDelay the maximum delay between each retry
      * @param fn additional configuration for the {@link dev.failsafe.RetryPolicy} to be applied
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withRetryMiddleware(final Scheduler scheduler, final int maxRetries, final long delay,
             final long maxDelay, final FailsafeRetryPolicyBuilderOptions fn) {
-        return withRetryMiddleware(RetryRequestMiddleware.of(scheduler, maxRetries, delay, maxDelay, fn));
+        return withPolicies(policies -> policies.withScheduler(scheduler)
+                .withRetry(retry -> retry.maxRetries(maxRetries).initialDelay(delay).maxDelay(maxDelay).options(fn)));
     }
 
     /**
      * add middleware to limit the concurrent requests to be executed
      * @param queueMiddleware {@link QueueRequestMiddleware} to be used
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final Supplier<QueueRequestMiddleware> queueMiddleware) {
         this.queueMiddleware = queueMiddleware;
         return this;
@@ -1051,7 +1192,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * add middleware to limit the concurrent requests to be executed
      * @param queueMiddleware {@link QueueRequestMiddleware} to be used
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final QueueRequestMiddleware queueMiddleware) {
         return withQueueMiddleware(() -> queueMiddleware);
     }
@@ -1061,7 +1204,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRequests maximum number of concurrent requests
      * @param maxWaitTime maximum time to wait before giving up
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final int maxRequests, final Duration maxWaitTime) {
         return withQueueMiddleware(() -> QueueRequestMiddleware.of(maxRequests, maxWaitTime));
     }
@@ -1072,7 +1217,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRequests maximum number of concurrent requests
      * @param maxWaitTime maximum time to wait before giving up
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final Scheduler scheduler, final int maxRequests,
             final Duration maxWaitTime) {
         return withQueueMiddleware(() -> QueueRequestMiddleware.of(scheduler, maxRequests, maxWaitTime));
@@ -1084,7 +1231,9 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRequests maximum number of concurrent requests
      * @param maxWaitTime maximum time to wait before giving up
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final ScheduledExecutorService executorService, final int maxRequests,
             final Duration maxWaitTime) {
         return withQueueMiddleware(() -> QueueRequestMiddleware.of(executorService, maxRequests, maxWaitTime));
@@ -1096,10 +1245,53 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
      * @param maxRequests maximum number of concurrent requests
      * @param maxWaitTime maximum time to wait before giving up
      * @return ClientBuilder instance
+     * @deprecated use {@link #withPolicies(Function)} instead
      */
+    @Deprecated
     public ClientBuilder withQueueMiddleware(final ExecutorService executorService, final int maxRequests,
             final Duration maxWaitTime) {
         return withQueueMiddleware(() -> QueueRequestMiddleware.of(executorService, maxRequests, maxWaitTime));
+    }
+
+    /**
+     * add middleware for safe handling of failed requests
+     * @param policyBuilder the policy builder
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withPolicies(PolicyBuilder policyBuilder) {
+        this.policyBuilder = policyBuilder;
+        this.policyMiddleware = policyBuilder::build;
+        return this;
+    }
+
+    /**
+     * add middleware for safe handling of failed requests
+     * @param fn the policy builder function
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withPolicies(Function<PolicyBuilder, PolicyBuilder> fn) {
+        this.policyBuilder = fn.apply(Optional.ofNullable(policyBuilder).orElse(PolicyBuilder.of()));
+        this.policyMiddleware = policyBuilder::build;
+        return this;
+    }
+
+    /**
+     * add middleware for safe handling of failed requests
+     * @param policyMiddleware {@link PolicyMiddleware} to be used
+     * @return ClientBuilder
+     */
+    public ClientBuilder withPolicyMiddleware(PolicyMiddleware policyMiddleware) {
+        return withPolicyMiddleware(() -> policyMiddleware);
+    }
+
+    /**
+     * add middleware for safe handling of failed requests
+     * @param policyMiddleware {@link PolicyMiddleware} to be used
+     * @return ClientBuilder
+     */
+    public ClientBuilder withPolicyMiddleware(Supplier<PolicyMiddleware> policyMiddleware) {
+        this.policyMiddleware = policyMiddleware;
+        return this;
     }
 
     /**
@@ -1211,7 +1403,7 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     /**
-     * @param userAgentSupplier user agent to be send with the requests
+     * @param userAgentSupplier user agent to be sent with the requests
      * @return ClientBuilder instance
      */
     public ClientBuilder withUserAgentSupplier(final Supplier<String> userAgentSupplier) {

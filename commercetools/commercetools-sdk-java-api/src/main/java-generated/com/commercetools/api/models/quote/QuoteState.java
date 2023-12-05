@@ -43,11 +43,6 @@ public interface QuoteState extends JsonEnum {
     */
     QuoteState ACCEPTED = QuoteStateEnum.ACCEPTED;
     /**
-    	<p>A state indicating a circumstance - other than the <a href="/../api/quotes-overview#buyer">Buyer</a> declining - that led to the Quote failing.</p>
-
-    */
-    QuoteState FAILED = QuoteStateEnum.FAILED;
-    /**
     	<p>A state indicating that the <a href="/../api/quotes-overview#seller">Seller</a> has withdrawn the Quote before the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted it.</p>
 
     */
@@ -81,11 +76,6 @@ public interface QuoteState extends JsonEnum {
          * Accepted
          */
         ACCEPTED("Accepted"),
-
-        /**
-         * Failed
-         */
-        FAILED("Failed"),
 
         /**
          * Withdrawn

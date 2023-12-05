@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ExtensionError
@@ -129,6 +131,11 @@ public class ExtensionErrorImpl implements ExtensionError, ModelBase {
                 .append(extensionId, that.extensionId)
                 .append(extensionKey, that.extensionKey)
                 .append(values, that.values)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(extensionId, that.extensionId)
+                .append(extensionKey, that.extensionKey)
+                .append(values, that.values)
                 .isEquals();
     }
 
@@ -140,6 +147,16 @@ public class ExtensionErrorImpl implements ExtensionError, ModelBase {
                 .append(extensionKey)
                 .append(values)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("extensionId", extensionId)
+                .append("extensionKey", extensionKey)
+                .append("values", values)
+                .build();
     }
 
 }

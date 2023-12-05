@@ -36,12 +36,6 @@ public class ProductSelectionDraftQueryBuilderDsl {
             ProductSelectionDraftQueryBuilderDsl::of);
     }
 
-    public StringComparisonPredicateBuilder<ProductSelectionDraftQueryBuilderDsl> type() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("type")),
-            p -> new CombinationQueryPredicate<>(p, ProductSelectionDraftQueryBuilderDsl::of));
-    }
-
     public StringComparisonPredicateBuilder<ProductSelectionDraftQueryBuilderDsl> mode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("mode")),

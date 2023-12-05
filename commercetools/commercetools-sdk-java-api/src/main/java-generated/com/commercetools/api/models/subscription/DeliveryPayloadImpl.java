@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>All payloads for the PlatformFormat share these common fields.</p>
@@ -107,6 +109,10 @@ public class DeliveryPayloadImpl implements DeliveryPayload, ModelBase {
                 .append(notificationType, that.notificationType)
                 .append(resource, that.resource)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .isEquals();
     }
 
@@ -117,6 +123,15 @@ public class DeliveryPayloadImpl implements DeliveryPayload, ModelBase {
                 .append(resource)
                 .append(resourceUserProvidedIdentifiers)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("projectKey", projectKey)
+                .append("notificationType", notificationType)
+                .append("resource", resource)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .build();
     }
 
 }

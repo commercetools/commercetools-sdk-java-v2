@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * QuoteDraft
@@ -149,6 +151,12 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
                 .append(stagedQuoteStateToSent, that.stagedQuoteStateToSent)
                 .append(state, that.state)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(stagedQuote, that.stagedQuote)
+                .append(stagedQuoteVersion, that.stagedQuoteVersion)
+                .append(stagedQuoteStateToSent, that.stagedQuoteStateToSent)
+                .append(state, that.state)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -161,6 +169,17 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
                 .append(state)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("stagedQuote", stagedQuote)
+                .append("stagedQuoteVersion", stagedQuoteVersion)
+                .append("stagedQuoteStateToSent", stagedQuoteStateToSent)
+                .append("state", state)
+                .append("custom", custom)
+                .build();
     }
 
 }

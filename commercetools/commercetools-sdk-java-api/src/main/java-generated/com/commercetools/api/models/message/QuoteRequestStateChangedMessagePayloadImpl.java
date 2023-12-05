@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Change Quote Request State update action.</p>
@@ -92,6 +94,9 @@ public class QuoteRequestStateChangedMessagePayloadImpl implements QuoteRequestS
         return new EqualsBuilder().append(type, that.type)
                 .append(quoteRequestState, that.quoteRequestState)
                 .append(oldQuoteRequestState, that.oldQuoteRequestState)
+                .append(type, that.type)
+                .append(quoteRequestState, that.quoteRequestState)
+                .append(oldQuoteRequestState, that.oldQuoteRequestState)
                 .isEquals();
     }
 
@@ -101,6 +106,14 @@ public class QuoteRequestStateChangedMessagePayloadImpl implements QuoteRequestS
                 .append(quoteRequestState)
                 .append(oldQuoteRequestState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("quoteRequestState", quoteRequestState)
+                .append("oldQuoteRequestState", oldQuoteRequestState)
+                .build();
     }
 
 }

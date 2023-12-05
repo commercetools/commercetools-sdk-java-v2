@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProductTypeChangeLabelAction
@@ -89,12 +91,23 @@ public class ProductTypeChangeLabelActionImpl implements ProductTypeChangeLabelA
         return new EqualsBuilder().append(action, that.action)
                 .append(attributeName, that.attributeName)
                 .append(label, that.label)
+                .append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(label, that.label)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(attributeName).append(label).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("attributeName", attributeName)
+                .append("label", label)
+                .build();
     }
 
 }

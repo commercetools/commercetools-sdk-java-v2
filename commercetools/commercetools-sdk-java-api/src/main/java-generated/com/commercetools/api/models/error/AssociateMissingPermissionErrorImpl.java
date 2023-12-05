@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when an Associate is missing a Permission on a B2B resource.</p>
@@ -171,6 +173,13 @@ public class AssociateMissingPermissionErrorImpl implements AssociateMissingPerm
                 .append(businessUnit, that.businessUnit)
                 .append(associateOnBehalf, that.associateOnBehalf)
                 .append(permissions, that.permissions)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(associate, that.associate)
+                .append(businessUnit, that.businessUnit)
+                .append(associateOnBehalf, that.associateOnBehalf)
+                .append(permissions, that.permissions)
                 .isEquals();
     }
 
@@ -184,6 +193,18 @@ public class AssociateMissingPermissionErrorImpl implements AssociateMissingPerm
                 .append(associateOnBehalf)
                 .append(permissions)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("associate", associate)
+                .append("businessUnit", businessUnit)
+                .append("associateOnBehalf", associateOnBehalf)
+                .append("permissions", permissions)
+                .build();
     }
 
 }

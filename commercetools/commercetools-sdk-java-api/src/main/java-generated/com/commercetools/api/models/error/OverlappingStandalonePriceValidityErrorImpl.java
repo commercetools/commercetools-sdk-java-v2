@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a given Price validity period conflicts with an existing one. Every Standalone Price associated with the same SKU and with the same combination of currency, country, Customer Group, and Channel, must have non-overlapping validity periods (<code>validFrom</code> and <code>validUntil</code>).</p>
@@ -264,6 +266,19 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
                 .append(validUntil, that.validUntil)
                 .append(conflictingValidFrom, that.conflictingValidFrom)
                 .append(conflictingValidUntil, that.conflictingValidUntil)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(conflictingStandalonePrice, that.conflictingStandalonePrice)
+                .append(sku, that.sku)
+                .append(currency, that.currency)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(conflictingValidFrom, that.conflictingValidFrom)
+                .append(conflictingValidUntil, that.conflictingValidUntil)
                 .isEquals();
     }
 
@@ -283,6 +298,24 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
                 .append(conflictingValidFrom)
                 .append(conflictingValidUntil)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("conflictingStandalonePrice", conflictingStandalonePrice)
+                .append("sku", sku)
+                .append("currency", currency)
+                .append("country", country)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("conflictingValidFrom", conflictingValidFrom)
+                .append("conflictingValidUntil", conflictingValidUntil)
+                .build();
     }
 
 }

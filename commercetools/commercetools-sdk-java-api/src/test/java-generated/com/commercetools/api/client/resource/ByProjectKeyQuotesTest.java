@@ -41,7 +41,7 @@ public class ByProjectKeyQuotesTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyQuotesTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -92,6 +92,13 @@ public class ByProjectKeyQuotesTest {
                         "test_projectKey/quotes", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/quotes?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().head().createHttpRequest(), "head",
+                        "test_projectKey/quotes", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .quotes()
                         .post(com.commercetools.api.models.quote.QuoteDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/quotes?expand=expand", },
@@ -115,6 +122,8 @@ public class ByProjectKeyQuotesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").quotes().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .quotes()
                         .post(com.commercetools.api.models.quote.QuoteDraft.of())

@@ -27,15 +27,6 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     private String key;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
-    @Nullable
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
-
-    @Nullable
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-
-    @Nullable
     private String productId;
 
     @Nullable
@@ -51,6 +42,9 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     private java.time.ZonedDateTime addedAt;
 
     @Nullable
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
+    @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     @Nullable
@@ -60,7 +54,16 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     @Nullable
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+
+    @Nullable
+    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
+
+    @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
+
+    @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
      *  <p>User-defined unique identifier of the LineItem.</p>
@@ -74,43 +77,66 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     * @param builder function to build the custom value
+     *  <p><code>id</code> of the published Product.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @param productId value to be set
      * @return Builder
      */
 
-    public StagedOrderAddLineItemActionBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+    public StagedOrderAddLineItemActionBuilder productId(@Nullable final String productId) {
+        this.productId = productId;
         return this;
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     * @param builder function to build the custom value
+     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @param variantId value to be set
      * @return Builder
      */
 
-    public StagedOrderAddLineItemActionBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+    public StagedOrderAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
+        this.variantId = variantId;
         return this;
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     * @param custom value to be set
+     *  <p>SKU of the ProductVariant.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @param sku value to be set
      * @return Builder
      */
 
-    public StagedOrderAddLineItemActionBuilder custom(
-            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
+    public StagedOrderAddLineItemActionBuilder sku(@Nullable final String sku) {
+        this.sku = sku;
         return this;
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Quantity of the Product Variant to add to the Cart.</p>
+     * @param quantity value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     * @param addedAt value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
+        this.addedAt = addedAt;
+        return this;
+    }
+
+    /**
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -124,7 +150,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -137,7 +163,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -149,99 +175,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @param builder function to build the externalTaxRate value
-     * @return Builder
-     */
-
-    public StagedOrderAddLineItemActionBuilder externalTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
-        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @param builder function to build the externalTaxRate value
-     * @return Builder
-     */
-
-    public StagedOrderAddLineItemActionBuilder withExternalTaxRate(
-            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
-        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @param externalTaxRate value to be set
-     * @return Builder
-     */
-
-    public StagedOrderAddLineItemActionBuilder externalTaxRate(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-        this.externalTaxRate = externalTaxRate;
-        return this;
-    }
-
-    /**
-     * set the value to the productId
-     * @param productId value to be set
-     * @return Builder
-     */
-
-    public StagedOrderAddLineItemActionBuilder productId(@Nullable final String productId) {
-        this.productId = productId;
-        return this;
-    }
-
-    /**
-     * set the value to the variantId
-     * @param variantId value to be set
-     * @return Builder
-     */
-
-    public StagedOrderAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
-        this.variantId = variantId;
-        return this;
-    }
-
-    /**
-     * set the value to the sku
-     * @param sku value to be set
-     * @return Builder
-     */
-
-    public StagedOrderAddLineItemActionBuilder sku(@Nullable final String sku) {
-        this.sku = sku;
-        return this;
-    }
-
-    /**
-     * set the value to the quantity
-     * @param quantity value to be set
-     * @return Builder
-     */
-
-    public StagedOrderAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
-        this.quantity = quantity;
-        return this;
-    }
-
-    /**
-     * set the value to the addedAt
-     * @param addedAt value to be set
-     * @return Builder
-     */
-
-    public StagedOrderAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
-        this.addedAt = addedAt;
-        return this;
-    }
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -254,7 +188,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -266,7 +200,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -278,7 +212,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -290,7 +224,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -302,7 +236,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -314,7 +248,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * set the value to the externalTotalPrice using the builder function
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -328,7 +262,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * set the value to the externalTotalPrice using the builder function
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -341,7 +275,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * set the value to the externalTotalPrice
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -353,7 +287,56 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder externalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     * @param externalTaxRate value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder externalTaxRate(
+            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+        this.externalTaxRate = externalTaxRate;
+        return this;
+    }
+
+    /**
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     * @param inventoryMode value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder inventoryMode(
+            @Nullable final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
+        return this;
+    }
+
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -366,7 +349,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Container for Line Item-specific addresses.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -378,7 +361,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Container for Line Item-specific addresses.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -386,6 +369,42 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     public StagedOrderAddLineItemActionBuilder shippingDetails(
             @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -400,37 +419,8 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     * @return custom
-     */
-
-    @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     * @return distributionChannel
-     */
-
-    @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
-        return this.distributionChannel;
-    }
-
-    /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     * @return externalTaxRate
-     */
-
-    @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
-        return this.externalTaxRate;
-    }
-
-    /**
-     * value of productId}
+     *  <p><code>id</code> of the published Product.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      * @return productId
      */
 
@@ -440,7 +430,8 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * value of variantId}
+     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      * @return variantId
      */
 
@@ -450,7 +441,8 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * value of sku}
+     *  <p>SKU of the ProductVariant.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      * @return sku
      */
 
@@ -460,7 +452,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * value of quantity}
+     *  <p>Quantity of the Product Variant to add to the Cart.</p>
      * @return quantity
      */
 
@@ -470,7 +462,8 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * value of addedAt}
+     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
      * @return addedAt
      */
 
@@ -480,7 +473,17 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @return distributionChannel
+     */
+
+    @Nullable
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
+        return this.distributionChannel;
+    }
+
+    /**
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @return supplyChannel
      */
 
@@ -490,7 +493,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      * @return externalPrice
      */
 
@@ -500,7 +503,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     * value of externalTotalPrice}
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @return externalTotalPrice
      */
 
@@ -510,7 +513,27 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+        return this.externalTaxRate;
+    }
+
+    /**
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     * @return inventoryMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+        return this.inventoryMode;
+    }
+
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
      * @return shippingDetails
      */
 
@@ -520,12 +543,23 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
+     *  <p>Custom Fields for the Line Item.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
+    /**
      * builds StagedOrderAddLineItemAction with checking for non-null required values
      * @return StagedOrderAddLineItemAction
      */
     public StagedOrderAddLineItemAction build() {
-        return new StagedOrderAddLineItemActionImpl(key, custom, distributionChannel, externalTaxRate, productId,
-            variantId, sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
+        return new StagedOrderAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt,
+            distributionChannel, supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode,
+            shippingDetails, custom);
     }
 
     /**
@@ -533,8 +567,9 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
      * @return StagedOrderAddLineItemAction
      */
     public StagedOrderAddLineItemAction buildUnchecked() {
-        return new StagedOrderAddLineItemActionImpl(key, custom, distributionChannel, externalTaxRate, productId,
-            variantId, sku, quantity, addedAt, supplyChannel, externalPrice, externalTotalPrice, shippingDetails);
+        return new StagedOrderAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt,
+            distributionChannel, supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode,
+            shippingDetails, custom);
     }
 
     /**
@@ -553,18 +588,19 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     public static StagedOrderAddLineItemActionBuilder of(final StagedOrderAddLineItemAction template) {
         StagedOrderAddLineItemActionBuilder builder = new StagedOrderAddLineItemActionBuilder();
         builder.key = template.getKey();
-        builder.custom = template.getCustom();
-        builder.distributionChannel = template.getDistributionChannel();
-        builder.externalTaxRate = template.getExternalTaxRate();
         builder.productId = template.getProductId();
         builder.variantId = template.getVariantId();
         builder.sku = template.getSku();
         builder.quantity = template.getQuantity();
         builder.addedAt = template.getAddedAt();
+        builder.distributionChannel = template.getDistributionChannel();
         builder.supplyChannel = template.getSupplyChannel();
         builder.externalPrice = template.getExternalPrice();
         builder.externalTotalPrice = template.getExternalTotalPrice();
+        builder.externalTaxRate = template.getExternalTaxRate();
+        builder.inventoryMode = template.getInventoryMode();
         builder.shippingDetails = template.getShippingDetails();
+        builder.custom = template.getCustom();
         return builder;
     }
 

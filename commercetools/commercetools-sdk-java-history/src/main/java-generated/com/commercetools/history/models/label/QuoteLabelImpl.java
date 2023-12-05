@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * QuoteLabel
@@ -123,6 +125,11 @@ public class QuoteLabelImpl implements QuoteLabel, ModelBase {
                 .append(customer, that.customer)
                 .append(stagedQuote, that.stagedQuote)
                 .append(quoteRequest, that.quoteRequest)
+                .append(type, that.type)
+                .append(key, that.key)
+                .append(customer, that.customer)
+                .append(stagedQuote, that.stagedQuote)
+                .append(quoteRequest, that.quoteRequest)
                 .isEquals();
     }
 
@@ -134,6 +141,16 @@ public class QuoteLabelImpl implements QuoteLabel, ModelBase {
                 .append(stagedQuote)
                 .append(quoteRequest)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("key", key)
+                .append("customer", customer)
+                .append("stagedQuote", stagedQuote)
+                .append("quoteRequest", quoteRequest)
+                .build();
     }
 
 }

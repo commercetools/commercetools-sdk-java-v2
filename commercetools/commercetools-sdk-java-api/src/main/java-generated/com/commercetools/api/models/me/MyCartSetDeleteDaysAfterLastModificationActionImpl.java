@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Number of days after which a Cart with <code>Active</code> CartState is deleted since its last modification.</p>
@@ -75,12 +77,21 @@ public class MyCartSetDeleteDaysAfterLastModificationActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(action, that.action)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(deleteDaysAfterLastModification).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
+                .build();
     }
 
 }

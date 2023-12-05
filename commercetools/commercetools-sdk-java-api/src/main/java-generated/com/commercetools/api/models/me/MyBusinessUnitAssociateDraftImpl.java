@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * MyBusinessUnitAssociateDraft
@@ -45,7 +47,7 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
     }
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -61,7 +63,7 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
     }
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> getAssociateRoleAssignments() {
@@ -99,6 +101,9 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
         return new EqualsBuilder().append(version, that.version)
                 .append(customer, that.customer)
                 .append(associateRoleAssignments, that.associateRoleAssignments)
+                .append(version, that.version)
+                .append(customer, that.customer)
+                .append(associateRoleAssignments, that.associateRoleAssignments)
                 .isEquals();
     }
 
@@ -108,6 +113,14 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
                 .append(customer)
                 .append(associateRoleAssignments)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("version", version)
+                .append("customer", customer)
+                .append("associateRoleAssignments", associateRoleAssignments)
+                .build();
     }
 
 }

@@ -27,6 +27,9 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     private com.commercetools.api.models.common.LocalizedString name;
 
     @Nullable
+    private String key;
+
+    @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
     @Nullable
@@ -71,6 +74,17 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     public MyShoppingListAddTextLineItemActionBuilder name(
             final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public MyShoppingListAddTextLineItemActionBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -178,6 +192,16 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     }
 
     /**
+     *  <p>User-defined identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Description of the TextLineItem.</p>
      * @return description
      */
@@ -223,7 +247,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
      */
     public MyShoppingListAddTextLineItemAction build() {
         Objects.requireNonNull(name, MyShoppingListAddTextLineItemAction.class + ": name is missing");
-        return new MyShoppingListAddTextLineItemActionImpl(name, description, quantity, addedAt, custom);
+        return new MyShoppingListAddTextLineItemActionImpl(name, key, description, quantity, addedAt, custom);
     }
 
     /**
@@ -231,7 +255,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
      * @return MyShoppingListAddTextLineItemAction
      */
     public MyShoppingListAddTextLineItemAction buildUnchecked() {
-        return new MyShoppingListAddTextLineItemActionImpl(name, description, quantity, addedAt, custom);
+        return new MyShoppingListAddTextLineItemActionImpl(name, key, description, quantity, addedAt, custom);
     }
 
     /**
@@ -250,6 +274,7 @@ public class MyShoppingListAddTextLineItemActionBuilder implements Builder<MySho
     public static MyShoppingListAddTextLineItemActionBuilder of(final MyShoppingListAddTextLineItemAction template) {
         MyShoppingListAddTextLineItemActionBuilder builder = new MyShoppingListAddTextLineItemActionBuilder();
         builder.name = template.getName();
+        builder.key = template.getKey();
         builder.description = template.getDescription();
         builder.quantity = template.getQuantity();
         builder.addedAt = template.getAddedAt();

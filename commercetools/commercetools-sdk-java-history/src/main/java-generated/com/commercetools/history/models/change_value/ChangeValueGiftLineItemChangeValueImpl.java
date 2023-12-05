@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ChangeValueGiftLineItemChangeValue
@@ -124,6 +126,11 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
                 .append(variantId, that.variantId)
                 .append(supplyChannel, that.supplyChannel)
                 .append(distributionChannel, that.distributionChannel)
+                .append(type, that.type)
+                .append(product, that.product)
+                .append(variantId, that.variantId)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
                 .isEquals();
     }
 
@@ -135,6 +142,16 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
                 .append(supplyChannel)
                 .append(distributionChannel)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("product", product)
+                .append("variantId", variantId)
+                .append("supplyChannel", supplyChannel)
+                .append("distributionChannel", distributionChannel)
+                .build();
     }
 
 }

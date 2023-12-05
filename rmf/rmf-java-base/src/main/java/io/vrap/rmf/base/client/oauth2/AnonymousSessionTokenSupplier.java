@@ -19,6 +19,11 @@ public class AnonymousSessionTokenSupplier extends BaseAuthTokenSupplier impleme
         super(vrapHttpClient, constructApiHttpRequest(clientId, clientSecret, scope, tokenEndpoint));
     }
 
+    public AnonymousSessionTokenSupplier(final String clientId, final String clientSecret, final String scope,
+            final String tokenEndpoint, final VrapHttpClient vrapHttpClient, ResponseSerializer serializer) {
+        super(vrapHttpClient, constructApiHttpRequest(clientId, clientSecret, scope, tokenEndpoint), serializer);
+    }
+
     private static ApiHttpRequest constructApiHttpRequest(final String clientId, final String clientSecret,
             final String scope, final String tokenEndpoint) {
         String auth = Base64.getEncoder()

@@ -24,6 +24,10 @@ public class ByProjectKeyMeCartsByIDRequestBuilder {
         return new ByProjectKeyMeCartsByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyMeCartsByIDHead head() {
+        return new ByProjectKeyMeCartsByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyMeCartsByIDPost post(com.commercetools.api.models.me.MyCartUpdate myCartUpdate) {
         return new ByProjectKeyMeCartsByIDPost(apiHttpClient, projectKey, ID, myCartUpdate);
     }

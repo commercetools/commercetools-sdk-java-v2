@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * TermFacetResult
@@ -144,6 +146,12 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
                 .append(total, that.total)
                 .append(other, that.other)
                 .append(terms, that.terms)
+                .append(type, that.type)
+                .append(dataType, that.dataType)
+                .append(missing, that.missing)
+                .append(total, that.total)
+                .append(other, that.other)
+                .append(terms, that.terms)
                 .isEquals();
     }
 
@@ -156,6 +164,17 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
                 .append(other)
                 .append(terms)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("dataType", dataType)
+                .append("missing", missing)
+                .append("total", total)
+                .append("other", other)
+                .append("terms", terms)
+                .build();
     }
 
 }

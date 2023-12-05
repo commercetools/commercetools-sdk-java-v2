@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .id("{id}")
  *             .name(nameBuilder -> nameBuilder)
  *             .money(moneyBuilder -> moneyBuilder)
+ *             .plusTaxedPricePortions(taxedPricePortionsBuilder -> taxedPricePortionsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .slug("{slug}")
  *             .quantity(0.3)
@@ -44,6 +45,8 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     @Nullable
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
+
+    private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
 
     private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
@@ -188,6 +191,97 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param taxedPricePortions value to be set
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder taxedPricePortions(
+            final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        this.taxedPricePortions = new ArrayList<>(Arrays.asList(taxedPricePortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param taxedPricePortions value to be set
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder taxedPricePortions(
+            final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
+        this.taxedPricePortions = taxedPricePortions;
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param taxedPricePortions value to be set
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder plusTaxedPricePortions(
+            final com.commercetools.api.models.cart.MethodTaxedPrice... taxedPricePortions) {
+        if (this.taxedPricePortions == null) {
+            this.taxedPricePortions = new ArrayList<>();
+        }
+        this.taxedPricePortions.addAll(Arrays.asList(taxedPricePortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param builder function to build the taxedPricePortions value
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder plusTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPriceBuilder> builder) {
+        if (this.taxedPricePortions == null) {
+            this.taxedPricePortions = new ArrayList<>();
+        }
+        this.taxedPricePortions
+                .add(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param builder function to build the taxedPricePortions value
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder withTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPriceBuilder> builder) {
+        this.taxedPricePortions = new ArrayList<>();
+        this.taxedPricePortions
+                .add(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param builder function to build the taxedPricePortions value
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder addTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPrice> builder) {
+        return plusTaxedPricePortions(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()));
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param builder function to build the taxedPricePortions value
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder setTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPrice> builder) {
+        return taxedPricePortions(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()));
+    }
+
+    /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
      *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
      * @param builder function to build the totalPrice value
@@ -237,7 +331,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>Number of Custom Line Items in the Cart.</p>
+     *  <p>Number of Custom Line Items in the Cart or Order.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -248,7 +342,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -259,7 +353,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -270,7 +364,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -284,7 +378,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -299,7 +393,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -312,7 +406,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -323,7 +417,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -726,6 +820,15 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @return taxedPricePortions
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
+        return this.taxedPricePortions;
+    }
+
+    /**
      *  <p>Total price of the Custom Line Item (<code>money</code> multiplied by <code>quantity</code>). If the Custom Line Item is discounted, the total price is <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>.</p>
      *  <p>Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
      * @return totalPrice
@@ -745,7 +848,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>Number of Custom Line Items in the Cart.</p>
+     *  <p>Number of Custom Line Items in the Cart or Order.</p>
      * @return quantity
      */
 
@@ -754,7 +857,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart.</p>
+     *  <p>State of the Custom Line Item in the Cart or Order.</p>
      * @return state
      */
 
@@ -840,6 +943,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         Objects.requireNonNull(id, CustomLineItem.class + ": id is missing");
         Objects.requireNonNull(name, CustomLineItem.class + ": name is missing");
         Objects.requireNonNull(money, CustomLineItem.class + ": money is missing");
+        Objects.requireNonNull(taxedPricePortions, CustomLineItem.class + ": taxedPricePortions is missing");
         Objects.requireNonNull(totalPrice, CustomLineItem.class + ": totalPrice is missing");
         Objects.requireNonNull(slug, CustomLineItem.class + ": slug is missing");
         Objects.requireNonNull(quantity, CustomLineItem.class + ": quantity is missing");
@@ -848,8 +952,9 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         Objects.requireNonNull(discountedPricePerQuantity,
             CustomLineItem.class + ": discountedPricePerQuantity is missing");
         Objects.requireNonNull(priceMode, CustomLineItem.class + ": priceMode is missing");
-        return new CustomLineItemImpl(id, key, name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
-            taxRate, perMethodTaxRate, discountedPricePerQuantity, custom, shippingDetails, priceMode);
+        return new CustomLineItemImpl(id, key, name, money, taxedPrice, taxedPricePortions, totalPrice, slug, quantity,
+            state, taxCategory, taxRate, perMethodTaxRate, discountedPricePerQuantity, custom, shippingDetails,
+            priceMode);
     }
 
     /**
@@ -857,8 +962,9 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
      * @return CustomLineItem
      */
     public CustomLineItem buildUnchecked() {
-        return new CustomLineItemImpl(id, key, name, money, taxedPrice, totalPrice, slug, quantity, state, taxCategory,
-            taxRate, perMethodTaxRate, discountedPricePerQuantity, custom, shippingDetails, priceMode);
+        return new CustomLineItemImpl(id, key, name, money, taxedPrice, taxedPricePortions, totalPrice, slug, quantity,
+            state, taxCategory, taxRate, perMethodTaxRate, discountedPricePerQuantity, custom, shippingDetails,
+            priceMode);
     }
 
     /**
@@ -881,6 +987,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         builder.name = template.getName();
         builder.money = template.getMoney();
         builder.taxedPrice = template.getTaxedPrice();
+        builder.taxedPricePortions = template.getTaxedPricePortions();
         builder.totalPrice = template.getTotalPrice();
         builder.slug = template.getSlug();
         builder.quantity = template.getQuantity();

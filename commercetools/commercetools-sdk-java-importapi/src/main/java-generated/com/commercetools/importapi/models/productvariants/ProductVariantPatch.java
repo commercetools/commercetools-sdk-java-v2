@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.commercetools.importapi.models.common.ProductVariantKeyReference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -33,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantPatch {
 
     /**
-     *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>Reference to the ProductVariant to update. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      * @return productVariant
      */
     @NotNull
@@ -64,7 +65,15 @@ public interface ProductVariantPatch {
     public Boolean getStaged();
 
     /**
-     *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>Reference to the Product which contains the ProductVariant. Setting a value will batch process the import operations to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     * @return product
+     */
+    @Valid
+    @JsonProperty("product")
+    public ProductKeyReference getProduct();
+
+    /**
+     *  <p>Reference to the ProductVariant to update. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      * @param productVariant value to be set
      */
 
@@ -91,6 +100,13 @@ public interface ProductVariantPatch {
     public void setStaged(final Boolean staged);
 
     /**
+     *  <p>Reference to the Product which contains the ProductVariant. Setting a value will batch process the import operations to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     * @param product value to be set
+     */
+
+    public void setProduct(final ProductKeyReference product);
+
+    /**
      * factory method
      * @return instance of ProductVariantPatch
      */
@@ -108,6 +124,7 @@ public interface ProductVariantPatch {
         instance.setProductVariant(template.getProductVariant());
         instance.setAttributes(template.getAttributes());
         instance.setStaged(template.getStaged());
+        instance.setProduct(template.getProduct());
         return instance;
     }
 
@@ -127,6 +144,8 @@ public interface ProductVariantPatch {
         instance.setAttributes(
             com.commercetools.importapi.models.productvariants.Attributes.deepCopy(template.getAttributes()));
         instance.setStaged(template.getStaged());
+        instance.setProduct(
+            com.commercetools.importapi.models.common.ProductKeyReference.deepCopy(template.getProduct()));
         return instance;
     }
 

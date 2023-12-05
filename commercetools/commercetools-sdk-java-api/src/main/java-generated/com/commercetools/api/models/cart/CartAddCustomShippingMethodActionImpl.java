@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>To add a custom Shipping Method (independent of the ShippingMethods managed through the Shipping Methods API) to the Cart, it <strong>must have</strong> the <code>Multiple</code> ShippingMode.</p>
@@ -218,6 +220,16 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(deliveries, that.deliveries)
                 .append(custom, that.custom)
+                .append(action, that.action)
+                .append(shippingKey, that.shippingKey)
+                .append(shippingMethodName, that.shippingMethodName)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingRate, that.shippingRate)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(taxCategory, that.taxCategory)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(deliveries, that.deliveries)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -234,6 +246,21 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
                 .append(deliveries)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("shippingKey", shippingKey)
+                .append("shippingMethodName", shippingMethodName)
+                .append("shippingAddress", shippingAddress)
+                .append("shippingRate", shippingRate)
+                .append("shippingRateInput", shippingRateInput)
+                .append("taxCategory", taxCategory)
+                .append("externalTaxRate", externalTaxRate)
+                .append("deliveries", deliveries)
+                .append("custom", custom)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * DeliveryItem
@@ -40,7 +42,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the DeliveryItem.</p>
+     *  <p><code>id</code> of the LineItem or CustomLineItem delivered.</p>
      */
 
     public String getId() {
@@ -48,7 +50,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items delivered.</p>
      */
 
     public Long getQuantity() {
@@ -73,12 +75,23 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
 
         DeliveryItemImpl that = (DeliveryItemImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(quantity, that.quantity).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(quantity, that.quantity)
+                .append(id, that.id)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id).append(quantity).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("quantity", quantity)
+                .build();
     }
 
 }

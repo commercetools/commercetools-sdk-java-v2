@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Draft type to represent the top level of a business. Contains the fields and values of the generic BusinessUnitDraft that are used specifically for creating a Company.</p>
@@ -316,6 +318,21 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(status, that.status)
+                .append(stores, that.stores)
+                .append(storeMode, that.storeMode)
+                .append(unitType, that.unitType)
+                .append(name, that.name)
+                .append(contactEmail, that.contactEmail)
+                .append(associateMode, that.associateMode)
+                .append(associates, that.associates)
+                .append(addresses, that.addresses)
+                .append(shippingAddresses, that.shippingAddresses)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
+                .append(billingAddresses, that.billingAddresses)
+                .append(defaultBillingAddress, that.defaultBillingAddress)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -337,6 +354,26 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
                 .append(defaultBillingAddress)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("status", status)
+                .append("stores", stores)
+                .append("storeMode", storeMode)
+                .append("unitType", unitType)
+                .append("name", name)
+                .append("contactEmail", contactEmail)
+                .append("associateMode", associateMode)
+                .append("associates", associates)
+                .append("addresses", addresses)
+                .append("shippingAddresses", shippingAddresses)
+                .append("defaultShippingAddress", defaultShippingAddress)
+                .append("billingAddresses", billingAddresses)
+                .append("defaultBillingAddress", defaultBillingAddress)
+                .append("custom", custom)
+                .build();
     }
 
 }

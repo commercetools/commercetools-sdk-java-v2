@@ -29,7 +29,7 @@ public class BusinessUnitSetCustomFieldActionBuilder implements Builder<Business
     private java.lang.Object value;
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the Custom Field to add, update, or remove.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class BusinessUnitSetCustomFieldActionBuilder implements Builder<Business
     }
 
     /**
-     *  <p>Name of the Custom Field.</p>
+     *  <p>Name of the Custom Field to add, update, or remove.</p>
      * @return name
      */
 

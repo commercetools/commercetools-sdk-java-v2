@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This action has no effect if the given Product Selection is not in the Store.</p>
@@ -74,12 +76,21 @@ public class StoreRemoveProductSelectionActionImpl implements StoreRemoveProduct
 
         return new EqualsBuilder().append(action, that.action)
                 .append(productSelection, that.productSelection)
+                .append(action, that.action)
+                .append(productSelection, that.productSelection)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(productSelection).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("productSelection", productSelection)
+                .build();
     }
 
 }

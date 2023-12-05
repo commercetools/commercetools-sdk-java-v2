@@ -106,6 +106,6 @@ public class CompatibilityTest {
 
         String query = request.createHttpRequest().getUri().getQuery();
         Assertions.assertThat(request.createHttpRequest().getUri().getPath()).isEqualTo("test/customers/abc");
-        Assertions.assertThat(query).isEqualTo("expand=customerGroup");
+        Assertions.assertThat(query).isEqualTo("version=1&expand=customerGroup");
     }
 }

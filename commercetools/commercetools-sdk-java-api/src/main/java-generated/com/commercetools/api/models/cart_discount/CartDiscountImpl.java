@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CartDiscount
@@ -188,7 +190,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Effect of the CartDiscount.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
@@ -204,7 +206,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     *  <p>Segment of the Cart that is discounted.</p>
+     *  <p>Empty, if the <code>value</code> is <code>giftLineItem</code>.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
@@ -255,7 +258,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>
+     *  <p>Indicates if the Discount is used in connection with a DiscountCode.</p>
      */
 
     public Boolean getRequiresDiscountCode() {
@@ -409,6 +412,27 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(references, that.references)
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(value, that.value)
+                .append(cartPredicate, that.cartPredicate)
+                .append(target, that.target)
+                .append(sortOrder, that.sortOrder)
+                .append(stores, that.stores)
+                .append(isActive, that.isActive)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(requiresDiscountCode, that.requiresDiscountCode)
+                .append(references, that.references)
+                .append(stackingMode, that.stackingMode)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -436,6 +460,32 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(stackingMode)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("name", name)
+                .append("key", key)
+                .append("description", description)
+                .append("value", value)
+                .append("cartPredicate", cartPredicate)
+                .append("target", target)
+                .append("sortOrder", sortOrder)
+                .append("stores", stores)
+                .append("isActive", isActive)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("requiresDiscountCode", requiresDiscountCode)
+                .append("references", references)
+                .append("stackingMode", stackingMode)
+                .append("custom", custom)
+                .build();
     }
 
 }

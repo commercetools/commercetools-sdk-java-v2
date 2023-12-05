@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the <code>CombinationUnique</code> AttributeConstraint criteria are not met during an Update Product request.</p>
@@ -113,12 +115,25 @@ public class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValu
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(attributes, that.attributes)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code).append(message).append(values).append(attributes).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("attributes", attributes)
+                .build();
     }
 
 }

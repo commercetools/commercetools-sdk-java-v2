@@ -41,8 +41,12 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     @Nullable
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -53,7 +57,8 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      * @return Builder
      */
@@ -64,7 +69,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * set the value to the parcelKey
+     *  <p><code>key</code> of an existing Parcel.</p>
      * @param parcelKey value to be set
      * @return Builder
      */
@@ -75,7 +80,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -87,7 +92,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -99,7 +104,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * set the value to the measurements
+     *  <p>Value to set.</p>
      * @param measurements value to be set
      * @return Builder
      */
@@ -111,7 +116,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -123,7 +128,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -135,7 +140,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * set the value to the trackingData
+     *  <p>Value to set.</p>
      * @param trackingData value to be set
      * @return Builder
      */
@@ -147,7 +152,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * set values to the items
+     *  <p>Value to set.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -159,7 +164,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * set value to the items
+     *  <p>Value to set.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -171,7 +176,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * add values to the items
+     *  <p>Value to set.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -186,7 +191,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -201,7 +206,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -214,7 +219,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -225,7 +230,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -236,7 +241,44 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p>Custom Fields for the Parcel.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderAddParcelToDeliveryActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Parcel.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderAddParcelToDeliveryActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Parcel.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddParcelToDeliveryActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
 
@@ -246,7 +288,8 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
 
@@ -256,7 +299,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * value of parcelKey}
+     *  <p><code>key</code> of an existing Parcel.</p>
      * @return parcelKey
      */
 
@@ -266,7 +309,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * value of measurements}
+     *  <p>Value to set.</p>
      * @return measurements
      */
 
@@ -276,7 +319,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * value of trackingData}
+     *  <p>Value to set.</p>
      * @return trackingData
      */
 
@@ -286,7 +329,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
-     * value of items}
+     *  <p>Value to set.</p>
      * @return items
      */
 
@@ -296,12 +339,22 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
+     *  <p>Custom Fields for the Parcel.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
+    /**
      * builds StagedOrderAddParcelToDeliveryAction with checking for non-null required values
      * @return StagedOrderAddParcelToDeliveryAction
      */
     public StagedOrderAddParcelToDeliveryAction build() {
         return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, deliveryKey, parcelKey, measurements,
-            trackingData, items);
+            trackingData, items, custom);
     }
 
     /**
@@ -310,7 +363,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
      */
     public StagedOrderAddParcelToDeliveryAction buildUnchecked() {
         return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, deliveryKey, parcelKey, measurements,
-            trackingData, items);
+            trackingData, items, custom);
     }
 
     /**
@@ -334,6 +387,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
         builder.measurements = template.getMeasurements();
         builder.trackingData = template.getTrackingData();
         builder.items = template.getItems();
+        builder.custom = template.getCustom();
         return builder;
     }
 

@@ -24,7 +24,7 @@ public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<St
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     /**
-     *  <p>Determines how monetary values are rounded.</p>
+     *  <p>New value to set.</p>
      * @param taxRoundingMode value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Determines how monetary values are rounded.</p>
+     *  <p>New value to set.</p>
      * @return taxRoundingMode
      */
 

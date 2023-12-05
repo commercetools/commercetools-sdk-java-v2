@@ -15,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShoppingListSetLineItemCustomFieldAction shoppingListSetLineItemCustomFieldAction = ShoppingListSetLineItemCustomFieldAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -25,7 +24,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ShoppingListSetLineItemCustomFieldActionBuilder
         implements Builder<ShoppingListSetLineItemCustomFieldAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     private String name;
 
@@ -33,13 +36,24 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public ShoppingListSetLineItemCustomFieldActionBuilder lineItemId(final String lineItemId) {
+    public ShoppingListSetLineItemCustomFieldActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public ShoppingListSetLineItemCustomFieldActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
         return this;
     }
 
@@ -66,12 +80,23 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
     }
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -98,9 +123,8 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
      * @return ShoppingListSetLineItemCustomFieldAction
      */
     public ShoppingListSetLineItemCustomFieldAction build() {
-        Objects.requireNonNull(lineItemId, ShoppingListSetLineItemCustomFieldAction.class + ": lineItemId is missing");
         Objects.requireNonNull(name, ShoppingListSetLineItemCustomFieldAction.class + ": name is missing");
-        return new ShoppingListSetLineItemCustomFieldActionImpl(lineItemId, name, value);
+        return new ShoppingListSetLineItemCustomFieldActionImpl(lineItemId, lineItemKey, name, value);
     }
 
     /**
@@ -108,7 +132,7 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
      * @return ShoppingListSetLineItemCustomFieldAction
      */
     public ShoppingListSetLineItemCustomFieldAction buildUnchecked() {
-        return new ShoppingListSetLineItemCustomFieldActionImpl(lineItemId, name, value);
+        return new ShoppingListSetLineItemCustomFieldActionImpl(lineItemId, lineItemKey, name, value);
     }
 
     /**
@@ -128,6 +152,7 @@ public class ShoppingListSetLineItemCustomFieldActionBuilder
             final ShoppingListSetLineItemCustomFieldAction template) {
         ShoppingListSetLineItemCustomFieldActionBuilder builder = new ShoppingListSetLineItemCustomFieldActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.name = template.getName();
         builder.value = template.getValue();
         return builder;

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the Product Variant does not have a Price according to the Product <code>priceMode</code> value for a selected currency, country, Customer Group, or Channel.</p>
@@ -200,6 +202,15 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
                 .append(country, that.country)
                 .append(customerGroup, that.customerGroup)
                 .append(channel, that.channel)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(currency, that.currency)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
                 .isEquals();
     }
 
@@ -215,6 +226,20 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
                 .append(customerGroup)
                 .append(channel)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("productId", productId)
+                .append("variantId", variantId)
+                .append("currency", currency)
+                .append("country", country)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .build();
     }
 
 }

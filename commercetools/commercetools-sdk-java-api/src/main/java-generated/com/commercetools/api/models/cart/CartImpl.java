@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Cart
@@ -53,6 +55,8 @@ public class CartImpl implements Cart, ModelBase {
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
 
     private com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice;
+
+    private com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice;
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
@@ -123,6 +127,7 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
             @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice,
+            @JsonProperty("discountOnTotalPrice") final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
@@ -164,6 +169,7 @@ public class CartImpl implements Cart, ModelBase {
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
         this.taxedShippingPrice = taxedShippingPrice;
+        this.discountOnTotalPrice = discountOnTotalPrice;
         this.taxMode = taxMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
@@ -310,7 +316,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      */
 
@@ -321,8 +327,9 @@ public class CartImpl implements Cart, ModelBase {
     /**
      *  <ul>
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
@@ -335,6 +342,14 @@ public class CartImpl implements Cart, ModelBase {
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
         return this.taxedShippingPrice;
+    }
+
+    /**
+     *  <p>Discounts that apply on the Cart <code>totalPrice</code>.</p>
+     */
+
+    public com.commercetools.api.models.cart.DiscountOnTotalPrice getDiscountOnTotalPrice() {
+        return this.discountOnTotalPrice;
     }
 
     /**
@@ -386,7 +401,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
      */
 
     public com.commercetools.api.models.common.Address getShippingAddress() {
@@ -448,7 +463,7 @@ public class CartImpl implements Cart, ModelBase {
 
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
@@ -622,6 +637,11 @@ public class CartImpl implements Cart, ModelBase {
         this.taxedShippingPrice = taxedShippingPrice;
     }
 
+    public void setDiscountOnTotalPrice(
+            final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice) {
+        this.discountOnTotalPrice = discountOnTotalPrice;
+    }
+
     public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
     }
@@ -774,6 +794,50 @@ public class CartImpl implements Cart, ModelBase {
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
                 .append(taxedShippingPrice, that.taxedShippingPrice)
+                .append(discountOnTotalPrice, that.discountOnTotalPrice)
+                .append(taxMode, that.taxMode)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .append(inventoryMode, that.inventoryMode)
+                .append(cartState, that.cartState)
+                .append(billingAddress, that.billingAddress)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingMode, that.shippingMode)
+                .append(shippingKey, that.shippingKey)
+                .append(shippingInfo, that.shippingInfo)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(shippingCustomFields, that.shippingCustomFields)
+                .append(shipping, that.shipping)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(discountCodes, that.discountCodes)
+                .append(directDiscounts, that.directDiscounts)
+                .append(refusedGifts, that.refusedGifts)
+                .append(paymentInfo, that.paymentInfo)
+                .append(country, that.country)
+                .append(locale, that.locale)
+                .append(origin, that.origin)
+                .append(custom, that.custom)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
+                .append(customerId, that.customerId)
+                .append(customerEmail, that.customerEmail)
+                .append(customerGroup, that.customerGroup)
+                .append(anonymousId, that.anonymousId)
+                .append(businessUnit, that.businessUnit)
+                .append(store, that.store)
+                .append(lineItems, that.lineItems)
+                .append(customLineItems, that.customLineItems)
+                .append(totalLineItemQuantity, that.totalLineItemQuantity)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(taxedShippingPrice, that.taxedShippingPrice)
+                .append(discountOnTotalPrice, that.discountOnTotalPrice)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
@@ -821,6 +885,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(totalPrice)
                 .append(taxedPrice)
                 .append(taxedShippingPrice)
+                .append(discountOnTotalPrice)
                 .append(taxMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)
@@ -847,6 +912,54 @@ public class CartImpl implements Cart, ModelBase {
                 .append(lastModifiedBy)
                 .append(createdBy)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("key", key)
+                .append("customerId", customerId)
+                .append("customerEmail", customerEmail)
+                .append("customerGroup", customerGroup)
+                .append("anonymousId", anonymousId)
+                .append("businessUnit", businessUnit)
+                .append("store", store)
+                .append("lineItems", lineItems)
+                .append("customLineItems", customLineItems)
+                .append("totalLineItemQuantity", totalLineItemQuantity)
+                .append("totalPrice", totalPrice)
+                .append("taxedPrice", taxedPrice)
+                .append("taxedShippingPrice", taxedShippingPrice)
+                .append("discountOnTotalPrice", discountOnTotalPrice)
+                .append("taxMode", taxMode)
+                .append("taxRoundingMode", taxRoundingMode)
+                .append("taxCalculationMode", taxCalculationMode)
+                .append("inventoryMode", inventoryMode)
+                .append("cartState", cartState)
+                .append("billingAddress", billingAddress)
+                .append("shippingAddress", shippingAddress)
+                .append("shippingMode", shippingMode)
+                .append("shippingKey", shippingKey)
+                .append("shippingInfo", shippingInfo)
+                .append("shippingRateInput", shippingRateInput)
+                .append("shippingCustomFields", shippingCustomFields)
+                .append("shipping", shipping)
+                .append("itemShippingAddresses", itemShippingAddresses)
+                .append("discountCodes", discountCodes)
+                .append("directDiscounts", directDiscounts)
+                .append("refusedGifts", refusedGifts)
+                .append("paymentInfo", paymentInfo)
+                .append("country", country)
+                .append("locale", locale)
+                .append("origin", origin)
+                .append("custom", custom)
+                .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .build();
     }
 
 }

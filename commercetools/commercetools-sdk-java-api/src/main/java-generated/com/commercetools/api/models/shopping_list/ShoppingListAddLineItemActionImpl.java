@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The ProductVariant to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>. If the ShoppingList already contains a ShoppingListLineItem for the same Product Variant with the same Custom Fields, then only the quantity of the existing ShoppingListLineItem is increased. A ShoppingListLineItem with an empty <code>variantId</code> is not considered the same as a ShoppingListLineItem with a <code>variantId</code> currently referring to the Master Variant.</p>
@@ -21,6 +23,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineItemAction, ModelBase {
 
     private String action;
+
+    private String key;
 
     private String sku;
 
@@ -38,11 +42,12 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
      * create instance with all properties
      */
     @JsonCreator
-    ShoppingListAddLineItemActionImpl(@JsonProperty("sku") final String sku,
+    ShoppingListAddLineItemActionImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
             @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.key = key;
         this.sku = sku;
         this.productId = productId;
         this.variantId = variantId;
@@ -65,6 +70,14 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
 
     public String getAction() {
         return this.action;
+    }
+
+    /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -115,6 +128,10 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
         return this.custom;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setSku(final String sku) {
         this.sku = sku;
     }
@@ -150,6 +167,15 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
         ShoppingListAddLineItemActionImpl that = (ShoppingListAddLineItemActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(action, that.action)
+                .append(key, that.key)
                 .append(sku, that.sku)
                 .append(productId, that.productId)
                 .append(variantId, that.variantId)
@@ -162,6 +188,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
+                .append(key)
                 .append(sku)
                 .append(productId)
                 .append(variantId)
@@ -169,6 +196,19 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
                 .append(addedAt)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("key", key)
+                .append("sku", sku)
+                .append("productId", productId)
+                .append("variantId", variantId)
+                .append("quantity", quantity)
+                .append("addedAt", addedAt)
+                .append("custom", custom)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ItemState
@@ -41,7 +43,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items in this State.</p>
      */
 
     public Long getQuantity() {
@@ -49,7 +51,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
     }
 
     /**
-     *
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow.</p>
      */
 
     public com.commercetools.api.models.state.StateReference getState() {
@@ -74,12 +76,23 @@ public class ItemStateImpl implements ItemState, ModelBase {
 
         ItemStateImpl that = (ItemStateImpl) o;
 
-        return new EqualsBuilder().append(quantity, that.quantity).append(state, that.state).isEquals();
+        return new EqualsBuilder().append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(quantity).append(state).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("quantity", quantity)
+                .append("state", state)
+                .build();
     }
 
 }

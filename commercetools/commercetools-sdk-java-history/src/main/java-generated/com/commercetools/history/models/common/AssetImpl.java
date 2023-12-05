@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Asset
@@ -127,6 +129,11 @@ public class AssetImpl implements Asset, ModelBase {
                 .append(description, that.description)
                 .append(custom, that.custom)
                 .append(key, that.key)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(custom, that.custom)
+                .append(key, that.key)
                 .isEquals();
     }
 
@@ -138,6 +145,16 @@ public class AssetImpl implements Asset, ModelBase {
                 .append(custom)
                 .append(key)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("name", name)
+                .append("description", description)
+                .append("custom", custom)
+                .append("key", key)
+                .build();
     }
 
 }

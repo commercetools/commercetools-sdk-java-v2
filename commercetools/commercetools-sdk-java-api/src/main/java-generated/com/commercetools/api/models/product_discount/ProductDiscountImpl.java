@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProductDiscount
@@ -316,6 +318,22 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
                 .append(references, that.references)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(value, that.value)
+                .append(predicate, that.predicate)
+                .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
+                .append(references, that.references)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
                 .isEquals();
     }
 
@@ -338,6 +356,27 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
                 .append(validFrom)
                 .append(validUntil)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("name", name)
+                .append("key", key)
+                .append("description", description)
+                .append("value", value)
+                .append("predicate", predicate)
+                .append("sortOrder", sortOrder)
+                .append("isActive", isActive)
+                .append("references", references)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .build();
     }
 
 }

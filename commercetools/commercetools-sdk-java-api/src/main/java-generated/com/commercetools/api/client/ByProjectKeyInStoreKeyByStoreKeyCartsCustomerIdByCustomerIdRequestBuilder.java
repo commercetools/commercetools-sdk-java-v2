@@ -25,4 +25,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdRequestB
             customerId);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdHead head() {
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdHead(apiHttpClient, projectKey, storeKey,
+            customerId);
+    }
+
 }

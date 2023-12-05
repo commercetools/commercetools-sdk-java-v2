@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StagedOrderChangeCustomLineItemMoneyAction
@@ -25,6 +27,8 @@ public class StagedOrderChangeCustomLineItemMoneyActionImpl
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private com.commercetools.api.models.common.Money money;
 
     /**
@@ -32,8 +36,10 @@ public class StagedOrderChangeCustomLineItemMoneyActionImpl
      */
     @JsonCreator
     StagedOrderChangeCustomLineItemMoneyActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("money") final com.commercetools.api.models.common.Money money) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.money = money;
         this.action = CHANGE_CUSTOM_LINE_ITEM_MONEY;
     }
@@ -54,7 +60,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionImpl
     }
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
@@ -62,7 +68,15 @@ public class StagedOrderChangeCustomLineItemMoneyActionImpl
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      */
 
     public com.commercetools.api.models.common.Money getMoney() {
@@ -71,6 +85,10 @@ public class StagedOrderChangeCustomLineItemMoneyActionImpl
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
     }
 
     public void setMoney(final com.commercetools.api.models.common.Money money) {
@@ -89,13 +107,31 @@ public class StagedOrderChangeCustomLineItemMoneyActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(money, that.money)
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(money, that.money)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).append(money).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(customLineItemId)
+                .append(customLineItemKey)
+                .append(money)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .append("money", money)
+                .build();
     }
 
 }

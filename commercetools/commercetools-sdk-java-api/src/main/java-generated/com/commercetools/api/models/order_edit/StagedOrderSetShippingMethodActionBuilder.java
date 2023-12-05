@@ -30,7 +30,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @param shippingMethod value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @return shippingMethod
      */
 
@@ -116,7 +116,7 @@ public class StagedOrderSetShippingMethodActionBuilder implements Builder<Staged
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
      */
 

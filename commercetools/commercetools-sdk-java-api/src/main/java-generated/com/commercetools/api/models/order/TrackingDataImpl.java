@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * TrackingData
+ *  <p>Information that helps track a Parcel.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TrackingDataImpl implements TrackingData, ModelBase {
@@ -52,7 +54,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *  <p>The ID to track one parcel.</p>
+     *  <p>Identifier to track the Parcel.</p>
      */
 
     public String getTrackingId() {
@@ -60,7 +62,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *  <p>The carrier that delivers the parcel.</p>
+     *  <p>Name of the carrier that delivers the Parcel.</p>
      */
 
     public String getCarrier() {
@@ -68,7 +70,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the provider that serves as facade to several carriers.</p>
      */
 
     public String getProvider() {
@@ -76,7 +78,7 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *
+     *  <p>Transaction identifier with the <code>provider</code>.</p>
      */
 
     public String getProviderTransaction() {
@@ -84,7 +86,10 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
     }
 
     /**
-     *  <p>Flag to distinguish if the parcel is on the way to the customer (false) or on the way back (true).</p>
+     *  <ul>
+     *   <li>If <code>true</code>, the Parcel is being returned.</li>
+     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
+     *  </ul>
      */
 
     public Boolean getIsReturn() {
@@ -126,6 +131,11 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
                 .append(provider, that.provider)
                 .append(providerTransaction, that.providerTransaction)
                 .append(isReturn, that.isReturn)
+                .append(trackingId, that.trackingId)
+                .append(carrier, that.carrier)
+                .append(provider, that.provider)
+                .append(providerTransaction, that.providerTransaction)
+                .append(isReturn, that.isReturn)
                 .isEquals();
     }
 
@@ -137,6 +147,16 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
                 .append(providerTransaction)
                 .append(isReturn)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("trackingId", trackingId)
+                .append("carrier", carrier)
+                .append("provider", provider)
+                .append("providerTransaction", providerTransaction)
+                .append("isReturn", isReturn)
+                .build();
     }
 
 }

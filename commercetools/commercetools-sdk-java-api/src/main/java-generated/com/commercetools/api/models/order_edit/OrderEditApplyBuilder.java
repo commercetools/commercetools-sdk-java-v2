@@ -27,7 +27,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     private Long resourceVersion;
 
     /**
-     * set the value to the editVersion
+     *  <p>Current <code>version</code> of the OrderEdit to be applied.</p>
      * @param editVersion value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     }
 
     /**
-     * set the value to the resourceVersion
+     *  <p>Current <code>version</code> of the Order to which the OrderEdit is applied.</p>
      * @param resourceVersion value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     }
 
     /**
-     * value of editVersion}
+     *  <p>Current <code>version</code> of the OrderEdit to be applied.</p>
      * @return editVersion
      */
 
@@ -58,7 +58,7 @@ public class OrderEditApplyBuilder implements Builder<OrderEditApply> {
     }
 
     /**
-     * value of resourceVersion}
+     *  <p>Current <code>version</code> of the Order to which the OrderEdit is applied.</p>
      * @return resourceVersion
      */
 

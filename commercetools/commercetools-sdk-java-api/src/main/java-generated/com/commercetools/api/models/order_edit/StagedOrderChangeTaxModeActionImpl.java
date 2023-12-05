@@ -13,9 +13,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderChangeTaxModeAction
+ *  <ul>
+ *   <li>When <code>External</code> TaxMode is changed to <code>Platform</code> or <code>Disabled</code>, all previously set external Tax Rates are removed.</li>
+ *   <li>When set to <code>Platform</code>, Line Items, Custom Line Items, and Shipping Method require a Tax Category with a Tax Rate for the Cart's <code>shippingAddress</code>.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangeTaxModeActionImpl implements StagedOrderChangeTaxModeAction, ModelBase {
@@ -50,7 +55,7 @@ public class StagedOrderChangeTaxModeActionImpl implements StagedOrderChangeTaxM
     }
 
     /**
-     *  <p>Indicates how taxes are set on the Cart.</p>
+     *  <p>The new TaxMode.</p>
      */
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
@@ -71,12 +76,23 @@ public class StagedOrderChangeTaxModeActionImpl implements StagedOrderChangeTaxM
 
         StagedOrderChangeTaxModeActionImpl that = (StagedOrderChangeTaxModeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(taxMode, that.taxMode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(taxMode, that.taxMode)
+                .append(action, that.action)
+                .append(taxMode, that.taxMode)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(taxMode).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("taxMode", taxMode)
+                .build();
     }
 
 }

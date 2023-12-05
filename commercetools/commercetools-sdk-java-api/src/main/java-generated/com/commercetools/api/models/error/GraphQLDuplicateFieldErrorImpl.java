@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a field value conflicts with an existing value causing a duplicate.</p>
@@ -109,6 +111,10 @@ public class GraphQLDuplicateFieldErrorImpl implements GraphQLDuplicateFieldErro
                 .append(values, that.values)
                 .append(field, that.field)
                 .append(duplicateValue, that.duplicateValue)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(field, that.field)
+                .append(duplicateValue, that.duplicateValue)
                 .isEquals();
     }
 
@@ -119,6 +125,15 @@ public class GraphQLDuplicateFieldErrorImpl implements GraphQLDuplicateFieldErro
                 .append(field)
                 .append(duplicateValue)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("values", values)
+                .append("field", field)
+                .append("duplicateValue", duplicateValue)
+                .build();
     }
 
 }

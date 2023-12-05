@@ -97,6 +97,12 @@ public class OrderLineItemRemovedMessageQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderLineItemRemovedMessageQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderLineItemRemovedMessageQueryBuilderDsl> lineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderLineItemRemovedMessageQueryBuilderDsl::of));
+    }
+
     public LongComparisonPredicateBuilder<OrderLineItemRemovedMessageQueryBuilderDsl> removedQuantity() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("removedQuantity")),

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CategorySetMetaDescriptionAction
@@ -71,12 +73,23 @@ public class CategorySetMetaDescriptionActionImpl implements CategorySetMetaDesc
 
         CategorySetMetaDescriptionActionImpl that = (CategorySetMetaDescriptionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(metaDescription, that.metaDescription).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(metaDescription, that.metaDescription)
+                .append(action, that.action)
+                .append(metaDescription, that.metaDescription)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(metaDescription).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("metaDescription", metaDescription)
+                .build();
     }
 
 }

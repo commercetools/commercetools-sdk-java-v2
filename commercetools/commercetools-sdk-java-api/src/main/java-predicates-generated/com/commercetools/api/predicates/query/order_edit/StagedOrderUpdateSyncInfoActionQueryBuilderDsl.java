@@ -19,6 +19,12 @@ public class StagedOrderUpdateSyncInfoActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderUpdateSyncInfoActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderUpdateSyncInfoActionQueryBuilderDsl> externalId() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("externalId")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderUpdateSyncInfoActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<StagedOrderUpdateSyncInfoActionQueryBuilderDsl> channel(
             Function<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -27,12 +33,6 @@ public class StagedOrderUpdateSyncInfoActionQueryBuilderDsl {
                     .inner(fn.apply(
                         com.commercetools.api.predicates.query.channel.ChannelResourceIdentifierQueryBuilderDsl.of())),
             StagedOrderUpdateSyncInfoActionQueryBuilderDsl::of);
-    }
-
-    public StringComparisonPredicateBuilder<StagedOrderUpdateSyncInfoActionQueryBuilderDsl> externalId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("externalId")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderUpdateSyncInfoActionQueryBuilderDsl::of));
     }
 
     public DateTimeComparisonPredicateBuilder<StagedOrderUpdateSyncInfoActionQueryBuilderDsl> syncedAt() {

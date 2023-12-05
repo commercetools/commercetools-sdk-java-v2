@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Can be used if the Cart has the <code>External</code> TaxMode.</p>
@@ -123,6 +125,11 @@ public class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTaxRateA
                 .append(lineItemKey, that.lineItemKey)
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(shippingKey, that.shippingKey)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -134,6 +141,16 @@ public class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTaxRateA
                 .append(externalTaxRate)
                 .append(shippingKey)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("externalTaxRate", externalTaxRate)
+                .append("shippingKey", shippingKey)
+                .build();
     }
 
 }

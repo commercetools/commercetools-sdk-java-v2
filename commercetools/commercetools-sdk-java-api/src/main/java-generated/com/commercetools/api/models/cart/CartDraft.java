@@ -145,7 +145,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public RoundingMode getTaxRoundingMode();
 
     /**
-     *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how taxes are calculated for <code>taxedPrice</code>.</p>
      * @return taxCalculationMode
      */
 
@@ -169,7 +169,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public BaseAddress getBillingAddress();
 
     /**
-     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
      * @return shippingAddress
      */
     @Valid
@@ -226,7 +226,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @return itemShippingAddresses
      */
     @Valid
@@ -391,7 +391,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
     /**
-     *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how taxes are calculated for <code>taxedPrice</code>.</p>
      * @param taxCalculationMode value to be set
      */
 
@@ -412,7 +412,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setBillingAddress(final BaseAddress billingAddress);
 
     /**
-     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
      * @param shippingAddress value to be set
      */
 
@@ -479,7 +479,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
@@ -488,7 +488,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
 
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 

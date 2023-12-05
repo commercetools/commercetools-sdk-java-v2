@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful recalculation of a Discount on a Custom Line Item.</p>
@@ -25,6 +27,8 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
@@ -34,9 +38,11 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
      */
     @JsonCreator
     OrderCustomLineItemDiscountSetMessagePayloadImpl(@JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.taxedPrice = taxedPrice;
         this.type = ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET;
@@ -66,6 +72,14 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
@@ -83,6 +97,10 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
     }
 
     public void setDiscountedPricePerQuantity(
@@ -111,6 +129,12 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(taxedPrice, that.taxedPrice)
+                .append(type, that.type)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(taxedPrice, that.taxedPrice)
                 .isEquals();
@@ -120,9 +144,20 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(customLineItemId)
+                .append(customLineItemKey)
                 .append(discountedPricePerQuantity)
                 .append(taxedPrice)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .append("discountedPricePerQuantity", discountedPricePerQuantity)
+                .append("taxedPrice", taxedPrice)
+                .build();
     }
 
 }

@@ -13,12 +13,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ReturnItemDraft
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
+
+    private String key;
 
     private Long quantity;
 
@@ -36,12 +40,13 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    ReturnItemDraftImpl(@JsonProperty("quantity") final Long quantity,
+    ReturnItemDraftImpl(@JsonProperty("key") final String key, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("comment") final String comment,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.key = key;
         this.quantity = quantity;
         this.lineItemId = lineItemId;
         this.customLineItemId = customLineItemId;
@@ -57,7 +62,15 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Return Item.</p>
+     */
+
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Number of Line Items or Custom Line Items to return.</p>
      */
 
     public Long getQuantity() {
@@ -65,7 +78,8 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to return.</p>
+     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
      */
 
     public String getLineItemId() {
@@ -73,7 +87,8 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
      */
 
     public String getCustomLineItemId() {
@@ -81,7 +96,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined description for the return.</p>
      */
 
     public String getComment() {
@@ -89,7 +104,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Shipment status of the item to be returned. Can either be <code>Advised</code> or <code>Returned</code> only.</p>
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
@@ -97,11 +112,15 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields for the Return Item.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
+    }
+
+    public void setKey(final String key) {
+        this.key = key;
     }
 
     public void setQuantity(final Long quantity) {
@@ -138,7 +157,15 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
 
         ReturnItemDraftImpl that = (ReturnItemDraftImpl) o;
 
-        return new EqualsBuilder().append(quantity, that.quantity)
+        return new EqualsBuilder().append(key, that.key)
+                .append(quantity, that.quantity)
+                .append(lineItemId, that.lineItemId)
+                .append(customLineItemId, that.customLineItemId)
+                .append(comment, that.comment)
+                .append(shipmentState, that.shipmentState)
+                .append(custom, that.custom)
+                .append(key, that.key)
+                .append(quantity, that.quantity)
                 .append(lineItemId, that.lineItemId)
                 .append(customLineItemId, that.customLineItemId)
                 .append(comment, that.comment)
@@ -149,13 +176,26 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(quantity)
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(quantity)
                 .append(lineItemId)
                 .append(customLineItemId)
                 .append(comment)
                 .append(shipmentState)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("quantity", quantity)
+                .append("lineItemId", lineItemId)
+                .append("customLineItemId", customLineItemId)
+                .append("comment", comment)
+                .append("shipmentState", shipmentState)
+                .append("custom", custom)
+                .build();
     }
 
 }

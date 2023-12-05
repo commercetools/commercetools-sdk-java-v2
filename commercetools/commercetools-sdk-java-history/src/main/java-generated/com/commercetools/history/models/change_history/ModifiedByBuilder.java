@@ -31,13 +31,16 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     private String type;
 
     @Nullable
-    private com.commercetools.history.models.common.Reference customer;
+    private String clientId;
 
     @Nullable
     private String anonymousId;
 
     @Nullable
-    private String clientId;
+    private com.commercetools.history.models.common.Reference customer;
+
+    @Nullable
+    private com.commercetools.history.models.common.Reference associate;
 
     private Boolean isPlatformClient;
 
@@ -58,6 +61,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
      *  <ul>
      *   <li>If the change was made by a user, the value is <code>"user"</code>.</li>
      *   <li>If the change was made by an API Client with or without an external user ID, the value is <code>"external-user"</code>.</li>
+     *   <li>If the change was made by an Associate, the value is <code>"associate"</code>.</li>
      *  </ul>
      * @param type value to be set
      * @return Builder
@@ -69,40 +73,14 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>Reference to the Customer who made the change.</p>
-     *  <p>Present only if the change was made using a token from the password flow.</p>
-     * @param builder function to build the customer value
+     *  <p>ID of the API Client that made the change.</p>
+     *  <p>Present only if the change was made using an API Client.</p>
+     * @param clientId value to be set
      * @return Builder
      */
 
-    public ModifiedByBuilder customer(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
-        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Customer who made the change.</p>
-     *  <p>Present only if the change was made using a token from the password flow.</p>
-     * @param builder function to build the customer value
-     * @return Builder
-     */
-
-    public ModifiedByBuilder withCustomer(
-            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
-        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Reference to the Customer who made the change.</p>
-     *  <p>Present only if the change was made using a token from the password flow.</p>
-     * @param customer value to be set
-     * @return Builder
-     */
-
-    public ModifiedByBuilder customer(@Nullable final com.commercetools.history.models.common.Reference customer) {
-        this.customer = customer;
+    public ModifiedByBuilder clientId(@Nullable final String clientId) {
+        this.clientId = clientId;
         return this;
     }
 
@@ -118,14 +96,75 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>ID of the API Client that made the change.</p>
-     *  <p>Present only if the change was made using an API Client.</p>
-     * @param clientId value to be set
+     *  <p>The Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
+     * @param builder function to build the customer value
      * @return Builder
      */
 
-    public ModifiedByBuilder clientId(@Nullable final String clientId) {
-        this.clientId = clientId;
+    public ModifiedByBuilder customer(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public ModifiedByBuilder withCustomer(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
+     * @param customer value to be set
+     * @return Builder
+     */
+
+    public ModifiedByBuilder customer(@Nullable final com.commercetools.history.models.common.Reference customer) {
+        this.customer = customer;
+        return this;
+    }
+
+    /**
+     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     * @param builder function to build the associate value
+     * @return Builder
+     */
+
+    public ModifiedByBuilder associate(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
+        this.associate = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     * @param builder function to build the associate value
+     * @return Builder
+     */
+
+    public ModifiedByBuilder withAssociate(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.associate = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     * @param associate value to be set
+     * @return Builder
+     */
+
+    public ModifiedByBuilder associate(@Nullable final com.commercetools.history.models.common.Reference associate) {
+        this.associate = associate;
         return this;
     }
 
@@ -155,6 +194,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
      *  <ul>
      *   <li>If the change was made by a user, the value is <code>"user"</code>.</li>
      *   <li>If the change was made by an API Client with or without an external user ID, the value is <code>"external-user"</code>.</li>
+     *   <li>If the change was made by an Associate, the value is <code>"associate"</code>.</li>
      *  </ul>
      * @return type
      */
@@ -164,14 +204,14 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>Reference to the Customer who made the change.</p>
-     *  <p>Present only if the change was made using a token from the password flow.</p>
-     * @return customer
+     *  <p>ID of the API Client that made the change.</p>
+     *  <p>Present only if the change was made using an API Client.</p>
+     * @return clientId
      */
 
     @Nullable
-    public com.commercetools.history.models.common.Reference getCustomer() {
-        return this.customer;
+    public String getClientId() {
+        return this.clientId;
     }
 
     /**
@@ -185,14 +225,24 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>ID of the API Client that made the change.</p>
-     *  <p>Present only if the change was made using an API Client.</p>
-     * @return clientId
+     *  <p>The Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
+     * @return customer
      */
 
     @Nullable
-    public String getClientId() {
-        return this.clientId;
+    public com.commercetools.history.models.common.Reference getCustomer() {
+        return this.customer;
+    }
+
+    /**
+     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     * @return associate
+     */
+
+    @Nullable
+    public com.commercetools.history.models.common.Reference getAssociate() {
+        return this.associate;
     }
 
     /**
@@ -212,7 +262,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
         Objects.requireNonNull(id, ModifiedBy.class + ": id is missing");
         Objects.requireNonNull(type, ModifiedBy.class + ": type is missing");
         Objects.requireNonNull(isPlatformClient, ModifiedBy.class + ": isPlatformClient is missing");
-        return new ModifiedByImpl(id, type, customer, anonymousId, clientId, isPlatformClient);
+        return new ModifiedByImpl(id, type, clientId, anonymousId, customer, associate, isPlatformClient);
     }
 
     /**
@@ -220,7 +270,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
      * @return ModifiedBy
      */
     public ModifiedBy buildUnchecked() {
-        return new ModifiedByImpl(id, type, customer, anonymousId, clientId, isPlatformClient);
+        return new ModifiedByImpl(id, type, clientId, anonymousId, customer, associate, isPlatformClient);
     }
 
     /**
@@ -240,9 +290,10 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
         ModifiedByBuilder builder = new ModifiedByBuilder();
         builder.id = template.getId();
         builder.type = template.getType();
-        builder.customer = template.getCustomer();
-        builder.anonymousId = template.getAnonymousId();
         builder.clientId = template.getClientId();
+        builder.anonymousId = template.getAnonymousId();
+        builder.customer = template.getCustomer();
+        builder.associate = template.getAssociate();
         builder.isPlatformClient = template.getIsPlatformClient();
         return builder;
     }

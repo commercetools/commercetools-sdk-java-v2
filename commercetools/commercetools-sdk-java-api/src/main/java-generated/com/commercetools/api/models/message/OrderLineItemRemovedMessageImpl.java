@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove Line Item update action.</p>
+ *  <p>Generated after a successful Remove LineItem update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMessage, ModelBase {
@@ -44,6 +46,8 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private Long removedQuantity;
 
     private Long newQuantity;
@@ -71,7 +75,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("removedQuantity") final Long removedQuantity,
             @JsonProperty("newQuantity") final Long newQuantity,
             @JsonProperty("newState") final java.util.List<com.commercetools.api.models.order.ItemState> newState,
@@ -90,6 +94,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.removedQuantity = removedQuantity;
         this.newQuantity = newQuantity;
         this.newState = newState;
@@ -204,6 +209,14 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
      */
 
@@ -304,6 +317,10 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setRemovedQuantity(final Long removedQuantity) {
         this.removedQuantity = removedQuantity;
     }
@@ -358,6 +375,27 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(removedQuantity, that.removedQuantity)
+                .append(newQuantity, that.newQuantity)
+                .append(newState, that.newState)
+                .append(newTotalPrice, that.newTotalPrice)
+                .append(newTaxedPrice, that.newTaxedPrice)
+                .append(newPrice, that.newPrice)
+                .append(newShippingDetail, that.newShippingDetail)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(removedQuantity, that.removedQuantity)
                 .append(newQuantity, that.newQuantity)
                 .append(newState, that.newState)
@@ -382,6 +420,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(removedQuantity)
                 .append(newQuantity)
                 .append(newState)
@@ -390,6 +429,31 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
                 .append(newPrice)
                 .append(newShippingDetail)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("removedQuantity", removedQuantity)
+                .append("newQuantity", newQuantity)
+                .append("newState", newState)
+                .append("newTotalPrice", newTotalPrice)
+                .append("newTaxedPrice", newTaxedPrice)
+                .append("newPrice", newPrice)
+                .append("newShippingDetail", newShippingDetail)
+                .build();
     }
 
 }

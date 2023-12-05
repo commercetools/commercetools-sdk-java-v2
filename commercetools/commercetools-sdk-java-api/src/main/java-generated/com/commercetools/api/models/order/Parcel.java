@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * Parcel
+ *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -52,7 +52,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
     public String getKey();
 
     /**
-     *
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @return createdAt
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
     public ZonedDateTime getCreatedAt();
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @return measurements
      */
     @Valid
@@ -68,7 +68,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
     public ParcelMeasurements getMeasurements();
 
     /**
-     *
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @return trackingData
      */
     @Valid
@@ -76,7 +76,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
     public TrackingData getTrackingData();
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @return items
      */
     @Valid
@@ -84,7 +84,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     *  <p>Custom Fields of the Parcel.</p>
      * @return custom
      */
     @Valid
@@ -106,28 +106,28 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
     public void setKey(final String key);
 
     /**
-     * set createdAt
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      * @param createdAt value to be set
      */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     * set measurements
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param measurements value to be set
      */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
     /**
-     * set trackingData
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @param trackingData value to be set
      */
 
     public void setTrackingData(final TrackingData trackingData);
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
@@ -135,14 +135,14 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     *  <p>Custom Fields of the Parcel.</p>
      * @param custom value to be set
      */
 

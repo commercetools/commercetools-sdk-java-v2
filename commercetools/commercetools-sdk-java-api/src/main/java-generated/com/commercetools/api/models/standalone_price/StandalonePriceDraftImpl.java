@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection.</p>
@@ -43,6 +45,8 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.standalone_price.StagedPriceDraft staged;
+
     private Boolean active;
 
     /**
@@ -59,6 +63,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers,
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("staged") final com.commercetools.api.models.standalone_price.StagedPriceDraft staged,
             @JsonProperty("active") final Boolean active) {
         this.key = key;
         this.sku = sku;
@@ -71,6 +76,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.tiers = tiers;
         this.discounted = discounted;
         this.custom = custom;
+        this.staged = staged;
         this.active = active;
     }
 
@@ -169,6 +175,14 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
+     *  <p>Staged changes for the StandalonePrice.</p>
+     */
+
+    public com.commercetools.api.models.standalone_price.StagedPriceDraft getStaged() {
+        return this.staged;
+    }
+
+    /**
      *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
      */
 
@@ -225,6 +239,10 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.custom = custom;
     }
 
+    public void setStaged(final com.commercetools.api.models.standalone_price.StagedPriceDraft staged) {
+        this.staged = staged;
+    }
+
     public void setActive(final Boolean active) {
         this.active = active;
     }
@@ -250,6 +268,20 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers, that.tiers)
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
+                .append(staged, that.staged)
+                .append(active, that.active)
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(tiers, that.tiers)
+                .append(discounted, that.discounted)
+                .append(custom, that.custom)
+                .append(staged, that.staged)
                 .append(active, that.active)
                 .isEquals();
     }
@@ -267,8 +299,27 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers)
                 .append(discounted)
                 .append(custom)
+                .append(staged)
                 .append(active)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("sku", sku)
+                .append("value", value)
+                .append("country", country)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("tiers", tiers)
+                .append("discounted", discounted)
+                .append("custom", custom)
+                .append("staged", staged)
+                .append("active", active)
+                .build();
     }
 
 }

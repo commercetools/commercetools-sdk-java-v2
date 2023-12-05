@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>An Image uploaded to commercetools Composable Commerce is stored in a Content Delivery Network and it's available in several pre-defined sizes. If you already have an image stored on an external service, you can save the URL when creating a new product or adding a variant, or you can add it later.</p>
@@ -93,12 +95,23 @@ public class ImageImpl implements Image, ModelBase {
         return new EqualsBuilder().append(url, that.url)
                 .append(dimensions, that.dimensions)
                 .append(label, that.label)
+                .append(url, that.url)
+                .append(dimensions, that.dimensions)
+                .append(label, that.label)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(url).append(dimensions).append(label).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("url", url)
+                .append("dimensions", dimensions)
+                .append("label", label)
+                .build();
     }
 
 }

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Change Custom Line Item Quantity update action.</p>
+ *  <p>Generated after a successful Change CustomLineItem Quantity update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -53,6 +53,14 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
     public String getCustomLineItemId();
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @return customLineItemKey
+     */
+
+    @JsonProperty("customLineItemKey")
+    public String getCustomLineItemKey();
+
+    /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      * @return quantity
      */
@@ -74,6 +82,13 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     * @param customLineItemKey value to be set
+     */
+
+    public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
@@ -116,6 +131,7 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setOldQuantity(template.getOldQuantity());
         return instance;
@@ -146,6 +162,7 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setCustomLineItemKey(template.getCustomLineItemKey());
         instance.setQuantity(template.getQuantity());
         instance.setOldQuantity(template.getOldQuantity());
         return instance;

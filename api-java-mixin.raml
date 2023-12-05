@@ -20,6 +20,9 @@ annotationTypes:
   java-implements:
     type: string
     allowedTargets: TypeDeclaration
+  java-impl-mixin:
+    type: string
+    allowedTargets: TypeDeclaration
 
 types:
   BaseAddress:
@@ -256,8 +259,6 @@ types:
   OrderPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Order>'
   OrderReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Order>'
-  OrderResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Order>'
   OrderUpdate:
     (java-extends): 'com.commercetools.api.models.ResourceUpdate<OrderUpdate, OrderUpdateAction, OrderUpdateBuilder>'
@@ -1076,12 +1077,17 @@ types:
       default javax.money.MonetaryOperator createMoneyOperator() {
           return MoneyUtil::draftOf;
       }
+  CartDiscountValueFixedDraft:
+    properties:
+      money:
+        type: Money[]
   Reference:
     (java-extends): 'ReferenceMixin'
   KeyReference:
     (java-extends): 'com.commercetools.api.models.WithKey'
   ResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.WithKey'
+    (java-builder-implements): 'ResourceIdentifierBuilderMixin'
   TypeReference:
     (java-extends): 'com.commercetools.api.models.Identifiable<Type>'
     (java-mixin): |
@@ -1207,11 +1213,6 @@ types:
     (java-mixin): |
       public static CartSetCustomLineItemCustomFieldAction ofUnset(final String name, final String customLineItemId) {
           return CartSetCustomLineItemCustomFieldActionBuilder.of().name(name).customLineItemId(customLineItemId).build();
-      }
-  CartSetDeliveryAddressCustomFieldAction:
-    (java-mixin): |
-      public static CartSetDeliveryAddressCustomFieldAction ofUnset(final String name, final String deliveryId) {
-          return CartSetDeliveryAddressCustomFieldActionBuilder.of().name(name).deliveryId(deliveryId).build();
       }
   CartSetItemShippingAddressCustomFieldAction:
     (java-mixin): |
@@ -1395,7 +1396,17 @@ types:
     (java-extends): 'com.commercetools.api.models.Identifiable<AssociateRole>'
   AssociateRoleUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<AssociateRoleUpdateAction>'
+  MessageDeliveryPayload:
+    (java-extends): MessageDeliveryPayloadMixin
+    (java-impl-mixin): |
+      private com.commercetools.api.models.message.MessagePayload messagePayload;
 
+      @Override
+      public com.commercetools.api.models.message.MessagePayload getMessagePayload() {
+          return messagePayload;
+      }
+  MessagePayload:
+    (java-extends): MessagePayloadMixin
 /{projectKey}:
   /categories:
     (java-implements): 'ByProjectKeyCategoriesRequestBuilderMixin'

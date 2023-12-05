@@ -56,7 +56,7 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Value to set. If empty, the existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Value to set. If empty, the existing value is removed.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Value to set. If empty, the existing value is removed.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class StagedOrderSetLineItemShippingDetailsActionBuilder
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Value to set. If empty, the existing value is removed.</p>
      * @return shippingDetails
      */
 

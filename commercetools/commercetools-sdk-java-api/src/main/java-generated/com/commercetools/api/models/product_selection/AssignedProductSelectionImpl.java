@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * AssignedProductSelection
@@ -116,6 +118,10 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
                 .append(variantSelection, that.variantSelection)
                 .append(variantExclusion, that.variantExclusion)
                 .append(createdAt, that.createdAt)
+                .append(productSelection, that.productSelection)
+                .append(variantSelection, that.variantSelection)
+                .append(variantExclusion, that.variantExclusion)
+                .append(createdAt, that.createdAt)
                 .isEquals();
     }
 
@@ -126,6 +132,15 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
                 .append(variantExclusion)
                 .append(createdAt)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("productSelection", productSelection)
+                .append("variantSelection", variantSelection)
+                .append("variantExclusion", variantExclusion)
+                .append("createdAt", createdAt)
+                .build();
     }
 
 }

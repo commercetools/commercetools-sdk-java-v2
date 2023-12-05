@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * MyBusinessUnitSetAddressCustomTypeAction
+ *  <p>Adding or updating a Custom Type to an Address of a Business Unit generates the BusinessUnitAddressCustomTypeSet Message, and removing one generates the BusinessUnitAddressCustomTypeRemoved Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyBusinessUnitSetAddressCustomTypeActionImpl
@@ -108,12 +110,25 @@ public class MyBusinessUnitSetAddressCustomTypeActionImpl
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .append(addressId, that.addressId)
+                .append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(type).append(fields).append(addressId).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("type", type)
+                .append("fields", fields)
+                .append("addressId", addressId)
+                .build();
     }
 
 }

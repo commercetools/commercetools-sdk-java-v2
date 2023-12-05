@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderSetShippingMethodTaxAmountAction
+ *  <p>A Shipping Method tax amount can be set if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingMethodTaxAmountActionImpl
@@ -62,12 +64,7 @@ public class StagedOrderSetShippingMethodTaxAmountActionImpl
     }
 
     /**
-     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
-     *  <p>Can only be set by these update actions:</p>
-     *  <ul>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
-     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
-     *  </ul>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
@@ -95,12 +92,23 @@ public class StagedOrderSetShippingMethodTaxAmountActionImpl
         return new EqualsBuilder().append(action, that.action)
                 .append(shippingKey, that.shippingKey)
                 .append(externalTaxAmount, that.externalTaxAmount)
+                .append(action, that.action)
+                .append(shippingKey, that.shippingKey)
+                .append(externalTaxAmount, that.externalTaxAmount)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(shippingKey).append(externalTaxAmount).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("shippingKey", shippingKey)
+                .append("externalTaxAmount", externalTaxAmount)
+                .build();
     }
 
 }

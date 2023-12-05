@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The response in case of an error.</p>
@@ -130,6 +132,11 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
                 .append(error, that.error)
                 .append(errorDescription, that.errorDescription)
                 .append(errors, that.errors)
+                .append(statusCode, that.statusCode)
+                .append(message, that.message)
+                .append(error, that.error)
+                .append(errorDescription, that.errorDescription)
+                .append(errors, that.errors)
                 .isEquals();
     }
 
@@ -141,6 +148,16 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
                 .append(errorDescription)
                 .append(errors)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("statusCode", statusCode)
+                .append("message", message)
+                .append("error", error)
+                .append("errorDescription", errorDescription)
+                .append("errors", errors)
+                .build();
     }
 
 }

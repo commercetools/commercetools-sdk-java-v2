@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Represents a URL path to poll to get the results of an Asynchronous Request.</p>
@@ -73,12 +75,23 @@ public class TaskTokenImpl implements TaskToken, ModelBase {
 
         TaskTokenImpl that = (TaskTokenImpl) o;
 
-        return new EqualsBuilder().append(taskId, that.taskId).append(uriPath, that.uriPath).isEquals();
+        return new EqualsBuilder().append(taskId, that.taskId)
+                .append(uriPath, that.uriPath)
+                .append(taskId, that.taskId)
+                .append(uriPath, that.uriPath)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(taskId).append(uriPath).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("taskId", taskId)
+                .append("uriPath", uriPath)
+                .build();
     }
 
 }

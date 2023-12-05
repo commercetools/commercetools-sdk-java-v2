@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Specify the Attribute to be created with the ProductTypeDraft.</p>
@@ -182,6 +184,14 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
                 .append(isSearchable, that.isSearchable)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(label, that.label)
+                .append(isRequired, that.isRequired)
+                .append(attributeConstraint, that.attributeConstraint)
+                .append(inputTip, that.inputTip)
+                .append(inputHint, that.inputHint)
+                .append(isSearchable, that.isSearchable)
                 .isEquals();
     }
 
@@ -196,6 +206,19 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append(inputHint)
                 .append(isSearchable)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("name", name)
+                .append("label", label)
+                .append("isRequired", isRequired)
+                .append("attributeConstraint", attributeConstraint)
+                .append("inputTip", inputTip)
+                .append("inputHint", inputHint)
+                .append("isSearchable", isSearchable)
+                .build();
     }
 
 }

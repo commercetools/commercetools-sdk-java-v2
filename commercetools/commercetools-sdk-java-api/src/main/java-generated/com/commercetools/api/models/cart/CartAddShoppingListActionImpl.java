@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Adds all LineItems of a ShoppingList to the Cart.</p>
@@ -109,6 +111,10 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
                 .append(shoppingList, that.shoppingList)
                 .append(distributionChannel, that.distributionChannel)
                 .append(supplyChannel, that.supplyChannel)
+                .append(action, that.action)
+                .append(shoppingList, that.shoppingList)
+                .append(distributionChannel, that.distributionChannel)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 
@@ -119,6 +125,15 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
                 .append(distributionChannel)
                 .append(supplyChannel)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("shoppingList", shoppingList)
+                .append("distributionChannel", distributionChannel)
+                .append("supplyChannel", supplyChannel)
+                .build();
     }
 
 }

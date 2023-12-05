@@ -84,36 +84,49 @@ public class MoneyUtil {
     }
 
     public static CentPrecisionMoney of(final MonetaryAmount monetaryAmount) {
-        return CentPrecisionMoneyBuilder.of()
-                .centAmount(amountToCents(monetaryAmount))
-                .fractionDigits(monetaryAmount.getCurrency().getDefaultFractionDigits())
-                .currencyCode(monetaryAmount.getCurrency().getCurrencyCode())
-                .build();
+        return builder(monetaryAmount).build();
     }
 
     public static HighPrecisionMoney of(final MonetaryAmount monetaryAmount, final int fractionDigits) {
-        return HighPrecisionMoneyBuilder.of()
-                .centAmount(amountToCents(monetaryAmount))
-                .preciseAmount(amountToPreciseAmount(monetaryAmount, fractionDigits))
-                .fractionDigits(fractionDigits)
-                .currencyCode(monetaryAmount.getCurrency().getCurrencyCode())
-                .build();
+        return builder(monetaryAmount, fractionDigits).build();
     }
 
     public static CentPrecisionMoneyDraft draftOf(final MonetaryAmount monetaryAmount) {
-        return CentPrecisionMoneyDraftBuilder.of()
-                .centAmount(amountToCents(monetaryAmount))
-                .currencyCode(monetaryAmount.getCurrency().getCurrencyCode())
-                .build();
+        return draftBuilder(monetaryAmount).build();
     }
 
     public static HighPrecisionMoneyDraft draftOf(final MonetaryAmount monetaryAmount, final int fractionDigits) {
+        return draftBuilder(monetaryAmount, fractionDigits).build();
+    }
+
+    public static CentPrecisionMoneyBuilder builder(final MonetaryAmount monetaryAmount) {
+        return CentPrecisionMoney.builder()
+                .centAmount(amountToCents(monetaryAmount))
+                .fractionDigits(monetaryAmount.getCurrency().getDefaultFractionDigits())
+                .currencyCode(monetaryAmount.getCurrency().getCurrencyCode());
+    }
+
+    public static HighPrecisionMoneyBuilder builder(final MonetaryAmount monetaryAmount, final int fractionDigits) {
+        return HighPrecisionMoney.builder()
+                .centAmount(amountToCents(monetaryAmount))
+                .preciseAmount(amountToPreciseAmount(monetaryAmount, fractionDigits))
+                .fractionDigits(fractionDigits)
+                .currencyCode(monetaryAmount.getCurrency().getCurrencyCode());
+    }
+
+    public static CentPrecisionMoneyDraftBuilder draftBuilder(final MonetaryAmount monetaryAmount) {
+        return CentPrecisionMoneyDraftBuilder.of()
+                .centAmount(amountToCents(monetaryAmount))
+                .currencyCode(monetaryAmount.getCurrency().getCurrencyCode());
+    }
+
+    public static HighPrecisionMoneyDraftBuilder draftBuilder(final MonetaryAmount monetaryAmount,
+            final int fractionDigits) {
         return HighPrecisionMoneyDraftBuilder.of()
                 .centAmount(amountToCents(monetaryAmount))
                 .preciseAmount(amountToPreciseAmount(monetaryAmount, fractionDigits))
                 .fractionDigits(fractionDigits)
-                .currencyCode(monetaryAmount.getCurrency().getCurrencyCode())
-                .build();
+                .currencyCode(monetaryAmount.getCurrency().getCurrencyCode());
     }
 
     public static long amountToCents(final MonetaryAmount monetaryAmount) {

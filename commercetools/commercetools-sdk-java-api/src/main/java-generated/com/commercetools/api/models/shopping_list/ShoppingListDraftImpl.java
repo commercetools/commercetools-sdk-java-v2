@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ShoppingListDraft
@@ -239,6 +241,17 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .append(textLineItems, that.textLineItems)
                 .append(store, that.store)
                 .append(custom, that.custom)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(customer, that.customer)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(anonymousId, that.anonymousId)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(lineItems, that.lineItems)
+                .append(textLineItems, that.textLineItems)
+                .append(store, that.store)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -256,6 +269,22 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .append(store)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("slug", slug)
+                .append("customer", customer)
+                .append("key", key)
+                .append("description", description)
+                .append("anonymousId", anonymousId)
+                .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
+                .append("lineItems", lineItems)
+                .append("textLineItems", textLineItems)
+                .append("store", store)
+                .append("custom", custom)
+                .build();
     }
 
 }

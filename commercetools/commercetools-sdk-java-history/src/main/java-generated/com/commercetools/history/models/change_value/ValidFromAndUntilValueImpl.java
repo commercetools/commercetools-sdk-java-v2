@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ValidFromAndUntilValue
@@ -74,12 +76,23 @@ public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue, Model
 
         ValidFromAndUntilValueImpl that = (ValidFromAndUntilValueImpl) o;
 
-        return new EqualsBuilder().append(validFrom, that.validFrom).append(validUntil, that.validUntil).isEquals();
+        return new EqualsBuilder().append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(validFrom).append(validUntil).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Attribute type for localized enum values. Useful for predefined language-specific values selectable in drop-down menus if only one value can be selected. Use AttributeSetType of AttributeLocalizedEnumValue instead if multiple values can be selected.</p>
@@ -76,12 +78,23 @@ public class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedEnumTyp
 
         AttributeLocalizedEnumTypeImpl that = (AttributeLocalizedEnumTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(values, that.values).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(values, that.values)
+                .append(name, that.name)
+                .append(values, that.values)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(name).append(values).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("values", values)
+                .build();
     }
 
 }

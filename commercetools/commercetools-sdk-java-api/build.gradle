@@ -10,6 +10,7 @@ dependencies {
     api commons.lang3
 
     testImplementation project(':commercetools:commercetools-http-client')
+    testImplementation project(':commercetools:commercetools-okhttp-client4')
     testImplementation project(':commercetools:commercetools-apachehttp-client')
     testImplementation commons.io version commons.io_version
 
@@ -27,18 +28,25 @@ tasks.register('runMainMethodThreadLeakTest', JavaExec) {
     mainClass = "com.commercetools.MainMethodThreadLeakTest"
     timeout = Duration.ofSeconds(20)
 }
+tasks.register('runMainMethodMemoryLeakTest', JavaExec) {
+    group = "Execution"
+    description = "Run the main method thread leak test class"
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.commercetools.MainMethodMemoryLeakTest"
+    maxHeapSize("128m")
+}
 
 
 apply plugin: com.commercetools.sdk.plugins.MigrationInfoPlugin
 
 migration {
-    outputFolder = "../internal-docs/src/main/java/com/commercetools/docs/meta"
+    outputFolder = project.projectDir.toPath().resolve("../internal-docs/src/main/java/com/commercetools/docs/meta").toString()
     v1BaseFolder = [
             '/Users/jensschulze/workspace/commercetools-jvm-sdk/commercetools-models/src/main',
             '/Users/jensschulze/workspace/commercetools-jvm-sdk/commercetools-models/target/generated-sources/annotations'
     ]
     v2BaseFolder = [
-            '/Users/jensschulze/workspace/commercetools-java-sdks/commercetools/commercetools-sdk-java-api/src/main/java',
-            '/Users/jensschulze/workspace/commercetools-java-sdks/commercetools/commercetools-sdk-java-api/src/main/java-generated'
+           project.rootDir.toPath().resolve('commercetools/commercetools-sdk-java-api/src/main/java').toAbsolutePath().toString(),
+           project.rootDir.toPath().resolve('commercetools/commercetools-sdk-java-api/src/main/java-generated').toAbsolutePath().toString()
     ]
 }

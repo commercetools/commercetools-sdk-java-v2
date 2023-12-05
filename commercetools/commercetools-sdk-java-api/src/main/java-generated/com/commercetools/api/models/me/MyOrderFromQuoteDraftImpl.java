@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>When creating B2B Orders, the Customer must have the <code>MyOrderFromQuoteDraft</code> Permission.</p>
+ * MyOrderFromQuoteDraft
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBase {
@@ -44,7 +46,7 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
     }
 
     /**
-     *  <p>Unique identifier of the Quote from which the Order is created.</p>
+     *  <p><code>id</code> of the Quote from which the Order is created.</p>
      */
 
     public String getId() {
@@ -52,7 +54,7 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
     }
 
     /**
-     *  <p><code>version</code> of the Quote from which the Order is created.</p>
+     *  <p>Current <code>version</code> of the Quote from which the Order is created.</p>
      */
 
     public Long getVersion() {
@@ -92,12 +94,23 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
         return new EqualsBuilder().append(id, that.id)
                 .append(version, that.version)
                 .append(quoteStateToAccepted, that.quoteStateToAccepted)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(quoteStateToAccepted, that.quoteStateToAccepted)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id).append(version).append(quoteStateToAccepted).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("quoteStateToAccepted", quoteStateToAccepted)
+                .build();
     }
 
 }

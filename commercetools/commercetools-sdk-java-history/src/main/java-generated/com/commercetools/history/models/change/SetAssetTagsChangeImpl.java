@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
@@ -135,6 +137,11 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(asset, that.asset)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(asset, that.asset)
                 .isEquals();
     }
 
@@ -146,6 +153,16 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
                 .append(nextValue)
                 .append(asset)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("change", change)
+                .append("previousValue", previousValue)
+                .append("nextValue", nextValue)
+                .append("asset", asset)
+                .build();
     }
 
 }

@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove Product Variant update action.</p>
+ *  <p>Generated after a successful Remove ProductVariant update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDeletedMessagePayload, ModelBase {
@@ -94,12 +96,23 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
         return new EqualsBuilder().append(type, that.type)
                 .append(variant, that.variant)
                 .append(removedImageUrls, that.removedImageUrls)
+                .append(type, that.type)
+                .append(variant, that.variant)
+                .append(removedImageUrls, that.removedImageUrls)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(variant).append(removedImageUrls).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("variant", variant)
+                .append("removedImageUrls", removedImageUrls)
+                .build();
     }
 
 }

@@ -164,7 +164,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public Long getTotalLineItemQuantity();
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @return totalPrice
      */
@@ -176,8 +176,9 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     /**
      *  <ul>
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @return taxedPrice
      */
     @Valid
@@ -191,6 +192,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     @Valid
     @JsonProperty("taxedShippingPrice")
     public TaxedPrice getTaxedShippingPrice();
+
+    /**
+     *  <p>Discounts that apply on the Cart <code>totalPrice</code>.</p>
+     * @return discountOnTotalPrice
+     */
+    @Valid
+    @JsonProperty("discountOnTotalPrice")
+    public DiscountOnTotalPrice getDiscountOnTotalPrice();
 
     /**
      *  <p>Indicates how Tax Rates are set.</p>
@@ -241,7 +250,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public Address getBillingAddress();
 
     /**
-     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
      * @return shippingAddress
      */
     @Valid
@@ -304,7 +313,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @return itemShippingAddresses
      */
     @NotNull
@@ -520,7 +529,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setTotalLineItemQuantity(final Long totalLineItemQuantity);
 
     /**
-     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      * @param totalPrice value to be set
      */
@@ -530,8 +539,9 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     /**
      *  <ul>
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @param taxedPrice value to be set
      */
 
@@ -543,6 +553,13 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
      */
 
     public void setTaxedShippingPrice(final TaxedPrice taxedShippingPrice);
+
+    /**
+     *  <p>Discounts that apply on the Cart <code>totalPrice</code>.</p>
+     * @param discountOnTotalPrice value to be set
+     */
+
+    public void setDiscountOnTotalPrice(final DiscountOnTotalPrice discountOnTotalPrice);
 
     /**
      *  <p>Indicates how Tax Rates are set.</p>
@@ -587,7 +604,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setBillingAddress(final Address billingAddress);
 
     /**
-     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
      * @param shippingAddress value to be set
      */
 
@@ -650,7 +667,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
@@ -659,7 +676,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
@@ -812,6 +829,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxedShippingPrice(template.getTaxedShippingPrice());
+        instance.setDiscountOnTotalPrice(template.getDiscountOnTotalPrice());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
@@ -880,6 +898,8 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedShippingPrice(
             com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedShippingPrice()));
+        instance.setDiscountOnTotalPrice(
+            com.commercetools.api.models.cart.DiscountOnTotalPrice.deepCopy(template.getDiscountOnTotalPrice()));
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());

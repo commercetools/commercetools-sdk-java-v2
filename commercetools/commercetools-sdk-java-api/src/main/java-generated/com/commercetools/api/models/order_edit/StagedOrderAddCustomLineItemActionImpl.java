@@ -13,9 +13,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderAddCustomLineItemAction
+ *  <p>If the Cart already contains a CustomLineItem with the same <code>slug</code>, <code>name</code>, <code>money</code>, <code>taxCategory</code>, <code>state</code>, and Custom Fields, then only the quantity of the existing Custom Line Item is increased. If CustomLineItem <code>shippingDetails</code> are set, they are merged with the <code>targets</code> that already exist on the ItemShippingDetails of the Custom Line Item. In case of overlapping address keys the ItemShippingTarget <code>quantity</code> is summed up.</p>
+ *  <p>If the Cart already contains a Custom Line Item with the same slug that is otherwise not identical, an InvalidOperation error is returned.</p>
+ *  <p>If the Tax Rate is not set, a MissingTaxRateForCountry error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCustomLineItemAction, ModelBase {
@@ -34,11 +38,13 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
 
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
+
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
+
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
      * create instance with all properties
@@ -49,18 +55,20 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
             @JsonProperty("key") final String key, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("slug") final String slug,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
-            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
+            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.money = money;
         this.name = name;
         this.key = key;
         this.quantity = quantity;
         this.slug = slug;
         this.taxCategory = taxCategory;
-        this.custom = custom;
         this.externalTaxRate = externalTaxRate;
+        this.shippingDetails = shippingDetails;
         this.priceMode = priceMode;
+        this.custom = custom;
         this.action = ADD_CUSTOM_LINE_ITEM;
     }
 
@@ -80,7 +88,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
      */
 
     public com.commercetools.api.models.common.Money getMoney() {
@@ -88,7 +96,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Custom Line Item.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
@@ -104,7 +112,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     *
+     *  <p>Number of Custom Line Items to add to the Cart.</p>
      */
 
     public Long getQuantity() {
@@ -112,7 +120,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     *
+     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
      */
 
     public String getSlug() {
@@ -120,7 +128,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. If TaxMode is <code>Platform</code>, this field must not be empty.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -128,19 +136,19 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
+    }
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     */
+
+    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
+        return this.shippingDetails;
     }
 
     /**
@@ -152,6 +160,14 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
 
     public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
         return this.priceMode;
+    }
+
+    /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     public void setMoney(final com.commercetools.api.models.common.Money money) {
@@ -179,16 +195,20 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         this.taxCategory = taxCategory;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
-    }
-
     public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
     }
 
+    public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+        this.shippingDetails = shippingDetails;
+    }
+
     public void setPriceMode(final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
         this.priceMode = priceMode;
+    }
+
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
     }
 
     @Override
@@ -208,9 +228,21 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
                 .append(quantity, that.quantity)
                 .append(slug, that.slug)
                 .append(taxCategory, that.taxCategory)
-                .append(custom, that.custom)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(shippingDetails, that.shippingDetails)
                 .append(priceMode, that.priceMode)
+                .append(custom, that.custom)
+                .append(action, that.action)
+                .append(money, that.money)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(quantity, that.quantity)
+                .append(slug, that.slug)
+                .append(taxCategory, that.taxCategory)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(shippingDetails, that.shippingDetails)
+                .append(priceMode, that.priceMode)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -223,10 +255,27 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
                 .append(quantity)
                 .append(slug)
                 .append(taxCategory)
-                .append(custom)
                 .append(externalTaxRate)
+                .append(shippingDetails)
                 .append(priceMode)
+                .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("money", money)
+                .append("name", name)
+                .append("key", key)
+                .append("quantity", quantity)
+                .append("slug", slug)
+                .append("taxCategory", taxCategory)
+                .append("externalTaxRate", externalTaxRate)
+                .append("shippingDetails", shippingDetails)
+                .append("priceMode", priceMode)
+                .append("custom", custom)
+                .build();
     }
 
 }

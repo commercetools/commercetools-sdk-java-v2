@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Add External Image update action or after the successful upload of an image.</p>
@@ -106,12 +108,25 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
                 .append(variantId, that.variantId)
                 .append(image, that.image)
                 .append(staged, that.staged)
+                .append(type, that.type)
+                .append(variantId, that.variantId)
+                .append(image, that.image)
+                .append(staged, that.staged)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(variantId).append(image).append(staged).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("variantId", variantId)
+                .append("image", image)
+                .append("staged", staged)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when update actions could not be applied to the resource (for example, because a referenced resource does not exist). This would result in a 400 Bad Request response if the same update action was sent from a regular client.</p>
@@ -132,6 +134,11 @@ public class GraphQLExtensionUpdateActionsFailedErrorImpl
                 .append(localizedMessage, that.localizedMessage)
                 .append(extensionExtraInfo, that.extensionExtraInfo)
                 .append(extensionErrors, that.extensionErrors)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(localizedMessage, that.localizedMessage)
+                .append(extensionExtraInfo, that.extensionExtraInfo)
+                .append(extensionErrors, that.extensionErrors)
                 .isEquals();
     }
 
@@ -143,6 +150,16 @@ public class GraphQLExtensionUpdateActionsFailedErrorImpl
                 .append(extensionExtraInfo)
                 .append(extensionErrors)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("values", values)
+                .append("localizedMessage", localizedMessage)
+                .append("extensionExtraInfo", extensionExtraInfo)
+                .append("extensionErrors", extensionErrors)
+                .build();
     }
 
 }

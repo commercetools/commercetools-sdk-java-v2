@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderSetLineItemCustomTypeAction
@@ -77,7 +79,7 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
     }
 
     /**
-     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     *  <p>Defines the Type that extends the Line Item with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Line Item.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -85,7 +87,7 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     *  <p>Sets the Custom Fields fields for the Line Item.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -123,6 +125,11 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
                 .append(lineItemKey, that.lineItemKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 
@@ -134,6 +141,16 @@ public class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineItemCus
                 .append(type)
                 .append(fields)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("type", type)
+                .append("fields", fields)
+                .build();
     }
 
 }

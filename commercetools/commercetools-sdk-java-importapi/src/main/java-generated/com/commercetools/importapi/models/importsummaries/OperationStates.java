@@ -27,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .waitForMasterVariant(1)
  *             .imported(1)
  *             .rejected(1)
+ *             .canceled(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -84,6 +85,14 @@ public interface OperationStates {
     public Long getRejected();
 
     /**
+     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     * @return canceled
+     */
+    @NotNull
+    @JsonProperty("canceled")
+    public Long getCanceled();
+
+    /**
      *  <p>The number of resources in the <code>processing</code> state.</p>
      * @param processing value to be set
      */
@@ -126,6 +135,13 @@ public interface OperationStates {
     public void setRejected(final Long rejected);
 
     /**
+     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     * @param canceled value to be set
+     */
+
+    public void setCanceled(final Long canceled);
+
+    /**
      * factory method
      * @return instance of OperationStates
      */
@@ -146,6 +162,7 @@ public interface OperationStates {
         instance.setWaitForMasterVariant(template.getWaitForMasterVariant());
         instance.setImported(template.getImported());
         instance.setRejected(template.getRejected());
+        instance.setCanceled(template.getCanceled());
         return instance;
     }
 
@@ -166,6 +183,7 @@ public interface OperationStates {
         instance.setWaitForMasterVariant(template.getWaitForMasterVariant());
         instance.setImported(template.getImported());
         instance.setRejected(template.getRejected());
+        instance.setCanceled(template.getCanceled());
         return instance;
     }
 

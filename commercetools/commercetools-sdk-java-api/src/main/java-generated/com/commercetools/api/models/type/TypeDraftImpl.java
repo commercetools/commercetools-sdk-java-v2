@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * TypeDraft
@@ -137,6 +139,11 @@ public class TypeDraftImpl implements TypeDraft, ModelBase {
                 .append(description, that.description)
                 .append(resourceTypeIds, that.resourceTypeIds)
                 .append(fieldDefinitions, that.fieldDefinitions)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(resourceTypeIds, that.resourceTypeIds)
+                .append(fieldDefinitions, that.fieldDefinitions)
                 .isEquals();
     }
 
@@ -148,6 +155,16 @@ public class TypeDraftImpl implements TypeDraft, ModelBase {
                 .append(resourceTypeIds)
                 .append(fieldDefinitions)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("name", name)
+                .append("description", description)
+                .append("resourceTypeIds", resourceTypeIds)
+                .append("fieldDefinitions", fieldDefinitions)
+                .build();
     }
 
 }

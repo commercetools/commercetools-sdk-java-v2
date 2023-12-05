@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>To create a new Product, send a representation that is going to become the initial <em>staged</em> representation of the new Product in the master catalog. If Price Selection query parameters are provided, selected Prices will be added to the response. Produces the ProductCreated Message.</p>
+ *  <p>To create a new Product, send a representation that is going to become the initial <em>staged</em> and <em>current</em> representation of the new Product in the catalog. If Price Selection query parameters are provided, selected Prices will be added to the response. Produces the ProductCreated Message.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -33,11 +35,17 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductsPost extends
-        BodyApiMethod<ByProjectKeyProductsPost, com.commercetools.api.models.product.Product, com.commercetools.api.models.product.ProductDraft>
+        TypeBodyApiMethod<ByProjectKeyProductsPost, com.commercetools.api.models.product.Product, com.commercetools.api.models.product.ProductDraft>
         implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsPost>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyProductsPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsPost> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.product.Product> resultType() {
+        return new TypeReference<com.commercetools.api.models.product.Product>() {
+        };
+    }
 
     private String projectKey;
 

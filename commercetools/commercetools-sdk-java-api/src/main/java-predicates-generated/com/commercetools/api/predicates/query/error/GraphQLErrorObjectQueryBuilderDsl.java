@@ -73,6 +73,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asContentTooLarge(
+            Function<com.commercetools.api.predicates.query.error.GraphQLContentTooLargeErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLContentTooLargeErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.GraphQLContentTooLargeErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asCountryNotConfiguredInStore(
             Function<com.commercetools.api.predicates.query.error.GraphQLCountryNotConfiguredInStoreErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLCountryNotConfiguredInStoreErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

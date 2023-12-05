@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,7 +36,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductProjectionsSearchGet extends
-        ApiMethod<ByProjectKeyProductProjectionsSearchGet, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>
+        TypeApiMethod<ByProjectKeyProductProjectionsSearchGet, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>
         implements com.commercetools.api.client.SortableTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.ProjectionselectingTrait<ByProjectKeyProductProjectionsSearchGet>,
@@ -44,6 +46,12 @@ public class ByProjectKeyProductProjectionsSearchGet extends
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsSearchGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>() {
+        };
+    }
 
     private String projectKey;
 
@@ -268,7 +276,7 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      * @param supplier supplier for the value to be set
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final Supplier<Double> supplier) {
+    public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final Supplier<Integer> supplier) {
         return copy().withQueryParam("fuzzyLevel", supplier.get());
     }
 
@@ -277,7 +285,7 @@ public class ByProjectKeyProductProjectionsSearchGet extends
      * @param supplier supplier for the value to be added
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Supplier<Double> supplier) {
+    public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Supplier<Integer> supplier) {
         return copy().addQueryParam("fuzzyLevel", supplier.get());
     }
 

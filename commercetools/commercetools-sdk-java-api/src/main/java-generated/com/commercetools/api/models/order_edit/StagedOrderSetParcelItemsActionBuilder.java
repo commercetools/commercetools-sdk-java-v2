@@ -33,7 +33,8 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelId value to be set
      * @return Builder
      */
@@ -44,7 +45,8 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @param parcelKey value to be set
      * @return Builder
      */
@@ -55,7 +57,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * set values to the items
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -67,7 +69,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * set value to the items
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -79,7 +81,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * add values to the items
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -94,7 +96,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -109,7 +111,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -122,7 +124,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -133,7 +135,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -144,7 +146,8 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelId
      */
 
@@ -154,7 +157,8 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      * @return parcelKey
      */
 
@@ -164,7 +168,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     * value of items}
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @return items
      */
 

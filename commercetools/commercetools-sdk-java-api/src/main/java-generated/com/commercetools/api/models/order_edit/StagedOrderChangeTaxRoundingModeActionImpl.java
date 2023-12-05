@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderChangeTaxRoundingModeAction
+ *  <p>Changing the tax rounding mode leads to recalculation of taxes.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangeTaxRoundingModeActionImpl implements StagedOrderChangeTaxRoundingModeAction, ModelBase {
@@ -50,7 +52,7 @@ public class StagedOrderChangeTaxRoundingModeActionImpl implements StagedOrderCh
     }
 
     /**
-     *  <p>Determines how monetary values are rounded.</p>
+     *  <p>New value to set.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
@@ -71,12 +73,23 @@ public class StagedOrderChangeTaxRoundingModeActionImpl implements StagedOrderCh
 
         StagedOrderChangeTaxRoundingModeActionImpl that = (StagedOrderChangeTaxRoundingModeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(taxRoundingMode, that.taxRoundingMode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(action, that.action)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(taxRoundingMode).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("taxRoundingMode", taxRoundingMode)
+                .build();
     }
 
 }

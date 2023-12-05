@@ -27,7 +27,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     private Long version;
 
     /**
-     *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
+     *  <p><code>id</code> of the Cart from which the Order is created.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     }
 
     /**
-     * set the value to the version
+     *  <p>Current <code>version</code> of the Cart from which the Order is created.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     }
 
     /**
-     *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
+     *  <p><code>id</code> of the Cart from which the Order is created.</p>
      * @return id
      */
 
@@ -58,7 +58,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     }
 
     /**
-     * value of version}
+     *  <p>Current <code>version</code> of the Cart from which the Order is created.</p>
      * @return version
      */
 

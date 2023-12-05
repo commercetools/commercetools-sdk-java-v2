@@ -3,6 +3,8 @@ package io.vrap.rmf.base.client.utils.json;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -17,16 +19,15 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeDeserializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModule;
+import io.vrap.rmf.base.client.utils.json.modules.deserializers.LocalDateDeserializationModule;
 
 /**
  * Class with methods to customize the JSON serialization/deserialization
  */
 public class JsonUtils {
 
-    private static final ObjectMapper OBJECT_MAPPER;
-
-    static {
-        OBJECT_MAPPER = createObjectMapper();
+    private static class ObjectMapperHolder {
+        static final ObjectMapper OBJECT_MAPPER = createObjectMapper();
     }
 
     /**
@@ -55,6 +56,7 @@ public class JsonUtils {
         objectMapper.registerModule(new JavaTimeModule()) //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
                 .registerModule(new ZonedDateTimeSerializationModule()) //custom serializer for LocalDate, LocalTime and ZonedDateTime
                 .registerModule(new ZonedDateTimeDeserializationModule()) //custom deserializer for ZonedDateTime
+                .registerModule(new LocalDateDeserializationModule()) //custom deserializer for LocalDate
                 .registerModules(loader)
                 .registerModules(moduleList)
                 .setSerializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields
@@ -70,7 +72,7 @@ public class JsonUtils {
      * @throws JsonProcessingException serialization errors
      */
     public static byte[] toJsonByteArray(final Object value) throws JsonProcessingException {
-        return OBJECT_MAPPER.writeValueAsBytes(value);
+        return getConfiguredObjectMapper().writeValueAsBytes(value);
     }
 
     /**
@@ -80,7 +82,7 @@ public class JsonUtils {
      * @throws JsonProcessingException serialization errors
      */
     public static String toJsonString(final Object value) throws JsonProcessingException {
-        return OBJECT_MAPPER.writeValueAsString(value);
+        return getConfiguredObjectMapper().writeValueAsString(value);
     }
 
     /**
@@ -91,7 +93,7 @@ public class JsonUtils {
      * @return deserialized object
      */
     public static <T> T fromJsonString(final String content, final Class<T> clazz) {
-        return executing(() -> OBJECT_MAPPER.readValue(content, clazz));
+        return executing(() -> getConfiguredObjectMapper().readValue(content, clazz));
     }
 
     /**
@@ -103,7 +105,7 @@ public class JsonUtils {
      * @return the created objected
      */
     public static <T> T fromJsonString(final String jsonAsString, final TypeReference<T> typeReference) {
-        return executing(() -> OBJECT_MAPPER.readValue(jsonAsString, typeReference));
+        return executing(() -> getConfiguredObjectMapper().readValue(jsonAsString, typeReference));
     }
 
     /**
@@ -116,7 +118,7 @@ public class JsonUtils {
      * @return the created objected
      */
     public static <T> T fromJsonNode(final JsonNode jsonNode, final TypeReference<T> typeReference) {
-        return executing(() -> OBJECT_MAPPER.readerFor(typeReference).readValue(jsonNode));
+        return executing(() -> getConfiguredObjectMapper().readerFor(typeReference).readValue(jsonNode));
     }
 
     /**
@@ -129,7 +131,7 @@ public class JsonUtils {
      * @return new json
      */
     public static JsonNode toJsonNode(final Object value) {
-        return OBJECT_MAPPER.valueToTree(value);
+        return getConfiguredObjectMapper().valueToTree(value);
     }
 
     /**
@@ -139,7 +141,7 @@ public class JsonUtils {
      * @return new JsonNode
      */
     public static JsonNode parse(final String jsonAsString) {
-        return executing(() -> OBJECT_MAPPER.readTree(jsonAsString));
+        return executing(() -> getConfiguredObjectMapper().readTree(jsonAsString));
     }
 
     /**
@@ -151,7 +153,7 @@ public class JsonUtils {
      * @param <T> type of the result
      */
     public static <T> T fromJsonByteArray(final byte[] content, final Class<T> clazz) {
-        return executing(() -> OBJECT_MAPPER.readValue(content, clazz));
+        return executing(() -> getConfiguredObjectMapper().readValue(content, clazz));
     }
 
     /**
@@ -163,7 +165,7 @@ public class JsonUtils {
      * @param <T> type of the result
      */
     public static <T> T fromInputStream(final InputStream content, final Class<T> clazz) {
-        return executing(() -> OBJECT_MAPPER.readValue(content, clazz));
+        return executing(() -> getConfiguredObjectMapper().readValue(content, clazz));
     }
 
     /**
@@ -175,7 +177,45 @@ public class JsonUtils {
      * @param <T> type of the result
      */
     public static <T> T fromInputStream(final InputStream content, final TypeReference<T> typeReference) {
-        return executing(() -> OBJECT_MAPPER.readValue(content, typeReference));
+        return executing(() -> getConfiguredObjectMapper().readValue(content, typeReference));
+    }
+
+    /**
+     * Reads a UTF-8 JSON text file from the classpath of the current thread and transforms it into a Java object.
+     *
+     * @param resourcePath  the path to the resource. Example: If the file is located in "src/test/resources/foo/bar/product.json" then the path should be "foo/bar/product.json"
+     * @param typeReference the full generic type information about the object to create
+     * @param <T>           the type of the result
+     * @return the created objected
+     */
+    public static <T> T readObjectFromResource(final String resourcePath, final TypeReference<T> typeReference) {
+        return executing(() -> {
+            final InputStream resourceAsStream = Thread.currentThread()
+                    .getContextClassLoader()
+                    .getResourceAsStream(resourcePath);
+            return getConfiguredObjectMapper()
+                    .readValue(new InputStreamReader(resourceAsStream, StandardCharsets.UTF_8.name()), typeReference);
+        });
+    }
+
+    public static <T> T readObjectFromResource(final String resourcePath, final JavaType javaType) {
+        return executing(() -> {
+            final InputStream resourceAsStream = Thread.currentThread()
+                    .getContextClassLoader()
+                    .getResourceAsStream(resourcePath);
+            return getConfiguredObjectMapper()
+                    .readValue(new InputStreamReader(resourceAsStream, StandardCharsets.UTF_8.name()), javaType);
+        });
+    }
+
+    public static <T> T readObjectFromResource(final String resourcePath, final Class<T> clazz) {
+        return executing(() -> {
+            final InputStream resourceAsStream = Thread.currentThread()
+                    .getContextClassLoader()
+                    .getResourceAsStream(resourcePath);
+            return getConfiguredObjectMapper()
+                    .readValue(new InputStreamReader(resourceAsStream, StandardCharsets.UTF_8.name()), clazz);
+        });
     }
 
     /**
@@ -183,7 +223,7 @@ public class JsonUtils {
      * @return ObjectMapper
      */
     public static ObjectMapper getConfiguredObjectMapper() {
-        return OBJECT_MAPPER;
+        return ObjectMapperHolder.OBJECT_MAPPER;
     }
 
     /**

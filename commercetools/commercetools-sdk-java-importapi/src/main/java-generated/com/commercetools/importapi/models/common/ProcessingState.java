@@ -11,41 +11,46 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Every Import Operation is assigned with one of the following states.</p>
+ *  <p>Every Import Operation is assigned one of the following states.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ProcessingState extends JsonEnum {
 
     /**
-    	<p>Initial state assigned if the format (JSON structure and fields) meets the Import API's specification. The resource import is in progress.</p>
+    	<p>The initial state assigned if the request payload (JSON structure and fields) meets Import API specifications. The resource import is in progress.</p>
 
     */
     ProcessingState PROCESSING = ProcessingStateEnum.PROCESSING;
     /**
-    	<p>Either the request payload is missing the data as per the Import API's specification or even though the references were resolved, the data does not meet the validation constraints.</p>
+    	<p>Either the request payload is missing the data as per Import API specifications, or even though the references were resolved, the data does not meet validation constraints.</p>
 
     */
     ProcessingState VALIDATION_FAILED = ProcessingStateEnum.VALIDATION_FAILED;
     /**
-    	<p>Import Request contains key references to resources that are currently not present in commercetools Composable Commerce.</p>
+    	<p>The import request contains <a href="ctp:import:type:KeyReference">KeyReferences</a> to resources that do not exist in your Composable Commerce Project.</p>
 
     */
     ProcessingState UNRESOLVED = ProcessingStateEnum.UNRESOLVED;
     /**
-    	<p>Waiting for a master variant to arrive. The Product Import has required attributes and thus a master variant that provides those is required.</p>
+    	<p>Products must have at least one Product Variant, also known as the Master Variant. If you import a Product without a Master Variant, the import request will have this status until another import request includes Master Variant data for the Product.</p>
 
     */
     ProcessingState WAIT_FOR_MASTER_VARIANT = ProcessingStateEnum.WAIT_FOR_MASTER_VARIANT;
     /**
-    	<p>Resource was successfully imported.</p>
+    	<p>The resource was successfully imported.</p>
 
     */
     ProcessingState IMPORTED = ProcessingStateEnum.IMPORTED;
     /**
-    	<p>Resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the limit of retry has been reached.</p>
+    	<p>The resource could not be imported. References were resolved, but the system could not import the data due to an internal server error and the retry limit was reached.</p>
 
     */
     ProcessingState REJECTED = ProcessingStateEnum.REJECTED;
+    /**
+    	<p>The import request was canceled and the resource was not imported.</p>
+
+    */
+    ProcessingState CANCELED = ProcessingStateEnum.CANCELED;
 
     /**
      * possible values of ProcessingState
@@ -79,7 +84,12 @@ public interface ProcessingState extends JsonEnum {
         /**
          * rejected
          */
-        REJECTED("rejected");
+        REJECTED("rejected"),
+
+        /**
+         * canceled
+         */
+        CANCELED("canceled");
         private final String jsonName;
 
         private ProcessingStateEnum(final String jsonName) {

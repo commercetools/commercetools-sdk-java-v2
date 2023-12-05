@@ -18,8 +18,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set LineItemShippingDetails on Orders.</li>
- *   <li>Set LineItemShippingDetails on Staged Orders.</li>
+ *   <li>Set LineItem ShippingDetails on Orders.</li>
+ *   <li>Set LineItem ShippingDetails on Staged Orders.</li>
  *  </ul>
  *
  * <hr>

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * InvalidStateTransitionError
@@ -65,7 +67,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     *  <p>Every Import Operation is assigned one of the following states.</p>
      */
 
     public com.commercetools.importapi.models.common.ProcessingState getCurrentState() {
@@ -73,7 +75,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     *  <p>Every Import Operation is assigned one of the following states.</p>
      */
 
     public com.commercetools.importapi.models.common.ProcessingState getNewState() {
@@ -106,6 +108,10 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
                 .append(message, that.message)
                 .append(currentState, that.currentState)
                 .append(newState, that.newState)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(currentState, that.currentState)
+                .append(newState, that.newState)
                 .isEquals();
     }
 
@@ -116,6 +122,15 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
                 .append(currentState)
                 .append(newState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("currentState", currentState)
+                .append("newState", newState)
+                .build();
     }
 
 }

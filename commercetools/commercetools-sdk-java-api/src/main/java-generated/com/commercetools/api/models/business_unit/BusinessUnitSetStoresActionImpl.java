@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Sets the Stores of the Business Unit. Can only be set if the Business Unit <code>storeMode</code> is <code>Explicit</code>. Carts and Orders created after the Set Stores update must use the new Stores of the Business Unit and, if set, their Product Selections, and Channels. Orders created before the Set Stores update action remain unchanged. Setting the Stores on a Business Unit generates a BusinessUnitStoresSet Message.</p>
@@ -75,12 +77,23 @@ public class BusinessUnitSetStoresActionImpl implements BusinessUnitSetStoresAct
 
         BusinessUnitSetStoresActionImpl that = (BusinessUnitSetStoresActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(stores, that.stores).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(stores, that.stores)
+                .append(action, that.action)
+                .append(stores, that.stores)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(stores).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("stores", stores)
+                .build();
     }
 
 }

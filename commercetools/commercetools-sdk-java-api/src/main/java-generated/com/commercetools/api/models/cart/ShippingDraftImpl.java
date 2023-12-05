@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Wraps all shipping-related information (such as address, rate, deliveries) per Shipping Method for Carts with multiple Shipping Methods.</p>
@@ -171,6 +173,13 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(deliveries, that.deliveries)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(shippingMethod, that.shippingMethod)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(deliveries, that.deliveries)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -184,6 +193,18 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
                 .append(deliveries)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("shippingMethod", shippingMethod)
+                .append("shippingAddress", shippingAddress)
+                .append("shippingRateInput", shippingRateInput)
+                .append("externalTaxRate", externalTaxRate)
+                .append("deliveries", deliveries)
+                .append("custom", custom)
+                .build();
     }
 
 }

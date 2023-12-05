@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>To override the shipping details, see Set LineItemShippingDetails.</p>
+ *  <p>To override the shipping details, see Set LineItem ShippingDetails.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
@@ -112,6 +114,10 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(targetsDelta, that.targetsDelta)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(targetsDelta, that.targetsDelta)
                 .isEquals();
     }
 
@@ -122,6 +128,15 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
                 .append(lineItemKey)
                 .append(targetsDelta)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("targetsDelta", targetsDelta)
+                .build();
     }
 
 }

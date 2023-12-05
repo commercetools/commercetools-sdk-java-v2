@@ -73,8 +73,6 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetCustomerGroupActionImpl.class, name = CartSetCustomerGroupAction.SET_CUSTOMER_GROUP),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetCustomerIdActionImpl.class, name = CartSetCustomerIdAction.SET_CUSTOMER_ID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationActionImpl.class, name = CartSetDeleteDaysAfterLastModificationAction.SET_DELETE_DAYS_AFTER_LAST_MODIFICATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldActionImpl.class, name = CartSetDeliveryAddressCustomFieldAction.SET_DELIVERY_ADDRESS_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeActionImpl.class, name = CartSetDeliveryAddressCustomTypeAction.SET_DELIVERY_ADDRESS_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetDirectDiscountsActionImpl.class, name = CartSetDirectDiscountsAction.SET_DIRECT_DISCOUNTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldActionImpl.class, name = CartSetItemShippingAddressCustomFieldAction.SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetItemShippingAddressCustomTypeActionImpl.class, name = CartSetItemShippingAddressCustomTypeAction.SET_ITEM_SHIPPING_ADDRESS_CUSTOM_TYPE),
@@ -300,14 +298,6 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
         if (template instanceof com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction) {
             return com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction.deepCopy(
                 (com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldAction) {
-            return com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeAction) {
-            return com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeAction) template);
         }
         if (template instanceof com.commercetools.api.models.cart.CartSetDirectDiscountsAction) {
             return com.commercetools.api.models.cart.CartSetDirectDiscountsAction
@@ -767,22 +757,6 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
      */
     public static com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationActionBuilder setDeleteDaysAfterLastModificationBuilder() {
         return com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationActionBuilder.of();
-    }
-
-    /**
-     * builder for setDeliveryAddressCustomField subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldActionBuilder setDeliveryAddressCustomFieldBuilder() {
-        return com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldActionBuilder.of();
-    }
-
-    /**
-     * builder for setDeliveryAddressCustomType subtype
-     * @return builder
-     */
-    public static com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeActionBuilder setDeliveryAddressCustomTypeBuilder() {
-        return com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeActionBuilder.of();
     }
 
     /**

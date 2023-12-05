@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderTransitionLineItemStateAction orderTransitionLineItemStateAction = OrderTransitionLineItemStateAction.builder()
- *             .lineItemId("{lineItemId}")
  *             .quantity(0.3)
  *             .fromState(fromStateBuilder -> fromStateBuilder)
  *             .toState(toStateBuilder -> toStateBuilder)
@@ -27,7 +26,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderTransitionLineItemStateAction> {
 
+    @Nullable
     private String lineItemId;
+
+    @Nullable
+    private String lineItemKey;
 
     private Long quantity;
 
@@ -39,18 +42,29 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     private java.time.ZonedDateTime actualTransitionDate;
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
 
-    public OrderTransitionLineItemStateActionBuilder lineItemId(final String lineItemId) {
+    public OrderTransitionLineItemStateActionBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
     /**
-     * set the value to the quantity
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderTransitionLineItemStateActionBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>Number of Line Items that should transition State.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -61,7 +75,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition from.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
@@ -73,7 +87,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition from.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
@@ -85,7 +99,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition from.</p>
      * @param fromState value to be set
      * @return Builder
      */
@@ -97,7 +111,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition to.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
@@ -109,7 +123,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition to.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
@@ -121,7 +135,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition to.</p>
      * @param toState value to be set
      * @return Builder
      */
@@ -133,7 +147,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     * set the value to the actualTransitionDate
+     *  <p>Date and time (UTC) to perform the State transition.</p>
      * @param actualTransitionDate value to be set
      * @return Builder
      */
@@ -145,16 +159,27 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return lineItemId
      */
 
+    @Nullable
     public String getLineItemId() {
         return this.lineItemId;
     }
 
     /**
-     * value of quantity}
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>Number of Line Items that should transition State.</p>
      * @return quantity
      */
 
@@ -163,7 +188,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition from.</p>
      * @return fromState
      */
 
@@ -172,7 +197,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition to.</p>
      * @return toState
      */
 
@@ -181,7 +206,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     }
 
     /**
-     * value of actualTransitionDate}
+     *  <p>Date and time (UTC) to perform the State transition.</p>
      * @return actualTransitionDate
      */
 
@@ -195,11 +220,10 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
      * @return OrderTransitionLineItemStateAction
      */
     public OrderTransitionLineItemStateAction build() {
-        Objects.requireNonNull(lineItemId, OrderTransitionLineItemStateAction.class + ": lineItemId is missing");
         Objects.requireNonNull(quantity, OrderTransitionLineItemStateAction.class + ": quantity is missing");
         Objects.requireNonNull(fromState, OrderTransitionLineItemStateAction.class + ": fromState is missing");
         Objects.requireNonNull(toState, OrderTransitionLineItemStateAction.class + ": toState is missing");
-        return new OrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,
+        return new OrderTransitionLineItemStateActionImpl(lineItemId, lineItemKey, quantity, fromState, toState,
             actualTransitionDate);
     }
 
@@ -208,7 +232,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
      * @return OrderTransitionLineItemStateAction
      */
     public OrderTransitionLineItemStateAction buildUnchecked() {
-        return new OrderTransitionLineItemStateActionImpl(lineItemId, quantity, fromState, toState,
+        return new OrderTransitionLineItemStateActionImpl(lineItemId, lineItemKey, quantity, fromState, toState,
             actualTransitionDate);
     }
 
@@ -228,6 +252,7 @@ public class OrderTransitionLineItemStateActionBuilder implements Builder<OrderT
     public static OrderTransitionLineItemStateActionBuilder of(final OrderTransitionLineItemStateAction template) {
         OrderTransitionLineItemStateActionBuilder builder = new OrderTransitionLineItemStateActionBuilder();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.quantity = template.getQuantity();
         builder.fromState = template.getFromState();
         builder.toState = template.getToState();

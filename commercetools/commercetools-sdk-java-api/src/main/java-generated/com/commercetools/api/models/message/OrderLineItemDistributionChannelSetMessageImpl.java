@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Line Item Distribution Channel update action.</p>
+ *  <p>Generated after a successful Set LineItem DistributionChannel update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemDistributionChannelSetMessageImpl
@@ -45,6 +47,8 @@ public class OrderLineItemDistributionChannelSetMessageImpl
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
     /**
@@ -61,7 +65,7 @@ public class OrderLineItemDistributionChannelSetMessageImpl
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelReference distributionChannel) {
         this.id = id;
         this.version = version;
@@ -74,6 +78,7 @@ public class OrderLineItemDistributionChannelSetMessageImpl
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.distributionChannel = distributionChannel;
         this.type = ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET;
     }
@@ -182,6 +187,14 @@ public class OrderLineItemDistributionChannelSetMessageImpl
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Distribution Channel that was set.</p>
      */
 
@@ -234,6 +247,10 @@ public class OrderLineItemDistributionChannelSetMessageImpl
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setDistributionChannel(
             final com.commercetools.api.models.channel.ChannelReference distributionChannel) {
         this.distributionChannel = distributionChannel;
@@ -261,6 +278,21 @@ public class OrderLineItemDistributionChannelSetMessageImpl
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(distributionChannel, that.distributionChannel)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(distributionChannel, that.distributionChannel)
                 .isEquals();
     }
@@ -279,8 +311,28 @@ public class OrderLineItemDistributionChannelSetMessageImpl
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(distributionChannel)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("distributionChannel", distributionChannel)
+                .build();
     }
 
 }

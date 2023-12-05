@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Business Unit type to model divisions that are part of the Company or a higher-order Division. Contains specific fields and values that differentiate a Division from the generic BusinessUnit.</p>
@@ -474,6 +476,30 @@ public class DivisionImpl implements Division, ModelBase {
                 .append(inheritedAssociates, that.inheritedAssociates)
                 .append(parentUnit, that.parentUnit)
                 .append(topLevelUnit, that.topLevelUnit)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(status, that.status)
+                .append(stores, that.stores)
+                .append(storeMode, that.storeMode)
+                .append(unitType, that.unitType)
+                .append(name, that.name)
+                .append(contactEmail, that.contactEmail)
+                .append(custom, that.custom)
+                .append(addresses, that.addresses)
+                .append(shippingAddressIds, that.shippingAddressIds)
+                .append(defaultShippingAddressId, that.defaultShippingAddressId)
+                .append(billingAddressIds, that.billingAddressIds)
+                .append(defaultBillingAddressId, that.defaultBillingAddressId)
+                .append(associateMode, that.associateMode)
+                .append(associates, that.associates)
+                .append(inheritedAssociates, that.inheritedAssociates)
+                .append(parentUnit, that.parentUnit)
+                .append(topLevelUnit, that.topLevelUnit)
                 .isEquals();
     }
 
@@ -504,6 +530,35 @@ public class DivisionImpl implements Division, ModelBase {
                 .append(parentUnit)
                 .append(topLevelUnit)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("key", key)
+                .append("status", status)
+                .append("stores", stores)
+                .append("storeMode", storeMode)
+                .append("unitType", unitType)
+                .append("name", name)
+                .append("contactEmail", contactEmail)
+                .append("custom", custom)
+                .append("addresses", addresses)
+                .append("shippingAddressIds", shippingAddressIds)
+                .append("defaultShippingAddressId", defaultShippingAddressId)
+                .append("billingAddressIds", billingAddressIds)
+                .append("defaultBillingAddressId", defaultBillingAddressId)
+                .append("associateMode", associateMode)
+                .append("associates", associates)
+                .append("inheritedAssociates", inheritedAssociates)
+                .append("parentUnit", parentUnit)
+                .append("topLevelUnit", topLevelUnit)
+                .build();
     }
 
 }

@@ -34,7 +34,7 @@ public interface OrderSetOrderNumberAction extends OrderUpdateAction {
     String SET_ORDER_NUMBER = "setOrderNumber";
 
     /**
-     *
+     *  <p>Value to set. Must be unique across a Project. Once set, the value cannot be changed.</p>
      * @return orderNumber
      */
 
@@ -42,7 +42,7 @@ public interface OrderSetOrderNumberAction extends OrderUpdateAction {
     public String getOrderNumber();
 
     /**
-     * set orderNumber
+     *  <p>Value to set. Must be unique across a Project. Once set, the value cannot be changed.</p>
      * @param orderNumber value to be set
      */
 

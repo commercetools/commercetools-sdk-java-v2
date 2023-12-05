@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     MessageSubscription messageSubscription = MessageSubscription.builder()
- *             .resourceTypeId(MessageSubscriptionResourceTypeId.ASSOCIATE_ROLE)
+ *             .resourceTypeId(MessageSubscriptionResourceTypeId.APPROVAL_FLOW)
  *             .build()
  * </code></pre>
  * </div>

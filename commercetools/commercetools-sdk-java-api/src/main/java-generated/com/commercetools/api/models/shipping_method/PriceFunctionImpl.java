@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * PriceFunction
@@ -75,12 +77,23 @@ public class PriceFunctionImpl implements PriceFunction, ModelBase {
 
         PriceFunctionImpl that = (PriceFunctionImpl) o;
 
-        return new EqualsBuilder().append(currencyCode, that.currencyCode).append(function, that.function).isEquals();
+        return new EqualsBuilder().append(currencyCode, that.currencyCode)
+                .append(function, that.function)
+                .append(currencyCode, that.currencyCode)
+                .append(function, that.function)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(currencyCode).append(function).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("currencyCode", currencyCode)
+                .append("function", function)
+                .build();
     }
 
 }

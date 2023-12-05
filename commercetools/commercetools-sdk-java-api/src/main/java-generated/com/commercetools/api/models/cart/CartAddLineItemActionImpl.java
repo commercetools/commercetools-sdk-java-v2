@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>If the Cart contains a LineItem for a Product Variant with the same LineItemMode, Custom Fields, supply and distribution channel, then only the quantity of the existing Line Item is increased. If LineItem <code>shippingDetails</code> is set, it is merged. All addresses will be present afterwards and, for address keys present in both shipping details, the quantity will be summed up. A new Line Item is added when the <code>externalPrice</code> or <code>externalTotalPrice</code> is set in this update action. The LineItem price is set as described in LineItem Price selection.</p>
@@ -299,6 +301,21 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
+                .append(action, that.action)
+                .append(key, that.key)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(distributionChannel, that.distributionChannel)
+                .append(supplyChannel, that.supplyChannel)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(inventoryMode, that.inventoryMode)
+                .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -320,6 +337,26 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append(shippingDetails)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("key", key)
+                .append("productId", productId)
+                .append("variantId", variantId)
+                .append("sku", sku)
+                .append("quantity", quantity)
+                .append("addedAt", addedAt)
+                .append("distributionChannel", distributionChannel)
+                .append("supplyChannel", supplyChannel)
+                .append("externalPrice", externalPrice)
+                .append("externalTotalPrice", externalTotalPrice)
+                .append("externalTaxRate", externalTaxRate)
+                .append("inventoryMode", inventoryMode)
+                .append("shippingDetails", shippingDetails)
+                .append("custom", custom)
+                .build();
     }
 
 }

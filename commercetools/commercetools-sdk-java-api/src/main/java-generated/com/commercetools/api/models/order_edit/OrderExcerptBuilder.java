@@ -33,7 +33,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     private Long version;
 
     /**
-     * set the value to the totalPrice
+     *  <p>Total price of the Order.</p>
      * @param totalPrice value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     * set the value to the totalPrice using the builder function
+     *  <p>Total price of the Order.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     * set the value to the taxedPrice using the builder function
+     *  <p>Taxed price of the Order.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     * set the value to the taxedPrice using the builder function
+     *  <p>Taxed price of the Order.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     * set the value to the taxedPrice
+     *  <p>Taxed price of the Order.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     * set the value to the version
+     *  <p>Current version of the Order.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     * value of totalPrice}
+     *  <p>Total price of the Order.</p>
      * @return totalPrice
      */
 
@@ -111,7 +111,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     * value of taxedPrice}
+     *  <p>Taxed price of the Order.</p>
      * @return taxedPrice
      */
 
@@ -121,7 +121,7 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
-     * value of version}
+     *  <p>Current version of the Order.</p>
      * @return version
      */
 

@@ -14,6 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Draft type to model divisions that are part of the Company or a higher-order Division. Contains the fields and values of the generic MyBusinessUnitDraft that are used specifically for creating a Division.</p>
@@ -238,6 +240,17 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(defaultBillingAddress, that.defaultBillingAddress)
                 .append(parentUnit, that.parentUnit)
+                .append(key, that.key)
+                .append(unitType, that.unitType)
+                .append(name, that.name)
+                .append(contactEmail, that.contactEmail)
+                .append(custom, that.custom)
+                .append(addresses, that.addresses)
+                .append(shippingAddresses, that.shippingAddresses)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
+                .append(billingAddresses, that.billingAddresses)
+                .append(defaultBillingAddress, that.defaultBillingAddress)
+                .append(parentUnit, that.parentUnit)
                 .isEquals();
     }
 
@@ -255,6 +268,22 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
                 .append(defaultBillingAddress)
                 .append(parentUnit)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("unitType", unitType)
+                .append("name", name)
+                .append("contactEmail", contactEmail)
+                .append("custom", custom)
+                .append("addresses", addresses)
+                .append("shippingAddresses", shippingAddresses)
+                .append("defaultShippingAddress", defaultShippingAddress)
+                .append("billingAddresses", billingAddresses)
+                .append("defaultBillingAddress", defaultBillingAddress)
+                .append("parentUnit", parentUnit)
+                .build();
     }
 
 }

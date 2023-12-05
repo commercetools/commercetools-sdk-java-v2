@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * MultiBuyLineItemsTarget
@@ -81,7 +83,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     *  <p>Number of Line Items that are discounted per application of this Discount.</p>
+     *  <p>Number of Line Items that are discounted per application of this Discount. It must be less than or equal to the <code>triggerQuantity</code>.</p>
      */
 
     public Integer getDiscountedQuantity() {
@@ -89,7 +91,7 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
     }
 
     /**
-     *  <p>Maximum number of times this Discount can be applied.</p>
+     *  <p>Maximum number of times this Discount can be applied. Do not set if the Discount should be applied an unlimited number of times.</p>
      */
 
     public Integer getMaxOccurrence() {
@@ -140,6 +142,12 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
                 .append(discountedQuantity, that.discountedQuantity)
                 .append(maxOccurrence, that.maxOccurrence)
                 .append(selectionMode, that.selectionMode)
+                .append(type, that.type)
+                .append(predicate, that.predicate)
+                .append(triggerQuantity, that.triggerQuantity)
+                .append(discountedQuantity, that.discountedQuantity)
+                .append(maxOccurrence, that.maxOccurrence)
+                .append(selectionMode, that.selectionMode)
                 .isEquals();
     }
 
@@ -152,6 +160,17 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
                 .append(maxOccurrence)
                 .append(selectionMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("predicate", predicate)
+                .append("triggerQuantity", triggerQuantity)
+                .append("discountedQuantity", discountedQuantity)
+                .append("maxOccurrence", maxOccurrence)
+                .append("selectionMode", selectionMode)
+                .build();
     }
 
 }

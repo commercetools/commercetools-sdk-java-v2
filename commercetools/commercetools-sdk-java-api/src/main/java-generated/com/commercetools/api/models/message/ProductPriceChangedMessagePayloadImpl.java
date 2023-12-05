@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Embedded Price update action.</p>
+ *  <p>Generated after a successful Change Price update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceChangedMessagePayloadImpl implements ProductPriceChangedMessagePayload, ModelBase {
@@ -140,6 +142,12 @@ public class ProductPriceChangedMessagePayloadImpl implements ProductPriceChange
                 .append(newPrice, that.newPrice)
                 .append(staged, that.staged)
                 .append(oldStagedPrice, that.oldStagedPrice)
+                .append(type, that.type)
+                .append(variantId, that.variantId)
+                .append(oldPrice, that.oldPrice)
+                .append(newPrice, that.newPrice)
+                .append(staged, that.staged)
+                .append(oldStagedPrice, that.oldStagedPrice)
                 .isEquals();
     }
 
@@ -152,6 +160,17 @@ public class ProductPriceChangedMessagePayloadImpl implements ProductPriceChange
                 .append(staged)
                 .append(oldStagedPrice)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("variantId", variantId)
+                .append("oldPrice", oldPrice)
+                .append("newPrice", newPrice)
+                .append("staged", staged)
+                .append("oldStagedPrice", oldStagedPrice)
+                .build();
     }
 
 }

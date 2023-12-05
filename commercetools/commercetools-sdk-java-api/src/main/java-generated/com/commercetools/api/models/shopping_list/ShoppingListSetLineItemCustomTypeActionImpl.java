@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ShoppingListSetLineItemCustomTypeAction
@@ -24,6 +26,8 @@ public class ShoppingListSetLineItemCustomTypeActionImpl implements ShoppingList
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private com.commercetools.api.models.type.FieldContainer fields;
@@ -33,9 +37,11 @@ public class ShoppingListSetLineItemCustomTypeActionImpl implements ShoppingList
      */
     @JsonCreator
     ShoppingListSetLineItemCustomTypeActionImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.type = type;
         this.fields = fields;
         this.action = SET_LINE_ITEM_CUSTOM_TYPE;
@@ -57,11 +63,19 @@ public class ShoppingListSetLineItemCustomTypeActionImpl implements ShoppingList
     }
 
     /**
-     *  <p>The <code>id</code> of the ShoppingListLineItem to update.</p>
+     *  <p>The <code>id</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the ShoppingListLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -84,6 +98,10 @@ public class ShoppingListSetLineItemCustomTypeActionImpl implements ShoppingList
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
     }
@@ -104,6 +122,12 @@ public class ShoppingListSetLineItemCustomTypeActionImpl implements ShoppingList
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();
@@ -111,7 +135,22 @@ public class ShoppingListSetLineItemCustomTypeActionImpl implements ShoppingList
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(type).append(fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(lineItemKey)
+                .append(type)
+                .append(fields)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("type", type)
+                .append("fields", fields)
+                .build();
     }
 
 }

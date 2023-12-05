@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful recalculation of a Discount on a Line Item.</p>
@@ -23,6 +25,8 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     private String type;
 
     private String lineItemId;
+
+    private String lineItemKey;
 
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
@@ -37,11 +41,13 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
      */
     @JsonCreator
     OrderLineItemDiscountSetMessagePayloadImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
             @JsonProperty("taxedPricePortions") final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
@@ -73,6 +79,14 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
@@ -97,7 +111,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
@@ -106,6 +120,10 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setDiscountedPricePerQuantity(
@@ -147,6 +165,14 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
 
         return new EqualsBuilder().append(type, that.type)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(taxedPricePortions, that.taxedPricePortions)
+                .append(type, that.type)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
@@ -158,11 +184,24 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(discountedPricePerQuantity)
                 .append(totalPrice)
                 .append(taxedPrice)
                 .append(taxedPricePortions)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("discountedPricePerQuantity", discountedPricePerQuantity)
+                .append("totalPrice", totalPrice)
+                .append("taxedPrice", taxedPrice)
+                .append("taxedPricePortions", taxedPricePortions)
+                .build();
     }
 
 }

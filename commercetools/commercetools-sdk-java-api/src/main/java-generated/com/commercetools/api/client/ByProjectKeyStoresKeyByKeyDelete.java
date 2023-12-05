@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -35,13 +37,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyStoresKeyByKeyDelete
-        extends ApiMethod<ByProjectKeyStoresKeyByKeyDelete, com.commercetools.api.models.store.Store> implements
+        extends TypeApiMethod<ByProjectKeyStoresKeyByKeyDelete, com.commercetools.api.models.store.Store> implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStoresKeyByKeyDelete, com.commercetools.api.models.store.Store>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyStoresKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyStoresKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStoresKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStoresKeyByKeyDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStoresKeyByKeyDelete> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.store.Store> resultType() {
+        return new TypeReference<com.commercetools.api.models.store.Store>() {
+        };
+    }
 
     private String projectKey;
     private String key;

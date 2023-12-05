@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Transition Line Item State update action.</p>
+ *  <p>Generated after a successful Transition LineItem State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemStateTransitionMessageImpl implements LineItemStateTransitionMessage, ModelBase {
@@ -44,6 +46,8 @@ public class LineItemStateTransitionMessageImpl implements LineItemStateTransiti
 
     private String lineItemId;
 
+    private String lineItemKey;
+
     private java.time.ZonedDateTime transitionDate;
 
     private Long quantity;
@@ -65,7 +69,7 @@ public class LineItemStateTransitionMessageImpl implements LineItemStateTransiti
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("fromState") final com.commercetools.api.models.state.StateReference fromState,
@@ -81,6 +85,7 @@ public class LineItemStateTransitionMessageImpl implements LineItemStateTransiti
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.transitionDate = transitionDate;
         this.quantity = quantity;
         this.fromState = fromState;
@@ -192,6 +197,14 @@ public class LineItemStateTransitionMessageImpl implements LineItemStateTransiti
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
      */
 
@@ -268,6 +281,10 @@ public class LineItemStateTransitionMessageImpl implements LineItemStateTransiti
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setTransitionDate(final java.time.ZonedDateTime transitionDate) {
         this.transitionDate = transitionDate;
     }
@@ -306,6 +323,24 @@ public class LineItemStateTransitionMessageImpl implements LineItemStateTransiti
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(transitionDate, that.transitionDate)
+                .append(quantity, that.quantity)
+                .append(fromState, that.fromState)
+                .append(toState, that.toState)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(transitionDate, that.transitionDate)
                 .append(quantity, that.quantity)
                 .append(fromState, that.fromState)
@@ -327,11 +362,34 @@ public class LineItemStateTransitionMessageImpl implements LineItemStateTransiti
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(transitionDate)
                 .append(quantity)
                 .append(fromState)
                 .append(toState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("transitionDate", transitionDate)
+                .append("quantity", quantity)
+                .append("fromState", fromState)
+                .append("toState", toState)
+                .build();
     }
 
 }

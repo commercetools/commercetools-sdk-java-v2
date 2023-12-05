@@ -38,6 +38,14 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
     String ADD_LINE_ITEM = "addLineItem";
 
     /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p><code>sku</code> of the ProductVariant.</p>
      * @return sku
      */
@@ -84,6 +92,13 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. Must be unique per ShoppingList.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p><code>sku</code> of the ProductVariant.</p>
@@ -142,6 +157,7 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
      */
     public static MyShoppingListAddLineItemAction of(final MyShoppingListAddLineItemAction template) {
         MyShoppingListAddLineItemActionImpl instance = new MyShoppingListAddLineItemActionImpl();
+        instance.setKey(template.getKey());
         instance.setSku(template.getSku());
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
@@ -162,6 +178,7 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
             return null;
         }
         MyShoppingListAddLineItemActionImpl instance = new MyShoppingListAddLineItemActionImpl();
+        instance.setKey(template.getKey());
         instance.setSku(template.getSku());
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());

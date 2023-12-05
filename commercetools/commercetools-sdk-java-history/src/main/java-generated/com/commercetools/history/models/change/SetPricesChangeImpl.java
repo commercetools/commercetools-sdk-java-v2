@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Change triggered by the Set Prices update action.</p>
@@ -150,6 +152,12 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
                 .append(nextValue, that.nextValue)
                 .append(catalogData, that.catalogData)
                 .append(variant, that.variant)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
                 .isEquals();
     }
 
@@ -162,6 +170,17 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
                 .append(catalogData)
                 .append(variant)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("change", change)
+                .append("previousValue", previousValue)
+                .append("nextValue", nextValue)
+                .append("catalogData", catalogData)
+                .append("variant", variant)
+                .build();
     }
 
 }

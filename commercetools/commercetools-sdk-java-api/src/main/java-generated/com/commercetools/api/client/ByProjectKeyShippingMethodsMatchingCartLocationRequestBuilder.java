@@ -20,4 +20,8 @@ public class ByProjectKeyShippingMethodsMatchingCartLocationRequestBuilder {
         return new ByProjectKeyShippingMethodsMatchingCartLocationGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyShippingMethodsMatchingCartLocationHead head() {
+        return new ByProjectKeyShippingMethodsMatchingCartLocationHead(apiHttpClient, projectKey);
+    }
+
 }

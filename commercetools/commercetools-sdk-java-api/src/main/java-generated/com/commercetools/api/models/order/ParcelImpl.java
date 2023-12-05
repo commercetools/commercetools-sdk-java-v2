@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * Parcel
+ *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ParcelImpl implements Parcel, ModelBase {
@@ -76,7 +78,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Parcel was created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -84,7 +86,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
@@ -92,7 +94,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Shipment tracking information of the Parcel.</p>
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
@@ -100,7 +102,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -108,7 +110,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     *  <p>Custom Fields of the Parcel.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -164,6 +166,13 @@ public class ParcelImpl implements Parcel, ModelBase {
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(createdAt, that.createdAt)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -177,6 +186,18 @@ public class ParcelImpl implements Parcel, ModelBase {
                 .append(items)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("key", key)
+                .append("createdAt", createdAt)
+                .append("measurements", measurements)
+                .append("trackingData", trackingData)
+                .append("items", items)
+                .append("custom", custom)
+                .build();
     }
 
 }

@@ -3,6 +3,8 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetReturnPaymentStateAction stagedOrderSetReturnPaymentStateAction = StagedOrderSetReturnPaymentStateAction.builder()
- *             .returnItemId("{returnItemId}")
  *             .paymentState(ReturnPaymentState.NON_REFUNDABLE)
  *             .build()
  * </code></pre>
@@ -22,23 +23,38 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<StagedOrderSetReturnPaymentStateAction> {
 
+    @Nullable
     private String returnItemId;
+
+    @Nullable
+    private String returnItemKey;
 
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
     /**
-     * set the value to the returnItemId
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetReturnPaymentStateActionBuilder returnItemId(final String returnItemId) {
+    public StagedOrderSetReturnPaymentStateActionBuilder returnItemId(@Nullable final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
 
     /**
-     * set the value to the paymentState
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @param returnItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetReturnPaymentStateActionBuilder returnItemKey(@Nullable final String returnItemKey) {
+        this.returnItemKey = returnItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>New Payment status of the ReturnItem.</p>
      * @param paymentState value to be set
      * @return Builder
      */
@@ -50,16 +66,27 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
     }
 
     /**
-     * value of returnItemId}
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
+    @Nullable
     public String getReturnItemId() {
         return this.returnItemId;
     }
 
     /**
-     * value of paymentState}
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @return returnItemKey
+     */
+
+    @Nullable
+    public String getReturnItemKey() {
+        return this.returnItemKey;
+    }
+
+    /**
+     *  <p>New Payment status of the ReturnItem.</p>
      * @return paymentState
      */
 
@@ -72,11 +99,9 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
      * @return StagedOrderSetReturnPaymentStateAction
      */
     public StagedOrderSetReturnPaymentStateAction build() {
-        Objects.requireNonNull(returnItemId,
-            StagedOrderSetReturnPaymentStateAction.class + ": returnItemId is missing");
         Objects.requireNonNull(paymentState,
             StagedOrderSetReturnPaymentStateAction.class + ": paymentState is missing");
-        return new StagedOrderSetReturnPaymentStateActionImpl(returnItemId, paymentState);
+        return new StagedOrderSetReturnPaymentStateActionImpl(returnItemId, returnItemKey, paymentState);
     }
 
     /**
@@ -84,7 +109,7 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
      * @return StagedOrderSetReturnPaymentStateAction
      */
     public StagedOrderSetReturnPaymentStateAction buildUnchecked() {
-        return new StagedOrderSetReturnPaymentStateActionImpl(returnItemId, paymentState);
+        return new StagedOrderSetReturnPaymentStateActionImpl(returnItemId, returnItemKey, paymentState);
     }
 
     /**
@@ -104,6 +129,7 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
             final StagedOrderSetReturnPaymentStateAction template) {
         StagedOrderSetReturnPaymentStateActionBuilder builder = new StagedOrderSetReturnPaymentStateActionBuilder();
         builder.returnItemId = template.getReturnItemId();
+        builder.returnItemKey = template.getReturnItemKey();
         builder.paymentState = template.getPaymentState();
         return builder;
     }

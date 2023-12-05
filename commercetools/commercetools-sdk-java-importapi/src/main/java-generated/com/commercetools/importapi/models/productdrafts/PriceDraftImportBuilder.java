@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     PriceDraftImport priceDraftImport = PriceDraftImport.builder()
  *             .value(valueBuilder -> valueBuilder)
+ *             .key("{key}")
  *             .build()
  * </code></pre>
  * </div>
@@ -50,7 +51,6 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     @Nullable
     private java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers;
 
-    @Nullable
     private String key;
 
     /**
@@ -350,7 +350,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
      * @return Builder
      */
 
-    public PriceDraftImportBuilder key(@Nullable final String key) {
+    public PriceDraftImportBuilder key(final String key) {
         this.key = key;
         return this;
     }
@@ -449,7 +449,6 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
      * @return key
      */
 
-    @Nullable
     public String getKey() {
         return this.key;
     }
@@ -460,6 +459,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
      */
     public PriceDraftImport build() {
         Objects.requireNonNull(value, PriceDraftImport.class + ": value is missing");
+        Objects.requireNonNull(key, PriceDraftImport.class + ": key is missing");
         return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom,
             discounted, tiers, key);
     }

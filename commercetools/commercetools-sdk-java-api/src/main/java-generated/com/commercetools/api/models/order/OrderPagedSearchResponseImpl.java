@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderPagedSearchResponse
@@ -113,12 +115,25 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
                 .append(offset, that.offset)
                 .append(limit, that.limit)
                 .append(hits, that.hits)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(limit, that.limit)
+                .append(hits, that.hits)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(total).append(offset).append(limit).append(hits).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("total", total)
+                .append("offset", offset)
+                .append("limit", limit)
+                .append("hits", hits)
+                .build();
     }
 
 }

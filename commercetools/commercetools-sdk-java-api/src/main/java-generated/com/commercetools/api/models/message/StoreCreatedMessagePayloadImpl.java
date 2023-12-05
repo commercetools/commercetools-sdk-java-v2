@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Create Store request.</p>
@@ -199,6 +201,14 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
                 .append(supplyChannels, that.supplyChannels)
                 .append(productSelections, that.productSelections)
                 .append(custom, that.custom)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(languages, that.languages)
+                .append(countries, that.countries)
+                .append(distributionChannels, that.distributionChannels)
+                .append(supplyChannels, that.supplyChannels)
+                .append(productSelections, that.productSelections)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -213,6 +223,19 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
                 .append(productSelections)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("name", name)
+                .append("languages", languages)
+                .append("countries", countries)
+                .append("distributionChannels", distributionChannels)
+                .append("supplyChannels", supplyChannels)
+                .append("productSelections", productSelections)
+                .append("custom", custom)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * TaxedPrice
@@ -116,6 +118,10 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
                 .append(totalGross, that.totalGross)
                 .append(taxPortions, that.taxPortions)
                 .append(totalTax, that.totalTax)
+                .append(totalNet, that.totalNet)
+                .append(totalGross, that.totalGross)
+                .append(taxPortions, that.taxPortions)
+                .append(totalTax, that.totalTax)
                 .isEquals();
     }
 
@@ -126,6 +132,15 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
                 .append(taxPortions)
                 .append(totalTax)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("totalNet", totalNet)
+                .append("totalGross", totalGross)
+                .append("taxPortions", taxPortions)
+                .append("totalTax", totalTax)
+                .build();
     }
 
 }

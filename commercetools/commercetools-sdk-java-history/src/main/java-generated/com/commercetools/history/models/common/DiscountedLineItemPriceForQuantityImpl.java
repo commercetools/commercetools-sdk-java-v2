@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * DiscountedLineItemPriceForQuantity
@@ -77,12 +79,21 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
 
         return new EqualsBuilder().append(quantity, that.quantity)
                 .append(discountedPrice, that.discountedPrice)
+                .append(quantity, that.quantity)
+                .append(discountedPrice, that.discountedPrice)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(quantity).append(discountedPrice).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("quantity", quantity)
+                .append("discountedPrice", discountedPrice)
+                .build();
     }
 
 }

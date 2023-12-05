@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This update action produces the StoreCountriesChanged Message. It has no effect if a given country is not present in a Store.</p>
@@ -71,12 +73,23 @@ public class StoreRemoveCountryActionImpl implements StoreRemoveCountryAction, M
 
         StoreRemoveCountryActionImpl that = (StoreRemoveCountryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(country, that.country).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(country, that.country)
+                .append(action, that.action)
+                .append(country, that.country)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(country).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("country", country)
+                .build();
     }
 
 }

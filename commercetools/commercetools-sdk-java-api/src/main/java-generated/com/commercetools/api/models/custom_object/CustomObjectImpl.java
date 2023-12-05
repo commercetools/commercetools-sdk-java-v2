@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomObject
@@ -193,6 +195,15 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
                 .append(container, that.container)
                 .append(key, that.key)
                 .append(value, that.value)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(container, that.container)
+                .append(key, that.key)
+                .append(value, that.value)
                 .isEquals();
     }
 
@@ -208,6 +219,20 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
                 .append(key)
                 .append(value)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("container", container)
+                .append("key", key)
+                .append("value", value)
+                .build();
     }
 
 }

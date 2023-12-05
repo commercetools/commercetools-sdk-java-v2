@@ -17,6 +17,8 @@ import com.commercetools.api.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.custom_object.CustomObjectReference;
+import com.commercetools.api.models.customer.CustomerEmailTokenReference;
+import com.commercetools.api.models.customer.CustomerPasswordTokenReference;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.discount_code.DiscountCodeReference;
@@ -67,7 +69,9 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryReferenceImpl.class, name = CategoryReference.CATEGORY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.channel.ChannelReferenceImpl.class, name = ChannelReference.CHANNEL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.custom_object.CustomObjectReferenceImpl.class, name = CustomObjectReference.KEY_VALUE_DOCUMENT),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerEmailTokenReferenceImpl.class, name = CustomerEmailTokenReference.CUSTOMER_EMAIL_TOKEN),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl.class, name = CustomerGroupReference.CUSTOMER_GROUP),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerPasswordTokenReferenceImpl.class, name = CustomerPasswordTokenReference.CUSTOMER_PASSWORD_TOKEN),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerReferenceImpl.class, name = CustomerReference.CUSTOMER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.DirectDiscountReferenceImpl.class, name = DirectDiscountReference.DIRECT_DISCOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeReferenceImpl.class, name = DiscountCodeReference.DISCOUNT_CODE),
@@ -161,9 +165,17 @@ public interface Reference extends ReferenceMixin {
             return com.commercetools.api.models.custom_object.CustomObjectReference
                     .deepCopy((com.commercetools.api.models.custom_object.CustomObjectReference) template);
         }
+        if (template instanceof com.commercetools.api.models.customer.CustomerEmailTokenReference) {
+            return com.commercetools.api.models.customer.CustomerEmailTokenReference
+                    .deepCopy((com.commercetools.api.models.customer.CustomerEmailTokenReference) template);
+        }
         if (template instanceof com.commercetools.api.models.customer_group.CustomerGroupReference) {
             return com.commercetools.api.models.customer_group.CustomerGroupReference
                     .deepCopy((com.commercetools.api.models.customer_group.CustomerGroupReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.customer.CustomerPasswordTokenReference) {
+            return com.commercetools.api.models.customer.CustomerPasswordTokenReference
+                    .deepCopy((com.commercetools.api.models.customer.CustomerPasswordTokenReference) template);
         }
         if (template instanceof com.commercetools.api.models.customer.CustomerReference) {
             return com.commercetools.api.models.customer.CustomerReference
@@ -327,11 +339,27 @@ public interface Reference extends ReferenceMixin {
     }
 
     /**
+     * builder for customerEmailToken subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.customer.CustomerEmailTokenReferenceBuilder customerEmailTokenBuilder() {
+        return com.commercetools.api.models.customer.CustomerEmailTokenReferenceBuilder.of();
+    }
+
+    /**
      * builder for customerGroup subtype
      * @return builder
      */
     public static com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder customerGroupBuilder() {
         return com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of();
+    }
+
+    /**
+     * builder for customerPasswordToken subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.customer.CustomerPasswordTokenReferenceBuilder customerPasswordTokenBuilder() {
+        return com.commercetools.api.models.customer.CustomerPasswordTokenReferenceBuilder.of();
     }
 
     /**

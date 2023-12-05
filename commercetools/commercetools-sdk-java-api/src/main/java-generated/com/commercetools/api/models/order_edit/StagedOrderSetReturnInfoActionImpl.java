@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderSetReturnInfoAction
+ *  <p>Produces the Return Info Set Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetReturnInfoActionImpl implements StagedOrderSetReturnInfoAction, ModelBase {
@@ -50,7 +52,7 @@ public class StagedOrderSetReturnInfoActionImpl implements StagedOrderSetReturnI
     }
 
     /**
-     *
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> getItems() {
@@ -75,12 +77,23 @@ public class StagedOrderSetReturnInfoActionImpl implements StagedOrderSetReturnI
 
         StagedOrderSetReturnInfoActionImpl that = (StagedOrderSetReturnInfoActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(items, that.items).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(items, that.items)
+                .append(action, that.action)
+                .append(items, that.items)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(items).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("items", items)
+                .build();
     }
 
 }

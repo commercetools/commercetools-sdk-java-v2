@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * MyPaymentDraft
@@ -110,6 +112,10 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
                 .append(paymentMethodInfo, that.paymentMethodInfo)
                 .append(custom, that.custom)
                 .append(transaction, that.transaction)
+                .append(amountPlanned, that.amountPlanned)
+                .append(paymentMethodInfo, that.paymentMethodInfo)
+                .append(custom, that.custom)
+                .append(transaction, that.transaction)
                 .isEquals();
     }
 
@@ -120,6 +126,15 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
                 .append(custom)
                 .append(transaction)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("amountPlanned", amountPlanned)
+                .append("paymentMethodInfo", paymentMethodInfo)
+                .append("custom", custom)
+                .append("transaction", transaction)
+                .build();
     }
 
 }

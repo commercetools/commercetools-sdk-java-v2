@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Price Key update action.</p>
@@ -138,6 +140,12 @@ public class ProductPriceKeySetMessagePayloadImpl implements ProductPriceKeySetM
                 .append(oldKey, that.oldKey)
                 .append(key, that.key)
                 .append(staged, that.staged)
+                .append(type, that.type)
+                .append(variantId, that.variantId)
+                .append(priceId, that.priceId)
+                .append(oldKey, that.oldKey)
+                .append(key, that.key)
+                .append(staged, that.staged)
                 .isEquals();
     }
 
@@ -150,6 +158,17 @@ public class ProductPriceKeySetMessagePayloadImpl implements ProductPriceKeySetM
                 .append(key)
                 .append(staged)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("variantId", variantId)
+                .append("priceId", priceId)
+                .append("oldKey", oldKey)
+                .append("key", key)
+                .append("staged", staged)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomLineItemDraft
@@ -262,6 +264,18 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(shippingDetails, that.shippingDetails)
+                .append(name, that.name)
+                .append(money, that.money)
+                .append(taxedPrice, that.taxedPrice)
+                .append(totalPrice, that.totalPrice)
+                .append(slug, that.slug)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(taxCategory, that.taxCategory)
+                .append(taxRate, that.taxRate)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(shippingDetails, that.shippingDetails)
                 .isEquals();
     }
 
@@ -280,6 +294,23 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(discountedPricePerQuantity)
                 .append(shippingDetails)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("money", money)
+                .append("taxedPrice", taxedPrice)
+                .append("totalPrice", totalPrice)
+                .append("slug", slug)
+                .append("quantity", quantity)
+                .append("state", state)
+                .append("taxCategory", taxCategory)
+                .append("taxRate", taxRate)
+                .append("externalTaxRate", externalTaxRate)
+                .append("discountedPricePerQuantity", discountedPricePerQuantity)
+                .append("shippingDetails", shippingDetails)
+                .build();
     }
 
 }

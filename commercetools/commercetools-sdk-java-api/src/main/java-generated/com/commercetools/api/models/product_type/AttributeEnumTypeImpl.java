@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Attribute type for plain enum values. Useful for predefined language-agnostic values selectable in drop downs when only one value should be selected. Use AttributeSetType of AttributeEnumType instead if multiple values can be selected from the list.</p>
@@ -76,12 +78,23 @@ public class AttributeEnumTypeImpl implements AttributeEnumType, ModelBase {
 
         AttributeEnumTypeImpl that = (AttributeEnumTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(values, that.values).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(values, that.values)
+                .append(name, that.name)
+                .append(values, that.values)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(name).append(values).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("values", values)
+                .build();
     }
 
 }

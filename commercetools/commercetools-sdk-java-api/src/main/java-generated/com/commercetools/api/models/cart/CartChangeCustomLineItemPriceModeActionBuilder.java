@@ -3,6 +3,8 @@ package com.commercetools.api.models.cart;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartChangeCustomLineItemPriceModeAction cartChangeCustomLineItemPriceModeAction = CartChangeCustomLineItemPriceModeAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .mode(CustomLineItemPriceMode.STANDARD)
  *             .build()
  * </code></pre>
@@ -23,18 +24,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartChangeCustomLineItemPriceModeActionBuilder
         implements Builder<CartChangeCustomLineItemPriceModeAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode mode;
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public CartChangeCustomLineItemPriceModeActionBuilder customLineItemId(final String customLineItemId) {
+    public CartChangeCustomLineItemPriceModeActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartChangeCustomLineItemPriceModeActionBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -51,12 +67,23 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -73,10 +100,8 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
      * @return CartChangeCustomLineItemPriceModeAction
      */
     public CartChangeCustomLineItemPriceModeAction build() {
-        Objects.requireNonNull(customLineItemId,
-            CartChangeCustomLineItemPriceModeAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(mode, CartChangeCustomLineItemPriceModeAction.class + ": mode is missing");
-        return new CartChangeCustomLineItemPriceModeActionImpl(customLineItemId, mode);
+        return new CartChangeCustomLineItemPriceModeActionImpl(customLineItemId, customLineItemKey, mode);
     }
 
     /**
@@ -84,7 +109,7 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
      * @return CartChangeCustomLineItemPriceModeAction
      */
     public CartChangeCustomLineItemPriceModeAction buildUnchecked() {
-        return new CartChangeCustomLineItemPriceModeActionImpl(customLineItemId, mode);
+        return new CartChangeCustomLineItemPriceModeActionImpl(customLineItemId, customLineItemKey, mode);
     }
 
     /**
@@ -104,6 +129,7 @@ public class CartChangeCustomLineItemPriceModeActionBuilder
             final CartChangeCustomLineItemPriceModeAction template) {
         CartChangeCustomLineItemPriceModeActionBuilder builder = new CartChangeCustomLineItemPriceModeActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.mode = template.getMode();
         return builder;
     }

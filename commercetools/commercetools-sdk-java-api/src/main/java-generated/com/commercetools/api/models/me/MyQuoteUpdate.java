@@ -35,7 +35,7 @@ public interface MyQuoteUpdate
         extends com.commercetools.api.models.ResourceUpdate<MyQuoteUpdate, MyQuoteUpdateAction, MyQuoteUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface MyQuoteUpdate
     public List<MyQuoteUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the Quote to which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      */
 

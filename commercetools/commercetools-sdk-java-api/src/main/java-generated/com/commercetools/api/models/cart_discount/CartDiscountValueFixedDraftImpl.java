@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Sets the DiscountedLineItemPrice of the CartDiscountLineItemsTarget or CartDiscountCustomLineItemsTarget to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied.</p>
@@ -50,7 +52,8 @@ public class CartDiscountValueFixedDraftImpl implements CartDiscountValueFixedDr
     }
 
     /**
-     *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty, the discount does not apply.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
@@ -75,12 +78,23 @@ public class CartDiscountValueFixedDraftImpl implements CartDiscountValueFixedDr
 
         CartDiscountValueFixedDraftImpl that = (CartDiscountValueFixedDraftImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(money, that.money).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(money, that.money)
+                .append(type, that.type)
+                .append(money, that.money)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(money).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("money", money)
+                .build();
     }
 
 }

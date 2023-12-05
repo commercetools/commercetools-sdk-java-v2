@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * SyncInfo
+ *  <p>Contains synchronization activity information of the Order (like export or import).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SyncInfoImpl implements SyncInfo, ModelBase {
@@ -45,7 +47,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     *  <p>Connection to a particular synchronization destination.</p>
+     *  <p>Connection to a synchronization destination.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
@@ -53,7 +55,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     *  <p>Identifier of an external order instance, file, or other resource.</p>
      */
 
     public String getExternalId() {
@@ -61,7 +63,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the information was synced.</p>
      */
 
     public java.time.ZonedDateTime getSyncedAt() {
@@ -93,12 +95,23 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
         return new EqualsBuilder().append(channel, that.channel)
                 .append(externalId, that.externalId)
                 .append(syncedAt, that.syncedAt)
+                .append(channel, that.channel)
+                .append(externalId, that.externalId)
+                .append(syncedAt, that.syncedAt)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(channel).append(externalId).append(syncedAt).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("channel", channel)
+                .append("externalId", externalId)
+                .append("syncedAt", syncedAt)
+                .build();
     }
 
 }

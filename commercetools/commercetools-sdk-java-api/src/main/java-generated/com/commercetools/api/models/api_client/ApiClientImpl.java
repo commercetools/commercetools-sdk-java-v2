@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ApiClient
@@ -193,6 +195,15 @@ public class ApiClientImpl implements ApiClient, ModelBase {
                 .append(createdAt, that.createdAt)
                 .append(accessTokenValiditySeconds, that.accessTokenValiditySeconds)
                 .append(refreshTokenValiditySeconds, that.refreshTokenValiditySeconds)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(scope, that.scope)
+                .append(secret, that.secret)
+                .append(lastUsedAt, that.lastUsedAt)
+                .append(deleteAt, that.deleteAt)
+                .append(createdAt, that.createdAt)
+                .append(accessTokenValiditySeconds, that.accessTokenValiditySeconds)
+                .append(refreshTokenValiditySeconds, that.refreshTokenValiditySeconds)
                 .isEquals();
     }
 
@@ -208,6 +219,20 @@ public class ApiClientImpl implements ApiClient, ModelBase {
                 .append(accessTokenValiditySeconds)
                 .append(refreshTokenValiditySeconds)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("name", name)
+                .append("scope", scope)
+                .append("secret", secret)
+                .append("lastUsedAt", lastUsedAt)
+                .append("deleteAt", deleteAt)
+                .append("createdAt", createdAt)
+                .append("accessTokenValiditySeconds", accessTokenValiditySeconds)
+                .append("refreshTokenValiditySeconds", refreshTokenValiditySeconds)
+                .build();
     }
 
 }

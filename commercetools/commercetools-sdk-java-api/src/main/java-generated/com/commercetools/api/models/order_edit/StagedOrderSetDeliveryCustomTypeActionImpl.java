@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StagedOrderSetDeliveryCustomTypeAction
@@ -61,7 +63,8 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryId() {
@@ -69,7 +72,8 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryKey() {
@@ -123,6 +127,11 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
                 .append(deliveryKey, that.deliveryKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 
@@ -134,6 +143,16 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
                 .append(type)
                 .append(fields)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("deliveryId", deliveryId)
+                .append("deliveryKey", deliveryKey)
+                .append("type", type)
+                .append("fields", fields)
+                .build();
     }
 
 }

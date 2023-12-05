@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a field value conflicts with an existing value stored in a particular resource causing a duplicate.</p>
@@ -144,6 +146,12 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
                 .append(field, that.field)
                 .append(duplicateValue, that.duplicateValue)
                 .append(conflictingResource, that.conflictingResource)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(field, that.field)
+                .append(duplicateValue, that.duplicateValue)
+                .append(conflictingResource, that.conflictingResource)
                 .isEquals();
     }
 
@@ -156,6 +164,17 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
                 .append(duplicateValue)
                 .append(conflictingResource)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("field", field)
+                .append("duplicateValue", duplicateValue)
+                .append("conflictingResource", conflictingResource)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Parcel Items update action.</p>
@@ -97,7 +99,7 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -148,6 +150,12 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
                 .append(items, that.items)
                 .append(oldItems, that.oldItems)
                 .append(shippingKey, that.shippingKey)
+                .append(type, that.type)
+                .append(parcelId, that.parcelId)
+                .append(deliveryId, that.deliveryId)
+                .append(items, that.items)
+                .append(oldItems, that.oldItems)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -160,6 +168,17 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
                 .append(oldItems)
                 .append(shippingKey)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("parcelId", parcelId)
+                .append("deliveryId", deliveryId)
+                .append("items", items)
+                .append("oldItems", oldItems)
+                .append("shippingKey", shippingKey)
+                .build();
     }
 
 }

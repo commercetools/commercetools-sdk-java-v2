@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ShoppingListChangeLineItemsOrderAction
@@ -75,12 +77,23 @@ public class ShoppingListChangeLineItemsOrderActionImpl implements ShoppingListC
 
         ShoppingListChangeLineItemsOrderActionImpl that = (ShoppingListChangeLineItemsOrderActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemOrder, that.lineItemOrder).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemOrder, that.lineItemOrder)
+                .append(action, that.action)
+                .append(lineItemOrder, that.lineItemOrder)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(lineItemOrder).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemOrder", lineItemOrder)
+                .build();
     }
 
 }

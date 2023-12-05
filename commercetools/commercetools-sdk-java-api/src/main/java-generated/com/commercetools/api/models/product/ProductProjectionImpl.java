@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProductProjection
@@ -443,6 +445,29 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
                 .append(state, that.state)
                 .append(reviewRatingStatistics, that.reviewRatingStatistics)
                 .append(priceMode, that.priceMode)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
+                .append(productType, that.productType)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(slug, that.slug)
+                .append(categories, that.categories)
+                .append(categoryOrderHints, that.categoryOrderHints)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(searchKeywords, that.searchKeywords)
+                .append(hasStagedChanges, that.hasStagedChanges)
+                .append(published, that.published)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(taxCategory, that.taxCategory)
+                .append(state, that.state)
+                .append(reviewRatingStatistics, that.reviewRatingStatistics)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 
@@ -472,6 +497,34 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
                 .append(reviewRatingStatistics)
                 .append(priceMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("key", key)
+                .append("productType", productType)
+                .append("name", name)
+                .append("description", description)
+                .append("slug", slug)
+                .append("categories", categories)
+                .append("categoryOrderHints", categoryOrderHints)
+                .append("metaTitle", metaTitle)
+                .append("metaDescription", metaDescription)
+                .append("metaKeywords", metaKeywords)
+                .append("searchKeywords", searchKeywords)
+                .append("hasStagedChanges", hasStagedChanges)
+                .append("published", published)
+                .append("masterVariant", masterVariant)
+                .append("variants", variants)
+                .append("taxCategory", taxCategory)
+                .append("state", state)
+                .append("reviewRatingStatistics", reviewRatingStatistics)
+                .append("priceMode", priceMode)
+                .build();
     }
 
 }

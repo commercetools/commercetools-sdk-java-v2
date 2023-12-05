@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Change Staged Quote State update action.</p>
@@ -91,6 +93,9 @@ public class StagedQuoteStateChangedMessagePayloadImpl implements StagedQuoteSta
         return new EqualsBuilder().append(type, that.type)
                 .append(stagedQuoteState, that.stagedQuoteState)
                 .append(oldStagedQuoteState, that.oldStagedQuoteState)
+                .append(type, that.type)
+                .append(stagedQuoteState, that.stagedQuoteState)
+                .append(oldStagedQuoteState, that.oldStagedQuoteState)
                 .isEquals();
     }
 
@@ -100,6 +105,14 @@ public class StagedQuoteStateChangedMessagePayloadImpl implements StagedQuoteSta
                 .append(stagedQuoteState)
                 .append(oldStagedQuoteState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("stagedQuoteState", stagedQuoteState)
+                .append("oldStagedQuoteState", oldStagedQuoteState)
+                .build();
     }
 
 }

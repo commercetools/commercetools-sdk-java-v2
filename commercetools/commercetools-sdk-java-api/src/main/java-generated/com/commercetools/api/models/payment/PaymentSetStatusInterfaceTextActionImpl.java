@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * PaymentSetStatusInterfaceTextAction
@@ -70,12 +72,23 @@ public class PaymentSetStatusInterfaceTextActionImpl implements PaymentSetStatus
 
         PaymentSetStatusInterfaceTextActionImpl that = (PaymentSetStatusInterfaceTextActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(interfaceText, that.interfaceText).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(interfaceText, that.interfaceText)
+                .append(action, that.action)
+                .append(interfaceText, that.interfaceText)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(interfaceText).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("interfaceText", interfaceText)
+                .build();
     }
 
 }

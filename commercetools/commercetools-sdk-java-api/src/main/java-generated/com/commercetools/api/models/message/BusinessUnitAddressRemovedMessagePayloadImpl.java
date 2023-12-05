@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Remove Address update action.</p>
@@ -72,12 +74,23 @@ public class BusinessUnitAddressRemovedMessagePayloadImpl
 
         BusinessUnitAddressRemovedMessagePayloadImpl that = (BusinessUnitAddressRemovedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(address, that.address)
+                .append(type, that.type)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(address).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("address", address)
+                .build();
     }
 
 }

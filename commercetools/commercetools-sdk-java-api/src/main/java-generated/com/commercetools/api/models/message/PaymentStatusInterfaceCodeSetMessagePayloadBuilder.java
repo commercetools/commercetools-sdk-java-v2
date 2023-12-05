@@ -24,21 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
         implements Builder<PaymentStatusInterfaceCodeSetMessagePayload> {
 
-    private String paymentId;
-
     @Nullable
     private String interfaceCode;
-
-    /**
-     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
-     * @param paymentId value to be set
-     * @return Builder
-     */
-
-    public PaymentStatusInterfaceCodeSetMessagePayloadBuilder paymentId(final String paymentId) {
-        this.paymentId = paymentId;
-        return this;
-    }
 
     /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
@@ -49,15 +36,6 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
     public PaymentStatusInterfaceCodeSetMessagePayloadBuilder interfaceCode(@Nullable final String interfaceCode) {
         this.interfaceCode = interfaceCode;
         return this;
-    }
-
-    /**
-     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
-     * @return paymentId
-     */
-
-    public String getPaymentId() {
-        return this.paymentId;
     }
 
     /**
@@ -75,8 +53,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
      * @return PaymentStatusInterfaceCodeSetMessagePayload
      */
     public PaymentStatusInterfaceCodeSetMessagePayload build() {
-        Objects.requireNonNull(paymentId, PaymentStatusInterfaceCodeSetMessagePayload.class + ": paymentId is missing");
-        return new PaymentStatusInterfaceCodeSetMessagePayloadImpl(paymentId, interfaceCode);
+        return new PaymentStatusInterfaceCodeSetMessagePayloadImpl(interfaceCode);
     }
 
     /**
@@ -84,7 +61,7 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
      * @return PaymentStatusInterfaceCodeSetMessagePayload
      */
     public PaymentStatusInterfaceCodeSetMessagePayload buildUnchecked() {
-        return new PaymentStatusInterfaceCodeSetMessagePayloadImpl(paymentId, interfaceCode);
+        return new PaymentStatusInterfaceCodeSetMessagePayloadImpl(interfaceCode);
     }
 
     /**
@@ -103,7 +80,6 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
     public static PaymentStatusInterfaceCodeSetMessagePayloadBuilder of(
             final PaymentStatusInterfaceCodeSetMessagePayload template) {
         PaymentStatusInterfaceCodeSetMessagePayloadBuilder builder = new PaymentStatusInterfaceCodeSetMessagePayloadBuilder();
-        builder.paymentId = template.getPaymentId();
         builder.interfaceCode = template.getInterfaceCode();
         return builder;
     }

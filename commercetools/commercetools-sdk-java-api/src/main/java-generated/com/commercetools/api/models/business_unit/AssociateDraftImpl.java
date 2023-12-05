@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * AssociateDraft
@@ -22,9 +24,6 @@ public class AssociateDraftImpl implements AssociateDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments;
 
-    @Deprecated
-    private java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles;
-
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
     /**
@@ -33,10 +32,8 @@ public class AssociateDraftImpl implements AssociateDraft, ModelBase {
     @JsonCreator
     AssociateDraftImpl(
             @JsonProperty("associateRoleAssignments") final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> associateRoleAssignments,
-            @JsonProperty("roles") final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
         this.associateRoleAssignments = associateRoleAssignments;
-        this.roles = roles;
         this.customer = customer;
     }
 
@@ -52,14 +49,6 @@ public class AssociateDraftImpl implements AssociateDraft, ModelBase {
 
     public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleAssignmentDraft> getAssociateRoleAssignments() {
         return this.associateRoleAssignments;
-    }
-
-    /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     */
-    @Deprecated
-    public java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> getRoles() {
-        return this.roles;
     }
 
     /**
@@ -80,17 +69,6 @@ public class AssociateDraftImpl implements AssociateDraft, ModelBase {
         this.associateRoleAssignments = associateRoleAssignments;
     }
 
-    @Deprecated
-    public void setRoles(final com.commercetools.api.models.business_unit.AssociateRoleDeprecated... roles) {
-        this.roles = new ArrayList<>(Arrays.asList(roles));
-    }
-
-    @Deprecated
-    public void setRoles(
-            final java.util.List<com.commercetools.api.models.business_unit.AssociateRoleDeprecated> roles) {
-        this.roles = roles;
-    }
-
     public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
         this.customer = customer;
     }
@@ -106,14 +84,23 @@ public class AssociateDraftImpl implements AssociateDraft, ModelBase {
         AssociateDraftImpl that = (AssociateDraftImpl) o;
 
         return new EqualsBuilder().append(associateRoleAssignments, that.associateRoleAssignments)
-                .append(roles, that.roles)
+                .append(customer, that.customer)
+                .append(associateRoleAssignments, that.associateRoleAssignments)
                 .append(customer, that.customer)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(associateRoleAssignments).append(roles).append(customer).toHashCode();
+        return new HashCodeBuilder(17, 37).append(associateRoleAssignments).append(customer).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+                .append("associateRoleAssignments", associateRoleAssignments)
+                .append("customer", customer)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This payload is sent for a MessageSubscription.</p>
@@ -226,6 +228,17 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
                 .append(sequenceNumber, that.sequenceNumber)
                 .append(resourceVersion, that.resourceVersion)
                 .append(payloadNotIncluded, that.payloadNotIncluded)
+                .append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resourceVersion, that.resourceVersion)
+                .append(payloadNotIncluded, that.payloadNotIncluded)
                 .isEquals();
     }
 
@@ -243,6 +256,29 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
                 .append(resourceVersion)
                 .append(payloadNotIncluded)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("projectKey", projectKey)
+                .append("notificationType", notificationType)
+                .append("resource", resource)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resourceVersion", resourceVersion)
+                .append("payloadNotIncluded", payloadNotIncluded)
+                .build();
+    }
+
+    private com.commercetools.api.models.message.MessagePayload messagePayload;
+
+    @Override
+    public com.commercetools.api.models.message.MessagePayload getMessagePayload() {
+        return messagePayload;
     }
 
 }

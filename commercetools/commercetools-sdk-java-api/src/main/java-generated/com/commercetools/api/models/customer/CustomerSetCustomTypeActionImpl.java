@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * CustomerSetCustomTypeAction
+ *  <p>Adding or updating a Custom Type on a Customer generates the CustomerCustomTypeSet Message, removing one generates the CustomerCustomTypeRemoved Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetCustomTypeActionImpl implements CustomerSetCustomTypeAction, ModelBase {
@@ -90,12 +92,23 @@ public class CustomerSetCustomTypeActionImpl implements CustomerSetCustomTypeAct
         return new EqualsBuilder().append(action, that.action)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(type).append(fields).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("type", type)
+                .append("fields", fields)
+                .build();
     }
 
 }

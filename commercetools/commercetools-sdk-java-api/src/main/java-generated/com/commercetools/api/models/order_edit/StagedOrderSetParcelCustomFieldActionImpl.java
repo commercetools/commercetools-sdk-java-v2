@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StagedOrderSetParcelCustomFieldAction
@@ -60,7 +62,8 @@ public class StagedOrderSetParcelCustomFieldActionImpl implements StagedOrderSet
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelId() {
@@ -68,7 +71,8 @@ public class StagedOrderSetParcelCustomFieldActionImpl implements StagedOrderSet
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Parcel.</p>
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> must be provided.</p>
      */
 
     public String getParcelKey() {
@@ -122,6 +126,11 @@ public class StagedOrderSetParcelCustomFieldActionImpl implements StagedOrderSet
                 .append(parcelKey, that.parcelKey)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(parcelId, that.parcelId)
+                .append(parcelKey, that.parcelKey)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 
@@ -133,6 +142,16 @@ public class StagedOrderSetParcelCustomFieldActionImpl implements StagedOrderSet
                 .append(name)
                 .append(value)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("parcelId", parcelId)
+                .append("parcelKey", parcelKey)
+                .append("name", name)
+                .append("value", value)
+                .build();
     }
 
 }

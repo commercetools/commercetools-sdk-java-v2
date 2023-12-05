@@ -41,7 +41,7 @@ public class ByProjectKeyTaxCategoriesTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyTaxCategoriesTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -105,6 +105,13 @@ public class ByProjectKeyTaxCategoriesTest {
                         "get", "test_projectKey/tax-categories", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/tax-categories?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().head().createHttpRequest(),
+                        "head", "test_projectKey/tax-categories", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
                         .post(com.commercetools.api.models.tax_category.TaxCategoryDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/tax-categories?expand=expand", },
@@ -128,6 +135,8 @@ public class ByProjectKeyTaxCategoriesTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .post(com.commercetools.api.models.tax_category.TaxCategoryDraft.of())

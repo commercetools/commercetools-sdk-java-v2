@@ -12,6 +12,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
+import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.cart.CustomLineItem;
 import com.commercetools.api.models.cart.DirectDiscount;
 import com.commercetools.api.models.cart.InventoryMode;
@@ -319,6 +320,14 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public String getPurchaseOrderNumber();
 
     /**
+     *  <p>The Cart from which a Quote is requested.</p>
+     * @return cart
+     */
+    @Valid
+    @JsonProperty("cart")
+    public CartReference getCart();
+
+    /**
      *  <p>The BusinessUnit for the Quote Request.</p>
      * @return businessUnit
      */
@@ -576,6 +585,13 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
+     *  <p>The Cart from which a Quote is requested.</p>
+     * @param cart value to be set
+     */
+
+    public void setCart(final CartReference cart);
+
+    /**
      *  <p>The BusinessUnit for the Quote Request.</p>
      * @param businessUnit value to be set
      */
@@ -628,6 +644,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
         instance.setCustom(template.getCustom());
         instance.setState(template.getState());
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
+        instance.setCart(template.getCart());
         instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }
@@ -694,6 +711,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
+        instance.setCart(com.commercetools.api.models.cart.CartReference.deepCopy(template.getCart()));
         instance.setBusinessUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));
         return instance;

@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderSetShippingAddressAndCustomShippingMethodAction
+ *  <p>Sets the shipping address and a custom Shipping Method together to prevent an inconsistent state.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
@@ -67,7 +69,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set for <code>shippingAddress</code>.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -75,7 +77,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public String getShippingMethodName() {
@@ -83,7 +85,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
@@ -91,7 +93,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when the Order has the <code>Platform</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -99,7 +101,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -143,6 +145,12 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
                 .append(shippingRate, that.shippingRate)
                 .append(taxCategory, that.taxCategory)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(action, that.action)
+                .append(address, that.address)
+                .append(shippingMethodName, that.shippingMethodName)
+                .append(shippingRate, that.shippingRate)
+                .append(taxCategory, that.taxCategory)
+                .append(externalTaxRate, that.externalTaxRate)
                 .isEquals();
     }
 
@@ -155,6 +163,17 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
                 .append(taxCategory)
                 .append(externalTaxRate)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("address", address)
+                .append("shippingMethodName", shippingMethodName)
+                .append("shippingRate", shippingRate)
+                .append("taxCategory", taxCategory)
+                .append("externalTaxRate", externalTaxRate)
+                .build();
     }
 
 }

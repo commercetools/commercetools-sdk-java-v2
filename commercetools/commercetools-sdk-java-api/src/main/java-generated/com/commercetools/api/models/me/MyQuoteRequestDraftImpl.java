@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * MyQuoteRequestDraft
@@ -92,12 +94,23 @@ public class MyQuoteRequestDraftImpl implements MyQuoteRequestDraft, ModelBase {
         return new EqualsBuilder().append(cartId, that.cartId)
                 .append(cartVersion, that.cartVersion)
                 .append(comment, that.comment)
+                .append(cartId, that.cartId)
+                .append(cartVersion, that.cartVersion)
+                .append(comment, that.comment)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(cartId).append(cartVersion).append(comment).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("cartId", cartId)
+                .append("cartVersion", cartVersion)
+                .append("comment", comment)
+                .build();
     }
 
 }

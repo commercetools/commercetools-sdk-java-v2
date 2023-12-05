@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderAddReturnInfoAction
+ *  <p>Produces the Return Info Added Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     String ADD_RETURN_INFO = "addReturnInfo";
 
     /**
-     *
+     *  <p>Value to set.</p>
      * @return returnTrackingId
      */
 
@@ -47,7 +47,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     public String getReturnTrackingId();
 
     /**
-     *
+     *  <p>Items to be returned. Must not be empty.</p>
      * @return items
      */
     @NotNull
@@ -56,7 +56,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     public List<ReturnItemDraft> getItems();
 
     /**
-     *
+     *  <p>Value to set. If not set, it defaults to the current date and time.</p>
      * @return returnDate
      */
 
@@ -64,14 +64,14 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     public ZonedDateTime getReturnDate();
 
     /**
-     * set returnTrackingId
+     *  <p>Value to set.</p>
      * @param returnTrackingId value to be set
      */
 
     public void setReturnTrackingId(final String returnTrackingId);
 
     /**
-     * set items
+     *  <p>Items to be returned. Must not be empty.</p>
      * @param items values to be set
      */
 
@@ -79,14 +79,14 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     public void setItems(final ReturnItemDraft... items);
 
     /**
-     * set items
+     *  <p>Items to be returned. Must not be empty.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<ReturnItemDraft> items);
 
     /**
-     * set returnDate
+     *  <p>Value to set. If not set, it defaults to the current date and time.</p>
      * @param returnDate value to be set
      */
 

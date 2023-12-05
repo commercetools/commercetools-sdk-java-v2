@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProductDraft
@@ -344,6 +346,23 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append(state, that.state)
                 .append(publish, that.publish)
                 .append(priceMode, that.priceMode)
+                .append(productType, that.productType)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(categories, that.categories)
+                .append(categoryOrderHints, that.categoryOrderHints)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(taxCategory, that.taxCategory)
+                .append(searchKeywords, that.searchKeywords)
+                .append(state, that.state)
+                .append(publish, that.publish)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 
@@ -367,6 +386,28 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append(publish)
                 .append(priceMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("productType", productType)
+                .append("name", name)
+                .append("slug", slug)
+                .append("key", key)
+                .append("description", description)
+                .append("categories", categories)
+                .append("categoryOrderHints", categoryOrderHints)
+                .append("metaTitle", metaTitle)
+                .append("metaDescription", metaDescription)
+                .append("metaKeywords", metaKeywords)
+                .append("masterVariant", masterVariant)
+                .append("variants", variants)
+                .append("taxCategory", taxCategory)
+                .append("searchKeywords", searchKeywords)
+                .append("state", state)
+                .append("publish", publish)
+                .append("priceMode", priceMode)
+                .build();
     }
 
 }

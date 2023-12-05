@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This update action produces the StoreDistributionChannelsChanged Message. It has no effect if a given distribution channel is already present in a Store.</p>
@@ -75,12 +77,21 @@ public class StoreAddDistributionChannelActionImpl implements StoreAddDistributi
 
         return new EqualsBuilder().append(action, that.action)
                 .append(distributionChannel, that.distributionChannel)
+                .append(action, that.action)
+                .append(distributionChannel, that.distributionChannel)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(distributionChannel).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("distributionChannel", distributionChannel)
+                .build();
     }
 
 }

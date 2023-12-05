@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>TextLineItems are Line Items that use text values instead of references to Products.</p>
@@ -28,6 +30,8 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
 
     private String id;
 
+    private String key;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     private Long quantity;
@@ -39,13 +43,14 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     TextLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
-            @JsonProperty("id") final String id,
+            @JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("quantity") final Long quantity) {
         this.addedAt = addedAt;
         this.custom = custom;
         this.description = description;
         this.id = id;
+        this.key = key;
         this.name = name;
         this.quantity = quantity;
     }
@@ -89,6 +94,14 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
     }
 
     /**
+     *  <p>User-defined identifier of the TextLineItem. It is unique per ShoppingList.</p>
+     */
+
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Name of the TextLineItem.</p>
      */
 
@@ -120,6 +133,10 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
         this.id = id;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -142,6 +159,14 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
                 .append(custom, that.custom)
                 .append(description, that.description)
                 .append(id, that.id)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(description, that.description)
+                .append(id, that.id)
+                .append(key, that.key)
                 .append(name, that.name)
                 .append(quantity, that.quantity)
                 .isEquals();
@@ -153,9 +178,22 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
                 .append(custom)
                 .append(description)
                 .append(id)
+                .append(key)
                 .append(name)
                 .append(quantity)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("addedAt", addedAt)
+                .append("custom", custom)
+                .append("description", description)
+                .append("id", id)
+                .append("key", key)
+                .append("name", name)
+                .append("quantity", quantity)
+                .build();
     }
 
 }

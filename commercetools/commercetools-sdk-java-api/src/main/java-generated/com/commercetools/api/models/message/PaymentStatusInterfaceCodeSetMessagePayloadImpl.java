@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set StatusInterfaceCode update action.</p>
@@ -23,17 +25,13 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
 
     private String type;
 
-    private String paymentId;
-
     private String interfaceCode;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    PaymentStatusInterfaceCodeSetMessagePayloadImpl(@JsonProperty("paymentId") final String paymentId,
-            @JsonProperty("interfaceCode") final String interfaceCode) {
-        this.paymentId = paymentId;
+    PaymentStatusInterfaceCodeSetMessagePayloadImpl(@JsonProperty("interfaceCode") final String interfaceCode) {
         this.interfaceCode = interfaceCode;
         this.type = PAYMENT_STATUS_INTERFACE_CODE_SET;
     }
@@ -54,23 +52,11 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
-     */
-
-    public String getPaymentId() {
-        return this.paymentId;
-    }
-
-    /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      */
 
     public String getInterfaceCode() {
         return this.interfaceCode;
-    }
-
-    public void setPaymentId(final String paymentId) {
-        this.paymentId = paymentId;
     }
 
     public void setInterfaceCode(final String interfaceCode) {
@@ -88,14 +74,22 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
         PaymentStatusInterfaceCodeSetMessagePayloadImpl that = (PaymentStatusInterfaceCodeSetMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
-                .append(paymentId, that.paymentId)
+                .append(interfaceCode, that.interfaceCode)
+                .append(type, that.type)
                 .append(interfaceCode, that.interfaceCode)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(paymentId).append(interfaceCode).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(interfaceCode).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("interfaceCode", interfaceCode)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>An abstract sellable good with a set of Attributes defined by a Product Type. Products themselves are not sellable. Instead, they act as a parent structure for Product Variants. Each Product must have at least one Product Variant, which is called the Master Variant. A single Product representation contains the <em>current</em> and the <em>staged</em> representation of its product data.</p>
@@ -264,6 +266,19 @@ public class ProductImpl implements Product, ModelBase {
                 .append(state, that.state)
                 .append(reviewRatingStatistics, that.reviewRatingStatistics)
                 .append(priceMode, that.priceMode)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(productType, that.productType)
+                .append(masterData, that.masterData)
+                .append(taxCategory, that.taxCategory)
+                .append(state, that.state)
+                .append(reviewRatingStatistics, that.reviewRatingStatistics)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 
@@ -283,6 +298,24 @@ public class ProductImpl implements Product, ModelBase {
                 .append(reviewRatingStatistics)
                 .append(priceMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("key", key)
+                .append("productType", productType)
+                .append("masterData", masterData)
+                .append("taxCategory", taxCategory)
+                .append("state", state)
+                .append("reviewRatingStatistics", reviewRatingStatistics)
+                .append("priceMode", priceMode)
+                .build();
     }
 
 }

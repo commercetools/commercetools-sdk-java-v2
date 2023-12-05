@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderChangeTaxCalculationModeAction
+ *  <p>Changing the tax calculation mode leads to recalculation of taxes.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangeTaxCalculationModeActionImpl
@@ -51,7 +53,7 @@ public class StagedOrderChangeTaxCalculationModeActionImpl
     }
 
     /**
-     *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
+     *  <p>New value to set.</p>
      */
 
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
@@ -74,12 +76,21 @@ public class StagedOrderChangeTaxCalculationModeActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(taxCalculationMode, that.taxCalculationMode)
+                .append(action, that.action)
+                .append(taxCalculationMode, that.taxCalculationMode)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(taxCalculationMode).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("taxCalculationMode", taxCalculationMode)
+                .build();
     }
 
 }

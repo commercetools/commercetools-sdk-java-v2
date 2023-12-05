@@ -41,7 +41,7 @@ public class ByProjectKeyMeQuoteRequestsKeyByKeyTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyMeQuoteRequestsKeyByKeyTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -64,6 +64,27 @@ public class ByProjectKeyMeQuoteRequestsKeyByKeyTest {
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] {
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .me()
+                                .quoteRequests()
+                                .withKey("test_key")
+                                .get()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "test_projectKey/me/quote-requests/key=test_key?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quoteRequests()
+                        .withKey("test_key")
+                        .get()
+                        .createHttpRequest(), "get", "test_projectKey/me/quote-requests/key=test_key", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quoteRequests()
+                        .withKey("test_key")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/me/quote-requests/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .me()
@@ -102,27 +123,22 @@ public class ByProjectKeyMeQuoteRequestsKeyByKeyTest {
                         .quoteRequests()
                         .withKey("test_key")
                         .delete()
-                        .createHttpRequest(), "delete", "test_projectKey/me/quote-requests/key=test_key", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .me()
-                                .quoteRequests()
-                                .withKey("test_key")
-                                .get()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "get", "test_projectKey/me/quote-requests/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withKey("test_key")
-                        .get()
-                        .createHttpRequest(), "get", "test_projectKey/me/quote-requests/key=test_key", } };
+                        .createHttpRequest(), "delete", "test_projectKey/me/quote-requests/key=test_key", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .quoteRequests()
+                        .withKey("test_key")
+                        .get()
+                        .withExpand("expand"), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withKey("test_key").get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withKey("test_key").head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
@@ -146,15 +162,10 @@ public class ByProjectKeyMeQuoteRequestsKeyByKeyTest {
                         .withKey("test_key")
                         .delete()
                         .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withKey("test_key").delete(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .quoteRequests()
                         .withKey("test_key")
-                        .get()
-                        .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withKey("test_key").get(), } };
+                        .delete(), } };
     }
 }

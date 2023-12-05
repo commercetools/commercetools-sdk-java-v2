@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove Line Item update action.</p>
+ *  <p>Generated after a successful Remove LineItem update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemovedMessagePayload, ModelBase {
@@ -23,6 +25,8 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     private String type;
 
     private String lineItemId;
+
+    private String lineItemKey;
 
     private Long removedQuantity;
 
@@ -43,6 +47,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
      */
     @JsonCreator
     OrderLineItemRemovedMessagePayloadImpl(@JsonProperty("lineItemId") final String lineItemId,
+            @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("removedQuantity") final Long removedQuantity,
             @JsonProperty("newQuantity") final Long newQuantity,
             @JsonProperty("newState") final java.util.List<com.commercetools.api.models.order.ItemState> newState,
@@ -51,6 +56,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
             @JsonProperty("newPrice") final com.commercetools.api.models.common.Price newPrice,
             @JsonProperty("newShippingDetail") final com.commercetools.api.models.cart.ItemShippingDetails newShippingDetail) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.removedQuantity = removedQuantity;
         this.newQuantity = newQuantity;
         this.newState = newState;
@@ -82,6 +88,14 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
 
     public String getLineItemId() {
         return this.lineItemId;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
     }
 
     /**
@@ -144,6 +158,10 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
         this.lineItemId = lineItemId;
     }
 
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+    }
+
     public void setRemovedQuantity(final Long removedQuantity) {
         this.removedQuantity = removedQuantity;
     }
@@ -188,6 +206,17 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
 
         return new EqualsBuilder().append(type, that.type)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(removedQuantity, that.removedQuantity)
+                .append(newQuantity, that.newQuantity)
+                .append(newState, that.newState)
+                .append(newTotalPrice, that.newTotalPrice)
+                .append(newTaxedPrice, that.newTaxedPrice)
+                .append(newPrice, that.newPrice)
+                .append(newShippingDetail, that.newShippingDetail)
+                .append(type, that.type)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(removedQuantity, that.removedQuantity)
                 .append(newQuantity, that.newQuantity)
                 .append(newState, that.newState)
@@ -202,6 +231,7 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(removedQuantity)
                 .append(newQuantity)
                 .append(newState)
@@ -210,6 +240,21 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
                 .append(newPrice)
                 .append(newShippingDetail)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("removedQuantity", removedQuantity)
+                .append("newQuantity", newQuantity)
+                .append("newState", newState)
+                .append("newTotalPrice", newTotalPrice)
+                .append("newTaxedPrice", newTaxedPrice)
+                .append("newPrice", newPrice)
+                .append("newShippingDetail", newShippingDetail)
+                .build();
     }
 
 }

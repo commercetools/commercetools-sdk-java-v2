@@ -24,6 +24,10 @@ public class ByProjectKeyZonesKeyByKeyRequestBuilder {
         return new ByProjectKeyZonesKeyByKeyGet(apiHttpClient, projectKey, key);
     }
 
+    public ByProjectKeyZonesKeyByKeyHead head() {
+        return new ByProjectKeyZonesKeyByKeyHead(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyZonesKeyByKeyPost post(com.commercetools.api.models.zone.ZoneUpdate zoneUpdate) {
         return new ByProjectKeyZonesKeyByKeyPost(apiHttpClient, projectKey, key, zoneUpdate);
     }

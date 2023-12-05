@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CategorySetAssetDescriptionAction
@@ -106,6 +108,10 @@ public class CategorySetAssetDescriptionActionImpl implements CategorySetAssetDe
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
                 .append(description, that.description)
+                .append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(description, that.description)
                 .isEquals();
     }
 
@@ -116,6 +122,15 @@ public class CategorySetAssetDescriptionActionImpl implements CategorySetAssetDe
                 .append(assetKey)
                 .append(description)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("assetId", assetId)
+                .append("assetKey", assetKey)
+                .append("description", description)
+                .build();
     }
 
 }

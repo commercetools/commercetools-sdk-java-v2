@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * OrderChangePaymentStateAction
+ *  <p>Produces the Order Payment State Changed Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderChangePaymentStateActionImpl implements OrderChangePaymentStateAction, ModelBase {
@@ -50,7 +52,7 @@ public class OrderChangePaymentStateActionImpl implements OrderChangePaymentStat
     }
 
     /**
-     *
+     *  <p>New payment status of the Order.</p>
      */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
@@ -71,12 +73,23 @@ public class OrderChangePaymentStateActionImpl implements OrderChangePaymentStat
 
         OrderChangePaymentStateActionImpl that = (OrderChangePaymentStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(paymentState, that.paymentState).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(paymentState, that.paymentState)
+                .append(action, that.action)
+                .append(paymentState, that.paymentState)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(paymentState).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("paymentState", paymentState)
+                .build();
     }
 
 }

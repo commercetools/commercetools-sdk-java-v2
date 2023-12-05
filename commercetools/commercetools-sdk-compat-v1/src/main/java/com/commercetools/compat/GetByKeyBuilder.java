@@ -31,7 +31,6 @@ import io.sphere.sdk.categories.queries.CategoryByKeyGet;
 import io.sphere.sdk.customergroups.queries.CustomerGroupByKeyGet;
 import io.sphere.sdk.customers.queries.CustomerByKeyGet;
 import io.sphere.sdk.expansion.ExpansionPath;
-import io.sphere.sdk.extensions.queries.ExtensionByKeyGet;
 import io.sphere.sdk.orders.queries.OrderByOrderNumberGet;
 import io.sphere.sdk.payments.queries.PaymentByKeyGet;
 import io.sphere.sdk.productdiscounts.queries.ProductDiscountByKeyGet;
@@ -45,7 +44,6 @@ import io.sphere.sdk.shippingmethods.queries.ShippingMethodByKeyGet;
 import io.sphere.sdk.shoppinglists.queries.ShoppingListByKeyGet;
 import io.sphere.sdk.states.queries.StateByKeyGet;
 import io.sphere.sdk.stores.queries.StoreByKeyGet;
-import io.sphere.sdk.subscriptions.queries.SubscriptionByKeyGet;
 import io.sphere.sdk.taxcategories.queries.TaxCategoryByKeyGet;
 import io.sphere.sdk.zones.queries.ZoneByKeyGet;
 import io.vrap.rmf.base.client.ApiMethod;
@@ -278,18 +276,15 @@ public class GetByKeyBuilder {
             () -> CustomerGroupByKeyGet.of(identifiable.toResourceIdentifier().getKey()), getDsl);
     }
 
-    public ByProjectKeyExtensionsKeyByKeyGet extension(final String key,
-            final Function<ExtensionByKeyGet, ExtensionByKeyGet> getDsl) {
+    public ByProjectKeyExtensionsKeyByKeyGet extension(final String key) {
         requireNonNull(key);
-        return get(apiRoot.extensions().withKey(key).get(), () -> ExtensionByKeyGet.of(key), getDsl);
+        return apiRoot.extensions().withKey(key).get();
     }
 
     public ByProjectKeyExtensionsKeyByKeyGet extension(
-            final io.sphere.sdk.models.ResourceIdentifiable<io.sphere.sdk.extensions.Extension> identifiable,
-            final Function<ExtensionByKeyGet, ExtensionByKeyGet> getDsl) {
+            final io.sphere.sdk.models.ResourceIdentifiable<io.sphere.sdk.extensions.Extension> identifiable) {
         requireNonNull(identifiable.toResourceIdentifier().getKey());
-        return get(apiRoot.extensions().withKey(identifiable.toResourceIdentifier().getKey()).get(),
-            () -> ExtensionByKeyGet.of(identifiable.toResourceIdentifier().getKey()), getDsl);
+        return apiRoot.extensions().withKey(identifiable.toResourceIdentifier().getKey()).get();
     }
 
     public ByProjectKeyOrdersOrderNumberByOrderNumberGet order(final String key,
@@ -298,6 +293,7 @@ public class GetByKeyBuilder {
         return get(apiRoot.orders().withOrderNumber(key).get(), () -> OrderByOrderNumberGet.of(key), getDsl);
     }
 
+    @Deprecated
     public ByProjectKeyOrdersOrderNumberByOrderNumberGet order(final OrderResourceIdentifier identifiable,
             final Function<OrderByOrderNumberGet, OrderByOrderNumberGet> getDsl) {
         requireNonNull(identifiable.getKey());
@@ -305,6 +301,7 @@ public class GetByKeyBuilder {
             () -> OrderByOrderNumberGet.of(identifiable.getKey()), getDsl);
     }
 
+    @Deprecated
     public ByProjectKeyOrdersOrderNumberByOrderNumberGet order(
             final io.sphere.sdk.models.ResourceIdentifiable<io.sphere.sdk.orders.Order> identifiable,
             final Function<OrderByOrderNumberGet, OrderByOrderNumberGet> getDsl) {
@@ -479,18 +476,15 @@ public class GetByKeyBuilder {
             () -> StoreByKeyGet.of(identifiable.toResourceIdentifier().getKey()), getDsl);
     }
 
-    public ByProjectKeySubscriptionsKeyByKeyGet subscription(final String key,
-            final Function<SubscriptionByKeyGet, SubscriptionByKeyGet> getDsl) {
+    public ByProjectKeySubscriptionsKeyByKeyGet subscription(final String key) {
         requireNonNull(key);
-        return get(apiRoot.subscriptions().withKey(key).get(), () -> SubscriptionByKeyGet.of(key), getDsl);
+        return apiRoot.subscriptions().withKey(key).get();
     }
 
     public ByProjectKeySubscriptionsKeyByKeyGet subscription(
-            final io.sphere.sdk.models.ResourceIdentifiable<io.sphere.sdk.subscriptions.Subscription> identifiable,
-            final Function<SubscriptionByKeyGet, SubscriptionByKeyGet> getDsl) {
+            final io.sphere.sdk.models.ResourceIdentifiable<io.sphere.sdk.subscriptions.Subscription> identifiable) {
         requireNonNull(identifiable.toResourceIdentifier().getKey());
-        return get(apiRoot.subscriptions().withKey(identifiable.toResourceIdentifier().getKey()).get(),
-            () -> SubscriptionByKeyGet.of(identifiable.toResourceIdentifier().getKey()), getDsl);
+        return apiRoot.subscriptions().withKey(identifiable.toResourceIdentifier().getKey()).get();
     }
 
     public ByProjectKeyTaxCategoriesKeyByKeyGet taxCategory(final String key,

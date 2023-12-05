@@ -13,12 +13,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Set LineItemShippingDetails on Orders.</li>
- *   <li>Set LineItemShippingDetails on Staged Orders.</li>
+ *   <li>Set LineItem ShippingDetails on Orders.</li>
+ *   <li>Set LineItem ShippingDetails on Staged Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -127,6 +129,11 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
                 .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(lineItemId, that.lineItemId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(lineItemId, that.lineItemId)
                 .isEquals();
     }
 
@@ -138,6 +145,16 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
                 .append(nextValue)
                 .append(lineItemId)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("change", change)
+                .append("previousValue", previousValue)
+                .append("nextValue", nextValue)
+                .append("lineItemId", lineItemId)
+                .build();
     }
 
 }

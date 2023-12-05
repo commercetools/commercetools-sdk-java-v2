@@ -39,6 +39,9 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     private String id;
 
+    @Nullable
+    private String key;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     private String productId;
@@ -122,6 +125,17 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     public ShoppingListLineItemBuilder id(final String id) {
         this.id = id;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public ShoppingListLineItemBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -351,6 +365,16 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Name of the Product.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
      * @return name
@@ -430,8 +454,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         Objects.requireNonNull(productId, ShoppingListLineItem.class + ": productId is missing");
         Objects.requireNonNull(productType, ShoppingListLineItem.class + ": productType is missing");
         Objects.requireNonNull(quantity, ShoppingListLineItem.class + ": quantity is missing");
-        return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, name, productId, productType, quantity,
-            variantId, variant, productSlug);
+        return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, key, name, productId, productType,
+            quantity, variantId, variant, productSlug);
     }
 
     /**
@@ -439,8 +463,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
      * @return ShoppingListLineItem
      */
     public ShoppingListLineItem buildUnchecked() {
-        return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, name, productId, productType, quantity,
-            variantId, variant, productSlug);
+        return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, key, name, productId, productType,
+            quantity, variantId, variant, productSlug);
     }
 
     /**
@@ -462,6 +486,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         builder.custom = template.getCustom();
         builder.deactivatedAt = template.getDeactivatedAt();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.name = template.getName();
         builder.productId = template.getProductId();
         builder.productType = template.getProductType();

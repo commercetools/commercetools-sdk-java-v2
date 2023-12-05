@@ -51,10 +51,6 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     private Integer productCount;
 
-    @Deprecated
-    @Nullable
-    private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
-
     private com.commercetools.api.models.product_selection.ProductSelectionMode mode;
 
     @Nullable
@@ -234,18 +230,6 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
-     * @param type value to be set
-     * @return Builder
-     */
-    @Deprecated
-    public ProductSelectionBuilder type(
-            @Nullable final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
-        this.type = type;
-        return this;
-    }
-
-    /**
-     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @param mode value to be set
      * @return Builder
      */
@@ -377,16 +361,6 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
-     * @return type
-     */
-    @Deprecated
-    @Nullable
-    public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
-        return this.type;
-    }
-
-    /**
-     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @return mode
      */
 
@@ -417,7 +391,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         Objects.requireNonNull(productCount, ProductSelection.class + ": productCount is missing");
         Objects.requireNonNull(mode, ProductSelection.class + ": mode is missing");
         return new ProductSelectionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            productCount, type, mode, custom);
+            productCount, mode, custom);
     }
 
     /**
@@ -426,7 +400,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
      */
     public ProductSelection buildUnchecked() {
         return new ProductSelectionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            productCount, type, mode, custom);
+            productCount, mode, custom);
     }
 
     /**
@@ -453,7 +427,6 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         builder.key = template.getKey();
         builder.name = template.getName();
         builder.productCount = template.getProductCount();
-        builder.type = template.getType();
         builder.mode = template.getMode();
         builder.custom = template.getCustom();
         return builder;

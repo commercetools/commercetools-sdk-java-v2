@@ -13,7 +13,6 @@ import java.util.stream.Stream;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringEntry;
 
-import io.vrap.rmf.base.client.ModelBase;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.apache.commons.lang3.StringUtils;
@@ -186,7 +185,7 @@ public class LocalizedStringTest {
 
     @Test
     public void implementToString() throws Exception {
-        assertThat(((ModelBase) LOCALIZED_STRING).reflectionString())
+        assertThat(LOCALIZED_STRING.toString())
                 .isEqualTo(format("LocalizedStringImpl[values={de=%s, en=%s}]", DEFAULT_STRING_1, DEFAULT_STRING_2));
     }
 
@@ -348,6 +347,15 @@ public class LocalizedStringTest {
     public void deserializeWithFullLocale() {
         final LocalizedString localizedString = LocalizedString.of(Locale.US, "kids", Locale.UK, "children");
         assertThat(JsonUtils.toJsonNode(localizedString)).isEqualTo(JsonUtils.parse(FULL_LOCALE_JSON_STRING));
+    }
+
+    @Test
+    public void deserializeWithFullLocaleLocaleValues() {
+        final LocalizedString localizedString = JsonUtils.fromJsonString(FULL_LOCALE_JSON_STRING,
+            LocalizedString.class);
+        assertThat(localizedString.localeValues().get(Locale.US)).isEqualTo("kids");
+        assertThat(localizedString.localeValues().get(Locale.UK)).isEqualTo("children");
+
     }
 
     @Test

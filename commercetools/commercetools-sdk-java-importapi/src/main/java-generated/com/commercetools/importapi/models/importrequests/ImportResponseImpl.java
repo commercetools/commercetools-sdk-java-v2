@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A list of the ID's and validation statuses of newly created ImportOperations. Used as a response at each resource-specific import endpoint, for example, at Import Categories and Import ProductTypes.</p>
@@ -65,12 +67,20 @@ public class ImportResponseImpl implements ImportResponse, ModelBase {
 
         ImportResponseImpl that = (ImportResponseImpl) o;
 
-        return new EqualsBuilder().append(operationStatus, that.operationStatus).isEquals();
+        return new EqualsBuilder().append(operationStatus, that.operationStatus)
+                .append(operationStatus, that.operationStatus)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(operationStatus).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("operationStatus", operationStatus)
+                .build();
     }
 
 }

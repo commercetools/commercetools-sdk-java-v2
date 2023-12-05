@@ -30,7 +30,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     private Boolean force;
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     }
 
     /**
-     * set the value to the force
+     *  <p>Set to <code>true</code> to turn off validation.</p>
      * @param force value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
      * @return state
      */
 
@@ -86,7 +86,7 @@ public class OrderTransitionStateActionBuilder implements Builder<OrderTransitio
     }
 
     /**
-     * value of force}
+     *  <p>Set to <code>true</code> to turn off validation.</p>
      * @return force
      */
 

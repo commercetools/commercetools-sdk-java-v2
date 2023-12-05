@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after the DiscountCodeState changes due to a recalculation.</p>
@@ -107,6 +109,10 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
                 .append(discountCode, that.discountCode)
                 .append(state, that.state)
                 .append(oldState, that.oldState)
+                .append(type, that.type)
+                .append(discountCode, that.discountCode)
+                .append(state, that.state)
+                .append(oldState, that.oldState)
                 .isEquals();
     }
 
@@ -117,6 +123,15 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
                 .append(state)
                 .append(oldState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("discountCode", discountCode)
+                .append("state", state)
+                .append("oldState", oldState)
+                .build();
     }
 
 }

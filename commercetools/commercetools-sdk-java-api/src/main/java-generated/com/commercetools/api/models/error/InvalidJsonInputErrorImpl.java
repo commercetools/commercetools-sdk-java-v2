@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when an invalid JSON input has been sent. Either the JSON is syntactically incorrect or does not conform to the expected shape (for example is missing a required field).</p>
@@ -110,6 +112,10 @@ public class InvalidJsonInputErrorImpl implements InvalidJsonInputError, ModelBa
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(detailedErrorMessage, that.detailedErrorMessage)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(detailedErrorMessage, that.detailedErrorMessage)
                 .isEquals();
     }
 
@@ -120,6 +126,15 @@ public class InvalidJsonInputErrorImpl implements InvalidJsonInputError, ModelBa
                 .append(values)
                 .append(detailedErrorMessage)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("detailedErrorMessage", detailedErrorMessage)
+                .build();
     }
 
 }

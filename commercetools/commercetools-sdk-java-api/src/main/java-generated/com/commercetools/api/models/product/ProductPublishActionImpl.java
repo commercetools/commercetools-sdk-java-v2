@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Publishes product data from the Product's staged projection to its current projection. Produces the ProductPublished Message.</p>
@@ -70,12 +72,23 @@ public class ProductPublishActionImpl implements ProductPublishAction, ModelBase
 
         ProductPublishActionImpl that = (ProductPublishActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(scope, that.scope).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(scope, that.scope)
+                .append(action, that.action)
+                .append(scope, that.scope)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(scope).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("scope", scope)
+                .build();
     }
 
 }

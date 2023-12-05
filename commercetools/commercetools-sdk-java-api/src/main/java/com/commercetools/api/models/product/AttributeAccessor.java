@@ -13,11 +13,17 @@ import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
+
+import io.vrap.rmf.base.client.utils.json.JsonException;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 /**
  * Accessor for retrieving type safe attribute values
  */
 public class AttributeAccessor {
+
     public static Map<String, Object> asAttributeMap(final ProductVariant variant) {
         return variant.getAttributes().stream().collect(Collectors.toMap(Attribute::getName, Attribute::getValue));
     }
@@ -89,89 +95,189 @@ public class AttributeAccessor {
     }
 
     public static Boolean asBoolean(final Attribute attribute) {
-        return (Boolean) attribute.getValue();
+        if (attribute.getValue() instanceof Boolean) {
+            return (Boolean) attribute.getValue();
+        }
+        if (attribute.getValue() instanceof JsonNode) {
+            return ((JsonNode) attribute.getValue()).asBoolean();
+        }
+        throw new JsonException("invalid type");
     }
 
     public static Double asDouble(final Attribute attribute) {
-        return (Double) attribute.getValue();
+        if (attribute.getValue() instanceof Double) {
+            return (Double) attribute.getValue();
+        }
+        if (attribute.getValue() instanceof Number) {
+            return ((Number) attribute.getValue()).doubleValue();
+        }
+        if (attribute.getValue() instanceof JsonNode) {
+            return ((JsonNode) attribute.getValue()).asDouble();
+        }
+        throw new JsonException("invalid type");
     }
 
     public static LocalizedString asLocalizedString(final Attribute attribute) {
-        return (LocalizedString) attribute.getValue();
+        if (attribute.getValue() instanceof LocalizedString) {
+            return (LocalizedString) attribute.getValue();
+        }
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.createObjectMapper().convertValue(attribute.getValue(), LocalizedString.class);
+        }
+        throw new JsonException("invalid type");
     }
 
     public static AttributePlainEnumValue asEnum(final Attribute attribute) {
-        return (AttributePlainEnumValue) attribute.getValue();
+        if (attribute.getValue() instanceof AttributePlainEnumValue) {
+            return (AttributePlainEnumValue) attribute.getValue();
+        }
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.createObjectMapper().convertValue(attribute.getValue(), AttributePlainEnumValue.class);
+        }
+        throw new JsonException("invalid type");
     }
 
     public static AttributeLocalizedEnumValue asLocalizedEnum(final Attribute attribute) {
-        return (AttributeLocalizedEnumValue) attribute.getValue();
+        if (attribute.getValue() instanceof AttributeLocalizedEnumValue) {
+            return (AttributeLocalizedEnumValue) attribute.getValue();
+        }
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.createObjectMapper().convertValue(attribute.getValue(), AttributeLocalizedEnumValue.class);
+        }
+        throw new JsonException("invalid type");
     }
 
     public static Long asLong(final Attribute attribute) {
-        return (Long) attribute.getValue();
+        if (attribute.getValue() instanceof Long) {
+            return (Long) attribute.getValue();
+        }
+        if (attribute.getValue() instanceof Number) {
+            return ((Number) attribute.getValue()).longValue();
+        }
+        if (attribute.getValue() instanceof JsonNode) {
+            return ((JsonNode) attribute.getValue()).asLong();
+        }
+        throw new JsonException("invalid type");
     }
 
     public static Reference asReference(final Attribute attribute) {
-        return (Reference) attribute.getValue();
+        if (attribute.getValue() instanceof Reference) {
+            return (Reference) attribute.getValue();
+        }
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.createObjectMapper().convertValue(attribute.getValue(), Reference.class);
+        }
+        throw new JsonException("invalid type");
     }
 
     public static TypedMoney asMoney(final Attribute attribute) {
-        return (TypedMoney) attribute.getValue();
+        if (attribute.getValue() instanceof TypedMoney) {
+            return (TypedMoney) attribute.getValue();
+        }
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.createObjectMapper().convertValue(attribute.getValue(), TypedMoney.class);
+        }
+        throw new JsonException("invalid type");
     }
 
     @SuppressWarnings("unchecked")
     public static List<String> asSetString(final Attribute attribute) {
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) attribute.getValue(), new TypeReference<List<String>>() {
+            });
+        }
         return (List<String>) attribute.getValue();
     }
 
     @SuppressWarnings("unchecked")
     public static List<Boolean> asSetBoolean(final Attribute attribute) {
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) attribute.getValue(), new TypeReference<List<Boolean>>() {
+            });
+        }
         return (List<Boolean>) attribute.getValue();
     }
 
     @SuppressWarnings("unchecked")
     public static List<Double> asSetDouble(final Attribute attribute) {
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) attribute.getValue(), new TypeReference<List<Double>>() {
+            });
+        }
         return (List<Double>) attribute.getValue();
     }
 
     @SuppressWarnings("unchecked")
     public static List<LocalizedString> asSetLocalizedString(final Attribute attribute) {
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) attribute.getValue(), new TypeReference<List<LocalizedString>>() {
+            });
+        }
         return (List<LocalizedString>) attribute.getValue();
     }
 
     @SuppressWarnings("unchecked")
     public static List<AttributePlainEnumValue> asSetEnum(final Attribute attribute) {
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) attribute.getValue(),
+                new TypeReference<List<AttributePlainEnumValue>>() {
+                });
+        }
         return (List<AttributePlainEnumValue>) attribute.getValue();
     }
 
     @SuppressWarnings("unchecked")
     public static List<AttributeLocalizedEnumValue> asSetLocalizedEnum(final Attribute attribute) {
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) attribute.getValue(),
+                new TypeReference<List<AttributeLocalizedEnumValue>>() {
+                });
+        }
         return (List<AttributeLocalizedEnumValue>) attribute.getValue();
     }
 
     @SuppressWarnings("unchecked")
     public static List<Long> asSetLong(final Attribute attribute) {
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) attribute.getValue(), new TypeReference<List<Long>>() {
+            });
+        }
         return (List<Long>) attribute.getValue();
     }
 
     @SuppressWarnings("unchecked")
     public static List<Reference> asSetReference(final Attribute attribute) {
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) attribute.getValue(), new TypeReference<List<Reference>>() {
+            });
+        }
         return (List<Reference>) attribute.getValue();
     }
 
     @SuppressWarnings("unchecked")
     public static List<TypedMoney> asSetMoney(final Attribute attribute) {
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) attribute.getValue(), new TypeReference<List<TypedMoney>>() {
+            });
+        }
         return (List<TypedMoney>) attribute.getValue();
     }
 
     @SuppressWarnings("unchecked")
     public static List<Attribute> asNested(final Attribute attribute) {
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) attribute.getValue(), new TypeReference<List<Attribute>>() {
+            });
+        }
         return (List<Attribute>) attribute.getValue();
     }
 
     @SuppressWarnings("unchecked")
     public static List<List<Attribute>> asSetNested(final Attribute attribute) {
+        if (attribute.getValue() instanceof JsonNode) {
+            return JsonUtils.fromJsonNode((JsonNode) attribute.getValue(), new TypeReference<List<List<Attribute>>>() {
+            });
+        }
         return (List<List<Attribute>>) attribute.getValue();
     }
 }

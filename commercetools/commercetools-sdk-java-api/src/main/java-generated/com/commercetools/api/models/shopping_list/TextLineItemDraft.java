@@ -36,6 +36,14 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
         io.vrap.rmf.base.client.Draft<TextLineItemDraft> {
 
     /**
+     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
@@ -75,6 +83,13 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
 
     @JsonProperty("quantity")
     public Long getQuantity();
+
+    /**
+     *  <p>User-defined unique identifier of the TextLineItem. Must be unique per ShoppingList.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
@@ -126,6 +141,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
      */
     public static TextLineItemDraft of(final TextLineItemDraft template) {
         TextLineItemDraftImpl instance = new TextLineItemDraftImpl();
+        instance.setKey(template.getKey());
         instance.setAddedAt(template.getAddedAt());
         instance.setCustom(template.getCustom());
         instance.setDescription(template.getDescription());
@@ -145,6 +161,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
             return null;
         }
         TextLineItemDraftImpl instance = new TextLineItemDraftImpl();
+        instance.setKey(template.getKey());
         instance.setAddedAt(template.getAddedAt());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setDescription(

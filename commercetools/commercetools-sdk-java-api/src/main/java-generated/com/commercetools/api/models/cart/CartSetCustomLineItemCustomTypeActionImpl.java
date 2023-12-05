@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CartSetCustomLineItemCustomTypeAction
@@ -24,6 +26,8 @@ public class CartSetCustomLineItemCustomTypeActionImpl implements CartSetCustomL
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private com.commercetools.api.models.type.FieldContainer fields;
@@ -33,9 +37,11 @@ public class CartSetCustomLineItemCustomTypeActionImpl implements CartSetCustomL
      */
     @JsonCreator
     CartSetCustomLineItemCustomTypeActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.type = type;
         this.fields = fields;
         this.action = SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE;
@@ -57,11 +63,19 @@ public class CartSetCustomLineItemCustomTypeActionImpl implements CartSetCustomL
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -84,6 +98,10 @@ public class CartSetCustomLineItemCustomTypeActionImpl implements CartSetCustomL
         this.customLineItemId = customLineItemId;
     }
 
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+    }
+
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
     }
@@ -104,6 +122,12 @@ public class CartSetCustomLineItemCustomTypeActionImpl implements CartSetCustomL
 
         return new EqualsBuilder().append(action, that.action)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();
@@ -113,9 +137,20 @@ public class CartSetCustomLineItemCustomTypeActionImpl implements CartSetCustomL
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(customLineItemId)
+                .append(customLineItemKey)
                 .append(type)
                 .append(fields)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .append("type", type)
+                .append("fields", fields)
+                .build();
     }
 
 }

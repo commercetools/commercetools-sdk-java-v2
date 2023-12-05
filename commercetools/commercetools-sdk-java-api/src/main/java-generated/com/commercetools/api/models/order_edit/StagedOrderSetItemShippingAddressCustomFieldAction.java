@@ -38,7 +38,7 @@ public interface StagedOrderSetItemShippingAddressCustomFieldAction extends Stag
     String SET_ITEM_SHIPPING_ADDRESS_CUSTOM_FIELD = "setItemShippingAddressCustomField";
 
     /**
-     *
+     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
      * @return addressKey
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface StagedOrderSetItemShippingAddressCustomFieldAction extends Stag
     public Object getValue();
 
     /**
-     * set addressKey
+     *  <p><code>key</code> of the Address in <code>itemShippingAddresses</code>.</p>
      * @param addressKey value to be set
      */
 

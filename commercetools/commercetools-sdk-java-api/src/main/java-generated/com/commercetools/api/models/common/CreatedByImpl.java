@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
@@ -28,6 +30,8 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
 
     private String anonymousId;
 
+    private com.commercetools.api.models.customer.CustomerReference associate;
+
     /**
      * create instance with all properties
      */
@@ -35,11 +39,13 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
     CreatedByImpl(@JsonProperty("clientId") final String clientId,
             @JsonProperty("externalUserId") final String externalUserId,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer,
-            @JsonProperty("anonymousId") final String anonymousId) {
+            @JsonProperty("anonymousId") final String anonymousId,
+            @JsonProperty("associate") final com.commercetools.api.models.customer.CustomerReference associate) {
         this.clientId = clientId;
         this.externalUserId = externalUserId;
         this.customer = customer;
         this.anonymousId = anonymousId;
+        this.associate = associate;
     }
 
     /**
@@ -49,7 +55,7 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     *  <p><code>id</code> of the API Client which created the resource.</p>
      */
 
     public String getClientId() {
@@ -57,7 +63,7 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
      */
 
     public String getExternalUserId() {
@@ -80,6 +86,14 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
         return this.anonymousId;
     }
 
+    /**
+     *  <p>Indicates the Customer who created the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     */
+
+    public com.commercetools.api.models.customer.CustomerReference getAssociate() {
+        return this.associate;
+    }
+
     public void setClientId(final String clientId) {
         this.clientId = clientId;
     }
@@ -96,6 +110,10 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
         this.anonymousId = anonymousId;
     }
 
+    public void setAssociate(final com.commercetools.api.models.customer.CustomerReference associate) {
+        this.associate = associate;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -110,6 +128,12 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
                 .append(externalUserId, that.externalUserId)
                 .append(customer, that.customer)
                 .append(anonymousId, that.anonymousId)
+                .append(associate, that.associate)
+                .append(clientId, that.clientId)
+                .append(externalUserId, that.externalUserId)
+                .append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .append(associate, that.associate)
                 .isEquals();
     }
 
@@ -119,7 +143,18 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
                 .append(externalUserId)
                 .append(customer)
                 .append(anonymousId)
+                .append(associate)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("clientId", clientId)
+                .append("externalUserId", externalUserId)
+                .append("customer", customer)
+                .append("anonymousId", anonymousId)
+                .append("associate", associate)
+                .build();
     }
 
 }

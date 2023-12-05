@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Quote
@@ -674,6 +676,42 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(state, that.state)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(businessUnit, that.businessUnit)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(quoteRequest, that.quoteRequest)
+                .append(stagedQuote, that.stagedQuote)
+                .append(customer, that.customer)
+                .append(customerGroup, that.customerGroup)
+                .append(validTo, that.validTo)
+                .append(sellerComment, that.sellerComment)
+                .append(buyerComment, that.buyerComment)
+                .append(store, that.store)
+                .append(lineItems, that.lineItems)
+                .append(customLineItems, that.customLineItems)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(shippingAddress, that.shippingAddress)
+                .append(billingAddress, that.billingAddress)
+                .append(inventoryMode, that.inventoryMode)
+                .append(taxMode, that.taxMode)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .append(country, that.country)
+                .append(shippingInfo, that.shippingInfo)
+                .append(paymentInfo, that.paymentInfo)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(directDiscounts, that.directDiscounts)
+                .append(custom, that.custom)
+                .append(quoteState, that.quoteState)
+                .append(state, that.state)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(businessUnit, that.businessUnit)
                 .isEquals();
     }
 
@@ -716,6 +754,47 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(purchaseOrderNumber)
                 .append(businessUnit)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("key", key)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("quoteRequest", quoteRequest)
+                .append("stagedQuote", stagedQuote)
+                .append("customer", customer)
+                .append("customerGroup", customerGroup)
+                .append("validTo", validTo)
+                .append("sellerComment", sellerComment)
+                .append("buyerComment", buyerComment)
+                .append("store", store)
+                .append("lineItems", lineItems)
+                .append("customLineItems", customLineItems)
+                .append("totalPrice", totalPrice)
+                .append("taxedPrice", taxedPrice)
+                .append("shippingAddress", shippingAddress)
+                .append("billingAddress", billingAddress)
+                .append("inventoryMode", inventoryMode)
+                .append("taxMode", taxMode)
+                .append("taxRoundingMode", taxRoundingMode)
+                .append("taxCalculationMode", taxCalculationMode)
+                .append("country", country)
+                .append("shippingInfo", shippingInfo)
+                .append("paymentInfo", paymentInfo)
+                .append("shippingRateInput", shippingRateInput)
+                .append("itemShippingAddresses", itemShippingAddresses)
+                .append("directDiscounts", directDiscounts)
+                .append("custom", custom)
+                .append("quoteState", quoteState)
+                .append("state", state)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
+                .append("businessUnit", businessUnit)
+                .build();
     }
 
 }

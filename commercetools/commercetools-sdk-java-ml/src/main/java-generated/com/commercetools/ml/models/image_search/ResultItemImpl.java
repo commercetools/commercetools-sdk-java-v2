@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>An image URL and the product variants it is contained in. If no matching images are found, ResultItem is not present.</p>
@@ -81,12 +83,21 @@ public class ResultItemImpl implements ResultItem, ModelBase {
 
         return new EqualsBuilder().append(imageUrl, that.imageUrl)
                 .append(productVariants, that.productVariants)
+                .append(imageUrl, that.imageUrl)
+                .append(productVariants, that.productVariants)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(imageUrl).append(productVariants).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("imageUrl", imageUrl)
+                .append("productVariants", productVariants)
+                .build();
     }
 
 }

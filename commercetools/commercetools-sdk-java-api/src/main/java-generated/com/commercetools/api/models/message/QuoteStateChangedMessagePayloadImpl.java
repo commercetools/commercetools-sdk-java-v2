@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Change Quote State update action.</p>
@@ -90,12 +92,23 @@ public class QuoteStateChangedMessagePayloadImpl implements QuoteStateChangedMes
         return new EqualsBuilder().append(type, that.type)
                 .append(quoteState, that.quoteState)
                 .append(oldQuoteState, that.oldQuoteState)
+                .append(type, that.type)
+                .append(quoteState, that.quoteState)
+                .append(oldQuoteState, that.oldQuoteState)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(quoteState).append(oldQuoteState).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("quoteState", quoteState)
+                .append("oldQuoteState", oldQuoteState)
+                .build();
     }
 
 }

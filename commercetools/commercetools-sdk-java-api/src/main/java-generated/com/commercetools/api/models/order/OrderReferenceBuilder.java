@@ -30,7 +30,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     private com.commercetools.api.models.order.Order obj;
 
     /**
-     *  <p>Unique ID of the referenced resource.</p>
+     *  <p>Unique identifier of the referenced Order.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     * set the value to the obj using the builder function
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     * set the value to the obj using the builder function
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     * set the value to the obj
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
      * @param obj value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     *  <p>Unique ID of the referenced resource.</p>
+     *  <p>Unique identifier of the referenced Order.</p>
      * @return id
      */
 
@@ -85,7 +85,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     * value of obj}
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
      * @return obj
      */
 

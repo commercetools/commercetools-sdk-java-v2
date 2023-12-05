@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Variant Selection update action.</p>
@@ -110,6 +112,10 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadImpl
                 .append(product, that.product)
                 .append(oldVariantSelection, that.oldVariantSelection)
                 .append(newVariantSelection, that.newVariantSelection)
+                .append(type, that.type)
+                .append(product, that.product)
+                .append(oldVariantSelection, that.oldVariantSelection)
+                .append(newVariantSelection, that.newVariantSelection)
                 .isEquals();
     }
 
@@ -120,6 +126,15 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadImpl
                 .append(oldVariantSelection)
                 .append(newVariantSelection)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("product", product)
+                .append("oldVariantSelection", oldVariantSelection)
+                .append("newVariantSelection", newVariantSelection)
+                .build();
     }
 
 }

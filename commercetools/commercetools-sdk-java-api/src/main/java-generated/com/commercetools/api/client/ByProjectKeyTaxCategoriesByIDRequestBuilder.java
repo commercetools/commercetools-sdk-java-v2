@@ -24,6 +24,10 @@ public class ByProjectKeyTaxCategoriesByIDRequestBuilder {
         return new ByProjectKeyTaxCategoriesByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyTaxCategoriesByIDHead head() {
+        return new ByProjectKeyTaxCategoriesByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyTaxCategoriesByIDPost post(
             com.commercetools.api.models.tax_category.TaxCategoryUpdate taxCategoryUpdate) {
         return new ByProjectKeyTaxCategoriesByIDPost(apiHttpClient, projectKey, ID, taxCategoryUpdate);

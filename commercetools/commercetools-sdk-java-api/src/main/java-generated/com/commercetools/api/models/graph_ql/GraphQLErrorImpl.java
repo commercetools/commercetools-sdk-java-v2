@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * GraphQLError
@@ -119,6 +121,10 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
                 .append(locations, that.locations)
                 .append(path, that.path)
                 .append(extensions, that.extensions)
+                .append(message, that.message)
+                .append(locations, that.locations)
+                .append(path, that.path)
+                .append(extensions, that.extensions)
                 .isEquals();
     }
 
@@ -129,6 +135,15 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
                 .append(path)
                 .append(extensions)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("message", message)
+                .append("locations", locations)
+                .append("path", path)
+                .append("extensions", extensions)
+                .build();
     }
 
 }

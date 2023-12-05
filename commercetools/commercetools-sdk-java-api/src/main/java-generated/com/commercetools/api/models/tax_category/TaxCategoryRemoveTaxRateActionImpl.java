@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * TaxCategoryRemoveTaxRateAction
@@ -89,12 +91,23 @@ public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxR
         return new EqualsBuilder().append(action, that.action)
                 .append(taxRateId, that.taxRateId)
                 .append(taxRateKey, that.taxRateKey)
+                .append(action, that.action)
+                .append(taxRateId, that.taxRateId)
+                .append(taxRateKey, that.taxRateKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(taxRateId).append(taxRateKey).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("taxRateId", taxRateId)
+                .append("taxRateKey", taxRateKey)
+                .build();
     }
 
 }

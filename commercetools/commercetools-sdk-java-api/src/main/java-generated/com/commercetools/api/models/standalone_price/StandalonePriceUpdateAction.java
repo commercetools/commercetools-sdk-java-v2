@@ -32,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionImpl.class, name = StandalonePriceChangeActiveAction.CHANGE_ACTIVE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionImpl.class, name = StandalonePriceChangeValueAction.CHANGE_VALUE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierActionImpl.class, name = StandalonePriceRemovePriceTierAction.REMOVE_PRICE_TIER),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesActionImpl.class, name = StandalonePriceRemoveStagedChangesAction.REMOVE_STAGED_CHANGES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionImpl.class, name = StandalonePriceSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionImpl.class, name = StandalonePriceSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionImpl.class, name = StandalonePriceSetDiscountedPriceAction.SET_DISCOUNTED_PRICE),
@@ -83,6 +84,10 @@ public interface StandalonePriceUpdateAction
         if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierAction) {
             return com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierAction.deepCopy(
                 (com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesAction) {
+            return com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesAction.deepCopy(
+                (com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesAction) template);
         }
         if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction) {
             return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction.deepCopy(
@@ -158,6 +163,14 @@ public interface StandalonePriceUpdateAction
      */
     public static com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierActionBuilder removePriceTierBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierActionBuilder.of();
+    }
+
+    /**
+     * builder for removeStagedChanges subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesActionBuilder removeStagedChangesBuilder() {
+        return com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesActionBuilder.of();
     }
 
     /**

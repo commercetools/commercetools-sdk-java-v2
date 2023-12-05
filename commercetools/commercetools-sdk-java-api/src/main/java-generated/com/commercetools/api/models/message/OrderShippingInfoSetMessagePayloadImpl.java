@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Shipping Method and Set Custom Shipping Method update actions.</p>
+ *  <p>Generated after a successful Set ShippingMethod and Set Custom ShippingMethod update actions.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfoSetMessagePayload, ModelBase {
@@ -90,12 +92,23 @@ public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfo
         return new EqualsBuilder().append(type, that.type)
                 .append(shippingInfo, that.shippingInfo)
                 .append(oldShippingInfo, that.oldShippingInfo)
+                .append(type, that.type)
+                .append(shippingInfo, that.shippingInfo)
+                .append(oldShippingInfo, that.oldShippingInfo)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(shippingInfo).append(oldShippingInfo).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("shippingInfo", shippingInfo)
+                .append("oldShippingInfo", oldShippingInfo)
+                .build();
     }
 
 }

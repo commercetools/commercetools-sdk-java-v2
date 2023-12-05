@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomerSignin
@@ -169,6 +171,13 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
                 .append(anonymousCartSignInMode, that.anonymousCartSignInMode)
                 .append(anonymousId, that.anonymousId)
                 .append(updateProductData, that.updateProductData)
+                .append(email, that.email)
+                .append(password, that.password)
+                .append(anonymousCartId, that.anonymousCartId)
+                .append(anonymousCart, that.anonymousCart)
+                .append(anonymousCartSignInMode, that.anonymousCartSignInMode)
+                .append(anonymousId, that.anonymousId)
+                .append(updateProductData, that.updateProductData)
                 .isEquals();
     }
 
@@ -182,6 +191,18 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
                 .append(anonymousId)
                 .append(updateProductData)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("email", email)
+                .append("password", password)
+                .append("anonymousCartId", anonymousCartId)
+                .append("anonymousCart", anonymousCart)
+                .append("anonymousCartSignInMode", anonymousCartSignInMode)
+                .append("anonymousId", anonymousId)
+                .append("updateProductData", updateProductData)
+                .build();
     }
 
 }

@@ -115,13 +115,6 @@ public class ResourceIdentifierQueryBuilderDsl {
             ResourceIdentifierQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asOrder(
-            Function<com.commercetools.api.predicates.query.order.OrderResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderResourceIdentifierQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.order.OrderResourceIdentifierQueryBuilderDsl.of()),
-            ResourceIdentifierQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asPayment(
             Function<com.commercetools.api.predicates.query.payment.PaymentResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

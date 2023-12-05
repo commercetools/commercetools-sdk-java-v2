@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * BusinessUnitSetAddressCustomTypeAction
+ *  <p>Adding or updating a Custom Type on an Address of a Business Unit generates the BusinessUnitAddressCustomTypeSet Message, and removing one generates the BusinessUnitAddressCustomTypeRemoved Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

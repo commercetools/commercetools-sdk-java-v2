@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Determines the address (as a reference to an address in <code>itemShippingAddresses</code>) and the quantity shipped to the address.</p>
@@ -96,12 +98,23 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
         return new EqualsBuilder().append(addressKey, that.addressKey)
                 .append(quantity, that.quantity)
                 .append(shippingMethodKey, that.shippingMethodKey)
+                .append(addressKey, that.addressKey)
+                .append(quantity, that.quantity)
+                .append(shippingMethodKey, that.shippingMethodKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(addressKey).append(quantity).append(shippingMethodKey).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("addressKey", addressKey)
+                .append("quantity", quantity)
+                .append("shippingMethodKey", shippingMethodKey)
+                .build();
     }
 
 }

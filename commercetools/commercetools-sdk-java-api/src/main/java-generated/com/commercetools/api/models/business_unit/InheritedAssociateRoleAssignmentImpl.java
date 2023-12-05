@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * InheritedAssociateRoleAssignment
@@ -76,12 +78,23 @@ public class InheritedAssociateRoleAssignmentImpl implements InheritedAssociateR
 
         InheritedAssociateRoleAssignmentImpl that = (InheritedAssociateRoleAssignmentImpl) o;
 
-        return new EqualsBuilder().append(associateRole, that.associateRole).append(source, that.source).isEquals();
+        return new EqualsBuilder().append(associateRole, that.associateRole)
+                .append(source, that.source)
+                .append(associateRole, that.associateRole)
+                .append(source, that.source)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(associateRole).append(source).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("associateRole", associateRole)
+                .append("source", source)
+                .build();
     }
 
 }

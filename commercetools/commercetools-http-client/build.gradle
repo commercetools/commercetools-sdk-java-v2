@@ -1,4 +1,4 @@
 
 dependencies {
-    api project(":commercetools:commercetools-okhttp-client4")
+    api project(":commercetools:commercetools-async-http-client")
 }

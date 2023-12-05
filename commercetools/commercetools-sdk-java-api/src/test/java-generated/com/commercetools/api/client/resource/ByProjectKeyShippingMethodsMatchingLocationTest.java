@@ -41,7 +41,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -108,7 +108,36 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
                         .shippingMethods()
                         .matchingLocation()
                         .get()
-                        .createHttpRequest(), "get", "test_projectKey/shipping-methods/matching-location", } };
+                        .createHttpRequest(), "get", "test_projectKey/shipping-methods/matching-location", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingLocation()
+                                .head()
+                                .withCountry("country")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/shipping-methods/matching-location?country=country", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingLocation()
+                                .head()
+                                .withState("state")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/shipping-methods/matching-location?state=state", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingLocation()
+                                .head()
+                                .withCurrency("currency")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/shipping-methods/matching-location?currency=currency", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingLocation()
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/shipping-methods/matching-location", } };
     }
 
     @DataProvider
@@ -139,7 +168,23 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
                         .matchingLocation()
                         .get()
                         .withSort("sort"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingLocation().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingLocation()
+                        .head()
+                        .withCountry("country"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingLocation()
+                        .head()
+                        .withState("state"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingLocation()
+                        .head()
+                        .withCurrency("currency"), },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingLocation().get(), } };
+                        apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingLocation().head(), } };
     }
 }

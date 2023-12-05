@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * InventoryEntryDraft
@@ -160,6 +162,13 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
                 .append(restockableInDays, that.restockableInDays)
                 .append(expectedDelivery, that.expectedDelivery)
                 .append(custom, that.custom)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(supplyChannel, that.supplyChannel)
+                .append(quantityOnStock, that.quantityOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(expectedDelivery, that.expectedDelivery)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -173,6 +182,18 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
                 .append(expectedDelivery)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("sku", sku)
+                .append("key", key)
+                .append("supplyChannel", supplyChannel)
+                .append("quantityOnStock", quantityOnStock)
+                .append("restockableInDays", restockableInDays)
+                .append("expectedDelivery", expectedDelivery)
+                .append("custom", custom)
+                .build();
     }
 
 }

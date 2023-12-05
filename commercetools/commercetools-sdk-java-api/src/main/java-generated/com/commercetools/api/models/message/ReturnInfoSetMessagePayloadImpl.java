@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Return Info update action on Orders and Order Edits.</p>
+ *  <p>Generated after a successful Set ReturnInfo update action on Orders and Order Edits.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnInfoSetMessagePayloadImpl implements ReturnInfoSetMessagePayload, ModelBase {
@@ -75,12 +77,23 @@ public class ReturnInfoSetMessagePayloadImpl implements ReturnInfoSetMessagePayl
 
         ReturnInfoSetMessagePayloadImpl that = (ReturnInfoSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(returnInfo, that.returnInfo).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(returnInfo, that.returnInfo)
+                .append(type, that.type)
+                .append(returnInfo, that.returnInfo)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(returnInfo).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("returnInfo", returnInfo)
+                .build();
     }
 
 }

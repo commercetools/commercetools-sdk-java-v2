@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <ul>
@@ -73,12 +75,23 @@ public class CartChangeTaxModeActionImpl implements CartChangeTaxModeAction, Mod
 
         CartChangeTaxModeActionImpl that = (CartChangeTaxModeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(taxMode, that.taxMode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(taxMode, that.taxMode)
+                .append(action, that.action)
+                .append(taxMode, that.taxMode)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(taxMode).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("taxMode", taxMode)
+                .build();
     }
 
 }

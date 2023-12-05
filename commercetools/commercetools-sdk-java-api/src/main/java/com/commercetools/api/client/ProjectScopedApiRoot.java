@@ -10,6 +10,8 @@ public interface ProjectScopedApiRoot {
 
     ByProjectKeyGet get();
 
+    ByProjectKeyHead head();
+
     ByProjectKeyPost post(ProjectUpdate projectUpdate);
 
     ByProjectKeyCategoriesRequestBuilder categories();

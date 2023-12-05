@@ -41,7 +41,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -103,6 +103,24 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .productSelectionAssignments()
                                 .get()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/in-store/key=test_storeKey/product-selection-assignments?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productSelectionAssignments()
+                                .get()
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/in-store/key=test_storeKey/product-selection-assignments?var.varName=var.varName", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productSelectionAssignments()
+                                .get()
                                 .createHttpRequest(),
                         "get", "test_projectKey/in-store/key=test_storeKey/product-selection-assignments", } };
     }
@@ -130,6 +148,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsTest {
                         .productSelectionAssignments()
                         .get()
                         .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productSelectionAssignments()
+                        .get()
+                        .withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productSelectionAssignments()
+                        .get()
+                        .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .productSelectionAssignments()

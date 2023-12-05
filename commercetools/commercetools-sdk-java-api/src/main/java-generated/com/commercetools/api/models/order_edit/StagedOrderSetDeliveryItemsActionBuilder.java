@@ -33,7 +33,8 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -44,7 +45,8 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      * @return Builder
      */
@@ -55,7 +57,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     * set values to the items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -67,7 +69,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     * set value to the items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -79,7 +81,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     * add values to the items
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -94,7 +96,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -109,7 +111,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -122,7 +124,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -133,7 +135,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -144,7 +146,8 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
 
@@ -154,7 +157,8 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
 
@@ -164,7 +168,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     * value of items}
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return items
      */
 

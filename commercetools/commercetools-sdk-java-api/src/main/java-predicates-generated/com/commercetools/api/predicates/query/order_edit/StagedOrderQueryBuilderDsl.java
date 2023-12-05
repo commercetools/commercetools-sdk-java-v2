@@ -36,33 +36,15 @@ public class StagedOrderQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> lastModifiedBy(
-            Function<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("lastModifiedBy"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl.of())),
-            StagedOrderQueryBuilderDsl::of);
-    }
-
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> createdBy(
-            Function<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("createdBy"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl.of())),
-            StagedOrderQueryBuilderDsl::of);
-    }
-
-    public DateTimeComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> completedAt() {
-        return new DateTimeComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("completedAt")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
-    }
-
     public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> orderNumber() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("orderNumber")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> purchaseOrderNumber() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("purchaseOrderNumber")),
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
@@ -76,6 +58,15 @@ public class StagedOrderQueryBuilderDsl {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerEmail")),
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> customerGroup(
+            Function<com.commercetools.api.predicates.query.customer_group.CustomerGroupReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer_group.CustomerGroupReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("customerGroup"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.customer_group.CustomerGroupReferenceQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
     }
 
     public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> anonymousId() {
@@ -157,13 +148,36 @@ public class StagedOrderQueryBuilderDsl {
             StagedOrderQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> shippingAddress(
-            Function<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("shippingAddress"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl.of())),
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> discountOnTotalPrice(
+            Function<com.commercetools.api.predicates.query.cart.DiscountOnTotalPriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountOnTotalPriceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("discountOnTotalPrice"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.cart.DiscountOnTotalPriceQueryBuilderDsl.of())),
             StagedOrderQueryBuilderDsl::of);
+    }
+
+    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> taxMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxMode")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> taxRoundingMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxRoundingMode")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> taxCalculationMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxCalculationMode")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> inventoryMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("inventoryMode")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
     public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> billingAddress(
@@ -171,6 +185,15 @@ public class StagedOrderQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
                     .parent(ConstantQueryPredicate.of().constant("billingAddress"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> shippingAddress(
+            Function<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("shippingAddress"))
                     .inner(fn.apply(com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl.of())),
             StagedOrderQueryBuilderDsl::of);
     }
@@ -185,6 +208,24 @@ public class StagedOrderQueryBuilderDsl {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shippingKey")),
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> shippingInfo(
+            Function<com.commercetools.api.predicates.query.cart.ShippingInfoQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ShippingInfoQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("shippingInfo"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.ShippingInfoQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> shippingRateInput(
+            Function<com.commercetools.api.predicates.query.cart.ShippingRateInputQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ShippingRateInputQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("shippingRateInput"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.ShippingRateInputQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
     }
 
     public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> shippingCustomFields(
@@ -210,24 +251,72 @@ public class StagedOrderQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
-    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> taxMode() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxMode")),
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> itemShippingAddresses(
+            Function<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("itemShippingAddresses"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<StagedOrderQueryBuilderDsl> itemShippingAddresses() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("itemShippingAddresses")),
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
-    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> taxRoundingMode() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxRoundingMode")),
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> discountCodes(
+            Function<com.commercetools.api.predicates.query.cart.DiscountCodeInfoQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountCodeInfoQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("discountCodes"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.DiscountCodeInfoQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<StagedOrderQueryBuilderDsl> discountCodes() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("discountCodes")),
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> customerGroup(
-            Function<com.commercetools.api.predicates.query.customer_group.CustomerGroupReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer_group.CustomerGroupReferenceQueryBuilderDsl>> fn) {
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> directDiscounts(
+            Function<com.commercetools.api.predicates.query.cart.DirectDiscountQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DirectDiscountQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("directDiscounts"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.DirectDiscountQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<StagedOrderQueryBuilderDsl> directDiscounts() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("directDiscounts")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> refusedGifts(
+            Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("customerGroup"))
+                .parent(ConstantQueryPredicate.of().constant("refusedGifts"))
                 .inner(fn.apply(
-                    com.commercetools.api.predicates.query.customer_group.CustomerGroupReferenceQueryBuilderDsl.of())),
+                    com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<StagedOrderQueryBuilderDsl> refusedGifts() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("refusedGifts")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> paymentInfo(
+            Function<com.commercetools.api.predicates.query.order.PaymentInfoQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.PaymentInfoQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("paymentInfo"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.order.PaymentInfoQueryBuilderDsl.of())),
             StagedOrderQueryBuilderDsl::of);
     }
 
@@ -237,19 +326,40 @@ public class StagedOrderQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> locale() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("locale")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> origin() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("origin")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> cart(
+            Function<com.commercetools.api.predicates.query.cart.CartReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("cart"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.CartReferenceQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> quote(
+            Function<com.commercetools.api.predicates.query.quote.QuoteReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.quote.QuoteReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("quote"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.quote.QuoteReferenceQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
+    }
+
     public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> orderState() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("orderState")),
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
-    }
-
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> state(
-            Function<com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("state"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl.of())),
-            StagedOrderQueryBuilderDsl::of);
     }
 
     public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> shipmentState() {
@@ -264,12 +374,12 @@ public class StagedOrderQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> shippingInfo(
-            Function<com.commercetools.api.predicates.query.cart.ShippingInfoQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ShippingInfoQueryBuilderDsl>> fn) {
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> state(
+            Function<com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("shippingInfo"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.ShippingInfoQueryBuilderDsl.of())),
+                    .parent(ConstantQueryPredicate.of().constant("state"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.state.StateReferenceQueryBuilderDsl.of())),
             StagedOrderQueryBuilderDsl::of);
     }
 
@@ -302,49 +412,10 @@ public class StagedOrderQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
-    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> purchaseOrderNumber() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("purchaseOrderNumber")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
-    }
-
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> discountCodes(
-            Function<com.commercetools.api.predicates.query.cart.DiscountCodeInfoQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountCodeInfoQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("discountCodes"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.DiscountCodeInfoQueryBuilderDsl.of())),
-            StagedOrderQueryBuilderDsl::of);
-    }
-
-    public CollectionPredicateBuilder<StagedOrderQueryBuilderDsl> discountCodes() {
-        return new CollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("discountCodes")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
-    }
-
     public LongComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> lastMessageSequenceNumber() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lastMessageSequenceNumber")),
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
-    }
-
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> cart(
-            Function<com.commercetools.api.predicates.query.cart.CartReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartReferenceQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("cart"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.CartReferenceQueryBuilderDsl.of())),
-            StagedOrderQueryBuilderDsl::of);
-    }
-
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> quote(
-            Function<com.commercetools.api.predicates.query.quote.QuoteReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.quote.QuoteReferenceQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("quote"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.quote.QuoteReferenceQueryBuilderDsl.of())),
-            StagedOrderQueryBuilderDsl::of);
     }
 
     public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> custom(
@@ -356,76 +427,28 @@ public class StagedOrderQueryBuilderDsl {
             StagedOrderQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> paymentInfo(
-            Function<com.commercetools.api.predicates.query.order.PaymentInfoQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.PaymentInfoQueryBuilderDsl>> fn) {
+    public DateTimeComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> completedAt() {
+        return new DateTimeComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("completedAt")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> lastModifiedBy(
+            Function<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("paymentInfo"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.order.PaymentInfoQueryBuilderDsl.of())),
+                    .parent(ConstantQueryPredicate.of().constant("lastModifiedBy"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl.of())),
             StagedOrderQueryBuilderDsl::of);
     }
 
-    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> locale() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("locale")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
-    }
-
-    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> inventoryMode() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("inventoryMode")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
-    }
-
-    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> origin() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("origin")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
-    }
-
-    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> taxCalculationMode() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxCalculationMode")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
-    }
-
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> shippingRateInput(
-            Function<com.commercetools.api.predicates.query.cart.ShippingRateInputQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ShippingRateInputQueryBuilderDsl>> fn) {
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> createdBy(
+            Function<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("shippingRateInput"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.cart.ShippingRateInputQueryBuilderDsl.of())),
+                    .parent(ConstantQueryPredicate.of().constant("createdBy"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.CreatedByQueryBuilderDsl.of())),
             StagedOrderQueryBuilderDsl::of);
-    }
-
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> itemShippingAddresses(
-            Function<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("itemShippingAddresses"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.AddressQueryBuilderDsl.of())),
-            StagedOrderQueryBuilderDsl::of);
-    }
-
-    public CollectionPredicateBuilder<StagedOrderQueryBuilderDsl> itemShippingAddresses() {
-        return new CollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("itemShippingAddresses")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
-    }
-
-    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> refusedGifts(
-            Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("refusedGifts"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.cart_discount.CartDiscountReferenceQueryBuilderDsl.of())),
-            StagedOrderQueryBuilderDsl::of);
-    }
-
-    public CollectionPredicateBuilder<StagedOrderQueryBuilderDsl> refusedGifts() {
-        return new CollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("refusedGifts")),
-            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
 }

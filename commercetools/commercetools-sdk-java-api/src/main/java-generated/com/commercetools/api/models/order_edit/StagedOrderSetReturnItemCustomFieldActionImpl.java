@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StagedOrderSetReturnItemCustomFieldAction
@@ -25,6 +27,8 @@ public class StagedOrderSetReturnItemCustomFieldActionImpl
 
     private String returnItemId;
 
+    private String returnItemKey;
+
     private String name;
 
     private java.lang.Object value;
@@ -34,8 +38,10 @@ public class StagedOrderSetReturnItemCustomFieldActionImpl
      */
     @JsonCreator
     StagedOrderSetReturnItemCustomFieldActionImpl(@JsonProperty("returnItemId") final String returnItemId,
-            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+            @JsonProperty("returnItemKey") final String returnItemKey, @JsonProperty("name") final String name,
+            @JsonProperty("value") final java.lang.Object value) {
         this.returnItemId = returnItemId;
+        this.returnItemKey = returnItemKey;
         this.name = name;
         this.value = value;
         this.action = SET_RETURN_ITEM_CUSTOM_FIELD;
@@ -57,11 +63,19 @@ public class StagedOrderSetReturnItemCustomFieldActionImpl
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      */
 
     public String getReturnItemId() {
         return this.returnItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     */
+
+    public String getReturnItemKey() {
+        return this.returnItemKey;
     }
 
     /**
@@ -84,6 +98,10 @@ public class StagedOrderSetReturnItemCustomFieldActionImpl
         this.returnItemId = returnItemId;
     }
 
+    public void setReturnItemKey(final String returnItemKey) {
+        this.returnItemKey = returnItemKey;
+    }
+
     public void setName(final String name) {
         this.name = name;
     }
@@ -104,6 +122,12 @@ public class StagedOrderSetReturnItemCustomFieldActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(returnItemId, that.returnItemId)
+                .append(returnItemKey, that.returnItemKey)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(action, that.action)
+                .append(returnItemId, that.returnItemId)
+                .append(returnItemKey, that.returnItemKey)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
@@ -111,7 +135,22 @@ public class StagedOrderSetReturnItemCustomFieldActionImpl
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(returnItemId).append(name).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(returnItemId)
+                .append(returnItemKey)
+                .append(name)
+                .append(value)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("returnItemId", returnItemId)
+                .append("returnItemKey", returnItemKey)
+                .append("name", name)
+                .append("value", value)
+                .build();
     }
 
 }

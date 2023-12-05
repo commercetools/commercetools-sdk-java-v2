@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * LineItem
@@ -212,6 +214,16 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(quantity, that.quantity)
                 .append(variant, that.variant)
                 .append(variantId, that.variantId)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(productId, that.productId)
+                .append(productSlug, that.productSlug)
+                .append(productType, that.productType)
+                .append(quantity, that.quantity)
+                .append(variant, that.variant)
+                .append(variantId, that.variantId)
                 .isEquals();
     }
 
@@ -228,6 +240,21 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(variant)
                 .append(variantId)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("addedAt", addedAt)
+                .append("custom", custom)
+                .append("id", id)
+                .append("name", name)
+                .append("productId", productId)
+                .append("productSlug", productSlug)
+                .append("productType", productType)
+                .append("quantity", quantity)
+                .append("variant", variant)
+                .append("variantId", variantId)
+                .build();
     }
 
 }

@@ -27,7 +27,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     private Long quantity;
 
     /**
-     *  <p>Unique identifier of the DeliveryItem.</p>
+     *  <p><code>id</code> of the LineItem or CustomLineItem delivered.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     * set the value to the quantity
+     *  <p>Number of Line Items or Custom Line Items delivered.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     *  <p>Unique identifier of the DeliveryItem.</p>
+     *  <p><code>id</code> of the LineItem or CustomLineItem delivered.</p>
      * @return id
      */
 
@@ -58,7 +58,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
     }
 
     /**
-     * value of quantity}
+     *  <p>Number of Line Items or Custom Line Items delivered.</p>
      * @return quantity
      */
 

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint. For more information, see Requesting an access token using an external OAuth 2.0 server.</p>
@@ -77,12 +79,21 @@ public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
 
         return new EqualsBuilder().append(url, that.url)
                 .append(authorizationHeader, that.authorizationHeader)
+                .append(url, that.url)
+                .append(authorizationHeader, that.authorizationHeader)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(url).append(authorizationHeader).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("url", url)
+                .append("authorizationHeader", authorizationHeader)
+                .build();
     }
 
 }

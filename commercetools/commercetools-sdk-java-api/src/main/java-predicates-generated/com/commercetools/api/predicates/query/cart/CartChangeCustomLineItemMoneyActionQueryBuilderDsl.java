@@ -25,6 +25,12 @@ public class CartChangeCustomLineItemMoneyActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartChangeCustomLineItemMoneyActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartChangeCustomLineItemMoneyActionQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, CartChangeCustomLineItemMoneyActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CartChangeCustomLineItemMoneyActionQueryBuilderDsl> money(
             Function<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

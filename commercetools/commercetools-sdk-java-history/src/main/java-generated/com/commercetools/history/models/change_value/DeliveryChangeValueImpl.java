@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * DeliveryChangeValue
@@ -102,12 +104,23 @@ public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
         return new EqualsBuilder().append(items, that.items)
                 .append(address, that.address)
                 .append(parcels, that.parcels)
+                .append(items, that.items)
+                .append(address, that.address)
+                .append(parcels, that.parcels)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(items).append(address).append(parcels).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("items", items)
+                .append("address", address)
+                .append("parcels", parcels)
+                .build();
     }
 
 }

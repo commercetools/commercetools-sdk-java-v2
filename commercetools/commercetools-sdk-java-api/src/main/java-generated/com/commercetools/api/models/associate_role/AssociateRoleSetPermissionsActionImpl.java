@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Updating the Permissions on an AssociateRole generates an AssociateRolePermissionsSet Message.</p>
@@ -76,12 +78,23 @@ public class AssociateRoleSetPermissionsActionImpl implements AssociateRoleSetPe
 
         AssociateRoleSetPermissionsActionImpl that = (AssociateRoleSetPermissionsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(permissions, that.permissions).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(permissions, that.permissions)
+                .append(action, that.action)
+                .append(permissions, that.permissions)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(permissions).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("permissions", permissions)
+                .build();
     }
 
 }

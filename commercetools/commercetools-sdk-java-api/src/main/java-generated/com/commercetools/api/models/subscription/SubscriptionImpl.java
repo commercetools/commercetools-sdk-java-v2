@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Subscription
@@ -254,6 +256,18 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .append(messages, that.messages)
                 .append(format, that.format)
                 .append(status, that.status)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(changes, that.changes)
+                .append(destination, that.destination)
+                .append(key, that.key)
+                .append(messages, that.messages)
+                .append(format, that.format)
+                .append(status, that.status)
                 .isEquals();
     }
 
@@ -272,6 +286,23 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .append(format)
                 .append(status)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("changes", changes)
+                .append("destination", destination)
+                .append("key", key)
+                .append("messages", messages)
+                .append("format", format)
+                .append("status", status)
+                .build();
     }
 
 }

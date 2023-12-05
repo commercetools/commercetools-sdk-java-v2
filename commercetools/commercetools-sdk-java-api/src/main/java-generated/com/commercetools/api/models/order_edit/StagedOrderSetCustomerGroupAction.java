@@ -16,7 +16,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderSetCustomerGroupAction
+ *  <p>This update action can only be used if a Customer is not assigned to a Cart. If a Customer is already assigned, the Cart has the same Customer Group as the assigned Customer.</p>
+ *  <p>Setting the Customer Group also updates the LineItem <code>prices</code> according to the Customer Group.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +38,7 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
     String SET_CUSTOMER_GROUP = "setCustomerGroup";
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @return customerGroup
      */
     @Valid
@@ -45,7 +46,7 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
     public CustomerGroupResourceIdentifier getCustomerGroup();
 
     /**
-     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param customerGroup value to be set
      */
 

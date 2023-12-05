@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Order State update action.</p>
+ *  <p>Generated after a successful Change OrderState update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderStateChangedMessagePayloadImpl implements OrderStateChangedMessagePayload, ModelBase {
@@ -90,12 +92,23 @@ public class OrderStateChangedMessagePayloadImpl implements OrderStateChangedMes
         return new EqualsBuilder().append(type, that.type)
                 .append(orderState, that.orderState)
                 .append(oldOrderState, that.oldOrderState)
+                .append(type, that.type)
+                .append(orderState, that.orderState)
+                .append(oldOrderState, that.oldOrderState)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(orderState).append(oldOrderState).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("orderState", orderState)
+                .append("oldOrderState", oldOrderState)
+                .build();
     }
 
 }

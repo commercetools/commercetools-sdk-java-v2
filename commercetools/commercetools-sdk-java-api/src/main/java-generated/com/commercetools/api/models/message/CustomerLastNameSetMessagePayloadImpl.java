@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Last Name update action.</p>
@@ -70,12 +72,23 @@ public class CustomerLastNameSetMessagePayloadImpl implements CustomerLastNameSe
 
         CustomerLastNameSetMessagePayloadImpl that = (CustomerLastNameSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(lastName, that.lastName).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(lastName, that.lastName)
+                .append(type, that.type)
+                .append(lastName, that.lastName)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(lastName).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("lastName", lastName)
+                .build();
     }
 
 }

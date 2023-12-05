@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * PaymentSetTransactionCustomTypeAction
@@ -106,6 +108,10 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
                 .append(transactionId, that.transactionId)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(transactionId, that.transactionId)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 
@@ -116,6 +122,15 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
                 .append(type)
                 .append(fields)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("transactionId", transactionId)
+                .append("type", type)
+                .append("fields", fields)
+                .build();
     }
 
 }

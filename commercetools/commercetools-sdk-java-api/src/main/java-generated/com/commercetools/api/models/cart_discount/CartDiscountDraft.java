@@ -66,7 +66,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public LocalizedString getDescription();
 
     /**
-     *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      * @return value
      */
     @NotNull
@@ -83,7 +83,8 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public String getCartPredicate();
 
     /**
-     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+     *  <p>Segment of the Cart that will be discounted.</p>
+     *  <p>Must not be set if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @return target
      */
     @Valid
@@ -181,7 +182,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      * @param value value to be set
      */
 
@@ -195,7 +196,8 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public void setCartPredicate(final String cartPredicate);
 
     /**
-     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+     *  <p>Segment of the Cart that will be discounted.</p>
+     *  <p>Must not be set if the <code>value</code> is <code>giftLineItem</code>.</p>
      * @param target value to be set
      */
 

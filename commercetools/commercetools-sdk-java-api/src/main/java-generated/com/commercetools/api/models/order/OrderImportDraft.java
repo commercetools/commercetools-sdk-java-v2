@@ -13,9 +13,9 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.cart.CartOrigin;
-import com.commercetools.api.models.cart.CustomLineItemImportDraft;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.RoundingMode;
+import com.commercetools.api.models.cart.TaxCalculationMode;
 import com.commercetools.api.models.cart.TaxedPriceDraft;
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.common.Money;
@@ -29,7 +29,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderImportDraft
+ *  <p>A snapshot of an Order at the time it was imported.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +47,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
         io.vrap.rmf.base.client.Draft<OrderImportDraft> {
 
     /**
-     *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
+     *  <p>User-defined identifier of the Order. Must be unique across a Project. Once set, the value cannot be changed.</p>
      * @return orderNumber
      */
 
@@ -55,7 +55,15 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public String getOrderNumber();
 
     /**
-     *  <p>If given the customer with that ID must exist in the project.</p>
+     *  <p>User-defined identifier for a purchase Order.</p>
+     * @return purchaseOrderNumber
+     */
+
+    @JsonProperty("purchaseOrderNumber")
+    public String getPurchaseOrderNumber();
+
+    /**
+     *  <p>The <code>id</code> of the Customer the Order belongs to.</p>
      * @return customerId
      */
 
@@ -63,7 +71,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public String getCustomerId();
 
     /**
-     *  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>
+     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing Customers is required.</p>
      * @return customerEmail
      */
 
@@ -71,7 +79,33 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public String getCustomerEmail();
 
     /**
-     *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     *  <p>The Customer Group of the Customer the Order belongs to.</p>
+     * @return customerGroup
+     */
+    @Valid
+    @JsonProperty("customerGroup")
+    public CustomerGroupResourceIdentifier getCustomerGroup();
+
+    /**
+     *  <p>ResourceIdentifier to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the Customer must be an Associate of the Business Unit.</p>
+     * @return businessUnit
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public BusinessUnitResourceIdentifier getBusinessUnit();
+
+    /**
+     *  <p>The Store the Order belongs to. Used for filtering.</p>
+     *  <p>If a LineItemImportDraft or a CustomLineItemImportDraft specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
+     * @return store
+     */
+    @Valid
+    @JsonProperty("store")
+    public StoreResourceIdentifier getStore();
+
+    /**
+     *  <p>Line Items to add to the Order.</p>
+     *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @return lineItems
      */
     @Valid
@@ -79,7 +113,8 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public List<LineItemImportDraft> getLineItems();
 
     /**
-     *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @return customLineItems
      */
     @Valid
@@ -87,7 +122,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public List<CustomLineItemImportDraft> getCustomLineItems();
 
     /**
-     *
+     *  <p>The total Price of the Order. The amount can be negative.</p>
      * @return totalPrice
      */
     @NotNull
@@ -96,7 +131,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public Money getTotalPrice();
 
     /**
-     *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
+     *  <p>Include TaxedPrice information for the Order. If not included, and if you have Tax Rates set for Line Items and Custom Line Items, the Order total will not be recalculated.</p>
      * @return taxedPrice
      */
     @Valid
@@ -104,111 +139,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public TaxedPriceDraft getTaxedPrice();
 
     /**
-     *
-     * @return shippingAddress
-     */
-    @Valid
-    @JsonProperty("shippingAddress")
-    public BaseAddress getShippingAddress();
-
-    /**
-     *
-     * @return billingAddress
-     */
-    @Valid
-    @JsonProperty("billingAddress")
-    public BaseAddress getBillingAddress();
-
-    /**
-     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
-     * @return customerGroup
-     */
-    @Valid
-    @JsonProperty("customerGroup")
-    public CustomerGroupResourceIdentifier getCustomerGroup();
-
-    /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
-     * @return country
-     */
-
-    @JsonProperty("country")
-    public String getCountry();
-
-    /**
-     *  <p>If not given the <code>Open</code> state will be assigned by default.</p>
-     * @return orderState
-     */
-
-    @JsonProperty("orderState")
-    public OrderState getOrderState();
-
-    /**
-     *  <p>This reference can point to a state in a custom workflow.</p>
-     * @return state
-     */
-    @Valid
-    @JsonProperty("state")
-    public StateReference getState();
-
-    /**
-     *
-     * @return shipmentState
-     */
-
-    @JsonProperty("shipmentState")
-    public ShipmentState getShipmentState();
-
-    /**
-     *
-     * @return paymentState
-     */
-
-    @JsonProperty("paymentState")
-    public PaymentState getPaymentState();
-
-    /**
-     *  <p>Set if the ShippingMethod is set.</p>
-     * @return shippingInfo
-     */
-    @Valid
-    @JsonProperty("shippingInfo")
-    public ShippingInfoImportDraft getShippingInfo();
-
-    /**
-     *
-     * @return paymentInfo
-     */
-    @Valid
-    @JsonProperty("paymentInfo")
-    public PaymentInfo getPaymentInfo();
-
-    /**
-     *
-     * @return completedAt
-     */
-
-    @JsonProperty("completedAt")
-    public ZonedDateTime getCompletedAt();
-
-    /**
-     *  <p>The custom fields.</p>
-     * @return custom
-     */
-    @Valid
-    @JsonProperty("custom")
-    public CustomFieldsDraft getCustom();
-
-    /**
-     *  <p>If not given the mode <code>None</code> will be assigned by default.</p>
-     * @return inventoryMode
-     */
-
-    @JsonProperty("inventoryMode")
-    public InventoryMode getInventoryMode();
-
-    /**
-     *  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>
+     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
      * @return taxRoundingMode
      */
 
@@ -216,7 +147,39 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public RoundingMode getTaxRoundingMode();
 
     /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     *  <p>Determines how taxes are calculated for <code>taxedPrice</code>.</p>
+     * @return taxCalculationMode
+     */
+
+    @JsonProperty("taxCalculationMode")
+    public TaxCalculationMode getTaxCalculationMode();
+
+    /**
+     *  <p>Determines how stock quantities are tracked for Line Items in the Cart.</p>
+     * @return inventoryMode
+     */
+
+    @JsonProperty("inventoryMode")
+    public InventoryMode getInventoryMode();
+
+    /**
+     *  <p>Billing address associated with the Order.</p>
+     * @return billingAddress
+     */
+    @Valid
+    @JsonProperty("billingAddress")
+    public BaseAddress getBillingAddress();
+
+    /**
+     *  <p>Shipping address associated with the Order.</p>
+     * @return shippingAddress
+     */
+    @Valid
+    @JsonProperty("shippingAddress")
+    public BaseAddress getShippingAddress();
+
+    /**
+     *  <p>Addresses for Orders with multiple shipping addresses. Addresses must include a value for <code>key</code>.</p>
      * @return itemShippingAddresses
      */
     @Valid
@@ -224,23 +187,63 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public List<BaseAddress> getItemShippingAddresses();
 
     /**
-     *  <p>The Business Unit the Cart belongs to.</p>
-     * @return businessUnit
+     *  <p>Shipping-related information of the Order.</p>
+     * @return shippingInfo
      */
     @Valid
-    @JsonProperty("businessUnit")
-    public BusinessUnitResourceIdentifier getBusinessUnit();
+    @JsonProperty("shippingInfo")
+    public ShippingInfoImportDraft getShippingInfo();
 
     /**
-     *
-     * @return store
+     *  <p>Payment information associated with the Order.</p>
+     * @return paymentInfo
      */
     @Valid
-    @JsonProperty("store")
-    public StoreResourceIdentifier getStore();
+    @JsonProperty("paymentInfo")
+    public PaymentInfo getPaymentInfo();
 
     /**
-     *  <p>The default origin is <code>Customer</code>.</p>
+     *  <p>Payment status of the Order.</p>
+     * @return paymentState
+     */
+
+    @JsonProperty("paymentState")
+    public PaymentState getPaymentState();
+
+    /**
+     *  <p>Shipment status of the Order.</p>
+     * @return shipmentState
+     */
+
+    @JsonProperty("shipmentState")
+    public ShipmentState getShipmentState();
+
+    /**
+     *  <p>Current status of the Order.</p>
+     * @return orderState
+     */
+
+    @JsonProperty("orderState")
+    public OrderState getOrderState();
+
+    /**
+     *  <p>State of the Order in a custom workflow.</p>
+     * @return state
+     */
+    @Valid
+    @JsonProperty("state")
+    public StateReference getState();
+
+    /**
+     *  <p>Include a value to associate a country with the Order.</p>
+     * @return country
+     */
+
+    @JsonProperty("country")
+    public String getCountry();
+
+    /**
+     *  <p>Indicates the origin of the Order.</p>
      * @return origin
      */
 
@@ -248,28 +251,74 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public CartOrigin getOrigin();
 
     /**
-     *  <p>String that unique identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique within a project.</p>
+     *  <p>User-defined date and time for the Order. This value does not influence the <code>createdAt</code> or <code>lastModifiedAt</code> values of the Order created by the Order Import.</p>
+     * @return completedAt
+     */
+
+    @JsonProperty("completedAt")
+    public ZonedDateTime getCompletedAt();
+
+    /**
+     *  <p>Custom Fields for the Order.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>User-defined identifier of the Order. Must be unique across a Project. Once set, the value cannot be changed.</p>
      * @param orderNumber value to be set
      */
 
     public void setOrderNumber(final String orderNumber);
 
     /**
-     *  <p>If given the customer with that ID must exist in the project.</p>
+     *  <p>User-defined identifier for a purchase Order.</p>
+     * @param purchaseOrderNumber value to be set
+     */
+
+    public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+
+    /**
+     *  <p>The <code>id</code> of the Customer the Order belongs to.</p>
      * @param customerId value to be set
      */
 
     public void setCustomerId(final String customerId);
 
     /**
-     *  <p>The customer email can be used when no check against existing Customers is desired during order import.</p>
+     *  <p>The Email address of the Customer the Order belongs to. Can be used instead of <code>customerId</code> when no check against existing Customers is required.</p>
      * @param customerEmail value to be set
      */
 
     public void setCustomerEmail(final String customerEmail);
 
     /**
-     *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     *  <p>The Customer Group of the Customer the Order belongs to.</p>
+     * @param customerGroup value to be set
+     */
+
+    public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
+
+    /**
+     *  <p>ResourceIdentifier to the Business Unit the Order should belong to. When the <code>customerId</code> of the Order is also set, the Customer must be an Associate of the Business Unit.</p>
+     * @param businessUnit value to be set
+     */
+
+    public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
+
+    /**
+     *  <p>The Store the Order belongs to. Used for filtering.</p>
+     *  <p>If a LineItemImportDraft or a CustomLineItemImportDraft specifies a <code>distributionChannel</code> or a <code>supplyChannel</code> that is not defined for the referenced Store, the Order Import gets rejected. The same applies when the provided <code>country</code> is not defined for the referenced Store.</p>
+     * @param store value to be set
+     */
+
+    public void setStore(final StoreResourceIdentifier store);
+
+    /**
+     *  <p>Line Items to add to the Order.</p>
+     *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @param lineItems values to be set
      */
 
@@ -277,14 +326,16 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public void setLineItems(final LineItemImportDraft... lineItems);
 
     /**
-     *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     *  <p>Line Items to add to the Order.</p>
+     *  <p>If not specified, <code>customLineItems</code> must not be empty.</p>
      * @param lineItems values to be set
      */
 
     public void setLineItems(final List<LineItemImportDraft> lineItems);
 
     /**
-     *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @param customLineItems values to be set
      */
 
@@ -292,126 +343,64 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public void setCustomLineItems(final CustomLineItemImportDraft... customLineItems);
 
     /**
-     *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     *  <p>Custom Line Items to add to the Cart.</p>
+     *  <p>If not specified, <code>lineItems</code> must not be empty.</p>
      * @param customLineItems values to be set
      */
 
     public void setCustomLineItems(final List<CustomLineItemImportDraft> customLineItems);
 
     /**
-     * set totalPrice
+     *  <p>The total Price of the Order. The amount can be negative.</p>
      * @param totalPrice value to be set
      */
 
     public void setTotalPrice(final Money totalPrice);
 
     /**
-     *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
+     *  <p>Include TaxedPrice information for the Order. If not included, and if you have Tax Rates set for Line Items and Custom Line Items, the Order total will not be recalculated.</p>
      * @param taxedPrice value to be set
      */
 
     public void setTaxedPrice(final TaxedPriceDraft taxedPrice);
 
     /**
-     * set shippingAddress
-     * @param shippingAddress value to be set
-     */
-
-    public void setShippingAddress(final BaseAddress shippingAddress);
-
-    /**
-     * set billingAddress
-     * @param billingAddress value to be set
-     */
-
-    public void setBillingAddress(final BaseAddress billingAddress);
-
-    /**
-     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
-     * @param customerGroup value to be set
-     */
-
-    public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
-
-    /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
-     * @param country value to be set
-     */
-
-    public void setCountry(final String country);
-
-    /**
-     *  <p>If not given the <code>Open</code> state will be assigned by default.</p>
-     * @param orderState value to be set
-     */
-
-    public void setOrderState(final OrderState orderState);
-
-    /**
-     *  <p>This reference can point to a state in a custom workflow.</p>
-     * @param state value to be set
-     */
-
-    public void setState(final StateReference state);
-
-    /**
-     * set shipmentState
-     * @param shipmentState value to be set
-     */
-
-    public void setShipmentState(final ShipmentState shipmentState);
-
-    /**
-     * set paymentState
-     * @param paymentState value to be set
-     */
-
-    public void setPaymentState(final PaymentState paymentState);
-
-    /**
-     *  <p>Set if the ShippingMethod is set.</p>
-     * @param shippingInfo value to be set
-     */
-
-    public void setShippingInfo(final ShippingInfoImportDraft shippingInfo);
-
-    /**
-     * set paymentInfo
-     * @param paymentInfo value to be set
-     */
-
-    public void setPaymentInfo(final PaymentInfo paymentInfo);
-
-    /**
-     * set completedAt
-     * @param completedAt value to be set
-     */
-
-    public void setCompletedAt(final ZonedDateTime completedAt);
-
-    /**
-     *  <p>The custom fields.</p>
-     * @param custom value to be set
-     */
-
-    public void setCustom(final CustomFieldsDraft custom);
-
-    /**
-     *  <p>If not given the mode <code>None</code> will be assigned by default.</p>
-     * @param inventoryMode value to be set
-     */
-
-    public void setInventoryMode(final InventoryMode inventoryMode);
-
-    /**
-     *  <p>If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</p>
+     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
      * @param taxRoundingMode value to be set
      */
 
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
     /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     *  <p>Determines how taxes are calculated for <code>taxedPrice</code>.</p>
+     * @param taxCalculationMode value to be set
+     */
+
+    public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
+
+    /**
+     *  <p>Determines how stock quantities are tracked for Line Items in the Cart.</p>
+     * @param inventoryMode value to be set
+     */
+
+    public void setInventoryMode(final InventoryMode inventoryMode);
+
+    /**
+     *  <p>Billing address associated with the Order.</p>
+     * @param billingAddress value to be set
+     */
+
+    public void setBillingAddress(final BaseAddress billingAddress);
+
+    /**
+     *  <p>Shipping address associated with the Order.</p>
+     * @param shippingAddress value to be set
+     */
+
+    public void setShippingAddress(final BaseAddress shippingAddress);
+
+    /**
+     *  <p>Addresses for Orders with multiple shipping addresses. Addresses must include a value for <code>key</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
@@ -419,32 +408,81 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public void setItemShippingAddresses(final BaseAddress... itemShippingAddresses);
 
     /**
-     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     *  <p>Addresses for Orders with multiple shipping addresses. Addresses must include a value for <code>key</code>.</p>
      * @param itemShippingAddresses values to be set
      */
 
     public void setItemShippingAddresses(final List<BaseAddress> itemShippingAddresses);
 
     /**
-     *  <p>The Business Unit the Cart belongs to.</p>
-     * @param businessUnit value to be set
+     *  <p>Shipping-related information of the Order.</p>
+     * @param shippingInfo value to be set
      */
 
-    public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
+    public void setShippingInfo(final ShippingInfoImportDraft shippingInfo);
 
     /**
-     * set store
-     * @param store value to be set
+     *  <p>Payment information associated with the Order.</p>
+     * @param paymentInfo value to be set
      */
 
-    public void setStore(final StoreResourceIdentifier store);
+    public void setPaymentInfo(final PaymentInfo paymentInfo);
 
     /**
-     *  <p>The default origin is <code>Customer</code>.</p>
+     *  <p>Payment status of the Order.</p>
+     * @param paymentState value to be set
+     */
+
+    public void setPaymentState(final PaymentState paymentState);
+
+    /**
+     *  <p>Shipment status of the Order.</p>
+     * @param shipmentState value to be set
+     */
+
+    public void setShipmentState(final ShipmentState shipmentState);
+
+    /**
+     *  <p>Current status of the Order.</p>
+     * @param orderState value to be set
+     */
+
+    public void setOrderState(final OrderState orderState);
+
+    /**
+     *  <p>State of the Order in a custom workflow.</p>
+     * @param state value to be set
+     */
+
+    public void setState(final StateReference state);
+
+    /**
+     *  <p>Include a value to associate a country with the Order.</p>
+     * @param country value to be set
+     */
+
+    public void setCountry(final String country);
+
+    /**
+     *  <p>Indicates the origin of the Order.</p>
      * @param origin value to be set
      */
 
     public void setOrigin(final CartOrigin origin);
+
+    /**
+     *  <p>User-defined date and time for the Order. This value does not influence the <code>createdAt</code> or <code>lastModifiedAt</code> values of the Order created by the Order Import.</p>
+     * @param completedAt value to be set
+     */
+
+    public void setCompletedAt(final ZonedDateTime completedAt);
+
+    /**
+     *  <p>Custom Fields for the Order.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFieldsDraft custom);
 
     /**
      * factory method
@@ -462,30 +500,32 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public static OrderImportDraft of(final OrderImportDraft template) {
         OrderImportDraftImpl instance = new OrderImportDraftImpl();
         instance.setOrderNumber(template.getOrderNumber());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setCustomerId(template.getCustomerId());
         instance.setCustomerEmail(template.getCustomerEmail());
+        instance.setCustomerGroup(template.getCustomerGroup());
+        instance.setBusinessUnit(template.getBusinessUnit());
+        instance.setStore(template.getStore());
         instance.setLineItems(template.getLineItems());
         instance.setCustomLineItems(template.getCustomLineItems());
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
-        instance.setShippingAddress(template.getShippingAddress());
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        instance.setInventoryMode(template.getInventoryMode());
         instance.setBillingAddress(template.getBillingAddress());
-        instance.setCustomerGroup(template.getCustomerGroup());
-        instance.setCountry(template.getCountry());
-        instance.setOrderState(template.getOrderState());
-        instance.setState(template.getState());
-        instance.setShipmentState(template.getShipmentState());
-        instance.setPaymentState(template.getPaymentState());
+        instance.setShippingAddress(template.getShippingAddress());
+        instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setShippingInfo(template.getShippingInfo());
         instance.setPaymentInfo(template.getPaymentInfo());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setOrderState(template.getOrderState());
+        instance.setState(template.getState());
+        instance.setCountry(template.getCountry());
+        instance.setOrigin(template.getOrigin());
         instance.setCompletedAt(template.getCompletedAt());
         instance.setCustom(template.getCustom());
-        instance.setInventoryMode(template.getInventoryMode());
-        instance.setTaxRoundingMode(template.getTaxRoundingMode());
-        instance.setItemShippingAddresses(template.getItemShippingAddresses());
-        instance.setBusinessUnit(template.getBusinessUnit());
-        instance.setStore(template.getStore());
-        instance.setOrigin(template.getOrigin());
         return instance;
     }
 
@@ -501,8 +541,14 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
         }
         OrderImportDraftImpl instance = new OrderImportDraftImpl();
         instance.setOrderNumber(template.getOrderNumber());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setCustomerId(template.getCustomerId());
         instance.setCustomerEmail(template.getCustomerEmail());
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                .deepCopy(template.getCustomerGroup()));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getBusinessUnit()));
+        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
         instance.setLineItems(Optional.ofNullable(template.getLineItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.LineItemImportDraft::deepCopy)
@@ -510,38 +556,34 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
                 .orElse(null));
         instance.setCustomLineItems(Optional.ofNullable(template.getCustomLineItems())
                 .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.CustomLineItemImportDraft::deepCopy)
+                        .map(com.commercetools.api.models.order.CustomLineItemImportDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft.deepCopy(template.getTaxedPrice()));
-        instance.setShippingAddress(
-            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getShippingAddress()));
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        instance.setInventoryMode(template.getInventoryMode());
         instance.setBillingAddress(
             com.commercetools.api.models.common.BaseAddress.deepCopy(template.getBillingAddress()));
-        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
-                .deepCopy(template.getCustomerGroup()));
-        instance.setCountry(template.getCountry());
-        instance.setOrderState(template.getOrderState());
-        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
-        instance.setShipmentState(template.getShipmentState());
-        instance.setPaymentState(template.getPaymentState());
-        instance.setShippingInfo(
-            com.commercetools.api.models.order.ShippingInfoImportDraft.deepCopy(template.getShippingInfo()));
-        instance.setPaymentInfo(com.commercetools.api.models.order.PaymentInfo.deepCopy(template.getPaymentInfo()));
-        instance.setCompletedAt(template.getCompletedAt());
-        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
-        instance.setInventoryMode(template.getInventoryMode());
-        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        instance.setShippingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getShippingAddress()));
         instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
-                .deepCopy(template.getBusinessUnit()));
-        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
+        instance.setShippingInfo(
+            com.commercetools.api.models.order.ShippingInfoImportDraft.deepCopy(template.getShippingInfo()));
+        instance.setPaymentInfo(com.commercetools.api.models.order.PaymentInfo.deepCopy(template.getPaymentInfo()));
+        instance.setPaymentState(template.getPaymentState());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setOrderState(template.getOrderState());
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
+        instance.setCountry(template.getCountry());
         instance.setOrigin(template.getOrigin());
+        instance.setCompletedAt(template.getCompletedAt());
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

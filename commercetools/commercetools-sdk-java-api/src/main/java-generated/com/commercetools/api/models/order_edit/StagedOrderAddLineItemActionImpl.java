@@ -13,9 +13,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderAddLineItemAction
+ *  <p>If the Cart contains a LineItem for a Product Variant with the same LineItemMode, Custom Fields, supply and distribution channel, then only the quantity of the existing Line Item is increased. If LineItem <code>shippingDetails</code> is set, it is merged. All addresses will be present afterwards and, for address keys present in both shipping details, the quantity will be summed up. A new Line Item is added when the <code>externalPrice</code> or <code>externalTotalPrice</code> is set in this update action. The LineItem price is set as described in LineItem Price selection.</p>
+ *  <p>If the Tax Rate is not set, a MissingTaxRateForCountry error is returned.</p>
+ *  <p>If the Line Items do not have a Price according to the Product <code>priceMode</code> value for a selected currency and/or country, Customer Group, or Channel, a MatchingPriceNotFound error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemAction, ModelBase {
@@ -23,12 +27,6 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     private String action;
 
     private String key;
-
-    private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
-
-    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     private String productId;
 
@@ -40,42 +38,52 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
 
     private java.time.ZonedDateTime addedAt;
 
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     private com.commercetools.api.models.common.Money externalPrice;
 
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
+    private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
+
+    private com.commercetools.api.models.cart.InventoryMode inventoryMode;
+
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
+
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     StagedOrderAddLineItemActionImpl(@JsonProperty("key") final String key,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
-            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
+            @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
-            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
+            @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
+            @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
-        this.custom = custom;
-        this.distributionChannel = distributionChannel;
-        this.externalTaxRate = externalTaxRate;
         this.productId = productId;
         this.variantId = variantId;
         this.sku = sku;
         this.quantity = quantity;
         this.addedAt = addedAt;
+        this.distributionChannel = distributionChannel;
         this.supplyChannel = supplyChannel;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
+        this.externalTaxRate = externalTaxRate;
+        this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
+        this.custom = custom;
         this.action = ADD_LINE_ITEM;
     }
 
@@ -103,31 +111,8 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     */
-
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
-        return this.custom;
-    }
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     */
-
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
-        return this.distributionChannel;
-    }
-
-    /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
-     */
-
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
-        return this.externalTaxRate;
-    }
-
-    /**
-     *
+     *  <p><code>id</code> of the published Product.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
     public String getProductId() {
@@ -135,7 +120,8 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     *
+     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
     public Long getVariantId() {
@@ -143,7 +129,8 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     *
+     *  <p>SKU of the ProductVariant.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
      */
 
     public String getSku() {
@@ -151,7 +138,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     *
+     *  <p>Quantity of the Product Variant to add to the Cart.</p>
      */
 
     public Long getQuantity() {
@@ -159,7 +146,8 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {
@@ -167,7 +155,15 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     */
+
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
+        return this.distributionChannel;
+    }
+
+    /**
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
@@ -175,7 +171,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -183,7 +179,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     *
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -191,28 +187,39 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     */
+
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+        return this.externalTaxRate;
+    }
+
+    /**
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     */
+
+    public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
+        return this.inventoryMode;
+    }
+
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
 
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
     public void setKey(final String key) {
         this.key = key;
-    }
-
-    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
-        this.custom = custom;
-    }
-
-    public void setDistributionChannel(
-            final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
-        this.distributionChannel = distributionChannel;
-    }
-
-    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
-        this.externalTaxRate = externalTaxRate;
     }
 
     public void setProductId(final String productId) {
@@ -235,6 +242,11 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
         this.addedAt = addedAt;
     }
 
+    public void setDistributionChannel(
+            final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+        this.distributionChannel = distributionChannel;
+    }
+
     public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
     }
@@ -248,8 +260,20 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
         this.externalTotalPrice = externalTotalPrice;
     }
 
+    public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+        this.externalTaxRate = externalTaxRate;
+    }
+
+    public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
+        this.inventoryMode = inventoryMode;
+    }
+
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
+    }
+
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
     }
 
     @Override
@@ -264,18 +288,34 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
 
         return new EqualsBuilder().append(action, that.action)
                 .append(key, that.key)
-                .append(custom, that.custom)
-                .append(distributionChannel, that.distributionChannel)
-                .append(externalTaxRate, that.externalTaxRate)
                 .append(productId, that.productId)
                 .append(variantId, that.variantId)
                 .append(sku, that.sku)
                 .append(quantity, that.quantity)
                 .append(addedAt, that.addedAt)
+                .append(distributionChannel, that.distributionChannel)
                 .append(supplyChannel, that.supplyChannel)
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
+                .append(action, that.action)
+                .append(key, that.key)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(distributionChannel, that.distributionChannel)
+                .append(supplyChannel, that.supplyChannel)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(inventoryMode, that.inventoryMode)
+                .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -283,19 +323,40 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(key)
-                .append(custom)
-                .append(distributionChannel)
-                .append(externalTaxRate)
                 .append(productId)
                 .append(variantId)
                 .append(sku)
                 .append(quantity)
                 .append(addedAt)
+                .append(distributionChannel)
                 .append(supplyChannel)
                 .append(externalPrice)
                 .append(externalTotalPrice)
+                .append(externalTaxRate)
+                .append(inventoryMode)
                 .append(shippingDetails)
+                .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("key", key)
+                .append("productId", productId)
+                .append("variantId", variantId)
+                .append("sku", sku)
+                .append("quantity", quantity)
+                .append("addedAt", addedAt)
+                .append("distributionChannel", distributionChannel)
+                .append("supplyChannel", supplyChannel)
+                .append("externalPrice", externalPrice)
+                .append("externalTotalPrice", externalTotalPrice)
+                .append("externalTaxRate", externalTaxRate)
+                .append("inventoryMode", inventoryMode)
+                .append("shippingDetails", shippingDetails)
+                .append("custom", custom)
+                .build();
     }
 
 }

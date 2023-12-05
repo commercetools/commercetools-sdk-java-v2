@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * MyTransactionDraft
@@ -127,6 +129,11 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
                 .append(amount, that.amount)
                 .append(interactionId, that.interactionId)
                 .append(custom, that.custom)
+                .append(timestamp, that.timestamp)
+                .append(type, that.type)
+                .append(amount, that.amount)
+                .append(interactionId, that.interactionId)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -138,6 +145,16 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
                 .append(interactionId)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("timestamp", timestamp)
+                .append("type", type)
+                .append("amount", amount)
+                .append("interactionId", interactionId)
+                .append("custom", custom)
+                .build();
     }
 
 }

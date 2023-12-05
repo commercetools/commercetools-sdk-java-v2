@@ -15,7 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderSetStoreAction
+ *  <p>Sets the Store the Order is assigned to. It should be used to migrate Orders to a new Store. No validations are performed (such as that the Customer is allowed to create Orders in the Store).</p>
+ *  <p>Produces the Order Store Set Message. Returns a <code>400</code> error if <code>store</code> references the same Store the Order is currently assigned to, including if you try to remove the value when no Store is currently assigned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -36,7 +37,8 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
     String SET_STORE = "setStore";
 
     /**
-     *  <p>ResourceIdentifier to a Store.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>If <code>store</code> references the same Store the Order is currently assigned to or if you try to remove the value when no Store is currently assigned, a <code>400</code> error is returned.</p>
      * @return store
      */
     @Valid
@@ -44,7 +46,8 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>ResourceIdentifier to a Store.</p>
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>If <code>store</code> references the same Store the Order is currently assigned to or if you try to remove the value when no Store is currently assigned, a <code>400</code> error is returned.</p>
      * @param store value to be set
      */
 

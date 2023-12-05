@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderAddShoppingListAction
+ *  <p>Adds all LineItems of a ShoppingList to the Cart.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +40,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     String ADD_SHOPPING_LIST = "addShoppingList";
 
     /**
-     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     *  <p>Shopping List that contains the Line Items to be added.</p>
      * @return shoppingList
      */
     @NotNull
@@ -49,15 +49,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     public ShoppingListResourceIdentifier getShoppingList();
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     * @return supplyChannel
-     */
-    @Valid
-    @JsonProperty("supplyChannel")
-    public ChannelResourceIdentifier getSupplyChannel();
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @return distributionChannel
      */
     @Valid
@@ -65,25 +57,33 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     public ChannelResourceIdentifier getDistributionChannel();
 
     /**
-     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
+     */
+    @Valid
+    @JsonProperty("supplyChannel")
+    public ChannelResourceIdentifier getSupplyChannel();
+
+    /**
+     *  <p>Shopping List that contains the Line Items to be added.</p>
      * @param shoppingList value to be set
      */
 
     public void setShoppingList(final ShoppingListResourceIdentifier shoppingList);
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     * @param supplyChannel value to be set
-     */
-
-    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-
-    /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @param distributionChannel value to be set
      */
 
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
+
+    /**
+     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannel value to be set
+     */
+
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
     /**
      * factory method
@@ -101,8 +101,8 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     public static StagedOrderAddShoppingListAction of(final StagedOrderAddShoppingListAction template) {
         StagedOrderAddShoppingListActionImpl instance = new StagedOrderAddShoppingListActionImpl();
         instance.setShoppingList(template.getShoppingList());
-        instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
+        instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
 
@@ -119,10 +119,10 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
         StagedOrderAddShoppingListActionImpl instance = new StagedOrderAddShoppingListActionImpl();
         instance.setShoppingList(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier
                 .deepCopy(template.getShoppingList()));
-        instance.setSupplyChannel(
-            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         instance.setDistributionChannel(
             com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         return instance;
     }
 

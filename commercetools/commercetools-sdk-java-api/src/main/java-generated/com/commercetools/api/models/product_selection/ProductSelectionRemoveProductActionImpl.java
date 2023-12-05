@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProductSelectionRemoveProductAction
@@ -71,12 +73,23 @@ public class ProductSelectionRemoveProductActionImpl implements ProductSelection
 
         ProductSelectionRemoveProductActionImpl that = (ProductSelectionRemoveProductActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(product, that.product).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(product, that.product)
+                .append(action, that.action)
+                .append(product, that.product)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(product).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("product", product)
+                .build();
     }
 
 }

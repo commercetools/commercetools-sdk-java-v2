@@ -39,6 +39,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLConcurrentModificationErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLContentTooLargeErrorBuilder contentTooLargeBuilder() {
+        return com.commercetools.api.models.error.GraphQLContentTooLargeErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreErrorBuilder countryNotConfiguredInStoreBuilder() {
         return com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreErrorBuilder.of();
     }

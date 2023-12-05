@@ -41,7 +41,7 @@ public class ByProjectKeyMeShoppingListsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyMeShoppingListsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -113,6 +113,15 @@ public class ByProjectKeyMeShoppingListsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .shoppingLists()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/me/shopping-lists?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().shoppingLists().head().createHttpRequest(),
+                        "head", "test_projectKey/me/shopping-lists", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .shoppingLists()
                         .post(com.commercetools.api.models.me.MyShoppingListDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/me/shopping-lists?expand=expand", },
@@ -141,6 +150,9 @@ public class ByProjectKeyMeShoppingListsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().shoppingLists().get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().shoppingLists().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().shoppingLists().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .shoppingLists()

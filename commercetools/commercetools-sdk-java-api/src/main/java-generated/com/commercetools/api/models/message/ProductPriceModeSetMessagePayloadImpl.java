@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set PriceMode update action.</p>
@@ -71,12 +73,23 @@ public class ProductPriceModeSetMessagePayloadImpl implements ProductPriceModeSe
 
         ProductPriceModeSetMessagePayloadImpl that = (ProductPriceModeSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(to, that.to).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(to, that.to)
+                .append(type, that.type)
+                .append(to, that.to)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(to).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("to", to)
+                .build();
     }
 
 }

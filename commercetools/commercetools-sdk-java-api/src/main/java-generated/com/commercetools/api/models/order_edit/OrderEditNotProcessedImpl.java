@@ -12,9 +12,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * OrderEditNotProcessed
+ *  <p>Indicates that the edit has not been applied or processed in any way.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditNotProcessedImpl implements OrderEditNotProcessed, ModelBase {
@@ -30,7 +32,7 @@ public class OrderEditNotProcessedImpl implements OrderEditNotProcessed, ModelBa
     }
 
     /**
-     *
+     *  <p>This field is queryable.</p>
      */
 
     public String getType() {
@@ -47,12 +49,17 @@ public class OrderEditNotProcessedImpl implements OrderEditNotProcessed, ModelBa
 
         OrderEditNotProcessedImpl that = (OrderEditNotProcessedImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).isEquals();
+        return new EqualsBuilder().append(type, that.type).append(type, that.type).isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
 }

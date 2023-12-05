@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderTransitionCustomLineItemStateAction stagedOrderTransitionCustomLineItemStateAction = StagedOrderTransitionCustomLineItemStateAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .quantity(0.3)
  *             .fromState(fromStateBuilder -> fromStateBuilder)
  *             .toState(toStateBuilder -> toStateBuilder)
@@ -28,7 +27,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderTransitionCustomLineItemStateActionBuilder
         implements Builder<StagedOrderTransitionCustomLineItemStateAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     private Long quantity;
 
@@ -40,18 +43,31 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     private java.time.ZonedDateTime actualTransitionDate;
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderTransitionCustomLineItemStateActionBuilder customLineItemId(final String customLineItemId) {
+    public StagedOrderTransitionCustomLineItemStateActionBuilder customLineItemId(
+            @Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     * set the value to the quantity
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderTransitionCustomLineItemStateActionBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>Number of Custom Line Items that should transition State.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -62,7 +78,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition from.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
@@ -74,7 +90,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition from.</p>
      * @param builder function to build the fromState value
      * @return Builder
      */
@@ -86,7 +102,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition from.</p>
      * @param fromState value to be set
      * @return Builder
      */
@@ -98,7 +114,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition to.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
@@ -110,7 +126,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition to.</p>
      * @param builder function to build the toState value
      * @return Builder
      */
@@ -122,7 +138,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition to.</p>
      * @param toState value to be set
      * @return Builder
      */
@@ -134,7 +150,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     * set the value to the actualTransitionDate
+     *  <p>Date and time (UTC) to perform the State transition.</p>
      * @param actualTransitionDate value to be set
      * @return Builder
      */
@@ -146,16 +162,27 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
     /**
-     * value of quantity}
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>Number of Custom Line Items that should transition State.</p>
      * @return quantity
      */
 
@@ -164,7 +191,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition from.</p>
      * @return fromState
      */
 
@@ -173,7 +200,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Custom Line Item should transition to.</p>
      * @return toState
      */
 
@@ -182,7 +209,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
     }
 
     /**
-     * value of actualTransitionDate}
+     *  <p>Date and time (UTC) to perform the State transition.</p>
      * @return actualTransitionDate
      */
 
@@ -196,15 +223,13 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
      * @return StagedOrderTransitionCustomLineItemStateAction
      */
     public StagedOrderTransitionCustomLineItemStateAction build() {
-        Objects.requireNonNull(customLineItemId,
-            StagedOrderTransitionCustomLineItemStateAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(quantity,
             StagedOrderTransitionCustomLineItemStateAction.class + ": quantity is missing");
         Objects.requireNonNull(fromState,
             StagedOrderTransitionCustomLineItemStateAction.class + ": fromState is missing");
         Objects.requireNonNull(toState, StagedOrderTransitionCustomLineItemStateAction.class + ": toState is missing");
-        return new StagedOrderTransitionCustomLineItemStateActionImpl(customLineItemId, quantity, fromState, toState,
-            actualTransitionDate);
+        return new StagedOrderTransitionCustomLineItemStateActionImpl(customLineItemId, customLineItemKey, quantity,
+            fromState, toState, actualTransitionDate);
     }
 
     /**
@@ -212,8 +237,8 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
      * @return StagedOrderTransitionCustomLineItemStateAction
      */
     public StagedOrderTransitionCustomLineItemStateAction buildUnchecked() {
-        return new StagedOrderTransitionCustomLineItemStateActionImpl(customLineItemId, quantity, fromState, toState,
-            actualTransitionDate);
+        return new StagedOrderTransitionCustomLineItemStateActionImpl(customLineItemId, customLineItemKey, quantity,
+            fromState, toState, actualTransitionDate);
     }
 
     /**
@@ -233,6 +258,7 @@ public class StagedOrderTransitionCustomLineItemStateActionBuilder
             final StagedOrderTransitionCustomLineItemStateAction template) {
         StagedOrderTransitionCustomLineItemStateActionBuilder builder = new StagedOrderTransitionCustomLineItemStateActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.quantity = template.getQuantity();
         builder.fromState = template.getFromState();
         builder.toState = template.getToState();

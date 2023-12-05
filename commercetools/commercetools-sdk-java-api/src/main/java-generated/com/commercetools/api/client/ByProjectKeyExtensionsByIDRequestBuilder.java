@@ -24,6 +24,10 @@ public class ByProjectKeyExtensionsByIDRequestBuilder {
         return new ByProjectKeyExtensionsByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyExtensionsByIDHead head() {
+        return new ByProjectKeyExtensionsByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyExtensionsByIDPost post(com.commercetools.api.models.extension.ExtensionUpdate extensionUpdate) {
         return new ByProjectKeyExtensionsByIDPost(apiHttpClient, projectKey, ID, extensionUpdate);
     }

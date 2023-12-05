@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * OrderChangeShipmentStateAction
+ *  <p>Produces the Order Shipment State Changed Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderChangeShipmentStateActionImpl implements OrderChangeShipmentStateAction, ModelBase {
@@ -50,7 +52,7 @@ public class OrderChangeShipmentStateActionImpl implements OrderChangeShipmentSt
     }
 
     /**
-     *
+     *  <p>New shipment status of the Order.</p>
      */
 
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
@@ -71,12 +73,23 @@ public class OrderChangeShipmentStateActionImpl implements OrderChangeShipmentSt
 
         OrderChangeShipmentStateActionImpl that = (OrderChangeShipmentStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(shipmentState, that.shipmentState).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(shipmentState, that.shipmentState)
+                .append(action, that.action)
+                .append(shipmentState, that.shipmentState)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(shipmentState).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("shipmentState", shipmentState)
+                .build();
     }
 
 }

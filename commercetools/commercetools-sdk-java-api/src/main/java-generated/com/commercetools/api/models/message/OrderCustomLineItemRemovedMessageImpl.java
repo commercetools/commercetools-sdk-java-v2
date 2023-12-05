@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Remove Custom Line Item update action.</p>
+ *  <p>Generated after a successful Remove CustomLineItem update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomLineItemRemovedMessageImpl implements OrderCustomLineItemRemovedMessage, ModelBase {
@@ -44,6 +46,8 @@ public class OrderCustomLineItemRemovedMessageImpl implements OrderCustomLineIte
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
     /**
@@ -61,6 +65,7 @@ public class OrderCustomLineItemRemovedMessageImpl implements OrderCustomLineIte
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("customLineItem") final com.commercetools.api.models.cart.CustomLineItem customLineItem) {
         this.id = id;
         this.version = version;
@@ -73,6 +78,7 @@ public class OrderCustomLineItemRemovedMessageImpl implements OrderCustomLineIte
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.customLineItem = customLineItem;
         this.type = ORDER_CUSTOM_LINE_ITEM_REMOVED;
     }
@@ -181,6 +187,14 @@ public class OrderCustomLineItemRemovedMessageImpl implements OrderCustomLineIte
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Custom Line Item that was removed from the Order.</p>
      */
 
@@ -233,6 +247,10 @@ public class OrderCustomLineItemRemovedMessageImpl implements OrderCustomLineIte
         this.customLineItemId = customLineItemId;
     }
 
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+    }
+
     public void setCustomLineItem(final com.commercetools.api.models.cart.CustomLineItem customLineItem) {
         this.customLineItem = customLineItem;
     }
@@ -259,6 +277,21 @@ public class OrderCustomLineItemRemovedMessageImpl implements OrderCustomLineIte
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(customLineItem, that.customLineItem)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(customLineItem, that.customLineItem)
                 .isEquals();
     }
@@ -277,8 +310,28 @@ public class OrderCustomLineItemRemovedMessageImpl implements OrderCustomLineIte
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(customLineItemId)
+                .append(customLineItemKey)
                 .append(customLineItem)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .append("customLineItem", customLineItem)
+                .build();
     }
 
 }

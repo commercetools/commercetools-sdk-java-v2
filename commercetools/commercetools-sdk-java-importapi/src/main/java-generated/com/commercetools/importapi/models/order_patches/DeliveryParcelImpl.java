@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * DeliveryParcel
@@ -114,6 +116,10 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
+                .append(deliveryId, that.deliveryId)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
                 .isEquals();
     }
 
@@ -124,6 +130,15 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
                 .append(trackingData)
                 .append(items)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("deliveryId", deliveryId)
+                .append("measurements", measurements)
+                .append("trackingData", trackingData)
+                .append("items", items)
+                .build();
     }
 
 }

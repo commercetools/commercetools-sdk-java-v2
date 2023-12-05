@@ -11,19 +11,35 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentState
+ *  <p>Indicates the payment status for the Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface PaymentState extends JsonEnum {
 
+    /**
+    	<p>Indicates that payment balance is due for the Order.</p>
+
+    */
     PaymentState BALANCE_DUE = PaymentStateEnum.BALANCE_DUE;
+    /**
+    	<p>Indicates that payment for the Order has failed.</p>
 
+    */
     PaymentState FAILED = PaymentStateEnum.FAILED;
+    /**
+    	<p>Indicates that payment for the Order is pending.</p>
 
+    */
     PaymentState PENDING = PaymentStateEnum.PENDING;
+    /**
+    	<p>Indicates that payment for the Order is made on a credit basis.</p>
 
+    */
     PaymentState CREDIT_OWED = PaymentStateEnum.CREDIT_OWED;
+    /**
+    	<p>Indicates that the Order is paid for.</p>
 
+    */
     PaymentState PAID = PaymentStateEnum.PAID;
 
     /**

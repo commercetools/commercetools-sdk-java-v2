@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
@@ -15,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderReference
+ *  <p>Reference to an Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +38,7 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
     String ORDER = "order";
 
     /**
-     *
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
      * @return obj
      */
     @Valid
@@ -45,11 +46,26 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
     public Order getObj();
 
     /**
-     * set obj
+     *  <p>Unique identifier of the referenced Order.</p>
+     * @return id
+     */
+    @NotNull
+    @JsonProperty("id")
+    public String getId();
+
+    /**
+     *  <p>Contains the representation of the expanded Order. Only present in responses to requests with Reference Expansion for Orders.</p>
      * @param obj value to be set
      */
 
     public void setObj(final Order obj);
+
+    /**
+     *  <p>Unique identifier of the referenced Order.</p>
+     * @param id value to be set
+     */
+
+    public void setId(final String id);
 
     /**
      * factory method

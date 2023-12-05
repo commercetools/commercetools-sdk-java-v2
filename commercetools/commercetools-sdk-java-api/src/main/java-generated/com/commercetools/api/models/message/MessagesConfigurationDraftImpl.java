@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Defines the configuration for the Messages Query feature for the Project.</p>
@@ -76,12 +78,21 @@ public class MessagesConfigurationDraftImpl implements MessagesConfigurationDraf
 
         return new EqualsBuilder().append(enabled, that.enabled)
                 .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
+                .append(enabled, that.enabled)
+                .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(enabled).append(deleteDaysAfterCreation).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("enabled", enabled)
+                .append("deleteDaysAfterCreation", deleteDaysAfterCreation)
+                .build();
     }
 
 }

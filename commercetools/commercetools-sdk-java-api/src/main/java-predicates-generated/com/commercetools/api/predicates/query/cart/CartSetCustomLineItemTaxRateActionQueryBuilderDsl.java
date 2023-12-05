@@ -25,12 +25,24 @@ public class CartSetCustomLineItemTaxRateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartSetCustomLineItemTaxRateActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartSetCustomLineItemTaxRateActionQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, CartSetCustomLineItemTaxRateActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CartSetCustomLineItemTaxRateActionQueryBuilderDsl> externalTaxRate(
             Function<com.commercetools.api.predicates.query.cart.ExternalTaxRateDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.ExternalTaxRateDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
                 .parent(ConstantQueryPredicate.of().constant("externalTaxRate"))
                 .inner(fn.apply(com.commercetools.api.predicates.query.cart.ExternalTaxRateDraftQueryBuilderDsl.of())),
             CartSetCustomLineItemTaxRateActionQueryBuilderDsl::of);
+    }
+
+    public StringComparisonPredicateBuilder<CartSetCustomLineItemTaxRateActionQueryBuilderDsl> shippingKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shippingKey")),
+            p -> new CombinationQueryPredicate<>(p, CartSetCustomLineItemTaxRateActionQueryBuilderDsl::of));
     }
 
 }

@@ -15,7 +15,6 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
@@ -115,14 +114,6 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
     public String getAnonymousId();
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     * @return externalId
-     */
-
-    @JsonProperty("externalId")
-    public String getExternalId();
-
-    /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
      * @return interfaceId
      */
@@ -138,38 +129,6 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
     @Valid
     @JsonProperty("amountPlanned")
     public CentPrecisionMoney getAmountPlanned();
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @return amountAuthorized
-     */
-    @Valid
-    @JsonProperty("amountAuthorized")
-    public TypedMoney getAmountAuthorized();
-
-    /**
-     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
-     * @return authorizedUntil
-     */
-
-    @JsonProperty("authorizedUntil")
-    public String getAuthorizedUntil();
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @return amountPaid
-     */
-    @Valid
-    @JsonProperty("amountPaid")
-    public TypedMoney getAmountPaid();
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @return amountRefunded
-     */
-    @Valid
-    @JsonProperty("amountRefunded")
-    public TypedMoney getAmountRefunded();
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
@@ -280,13 +239,6 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
-     * @param externalId value to be set
-     */
-
-    public void setExternalId(final String externalId);
-
-    /**
      *  <p>Identifier used by the payment service that processes the Payment (for example, a PSP). The combination of <code>interfaceId</code> and the <code>paymentInterface</code> field on PaymentMethodInfo must be unique.</p>
      * @param interfaceId value to be set
      */
@@ -299,34 +251,6 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
      */
 
     public void setAmountPlanned(final CentPrecisionMoney amountPlanned);
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountAuthorized value to be set
-     */
-
-    public void setAmountAuthorized(final TypedMoney amountAuthorized);
-
-    /**
-     *  <p>Deprecated because this field is of little practical value, as it is either not reliably known, or the authorization time is fixed for a PSP.</p>
-     * @param authorizedUntil value to be set
-     */
-
-    public void setAuthorizedUntil(final String authorizedUntil);
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountPaid value to be set
-     */
-
-    public void setAmountPaid(final TypedMoney amountPaid);
-
-    /**
-     *  <p>Deprecated because its value can be calculated from the total amounts saved in the Transactions.</p>
-     * @param amountRefunded value to be set
-     */
-
-    public void setAmountRefunded(final TypedMoney amountRefunded);
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
@@ -409,13 +333,8 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
         instance.setCreatedBy(template.getCreatedBy());
         instance.setCustomer(template.getCustomer());
         instance.setAnonymousId(template.getAnonymousId());
-        instance.setExternalId(template.getExternalId());
         instance.setInterfaceId(template.getInterfaceId());
         instance.setAmountPlanned(template.getAmountPlanned());
-        instance.setAmountAuthorized(template.getAmountAuthorized());
-        instance.setAuthorizedUntil(template.getAuthorizedUntil());
-        instance.setAmountPaid(template.getAmountPaid());
-        instance.setAmountRefunded(template.getAmountRefunded());
         instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
         instance.setPaymentStatus(template.getPaymentStatus());
         instance.setTransactions(template.getTransactions());
@@ -445,16 +364,9 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         instance.setAnonymousId(template.getAnonymousId());
-        instance.setExternalId(template.getExternalId());
         instance.setInterfaceId(template.getInterfaceId());
         instance.setAmountPlanned(
             com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getAmountPlanned()));
-        instance.setAmountAuthorized(
-            com.commercetools.api.models.common.TypedMoney.deepCopy(template.getAmountAuthorized()));
-        instance.setAuthorizedUntil(template.getAuthorizedUntil());
-        instance.setAmountPaid(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getAmountPaid()));
-        instance.setAmountRefunded(
-            com.commercetools.api.models.common.TypedMoney.deepCopy(template.getAmountRefunded()));
         instance.setPaymentMethodInfo(
             com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
         instance.setPaymentStatus(

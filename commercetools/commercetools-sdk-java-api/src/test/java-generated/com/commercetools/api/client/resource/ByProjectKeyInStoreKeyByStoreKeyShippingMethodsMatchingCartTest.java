@@ -41,7 +41,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -91,7 +91,25 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartTest {
                                 .matchingCart()
                                 .get()
                                 .createHttpRequest(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart", } };
+                        "get", "test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .shippingMethods()
+                                .matchingCart()
+                                .head()
+                                .withCartId("cartId")
+                                .createHttpRequest(),
+                        "head",
+                        "test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart?cartId=cartId", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .shippingMethods()
+                                .matchingCart()
+                                .head()
+                                .createHttpRequest(),
+                        "head", "test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart", } };
     }
 
     @DataProvider
@@ -113,6 +131,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartTest {
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .shippingMethods()
                         .matchingCart()
-                        .get(), } };
+                        .get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .shippingMethods()
+                        .matchingCart()
+                        .head()
+                        .withCartId("cartId"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .shippingMethods()
+                        .matchingCart()
+                        .head(), } };
     }
 }

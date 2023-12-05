@@ -11,6 +11,7 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CustomLineItemPriceMode;
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -22,7 +23,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderAddCustomLineItemAction
+ *  <p>If the Cart already contains a CustomLineItem with the same <code>slug</code>, <code>name</code>, <code>money</code>, <code>taxCategory</code>, <code>state</code>, and Custom Fields, then only the quantity of the existing Custom Line Item is increased. If CustomLineItem <code>shippingDetails</code> are set, they are merged with the <code>targets</code> that already exist on the ItemShippingDetails of the Custom Line Item. In case of overlapping address keys the ItemShippingTarget <code>quantity</code> is summed up.</p>
+ *  <p>If the Cart already contains a Custom Line Item with the same slug that is otherwise not identical, an InvalidOperation error is returned.</p>
+ *  <p>If the Tax Rate is not set, a MissingTaxRateForCountry error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -47,7 +50,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     String ADD_CUSTOM_LINE_ITEM = "addCustomLineItem";
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
      * @return money
      */
     @NotNull
@@ -56,7 +59,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public Money getMoney();
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Custom Line Item.</p>
      * @return name
      */
     @NotNull
@@ -73,7 +76,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public String getKey();
 
     /**
-     *
+     *  <p>Number of Custom Line Items to add to the Cart.</p>
      * @return quantity
      */
 
@@ -81,7 +84,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public Long getQuantity();
 
     /**
-     *
+     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
      * @return slug
      */
     @NotNull
@@ -89,7 +92,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public String getSlug();
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. If TaxMode is <code>Platform</code>, this field must not be empty.</p>
      * @return taxCategory
      */
     @Valid
@@ -97,20 +100,20 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     * @return custom
-     */
-    @Valid
-    @JsonProperty("custom")
-    public CustomFieldsDraft getCustom();
-
-    /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @return shippingDetails
+     */
+    @Valid
+    @JsonProperty("shippingDetails")
+    public ItemShippingDetailsDraft getShippingDetails();
 
     /**
      *  <ul>
@@ -124,14 +127,22 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public CustomLineItemPriceMode getPriceMode();
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
      * @param money value to be set
      */
 
     public void setMoney(final Money money);
 
     /**
-     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     *  <p>Name of the Custom Line Item.</p>
      * @param name value to be set
      */
 
@@ -145,39 +156,39 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     public void setKey(final String key);
 
     /**
-     * set quantity
+     *  <p>Number of Custom Line Items to add to the Cart.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     * set slug
+     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final String slug);
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. If TaxMode is <code>Platform</code>, this field must not be empty.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
-     * @param custom value to be set
-     */
-
-    public void setCustom(final CustomFieldsDraft custom);
-
-    /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param shippingDetails value to be set
+     */
+
+    public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
     /**
      *  <ul>
@@ -188,6 +199,13 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
      */
 
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
+
+    /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFieldsDraft custom);
 
     /**
      * factory method
@@ -210,9 +228,10 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
         instance.setQuantity(template.getQuantity());
         instance.setSlug(template.getSlug());
         instance.setTaxCategory(template.getTaxCategory());
-        instance.setCustom(template.getCustom());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setShippingDetails(template.getShippingDetails());
         instance.setPriceMode(template.getPriceMode());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 
@@ -235,10 +254,12 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
         instance.setSlug(template.getSlug());
         instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
                 .deepCopy(template.getTaxCategory()));
-        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setExternalTaxRate(
             com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         instance.setPriceMode(template.getPriceMode());
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

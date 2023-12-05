@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * ShippingInfoImportDraft
+ *  <p>Becomes the <code>shippingInfo</code> of the imported Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, ModelBase {
@@ -69,7 +71,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *
+     *  <p>Name of the Shipping Method.</p>
      */
 
     public String getShippingMethodName() {
@@ -77,7 +79,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *
+     *  <p>The base price for the Shipping Method.</p>
      */
 
     public com.commercetools.api.models.common.Money getPrice() {
@@ -85,7 +87,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *  <p>The shipping rate used to determine the price.</p>
+     *  <p>Shipping rate information for the Order.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
@@ -93,7 +95,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *
+     *  <p>Include a Tax Rate for the Shipping Method.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
@@ -101,7 +103,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *
+     *  <p>Include a value to associate a Tax Category with the shipping information.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -109,7 +111,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *  <p>Not set if custom shipping method is used.</p>
+     *  <p>Include a value to associate a Shipping Method with the Order.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
@@ -117,7 +119,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     *  <p>Information on how items are to be delivered to customers.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryDraft> getDeliveries() {
@@ -125,7 +127,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *
+     *  <p>Discounted Price of the Shipping Method.</p>
      */
 
     public com.commercetools.api.models.order.DiscountedLineItemPriceDraft getDiscountedPrice() {
@@ -133,7 +135,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+     *  <p>Indicates if the ShippingMethod referenced is allowed for the Order or not.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingMethodState getShippingMethodState() {
@@ -203,6 +205,15 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
                 .append(deliveries, that.deliveries)
                 .append(discountedPrice, that.discountedPrice)
                 .append(shippingMethodState, that.shippingMethodState)
+                .append(shippingMethodName, that.shippingMethodName)
+                .append(price, that.price)
+                .append(shippingRate, that.shippingRate)
+                .append(taxRate, that.taxRate)
+                .append(taxCategory, that.taxCategory)
+                .append(shippingMethod, that.shippingMethod)
+                .append(deliveries, that.deliveries)
+                .append(discountedPrice, that.discountedPrice)
+                .append(shippingMethodState, that.shippingMethodState)
                 .isEquals();
     }
 
@@ -218,6 +229,21 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
                 .append(discountedPrice)
                 .append(shippingMethodState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+                .append("shippingMethodName", shippingMethodName)
+                .append("price", price)
+                .append("shippingRate", shippingRate)
+                .append("taxRate", taxRate)
+                .append("taxCategory", taxCategory)
+                .append("shippingMethod", shippingMethod)
+                .append("deliveries", deliveries)
+                .append("discountedPrice", discountedPrice)
+                .append("shippingMethodState", shippingMethodState)
+                .build();
     }
 
 }

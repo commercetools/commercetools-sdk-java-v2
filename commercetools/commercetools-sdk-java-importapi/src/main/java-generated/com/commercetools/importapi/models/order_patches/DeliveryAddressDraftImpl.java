@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * DeliveryAddressDraft
@@ -74,12 +76,23 @@ public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase
 
         DeliveryAddressDraftImpl that = (DeliveryAddressDraftImpl) o;
 
-        return new EqualsBuilder().append(deliveryId, that.deliveryId).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(deliveryId, that.deliveryId)
+                .append(address, that.address)
+                .append(deliveryId, that.deliveryId)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(deliveryId).append(address).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("deliveryId", deliveryId)
+                .append("address", address)
+                .build();
     }
 
 }

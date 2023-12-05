@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Type
@@ -238,6 +240,17 @@ public class TypeImpl implements Type, ModelBase {
                 .append(description, that.description)
                 .append(resourceTypeIds, that.resourceTypeIds)
                 .append(fieldDefinitions, that.fieldDefinitions)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(resourceTypeIds, that.resourceTypeIds)
+                .append(fieldDefinitions, that.fieldDefinitions)
                 .isEquals();
     }
 
@@ -255,6 +268,22 @@ public class TypeImpl implements Type, ModelBase {
                 .append(resourceTypeIds)
                 .append(fieldDefinitions)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("key", key)
+                .append("name", name)
+                .append("description", description)
+                .append("resourceTypeIds", resourceTypeIds)
+                .append("fieldDefinitions", fieldDefinitions)
+                .build();
     }
 
 }

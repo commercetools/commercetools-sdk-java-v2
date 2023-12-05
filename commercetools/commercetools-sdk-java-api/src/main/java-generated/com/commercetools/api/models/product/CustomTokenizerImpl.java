@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Define arbitrary tokens that are used to match the input.</p>
@@ -74,12 +76,23 @@ public class CustomTokenizerImpl implements CustomTokenizer, ModelBase {
 
         CustomTokenizerImpl that = (CustomTokenizerImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(inputs, that.inputs).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(inputs, that.inputs)
+                .append(type, that.type)
+                .append(inputs, that.inputs)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(inputs).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("inputs", inputs)
+                .build();
     }
 
 }

@@ -13,9 +13,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderChangeCustomLineItemQuantityAction
+ *  <p>When multiple shipping addresses are set for a Custom Line Item, use the Add CustomLineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Custom Line Item quantity should be distributed over the sub-quantities, the <code>shippingDetails</code> field is kept in its current state to avoid data loss.</p>
+ *  <p>To change the Custom Line Item quantity and shipping details together, use this update action in combination with the Set CustomLineItem ShippingDetails update action in a single Order update command.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangeCustomLineItemQuantityActionImpl
@@ -25,6 +28,8 @@ public class StagedOrderChangeCustomLineItemQuantityActionImpl
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private Long quantity;
 
     /**
@@ -32,8 +37,10 @@ public class StagedOrderChangeCustomLineItemQuantityActionImpl
      */
     @JsonCreator
     StagedOrderChangeCustomLineItemQuantityActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("quantity") final Long quantity) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.quantity = quantity;
         this.action = CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
     }
@@ -54,7 +61,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionImpl
     }
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
@@ -62,7 +69,15 @@ public class StagedOrderChangeCustomLineItemQuantityActionImpl
     }
 
     /**
-     *
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>New value to set. If <code>0</code>, the Custom Line Item is removed from the Order.</p>
      */
 
     public Long getQuantity() {
@@ -71,6 +86,10 @@ public class StagedOrderChangeCustomLineItemQuantityActionImpl
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
     }
 
     public void setQuantity(final Long quantity) {
@@ -89,13 +108,31 @@ public class StagedOrderChangeCustomLineItemQuantityActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(quantity, that.quantity)
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(quantity, that.quantity)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).append(quantity).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(customLineItemId)
+                .append(customLineItemKey)
+                .append(quantity)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .append("quantity", quantity)
+                .build();
     }
 
 }

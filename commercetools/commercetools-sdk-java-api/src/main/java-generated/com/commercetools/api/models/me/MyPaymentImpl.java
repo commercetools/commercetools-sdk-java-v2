@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * MyPayment
@@ -181,6 +183,14 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
                 .append(paymentMethodInfo, that.paymentMethodInfo)
                 .append(transactions, that.transactions)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .append(amountPlanned, that.amountPlanned)
+                .append(paymentMethodInfo, that.paymentMethodInfo)
+                .append(transactions, that.transactions)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -195,6 +205,19 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
                 .append(transactions)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("customer", customer)
+                .append("anonymousId", anonymousId)
+                .append("amountPlanned", amountPlanned)
+                .append("paymentMethodInfo", paymentMethodInfo)
+                .append("transactions", transactions)
+                .append("custom", custom)
+                .build();
     }
 
 }

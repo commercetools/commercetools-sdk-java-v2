@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,6 +35,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyOrdersSearchPostString extends
         StringBodyApiMethod<ByProjectKeyOrdersSearchPostString, com.commercetools.api.models.order.OrderPagedSearchResponse>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersSearchPostString> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.order.OrderPagedSearchResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.order.OrderPagedSearchResponse>() {
+        };
+    }
 
     private String projectKey;
 

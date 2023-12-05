@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Change Custom Line Item Quantity update action.</p>
+ *  <p>Generated after a successful Change CustomLineItem Quantity update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomLineItemQuantityChangedMessagePayloadImpl
@@ -24,6 +26,8 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadImpl
     private String type;
 
     private String customLineItemId;
+
+    private String customLineItemKey;
 
     private Long quantity;
 
@@ -35,8 +39,10 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadImpl
     @JsonCreator
     OrderCustomLineItemQuantityChangedMessagePayloadImpl(
             @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("quantity") final Long quantity, @JsonProperty("oldQuantity") final Long oldQuantity) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.quantity = quantity;
         this.oldQuantity = oldQuantity;
         this.type = ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED;
@@ -66,6 +72,14 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadImpl
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
      */
 
@@ -83,6 +97,10 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadImpl
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
     }
 
     public void setQuantity(final Long quantity) {
@@ -105,6 +123,12 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(quantity, that.quantity)
+                .append(oldQuantity, that.oldQuantity)
+                .append(type, that.type)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(quantity, that.quantity)
                 .append(oldQuantity, that.oldQuantity)
                 .isEquals();
@@ -114,9 +138,20 @@ public class OrderCustomLineItemQuantityChangedMessagePayloadImpl
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(customLineItemId)
+                .append(customLineItemKey)
                 .append(quantity)
                 .append(oldQuantity)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .append("quantity", quantity)
+                .append("oldQuantity", oldQuantity)
+                .build();
     }
 
 }

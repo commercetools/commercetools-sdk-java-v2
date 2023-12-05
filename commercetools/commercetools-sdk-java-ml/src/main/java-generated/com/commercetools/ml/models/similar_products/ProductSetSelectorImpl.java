@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A set of ProductData for comparison. If no optional attributes are specified, all <code>current</code> ProductData are selected for comparison.</p>
@@ -152,6 +154,12 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
                 .append(staged, that.staged)
                 .append(includeVariants, that.includeVariants)
                 .append(productSetLimit, that.productSetLimit)
+                .append(projectKey, that.projectKey)
+                .append(productIds, that.productIds)
+                .append(productTypeIds, that.productTypeIds)
+                .append(staged, that.staged)
+                .append(includeVariants, that.includeVariants)
+                .append(productSetLimit, that.productSetLimit)
                 .isEquals();
     }
 
@@ -164,6 +172,17 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
                 .append(includeVariants)
                 .append(productSetLimit)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("projectKey", projectKey)
+                .append("productIds", productIds)
+                .append("productTypeIds", productTypeIds)
+                .append("staged", staged)
+                .append("includeVariants", includeVariants)
+                .append("productSetLimit", productSetLimit)
+                .build();
     }
 
 }

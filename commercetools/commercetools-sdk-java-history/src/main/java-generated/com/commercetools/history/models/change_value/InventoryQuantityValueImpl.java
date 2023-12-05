@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * InventoryQuantityValue
@@ -76,12 +78,21 @@ public class InventoryQuantityValueImpl implements InventoryQuantityValue, Model
 
         return new EqualsBuilder().append(quantityOnStock, that.quantityOnStock)
                 .append(availableQuantity, that.availableQuantity)
+                .append(quantityOnStock, that.quantityOnStock)
+                .append(availableQuantity, that.availableQuantity)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(quantityOnStock).append(availableQuantity).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("quantityOnStock", quantityOnStock)
+                .append("availableQuantity", availableQuantity)
+                .build();
     }
 
 }

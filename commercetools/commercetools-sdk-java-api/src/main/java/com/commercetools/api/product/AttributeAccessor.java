@@ -6,4 +6,5 @@ package com.commercetools.api.product;
  */
 @Deprecated
 public class AttributeAccessor extends com.commercetools.api.models.product.AttributeAccessor {
+
 }

@@ -21,6 +21,10 @@ public class ByProjectKeyMePaymentsRequestBuilder {
         return new ByProjectKeyMePaymentsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyMePaymentsHead head() {
+        return new ByProjectKeyMePaymentsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyMePaymentsPost post(com.commercetools.api.models.me.MyPaymentDraft myPaymentDraft) {
         return new ByProjectKeyMePaymentsPost(apiHttpClient, projectKey, myPaymentDraft);
     }
@@ -31,10 +35,6 @@ public class ByProjectKeyMePaymentsRequestBuilder {
 
     public ByProjectKeyMePaymentsPost post(UnaryOperator<com.commercetools.api.models.me.MyPaymentDraftBuilder> op) {
         return post(op.apply(com.commercetools.api.models.me.MyPaymentDraftBuilder.of()).build());
-    }
-
-    public ByProjectKeyMePaymentsKeyByKeyRequestBuilder withKey(String key) {
-        return new ByProjectKeyMePaymentsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
     }
 
     public ByProjectKeyMePaymentsByIDRequestBuilder withId(String ID) {

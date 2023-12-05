@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderSetDeliveryCustomFieldAction
@@ -60,7 +62,8 @@ public class OrderSetDeliveryCustomFieldActionImpl implements OrderSetDeliveryCu
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryId() {
@@ -68,7 +71,8 @@ public class OrderSetDeliveryCustomFieldActionImpl implements OrderSetDeliveryCu
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryKey() {
@@ -122,6 +126,11 @@ public class OrderSetDeliveryCustomFieldActionImpl implements OrderSetDeliveryCu
                 .append(deliveryKey, that.deliveryKey)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 
@@ -133,6 +142,16 @@ public class OrderSetDeliveryCustomFieldActionImpl implements OrderSetDeliveryCu
                 .append(name)
                 .append(value)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("deliveryId", deliveryId)
+                .append("deliveryKey", deliveryKey)
+                .append("name", name)
+                .append("value", value)
+                .build();
     }
 
 }

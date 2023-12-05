@@ -14,6 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Reference to an OrderEdit.</p>
@@ -62,7 +64,7 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
     }
 
     /**
-     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
+     *  <p>Contains the representation of the expanded Order Edit. Only present in responses to requests with Reference Expansion for Order Edits.</p>
      */
 
     public com.commercetools.api.models.order_edit.OrderEdit getObj() {
@@ -87,12 +89,26 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
 
         OrderEditReferenceImpl that = (OrderEditReferenceImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(obj, that.obj).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(obj, that.obj)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(typeId).append(id).append(obj).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("typeId", typeId)
+                .append("id", id)
+                .append("obj", obj)
+                .build();
     }
 
 }

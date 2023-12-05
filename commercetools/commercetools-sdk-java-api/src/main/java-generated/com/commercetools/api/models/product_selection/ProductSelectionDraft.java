@@ -60,14 +60,6 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Type of the Product Selection.</p>
-     * @return type
-     */
-    @Deprecated
-    @JsonProperty("type")
-    public ProductSelectionTypeEnum getType();
-
-    /**
      *  <p>Mode of the Product Selection.</p>
      * @return mode
      */
@@ -97,13 +89,6 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
-     *  <p>Type of the Product Selection.</p>
-     * @param type value to be set
-     */
-    @Deprecated
-    public void setType(final ProductSelectionTypeEnum type);
-
-    /**
      *  <p>Mode of the Product Selection.</p>
      * @param mode value to be set
      */
@@ -128,7 +113,6 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setCustom(template.getCustom());
-        instance.setType(template.getType());
         instance.setMode(template.getMode());
         return instance;
     }
@@ -147,7 +131,6 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
         instance.setKey(template.getKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
-        instance.setType(template.getType());
         instance.setMode(template.getMode());
         return instance;
     }

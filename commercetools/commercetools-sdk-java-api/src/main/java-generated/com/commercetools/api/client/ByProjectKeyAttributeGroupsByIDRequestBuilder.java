@@ -24,6 +24,10 @@ public class ByProjectKeyAttributeGroupsByIDRequestBuilder {
         return new ByProjectKeyAttributeGroupsByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyAttributeGroupsByIDHead head() {
+        return new ByProjectKeyAttributeGroupsByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyAttributeGroupsByIDPost post(
             com.commercetools.api.models.attribute_group.AttributeGroupUpdate attributeGroupUpdate) {
         return new ByProjectKeyAttributeGroupsByIDPost(apiHttpClient, projectKey, ID, attributeGroupUpdate);

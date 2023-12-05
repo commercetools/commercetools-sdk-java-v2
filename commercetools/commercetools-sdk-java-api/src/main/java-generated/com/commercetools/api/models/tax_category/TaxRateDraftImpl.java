@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * TaxRateDraft
@@ -163,6 +165,13 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
                 .append(state, that.state)
                 .append(subRates, that.subRates)
                 .append(key, that.key)
+                .append(name, that.name)
+                .append(amount, that.amount)
+                .append(includedInPrice, that.includedInPrice)
+                .append(country, that.country)
+                .append(state, that.state)
+                .append(subRates, that.subRates)
+                .append(key, that.key)
                 .isEquals();
     }
 
@@ -176,6 +185,18 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
                 .append(subRates)
                 .append(key)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("amount", amount)
+                .append("includedInPrice", includedInPrice)
+                .append("country", country)
+                .append("state", state)
+                .append("subRates", subRates)
+                .append("key", key)
+                .build();
     }
 
 }

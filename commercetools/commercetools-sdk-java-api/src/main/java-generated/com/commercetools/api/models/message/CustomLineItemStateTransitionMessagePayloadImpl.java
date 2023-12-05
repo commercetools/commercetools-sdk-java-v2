@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Transition Custom Line Item State update action.</p>
+ *  <p>Generated after a successful Transition CustomLineItem State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemStateTransitionMessagePayloadImpl
@@ -24,6 +26,8 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     private String type;
 
     private String customLineItemId;
+
+    private String customLineItemKey;
 
     private java.time.ZonedDateTime transitionDate;
 
@@ -38,11 +42,13 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
      */
     @JsonCreator
     CustomLineItemStateTransitionMessagePayloadImpl(@JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("fromState") final com.commercetools.api.models.state.StateReference fromState,
             @JsonProperty("toState") final com.commercetools.api.models.state.StateReference toState) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.transitionDate = transitionDate;
         this.quantity = quantity;
         this.fromState = fromState;
@@ -71,6 +77,14 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -109,6 +123,10 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
         this.customLineItemId = customLineItemId;
     }
 
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+    }
+
     public void setTransitionDate(final java.time.ZonedDateTime transitionDate) {
         this.transitionDate = transitionDate;
     }
@@ -137,6 +155,14 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(transitionDate, that.transitionDate)
+                .append(quantity, that.quantity)
+                .append(fromState, that.fromState)
+                .append(toState, that.toState)
+                .append(type, that.type)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(transitionDate, that.transitionDate)
                 .append(quantity, that.quantity)
                 .append(fromState, that.fromState)
@@ -148,11 +174,24 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type)
                 .append(customLineItemId)
+                .append(customLineItemKey)
                 .append(transitionDate)
                 .append(quantity)
                 .append(fromState)
                 .append(toState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .append("transitionDate", transitionDate)
+                .append("quantity", quantity)
+                .append("fromState", fromState)
+                .append("toState", toState)
+                .build();
     }
 
 }

@@ -13,13 +13,15 @@ import com.commercetools.api.models.order.DeliveryItem;
 import com.commercetools.api.models.order.ParcelMeasurements;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.order.TrackingData;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderAddParcelToDeliveryAction
+ *  <p>To add a Parcel, at least one Delivery must exist.</p>
+ *  <p>Produces the Parcel Added To Delivery Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -40,7 +42,8 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     String ADD_PARCEL_TO_DELIVERY = "addParcelToDelivery";
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
 
@@ -48,7 +51,8 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public String getDeliveryId();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
 
@@ -56,7 +60,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public String getDeliveryKey();
 
     /**
-     *
+     *  <p><code>key</code> of an existing Parcel.</p>
      * @return parcelKey
      */
 
@@ -64,7 +68,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public String getParcelKey();
 
     /**
-     *
+     *  <p>Value to set.</p>
      * @return measurements
      */
     @Valid
@@ -72,7 +76,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public ParcelMeasurements getMeasurements();
 
     /**
-     *
+     *  <p>Value to set.</p>
      * @return trackingData
      */
     @Valid
@@ -80,7 +84,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public TrackingData getTrackingData();
 
     /**
-     *
+     *  <p>Value to set.</p>
      * @return items
      */
     @Valid
@@ -88,42 +92,52 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public List<DeliveryItem> getItems();
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p>Custom Fields for the Parcel.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
+    /**
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      */
 
     public void setDeliveryKey(final String deliveryKey);
 
     /**
-     * set parcelKey
+     *  <p><code>key</code> of an existing Parcel.</p>
      * @param parcelKey value to be set
      */
 
     public void setParcelKey(final String parcelKey);
 
     /**
-     * set measurements
+     *  <p>Value to set.</p>
      * @param measurements value to be set
      */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
     /**
-     * set trackingData
+     *  <p>Value to set.</p>
      * @param trackingData value to be set
      */
 
     public void setTrackingData(final TrackingData trackingData);
 
     /**
-     * set items
+     *  <p>Value to set.</p>
      * @param items values to be set
      */
 
@@ -131,11 +145,18 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Value to set.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
+
+    /**
+     *  <p>Custom Fields for the Parcel.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFieldsDraft custom);
 
     /**
      * factory method
@@ -158,6 +179,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 
@@ -184,6 +206,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
                         .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the Tax Category of at least one of the <code>lineItems</code>, <code>customLineItems</code>, or <code>shippingInfo</code> in the Cart is missing the TaxRate matching <code>country</code> and <code>state</code> given in the <code>shippingAddress</code> of that Cart.</p>
@@ -130,6 +132,11 @@ public class GraphQLMissingTaxRateForCountryErrorImpl implements GraphQLMissingT
                 .append(taxCategoryId, that.taxCategoryId)
                 .append(country, that.country)
                 .append(state, that.state)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(taxCategoryId, that.taxCategoryId)
+                .append(country, that.country)
+                .append(state, that.state)
                 .isEquals();
     }
 
@@ -141,6 +148,16 @@ public class GraphQLMissingTaxRateForCountryErrorImpl implements GraphQLMissingT
                 .append(country)
                 .append(state)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("values", values)
+                .append("taxCategoryId", taxCategoryId)
+                .append("country", country)
+                .append("state", state)
+                .build();
     }
 
 }

@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * OrderRemoveItemShippingAddressAction
+ *  <p>An address can only be removed if it is not referenced in any ItemShippingTarget of the Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderRemoveItemShippingAddressActionImpl implements OrderRemoveItemShippingAddressAction, ModelBase {
@@ -49,7 +51,7 @@ public class OrderRemoveItemShippingAddressActionImpl implements OrderRemoveItem
     }
 
     /**
-     *
+     *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
      */
 
     public String getAddressKey() {
@@ -70,12 +72,23 @@ public class OrderRemoveItemShippingAddressActionImpl implements OrderRemoveItem
 
         OrderRemoveItemShippingAddressActionImpl that = (OrderRemoveItemShippingAddressActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(addressKey, that.addressKey).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(addressKey, that.addressKey)
+                .append(action, that.action)
+                .append(addressKey, that.addressKey)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(addressKey).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("addressKey", addressKey)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Field type for Reference values.</p>
@@ -71,12 +73,23 @@ public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, M
 
         CustomFieldReferenceTypeImpl that = (CustomFieldReferenceTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(referenceTypeId, that.referenceTypeId).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(referenceTypeId, that.referenceTypeId)
+                .append(name, that.name)
+                .append(referenceTypeId, that.referenceTypeId)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(name).append(referenceTypeId).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("referenceTypeId", referenceTypeId)
+                .build();
     }
 
 }

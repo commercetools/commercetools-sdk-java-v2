@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Money
@@ -110,6 +112,10 @@ public class MoneyImpl implements Money, ModelBase {
                 .append(centAmount, that.centAmount)
                 .append(fractionDigits, that.fractionDigits)
                 .append(type, that.type)
+                .append(currencyCode, that.currencyCode)
+                .append(centAmount, that.centAmount)
+                .append(fractionDigits, that.fractionDigits)
+                .append(type, that.type)
                 .isEquals();
     }
 
@@ -120,6 +126,15 @@ public class MoneyImpl implements Money, ModelBase {
                 .append(fractionDigits)
                 .append(type)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("currencyCode", currencyCode)
+                .append("centAmount", centAmount)
+                .append("fractionDigits", fractionDigits)
+                .append("type", type)
+                .build();
     }
 
 }

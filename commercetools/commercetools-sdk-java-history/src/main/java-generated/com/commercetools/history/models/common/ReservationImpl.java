@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Reservation
@@ -110,6 +112,10 @@ public class ReservationImpl implements Reservation, ModelBase {
                 .append(owner, that.owner)
                 .append(createdAt, that.createdAt)
                 .append(checkoutStartedAt, that.checkoutStartedAt)
+                .append(quantity, that.quantity)
+                .append(owner, that.owner)
+                .append(createdAt, that.createdAt)
+                .append(checkoutStartedAt, that.checkoutStartedAt)
                 .isEquals();
     }
 
@@ -120,6 +126,15 @@ public class ReservationImpl implements Reservation, ModelBase {
                 .append(createdAt)
                 .append(checkoutStartedAt)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("quantity", quantity)
+                .append("owner", owner)
+                .append("createdAt", createdAt)
+                .append("checkoutStartedAt", checkoutStartedAt)
+                .build();
     }
 
 }

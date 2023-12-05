@@ -21,7 +21,7 @@ The latest stable SDK release can be retrieved from [Maven Central](https://sear
 ```gradle
 ext {
     versions = [
-        commercetools: "14.5.0"
+        commercetools: "17.3.0"
     ]
 }
 
@@ -43,7 +43,7 @@ dependencies {
 
 ```maven
 <properties>
-    <commercetools.version>14.5.0</commercetools.version>
+    <commercetools.version>17.3.0</commercetools.version>
 </properties>
 <dependencies>
     <dependency>
@@ -71,11 +71,11 @@ dependencies {
 
 ### Modules
 
-* `commercetools-http-client`: alias for commercetools-okhttp-client4
+* `commercetools-http-client`: alias for commercetools-async-http-client
 * `commercetools-okhttp-client3`: uses OkHttp client 3.0
 * `commercetools-okhttp-client4`: uses OkHttp client 4.0
 * `commercetools-apachehttp-client`: uses Apache HTTP async client 5.1
-* `commercetools-asynchttp-client`: uses Async HTTP client 2.12
+* `commercetools-async-http-client`: uses Async HTTP client 2.12
 * `commercetools-reactornetty-client`: uses Reactor Netty HTTP Client
 * `commercetools-javanet-client`: uses HTTP client (`java.net.http.HttpClient`) included in JDK 11+
 * `commercetools-sdk-java-api`: models and request builders for the product API
@@ -85,6 +85,7 @@ dependencies {
 * `commercetools-sdk-compat-v1`: Compatibility layer for Java v1 SDK
 * `commercetools-money`: Provider for JSR-354 money instances
 * `commercetools-monitoring-newrelic`: Middleware to integrate NewRelic monitoring
+* `commercetools-monitoring-opentelemetry`: Middleware to collect metrics using OpenTelemetry
 * `commercetools-graphql-api`: type safe support for the commercetools GraphQL API
 
 ### Migration Guidelines

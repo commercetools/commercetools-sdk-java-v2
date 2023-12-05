@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StandalonePrice
@@ -368,6 +370,25 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .append(custom, that.custom)
                 .append(staged, that.staged)
                 .append(active, that.active)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(tiers, that.tiers)
+                .append(discounted, that.discounted)
+                .append(custom, that.custom)
+                .append(staged, that.staged)
+                .append(active, that.active)
                 .isEquals();
     }
 
@@ -393,6 +414,30 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .append(staged)
                 .append(active)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("key", key)
+                .append("sku", sku)
+                .append("value", value)
+                .append("country", country)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("tiers", tiers)
+                .append("discounted", discounted)
+                .append("custom", custom)
+                .append("staged", staged)
+                .append("active", active)
+                .build();
     }
 
 }

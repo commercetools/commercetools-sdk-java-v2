@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Project
@@ -309,6 +311,21 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(externalOAuth, that.externalOAuth)
                 .append(searchIndexing, that.searchIndexing)
                 .append(businessUnits, that.businessUnits)
+                .append(version, that.version)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(countries, that.countries)
+                .append(currencies, that.currencies)
+                .append(languages, that.languages)
+                .append(createdAt, that.createdAt)
+                .append(trialUntil, that.trialUntil)
+                .append(messages, that.messages)
+                .append(carts, that.carts)
+                .append(shoppingLists, that.shoppingLists)
+                .append(shippingRateInputType, that.shippingRateInputType)
+                .append(externalOAuth, that.externalOAuth)
+                .append(searchIndexing, that.searchIndexing)
+                .append(businessUnits, that.businessUnits)
                 .isEquals();
     }
 
@@ -330,6 +347,26 @@ public class ProjectImpl implements Project, ModelBase {
                 .append(searchIndexing)
                 .append(businessUnits)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("version", version)
+                .append("key", key)
+                .append("name", name)
+                .append("countries", countries)
+                .append("currencies", currencies)
+                .append("languages", languages)
+                .append("createdAt", createdAt)
+                .append("trialUntil", trialUntil)
+                .append("messages", messages)
+                .append("carts", carts)
+                .append("shoppingLists", shoppingLists)
+                .append("shippingRateInputType", shippingRateInputType)
+                .append("externalOAuth", externalOAuth)
+                .append("searchIndexing", searchIndexing)
+                .append("businessUnits", businessUnits)
+                .build();
     }
 
 }

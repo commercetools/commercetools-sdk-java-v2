@@ -22,4 +22,8 @@ public class ByProjectKeyMessagesByIDRequestBuilder {
         return new ByProjectKeyMessagesByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyMessagesByIDHead head() {
+        return new ByProjectKeyMessagesByIDHead(apiHttpClient, projectKey, ID);
+    }
+
 }

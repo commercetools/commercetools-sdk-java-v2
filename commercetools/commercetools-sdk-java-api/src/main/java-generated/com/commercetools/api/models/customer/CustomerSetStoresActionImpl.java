@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Sets the Stores the Customer account is associated with. If no Stores are specified, the Customer becomes a global Customer.</p>
@@ -75,12 +77,23 @@ public class CustomerSetStoresActionImpl implements CustomerSetStoresAction, Mod
 
         CustomerSetStoresActionImpl that = (CustomerSetStoresActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(stores, that.stores).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(stores, that.stores)
+                .append(action, that.action)
+                .append(stores, that.stores)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(stores).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("stores", stores)
+                .build();
     }
 
 }

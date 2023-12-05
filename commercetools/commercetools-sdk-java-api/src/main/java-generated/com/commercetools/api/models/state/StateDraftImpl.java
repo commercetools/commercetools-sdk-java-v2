@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StateDraft
@@ -175,6 +177,13 @@ public class StateDraftImpl implements StateDraft, ModelBase {
                 .append(initial, that.initial)
                 .append(roles, that.roles)
                 .append(transitions, that.transitions)
+                .append(key, that.key)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(initial, that.initial)
+                .append(roles, that.roles)
+                .append(transitions, that.transitions)
                 .isEquals();
     }
 
@@ -188,6 +197,18 @@ public class StateDraftImpl implements StateDraft, ModelBase {
                 .append(roles)
                 .append(transitions)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("type", type)
+                .append("name", name)
+                .append("description", description)
+                .append("initial", initial)
+                .append("roles", roles)
+                .append("transitions", transitions)
+                .build();
     }
 
 }

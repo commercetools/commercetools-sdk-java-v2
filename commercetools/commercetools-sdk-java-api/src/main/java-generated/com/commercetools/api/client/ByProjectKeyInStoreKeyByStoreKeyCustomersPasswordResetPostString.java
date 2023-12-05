@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -36,6 +38,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPostString ex
         StringBodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPostString, com.commercetools.api.models.customer.Customer>
         implements
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPostString> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.customer.Customer> resultType() {
+        return new TypeReference<com.commercetools.api.models.customer.Customer>() {
+        };
+    }
 
     private String projectKey;
     private String storeKey;

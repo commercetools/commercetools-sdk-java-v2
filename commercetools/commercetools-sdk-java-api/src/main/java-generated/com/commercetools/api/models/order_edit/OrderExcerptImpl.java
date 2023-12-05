@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * OrderExcerpt
+ *  <p>Excerpt of the Order extracting the total and the taxed price.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
@@ -45,7 +47,7 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
     }
 
     /**
-     *
+     *  <p>Total price of the Order.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
@@ -53,7 +55,7 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
     }
 
     /**
-     *
+     *  <p>Taxed price of the Order.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
@@ -61,7 +63,7 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current version of the Order.</p>
      */
 
     public Long getVersion() {
@@ -93,12 +95,23 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
         return new EqualsBuilder().append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
                 .append(version, that.version)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(version, that.version)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(totalPrice).append(taxedPrice).append(version).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("totalPrice", totalPrice)
+                .append("taxedPrice", taxedPrice)
+                .append("version", version)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StagedOrderSetDeliveryAddressCustomTypeAction
@@ -62,7 +64,8 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionImpl
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryId() {
@@ -70,7 +73,8 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionImpl
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryKey() {
@@ -78,7 +82,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionImpl
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
      */
 
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
@@ -86,7 +90,7 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionImpl
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
      */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -124,6 +128,11 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionImpl
                 .append(deliveryKey, that.deliveryKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
+                .append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
                 .isEquals();
     }
 
@@ -135,6 +144,16 @@ public class StagedOrderSetDeliveryAddressCustomTypeActionImpl
                 .append(type)
                 .append(fields)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("deliveryId", deliveryId)
+                .append("deliveryKey", deliveryKey)
+                .append("type", type)
+                .append("fields", fields)
+                .build();
     }
 
 }

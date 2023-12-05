@@ -25,7 +25,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     Associate associate = Associate.builder()
  *             .plusAssociateRoleAssignments(associateRoleAssignmentsBuilder -> associateRoleAssignmentsBuilder)
- *             .plusRoles(rolesBuilder -> rolesBuilder)
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
@@ -43,15 +42,6 @@ public interface Associate {
     @Valid
     @JsonProperty("associateRoleAssignments")
     public List<AssociateRoleAssignment> getAssociateRoleAssignments();
-
-    /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @return roles
-     */
-    @NotNull
-    @Deprecated
-    @JsonProperty("roles")
-    public List<AssociateRoleDeprecated> getRoles();
 
     /**
      *  <p>The Customer that acts as an Associate in the Business Unit.</p>
@@ -78,21 +68,6 @@ public interface Associate {
     public void setAssociateRoleAssignments(final List<AssociateRoleAssignment> associateRoleAssignments);
 
     /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @param roles values to be set
-     */
-    @Deprecated
-    @JsonIgnore
-    public void setRoles(final AssociateRoleDeprecated... roles);
-
-    /**
-     *  <p>Deprecated type. Use <code>associateRoleAssignment</code> instead.</p>
-     * @param roles values to be set
-     */
-    @Deprecated
-    public void setRoles(final List<AssociateRoleDeprecated> roles);
-
-    /**
      *  <p>The Customer that acts as an Associate in the Business Unit.</p>
      * @param customer value to be set
      */
@@ -115,7 +90,6 @@ public interface Associate {
     public static Associate of(final Associate template) {
         AssociateImpl instance = new AssociateImpl();
         instance.setAssociateRoleAssignments(template.getAssociateRoleAssignments());
-        instance.setRoles(template.getRoles());
         instance.setCustomer(template.getCustomer());
         return instance;
     }
@@ -136,7 +110,6 @@ public interface Associate {
                         .map(com.commercetools.api.models.business_unit.AssociateRoleAssignment::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         return instance;
     }

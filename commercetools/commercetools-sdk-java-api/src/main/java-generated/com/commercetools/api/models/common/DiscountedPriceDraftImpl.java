@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * DiscountedPriceDraft
@@ -74,12 +76,23 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
 
         DiscountedPriceDraftImpl that = (DiscountedPriceDraftImpl) o;
 
-        return new EqualsBuilder().append(value, that.value).append(discount, that.discount).isEquals();
+        return new EqualsBuilder().append(value, that.value)
+                .append(discount, that.discount)
+                .append(value, that.value)
+                .append(discount, that.discount)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(value).append(discount).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("value", value)
+                .append("discount", discount)
+                .build();
     }
 
 }

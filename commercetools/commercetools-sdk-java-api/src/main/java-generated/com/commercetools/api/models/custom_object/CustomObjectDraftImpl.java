@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomObjectDraft
@@ -108,12 +110,25 @@ public class CustomObjectDraftImpl implements CustomObjectDraft, ModelBase {
                 .append(key, that.key)
                 .append(value, that.value)
                 .append(version, that.version)
+                .append(container, that.container)
+                .append(key, that.key)
+                .append(value, that.value)
+                .append(version, that.version)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(container).append(key).append(value).append(version).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("container", container)
+                .append("key", key)
+                .append("value", value)
+                .append("version", version)
+                .build();
     }
 
 }

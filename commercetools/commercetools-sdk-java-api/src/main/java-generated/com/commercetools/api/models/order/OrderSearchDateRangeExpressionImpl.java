@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderSearchDateRangeExpression
@@ -59,12 +61,17 @@ public class OrderSearchDateRangeExpressionImpl implements OrderSearchDateRangeE
 
         OrderSearchDateRangeExpressionImpl that = (OrderSearchDateRangeExpressionImpl) o;
 
-        return new EqualsBuilder().append(range, that.range).isEquals();
+        return new EqualsBuilder().append(range, that.range).append(range, that.range).isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(range).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("range", range).build();
     }
 
 }

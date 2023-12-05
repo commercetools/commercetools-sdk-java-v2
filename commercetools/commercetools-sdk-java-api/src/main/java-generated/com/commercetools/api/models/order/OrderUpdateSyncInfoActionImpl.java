@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderUpdateSyncInfoAction
@@ -22,9 +24,9 @@ public class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoAction,
 
     private String action;
 
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier channel;
-
     private String externalId;
+
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier channel;
 
     private java.time.ZonedDateTime syncedAt;
 
@@ -32,12 +34,11 @@ public class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoAction,
      * create instance with all properties
      */
     @JsonCreator
-    OrderUpdateSyncInfoActionImpl(
+    OrderUpdateSyncInfoActionImpl(@JsonProperty("externalId") final String externalId,
             @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelResourceIdentifier channel,
-            @JsonProperty("externalId") final String externalId,
             @JsonProperty("syncedAt") final java.time.ZonedDateTime syncedAt) {
-        this.channel = channel;
         this.externalId = externalId;
+        this.channel = channel;
         this.syncedAt = syncedAt;
         this.action = UPDATE_SYNC_INFO;
     }
@@ -58,15 +59,7 @@ public class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoAction,
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     */
-
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
-        return this.channel;
-    }
-
-    /**
-     *
+     *  <p>Set this to identify an external order instance, file, or other resource.</p>
      */
 
     public String getExternalId() {
@@ -74,19 +67,27 @@ public class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoAction,
     }
 
     /**
-     *
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     */
+
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
+        return this.channel;
+    }
+
+    /**
+     *  <p>If not set, it defaults to the current date and time.</p>
      */
 
     public java.time.ZonedDateTime getSyncedAt() {
         return this.syncedAt;
     }
 
-    public void setChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
-        this.channel = channel;
-    }
-
     public void setExternalId(final String externalId) {
         this.externalId = externalId;
+    }
+
+    public void setChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
+        this.channel = channel;
     }
 
     public void setSyncedAt(final java.time.ZonedDateTime syncedAt) {
@@ -104,8 +105,12 @@ public class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoAction,
         OrderUpdateSyncInfoActionImpl that = (OrderUpdateSyncInfoActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
-                .append(channel, that.channel)
                 .append(externalId, that.externalId)
+                .append(channel, that.channel)
+                .append(syncedAt, that.syncedAt)
+                .append(action, that.action)
+                .append(externalId, that.externalId)
+                .append(channel, that.channel)
                 .append(syncedAt, that.syncedAt)
                 .isEquals();
     }
@@ -113,10 +118,19 @@ public class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoAction,
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
-                .append(channel)
                 .append(externalId)
+                .append(channel)
                 .append(syncedAt)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("externalId", externalId)
+                .append("channel", channel)
+                .append("syncedAt", syncedAt)
+                .build();
     }
 
 }

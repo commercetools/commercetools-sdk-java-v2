@@ -36,7 +36,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Draft<MyBusinessUnitAssociateDraft> {
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public MyCustomerDraft getCustomer();
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @return associateRoleAssignments
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public List<AssociateRoleAssignmentDraft> getAssociateRoleAssignments();
 
     /**
-     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      */
 
@@ -76,7 +76,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public void setCustomer(final MyCustomerDraft customer);
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param associateRoleAssignments values to be set
      */
 
@@ -84,7 +84,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     public void setAssociateRoleAssignments(final AssociateRoleAssignmentDraft... associateRoleAssignments);
 
     /**
-     *  <p>Roles assigned to the new Associate within a Business Unit.</p>
+     *  <p>Roles assigned to the new Associate within a Business Unit. Can only contain AssociateRoles with the <code>buyerAssignable</code> property set to <code>true</code>.</p>
      * @param associateRoleAssignments values to be set
      */
 

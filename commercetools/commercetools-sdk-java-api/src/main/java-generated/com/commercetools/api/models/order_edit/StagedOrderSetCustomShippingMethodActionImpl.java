@@ -13,9 +13,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderSetCustomShippingMethodAction
+ *  <p>To set the Cart's custom Shipping Method (independent of the ShippingMethods managed through the Shipping Methods API) the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
+ *  <p>To unset a custom Shipping Method on a Cart, use the Set ShippingMethod update action without the <code>shippingMethod</code> field instead.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetCustomShippingMethodActionImpl
@@ -62,7 +65,7 @@ public class StagedOrderSetCustomShippingMethodActionImpl
     }
 
     /**
-     *
+     *  <p>Name of the custom Shipping Method.</p>
      */
 
     public String getShippingMethodName() {
@@ -70,7 +73,7 @@ public class StagedOrderSetCustomShippingMethodActionImpl
     }
 
     /**
-     *
+     *  <p>Determines the shipping price.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
@@ -78,7 +81,7 @@ public class StagedOrderSetCustomShippingMethodActionImpl
     }
 
     /**
-     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
@@ -86,7 +89,7 @@ public class StagedOrderSetCustomShippingMethodActionImpl
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -125,6 +128,11 @@ public class StagedOrderSetCustomShippingMethodActionImpl
                 .append(shippingRate, that.shippingRate)
                 .append(taxCategory, that.taxCategory)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(action, that.action)
+                .append(shippingMethodName, that.shippingMethodName)
+                .append(shippingRate, that.shippingRate)
+                .append(taxCategory, that.taxCategory)
+                .append(externalTaxRate, that.externalTaxRate)
                 .isEquals();
     }
 
@@ -136,6 +144,16 @@ public class StagedOrderSetCustomShippingMethodActionImpl
                 .append(taxCategory)
                 .append(externalTaxRate)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("shippingMethodName", shippingMethodName)
+                .append("shippingRate", shippingRate)
+                .append("taxCategory", taxCategory)
+                .append("externalTaxRate", externalTaxRate)
+                .build();
     }
 
 }

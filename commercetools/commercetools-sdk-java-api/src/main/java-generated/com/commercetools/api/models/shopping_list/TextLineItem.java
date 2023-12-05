@@ -70,6 +70,14 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
     public String getId();
 
     /**
+     *  <p>User-defined identifier of the TextLineItem. It is unique per ShoppingList.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Name of the TextLineItem.</p>
      * @return name
      */
@@ -115,6 +123,13 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
     public void setId(final String id);
 
     /**
+     *  <p>User-defined identifier of the TextLineItem. It is unique per ShoppingList.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
      *  <p>Name of the TextLineItem.</p>
      * @param name value to be set
      */
@@ -147,6 +162,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
         instance.setCustom(template.getCustom());
         instance.setDescription(template.getDescription());
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setQuantity(template.getQuantity());
         return instance;
@@ -168,6 +184,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
         instance.setDescription(
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setQuantity(template.getQuantity());
         return instance;

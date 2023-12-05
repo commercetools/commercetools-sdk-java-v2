@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ReturnItem
@@ -21,6 +23,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ReturnItemImpl implements ReturnItem, ModelBase {
 
     private String id;
+
+    private String key;
 
     private Long quantity;
 
@@ -42,14 +46,16 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    ReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Long quantity,
-            @JsonProperty("type") final String type, @JsonProperty("comment") final String comment,
+    ReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
+            @JsonProperty("quantity") final Long quantity, @JsonProperty("type") final String type,
+            @JsonProperty("comment") final String comment,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState,
             @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt) {
         this.id = id;
+        this.key = key;
         this.quantity = quantity;
         this.type = type;
         this.comment = comment;
@@ -67,7 +73,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the ReturnItem.</p>
+     *  <p>Unique identifier of the Return Item.</p>
      */
 
     public String getId() {
@@ -75,7 +81,15 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the Return Item.</p>
+     */
+
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Number of Line Items or Custom Line Items returned.</p>
      */
 
     public Long getQuantity() {
@@ -91,7 +105,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined description for the return.</p>
      */
 
     public String getComment() {
@@ -99,7 +113,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Shipment status of the Return Item.</p>
      */
 
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
@@ -107,7 +121,11 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Payment status of the Return Item:</p>
+     *  <ul>
+     *   <li><code>NonRefundable</code>, for items in the <code>Advised</code> ReturnShipmentState</li>
+     *   <li><code>Initial</code>, for items in the <code>Returned</code> ReturnShipmentState</li>
+     *  </ul>
      */
 
     public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {
@@ -115,7 +133,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields of the Return Item.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -123,7 +141,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Return Item was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -131,7 +149,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Return Item was intitially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -140,6 +158,10 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
 
     public void setId(final String id) {
         this.id = id;
+    }
+
+    public void setKey(final String key) {
+        this.key = key;
     }
 
     public void setQuantity(final Long quantity) {
@@ -181,6 +203,17 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
         ReturnItemImpl that = (ReturnItemImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
+                .append(quantity, that.quantity)
+                .append(type, that.type)
+                .append(comment, that.comment)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(custom, that.custom)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(createdAt, that.createdAt)
+                .append(id, that.id)
+                .append(key, that.key)
                 .append(quantity, that.quantity)
                 .append(type, that.type)
                 .append(comment, that.comment)
@@ -195,6 +228,7 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(quantity)
                 .append(type)
                 .append(comment)
@@ -204,6 +238,21 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
                 .append(lastModifiedAt)
                 .append(createdAt)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("key", key)
+                .append("quantity", quantity)
+                .append("type", type)
+                .append("comment", comment)
+                .append("shipmentState", shipmentState)
+                .append("paymentState", paymentState)
+                .append("custom", custom)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("createdAt", createdAt)
+                .build();
     }
 
 }

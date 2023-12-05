@@ -12,13 +12,12 @@ import java.util.function.Function;
 import javax.annotation.Nonnull;
 
 import com.commercetools.api.models.DomainResource;
-import com.commercetools.api.models.PagedQueryResourceRequest;
 import com.commercetools.api.models.ResourcePagedQueryResponse;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
-final class QueryAll<TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> {
-    private final PagedQueryResourceRequest<TMethod, TResult> baseQuery;
+final class QueryAll<TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> {
+    private final SimplePagedQueryResourceRequest<TMethod, TResult, ?> baseQuery;
     private final long pageSize;
 
     private Function<List<TElement>, S> pageMapper;
@@ -26,7 +25,8 @@ final class QueryAll<TMethod extends PagedQueryResourceRequest<TMethod, TResult>
 
     private Consumer<List<TElement>> pageConsumer;
 
-    private QueryAll(@Nonnull final PagedQueryResourceRequest<TMethod, TResult> baseQuery, final int pageSize) {
+    private QueryAll(@Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> baseQuery,
+            final int pageSize) {
 
         this.baseQuery = withDefaults(baseQuery, pageSize);
         this.pageSize = pageSize;
@@ -34,16 +34,17 @@ final class QueryAll<TMethod extends PagedQueryResourceRequest<TMethod, TResult>
     }
 
     @Nonnull
-    private static <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> PagedQueryResourceRequest<TMethod, TResult> withDefaults(
-            @Nonnull final PagedQueryResourceRequest<TMethod, TResult> request, final int pageSize) {
+    private static <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> SimplePagedQueryResourceRequest<TMethod, TResult, ?> withDefaults(
+            @Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> request, final int pageSize) {
 
-        final PagedQueryResourceRequest<TMethod, TResult> withLimit = request.withLimit(pageSize).withWithTotal(false);
+        final SimplePagedQueryResourceRequest<TMethod, TResult, ?> withLimit = request.withLimit(pageSize)
+                .withWithTotal(false);
         return !withLimit.getQueryParam("sort").isEmpty() ? withLimit : withLimit.withSort("id asc");
     }
 
     @Nonnull
-    static <TMethod extends PagedQueryResourceRequest<TMethod, TResult>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> QueryAll<TMethod, TResult, TElement, S> of(
-            @Nonnull final PagedQueryResourceRequest<TMethod, TResult> baseQuery, final int pageSize) {
+    static <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> QueryAll<TMethod, TResult, TElement, S> of(
+            @Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> baseQuery, final int pageSize) {
 
         return new QueryAll<>(baseQuery, pageSize);
     }

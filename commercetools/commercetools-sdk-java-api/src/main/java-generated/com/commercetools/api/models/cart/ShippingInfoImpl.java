@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ShippingInfo
@@ -219,6 +221,16 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
                 .append(deliveries, that.deliveries)
                 .append(discountedPrice, that.discountedPrice)
                 .append(shippingMethodState, that.shippingMethodState)
+                .append(shippingMethodName, that.shippingMethodName)
+                .append(price, that.price)
+                .append(shippingRate, that.shippingRate)
+                .append(taxedPrice, that.taxedPrice)
+                .append(taxRate, that.taxRate)
+                .append(taxCategory, that.taxCategory)
+                .append(shippingMethod, that.shippingMethod)
+                .append(deliveries, that.deliveries)
+                .append(discountedPrice, that.discountedPrice)
+                .append(shippingMethodState, that.shippingMethodState)
                 .isEquals();
     }
 
@@ -235,6 +247,22 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
                 .append(discountedPrice)
                 .append(shippingMethodState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
+                .append("shippingMethodName", shippingMethodName)
+                .append("price", price)
+                .append("shippingRate", shippingRate)
+                .append("taxedPrice", taxedPrice)
+                .append("taxRate", taxRate)
+                .append("taxCategory", taxCategory)
+                .append("shippingMethod", shippingMethod)
+                .append("deliveries", deliveries)
+                .append("discountedPrice", discountedPrice)
+                .append("shippingMethodState", shippingMethodState)
+                .build();
     }
 
 }

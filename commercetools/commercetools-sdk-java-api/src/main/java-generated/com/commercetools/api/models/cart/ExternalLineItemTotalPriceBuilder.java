@@ -29,7 +29,6 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     /**
      *  <p>Price of the Line Item.</p>
-     *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -42,7 +41,6 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     /**
      *  <p>Price of the Line Item.</p>
-     *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -55,7 +53,6 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     /**
      *  <p>Price of the Line Item.</p>
-     *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -102,7 +99,6 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     /**
      *  <p>Price of the Line Item.</p>
-     *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
      * @return price
      */
 

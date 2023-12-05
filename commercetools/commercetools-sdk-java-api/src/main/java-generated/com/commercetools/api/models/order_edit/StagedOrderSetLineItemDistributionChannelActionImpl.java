@@ -13,9 +13,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderSetLineItemDistributionChannelAction
+ *  <p>Setting a distribution channel for a LineItem can lead to an updated <code>price</code> as described in LineItem Price selection.</p>
+ *  <p>Produces the OrderLineItemDistributionChannelSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemDistributionChannelActionImpl
@@ -74,7 +77,10 @@ public class StagedOrderSetLineItemDistributionChannelActionImpl
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
+     *  </ul>
      */
 
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -108,6 +114,10 @@ public class StagedOrderSetLineItemDistributionChannelActionImpl
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(distributionChannel, that.distributionChannel)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(distributionChannel, that.distributionChannel)
                 .isEquals();
     }
 
@@ -118,6 +128,15 @@ public class StagedOrderSetLineItemDistributionChannelActionImpl
                 .append(lineItemKey)
                 .append(distributionChannel)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("distributionChannel", distributionChannel)
+                .build();
     }
 
 }

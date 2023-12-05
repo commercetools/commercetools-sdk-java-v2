@@ -27,7 +27,7 @@ public class StagedOrderSetPurchaseOrderNumberActionBuilder
     private String purchaseOrderNumber;
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     *  <p>Value to set.</p>
      * @param purchaseOrderNumber value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class StagedOrderSetPurchaseOrderNumberActionBuilder
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     *  <p>Value to set.</p>
      * @return purchaseOrderNumber
      */
 

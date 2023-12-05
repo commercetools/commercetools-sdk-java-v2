@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,8 +36,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyStagedQuotesKeyByKeyDelete
-        extends ApiMethod<ByProjectKeyStagedQuotesKeyByKeyDelete, com.commercetools.api.models.staged_quote.StagedQuote>
+public class ByProjectKeyStagedQuotesKeyByKeyDelete extends
+        TypeApiMethod<ByProjectKeyStagedQuotesKeyByKeyDelete, com.commercetools.api.models.staged_quote.StagedQuote>
         implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyStagedQuotesKeyByKeyDelete, com.commercetools.api.models.staged_quote.StagedQuote>,
         com.commercetools.api.client.DataerasureTrait<ByProjectKeyStagedQuotesKeyByKeyDelete>,
@@ -44,6 +46,12 @@ public class ByProjectKeyStagedQuotesKeyByKeyDelete
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyStagedQuotesKeyByKeyDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyStagedQuotesKeyByKeyDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyStagedQuotesKeyByKeyDelete> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.staged_quote.StagedQuote> resultType() {
+        return new TypeReference<com.commercetools.api.models.staged_quote.StagedQuote>() {
+        };
+    }
 
     private String projectKey;
     private String key;

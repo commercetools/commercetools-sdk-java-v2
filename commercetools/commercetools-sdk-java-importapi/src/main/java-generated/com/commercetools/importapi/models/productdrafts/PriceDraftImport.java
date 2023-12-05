@@ -31,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     PriceDraftImport priceDraftImport = PriceDraftImport.builder()
  *             .value(valueBuilder -> valueBuilder)
+ *             .key("{key}")
  *             .build()
  * </code></pre>
  * </div>
@@ -116,7 +117,7 @@ public interface PriceDraftImport {
      *  <p>User-defined unique identifier for the Embedded Price.</p>
      * @return key
      */
-
+    @NotNull
     @JsonProperty("key")
     public String getKey();
 

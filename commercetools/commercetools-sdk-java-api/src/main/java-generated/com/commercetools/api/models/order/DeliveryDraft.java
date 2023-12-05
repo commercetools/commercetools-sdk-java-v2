@@ -42,7 +42,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public String getKey();
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @return items
      */
     @Valid
@@ -50,7 +50,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @return parcels
      */
     @Valid
@@ -58,7 +58,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public List<ParcelDraft> getParcels();
 
     /**
-     *
+     *  <p>Address to which the Parcels are delivered.</p>
      * @return address
      */
     @Valid
@@ -66,7 +66,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public AddressDraft getAddress();
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      * @return custom
      */
     @Valid
@@ -81,7 +81,7 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public void setKey(final String key);
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @param items values to be set
      */
 
@@ -89,14 +89,14 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public void setItems(final DeliveryItem... items);
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param parcels values to be set
      */
 
@@ -104,21 +104,21 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
     public void setParcels(final ParcelDraft... parcels);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param parcels values to be set
      */
 
     public void setParcels(final List<ParcelDraft> parcels);
 
     /**
-     * set address
+     *  <p>Address to which the Parcels are delivered.</p>
      * @param address value to be set
      */
 
     public void setAddress(final AddressDraft address);
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      * @param custom value to be set
      */
 

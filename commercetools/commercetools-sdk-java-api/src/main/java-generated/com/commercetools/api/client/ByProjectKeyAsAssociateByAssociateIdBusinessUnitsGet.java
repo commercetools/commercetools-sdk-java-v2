@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -35,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet extends
-        ApiMethod<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet, com.commercetools.api.models.business_unit.BusinessUnitPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet, com.commercetools.api.models.business_unit.BusinessUnitPagedQueryResponse>
         implements ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet>,
@@ -43,6 +45,12 @@ public class ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet extends
         com.commercetools.api.client.QueryTrait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyAsAssociateByAssociateIdBusinessUnitsGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.business_unit.BusinessUnitPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.business_unit.BusinessUnitPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
     private String associateId;

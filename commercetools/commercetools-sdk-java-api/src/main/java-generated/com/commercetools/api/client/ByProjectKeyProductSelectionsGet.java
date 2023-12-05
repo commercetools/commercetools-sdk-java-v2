@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,7 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductSelectionsGet extends
-        ApiMethod<ByProjectKeyProductSelectionsGet, com.commercetools.api.models.product_selection.ProductSelectionPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyProductSelectionsGet, com.commercetools.api.models.product_selection.ProductSelectionPagedQueryResponse>
         implements ByProjectKeyProductSelectionsGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductSelectionsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyProductSelectionsGet>,
@@ -41,6 +43,12 @@ public class ByProjectKeyProductSelectionsGet extends
         com.commercetools.api.client.QueryTrait<ByProjectKeyProductSelectionsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductSelectionsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductSelectionsGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.product_selection.ProductSelectionPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.product_selection.ProductSelectionPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Category
@@ -371,6 +373,25 @@ public class CategoryImpl implements Category, ModelBase {
                 .append(custom, that.custom)
                 .append(assets, that.assets)
                 .append(key, that.key)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(ancestors, that.ancestors)
+                .append(parent, that.parent)
+                .append(orderHint, that.orderHint)
+                .append(externalId, that.externalId)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(custom, that.custom)
+                .append(assets, that.assets)
+                .append(key, that.key)
                 .isEquals();
     }
 
@@ -396,6 +417,30 @@ public class CategoryImpl implements Category, ModelBase {
                 .append(assets)
                 .append(key)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("name", name)
+                .append("slug", slug)
+                .append("description", description)
+                .append("ancestors", ancestors)
+                .append("parent", parent)
+                .append("orderHint", orderHint)
+                .append("externalId", externalId)
+                .append("metaTitle", metaTitle)
+                .append("metaDescription", metaDescription)
+                .append("metaKeywords", metaKeywords)
+                .append("custom", custom)
+                .append("assets", assets)
+                .append("key", key)
+                .build();
     }
 
 }

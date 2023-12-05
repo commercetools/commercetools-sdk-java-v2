@@ -1,10 +1,16 @@
 
 package com.commercetools;
 
+import static com.commercetools.TestUtils.stringFromResource;
+
 import java.io.IOException;
 
+import com.commercetools.api.models.message.CustomerFirstNameSetMessagePayload;
+import com.commercetools.api.models.message.CustomerLastNameSetMessagePayload;
 import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.message.OrderCreatedMessagePayload;
+import com.commercetools.api.models.subscription.DeliveryPayload;
+import com.commercetools.api.models.subscription.MessageDeliveryPayload;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -19,5 +25,36 @@ public class MessagePayloadTest {
         MessagePayload deserializedObject = JsonUtils.fromJsonString(payload, MessagePayload.class);
 
         Assertions.assertThat(deserializedObject).isInstanceOf(OrderCreatedMessagePayload.class);
+    }
+
+    @Test
+    public void deserializeMessageDeliveryPayload() {
+        MessageDeliveryPayload delivery = JsonUtils.fromJsonString(stringFromResource("messagedeliverypayload.json"),
+            MessageDeliveryPayload.class);
+
+        Assertions.assertThat(delivery.getMessagePayload()).isInstanceOf(CustomerLastNameSetMessagePayload.class);
+        Assertions.assertThat(delivery.getMessagePayload().as(CustomerLastNameSetMessagePayload.class))
+                .isInstanceOf(CustomerLastNameSetMessagePayload.class);
+        Assertions.assertThat(delivery.hasCompleteMessage()).isTrue();
+        Assertions.assertThatThrownBy(() -> delivery.getMessagePayload().as(CustomerFirstNameSetMessagePayload.class))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    public void deserializeDeliveryPayload() {
+        DeliveryPayload delivery = JsonUtils.fromJsonString(stringFromResource("messagedeliverypayload.json"),
+            DeliveryPayload.class);
+
+        Assertions.assertThat(delivery).isInstanceOf(MessageDeliveryPayload.class);
+        MessageDeliveryPayload messageDelivery = (MessageDeliveryPayload) delivery;
+        Assertions.assertThat(messageDelivery.getMessagePayload())
+                .isInstanceOf(CustomerLastNameSetMessagePayload.class);
+        Assertions.assertThat(messageDelivery.getMessagePayload().as(CustomerLastNameSetMessagePayload.class))
+                .isInstanceOf(CustomerLastNameSetMessagePayload.class);
+        Assertions.assertThat(messageDelivery.hasCompleteMessage()).isTrue();
+        Assertions
+                .assertThatThrownBy(
+                    () -> messageDelivery.getMessagePayload().as(CustomerFirstNameSetMessagePayload.class))
+                .isInstanceOf(IllegalArgumentException.class);
     }
 }

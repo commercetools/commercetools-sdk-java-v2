@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This update action results in the <code>taxedPrice</code> field being added to the Cart when the <code>ExternalAmount</code> TaxMode is used.</p>
@@ -95,6 +97,9 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
         return new EqualsBuilder().append(action, that.action)
                 .append(externalTotalGross, that.externalTotalGross)
                 .append(externalTaxPortions, that.externalTaxPortions)
+                .append(action, that.action)
+                .append(externalTotalGross, that.externalTotalGross)
+                .append(externalTaxPortions, that.externalTaxPortions)
                 .isEquals();
     }
 
@@ -104,6 +109,14 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
                 .append(externalTotalGross)
                 .append(externalTaxPortions)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("externalTotalGross", externalTotalGross)
+                .append("externalTaxPortions", externalTaxPortions)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ShoppingListChangeTextLineItemNameAction
@@ -25,6 +27,8 @@ public class ShoppingListChangeTextLineItemNameActionImpl
 
     private String textLineItemId;
 
+    private String textLineItemKey;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     /**
@@ -32,8 +36,10 @@ public class ShoppingListChangeTextLineItemNameActionImpl
      */
     @JsonCreator
     ShoppingListChangeTextLineItemNameActionImpl(@JsonProperty("textLineItemId") final String textLineItemId,
+            @JsonProperty("textLineItemKey") final String textLineItemKey,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.textLineItemId = textLineItemId;
+        this.textLineItemKey = textLineItemKey;
         this.name = name;
         this.action = CHANGE_TEXT_LINE_ITEM_NAME;
     }
@@ -54,11 +60,19 @@ public class ShoppingListChangeTextLineItemNameActionImpl
     }
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getTextLineItemId() {
         return this.textLineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getTextLineItemKey() {
+        return this.textLineItemKey;
     }
 
     /**
@@ -71,6 +85,10 @@ public class ShoppingListChangeTextLineItemNameActionImpl
 
     public void setTextLineItemId(final String textLineItemId) {
         this.textLineItemId = textLineItemId;
+    }
+
+    public void setTextLineItemKey(final String textLineItemKey) {
+        this.textLineItemKey = textLineItemKey;
     }
 
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
@@ -89,13 +107,31 @@ public class ShoppingListChangeTextLineItemNameActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(textLineItemId, that.textLineItemId)
+                .append(textLineItemKey, that.textLineItemKey)
+                .append(name, that.name)
+                .append(action, that.action)
+                .append(textLineItemId, that.textLineItemId)
+                .append(textLineItemKey, that.textLineItemKey)
                 .append(name, that.name)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(textLineItemId).append(name).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(textLineItemId)
+                .append(textLineItemKey)
+                .append(name)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("textLineItemId", textLineItemId)
+                .append("textLineItemKey", textLineItemKey)
+                .append("name", name)
+                .build();
     }
 
 }

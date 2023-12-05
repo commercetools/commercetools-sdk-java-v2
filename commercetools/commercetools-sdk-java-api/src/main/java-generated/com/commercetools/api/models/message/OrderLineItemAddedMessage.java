@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Add Line Item update action.</p>
+ *  <p>Generated after a successful Add LineItem update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

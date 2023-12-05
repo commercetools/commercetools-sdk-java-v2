@@ -24,6 +24,10 @@ public class ByProjectKeyMeShoppingListsByIDRequestBuilder {
         return new ByProjectKeyMeShoppingListsByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyMeShoppingListsByIDHead head() {
+        return new ByProjectKeyMeShoppingListsByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyMeShoppingListsByIDPost post(
             com.commercetools.api.models.me.MyShoppingListUpdate myShoppingListUpdate) {
         return new ByProjectKeyMeShoppingListsByIDPost(apiHttpClient, projectKey, ID, myShoppingListUpdate);

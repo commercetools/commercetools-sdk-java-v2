@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Base polymorphic read-only Money type which is stored in cent precision or high precision. The actual type is determined by the <code>type</code> field.</p>
+ *  <p>Base polymorphic read-only money type that stores currency in cent precision or high precision, that is in sub-cents.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TypedMoneyImpl implements TypedMoney, ModelBase {
@@ -69,7 +71,7 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
     }
 
     /**
-     *  <p>MoneyType supports two different values, one for amounts in cent precision and another one for sub-cent amounts up to 20 fraction digits.</p>
+     *  <p>Type of money used.</p>
      */
 
     public com.commercetools.api.models.common.MoneyType getType() {
@@ -77,10 +79,10 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
     }
 
     /**
-     *  <p>Number of digits after the decimal separator:</p>
+     *  <p>Number of digits after the decimal separator.</p>
      *  <ul>
-     *   <li>Equal to the default number of fraction digits for a currency in CentPrecisionMoney.</li>
-     *   <li>Greater than the default number of fraction digits for a currency in HighPrecisionMoney.</li>
+     *   <li>For CentPrecisionMoney, it is equal to the default number of fraction digits for a currency.</li>
+     *   <li>For HighPrecisionMoney, it is greater than the default number of fraction digits for a currency.</li>
      *  </ul>
      */
 
@@ -114,6 +116,10 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
                 .append(currencyCode, that.currencyCode)
                 .append(type, that.type)
                 .append(fractionDigits, that.fractionDigits)
+                .append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
                 .isEquals();
     }
 
@@ -124,6 +130,15 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
                 .append(type)
                 .append(fractionDigits)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("centAmount", centAmount)
+                .append("currencyCode", currencyCode)
+                .append("type", type)
+                .append("fractionDigits", fractionDigits)
+                .build();
     }
 
 }

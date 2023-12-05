@@ -37,7 +37,8 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -48,7 +49,8 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @param deliveryKey value to be set
      * @return Builder
      */
@@ -59,7 +61,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -71,7 +73,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -83,7 +85,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -95,7 +97,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -107,7 +109,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -119,7 +121,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -131,7 +133,8 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryId
      */
 
@@ -141,7 +144,8 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      * @return deliveryKey
      */
 
@@ -151,7 +155,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     *  <p>Defines the Type that extends the Delivery <code>address</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Delivery <code>address</code>.</p>
      * @return type
      */
 
@@ -161,7 +165,7 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     *  <p>Sets the Custom Fields fields for the Delivery <code>address</code>.</p>
      * @return fields
      */
 

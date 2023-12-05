@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,6 +35,12 @@ public class ByProjectKeyImportContainersPostString extends
         StringBodyApiMethod<ByProjectKeyImportContainersPostString, com.commercetools.importapi.models.importcontainers.ImportContainer>
         implements
         com.commercetools.importapi.client.Secured_by_manage_import_containersTrait<ByProjectKeyImportContainersPostString> {
+
+    @Override
+    public TypeReference<com.commercetools.importapi.models.importcontainers.ImportContainer> resultType() {
+        return new TypeReference<com.commercetools.importapi.models.importcontainers.ImportContainer>() {
+        };
+    }
 
     private String projectKey;
 

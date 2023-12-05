@@ -18,7 +18,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerImport customerImport = CustomerImport.builder()
  *             .key("{key}")
  *             .email("{email}")
- *             .plusAddresses(addressesBuilder -> addressesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -72,6 +71,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     @Nullable
     private com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup;
 
+    @Nullable
     private java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> addresses;
 
     @Nullable
@@ -96,7 +96,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     private com.commercetools.importapi.models.customers.AuthenticationMode authenticationMode;
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -384,7 +384,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
      */
 
     public CustomerImportBuilder addresses(
-            final com.commercetools.importapi.models.customers.CustomerAddress... addresses) {
+            @Nullable final com.commercetools.importapi.models.customers.CustomerAddress... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
         return this;
     }
@@ -396,7 +396,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
      */
 
     public CustomerImportBuilder addresses(
-            final java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> addresses) {
+            @Nullable final java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> addresses) {
         this.addresses = addresses;
         return this;
     }
@@ -408,7 +408,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
      */
 
     public CustomerImportBuilder plusAddresses(
-            final com.commercetools.importapi.models.customers.CustomerAddress... addresses) {
+            @Nullable final com.commercetools.importapi.models.customers.CustomerAddress... addresses) {
         if (this.addresses == null) {
             this.addresses = new ArrayList<>();
         }
@@ -624,7 +624,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @return key
      */
 
@@ -786,6 +786,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
      * @return addresses
      */
 
+    @Nullable
     public java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> getAddresses() {
         return this.addresses;
     }
@@ -870,7 +871,6 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     public CustomerImport build() {
         Objects.requireNonNull(key, CustomerImport.class + ": key is missing");
         Objects.requireNonNull(email, CustomerImport.class + ": email is missing");
-        Objects.requireNonNull(addresses, CustomerImport.class + ": addresses is missing");
         return new CustomerImportImpl(key, customerNumber, email, password, stores, firstName, lastName, middleName,
             title, salutation, externalId, dateOfBirth, companyName, vatId, isEmailVerified, customerGroup, addresses,
             defaultBillingAddress, billingAddresses, defaultShippingAddress, shippingAddresses, locale, custom,

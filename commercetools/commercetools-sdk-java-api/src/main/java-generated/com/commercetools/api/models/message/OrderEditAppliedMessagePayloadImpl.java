@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successfully applying an OrderEdit.</p>
+ *  <p>Generated after successfully applying an OrderEdit.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessagePayload, ModelBase {
@@ -90,12 +92,23 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
         return new EqualsBuilder().append(type, that.type)
                 .append(edit, that.edit)
                 .append(result, that.result)
+                .append(type, that.type)
+                .append(edit, that.edit)
+                .append(result, that.result)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(edit).append(result).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("edit", edit)
+                .append("result", result)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the Price, Tax Rate, or Shipping Rate of some Line Items changed since they were last added to the Cart.</p>
@@ -135,6 +137,11 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
                 .append(values, that.values)
                 .append(lineItems, that.lineItems)
                 .append(shipping, that.shipping)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(lineItems, that.lineItems)
+                .append(shipping, that.shipping)
                 .isEquals();
     }
 
@@ -146,6 +153,16 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
                 .append(lineItems)
                 .append(shipping)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("lineItems", lineItems)
+                .append("shipping", shipping)
+                .build();
     }
 
 }

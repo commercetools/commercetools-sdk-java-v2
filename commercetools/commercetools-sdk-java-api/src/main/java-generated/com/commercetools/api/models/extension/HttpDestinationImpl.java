@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>We recommend an encrypted <code>HTTPS</code> connection for production setups. However, we also accept unencrypted <code>HTTP</code> connections for development purposes. HTTP redirects will not be followed and cache headers will be ignored.</p>
@@ -90,12 +92,23 @@ public class HttpDestinationImpl implements HttpDestination, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(url, that.url)
                 .append(authentication, that.authentication)
+                .append(type, that.type)
+                .append(url, that.url)
+                .append(authentication, that.authentication)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(url).append(authentication).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("url", url)
+                .append("authentication", authentication)
+                .build();
     }
 
 }

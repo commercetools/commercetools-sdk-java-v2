@@ -6,6 +6,7 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -13,13 +14,14 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderChangePaymentStateAction
+ *  <p>Produces the Order Payment State Changed Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderChangePaymentStateAction orderChangePaymentStateAction = OrderChangePaymentStateAction.builder()
+ *             .paymentState(PaymentState.BALANCE_DUE)
  *             .build()
  * </code></pre>
  * </div>
@@ -34,15 +36,15 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
     String CHANGE_PAYMENT_STATE = "changePaymentState";
 
     /**
-     *
+     *  <p>New payment status of the Order.</p>
      * @return paymentState
      */
-
+    @NotNull
     @JsonProperty("paymentState")
     public PaymentState getPaymentState();
 
     /**
-     * set paymentState
+     *  <p>New payment status of the Order.</p>
      * @param paymentState value to be set
      */
 

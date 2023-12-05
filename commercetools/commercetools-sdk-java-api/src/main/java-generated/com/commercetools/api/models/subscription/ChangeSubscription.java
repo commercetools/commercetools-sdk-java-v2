@@ -21,7 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ChangeSubscription changeSubscription = ChangeSubscription.builder()
- *             .resourceTypeId(ChangeSubscriptionResourceTypeId.BUSINESS_UNIT)
+ *             .resourceTypeId(ChangeSubscriptionResourceTypeId.APPROVAL_FLOW)
  *             .build()
  * </code></pre>
  * </div>

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * PagedQueryResponse
@@ -146,6 +148,12 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
                 .append(total, that.total)
                 .append(results, that.results)
                 .append(meta, that.meta)
+                .append(limit, that.limit)
+                .append(offset, that.offset)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(results, that.results)
+                .append(meta, that.meta)
                 .isEquals();
     }
 
@@ -158,6 +166,17 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
                 .append(results)
                 .append(meta)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("limit", limit)
+                .append("offset", offset)
+                .append("count", count)
+                .append("total", total)
+                .append("results", results)
+                .append("meta", meta)
+                .build();
     }
 
 }

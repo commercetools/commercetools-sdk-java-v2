@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomerSignInResult
@@ -74,12 +76,23 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
 
         CustomerSignInResultImpl that = (CustomerSignInResultImpl) o;
 
-        return new EqualsBuilder().append(customer, that.customer).append(cart, that.cart).isEquals();
+        return new EqualsBuilder().append(customer, that.customer)
+                .append(cart, that.cart)
+                .append(customer, that.customer)
+                .append(cart, that.cart)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(customer).append(cart).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("customer", customer)
+                .append("cart", cart)
+                .build();
     }
 
 }

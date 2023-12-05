@@ -21,6 +21,10 @@ public class ByProjectKeyCategoriesRequestBuilder implements ByProjectKeyCategor
         return new ByProjectKeyCategoriesGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyCategoriesHead head() {
+        return new ByProjectKeyCategoriesHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyCategoriesPost post(com.commercetools.api.models.category.CategoryDraft categoryDraft) {
         return new ByProjectKeyCategoriesPost(apiHttpClient, projectKey, categoryDraft);
     }

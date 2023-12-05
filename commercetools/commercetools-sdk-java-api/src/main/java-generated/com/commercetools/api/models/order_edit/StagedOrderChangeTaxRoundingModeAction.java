@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StagedOrderChangeTaxRoundingModeAction
+ *  <p>Changing the tax rounding mode leads to recalculation of taxes.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
     String CHANGE_TAX_ROUNDING_MODE = "changeTaxRoundingMode";
 
     /**
-     *  <p>Determines how monetary values are rounded.</p>
+     *  <p>New value to set.</p>
      * @return taxRoundingMode
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
     public RoundingMode getTaxRoundingMode();
 
     /**
-     *  <p>Determines how monetary values are rounded.</p>
+     *  <p>New value to set.</p>
      * @param taxRoundingMode value to be set
      */
 

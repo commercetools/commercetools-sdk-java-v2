@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ShoppingList
@@ -340,6 +342,23 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append(custom, that.custom)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(customer, that.customer)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(lineItems, that.lineItems)
+                .append(textLineItems, that.textLineItems)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(anonymousId, that.anonymousId)
+                .append(store, that.store)
+                .append(custom, that.custom)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
                 .isEquals();
     }
 
@@ -363,6 +382,28 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append(lastModifiedBy)
                 .append(createdBy)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("name", name)
+                .append("key", key)
+                .append("customer", customer)
+                .append("slug", slug)
+                .append("description", description)
+                .append("lineItems", lineItems)
+                .append("textLineItems", textLineItems)
+                .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
+                .append("anonymousId", anonymousId)
+                .append("store", store)
+                .append("custom", custom)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .build();
     }
 
 }

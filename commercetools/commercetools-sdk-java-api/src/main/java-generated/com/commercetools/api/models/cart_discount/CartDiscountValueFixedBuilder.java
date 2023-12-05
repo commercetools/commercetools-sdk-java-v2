@@ -22,39 +22,38 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueFixed> {
 
-    private java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money;
+    private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @param money value to be set
      * @return Builder
      */
 
-    public CartDiscountValueFixedBuilder money(final com.commercetools.api.models.common.CentPrecisionMoney... money) {
+    public CartDiscountValueFixedBuilder money(final com.commercetools.api.models.common.TypedMoney... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
         return this;
     }
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @param money value to be set
      * @return Builder
      */
 
     public CartDiscountValueFixedBuilder money(
-            final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
+            final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
         this.money = money;
         return this;
     }
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @param money value to be set
      * @return Builder
      */
 
-    public CartDiscountValueFixedBuilder plusMoney(
-            final com.commercetools.api.models.common.CentPrecisionMoney... money) {
+    public CartDiscountValueFixedBuilder plusMoney(final com.commercetools.api.models.common.TypedMoney... money) {
         if (this.money == null) {
             this.money = new ArrayList<>();
         }
@@ -63,61 +62,39 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
 
     public CartDiscountValueFixedBuilder plusMoney(
-            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
         if (this.money == null) {
             this.money = new ArrayList<>();
         }
-        this.money.add(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build());
+        this.money.add(builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build());
         return this;
     }
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @param builder function to build the money value
      * @return Builder
      */
 
     public CartDiscountValueFixedBuilder withMoney(
-            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
         this.money = new ArrayList<>();
-        this.money.add(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build());
+        this.money.add(builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build());
         return this;
     }
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
-     * @param builder function to build the money value
-     * @return Builder
-     */
-
-    public CartDiscountValueFixedBuilder addMoney(
-            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
-        return plusMoney(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()));
-    }
-
-    /**
-     *  <p>Cent precision money values in different currencies.</p>
-     * @param builder function to build the money value
-     * @return Builder
-     */
-
-    public CartDiscountValueFixedBuilder setMoney(
-            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
-        return money(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()));
-    }
-
-    /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @return money
      */
 
-    public java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> getMoney() {
+    public java.util.List<com.commercetools.api.models.common.TypedMoney> getMoney() {
         return this.money;
     }
 

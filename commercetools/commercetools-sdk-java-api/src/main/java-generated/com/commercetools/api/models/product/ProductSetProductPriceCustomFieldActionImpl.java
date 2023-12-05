@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProductSetProductPriceCustomFieldAction
@@ -122,6 +124,11 @@ public class ProductSetProductPriceCustomFieldActionImpl implements ProductSetPr
                 .append(staged, that.staged)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(priceId, that.priceId)
+                .append(staged, that.staged)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 
@@ -133,6 +140,16 @@ public class ProductSetProductPriceCustomFieldActionImpl implements ProductSetPr
                 .append(name)
                 .append(value)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("priceId", priceId)
+                .append("staged", staged)
+                .append("name", name)
+                .append("value", value)
+                .build();
     }
 
 }

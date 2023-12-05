@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Parcel
@@ -96,7 +98,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>The representation to be sent to the server when creating a resource with Custom Fields.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -147,6 +149,12 @@ public class ParcelImpl implements Parcel, ModelBase {
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(createdAt, that.createdAt)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -159,6 +167,17 @@ public class ParcelImpl implements Parcel, ModelBase {
                 .append(items)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("createdAt", createdAt)
+                .append("measurements", measurements)
+                .append("trackingData", trackingData)
+                .append("items", items)
+                .append("custom", custom)
+                .build();
     }
 
 }

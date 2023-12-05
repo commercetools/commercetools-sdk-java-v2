@@ -23,6 +23,12 @@ public class CartChangeCustomLineItemPriceModeActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartChangeCustomLineItemPriceModeActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartChangeCustomLineItemPriceModeActionQueryBuilderDsl> customLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, CartChangeCustomLineItemPriceModeActionQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<CartChangeCustomLineItemPriceModeActionQueryBuilderDsl> mode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("mode")),

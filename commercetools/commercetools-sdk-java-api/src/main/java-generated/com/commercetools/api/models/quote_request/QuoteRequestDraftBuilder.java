@@ -18,7 +18,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     QuoteRequestDraft quoteRequestDraft = QuoteRequestDraft.builder()
  *             .cart(cartBuilder -> cartBuilder)
  *             .cartVersion(0.3)
- *             .comment("{comment}")
  *             .build()
  * </code></pre>
  * </div>
@@ -33,6 +32,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     @Nullable
     private String key;
 
+    @Nullable
     private String comment;
 
     @Nullable
@@ -107,7 +107,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
      * @return Builder
      */
 
-    public QuoteRequestDraftBuilder comment(final String comment) {
+    public QuoteRequestDraftBuilder comment(@Nullable final String comment) {
         this.comment = comment;
         return this;
     }
@@ -226,6 +226,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
      * @return comment
      */
 
+    @Nullable
     public String getComment() {
         return this.comment;
     }
@@ -267,7 +268,6 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     public QuoteRequestDraft build() {
         Objects.requireNonNull(cart, QuoteRequestDraft.class + ": cart is missing");
         Objects.requireNonNull(cartVersion, QuoteRequestDraft.class + ": cartVersion is missing");
-        Objects.requireNonNull(comment, QuoteRequestDraft.class + ": comment is missing");
         return new QuoteRequestDraftImpl(cart, cartVersion, key, comment, custom, state, purchaseOrderNumber);
     }
 

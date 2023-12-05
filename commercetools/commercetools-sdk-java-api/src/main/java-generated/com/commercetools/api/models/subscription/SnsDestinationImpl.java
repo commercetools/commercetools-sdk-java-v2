@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>AWS SNS can be used to push messages to AWS Lambda, HTTP endpoints (webhooks), or fan-out messages to SQS queues. The SQS queue must be a Standard queue type.</p>
@@ -126,6 +128,11 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
                 .append(accessSecret, that.accessSecret)
                 .append(topicArn, that.topicArn)
                 .append(authenticationMode, that.authenticationMode)
+                .append(type, that.type)
+                .append(accessKey, that.accessKey)
+                .append(accessSecret, that.accessSecret)
+                .append(topicArn, that.topicArn)
+                .append(authenticationMode, that.authenticationMode)
                 .isEquals();
     }
 
@@ -137,6 +144,16 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
                 .append(topicArn)
                 .append(authenticationMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("accessKey", accessKey)
+                .append("accessSecret", accessSecret)
+                .append("topicArn", topicArn)
+                .append("authenticationMode", authenticationMode)
+                .build();
     }
 
 }

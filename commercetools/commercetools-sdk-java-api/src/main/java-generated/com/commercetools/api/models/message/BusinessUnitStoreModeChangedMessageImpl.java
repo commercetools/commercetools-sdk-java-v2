@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Store Mode update action.</p>
@@ -302,6 +304,21 @@ public class BusinessUnitStoreModeChangedMessageImpl implements BusinessUnitStor
                 .append(storeMode, that.storeMode)
                 .append(oldStores, that.oldStores)
                 .append(oldStoreMode, that.oldStoreMode)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(stores, that.stores)
+                .append(storeMode, that.storeMode)
+                .append(oldStores, that.oldStores)
+                .append(oldStoreMode, that.oldStoreMode)
                 .isEquals();
     }
 
@@ -323,6 +340,26 @@ public class BusinessUnitStoreModeChangedMessageImpl implements BusinessUnitStor
                 .append(oldStores)
                 .append(oldStoreMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("stores", stores)
+                .append("storeMode", storeMode)
+                .append("oldStores", oldStores)
+                .append("oldStoreMode", oldStoreMode)
+                .build();
     }
 
 }

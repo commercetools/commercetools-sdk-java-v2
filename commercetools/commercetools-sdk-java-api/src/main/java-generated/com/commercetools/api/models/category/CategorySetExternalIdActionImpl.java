@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This update action sets a new ID that can be used as an additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
@@ -70,12 +72,23 @@ public class CategorySetExternalIdActionImpl implements CategorySetExternalIdAct
 
         CategorySetExternalIdActionImpl that = (CategorySetExternalIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(externalId, that.externalId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(externalId, that.externalId)
+                .append(action, that.action)
+                .append(externalId, that.externalId)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(externalId).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("externalId", externalId)
+                .build();
     }
 
 }

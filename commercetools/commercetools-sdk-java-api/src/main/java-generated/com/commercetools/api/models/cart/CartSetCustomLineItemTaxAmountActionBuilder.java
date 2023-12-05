@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartSetCustomLineItemTaxAmountAction cartSetCustomLineItemTaxAmountAction = CartSetCustomLineItemTaxAmountAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -24,19 +23,37 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<CartSetCustomLineItemTaxAmountAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
+    @Nullable
+    private String shippingKey;
+
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public CartSetCustomLineItemTaxAmountActionBuilder customLineItemId(final String customLineItemId) {
+    public CartSetCustomLineItemTaxAmountActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public CartSetCustomLineItemTaxAmountActionBuilder customLineItemKey(@Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
         return this;
     }
 
@@ -78,12 +95,34 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
     }
 
     /**
-     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public CartSetCustomLineItemTaxAmountActionBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
+    }
+
+    /**
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
     }
 
     /**
@@ -97,13 +136,22 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
     }
 
     /**
+     *  <p><code>key</code> of the ShippingMethod used for this Custom Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      * builds CartSetCustomLineItemTaxAmountAction with checking for non-null required values
      * @return CartSetCustomLineItemTaxAmountAction
      */
     public CartSetCustomLineItemTaxAmountAction build() {
-        Objects.requireNonNull(customLineItemId,
-            CartSetCustomLineItemTaxAmountAction.class + ": customLineItemId is missing");
-        return new CartSetCustomLineItemTaxAmountActionImpl(customLineItemId, externalTaxAmount);
+        return new CartSetCustomLineItemTaxAmountActionImpl(customLineItemId, customLineItemKey, externalTaxAmount,
+            shippingKey);
     }
 
     /**
@@ -111,7 +159,8 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
      * @return CartSetCustomLineItemTaxAmountAction
      */
     public CartSetCustomLineItemTaxAmountAction buildUnchecked() {
-        return new CartSetCustomLineItemTaxAmountActionImpl(customLineItemId, externalTaxAmount);
+        return new CartSetCustomLineItemTaxAmountActionImpl(customLineItemId, customLineItemKey, externalTaxAmount,
+            shippingKey);
     }
 
     /**
@@ -130,7 +179,9 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
     public static CartSetCustomLineItemTaxAmountActionBuilder of(final CartSetCustomLineItemTaxAmountAction template) {
         CartSetCustomLineItemTaxAmountActionBuilder builder = new CartSetCustomLineItemTaxAmountActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.externalTaxAmount = template.getExternalTaxAmount();
+        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

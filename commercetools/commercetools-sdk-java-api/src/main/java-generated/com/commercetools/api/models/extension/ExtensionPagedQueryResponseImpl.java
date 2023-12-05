@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>PagedQueryResult with <code>results</code> containing an array of Extension.</p>
@@ -129,6 +131,11 @@ public class ExtensionPagedQueryResponseImpl implements ExtensionPagedQueryRespo
                 .append(count, that.count)
                 .append(total, that.total)
                 .append(results, that.results)
+                .append(limit, that.limit)
+                .append(offset, that.offset)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(results, that.results)
                 .isEquals();
     }
 
@@ -140,6 +147,16 @@ public class ExtensionPagedQueryResponseImpl implements ExtensionPagedQueryRespo
                 .append(total)
                 .append(results)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("limit", limit)
+                .append("offset", offset)
+                .append("count", count)
+                .append("total", total)
+                .append("results", results)
+                .build();
     }
 
 }

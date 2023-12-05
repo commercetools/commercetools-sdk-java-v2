@@ -39,6 +39,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.ConcurrentModificationErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.ContentTooLargeErrorBuilder contentTooLargeBuilder() {
+        return com.commercetools.api.models.error.ContentTooLargeErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.CountryNotConfiguredInStoreErrorBuilder countryNotConfiguredInStoreBuilder() {
         return com.commercetools.api.models.error.CountryNotConfiguredInStoreErrorBuilder.of();
     }

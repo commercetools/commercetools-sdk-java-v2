@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Add Line Item update action.</p>
+ *  <p>Generated after a successful Add LineItem update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedMessagePayload, ModelBase {
@@ -90,12 +92,23 @@ public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedM
         return new EqualsBuilder().append(type, that.type)
                 .append(lineItem, that.lineItem)
                 .append(addedQuantity, that.addedQuantity)
+                .append(type, that.type)
+                .append(lineItem, that.lineItem)
+                .append(addedQuantity, that.addedQuantity)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(lineItem).append(addedQuantity).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("lineItem", lineItem)
+                .append("addedQuantity", addedQuantity)
+                .build();
     }
 
 }

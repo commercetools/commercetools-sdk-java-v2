@@ -41,7 +41,7 @@ public class ByProjectKeyMeBusinessUnitsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyMeBusinessUnitsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -113,6 +113,15 @@ public class ByProjectKeyMeBusinessUnitsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/me/business-units?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().businessUnits().head().createHttpRequest(),
+                        "head", "test_projectKey/me/business-units", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .businessUnits()
                         .post(com.commercetools.api.models.me.MyCompanyDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/me/business-units?expand=expand", },
@@ -141,6 +150,9 @@ public class ByProjectKeyMeBusinessUnitsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().businessUnits().get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").me().businessUnits().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().businessUnits().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .businessUnits()

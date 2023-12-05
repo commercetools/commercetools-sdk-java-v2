@@ -65,7 +65,7 @@ public class CustomBuilder implements Builder<Custom> {
     }
 
     /**
-     *  <p>The custom fields of this object.</p>
+     *  <p>The Custom Fields of this object.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class CustomBuilder implements Builder<Custom> {
     }
 
     /**
-     *  <p>The custom fields of this object.</p>
+     *  <p>The Custom Fields of this object.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class CustomBuilder implements Builder<Custom> {
     }
 
     /**
-     *  <p>The custom fields of this object.</p>
+     *  <p>The Custom Fields of this object.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class CustomBuilder implements Builder<Custom> {
     }
 
     /**
-     *  <p>The custom fields of this object.</p>
+     *  <p>The Custom Fields of this object.</p>
      * @return fields
      */
 

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * AttributeSetType
@@ -71,12 +73,23 @@ public class AttributeSetTypeImpl implements AttributeSetType, ModelBase {
 
         AttributeSetTypeImpl that = (AttributeSetTypeImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(elementType, that.elementType).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(elementType, that.elementType)
+                .append(name, that.name)
+                .append(elementType, that.elementType)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(name).append(elementType).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("elementType", elementType)
+                .build();
     }
 
 }

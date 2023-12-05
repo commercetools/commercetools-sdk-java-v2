@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * GraphQLErrorLocation
@@ -73,12 +75,23 @@ public class GraphQLErrorLocationImpl implements GraphQLErrorLocation, ModelBase
 
         GraphQLErrorLocationImpl that = (GraphQLErrorLocationImpl) o;
 
-        return new EqualsBuilder().append(line, that.line).append(column, that.column).isEquals();
+        return new EqualsBuilder().append(line, that.line)
+                .append(column, that.column)
+                .append(line, that.line)
+                .append(column, that.column)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(line).append(column).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("line", line)
+                .append("column", column)
+                .build();
     }
 
 }

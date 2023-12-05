@@ -41,7 +41,7 @@ public class ByProjectKeyMeActiveCartTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyMeActiveCartTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -71,7 +71,9 @@ public class ByProjectKeyMeActiveCartTest {
                         .withExpand("expand")
                         .createHttpRequest(), "get", "test_projectKey/me/active-cart?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().activeCart().get().createHttpRequest(),
-                        "get", "test_projectKey/me/active-cart", } };
+                        "get", "test_projectKey/me/active-cart", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().activeCart().head().createHttpRequest(),
+                        "head", "test_projectKey/me/active-cart", } };
     }
 
     @DataProvider
@@ -79,6 +81,7 @@ public class ByProjectKeyMeActiveCartTest {
         return new Object[][] {
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").me().activeCart().get().withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().activeCart().get(), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().activeCart().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().activeCart().head(), } };
     }
 }

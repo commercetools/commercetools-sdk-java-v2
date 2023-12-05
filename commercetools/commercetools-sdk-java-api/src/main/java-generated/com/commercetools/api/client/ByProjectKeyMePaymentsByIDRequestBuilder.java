@@ -24,6 +24,10 @@ public class ByProjectKeyMePaymentsByIDRequestBuilder {
         return new ByProjectKeyMePaymentsByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyMePaymentsByIDHead head() {
+        return new ByProjectKeyMePaymentsByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyMePaymentsByIDPost post(com.commercetools.api.models.me.MyPaymentUpdate myPaymentUpdate) {
         return new ByProjectKeyMePaymentsByIDPost(apiHttpClient, projectKey, ID, myPaymentUpdate);
     }

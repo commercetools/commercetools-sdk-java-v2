@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Only Business Units of type <code>Division</code> can be have a store mode of <code>FromParent</code>. Changing the <code>storeMode</code> to <code>FromParent</code> empties the <code>stores</code> array on the BusinessUnit. This update action generates a BusinessUnitStoreModeChanged Message.</p>
@@ -94,12 +96,23 @@ public class BusinessUnitSetStoreModeActionImpl implements BusinessUnitSetStoreM
         return new EqualsBuilder().append(action, that.action)
                 .append(storeMode, that.storeMode)
                 .append(stores, that.stores)
+                .append(action, that.action)
+                .append(storeMode, that.storeMode)
+                .append(stores, that.stores)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(storeMode).append(stores).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("storeMode", storeMode)
+                .append("stores", stores)
+                .build();
     }
 
 }

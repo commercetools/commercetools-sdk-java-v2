@@ -11,23 +11,45 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShipmentState
+ *  <p>Indicates the shipment status of the Parcel.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ShipmentState extends JsonEnum {
 
+    /**
+    	<p>Indicates that the Order is shipped.</p>
+
+    */
     ShipmentState SHIPPED = ShipmentStateEnum.SHIPPED;
+    /**
+    	<p>Indicates that the Order is delivered.</p>
 
+    */
     ShipmentState DELIVERED = ShipmentStateEnum.DELIVERED;
+    /**
+    	<p>Indicates that the Order is ready to be shipped.</p>
 
+    */
     ShipmentState READY = ShipmentStateEnum.READY;
+    /**
+    	<p>Indicates that the shipment of the Order is pending.</p>
 
+    */
     ShipmentState PENDING = ShipmentStateEnum.PENDING;
+    /**
+    	<p>Indicates that the shipment of the Order is delayed.</p>
 
+    */
     ShipmentState DELAYED = ShipmentStateEnum.DELAYED;
+    /**
+    	<p>Indicates that items in the Order are shipped in more than one shipment.</p>
 
+    */
     ShipmentState PARTIAL = ShipmentStateEnum.PARTIAL;
+    /**
+    	<p>Indicates that items in the Order are not in stock and will be delivered once the items are restocked.</p>
 
+    */
     ShipmentState BACKORDER = ShipmentStateEnum.BACKORDER;
 
     /**

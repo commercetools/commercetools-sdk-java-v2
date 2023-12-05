@@ -25,7 +25,7 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>Discount Code to remove from the Cart.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>Discount Code to remove from the Cart.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>Discount Code to remove from the Cart.</p>
      * @param discountCode value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>Discount Code to remove from the Cart.</p>
      * @return discountCode
      */
 

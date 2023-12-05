@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>The My Business Unit endpoint does not support assigning existing Customers to a Business Unit. Associates with the <code>UpdateAssociates</code> Permission can use this endpoint to create a new Customer and associate it with the Business Unit. If the required Permission is missing, an AssociateMissingPermission error is returned. The new Associate is created with an empty set of roles.</p>
+ *  <p>The My Business Unit endpoint does not support assigning existing Customers to a Business Unit. Associates with the <code>UpdateAssociates</code> Permission can use this endpoint to create a new Customer and associate it with the Business Unit. If the required Permission is missing, an AssociateMissingPermission error is returned.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -31,7 +33,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPost extends
-        BodyApiMethod<ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.me.MyBusinessUnitAssociateDraft> {
+        TypeBodyApiMethod<ByProjectKeyInBusinessUnitKeyByBusinessUnitKeyMeCustomersPost, com.commercetools.api.models.customer.CustomerSignInResult, com.commercetools.api.models.me.MyBusinessUnitAssociateDraft> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.customer.CustomerSignInResult> resultType() {
+        return new TypeReference<com.commercetools.api.models.customer.CustomerSignInResult>() {
+        };
+    }
 
     private String projectKey;
     private String businessUnitKey;

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>ShoppingListLineItems are Line Items that contain references to ProductVariants in a Product.</p>
@@ -28,6 +30,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     private java.time.ZonedDateTime deactivatedAt;
 
     private String id;
+
+    private String key;
 
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -50,7 +54,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     ShoppingListLineItemImpl(@JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("deactivatedAt") final java.time.ZonedDateTime deactivatedAt,
-            @JsonProperty("id") final String id,
+            @JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("productId") final String productId,
             @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType,
@@ -61,6 +65,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         this.custom = custom;
         this.deactivatedAt = deactivatedAt;
         this.id = id;
+        this.key = key;
         this.name = name;
         this.productId = productId;
         this.productType = productType;
@@ -107,6 +112,14 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>User-defined identifier of the ShoppingListLineItem. It is unique per ShoppingList.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -184,6 +197,10 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         this.id = id;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -226,6 +243,19 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(custom, that.custom)
                 .append(deactivatedAt, that.deactivatedAt)
                 .append(id, that.id)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(productId, that.productId)
+                .append(productType, that.productType)
+                .append(quantity, that.quantity)
+                .append(variantId, that.variantId)
+                .append(variant, that.variant)
+                .append(productSlug, that.productSlug)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(deactivatedAt, that.deactivatedAt)
+                .append(id, that.id)
+                .append(key, that.key)
                 .append(name, that.name)
                 .append(productId, that.productId)
                 .append(productType, that.productType)
@@ -242,6 +272,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(custom)
                 .append(deactivatedAt)
                 .append(id)
+                .append(key)
                 .append(name)
                 .append(productId)
                 .append(productType)
@@ -250,6 +281,23 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(variant)
                 .append(productSlug)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("addedAt", addedAt)
+                .append("custom", custom)
+                .append("deactivatedAt", deactivatedAt)
+                .append("id", id)
+                .append("key", key)
+                .append("name", name)
+                .append("productId", productId)
+                .append("productType", productType)
+                .append("quantity", quantity)
+                .append("variantId", variantId)
+                .append("variant", variant)
+                .append("productSlug", productSlug)
+                .build();
     }
 
 }

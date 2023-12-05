@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>User-provided identifiers present on the resource for which the Message is created. The value of the identifier stored in the Message corresponds to the one that was set on the resource at the version shown in <code>resourceVersion</code>.</p>
@@ -159,6 +161,13 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
                 .append(sku, that.sku)
                 .append(slug, that.slug)
                 .append(containerAndKey, that.containerAndKey)
+                .append(key, that.key)
+                .append(externalId, that.externalId)
+                .append(orderNumber, that.orderNumber)
+                .append(customerNumber, that.customerNumber)
+                .append(sku, that.sku)
+                .append(slug, that.slug)
+                .append(containerAndKey, that.containerAndKey)
                 .isEquals();
     }
 
@@ -172,6 +181,18 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
                 .append(slug)
                 .append(containerAndKey)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("externalId", externalId)
+                .append("orderNumber", orderNumber)
+                .append("customerNumber", customerNumber)
+                .append("sku", sku)
+                .append("slug", slug)
+                .append("containerAndKey", containerAndKey)
+                .build();
     }
 
 }

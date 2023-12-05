@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderEditPreviewFailure
+ *  <p>Result of a failed application of <code>stagedActions</code> to the Order. The data is calculated on the fly and is not queryable.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
     String PREVIEW_FAILURE = "PreviewFailure";
 
     /**
-     *
+     *  <p>Errors returned.</p>
      * @return errors
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
     public List<ErrorObject> getErrors();
 
     /**
-     * set errors
+     *  <p>Errors returned.</p>
      * @param errors values to be set
      */
 
@@ -56,7 +56,7 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
     public void setErrors(final ErrorObject... errors);
 
     /**
-     * set errors
+     *  <p>Errors returned.</p>
      * @param errors values to be set
      */
 

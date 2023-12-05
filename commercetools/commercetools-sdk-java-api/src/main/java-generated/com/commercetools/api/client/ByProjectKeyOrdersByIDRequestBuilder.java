@@ -24,6 +24,10 @@ public class ByProjectKeyOrdersByIDRequestBuilder {
         return new ByProjectKeyOrdersByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyOrdersByIDHead head() {
+        return new ByProjectKeyOrdersByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyOrdersByIDPost post(com.commercetools.api.models.order.OrderUpdate orderUpdate) {
         return new ByProjectKeyOrdersByIDPost(apiHttpClient, projectKey, ID, orderUpdate);
     }

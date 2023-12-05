@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set Customer Id update action.</p>
+ *  <p>Generated after a successful Set Customer ID update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +37,7 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     String ORDER_CUSTOMER_SET = "OrderCustomerSet";
 
     /**
-     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     *  <p>Customer on the Order after the Set Customer ID update action.</p>
      * @return customer
      */
     @Valid
@@ -45,7 +45,7 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     public CustomerReference getCustomer();
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
      * @return customerGroup
      */
     @Valid
@@ -53,7 +53,7 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     *  <p>Customer on the Order before the Set Customer ID update action.</p>
      * @return oldCustomer
      */
     @Valid
@@ -61,7 +61,7 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     public CustomerReference getOldCustomer();
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
      * @return oldCustomerGroup
      */
     @Valid
@@ -69,28 +69,28 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     public CustomerGroupReference getOldCustomerGroup();
 
     /**
-     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     *  <p>Customer on the Order after the Set Customer ID update action.</p>
      * @param customer value to be set
      */
 
     public void setCustomer(final CustomerReference customer);
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
     /**
-     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     *  <p>Customer on the Order before the Set Customer ID update action.</p>
      * @param oldCustomer value to be set
      */
 
     public void setOldCustomer(final CustomerReference oldCustomer);
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
      * @param oldCustomerGroup value to be set
      */
 

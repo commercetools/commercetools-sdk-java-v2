@@ -25,7 +25,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
     /**
-     * set values to the errors
+     *  <p>Errors returned.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     }
 
     /**
-     * set value to the errors
+     *  <p>Errors returned.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     }
 
     /**
-     * add values to the errors
+     *  <p>Errors returned.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     }
 
     /**
-     * add a value to the errors using the builder function
+     *  <p>Errors returned.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     }
 
     /**
-     * set the value to the errors using the builder function
+     *  <p>Errors returned.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class OrderEditPreviewFailureBuilder implements Builder<OrderEditPreviewF
     }
 
     /**
-     * value of errors}
+     *  <p>Errors returned.</p>
      * @return errors
      */
 

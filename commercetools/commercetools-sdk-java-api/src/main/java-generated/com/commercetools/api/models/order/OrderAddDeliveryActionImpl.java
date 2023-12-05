@@ -13,9 +13,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * OrderAddDeliveryAction
+ *  <p>A Delivery can only be added to an Order if its <code>shippingInfo</code> (for <code>shippingMode</code> = <code>Single</code>), or its <code>shipping</code> (for <code>shippingMode</code> = <code>Multiple</code>) exists.</p>
+ *  <p>Produces the Delivery Added Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, ModelBase {
@@ -24,9 +27,9 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
 
     private String deliveryKey;
 
-    private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
-
     private String shippingKey;
+
+    private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     private com.commercetools.api.models.common.BaseAddress address;
 
@@ -39,14 +42,14 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
      */
     @JsonCreator
     OrderAddDeliveryActionImpl(@JsonProperty("deliveryKey") final String deliveryKey,
-            @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
             @JsonProperty("shippingKey") final String shippingKey,
+            @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address,
             @JsonProperty("parcels") final java.util.List<com.commercetools.api.models.order.ParcelDraft> parcels,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.deliveryKey = deliveryKey;
-        this.items = items;
         this.shippingKey = shippingKey;
+        this.items = items;
         this.address = address;
         this.parcels = parcels;
         this.custom = custom;
@@ -69,7 +72,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     }
 
     /**
-     *  <p>User-defined unique identifier of a Delivery.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
      */
 
     public String getDeliveryKey() {
@@ -77,15 +80,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     }
 
     /**
-     *
-     */
-
-    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
-        return this.items;
-    }
-
-    /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p><code>key</code> of the ShippingMethod, required for <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -93,7 +88,15 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Line Items or Custom Line Items to be included in the Delivery.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
+        return this.items;
+    }
+
+    /**
+     *  <p>Address the <code>parcels</code> should be delivered to.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -101,7 +104,8 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     }
 
     /**
-     *
+     *  <p>Parcels of the Delivery.</p>
+     *  <p>If provided, this update action produces the Parcel Added To Delivery Message.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ParcelDraft> getParcels() {
@@ -109,7 +113,7 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -120,16 +124,16 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
         this.deliveryKey = deliveryKey;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     public void setItems(final com.commercetools.api.models.order.DeliveryItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
     }
 
     public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
-    }
-
-    public void setShippingKey(final String shippingKey) {
-        this.shippingKey = shippingKey;
     }
 
     public void setAddress(final com.commercetools.api.models.common.BaseAddress address) {
@@ -160,8 +164,15 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
 
         return new EqualsBuilder().append(action, that.action)
                 .append(deliveryKey, that.deliveryKey)
-                .append(items, that.items)
                 .append(shippingKey, that.shippingKey)
+                .append(items, that.items)
+                .append(address, that.address)
+                .append(parcels, that.parcels)
+                .append(custom, that.custom)
+                .append(action, that.action)
+                .append(deliveryKey, that.deliveryKey)
+                .append(shippingKey, that.shippingKey)
+                .append(items, that.items)
                 .append(address, that.address)
                 .append(parcels, that.parcels)
                 .append(custom, that.custom)
@@ -172,12 +183,24 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(deliveryKey)
-                .append(items)
                 .append(shippingKey)
+                .append(items)
                 .append(address)
                 .append(parcels)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("deliveryKey", deliveryKey)
+                .append("shippingKey", shippingKey)
+                .append("items", items)
+                .append("address", address)
+                .append("parcels", parcels)
+                .append("custom", custom)
+                .build();
     }
 
 }

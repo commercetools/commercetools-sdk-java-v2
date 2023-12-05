@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>ProductSelection in a Store can be activated or deactivated using this update action.</p>
@@ -91,12 +93,23 @@ public class StoreChangeProductSelectionActionImpl implements StoreChangeProduct
         return new EqualsBuilder().append(action, that.action)
                 .append(productSelection, that.productSelection)
                 .append(active, that.active)
+                .append(action, that.action)
+                .append(productSelection, that.productSelection)
+                .append(active, that.active)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(productSelection).append(active).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("productSelection", productSelection)
+                .append("active", active)
+                .build();
     }
 
 }

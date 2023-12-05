@@ -42,11 +42,6 @@ public class ApiMethodTest {
         }
 
         @Override
-        public ApiHttpResponse<Object> executeBlocking() {
-            return null;
-        }
-
-        @Override
         public ApiHttpResponse<Object> executeBlocking(Duration timeout) {
             return null;
         }

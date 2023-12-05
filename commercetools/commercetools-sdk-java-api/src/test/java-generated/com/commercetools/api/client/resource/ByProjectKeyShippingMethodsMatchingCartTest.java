@@ -41,7 +41,7 @@ public class ByProjectKeyShippingMethodsMatchingCartTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyShippingMethodsMatchingCartTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -84,7 +84,20 @@ public class ByProjectKeyShippingMethodsMatchingCartTest {
                         .shippingMethods()
                         .matchingCart()
                         .get()
-                        .createHttpRequest(), "get", "test_projectKey/shipping-methods/matching-cart", } };
+                        .createHttpRequest(), "get", "test_projectKey/shipping-methods/matching-cart", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingCart()
+                                .head()
+                                .withCartId("cartId")
+                                .createHttpRequest(),
+                        "head", "test_projectKey/shipping-methods/matching-cart?cartId=cartId", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingCart()
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/shipping-methods/matching-cart", } };
     }
 
     @DataProvider
@@ -100,6 +113,12 @@ public class ByProjectKeyShippingMethodsMatchingCartTest {
                         .matchingCart()
                         .get()
                         .withExpand("expand"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingCart().get(), } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingCart().get(), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingCart()
+                        .head()
+                        .withCartId("cartId"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingCart().head(), } };
     }
 }

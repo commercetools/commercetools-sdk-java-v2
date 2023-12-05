@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * DeliveryDraft
@@ -61,7 +63,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -69,7 +71,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ParcelDraft> getParcels() {
@@ -77,7 +79,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Address to which the Parcels are delivered.</p>
      */
 
     public com.commercetools.api.models.common.AddressDraft getAddress() {
@@ -85,7 +87,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the Transaction.</p>
+     *  <p>Custom Fields for the Delivery.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -135,6 +137,11 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
                 .append(parcels, that.parcels)
                 .append(address, that.address)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(items, that.items)
+                .append(parcels, that.parcels)
+                .append(address, that.address)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -146,6 +153,16 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
                 .append(address)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("items", items)
+                .append("parcels", parcels)
+                .append("address", address)
+                .append("custom", custom)
+                .build();
     }
 
 }

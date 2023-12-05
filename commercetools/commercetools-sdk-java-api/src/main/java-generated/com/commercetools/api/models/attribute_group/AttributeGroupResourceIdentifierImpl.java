@@ -14,9 +14,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>ResourceIdentifier to an AttributeGroup.</p>
+ *  <p>ResourceIdentifier to an AttributeGroup. Either <code>id</code> or <code>key</code> is required. If both are set, an InvalidJsonInput error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeGroupResourceIdentifierImpl implements AttributeGroupResourceIdentifier, ModelBase {
@@ -53,7 +55,7 @@ public class AttributeGroupResourceIdentifierImpl implements AttributeGroupResou
     }
 
     /**
-     *  <p>Platform-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>Platform-generated unique identifier of the referenced AttributeGroup. Required if <code>key</code> is absent.</p>
      */
 
     public String getId() {
@@ -61,7 +63,7 @@ public class AttributeGroupResourceIdentifierImpl implements AttributeGroupResou
     }
 
     /**
-     *  <p>User-generated unique identifier of the referenced AttributeGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     *  <p>User-generated unique identifier of the referenced AttributeGroup. Required if <code>id</code> is absent.</p>
      */
 
     public String getKey() {
@@ -86,12 +88,26 @@ public class AttributeGroupResourceIdentifierImpl implements AttributeGroupResou
 
         AttributeGroupResourceIdentifierImpl that = (AttributeGroupResourceIdentifierImpl) o;
 
-        return new EqualsBuilder().append(typeId, that.typeId).append(id, that.id).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(typeId).append(id).append(key).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("typeId", typeId)
+                .append("id", id)
+                .append("key", key)
+                .build();
     }
 
 }

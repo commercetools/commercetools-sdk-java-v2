@@ -41,7 +41,7 @@ public class ByProjectKeyExtensionsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyExtensionsTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -64,13 +64,8 @@ public class ByProjectKeyExtensionsTest {
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
         return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").extensions().get().withExpand("expand").createHttpRequest(),
-                "get", "test_projectKey/extensions?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .extensions()
-                        .get()
-                        .withSort("sort")
-                        .createHttpRequest(), "get", "test_projectKey/extensions?sort=sort", },
+                apiRoot.withProjectKey("test_projectKey").extensions().get().withSort("sort").createHttpRequest(),
+                "get", "test_projectKey/extensions?sort=sort", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").extensions().get().withLimit(7).createHttpRequest(),
                         "get", "test_projectKey/extensions?limit=7", },
@@ -96,9 +91,11 @@ public class ByProjectKeyExtensionsTest {
                         "test_projectKey/extensions", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
-                        .post(com.commercetools.api.models.extension.ExtensionDraft.of())
-                        .withExpand("expand")
-                        .createHttpRequest(), "post", "test_projectKey/extensions?expand=expand", },
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/extensions?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().head().createHttpRequest(),
+                        "head", "test_projectKey/extensions", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .post(com.commercetools.api.models.extension.ExtensionDraft.of())
@@ -108,7 +105,6 @@ public class ByProjectKeyExtensionsTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().get().withSort("sort"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().get().withLimit(7), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().get().withOffset(3), },
@@ -119,10 +115,8 @@ public class ByProjectKeyExtensionsTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().get(), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .extensions()
-                        .post(com.commercetools.api.models.extension.ExtensionDraft.of())
-                        .withExpand("expand"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .post(com.commercetools.api.models.extension.ExtensionDraft.of()), } };

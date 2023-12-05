@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -35,7 +37,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyPaymentsByIDDelete
-        extends ApiMethod<ByProjectKeyPaymentsByIDDelete, com.commercetools.api.models.payment.Payment> implements
+        extends TypeApiMethod<ByProjectKeyPaymentsByIDDelete, com.commercetools.api.models.payment.Payment> implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyPaymentsByIDDelete, com.commercetools.api.models.payment.Payment>,
         com.commercetools.api.client.DataerasureTrait<ByProjectKeyPaymentsByIDDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyPaymentsByIDDelete>,
@@ -43,6 +45,12 @@ public class ByProjectKeyPaymentsByIDDelete
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyPaymentsByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyPaymentsByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyPaymentsByIDDelete> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.payment.Payment> resultType() {
+        return new TypeReference<com.commercetools.api.models.payment.Payment>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

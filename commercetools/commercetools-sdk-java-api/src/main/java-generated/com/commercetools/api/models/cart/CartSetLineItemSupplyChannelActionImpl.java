@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Performing this action has no impact on inventory that should be reserved.</p>
@@ -109,6 +111,10 @@ public class CartSetLineItemSupplyChannelActionImpl implements CartSetLineItemSu
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(supplyChannel, that.supplyChannel)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 
@@ -119,6 +125,15 @@ public class CartSetLineItemSupplyChannelActionImpl implements CartSetLineItemSu
                 .append(lineItemKey)
                 .append(supplyChannel)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("supplyChannel", supplyChannel)
+                .build();
     }
 
 }

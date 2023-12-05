@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A price tier is selected instead of the default price when a certain quantity of the ProductVariant is added to a cart and ordered.</p>
@@ -74,12 +76,23 @@ public class PriceTierImpl implements PriceTier, ModelBase {
 
         PriceTierImpl that = (PriceTierImpl) o;
 
-        return new EqualsBuilder().append(minimumQuantity, that.minimumQuantity).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(minimumQuantity, that.minimumQuantity)
+                .append(value, that.value)
+                .append(minimumQuantity, that.minimumQuantity)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(minimumQuantity).append(value).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("minimumQuantity", minimumQuantity)
+                .append("value", value)
+                .build();
     }
 
 }

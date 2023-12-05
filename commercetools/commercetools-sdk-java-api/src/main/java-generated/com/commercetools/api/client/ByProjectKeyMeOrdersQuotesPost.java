@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,16 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>When creating B2B Orders, the Customer must have the <code>CreateMyOrdersFromMyQuotes</code> Permission.</p>
+ *  <p>Creating an Order produces the OrderCreated Message.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li>OutOfStock</li>
+ *   <li>PriceChanged</li>
+ *   <li>InvalidItemShippingDetails</li>
+ *   <li>CountryNotConfiguredInStore</li>
+ *   <li>AssociateMissingPermission</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>
@@ -23,7 +34,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *            .withProjectKey("{projectKey}")
  *            .me()
  *            .orders()
- *            .quotes()
+ *            .orderQuote()
  *            .post(null)
  *            .execute()
  * }</code></pre>
@@ -31,7 +42,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyMeOrdersQuotesPost extends
-        BodyApiMethod<ByProjectKeyMeOrdersQuotesPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.me.MyOrderFromQuoteDraft> {
+        TypeBodyApiMethod<ByProjectKeyMeOrdersQuotesPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.me.MyOrderFromQuoteDraft>
+        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeOrdersQuotesPost> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.order.Order> resultType() {
+        return new TypeReference<com.commercetools.api.models.order.Order>() {
+        };
+    }
 
     private String projectKey;
 

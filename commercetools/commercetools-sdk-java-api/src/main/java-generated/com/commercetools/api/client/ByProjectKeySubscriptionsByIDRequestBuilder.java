@@ -24,6 +24,10 @@ public class ByProjectKeySubscriptionsByIDRequestBuilder {
         return new ByProjectKeySubscriptionsByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeySubscriptionsByIDHead head() {
+        return new ByProjectKeySubscriptionsByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeySubscriptionsByIDPost post(
             com.commercetools.api.models.subscription.SubscriptionUpdate subscriptionUpdate) {
         return new ByProjectKeySubscriptionsByIDPost(apiHttpClient, projectKey, ID, subscriptionUpdate);

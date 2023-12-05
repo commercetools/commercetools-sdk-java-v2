@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Changing the email of the Customer produces the CustomerEmailChanged Message.</p>
+ *  <p>Changes the <code>email</code> of the Customer and sets the <code>isEmailVerified</code> property to <code>false</code>. This update action generates a CustomerEmailChanged Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

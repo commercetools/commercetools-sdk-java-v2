@@ -13,9 +13,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * OrderAddParcelToDeliveryAction
+ *  <p>To add a Parcel, at least one Delivery must exist.</p>
+ *  <p>Produces the Parcel Added To Delivery Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliveryAction, ModelBase {
@@ -34,6 +37,8 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     /**
      * create instance with all properties
      */
@@ -42,13 +47,15 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
             @JsonProperty("deliveryKey") final String deliveryKey, @JsonProperty("parcelKey") final String parcelKey,
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData,
-            @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+            @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.deliveryId = deliveryId;
         this.deliveryKey = deliveryKey;
         this.parcelKey = parcelKey;
         this.measurements = measurements;
         this.trackingData = trackingData;
         this.items = items;
+        this.custom = custom;
         this.action = ADD_PARCEL_TO_DELIVERY;
     }
 
@@ -68,7 +75,8 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryId() {
@@ -76,7 +84,8 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryKey() {
@@ -84,7 +93,7 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
     }
 
     /**
-     *
+     *  <p><code>key</code> of an existing Parcel.</p>
      */
 
     public String getParcelKey() {
@@ -92,7 +101,7 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
@@ -100,7 +109,7 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
@@ -108,11 +117,19 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
     }
 
     /**
-     *
+     *  <p>Value to set.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
+    }
+
+    /**
+     *  <p>Custom Fields for the Parcel.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
     }
 
     public void setDeliveryId(final String deliveryId) {
@@ -143,6 +160,10 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
         this.items = items;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -160,6 +181,15 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
+                .append(custom, that.custom)
+                .append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
+                .append(parcelKey, that.parcelKey)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -172,7 +202,21 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
                 .append(measurements)
                 .append(trackingData)
                 .append(items)
+                .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("deliveryId", deliveryId)
+                .append("deliveryKey", deliveryKey)
+                .append("parcelKey", parcelKey)
+                .append("measurements", measurements)
+                .append("trackingData", trackingData)
+                .append("items", items)
+                .append("custom", custom)
+                .build();
     }
 
 }

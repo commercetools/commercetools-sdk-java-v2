@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Channel
@@ -284,6 +286,20 @@ public class ChannelImpl implements Channel, ModelBase {
                 .append(reviewRatingStatistics, that.reviewRatingStatistics)
                 .append(custom, that.custom)
                 .append(geoLocation, that.geoLocation)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(roles, that.roles)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(address, that.address)
+                .append(reviewRatingStatistics, that.reviewRatingStatistics)
+                .append(custom, that.custom)
+                .append(geoLocation, that.geoLocation)
                 .isEquals();
     }
 
@@ -304,6 +320,25 @@ public class ChannelImpl implements Channel, ModelBase {
                 .append(custom)
                 .append(geoLocation)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("key", key)
+                .append("roles", roles)
+                .append("name", name)
+                .append("description", description)
+                .append("address", address)
+                .append("reviewRatingStatistics", reviewRatingStatistics)
+                .append("custom", custom)
+                .append("geoLocation", geoLocation)
+                .build();
     }
 
 }

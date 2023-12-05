@@ -25,6 +25,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder
         return new ByProjectKeyInStoreKeyByStoreKeyOrdersGet(apiHttpClient, projectKey, storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersHead head() {
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersHead(apiHttpClient, projectKey, storeKey);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyOrdersPost post(
             com.commercetools.api.models.order.OrderFromCartDraft orderFromCartDraft) {
         return new ByProjectKeyInStoreKeyByStoreKeyOrdersPost(apiHttpClient, projectKey, storeKey, orderFromCartDraft);

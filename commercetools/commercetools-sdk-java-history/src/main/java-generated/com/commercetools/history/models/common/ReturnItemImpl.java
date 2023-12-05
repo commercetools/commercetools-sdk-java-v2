@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ReturnItem
@@ -176,6 +178,14 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
                 .append(paymentState, that.paymentState)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(createdAt, that.createdAt)
+                .append(id, that.id)
+                .append(quantity, that.quantity)
+                .append(type, that.type)
+                .append(comment, that.comment)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(createdAt, that.createdAt)
                 .isEquals();
     }
 
@@ -190,6 +200,19 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
                 .append(lastModifiedAt)
                 .append(createdAt)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("quantity", quantity)
+                .append("type", type)
+                .append("comment", comment)
+                .append("shipmentState", shipmentState)
+                .append("paymentState", paymentState)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("createdAt", createdAt)
+                .build();
     }
 
 }

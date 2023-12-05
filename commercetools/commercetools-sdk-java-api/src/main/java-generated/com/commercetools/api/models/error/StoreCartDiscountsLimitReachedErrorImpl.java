@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a Cart Discount cannot be created or assigned to a Store as the limit for active Cart Discounts in a Store has been reached for one or more Stores in the request.</p>
@@ -118,12 +120,25 @@ public class StoreCartDiscountsLimitReachedErrorImpl implements StoreCartDiscoun
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(stores, that.stores)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(stores, that.stores)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code).append(message).append(values).append(stores).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("stores", stores)
+                .build();
     }
 
 }

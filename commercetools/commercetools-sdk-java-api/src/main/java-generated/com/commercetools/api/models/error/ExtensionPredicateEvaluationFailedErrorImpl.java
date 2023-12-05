@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the predicate defined in the ExtensionTrigger could not be evaluated due to a missing field.</p>
@@ -109,6 +111,10 @@ public class ExtensionPredicateEvaluationFailedErrorImpl implements ExtensionPre
                 .append(message, that.message)
                 .append(values, that.values)
                 .append(errorByExtension, that.errorByExtension)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(errorByExtension, that.errorByExtension)
                 .isEquals();
     }
 
@@ -119,6 +125,15 @@ public class ExtensionPredicateEvaluationFailedErrorImpl implements ExtensionPre
                 .append(values)
                 .append(errorByExtension)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("errorByExtension", errorByExtension)
+                .build();
     }
 
 }

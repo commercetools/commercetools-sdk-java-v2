@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
@@ -75,12 +77,23 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
 
         SearchIndexingConfigurationImpl that = (SearchIndexingConfigurationImpl) o;
 
-        return new EqualsBuilder().append(products, that.products).append(orders, that.orders).isEquals();
+        return new EqualsBuilder().append(products, that.products)
+                .append(orders, that.orders)
+                .append(products, that.products)
+                .append(orders, that.orders)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(products).append(orders).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("products", products)
+                .append("orders", orders)
+                .build();
     }
 
 }

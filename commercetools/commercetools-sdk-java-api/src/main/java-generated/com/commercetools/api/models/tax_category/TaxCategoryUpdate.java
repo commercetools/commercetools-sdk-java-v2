@@ -35,7 +35,7 @@ public interface TaxCategoryUpdate extends
         com.commercetools.api.models.ResourceUpdate<TaxCategoryUpdate, TaxCategoryUpdateAction, TaxCategoryUpdateBuilder> {
 
     /**
-     *  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     *  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface TaxCategoryUpdate extends
     public List<TaxCategoryUpdateAction> getActions();
 
     /**
-     *  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     *  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      */
 

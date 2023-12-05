@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The data representation for a Type to be imported that is persisted as a Type in the Project.</p>
@@ -53,7 +55,7 @@ public class TypeImportImpl implements TypeImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Type.</p>
+     *  <p>User-defined unique identifier for the Type. If a Type with this <code>key</code> exists, it will be updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -138,6 +140,11 @@ public class TypeImportImpl implements TypeImport, ModelBase {
                 .append(description, that.description)
                 .append(resourceTypeIds, that.resourceTypeIds)
                 .append(fieldDefinitions, that.fieldDefinitions)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(resourceTypeIds, that.resourceTypeIds)
+                .append(fieldDefinitions, that.fieldDefinitions)
                 .isEquals();
     }
 
@@ -149,6 +156,16 @@ public class TypeImportImpl implements TypeImport, ModelBase {
                 .append(resourceTypeIds)
                 .append(fieldDefinitions)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("name", name)
+                .append("description", description)
+                .append("resourceTypeIds", resourceTypeIds)
+                .append("fieldDefinitions", fieldDefinitions)
+                .build();
     }
 
 }

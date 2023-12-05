@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StagedOrderRemoveDiscountCodeAction
@@ -50,7 +52,7 @@ public class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrderRemov
     }
 
     /**
-     *  <p>Reference to a DiscountCode.</p>
+     *  <p>Discount Code to remove from the Cart.</p>
      */
 
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
@@ -71,12 +73,23 @@ public class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrderRemov
 
         StagedOrderRemoveDiscountCodeActionImpl that = (StagedOrderRemoveDiscountCodeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(discountCode, that.discountCode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(discountCode, that.discountCode)
+                .append(action, that.action)
+                .append(discountCode, that.discountCode)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(discountCode).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("discountCode", discountCode)
+                .build();
     }
 
 }

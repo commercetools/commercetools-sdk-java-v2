@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomShippingDraft
@@ -205,6 +207,15 @@ public class CustomShippingDraftImpl implements CustomShippingDraft, ModelBase {
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(deliveries, that.deliveries)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(shippingMethodName, that.shippingMethodName)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingRate, that.shippingRate)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(taxCategory, that.taxCategory)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(deliveries, that.deliveries)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -220,6 +231,20 @@ public class CustomShippingDraftImpl implements CustomShippingDraft, ModelBase {
                 .append(deliveries)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("shippingMethodName", shippingMethodName)
+                .append("shippingAddress", shippingAddress)
+                .append("shippingRate", shippingRate)
+                .append("shippingRateInput", shippingRateInput)
+                .append("taxCategory", taxCategory)
+                .append("externalTaxRate", externalTaxRate)
+                .append("deliveries", deliveries)
+                .append("custom", custom)
+                .build();
     }
 
 }

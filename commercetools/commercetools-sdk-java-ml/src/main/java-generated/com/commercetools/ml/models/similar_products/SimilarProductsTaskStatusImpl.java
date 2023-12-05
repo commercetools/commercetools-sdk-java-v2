@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Represents a URL path to poll to get the results of an Asynchronous Request.</p>
@@ -93,12 +95,23 @@ public class SimilarProductsTaskStatusImpl implements SimilarProductsTaskStatus,
         return new EqualsBuilder().append(state, that.state)
                 .append(expires, that.expires)
                 .append(result, that.result)
+                .append(state, that.state)
+                .append(expires, that.expires)
+                .append(result, that.result)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(state).append(expires).append(result).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("state", state)
+                .append("expires", expires)
+                .append("result", result)
+                .build();
     }
 
 }

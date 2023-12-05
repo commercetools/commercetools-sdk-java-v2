@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * MyCustomerEmailVerify
@@ -58,12 +60,17 @@ public class MyCustomerEmailVerifyImpl implements MyCustomerEmailVerify, ModelBa
 
         MyCustomerEmailVerifyImpl that = (MyCustomerEmailVerifyImpl) o;
 
-        return new EqualsBuilder().append(tokenValue, that.tokenValue).isEquals();
+        return new EqualsBuilder().append(tokenValue, that.tokenValue).append(tokenValue, that.tokenValue).isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(tokenValue).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("tokenValue", tokenValue).build();
     }
 
 }

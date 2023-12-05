@@ -24,6 +24,10 @@ public class ByProjectKeyProductDiscountsByIDRequestBuilder {
         return new ByProjectKeyProductDiscountsByIDGet(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyProductDiscountsByIDHead head() {
+        return new ByProjectKeyProductDiscountsByIDHead(apiHttpClient, projectKey, ID);
+    }
+
     public ByProjectKeyProductDiscountsByIDPost post(
             com.commercetools.api.models.product_discount.ProductDiscountUpdate productDiscountUpdate) {
         return new ByProjectKeyProductDiscountsByIDPost(apiHttpClient, projectKey, ID, productDiscountUpdate);

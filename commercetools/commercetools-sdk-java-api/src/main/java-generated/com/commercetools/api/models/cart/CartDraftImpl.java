@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CartDraft
@@ -252,7 +254,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how taxes are calculated for <code>taxedPrice</code>.</p>
      */
 
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
@@ -276,7 +278,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getShippingAddress() {
@@ -333,7 +335,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     /**
      *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
-     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     *  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getItemShippingAddresses() {
@@ -576,6 +578,35 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(origin, that.origin)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(custom, that.custom)
+                .append(currency, that.currency)
+                .append(key, that.key)
+                .append(customerId, that.customerId)
+                .append(customerEmail, that.customerEmail)
+                .append(customerGroup, that.customerGroup)
+                .append(anonymousId, that.anonymousId)
+                .append(businessUnit, that.businessUnit)
+                .append(store, that.store)
+                .append(lineItems, that.lineItems)
+                .append(customLineItems, that.customLineItems)
+                .append(taxMode, that.taxMode)
+                .append(externalTaxRateForShippingMethod, that.externalTaxRateForShippingMethod)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .append(inventoryMode, that.inventoryMode)
+                .append(billingAddress, that.billingAddress)
+                .append(shippingAddress, that.shippingAddress)
+                .append(shippingMethod, that.shippingMethod)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(shippingMode, that.shippingMode)
+                .append(customShipping, that.customShipping)
+                .append(shipping, that.shipping)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(discountCodes, that.discountCodes)
+                .append(country, that.country)
+                .append(locale, that.locale)
+                .append(origin, that.origin)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -611,6 +642,40 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(deleteDaysAfterLastModification)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("currency", currency)
+                .append("key", key)
+                .append("customerId", customerId)
+                .append("customerEmail", customerEmail)
+                .append("customerGroup", customerGroup)
+                .append("anonymousId", anonymousId)
+                .append("businessUnit", businessUnit)
+                .append("store", store)
+                .append("lineItems", lineItems)
+                .append("customLineItems", customLineItems)
+                .append("taxMode", taxMode)
+                .append("externalTaxRateForShippingMethod", externalTaxRateForShippingMethod)
+                .append("taxRoundingMode", taxRoundingMode)
+                .append("taxCalculationMode", taxCalculationMode)
+                .append("inventoryMode", inventoryMode)
+                .append("billingAddress", billingAddress)
+                .append("shippingAddress", shippingAddress)
+                .append("shippingMethod", shippingMethod)
+                .append("shippingRateInput", shippingRateInput)
+                .append("shippingMode", shippingMode)
+                .append("customShipping", customShipping)
+                .append("shipping", shipping)
+                .append("itemShippingAddresses", itemShippingAddresses)
+                .append("discountCodes", discountCodes)
+                .append("country", country)
+                .append("locale", locale)
+                .append("origin", origin)
+                .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
+                .append("custom", custom)
+                .build();
     }
 
 }

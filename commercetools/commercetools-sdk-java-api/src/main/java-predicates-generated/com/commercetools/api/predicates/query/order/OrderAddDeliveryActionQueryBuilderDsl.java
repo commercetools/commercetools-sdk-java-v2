@@ -25,6 +25,12 @@ public class OrderAddDeliveryActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, OrderAddDeliveryActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<OrderAddDeliveryActionQueryBuilderDsl> shippingKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shippingKey")),
+            p -> new CombinationQueryPredicate<>(p, OrderAddDeliveryActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<OrderAddDeliveryActionQueryBuilderDsl> items(
             Function<com.commercetools.api.predicates.query.order.DeliveryItemQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.DeliveryItemQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -36,12 +42,6 @@ public class OrderAddDeliveryActionQueryBuilderDsl {
 
     public CollectionPredicateBuilder<OrderAddDeliveryActionQueryBuilderDsl> items() {
         return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("items")),
-            p -> new CombinationQueryPredicate<>(p, OrderAddDeliveryActionQueryBuilderDsl::of));
-    }
-
-    public StringComparisonPredicateBuilder<OrderAddDeliveryActionQueryBuilderDsl> shippingKey() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shippingKey")),
             p -> new CombinationQueryPredicate<>(p, OrderAddDeliveryActionQueryBuilderDsl::of));
     }
 

@@ -19,6 +19,11 @@ public class ShoppingListAddLineItemActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ShoppingListAddLineItemActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<ShoppingListAddLineItemActionQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, ShoppingListAddLineItemActionQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<ShoppingListAddLineItemActionQueryBuilderDsl> sku() {
         return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("sku")),
             p -> new CombinationQueryPredicate<>(p, ShoppingListAddLineItemActionQueryBuilderDsl::of));

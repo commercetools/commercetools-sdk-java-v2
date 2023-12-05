@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderSetPurchaseOrderNumberAction
+ *  <p>Produces the PurchaseOrderNumberSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetPurchaseOrderNumberActionImpl implements StagedOrderSetPurchaseOrderNumberAction, ModelBase {
@@ -49,7 +51,7 @@ public class StagedOrderSetPurchaseOrderNumberActionImpl implements StagedOrderS
     }
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     *  <p>Value to set.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -72,12 +74,21 @@ public class StagedOrderSetPurchaseOrderNumberActionImpl implements StagedOrderS
 
         return new EqualsBuilder().append(action, that.action)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(action, that.action)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(purchaseOrderNumber).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
+                .build();
     }
 
 }

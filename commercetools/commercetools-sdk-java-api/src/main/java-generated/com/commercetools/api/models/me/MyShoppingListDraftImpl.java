@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A MyShoppingListDraft is the object submitted as payload to the Create MyShoppingList request. The <code>customer</code> field of ShoppingList is automatically set with a password flow token. The <code>anonymousId</code> is automatically set with a token for an anonymous session. The <code>key</code> and <code>slug</code> fields can not be set.</p>
@@ -171,6 +173,13 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(store, that.store)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(lineItems, that.lineItems)
+                .append(textLineItems, that.textLineItems)
+                .append(custom, that.custom)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(store, that.store)
                 .isEquals();
     }
 
@@ -184,6 +193,18 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
                 .append(deleteDaysAfterLastModification)
                 .append(store)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("description", description)
+                .append("lineItems", lineItems)
+                .append("textLineItems", textLineItems)
+                .append("custom", custom)
+                .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
+                .append("store", store)
+                .build();
     }
 
 }

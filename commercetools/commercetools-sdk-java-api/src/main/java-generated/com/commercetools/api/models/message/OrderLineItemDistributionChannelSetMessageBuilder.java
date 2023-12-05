@@ -58,6 +58,9 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     private String lineItemId;
 
     @Nullable
+    private String lineItemKey;
+
+    @Nullable
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
     /**
@@ -274,6 +277,17 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @param lineItemKey value to be set
+     * @return Builder
+     */
+
+    public OrderLineItemDistributionChannelSetMessageBuilder lineItemKey(@Nullable final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
+        return this;
+    }
+
+    /**
      *  <p>Distribution Channel that was set.</p>
      * @param builder function to build the distributionChannel value
      * @return Builder
@@ -413,6 +427,16 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     }
 
     /**
+     *  <p>User-defined unique identifier of the LineItem.</p>
+     * @return lineItemKey
+     */
+
+    @Nullable
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
      *  <p>Distribution Channel that was set.</p>
      * @return distributionChannel
      */
@@ -441,7 +465,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
             OrderLineItemDistributionChannelSetMessage.class + ": lineItemId is missing");
         return new OrderLineItemDistributionChannelSetMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
-            lineItemId, distributionChannel);
+            lineItemId, lineItemKey, distributionChannel);
     }
 
     /**
@@ -451,7 +475,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
     public OrderLineItemDistributionChannelSetMessage buildUnchecked() {
         return new OrderLineItemDistributionChannelSetMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
-            lineItemId, distributionChannel);
+            lineItemId, lineItemKey, distributionChannel);
     }
 
     /**
@@ -481,6 +505,7 @@ public class OrderLineItemDistributionChannelSetMessageBuilder
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.lineItemId = template.getLineItemId();
+        builder.lineItemKey = template.getLineItemKey();
         builder.distributionChannel = template.getDistributionChannel();
         return builder;
     }

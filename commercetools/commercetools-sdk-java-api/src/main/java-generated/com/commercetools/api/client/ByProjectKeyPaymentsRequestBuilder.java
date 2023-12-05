@@ -21,6 +21,10 @@ public class ByProjectKeyPaymentsRequestBuilder implements ByProjectKeyPaymentsR
         return new ByProjectKeyPaymentsGet(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyPaymentsHead head() {
+        return new ByProjectKeyPaymentsHead(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyPaymentsPost post(com.commercetools.api.models.payment.PaymentDraft paymentDraft) {
         return new ByProjectKeyPaymentsPost(apiHttpClient, projectKey, paymentDraft);
     }

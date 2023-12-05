@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Address type to be used on write methods. Optionally, use the <code>custom</code> field in addition to the fields of a BaseAddress.</p>
@@ -475,6 +477,32 @@ public class AddressDraftImpl implements AddressDraft, ModelBase {
                 .append(additionalAddressInfo, that.additionalAddressInfo)
                 .append(externalId, that.externalId)
                 .append(custom, that.custom)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(country, that.country)
+                .append(title, that.title)
+                .append(salutation, that.salutation)
+                .append(firstName, that.firstName)
+                .append(lastName, that.lastName)
+                .append(streetName, that.streetName)
+                .append(streetNumber, that.streetNumber)
+                .append(additionalStreetInfo, that.additionalStreetInfo)
+                .append(postalCode, that.postalCode)
+                .append(city, that.city)
+                .append(region, that.region)
+                .append(state, that.state)
+                .append(company, that.company)
+                .append(department, that.department)
+                .append(building, that.building)
+                .append(apartment, that.apartment)
+                .append(pOBox, that.pOBox)
+                .append(phone, that.phone)
+                .append(mobile, that.mobile)
+                .append(email, that.email)
+                .append(fax, that.fax)
+                .append(additionalAddressInfo, that.additionalAddressInfo)
+                .append(externalId, that.externalId)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -507,6 +535,37 @@ public class AddressDraftImpl implements AddressDraft, ModelBase {
                 .append(externalId)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("key", key)
+                .append("country", country)
+                .append("title", title)
+                .append("salutation", salutation)
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .append("streetName", streetName)
+                .append("streetNumber", streetNumber)
+                .append("additionalStreetInfo", additionalStreetInfo)
+                .append("postalCode", postalCode)
+                .append("city", city)
+                .append("region", region)
+                .append("state", state)
+                .append("company", company)
+                .append("department", department)
+                .append("building", building)
+                .append("apartment", apartment)
+                .append("pOBox", pOBox)
+                .append("phone", phone)
+                .append("mobile", mobile)
+                .append("email", email)
+                .append("fax", fax)
+                .append("additionalAddressInfo", additionalAddressInfo)
+                .append("externalId", externalId)
+                .append("custom", custom)
+                .build();
     }
 
 }

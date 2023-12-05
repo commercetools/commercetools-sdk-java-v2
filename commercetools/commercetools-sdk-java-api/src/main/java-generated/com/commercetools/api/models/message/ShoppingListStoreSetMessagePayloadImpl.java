@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ShoppingListStoreSetMessagePayload
@@ -71,12 +73,23 @@ public class ShoppingListStoreSetMessagePayloadImpl implements ShoppingListStore
 
         ShoppingListStoreSetMessagePayloadImpl that = (ShoppingListStoreSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(store, that.store).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(store, that.store)
+                .append(type, that.type)
+                .append(store, that.store)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(store).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("store", store)
+                .build();
     }
 
 }

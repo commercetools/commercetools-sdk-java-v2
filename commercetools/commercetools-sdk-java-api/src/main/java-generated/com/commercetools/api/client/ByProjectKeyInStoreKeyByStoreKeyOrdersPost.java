@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,7 +20,19 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates an order from a Cart from a specific Store. When using this endpoint the orders's <code>store</code> field is always set to the Store specified in the path parameter. The cart must have a shipping address set before creating an order. When using the Platform TaxMode, the shipping address is used for tax calculation.</p>
+ *  <p>Before you create an Order, the Cart must have a shipping address set. The shipping address is used for tax calculation for a Cart with <code>Platform</code> TaxMode.</p>
+ *  <p>Creating an Order produces the OrderCreated Message.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li>OutOfStock</li>
+ *   <li>PriceChanged</li>
+ *   <li>DiscountCodeNonApplicable</li>
+ *   <li>ShippingMethodDoesNotMatchCart</li>
+ *   <li>InvalidItemShippingDetails</li>
+ *   <li>MatchingPriceNotFound</li>
+ *   <li>MissingTaxRateForCountry</li>
+ *   <li>CountryNotConfiguredInStore</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>
@@ -34,10 +48,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost extends
-        BodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.order.OrderFromCartDraft>
+        TypeBodyApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersPost, com.commercetools.api.models.order.Order, com.commercetools.api.models.order.OrderFromCartDraft>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersPost> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.order.Order> resultType() {
+        return new TypeReference<com.commercetools.api.models.order.Order>() {
+        };
+    }
 
     private String projectKey;
     private String storeKey;

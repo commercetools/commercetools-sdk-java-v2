@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This payload is sent for a ChangeSubscription when a resource is deleted.</p>
@@ -158,6 +160,13 @@ public class ResourceDeletedDeliveryPayloadImpl implements ResourceDeletedDelive
                 .append(version, that.version)
                 .append(modifiedAt, that.modifiedAt)
                 .append(dataErasure, that.dataErasure)
+                .append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(version, that.version)
+                .append(modifiedAt, that.modifiedAt)
+                .append(dataErasure, that.dataErasure)
                 .isEquals();
     }
 
@@ -171,6 +180,18 @@ public class ResourceDeletedDeliveryPayloadImpl implements ResourceDeletedDelive
                 .append(modifiedAt)
                 .append(dataErasure)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("projectKey", projectKey)
+                .append("notificationType", notificationType)
+                .append("resource", resource)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("version", version)
+                .append("modifiedAt", modifiedAt)
+                .append("dataErasure", dataErasure)
+                .build();
     }
 
 }

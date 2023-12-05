@@ -39,7 +39,15 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     String UPDATE_SYNC_INFO = "updateSyncInfo";
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <p>Set this to identify an external order instance, file, or other resource.</p>
+     * @return externalId
+     */
+
+    @JsonProperty("externalId")
+    public String getExternalId();
+
+    /**
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
      * @return channel
      */
     @NotNull
@@ -48,15 +56,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     public ChannelResourceIdentifier getChannel();
 
     /**
-     *
-     * @return externalId
-     */
-
-    @JsonProperty("externalId")
-    public String getExternalId();
-
-    /**
-     *
+     *  <p>If not set, it defaults to the current date and time.</p>
      * @return syncedAt
      */
 
@@ -64,21 +64,21 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     public ZonedDateTime getSyncedAt();
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
-     * @param channel value to be set
-     */
-
-    public void setChannel(final ChannelResourceIdentifier channel);
-
-    /**
-     * set externalId
+     *  <p>Set this to identify an external order instance, file, or other resource.</p>
      * @param externalId value to be set
      */
 
     public void setExternalId(final String externalId);
 
     /**
-     * set syncedAt
+     *  <p>The synchronization destination to set. Must not be empty. The referenced Channel must have the Channel Role <code>OrderExport</code> or <code>OrderImport</code>. Otherwise this update action returns an InvalidInput error.</p>
+     * @param channel value to be set
+     */
+
+    public void setChannel(final ChannelResourceIdentifier channel);
+
+    /**
+     *  <p>If not set, it defaults to the current date and time.</p>
      * @param syncedAt value to be set
      */
 
@@ -99,8 +99,8 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
      */
     public static OrderUpdateSyncInfoAction of(final OrderUpdateSyncInfoAction template) {
         OrderUpdateSyncInfoActionImpl instance = new OrderUpdateSyncInfoActionImpl();
-        instance.setChannel(template.getChannel());
         instance.setExternalId(template.getExternalId());
+        instance.setChannel(template.getChannel());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
     }
@@ -116,9 +116,9 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
             return null;
         }
         OrderUpdateSyncInfoActionImpl instance = new OrderUpdateSyncInfoActionImpl();
+        instance.setExternalId(template.getExternalId());
         instance.setChannel(
             com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
-        instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
     }

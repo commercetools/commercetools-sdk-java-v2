@@ -40,7 +40,7 @@ public interface AssetSource extends com.commercetools.api.models.WithKey {
     public String getUri();
 
     /**
-     *  <p>User-defined unique identifier of the AssetSource.</p>
+     *  <p>User-defined identifier of the AssetSource. Must be unique per Asset.</p>
      * @return key
      */
 
@@ -71,7 +71,7 @@ public interface AssetSource extends com.commercetools.api.models.WithKey {
     public void setUri(final String uri);
 
     /**
-     *  <p>User-defined unique identifier of the AssetSource.</p>
+     *  <p>User-defined identifier of the AssetSource. Must be unique per Asset.</p>
      * @param key value to be set
      */
 

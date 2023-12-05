@@ -66,7 +66,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     private com.commercetools.importapi.models.common.ProductPriceModeEnum priceMode;
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -648,7 +648,7 @@ public class ProductImportBuilder implements Builder<ProductImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @return key
      */
 

@@ -25,6 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
+    @Nullable
+    private String key;
+
     private Long quantity;
 
     @Nullable
@@ -42,7 +45,18 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     * set the value to the quantity
+     *  <p>User-defined unique identifier of the Return Item.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public ReturnItemDraftBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    /**
+     *  <p>Number of Line Items or Custom Line Items to return.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -53,7 +67,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to return.</p>
+     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -64,7 +79,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -75,7 +91,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * set the value to the comment
+     *  <p>User-defined description for the return.</p>
      * @param comment value to be set
      * @return Builder
      */
@@ -86,7 +102,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * set the value to the shipmentState
+     *  <p>Shipment status of the item to be returned. Can either be <code>Advised</code> or <code>Returned</code> only.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -98,7 +114,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields for the Return Item.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -110,7 +126,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields for the Return Item.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -122,7 +138,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields for the Return Item.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -133,7 +149,17 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * value of quantity}
+     *  <p>User-defined unique identifier of the Return Item.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
+     *  <p>Number of Line Items or Custom Line Items to return.</p>
      * @return quantity
      */
 
@@ -142,7 +168,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to return.</p>
+     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
      * @return lineItemId
      */
 
@@ -152,7 +179,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>id</code> of the CustomLineItem to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
      * @return customLineItemId
      */
 
@@ -162,7 +190,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * value of comment}
+     *  <p>User-defined description for the return.</p>
      * @return comment
      */
 
@@ -172,7 +200,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * value of shipmentState}
+     *  <p>Shipment status of the item to be returned. Can either be <code>Advised</code> or <code>Returned</code> only.</p>
      * @return shipmentState
      */
 
@@ -181,7 +209,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *  <p>Custom Fields of this return item.</p>
+     *  <p>Custom Fields for the Return Item.</p>
      * @return custom
      */
 
@@ -197,7 +225,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     public ReturnItemDraft build() {
         Objects.requireNonNull(quantity, ReturnItemDraft.class + ": quantity is missing");
         Objects.requireNonNull(shipmentState, ReturnItemDraft.class + ": shipmentState is missing");
-        return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState, custom);
+        return new ReturnItemDraftImpl(key, quantity, lineItemId, customLineItemId, comment, shipmentState, custom);
     }
 
     /**
@@ -205,7 +233,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
      * @return ReturnItemDraft
      */
     public ReturnItemDraft buildUnchecked() {
-        return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState, custom);
+        return new ReturnItemDraftImpl(key, quantity, lineItemId, customLineItemId, comment, shipmentState, custom);
     }
 
     /**
@@ -223,6 +251,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
      */
     public static ReturnItemDraftBuilder of(final ReturnItemDraft template) {
         ReturnItemDraftBuilder builder = new ReturnItemDraftBuilder();
+        builder.key = template.getKey();
         builder.quantity = template.getQuantity();
         builder.lineItemId = template.getLineItemId();
         builder.customLineItemId = template.getCustomLineItemId();

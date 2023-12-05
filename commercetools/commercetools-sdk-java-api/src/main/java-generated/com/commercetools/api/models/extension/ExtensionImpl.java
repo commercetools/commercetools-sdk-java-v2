@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Extension
@@ -215,6 +217,16 @@ public class ExtensionImpl implements Extension, ModelBase {
                 .append(destination, that.destination)
                 .append(triggers, that.triggers)
                 .append(timeoutInMs, that.timeoutInMs)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(destination, that.destination)
+                .append(triggers, that.triggers)
+                .append(timeoutInMs, that.timeoutInMs)
                 .isEquals();
     }
 
@@ -231,6 +243,21 @@ public class ExtensionImpl implements Extension, ModelBase {
                 .append(triggers)
                 .append(timeoutInMs)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("key", key)
+                .append("destination", destination)
+                .append("triggers", triggers)
+                .append("timeoutInMs", timeoutInMs)
+                .build();
     }
 
 }

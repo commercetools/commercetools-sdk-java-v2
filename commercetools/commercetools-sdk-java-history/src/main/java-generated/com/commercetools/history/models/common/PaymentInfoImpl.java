@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * PaymentInfo
@@ -63,12 +65,17 @@ public class PaymentInfoImpl implements PaymentInfo, ModelBase {
 
         PaymentInfoImpl that = (PaymentInfoImpl) o;
 
-        return new EqualsBuilder().append(payments, that.payments).isEquals();
+        return new EqualsBuilder().append(payments, that.payments).append(payments, that.payments).isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(payments).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("payments", payments).build();
     }
 
 }

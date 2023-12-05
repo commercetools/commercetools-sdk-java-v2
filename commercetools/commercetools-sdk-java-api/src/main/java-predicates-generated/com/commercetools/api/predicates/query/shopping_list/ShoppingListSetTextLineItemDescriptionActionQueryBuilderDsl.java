@@ -25,6 +25,12 @@ public class ShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<ShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl> textLineItemKey() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("textLineItemKey")),
+            p -> new CombinationQueryPredicate<>(p, ShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<ShoppingListSetTextLineItemDescriptionActionQueryBuilderDsl> description(
             Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

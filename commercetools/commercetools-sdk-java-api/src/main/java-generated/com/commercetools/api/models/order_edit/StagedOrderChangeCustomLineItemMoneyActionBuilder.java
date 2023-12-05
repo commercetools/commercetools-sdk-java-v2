@@ -4,6 +4,8 @@ package com.commercetools.api.models.order_edit;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderChangeCustomLineItemMoneyAction stagedOrderChangeCustomLineItemMoneyAction = StagedOrderChangeCustomLineItemMoneyAction.builder()
- *             .customLineItemId("{customLineItemId}")
  *             .money(moneyBuilder -> moneyBuilder)
  *             .build()
  * </code></pre>
@@ -24,23 +25,39 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderChangeCustomLineItemMoneyActionBuilder
         implements Builder<StagedOrderChangeCustomLineItemMoneyAction> {
 
+    @Nullable
     private String customLineItemId;
+
+    @Nullable
+    private String customLineItemKey;
 
     private com.commercetools.api.models.common.Money money;
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderChangeCustomLineItemMoneyActionBuilder customLineItemId(final String customLineItemId) {
+    public StagedOrderChangeCustomLineItemMoneyActionBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @param customLineItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderChangeCustomLineItemMoneyActionBuilder customLineItemKey(
+            @Nullable final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -52,7 +69,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -64,7 +81,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -76,16 +93,27 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      * @return customLineItemId
      */
 
+    @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     * @return customLineItemKey
+     */
+
+    @Nullable
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      * @return money
      */
 
@@ -98,10 +126,8 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
      * @return StagedOrderChangeCustomLineItemMoneyAction
      */
     public StagedOrderChangeCustomLineItemMoneyAction build() {
-        Objects.requireNonNull(customLineItemId,
-            StagedOrderChangeCustomLineItemMoneyAction.class + ": customLineItemId is missing");
         Objects.requireNonNull(money, StagedOrderChangeCustomLineItemMoneyAction.class + ": money is missing");
-        return new StagedOrderChangeCustomLineItemMoneyActionImpl(customLineItemId, money);
+        return new StagedOrderChangeCustomLineItemMoneyActionImpl(customLineItemId, customLineItemKey, money);
     }
 
     /**
@@ -109,7 +135,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
      * @return StagedOrderChangeCustomLineItemMoneyAction
      */
     public StagedOrderChangeCustomLineItemMoneyAction buildUnchecked() {
-        return new StagedOrderChangeCustomLineItemMoneyActionImpl(customLineItemId, money);
+        return new StagedOrderChangeCustomLineItemMoneyActionImpl(customLineItemId, customLineItemKey, money);
     }
 
     /**
@@ -129,6 +155,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
             final StagedOrderChangeCustomLineItemMoneyAction template) {
         StagedOrderChangeCustomLineItemMoneyActionBuilder builder = new StagedOrderChangeCustomLineItemMoneyActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
+        builder.customLineItemKey = template.getCustomLineItemKey();
         builder.money = template.getMoney();
         return builder;
     }

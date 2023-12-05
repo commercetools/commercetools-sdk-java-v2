@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * StagedOrderSetCustomLineItemShippingDetailsAction
@@ -25,6 +27,8 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionImpl
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     /**
@@ -33,8 +37,10 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionImpl
     @JsonCreator
     StagedOrderSetCustomLineItemShippingDetailsActionImpl(
             @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.shippingDetails = shippingDetails;
         this.action = SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS;
     }
@@ -55,7 +61,7 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionImpl
     }
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
      */
 
     public String getCustomLineItemId() {
@@ -63,7 +69,15 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionImpl
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p><code>key</code> of the CustomLineItem to update. Either <code>customLineItemId</code> or <code>customLineItemKey</code> is required.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
@@ -72,6 +86,10 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionImpl
 
     public void setCustomLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+    }
+
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
     }
 
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
@@ -90,13 +108,31 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(shippingDetails, that.shippingDetails)
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(shippingDetails, that.shippingDetails)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).append(shippingDetails).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(customLineItemId)
+                .append(customLineItemKey)
+                .append(shippingDetails)
+                .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .append("shippingDetails", shippingDetails)
+                .build();
     }
 
 }

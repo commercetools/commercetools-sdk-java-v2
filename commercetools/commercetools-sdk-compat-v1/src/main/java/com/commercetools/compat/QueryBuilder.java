@@ -5,7 +5,6 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 import com.commercetools.api.client.*;
-import com.commercetools.api.models.PagedQueryResourceRequest;
 
 import io.sphere.sdk.cartdiscounts.queries.CartDiscountQuery;
 import io.sphere.sdk.carts.queries.CartQuery;
@@ -50,9 +49,9 @@ public class QueryBuilder {
         return new QueryBuilder(apiRoot);
     }
 
-    public static <T extends PagedQueryResourceRequest<T, TResult>, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T query(
+    public static <T extends SimplePagedQueryResourceRequest<T, TResult, ?>, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T query(
             final T request, final TQuery queryDsl) {
-        PagedQueryResourceRequest<T, TResult> updatedRequest = queryDsl.limit() != null
+        SimplePagedQueryResourceRequest<T, TResult, ?> updatedRequest = queryDsl.limit() != null
                 ? request.withLimit(queryDsl.limit())
                 : request;
         updatedRequest = queryDsl.offset() != null ? updatedRequest.withOffset(queryDsl.offset()) : updatedRequest;
@@ -70,13 +69,13 @@ public class QueryBuilder {
         return updatedRequest.asPagedQueryResourceRequestToBaseType();
     }
 
-    public static <T extends PagedQueryResourceRequest<T, TResult>, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T query(
+    public static <T extends SimplePagedQueryResourceRequest<T, TResult, ?>, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T query(
             final T request, final Supplier<TQuery> createQueryDsl, final Function<TQuery, TQuery> queryDsl) {
         MetaModelQueryDsl<?, ?, ?, ?> query = queryDsl.apply(createQueryDsl.get());
         return query(request, query);
     }
 
-    public <T extends PagedQueryResourceRequest<T, TResult>, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T with(
+    public <T extends SimplePagedQueryResourceRequest<T, TResult, ?>, TResult, TQuery extends MetaModelQueryDsl<?, ?, ?, ?>> T with(
             final Function<ProjectApiRoot, T> request, final Supplier<TQuery> createQueryDsl,
             final Function<TQuery, TQuery> queryDsl) {
         MetaModelQueryDsl<?, ?, ?, ?> query = queryDsl.apply(createQueryDsl.get());

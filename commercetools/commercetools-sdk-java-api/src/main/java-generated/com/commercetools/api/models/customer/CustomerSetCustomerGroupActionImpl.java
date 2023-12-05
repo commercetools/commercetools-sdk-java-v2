@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Setting the Customer Group of the Customer produces the CustomerGroupSet Message.</p>
@@ -72,12 +74,23 @@ public class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGr
 
         CustomerSetCustomerGroupActionImpl that = (CustomerSetCustomerGroupActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customerGroup, that.customerGroup).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customerGroup, that.customerGroup)
+                .append(action, that.action)
+                .append(customerGroup, that.customerGroup)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(customerGroup).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("customerGroup", customerGroup)
+                .build();
     }
 
 }

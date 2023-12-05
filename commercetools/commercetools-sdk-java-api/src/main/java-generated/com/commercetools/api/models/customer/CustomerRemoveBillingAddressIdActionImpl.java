@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Removes a billing address from <code>billingAddressesIds</code>. If the billing address is the default billing address, the <code>defaultBillingAddressId</code> is unset. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
@@ -89,12 +91,23 @@ public class CustomerRemoveBillingAddressIdActionImpl implements CustomerRemoveB
         return new EqualsBuilder().append(action, that.action)
                 .append(addressId, that.addressId)
                 .append(addressKey, that.addressKey)
+                .append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(addressKey, that.addressKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(addressId).append(addressKey).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("addressId", addressId)
+                .append("addressKey", addressKey)
+                .build();
     }
 
 }

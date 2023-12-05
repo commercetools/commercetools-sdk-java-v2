@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderSearchStringValue
@@ -142,6 +144,12 @@ public class OrderSearchStringValueImpl implements OrderSearchStringValue, Model
                 .append(value, that.value)
                 .append(language, that.language)
                 .append(caseInsensitive, that.caseInsensitive)
+                .append(field, that.field)
+                .append(boost, that.boost)
+                .append(customType, that.customType)
+                .append(value, that.value)
+                .append(language, that.language)
+                .append(caseInsensitive, that.caseInsensitive)
                 .isEquals();
     }
 
@@ -154,6 +162,17 @@ public class OrderSearchStringValueImpl implements OrderSearchStringValue, Model
                 .append(language)
                 .append(caseInsensitive)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("field", field)
+                .append("boost", boost)
+                .append("customType", customType)
+                .append("value", value)
+                .append("language", language)
+                .append("caseInsensitive", caseInsensitive)
+                .build();
     }
 
 }

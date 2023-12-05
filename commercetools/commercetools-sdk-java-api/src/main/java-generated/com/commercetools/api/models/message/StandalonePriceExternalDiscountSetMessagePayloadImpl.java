@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Discounted Price update action.</p>
@@ -72,12 +74,23 @@ public class StandalonePriceExternalDiscountSetMessagePayloadImpl
 
         StandalonePriceExternalDiscountSetMessagePayloadImpl that = (StandalonePriceExternalDiscountSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(discounted, that.discounted).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(discounted, that.discounted)
+                .append(type, that.type)
+                .append(discounted, that.discounted)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(discounted).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("discounted", discounted)
+                .build();
     }
 
 }

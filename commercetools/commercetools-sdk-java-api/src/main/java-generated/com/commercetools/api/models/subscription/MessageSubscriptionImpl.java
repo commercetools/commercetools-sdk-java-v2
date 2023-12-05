@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>For supported resources and message types, see Message Types. Messages will be delivered even if the Messages Query HTTP API is not enabled.</p>
@@ -81,12 +83,23 @@ public class MessageSubscriptionImpl implements MessageSubscription, ModelBase {
 
         MessageSubscriptionImpl that = (MessageSubscriptionImpl) o;
 
-        return new EqualsBuilder().append(resourceTypeId, that.resourceTypeId).append(types, that.types).isEquals();
+        return new EqualsBuilder().append(resourceTypeId, that.resourceTypeId)
+                .append(types, that.types)
+                .append(resourceTypeId, that.resourceTypeId)
+                .append(types, that.types)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(resourceTypeId).append(types).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("resourceTypeId", resourceTypeId)
+                .append("types", types)
+                .build();
     }
 
 }

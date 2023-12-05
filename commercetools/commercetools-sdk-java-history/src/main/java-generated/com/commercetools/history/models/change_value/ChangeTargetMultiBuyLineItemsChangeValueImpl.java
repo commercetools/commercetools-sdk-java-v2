@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ChangeTargetMultiBuyLineItemsChangeValue
@@ -141,6 +143,12 @@ public class ChangeTargetMultiBuyLineItemsChangeValueImpl
                 .append(discountedQuantity, that.discountedQuantity)
                 .append(maxOccurrence, that.maxOccurrence)
                 .append(selectionMode, that.selectionMode)
+                .append(type, that.type)
+                .append(predicate, that.predicate)
+                .append(triggerQuantity, that.triggerQuantity)
+                .append(discountedQuantity, that.discountedQuantity)
+                .append(maxOccurrence, that.maxOccurrence)
+                .append(selectionMode, that.selectionMode)
                 .isEquals();
     }
 
@@ -153,6 +161,17 @@ public class ChangeTargetMultiBuyLineItemsChangeValueImpl
                 .append(maxOccurrence)
                 .append(selectionMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("predicate", predicate)
+                .append("triggerQuantity", triggerQuantity)
+                .append("discountedQuantity", discountedQuantity)
+                .append("maxOccurrence", maxOccurrence)
+                .append("selectionMode", selectionMode)
+                .build();
     }
 
 }

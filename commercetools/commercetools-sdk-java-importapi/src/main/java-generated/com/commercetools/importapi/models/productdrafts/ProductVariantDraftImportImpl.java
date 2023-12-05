@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The representation of a Product Variant Draft for the import purpose.</p>
@@ -161,6 +163,12 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
                 .append(attributes, that.attributes)
                 .append(images, that.images)
                 .append(assets, that.assets)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .append(images, that.images)
+                .append(assets, that.assets)
                 .isEquals();
     }
 
@@ -173,6 +181,17 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
                 .append(images)
                 .append(assets)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("sku", sku)
+                .append("key", key)
+                .append("prices", prices)
+                .append("attributes", attributes)
+                .append("images", images)
+                .append("assets", assets)
+                .build();
     }
 
 }

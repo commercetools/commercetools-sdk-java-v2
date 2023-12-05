@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Order fields that needs to be added or updated.</p>
@@ -214,6 +216,15 @@ public class OrderFieldImpl implements OrderField, ModelBase {
                 .append(setParcelMeasurements, that.setParcelMeasurements)
                 .append(setParcelTrackingData, that.setParcelTrackingData)
                 .append(setParcelItems, that.setParcelItems)
+                .append(addReturnInfo, that.addReturnInfo)
+                .append(addParcelToDelivery, that.addParcelToDelivery)
+                .append(addDeliveries, that.addDeliveries)
+                .append(removeDelivery, that.removeDelivery)
+                .append(removeParcelFromDelivery, that.removeParcelFromDelivery)
+                .append(setDeliveryAddress, that.setDeliveryAddress)
+                .append(setParcelMeasurements, that.setParcelMeasurements)
+                .append(setParcelTrackingData, that.setParcelTrackingData)
+                .append(setParcelItems, that.setParcelItems)
                 .isEquals();
     }
 
@@ -229,6 +240,20 @@ public class OrderFieldImpl implements OrderField, ModelBase {
                 .append(setParcelTrackingData)
                 .append(setParcelItems)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("addReturnInfo", addReturnInfo)
+                .append("addParcelToDelivery", addParcelToDelivery)
+                .append("addDeliveries", addDeliveries)
+                .append("removeDelivery", removeDelivery)
+                .append("removeParcelFromDelivery", removeParcelFromDelivery)
+                .append("setDeliveryAddress", setDeliveryAddress)
+                .append("setParcelMeasurements", setParcelMeasurements)
+                .append("setParcelTrackingData", setParcelTrackingData)
+                .append("setParcelItems", setParcelItems)
+                .build();
     }
 
 }

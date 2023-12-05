@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ClassificationShippingRateInput
@@ -86,12 +88,26 @@ public class ClassificationShippingRateInputImpl implements ClassificationShippi
 
         ClassificationShippingRateInputImpl that = (ClassificationShippingRateInputImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(key, that.key).append(label, that.label).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(key, that.key)
+                .append(label, that.label)
+                .append(type, that.type)
+                .append(key, that.key)
+                .append(label, that.label)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(key).append(label).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("key", key)
+                .append("label", label)
+                .build();
     }
 
 }

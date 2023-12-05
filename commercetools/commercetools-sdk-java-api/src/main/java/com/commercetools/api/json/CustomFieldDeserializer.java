@@ -23,18 +23,26 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
 
     private static Pattern p = Pattern.compile("^[0-9]");
     private static Pattern dateTime = Pattern
-            .compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
+            .compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,6})?(Z|[+-][0-9]{2}:[0-9]{2})");
     private static Pattern date = Pattern.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}");
-    private static Pattern time = Pattern.compile("^[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
+    private static Pattern time = Pattern.compile("^[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,6})?");
 
     private final boolean deserializeAsDate;
+    private final boolean deserializeNumberAsDouble;
 
     public CustomFieldDeserializer(boolean deserializeAsDateString) {
         this.deserializeAsDate = !deserializeAsDateString;
+        this.deserializeNumberAsDouble = false;
+    }
+
+    public CustomFieldDeserializer(boolean deserializeAsDateString, boolean deserializeNumberAsDouble) {
+        this.deserializeAsDate = !deserializeAsDateString;
+        this.deserializeNumberAsDouble = deserializeNumberAsDouble;
     }
 
     public CustomFieldDeserializer() {
         this.deserializeAsDate = true;
+        this.deserializeNumberAsDouble = false;
     }
 
     @Override
@@ -66,7 +74,7 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
                 return new TypeReference<Boolean>() {
                 };
             case NUMBER:
-                if (valueNode.isInt() || valueNode.isLong()) {
+                if (!deserializeNumberAsDouble && (valueNode.isInt() || valueNode.isLong())) {
                     return new TypeReference<Long>() {
                     };
                 }
@@ -183,7 +191,7 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
                 }
                 return ElemType.LOCALIZED_STRING;
             case NUMBER:
-                if (valueNode.isInt() || valueNode.isLong()) {
+                if (!deserializeNumberAsDouble && (valueNode.isInt() || valueNode.isLong())) {
                     return ElemType.LONG;
                 }
                 return ElemType.NUMBER;

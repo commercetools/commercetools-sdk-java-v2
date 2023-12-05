@@ -28,12 +28,6 @@ public class PaymentDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, PaymentDraftQueryBuilderDsl::of));
     }
 
-    public StringComparisonPredicateBuilder<PaymentDraftQueryBuilderDsl> externalId() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("externalId")),
-            p -> new CombinationQueryPredicate<>(p, PaymentDraftQueryBuilderDsl::of));
-    }
-
     public StringComparisonPredicateBuilder<PaymentDraftQueryBuilderDsl> interfaceId() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("interfaceId")),
@@ -45,39 +39,6 @@ public class PaymentDraftQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
                     .parent(ConstantQueryPredicate.of().constant("amountPlanned"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl.of())),
-            PaymentDraftQueryBuilderDsl::of);
-    }
-
-    public CombinationQueryPredicate<PaymentDraftQueryBuilderDsl> amountAuthorized(
-            Function<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("amountAuthorized"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl.of())),
-            PaymentDraftQueryBuilderDsl::of);
-    }
-
-    public StringComparisonPredicateBuilder<PaymentDraftQueryBuilderDsl> authorizedUntil() {
-        return new StringComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("authorizedUntil")),
-            p -> new CombinationQueryPredicate<>(p, PaymentDraftQueryBuilderDsl::of));
-    }
-
-    public CombinationQueryPredicate<PaymentDraftQueryBuilderDsl> amountPaid(
-            Function<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("amountPaid"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl.of())),
-            PaymentDraftQueryBuilderDsl::of);
-    }
-
-    public CombinationQueryPredicate<PaymentDraftQueryBuilderDsl> amountRefunded(
-            Function<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("amountRefunded"))
                     .inner(fn.apply(com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl.of())),
             PaymentDraftQueryBuilderDsl::of);
     }

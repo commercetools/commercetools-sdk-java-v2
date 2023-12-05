@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProjectCategoryRecommendation
@@ -93,12 +95,23 @@ public class ProjectCategoryRecommendationImpl implements ProjectCategoryRecomme
         return new EqualsBuilder().append(category, that.category)
                 .append(confidence, that.confidence)
                 .append(path, that.path)
+                .append(category, that.category)
+                .append(confidence, that.confidence)
+                .append(path, that.path)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(category).append(confidence).append(path).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("category", category)
+                .append("confidence", confidence)
+                .append("path", path)
+                .build();
     }
 
 }

@@ -30,7 +30,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     CustomerImport customerImport = CustomerImport.builder()
  *             .key("{key}")
  *             .email("{email}")
- *             .plusAddresses(addressesBuilder -> addressesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -38,6 +37,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerImportImpl.class)
 public interface CustomerImport extends ImportResource {
+
+    /**
+     *  <p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
 
     /**
      *  <p>Maps to <code>Customer.customerNumber</code>.</p>
@@ -163,7 +170,6 @@ public interface CustomerImport extends ImportResource {
      *  <p>Maps to <code>Customer.addresses</code>.</p>
      * @return addresses
      */
-    @NotNull
     @Valid
     @JsonProperty("addresses")
     public List<CustomerAddress> getAddresses();
@@ -226,6 +232,13 @@ public interface CustomerImport extends ImportResource {
 
     @JsonProperty("authenticationMode")
     public AuthenticationMode getAuthenticationMode();
+
+    /**
+     *  <p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Maps to <code>Customer.customerNumber</code>.</p>

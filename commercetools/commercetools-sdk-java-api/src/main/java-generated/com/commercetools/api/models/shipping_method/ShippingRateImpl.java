@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ShippingRate
@@ -115,6 +117,10 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
                 .append(freeAbove, that.freeAbove)
                 .append(isMatching, that.isMatching)
                 .append(tiers, that.tiers)
+                .append(price, that.price)
+                .append(freeAbove, that.freeAbove)
+                .append(isMatching, that.isMatching)
+                .append(tiers, that.tiers)
                 .isEquals();
     }
 
@@ -125,6 +131,15 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
                 .append(isMatching)
                 .append(tiers)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("price", price)
+                .append("freeAbove", freeAbove)
+                .append("isMatching", isMatching)
+                .append("tiers", tiers)
+                .build();
     }
 
 }

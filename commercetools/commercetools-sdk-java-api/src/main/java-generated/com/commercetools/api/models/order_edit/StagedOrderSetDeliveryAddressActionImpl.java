@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderSetDeliveryAddressAction
+ *  <p>Produces the DeliveryAddressSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDeliveryAddressAction, ModelBase {
@@ -57,7 +59,8 @@ public class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDe
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>id</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryId() {
@@ -65,7 +68,8 @@ public class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDe
     }
 
     /**
-     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> is required for this update action.</p>
+     *  <p><code>key</code> of an existing Delivery.</p>
+     *  <p>Either <code>deliveryId</code> or <code>deliveryKey</code> must be provided.</p>
      */
 
     public String getDeliveryKey() {
@@ -73,7 +77,7 @@ public class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDe
     }
 
     /**
-     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -106,6 +110,10 @@ public class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDe
                 .append(deliveryId, that.deliveryId)
                 .append(deliveryKey, that.deliveryKey)
                 .append(address, that.address)
+                .append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(deliveryKey, that.deliveryKey)
+                .append(address, that.address)
                 .isEquals();
     }
 
@@ -116,6 +124,15 @@ public class StagedOrderSetDeliveryAddressActionImpl implements StagedOrderSetDe
                 .append(deliveryKey)
                 .append(address)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("deliveryId", deliveryId)
+                .append("deliveryKey", deliveryKey)
+                .append("address", address)
+                .build();
     }
 
 }

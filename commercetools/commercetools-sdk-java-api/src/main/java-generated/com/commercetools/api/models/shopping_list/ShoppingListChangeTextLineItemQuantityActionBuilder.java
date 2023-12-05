@@ -3,6 +3,8 @@ package com.commercetools.api.models.shopping_list;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ShoppingListChangeTextLineItemQuantityAction shoppingListChangeTextLineItemQuantityAction = ShoppingListChangeTextLineItemQuantityAction.builder()
- *             .textLineItemId("{textLineItemId}")
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -23,18 +24,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ShoppingListChangeTextLineItemQuantityActionBuilder
         implements Builder<ShoppingListChangeTextLineItemQuantityAction> {
 
+    @Nullable
     private String textLineItemId;
+
+    @Nullable
+    private String textLineItemKey;
 
     private Long quantity;
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @param textLineItemId value to be set
      * @return Builder
      */
 
-    public ShoppingListChangeTextLineItemQuantityActionBuilder textLineItemId(final String textLineItemId) {
+    public ShoppingListChangeTextLineItemQuantityActionBuilder textLineItemId(@Nullable final String textLineItemId) {
         this.textLineItemId = textLineItemId;
+        return this;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @param textLineItemKey value to be set
+     * @return Builder
+     */
+
+    public ShoppingListChangeTextLineItemQuantityActionBuilder textLineItemKey(@Nullable final String textLineItemKey) {
+        this.textLineItemKey = textLineItemKey;
         return this;
     }
 
@@ -50,12 +66,23 @@ public class ShoppingListChangeTextLineItemQuantityActionBuilder
     }
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      * @return textLineItemId
      */
 
+    @Nullable
     public String getTextLineItemId() {
         return this.textLineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     * @return textLineItemKey
+     */
+
+    @Nullable
+    public String getTextLineItemKey() {
+        return this.textLineItemKey;
     }
 
     /**
@@ -72,10 +99,8 @@ public class ShoppingListChangeTextLineItemQuantityActionBuilder
      * @return ShoppingListChangeTextLineItemQuantityAction
      */
     public ShoppingListChangeTextLineItemQuantityAction build() {
-        Objects.requireNonNull(textLineItemId,
-            ShoppingListChangeTextLineItemQuantityAction.class + ": textLineItemId is missing");
         Objects.requireNonNull(quantity, ShoppingListChangeTextLineItemQuantityAction.class + ": quantity is missing");
-        return new ShoppingListChangeTextLineItemQuantityActionImpl(textLineItemId, quantity);
+        return new ShoppingListChangeTextLineItemQuantityActionImpl(textLineItemId, textLineItemKey, quantity);
     }
 
     /**
@@ -83,7 +108,7 @@ public class ShoppingListChangeTextLineItemQuantityActionBuilder
      * @return ShoppingListChangeTextLineItemQuantityAction
      */
     public ShoppingListChangeTextLineItemQuantityAction buildUnchecked() {
-        return new ShoppingListChangeTextLineItemQuantityActionImpl(textLineItemId, quantity);
+        return new ShoppingListChangeTextLineItemQuantityActionImpl(textLineItemId, textLineItemKey, quantity);
     }
 
     /**
@@ -103,6 +128,7 @@ public class ShoppingListChangeTextLineItemQuantityActionBuilder
             final ShoppingListChangeTextLineItemQuantityAction template) {
         ShoppingListChangeTextLineItemQuantityActionBuilder builder = new ShoppingListChangeTextLineItemQuantityActionBuilder();
         builder.textLineItemId = template.getTextLineItemId();
+        builder.textLineItemKey = template.getTextLineItemKey();
         builder.quantity = template.getQuantity();
         return builder;
     }

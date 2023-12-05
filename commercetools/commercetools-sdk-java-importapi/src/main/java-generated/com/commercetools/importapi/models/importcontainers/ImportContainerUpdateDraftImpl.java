@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The representation sent to the server when updating an import container.</p>
@@ -74,12 +76,23 @@ public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraf
 
         ImportContainerUpdateDraftImpl that = (ImportContainerUpdateDraftImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(resourceType, that.resourceType).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(resourceType, that.resourceType)
+                .append(version, that.version)
+                .append(resourceType, that.resourceType)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(version).append(resourceType).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("version", version)
+                .append("resourceType", resourceType)
+                .build();
     }
 
 }

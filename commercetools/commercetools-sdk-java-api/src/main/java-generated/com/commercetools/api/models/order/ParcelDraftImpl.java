@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ParcelDraft
@@ -61,7 +63,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information about the dimensions for the Parcel.</p>
      */
 
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
@@ -69,7 +71,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Shipment tracking information for the Parcel.</p>
      */
 
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
@@ -77,7 +79,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     *  <p>The delivery items contained in this parcel.</p>
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
@@ -85,7 +87,7 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of this parcel.</p>
+     *  <p>Custom Fields for the Parcel.</p>
      */
 
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -131,6 +133,11 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -142,6 +149,16 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
                 .append(items)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("measurements", measurements)
+                .append("trackingData", trackingData)
+                .append("items", items)
+                .append("custom", custom)
+                .build();
     }
 
 }

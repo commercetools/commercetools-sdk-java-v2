@@ -16,7 +16,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OrderTransitionStateAction
+ *  <p>If the existing State has set <code>transitions</code>, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed.</p>
+ *  <p>This update action produces the Order State Transition Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +39,7 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
     String TRANSITION_STATE = "transitionState";
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
      * @return state
      */
     @NotNull
@@ -47,7 +48,7 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
     public StateResourceIdentifier getState();
 
     /**
-     *
+     *  <p>Set to <code>true</code> to turn off validation.</p>
      * @return force
      */
 
@@ -55,14 +56,14 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
     public Boolean getForce();
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
      * @param state value to be set
      */
 
     public void setState(final StateResourceIdentifier state);
 
     /**
-     * set force
+     *  <p>Set to <code>true</code> to turn off validation.</p>
      * @param force value to be set
      */
 

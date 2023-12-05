@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderSetLineItemShippingDetailsAction
@@ -73,7 +75,7 @@ public class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineIt
     }
 
     /**
-     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     *  <p>Value to set. If empty, the existing value is removed.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
@@ -106,6 +108,10 @@ public class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineIt
                 .append(lineItemId, that.lineItemId)
                 .append(lineItemKey, that.lineItemKey)
                 .append(shippingDetails, that.shippingDetails)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(shippingDetails, that.shippingDetails)
                 .isEquals();
     }
 
@@ -116,6 +122,15 @@ public class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineIt
                 .append(lineItemKey)
                 .append(shippingDetails)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("shippingDetails", shippingDetails)
+                .build();
     }
 
 }

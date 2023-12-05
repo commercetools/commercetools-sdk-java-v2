@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>For GoogleCloudFunction destinations, you need to grant permissions to the <code>extensions@commercetools-platform.iam.gserviceaccount.com</code> service account to invoke your function. If your function's version is 1st gen, grant the service account the IAM role <code>Cloud Functions Invoker</code>. For version 2nd gen, assign the IAM role <code>Cloud Run Invoker</code> using the Cloud Run console.</p>
@@ -70,12 +72,23 @@ public class GoogleCloudFunctionDestinationImpl implements GoogleCloudFunctionDe
 
         GoogleCloudFunctionDestinationImpl that = (GoogleCloudFunctionDestinationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(url, that.url).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(url, that.url)
+                .append(type, that.type)
+                .append(url, that.url)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(url).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("url", url)
+                .build();
     }
 
 }

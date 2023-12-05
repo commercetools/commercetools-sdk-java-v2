@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Import Operation describes the import status of a specific resource.</p>
@@ -238,6 +240,17 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(expiresAt, that.expiresAt)
+                .append(version, that.version)
+                .append(importContainerKey, that.importContainerKey)
+                .append(resourceKey, that.resourceKey)
+                .append(id, that.id)
+                .append(state, that.state)
+                .append(resourceVersion, that.resourceVersion)
+                .append(errors, that.errors)
+                .append(unresolvedReferences, that.unresolvedReferences)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(expiresAt, that.expiresAt)
                 .isEquals();
     }
 
@@ -255,6 +268,22 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
                 .append(lastModifiedAt)
                 .append(expiresAt)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("version", version)
+                .append("importContainerKey", importContainerKey)
+                .append("resourceKey", resourceKey)
+                .append("id", id)
+                .append("state", state)
+                .append("resourceVersion", resourceVersion)
+                .append("errors", errors)
+                .append("unresolvedReferences", unresolvedReferences)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("expiresAt", expiresAt)
+                .build();
     }
 
 }

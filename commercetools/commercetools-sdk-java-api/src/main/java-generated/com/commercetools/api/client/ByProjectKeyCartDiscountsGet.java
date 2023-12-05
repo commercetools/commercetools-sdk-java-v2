@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,7 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCartDiscountsGet extends
-        ApiMethod<ByProjectKeyCartDiscountsGet, com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyCartDiscountsGet, com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse>
         implements ByProjectKeyCartDiscountsGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartDiscountsGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyCartDiscountsGet>,
@@ -41,6 +43,12 @@ public class ByProjectKeyCartDiscountsGet extends
         com.commercetools.api.client.QueryTrait<ByProjectKeyCartDiscountsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCartDiscountsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCartDiscountsGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

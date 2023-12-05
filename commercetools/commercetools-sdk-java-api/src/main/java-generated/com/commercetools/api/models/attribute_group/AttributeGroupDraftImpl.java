@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * AttributeGroupDraft
@@ -115,12 +117,25 @@ public class AttributeGroupDraftImpl implements AttributeGroupDraft, ModelBase {
                 .append(description, that.description)
                 .append(attributes, that.attributes)
                 .append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(attributes, that.attributes)
+                .append(key, that.key)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(name).append(description).append(attributes).append(key).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("description", description)
+                .append("attributes", attributes)
+                .append("key", key)
+                .build();
     }
 
 }

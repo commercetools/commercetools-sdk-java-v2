@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ExtensionDraft
@@ -115,6 +117,10 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
                 .append(destination, that.destination)
                 .append(triggers, that.triggers)
                 .append(timeoutInMs, that.timeoutInMs)
+                .append(key, that.key)
+                .append(destination, that.destination)
+                .append(triggers, that.triggers)
+                .append(timeoutInMs, that.timeoutInMs)
                 .isEquals();
     }
 
@@ -125,6 +131,15 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
                 .append(triggers)
                 .append(timeoutInMs)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("destination", destination)
+                .append("triggers", triggers)
+                .append("timeoutInMs", timeoutInMs)
+                .build();
     }
 
 }

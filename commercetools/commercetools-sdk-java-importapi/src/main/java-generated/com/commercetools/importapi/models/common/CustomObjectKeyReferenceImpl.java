@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>References a key value document by key.</p>
@@ -89,12 +91,23 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
         return new EqualsBuilder().append(key, that.key)
                 .append(typeId, that.typeId)
                 .append(container, that.container)
+                .append(key, that.key)
+                .append(typeId, that.typeId)
+                .append(container, that.container)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(key).append(typeId).append(container).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("typeId", typeId)
+                .append("container", container)
+                .build();
     }
 
 }

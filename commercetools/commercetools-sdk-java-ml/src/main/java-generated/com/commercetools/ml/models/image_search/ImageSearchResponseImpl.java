@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Response format from image search endpoint.</p>
@@ -113,12 +115,25 @@ public class ImageSearchResponseImpl implements ImageSearchResponse, ModelBase {
                 .append(offset, that.offset)
                 .append(total, that.total)
                 .append(results, that.results)
+                .append(count, that.count)
+                .append(offset, that.offset)
+                .append(total, that.total)
+                .append(results, that.results)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(count).append(offset).append(total).append(results).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("count", count)
+                .append("offset", offset)
+                .append("total", total)
+                .append("results", results)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * FacetRange
@@ -207,6 +209,16 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
                 .append(min, that.min)
                 .append(max, that.max)
                 .append(mean, that.mean)
+                .append(from, that.from)
+                .append(fromStr, that.fromStr)
+                .append(to, that.to)
+                .append(toStr, that.toStr)
+                .append(count, that.count)
+                .append(productCount, that.productCount)
+                .append(total, that.total)
+                .append(min, that.min)
+                .append(max, that.max)
+                .append(mean, that.mean)
                 .isEquals();
     }
 
@@ -223,6 +235,21 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
                 .append(max)
                 .append(mean)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("from", from)
+                .append("fromStr", fromStr)
+                .append("to", to)
+                .append("toStr", toStr)
+                .append("count", count)
+                .append("productCount", productCount)
+                .append("total", total)
+                .append("min", min)
+                .append("max", max)
+                .append("mean", mean)
+                .build();
     }
 
 }

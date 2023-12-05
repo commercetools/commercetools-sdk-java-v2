@@ -4,10 +4,10 @@ package com.commercetools.api.models.cart_discount;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.common.TypedMoney;
 
 public interface CartDiscountValueFixedMixin extends GenericCartDiscountValueMixin<CartDiscountValueFixedDraft> {
-    public List<CentPrecisionMoney> getMoney();
+    public List<TypedMoney> getMoney();
 
     @Override
     default CartDiscountValueFixedDraft toDraft() {
@@ -17,6 +17,6 @@ public interface CartDiscountValueFixedMixin extends GenericCartDiscountValueMix
     @Override
     default CartDiscountValueFixedDraftBuilder toDraftBuilder() {
         return CartDiscountValueFixedDraft.builder()
-                .money(this.getMoney().stream().map(CentPrecisionMoney::toDraft).collect(Collectors.toList()));
+                .money(this.getMoney().stream().map(TypedMoney::toDraft).collect(Collectors.toList()));
     }
 }

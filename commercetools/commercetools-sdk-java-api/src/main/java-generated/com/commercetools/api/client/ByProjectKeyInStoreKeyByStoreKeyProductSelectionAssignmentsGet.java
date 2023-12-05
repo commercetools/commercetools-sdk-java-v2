@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -35,11 +37,18 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet, com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse>
+        TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet, com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse>
         implements
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>,
+        com.commercetools.api.client.QueryTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.product_selection.ProductsInStorePagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
     private String storeKey;
@@ -104,6 +113,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
+    }
+
+    public List<String> getWhere() {
+        return this.getQueryParam("where");
     }
 
     public void setProjectKey(final String projectKey) {
@@ -449,6 +462,144 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet exte
             final Collection<TValue> expand) {
         return copy().addQueryParams(
             expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set where with the specified value
+     * @param where value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWhere(final TValue where) {
+        return copy().withQueryParam("where", where);
+    }
+
+    /**
+     * add additional where query parameter
+     * @param where value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWhere(final TValue where) {
+        return copy().addQueryParam("where", where);
+    }
+
+    /**
+     * set where with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWhere(final Supplier<String> supplier) {
+        return copy().withQueryParam("where", supplier.get());
+    }
+
+    /**
+     * add additional where query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWhere(final Supplier<String> supplier) {
+        return copy().addQueryParam("where", supplier.get());
+    }
+
+    /**
+     * set where with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWhere(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional where query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWhere(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set where with the specified values
+     * @param where values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withWhere(
+            final Collection<TValue> where) {
+        return copy().withoutQueryParam("where")
+                .addQueryParams(
+                    where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional where query parameters
+     * @param where values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addWhere(
+            final Collection<TValue> where) {
+        return copy().addQueryParams(
+            where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set predicateVar with the specificied value
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter value
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withPredicateVar(
+            final String varName, final TValue predicateVar) {
+        return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+
+    /**
+     * add additional predicateVar query parameter
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter value
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addPredicateVar(final String varName,
+            final TValue predicateVar) {
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+
+    /**
+     * set predicateVar with the specificied values
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter values
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet withPredicateVar(
+            final String varName, final Collection<TValue> predicateVar) {
+        final String placeholderName = String.format("var.%s", varName);
+        return copy().withoutQueryParam(placeholderName)
+                .addQueryParams(predicateVar.stream()
+                        .map(s -> new ParamEntry<>(placeholderName, s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional predicateVar query parameters
+     * @param <TValue> value type
+     * @param varName parameter name
+     * @param predicateVar parameter values
+     * @return ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet
+     */
+    public <TValue> ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsGet addPredicateVar(final String varName,
+            final Collection<TValue> predicateVar) {
+        final String placeholderName = String.format("var.%s", varName);
+        return copy().addQueryParams(predicateVar.stream()
+                .map(s -> new ParamEntry<>(placeholderName, s.toString()))
+                .collect(Collectors.toList()));
     }
 
     @Override

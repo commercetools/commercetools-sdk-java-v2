@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ShoppingListSetTextLineItemCustomFieldAction
@@ -25,6 +27,8 @@ public class ShoppingListSetTextLineItemCustomFieldActionImpl
 
     private String textLineItemId;
 
+    private String textLineItemKey;
+
     private String name;
 
     private java.lang.Object value;
@@ -34,8 +38,10 @@ public class ShoppingListSetTextLineItemCustomFieldActionImpl
      */
     @JsonCreator
     ShoppingListSetTextLineItemCustomFieldActionImpl(@JsonProperty("textLineItemId") final String textLineItemId,
-            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+            @JsonProperty("textLineItemKey") final String textLineItemKey, @JsonProperty("name") final String name,
+            @JsonProperty("value") final java.lang.Object value) {
         this.textLineItemId = textLineItemId;
+        this.textLineItemKey = textLineItemKey;
         this.name = name;
         this.value = value;
         this.action = SET_TEXT_LINE_ITEM_CUSTOM_FIELD;
@@ -57,11 +63,19 @@ public class ShoppingListSetTextLineItemCustomFieldActionImpl
     }
 
     /**
-     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     *  <p>The <code>id</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getTextLineItemId() {
         return this.textLineItemId;
+    }
+
+    /**
+     *  <p>The <code>key</code> of the TextLineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getTextLineItemKey() {
+        return this.textLineItemKey;
     }
 
     /**
@@ -84,6 +98,10 @@ public class ShoppingListSetTextLineItemCustomFieldActionImpl
         this.textLineItemId = textLineItemId;
     }
 
+    public void setTextLineItemKey(final String textLineItemKey) {
+        this.textLineItemKey = textLineItemKey;
+    }
+
     public void setName(final String name) {
         this.name = name;
     }
@@ -104,6 +122,12 @@ public class ShoppingListSetTextLineItemCustomFieldActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(textLineItemId, that.textLineItemId)
+                .append(textLineItemKey, that.textLineItemKey)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(action, that.action)
+                .append(textLineItemId, that.textLineItemId)
+                .append(textLineItemKey, that.textLineItemKey)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
@@ -113,9 +137,20 @@ public class ShoppingListSetTextLineItemCustomFieldActionImpl
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(textLineItemId)
+                .append(textLineItemKey)
                 .append(name)
                 .append(value)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("textLineItemId", textLineItemId)
+                .append("textLineItemKey", textLineItemKey)
+                .append("name", name)
+                .append("value", value)
+                .build();
     }
 
 }

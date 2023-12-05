@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Variant
@@ -89,12 +91,26 @@ public class VariantImpl implements Variant, ModelBase {
 
         VariantImpl that = (VariantImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(sku, that.sku).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(id, that.id)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id).append(sku).append(key).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("sku", sku)
+                .append("key", key)
+                .build();
     }
 
 }

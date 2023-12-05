@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,7 +21,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Retrieves the Customer's most recently modified active Cart. Carts with <code>Merchant</code> or <code>Quote</code> CartOrigin are ignored.</p>
- *  <p>If no active Cart exists, a ResourceNotFound error is returned.</p>
+ *  <p>If no active Cart exists, this method returns a ResourceNotFound error.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -35,10 +37,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyMeActiveCartGet
-        extends ApiMethod<ByProjectKeyMeActiveCartGet, com.commercetools.api.models.cart.Cart>
+        extends TypeApiMethod<ByProjectKeyMeActiveCartGet, com.commercetools.api.models.cart.Cart>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeActiveCartGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeActiveCartGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyMeActiveCartGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.cart.Cart> resultType() {
+        return new TypeReference<com.commercetools.api.models.cart.Cart>() {
+        };
+    }
 
     private String projectKey;
 

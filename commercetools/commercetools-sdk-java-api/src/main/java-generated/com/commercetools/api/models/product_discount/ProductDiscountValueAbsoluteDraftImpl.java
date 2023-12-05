@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Discounts the Product Price by a fixed amount, defined by the <code>money</code> field.</p>
@@ -50,7 +52,8 @@ public class ProductDiscountValueAbsoluteDraftImpl implements ProductDiscountVal
     }
 
     /**
-     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
+     *  <p>If the array is empty, the discount does not apply.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
@@ -75,12 +78,23 @@ public class ProductDiscountValueAbsoluteDraftImpl implements ProductDiscountVal
 
         ProductDiscountValueAbsoluteDraftImpl that = (ProductDiscountValueAbsoluteDraftImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(money, that.money).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(money, that.money)
+                .append(type, that.type)
+                .append(money, that.money)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(money).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("money", money)
+                .build();
     }
 
 }

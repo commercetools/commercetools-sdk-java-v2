@@ -30,7 +30,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     *  <p>Defines the Type that extends the Order Edit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order Edit.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     *  <p>Defines the Type that extends the Order Edit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order Edit.</p>
      * @param builder function to build the type value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     *  <p>Defines the Type that extends the Order Edit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order Edit.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     *  <p>Sets the Custom Fields fields for the Order Edit.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     *  <p>Sets the Custom Fields fields for the Order Edit.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     *  <p>Sets the Custom Fields fields for the Order Edit.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     *  <p>Defines the Type that extends the Order Edit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Order Edit.</p>
      * @return type
      */
 
@@ -112,7 +112,7 @@ public class StagedOrderSetCustomTypeActionBuilder implements Builder<StagedOrde
     }
 
     /**
-     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     *  <p>Sets the Custom Fields fields for the Order Edit.</p>
      * @return fields
      */
 

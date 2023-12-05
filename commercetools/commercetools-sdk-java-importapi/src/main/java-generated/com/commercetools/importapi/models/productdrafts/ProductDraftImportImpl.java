@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The representation of a Product Draft for the import purpose.</p>
@@ -97,7 +99,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -357,6 +359,22 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
                 .append(state, that.state)
                 .append(publish, that.publish)
                 .append(priceMode, that.priceMode)
+                .append(key, that.key)
+                .append(productType, that.productType)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(categories, that.categories)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(taxCategory, that.taxCategory)
+                .append(searchKeywords, that.searchKeywords)
+                .append(state, that.state)
+                .append(publish, that.publish)
+                .append(priceMode, that.priceMode)
                 .isEquals();
     }
 
@@ -379,6 +397,27 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
                 .append(publish)
                 .append(priceMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("productType", productType)
+                .append("name", name)
+                .append("slug", slug)
+                .append("description", description)
+                .append("categories", categories)
+                .append("metaTitle", metaTitle)
+                .append("metaDescription", metaDescription)
+                .append("metaKeywords", metaKeywords)
+                .append("masterVariant", masterVariant)
+                .append("variants", variants)
+                .append("taxCategory", taxCategory)
+                .append("searchKeywords", searchKeywords)
+                .append("state", state)
+                .append("publish", publish)
+                .append("priceMode", priceMode)
+                .build();
     }
 
 }

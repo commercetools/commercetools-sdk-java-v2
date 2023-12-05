@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set PurchaseOrderNumber update action.</p>
+ *  <p>Generated after a successful Set Purchase Order Number update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPurchaseOrderNumberSetMessagePayloadImpl
@@ -54,7 +56,7 @@ public class OrderPurchaseOrderNumberSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Purchase order number on the Order after the Set PurchaseOrderNumber update action.</p>
+     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -62,7 +64,7 @@ public class OrderPurchaseOrderNumberSetMessagePayloadImpl
     }
 
     /**
-     *  <p>Purchase order number on the Order before the Set PurchaseOrderNumber update action.</p>
+     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
      */
 
     public String getOldPurchaseOrderNumber() {
@@ -90,6 +92,9 @@ public class OrderPurchaseOrderNumberSetMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(oldPurchaseOrderNumber, that.oldPurchaseOrderNumber)
+                .append(type, that.type)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(oldPurchaseOrderNumber, that.oldPurchaseOrderNumber)
                 .isEquals();
     }
 
@@ -99,6 +104,14 @@ public class OrderPurchaseOrderNumberSetMessagePayloadImpl
                 .append(purchaseOrderNumber)
                 .append(oldPurchaseOrderNumber)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
+                .append("oldPurchaseOrderNumber", oldPurchaseOrderNumber)
+                .build();
     }
 
 }

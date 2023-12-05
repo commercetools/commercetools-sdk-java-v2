@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomerToken
@@ -22,32 +24,31 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
 
     private String id;
 
-    private java.time.ZonedDateTime createdAt;
-
-    private java.time.ZonedDateTime lastModifiedAt;
-
     private String customerId;
+
+    private String value;
 
     private java.time.ZonedDateTime expiresAt;
 
-    private String value;
+    private java.time.ZonedDateTime createdAt;
+
+    private java.time.ZonedDateTime lastModifiedAt;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CustomerTokenImpl(@JsonProperty("id") final String id,
-            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
-            @JsonProperty("customerId") final String customerId,
+    CustomerTokenImpl(@JsonProperty("id") final String id, @JsonProperty("customerId") final String customerId,
+            @JsonProperty("value") final String value,
             @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt,
-            @JsonProperty("value") final String value) {
+            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
+            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
         this.id = id;
+        this.customerId = customerId;
+        this.value = value;
+        this.expiresAt = expiresAt;
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
-        this.customerId = customerId;
-        this.expiresAt = expiresAt;
-        this.value = value;
     }
 
     /**
@@ -62,6 +63,30 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>The <code>id</code> of the Customer.</p>
+     */
+
+    public String getCustomerId() {
+        return this.customerId;
+    }
+
+    /**
+     *  <p>Value of the token.</p>
+     */
+
+    public String getValue() {
+        return this.value;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the token expires.</p>
+     */
+
+    public java.time.ZonedDateTime getExpiresAt() {
+        return this.expiresAt;
     }
 
     /**
@@ -80,32 +105,20 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
         return this.lastModifiedAt;
     }
 
-    /**
-     *  <p>The <code>id</code> of the Customer.</p>
-     */
-
-    public String getCustomerId() {
-        return this.customerId;
-    }
-
-    /**
-     *  <p>Date and time (UTC) the token expires.</p>
-     */
-
-    public java.time.ZonedDateTime getExpiresAt() {
-        return this.expiresAt;
-    }
-
-    /**
-     *  <p>Value of the token.</p>
-     */
-
-    public String getValue() {
-        return this.value;
-    }
-
     public void setId(final String id) {
         this.id = id;
+    }
+
+    public void setCustomerId(final String customerId) {
+        this.customerId = customerId;
+    }
+
+    public void setValue(final String value) {
+        this.value = value;
+    }
+
+    public void setExpiresAt(final java.time.ZonedDateTime expiresAt) {
+        this.expiresAt = expiresAt;
     }
 
     public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
@@ -114,18 +127,6 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
 
     public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
-    }
-
-    public void setCustomerId(final String customerId) {
-        this.customerId = customerId;
-    }
-
-    public void setExpiresAt(final java.time.ZonedDateTime expiresAt) {
-        this.expiresAt = expiresAt;
-    }
-
-    public void setValue(final String value) {
-        this.value = value;
     }
 
     @Override
@@ -139,23 +140,40 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
         CustomerTokenImpl that = (CustomerTokenImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(customerId, that.customerId)
+                .append(value, that.value)
+                .append(expiresAt, that.expiresAt)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(id, that.id)
                 .append(customerId, that.customerId)
-                .append(expiresAt, that.expiresAt)
                 .append(value, that.value)
+                .append(expiresAt, that.expiresAt)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(customerId)
+                .append(value)
+                .append(expiresAt)
                 .append(createdAt)
                 .append(lastModifiedAt)
-                .append(customerId)
-                .append(expiresAt)
-                .append(value)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("customerId", customerId)
+                .append("value", value)
+                .append("expiresAt", expiresAt)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .build();
     }
 
 }

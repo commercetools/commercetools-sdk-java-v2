@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomLineItem
@@ -160,6 +162,13 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(totalPrice, that.totalPrice)
                 .append(slug, that.slug)
                 .append(quantity, that.quantity)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(money, that.money)
+                .append(taxedPrice, that.taxedPrice)
+                .append(totalPrice, that.totalPrice)
+                .append(slug, that.slug)
+                .append(quantity, that.quantity)
                 .isEquals();
     }
 
@@ -173,6 +182,18 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(slug)
                 .append(quantity)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("name", name)
+                .append("money", money)
+                .append("taxedPrice", taxedPrice)
+                .append("totalPrice", totalPrice)
+                .append("slug", slug)
+                .append("quantity", quantity)
+                .build();
     }
 
 }

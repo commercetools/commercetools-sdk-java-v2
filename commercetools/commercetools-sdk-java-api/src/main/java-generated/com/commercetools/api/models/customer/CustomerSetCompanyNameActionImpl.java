@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Setting a company name produces the CustomerCompanyNameSet Message.</p>
@@ -70,12 +72,23 @@ public class CustomerSetCompanyNameActionImpl implements CustomerSetCompanyNameA
 
         CustomerSetCompanyNameActionImpl that = (CustomerSetCompanyNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(companyName, that.companyName).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(companyName, that.companyName)
+                .append(action, that.action)
+                .append(companyName, that.companyName)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(companyName).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("companyName", companyName)
+                .build();
     }
 
 }

@@ -3,6 +3,8 @@ package com.commercetools.api.models.common;
 
 import java.util.*;
 
+import javax.money.MonetaryAmount;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -85,4 +87,19 @@ public class MoneyBuilder implements Builder<Money> {
         return builder;
     }
 
+    public CentPrecisionMoneyBuilder centPrecision(MonetaryAmount monetaryAmount) {
+        return MoneyUtil.builder(monetaryAmount);
+    }
+
+    public CentPrecisionMoneyDraftBuilder centPrecisionDraft(MonetaryAmount monetaryAmount) {
+        return MoneyUtil.draftBuilder(monetaryAmount);
+    }
+
+    public HighPrecisionMoneyBuilder highPrecision(MonetaryAmount monetaryAmount, int fractionDigits) {
+        return MoneyUtil.builder(monetaryAmount, fractionDigits);
+    }
+
+    public HighPrecisionMoneyDraftBuilder highPrecisionDraft(MonetaryAmount monetaryAmount, int fractionDigits) {
+        return MoneyUtil.draftBuilder(monetaryAmount, fractionDigits);
+    }
 }

@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set PurchaseOrderNumber update action.</p>
+ *  <p>Generated after a successful Set Purchase Order Number update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrderNumberSetMessage, ModelBase {
@@ -173,7 +175,7 @@ public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrde
     }
 
     /**
-     *  <p>Purchase order number on the Order after the Set PurchaseOrderNumber update action.</p>
+     *  <p>Purchase order number on the Order after the Set Purchase Order Number update action.</p>
      */
 
     public String getPurchaseOrderNumber() {
@@ -181,7 +183,7 @@ public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrde
     }
 
     /**
-     *  <p>Purchase order number on the Order before the Set PurchaseOrderNumber update action.</p>
+     *  <p>Purchase order number on the Order before the Set Purchase Order Number update action.</p>
      */
 
     public String getOldPurchaseOrderNumber() {
@@ -260,6 +262,19 @@ public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrde
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(oldPurchaseOrderNumber, that.oldPurchaseOrderNumber)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(oldPurchaseOrderNumber, that.oldPurchaseOrderNumber)
                 .isEquals();
     }
 
@@ -279,6 +294,24 @@ public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrde
                 .append(purchaseOrderNumber)
                 .append(oldPurchaseOrderNumber)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
+                .append("oldPurchaseOrderNumber", oldPurchaseOrderNumber)
+                .build();
     }
 
 }

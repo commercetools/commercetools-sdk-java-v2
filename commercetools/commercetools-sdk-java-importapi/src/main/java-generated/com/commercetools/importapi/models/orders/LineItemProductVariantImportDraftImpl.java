@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * LineItemProductVariantImportDraft
@@ -142,6 +144,11 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
                 .append(prices, that.prices)
                 .append(attributes, that.attributes)
                 .append(images, that.images)
+                .append(productVariant, that.productVariant)
+                .append(sku, that.sku)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .append(images, that.images)
                 .isEquals();
     }
 
@@ -153,6 +160,16 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
                 .append(attributes)
                 .append(images)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("productVariant", productVariant)
+                .append("sku", sku)
+                .append("prices", prices)
+                .append("attributes", attributes)
+                .append("images", images)
+                .build();
     }
 
 }

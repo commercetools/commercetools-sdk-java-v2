@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderFromCartDraft> {
 
     /**
-     *  <p>Unique identifier of the Cart from which you can create an Order.</p>
+     *  <p><code>id</code> of the Cart used to create the Order.</p>
      * @return id
      */
     @Deprecated
@@ -43,7 +43,8 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public String getId();
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which the Order is created.</p>
+     *  <p>ResourceIdentifier to the Cart from which the Order is created.</p>
+     *  <p>This field is required, but is marked as optional for backwards compatibility reasons.</p>
      * @return cart
      */
     @Valid
@@ -51,7 +52,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public CartResourceIdentifier getCart();
 
     /**
-     *  <p>Expected version of the Cart from which the Order is created. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p><code>version</code> of the Cart from which the Order is created.</p>
      * @return version
      */
     @NotNull
@@ -59,7 +60,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public Long getVersion();
 
     /**
-     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     *  <p>User-defined identifier for the Order that is unique across a Project. Once set, the value cannot be changed.</p>
      * @return orderNumber
      */
 
@@ -67,7 +68,8 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public String getOrderNumber();
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     *  <p>User-defined identifier for a purchase Order.</p>
+     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
      * @return purchaseOrderNumber
      */
 
@@ -75,7 +77,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>Payment state for the Order.</p>
+     *  <p>Payment status for the Order.</p>
      * @return paymentState
      */
 
@@ -83,7 +85,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public PaymentState getPaymentState();
 
     /**
-     *  <p>Shipment state for the Order.</p>
+     *  <p>Shipment status for the Order.</p>
      * @return shipmentState
      */
 
@@ -91,7 +93,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public ShipmentState getShipmentState();
 
     /**
-     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     *  <p>Current status for the Order.</p>
      * @return orderState
      */
 
@@ -99,7 +101,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public OrderState getOrderState();
 
     /**
-     *  <p>Reference to a State indicating the Order's state.</p>
+     *  <p>State for the Order in a custom workflow.</p>
      * @return state
      */
     @Valid
@@ -107,7 +109,11 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     *  <p>Custom Fields for the Order. The Custom Fields' type must match the Custom Fields' type in the referenced Cart.</p>
+     *  <ul>
+     *   <li>If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order.</li>
+     *  </ul>
      * @return custom
      */
     @Valid
@@ -115,70 +121,76 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>Unique identifier of the Cart from which you can create an Order.</p>
+     *  <p><code>id</code> of the Cart used to create the Order.</p>
      * @param id value to be set
      */
     @Deprecated
     public void setId(final String id);
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which the Order is created.</p>
+     *  <p>ResourceIdentifier to the Cart from which the Order is created.</p>
+     *  <p>This field is required, but is marked as optional for backwards compatibility reasons.</p>
      * @param cart value to be set
      */
 
     public void setCart(final CartResourceIdentifier cart);
 
     /**
-     *  <p>Expected version of the Cart from which the Order is created. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     *  <p><code>version</code> of the Cart from which the Order is created.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     *  <p>User-defined identifier for the Order that is unique across a Project. Once set, the value cannot be changed.</p>
      * @param orderNumber value to be set
      */
 
     public void setOrderNumber(final String orderNumber);
 
     /**
-     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     *  <p>User-defined identifier for a purchase Order.</p>
+     *  <p>It is typically set by the Buyer and can be used with Quotes to track the purchase Order during the quote and order flow.</p>
      * @param purchaseOrderNumber value to be set
      */
 
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     *  <p>Payment state for the Order.</p>
+     *  <p>Payment status for the Order.</p>
      * @param paymentState value to be set
      */
 
     public void setPaymentState(final PaymentState paymentState);
 
     /**
-     *  <p>Shipment state for the Order.</p>
+     *  <p>Shipment status for the Order.</p>
      * @param shipmentState value to be set
      */
 
     public void setShipmentState(final ShipmentState shipmentState);
 
     /**
-     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     *  <p>Current status for the Order.</p>
      * @param orderState value to be set
      */
 
     public void setOrderState(final OrderState orderState);
 
     /**
-     *  <p>Reference to a State indicating the Order's state.</p>
+     *  <p>State for the Order in a custom workflow.</p>
      * @param state value to be set
      */
 
     public void setState(final StateResourceIdentifier state);
 
     /**
-     *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     *  <p>Custom Fields for the Order. The Custom Fields' type must match the Custom Fields' type in the referenced Cart.</p>
+     *  <ul>
+     *   <li>If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</li>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order.</li>
+     *  </ul>
      * @param custom value to be set
      */
 

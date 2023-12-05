@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ReviewRatingStatistics
@@ -126,6 +128,11 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
                 .append(lowestRating, that.lowestRating)
                 .append(count, that.count)
                 .append(ratingsDistribution, that.ratingsDistribution)
+                .append(averageRating, that.averageRating)
+                .append(highestRating, that.highestRating)
+                .append(lowestRating, that.lowestRating)
+                .append(count, that.count)
+                .append(ratingsDistribution, that.ratingsDistribution)
                 .isEquals();
     }
 
@@ -137,6 +144,16 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
                 .append(count)
                 .append(ratingsDistribution)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("averageRating", averageRating)
+                .append("highestRating", highestRating)
+                .append("lowestRating", lowestRating)
+                .append("count", count)
+                .append("ratingsDistribution", ratingsDistribution)
+                .build();
     }
 
 }

@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * ReturnInfo
+ *  <p>Stores information about returns connected to an Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnInfoImpl implements ReturnInfo, ModelBase {
@@ -45,7 +47,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ReturnItem> getItems() {
@@ -53,7 +55,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     *  <p>User-defined identifier to track the return.</p>
      */
 
     public String getReturnTrackingId() {
@@ -61,7 +63,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the return is initiated.</p>
      */
 
     public java.time.ZonedDateTime getReturnDate() {
@@ -97,12 +99,23 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
         return new EqualsBuilder().append(items, that.items)
                 .append(returnTrackingId, that.returnTrackingId)
                 .append(returnDate, that.returnDate)
+                .append(items, that.items)
+                .append(returnTrackingId, that.returnTrackingId)
+                .append(returnDate, that.returnDate)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(items).append(returnTrackingId).append(returnDate).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("items", items)
+                .append("returnTrackingId", returnTrackingId)
+                .append("returnDate", returnDate)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProductVariantChannelAvailability
@@ -126,6 +128,11 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
                 .append(availableQuantity, that.availableQuantity)
                 .append(id, that.id)
                 .append(version, that.version)
+                .append(isOnStock, that.isOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(availableQuantity, that.availableQuantity)
+                .append(id, that.id)
+                .append(version, that.version)
                 .isEquals();
     }
 
@@ -137,6 +144,16 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
                 .append(id)
                 .append(version)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("isOnStock", isOnStock)
+                .append("restockableInDays", restockableInDays)
+                .append("availableQuantity", availableQuantity)
+                .append("id", id)
+                .append("version", version)
+                .build();
     }
 
 }

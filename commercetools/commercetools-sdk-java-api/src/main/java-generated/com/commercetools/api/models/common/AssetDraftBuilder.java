@@ -270,7 +270,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Asset.</p>
+     *  <p>User-defined identifier for the Asset. Must be unique per Category or ProductVariant.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -329,7 +329,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Asset.</p>
+     *  <p>User-defined identifier for the Asset. Must be unique per Category or ProductVariant.</p>
      * @return key
      */
 

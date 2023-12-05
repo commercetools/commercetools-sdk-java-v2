@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,14 +36,20 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class ByProjectKeyCategoriesByIDDelete
-        extends ApiMethod<ByProjectKeyCategoriesByIDDelete, com.commercetools.api.models.category.Category> implements
+public class ByProjectKeyCategoriesByIDDelete extends
+        TypeApiMethod<ByProjectKeyCategoriesByIDDelete, com.commercetools.api.models.category.Category> implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCategoriesByIDDelete, com.commercetools.api.models.category.Category>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyCategoriesByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyCategoriesByIDDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCategoriesByIDDelete>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCategoriesByIDDelete>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCategoriesByIDDelete> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.category.Category> resultType() {
+        return new TypeReference<com.commercetools.api.models.category.Category>() {
+        };
+    }
 
     private String projectKey;
     private String ID;

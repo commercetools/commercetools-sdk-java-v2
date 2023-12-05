@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>For Product Variant identification, either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
@@ -213,6 +215,16 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
                 .append(distributionChannel, that.distributionChannel)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
+                .append(key, that.key)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
+                .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -229,6 +241,21 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
                 .append(shippingDetails)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("productId", productId)
+                .append("variantId", variantId)
+                .append("sku", sku)
+                .append("quantity", quantity)
+                .append("addedAt", addedAt)
+                .append("supplyChannel", supplyChannel)
+                .append("distributionChannel", distributionChannel)
+                .append("shippingDetails", shippingDetails)
+                .append("custom", custom)
+                .build();
     }
 
 }

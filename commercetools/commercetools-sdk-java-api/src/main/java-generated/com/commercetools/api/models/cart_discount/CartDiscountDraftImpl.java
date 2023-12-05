@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CartDiscountDraft
@@ -113,7 +115,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
+     *  <p>Effect of the CartDiscount on the <code>target</code>.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {
@@ -129,7 +131,8 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+     *  <p>Segment of the Cart that will be discounted.</p>
+     *  <p>Must not be set if the <code>value</code> is <code>giftLineItem</code>.</p>
      */
 
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
@@ -289,6 +292,20 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(requiresDiscountCode, that.requiresDiscountCode)
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(value, that.value)
+                .append(cartPredicate, that.cartPredicate)
+                .append(target, that.target)
+                .append(sortOrder, that.sortOrder)
+                .append(stores, that.stores)
+                .append(isActive, that.isActive)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(requiresDiscountCode, that.requiresDiscountCode)
+                .append(stackingMode, that.stackingMode)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -309,6 +326,25 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(stackingMode)
                 .append(custom)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("key", key)
+                .append("description", description)
+                .append("value", value)
+                .append("cartPredicate", cartPredicate)
+                .append("target", target)
+                .append("sortOrder", sortOrder)
+                .append("stores", stores)
+                .append("isActive", isActive)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("requiresDiscountCode", requiresDiscountCode)
+                .append("stackingMode", stackingMode)
+                .append("custom", custom)
+                .build();
     }
 
 }

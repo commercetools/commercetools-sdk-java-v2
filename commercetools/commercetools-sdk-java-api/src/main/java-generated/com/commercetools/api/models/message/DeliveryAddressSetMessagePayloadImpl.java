@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Delivery Address update action.</p>
@@ -85,7 +87,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -123,6 +125,11 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
                 .append(address, that.address)
                 .append(oldAddress, that.oldAddress)
                 .append(shippingKey, that.shippingKey)
+                .append(type, that.type)
+                .append(deliveryId, that.deliveryId)
+                .append(address, that.address)
+                .append(oldAddress, that.oldAddress)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -134,6 +141,16 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
                 .append(oldAddress)
                 .append(shippingKey)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("deliveryId", deliveryId)
+                .append("address", address)
+                .append("oldAddress", oldAddress)
+                .append("shippingKey", shippingKey)
+                .build();
     }
 
 }

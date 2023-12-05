@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * OrderEditApply
+ *  <p>If the <code>editVersion</code> and/or <code>resourceVersion</code> do not match the actual version, a ConcurrentModification error will be returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
@@ -41,7 +43,7 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current <code>version</code> of the OrderEdit to be applied.</p>
      */
 
     public Long getEditVersion() {
@@ -49,7 +51,7 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
     }
 
     /**
-     *
+     *  <p>Current <code>version</code> of the Order to which the OrderEdit is applied.</p>
      */
 
     public Long getResourceVersion() {
@@ -76,12 +78,21 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
 
         return new EqualsBuilder().append(editVersion, that.editVersion)
                 .append(resourceVersion, that.resourceVersion)
+                .append(editVersion, that.editVersion)
+                .append(resourceVersion, that.resourceVersion)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(editVersion).append(resourceVersion).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("editVersion", editVersion)
+                .append("resourceVersion", resourceVersion)
+                .build();
     }
 
 }

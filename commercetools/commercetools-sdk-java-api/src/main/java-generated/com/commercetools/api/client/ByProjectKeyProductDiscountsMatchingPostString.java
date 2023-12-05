@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,6 +36,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyProductDiscountsMatchingPostString extends
         StringBodyApiMethod<ByProjectKeyProductDiscountsMatchingPostString, com.commercetools.api.models.product_discount.ProductDiscount>
         implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductDiscountsMatchingPostString> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.product_discount.ProductDiscount> resultType() {
+        return new TypeReference<com.commercetools.api.models.product_discount.ProductDiscount>() {
+        };
+    }
 
     private String projectKey;
 

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ExtensionChangeDestinationAction
@@ -71,12 +73,23 @@ public class ExtensionChangeDestinationActionImpl implements ExtensionChangeDest
 
         ExtensionChangeDestinationActionImpl that = (ExtensionChangeDestinationActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(destination, that.destination).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(destination, that.destination)
+                .append(action, that.action)
+                .append(destination, that.destination)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(destination).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("destination", destination)
+                .build();
     }
 
 }

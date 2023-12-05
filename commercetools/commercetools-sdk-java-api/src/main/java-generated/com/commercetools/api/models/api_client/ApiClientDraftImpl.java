@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ApiClientDraft
@@ -126,6 +128,11 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
                 .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
                 .append(accessTokenValiditySeconds, that.accessTokenValiditySeconds)
                 .append(refreshTokenValiditySeconds, that.refreshTokenValiditySeconds)
+                .append(name, that.name)
+                .append(scope, that.scope)
+                .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
+                .append(accessTokenValiditySeconds, that.accessTokenValiditySeconds)
+                .append(refreshTokenValiditySeconds, that.refreshTokenValiditySeconds)
                 .isEquals();
     }
 
@@ -137,6 +144,16 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
                 .append(accessTokenValiditySeconds)
                 .append(refreshTokenValiditySeconds)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("scope", scope)
+                .append("deleteDaysAfterCreation", deleteDaysAfterCreation)
+                .append("accessTokenValiditySeconds", accessTokenValiditySeconds)
+                .append("refreshTokenValiditySeconds", refreshTokenValiditySeconds)
+                .build();
     }
 
 }

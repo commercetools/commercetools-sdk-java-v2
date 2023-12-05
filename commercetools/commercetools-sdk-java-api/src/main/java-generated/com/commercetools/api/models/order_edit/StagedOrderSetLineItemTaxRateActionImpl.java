@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderSetLineItemTaxRateAction
+ *  <p>Can be used if the Cart has the <code>External</code> TaxMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLineItemTaxRateAction, ModelBase {
@@ -77,7 +79,7 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -123,6 +125,11 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
                 .append(lineItemKey, that.lineItemKey)
                 .append(externalTaxRate, that.externalTaxRate)
                 .append(shippingKey, that.shippingKey)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -134,6 +141,16 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
                 .append(externalTaxRate)
                 .append(shippingKey)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("externalTaxRate", externalTaxRate)
+                .append("shippingKey", shippingKey)
+                .build();
     }
 
 }

@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The representation of a Line Item in a Cart.</p>
+ *  <p>The representation of a Line Item in a Cart or in an Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LineItemImpl implements LineItem, ModelBase {
@@ -162,8 +164,8 @@ public class LineItemImpl implements LineItem, ModelBase {
      *  <p><code>key</code> of the Product.</p>
      *  <p>This field is only present on:</p>
      *  <ul>
-     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item was created or updated on the Cart.</li>
-     *   <li>Orders when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
+     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the LineItem was created or updated on the Cart.</li>
+     *   <li>Line Items in an Order when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
      *  </ul>
      *  <p>Present on resources created or updated after 3 December 2021.</p>
      */
@@ -214,7 +216,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>Number of Line Items of the given Product Variant present in the Cart.</p>
+     *  <p>Number of Line Items of the given Product Variant present in the Cart or Order.</p>
      */
 
     public Long getQuantity() {
@@ -254,7 +256,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
@@ -513,6 +515,32 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(custom, that.custom)
                 .append(addedAt, that.addedAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(id, that.id)
+                .append(key, that.key)
+                .append(productId, that.productId)
+                .append(productKey, that.productKey)
+                .append(name, that.name)
+                .append(productSlug, that.productSlug)
+                .append(productType, that.productType)
+                .append(variant, that.variant)
+                .append(price, that.price)
+                .append(quantity, that.quantity)
+                .append(totalPrice, that.totalPrice)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(taxedPrice, that.taxedPrice)
+                .append(taxedPricePortions, that.taxedPricePortions)
+                .append(state, that.state)
+                .append(taxRate, that.taxRate)
+                .append(perMethodTaxRate, that.perMethodTaxRate)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
+                .append(priceMode, that.priceMode)
+                .append(lineItemMode, that.lineItemMode)
+                .append(inventoryMode, that.inventoryMode)
+                .append(shippingDetails, that.shippingDetails)
+                .append(custom, that.custom)
+                .append(addedAt, that.addedAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
                 .isEquals();
     }
 
@@ -545,6 +573,37 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(addedAt)
                 .append(lastModifiedAt)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("key", key)
+                .append("productId", productId)
+                .append("productKey", productKey)
+                .append("name", name)
+                .append("productSlug", productSlug)
+                .append("productType", productType)
+                .append("variant", variant)
+                .append("price", price)
+                .append("quantity", quantity)
+                .append("totalPrice", totalPrice)
+                .append("discountedPricePerQuantity", discountedPricePerQuantity)
+                .append("taxedPrice", taxedPrice)
+                .append("taxedPricePortions", taxedPricePortions)
+                .append("state", state)
+                .append("taxRate", taxRate)
+                .append("perMethodTaxRate", perMethodTaxRate)
+                .append("supplyChannel", supplyChannel)
+                .append("distributionChannel", distributionChannel)
+                .append("priceMode", priceMode)
+                .append("lineItemMode", lineItemMode)
+                .append("inventoryMode", inventoryMode)
+                .append("shippingDetails", shippingDetails)
+                .append("custom", custom)
+                .append("addedAt", addedAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .build();
     }
 
 }

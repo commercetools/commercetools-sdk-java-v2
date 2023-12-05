@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Transition Custom Line Item State update action.</p>
+ *  <p>Generated after a successful Transition CustomLineItem State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemStateTransitionMessage, ModelBase {
@@ -44,6 +46,8 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private java.time.ZonedDateTime transitionDate;
 
     private Long quantity;
@@ -67,6 +71,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate,
             @JsonProperty("quantity") final Long quantity,
             @JsonProperty("fromState") final com.commercetools.api.models.state.StateReference fromState,
@@ -82,6 +87,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.transitionDate = transitionDate;
         this.quantity = quantity;
         this.fromState = fromState;
@@ -193,6 +199,14 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
      */
 
@@ -269,6 +283,10 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
         this.customLineItemId = customLineItemId;
     }
 
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+    }
+
     public void setTransitionDate(final java.time.ZonedDateTime transitionDate) {
         this.transitionDate = transitionDate;
     }
@@ -307,6 +325,24 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(transitionDate, that.transitionDate)
+                .append(quantity, that.quantity)
+                .append(fromState, that.fromState)
+                .append(toState, that.toState)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(transitionDate, that.transitionDate)
                 .append(quantity, that.quantity)
                 .append(fromState, that.fromState)
@@ -328,11 +364,34 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(customLineItemId)
+                .append(customLineItemKey)
                 .append(transitionDate)
                 .append(quantity)
                 .append(fromState)
                 .append(toState)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .append("transitionDate", transitionDate)
+                .append("quantity", quantity)
+                .append("fromState", fromState)
+                .append("toState", toState)
+                .build();
     }
 
 }

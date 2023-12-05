@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the Cart contains a Discount Code with a DiscountCodeState other than <code>MatchesCart</code>.</p>
@@ -181,6 +183,14 @@ public class GraphQLDiscountCodeNonApplicableErrorImpl implements GraphQLDiscoun
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
                 .append(validityCheckTime, that.validityCheckTime)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(discountCode, that.discountCode)
+                .append(reason, that.reason)
+                .append(discountCodeId, that.discountCodeId)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(validityCheckTime, that.validityCheckTime)
                 .isEquals();
     }
 
@@ -195,6 +205,19 @@ public class GraphQLDiscountCodeNonApplicableErrorImpl implements GraphQLDiscoun
                 .append(validUntil)
                 .append(validityCheckTime)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("values", values)
+                .append("discountCode", discountCode)
+                .append("reason", reason)
+                .append("discountCodeId", discountCodeId)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("validityCheckTime", validityCheckTime)
+                .build();
     }
 
 }

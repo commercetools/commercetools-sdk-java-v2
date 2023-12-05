@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required. The Asset to remove must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
@@ -138,6 +140,12 @@ public class ProductRemoveAssetActionImpl implements ProductRemoveAssetAction, M
                 .append(staged, that.staged)
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
                 .isEquals();
     }
 
@@ -150,6 +158,17 @@ public class ProductRemoveAssetActionImpl implements ProductRemoveAssetAction, M
                 .append(assetId)
                 .append(assetKey)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("variantId", variantId)
+                .append("sku", sku)
+                .append("staged", staged)
+                .append("assetId", assetId)
+                .append("assetKey", assetKey)
+                .build();
     }
 
 }

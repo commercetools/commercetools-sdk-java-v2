@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Add Quantity, Remove Quantity or Change Quantity update action. Inventory changes as a result of Order creation do not trigger this message.</p>
@@ -311,6 +313,22 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
                 .append(oldAvailableQuantity, that.oldAvailableQuantity)
                 .append(newAvailableQuantity, that.newAvailableQuantity)
                 .append(supplyChannel, that.supplyChannel)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(oldQuantityOnStock, that.oldQuantityOnStock)
+                .append(newQuantityOnStock, that.newQuantityOnStock)
+                .append(oldAvailableQuantity, that.oldAvailableQuantity)
+                .append(newAvailableQuantity, that.newAvailableQuantity)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
 
@@ -333,6 +351,27 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
                 .append(newAvailableQuantity)
                 .append(supplyChannel)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("oldQuantityOnStock", oldQuantityOnStock)
+                .append("newQuantityOnStock", newQuantityOnStock)
+                .append("oldAvailableQuantity", oldAvailableQuantity)
+                .append("newAvailableQuantity", newAvailableQuantity)
+                .append("supplyChannel", supplyChannel)
+                .build();
     }
 
 }

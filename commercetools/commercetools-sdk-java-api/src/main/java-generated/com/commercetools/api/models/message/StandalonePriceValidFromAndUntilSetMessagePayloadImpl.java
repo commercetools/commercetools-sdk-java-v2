@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Valid From and Until update action.</p>
@@ -125,6 +127,11 @@ public class StandalonePriceValidFromAndUntilSetMessagePayloadImpl
                 .append(previousValidFrom, that.previousValidFrom)
                 .append(validUntil, that.validUntil)
                 .append(previousValidUntil, that.previousValidUntil)
+                .append(type, that.type)
+                .append(validFrom, that.validFrom)
+                .append(previousValidFrom, that.previousValidFrom)
+                .append(validUntil, that.validUntil)
+                .append(previousValidUntil, that.previousValidUntil)
                 .isEquals();
     }
 
@@ -136,6 +143,16 @@ public class StandalonePriceValidFromAndUntilSetMessagePayloadImpl
                 .append(validUntil)
                 .append(previousValidUntil)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("validFrom", validFrom)
+                .append("previousValidFrom", previousValidFrom)
+                .append("validUntil", validUntil)
+                .append("previousValidUntil", previousValidUntil)
+                .build();
     }
 
 }

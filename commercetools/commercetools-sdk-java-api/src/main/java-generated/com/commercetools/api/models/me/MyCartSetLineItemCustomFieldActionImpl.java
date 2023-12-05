@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * MyCartSetLineItemCustomFieldAction
@@ -122,6 +124,11 @@ public class MyCartSetLineItemCustomFieldActionImpl implements MyCartSetLineItem
                 .append(lineItemKey, that.lineItemKey)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
 
@@ -133,6 +140,16 @@ public class MyCartSetLineItemCustomFieldActionImpl implements MyCartSetLineItem
                 .append(name)
                 .append(value)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("name", name)
+                .append("value", value)
+                .build();
     }
 
 }

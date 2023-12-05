@@ -41,7 +41,7 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeServerException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -52,7 +52,7 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdTest {
 
     @TestTemplate
     @UseDataProvider("executeMethodParameters")
-    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception {
+    public void executeClientException(HttpRequestCommand<?> httpRequest) throws Exception {
         Mockito.when(httpClientMock.execute(Mockito.any()))
                 .thenReturn(CompletableFuture.completedFuture(
                     new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
@@ -76,7 +76,12 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdTest {
                         .carts()
                         .withCustomerId("test_customerId")
                         .get()
-                        .createHttpRequest(), "get", "test_projectKey/carts/customer-id=test_customerId", } };
+                        .createHttpRequest(), "get", "test_projectKey/carts/customer-id=test_customerId", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .carts()
+                        .withCustomerId("test_customerId")
+                        .head()
+                        .createHttpRequest(), "head", "test_projectKey/carts/customer-id=test_customerId", } };
     }
 
     @DataProvider
@@ -88,6 +93,8 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdTest {
                         .get()
                         .withExpand("expand"), },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").carts().withCustomerId("test_customerId").get(), } };
+                        apiRoot.withProjectKey("test_projectKey").carts().withCustomerId("test_customerId").get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").carts().withCustomerId("test_customerId").head(), } };
     }
 }

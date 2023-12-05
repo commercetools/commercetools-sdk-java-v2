@@ -28,7 +28,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
     private java.util.List<com.commercetools.api.models.discount_code.DiscountCodeUpdateAction> actions;
 
     /**
-     *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class DiscountCodeUpdateBuilder implements Builder<DiscountCodeUpdate> {
     }
 
     /**
-     *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     *  <p>Expected version of the DiscountCode on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
 

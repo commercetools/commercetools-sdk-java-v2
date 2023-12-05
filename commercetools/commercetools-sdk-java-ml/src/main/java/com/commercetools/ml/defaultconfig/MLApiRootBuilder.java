@@ -204,30 +204,54 @@ public class MLApiRootBuilder {
         return this;
     }
 
+    public MLApiRootBuilder withPolicies(final Function<PolicyBuilder, PolicyBuilder> fn) {
+        return with(clientBuilder -> clientBuilder.withPolicies(fn));
+    }
+
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withRetryMiddleware(Supplier<RetryRequestMiddleware> retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withRetryMiddleware(RetryRequestMiddleware retryMiddleware) {
         builder.withRetryMiddleware(retryMiddleware);
 
         return this;
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withRetryMiddleware(final int maxRetries) {
         builder.withRetryMiddleware(maxRetries);
 
         return this;
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
         builder.withRetryMiddleware(maxRetries, statusCodes);
 
         return this;
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withRetryMiddleware(final int maxRetries, List<Integer> statusCodes,
             final List<Class<? extends Throwable>> failures) {
         builder.withRetryMiddleware(maxRetries, statusCodes, failures);
@@ -235,6 +259,10 @@ public class MLApiRootBuilder {
         return this;
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             List<Integer> statusCodes, final List<Class<? extends Throwable>> failures,
             final FailsafeRetryPolicyBuilderOptions fn) {
@@ -243,6 +271,10 @@ public class MLApiRootBuilder {
         return this;
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withRetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
             final FailsafeRetryPolicyBuilderOptions fn) {
         builder.withRetryMiddleware(maxRetries, delay, maxDelay, fn);
@@ -250,28 +282,52 @@ public class MLApiRootBuilder {
         return this;
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withQueueMiddleware(final Supplier<QueueRequestMiddleware> queueMiddleware) {
         return with(clientBuilder -> clientBuilder.withQueueMiddleware(queueMiddleware));
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withQueueMiddleware(final QueueRequestMiddleware queueMiddleware) {
         return with(clientBuilder -> clientBuilder.withQueueMiddleware(queueMiddleware));
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withQueueMiddleware(final int maxRequests, final Duration maxWaitTime) {
         return with(clientBuilder -> clientBuilder.withQueueMiddleware(maxRequests, maxWaitTime));
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withQueueMiddleware(final Scheduler scheduler, final int maxRequests,
             final Duration maxWaitTime) {
         return with(clientBuilder -> clientBuilder.withQueueMiddleware(scheduler, maxRequests, maxWaitTime));
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withQueueMiddleware(final ScheduledExecutorService executorService, final int maxRequests,
             final Duration maxWaitTime) {
         return with(clientBuilder -> clientBuilder.withQueueMiddleware(executorService, maxRequests, maxWaitTime));
     }
 
+    /**
+     * @deprecated use {@link #withPolicies(Function)} instead
+     */
+    @Deprecated
     public MLApiRootBuilder withQueueMiddleware(final ExecutorService executorService, final int maxRequests,
             final Duration maxWaitTime) {
         return with(clientBuilder -> clientBuilder.withQueueMiddleware(executorService, maxRequests, maxWaitTime));

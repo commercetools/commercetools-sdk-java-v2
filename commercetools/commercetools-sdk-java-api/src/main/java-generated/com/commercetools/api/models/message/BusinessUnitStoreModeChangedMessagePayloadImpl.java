@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set Store Mode update action.</p>
@@ -133,6 +135,11 @@ public class BusinessUnitStoreModeChangedMessagePayloadImpl
                 .append(storeMode, that.storeMode)
                 .append(oldStores, that.oldStores)
                 .append(oldStoreMode, that.oldStoreMode)
+                .append(type, that.type)
+                .append(stores, that.stores)
+                .append(storeMode, that.storeMode)
+                .append(oldStores, that.oldStores)
+                .append(oldStoreMode, that.oldStoreMode)
                 .isEquals();
     }
 
@@ -144,6 +151,16 @@ public class BusinessUnitStoreModeChangedMessagePayloadImpl
                 .append(oldStores)
                 .append(oldStoreMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("stores", stores)
+                .append("storeMode", storeMode)
+                .append("oldStores", oldStores)
+                .append("oldStoreMode", oldStoreMode)
+                .build();
     }
 
 }

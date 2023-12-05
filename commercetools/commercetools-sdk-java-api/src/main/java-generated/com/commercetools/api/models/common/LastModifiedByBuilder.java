@@ -35,8 +35,11 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     @Nullable
     private String anonymousId;
 
+    @Nullable
+    private com.commercetools.api.models.customer.CustomerReference associate;
+
     /**
-     *  <p><code>id</code> of the APIClient which modified the resource.</p>
+     *  <p><code>id</code> of the API Client which modified the resource.</p>
      * @param clientId value to be set
      * @return Builder
      */
@@ -47,7 +50,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
      * @param externalUserId value to be set
      * @return Builder
      */
@@ -105,7 +108,43 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p><code>id</code> of the APIClient which modified the resource.</p>
+     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     * @param builder function to build the associate value
+     * @return Builder
+     */
+
+    public LastModifiedByBuilder associate(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
+        this.associate = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     * @param builder function to build the associate value
+     * @return Builder
+     */
+
+    public LastModifiedByBuilder withAssociate(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReference> builder) {
+        this.associate = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     * @param associate value to be set
+     * @return Builder
+     */
+
+    public LastModifiedByBuilder associate(
+            @Nullable final com.commercetools.api.models.customer.CustomerReference associate) {
+        this.associate = associate;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the API Client which modified the resource.</p>
      * @return clientId
      */
 
@@ -115,7 +154,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
      * @return externalUserId
      */
 
@@ -145,11 +184,21 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
+     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     * @return associate
+     */
+
+    @Nullable
+    public com.commercetools.api.models.customer.CustomerReference getAssociate() {
+        return this.associate;
+    }
+
+    /**
      * builds LastModifiedBy with checking for non-null required values
      * @return LastModifiedBy
      */
     public LastModifiedBy build() {
-        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId);
+        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId, associate);
     }
 
     /**
@@ -157,7 +206,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
      * @return LastModifiedBy
      */
     public LastModifiedBy buildUnchecked() {
-        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId);
+        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId, associate);
     }
 
     /**
@@ -179,6 +228,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
         builder.externalUserId = template.getExternalUserId();
         builder.customer = template.getCustomer();
         builder.anonymousId = template.getAnonymousId();
+        builder.associate = template.getAssociate();
         return builder;
     }
 

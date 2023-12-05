@@ -45,8 +45,6 @@ import com.fasterxml.jackson.databind.JsonNode;
  * {@include.example example.HelperMethodsTest#cartSetCustomLineItemCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction#ofUnset()}</p>
  * {@include.example example.HelperMethodsTest#cartSetDeleteDaysAfterLastModificationUnset()}
- * <p>{@link com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldAction#ofUnset(String, String)}</p>
- * {@include.example example.HelperMethodsTest#cartSetDeliveryAddressCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldAction#ofUnset(String, String)}</p>
  * {@include.example example.HelperMethodsTest#cartSetItemShippingAddressCustomFieldUnset()}
  * <p>{@link com.commercetools.api.models.cart.CartSetShippingAddressCustomFieldAction#ofUnset(String)}</p>
@@ -289,8 +287,6 @@ import com.fasterxml.jackson.databind.JsonNode;
  *
  * <h2>Orders</h2>
  *
- * <p>{@link com.commercetools.api.models.order.Order#toResourceIdentifier()}</p>
- * {@include.example example.HelperMethodsTest#orderToResourceIdentifier()}
  * <p>{@link com.commercetools.api.models.order.Order#toReference()}</p>
  * {@include.example example.HelperMethodsTest#orderToReference()}
  * <p>{@link com.commercetools.api.models.order.Order#referenceTypeId()}</p>

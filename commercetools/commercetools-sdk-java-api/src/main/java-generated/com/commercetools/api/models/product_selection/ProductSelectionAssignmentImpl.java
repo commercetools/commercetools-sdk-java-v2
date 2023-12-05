@@ -13,12 +13,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Given the mode of Product Selection, this assignment refers to, it may contain:</p>
  *  <ul>
  *   <li><code>variantSelection</code> field for a Product Selection with <code>Individual</code> ProductSelectionMode.</li>
- *   <li><code>variantExclusion</code> field for a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode (BETA).</li>
+ *   <li><code>variantExclusion</code> field for a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -120,6 +122,10 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
                 .append(productSelection, that.productSelection)
                 .append(variantSelection, that.variantSelection)
                 .append(variantExclusion, that.variantExclusion)
+                .append(product, that.product)
+                .append(productSelection, that.productSelection)
+                .append(variantSelection, that.variantSelection)
+                .append(variantExclusion, that.variantExclusion)
                 .isEquals();
     }
 
@@ -130,6 +136,15 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
                 .append(variantSelection)
                 .append(variantExclusion)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("product", product)
+                .append("productSelection", productSelection)
+                .append("variantSelection", variantSelection)
+                .append("variantExclusion", variantExclusion)
+                .build();
     }
 
 }

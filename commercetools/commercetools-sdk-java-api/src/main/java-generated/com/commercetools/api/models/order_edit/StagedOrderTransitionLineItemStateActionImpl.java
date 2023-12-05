@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderTransitionLineItemStateAction
+ *  <p>Produces the Line Item State Transition Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderTransitionLineItemStateActionImpl
@@ -24,6 +26,8 @@ public class StagedOrderTransitionLineItemStateActionImpl
     private String action;
 
     private String lineItemId;
+
+    private String lineItemKey;
 
     private Long quantity;
 
@@ -38,11 +42,12 @@ public class StagedOrderTransitionLineItemStateActionImpl
      */
     @JsonCreator
     StagedOrderTransitionLineItemStateActionImpl(@JsonProperty("lineItemId") final String lineItemId,
-            @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("lineItemKey") final String lineItemKey, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("fromState") final com.commercetools.api.models.state.StateResourceIdentifier fromState,
             @JsonProperty("toState") final com.commercetools.api.models.state.StateResourceIdentifier toState,
             @JsonProperty("actualTransitionDate") final java.time.ZonedDateTime actualTransitionDate) {
         this.lineItemId = lineItemId;
+        this.lineItemKey = lineItemKey;
         this.quantity = quantity;
         this.fromState = fromState;
         this.toState = toState;
@@ -66,7 +71,7 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
      */
 
     public String getLineItemId() {
@@ -74,7 +79,15 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *
+     *  <p><code>key</code> of the LineItem to update. Either <code>lineItemId</code> or <code>lineItemKey</code> is required.</p>
+     */
+
+    public String getLineItemKey() {
+        return this.lineItemKey;
+    }
+
+    /**
+     *  <p>Number of Line Items that should transition State.</p>
      */
 
     public Long getQuantity() {
@@ -82,7 +95,7 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition from.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getFromState() {
@@ -90,7 +103,7 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *  <p>ResourceIdentifier to a State.</p>
+     *  <p>State the Line Item should transition to.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getToState() {
@@ -98,7 +111,7 @@ public class StagedOrderTransitionLineItemStateActionImpl
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) to perform the State transition.</p>
      */
 
     public java.time.ZonedDateTime getActualTransitionDate() {
@@ -107,6 +120,10 @@ public class StagedOrderTransitionLineItemStateActionImpl
 
     public void setLineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
+    }
+
+    public void setLineItemKey(final String lineItemKey) {
+        this.lineItemKey = lineItemKey;
     }
 
     public void setQuantity(final Long quantity) {
@@ -137,6 +154,14 @@ public class StagedOrderTransitionLineItemStateActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
+                .append(quantity, that.quantity)
+                .append(fromState, that.fromState)
+                .append(toState, that.toState)
+                .append(actualTransitionDate, that.actualTransitionDate)
+                .append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(lineItemKey, that.lineItemKey)
                 .append(quantity, that.quantity)
                 .append(fromState, that.fromState)
                 .append(toState, that.toState)
@@ -148,11 +173,24 @@ public class StagedOrderTransitionLineItemStateActionImpl
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(lineItemId)
+                .append(lineItemKey)
                 .append(quantity)
                 .append(fromState)
                 .append(toState)
                 .append(actualTransitionDate)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("lineItemId", lineItemId)
+                .append("lineItemKey", lineItemKey)
+                .append("quantity", quantity)
+                .append("fromState", fromState)
+                .append("toState", toState)
+                .append("actualTransitionDate", actualTransitionDate)
+                .build();
     }
 
 }

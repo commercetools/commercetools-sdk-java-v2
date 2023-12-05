@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a Product is already assigned to a Product Selection, but the Product Selection has either a different Product Variant Selection or a different Product Variant Exclusion.</p>
@@ -113,6 +115,10 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorImpl
                 .append(values, that.values)
                 .append(product, that.product)
                 .append(existingVariantSelection, that.existingVariantSelection)
+                .append(code, that.code)
+                .append(values, that.values)
+                .append(product, that.product)
+                .append(existingVariantSelection, that.existingVariantSelection)
                 .isEquals();
     }
 
@@ -123,6 +129,15 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorImpl
                 .append(product)
                 .append(existingVariantSelection)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("values", values)
+                .append("product", product)
+                .append("existingVariantSelection", existingVariantSelection)
+                .build();
     }
 
 }

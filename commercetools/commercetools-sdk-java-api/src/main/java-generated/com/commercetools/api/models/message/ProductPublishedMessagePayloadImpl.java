@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Publish update action.</p>
@@ -110,6 +112,10 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
                 .append(removedImageUrls, that.removedImageUrls)
                 .append(productProjection, that.productProjection)
                 .append(scope, that.scope)
+                .append(type, that.type)
+                .append(removedImageUrls, that.removedImageUrls)
+                .append(productProjection, that.productProjection)
+                .append(scope, that.scope)
                 .isEquals();
     }
 
@@ -120,6 +126,15 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
                 .append(productProjection)
                 .append(scope)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("removedImageUrls", removedImageUrls)
+                .append("productProjection", productProjection)
+                .append("scope", scope)
+                .build();
     }
 
 }

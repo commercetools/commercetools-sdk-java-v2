@@ -24,7 +24,7 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
     private String code;
 
     /**
-     * set the value to the code
+     *  <p><code>code</code> of a DiscountCode.</p>
      * @param code value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StagedOrderAddDiscountCodeActionBuilder implements Builder<StagedOr
     }
 
     /**
-     * value of code}
+     *  <p><code>code</code> of a DiscountCode.</p>
      * @return code
      */
 

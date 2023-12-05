@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Customer Id update action.</p>
+ *  <p>Generated after a successful Set Customer ID update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, ModelBase {
@@ -180,7 +182,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     *  <p>Customer on the Order after the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
@@ -188,7 +190,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order after the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -196,7 +198,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     *  <p>Customer on the Order before the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getOldCustomer() {
@@ -204,7 +206,7 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
     }
 
     /**
-     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     *  <p>CustomerGroup on the Order before the Set Customer ID update action.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {
@@ -295,6 +297,21 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
                 .append(customerGroup, that.customerGroup)
                 .append(oldCustomer, that.oldCustomer)
                 .append(oldCustomerGroup, that.oldCustomerGroup)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(customer, that.customer)
+                .append(customerGroup, that.customerGroup)
+                .append(oldCustomer, that.oldCustomer)
+                .append(oldCustomerGroup, that.oldCustomerGroup)
                 .isEquals();
     }
 
@@ -316,6 +333,26 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
                 .append(oldCustomer)
                 .append(oldCustomerGroup)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("customer", customer)
+                .append("customerGroup", customerGroup)
+                .append("oldCustomer", oldCustomer)
+                .append("oldCustomerGroup", oldCustomerGroup)
+                .build();
     }
 
 }

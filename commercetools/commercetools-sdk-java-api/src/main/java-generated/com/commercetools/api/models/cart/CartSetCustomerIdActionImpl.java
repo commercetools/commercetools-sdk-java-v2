@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Setting the Cart's <code>customerId</code> can lead to updates on all its LineItem <code>prices</code>.</p>
@@ -71,12 +73,23 @@ public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, Mod
 
         CartSetCustomerIdActionImpl that = (CartSetCustomerIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customerId, that.customerId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customerId, that.customerId)
+                .append(action, that.action)
+                .append(customerId, that.customerId)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(customerId).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("customerId", customerId)
+                .build();
     }
 
 }

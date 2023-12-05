@@ -17,9 +17,9 @@ jobs:
     if: startsWith( github.ref, 'refs/tags/')
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -53,21 +53,28 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
             ref: main
 
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
 
-      - run: ./gradlew -Pversion=${{ github.ref_name }} writeVersionToReadme setVersion nextMinorVersion snapshotVersion
+      - run: ./gradlew -Pversion=${{ github.ref_name }} writeVersionToExamples writeVersionToReadme setVersion nextMinorVersion snapshotVersion
+
+      - name: "update changelog"
+        run: |
+            gh api /repos/commercetools/commercetools-sdk-java-v2/releases --paginate > releases.json
+            node scripts/changelog.js > CHANGELOG.md
+            rm -rf releases.json
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: "remove API reference commit SHA"
         run: rm -rf reference.txt
         continue-on-error: true
 
-      - run: ./gradlew writeVersionToExamples
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
         with:
           commit_message: "TASK: Updating version in README"
           commit_user_name: automation-commercetools
@@ -85,12 +92,12 @@ jobs:
     if: startsWith( github.ref, 'refs/tags/')
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: sdk
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: doc
           ref: gh-pages
@@ -102,14 +109,14 @@ jobs:
           java-version: '17'
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@v1
+        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
 
       - run: ./gradlew -Pversion=${{ github.ref_name }} alljavadoc
         working-directory: sdk
 
-      - run: rm -rf doc/javadoc && mv sdk/build/docs/javadoc doc
+      - run: rsync -r sdk/build/docs/javadoc/ doc/javadoc
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
         with:
           repository: doc
           commit_message: "Update javadoc"

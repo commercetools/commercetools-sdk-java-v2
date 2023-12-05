@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The data representation for a Customer to be imported that is persisted as a Customer in the Project.</p>
@@ -124,7 +126,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier.</p>
+     *  <p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -467,6 +469,30 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
                 .append(locale, that.locale)
                 .append(custom, that.custom)
                 .append(authenticationMode, that.authenticationMode)
+                .append(key, that.key)
+                .append(customerNumber, that.customerNumber)
+                .append(email, that.email)
+                .append(password, that.password)
+                .append(stores, that.stores)
+                .append(firstName, that.firstName)
+                .append(lastName, that.lastName)
+                .append(middleName, that.middleName)
+                .append(title, that.title)
+                .append(salutation, that.salutation)
+                .append(externalId, that.externalId)
+                .append(dateOfBirth, that.dateOfBirth)
+                .append(companyName, that.companyName)
+                .append(vatId, that.vatId)
+                .append(isEmailVerified, that.isEmailVerified)
+                .append(customerGroup, that.customerGroup)
+                .append(addresses, that.addresses)
+                .append(defaultBillingAddress, that.defaultBillingAddress)
+                .append(billingAddresses, that.billingAddresses)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
+                .append(shippingAddresses, that.shippingAddresses)
+                .append(locale, that.locale)
+                .append(custom, that.custom)
+                .append(authenticationMode, that.authenticationMode)
                 .isEquals();
     }
 
@@ -497,6 +523,35 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
                 .append(custom)
                 .append(authenticationMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("customerNumber", customerNumber)
+                .append("email", email)
+                .append("password", password)
+                .append("stores", stores)
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .append("middleName", middleName)
+                .append("title", title)
+                .append("salutation", salutation)
+                .append("externalId", externalId)
+                .append("dateOfBirth", dateOfBirth)
+                .append("companyName", companyName)
+                .append("vatId", vatId)
+                .append("isEmailVerified", isEmailVerified)
+                .append("customerGroup", customerGroup)
+                .append("addresses", addresses)
+                .append("defaultBillingAddress", defaultBillingAddress)
+                .append("billingAddresses", billingAddresses)
+                .append("defaultShippingAddress", defaultShippingAddress)
+                .append("shippingAddresses", shippingAddresses)
+                .append("locale", locale)
+                .append("custom", custom)
+                .append("authenticationMode", authenticationMode)
+                .build();
     }
 
 }

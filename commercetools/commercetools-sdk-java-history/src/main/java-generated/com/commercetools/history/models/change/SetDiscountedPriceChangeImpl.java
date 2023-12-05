@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Change triggered by the Set Discounted Embedded Price update action.</p>
@@ -159,6 +161,13 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
                 .append(catalogData, that.catalogData)
                 .append(variant, that.variant)
                 .append(priceId, that.priceId)
+                .append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .append(catalogData, that.catalogData)
+                .append(variant, that.variant)
+                .append(priceId, that.priceId)
                 .isEquals();
     }
 
@@ -172,6 +181,18 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
                 .append(variant)
                 .append(priceId)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("change", change)
+                .append("previousValue", previousValue)
+                .append("nextValue", nextValue)
+                .append("catalogData", catalogData)
+                .append("variant", variant)
+                .append("priceId", priceId)
+                .build();
     }
 
 }

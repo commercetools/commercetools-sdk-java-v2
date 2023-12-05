@@ -47,7 +47,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the AssetSource.</p>
+     *  <p>User-defined identifier of the AssetSource. Must be unique per Asset.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the AssetSource.</p>
+     *  <p>User-defined identifier of the AssetSource. Must be unique per Asset.</p>
      * @return key
      */
 

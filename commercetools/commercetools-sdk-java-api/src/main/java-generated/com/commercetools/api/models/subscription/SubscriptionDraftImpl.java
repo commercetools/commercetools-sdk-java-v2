@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Either <code>messages</code> or <code>changes</code> must be set.</p>
@@ -137,6 +139,11 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
                 .append(key, that.key)
                 .append(messages, that.messages)
                 .append(format, that.format)
+                .append(changes, that.changes)
+                .append(destination, that.destination)
+                .append(key, that.key)
+                .append(messages, that.messages)
+                .append(format, that.format)
                 .isEquals();
     }
 
@@ -148,6 +155,16 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
                 .append(messages)
                 .append(format)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("changes", changes)
+                .append("destination", destination)
+                .append("key", key)
+                .append("messages", messages)
+                .append("format", format)
+                .build();
     }
 
 }

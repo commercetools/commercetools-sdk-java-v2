@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required. The Asset to update must be specified using either <code>assetId</code> or <code>assetKey</code>.</p>
@@ -155,6 +157,13 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
                 .append(assetId, that.assetId)
                 .append(assetKey, that.assetKey)
                 .append(description, that.description)
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(description, that.description)
                 .isEquals();
     }
 
@@ -168,6 +177,18 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
                 .append(assetKey)
                 .append(description)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("variantId", variantId)
+                .append("sku", sku)
+                .append("staged", staged)
+                .append("assetId", assetId)
+                .append("assetKey", assetKey)
+                .append("description", description)
+                .build();
     }
 
 }

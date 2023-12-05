@@ -48,6 +48,7 @@ public interface ModifiedBy {
      *  <ul>
      *   <li>If the change was made by a user, the value is <code>"user"</code>.</li>
      *   <li>If the change was made by an API Client with or without an external user ID, the value is <code>"external-user"</code>.</li>
+     *   <li>If the change was made by an Associate, the value is <code>"associate"</code>.</li>
      *  </ul>
      * @return type
      */
@@ -56,13 +57,13 @@ public interface ModifiedBy {
     public String getType();
 
     /**
-     *  <p>Reference to the Customer who made the change.</p>
-     *  <p>Present only if the change was made using a token from the password flow.</p>
-     * @return customer
+     *  <p>ID of the API Client that made the change.</p>
+     *  <p>Present only if the change was made using an API Client.</p>
+     * @return clientId
      */
-    @Valid
-    @JsonProperty("customer")
-    public Reference getCustomer();
+
+    @JsonProperty("clientId")
+    public String getClientId();
 
     /**
      *  <p>Present only if the change was made using a token from an anonymous session.</p>
@@ -73,13 +74,21 @@ public interface ModifiedBy {
     public String getAnonymousId();
 
     /**
-     *  <p>ID of the API Client that made the change.</p>
-     *  <p>Present only if the change was made using an API Client.</p>
-     * @return clientId
+     *  <p>The Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
+     * @return customer
      */
+    @Valid
+    @JsonProperty("customer")
+    public Reference getCustomer();
 
-    @JsonProperty("clientId")
-    public String getClientId();
+    /**
+     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     * @return associate
+     */
+    @Valid
+    @JsonProperty("associate")
+    public Reference getAssociate();
 
     /**
      *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
@@ -102,6 +111,7 @@ public interface ModifiedBy {
      *  <ul>
      *   <li>If the change was made by a user, the value is <code>"user"</code>.</li>
      *   <li>If the change was made by an API Client with or without an external user ID, the value is <code>"external-user"</code>.</li>
+     *   <li>If the change was made by an Associate, the value is <code>"associate"</code>.</li>
      *  </ul>
      * @param type value to be set
      */
@@ -109,12 +119,12 @@ public interface ModifiedBy {
     public void setType(final String type);
 
     /**
-     *  <p>Reference to the Customer who made the change.</p>
-     *  <p>Present only if the change was made using a token from the password flow.</p>
-     * @param customer value to be set
+     *  <p>ID of the API Client that made the change.</p>
+     *  <p>Present only if the change was made using an API Client.</p>
+     * @param clientId value to be set
      */
 
-    public void setCustomer(final Reference customer);
+    public void setClientId(final String clientId);
 
     /**
      *  <p>Present only if the change was made using a token from an anonymous session.</p>
@@ -124,12 +134,19 @@ public interface ModifiedBy {
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>ID of the API Client that made the change.</p>
-     *  <p>Present only if the change was made using an API Client.</p>
-     * @param clientId value to be set
+     *  <p>The Customer who made the change.</p>
+     *  <p>Present only if the change was made using a token from the password flow.</p>
+     * @param customer value to be set
      */
 
-    public void setClientId(final String clientId);
+    public void setCustomer(final Reference customer);
+
+    /**
+     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     * @param associate value to be set
+     */
+
+    public void setAssociate(final Reference associate);
 
     /**
      *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
@@ -155,9 +172,10 @@ public interface ModifiedBy {
         ModifiedByImpl instance = new ModifiedByImpl();
         instance.setId(template.getId());
         instance.setType(template.getType());
-        instance.setCustomer(template.getCustomer());
-        instance.setAnonymousId(template.getAnonymousId());
         instance.setClientId(template.getClientId());
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setCustomer(template.getCustomer());
+        instance.setAssociate(template.getAssociate());
         instance.setIsPlatformClient(template.getIsPlatformClient());
         return instance;
     }
@@ -175,9 +193,10 @@ public interface ModifiedBy {
         ModifiedByImpl instance = new ModifiedByImpl();
         instance.setId(template.getId());
         instance.setType(template.getType());
-        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
-        instance.setAnonymousId(template.getAnonymousId());
         instance.setClientId(template.getClientId());
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
+        instance.setAssociate(com.commercetools.history.models.common.Reference.deepCopy(template.getAssociate()));
         instance.setIsPlatformClient(template.getIsPlatformClient());
         return instance;
     }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderSetLocaleAction
@@ -49,7 +51,7 @@ public class OrderSetLocaleActionImpl implements OrderSetLocaleAction, ModelBase
     }
 
     /**
-     *
+     *  <p>Value to set. Must be one of the Project's languages. If empty, any existing value is removed.</p>
      */
 
     public String getLocale() {
@@ -70,12 +72,23 @@ public class OrderSetLocaleActionImpl implements OrderSetLocaleAction, ModelBase
 
         OrderSetLocaleActionImpl that = (OrderSetLocaleActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(locale, that.locale).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(locale, that.locale)
+                .append(action, that.action)
+                .append(locale, that.locale)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(locale).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("locale", locale)
+                .build();
     }
 
 }

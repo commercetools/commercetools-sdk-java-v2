@@ -55,7 +55,7 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @return externalPrice
      */
 

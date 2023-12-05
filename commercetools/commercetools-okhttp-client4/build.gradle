@@ -1,11 +1,11 @@
 
 dependencies {
     api project(":rmf:rmf-java-base")
-    api "com.squareup.okhttp3:okhttp:4.10.0" version {
+    api "com.squareup.okhttp3:okhttp:4.12.0" version {
         strictly '[4.0,5.0['
         prefer "4.10.0"
     }
-    implementation "com.squareup.okio:okio:3.3.0"
+    implementation "com.squareup.okio:okio:3.6.0"
 
     implementation javax.validation
 }

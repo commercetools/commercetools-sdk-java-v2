@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create Staged Quote request.</p>
+ *  <p>Generated after a successful Create StagedQuote request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedQuoteCreatedMessagePayloadImpl implements StagedQuoteCreatedMessagePayload, ModelBase {
@@ -71,12 +73,23 @@ public class StagedQuoteCreatedMessagePayloadImpl implements StagedQuoteCreatedM
 
         StagedQuoteCreatedMessagePayloadImpl that = (StagedQuoteCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(stagedQuote, that.stagedQuote).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(stagedQuote, that.stagedQuote)
+                .append(type, that.type)
+                .append(stagedQuote, that.stagedQuote)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(stagedQuote).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("stagedQuote", stagedQuote)
+                .build();
     }
 
 }

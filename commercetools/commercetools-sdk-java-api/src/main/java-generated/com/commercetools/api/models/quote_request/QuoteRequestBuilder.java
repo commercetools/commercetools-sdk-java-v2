@@ -117,6 +117,9 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     private String purchaseOrderNumber;
 
     @Nullable
+    private com.commercetools.api.models.cart.CartReference cart;
+
+    @Nullable
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
     /**
@@ -1094,6 +1097,41 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
+     *  <p>The Cart from which a Quote is requested.</p>
+     * @param builder function to build the cart value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder cart(
+            Function<com.commercetools.api.models.cart.CartReferenceBuilder, com.commercetools.api.models.cart.CartReferenceBuilder> builder) {
+        this.cart = builder.apply(com.commercetools.api.models.cart.CartReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Cart from which a Quote is requested.</p>
+     * @param builder function to build the cart value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withCart(
+            Function<com.commercetools.api.models.cart.CartReferenceBuilder, com.commercetools.api.models.cart.CartReference> builder) {
+        this.cart = builder.apply(com.commercetools.api.models.cart.CartReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Cart from which a Quote is requested.</p>
+     * @param cart value to be set
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder cart(@Nullable final com.commercetools.api.models.cart.CartReference cart) {
+        this.cart = cart;
+        return this;
+    }
+
+    /**
      *  <p>The BusinessUnit for the Quote Request.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
@@ -1431,6 +1469,16 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
+     *  <p>The Cart from which a Quote is requested.</p>
+     * @return cart
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.CartReference getCart() {
+        return this.cart;
+    }
+
+    /**
      *  <p>The BusinessUnit for the Quote Request.</p>
      * @return businessUnit
      */
@@ -1461,7 +1509,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
             country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
-            state, purchaseOrderNumber, businessUnit);
+            state, purchaseOrderNumber, cart, businessUnit);
     }
 
     /**
@@ -1473,7 +1521,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
             taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
             country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
-            state, purchaseOrderNumber, businessUnit);
+            state, purchaseOrderNumber, cart, businessUnit);
     }
 
     /**
@@ -1522,6 +1570,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         builder.custom = template.getCustom();
         builder.state = template.getState();
         builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
+        builder.cart = template.getCart();
         builder.businessUnit = template.getBusinessUnit();
         return builder;
     }

@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>When creating B2B Orders, the Customer must have the <code>MyOrderFromCartDraft</code> Permission.</p>
+ * MyOrderFromCartDraft
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft, ModelBase {
@@ -40,7 +42,7 @@ public class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft, ModelBase
     }
 
     /**
-     *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
+     *  <p><code>id</code> of the Cart from which the Order is created.</p>
      */
 
     public String getId() {
@@ -48,7 +50,7 @@ public class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft, ModelBase
     }
 
     /**
-     *
+     *  <p>Current <code>version</code> of the Cart from which the Order is created.</p>
      */
 
     public Long getVersion() {
@@ -73,12 +75,23 @@ public class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft, ModelBase
 
         MyOrderFromCartDraftImpl that = (MyOrderFromCartDraftImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(id, that.id)
+                .append(version, that.version)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id).append(version).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .build();
     }
 
 }

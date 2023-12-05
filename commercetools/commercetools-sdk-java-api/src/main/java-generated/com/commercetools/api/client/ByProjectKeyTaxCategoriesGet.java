@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,7 +35,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyTaxCategoriesGet extends
-        ApiMethod<ByProjectKeyTaxCategoriesGet, com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse>
+        TypeApiMethod<ByProjectKeyTaxCategoriesGet, com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse>
         implements ByProjectKeyTaxCategoriesGetMixin,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyTaxCategoriesGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyTaxCategoriesGet>,
@@ -41,6 +43,12 @@ public class ByProjectKeyTaxCategoriesGet extends
         com.commercetools.api.client.QueryTrait<ByProjectKeyTaxCategoriesGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyTaxCategoriesGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyTaxCategoriesGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse> resultType() {
+        return new TypeReference<com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse>() {
+        };
+    }
 
     private String projectKey;
 

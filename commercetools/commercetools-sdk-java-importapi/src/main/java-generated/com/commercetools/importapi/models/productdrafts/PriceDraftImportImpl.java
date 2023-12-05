@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The representation of a Price Draft for the import purpose.</p>
@@ -217,6 +219,16 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
                 .append(discounted, that.discounted)
                 .append(tiers, that.tiers)
                 .append(key, that.key)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(custom, that.custom)
+                .append(discounted, that.discounted)
+                .append(tiers, that.tiers)
+                .append(key, that.key)
                 .isEquals();
     }
 
@@ -233,6 +245,21 @@ public class PriceDraftImportImpl implements PriceDraftImport, ModelBase {
                 .append(tiers)
                 .append(key)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("value", value)
+                .append("country", country)
+                .append("customerGroup", customerGroup)
+                .append("channel", channel)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("custom", custom)
+                .append("discounted", discounted)
+                .append("tiers", tiers)
+                .append("key", key)
+                .build();
     }
 
 }

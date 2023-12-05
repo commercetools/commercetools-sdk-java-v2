@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CategoryDraft
@@ -249,6 +251,18 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(assets, that.assets)
                 .append(key, that.key)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(parent, that.parent)
+                .append(orderHint, that.orderHint)
+                .append(externalId, that.externalId)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(custom, that.custom)
+                .append(assets, that.assets)
+                .append(key, that.key)
                 .isEquals();
     }
 
@@ -267,6 +281,23 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
                 .append(assets)
                 .append(key)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+                .append("slug", slug)
+                .append("description", description)
+                .append("parent", parent)
+                .append("orderHint", orderHint)
+                .append("externalId", externalId)
+                .append("metaTitle", metaTitle)
+                .append("metaDescription", metaDescription)
+                .append("metaKeywords", metaKeywords)
+                .append("custom", custom)
+                .append("assets", assets)
+                .append("key", key)
+                .build();
     }
 
 }

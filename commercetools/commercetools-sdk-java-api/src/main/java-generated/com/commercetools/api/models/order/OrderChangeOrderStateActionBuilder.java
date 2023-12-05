@@ -24,7 +24,7 @@ public class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOr
     private com.commercetools.api.models.order.OrderState orderState;
 
     /**
-     * set the value to the orderState
+     *  <p>New status of the Order.</p>
      * @param orderState value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOr
     }
 
     /**
-     * value of orderState}
+     *  <p>New status of the Order.</p>
      * @return orderState
      */
 

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderEditUpdate
@@ -45,7 +47,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      */
 
     public Long getVersion() {
@@ -53,7 +55,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Update actions to be performed on the Order Edit.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> getActions() {
@@ -61,7 +63,7 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
     }
 
     /**
-     *
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
      */
 
     public Boolean getDryRun() {
@@ -98,12 +100,23 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
         return new EqualsBuilder().append(version, that.version)
                 .append(actions, that.actions)
                 .append(dryRun, that.dryRun)
+                .append(version, that.version)
+                .append(actions, that.actions)
+                .append(dryRun, that.dryRun)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(version).append(actions).append(dryRun).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("version", version)
+                .append("actions", actions)
+                .append("dryRun", dryRun)
+                .build();
     }
 
 }

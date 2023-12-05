@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LastModifiedBy extends ClientLogging {
 
     /**
-     *  <p><code>id</code> of the APIClient which modified the resource.</p>
+     *  <p><code>id</code> of the API Client which modified the resource.</p>
      * @return clientId
      */
 
@@ -39,7 +39,7 @@ public interface LastModifiedBy extends ClientLogging {
     public String getClientId();
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
      * @return externalUserId
      */
 
@@ -63,14 +63,22 @@ public interface LastModifiedBy extends ClientLogging {
     public String getAnonymousId();
 
     /**
-     *  <p><code>id</code> of the APIClient which modified the resource.</p>
+     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     * @return associate
+     */
+    @Valid
+    @JsonProperty("associate")
+    public CustomerReference getAssociate();
+
+    /**
+     *  <p><code>id</code> of the API Client which modified the resource.</p>
      * @param clientId value to be set
      */
 
     public void setClientId(final String clientId);
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
      * @param externalUserId value to be set
      */
 
@@ -91,6 +99,13 @@ public interface LastModifiedBy extends ClientLogging {
     public void setAnonymousId(final String anonymousId);
 
     /**
+     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     * @param associate value to be set
+     */
+
+    public void setAssociate(final CustomerReference associate);
+
+    /**
      * factory method
      * @return instance of LastModifiedBy
      */
@@ -109,6 +124,7 @@ public interface LastModifiedBy extends ClientLogging {
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(template.getCustomer());
         instance.setAnonymousId(template.getAnonymousId());
+        instance.setAssociate(template.getAssociate());
         return instance;
     }
 
@@ -127,6 +143,8 @@ public interface LastModifiedBy extends ClientLogging {
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         instance.setAnonymousId(template.getAnonymousId());
+        instance.setAssociate(
+            com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getAssociate()));
         return instance;
     }
 

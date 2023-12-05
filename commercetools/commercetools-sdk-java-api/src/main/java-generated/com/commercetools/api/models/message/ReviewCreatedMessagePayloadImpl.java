@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Create Review request.</p>
@@ -70,12 +72,23 @@ public class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayl
 
         ReviewCreatedMessagePayloadImpl that = (ReviewCreatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(review, that.review).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(review, that.review)
+                .append(type, that.type)
+                .append(review, that.review)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(review).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("review", review)
+                .build();
     }
 
 }

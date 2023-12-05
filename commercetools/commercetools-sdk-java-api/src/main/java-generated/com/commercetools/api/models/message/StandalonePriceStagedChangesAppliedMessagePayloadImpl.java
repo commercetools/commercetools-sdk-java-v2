@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Apply Staged Changes update action.</p>
@@ -73,12 +75,23 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadImpl
 
         StandalonePriceStagedChangesAppliedMessagePayloadImpl that = (StandalonePriceStagedChangesAppliedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(stagedChanges, that.stagedChanges).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(stagedChanges, that.stagedChanges)
+                .append(type, that.type)
+                .append(stagedChanges, that.stagedChanges)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(stagedChanges).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("stagedChanges", stagedChanges)
+                .build();
     }
 
 }

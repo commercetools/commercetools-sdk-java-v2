@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * AttributeGroupSetAttributesAction
@@ -76,12 +78,23 @@ public class AttributeGroupSetAttributesActionImpl implements AttributeGroupSetA
 
         AttributeGroupSetAttributesActionImpl that = (AttributeGroupSetAttributesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attributes, that.attributes).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attributes, that.attributes)
+                .append(action, that.action)
+                .append(attributes, that.attributes)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(attributes).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("attributes", attributes)
+                .build();
     }
 
 }

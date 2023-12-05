@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The width and height of the Asset Source.</p>
@@ -73,12 +75,17 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
 
         AssetDimensionsImpl that = (AssetDimensionsImpl) o;
 
-        return new EqualsBuilder().append(w, that.w).append(h, that.h).isEquals();
+        return new EqualsBuilder().append(w, that.w).append(h, that.h).append(w, that.w).append(h, that.h).isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(w).append(h).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("w", w).append("h", h).build();
     }
 
 }

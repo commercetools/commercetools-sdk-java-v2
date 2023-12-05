@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when a Cart or an Order in a Store references a country that is not included in the countries configured for the Store.</p>
@@ -21,7 +23,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *   <li>Create Cart in Store request and Set Country update action on Carts.</li>
  *   <li>Create Cart in Store request and Set Country update action on My Carts.</li>
  *   <li>Create Order in Store from Cart requests on Orders.</li>
- *   <li>Create Order from Cart in a Store requests on My Orders.</li>
+ *   <li>Create Order in Store from Cart requests on My Orders.</li>
  *   <li>Create Order from Quote requests on Orders.</li>
  *   <li>Create Order from Quote requests on My Orders.</li>
  *   <li>Create Order by Import request on Order Import.</li>
@@ -141,6 +143,11 @@ public class CountryNotConfiguredInStoreErrorImpl implements CountryNotConfigure
                 .append(values, that.values)
                 .append(storeCountries, that.storeCountries)
                 .append(country, that.country)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(values, that.values)
+                .append(storeCountries, that.storeCountries)
+                .append(country, that.country)
                 .isEquals();
     }
 
@@ -152,6 +159,16 @@ public class CountryNotConfiguredInStoreErrorImpl implements CountryNotConfigure
                 .append(storeCountries)
                 .append(country)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("values", values)
+                .append("storeCountries", storeCountries)
+                .append("country", country)
+                .build();
     }
 
 }

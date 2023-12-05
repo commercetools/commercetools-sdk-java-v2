@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.CentPrecisionMoney;
+import com.commercetools.api.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -39,28 +39,28 @@ public interface CartDiscountValueFixed extends CartDiscountValue, CartDiscountV
     String FIXED = "fixed";
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @return money
      */
     @NotNull
     @Valid
     @JsonProperty("money")
-    public List<CentPrecisionMoney> getMoney();
+    public List<TypedMoney> getMoney();
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @param money values to be set
      */
 
     @JsonIgnore
-    public void setMoney(final CentPrecisionMoney... money);
+    public void setMoney(final TypedMoney... money);
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @param money values to be set
      */
 
-    public void setMoney(final List<CentPrecisionMoney> money);
+    public void setMoney(final List<TypedMoney> money);
 
     /**
      * factory method
@@ -94,7 +94,7 @@ public interface CartDiscountValueFixed extends CartDiscountValue, CartDiscountV
         CartDiscountValueFixedImpl instance = new CartDiscountValueFixedImpl();
         instance.setMoney(Optional.ofNullable(template.getMoney())
                 .map(t -> t.stream()
-                        .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
+                        .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         return instance;

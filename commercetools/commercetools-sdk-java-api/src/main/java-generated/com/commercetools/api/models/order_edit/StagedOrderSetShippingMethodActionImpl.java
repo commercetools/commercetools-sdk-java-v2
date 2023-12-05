@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StagedOrderSetShippingMethodAction
+ *  <p>To set the Cart's Shipping Method, the Cart must have the <code>Single</code> ShippingMode and a <code>shippingAddress</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetShippingMethodActionImpl implements StagedOrderSetShippingMethodAction, ModelBase {
@@ -54,7 +56,7 @@ public class StagedOrderSetShippingMethodActionImpl implements StagedOrderSetShi
     }
 
     /**
-     *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     *  <p>Value to set. If empty, any existing value will be removed. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
@@ -62,7 +64,7 @@ public class StagedOrderSetShippingMethodActionImpl implements StagedOrderSetShi
     }
 
     /**
-     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     *  <p>An external Tax Rate can be set if the Cart has the <code>External</code> TaxMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -91,12 +93,23 @@ public class StagedOrderSetShippingMethodActionImpl implements StagedOrderSetShi
         return new EqualsBuilder().append(action, that.action)
                 .append(shippingMethod, that.shippingMethod)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(action, that.action)
+                .append(shippingMethod, that.shippingMethod)
+                .append(externalTaxRate, that.externalTaxRate)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(shippingMethod).append(externalTaxRate).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("shippingMethod", shippingMethod)
+                .append("externalTaxRate", externalTaxRate)
+                .build();
     }
 
 }

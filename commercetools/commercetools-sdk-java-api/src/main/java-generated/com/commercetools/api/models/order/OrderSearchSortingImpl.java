@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderSearchSorting
@@ -126,6 +128,11 @@ public class OrderSearchSortingImpl implements OrderSearchSorting, ModelBase {
                 .append(order, that.order)
                 .append(mode, that.mode)
                 .append(filter, that.filter)
+                .append(field, that.field)
+                .append(language, that.language)
+                .append(order, that.order)
+                .append(mode, that.mode)
+                .append(filter, that.filter)
                 .isEquals();
     }
 
@@ -137,6 +144,16 @@ public class OrderSearchSortingImpl implements OrderSearchSorting, ModelBase {
                 .append(mode)
                 .append(filter)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("field", field)
+                .append("language", language)
+                .append("order", order)
+                .append("mode", mode)
+                .append("filter", filter)
+                .build();
     }
 
 }

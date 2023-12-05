@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The <code>Unique</code> AttributeConstraintEnum was violated.</p>
@@ -89,12 +91,23 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
         return new EqualsBuilder().append(code, that.code)
                 .append(message, that.message)
                 .append(attribute, that.attribute)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(attribute, that.attribute)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(code).append(message).append(attribute).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("attribute", attribute)
+                .build();
     }
 
 }

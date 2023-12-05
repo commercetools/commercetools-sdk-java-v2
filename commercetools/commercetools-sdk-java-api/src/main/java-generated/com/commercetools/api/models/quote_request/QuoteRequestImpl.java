@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * QuoteRequest
@@ -82,6 +84,8 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
 
     private String purchaseOrderNumber;
 
+    private com.commercetools.api.models.cart.CartReference cart;
+
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
     /**
@@ -118,6 +122,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
             @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
+            @JsonProperty("cart") final com.commercetools.api.models.cart.CartReference cart,
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.id = id;
         this.version = version;
@@ -150,6 +155,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.custom = custom;
         this.state = state;
         this.purchaseOrderNumber = purchaseOrderNumber;
+        this.cart = cart;
         this.businessUnit = businessUnit;
     }
 
@@ -408,6 +414,14 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
+     *  <p>The Cart from which a Quote is requested.</p>
+     */
+
+    public com.commercetools.api.models.cart.CartReference getCart() {
+        return this.cart;
+    }
+
+    /**
      *  <p>The BusinessUnit for the Quote Request.</p>
      */
 
@@ -560,6 +574,10 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.purchaseOrderNumber = purchaseOrderNumber;
     }
 
+    public void setCart(final com.commercetools.api.models.cart.CartReference cart) {
+        this.cart = cart;
+    }
+
     public void setBusinessUnit(
             final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
         this.businessUnit = businessUnit;
@@ -606,6 +624,40 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(custom, that.custom)
                 .append(state, that.state)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(cart, that.cart)
+                .append(businessUnit, that.businessUnit)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(quoteRequestState, that.quoteRequestState)
+                .append(comment, that.comment)
+                .append(customer, that.customer)
+                .append(customerGroup, that.customerGroup)
+                .append(store, that.store)
+                .append(lineItems, that.lineItems)
+                .append(customLineItems, that.customLineItems)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(shippingAddress, that.shippingAddress)
+                .append(billingAddress, that.billingAddress)
+                .append(inventoryMode, that.inventoryMode)
+                .append(taxMode, that.taxMode)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .append(country, that.country)
+                .append(shippingInfo, that.shippingInfo)
+                .append(paymentInfo, that.paymentInfo)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(directDiscounts, that.directDiscounts)
+                .append(custom, that.custom)
+                .append(state, that.state)
+                .append(purchaseOrderNumber, that.purchaseOrderNumber)
+                .append(cart, that.cart)
                 .append(businessUnit, that.businessUnit)
                 .isEquals();
     }
@@ -643,8 +695,47 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .append(custom)
                 .append(state)
                 .append(purchaseOrderNumber)
+                .append(cart)
                 .append(businessUnit)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("key", key)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("quoteRequestState", quoteRequestState)
+                .append("comment", comment)
+                .append("customer", customer)
+                .append("customerGroup", customerGroup)
+                .append("store", store)
+                .append("lineItems", lineItems)
+                .append("customLineItems", customLineItems)
+                .append("totalPrice", totalPrice)
+                .append("taxedPrice", taxedPrice)
+                .append("shippingAddress", shippingAddress)
+                .append("billingAddress", billingAddress)
+                .append("inventoryMode", inventoryMode)
+                .append("taxMode", taxMode)
+                .append("taxRoundingMode", taxRoundingMode)
+                .append("taxCalculationMode", taxCalculationMode)
+                .append("country", country)
+                .append("shippingInfo", shippingInfo)
+                .append("paymentInfo", paymentInfo)
+                .append("shippingRateInput", shippingRateInput)
+                .append("itemShippingAddresses", itemShippingAddresses)
+                .append("directDiscounts", directDiscounts)
+                .append("custom", custom)
+                .append("state", state)
+                .append("purchaseOrderNumber", purchaseOrderNumber)
+                .append("cart", cart)
+                .append("businessUnit", businessUnit)
+                .build();
     }
 
 }

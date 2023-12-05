@@ -39,6 +39,11 @@ public class ShoppingListLineItemQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ShoppingListLineItemQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<ShoppingListLineItemQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, ShoppingListLineItemQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<ShoppingListLineItemQueryBuilderDsl> name(
             Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

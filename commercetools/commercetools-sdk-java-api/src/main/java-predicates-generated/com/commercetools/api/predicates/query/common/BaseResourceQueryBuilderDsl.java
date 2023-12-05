@@ -36,6 +36,20 @@ public class BaseResourceQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, BaseResourceQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asApprovalFlow(
+            Function<com.commercetools.api.predicates.query.approval_flow.ApprovalFlowQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.approval_flow.ApprovalFlowQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.approval_flow.ApprovalFlowQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asApprovalRule(
+            Function<com.commercetools.api.predicates.query.approval_rule.ApprovalRuleQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.approval_rule.ApprovalRuleQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.approval_rule.ApprovalRuleQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asAssociateRole(
             Function<com.commercetools.api.predicates.query.associate_role.AssociateRoleQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.associate_role.AssociateRoleQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

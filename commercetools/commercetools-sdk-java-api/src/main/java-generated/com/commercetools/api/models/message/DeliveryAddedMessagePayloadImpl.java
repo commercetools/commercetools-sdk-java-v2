@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Add Delivery update action.</p>
@@ -54,7 +56,7 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
     }
 
     /**
-     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional Parcel Added To Delivery Message containing information about the Parcels.</p>
      */
 
     public com.commercetools.api.models.order.Delivery getDelivery() {
@@ -62,7 +64,7 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
      */
 
     public String getShippingKey() {
@@ -90,12 +92,23 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
         return new EqualsBuilder().append(type, that.type)
                 .append(delivery, that.delivery)
                 .append(shippingKey, that.shippingKey)
+                .append(type, that.type)
+                .append(delivery, that.delivery)
+                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(delivery).append(shippingKey).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("delivery", delivery)
+                .append("shippingKey", shippingKey)
+                .build();
     }
 
 }

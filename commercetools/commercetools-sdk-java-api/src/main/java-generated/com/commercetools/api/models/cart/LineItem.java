@@ -26,7 +26,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The representation of a Line Item in a Cart.</p>
+ *  <p>The representation of a Line Item in a Cart or in an Order.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -83,8 +83,8 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
      *  <p><code>key</code> of the Product.</p>
      *  <p>This field is only present on:</p>
      *  <ul>
-     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item was created or updated on the Cart.</li>
-     *   <li>Orders when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
+     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the LineItem was created or updated on the Cart.</li>
+     *   <li>Line Items in an Order when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
      *  </ul>
      *  <p>Present on resources created or updated after 3 December 2021.</p>
      * @return productKey
@@ -139,7 +139,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public Price getPrice();
 
     /**
-     *  <p>Number of Line Items of the given Product Variant present in the Cart.</p>
+     *  <p>Number of Line Items of the given Product Variant present in the Cart or Order.</p>
      * @return quantity
      */
     @NotNull
@@ -182,7 +182,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public List<MethodTaxedPrice> getTaxedPricePortions();
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      * @return state
      */
     @NotNull
@@ -307,8 +307,8 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
      *  <p><code>key</code> of the Product.</p>
      *  <p>This field is only present on:</p>
      *  <ul>
-     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item was created or updated on the Cart.</li>
-     *   <li>Orders when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
+     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the LineItem was created or updated on the Cart.</li>
+     *   <li>Line Items in an Order when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
      *  </ul>
      *  <p>Present on resources created or updated after 3 December 2021.</p>
      * @param productKey value to be set
@@ -353,7 +353,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public void setPrice(final Price price);
 
     /**
-     *  <p>Number of Line Items of the given Product Variant present in the Cart.</p>
+     *  <p>Number of Line Items of the given Product Variant present in the Cart or Order.</p>
      * @param quantity value to be set
      */
 
@@ -405,7 +405,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public void setTaxedPricePortions(final List<MethodTaxedPrice> taxedPricePortions);
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      * @param state values to be set
      */
 
@@ -413,7 +413,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public void setState(final ItemState... state);
 
     /**
-     *  <p>State of the Line Item in the Cart.</p>
+     *  <p>State of the Line Item in the Cart or the Order.</p>
      * @param state values to be set
      */
 

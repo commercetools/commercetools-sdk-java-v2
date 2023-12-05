@@ -35,7 +35,7 @@ public interface OrderEditUpdate extends
         com.commercetools.api.models.ResourceUpdate<OrderEditUpdate, OrderEditUpdateAction, OrderEditUpdateBuilder> {
 
     /**
-     *
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface OrderEditUpdate extends
     public Long getVersion();
 
     /**
-     *
+     *  <p>Update actions to be performed on the Order Edit.</p>
      * @return actions
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface OrderEditUpdate extends
     public List<OrderEditUpdateAction> getActions();
 
     /**
-     *
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
      * @return dryRun
      */
 
@@ -60,14 +60,14 @@ public interface OrderEditUpdate extends
     public Boolean getDryRun();
 
     /**
-     * set version
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      */
 
     public void setVersion(final Long version);
 
     /**
-     * set actions
+     *  <p>Update actions to be performed on the Order Edit.</p>
      * @param actions values to be set
      */
 
@@ -75,14 +75,14 @@ public interface OrderEditUpdate extends
     public void setActions(final OrderEditUpdateAction... actions);
 
     /**
-     * set actions
+     *  <p>Update actions to be performed on the Order Edit.</p>
      * @param actions values to be set
      */
 
     public void setActions(final List<OrderEditUpdateAction> actions);
 
     /**
-     * set dryRun
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
      * @param dryRun value to be set
      */
 

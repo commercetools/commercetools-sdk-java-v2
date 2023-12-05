@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>A given field is not supported. This error occurs, for example, if the field <code>variants</code>, which is not supported by Product Import, is sent to the Product Import endpoint.</p>
@@ -143,6 +145,12 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
                 .append(invalidValue, that.invalidValue)
                 .append(allowedValues, that.allowedValues)
                 .append(resourceIndex, that.resourceIndex)
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(field, that.field)
+                .append(invalidValue, that.invalidValue)
+                .append(allowedValues, that.allowedValues)
+                .append(resourceIndex, that.resourceIndex)
                 .isEquals();
     }
 
@@ -155,6 +163,17 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
                 .append(allowedValues)
                 .append(resourceIndex)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code)
+                .append("message", message)
+                .append("field", field)
+                .append("invalidValue", invalidValue)
+                .append("allowedValues", allowedValues)
+                .append("resourceIndex", resourceIndex)
+                .build();
     }
 
 }

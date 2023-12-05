@@ -25,6 +25,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersGet(apiHttpClient, projectKey, storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersHead head() {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersHead(apiHttpClient, projectKey, storeKey);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPost post(
             com.commercetools.api.models.customer.CustomerDraft customerDraft) {
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersPost(apiHttpClient, projectKey, storeKey, customerDraft);

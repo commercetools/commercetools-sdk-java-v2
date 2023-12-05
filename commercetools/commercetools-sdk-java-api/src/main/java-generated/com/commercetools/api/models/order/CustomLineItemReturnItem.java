@@ -42,7 +42,15 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     String CUSTOM_LINE_ITEM_RETURN_ITEM = "CustomLineItemReturnItem";
 
     /**
-     *
+     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p><code>id</code> of the returned CustomLineItem.</p>
      * @return customLineItemId
      */
     @NotNull
@@ -50,11 +58,33 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     public String getCustomLineItemId();
 
     /**
-     * set customLineItemId
+     *  <p>Number of Custom Line Items returned.</p>
+     * @return quantity
+     */
+    @NotNull
+    @JsonProperty("quantity")
+    public Long getQuantity();
+
+    /**
+     *  <p>User-defined unique identifier of the CustomLineItemReturnItem.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p><code>id</code> of the returned CustomLineItem.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Number of Custom Line Items returned.</p>
+     * @param quantity value to be set
+     */
+
+    public void setQuantity(final Long quantity);
 
     /**
      * factory method
@@ -72,6 +102,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
     public static CustomLineItemReturnItem of(final CustomLineItemReturnItem template) {
         CustomLineItemReturnItemImpl instance = new CustomLineItemReturnItemImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setComment(template.getComment());
         instance.setShipmentState(template.getShipmentState());
@@ -95,6 +126,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
         }
         CustomLineItemReturnItemImpl instance = new CustomLineItemReturnItemImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setQuantity(template.getQuantity());
         instance.setComment(template.getComment());
         instance.setShipmentState(template.getShipmentState());

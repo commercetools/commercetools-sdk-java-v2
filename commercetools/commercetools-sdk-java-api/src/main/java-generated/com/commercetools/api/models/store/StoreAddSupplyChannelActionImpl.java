@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>This action has no effect if a given supply channel is already present in a Store.</p>
@@ -73,12 +75,23 @@ public class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChannelAct
 
         StoreAddSupplyChannelActionImpl that = (StoreAddSupplyChannelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(supplyChannel, that.supplyChannel).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(supplyChannel, that.supplyChannel)
+                .append(action, that.action)
+                .append(supplyChannel, that.supplyChannel)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(supplyChannel).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("supplyChannel", supplyChannel)
+                .build();
     }
 
 }

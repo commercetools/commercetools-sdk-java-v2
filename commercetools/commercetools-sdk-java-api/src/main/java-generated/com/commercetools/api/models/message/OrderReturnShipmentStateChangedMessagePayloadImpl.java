@@ -13,9 +13,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Return Shipment State update action.</p>
+ *  <p>Generated after a successful Set ReturnShipmentState update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReturnShipmentStateChangedMessagePayloadImpl
@@ -91,12 +93,23 @@ public class OrderReturnShipmentStateChangedMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(returnItemId, that.returnItemId)
                 .append(returnShipmentState, that.returnShipmentState)
+                .append(type, that.type)
+                .append(returnItemId, that.returnItemId)
+                .append(returnShipmentState, that.returnShipmentState)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(returnItemId).append(returnShipmentState).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("returnItemId", returnItemId)
+                .append("returnShipmentState", returnShipmentState)
+                .build();
     }
 
 }

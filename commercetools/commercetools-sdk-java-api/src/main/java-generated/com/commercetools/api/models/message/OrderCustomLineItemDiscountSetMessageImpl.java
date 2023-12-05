@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful recalculation of a Discount on a Custom Line Item.</p>
@@ -44,6 +46,8 @@ public class OrderCustomLineItemDiscountSetMessageImpl implements OrderCustomLin
 
     private String customLineItemId;
 
+    private String customLineItemKey;
+
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
@@ -63,6 +67,7 @@ public class OrderCustomLineItemDiscountSetMessageImpl implements OrderCustomLin
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("customLineItemId") final String customLineItemId,
+            @JsonProperty("customLineItemKey") final String customLineItemKey,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
         this.id = id;
@@ -76,6 +81,7 @@ public class OrderCustomLineItemDiscountSetMessageImpl implements OrderCustomLin
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customLineItemId = customLineItemId;
+        this.customLineItemKey = customLineItemKey;
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.taxedPrice = taxedPrice;
         this.type = ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET;
@@ -185,6 +191,14 @@ public class OrderCustomLineItemDiscountSetMessageImpl implements OrderCustomLin
     }
 
     /**
+     *  <p>User-defined unique identifier of the Custom Line Item.</p>
+     */
+
+    public String getCustomLineItemKey() {
+        return this.customLineItemKey;
+    }
+
+    /**
      *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
      */
 
@@ -245,6 +259,10 @@ public class OrderCustomLineItemDiscountSetMessageImpl implements OrderCustomLin
         this.customLineItemId = customLineItemId;
     }
 
+    public void setCustomLineItemKey(final String customLineItemKey) {
+        this.customLineItemKey = customLineItemKey;
+    }
+
     public void setDiscountedPricePerQuantity(
             final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
         this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
@@ -281,6 +299,22 @@ public class OrderCustomLineItemDiscountSetMessageImpl implements OrderCustomLin
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(taxedPrice, that.taxedPrice)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(customLineItemId, that.customLineItemId)
+                .append(customLineItemKey, that.customLineItemKey)
                 .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
                 .append(taxedPrice, that.taxedPrice)
                 .isEquals();
@@ -300,9 +334,30 @@ public class OrderCustomLineItemDiscountSetMessageImpl implements OrderCustomLin
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(customLineItemId)
+                .append(customLineItemKey)
                 .append(discountedPricePerQuantity)
                 .append(taxedPrice)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("customLineItemId", customLineItemId)
+                .append("customLineItemKey", customLineItemKey)
+                .append("discountedPricePerQuantity", discountedPricePerQuantity)
+                .append("taxedPrice", taxedPrice)
+                .build();
     }
 
 }

@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Set StatusInterfaceCode update action.</p>
@@ -42,8 +44,6 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private String paymentId;
-
     private String interfaceCode;
 
     /**
@@ -60,7 +60,6 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("paymentId") final String paymentId,
             @JsonProperty("interfaceCode") final String interfaceCode) {
         this.id = id;
         this.version = version;
@@ -72,7 +71,6 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.paymentId = paymentId;
         this.interfaceCode = interfaceCode;
         this.type = PAYMENT_STATUS_INTERFACE_CODE_SET;
     }
@@ -173,14 +171,6 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
     }
 
     /**
-     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
-     */
-
-    public String getPaymentId() {
-        return this.paymentId;
-    }
-
-    /**
      *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
      */
 
@@ -229,10 +219,6 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setPaymentId(final String paymentId) {
-        this.paymentId = paymentId;
-    }
-
     public void setInterfaceCode(final String interfaceCode) {
         this.interfaceCode = interfaceCode;
     }
@@ -258,7 +244,18 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
-                .append(paymentId, that.paymentId)
+                .append(interfaceCode, that.interfaceCode)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(interfaceCode, that.interfaceCode)
                 .isEquals();
     }
@@ -276,9 +273,25 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
-                .append(paymentId)
                 .append(interfaceCode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("sequenceNumber", sequenceNumber)
+                .append("resource", resource)
+                .append("resourceVersion", resourceVersion)
+                .append("type", type)
+                .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("interfaceCode", interfaceCode)
+                .build();
     }
 
 }

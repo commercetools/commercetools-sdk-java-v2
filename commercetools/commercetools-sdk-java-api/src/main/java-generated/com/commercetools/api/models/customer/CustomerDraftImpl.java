@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * CustomerDraft
@@ -523,6 +525,33 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(salutation, that.salutation)
                 .append(stores, that.stores)
                 .append(authenticationMode, that.authenticationMode)
+                .append(key, that.key)
+                .append(customerNumber, that.customerNumber)
+                .append(externalId, that.externalId)
+                .append(email, that.email)
+                .append(password, that.password)
+                .append(firstName, that.firstName)
+                .append(lastName, that.lastName)
+                .append(middleName, that.middleName)
+                .append(title, that.title)
+                .append(anonymousCartId, that.anonymousCartId)
+                .append(anonymousCart, that.anonymousCart)
+                .append(anonymousId, that.anonymousId)
+                .append(dateOfBirth, that.dateOfBirth)
+                .append(companyName, that.companyName)
+                .append(vatId, that.vatId)
+                .append(addresses, that.addresses)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
+                .append(shippingAddresses, that.shippingAddresses)
+                .append(defaultBillingAddress, that.defaultBillingAddress)
+                .append(billingAddresses, that.billingAddresses)
+                .append(isEmailVerified, that.isEmailVerified)
+                .append(customerGroup, that.customerGroup)
+                .append(custom, that.custom)
+                .append(locale, that.locale)
+                .append(salutation, that.salutation)
+                .append(stores, that.stores)
+                .append(authenticationMode, that.authenticationMode)
                 .isEquals();
     }
 
@@ -556,6 +585,38 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(stores)
                 .append(authenticationMode)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("customerNumber", customerNumber)
+                .append("externalId", externalId)
+                .append("email", email)
+                .append("password", password)
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .append("middleName", middleName)
+                .append("title", title)
+                .append("anonymousCartId", anonymousCartId)
+                .append("anonymousCart", anonymousCart)
+                .append("anonymousId", anonymousId)
+                .append("dateOfBirth", dateOfBirth)
+                .append("companyName", companyName)
+                .append("vatId", vatId)
+                .append("addresses", addresses)
+                .append("defaultShippingAddress", defaultShippingAddress)
+                .append("shippingAddresses", shippingAddresses)
+                .append("defaultBillingAddress", defaultBillingAddress)
+                .append("billingAddresses", billingAddresses)
+                .append("isEmailVerified", isEmailVerified)
+                .append("customerGroup", customerGroup)
+                .append("custom", custom)
+                .append("locale", locale)
+                .append("salutation", salutation)
+                .append("stores", stores)
+                .append("authenticationMode", authenticationMode)
+                .build();
     }
 
 }

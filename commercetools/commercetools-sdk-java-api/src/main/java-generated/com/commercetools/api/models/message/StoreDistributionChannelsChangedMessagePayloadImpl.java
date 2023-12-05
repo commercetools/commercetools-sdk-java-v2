@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Generated after a successful Add Distribution Channel, Remove Distribution Channel, or Set Distribution Channels update action.</p>
@@ -103,6 +105,9 @@ public class StoreDistributionChannelsChangedMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(addedDistributionChannels, that.addedDistributionChannels)
                 .append(removedDistributionChannels, that.removedDistributionChannels)
+                .append(type, that.type)
+                .append(addedDistributionChannels, that.addedDistributionChannels)
+                .append(removedDistributionChannels, that.removedDistributionChannels)
                 .isEquals();
     }
 
@@ -112,6 +117,14 @@ public class StoreDistributionChannelsChangedMessagePayloadImpl
                 .append(addedDistributionChannels)
                 .append(removedDistributionChannels)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("addedDistributionChannels", addedDistributionChannels)
+                .append("removedDistributionChannels", removedDistributionChannels)
+                .build();
     }
 
 }

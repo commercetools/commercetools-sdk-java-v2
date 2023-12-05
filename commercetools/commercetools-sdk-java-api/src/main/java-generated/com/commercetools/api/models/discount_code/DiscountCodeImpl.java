@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * DiscountCode
@@ -394,6 +396,26 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
                 .append(applicationVersion, that.applicationVersion)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(code, that.code)
+                .append(cartDiscounts, that.cartDiscounts)
+                .append(cartPredicate, that.cartPredicate)
+                .append(isActive, that.isActive)
+                .append(references, that.references)
+                .append(maxApplications, that.maxApplications)
+                .append(maxApplicationsPerCustomer, that.maxApplicationsPerCustomer)
+                .append(custom, that.custom)
+                .append(groups, that.groups)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(applicationVersion, that.applicationVersion)
                 .isEquals();
     }
 
@@ -420,6 +442,31 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .append(validUntil)
                 .append(applicationVersion)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
+                .append("version", version)
+                .append("createdAt", createdAt)
+                .append("lastModifiedAt", lastModifiedAt)
+                .append("lastModifiedBy", lastModifiedBy)
+                .append("createdBy", createdBy)
+                .append("name", name)
+                .append("description", description)
+                .append("code", code)
+                .append("cartDiscounts", cartDiscounts)
+                .append("cartPredicate", cartPredicate)
+                .append("isActive", isActive)
+                .append("references", references)
+                .append("maxApplications", maxApplications)
+                .append("maxApplicationsPerCustomer", maxApplicationsPerCustomer)
+                .append("custom", custom)
+                .append("groups", groups)
+                .append("validFrom", validFrom)
+                .append("validUntil", validUntil)
+                .append("applicationVersion", applicationVersion)
+                .build();
     }
 
 }

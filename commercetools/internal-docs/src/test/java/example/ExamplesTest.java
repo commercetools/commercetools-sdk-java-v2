@@ -2,6 +2,9 @@
 package example;
 
 import static io.sphere.sdk.http.HttpStatusCode.*;
+import static io.vrap.rmf.base.client.http.HttpStatusCode.BAD_GATEWAY_502;
+import static io.vrap.rmf.base.client.http.HttpStatusCode.GATEWAY_TIMEOUT_504;
+import static io.vrap.rmf.base.client.http.HttpStatusCode.SERVICE_UNAVAILABLE_503;
 
 import java.net.InetSocketAddress;
 import java.net.Proxy;
@@ -11,6 +14,9 @@ import java.util.Collections;
 import java.util.ConcurrentModificationException;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.stream.Collectors;
 
 import com.commercetools.api.client.*;
@@ -33,7 +39,6 @@ import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.ErrorMiddleware;
-import io.vrap.rmf.base.client.http.QueueMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -42,6 +47,9 @@ import org.apache.hc.core5.util.Timeout;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.event.Level;
+
+import dev.failsafe.Failsafe;
+import dev.failsafe.FailsafeExecutor;
 
 public class ExamplesTest {
 
@@ -73,6 +81,84 @@ public class ExamplesTest {
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
                 .build("my-project");
+
+        // Project scoped ApiRoot config for Europe projects
+        ProjectApiRoot projectApiRootGcpEu = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.valueOf("GCP_EUROPE_WEST1"))
+                .build("my-project");
+    }
+
+    public void customUrls() {
+        // Project scoped ApiRoot config using ServiceRegion class
+        ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .build("my-project");
+
+        // Project scoped ApiRoot config using URI strings
+        ProjectApiRoot projectApiRoot2 = ApiRootBuilder.of()
+                .defaultClient(
+                    ClientCredentials.of()
+                            .withClientId("your-client-id")
+                            .withClientSecret("your-client-secret")
+                            .build(),
+                    "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
+                    "https://api.europe-west1.gcp.commercetools.com/")
+                .build("my-project");
+    }
+
+    public void timeoutMiddleware() {
+        dev.failsafe.Timeout<ApiHttpResponse<byte[]>> timeout = dev.failsafe.Timeout
+                .<ApiHttpResponse<byte[]>> builder(Duration.ofSeconds(10))
+                .build();
+        FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor = Failsafe.with(timeout);
+
+        ProjectApiRoot apiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .addMiddleware((request, next) -> failsafeExecutor.getStageAsync(() -> next.apply(request)))
+                .build("my-project");
+    }
+
+    public void timeoutOkHttpClient() {
+        ProjectApiRoot apiRoot = ApiRootBuilder
+                .of(new CtOkHttp4Client(builder -> builder.callTimeout(Duration.ofSeconds(10))))
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build("my-project");
+    }
+
+    public void timeoutApacheHttpClient() {
+        RequestConfig config = RequestConfig.custom().setResponseTimeout(Timeout.ofSeconds(10)).build();
+        ProjectApiRoot apiRoot = ApiRootBuilder
+                .of(new CtApacheHttpClient(builder -> builder.setDefaultRequestConfig(config)))
+                .defaultClient(ClientCredentials.of()
+                        .withClientId("your-client-id")
+                        .withClientSecret("your-client-secret")
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .build("my-project");
+    }
+
+    public void timeoutFuture() throws ExecutionException, InterruptedException, TimeoutException {
+        ProjectApiRoot apiRoot = createProjectClient();
+
+        apiRoot.get().execute().get(10, TimeUnit.SECONDS);
+        apiRoot.get().executeBlocking(Duration.ofSeconds(10));
     }
 
     public void customHttpClient() {
@@ -310,7 +396,8 @@ public class ExamplesTest {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .withRetryMiddleware(5, Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))
+                .withPolicies(policies -> policies.withRetry(builder -> builder.maxRetries(5)
+                        .statusCodes(Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))))
                 .build("my-project");
     }
 
@@ -498,7 +585,7 @@ public class ExamplesTest {
     public void queueConcurrentLimitation() {
         ApiRootBuilder.of()
                 // ...
-                .addMiddleware(new QueueMiddleware(64, Duration.ofSeconds(10)))
+                .withPolicies(policies -> policies.withBulkhead(64, Duration.ofSeconds(10)))
                 .build();
     }
 

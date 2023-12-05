@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface PaymentInfo {
 
     /**
-     *
+     *  <p>References to the Payments associated with the Order.</p>
      * @return payments
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface PaymentInfo {
     public List<PaymentReference> getPayments();
 
     /**
-     * set payments
+     *  <p>References to the Payments associated with the Order.</p>
      * @param payments values to be set
      */
 
@@ -51,7 +51,7 @@ public interface PaymentInfo {
     public void setPayments(final PaymentReference... payments);
 
     /**
-     * set payments
+     *  <p>References to the Payments associated with the Order.</p>
      * @param payments values to be set
      */
 

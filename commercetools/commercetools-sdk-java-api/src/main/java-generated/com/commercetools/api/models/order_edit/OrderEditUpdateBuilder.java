@@ -33,7 +33,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     private Boolean dryRun;
 
     /**
-     * set the value to the version
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     * set values to the actions
+     *  <p>Update actions to be performed on the Order Edit.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     * set value to the actions
+     *  <p>Update actions to be performed on the Order Edit.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     * add values to the actions
+     *  <p>Update actions to be performed on the Order Edit.</p>
      * @param actions value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     * add a value to the actions using the builder function
+     *  <p>Update actions to be performed on the Order Edit.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     * set the value to the actions using the builder function
+     *  <p>Update actions to be performed on the Order Edit.</p>
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     * set the value to the dryRun
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
      * @param dryRun value to be set
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     * value of version}
+     *  <p>Expected version of the Order Edit on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error will be returned.</p>
      * @return version
      */
 
@@ -133,7 +133,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     * value of actions}
+     *  <p>Update actions to be performed on the Order Edit.</p>
      * @return actions
      */
 
@@ -142,7 +142,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     * value of dryRun}
+     *  <p>If set to <code>true</code>, the Order Edit is applied on the Order without persisting it.</p>
      * @return dryRun
      */
 

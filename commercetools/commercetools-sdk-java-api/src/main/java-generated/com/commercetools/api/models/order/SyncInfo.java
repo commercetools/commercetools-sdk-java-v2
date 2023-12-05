@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * SyncInfo
+ *  <p>Contains synchronization activity information of the Order (like export or import).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SyncInfo {
 
     /**
-     *  <p>Connection to a particular synchronization destination.</p>
+     *  <p>Connection to a synchronization destination.</p>
      * @return channel
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface SyncInfo {
     public ChannelReference getChannel();
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     *  <p>Identifier of an external order instance, file, or other resource.</p>
      * @return externalId
      */
 
@@ -52,7 +52,7 @@ public interface SyncInfo {
     public String getExternalId();
 
     /**
-     *
+     *  <p>Date and time (UTC) the information was synced.</p>
      * @return syncedAt
      */
     @NotNull
@@ -60,21 +60,21 @@ public interface SyncInfo {
     public ZonedDateTime getSyncedAt();
 
     /**
-     *  <p>Connection to a particular synchronization destination.</p>
+     *  <p>Connection to a synchronization destination.</p>
      * @param channel value to be set
      */
 
     public void setChannel(final ChannelReference channel);
 
     /**
-     *  <p>Can be used to reference an external order instance, file etc.</p>
+     *  <p>Identifier of an external order instance, file, or other resource.</p>
      * @param externalId value to be set
      */
 
     public void setExternalId(final String externalId);
 
     /**
-     * set syncedAt
+     *  <p>Date and time (UTC) the information was synced.</p>
      * @param syncedAt value to be set
      */
 

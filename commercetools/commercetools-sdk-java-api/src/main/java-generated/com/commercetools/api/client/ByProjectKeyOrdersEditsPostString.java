@@ -12,6 +12,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>You can either create multiple Order Edits for an Order and apply them sequentially to an Order, or create multiple Order Edits parallelly (as alternatives to each other) and apply one of them to the Order.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -39,6 +41,12 @@ public class ByProjectKeyOrdersEditsPostString extends
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersEditsPostString>,
         com.commercetools.api.client.Deprecatable201Trait<ByProjectKeyOrdersEditsPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsPostString> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.order_edit.OrderEdit> resultType() {
+        return new TypeReference<com.commercetools.api.models.order_edit.OrderEdit>() {
+        };
+    }
 
     private String projectKey;
 

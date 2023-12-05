@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * OrderSetOrderNumberAction
@@ -49,7 +51,7 @@ public class OrderSetOrderNumberActionImpl implements OrderSetOrderNumberAction,
     }
 
     /**
-     *
+     *  <p>Value to set. Must be unique across a Project. Once set, the value cannot be changed.</p>
      */
 
     public String getOrderNumber() {
@@ -70,12 +72,23 @@ public class OrderSetOrderNumberActionImpl implements OrderSetOrderNumberAction,
 
         OrderSetOrderNumberActionImpl that = (OrderSetOrderNumberActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(orderNumber, that.orderNumber).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(orderNumber, that.orderNumber)
+                .append(action, that.action)
+                .append(orderNumber, that.orderNumber)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action).append(orderNumber).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
+                .append("orderNumber", orderNumber)
+                .build();
     }
 
 }

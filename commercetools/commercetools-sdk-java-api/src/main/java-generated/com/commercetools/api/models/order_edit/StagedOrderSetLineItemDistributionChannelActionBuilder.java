@@ -56,7 +56,10 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
+     *  </ul>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -70,7 +73,10 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
+     *  </ul>
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -83,7 +89,10 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
+     *  </ul>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -115,7 +124,10 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
     }
 
     /**
-     *  <p>ResourceIdentifier to a Channel.</p>
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
+     *  </ul>
      * @return distributionChannel
      */
 

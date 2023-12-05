@@ -3,6 +3,8 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -13,7 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetReturnShipmentStateAction stagedOrderSetReturnShipmentStateAction = StagedOrderSetReturnShipmentStateAction.builder()
- *             .returnItemId("{returnItemId}")
  *             .shipmentState(ReturnShipmentState.ADVISED)
  *             .build()
  * </code></pre>
@@ -23,23 +24,38 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class StagedOrderSetReturnShipmentStateActionBuilder
         implements Builder<StagedOrderSetReturnShipmentStateAction> {
 
+    @Nullable
     private String returnItemId;
+
+    @Nullable
+    private String returnItemKey;
 
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
     /**
-     * set the value to the returnItemId
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @param returnItemId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetReturnShipmentStateActionBuilder returnItemId(final String returnItemId) {
+    public StagedOrderSetReturnShipmentStateActionBuilder returnItemId(@Nullable final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
 
     /**
-     * set the value to the shipmentState
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @param returnItemKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetReturnShipmentStateActionBuilder returnItemKey(@Nullable final String returnItemKey) {
+        this.returnItemKey = returnItemKey;
+        return this;
+    }
+
+    /**
+     *  <p>New shipment state of the ReturnItem.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -51,16 +67,27 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
     }
 
     /**
-     * value of returnItemId}
+     *  <p><code>id</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
      * @return returnItemId
      */
 
+    @Nullable
     public String getReturnItemId() {
         return this.returnItemId;
     }
 
     /**
-     * value of shipmentState}
+     *  <p><code>key</code> of the ReturnItem to update. Either <code>returnItemId</code> or <code>returnItemKey</code> is required.</p>
+     * @return returnItemKey
+     */
+
+    @Nullable
+    public String getReturnItemKey() {
+        return this.returnItemKey;
+    }
+
+    /**
+     *  <p>New shipment state of the ReturnItem.</p>
      * @return shipmentState
      */
 
@@ -73,11 +100,9 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
      * @return StagedOrderSetReturnShipmentStateAction
      */
     public StagedOrderSetReturnShipmentStateAction build() {
-        Objects.requireNonNull(returnItemId,
-            StagedOrderSetReturnShipmentStateAction.class + ": returnItemId is missing");
         Objects.requireNonNull(shipmentState,
             StagedOrderSetReturnShipmentStateAction.class + ": shipmentState is missing");
-        return new StagedOrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
+        return new StagedOrderSetReturnShipmentStateActionImpl(returnItemId, returnItemKey, shipmentState);
     }
 
     /**
@@ -85,7 +110,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
      * @return StagedOrderSetReturnShipmentStateAction
      */
     public StagedOrderSetReturnShipmentStateAction buildUnchecked() {
-        return new StagedOrderSetReturnShipmentStateActionImpl(returnItemId, shipmentState);
+        return new StagedOrderSetReturnShipmentStateActionImpl(returnItemId, returnItemKey, shipmentState);
     }
 
     /**
@@ -105,6 +130,7 @@ public class StagedOrderSetReturnShipmentStateActionBuilder
             final StagedOrderSetReturnShipmentStateAction template) {
         StagedOrderSetReturnShipmentStateActionBuilder builder = new StagedOrderSetReturnShipmentStateActionBuilder();
         builder.returnItemId = template.getReturnItemId();
+        builder.returnItemKey = template.getReturnItemKey();
         builder.shipmentState = template.getShipmentState();
         return builder;
     }

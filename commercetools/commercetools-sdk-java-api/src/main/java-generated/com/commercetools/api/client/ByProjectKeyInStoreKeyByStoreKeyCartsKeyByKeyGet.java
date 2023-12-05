@@ -11,6 +11,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, a ResourceNotFound error is returned.</p>
+ *  <p>If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</p>
  *  <p>To ensure the Cart is up-to-date with current values (such as Prices and Discounts), use the Recalculate update action.</p>
  *
  * <hr>
@@ -36,10 +38,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyGet
-        extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyGet, com.commercetools.api.models.cart.Cart>
+        extends TypeApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyGet, com.commercetools.api.models.cart.Cart>
         implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyGet> {
+
+    @Override
+    public TypeReference<com.commercetools.api.models.cart.Cart> resultType() {
+        return new TypeReference<com.commercetools.api.models.cart.Cart>() {
+        };
+    }
 
     private String projectKey;
     private String storeKey;

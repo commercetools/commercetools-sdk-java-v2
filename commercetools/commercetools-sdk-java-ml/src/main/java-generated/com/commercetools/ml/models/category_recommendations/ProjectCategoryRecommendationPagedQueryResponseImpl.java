@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * ProjectCategoryRecommendationPagedQueryResponse
@@ -134,6 +136,11 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
                 .append(offset, that.offset)
                 .append(results, that.results)
                 .append(meta, that.meta)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(results, that.results)
+                .append(meta, that.meta)
                 .isEquals();
     }
 
@@ -145,6 +152,16 @@ public class ProjectCategoryRecommendationPagedQueryResponseImpl
                 .append(results)
                 .append(meta)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("count", count)
+                .append("total", total)
+                .append("offset", offset)
+                .append("results", results)
+                .append("meta", meta)
+                .build();
     }
 
 }

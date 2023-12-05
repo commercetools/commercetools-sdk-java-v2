@@ -13,6 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Sets the DiscountedLineItemPrice of the CartDiscountLineItemsTarget or CartDiscountCustomLineItemsTarget to the value specified in the <code>money</code> field, if it is lower than the current Line Item price for the same currency. If the Line Item price is already discounted to a price equal to or lower than the respective price in the <code>money</code> field, this Discount is not applied. If the <code>quantity</code> of the Line Item eligible for the Discount is greater than <code>1</code>, the fixed price discount is only applied to the Line Item portion for which the <code>money</code> value is lesser than their current price.</p>
@@ -22,14 +24,14 @@ public class CartDiscountValueFixedImpl implements CartDiscountValueFixed, Model
 
     private String type;
 
-    private java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money;
+    private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     CartDiscountValueFixedImpl(
-            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
+            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
         this.money = money;
         this.type = FIXED;
     }
@@ -50,18 +52,18 @@ public class CartDiscountValueFixedImpl implements CartDiscountValueFixed, Model
     }
 
     /**
-     *  <p>Cent precision money values in different currencies.</p>
+     *  <p>Money values in cent precision or high precision of different currencies.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> getMoney() {
+    public java.util.List<com.commercetools.api.models.common.TypedMoney> getMoney() {
         return this.money;
     }
 
-    public void setMoney(final com.commercetools.api.models.common.CentPrecisionMoney... money) {
+    public void setMoney(final com.commercetools.api.models.common.TypedMoney... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
     }
 
-    public void setMoney(final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
+    public void setMoney(final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
         this.money = money;
     }
 
@@ -75,12 +77,23 @@ public class CartDiscountValueFixedImpl implements CartDiscountValueFixed, Model
 
         CartDiscountValueFixedImpl that = (CartDiscountValueFixedImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(money, that.money).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(money, that.money)
+                .append(type, that.type)
+                .append(money, that.money)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(type).append(money).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
+                .append("money", money)
+                .build();
     }
 
 }

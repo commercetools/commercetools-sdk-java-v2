@@ -30,7 +30,7 @@ public class CtpClientBeanService {
     @Value(value = "${ctp.project.key}")
     private String projectKey;
 
-    @Value(value = "${otel.provider}")
+    @Value(value = "${otel.provider:LOCAL}")
     private OtelProvider otelProvider;
 
     private ClientCredentials credentials() {
@@ -39,16 +39,11 @@ public class CtpClientBeanService {
 
     @Bean
     public ProjectScopedApiRoot apiRoot() {
-        if (otelProvider == OtelProvider.DYNATRACE) {
-            return ApiRootBuilder.of()
-                    .defaultClient(credentials())
-                    .withTelemetryMiddleware(new OpenTelemetryMiddleware(GlobalOpenTelemetry.get(), false))
-                    .build(projectKey);
-        }
         return ApiRootBuilder.of()
                 .defaultClient(credentials())
                 .withSerializer(new OpenTelemetryResponseSerializer(ResponseSerializer.of(), GlobalOpenTelemetry.get()))
-                .withTelemetryMiddleware(new OpenTelemetryMiddleware(GlobalOpenTelemetry.get()))
+                .withTelemetryMiddleware(new OpenTelemetryMiddleware(GlobalOpenTelemetry.get(),
+                        otelProvider.supportsHistogram()))
                 .build(projectKey);
     }
 }

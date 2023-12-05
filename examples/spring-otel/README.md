@@ -52,4 +52,4 @@ Prometheus is located at http://localhost:9090
 
 ### Choose your OpenTelemetry provider
 To choose exporting to either NewRelic or Dynatrace you need to set the environment variable `OTEL_PROVIDER`
-to either `newrelic` or `dynatrace`. By default, the NewRelic settings are used.
+to either `local`, `newrelic` or `dynatrace`. By default, the `local` settings are used.

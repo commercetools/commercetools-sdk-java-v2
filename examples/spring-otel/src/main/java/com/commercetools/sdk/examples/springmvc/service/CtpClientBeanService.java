@@ -43,7 +43,7 @@ public class CtpClientBeanService {
                 .defaultClient(credentials())
                 .withTelemetryMiddleware(new OpenTelemetryMiddleware(GlobalOpenTelemetry.get(),
                         otelProvider.supportsHistogram()));
-        if (otelProvider.supportsHistogram()) {
+        if (otelProvider.useOtelSerializer()) {
             builder.withSerializer(new OpenTelemetryResponseSerializer(ResponseSerializer.of(), GlobalOpenTelemetry.get()));
         }
         return builder.build(projectKey);

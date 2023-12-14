@@ -2,6 +2,7 @@ on:
   - push
   - workflow_dispatch
   - pull_request
+  - merge_group
 
 name: CI
 
@@ -71,7 +72,7 @@ jobs:
             disable_globbing: true
 
       - name: Run integration tests for PR
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' || github.event_name == 'merge_group'
         run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest
         env:
           CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID_PR }}
@@ -81,7 +82,7 @@ jobs:
           CTP_JVM_SDK_LOG_LEVEL: OFF
 
       - name: Run integration tests
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && github.event_name != 'merge_group'
         run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest
         env:
             CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}

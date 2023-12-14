@@ -35,3 +35,6 @@ Use this file to build the application with the OneAgent included on Docker.
 1. Open a new browser window/tab
 2. Navigate to [http://localhost:8080/p](http://localhost:8080/p) and a list of products should appear.
 
+## Using Dynatrace with OpenTelemetry
+
+If you want to use Dynatrace with OpenTelemetry, we also provide [an example Spring Boot application](../spring-otel).

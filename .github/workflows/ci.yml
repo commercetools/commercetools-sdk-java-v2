@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.event_name }}
-
+      cancel-in-progress: false
     permissions:
         contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
 

@@ -65,6 +65,6 @@ jobs:
         with:
           repository: doc
           commit_message: "Update javadoc"
-          commit_user_name: automation-commercetools
+          commit_user_name: ct-sdks[bot]
           commit_user_email: automation@commercetools.com
-          commit_author: Auto Mation <automation@commercetools.com>
+          commit_author: ct-sdks[bot] <automation@commercetools.com>

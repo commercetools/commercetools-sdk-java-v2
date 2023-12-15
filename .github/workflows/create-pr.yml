@@ -12,19 +12,30 @@ jobs:
   create_pr:
     name: Create/Update PR
 
-    permissions:
-      pull-requests: write
     runs-on: ubuntu-latest
     steps:
+      # Get GitHub token via the CT SDKs App
+      - name: Generate GitHub token (via CT SDKs App)
+        id: generate_github_token
+        uses: tibdex/github-app-token@v2.1.0
+        with:
+          app_id: ${{ secrets.SDK_APP_ID }}
+          private_key: ${{ secrets.SDK_APP_PEM }}
+
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Pass a personal access token (using our CT SDKs App) to be able to trigger other workflows
+          # https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token
+          # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/8
+          token: ${{ steps.generate_github_token.outputs.token }}
 
       - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
 
       - uses: jenschude/auto-create-pr-action@8733ffe7f93fbeab30113ed3964dfb02bb6984b5
         with:
             request_title: "Update generated SDKs"
-            github_token: ${{ secrets.GITHUB_TOKEN }}
+            github_token: ${{ steps.generate_github_token.outputs.token }}
             request_body: |
                 - [ ] Changeset added
 

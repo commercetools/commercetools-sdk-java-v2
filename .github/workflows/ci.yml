@@ -58,9 +58,9 @@ jobs:
         with:
             push_options: --dry-run
             commit_message: "spotless: Fix code style"
-            commit_user_name: automation-commercetools
+            commit_user_name: ct-sdks[bot]
             commit_user_email: automation@commercetools.com
-            commit_author: Auto Mation <automation@commercetools.com>
+            commit_author: ct-sdks[bot] <automation@commercetools.com>
 
       - name: "Run if style changes have been detected"
         if: steps.commit_style_fix.outputs.changes_detected == 'true'
@@ -75,9 +75,9 @@ jobs:
             push_options: --dry-run
             file_pattern: '.git-blame-ignore-revs'
             commit_message: "spotless: add commit to blame ignore revs file"
-            commit_user_name: automation-commercetools
+            commit_user_name: ct-sdks[bot]
             commit_user_email: automation@commercetools.com
-            commit_author: Auto Mation <automation@commercetools.com>
+            commit_author: ct-sdks[bot] <automation@commercetools.com>
 
       - name: License check
         run: ./gradlew checkLicense
@@ -91,9 +91,9 @@ jobs:
             push_options: --dry-run
             file_pattern: 'licenses/index.json licenses/**/index.json'
             commit_message: "TASK: Updating license information"
-            commit_user_name: automation-commercetools
+            commit_user_name: ct-sdks[bot]
             commit_user_email: automation@commercetools.com
-            commit_author: Auto Mation <automation@commercetools.com>
+            commit_author: ct-sdks[bot] <automation@commercetools.com>
             disable_globbing: true
       - name: Push if changes
         if: steps.commit_style_fix.outputs.changes_detected || steps.commit_license_change.outputs.changes_detected || steps.commit_rev_ignore.outputs.changes_detected

@@ -11,25 +11,31 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StateType
+ *  <p>Resource or object type the State can be assigned to.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface StateType extends JsonEnum {
+public interface StateTypeEnum extends JsonEnum {
 
-    StateType ORDER_STATE = StateTypeEnum.ORDER_STATE;
+    StateTypeEnum ORDER_STATE = StateTypeEnumEnum.ORDER_STATE;
 
-    StateType LINE_ITEM_STATE = StateTypeEnum.LINE_ITEM_STATE;
+    StateTypeEnum LINE_ITEM_STATE = StateTypeEnumEnum.LINE_ITEM_STATE;
 
-    StateType PRODUCT_STATE = StateTypeEnum.PRODUCT_STATE;
+    StateTypeEnum PRODUCT_STATE = StateTypeEnumEnum.PRODUCT_STATE;
 
-    StateType REVIEW_STATE = StateTypeEnum.REVIEW_STATE;
+    StateTypeEnum REVIEW_STATE = StateTypeEnumEnum.REVIEW_STATE;
 
-    StateType PAYMENT_STATE = StateTypeEnum.PAYMENT_STATE;
+    StateTypeEnum PAYMENT_STATE = StateTypeEnumEnum.PAYMENT_STATE;
+
+    StateTypeEnum QUOTE_REQUEST_STATE = StateTypeEnumEnum.QUOTE_REQUEST_STATE;
+
+    StateTypeEnum STAGED_QUOTE_STATE = StateTypeEnumEnum.STAGED_QUOTE_STATE;
+
+    StateTypeEnum QUOTE_STATE = StateTypeEnumEnum.QUOTE_STATE;
 
     /**
-     * possible values of StateType
+     * possible values of StateTypeEnum
      */
-    enum StateTypeEnum implements StateType {
+    enum StateTypeEnumEnum implements StateTypeEnum {
         /**
          * OrderState
          */
@@ -53,10 +59,25 @@ public interface StateType extends JsonEnum {
         /**
          * PaymentState
          */
-        PAYMENT_STATE("PaymentState");
+        PAYMENT_STATE("PaymentState"),
+
+        /**
+         * QuoteRequestState
+         */
+        QUOTE_REQUEST_STATE("QuoteRequestState"),
+
+        /**
+         * StagedQuoteState
+         */
+        STAGED_QUOTE_STATE("StagedQuoteState"),
+
+        /**
+         * QuoteState
+         */
+        QUOTE_STATE("QuoteState");
         private final String jsonName;
 
-        private StateTypeEnum(final String jsonName) {
+        private StateTypeEnumEnum(final String jsonName) {
             this.jsonName = jsonName;
         }
 
@@ -89,14 +110,14 @@ public interface StateType extends JsonEnum {
     String toString();
 
     /**
-     * factory method for a enum value of StateType
+     * factory method for a enum value of StateTypeEnum
      * if no enum has been found an anonymous instance will be created
      * @param value the enum value to be wrapped
      * @return enum instance
      */
     @JsonCreator
-    public static StateType findEnum(String value) {
-        return findEnumViaJsonName(value).orElse(new StateType() {
+    public static StateTypeEnum findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new StateTypeEnum() {
             @Override
             public String getJsonName() {
                 return value;
@@ -118,7 +139,7 @@ public interface StateType extends JsonEnum {
      * @param jsonName the json value to be wrapped
      * @return optional of enum instance
      */
-    public static Optional<StateType> findEnumViaJsonName(String jsonName) {
+    public static Optional<StateTypeEnum> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
@@ -126,8 +147,8 @@ public interface StateType extends JsonEnum {
      * possible enum values
      * @return array of possible enum values
      */
-    public static StateType[] values() {
-        return StateTypeEnum.values();
+    public static StateTypeEnum[] values() {
+        return StateTypeEnumEnum.values();
     }
 
 }

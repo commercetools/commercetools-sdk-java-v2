@@ -11,52 +11,31 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ChannelRole
+ *  <p>For some resource types, a State can fulfill the following predefined roles:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ChannelRole extends JsonEnum {
+public interface StateRoleEnum extends JsonEnum {
 
-    ChannelRole INVENTORY_SUPPLY = ChannelRoleEnum.INVENTORY_SUPPLY;
+    StateRoleEnum REVIEW_INCLUDED_IN_STATISTICS = StateRoleEnumEnum.REVIEW_INCLUDED_IN_STATISTICS;
 
-    ChannelRole PRODUCT_DISTRIBUTION = ChannelRoleEnum.PRODUCT_DISTRIBUTION;
-
-    ChannelRole ORDER_EXPORT = ChannelRoleEnum.ORDER_EXPORT;
-
-    ChannelRole ORDER_IMPORT = ChannelRoleEnum.ORDER_IMPORT;
-
-    ChannelRole PRIMARY = ChannelRoleEnum.PRIMARY;
+    StateRoleEnum RETURN = StateRoleEnumEnum.RETURN;
 
     /**
-     * possible values of ChannelRole
+     * possible values of StateRoleEnum
      */
-    enum ChannelRoleEnum implements ChannelRole {
+    enum StateRoleEnumEnum implements StateRoleEnum {
         /**
-         * InventorySupply
+         * ReviewIncludedInStatistics
          */
-        INVENTORY_SUPPLY("InventorySupply"),
+        REVIEW_INCLUDED_IN_STATISTICS("ReviewIncludedInStatistics"),
 
         /**
-         * ProductDistribution
+         * Return
          */
-        PRODUCT_DISTRIBUTION("ProductDistribution"),
-
-        /**
-         * OrderExport
-         */
-        ORDER_EXPORT("OrderExport"),
-
-        /**
-         * OrderImport
-         */
-        ORDER_IMPORT("OrderImport"),
-
-        /**
-         * Primary
-         */
-        PRIMARY("Primary");
+        RETURN("Return");
         private final String jsonName;
 
-        private ChannelRoleEnum(final String jsonName) {
+        private StateRoleEnumEnum(final String jsonName) {
             this.jsonName = jsonName;
         }
 
@@ -89,14 +68,14 @@ public interface ChannelRole extends JsonEnum {
     String toString();
 
     /**
-     * factory method for a enum value of ChannelRole
+     * factory method for a enum value of StateRoleEnum
      * if no enum has been found an anonymous instance will be created
      * @param value the enum value to be wrapped
      * @return enum instance
      */
     @JsonCreator
-    public static ChannelRole findEnum(String value) {
-        return findEnumViaJsonName(value).orElse(new ChannelRole() {
+    public static StateRoleEnum findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new StateRoleEnum() {
             @Override
             public String getJsonName() {
                 return value;
@@ -118,7 +97,7 @@ public interface ChannelRole extends JsonEnum {
      * @param jsonName the json value to be wrapped
      * @return optional of enum instance
      */
-    public static Optional<ChannelRole> findEnumViaJsonName(String jsonName) {
+    public static Optional<StateRoleEnum> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
@@ -126,8 +105,8 @@ public interface ChannelRole extends JsonEnum {
      * possible enum values
      * @return array of possible enum values
      */
-    public static ChannelRole[] values() {
-        return ChannelRoleEnum.values();
+    public static StateRoleEnum[] values() {
+        return StateRoleEnumEnum.values();
     }
 
 }

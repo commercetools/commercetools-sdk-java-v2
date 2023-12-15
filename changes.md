@@ -1,213 +1,63 @@
 **Api changes**
 
 <details>
-<summary>Added QueryParameter(s)</summary>
-
-- added query parameter `expand` to method `get /{projectKey}/in-store/key={storeKey}/cart-discounts`
-- added query parameter `sort` to method `get /{projectKey}/in-store/key={storeKey}/cart-discounts`
-- added query parameter `limit` to method `get /{projectKey}/in-store/key={storeKey}/cart-discounts`
-- added query parameter `offset` to method `get /{projectKey}/in-store/key={storeKey}/cart-discounts`
-- added query parameter `withTotal` to method `get /{projectKey}/in-store/key={storeKey}/cart-discounts`
-- added query parameter `where` to method `get /{projectKey}/in-store/key={storeKey}/cart-discounts`
-- added query parameter `/^var[.][a-zA-Z0-9]+$/` to method `get /{projectKey}/in-store/key={storeKey}/cart-discounts`
-- added query parameter `expand` to method `post /{projectKey}/in-store/key={storeKey}/cart-discounts`
-</details>
-
-
-<details>
 <summary>Added Enum(s)</summary>
 
-- added enum `approval-flow` to type `ReferenceTypeId`
-- added enum `approval-rule` to type `ReferenceTypeId`
-- added enum `approval-flow` to type `ChangeSubscriptionResourceTypeId`
-- added enum `approval-rule` to type `ChangeSubscriptionResourceTypeId`
-- added enum `approval-flow` to type `MessageSubscriptionResourceTypeId`
-- added enum `approval-rule` to type `MessageSubscriptionResourceTypeId`
-</details>
-
-
-<details>
-<summary>Changed MethodResponseBody(s)</summary>
-
-- :warning: changed response body for `200: application/json` of method `get /{projectKey}/in-store/key={storeKey}/cart-discounts` from type `CartDiscount` to `CartDiscountPagedQueryResponse`
-</details>
-
-
-<details>
-<summary>Added Method(s)</summary>
-
-- added method `apiRoot.withProjectKey().head()`
-- added method `apiRoot.withProjectKey().associateRoles().head()`
-- added method `apiRoot.withProjectKey().businessUnits().head()`
-- added method `apiRoot.withProjectKey().categories().head()`
-- added method `apiRoot.withProjectKey().carts().head()`
-- added method `apiRoot.withProjectKey().cartDiscounts().head()`
-- added method `apiRoot.withProjectKey().channels().head()`
-- added method `apiRoot.withProjectKey().customers().head()`
-- added method `apiRoot.withProjectKey().customerGroups().head()`
-- added method `apiRoot.withProjectKey().customObjects().head()`
-- added method `apiRoot.withProjectKey().discountCodes().head()`
-- added method `apiRoot.withProjectKey().inventory().head()`
-- added method `apiRoot.withProjectKey().messages().head()`
-- added method `apiRoot.withProjectKey().orders().head()`
-- added method `apiRoot.withProjectKey().payments().head()`
-- added method `apiRoot.withProjectKey().productDiscounts().head()`
-- added method `apiRoot.withProjectKey().productProjections().head()`
-- added method `apiRoot.withProjectKey().productSelections().head()`
-- added method `apiRoot.withProjectKey().quotes().head()`
-- added method `apiRoot.withProjectKey().quoteRequests().head()`
-- added method `apiRoot.withProjectKey().stagedQuotes().head()`
-- added method `apiRoot.withProjectKey().reviews().head()`
-- added method `apiRoot.withProjectKey().shippingMethods().head()`
-- added method `apiRoot.withProjectKey().shoppingLists().head()`
-- added method `apiRoot.withProjectKey().states().head()`
-- added method `apiRoot.withProjectKey().subscriptions().head()`
-- added method `apiRoot.withProjectKey().taxCategories().head()`
-- added method `apiRoot.withProjectKey().types().head()`
-- added method `apiRoot.withProjectKey().zones().head()`
-- added method `apiRoot.withProjectKey().extensions().head()`
-- added method `apiRoot.withProjectKey().apiClients().head()`
-- added method `apiRoot.withProjectKey().stores().head()`
-- added method `apiRoot.withProjectKey().standalonePrices().head()`
-- added method `apiRoot.withProjectKey().attributeGroups().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().businessUnits().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().businessUnits().withKey().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().businessUnits().withId().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().carts().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().orders().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().quotes().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().quoteRequests().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().carts().withKey().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().carts().withId().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().orders().withOrderNumber().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().orders().withId().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().quotes().withKey().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().quotes().withId().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().quoteRequests().withKey().head()`
-- added method `apiRoot.withProjectKey().asAssociate().withAssociateIdValue().inBusinessUnitKeyWithBusinessUnitKeyValue().quoteRequests().withId().head()`
-- added method `apiRoot.withProjectKey().associateRoles().withKey().head()`
-- added method `apiRoot.withProjectKey().associateRoles().withId().head()`
-- added method `apiRoot.withProjectKey().businessUnits().withKey().head()`
-- added method `apiRoot.withProjectKey().businessUnits().withId().head()`
-- added method `apiRoot.withProjectKey().categories().withKey().head()`
-- added method `apiRoot.withProjectKey().categories().withId().head()`
-- added method `apiRoot.withProjectKey().carts().withCustomerId().head()`
-- added method `apiRoot.withProjectKey().carts().withKey().head()`
-- added method `apiRoot.withProjectKey().carts().withId().head()`
-- added method `apiRoot.withProjectKey().cartDiscounts().withKey().head()`
-- added method `apiRoot.withProjectKey().cartDiscounts().withId().head()`
-- added method `apiRoot.withProjectKey().channels().withId().head()`
-- added method `apiRoot.withProjectKey().customers().withKey().head()`
-- added method `apiRoot.withProjectKey().customers().withId().head()`
-- added method `apiRoot.withProjectKey().customerGroups().withKey().head()`
-- added method `apiRoot.withProjectKey().customerGroups().withId().head()`
-- added method `apiRoot.withProjectKey().discountCodes().withId().head()`
-- added method `apiRoot.withProjectKey().inventory().withId().head()`
-- added method `apiRoot.withProjectKey().inventory().withKey().head()`
-- added method `apiRoot.withProjectKey().messages().withId().head()`
-- added method `apiRoot.withProjectKey().orders().withOrderNumber().head()`
-- added method `apiRoot.withProjectKey().orders().edits().head()`
-- added method `apiRoot.withProjectKey().orders().withId().head()`
-- added method `apiRoot.withProjectKey().orders().edits().withKey().head()`
-- added method `apiRoot.withProjectKey().orders().edits().withId().head()`
-- added method `apiRoot.withProjectKey().payments().withKey().head()`
-- added method `apiRoot.withProjectKey().payments().withId().head()`
-- added method `apiRoot.withProjectKey().productDiscounts().withKey().head()`
-- added method `apiRoot.withProjectKey().productDiscounts().withId().head()`
-- added method `apiRoot.withProjectKey().productProjections().withKey().head()`
-- added method `apiRoot.withProjectKey().productProjections().withId().head()`
-- added method `apiRoot.withProjectKey().productSelections().withKey().head()`
-- added method `apiRoot.withProjectKey().productSelections().withId().head()`
-- added method `apiRoot.withProjectKey().quotes().withKey().head()`
-- added method `apiRoot.withProjectKey().quotes().withId().head()`
-- added method `apiRoot.withProjectKey().quoteRequests().withKey().head()`
-- added method `apiRoot.withProjectKey().quoteRequests().withId().head()`
-- added method `apiRoot.withProjectKey().stagedQuotes().withKey().head()`
-- added method `apiRoot.withProjectKey().stagedQuotes().withId().head()`
-- added method `apiRoot.withProjectKey().reviews().withKey().head()`
-- added method `apiRoot.withProjectKey().reviews().withId().head()`
-- added method `apiRoot.withProjectKey().shippingMethods().withKey().head()`
-- added method `apiRoot.withProjectKey().shippingMethods().matchingCart().head()`
-- added method `apiRoot.withProjectKey().shippingMethods().matchingCartLocation().head()`
-- added method `apiRoot.withProjectKey().shippingMethods().matchingOrderedit().head()`
-- added method `apiRoot.withProjectKey().shippingMethods().matchingLocation().head()`
-- added method `apiRoot.withProjectKey().shippingMethods().withId().head()`
-- added method `apiRoot.withProjectKey().shoppingLists().withKey().head()`
-- added method `apiRoot.withProjectKey().shoppingLists().withId().head()`
-- added method `apiRoot.withProjectKey().states().withKey().head()`
-- added method `apiRoot.withProjectKey().states().withId().head()`
-- added method `apiRoot.withProjectKey().subscriptions().withKey().head()`
-- added method `apiRoot.withProjectKey().subscriptions().withId().head()`
-- added method `apiRoot.withProjectKey().taxCategories().withKey().head()`
-- added method `apiRoot.withProjectKey().taxCategories().withId().head()`
-- added method `apiRoot.withProjectKey().types().withKey().head()`
-- added method `apiRoot.withProjectKey().types().withId().head()`
-- added method `apiRoot.withProjectKey().zones().withKey().head()`
-- added method `apiRoot.withProjectKey().zones().withId().head()`
-- added method `apiRoot.withProjectKey().me().activeCart().head()`
-- added method `apiRoot.withProjectKey().me().businessUnits().head()`
-- added method `apiRoot.withProjectKey().me().carts().head()`
-- added method `apiRoot.withProjectKey().me().orders().head()`
-- added method `apiRoot.withProjectKey().me().payments().head()`
-- added method `apiRoot.withProjectKey().me().quoteRequests().head()`
-- added method `apiRoot.withProjectKey().me().quotes().head()`
-- added method `apiRoot.withProjectKey().me().shoppingLists().head()`
-- added method `apiRoot.withProjectKey().me().businessUnits().withId().head()`
-- added method `apiRoot.withProjectKey().me().businessUnits().withKey().head()`
-- added method `apiRoot.withProjectKey().me().carts().withKey().head()`
-- added method `apiRoot.withProjectKey().me().carts().withId().head()`
-- added method `apiRoot.withProjectKey().me().orders().withId().head()`
-- added method `apiRoot.withProjectKey().me().payments().withId().head()`
-- added method `apiRoot.withProjectKey().me().quoteRequests().withId().head()`
-- added method `apiRoot.withProjectKey().me().quoteRequests().withKey().head()`
-- added method `apiRoot.withProjectKey().me().quotes().withId().head()`
-- added method `apiRoot.withProjectKey().me().quotes().withKey().head()`
-- added method `apiRoot.withProjectKey().me().shoppingLists().withId().head()`
-- added method `apiRoot.withProjectKey().me().shoppingLists().withKey().head()`
-- added method `apiRoot.withProjectKey().extensions().withKey().head()`
-- added method `apiRoot.withProjectKey().extensions().withId().head()`
-- added method `apiRoot.withProjectKey().apiClients().withId().head()`
-- added method `apiRoot.withProjectKey().stores().withKey().head()`
-- added method `apiRoot.withProjectKey().stores().withId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().carts().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().orders().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().customers().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().shoppingLists().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().carts().withCustomerId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().carts().withKey().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().carts().withId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().orders().withOrderNumber().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().orders().withId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().me().carts().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().me().orders().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().me().activeCart().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().me().shoppingLists().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().me().carts().withId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().me().orders().withId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().me().shoppingLists().withKey().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().me().shoppingLists().withId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().customers().withKey().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().customers().withId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().shippingMethods().matchingCart().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().shoppingLists().withKey().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().shoppingLists().withId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().productProjections().withKey().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().productProjections().withId().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().withKey().head()`
-- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().cartDiscounts().withId().head()`
-- added method `apiRoot.withProjectKey().standalonePrices().withKey().head()`
-- added method `apiRoot.withProjectKey().standalonePrices().withId().head()`
-- added method `apiRoot.withProjectKey().attributeGroups().withKey().head()`
-- added method `apiRoot.withProjectKey().attributeGroups().withId().head()`
+- added enum `associate-role` to type `AttributeReferenceTypeId`
+- added enum `business-unit` to type `AttributeReferenceTypeId`
+- added enum `cart-discount` to type `AttributeReferenceTypeId`
 </details>
 
 **History changes**
 
 <details>
+<summary>Added Type(s)</summary>
+
+- added type `AttributeLocalizedEnumValue`
+- added type `AttributePlainEnumValue`
+- added type `ChannelRoleEnum`
+- added type `StateRoleEnum`
+- added type `StateTypeEnum`
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `ChannelRole`
+- :warning: removed type `StateRole`
+- :warning: removed type `StateType`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `previousValue` from type `AddAddressChange`
+- :warning: removed property `previousValue` from type `AddLocationChange`
+- :warning: removed property `nextValue` from type `RemoveLocationChange`
+- :warning: removed property `nextValue` from type `RemoveTaxRateChange`
+</details>
+
+
+<details>
 <summary>Changed Property(s)</summary>
 
-- :warning: changed property `previousValue` of type `SetNameChange` from type `LocalizedString` to `string`
-- :warning: changed property `nextValue` of type `SetNameChange` from type `LocalizedString` to `string`
+- :warning: changed property `previousValue` of type `AddChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `AddChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `AddLocalizedEnumValueChange` from type `LocalizedEnumValue` to `AttributeLocalizedEnumValue`
+- :warning: changed property `nextValue` of type `AddPlainEnumValueChange` from type `EnumValue` to `AttributePlainEnumValue`
+- :warning: changed property `previousValue` of type `AddStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `nextValue` of type `AddStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `previousValue` of type `ChangeStateTypeChange` from type `StateType` to `StateTypeEnum`
+- :warning: changed property `nextValue` of type `ChangeStateTypeChange` from type `StateType` to `StateTypeEnum`
+- :warning: changed property `previousValue` of type `RemoveChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `RemoveChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `previousValue` of type `RemoveStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `nextValue` of type `RemoveStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `previousValue` of type `SetChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `SetChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `previousValue` of type `SetStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `nextValue` of type `SetStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
 </details>
 

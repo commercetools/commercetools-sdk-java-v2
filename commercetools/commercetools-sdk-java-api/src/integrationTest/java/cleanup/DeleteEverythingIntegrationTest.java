@@ -41,6 +41,7 @@ import io.vrap.rmf.base.client.error.NotFoundException;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
 
 /**
  * Please be careful when running these tests, as they are meant to be used as cleanup and will delete all resources in your project
@@ -48,6 +49,7 @@ import org.junit.jupiter.api.Test;
 public class DeleteEverythingIntegrationTest {
 
     @Test
+    @EnabledIfEnvironmentVariable(named = "RUN_DELETE_TEST", matches = "true")
     public void execute() {
         try {
             deleteAllExtensions();

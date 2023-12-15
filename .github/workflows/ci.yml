@@ -13,6 +13,9 @@ name: CI
 # Declare default permissions as read only.
 permissions: read-all
 
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   integrationTest:
     name: Integration tests

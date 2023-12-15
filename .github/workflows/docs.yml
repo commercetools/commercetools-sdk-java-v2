@@ -18,16 +18,32 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+      # Get GitHub token via the CT SDKs App
+      - name: Generate GitHub token (via CT SDKs App)
+        id: generate_github_token
+        uses: tibdex/github-app-token@v2.1.0
+        with:
+          app_id: ${{ secrets.SDK_APP_ID }}
+          private_key: ${{ secrets.SDK_APP_PEM }}
+          
       - name: Checkout
         uses: actions/checkout@v4
         with:
           path: sdk
+          # Pass a personal access token (using our CT SDKs App) to be able to trigger other workflows
+          # https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token
+          # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/8
+          token: ${{ steps.generate_github_token.outputs.token }}
 
       - name: Checkout
         uses: actions/checkout@v4
         with:
           path: doc
           ref: gh-pages
+          # Pass a personal access token (using our CT SDKs App) to be able to trigger other workflows
+          # https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token
+          # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/8
+          token: ${{ steps.generate_github_token.outputs.token }}
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -44,6 +60,8 @@ jobs:
       - run: rsync -r sdk/build/docs/javadoc/ doc/javadoc
 
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
+        env:
+           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
         with:
           repository: doc
           commit_message: "Update javadoc"

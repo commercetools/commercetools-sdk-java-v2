@@ -20,14 +20,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-          # Get GitHub token via the CT SDKs App
+        # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: tibdex/github-app-token@v2.1.0
+        uses: actions/create-github-app-token@v1
         with:
-          app_id: ${{ secrets.SDK_APP_ID }}
-          private_key: ${{ secrets.SDK_APP_PEM }}
-          
+          app-id: ${{ secrets.SDK_APP_ID }}
+          private-key: ${{ secrets.SDK_APP_PEM }}
+
+      - name: Get App user
+        id: get_app_user
+        env:
+           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
+        run: |
+          export GH_APP_USER=`gh api /users/ct-sdks%5Bbot%5D | jq .id`
+          echo "email=${GH_APP_USER}+ct-sdks[bot]@users.noreply.github.com" >> "$GITHUB_OUTPUT"
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -58,9 +66,9 @@ jobs:
         with:
             push_options: --dry-run
             commit_message: "spotless: Fix code style"
+            commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
             commit_user_name: ct-sdks[bot]
-            commit_user_email: automation@commercetools.com
-            commit_author: ct-sdks[bot] <automation@commercetools.com>
+            commit_user_email: ${{ steps.get_app_user.outputs.email }}
 
       - name: "Run if style changes have been detected"
         if: steps.commit_style_fix.outputs.changes_detected == 'true'
@@ -75,9 +83,9 @@ jobs:
             push_options: --dry-run
             file_pattern: '.git-blame-ignore-revs'
             commit_message: "spotless: add commit to blame ignore revs file"
+            commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
             commit_user_name: ct-sdks[bot]
-            commit_user_email: automation@commercetools.com
-            commit_author: ct-sdks[bot] <automation@commercetools.com>
+            commit_user_email: ${{ steps.get_app_user.outputs.email }}
 
       - name: License check
         run: ./gradlew checkLicense
@@ -91,9 +99,9 @@ jobs:
             push_options: --dry-run
             file_pattern: 'licenses/index.json licenses/**/index.json'
             commit_message: "TASK: Updating license information"
+            commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
             commit_user_name: ct-sdks[bot]
-            commit_user_email: automation@commercetools.com
-            commit_author: ct-sdks[bot] <automation@commercetools.com>
+            commit_user_email: ${{ steps.get_app_user.outputs.email }}
             disable_globbing: true
       - name: Push if changes
         if: steps.commit_style_fix.outputs.changes_detected || steps.commit_license_change.outputs.changes_detected || steps.commit_rev_ignore.outputs.changes_detected
@@ -138,20 +146,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -   name: Checkout
-          uses: actions/checkout@v4
+        # Get GitHub token via the CT SDKs App
+      - name: Generate GitHub token (via CT SDKs App)
+        id: generate_github_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.SDK_APP_ID }}
+          private-key: ${{ secrets.SDK_APP_PEM }}
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.generate_github_token.outputs.token }}
 
       - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
 
-      -   name: Setup Java
-          uses: actions/setup-java@v3
-          with:
-              distribution: 'temurin'
-              java-version: '17'
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
 
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
 
-      -   name: build javadoc
-          if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'
-          run: ./gradlew alljavadoc
+      - name: build javadoc
+        if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: ./gradlew alljavadoc

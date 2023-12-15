@@ -20,8 +20,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-          # Get GitHub token via the CT Changesets App
-      - name: Generate GitHub token (via CT Changesets App)
+          # Get GitHub token via the CT SDKs App
+      - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
         uses: tibdex/github-app-token@v2.1.0
         with:
@@ -31,7 +31,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # Pass a personal access token (using our CT Changesets App) to be able to trigger other workflows
+          # Pass a personal access token (using our CT SDKs App) to be able to trigger other workflows
           # https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token
           # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/8
           token: ${{ steps.generate_github_token.outputs.token }}
@@ -63,7 +63,7 @@ jobs:
             commit_author: Auto Mation <automation@commercetools.com>
 
       - name: "Run if style changes have been detected"
-        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        if: steps.commit_style_fix.outputs.changes_detected == 'true'
         run: echo "${{steps.auto-commit-action.outputs.commit_hash}}" >> .git-blame-ignore-revs
 
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660

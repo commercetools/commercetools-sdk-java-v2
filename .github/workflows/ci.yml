@@ -18,13 +18,23 @@ jobs:
     name: Integration tests
 
     runs-on: ubuntu-latest
-    permissions:
-        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
 
     steps:
+          # Get GitHub token via the CT Changesets App
+      - name: Generate GitHub token (via CT Changesets App)
+        id: generate_github_token
+        uses: tibdex/github-app-token@v2.1.0
+        with:
+          app_id: ${{ secrets.SDK_APP_ID }}
+          private_key: ${{ secrets.SDK_APP_PEM }}
+          
       - name: Checkout
         uses: actions/checkout@v4
-
+        with:
+          # Pass a personal access token (using our CT Changesets App) to be able to trigger other workflows
+          # https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token
+          # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/8
+          token: ${{ steps.generate_github_token.outputs.token }}
       - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
 
       - name: Setup Java
@@ -41,8 +51,12 @@ jobs:
         run: ./gradlew spotlessApply
 
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
+        id: commit_style_fix
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        env:
+           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
         with:
+            push_options: --dry-run
             commit_message: "spotless: Fix code style"
             commit_user_name: automation-commercetools
             commit_user_email: automation@commercetools.com
@@ -53,8 +67,12 @@ jobs:
         run: echo "${{steps.auto-commit-action.outputs.commit_hash}}" >> .git-blame-ignore-revs
 
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
+        id: commit_rev_ignore
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        env:
+           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
         with:
+            push_options: --dry-run
             file_pattern: '.git-blame-ignore-revs'
             commit_message: "spotless: add commit to blame ignore revs file"
             commit_user_name: automation-commercetools
@@ -65,14 +83,21 @@ jobs:
         run: ./gradlew checkLicense
 
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
+        id: commit_license_change
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
         with:
+            push_options: --dry-run
             file_pattern: 'licenses/index.json licenses/**/index.json'
             commit_message: "TASK: Updating license information"
             commit_user_name: automation-commercetools
             commit_user_email: automation@commercetools.com
             commit_author: Auto Mation <automation@commercetools.com>
             disable_globbing: true
+      - name: Push if changes
+        if: steps.commit_style_fix.outputs.changes_detected || steps.commit_license_change.outputs.changes_detected || steps.commit_rev_ignore.outputs.changes_detected
+        run: git push
 
       - name: Run integration tests for PR
         if: github.event_name == 'pull_request' || github.event_name == 'merge_group'

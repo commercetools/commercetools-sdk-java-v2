@@ -20,7 +20,7 @@ jobs:
         uses: actions/create-github-app-token@v1
         with:
           app-id: ${{ secrets.SDK_APP_ID }}
-          private-key: ${{ secrets.SDK_APP_PEM }}
+          private-key: ${{ secrets.CT_SDKS_APP_PEM }}
 
       - name: Get App user
         id: get_app_user

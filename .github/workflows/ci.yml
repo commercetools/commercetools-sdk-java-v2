@@ -13,18 +13,39 @@ name: CI
 # Declare default permissions as read only.
 permissions: read-all
 
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   integrationTest:
     name: Integration tests
 
     runs-on: ubuntu-latest
-    permissions:
-        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
 
     steps:
+        # Get GitHub token via the CT SDKs App
+      - name: Generate GitHub token (via CT SDKs App)
+        id: generate_github_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.SDK_APP_ID }}
+          private-key: ${{ secrets.SDK_APP_PEM }}
+
+      - name: Get App user
+        id: get_app_user
+        env:
+           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
+        run: |
+          export GH_APP_USER=`gh api /users/ct-sdks%5Bbot%5D | jq .id`
+          echo "email=${GH_APP_USER}+ct-sdks[bot]@users.noreply.github.com" >> "$GITHUB_OUTPUT"
+
       - name: Checkout
         uses: actions/checkout@v4
-
+        with:
+          # Pass a personal access token (using our CT SDKs App) to be able to trigger other workflows
+          # https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token
+          # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/8
+          token: ${{ steps.generate_github_token.outputs.token }}
       - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
 
       - name: Setup Java
@@ -41,38 +62,53 @@ jobs:
         run: ./gradlew spotlessApply
 
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
+        id: commit_style_fix
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        env:
+           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
         with:
+            push_options: --dry-run
             commit_message: "spotless: Fix code style"
-            commit_user_name: automation-commercetools
-            commit_user_email: automation@commercetools.com
-            commit_author: Auto Mation <automation@commercetools.com>
+            commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
+            commit_user_name: ct-sdks[bot]
+            commit_user_email: ${{ steps.get_app_user.outputs.email }}
 
       - name: "Run if style changes have been detected"
-        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        if: steps.commit_style_fix.outputs.changes_detected == 'true'
         run: echo "${{steps.auto-commit-action.outputs.commit_hash}}" >> .git-blame-ignore-revs
 
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
+        id: commit_rev_ignore
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        env:
+           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
         with:
+            push_options: --dry-run
             file_pattern: '.git-blame-ignore-revs'
             commit_message: "spotless: add commit to blame ignore revs file"
-            commit_user_name: automation-commercetools
-            commit_user_email: automation@commercetools.com
-            commit_author: Auto Mation <automation@commercetools.com>
+            commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
+            commit_user_name: ct-sdks[bot]
+            commit_user_email: ${{ steps.get_app_user.outputs.email }}
 
       - name: License check
         run: ./gradlew checkLicense
 
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
+        id: commit_license_change
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
         with:
+            push_options: --dry-run
             file_pattern: 'licenses/index.json licenses/**/index.json'
             commit_message: "TASK: Updating license information"
-            commit_user_name: automation-commercetools
-            commit_user_email: automation@commercetools.com
-            commit_author: Auto Mation <automation@commercetools.com>
+            commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
+            commit_user_name: ct-sdks[bot]
+            commit_user_email: ${{ steps.get_app_user.outputs.email }}
             disable_globbing: true
+      - name: Push if changes
+        if: steps.commit_style_fix.outputs.changes_detected || steps.commit_license_change.outputs.changes_detected || steps.commit_rev_ignore.outputs.changes_detected
+        run: git push
 
       - name: Run integration tests for PR
         if: github.event_name == 'pull_request' || github.event_name == 'merge_group'
@@ -113,20 +149,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -   name: Checkout
-          uses: actions/checkout@v4
+        # Get GitHub token via the CT SDKs App
+      - name: Generate GitHub token (via CT SDKs App)
+        id: generate_github_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.SDK_APP_ID }}
+          private-key: ${{ secrets.SDK_APP_PEM }}
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.generate_github_token.outputs.token }}
 
       - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
 
-      -   name: Setup Java
-          uses: actions/setup-java@v3
-          with:
-              distribution: 'temurin'
-              java-version: '17'
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
 
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
 
-      -   name: build javadoc
-          if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'
-          run: ./gradlew alljavadoc
+      - name: build javadoc
+        if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: ./gradlew alljavadoc

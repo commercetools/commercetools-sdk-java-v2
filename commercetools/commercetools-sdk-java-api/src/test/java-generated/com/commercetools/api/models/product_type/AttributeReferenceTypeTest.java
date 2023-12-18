@@ -26,14 +26,16 @@ public class AttributeReferenceTypeTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { AttributeReferenceType.builder()
                 .referenceTypeId(
-                    com.commercetools.api.models.product_type.AttributeReferenceTypeId.findEnum("cart")) } };
+                    com.commercetools.api.models.product_type.AttributeReferenceTypeId.findEnum("associate-role")) } };
     }
 
     @Test
     public void referenceTypeId() {
         AttributeReferenceType value = AttributeReferenceType.of();
-        value.setReferenceTypeId(com.commercetools.api.models.product_type.AttributeReferenceTypeId.findEnum("cart"));
+        value.setReferenceTypeId(
+            com.commercetools.api.models.product_type.AttributeReferenceTypeId.findEnum("associate-role"));
         Assertions.assertThat(value.getReferenceTypeId())
-                .isEqualTo(com.commercetools.api.models.product_type.AttributeReferenceTypeId.findEnum("cart"));
+                .isEqualTo(
+                    com.commercetools.api.models.product_type.AttributeReferenceTypeId.findEnum("associate-role"));
     }
 }

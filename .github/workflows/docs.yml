@@ -9,6 +9,10 @@ name: Deploy docs
 # Declare default permissions as read only.
 permissions: read-all
 
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
 jobs:
   docs:
     name: Build and release docs
@@ -18,16 +22,34 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+        # Get GitHub token via the CT SDKs App
+      - name: Generate GitHub token (via CT SDKs App)
+        id: generate_github_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.SDK_APP_ID }}
+          private-key: ${{ secrets.SDK_APP_PEM }}
+
+      - name: Get App user
+        id: get_app_user
+        env:
+           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
+        run: |
+          export GH_APP_USER=`gh api /users/ct-sdks%5Bbot%5D | jq .id`
+          echo "email=${GH_APP_USER}+ct-sdks[bot]@users.noreply.github.com" >> "$GITHUB_OUTPUT"
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           path: sdk
+          token: ${{ steps.generate_github_token.outputs.token }}
 
       - name: Checkout
         uses: actions/checkout@v4
         with:
           path: doc
           ref: gh-pages
+          token: ${{ steps.generate_github_token.outputs.token }}
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -47,6 +69,6 @@ jobs:
         with:
           repository: doc
           commit_message: "Update javadoc"
-          commit_user_name: automation-commercetools
-          commit_user_email: automation@commercetools.com
-          commit_author: Auto Mation <automation@commercetools.com>
+          commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
+          commit_user_name: ct-sdks[bot]
+          commit_user_email: ${{ steps.get_app_user.outputs.email }}

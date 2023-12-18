@@ -26,17 +26,17 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
 
     private String change;
 
-    private java.util.List<com.commercetools.history.models.common.ChannelRole> previousValue;
+    private java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> previousValue;
 
-    private java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue;
+    private java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveChannelRolesChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.ChannelRole> previousValue,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue) {
+            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> previousValue,
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> nextValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
@@ -70,7 +70,7 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
      *  <p>Value before the change.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.common.ChannelRole> getPreviousValue() {
+    public java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> getPreviousValue() {
         return this.previousValue;
     }
 
@@ -78,7 +78,7 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
      *  <p>Value after the change.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.common.ChannelRole> getNextValue() {
+    public java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> getNextValue() {
         return this.nextValue;
     }
 
@@ -86,20 +86,20 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.ChannelRole... previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.ChannelRoleEnum... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
     }
 
     public void setPreviousValue(
-            final java.util.List<com.commercetools.history.models.common.ChannelRole> previousValue) {
+            final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.ChannelRole... nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.ChannelRoleEnum... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
     }
 
-    public void setNextValue(final java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue) {
+    public void setNextValue(final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> nextValue) {
         this.nextValue = nextValue;
     }
 

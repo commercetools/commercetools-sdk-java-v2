@@ -14,6 +14,7 @@ import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.http.ErrorMiddleware;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -73,10 +74,12 @@ public class ApiClientIntegrationTests {
                 .withStaticTokenFlow(authenticationToken)
                 .addConcurrentModificationMiddleware()
                 .withPolicies(
-                        policyBuilder -> policyBuilder.withRetry(b -> b.maxRetries(5).statusCodes(singletonList(503))))
+                    policyBuilder -> policyBuilder.withRetry(b -> b.maxRetries(5).statusCodes(singletonList(503))))
                 .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION);
         ProjectApiRoot projectApiRoot = builder.buildProjectRoot();
-        ApiHttpResponse<ProductPagedQueryResponse> productPagedQueryResponseApiHttpResponse = projectApiRoot.products().get().executeBlocking();
+        ApiHttpResponse<ProductPagedQueryResponse> productPagedQueryResponseApiHttpResponse = projectApiRoot.products()
+                .get()
+                .executeBlocking();
 
         Assertions.assertEquals(productPagedQueryResponseApiHttpResponse.getStatusCode(), 200);
     }

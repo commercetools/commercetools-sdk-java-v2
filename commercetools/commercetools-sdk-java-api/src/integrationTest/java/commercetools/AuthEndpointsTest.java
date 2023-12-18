@@ -1,24 +1,26 @@
 
 package commercetools;
 
-import com.commercetools.api.client.ProjectApiRoot;
-import com.commercetools.api.defaultconfig.ApiRootBuilder;
-import com.commercetools.api.defaultconfig.ServiceRegion;
-import com.commercetools.api.models.product.ProductPagedQueryResponse;
-import commercetools.utils.CommercetoolsTestUtils;
-import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.http.HttpStatusCode;
-import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import static java.lang.String.format;
 
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.concurrent.ExecutionException;
 
-import static java.lang.String.format;
+import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
+import com.commercetools.api.defaultconfig.ServiceRegion;
+import com.commercetools.api.models.product.ProductPagedQueryResponse;
+import commercetools.utils.CommercetoolsTestUtils;
+
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.http.HttpStatusCode;
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class AuthEndpointsTest {
     @Test
@@ -113,9 +115,9 @@ public class AuthEndpointsTest {
                 .withClientId(CommercetoolsTestUtils.getClientId())
                 .withClientSecret(CommercetoolsTestUtils.getClientSecret())
                 .build();
-        final ClientCredentialsTokenSupplier tokenSupplier = new ClientCredentialsTokenSupplier(credentials.getClientId(),
-                credentials.getClientSecret(), "", ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-                HttpClientSupplier.of().get());
+        final ClientCredentialsTokenSupplier tokenSupplier = new ClientCredentialsTokenSupplier(
+            credentials.getClientId(), credentials.getClientSecret(), "",
+            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), HttpClientSupplier.of().get());
         final AuthenticationToken token = tokenSupplier.getToken().get();
 
         final ApiRootBuilder builder = ApiRootBuilder.of()
@@ -123,7 +125,8 @@ public class AuthEndpointsTest {
                 .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
                 .withStaticTokenFlow(token);
         final ProjectApiRoot projectApiRoot = builder.buildProjectRoot();
-        final ApiHttpResponse<ProductPagedQueryResponse> productPagedQueryResponseApiHttpResponse = projectApiRoot.products()
+        final ApiHttpResponse<ProductPagedQueryResponse> productPagedQueryResponseApiHttpResponse = projectApiRoot
+                .products()
                 .get()
                 .executeBlocking();
 

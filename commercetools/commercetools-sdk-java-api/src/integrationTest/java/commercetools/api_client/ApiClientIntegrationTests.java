@@ -1,13 +1,14 @@
 
 package commercetools.api_client;
 
+import static commercetools.api_client.ApiClientFixtures.*;
+
 import com.commercetools.api.models.api_client.ApiClient;
 import com.commercetools.api.models.api_client.ApiClientPagedQueryResponse;
 import commercetools.utils.CommercetoolsTestUtils;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static commercetools.api_client.ApiClientFixtures.*;
 
 public class ApiClientIntegrationTests {
 

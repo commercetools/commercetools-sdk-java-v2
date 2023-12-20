@@ -100,7 +100,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param subRates value to be set
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param subRates value to be set
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param subRates value to be set
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -177,7 +177,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -246,7 +246,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @return subRates
      */
 

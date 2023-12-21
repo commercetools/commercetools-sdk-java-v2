@@ -388,13 +388,6 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asNotEnabled(
-            Function<com.commercetools.api.predicates.query.error.NotEnabledErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.NotEnabledErrorQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.error.NotEnabledErrorQueryBuilderDsl.of()),
-            ErrorObjectQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asObjectNotFound(
             Function<com.commercetools.api.predicates.query.error.ObjectNotFoundErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.ObjectNotFoundErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

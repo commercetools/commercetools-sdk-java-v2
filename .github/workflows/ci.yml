@@ -28,7 +28,7 @@ jobs:
         id: generate_github_token
         uses: actions/create-github-app-token@v1
         with:
-          app-id: ${{ secrets.SDK_APP_ID }}
+          app-id: ${{ secrets.CT_SDK_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
 
       - name: Get App user
@@ -154,7 +154,7 @@ jobs:
         id: generate_github_token
         uses: actions/create-github-app-token@v1
         with:
-          app-id: ${{ secrets.SDK_APP_ID }}
+          app-id: ${{ secrets.CT_SDK_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
 
       - name: Checkout

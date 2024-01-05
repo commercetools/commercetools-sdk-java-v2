@@ -13,8 +13,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Get GitHub token via the CT SDKs App
+      - name: Generate GitHub token (via CT SDKs App)
+        id: generate_github_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.CT_SDKS_APP_ID }}
+          private-key: ${{ secrets.CT_SDKS_APP_PEM }}
+
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+            token: ${{ steps.generate_github_token.outputs.token }}
 
       - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
 

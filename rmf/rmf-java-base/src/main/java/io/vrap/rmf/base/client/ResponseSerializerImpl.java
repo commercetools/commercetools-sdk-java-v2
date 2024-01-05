@@ -21,7 +21,7 @@ class ResponseSerializerImpl implements ResponseSerializer {
 
     public <O> ApiHttpResponse<O> convertResponse(final ApiHttpResponse<byte[]> response, final Class<O> outputType) {
         try {
-            if (response.getBody() == null) {
+            if (response.getBody() == null || response.getBody().length == 0) {
                 return (ApiHttpResponse<O>) response;
             }
             O newBody = mapper.readValue(response.getBody(), outputType);

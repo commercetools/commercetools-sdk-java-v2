@@ -1,12 +1,17 @@
 
 package commercetools;
 
+import static java.lang.String.format;
+
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.concurrent.ExecutionException;
 
+import com.commercetools.api.client.ProjectApiRoot;
+import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
+import com.commercetools.api.models.product.ProductPagedQueryResponse;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.*;
@@ -40,7 +45,7 @@ public class AuthEndpointsTest {
                     (credentials.getClientId() + ":" + credentials.getClientSecret()).getBytes(StandardCharsets.UTF_8));
 
         final ApiHttpHeaders headers = new ApiHttpHeaders()
-                .withHeader(ApiHttpHeaders.AUTHORIZATION, String.format("Basic %s", auth))
+                .withHeader(ApiHttpHeaders.AUTHORIZATION, format("Basic %s", auth))
                 .withHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
         final String body = "token=" + token.getAccessToken();
 
@@ -76,7 +81,7 @@ public class AuthEndpointsTest {
                 .encodeToString(
                     (credentials.getClientId() + ":" + credentials.getClientSecret()).getBytes(StandardCharsets.UTF_8));
         final ApiHttpHeaders headers = new ApiHttpHeaders()
-                .withHeader(ApiHttpHeaders.AUTHORIZATION, String.format("Basic %s", auth))
+                .withHeader(ApiHttpHeaders.AUTHORIZATION, format("Basic %s", auth))
                 .withHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
 
         // build the revoke request
@@ -102,5 +107,29 @@ public class AuthEndpointsTest {
                 .get();
 
         Assertions.assertFalse(tokenIntrospection.getBody().isActive());
+    }
+
+    @Test
+    public void apiRootWithStaticAuthToken() throws ExecutionException, InterruptedException {
+        final ClientCredentials credentials = ClientCredentials.of()
+                .withClientId(CommercetoolsTestUtils.getClientId())
+                .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                .build();
+        final ClientCredentialsTokenSupplier tokenSupplier = new ClientCredentialsTokenSupplier(
+            credentials.getClientId(), credentials.getClientSecret(), "",
+            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), HttpClientSupplier.of().get());
+        final AuthenticationToken token = tokenSupplier.getToken().get();
+
+        final ApiRootBuilder builder = ApiRootBuilder.of()
+                .withProjectKey(CommercetoolsTestUtils.getProjectKey())
+                .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .withStaticTokenFlow(token);
+        final ProjectApiRoot projectApiRoot = builder.buildProjectRoot();
+        final ApiHttpResponse<ProductPagedQueryResponse> productPagedQueryResponseApiHttpResponse = projectApiRoot
+                .products()
+                .get()
+                .executeBlocking();
+
+        Assertions.assertEquals(productPagedQueryResponseApiHttpResponse.getStatusCode(), 200);
     }
 }

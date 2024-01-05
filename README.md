@@ -35,7 +35,6 @@ dependencies {
     implementation "com.commercetools.sdk:commercetools-http-client:${versions.commercetools}"
     implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"
     implementation "com.commercetools.sdk:commercetools-sdk-java-importapi:${versions.commercetools}"
-    implementation "com.commercetools.sdk:commercetools-sdk-java-ml:${versions.commercetools}"
 }
 ```
 
@@ -61,11 +60,6 @@ dependencies {
       <artifactId>commercetools-sdk-java-importapi</artifactId>
       <version>${commercetools.version}</version>
     </dependency>
-    <dependency>
-      <groupId>com.commercetools.sdk</groupId>
-      <artifactId>commercetools-sdk-java-ml</artifactId>
-      <version>${commercetools.version}</version>
-    </dependency>
 </dependencies>
 ```
 
@@ -81,7 +75,6 @@ dependencies {
 * `commercetools-sdk-java-api`: models and request builders for the product API
 * `commercetools-sdk-java-importapi`: models and request builders for the import API
 * `commercetools-sdk-java-history`: models and request builders for the audit log API
-* `commercetools-sdk-java-ml`: models and request builders for the machine learning API
 * `commercetools-sdk-compat-v1`: Compatibility layer for Java v1 SDK
 * `commercetools-money`: Provider for JSR-354 money instances
 * `commercetools-monitoring-newrelic`: Middleware to integrate NewRelic monitoring

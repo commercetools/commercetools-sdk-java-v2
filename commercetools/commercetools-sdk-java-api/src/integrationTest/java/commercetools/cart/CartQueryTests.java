@@ -34,6 +34,19 @@ public class CartQueryTests {
     }
 
     @Test
+    public void exists() {
+        CartsFixtures.withCart(cart -> {
+            int statusCode = CommercetoolsTestUtils.getProjectApiRoot()
+                    .carts()
+                    .withKey(cart.getKey())
+                    .head()
+                    .executeBlocking()
+                    .getStatusCode();
+            Assertions.assertThat(statusCode).isEqualTo(200);
+        });
+    }
+
+    @Test
     public void queryByKey() {
         CartsFixtures.withCart(cart -> {
             Cart queriedCart = CommercetoolsTestUtils.getProjectApiRoot()

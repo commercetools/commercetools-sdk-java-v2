@@ -8,6 +8,7 @@ import com.commercetools.api.models.error.InvalidFieldError;
 import com.commercetools.api.models.product.Attribute;
 import com.commercetools.api.models.product.AttributeContainer;
 import com.commercetools.api.models.product.AttributesAccessor;
+import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product.ProductVariantDraftBuilder;
 import com.commercetools.api.models.product_type.AttributeDefinition;
@@ -15,7 +16,6 @@ import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import com.commercetools.api.models.product_type.AttributeType;
 import com.commercetools.api.models.product_type.ProductType;
-import com.commercetools.ml.models.common.ProductReference;
 
 import io.vrap.rmf.base.client.utils.json.JsonException;
 

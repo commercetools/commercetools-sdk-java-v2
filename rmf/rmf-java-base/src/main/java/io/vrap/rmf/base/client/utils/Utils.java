@@ -37,7 +37,7 @@ public final class Utils {
 
     public static <I, O> ApiHttpResponse<O> convertResponse(final ApiHttpResponse<byte[]> response,
             final Class<O> outputType) {
-        if (response.getBody() == null) {
+        if (response.getBody() == null || response.getBody().length == 0) {
             return (ApiHttpResponse<O>) response;
         }
         O newBody = JsonUtils.fromJsonByteArray(response.getBody(), outputType);

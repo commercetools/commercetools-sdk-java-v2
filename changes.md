@@ -8,6 +8,14 @@
 - added enum `cart-discount` to type `AttributeReferenceTypeId`
 </details>
 
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `NotEnabledError`
+- :warning: removed type `GraphQLNotEnabledError`
+</details>
+
 **History changes**
 
 <details>

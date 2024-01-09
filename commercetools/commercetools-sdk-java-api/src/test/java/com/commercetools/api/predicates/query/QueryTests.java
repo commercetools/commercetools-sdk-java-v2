@@ -14,6 +14,7 @@ import com.commercetools.api.predicates.query.cart_discount.CartDiscountQueryBui
 import com.commercetools.api.predicates.query.channel.ChannelQueryBuilderDsl;
 import com.commercetools.api.predicates.query.customer.CustomerQueryBuilderDsl;
 import com.commercetools.api.predicates.query.message.MessageQueryBuilderDsl;
+import com.commercetools.api.predicates.query.order.OrderQueryBuilderDsl;
 import com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl;
 import com.commercetools.api.predicates.query.product.ProductQueryBuilderDsl;
 import com.commercetools.api.predicates.query.state.StateQueryBuilderDsl;
@@ -248,7 +249,29 @@ public class QueryTests {
                         "resourceTypeIds contains any :foo", },
                 new Object[] { TypeQueryBuilderDsl.of().resourceTypeIds().containsAllVar("foo"),
                         "resourceTypeIds contains all :foo", },
-
-        };
+                new Object[] {
+                        OrderQueryBuilderDsl.of()
+                                .custom(c -> c.fields(f -> f.field("foo").plainEnum(e -> e.key().is("bar")))),
+                        "custom(fields(foo(key = \"bar\")))", },
+                new Object[] {
+                        OrderQueryBuilderDsl.of()
+                                .custom(c -> c.fields(f -> f.field("foo")
+                                        .localizedEnum(e -> e.label(l -> l.with(Locale.ENGLISH).is("bar"))))),
+                        "custom(fields(foo(label(en = \"bar\"))))", },
+                new Object[] {
+                        OrderQueryBuilderDsl.of()
+                                .custom(c -> c.fields(f -> f.field("foo").money(e -> e.currencyCode().is("EUR")))),
+                        "custom(fields(foo(currencyCode = \"EUR\")))", },
+                new Object[] {
+                        OrderQueryBuilderDsl.of()
+                                .custom(c -> c.fields(f -> f.field("foo").reference(e -> e.typeId().is("customer")))),
+                        "custom(fields(foo(typeId = \"customer\")))", },
+                new Object[] { OrderQueryBuilderDsl.of().custom(c -> c.fields(f -> f.field("foo").string().is("bar"))),
+                        "custom(fields(foo = \"bar\"))", },
+                new Object[] { OrderQueryBuilderDsl.of().custom(c -> c.fields(f -> f.field("foo").longNumber().is(3L))),
+                        "custom(fields(foo = 3))", },
+                new Object[] {
+                        OrderQueryBuilderDsl.of().custom(c -> c.fields(f -> f.field("foo").doubleNumber().is(3.1))),
+                        "custom(fields(foo = 3.1))", }, };
     }
 }

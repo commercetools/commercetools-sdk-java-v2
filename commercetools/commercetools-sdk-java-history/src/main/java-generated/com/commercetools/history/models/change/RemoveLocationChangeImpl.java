@@ -28,18 +28,14 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
 
     private com.commercetools.history.models.common.Location previousValue;
 
-    private com.commercetools.history.models.common.Location nextValue;
-
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveLocationChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.Location previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.Location nextValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.Location previousValue) {
         this.change = change;
         this.previousValue = previousValue;
-        this.nextValue = nextValue;
         this.type = REMOVE_LOCATION_CHANGE;
     }
 
@@ -74,24 +70,12 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
         return this.previousValue;
     }
 
-    /**
-     *  <p>Value after the change.</p>
-     */
-
-    public com.commercetools.history.models.common.Location getNextValue() {
-        return this.nextValue;
-    }
-
     public void setChange(final String change) {
         this.change = change;
     }
 
     public void setPreviousValue(final com.commercetools.history.models.common.Location previousValue) {
         this.previousValue = previousValue;
-    }
-
-    public void setNextValue(final com.commercetools.history.models.common.Location nextValue) {
-        this.nextValue = nextValue;
     }
 
     @Override
@@ -107,21 +91,15 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
-                .append(nextValue, that.nextValue)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
-                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type)
-                .append(change)
-                .append(previousValue)
-                .append(nextValue)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(change).append(previousValue).toHashCode();
     }
 
     @Override
@@ -129,7 +107,6 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("change", change)
                 .append("previousValue", previousValue)
-                .append("nextValue", nextValue)
                 .build();
     }
 

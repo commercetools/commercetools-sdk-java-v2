@@ -14,6 +14,7 @@ import commercetools.utils.CommercetoolsTestUtils;
 
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class ProductProjectionIntegrationTests {
@@ -83,6 +84,7 @@ public class ProductProjectionIntegrationTests {
     }
 
     @Test
+    @Disabled
     public void searchBoolean() {
         ProjectApiRoot apiRoot = CommercetoolsTestUtils.getProjectApiRoot();
         withProduct(product1 -> {

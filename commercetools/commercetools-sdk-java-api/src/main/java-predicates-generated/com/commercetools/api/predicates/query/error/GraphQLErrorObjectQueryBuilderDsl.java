@@ -394,13 +394,6 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asNotEnabled(
-            Function<com.commercetools.api.predicates.query.error.GraphQLNotEnabledErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLNotEnabledErrorQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(com.commercetools.api.predicates.query.error.GraphQLNotEnabledErrorQueryBuilderDsl.of()),
-            GraphQLErrorObjectQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asObjectNotFound(
             Function<com.commercetools.api.predicates.query.error.GraphQLObjectNotFoundErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLObjectNotFoundErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

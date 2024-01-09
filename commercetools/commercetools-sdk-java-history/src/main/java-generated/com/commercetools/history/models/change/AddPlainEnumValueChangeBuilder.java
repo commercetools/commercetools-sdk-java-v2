@@ -26,7 +26,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
 
     private String change;
 
-    private com.commercetools.history.models.change_value.EnumValue nextValue;
+    private com.commercetools.history.models.common.AttributePlainEnumValue nextValue;
 
     private String attributeName;
 
@@ -48,8 +48,9 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
      */
 
     public AddPlainEnumValueChangeBuilder nextValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValueBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build();
+            Function<com.commercetools.history.models.common.AttributePlainEnumValueBuilder, com.commercetools.history.models.common.AttributePlainEnumValueBuilder> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AttributePlainEnumValueBuilder.of())
+                .build();
         return this;
     }
 
@@ -60,8 +61,8 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
      */
 
     public AddPlainEnumValueChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of());
+            Function<com.commercetools.history.models.common.AttributePlainEnumValueBuilder, com.commercetools.history.models.common.AttributePlainEnumValue> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AttributePlainEnumValueBuilder.of());
         return this;
     }
 
@@ -72,7 +73,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
      */
 
     public AddPlainEnumValueChangeBuilder nextValue(
-            final com.commercetools.history.models.change_value.EnumValue nextValue) {
+            final com.commercetools.history.models.common.AttributePlainEnumValue nextValue) {
         this.nextValue = nextValue;
         return this;
     }
@@ -102,7 +103,7 @@ public class AddPlainEnumValueChangeBuilder implements Builder<AddPlainEnumValue
      * @return nextValue
      */
 
-    public com.commercetools.history.models.change_value.EnumValue getNextValue() {
+    public com.commercetools.history.models.common.AttributePlainEnumValue getNextValue() {
         return this.nextValue;
     }
 

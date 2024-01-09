@@ -30,16 +30,22 @@ public class CtpClientBeanService {
     @Value(value = "${ctp.project.key}")
     private String projectKey;
 
+    @Value(value = "${otel.provider:local}")
+    private OtelProvider otelProvider;
+
     private ClientCredentials credentials() {
         return ClientCredentials.of().withClientId(clientId).withClientSecret(clientSecret).build();
     }
 
     @Bean
     public ProjectScopedApiRoot apiRoot() {
-        return ApiRootBuilder.of()
+        ApiRootBuilder builder = ApiRootBuilder.of()
                 .defaultClient(credentials())
-                .withSerializer(new OpenTelemetryResponseSerializer(ResponseSerializer.of(), GlobalOpenTelemetry.get()))
-                .withTelemetryMiddleware(new OpenTelemetryMiddleware(GlobalOpenTelemetry.get()))
-                .build(projectKey);
+                .withTelemetryMiddleware(new OpenTelemetryMiddleware(GlobalOpenTelemetry.get(),
+                        otelProvider.supportsHistogram()));
+        if (otelProvider.useOtelSerializer()) {
+            builder.withSerializer(new OpenTelemetryResponseSerializer(ResponseSerializer.of(), GlobalOpenTelemetry.get()));
+        }
+        return builder.build(projectKey);
     }
 }

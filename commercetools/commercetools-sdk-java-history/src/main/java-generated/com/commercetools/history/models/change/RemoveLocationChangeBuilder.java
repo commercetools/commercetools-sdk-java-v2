@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     RemoveLocationChange removeLocationChange = RemoveLocationChange.builder()
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
- *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,8 +26,6 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
     private String change;
 
     private com.commercetools.history.models.common.Location previousValue;
-
-    private com.commercetools.history.models.common.Location nextValue;
 
     /**
      * set the value to the change
@@ -78,41 +75,6 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
     }
 
     /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public RemoveLocationChangeBuilder nextValue(
-            Function<com.commercetools.history.models.common.LocationBuilder, com.commercetools.history.models.common.LocationBuilder> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.LocationBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
-     * @param builder function to build the nextValue value
-     * @return Builder
-     */
-
-    public RemoveLocationChangeBuilder withNextValue(
-            Function<com.commercetools.history.models.common.LocationBuilder, com.commercetools.history.models.common.Location> builder) {
-        this.nextValue = builder.apply(com.commercetools.history.models.common.LocationBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Value after the change.</p>
-     * @param nextValue value to be set
-     * @return Builder
-     */
-
-    public RemoveLocationChangeBuilder nextValue(final com.commercetools.history.models.common.Location nextValue) {
-        this.nextValue = nextValue;
-        return this;
-    }
-
-    /**
      * value of change}
      * @return change
      */
@@ -131,23 +93,13 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
     }
 
     /**
-     *  <p>Value after the change.</p>
-     * @return nextValue
-     */
-
-    public com.commercetools.history.models.common.Location getNextValue() {
-        return this.nextValue;
-    }
-
-    /**
      * builds RemoveLocationChange with checking for non-null required values
      * @return RemoveLocationChange
      */
     public RemoveLocationChange build() {
         Objects.requireNonNull(change, RemoveLocationChange.class + ": change is missing");
         Objects.requireNonNull(previousValue, RemoveLocationChange.class + ": previousValue is missing");
-        Objects.requireNonNull(nextValue, RemoveLocationChange.class + ": nextValue is missing");
-        return new RemoveLocationChangeImpl(change, previousValue, nextValue);
+        return new RemoveLocationChangeImpl(change, previousValue);
     }
 
     /**
@@ -155,7 +107,7 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
      * @return RemoveLocationChange
      */
     public RemoveLocationChange buildUnchecked() {
-        return new RemoveLocationChangeImpl(change, previousValue, nextValue);
+        return new RemoveLocationChangeImpl(change, previousValue);
     }
 
     /**
@@ -175,7 +127,6 @@ public class RemoveLocationChangeBuilder implements Builder<RemoveLocationChange
         RemoveLocationChangeBuilder builder = new RemoveLocationChangeBuilder();
         builder.change = template.getChange();
         builder.previousValue = template.getPreviousValue();
-        builder.nextValue = template.getNextValue();
         return builder;
     }
 

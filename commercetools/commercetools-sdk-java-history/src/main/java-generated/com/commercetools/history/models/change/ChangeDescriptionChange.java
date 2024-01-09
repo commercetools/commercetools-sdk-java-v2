@@ -14,11 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Change triggered by the following update actions:</p>
- *  <ul>
- *   <li>Change Description on Channels.</li>
- *   <li>Change Description on Product Types.</li>
- *  </ul>
+ *  <p>Change triggered by the Change Description update action.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

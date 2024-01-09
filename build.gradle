@@ -203,7 +203,6 @@ def documentationProjects= [
         ":commercetools:commercetools-sdk-java-api",
         ":commercetools:commercetools-sdk-java-history",
         ":commercetools:commercetools-sdk-java-importapi",
-        ":commercetools:commercetools-sdk-java-ml",
         ":commercetools:internal-docs",
         ":rmf:rmf-java-base"
 ]

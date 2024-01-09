@@ -83,7 +83,8 @@ public class CommercetoolsTestUtils {
             }
             catch (AssertionError e) {
                 if (System.currentTimeMillis() > timeOutAt) {
-                    throw e;
+                    throw new AssertionError(
+                        String.format("assertEventually timed out after %s seconds", maxWaitTime.getSeconds()), e);
                 }
             }
 

@@ -26,17 +26,17 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
 
     private String change;
 
-    private com.commercetools.history.models.common.StateType previousValue;
+    private com.commercetools.history.models.common.StateTypeEnum previousValue;
 
-    private com.commercetools.history.models.common.StateType nextValue;
+    private com.commercetools.history.models.common.StateTypeEnum nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ChangeStateTypeChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.StateType previousValue,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.StateType nextValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.StateTypeEnum previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.StateTypeEnum nextValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
@@ -70,7 +70,7 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
      *  <p>Value before the change.</p>
      */
 
-    public com.commercetools.history.models.common.StateType getPreviousValue() {
+    public com.commercetools.history.models.common.StateTypeEnum getPreviousValue() {
         return this.previousValue;
     }
 
@@ -78,7 +78,7 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.StateType getNextValue() {
+    public com.commercetools.history.models.common.StateTypeEnum getNextValue() {
         return this.nextValue;
     }
 
@@ -86,11 +86,11 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.StateType previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.StateTypeEnum previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.StateType nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.StateTypeEnum nextValue) {
         this.nextValue = nextValue;
     }
 

@@ -25,9 +25,9 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
 
     private String change;
 
-    private java.util.List<com.commercetools.history.models.common.StateRole> previousValue;
+    private java.util.List<com.commercetools.history.models.common.StateRoleEnum> previousValue;
 
-    private java.util.List<com.commercetools.history.models.common.StateRole> nextValue;
+    private java.util.List<com.commercetools.history.models.common.StateRoleEnum> nextValue;
 
     /**
      * set the value to the change
@@ -47,7 +47,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
      */
 
     public SetStateRolesChangeBuilder previousValue(
-            final com.commercetools.history.models.common.StateRole... previousValue) {
+            final com.commercetools.history.models.common.StateRoleEnum... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
@@ -59,7 +59,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
      */
 
     public SetStateRolesChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.StateRole> previousValue) {
+            final java.util.List<com.commercetools.history.models.common.StateRoleEnum> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -71,7 +71,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
      */
 
     public SetStateRolesChangeBuilder plusPreviousValue(
-            final com.commercetools.history.models.common.StateRole... previousValue) {
+            final com.commercetools.history.models.common.StateRoleEnum... previousValue) {
         if (this.previousValue == null) {
             this.previousValue = new ArrayList<>();
         }
@@ -85,7 +85,8 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
      * @return Builder
      */
 
-    public SetStateRolesChangeBuilder nextValue(final com.commercetools.history.models.common.StateRole... nextValue) {
+    public SetStateRolesChangeBuilder nextValue(
+            final com.commercetools.history.models.common.StateRoleEnum... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
@@ -97,7 +98,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
      */
 
     public SetStateRolesChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.StateRole> nextValue) {
+            final java.util.List<com.commercetools.history.models.common.StateRoleEnum> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
@@ -109,7 +110,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
      */
 
     public SetStateRolesChangeBuilder plusNextValue(
-            final com.commercetools.history.models.common.StateRole... nextValue) {
+            final com.commercetools.history.models.common.StateRoleEnum... nextValue) {
         if (this.nextValue == null) {
             this.nextValue = new ArrayList<>();
         }
@@ -131,7 +132,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
      * @return previousValue
      */
 
-    public java.util.List<com.commercetools.history.models.common.StateRole> getPreviousValue() {
+    public java.util.List<com.commercetools.history.models.common.StateRoleEnum> getPreviousValue() {
         return this.previousValue;
     }
 
@@ -140,7 +141,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
      * @return nextValue
      */
 
-    public java.util.List<com.commercetools.history.models.common.StateRole> getNextValue() {
+    public java.util.List<com.commercetools.history.models.common.StateRoleEnum> getNextValue() {
         return this.nextValue;
     }
 

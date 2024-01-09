@@ -19,7 +19,7 @@ jobs:
             - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
 
             - name: Setup Java
-              uses: actions/setup-java@v3
+              uses: actions/setup-java@v4
               with:
                   distribution: 'temurin'
                   java-version: '17'

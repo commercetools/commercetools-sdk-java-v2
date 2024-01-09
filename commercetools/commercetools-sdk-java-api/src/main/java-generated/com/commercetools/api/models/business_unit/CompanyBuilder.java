@@ -678,7 +678,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param inheritedAssociates value to be set
      * @return Builder
      */
@@ -690,7 +690,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param inheritedAssociates value to be set
      * @return Builder
      */
@@ -702,7 +702,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param inheritedAssociates value to be set
      * @return Builder
      */
@@ -717,7 +717,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param builder function to build the inheritedAssociates value
      * @return Builder
      */
@@ -733,7 +733,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param builder function to build the inheritedAssociates value
      * @return Builder
      */
@@ -747,7 +747,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param builder function to build the inheritedAssociates value
      * @return Builder
      */
@@ -759,7 +759,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param builder function to build the inheritedAssociates value
      * @return Builder
      */
@@ -1039,7 +1039,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @return inheritedAssociates
      */
 

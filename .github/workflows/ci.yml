@@ -110,7 +110,7 @@ jobs:
 
       - name: Run integration tests for PR
         if: (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/')) || github.event_name == 'merge_group'
-        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest
+        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples
         env:
           CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID_PR }}
           CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET_PR }}
@@ -120,7 +120,7 @@ jobs:
 
       - name: Run integration tests
         if: github.event_name != 'pull_request' && github.event_name != 'merge_group'
-        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest
+        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples
         env:
             CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
             CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
@@ -130,7 +130,6 @@ jobs:
 
       - name: Test examples
         run: |
-          ./gradlew writeVersionToExamples
           cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
           cd ../maven-okhttp4 && mvn verify --no-transfer-progress
 

@@ -62,8 +62,6 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
         id: commit_style_fix
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
-        env:
-           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
         with:
             push_options: --dry-run
             commit_message: "spotless: Fix code style"
@@ -78,8 +76,6 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
         id: commit_rev_ignore
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
-        env:
-           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
         with:
             push_options: --dry-run
             file_pattern: '.git-blame-ignore-revs'
@@ -94,8 +90,6 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
         id: commit_license_change
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        env:
-           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
         with:
             push_options: --dry-run
             file_pattern: 'licenses/index.json licenses/**/index.json'
@@ -107,7 +101,8 @@ jobs:
       - name: Push if changes
         if: steps.commit_style_fix.outputs.changes_detected || steps.commit_license_change.outputs.changes_detected || steps.commit_rev_ignore.outputs.changes_detected
         run: git push
-
+        env:
+           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
       - name: Run integration tests for PR
         if: (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/')) || github.event_name == 'merge_group'
         run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples

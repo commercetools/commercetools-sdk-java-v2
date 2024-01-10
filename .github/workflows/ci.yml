@@ -100,9 +100,7 @@ jobs:
             disable_globbing: true
       - name: Push if changes
         if: steps.commit_style_fix.outputs.changes_detected || steps.commit_license_change.outputs.changes_detected || steps.commit_rev_ignore.outputs.changes_detected
-        run: git push
-        env:
-           GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
+        run: git push origin
       - name: Run integration tests for PR
         if: (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/')) || github.event_name == 'merge_group'
         run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples

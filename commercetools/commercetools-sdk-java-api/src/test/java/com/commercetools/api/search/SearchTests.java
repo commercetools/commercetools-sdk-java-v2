@@ -253,6 +253,10 @@ public class SearchTests {
     @DataProvider
     public static Object[][] facetExpressions() {
         return new Object[][] {
+                new Object[] { ProductFacetExpressionBuilder.of().categories().id().alias("cat"),
+                        "categories.id as cat" },
+                new Object[] { ProductFacetExpressionBuilder.of().categories().id(),
+                        "categories.id" },
                 new Object[] { ProductFacetExpressionBuilder.of().categories().id().is("foo"),
                         "categories.id: \"foo\"" },
                 new Object[] { ProductFacetExpressionBuilder.of().categories().id().is("foo").is("bar"),
@@ -263,173 +267,26 @@ public class SearchTests {
                         "categories.id: \"foo\", subTree(\"bar\")" },
                 new Object[] { ProductFacetExpressionBuilder.of().categories().id().is("foo").subTree("bar").is("baz"),
                         "categories.id: \"foo\", subTree(\"bar\"), \"baz\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().key().is("foo"),
-                //                        "variants.key: \"foo\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().key().is("foo").is("bar"),
-                //                        "variants.key: \"foo\", \"bar\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().key().exists(), "variants.key: exists" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().key().missing(),
-                //                        "variants.key: missing" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().sku().is("foo"),
-                //                        "variants.sku: \"foo\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().sku().is("foo").is("bar"),
-                //                        "variants.sku: \"foo\", \"bar\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().sku().exists(), "variants.sku: exists" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().sku().missing(),
-                //                        "variants.sku: missing" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().prices().exists(),
-                //                        "variants.prices: exists" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().prices().missing(),
-                //                        "variants.prices: missing" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().price().centAmount().is(100L),
-                //                        "variants.price.centAmount: 100" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().price().centAmount().rangeTo(100L),
-                //                        "variants.price.centAmount: range (* to 100)" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().price().centAmount().rangeFrom(100L),
-                //                        "variants.price.centAmount: range (100 to *)" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().price().centAmount().range(100L, 200L),
-                //                        "variants.price.centAmount: range (100 to 200)" },
-                //                new Object[] {
-                //                        ProductFacetExpressionBuilder.of()
-                //                                .variants()
-                //                                .price()
-                //                                .centAmount()
-                //                                .rangeTo(100L)
-                //                                .range(100L, 200L)
-                //                                .rangeFrom(200L),
-                //                        "variants.price.centAmount: range (* to 100), (100 to 200), (200 to *)" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().price().currencyCode().is("EUR"),
-                //                        "variants.price.currencyCode: \"EUR\"" },
-                //                new Object[] {
-                //                        ProductFacetExpressionBuilder.of().variants().price().currency().is(DefaultCurrencyUnits.EUR),
-                //                        "variants.price.currencyCode: \"EUR\"" },
-                //                new Object[] {
-                //                        ProductFacetExpressionBuilder.of().variants().scopedPrice().value().centAmount().is(100L),
-                //                        "variants.scopedPrice.value.centAmount: 100" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .scopedPrice()
-                //                        .currentValue()
-                //                        .centAmount()
-                //                        .is(100L), "variants.scopedPrice.currentValue.centAmount: 100" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .scopedPrice()
-                //                        .discounted()
-                //                        .value()
-                //                        .centAmount()
-                //                        .is(100L), "variants.scopedPrice.discounted.value.centAmount: 100" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().scopedPriceDiscounted().is(true),
-                //                        "variants.scopedPriceDiscounted: true" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().reviewRatingStatistics().averageRating().is(100L),
-                //                        "reviewRatingStatistics.averageRating: 100" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().reviewRatingStatistics().lowestRating().is(100L),
-                //                        "reviewRatingStatistics.lowestRating: 100" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().reviewRatingStatistics().highestRating().is(100L),
-                //                        "reviewRatingStatistics.highestRating: 100" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().reviewRatingStatistics().count().is(100L),
-                //                        "reviewRatingStatistics.count: 100" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().availability().isOnStock().is(true),
-                //                        "variants.availability.isOnStock: true" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .availability()
-                //                        .availableQuantity()
-                //                        .range(100L, 200L), "variants.availability.availableQuantity: range (100 to 200)" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .availability()
-                //                        .channel(Identifiable.of("foo"))
-                //                        .isOnStock()
-                //                        .is(true), "variants.availability.channels.foo.isOnStock: true" },
-                //                new Object[] {
-                //                        ProductFacetExpressionBuilder.of()
-                //                                .variants()
-                //                                .availability()
-                //                                .channel(Identifiable.of("foo"))
-                //                                .availableQuantity()
-                //                                .range(100L, 200L),
-                //                        "variants.availability.channels.foo.availableQuantity: range (100 to 200)" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .availability()
-                //                        .channel("foo")
-                //                        .isOnStock()
-                //                        .is(true), "variants.availability.channels.foo.isOnStock: true" },
-                //                new Object[] {
-                //                        ProductFacetExpressionBuilder.of()
-                //                                .variants()
-                //                                .availability()
-                //                                .channel("foo")
-                //                                .availableQuantity()
-                //                                .range(100L, 200L),
-                //                        "variants.availability.channels.foo.availableQuantity: range (100 to 200)" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .availability()
-                //                        .isOnStockInChannels()
-                //                        .is("foo")
-                //                        .is("bar"), "variants.availability.isOnStockInChannels: \"foo\", \"bar\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .availability()
-                //                        .isOnStockInChannels()
-                //                        .is(Identifiable.of("foo"))
-                //                        .is("bar"), "variants.availability.isOnStockInChannels: \"foo\", \"bar\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute("foo").asBoolean().is(true),
-                //                        "variants.attributes.foo: true" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute("foo").asLong().is(100L),
-                //                        "variants.attributes.foo: 100" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute("foo").asDouble().is(100.0),
-                //                        "variants.attributes.foo: 100.0" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute("foo").asDouble().is(100.0),
-                //                        "variants.attributes.foo: 100.0" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute("foo").asString().is("bar"),
-                //                        "variants.attributes.foo: \"bar\"" },
-                //                new Object[] {
-                //                        ProductFacetExpressionBuilder.of()
-                //                                .variants()
-                //                                .attribute("foo")
-                //                                .asDateTime()
-                //                                .is(ZonedDateTime.parse("2015-06-04T12:27:55.344Z")),
-                //                        "variants.attributes.foo: \"2015-06-04T12:27:55.344Z\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .attribute("foo")
-                //                        .asDate()
-                //                        .is(LocalDate.parse("2022-03-21")), "variants.attributes.foo: \"2022-03-21\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .attribute("foo")
-                //                        .asTime()
-                //                        .is(LocalTime.parse("12:34:32")), "variants.attributes.foo: \"12:34:32\"" },
-                //                new Object[] {
-                //                        ProductFacetExpressionBuilder.of().variants().attribute("foo").asMoney().centAmount().is(100L),
-                //                        "variants.attributes.foo.centAmount: 100" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .attribute("foo")
-                //                        .asMoney()
-                //                        .currencyCode()
-                //                        .is("EUR"), "variants.attributes.foo.currencyCode: \"EUR\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .attribute("foo")
-                //                        .asMoney()
-                //                        .currency()
-                //                        .is(DefaultCurrencyUnits.EUR), "variants.attributes.foo.currencyCode: \"EUR\"" },
-                //                new Object[] {
-                //                        ProductFacetExpressionBuilder.of().variants().attribute("foo").asReference().id().is("foo"),
-                //                        "variants.attributes.foo.id: \"foo\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of()
-                //                        .variants()
-                //                        .attribute("foo")
-                //                        .asReference()
-                //                        .typeId()
-                //                        .is("foo"), "variants.attributes.foo.typeId: \"foo\"" },
-                //                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute("foo").asEnum().key().is("foo"),
-                //                        "variants.attributes.foo.key: \"foo\"" },
-
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofText("test"),
+                        "variants.attributes.test" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofText("test").is("foo"),
+                        "variants.attributes.test: \"foo\"" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofText("test").is("foo").is("bar"),
+                        "variants.attributes.test: \"foo\", \"bar\"" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofDate("test"),
+                        "variants.attributes.test" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofDate("test").is(LocalDate.parse("2024-01-03")),
+                        "variants.attributes.test: \"2024-01-03\"" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofDate("test").is(LocalDate.parse("2024-01-03")).is(LocalDate.parse("2024-01-04")),
+                        "variants.attributes.test: \"2024-01-03\", \"2024-01-04\"" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofTime("test"),
+                        "variants.attributes.test" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofTime("test").is(LocalTime.parse("10:00")),
+                        "variants.attributes.test: \"10:00:00\"" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofTime("test").is(LocalTime.parse("10:00")).is(LocalTime.parse("11:00")),
+                        "variants.attributes.test: \"10:00:00\", \"11:00:00\"" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofDatetime("test").is(ZonedDateTime.parse("2024-01-03T10:00Z")),
+                        "variants.attributes.test: \"2024-01-03T10:00:00.000Z\"" },
         };
     }
 }

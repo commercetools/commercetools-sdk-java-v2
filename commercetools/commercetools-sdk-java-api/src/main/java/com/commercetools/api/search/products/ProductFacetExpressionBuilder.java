@@ -82,21 +82,27 @@ public class ProductFacetExpressionBuilder {
         public TermFacetExpression<String> ofText(final String name) {
             return TermFacetExpression.of(expression.add(name), TermFormatter::format);
         }
+
         public TermFacetExpression<LocalDate> ofDate(final String name) {
             return TermFacetExpression.of(expression.add(name), TermFormatter::format);
         }
+
         public TermFacetExpression<LocalTime> ofTime(final String name) {
             return TermFacetExpression.of(expression.add(name), TermFormatter::format);
         }
+
         public TermFacetExpression<ZonedDateTime> ofDatetime(final String name) {
             return TermFacetExpression.of(expression.add(name), TermFormatter::format);
         }
+
         public TermFacetExpression<Boolean> ofBool(final String name) {
             return TermFacetExpression.of(expression.add(name), TermFormatter::format);
         }
+
         public TermFacetExpression<Double> ofNumber(final String name) {
             return TermFacetExpression.of(expression.add(name), TermFormatter::format);
         }
+
         public TermFacetExpression<Long> ofLong(final String name) {
             return TermFacetExpression.of(expression.add(name), TermFormatter::format);
         }
@@ -120,9 +126,11 @@ public class ProductFacetExpressionBuilder {
         public TermFacetExpression<String> key() {
             return TermFacetExpression.of(expression.add("key"), TermFormatter::format);
         }
+
         public TermFacetExpression<String> label() {
             return TermFacetExpression.of(expression.add("label"), TermFormatter::format);
         }
+
         public TermFacetExpression<String> label(final String language) {
             return TermFacetExpression.of(expression.add("label").add(language), TermFormatter::format);
         }
@@ -138,6 +146,7 @@ public class ProductFacetExpressionBuilder {
         public TermFacetExpression<String> centAmount() {
             return TermFacetExpression.of(expression.add("centAmount"), TermFormatter::format);
         }
+
         public TermFacetExpression<String> currencyCode() {
             return TermFacetExpression.of(expression.add("currencyCode"), TermFormatter::format);
         }

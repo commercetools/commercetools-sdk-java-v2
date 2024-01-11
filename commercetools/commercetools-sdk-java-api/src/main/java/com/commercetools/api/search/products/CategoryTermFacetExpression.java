@@ -1,15 +1,15 @@
 
 package com.commercetools.api.search.products;
 
-import com.commercetools.api.models.Identifiable;
-import com.commercetools.api.models.category.Category;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
+
+import com.commercetools.api.models.Identifiable;
+import com.commercetools.api.models.category.Category;
 
 public class CategoryTermFacetExpression extends TermFacetExpression<String> {
 

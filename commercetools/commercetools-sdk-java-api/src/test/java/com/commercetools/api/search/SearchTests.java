@@ -255,8 +255,7 @@ public class SearchTests {
         return new Object[][] {
                 new Object[] { ProductFacetExpressionBuilder.of().categories().id().alias("cat"),
                         "categories.id as cat" },
-                new Object[] { ProductFacetExpressionBuilder.of().categories().id(),
-                        "categories.id" },
+                new Object[] { ProductFacetExpressionBuilder.of().categories().id(), "categories.id" },
                 new Object[] { ProductFacetExpressionBuilder.of().categories().id().is("foo"),
                         "categories.id: \"foo\"" },
                 new Object[] { ProductFacetExpressionBuilder.of().categories().id().is("foo").is("bar"),
@@ -271,22 +270,43 @@ public class SearchTests {
                         "variants.attributes.test" },
                 new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofText("test").is("foo"),
                         "variants.attributes.test: \"foo\"" },
-                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofText("test").is("foo").is("bar"),
+                new Object[] {
+                        ProductFacetExpressionBuilder.of().variants().attribute().ofText("test").is("foo").is("bar"),
                         "variants.attributes.test: \"foo\", \"bar\"" },
                 new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofDate("test"),
                         "variants.attributes.test" },
-                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofDate("test").is(LocalDate.parse("2024-01-03")),
-                        "variants.attributes.test: \"2024-01-03\"" },
-                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofDate("test").is(LocalDate.parse("2024-01-03")).is(LocalDate.parse("2024-01-04")),
+                new Object[] { ProductFacetExpressionBuilder.of()
+                        .variants()
+                        .attribute()
+                        .ofDate("test")
+                        .is(LocalDate.parse("2024-01-03")), "variants.attributes.test: \"2024-01-03\"" },
+                new Object[] {
+                        ProductFacetExpressionBuilder.of()
+                                .variants()
+                                .attribute()
+                                .ofDate("test")
+                                .is(LocalDate.parse("2024-01-03"))
+                                .is(LocalDate.parse("2024-01-04")),
                         "variants.attributes.test: \"2024-01-03\", \"2024-01-04\"" },
                 new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofTime("test"),
                         "variants.attributes.test" },
-                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofTime("test").is(LocalTime.parse("10:00")),
-                        "variants.attributes.test: \"10:00:00\"" },
-                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofTime("test").is(LocalTime.parse("10:00")).is(LocalTime.parse("11:00")),
-                        "variants.attributes.test: \"10:00:00\", \"11:00:00\"" },
-                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofDatetime("test").is(ZonedDateTime.parse("2024-01-03T10:00Z")),
-                        "variants.attributes.test: \"2024-01-03T10:00:00.000Z\"" },
-        };
+                new Object[] { ProductFacetExpressionBuilder.of()
+                        .variants()
+                        .attribute()
+                        .ofTime("test")
+                        .is(LocalTime.parse("10:00")), "variants.attributes.test: \"10:00:00\"" },
+                new Object[] { ProductFacetExpressionBuilder.of()
+                        .variants()
+                        .attribute()
+                        .ofTime("test")
+                        .is(LocalTime.parse("10:00"))
+                        .is(LocalTime.parse("11:00")), "variants.attributes.test: \"10:00:00\", \"11:00:00\"" },
+                new Object[] {
+                        ProductFacetExpressionBuilder.of()
+                                .variants()
+                                .attribute()
+                                .ofDatetime("test")
+                                .is(ZonedDateTime.parse("2024-01-03T10:00Z")),
+                        "variants.attributes.test: \"2024-01-03T10:00:00.000Z\"" }, };
     }
 }

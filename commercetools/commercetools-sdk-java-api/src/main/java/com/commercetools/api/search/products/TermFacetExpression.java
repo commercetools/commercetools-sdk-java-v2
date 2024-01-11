@@ -21,7 +21,7 @@ public class TermFacetExpression<T> implements FilterExpression {
     }
 
     public TermFacetExpression(PathExpression expression, List<FilterExpression> terms,
-                               Function<T, FilterExpression> formatter) {
+            Function<T, FilterExpression> formatter) {
         this.expression = expression;
         this.terms = terms;
         this.formatter = formatter;
@@ -39,8 +39,7 @@ public class TermFacetExpression<T> implements FilterExpression {
         return formatter;
     }
 
-    public FilterExpression alias(final String alias)
-    {
+    public FilterExpression alias(final String alias) {
         return ContainerExpression.of(this, ConstantExpression.of(String.format("as %s", alias)), true);
     }
 
@@ -68,7 +67,7 @@ public class TermFacetExpression<T> implements FilterExpression {
     }
 
     public static <T> TermFacetExpression<T> of(PathExpression expression, List<FilterExpression> terms,
-                                                Function<T, FilterExpression> formatter) {
+            Function<T, FilterExpression> formatter) {
         return new TermFacetExpression<>(expression, terms, formatter);
     }
 

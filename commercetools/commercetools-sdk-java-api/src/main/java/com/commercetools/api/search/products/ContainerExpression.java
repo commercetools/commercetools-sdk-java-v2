@@ -22,7 +22,8 @@ public class ContainerExpression implements FilterExpression {
         this.renderInnerWithoutParentheses = false;
     }
 
-    public ContainerExpression(final FilterExpression parent, final FilterExpression inner, final boolean renderInnerWithoutParentheses) {
+    public ContainerExpression(final FilterExpression parent, final FilterExpression inner,
+            final boolean renderInnerWithoutParentheses) {
         this.parent = parent;
         this.inner = inner;
         this.renderInnerWithoutParentheses = renderInnerWithoutParentheses;
@@ -68,7 +69,8 @@ public class ContainerExpression implements FilterExpression {
         return new ContainerExpression(parent, inner);
     }
 
-    public static ContainerExpression of(final FilterExpression parent, final FilterExpression inner, final boolean renderInnerWithoutParentheses) {
+    public static ContainerExpression of(final FilterExpression parent, final FilterExpression inner,
+            final boolean renderInnerWithoutParentheses) {
         return new ContainerExpression(parent, inner, renderInnerWithoutParentheses);
     }
 }

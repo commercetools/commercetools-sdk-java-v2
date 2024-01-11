@@ -1,4 +1,116 @@
 
+# 17.4.0 (2024-01-11)
+
+## What's Changed
+* add PolicyMiddleware by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/521
+* add predicate builder for custom fields by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/543
+* Oneagent dynatrace by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/529
+* Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/520
+* Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/525
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/534
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/544
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/489
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/526
+* Add example for opentelemetry export to dynatrace by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/524
+* Add an example test for static auth token by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/536
+* fix deserialization of head API requests by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/538
+* fix renovate builds by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/541
+* remove ML module by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/539
+* remove ML package code by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/540
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ApprovalFlowSetCustomFieldAction`
+- added type `ApprovalFlowSetCustomTypeAction`
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `NotEnabledError`
+- :warning: removed type `GraphQLNotEnabledError`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `custom` to type `ApprovalFlow`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `associate-role` to type `AttributeReferenceTypeId`
+- added enum `business-unit` to type `AttributeReferenceTypeId`
+- added enum `cart-discount` to type `AttributeReferenceTypeId`
+- added enum `approval-flow` to type `CustomFieldReferenceValue`
+- added enum `approval-flow` to type `ResourceTypeId`
+</details>
+
+**History changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `AttributeLocalizedEnumValue`
+- added type `AttributePlainEnumValue`
+- added type `ChannelRoleEnum`
+- added type `StateRoleEnum`
+- added type `StateTypeEnum`
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `ChannelRole`
+- :warning: removed type `StateRole`
+- :warning: removed type `StateType`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `previousValue` from type `AddAddressChange`
+- :warning: removed property `previousValue` from type `AddLocationChange`
+- :warning: removed property `nextValue` from type `RemoveLocationChange`
+- :warning: removed property `nextValue` from type `RemoveTaxRateChange`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `previousValue` of type `AddChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `AddChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `AddLocalizedEnumValueChange` from type `LocalizedEnumValue` to `AttributeLocalizedEnumValue`
+- :warning: changed property `nextValue` of type `AddPlainEnumValueChange` from type `EnumValue` to `AttributePlainEnumValue`
+- :warning: changed property `previousValue` of type `AddStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `nextValue` of type `AddStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `previousValue` of type `ChangeStateTypeChange` from type `StateType` to `StateTypeEnum`
+- :warning: changed property `nextValue` of type `ChangeStateTypeChange` from type `StateType` to `StateTypeEnum`
+- :warning: changed property `previousValue` of type `RemoveChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `RemoveChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `previousValue` of type `RemoveStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `nextValue` of type `RemoveStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `previousValue` of type `SetChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `SetChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `previousValue` of type `SetStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `nextValue` of type `SetStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+</details>
+
+## New Contributors
+* @ct-sdks made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/534
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.3.0...17.4.0
+
 # 17.3.0 (2023-12-04)
 
 ## What's Changed

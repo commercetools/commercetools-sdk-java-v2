@@ -302,6 +302,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/MaxCartDiscountsReachedErrorBuilder.html#%3Cinit%3E()" class="member-name-link">MaxCartDiscountsReachedErrorBuilder()</a> - Constructor for class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MaxCartDiscountsReachedErrorBuilder.html" title="class in com.commercetools.api.models.error">MaxCartDiscountsReachedErrorBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../io/vrap/rmf/base/client/http/RetryPolicyBuilder.html#maxDelay(long)" class="member-name-link">maxDelay(long)</a> - Method in class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryPolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">RetryPolicyBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetBuilder.html#maxOccurrence(java.lang.Integer)" class="member-name-link">maxOccurrence(Integer)</a> - Method in class com.commercetools.api.models.cart_discount.<a href="../com/commercetools/api/models/cart_discount/MultiBuyCustomLineItemsTargetBuilder.html" title="class in com.commercetools.api.models.cart_discount">MultiBuyCustomLineItemsTargetBuilder</a></dt>
 <dd>
 <div class="block">Maximum number of times this Discount can be applied.</div>
@@ -342,6 +344,8 @@ loadScripts(document, 'script');</script>
  </div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/MaxResourceLimitExceededErrorBuilder.html#%3Cinit%3E()" class="member-name-link">MaxResourceLimitExceededErrorBuilder()</a> - Constructor for class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MaxResourceLimitExceededErrorBuilder.html" title="class in com.commercetools.api.models.error">MaxResourceLimitExceededErrorBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../io/vrap/rmf/base/client/http/RetryPolicyBuilder.html#maxRetries(int)" class="member-name-link">maxRetries(int)</a> - Method in class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RetryPolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">RetryPolicyBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/error/ErrorObject.html#maxStoreReferencesReachedBuilder()" class="member-name-link">maxStoreReferencesReachedBuilder()</a> - Static method in interface com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></dt>
 <dd>
@@ -750,10 +754,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/error/NoMatchingProductDiscountFoundErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/NoMatchingProductDiscountFoundErrorBuilder.html" title="class in com.commercetools.api.models.error">NoMatchingProductDiscountFoundErrorBuilder</a></dt>
 <dd>
 <div class="block"><code>"Couldn't find a matching product discount for: productId=$productId, variantId=$variantId, price=$price."</code></div>
-</dd>
-<dt><a href="../com/commercetools/api/models/error/NotEnabledErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/NotEnabledErrorBuilder.html" title="class in com.commercetools.api.models.error">NotEnabledErrorBuilder</a></dt>
-<dd>
-<div class="block"><code>"The category recommendations API is not yet enabled for your project."</code></div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/ObjectNotFoundErrorBuilder.html#message(java.lang.String)" class="member-name-link">message(String)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ObjectNotFoundErrorBuilder.html" title="class in com.commercetools.api.models.error">ObjectNotFoundErrorBuilder</a></dt>
 <dd>
@@ -1184,33 +1184,9 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">possible values of MessageSubscriptionResourceTypeId</div>
 </dd>
-<dt><a href="../com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationPagedQueryResponseBuilder.html#meta(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta)" class="member-name-link">meta(ProjectCategoryRecommendationMeta)</a> - Method in class com.commercetools.ml.models.category_recommendations.<a href="../com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationPagedQueryResponseBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationPagedQueryResponseBuilder</a></dt>
-<dd>
-<div class="block">set the value to the meta</div>
-</dd>
-<dt><a href="../com/commercetools/ml/models/similar_products/SimilarProductBuilder.html#meta(com.commercetools.ml.models.similar_products.SimilarProductMeta)" class="member-name-link">meta(SimilarProductMeta)</a> - Method in class com.commercetools.ml.models.similar_products.<a href="../com/commercetools/ml/models/similar_products/SimilarProductBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductBuilder</a></dt>
-<dd>
-<div class="block">Supplementary information about the data used for similarity estimation.</div>
-</dd>
-<dt><a href="../com/commercetools/ml/models/similar_products/SimilarProductsPagedQueryResultBuilder.html#meta(com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta)" class="member-name-link">meta(SimilarProductSearchRequestMeta)</a> - Method in class com.commercetools.ml.models.similar_products.<a href="../com/commercetools/ml/models/similar_products/SimilarProductsPagedQueryResultBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductsPagedQueryResultBuilder</a></dt>
-<dd>
-<div class="block">set the value to the meta</div>
-</dd>
 <dt><a href="../com/commercetools/api/models/common/PagedQueryResponseBuilder.html#meta(java.lang.Object)" class="member-name-link">meta(Object)</a> - Method in class com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/PagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.common">PagedQueryResponseBuilder</a></dt>
 <dd>
 <div class="block">set the value to the meta</div>
-</dd>
-<dt><a href="../com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationPagedQueryResponseBuilder.html#meta(java.util.function.Function)" class="member-name-link">meta(Function&lt;ProjectCategoryRecommendationMetaBuilder, ProjectCategoryRecommendationMetaBuilder&gt;)</a> - Method in class com.commercetools.ml.models.category_recommendations.<a href="../com/commercetools/ml/models/category_recommendations/ProjectCategoryRecommendationPagedQueryResponseBuilder.html" title="class in com.commercetools.ml.models.category_recommendations">ProjectCategoryRecommendationPagedQueryResponseBuilder</a></dt>
-<dd>
-<div class="block">set the value to the meta using the builder function</div>
-</dd>
-<dt><a href="../com/commercetools/ml/models/similar_products/SimilarProductBuilder.html#meta(java.util.function.Function)" class="member-name-link">meta(Function&lt;SimilarProductMetaBuilder, SimilarProductMetaBuilder&gt;)</a> - Method in class com.commercetools.ml.models.similar_products.<a href="../com/commercetools/ml/models/similar_products/SimilarProductBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductBuilder</a></dt>
-<dd>
-<div class="block">Supplementary information about the data used for similarity estimation.</div>
-</dd>
-<dt><a href="../com/commercetools/ml/models/similar_products/SimilarProductsPagedQueryResultBuilder.html#meta(java.util.function.Function)" class="member-name-link">meta(Function&lt;SimilarProductSearchRequestMetaBuilder, SimilarProductSearchRequestMetaBuilder&gt;)</a> - Method in class com.commercetools.ml.models.similar_products.<a href="../com/commercetools/ml/models/similar_products/SimilarProductsPagedQueryResultBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductsPagedQueryResultBuilder</a></dt>
-<dd>
-<div class="block">set the value to the meta using the builder function</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/common/MetaAttributes.html" class="type-name-link" title="interface in com.commercetools.api.models.common">MetaAttributes</a> - Interface in <a href="../com/commercetools/api/models/common/package-summary.html">com.commercetools.api.models.common</a></dt>
 <dd>
@@ -1549,7 +1525,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/docs/meta/Middlewares.html" class="type-name-link" title="class in com.commercetools.docs.meta">Middlewares</a> - Class in <a href="../com/commercetools/docs/meta/package-summary.html">com.commercetools.docs.meta</a></dt>
 <dd>
-<div class="block"><b>Table of content</b><ul><li>Middlewares</li><ul><li>ErrorMiddleware</li><li>OAuthMiddleware</li><li>RetryMiddleware</li><li>ConcurrentModificationMiddleware</li><li>UserAgentMiddleware</li><li>AcceptGZipMiddleware</li><li>InternalLoggerMiddleware</li></ul></ul></div>
+<div class="block"><b>Table of content</b><ul><li><a href="#middlewares">Middlewares</a></li><ul><li><a href="#ErrorMiddleware">ErrorMiddleware</a></li><li><a href="#OAuthMiddleware">OAuthMiddleware</a></li><li><a href="#PolicyMiddleware">PolicyMiddleware</a></li><li><a href="#ConcurrentModificationMiddleware">ConcurrentModificationMiddleware</a></li><li><a href="#UserAgentMiddleware">UserAgentMiddleware</a></li><li><a href="#AcceptGZipMiddleware">AcceptGZipMiddleware</a></li><li><a href="#InternalLoggerMiddleware">InternalLoggerMiddleware</a></li></ul></ul></div>
 </dd>
 <dt><a href="../com/commercetools/docs/meta/Middlewares.html#%3Cinit%3E()" class="member-name-link">Middlewares()</a> - Constructor for class com.commercetools.docs.meta.<a href="../com/commercetools/docs/meta/Middlewares.html" title="class in com.commercetools.docs.meta">Middlewares</a></dt>
 <dd>&nbsp;</dd>
@@ -1670,12 +1646,6 @@ loadScripts(document, 'script');</script>
  </div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/MissingTaxRateForCountryErrorBuilder.html#%3Cinit%3E()" class="member-name-link">MissingTaxRateForCountryErrorBuilder()</a> - Constructor for class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/MissingTaxRateForCountryErrorBuilder.html" title="class in com.commercetools.api.models.error">MissingTaxRateForCountryErrorBuilder</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/ml/defaultconfig/MLApiRootBuilder.html" class="type-name-link" title="class in com.commercetools.ml.defaultconfig">MLApiRootBuilder</a> - Class in <a href="../com/commercetools/ml/defaultconfig/package-summary.html">com.commercetools.ml.defaultconfig</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/ml/client/MLCorrelationIdProvider.html" class="type-name-link" title="class in com.commercetools.ml.client">MLCorrelationIdProvider</a> - Class in <a href="../com/commercetools/ml/client/package-summary.html">com.commercetools.ml.client</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/ml/client/MLCorrelationIdProvider.html#%3Cinit%3E(java.lang.String)" class="member-name-link">MLCorrelationIdProvider(String)</a> - Constructor for class com.commercetools.ml.client.<a href="../com/commercetools/ml/client/MLCorrelationIdProvider.html" title="class in com.commercetools.ml.client">MLCorrelationIdProvider</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/common/AddressBuilder.html#mobile(java.lang.String)" class="member-name-link">mobile(String)</a> - Method in class com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a></dt>
 <dd>
@@ -1924,14 +1894,6 @@ loadScripts(document, 'script');</script>
  Example to create an instance using the builder pattern
  </div>
 </dd>
-<dt><a href="../com/commercetools/ml/models/common/Money.html" class="type-name-link" title="interface in com.commercetools.ml.models.common">Money</a> - Interface in <a href="../com/commercetools/ml/models/common/package-summary.html">com.commercetools.ml.models.common</a></dt>
-<dd>
-<div class="block">Money
-
- 
- Example to create an instance using the builder pattern
- </div>
-</dd>
 <dt><a href="../com/commercetools/api/models/product_type/AttributeMoneyType.html#MONEY" class="member-name-link">MONEY</a> - Static variable in interface com.commercetools.api.models.product_type.<a href="../com/commercetools/api/models/product_type/AttributeMoneyType.html" title="interface in com.commercetools.api.models.product_type">AttributeMoneyType</a></dt>
 <dd>
 <div class="block">discriminator value for AttributeMoneyType</div>
@@ -2042,20 +2004,11 @@ loadScripts(document, 'script');</script>
  Example to create an instance using the builder pattern
  </div>
 </dd>
-<dt><a href="../com/commercetools/ml/models/common/MoneyBuilder.html" class="type-name-link" title="class in com.commercetools.ml.models.common">MoneyBuilder</a> - Class in <a href="../com/commercetools/ml/models/common/package-summary.html">com.commercetools.ml.models.common</a></dt>
-<dd>
-<div class="block">MoneyBuilder
- 
- Example to create an instance using the builder pattern
- </div>
-</dd>
 <dt><a href="../com/commercetools/api/models/common/MoneyBuilder.html#%3Cinit%3E()" class="member-name-link">MoneyBuilder()</a> - Constructor for class com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/history/models/common/MoneyBuilder.html#%3Cinit%3E()" class="member-name-link">MoneyBuilder()</a> - Constructor for class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/MoneyBuilder.html" title="class in com.commercetools.history.models.common">MoneyBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/importapi/models/common/MoneyBuilder.html#%3Cinit%3E()" class="member-name-link">MoneyBuilder()</a> - Constructor for class com.commercetools.importapi.models.common.<a href="../com/commercetools/importapi/models/common/MoneyBuilder.html" title="class in com.commercetools.importapi.models.common">MoneyBuilder</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/ml/models/common/MoneyBuilder.html#%3Cinit%3E()" class="member-name-link">MoneyBuilder()</a> - Constructor for class com.commercetools.ml.models.common.<a href="../com/commercetools/ml/models/common/MoneyBuilder.html" title="class in com.commercetools.ml.models.common">MoneyBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/importapi/models/customfields/MoneyField.html" class="type-name-link" title="interface in com.commercetools.importapi.models.customfields">MoneyField</a> - Interface in <a href="../com/commercetools/importapi/models/customfields/package-summary.html">com.commercetools.importapi.models.customfields</a></dt>
 <dd>

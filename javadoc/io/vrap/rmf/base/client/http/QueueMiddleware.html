@@ -79,10 +79,20 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></code>, <code><a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">QueueRequestMiddleware</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">QueueMiddleware</span>
+<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public class </span><span class="element-name type-name-label">QueueMiddleware</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">QueueRequestMiddleware</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></span></div>
-<div class="block">Implementation of a Queue to limit the number of concurrent requests handled by the client</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> instead</div>
+</div>
+<div class="block">Implementation of a Queue to limit the number of concurrent requests handled by the client
+
+ <div id="io-vrap-rmf-base-client-QueueMiddlewareTest-queueConfiguration--%s" class=code-example><pre><code class='java'>final ApiHttpClient build = ClientBuilder.of()
+        // ...
+        .addMiddleware(new QueueMiddleware(64, Duration.ofSeconds(10)))
+        .build();
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/rmf/rmf-java-base/src/test/java/io/vrap/rmf/base/client/QueueMiddlewareTest.java" target="_blank">test code</a>.</pre></div></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -96,19 +106,27 @@ implements <a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,java.time.Duration)" class="member-name-link">QueueMiddleware</a><wbr>(int&nbsp;maxConnection,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(dev.failsafe.spi.Scheduler,int,java.time.Duration)" class="member-name-link">QueueMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxConnections,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,int,java.time.Duration)" class="member-name-link">QueueMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxConnection,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.concurrent.ScheduledExecutorService,int,java.time.Duration)" class="member-name-link">QueueMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxConnection,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
 </div>
 </section>
 </li>
@@ -117,19 +135,23 @@ implements <a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#close()" class="member-name-link">close</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#invoke(io.vrap.rmf.base.client.ApiHttpRequest,java.util.function.Function)" class="member-name-link">invoke</a><wbr>(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#close()" class="member-name-link">close</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#invoke(io.vrap.rmf.base.client.ApiHttpRequest,java.util.function.Function)" class="member-name-link">invoke</a><wbr>(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>,<wbr><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;&gt;&nbsp;next)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
 </div>
 </div>
 </div>
@@ -153,6 +175,7 @@ implements <a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">QueueMiddleware</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxConnection,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -161,6 +184,7 @@ implements <a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">QueueMiddleware</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxConnection,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -168,6 +192,7 @@ implements <a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf
 <h3>QueueMiddleware</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">QueueMiddleware</span><wbr><span class="parameters">(int&nbsp;maxConnection,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -176,6 +201,7 @@ implements <a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">QueueMiddleware</span><wbr><span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxConnections,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 </ul>
@@ -191,6 +217,7 @@ implements <a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf
 <h3>invoke</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</span>&nbsp;<span class="element-name">invoke</span><wbr><span class="parameters">(<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>,<wbr><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;&gt;&nbsp;next)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Middleware.html#invoke(io.vrap.rmf.base.client.ApiHttpRequest,java.util.function.Function)">invoke</a></code>&nbsp;in interface&nbsp;<code><a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></code></dd>
@@ -201,6 +228,7 @@ implements <a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf
 <section class="detail" id="close()">
 <h3>close</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">close</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html#close--" title="class or interface in java.lang" class="external-link">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html" title="class or interface in java.lang" class="external-link">AutoCloseable</a></code></dd>

@@ -73,12 +73,12 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Middlewares</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li>Middlewares</li><ul><li>ErrorMiddleware</li><li>OAuthMiddleware</li><li>RetryMiddleware</li><li>ConcurrentModificationMiddleware</li><li>UserAgentMiddleware</li><li>AcceptGZipMiddleware</li><li>InternalLoggerMiddleware</li></ul></ul>
-    <h2>Middlewares</h2>
+<div class="block"><b>Table of content</b><ul><li><a href="#middlewares">Middlewares</a></li><ul><li><a href="#ErrorMiddleware">ErrorMiddleware</a></li><li><a href="#OAuthMiddleware">OAuthMiddleware</a></li><li><a href="#PolicyMiddleware">PolicyMiddleware</a></li><li><a href="#ConcurrentModificationMiddleware">ConcurrentModificationMiddleware</a></li><li><a href="#UserAgentMiddleware">UserAgentMiddleware</a></li><li><a href="#AcceptGZipMiddleware">AcceptGZipMiddleware</a></li><li><a href="#InternalLoggerMiddleware">InternalLoggerMiddleware</a></li></ul></ul>
+    <h2 id="middlewares">Middlewares</h2>
 
     <p></p>
 
-    <h3>ErrorMiddleware</h3>
+    <h3 id="ErrorMiddleware">ErrorMiddleware</h3>
 
     <p>The <a href="../../../../io/vrap/rmf/base/client/http/ErrorMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>ErrorMiddleware</code></a> is used to react to erroneous HTTP responses. It will always
     be placed as first middleware in the <a href="../../../../io/vrap/rmf/base/client/http/HandlerStack.html" title="class in io.vrap.rmf.base.client.http"><code>HandlerStack</code></a>. The default implementation
@@ -116,7 +116,7 @@ next.apply(request).whenComplete((response, throwable) -&gt; {
 return result;
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/rmf/rmf-java-base/src/main/java/io/vrap/rmf/base/client/http/ErrorMiddlewareImpl.java" target="_blank">test code</a>.</pre></div>
 
-    <h3>OAuthMiddleware</h3>
+    <h3 id="OAuthMiddleware">OAuthMiddleware</h3>
 
     <p>An <a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>OAuthMiddleware</code></a> is used to authenticate a request against the commercetools Composable Commerce
     APIs. The default implementation adds an auth header to the request instance. In case of an expired token it will try to
@@ -133,16 +133,16 @@ return result;
 });
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/rmf/rmf-java-base/src/main/java/io/vrap/rmf/base/client/http/OAuthMiddlewareImpl.java" target="_blank">test code</a>.</pre></div>
 
-    <h3>RetryMiddleware</h3>
+    <h3 id="PolicyMiddleware">PolicyMiddleware</h3>
 
-    <p>The <a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>RetryRequestMiddleware</code></a> is used to retry a failed request returns with the configured
-    status codes e.g. <code>503</code>. For retrying an exponential backoff strategy is used which will increase the wait
-    time before each try to avoid overwhelming the API. A jitter is also added to avoid reduce the possibility that parallel
+    <p>The <a href="../../../../io/vrap/rmf/base/client/http/PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> is used to act on a failed request returns with the configured
+    policies e.g. retry on status code <code>503</code>. For retrying an exponential backoff strategy is used which will increase
+    the wait time before each try to avoid overwhelming the API. A jitter is also added to avoid reduce the possibility that parallel
     requests will be retried at the same time.</p>
 
-    <p>The retry implementation uses the library <a href="https://failsafe.dev/">failsafe</a></p>
+    <p>The policy implementations use the library <a href="https://failsafe.dev/">failsafe</a></p>
 
-    <h3>ConcurrentModificationMiddleware</h3>
+    <h3 id="ConcurrentModificationMiddleware">ConcurrentModificationMiddleware</h3>
 
     <p>The <a href="../../api/client/ConcurrentModificationMiddleware.html" title="interface in com.commercetools.api.client"><code>ConcurrentModificationMiddleware</code></a> is used to retry a failed request which returns the
     status codes <code>409</code> (concurrent modification). For retrying an exponential backoff strategy is used which will increase
@@ -151,7 +151,7 @@ return result;
 
     <p>The retry implementation uses the library <a href="https://failsafe.dev/">failsafe</a></p>
 
-    <h3>UserAgentMiddleware</h3>
+    <h3 id="UserAgentMiddleware">UserAgentMiddleware</h3>
 
     <p>The <a href="../../../../io/vrap/rmf/base/client/http/UserAgentMiddleware.html" title="class in io.vrap.rmf.base.client.http"><code>UserAgentMiddleware</code></a> adds an user agent header to every request. By default
     is submits the following data:</p>
@@ -164,7 +164,7 @@ return result;
     <div id="io-vrap-rmf-base-client-ClientBuilder-buildDefaultUserAgent--%s" class=code-example><pre><code class='java'>return UserAgentUtils.obtainUserAgent();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/rmf/rmf-java-base/src/main/java/io/vrap/rmf/base/client/ClientBuilder.java" target="_blank">test code</a>.</pre></div>
 
-    <h3>AcceptGZipMiddleware</h3>
+    <h3 id="AcceptGZipMiddleware">AcceptGZipMiddleware</h3>
 
     <p>The <a href="../../../../io/vrap/rmf/base/client/http/AcceptGZipMiddleware.html" title="class in io.vrap.rmf.base.client.http"><code>AcceptGZipMiddleware</code></a> adds an <code>Accept-Encoding: gzip</code> header, to
     enable the ability of an compressed response as this reduces the data transport time.</p>
@@ -172,7 +172,7 @@ return result;
     <div id="io-vrap-rmf-base-client-http-AcceptGZipMiddleware-invoke-io-vrap-rmf-base-client-ApiHttpRequest--java-util-function-Function-%s" class=code-example><pre><code class='java'>return next.apply(request.withHeader(ApiHttpHeaders.ACCEPT_ENCODING, "gzip"));
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/rmf/rmf-java-base/src/main/java/io/vrap/rmf/base/client/http/AcceptGZipMiddleware.java" target="_blank">test code</a>.</pre></div>
 
-    <h3>InternalLoggerMiddleware</h3>
+    <h3 id="InternalLoggerMiddleware">InternalLoggerMiddleware</h3>
 
     <p>The <a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>InternalLoggerMiddleware</code></a></p> logs every request send using the SDK. Depending
     on the configured logging level the default implementation logs the sent request and the returning response. The info level

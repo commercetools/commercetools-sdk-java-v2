@@ -211,6 +211,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> only for the currently active tier(s).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#custom(com.commercetools.api.models.type.CustomFields)" class="member-name-link">custom</a><wbr>(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Custom Fields on the Approval Flow.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#custom(java.util.function.Function)" class="member-name-link">custom</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Custom Fields on the Approval Flow.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#eligibleApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">eligibleApprovers</a><wbr>(<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>...&nbsp;eligibleApprovers)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
@@ -245,230 +255,240 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> only for the currently active tier(s).</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEligibleApprovers()" class="member-name-link">getEligibleApprovers</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Unique identifier of the Approval Flow.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastModifiedAt()" class="member-name-link">getLastModifiedAt</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Date and time (UTC) the Approval Flow was last updated.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastModifiedBy()" class="member-name-link">getLastModifiedBy</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrder()" class="member-name-link">getOrder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Order that needs to be approved.</div>
+<div class="block">Custom Fields on the Approval Flow.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPendingApprovers()" class="member-name-link">getPendingApprovers</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEligibleApprovers()" class="member-name-link">getEligibleApprovers</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
+<div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowRejection.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowRejection</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRejection()" class="member-name-link">getRejection</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Present when the status of the Approval Flow is <code>Rejected</code>.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../approval_rule/ApprovalRule.html" title="interface in com.commercetools.api.models.approval_rule">ApprovalRule</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRules()" class="member-name-link">getRules</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Approval Rules that matched the Order.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowStatus.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowStatus</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus()" class="member-name-link">getStatus</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Indicates whether the Approval Flow is under review, approved, or rejected.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Current version of the Approval Flow.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id(java.lang.String)" class="member-name-link">id</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Unique identifier of the Approval Flow.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastModifiedAt(java.time.ZonedDateTime)" class="member-name-link">lastModifiedAt</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastModifiedAt()" class="member-name-link">getLastModifiedAt</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Date and time (UTC) the Approval Flow was last updated.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)" class="member-name-link">lastModifiedBy</a><wbr>(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastModifiedBy()" class="member-name-link">getLastModifiedBy</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastModifiedBy(java.util.function.Function)" class="member-name-link">lastModifiedBy</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">factory method for an instance of ApprovalFlowBuilder</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.api.models.approval_flow.ApprovalFlow)" class="member-name-link">of</a><wbr>(<a href="ApprovalFlow.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlow</a>&nbsp;template)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">create builder for ApprovalFlow instance</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#order(com.commercetools.api.models.order.OrderReference)" class="member-name-link">order</a><wbr>(<a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a>&nbsp;order)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Order that needs to be approved.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#order(java.util.function.Function)" class="member-name-link">order</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/OrderReferenceBuilder.html" title="class in com.commercetools.api.models.order">OrderReferenceBuilder</a>,<wbr><a href="../order/OrderReferenceBuilder.html" title="class in com.commercetools.api.models.order">OrderReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrder()" class="member-name-link">getOrder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Order that needs to be approved.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pendingApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">pendingApprovers</a><wbr>(<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>...&nbsp;pendingApprovers)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPendingApprovers()" class="member-name-link">getPendingApprovers</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pendingApprovers(java.util.List)" class="member-name-link">pendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>&gt;&nbsp;pendingApprovers)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusApprovals(com.commercetools.api.models.approval_flow.ApprovalFlowApproval...)" class="member-name-link">plusApprovals</a><wbr>(<a href="ApprovalFlowApproval.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowApproval</a>...&nbsp;approvals)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Existing approvals in the Approval Flow.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusApprovals(java.util.function.Function)" class="member-name-link">plusApprovals</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApprovalFlowApprovalBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowApprovalBuilder</a>,<wbr><a href="ApprovalFlowApprovalBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowApprovalBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Existing approvals in the Approval Flow.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusCurrentTierPendingApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">plusCurrentTierPendingApprovers</a><wbr>(<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>...&nbsp;currentTierPendingApprovers)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> only for the currently active tier(s).</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusCurrentTierPendingApprovers(java.util.function.Function)" class="member-name-link">plusCurrentTierPendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> only for the currently active tier(s).</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusEligibleApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">plusEligibleApprovers</a><wbr>(<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>...&nbsp;eligibleApprovers)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusEligibleApprovers(java.util.function.Function)" class="member-name-link">plusEligibleApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusPendingApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">plusPendingApprovers</a><wbr>(<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>...&nbsp;pendingApprovers)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusPendingApprovers(java.util.function.Function)" class="member-name-link">plusPendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusRules(com.commercetools.api.models.approval_rule.ApprovalRule...)" class="member-name-link">plusRules</a><wbr>(<a href="../approval_rule/ApprovalRule.html" title="interface in com.commercetools.api.models.approval_rule">ApprovalRule</a>...&nbsp;rules)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Approval Rules that matched the Order.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusRules(java.util.function.Function)" class="member-name-link">plusRules</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/ApprovalRuleBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleBuilder</a>,<wbr><a href="../approval_rule/ApprovalRuleBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Approval Rules that matched the Order.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rejection(com.commercetools.api.models.approval_flow.ApprovalFlowRejection)" class="member-name-link">rejection</a><wbr>(<a href="ApprovalFlowRejection.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowRejection</a>&nbsp;rejection)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Present when the status of the Approval Flow is <code>Rejected</code>.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rejection(java.util.function.Function)" class="member-name-link">rejection</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApprovalFlowRejectionBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowRejectionBuilder</a>,<wbr><a href="ApprovalFlowRejectionBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowRejectionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowRejection.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowRejection</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRejection()" class="member-name-link">getRejection</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Present when the status of the Approval Flow is <code>Rejected</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rules(com.commercetools.api.models.approval_rule.ApprovalRule...)" class="member-name-link">rules</a><wbr>(<a href="../approval_rule/ApprovalRule.html" title="interface in com.commercetools.api.models.approval_rule">ApprovalRule</a>...&nbsp;rules)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../approval_rule/ApprovalRule.html" title="interface in com.commercetools.api.models.approval_rule">ApprovalRule</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRules()" class="member-name-link">getRules</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Approval Rules that matched the Order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rules(java.util.List)" class="member-name-link">rules</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../approval_rule/ApprovalRule.html" title="interface in com.commercetools.api.models.approval_rule">ApprovalRule</a>&gt;&nbsp;rules)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Approval Rules that matched the Order.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setApprovals(java.util.function.Function)" class="member-name-link">setApprovals</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApprovalFlowApprovalBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowApprovalBuilder</a>,<wbr><a href="ApprovalFlowApproval.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowApproval</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Existing approvals in the Approval Flow.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentTierPendingApprovers(java.util.function.Function)" class="member-name-link">setCurrentTierPendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> only for the currently active tier(s).</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEligibleApprovers(java.util.function.Function)" class="member-name-link">setEligibleApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPendingApprovers(java.util.function.Function)" class="member-name-link">setPendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRules(java.util.function.Function)" class="member-name-link">setRules</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/ApprovalRuleBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleBuilder</a>,<wbr><a href="../approval_rule/ApprovalRule.html" title="interface in com.commercetools.api.models.approval_rule">ApprovalRule</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Approval Rules that matched the Order.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#status(com.commercetools.api.models.approval_flow.ApprovalFlowStatus)" class="member-name-link">status</a><wbr>(<a href="ApprovalFlowStatus.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowStatus</a>&nbsp;status)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowStatus.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowStatus</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStatus()" class="member-name-link">getStatus</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether the Approval Flow is under review, approved, or rejected.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.Long)" class="member-name-link">version</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Current version of the Approval Flow.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withApprovals(java.util.function.Function)" class="member-name-link">withApprovals</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApprovalFlowApprovalBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowApprovalBuilder</a>,<wbr><a href="ApprovalFlowApprovalBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowApprovalBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id(java.lang.String)" class="member-name-link">id</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Existing approvals in the Approval Flow.</div>
+<div class="block">Unique identifier of the Approval Flow.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withBusinessUnit(java.util.function.Function)" class="member-name-link">withBusinessUnit</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../business_unit/BusinessUnitKeyReferenceBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitKeyReferenceBuilder</a>,<wbr><a href="../business_unit/BusinessUnitKeyReference.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitKeyReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastModifiedAt(java.time.ZonedDateTime)" class="member-name-link">lastModifiedAt</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Business Unit the Approval Flow belongs to.</div>
+<div class="block">Date and time (UTC) the Approval Flow was last updated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCreatedBy(java.util.function.Function)" class="member-name-link">withCreatedBy</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)" class="member-name-link">lastModifiedBy</a><wbr>(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCurrentTierPendingApprovers(java.util.function.Function)" class="member-name-link">withCurrentTierPendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastModifiedBy(java.util.function.Function)" class="member-name-link">lastModifiedBy</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">factory method for an instance of ApprovalFlowBuilder</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.api.models.approval_flow.ApprovalFlow)" class="member-name-link">of</a><wbr>(<a href="ApprovalFlow.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlow</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">create builder for ApprovalFlow instance</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#order(com.commercetools.api.models.order.OrderReference)" class="member-name-link">order</a><wbr>(<a href="../order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a>&nbsp;order)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Order that needs to be approved.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#order(java.util.function.Function)" class="member-name-link">order</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../order/OrderReferenceBuilder.html" title="class in com.commercetools.api.models.order">OrderReferenceBuilder</a>,<wbr><a href="../order/OrderReferenceBuilder.html" title="class in com.commercetools.api.models.order">OrderReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Order that needs to be approved.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pendingApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">pendingApprovers</a><wbr>(<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>...&nbsp;pendingApprovers)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pendingApprovers(java.util.List)" class="member-name-link">pendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>&gt;&nbsp;pendingApprovers)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusApprovals(com.commercetools.api.models.approval_flow.ApprovalFlowApproval...)" class="member-name-link">plusApprovals</a><wbr>(<a href="ApprovalFlowApproval.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowApproval</a>...&nbsp;approvals)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Existing approvals in the Approval Flow.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusApprovals(java.util.function.Function)" class="member-name-link">plusApprovals</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApprovalFlowApprovalBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowApprovalBuilder</a>,<wbr><a href="ApprovalFlowApprovalBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowApprovalBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Existing approvals in the Approval Flow.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusCurrentTierPendingApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">plusCurrentTierPendingApprovers</a><wbr>(<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>...&nbsp;currentTierPendingApprovers)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> only for the currently active tier(s).</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusCurrentTierPendingApprovers(java.util.function.Function)" class="member-name-link">plusCurrentTierPendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> only for the currently active tier(s).</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusEligibleApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">plusEligibleApprovers</a><wbr>(<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>...&nbsp;eligibleApprovers)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusEligibleApprovers(java.util.function.Function)" class="member-name-link">plusEligibleApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusPendingApprovers(com.commercetools.api.models.approval_rule.RuleApprover...)" class="member-name-link">plusPendingApprovers</a><wbr>(<a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>...&nbsp;pendingApprovers)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusPendingApprovers(java.util.function.Function)" class="member-name-link">plusPendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusRules(com.commercetools.api.models.approval_rule.ApprovalRule...)" class="member-name-link">plusRules</a><wbr>(<a href="../approval_rule/ApprovalRule.html" title="interface in com.commercetools.api.models.approval_rule">ApprovalRule</a>...&nbsp;rules)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Approval Rules that matched the Order.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusRules(java.util.function.Function)" class="member-name-link">plusRules</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/ApprovalRuleBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleBuilder</a>,<wbr><a href="../approval_rule/ApprovalRuleBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Approval Rules that matched the Order.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rejection(com.commercetools.api.models.approval_flow.ApprovalFlowRejection)" class="member-name-link">rejection</a><wbr>(<a href="ApprovalFlowRejection.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowRejection</a>&nbsp;rejection)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Present when the status of the Approval Flow is <code>Rejected</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rejection(java.util.function.Function)" class="member-name-link">rejection</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApprovalFlowRejectionBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowRejectionBuilder</a>,<wbr><a href="ApprovalFlowRejectionBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowRejectionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Present when the status of the Approval Flow is <code>Rejected</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rules(com.commercetools.api.models.approval_rule.ApprovalRule...)" class="member-name-link">rules</a><wbr>(<a href="../approval_rule/ApprovalRule.html" title="interface in com.commercetools.api.models.approval_rule">ApprovalRule</a>...&nbsp;rules)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Approval Rules that matched the Order.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#rules(java.util.List)" class="member-name-link">rules</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../approval_rule/ApprovalRule.html" title="interface in com.commercetools.api.models.approval_rule">ApprovalRule</a>&gt;&nbsp;rules)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Approval Rules that matched the Order.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setApprovals(java.util.function.Function)" class="member-name-link">setApprovals</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApprovalFlowApprovalBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowApprovalBuilder</a>,<wbr><a href="ApprovalFlowApproval.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowApproval</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Existing approvals in the Approval Flow.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCurrentTierPendingApprovers(java.util.function.Function)" class="member-name-link">setCurrentTierPendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> only for the currently active tier(s).</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEligibleApprovers(java.util.function.Function)" class="member-name-link">setEligibleApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Associate Roles that can approve according to the approver hierarchy tiers defined in <code>rules</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPendingApprovers(java.util.function.Function)" class="member-name-link">setPendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApprover.html" title="interface in com.commercetools.api.models.approval_rule">RuleApprover</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> across all remaining tiers.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRules(java.util.function.Function)" class="member-name-link">setRules</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/ApprovalRuleBuilder.html" title="class in com.commercetools.api.models.approval_rule">ApprovalRuleBuilder</a>,<wbr><a href="../approval_rule/ApprovalRule.html" title="interface in com.commercetools.api.models.approval_rule">ApprovalRule</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Approval Rules that matched the Order.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#status(com.commercetools.api.models.approval_flow.ApprovalFlowStatus)" class="member-name-link">status</a><wbr>(<a href="ApprovalFlowStatus.html" title="interface in com.commercetools.api.models.approval_flow">ApprovalFlowStatus</a>&nbsp;status)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Indicates whether the Approval Flow is under review, approved, or rejected.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.Long)" class="member-name-link">version</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Current version of the Approval Flow.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withApprovals(java.util.function.Function)" class="member-name-link">withApprovals</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ApprovalFlowApprovalBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowApprovalBuilder</a>,<wbr><a href="ApprovalFlowApprovalBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowApprovalBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Existing approvals in the Approval Flow.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withBusinessUnit(java.util.function.Function)" class="member-name-link">withBusinessUnit</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../business_unit/BusinessUnitKeyReferenceBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitKeyReferenceBuilder</a>,<wbr><a href="../business_unit/BusinessUnitKeyReference.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitKeyReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Business Unit the Approval Flow belongs to.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCreatedBy(java.util.function.Function)" class="member-name-link">withCreatedBy</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Present on resources created after 1 February 2019 except for events not tracked.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCurrentTierPendingApprovers(java.util.function.Function)" class="member-name-link">withCurrentTierPendingApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Associate Roles required for approval based on the approver hierarchy tiers defined in <code>rules</code> only for the currently active tier(s).</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustom(java.util.function.Function)" class="member-name-link">withCustom</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Custom Fields on the Approval Flow.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withEligibleApprovers(java.util.function.Function)" class="member-name-link">withEligibleApprovers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>,<wbr><a href="../approval_rule/RuleApproverBuilder.html" title="class in com.commercetools.api.models.approval_rule">RuleApproverBuilder</a>&gt;&nbsp;builder)</code></div>
@@ -1250,6 +1270,46 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="custom(java.util.function.Function)">
+<h3>custom</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></span>&nbsp;<span class="element-name">custom</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Custom Fields on the Approval Flow.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the custom value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withCustom(java.util.function.Function)">
+<h3>withCustom</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></span>&nbsp;<span class="element-name">withCustom</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Custom Fields on the Approval Flow.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the custom value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="custom(com.commercetools.api.models.type.CustomFields)">
+<h3>custom</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApprovalFlowBuilder.html" title="class in com.commercetools.api.models.approval_flow">ApprovalFlowBuilder</a></span>&nbsp;<span class="element-name">custom</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
+<div class="block"><p>Custom Fields on the Approval Flow.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>custom</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
@@ -1414,6 +1474,18 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>currentTierPendingApprovers</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCustom()">
+<h3>getCustom</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
+<div class="block"><p>Custom Fields on the Approval Flow.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>custom</dd>
 </dl>
 </section>
 </li>

@@ -274,7 +274,7 @@ loadScripts(document, 'script');</script>
 <h3>getAmount</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name">getAmount</span>()</div>
-<div class="block"><p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p></div>
+<div class="block"><p>Tax rate. If subrates are used, the amount is the sum of all rates in <code>subRates</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>amount</dd>
@@ -321,7 +321,7 @@ loadScripts(document, 'script');</script>
 <h3>getSubRates</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;</span>&nbsp;<span class="element-name">getSubRates</span>()</div>
-<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p></div>
+<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>subRates</dd>
@@ -365,7 +365,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setAmount(java.lang.Double)">
 <h3>setAmount</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAmount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;amount)</span></div>
-<div class="block"><p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p></div>
+<div class="block"><p>Tax rate. If subrates are used, the amount is the sum of all rates in <code>subRates</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>amount</code> - value to be set</dd>
@@ -409,7 +409,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setSubRates(com.commercetools.api.models.tax_category.SubRate...)">
 <h3>setSubRates</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSubRates</span><wbr><span class="parameters">(<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>...&nbsp;subRates)</span></div>
-<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p></div>
+<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subRates</code> - values to be set</dd>
@@ -420,7 +420,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setSubRates(java.util.List)">
 <h3>setSubRates</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSubRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;&nbsp;subRates)</span></div>
-<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p></div>
+<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subRates</code> - values to be set</dd>

@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ClientTuning</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#retry-middleware">RetryMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li><li><a href="#timeouts">Timeouts</a></li></ul></ul>
+<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#policy-middleware">PolicyMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li><li><a href="#timeouts">Timeouts</a></li></ul></ul>
  <h2 id=client-tuning>Tuning the client</h2>
 
  <h3 id=blocking-execution>Blocking execution</h3>
@@ -86,17 +86,18 @@ loadScripts(document, 'script');</script>
 Project project = apiRoot.get().executeBlocking().getBody();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
- <h3 id=retry-middleware>RetryMiddleware</h3>
+ <h3 id=policy-middleware>PolicyMiddleware</h3>
 
- <p>The <a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>RetryRequestMiddleware</code></a> configures a client to handle failures like gateway timeouts
- and version conflicts through retrying the request.</p>
+ <p>The <a href="../../../../io/vrap/rmf/base/client/http/PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> configures a client to handle failures like gateway timeouts
+ and version conflicts through retrying the request. Limiting the number of parallel requests or timeouts</p>
 
  <p>A best practice example to retry on gateway timeouts and similar problems</p>
 
  <div id="example-ExamplesTest-retry--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = ApiRootBuilder.of()
         .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
             ServiceRegion.GCP_EUROPE_WEST1)
-        .withRetryMiddleware(5, Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))
+        .withPolicies(policies -&gt; policies.withRetry(builder -&gt; builder.maxRetries(5)
+                .statusCodes(Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))))
         .build("my-project");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
@@ -139,7 +140,7 @@ ApiRootBuilder.of(new CtApacheHttpClient(64, 64))
 
  <div id="example-ExamplesTest-queueConcurrentLimitation--%s" class=code-example><pre><code class='java'>ApiRootBuilder.of()
         // ...
-        .addMiddleware(new QueueMiddleware(64, Duration.ofSeconds(10)))
+        .withPolicies(policies -&gt; policies.withBulkhead(64, Duration.ofSeconds(10)))
         .build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 

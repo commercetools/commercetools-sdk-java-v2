@@ -133,7 +133,7 @@ final String auth = Base64.getEncoder()
             (credentials.getClientId() + ":" + credentials.getClientSecret()).getBytes(StandardCharsets.UTF_8));
 
 final ApiHttpHeaders headers = new ApiHttpHeaders()
-        .withHeader(ApiHttpHeaders.AUTHORIZATION, String.format("Basic %s", auth))
+        .withHeader(ApiHttpHeaders.AUTHORIZATION, format("Basic %s", auth))
         .withHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
 final String body = "token=" + token.getAccessToken();
 
@@ -172,7 +172,7 @@ final String auth = Base64.getEncoder()
         .encodeToString(
             (credentials.getClientId() + ":" + credentials.getClientSecret()).getBytes(StandardCharsets.UTF_8));
 final ApiHttpHeaders headers = new ApiHttpHeaders()
-        .withHeader(ApiHttpHeaders.AUTHORIZATION, String.format("Basic %s", auth))
+        .withHeader(ApiHttpHeaders.AUTHORIZATION, format("Basic %s", auth))
         .withHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
 
 // build the revoke request

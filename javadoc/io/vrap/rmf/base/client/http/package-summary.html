@@ -103,7 +103,15 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab3"><a href="ErrorMiddleware.ExceptionMode.html" title="enum in io.vrap.rmf.base.client.http">ErrorMiddleware.ExceptionMode</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab3">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="FailsafeConcurrencyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeConcurrencyBuilderOptions</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Interface to enable the configuration of Failsafe instances</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">Interface to enable the configuration of Failsafe instances</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="FailsafeTimeoutBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeTimeoutBuilderOptions</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
 <div class="block">Interface to enable the configuration of Failsafe instances</div>
 </div>
@@ -149,21 +157,33 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Default implementation for the <a href="OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>OAuthMiddleware</code></a> with automatic retry upon expired access</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="QueueMiddleware.html" title="class in io.vrap.rmf.base.client.http">QueueMiddleware</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="PolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">PolicyBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Implementation of a Queue to limit the number of concurrent requests handled by the client</div>
+<div class="block">PolicyBuilder</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">QueueRequestMiddleware</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Middleware to limit the number of concurrent request using a Queue</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http">PolicyMiddleware</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="PolicyMiddlewareImpl.html" title="class in io.vrap.rmf.base.client.http">PolicyMiddlewareImpl</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Implementation for a retry of a requests upon configured response status codes</div>
+<div class="block">Implementation for a failsafe requests handling</div>
 </div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="QueueMiddleware.html" title="class in io.vrap.rmf.base.client.http">QueueMiddleware</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">Deprecated.
+<div class="deprecation-comment">use <a href="PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> instead</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="QueueRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">QueueRequestMiddleware</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">Deprecated.
+<div class="deprecation-comment">use <a href="PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> instead</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">Deprecated.
+<div class="deprecation-comment">use <a href="PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> instead</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="RetryPolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">RetryPolicyBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Retry failed requests</div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">Deprecated.
+<div class="deprecation-comment">use <a href="PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> instead</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="TelemetryMiddleware.html" title="interface in io.vrap.rmf.base.client.http">TelemetryMiddleware</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>

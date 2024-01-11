@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">OrderEditApply</span></div>
-<div class="block"><p>If the <code>editVersion</code> and/or <code>resourceVersion</code> do not match the actual version, a 409 Conflict will be returned.</p>
+<div class="block"><p>If the <code>editVersion</code> and/or <code>resourceVersion</code> do not match the actual version, a ConcurrentModification error will be returned.</p>
 
  <hr>
  Example to create an instance using the builder pattern

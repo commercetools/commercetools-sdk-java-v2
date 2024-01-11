@@ -15,7 +15,11 @@
 <script type="text/javascript" src="../../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var pathtoroot = "../../../../../../";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "../../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -76,8 +80,12 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">RetryMiddleware</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">RetryRequestMiddleware</span><span class="extends-implements">
+<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public interface </span><span class="element-name type-name-label">RetryRequestMiddleware</span><span class="extends-implements">
 extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a></span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> instead</div>
+</div>
 <div class="block"><h2>Retry failed requests</h2>
 
  <p>Middleware for retrying of a requests upon configured response status codes and/or exceptions</p>
@@ -113,13 +121,19 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#DEFAULT_INITIAL_DELAY" class="member-name-link">DEFAULT_INITIAL_DELAY</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#DEFAULT_MAX_DELAY" class="member-name-link">DEFAULT_MAX_DELAY</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second even-row-color"><code><a href="#DEFAULT_RETRY_STATUS_CODES" class="member-name-link">DEFAULT_RETRY_STATUS_CODES</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
 </div>
 </section>
 </li>
@@ -128,182 +142,244 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="caption"><span>Static Methods</span></div>
-<div class="summary-table three-column-summary">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel">
+<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#handleFailures(java.util.List)" class="member-name-link">handleFailures</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#handleStatusCodes(java.util.List)" class="member-name-link">handleStatusCodes</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(int)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(int,long,long)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#handleFailures(java.util.List)" class="member-name-link">handleFailures</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#handleStatusCodes(java.util.List)" class="member-name-link">handleStatusCodes</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(int)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(int,long,long)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(int,long,long,java.util.List)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(int,long,long,java.util.List)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(int,long,long,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(int,long,long,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(int,java.util.List)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(int,java.util.List)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(int,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(int,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(dev.failsafe.spi.Scheduler,int)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(dev.failsafe.spi.Scheduler,int)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(dev.failsafe.spi.Scheduler,int,long,long)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(dev.failsafe.spi.Scheduler,int,long,long)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(dev.failsafe.spi.Scheduler,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(dev.failsafe.spi.Scheduler,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(dev.failsafe.spi.Scheduler,int,long,long,java.util.List)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(dev.failsafe.spi.Scheduler,int,long,long,java.util.List)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(dev.failsafe.spi.Scheduler,int,long,long,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(dev.failsafe.spi.Scheduler,int,long,long,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(dev.failsafe.spi.Scheduler,int,java.util.List)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(dev.failsafe.spi.Scheduler,int,java.util.List)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(dev.failsafe.spi.Scheduler,int,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(dev.failsafe.spi.Scheduler,int,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ExecutorService,int)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ExecutorService,int)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ExecutorService,int,long,long)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ExecutorService,int,long,long)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ExecutorService,int,long,long,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ExecutorService,int,long,long,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ExecutorService,int,long,long,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ExecutorService,int,long,long,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ExecutorService,int,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ExecutorService,int,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ExecutorService,int,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ExecutorService,int,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,long,long)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,long,long)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,long,long,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,long,long,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,long,long,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,long,long,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code>static <a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6"><code><a href="#of(java.util.concurrent.ScheduledExecutorService,int,java.util.List,java.util.List)" class="member-name-link">of</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+&nbsp;</div>
+</div>
 </div>
 </div>
 <div class="inherited-list">
@@ -324,6 +400,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <section class="detail" id="DEFAULT_MAX_DELAY">
 <h3>DEFAULT_MAX_DELAY</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">DEFAULT_MAX_DELAY</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -338,6 +415,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <section class="detail" id="DEFAULT_INITIAL_DELAY">
 <h3>DEFAULT_INITIAL_DELAY</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">DEFAULT_INITIAL_DELAY</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -352,6 +430,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <section class="detail" id="DEFAULT_RETRY_STATUS_CODES">
 <h3>DEFAULT_RETRY_STATUS_CODES</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">DEFAULT_RETRY_STATUS_CODES</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 </ul>
@@ -366,6 +445,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <section class="detail" id="of(int)">
 <h3>of</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(int&nbsp;maxRetries)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -373,6 +453,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <h3>of</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -381,6 +462,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -389,6 +471,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -398,6 +481,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -408,6 +492,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -417,6 +502,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -424,6 +510,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <h3>of</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -432,6 +519,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -441,6 +529,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -450,6 +539,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -460,6 +550,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -471,6 +562,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -481,6 +573,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -488,6 +581,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <h3>of</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -496,6 +590,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -505,6 +600,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -514,6 +610,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -524,6 +621,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -535,6 +633,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -545,6 +644,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -552,6 +652,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <h3>of</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -560,6 +661,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -569,6 +671,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -578,6 +681,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -588,6 +692,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -599,6 +704,7 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
@@ -609,18 +715,21 @@ extends <a href="Middleware.html" title="interface in io.vrap.rmf.base.client.ht
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="handleFailures(java.util.List)">
 <h3>handleFailures</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></span>&nbsp;<span class="element-name">handleFailures</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="handleStatusCodes(java.util.List)">
 <h3>handleStatusCodes</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a></span>&nbsp;<span class="element-name">handleStatusCodes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 </section>
 </li>
 </ul>

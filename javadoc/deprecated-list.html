@@ -134,6 +134,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="deprecation-comment">use <a href="com/commercetools/api/models/subscription/DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription"><code>DeliveryPayload</code></a> instead</div>
 </div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/QueueRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">io.vrap.rmf.base.client.http.QueueRequestMiddleware</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/http/PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">io.vrap.rmf.base.client.http.RetryRequestMiddleware</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/http/PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> instead</div>
+</div>
 </div>
 </div>
 </li>
@@ -215,6 +223,14 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="deprecation-comment">use <a href="com/commercetools/api/models/product/FacetResultsAccessor.html" title="class in com.commercetools.api.models.product"><code>FacetResultsAccessor</code></a> instead</div>
 </div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/http/QueueMiddleware.html" title="class in io.vrap.rmf.base.client.http">io.vrap.rmf.base.client.http.QueueMiddleware</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/http/PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/RetryMiddleware.html" title="class in io.vrap.rmf.base.client.http">io.vrap.rmf.base.client.http.RetryMiddleware</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/http/PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> instead</div>
+</div>
 </div>
 </div>
 </li>
@@ -233,6 +249,118 @@ loadScripts(document, 'script');</script>
 <div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#buildProjectRoot(java.lang.String)">com.commercetools.api.defaultconfig.ApiRootBuilder.buildProjectRoot<wbr>(String)</a></div>
 <div class="col-last odd-row-color">
 <div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#build(java.lang.String)"><code>ApiRootBuilder.build(String)</code></a>  instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withQueueMiddleware(int,java.time.Duration)">com.commercetools.api.defaultconfig.ApiRootBuilder.withQueueMiddleware<wbr>(int, Duration)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withQueueMiddleware(dev.failsafe.spi.Scheduler,int,java.time.Duration)">com.commercetools.api.defaultconfig.ApiRootBuilder.withQueueMiddleware<wbr>(Scheduler, int, Duration)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withQueueMiddleware(io.vrap.rmf.base.client.http.QueueRequestMiddleware)">com.commercetools.api.defaultconfig.ApiRootBuilder.withQueueMiddleware<wbr>(QueueRequestMiddleware)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withQueueMiddleware(java.util.concurrent.ExecutorService,int,java.time.Duration)">com.commercetools.api.defaultconfig.ApiRootBuilder.withQueueMiddleware<wbr>(ExecutorService, int, Duration)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withQueueMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.time.Duration)">com.commercetools.api.defaultconfig.ApiRootBuilder.withQueueMiddleware<wbr>(ScheduledExecutorService, int, Duration)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withQueueMiddleware(java.util.function.Supplier)">com.commercetools.api.defaultconfig.ApiRootBuilder.withQueueMiddleware<wbr>(Supplier&lt;QueueRequestMiddleware&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(int)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(int)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(int, long, long, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(int, long, long, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(int,java.util.List)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(int, List&lt;Integer&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(int,java.util.List,java.util.List)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(int, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(dev.failsafe.spi.Scheduler,int)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(Scheduler, int)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(Scheduler, int, long, long, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(Scheduler, int, long, long, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,java.util.List)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(Scheduler, int, List&lt;Integer&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,java.util.List,java.util.List)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(Scheduler, int, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(io.vrap.rmf.base.client.http.RetryRequestMiddleware)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(RetryRequestMiddleware)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(java.util.concurrent.ExecutorService,int)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(ExecutorService, int)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(java.util.concurrent.ExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(ExecutorService, int, long, long, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(java.util.concurrent.ExecutorService,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(ExecutorService, int, long, long, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(java.util.concurrent.ExecutorService,int,java.util.List)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(ExecutorService, int, List&lt;Integer&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(java.util.concurrent.ExecutorService,int,java.util.List,java.util.List)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(ExecutorService, int, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(ScheduledExecutorService, int)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(ScheduledExecutorService, int, long, long, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(ScheduledExecutorService, int, long, long, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.util.List)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(ScheduledExecutorService, int, List&lt;Integer&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.util.List,java.util.List)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(ScheduledExecutorService, int, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withRetryMiddleware(java.util.function.Supplier)">com.commercetools.api.defaultconfig.ApiRootBuilder.withRetryMiddleware<wbr>(Supplier&lt;RetryRequestMiddleware&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/api/defaultconfig/ApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ApiRootBuilder.withPolicies(Function)</code></a> instead</div>
 </div>
 <div class="col-summary-item-name even-row-color"><a href="com/commercetools/api/models/cart/ReplicaCartDraft.html#setReference(java.lang.Object)">com.commercetools.api.models.cart.ReplicaCartDraft.setReference<wbr>(Object)</a></div>
 <div class="col-last even-row-color"></div>
@@ -422,21 +550,117 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">
 <div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#build(java.lang.String)"><code>HistoryApiRootBuilder.build(String)</code></a>  instead</div>
 </div>
-<div class="col-summary-item-name even-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#buildForProject(java.lang.String)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.buildForProject<wbr>(String)</a></div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withQueueMiddleware(int,java.time.Duration)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withQueueMiddleware<wbr>(int, Duration)</a></div>
 <div class="col-last even-row-color">
-<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#build(java.lang.String)"><code>ImportApiRootBuilder.build(String)</code></a>  instead</div>
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
 </div>
-<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#buildProjectRoot(java.lang.String)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.buildProjectRoot<wbr>(String)</a></div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withQueueMiddleware(dev.failsafe.spi.Scheduler,int,java.time.Duration)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withQueueMiddleware<wbr>(Scheduler, int, Duration)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withQueueMiddleware(io.vrap.rmf.base.client.http.QueueRequestMiddleware)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withQueueMiddleware<wbr>(QueueRequestMiddleware)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withQueueMiddleware(java.util.concurrent.ExecutorService,int,java.time.Duration)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withQueueMiddleware<wbr>(ExecutorService, int, Duration)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withQueueMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.time.Duration)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withQueueMiddleware<wbr>(ScheduledExecutorService, int, Duration)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withQueueMiddleware(java.util.function.Supplier)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withQueueMiddleware<wbr>(Supplier&lt;QueueRequestMiddleware&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withRetryMiddleware(int)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withRetryMiddleware<wbr>(int)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withRetryMiddleware(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withRetryMiddleware<wbr>(int, long, long, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withRetryMiddleware(int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withRetryMiddleware<wbr>(int, long, long, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withRetryMiddleware(int,java.util.List)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withRetryMiddleware<wbr>(int, List&lt;Integer&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withRetryMiddleware(int,java.util.List,java.util.List)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withRetryMiddleware<wbr>(int, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withRetryMiddleware(io.vrap.rmf.base.client.http.RetryRequestMiddleware)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withRetryMiddleware<wbr>(RetryRequestMiddleware)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withRetryMiddleware(java.util.function.Supplier)">com.commercetools.history.defaultconfig.HistoryApiRootBuilder.withRetryMiddleware<wbr>(Supplier&lt;RetryRequestMiddleware&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/history/defaultconfig/HistoryApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>HistoryApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#buildForProject(java.lang.String)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.buildForProject<wbr>(String)</a></div>
 <div class="col-last odd-row-color">
 <div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#build(java.lang.String)"><code>ImportApiRootBuilder.build(String)</code></a>  instead</div>
 </div>
-<div class="col-summary-item-name even-row-color"><a href="com/commercetools/ml/defaultconfig/MLApiRootBuilder.html#buildForProject(java.lang.String)">com.commercetools.ml.defaultconfig.MLApiRootBuilder.buildForProject<wbr>(String)</a></div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#buildProjectRoot(java.lang.String)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.buildProjectRoot<wbr>(String)</a></div>
 <div class="col-last even-row-color">
-<div class="deprecation-comment">use <a href="com/commercetools/ml/defaultconfig/MLApiRootBuilder.html#build(java.lang.String)"><code>MLApiRootBuilder.build(String)</code></a>  instead</div>
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#build(java.lang.String)"><code>ImportApiRootBuilder.build(String)</code></a>  instead</div>
 </div>
-<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/ml/defaultconfig/MLApiRootBuilder.html#buildProjectRoot(java.lang.String)">com.commercetools.ml.defaultconfig.MLApiRootBuilder.buildProjectRoot<wbr>(String)</a></div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withQueueMiddleware(int,java.time.Duration)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withQueueMiddleware<wbr>(int, Duration)</a></div>
 <div class="col-last odd-row-color">
-<div class="deprecation-comment">use <a href="com/commercetools/ml/defaultconfig/MLApiRootBuilder.html#build(java.lang.String)"><code>MLApiRootBuilder.build(String)</code></a>  instead</div>
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withQueueMiddleware(dev.failsafe.spi.Scheduler,int,java.time.Duration)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withQueueMiddleware<wbr>(Scheduler, int, Duration)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withQueueMiddleware(io.vrap.rmf.base.client.http.QueueRequestMiddleware)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withQueueMiddleware<wbr>(QueueRequestMiddleware)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withQueueMiddleware(java.util.concurrent.ExecutorService,int,java.time.Duration)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withQueueMiddleware<wbr>(ExecutorService, int, Duration)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withQueueMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.time.Duration)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withQueueMiddleware<wbr>(ScheduledExecutorService, int, Duration)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withQueueMiddleware(java.util.function.Supplier)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withQueueMiddleware<wbr>(Supplier&lt;QueueRequestMiddleware&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withRetryMiddleware(int)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withRetryMiddleware<wbr>(int)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withRetryMiddleware(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withRetryMiddleware<wbr>(int, long, long, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withRetryMiddleware(int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withRetryMiddleware<wbr>(int, long, long, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withRetryMiddleware(int,java.util.List)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withRetryMiddleware<wbr>(int, List&lt;Integer&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withRetryMiddleware(int,java.util.List,java.util.List)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withRetryMiddleware<wbr>(int, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withRetryMiddleware(io.vrap.rmf.base.client.http.RetryRequestMiddleware)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withRetryMiddleware<wbr>(RetryRequestMiddleware)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withRetryMiddleware(java.util.function.Supplier)">com.commercetools.importapi.defaultconfig.ImportApiRootBuilder.withRetryMiddleware<wbr>(Supplier&lt;RetryRequestMiddleware&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="com/commercetools/importapi/defaultconfig/ImportApiRootBuilder.html#withPolicies(java.util.function.Function)"><code>ImportApiRootBuilder.withPolicies(Function)</code></a> instead</div>
 </div>
 <div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/AuthenticationToken.html#getRefresherToken()">io.vrap.rmf.base.client.AuthenticationToken.getRefresherToken()</a></div>
 <div class="col-last even-row-color"></div>
@@ -449,6 +673,118 @@ loadScripts(document, 'script');</script>
 <div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withClientCredentials(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)">io.vrap.rmf.base.client.ClientBuilder.withClientCredentials<wbr>(ClientCredentials, String, VrapHttpClient)</a></div>
 <div class="col-last odd-row-color">
 <div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withClientCredentialsFlow(io.vrap.rmf.base.client.oauth2.ClientCredentials,java.lang.String,io.vrap.rmf.base.client.VrapHttpClient)"><code>ClientBuilder.withClientCredentialsFlow(ClientCredentials, String, VrapHttpClient)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withQueueMiddleware(int,java.time.Duration)">io.vrap.rmf.base.client.ClientBuilder.withQueueMiddleware<wbr>(int, Duration)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withQueueMiddleware(dev.failsafe.spi.Scheduler,int,java.time.Duration)">io.vrap.rmf.base.client.ClientBuilder.withQueueMiddleware<wbr>(Scheduler, int, Duration)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withQueueMiddleware(io.vrap.rmf.base.client.http.QueueRequestMiddleware)">io.vrap.rmf.base.client.ClientBuilder.withQueueMiddleware<wbr>(QueueRequestMiddleware)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withQueueMiddleware(java.util.concurrent.ExecutorService,int,java.time.Duration)">io.vrap.rmf.base.client.ClientBuilder.withQueueMiddleware<wbr>(ExecutorService, int, Duration)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withQueueMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.time.Duration)">io.vrap.rmf.base.client.ClientBuilder.withQueueMiddleware<wbr>(ScheduledExecutorService, int, Duration)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withQueueMiddleware(java.util.function.Supplier)">io.vrap.rmf.base.client.ClientBuilder.withQueueMiddleware<wbr>(Supplier&lt;QueueRequestMiddleware&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(int)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(int)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a>} instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(int, long, long, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(int, long, long, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(int,java.util.List)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(int, List&lt;Integer&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a>} instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(int,java.util.List,java.util.List)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(int, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(dev.failsafe.spi.Scheduler,int)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(Scheduler, int)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(Scheduler, int, long, long, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(Scheduler, int, long, long, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,java.util.List)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(Scheduler, int, List&lt;Integer&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,java.util.List,java.util.List)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(Scheduler, int, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(io.vrap.rmf.base.client.http.RetryRequestMiddleware)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(RetryRequestMiddleware)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(java.util.concurrent.ExecutorService,int)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(ExecutorService, int)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(java.util.concurrent.ExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(ExecutorService, int, long, long, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(java.util.concurrent.ExecutorService,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(ExecutorService, int, long, long, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(java.util.concurrent.ExecutorService,int,java.util.List)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(ExecutorService, int, List&lt;Integer&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(java.util.concurrent.ExecutorService,int,java.util.List,java.util.List)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(ExecutorService, int, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(ScheduledExecutorService, int)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(ScheduledExecutorService, int, long, long, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(ScheduledExecutorService, int, long, long, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;, FailsafeRetryPolicyBuilderOptions)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.util.List)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(ScheduledExecutorService, int, List&lt;Integer&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.util.List,java.util.List)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(ScheduledExecutorService, int, List&lt;Integer&gt;, List&lt;Class&lt;? extends Throwable&gt;&gt;)</a></div>
+<div class="col-last even-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="io/vrap/rmf/base/client/ClientBuilder.html#withRetryMiddleware(java.util.function.Supplier)">io.vrap.rmf.base.client.ClientBuilder.withRetryMiddleware<wbr>(Supplier&lt;RetryRequestMiddleware&gt;)</a></div>
+<div class="col-last odd-row-color">
+<div class="deprecation-comment">use <a href="io/vrap/rmf/base/client/ClientBuilder.html#withPolicies(java.util.function.Function)"><code>ClientBuilder.withPolicies(Function)</code></a> instead</div>
 </div>
 <div class="col-summary-item-name even-row-color"><a href="io/vrap/rmf/base/client/http/ErrorMiddleware.html#of(io.vrap.rmf.base.client.ResponseSerializer)">io.vrap.rmf.base.client.http.ErrorMiddleware.of<wbr>(ResponseSerializer)</a></div>
 <div class="col-last even-row-color"></div>

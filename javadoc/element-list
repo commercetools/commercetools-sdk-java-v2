@@ -50,6 +50,7 @@ com.commercetools.api.models.zone
 com.commercetools.api.predicates
 com.commercetools.api.predicates.query
 com.commercetools.api.predicates.query.product
+com.commercetools.api.predicates.query.type
 com.commercetools.api.product
 com.commercetools.compat
 com.commercetools.docs.meta
@@ -89,14 +90,6 @@ com.commercetools.importapi.models.producttypes
 com.commercetools.importapi.models.productvariants
 com.commercetools.importapi.models.standalone_prices
 com.commercetools.importapi.models.types
-com.commercetools.ml.client
-com.commercetools.ml.defaultconfig
-com.commercetools.ml.models.category_recommendations
-com.commercetools.ml.models.common
-com.commercetools.ml.models.general_category_recommendations
-com.commercetools.ml.models.image_search
-com.commercetools.ml.models.image_search_config
-com.commercetools.ml.models.similar_products
 com.commercetools.money
 com.commercetools.monitoring.newrelic
 com.commercetools.monitoring.opentelemetry

@@ -86,7 +86,6 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
  <pre><code class='java'>
      AddLocationChange addLocationChange = AddLocationChange.builder()
              .change("{change}")
-             .previousValue(previousValueBuilder -> previousValueBuilder)
              .nextValue(nextValueBuilder -> nextValueBuilder)
              .build()
  </code></pre>
@@ -147,40 +146,30 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Value after the change.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPreviousValue()" class="member-name-link">getPreviousValue</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Value before the change.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Unique discriminator value to reliably deserialize the data type.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.change.AddLocationChange)" class="member-name-link">of</a><wbr>(<a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a>&nbsp;template)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.change.AddLocationChange)" class="member-name-link">of</a><wbr>(<a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy AddLocationChange</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChange(java.lang.String)" class="member-name-link">setChange</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChange(java.lang.String)" class="member-name-link">setChange</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;change)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">set change</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setNextValue(com.commercetools.history.models.common.Location)" class="member-name-link">setNextValue</a><wbr>(<a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a>&nbsp;nextValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Value after the change.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPreviousValue(com.commercetools.history.models.common.Location)" class="member-name-link">setPreviousValue</a><wbr>(<a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a>&nbsp;previousValue)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setNextValue(com.commercetools.history.models.common.Location)" class="member-name-link">setNextValue</a><wbr>(<a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a>&nbsp;nextValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Value before the change.</div>
+<div class="block">Value after the change.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="AddLocationChange.html" title="interface in com.commercetools.history.models.change">AddLocationChange</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -264,19 +253,6 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 </section>
 </li>
 <li>
-<section class="detail" id="getPreviousValue()">
-<h3>getPreviousValue</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-@Valid
-</span><span class="return-type">@NotNull @Valid <a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a></span>&nbsp;<span class="element-name">getPreviousValue</span>()</div>
-<div class="block"><p>Value before the change.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>previousValue</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getNextValue()">
 <h3>getNextValue</h3>
 <div class="member-signature"><span class="annotations">@NotNull
@@ -299,17 +275,6 @@ extends <a href="Change.html" title="interface in com.commercetools.history.mode
 <dd><code><a href="Change.html#setChange(java.lang.String)">setChange</a></code>&nbsp;in interface&nbsp;<code><a href="Change.html" title="interface in com.commercetools.history.models.change">Change</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>change</code> - value to be set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setPreviousValue(com.commercetools.history.models.common.Location)">
-<h3>setPreviousValue</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPreviousValue</span><wbr><span class="parameters">(<a href="../common/Location.html" title="interface in com.commercetools.history.models.common">Location</a>&nbsp;previousValue)</span></div>
-<div class="block"><p>Value before the change.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>previousValue</code> - value to be set</dd>
 </dl>
 </section>
 </li>

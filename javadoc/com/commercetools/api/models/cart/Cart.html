@@ -279,7 +279,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingAddress()" class="member-name-link">getShippingAddress</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Shipping address associated with the Cart.</div>
+<div class="block">Shipping address for a Cart with <code>Single</code> ShippingMode.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingCustomFields()" class="member-name-link">getShippingCustomFields</a>()</code></div>
@@ -542,7 +542,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingAddress(com.commercetools.api.models.common.Address)" class="member-name-link">setShippingAddress</a><wbr>(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;shippingAddress)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Shipping address associated with the Cart.</div>
+<div class="block">Shipping address for a Cart with <code>Single</code> ShippingMode.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingCustomFields(com.commercetools.api.models.type.CustomFields)" class="member-name-link">setShippingCustomFields</a><wbr>(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;shippingCustomFields)</code></div>
@@ -976,7 +976,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getShippingAddress</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></span>&nbsp;<span class="element-name">getShippingAddress</span>()</div>
-<div class="block"><p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p></div>
+<div class="block"><p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../order/OrderLike.html#getShippingAddress()">getShippingAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../order/OrderLike.html" title="interface in com.commercetools.api.models.order">OrderLike</a>&lt;<a href="Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&gt;</code></dd>
@@ -1075,7 +1075,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</span>&nbsp;<span class="element-name">getItemShippingAddresses</span>()</div>
 <div class="block"><p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p></div>
+  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../order/OrderLike.html#getItemShippingAddresses()">getItemShippingAddresses</a></code>&nbsp;in interface&nbsp;<code><a href="../order/OrderLike.html" title="interface in com.commercetools.api.models.order">OrderLike</a>&lt;<a href="Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&gt;</code></dd>
@@ -1545,7 +1545,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setShippingAddress(com.commercetools.api.models.common.Address)">
 <h3>setShippingAddress</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingAddress</span><wbr><span class="parameters">(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;shippingAddress)</span></div>
-<div class="block"><p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p></div>
+<div class="block"><p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingAddress</code> - value to be set</dd>
@@ -1639,7 +1639,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>setItemShippingAddresses</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setItemShippingAddresses</span><wbr><span class="parameters">(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;itemShippingAddresses)</span></div>
 <div class="block"><p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p></div>
+  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>itemShippingAddresses</code> - values to be set</dd>
@@ -1651,7 +1651,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>setItemShippingAddresses</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setItemShippingAddresses</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;itemShippingAddresses)</span></div>
 <div class="block"><p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
-  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p></div>
+  <p>For Carts with <code>Single</code> ShippingMode: eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>itemShippingAddresses</code> - values to be set</dd>

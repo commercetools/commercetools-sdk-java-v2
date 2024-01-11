@@ -91,7 +91,7 @@ Project project = apiRoot.get().executeBlocking().getBody();
  <p>The <a href="../../../../io/vrap/rmf/base/client/http/PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>PolicyMiddleware</code></a> configures a client to handle failures like gateway timeouts
  and version conflicts through retrying the request. Limiting the number of parallel requests or timeouts</p>
 
- <p>A best practice example to retry on gateway timeouts and similar problems</p>
+ <p>A best practice example to retry on gateway timeouts and similar problems.</p>
 
  <div id="example-ExamplesTest-retry--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = ApiRootBuilder.of()
         .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
@@ -100,6 +100,8 @@ Project project = apiRoot.get().executeBlocking().getBody();
                 .statusCodes(Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))))
         .build("my-project");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <p>For more configuration options see <a href="../../../../io/vrap/rmf/base/client/http/PolicyBuilder.html" title="class in io.vrap.rmf.base.client.http"><code>PolicyBuilder</code></a></p>
 
  <h3 id=configure-http-client>Configure the underlying http client</h3>
 

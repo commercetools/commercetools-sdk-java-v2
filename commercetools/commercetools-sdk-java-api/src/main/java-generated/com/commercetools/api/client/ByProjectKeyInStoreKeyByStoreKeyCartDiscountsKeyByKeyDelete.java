@@ -21,6 +21,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>To delete a CartDiscount, specify the <code>manage_cart_discounts:{projectKey}:{storeKey}</code> scope for all Stores associated with the CartDiscount.</p>
+ *  <p>Deleting a Cart Discount produces the CartDiscountDeleted Message.</p>
  *
  * <hr>
  * <div class=code-example>

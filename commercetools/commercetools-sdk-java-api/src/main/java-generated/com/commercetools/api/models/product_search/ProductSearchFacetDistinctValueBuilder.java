@@ -1,0 +1,472 @@
+
+package com.commercetools.api.models.product_search;
+
+import java.util.*;
+import java.util.function.Function;
+
+import javax.annotation.Nullable;
+
+import io.vrap.rmf.base.client.Builder;
+import io.vrap.rmf.base.client.utils.Generated;
+
+/**
+ * ProductSearchFacetDistinctValueBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     ProductSearchFacetDistinctValue productSearchFacetDistinctValue = ProductSearchFacetDistinctValue.builder()
+ *             .name("{name}")
+ *             .field("{field}")
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSearchFacetDistinctValue> {
+
+    private String name;
+
+    @Nullable
+    private com.commercetools.api.models.product_search.ProductSearchFacetEnumScope scope;
+
+    @Nullable
+    private com.commercetools.api.models.product_search.ProductSearchQuery filter;
+
+    @Nullable
+    private com.commercetools.api.models.product_search.ProductSearchFacetEnumCount count;
+
+    private String field;
+
+    @Nullable
+    private java.util.List<String> includes;
+
+    @Nullable
+    private com.commercetools.api.models.product_search.ProductSearchFacetDistinctStartsWith startsWith;
+
+    @Nullable
+    private com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortExpression sort;
+
+    @Nullable
+    private Integer size;
+
+    @Nullable
+    private String language;
+
+    @Nullable
+    private com.commercetools.api.models.product_search.ProductSearchAttributeType attributeType;
+
+    @Nullable
+    private String missing;
+
+    /**
+     *  <p>Name of the count facet.</p>
+     * @param name value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder name(final String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     *  <p>Whether the facet must consider only the Products resulting from the search (<code>query</code>) or all the Products (<code>all</code>).</p>
+     * @param scope value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder scope(
+            @Nullable final com.commercetools.api.models.product_search.ProductSearchFacetEnumScope scope) {
+        this.scope = scope;
+        return this;
+    }
+
+    /**
+     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     * @param builder function to build the filter value
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder filter(
+            Function<com.commercetools.api.models.product_search.ProductSearchQueryBuilder, com.commercetools.api.models.product_search.ProductSearchQueryBuilder> builder) {
+        this.filter = builder.apply(com.commercetools.api.models.product_search.ProductSearchQueryBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     * @param builder function to build the filter value
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder withFilter(
+            Function<com.commercetools.api.models.product_search.ProductSearchQueryBuilder, com.commercetools.api.models.product_search.ProductSearchQuery> builder) {
+        this.filter = builder.apply(com.commercetools.api.models.product_search.ProductSearchQueryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     * @param filter value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder filter(
+            @Nullable final com.commercetools.api.models.product_search.ProductSearchQuery filter) {
+        this.filter = filter;
+        return this;
+    }
+
+    /**
+     *  <p>Specify whether to count Products (<code>products</code>) or Product Variants (<code>variants</code>).</p>
+     * @param count value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder count(
+            @Nullable final com.commercetools.api.models.product_search.ProductSearchFacetEnumCount count) {
+        this.count = count;
+        return this;
+    }
+
+    /**
+     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     * @param field value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder field(final String field) {
+        this.field = field;
+        return this;
+    }
+
+    /**
+     *  <p>Specify which bucket keys the facets results should include.</p>
+     * @param includes value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder includes(@Nullable final String... includes) {
+        this.includes = new ArrayList<>(Arrays.asList(includes));
+        return this;
+    }
+
+    /**
+     *  <p>Specify which bucket keys the facets results should include.</p>
+     * @param includes value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder includes(@Nullable final java.util.List<String> includes) {
+        this.includes = includes;
+        return this;
+    }
+
+    /**
+     *  <p>Specify which bucket keys the facets results should include.</p>
+     * @param includes value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder plusIncludes(@Nullable final String... includes) {
+        if (this.includes == null) {
+            this.includes = new ArrayList<>();
+        }
+        this.includes.addAll(Arrays.asList(includes));
+        return this;
+    }
+
+    /**
+     *  <p>Filter bucket keys in the facet results by the start of the key.</p>
+     * @param builder function to build the startsWith value
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder startsWith(
+            Function<com.commercetools.api.models.product_search.ProductSearchFacetDistinctStartsWithBuilder, com.commercetools.api.models.product_search.ProductSearchFacetDistinctStartsWithBuilder> builder) {
+        this.startsWith = builder
+                .apply(com.commercetools.api.models.product_search.ProductSearchFacetDistinctStartsWithBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Filter bucket keys in the facet results by the start of the key.</p>
+     * @param builder function to build the startsWith value
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder withStartsWith(
+            Function<com.commercetools.api.models.product_search.ProductSearchFacetDistinctStartsWithBuilder, com.commercetools.api.models.product_search.ProductSearchFacetDistinctStartsWith> builder) {
+        this.startsWith = builder
+                .apply(com.commercetools.api.models.product_search.ProductSearchFacetDistinctStartsWithBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Filter bucket keys in the facet results by the start of the key.</p>
+     * @param startsWith value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder startsWith(
+            @Nullable final com.commercetools.api.models.product_search.ProductSearchFacetDistinctStartsWith startsWith) {
+        this.startsWith = startsWith;
+        return this;
+    }
+
+    /**
+     *  <p>Define how the buckets are sorted.</p>
+     * @param builder function to build the sort value
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder sort(
+            Function<com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortExpressionBuilder, com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortExpressionBuilder> builder) {
+        this.sort = builder
+                .apply(com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortExpressionBuilder
+                        .of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Define how the buckets are sorted.</p>
+     * @param builder function to build the sort value
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder withSort(
+            Function<com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortExpressionBuilder, com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortExpression> builder) {
+        this.sort = builder.apply(
+            com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortExpressionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Define how the buckets are sorted.</p>
+     * @param sort value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder sort(
+            @Nullable final com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortExpression sort) {
+        this.sort = sort;
+        return this;
+    }
+
+    /**
+     *  <p>Maximum number of buckets to return.</p>
+     * @param size value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder size(@Nullable final Integer size) {
+        this.size = size;
+        return this;
+    }
+
+    /**
+     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     * @param language value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder language(@Nullable final String language) {
+        this.language = language;
+        return this;
+    }
+
+    /**
+     *  <p>If the <code>field</code> is an Attribute, this must be the Attribute type.</p>
+     * @param attributeType value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder attributeType(
+            @Nullable final com.commercetools.api.models.product_search.ProductSearchAttributeType attributeType) {
+        this.attributeType = attributeType;
+        return this;
+    }
+
+    /**
+     *  <p>Default value to use if the specified field is not present on some Products.</p>
+     * @param missing value to be set
+     * @return Builder
+     */
+
+    public ProductSearchFacetDistinctValueBuilder missing(@Nullable final String missing) {
+        this.missing = missing;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the count facet.</p>
+     * @return name
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     *  <p>Whether the facet must consider only the Products resulting from the search (<code>query</code>) or all the Products (<code>all</code>).</p>
+     * @return scope
+     */
+
+    @Nullable
+    public com.commercetools.api.models.product_search.ProductSearchFacetEnumScope getScope() {
+        return this.scope;
+    }
+
+    /**
+     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     * @return filter
+     */
+
+    @Nullable
+    public com.commercetools.api.models.product_search.ProductSearchQuery getFilter() {
+        return this.filter;
+    }
+
+    /**
+     *  <p>Specify whether to count Products (<code>products</code>) or Product Variants (<code>variants</code>).</p>
+     * @return count
+     */
+
+    @Nullable
+    public com.commercetools.api.models.product_search.ProductSearchFacetEnumCount getCount() {
+        return this.count;
+    }
+
+    /**
+     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     * @return field
+     */
+
+    public String getField() {
+        return this.field;
+    }
+
+    /**
+     *  <p>Specify which bucket keys the facets results should include.</p>
+     * @return includes
+     */
+
+    @Nullable
+    public java.util.List<String> getIncludes() {
+        return this.includes;
+    }
+
+    /**
+     *  <p>Filter bucket keys in the facet results by the start of the key.</p>
+     * @return startsWith
+     */
+
+    @Nullable
+    public com.commercetools.api.models.product_search.ProductSearchFacetDistinctStartsWith getStartsWith() {
+        return this.startsWith;
+    }
+
+    /**
+     *  <p>Define how the buckets are sorted.</p>
+     * @return sort
+     */
+
+    @Nullable
+    public com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortExpression getSort() {
+        return this.sort;
+    }
+
+    /**
+     *  <p>Maximum number of buckets to return.</p>
+     * @return size
+     */
+
+    @Nullable
+    public Integer getSize() {
+        return this.size;
+    }
+
+    /**
+     *  <p>String value specifying linguistic and regional preferences using the IETF language tag format, as described in BCP 47. The format combines language, script, and region using hyphen-separated subtags. For example: <code>en</code>, <code>en-US</code>, <code>zh-Hans-SG</code>.</p>
+     * @return language
+     */
+
+    @Nullable
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
+     *  <p>If the <code>field</code> is an Attribute, this must be the Attribute type.</p>
+     * @return attributeType
+     */
+
+    @Nullable
+    public com.commercetools.api.models.product_search.ProductSearchAttributeType getAttributeType() {
+        return this.attributeType;
+    }
+
+    /**
+     *  <p>Default value to use if the specified field is not present on some Products.</p>
+     * @return missing
+     */
+
+    @Nullable
+    public String getMissing() {
+        return this.missing;
+    }
+
+    /**
+     * builds ProductSearchFacetDistinctValue with checking for non-null required values
+     * @return ProductSearchFacetDistinctValue
+     */
+    public ProductSearchFacetDistinctValue build() {
+        Objects.requireNonNull(name, ProductSearchFacetDistinctValue.class + ": name is missing");
+        Objects.requireNonNull(field, ProductSearchFacetDistinctValue.class + ": field is missing");
+        return new ProductSearchFacetDistinctValueImpl(name, scope, filter, count, field, includes, startsWith, sort,
+            size, language, attributeType, missing);
+    }
+
+    /**
+     * builds ProductSearchFacetDistinctValue without checking for non-null required values
+     * @return ProductSearchFacetDistinctValue
+     */
+    public ProductSearchFacetDistinctValue buildUnchecked() {
+        return new ProductSearchFacetDistinctValueImpl(name, scope, filter, count, field, includes, startsWith, sort,
+            size, language, attributeType, missing);
+    }
+
+    /**
+     * factory method for an instance of ProductSearchFacetDistinctValueBuilder
+     * @return builder
+     */
+    public static ProductSearchFacetDistinctValueBuilder of() {
+        return new ProductSearchFacetDistinctValueBuilder();
+    }
+
+    /**
+     * create builder for ProductSearchFacetDistinctValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static ProductSearchFacetDistinctValueBuilder of(final ProductSearchFacetDistinctValue template) {
+        ProductSearchFacetDistinctValueBuilder builder = new ProductSearchFacetDistinctValueBuilder();
+        builder.name = template.getName();
+        builder.scope = template.getScope();
+        builder.filter = template.getFilter();
+        builder.count = template.getCount();
+        builder.field = template.getField();
+        builder.includes = template.getIncludes();
+        builder.startsWith = template.getStartsWith();
+        builder.sort = template.getSort();
+        builder.size = template.getSize();
+        builder.language = template.getLanguage();
+        builder.attributeType = template.getAttributeType();
+        builder.missing = template.getMissing();
+        return builder;
+    }
+
+}

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     RemoveTaxRateChange removeTaxRateChange = RemoveTaxRateChange.builder()
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -64,6 +65,15 @@ public interface RemoveTaxRateChange extends Change {
     public TaxRate getPreviousValue();
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public TaxRate getNextValue();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -76,6 +86,13 @@ public interface RemoveTaxRateChange extends Change {
      */
 
     public void setPreviousValue(final TaxRate previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final TaxRate nextValue);
 
     /**
      * factory method
@@ -94,6 +111,7 @@ public interface RemoveTaxRateChange extends Change {
         RemoveTaxRateChangeImpl instance = new RemoveTaxRateChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -111,6 +129,7 @@ public interface RemoveTaxRateChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(
             com.commercetools.history.models.common.TaxRate.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getNextValue()));
         return instance;
     }
 

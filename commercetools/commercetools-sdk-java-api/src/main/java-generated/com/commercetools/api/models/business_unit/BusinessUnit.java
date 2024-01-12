@@ -227,7 +227,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public List<Associate> getAssociates();
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @return inheritedAssociates
      */
     @Valid
@@ -436,7 +436,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setAssociates(final List<Associate> associates);
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param inheritedAssociates values to be set
      */
 
@@ -444,7 +444,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setInheritedAssociates(final InheritedAssociate... inheritedAssociates);
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      * @param inheritedAssociates values to be set
      */
 

@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     AttributeReferenceType attributeReferenceType = AttributeReferenceType.builder()
- *             .referenceTypeId(AttributeReferenceTypeId.ASSOCIATE_ROLE)
+ *             .referenceTypeId(AttributeReferenceTypeId.CART)
  *             .build()
  * </code></pre>
  * </div>

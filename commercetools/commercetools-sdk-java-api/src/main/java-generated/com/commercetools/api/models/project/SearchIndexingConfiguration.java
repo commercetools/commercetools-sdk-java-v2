@@ -38,6 +38,14 @@ public interface SearchIndexingConfiguration {
     public SearchIndexingConfigurationValues getProducts();
 
     /**
+     *  <p>Configuration for the Product Search feature.</p>
+     * @return productsNew
+     */
+    @Valid
+    @JsonProperty("productsNew")
+    public SearchIndexingConfigurationValues getProductsNew();
+
+    /**
      *  <p>Configuration for the Order Search feature.</p>
      * @return orders
      */
@@ -51,6 +59,13 @@ public interface SearchIndexingConfiguration {
      */
 
     public void setProducts(final SearchIndexingConfigurationValues products);
+
+    /**
+     *  <p>Configuration for the Product Search feature.</p>
+     * @param productsNew value to be set
+     */
+
+    public void setProductsNew(final SearchIndexingConfigurationValues productsNew);
 
     /**
      *  <p>Configuration for the Order Search feature.</p>
@@ -75,6 +90,7 @@ public interface SearchIndexingConfiguration {
     public static SearchIndexingConfiguration of(final SearchIndexingConfiguration template) {
         SearchIndexingConfigurationImpl instance = new SearchIndexingConfigurationImpl();
         instance.setProducts(template.getProducts());
+        instance.setProductsNew(template.getProductsNew());
         instance.setOrders(template.getOrders());
         return instance;
     }
@@ -92,6 +108,8 @@ public interface SearchIndexingConfiguration {
         SearchIndexingConfigurationImpl instance = new SearchIndexingConfigurationImpl();
         instance.setProducts(
             com.commercetools.api.models.project.SearchIndexingConfigurationValues.deepCopy(template.getProducts()));
+        instance.setProductsNew(
+            com.commercetools.api.models.project.SearchIndexingConfigurationValues.deepCopy(template.getProductsNew()));
         instance.setOrders(
             com.commercetools.api.models.project.SearchIndexingConfigurationValues.deepCopy(template.getOrders()));
         return instance;

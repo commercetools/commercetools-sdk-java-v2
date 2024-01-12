@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.history.models.common.ChannelRoleEnum;
+import com.commercetools.history.models.common.ChannelRole;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -60,7 +60,7 @@ public interface RemoveChannelRolesChange extends Change {
      */
     @NotNull
     @JsonProperty("previousValue")
-    public List<ChannelRoleEnum> getPreviousValue();
+    public List<ChannelRole> getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -68,7 +68,7 @@ public interface RemoveChannelRolesChange extends Change {
      */
     @NotNull
     @JsonProperty("nextValue")
-    public List<ChannelRoleEnum> getNextValue();
+    public List<ChannelRole> getNextValue();
 
     /**
      * set change
@@ -83,14 +83,14 @@ public interface RemoveChannelRolesChange extends Change {
      */
 
     @JsonIgnore
-    public void setPreviousValue(final ChannelRoleEnum... previousValue);
+    public void setPreviousValue(final ChannelRole... previousValue);
 
     /**
      *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
-    public void setPreviousValue(final List<ChannelRoleEnum> previousValue);
+    public void setPreviousValue(final List<ChannelRole> previousValue);
 
     /**
      *  <p>Value after the change.</p>
@@ -98,14 +98,14 @@ public interface RemoveChannelRolesChange extends Change {
      */
 
     @JsonIgnore
-    public void setNextValue(final ChannelRoleEnum... nextValue);
+    public void setNextValue(final ChannelRole... nextValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
-    public void setNextValue(final List<ChannelRoleEnum> nextValue);
+    public void setNextValue(final List<ChannelRole> nextValue);
 
     /**
      * factory method

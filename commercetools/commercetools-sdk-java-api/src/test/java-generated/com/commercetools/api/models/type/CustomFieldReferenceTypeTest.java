@@ -26,14 +26,15 @@ public class CustomFieldReferenceTypeTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { CustomFieldReferenceType.builder()
                 .referenceTypeId(
-                    com.commercetools.api.models.type.CustomFieldReferenceValue.findEnum("approval-flow")) } };
+                    com.commercetools.api.models.type.CustomFieldReferenceValue.findEnum("associate-role")) } };
     }
 
     @Test
     public void referenceTypeId() {
         CustomFieldReferenceType value = CustomFieldReferenceType.of();
-        value.setReferenceTypeId(com.commercetools.api.models.type.CustomFieldReferenceValue.findEnum("approval-flow"));
+        value.setReferenceTypeId(
+            com.commercetools.api.models.type.CustomFieldReferenceValue.findEnum("associate-role"));
         Assertions.assertThat(value.getReferenceTypeId())
-                .isEqualTo(com.commercetools.api.models.type.CustomFieldReferenceValue.findEnum("approval-flow"));
+                .isEqualTo(com.commercetools.api.models.type.CustomFieldReferenceValue.findEnum("associate-role"));
     }
 }

@@ -51,6 +51,10 @@ public class ProjectUpdateActionBuilder {
         return com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionBuilder.of();
     }
 
+    public com.commercetools.api.models.project.ProjectChangeProductSearchStatusActionBuilder changeProductSearchStatusBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeProductSearchStatusActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionBuilder changeShoppingListsConfigurationBuilder() {
         return com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionBuilder.of();
     }

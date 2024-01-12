@@ -215,6 +215,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.NotEnabledErrorBuilder notEnabledBuilder() {
+        return com.commercetools.api.models.error.NotEnabledErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.ObjectNotFoundErrorBuilder objectNotFoundBuilder() {
         return com.commercetools.api.models.error.ObjectNotFoundErrorBuilder.of();
     }

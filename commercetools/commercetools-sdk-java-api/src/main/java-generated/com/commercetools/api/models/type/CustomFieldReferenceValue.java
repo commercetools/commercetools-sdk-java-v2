@@ -17,11 +17,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomFieldReferenceValue extends JsonEnum {
 
     /**
-    	<p><a href="ctp:api:type:ApprovalFlow">ApprovalFlow</a></p>
-
-    */
-    CustomFieldReferenceValue APPROVAL_FLOW = CustomFieldReferenceValueEnum.APPROVAL_FLOW;
-    /**
     	<p><a href="ctp:api:type:AssociateRole">AssociateRole</a></p>
 
     */
@@ -96,11 +91,6 @@ public interface CustomFieldReferenceValue extends JsonEnum {
      * possible values of CustomFieldReferenceValue
      */
     enum CustomFieldReferenceValueEnum implements CustomFieldReferenceValue {
-        /**
-         * approval-flow
-         */
-        APPROVAL_FLOW("approval-flow"),
-
         /**
          * associate-role
          */

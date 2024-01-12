@@ -18,7 +18,6 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.order.OrderReference;
-import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -180,14 +179,6 @@ public interface ApprovalFlow extends BaseResource {
     public List<RuleApprover> getCurrentTierPendingApprovers();
 
     /**
-     *  <p>Custom Fields on the Approval Flow.</p>
-     * @return custom
-     */
-    @Valid
-    @JsonProperty("custom")
-    public CustomFields getCustom();
-
-    /**
      *  <p>Unique identifier of the Approval Flow.</p>
      * @param id value to be set
      */
@@ -333,13 +324,6 @@ public interface ApprovalFlow extends BaseResource {
     public void setCurrentTierPendingApprovers(final List<RuleApprover> currentTierPendingApprovers);
 
     /**
-     *  <p>Custom Fields on the Approval Flow.</p>
-     * @param custom value to be set
-     */
-
-    public void setCustom(final CustomFields custom);
-
-    /**
      * factory method
      * @return instance of ApprovalFlow
      */
@@ -369,7 +353,6 @@ public interface ApprovalFlow extends BaseResource {
         instance.setEligibleApprovers(template.getEligibleApprovers());
         instance.setPendingApprovers(template.getPendingApprovers());
         instance.setCurrentTierPendingApprovers(template.getCurrentTierPendingApprovers());
-        instance.setCustom(template.getCustom());
         return instance;
     }
 
@@ -422,7 +405,6 @@ public interface ApprovalFlow extends BaseResource {
                         .map(com.commercetools.api.models.approval_rule.RuleApprover::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

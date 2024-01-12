@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddAddressChange addAddressChange = AddAddressChange.builder()
  *             .change("{change}")
+ *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
@@ -55,6 +56,15 @@ public interface AddAddressChange extends Change {
     public String getType();
 
     /**
+     *  <p>Value before the change.</p>
+     * @return previousValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("previousValue")
+    public Address getPreviousValue();
+
+    /**
      *  <p>Value after the change.</p>
      * @return nextValue
      */
@@ -69,6 +79,13 @@ public interface AddAddressChange extends Change {
      */
 
     public void setChange(final String change);
+
+    /**
+     *  <p>Value before the change.</p>
+     * @param previousValue value to be set
+     */
+
+    public void setPreviousValue(final Address previousValue);
 
     /**
      *  <p>Value after the change.</p>
@@ -93,6 +110,7 @@ public interface AddAddressChange extends Change {
     public static AddAddressChange of(final AddAddressChange template) {
         AddAddressChangeImpl instance = new AddAddressChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         return instance;
     }
@@ -109,6 +127,8 @@ public interface AddAddressChange extends Change {
         }
         AddAddressChangeImpl instance = new AddAddressChangeImpl();
         instance.setChange(template.getChange());
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.Address.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.Address.deepCopy(template.getNextValue()));
         return instance;
     }

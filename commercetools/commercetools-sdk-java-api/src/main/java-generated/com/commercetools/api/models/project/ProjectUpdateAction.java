@@ -37,6 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeNameActionImpl.class, name = ProjectChangeNameAction.CHANGE_NAME),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeOrderSearchStatusActionImpl.class, name = ProjectChangeOrderSearchStatusAction.CHANGE_ORDER_SEARCH_STATUS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionImpl.class, name = ProjectChangeProductSearchIndexingEnabledAction.CHANGE_PRODUCT_SEARCH_INDEXING_ENABLED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeProductSearchStatusActionImpl.class, name = ProjectChangeProductSearchStatusAction.CHANGE_PRODUCT_SEARCH_STATUS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionImpl.class, name = ProjectChangeShoppingListsConfigurationAction.CHANGE_SHOPPING_LISTS_CONFIGURATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectSetBusinessUnitAssociateRoleOnCreationActionImpl.class, name = ProjectSetBusinessUnitAssociateRoleOnCreationAction.SET_MY_BUSINESS_UNIT_ASSOCIATE_ROLE_ON_CREATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectSetExternalOAuthActionImpl.class, name = ProjectSetExternalOAuthAction.SET_EXTERNAL_O_AUTH),
@@ -103,6 +104,10 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
         if (template instanceof com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledAction) {
             return com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledAction.deepCopy(
                 (com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeProductSearchStatusAction) {
+            return com.commercetools.api.models.project.ProjectChangeProductSearchStatusAction
+                    .deepCopy((com.commercetools.api.models.project.ProjectChangeProductSearchStatusAction) template);
         }
         if (template instanceof com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationAction) {
             return com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationAction.deepCopy(
@@ -202,6 +207,14 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
      */
     public static com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionBuilder changeProductSearchIndexingEnabledBuilder() {
         return com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionBuilder.of();
+    }
+
+    /**
+     * builder for changeProductSearchStatus subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.project.ProjectChangeProductSearchStatusActionBuilder changeProductSearchStatusBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeProductSearchStatusActionBuilder.of();
     }
 
     /**

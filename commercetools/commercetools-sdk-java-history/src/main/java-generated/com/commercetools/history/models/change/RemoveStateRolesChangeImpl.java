@@ -26,17 +26,17 @@ public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange, Model
 
     private String change;
 
-    private java.util.List<com.commercetools.history.models.common.StateRoleEnum> previousValue;
+    private java.util.List<com.commercetools.history.models.common.StateRole> previousValue;
 
-    private java.util.List<com.commercetools.history.models.common.StateRoleEnum> nextValue;
+    private java.util.List<com.commercetools.history.models.common.StateRole> nextValue;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveStateRolesChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.StateRoleEnum> previousValue,
-            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.StateRoleEnum> nextValue) {
+            @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.StateRole> previousValue,
+            @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.StateRole> nextValue) {
         this.change = change;
         this.previousValue = previousValue;
         this.nextValue = nextValue;
@@ -70,7 +70,7 @@ public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange, Model
      *  <p>Value before the change.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.common.StateRoleEnum> getPreviousValue() {
+    public java.util.List<com.commercetools.history.models.common.StateRole> getPreviousValue() {
         return this.previousValue;
     }
 
@@ -78,7 +78,7 @@ public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange, Model
      *  <p>Value after the change.</p>
      */
 
-    public java.util.List<com.commercetools.history.models.common.StateRoleEnum> getNextValue() {
+    public java.util.List<com.commercetools.history.models.common.StateRole> getNextValue() {
         return this.nextValue;
     }
 
@@ -86,20 +86,20 @@ public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange, Model
         this.change = change;
     }
 
-    public void setPreviousValue(final com.commercetools.history.models.common.StateRoleEnum... previousValue) {
+    public void setPreviousValue(final com.commercetools.history.models.common.StateRole... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
     }
 
     public void setPreviousValue(
-            final java.util.List<com.commercetools.history.models.common.StateRoleEnum> previousValue) {
+            final java.util.List<com.commercetools.history.models.common.StateRole> previousValue) {
         this.previousValue = previousValue;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.StateRoleEnum... nextValue) {
+    public void setNextValue(final com.commercetools.history.models.common.StateRole... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
     }
 
-    public void setNextValue(final java.util.List<com.commercetools.history.models.common.StateRoleEnum> nextValue) {
+    public void setNextValue(final java.util.List<com.commercetools.history.models.common.StateRole> nextValue) {
         this.nextValue = nextValue;
     }
 

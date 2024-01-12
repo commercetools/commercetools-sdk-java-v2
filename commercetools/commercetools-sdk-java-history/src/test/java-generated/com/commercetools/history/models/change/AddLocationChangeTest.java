@@ -24,8 +24,11 @@ public class AddLocationChangeTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AddLocationChange.builder().change("change") }, new Object[] {
-                AddLocationChange.builder().nextValue(new com.commercetools.history.models.common.LocationImpl()) } };
+        return new Object[][] { new Object[] { AddLocationChange.builder().change("change") },
+                new Object[] { AddLocationChange.builder()
+                        .previousValue(new com.commercetools.history.models.common.LocationImpl()) },
+                new Object[] { AddLocationChange.builder()
+                        .nextValue(new com.commercetools.history.models.common.LocationImpl()) } };
     }
 
     @Test
@@ -33,6 +36,14 @@ public class AddLocationChangeTest {
         AddLocationChange value = AddLocationChange.of();
         value.setChange("change");
         Assertions.assertThat(value.getChange()).isEqualTo("change");
+    }
+
+    @Test
+    public void previousValue() {
+        AddLocationChange value = AddLocationChange.of();
+        value.setPreviousValue(new com.commercetools.history.models.common.LocationImpl());
+        Assertions.assertThat(value.getPreviousValue())
+                .isEqualTo(new com.commercetools.history.models.common.LocationImpl());
     }
 
     @Test

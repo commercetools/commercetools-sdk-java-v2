@@ -25,9 +25,9 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
 
     private String change;
 
-    private java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> previousValue;
+    private java.util.List<com.commercetools.history.models.common.ChannelRole> previousValue;
 
-    private java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> nextValue;
+    private java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue;
 
     /**
      * set the value to the change
@@ -47,7 +47,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
      */
 
     public AddChannelRolesChangeBuilder previousValue(
-            final com.commercetools.history.models.common.ChannelRoleEnum... previousValue) {
+            final com.commercetools.history.models.common.ChannelRole... previousValue) {
         this.previousValue = new ArrayList<>(Arrays.asList(previousValue));
         return this;
     }
@@ -59,7 +59,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
      */
 
     public AddChannelRolesChangeBuilder previousValue(
-            final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> previousValue) {
+            final java.util.List<com.commercetools.history.models.common.ChannelRole> previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -71,7 +71,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
      */
 
     public AddChannelRolesChangeBuilder plusPreviousValue(
-            final com.commercetools.history.models.common.ChannelRoleEnum... previousValue) {
+            final com.commercetools.history.models.common.ChannelRole... previousValue) {
         if (this.previousValue == null) {
             this.previousValue = new ArrayList<>();
         }
@@ -86,7 +86,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
      */
 
     public AddChannelRolesChangeBuilder nextValue(
-            final com.commercetools.history.models.common.ChannelRoleEnum... nextValue) {
+            final com.commercetools.history.models.common.ChannelRole... nextValue) {
         this.nextValue = new ArrayList<>(Arrays.asList(nextValue));
         return this;
     }
@@ -98,7 +98,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
      */
 
     public AddChannelRolesChangeBuilder nextValue(
-            final java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> nextValue) {
+            final java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue) {
         this.nextValue = nextValue;
         return this;
     }
@@ -110,7 +110,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
      */
 
     public AddChannelRolesChangeBuilder plusNextValue(
-            final com.commercetools.history.models.common.ChannelRoleEnum... nextValue) {
+            final com.commercetools.history.models.common.ChannelRole... nextValue) {
         if (this.nextValue == null) {
             this.nextValue = new ArrayList<>();
         }
@@ -132,7 +132,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
      * @return previousValue
      */
 
-    public java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> getPreviousValue() {
+    public java.util.List<com.commercetools.history.models.common.ChannelRole> getPreviousValue() {
         return this.previousValue;
     }
 
@@ -141,7 +141,7 @@ public class AddChannelRolesChangeBuilder implements Builder<AddChannelRolesChan
      * @return nextValue
      */
 
-    public java.util.List<com.commercetools.history.models.common.ChannelRoleEnum> getNextValue() {
+    public java.util.List<com.commercetools.history.models.common.ChannelRole> getNextValue() {
         return this.nextValue;
     }
 

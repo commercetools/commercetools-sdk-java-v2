@@ -77,6 +77,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMissingTaxRateForCountryErrorImpl.class, name = GraphQLMissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMoneyOverflowErrorImpl.class, name = GraphQLMoneyOverflowError.MONEY_OVERFLOW),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundErrorImpl.class, name = GraphQLNoMatchingProductDiscountFoundError.NO_MATCHING_PRODUCT_DISCOUNT_FOUND),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLNotEnabledErrorImpl.class, name = GraphQLNotEnabledError.NOT_ENABLED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLObjectNotFoundErrorImpl.class, name = GraphQLObjectNotFoundError.OBJECT_NOT_FOUND),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLOutOfStockErrorImpl.class, name = GraphQLOutOfStockError.OUT_OF_STOCK),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLOverCapacityErrorImpl.class, name = GraphQLOverCapacityError.OVER_CAPACITY),
@@ -344,6 +345,10 @@ public interface GraphQLErrorObject {
         if (template instanceof com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundError) {
             return com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundError
                     .deepCopy((com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLNotEnabledError) {
+            return com.commercetools.api.models.error.GraphQLNotEnabledError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLNotEnabledError) template);
         }
         if (template instanceof com.commercetools.api.models.error.GraphQLObjectNotFoundError) {
             return com.commercetools.api.models.error.GraphQLObjectNotFoundError
@@ -852,6 +857,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundErrorBuilder noMatchingProductDiscountFoundBuilder() {
         return com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundErrorBuilder.of();
+    }
+
+    /**
+     * builder for notEnabled subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLNotEnabledErrorBuilder notEnabledBuilder() {
+        return com.commercetools.api.models.error.GraphQLNotEnabledErrorBuilder.of();
     }
 
     /**

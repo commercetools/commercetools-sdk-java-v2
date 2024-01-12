@@ -26,7 +26,7 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
 
     private String change;
 
-    private com.commercetools.history.models.common.AttributePlainEnumValue nextValue;
+    private com.commercetools.history.models.change_value.EnumValue nextValue;
 
     private String attributeName;
 
@@ -35,7 +35,7 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
      */
     @JsonCreator
     AddPlainEnumValueChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("nextValue") final com.commercetools.history.models.common.AttributePlainEnumValue nextValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.change_value.EnumValue nextValue,
             @JsonProperty("attributeName") final String attributeName) {
         this.change = change;
         this.nextValue = nextValue;
@@ -70,7 +70,7 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
      *  <p>Value after the change.</p>
      */
 
-    public com.commercetools.history.models.common.AttributePlainEnumValue getNextValue() {
+    public com.commercetools.history.models.change_value.EnumValue getNextValue() {
         return this.nextValue;
     }
 
@@ -86,7 +86,7 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
         this.change = change;
     }
 
-    public void setNextValue(final com.commercetools.history.models.common.AttributePlainEnumValue nextValue) {
+    public void setNextValue(final com.commercetools.history.models.change_value.EnumValue nextValue) {
         this.nextValue = nextValue;
     }
 

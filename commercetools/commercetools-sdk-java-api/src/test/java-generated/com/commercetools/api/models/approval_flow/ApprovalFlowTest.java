@@ -57,9 +57,7 @@ public class ApprovalFlowTest {
                                 .singletonList(new com.commercetools.api.models.approval_rule.RuleApproverImpl())) },
                 new Object[] { ApprovalFlow.builder()
                         .currentTierPendingApprovers(Collections
-                                .singletonList(new com.commercetools.api.models.approval_rule.RuleApproverImpl())) },
-                new Object[] {
-                        ApprovalFlow.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
+                                .singletonList(new com.commercetools.api.models.approval_rule.RuleApproverImpl())) } };
     }
 
     @Test
@@ -183,12 +181,5 @@ public class ApprovalFlowTest {
         Assertions.assertThat(value.getCurrentTierPendingApprovers())
                 .isEqualTo(
                     Collections.singletonList(new com.commercetools.api.models.approval_rule.RuleApproverImpl()));
-    }
-
-    @Test
-    public void custom() {
-        ApprovalFlow value = ApprovalFlow.of();
-        value.setCustom(new com.commercetools.api.models.type.CustomFieldsImpl());
-        Assertions.assertThat(value.getCustom()).isEqualTo(new com.commercetools.api.models.type.CustomFieldsImpl());
     }
 }

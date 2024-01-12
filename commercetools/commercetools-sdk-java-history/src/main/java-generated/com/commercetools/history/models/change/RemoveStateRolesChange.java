@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.history.models.common.StateRoleEnum;
+import com.commercetools.history.models.common.StateRole;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -60,7 +60,7 @@ public interface RemoveStateRolesChange extends Change {
      */
     @NotNull
     @JsonProperty("previousValue")
-    public List<StateRoleEnum> getPreviousValue();
+    public List<StateRole> getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -68,7 +68,7 @@ public interface RemoveStateRolesChange extends Change {
      */
     @NotNull
     @JsonProperty("nextValue")
-    public List<StateRoleEnum> getNextValue();
+    public List<StateRole> getNextValue();
 
     /**
      * set change
@@ -83,14 +83,14 @@ public interface RemoveStateRolesChange extends Change {
      */
 
     @JsonIgnore
-    public void setPreviousValue(final StateRoleEnum... previousValue);
+    public void setPreviousValue(final StateRole... previousValue);
 
     /**
      *  <p>Value before the change.</p>
      * @param previousValue values to be set
      */
 
-    public void setPreviousValue(final List<StateRoleEnum> previousValue);
+    public void setPreviousValue(final List<StateRole> previousValue);
 
     /**
      *  <p>Value after the change.</p>
@@ -98,14 +98,14 @@ public interface RemoveStateRolesChange extends Change {
      */
 
     @JsonIgnore
-    public void setNextValue(final StateRoleEnum... nextValue);
+    public void setNextValue(final StateRole... nextValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue values to be set
      */
 
-    public void setNextValue(final List<StateRoleEnum> nextValue);
+    public void setNextValue(final List<StateRole> nextValue);
 
     /**
      * factory method

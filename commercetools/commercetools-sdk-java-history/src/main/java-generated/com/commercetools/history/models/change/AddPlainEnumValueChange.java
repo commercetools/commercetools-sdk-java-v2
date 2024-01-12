@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.history.models.common.AttributePlainEnumValue;
+import com.commercetools.history.models.change_value.EnumValue;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -62,7 +62,7 @@ public interface AddPlainEnumValueChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public AttributePlainEnumValue getNextValue();
+    public EnumValue getNextValue();
 
     /**
      *  <p>Name of the updated AttributeDefinition.</p>
@@ -84,7 +84,7 @@ public interface AddPlainEnumValueChange extends Change {
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final AttributePlainEnumValue nextValue);
+    public void setNextValue(final EnumValue nextValue);
 
     /**
      *  <p>Name of the updated AttributeDefinition.</p>
@@ -127,7 +127,7 @@ public interface AddPlainEnumValueChange extends Change {
         AddPlainEnumValueChangeImpl instance = new AddPlainEnumValueChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(
-            com.commercetools.history.models.common.AttributePlainEnumValue.deepCopy(template.getNextValue()));
+            com.commercetools.history.models.change_value.EnumValue.deepCopy(template.getNextValue()));
         instance.setAttributeName(template.getAttributeName());
         return instance;
     }

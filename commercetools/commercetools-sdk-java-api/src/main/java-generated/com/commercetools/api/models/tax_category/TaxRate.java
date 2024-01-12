@@ -60,7 +60,7 @@ public interface TaxRate {
     public String getName();
 
     /**
-     *  <p>Tax rate. If subrates are used, the amount is the sum of all rates in <code>subRates</code>.</p>
+     *  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>
      * @return amount
      */
     @NotNull
@@ -92,7 +92,7 @@ public interface TaxRate {
     public String getState();
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
      * @return subRates
      */
     @Valid
@@ -121,7 +121,7 @@ public interface TaxRate {
     public void setName(final String name);
 
     /**
-     *  <p>Tax rate. If subrates are used, the amount is the sum of all rates in <code>subRates</code>.</p>
+     *  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>
      * @param amount value to be set
      */
 
@@ -149,7 +149,7 @@ public interface TaxRate {
     public void setState(final String state);
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
      * @param subRates values to be set
      */
 
@@ -157,7 +157,7 @@ public interface TaxRate {
     public void setSubRates(final SubRate... subRates);
 
     /**
-     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p>
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
      * @param subRates values to be set
      */
 

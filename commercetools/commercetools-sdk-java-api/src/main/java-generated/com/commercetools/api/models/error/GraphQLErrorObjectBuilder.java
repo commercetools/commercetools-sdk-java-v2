@@ -215,6 +215,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLNoMatchingProductDiscountFoundErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLNotEnabledErrorBuilder notEnabledBuilder() {
+        return com.commercetools.api.models.error.GraphQLNotEnabledErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLObjectNotFoundErrorBuilder objectNotFoundBuilder() {
         return com.commercetools.api.models.error.GraphQLObjectNotFoundErrorBuilder.of();
     }

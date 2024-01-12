@@ -26,6 +26,8 @@ public class AddAddressChangeImpl implements AddAddressChange, ModelBase {
 
     private String change;
 
+    private com.commercetools.history.models.common.Address previousValue;
+
     private com.commercetools.history.models.common.Address nextValue;
 
     /**
@@ -33,8 +35,10 @@ public class AddAddressChangeImpl implements AddAddressChange, ModelBase {
      */
     @JsonCreator
     AddAddressChangeImpl(@JsonProperty("change") final String change,
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.Address previousValue,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Address nextValue) {
         this.change = change;
+        this.previousValue = previousValue;
         this.nextValue = nextValue;
         this.type = ADD_ADDRESS_CHANGE;
     }
@@ -63,6 +67,14 @@ public class AddAddressChangeImpl implements AddAddressChange, ModelBase {
     }
 
     /**
+     *  <p>Value before the change.</p>
+     */
+
+    public com.commercetools.history.models.common.Address getPreviousValue() {
+        return this.previousValue;
+    }
+
+    /**
      *  <p>Value after the change.</p>
      */
 
@@ -72,6 +84,10 @@ public class AddAddressChangeImpl implements AddAddressChange, ModelBase {
 
     public void setChange(final String change) {
         this.change = change;
+    }
+
+    public void setPreviousValue(final com.commercetools.history.models.common.Address previousValue) {
+        this.previousValue = previousValue;
     }
 
     public void setNextValue(final com.commercetools.history.models.common.Address nextValue) {
@@ -90,22 +106,29 @@ public class AddAddressChangeImpl implements AddAddressChange, ModelBase {
 
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .append(type, that.type)
                 .append(change, that.change)
+                .append(previousValue, that.previousValue)
                 .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(nextValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(previousValue)
+                .append(nextValue)
+                .toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("change", change)
+                .append("previousValue", previousValue)
                 .append("nextValue", nextValue)
                 .build();
     }

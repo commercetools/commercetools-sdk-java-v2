@@ -26,7 +26,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  *   <li>Set Description on Product Discounts.</li>
  *   <li>Set Description on Shopping Lists.</li>
  *   <li>Set Description on States.</li>
+ *   <li>Set Description on Tax Categories.</li>
  *   <li>Set Description on Types.</li>
+ *   <li>Set Description on Zones.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

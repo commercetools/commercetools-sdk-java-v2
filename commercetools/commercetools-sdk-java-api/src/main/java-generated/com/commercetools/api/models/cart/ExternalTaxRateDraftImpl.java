@@ -104,7 +104,7 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
     }
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
      */
 
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {

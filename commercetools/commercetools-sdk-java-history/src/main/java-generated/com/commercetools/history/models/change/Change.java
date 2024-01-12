@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     Change change = Change.addAddressChangeBuilder()
  *             change("{change}")
+ *             previousValue(previousValueBuilder -> previousValueBuilder)
  *             nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>

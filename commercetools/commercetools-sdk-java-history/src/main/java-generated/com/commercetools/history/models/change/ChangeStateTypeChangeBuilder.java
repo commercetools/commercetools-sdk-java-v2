@@ -14,8 +14,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeStateTypeChange changeStateTypeChange = ChangeStateTypeChange.builder()
  *             .change("{change}")
- *             .previousValue(StateTypeEnum.ORDER_STATE)
- *             .nextValue(StateTypeEnum.ORDER_STATE)
+ *             .previousValue(StateType.ORDER_STATE)
+ *             .nextValue(StateType.ORDER_STATE)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,9 +25,9 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
 
     private String change;
 
-    private com.commercetools.history.models.common.StateTypeEnum previousValue;
+    private com.commercetools.history.models.common.StateType previousValue;
 
-    private com.commercetools.history.models.common.StateTypeEnum nextValue;
+    private com.commercetools.history.models.common.StateType nextValue;
 
     /**
      * set the value to the change
@@ -47,7 +47,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
      */
 
     public ChangeStateTypeChangeBuilder previousValue(
-            final com.commercetools.history.models.common.StateTypeEnum previousValue) {
+            final com.commercetools.history.models.common.StateType previousValue) {
         this.previousValue = previousValue;
         return this;
     }
@@ -58,8 +58,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
      * @return Builder
      */
 
-    public ChangeStateTypeChangeBuilder nextValue(
-            final com.commercetools.history.models.common.StateTypeEnum nextValue) {
+    public ChangeStateTypeChangeBuilder nextValue(final com.commercetools.history.models.common.StateType nextValue) {
         this.nextValue = nextValue;
         return this;
     }
@@ -78,7 +77,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
      * @return previousValue
      */
 
-    public com.commercetools.history.models.common.StateTypeEnum getPreviousValue() {
+    public com.commercetools.history.models.common.StateType getPreviousValue() {
         return this.previousValue;
     }
 
@@ -87,7 +86,7 @@ public class ChangeStateTypeChangeBuilder implements Builder<ChangeStateTypeChan
      * @return nextValue
      */
 
-    public com.commercetools.history.models.common.StateTypeEnum getNextValue() {
+    public com.commercetools.history.models.common.StateType getNextValue() {
         return this.nextValue;
     }
 

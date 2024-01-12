@@ -27,6 +27,9 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues products;
 
     @Nullable
+    private com.commercetools.api.models.project.SearchIndexingConfigurationValues productsNew;
+
+    @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues orders;
 
     /**
@@ -65,6 +68,45 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     public SearchIndexingConfigurationBuilder products(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues products) {
         this.products = products;
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Product Search feature.</p>
+     * @param builder function to build the productsNew value
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder productsNew(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder> builder) {
+        this.productsNew = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Product Search feature.</p>
+     * @param builder function to build the productsNew value
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder withProductsNew(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValues> builder) {
+        this.productsNew = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Product Search feature.</p>
+     * @param productsNew value to be set
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder productsNew(
+            @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues productsNew) {
+        this.productsNew = productsNew;
         return this;
     }
 
@@ -116,6 +158,16 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
+     *  <p>Configuration for the Product Search feature.</p>
+     * @return productsNew
+     */
+
+    @Nullable
+    public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProductsNew() {
+        return this.productsNew;
+    }
+
+    /**
      *  <p>Configuration for the Order Search feature.</p>
      * @return orders
      */
@@ -130,7 +182,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
      * @return SearchIndexingConfiguration
      */
     public SearchIndexingConfiguration build() {
-        return new SearchIndexingConfigurationImpl(products, orders);
+        return new SearchIndexingConfigurationImpl(products, productsNew, orders);
     }
 
     /**
@@ -138,7 +190,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
      * @return SearchIndexingConfiguration
      */
     public SearchIndexingConfiguration buildUnchecked() {
-        return new SearchIndexingConfigurationImpl(products, orders);
+        return new SearchIndexingConfigurationImpl(products, productsNew, orders);
     }
 
     /**
@@ -157,6 +209,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     public static SearchIndexingConfigurationBuilder of(final SearchIndexingConfiguration template) {
         SearchIndexingConfigurationBuilder builder = new SearchIndexingConfigurationBuilder();
         builder.products = template.getProducts();
+        builder.productsNew = template.getProductsNew();
         builder.orders = template.getOrders();
         return builder;
     }

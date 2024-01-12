@@ -299,7 +299,7 @@ public class DivisionImpl implements Division, ModelBase {
     }
 
     /**
-     *  <p>Associates that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> getInheritedAssociates() {

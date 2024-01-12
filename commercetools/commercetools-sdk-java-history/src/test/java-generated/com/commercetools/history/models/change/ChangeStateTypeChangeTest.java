@@ -26,9 +26,9 @@ public class ChangeStateTypeChangeTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { ChangeStateTypeChange.builder().change("change") },
                 new Object[] { ChangeStateTypeChange.builder()
-                        .previousValue(com.commercetools.history.models.common.StateTypeEnum.findEnum("OrderState")) },
+                        .previousValue(com.commercetools.history.models.common.StateType.findEnum("OrderState")) },
                 new Object[] { ChangeStateTypeChange.builder()
-                        .nextValue(com.commercetools.history.models.common.StateTypeEnum.findEnum("OrderState")) } };
+                        .nextValue(com.commercetools.history.models.common.StateType.findEnum("OrderState")) } };
     }
 
     @Test
@@ -41,16 +41,16 @@ public class ChangeStateTypeChangeTest {
     @Test
     public void previousValue() {
         ChangeStateTypeChange value = ChangeStateTypeChange.of();
-        value.setPreviousValue(com.commercetools.history.models.common.StateTypeEnum.findEnum("OrderState"));
+        value.setPreviousValue(com.commercetools.history.models.common.StateType.findEnum("OrderState"));
         Assertions.assertThat(value.getPreviousValue())
-                .isEqualTo(com.commercetools.history.models.common.StateTypeEnum.findEnum("OrderState"));
+                .isEqualTo(com.commercetools.history.models.common.StateType.findEnum("OrderState"));
     }
 
     @Test
     public void nextValue() {
         ChangeStateTypeChange value = ChangeStateTypeChange.of();
-        value.setNextValue(com.commercetools.history.models.common.StateTypeEnum.findEnum("OrderState"));
+        value.setNextValue(com.commercetools.history.models.common.StateType.findEnum("OrderState"));
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(com.commercetools.history.models.common.StateTypeEnum.findEnum("OrderState"));
+                .isEqualTo(com.commercetools.history.models.common.StateType.findEnum("OrderState"));
     }
 }

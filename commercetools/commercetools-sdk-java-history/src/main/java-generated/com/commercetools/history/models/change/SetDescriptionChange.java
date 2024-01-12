@@ -16,7 +16,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
+ *   <li>Set Description on Cart Discounts.</li>
+ *   <li>Set Description on Categories.</li>
+ *   <li>Set Description on Discount Codes.</li>
+ *   <li>Set Description on Products.</li>
+ *   <li>Set Description on Product Discounts.</li>
+ *   <li>Set Description on Shopping Lists.</li>
+ *   <li>Set Description on States.</li>
  *   <li>Set Description on Tax Categories.</li>
+ *   <li>Set Description on Types.</li>
  *   <li>Set Description on Zones.</li>
  *  </ul>
  *

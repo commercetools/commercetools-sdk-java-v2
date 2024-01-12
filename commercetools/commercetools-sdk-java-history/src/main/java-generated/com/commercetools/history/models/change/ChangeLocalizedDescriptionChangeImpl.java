@@ -17,7 +17,11 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Change triggered by the Change Description update action.</p>
+ *  <p>Change triggered by the following update actions:</p>
+ *  <ul>
+ *   <li>Change Description on Product Types.</li>
+ *   <li>Change Description on Channels.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeLocalizedDescriptionChangeImpl implements ChangeLocalizedDescriptionChange, ModelBase {

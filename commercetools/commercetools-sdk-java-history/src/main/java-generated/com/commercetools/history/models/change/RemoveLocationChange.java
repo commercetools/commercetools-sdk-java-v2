@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     RemoveLocationChange removeLocationChange = RemoveLocationChange.builder()
  *             .change("{change}")
  *             .previousValue(previousValueBuilder -> previousValueBuilder)
+ *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -64,6 +65,15 @@ public interface RemoveLocationChange extends Change {
     public Location getPreviousValue();
 
     /**
+     *  <p>Value after the change.</p>
+     * @return nextValue
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("nextValue")
+    public Location getNextValue();
+
+    /**
      * set change
      * @param change value to be set
      */
@@ -76,6 +86,13 @@ public interface RemoveLocationChange extends Change {
      */
 
     public void setPreviousValue(final Location previousValue);
+
+    /**
+     *  <p>Value after the change.</p>
+     * @param nextValue value to be set
+     */
+
+    public void setNextValue(final Location nextValue);
 
     /**
      * factory method
@@ -94,6 +111,7 @@ public interface RemoveLocationChange extends Change {
         RemoveLocationChangeImpl instance = new RemoveLocationChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
         return instance;
     }
 
@@ -111,6 +129,7 @@ public interface RemoveLocationChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(
             com.commercetools.history.models.common.Location.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Location.deepCopy(template.getNextValue()));
         return instance;
     }
 

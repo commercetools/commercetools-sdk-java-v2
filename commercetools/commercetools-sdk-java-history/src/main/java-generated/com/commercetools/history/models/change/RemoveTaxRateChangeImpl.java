@@ -28,14 +28,18 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
 
     private com.commercetools.history.models.common.TaxRate previousValue;
 
+    private com.commercetools.history.models.common.TaxRate nextValue;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     RemoveTaxRateChangeImpl(@JsonProperty("change") final String change,
-            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxRate previousValue) {
+            @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxRate previousValue,
+            @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxRate nextValue) {
         this.change = change;
         this.previousValue = previousValue;
+        this.nextValue = nextValue;
         this.type = REMOVE_TAX_RATE_CHANGE;
     }
 
@@ -70,12 +74,24 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
         return this.previousValue;
     }
 
+    /**
+     *  <p>Value after the change.</p>
+     */
+
+    public com.commercetools.history.models.common.TaxRate getNextValue() {
+        return this.nextValue;
+    }
+
     public void setChange(final String change) {
         this.change = change;
     }
 
     public void setPreviousValue(final com.commercetools.history.models.common.TaxRate previousValue) {
         this.previousValue = previousValue;
+    }
+
+    public void setNextValue(final com.commercetools.history.models.common.TaxRate nextValue) {
+        this.nextValue = nextValue;
     }
 
     @Override
@@ -91,15 +107,21 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
         return new EqualsBuilder().append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .append(type, that.type)
                 .append(change, that.change)
                 .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(previousValue)
+                .append(nextValue)
+                .toHashCode();
     }
 
     @Override
@@ -107,6 +129,7 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("change", change)
                 .append("previousValue", previousValue)
+                .append("nextValue", nextValue)
                 .build();
     }
 

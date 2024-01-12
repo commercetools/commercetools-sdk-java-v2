@@ -22,7 +22,7 @@ public interface BusinessUnitStatus extends JsonEnum {
     */
     BusinessUnitStatus ACTIVE = BusinessUnitStatusEnum.ACTIVE;
     /**
-    	<p>The Business Unit cannot be used in Carts, Orders, Quote Requests, and Quotes and can only be edited using the <a href="/../api/associates-overview#through-the-general-endpoints">general endpoint</a>.
+    	<p>The Business Unit cannot be used in Carts, Orders, Quote Requests, and Quotes and can only be edited using the <a href="ctp:api:endpoint:/{projectKey}/me/business-units:POST">general endpoint</a>.
     	Status doesn't affect inheritance. Even if a parent unit is inactive, its children remain active and can inherit role assignments.</p>
 
     */

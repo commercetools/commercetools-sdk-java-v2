@@ -17,25 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeReferenceTypeId extends JsonEnum {
 
     /**
-    	<p>References a <a href="ctp:api:type:AssociateRole">AssociateRole</a>.</p>
-
-    */
-    AttributeReferenceTypeId ASSOCIATE_ROLE = AttributeReferenceTypeIdEnum.ASSOCIATE_ROLE;
-    /**
-    	<p>References a <a href="ctp:api:type:BusinessUnit">BusinessUnit</a>.</p>
-
-    */
-    AttributeReferenceTypeId BUSINESS_UNIT = AttributeReferenceTypeIdEnum.BUSINESS_UNIT;
-    /**
     	<p>References a <a href="ctp:api:type:Cart">Cart</a>.</p>
 
     */
     AttributeReferenceTypeId CART = AttributeReferenceTypeIdEnum.CART;
-    /**
-    	<p>References a <a href="ctp:api:type:CartDiscount">CartDiscount</a>.</p>
-
-    */
-    AttributeReferenceTypeId CART_DISCOUNT = AttributeReferenceTypeIdEnum.CART_DISCOUNT;
     /**
     	<p>References a <a href="ctp:api:type:Category">Category</a>.</p>
 
@@ -97,24 +82,9 @@ public interface AttributeReferenceTypeId extends JsonEnum {
      */
     enum AttributeReferenceTypeIdEnum implements AttributeReferenceTypeId {
         /**
-         * associate-role
-         */
-        ASSOCIATE_ROLE("associate-role"),
-
-        /**
-         * business-unit
-         */
-        BUSINESS_UNIT("business-unit"),
-
-        /**
          * cart
          */
         CART("cart"),
-
-        /**
-         * cart-discount
-         */
-        CART_DISCOUNT("cart-discount"),
 
         /**
          * category

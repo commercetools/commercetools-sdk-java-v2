@@ -79,6 +79,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MissingTaxRateForCountryErrorImpl.class, name = MissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MoneyOverflowErrorImpl.class, name = MoneyOverflowError.MONEY_OVERFLOW),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorImpl.class, name = NoMatchingProductDiscountFoundError.NO_MATCHING_PRODUCT_DISCOUNT_FOUND),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.NotEnabledErrorImpl.class, name = NotEnabledError.NOT_ENABLED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ObjectNotFoundErrorImpl.class, name = ObjectNotFoundError.OBJECT_NOT_FOUND),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.OutOfStockErrorImpl.class, name = OutOfStockError.OUT_OF_STOCK),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.OverCapacityErrorImpl.class, name = OverCapacityError.OVER_CAPACITY),
@@ -361,6 +362,10 @@ public interface ErrorObject {
         if (template instanceof com.commercetools.api.models.error.NoMatchingProductDiscountFoundError) {
             return com.commercetools.api.models.error.NoMatchingProductDiscountFoundError
                     .deepCopy((com.commercetools.api.models.error.NoMatchingProductDiscountFoundError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.NotEnabledError) {
+            return com.commercetools.api.models.error.NotEnabledError
+                    .deepCopy((com.commercetools.api.models.error.NotEnabledError) template);
         }
         if (template instanceof com.commercetools.api.models.error.ObjectNotFoundError) {
             return com.commercetools.api.models.error.ObjectNotFoundError
@@ -870,6 +875,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorBuilder noMatchingProductDiscountFoundBuilder() {
         return com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorBuilder.of();
+    }
+
+    /**
+     * builder for notEnabled subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.NotEnabledErrorBuilder notEnabledBuilder() {
+        return com.commercetools.api.models.error.NotEnabledErrorBuilder.of();
     }
 
     /**

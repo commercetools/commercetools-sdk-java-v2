@@ -26,7 +26,9 @@ public class RemoveLocationChangeTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { RemoveLocationChange.builder().change("change") },
                 new Object[] { RemoveLocationChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.LocationImpl()) } };
+                        .previousValue(new com.commercetools.history.models.common.LocationImpl()) },
+                new Object[] { RemoveLocationChange.builder()
+                        .nextValue(new com.commercetools.history.models.common.LocationImpl()) } };
     }
 
     @Test
@@ -41,6 +43,14 @@ public class RemoveLocationChangeTest {
         RemoveLocationChange value = RemoveLocationChange.of();
         value.setPreviousValue(new com.commercetools.history.models.common.LocationImpl());
         Assertions.assertThat(value.getPreviousValue())
+                .isEqualTo(new com.commercetools.history.models.common.LocationImpl());
+    }
+
+    @Test
+    public void nextValue() {
+        RemoveLocationChange value = RemoveLocationChange.of();
+        value.setNextValue(new com.commercetools.history.models.common.LocationImpl());
+        Assertions.assertThat(value.getNextValue())
                 .isEqualTo(new com.commercetools.history.models.common.LocationImpl());
     }
 }

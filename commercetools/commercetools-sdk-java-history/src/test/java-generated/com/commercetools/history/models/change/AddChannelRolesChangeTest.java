@@ -29,10 +29,10 @@ public class AddChannelRolesChangeTest {
         return new Object[][] { new Object[] { AddChannelRolesChange.builder().change("change") },
                 new Object[] { AddChannelRolesChange.builder()
                         .previousValue(Collections.singletonList(
-                            com.commercetools.history.models.common.ChannelRoleEnum.findEnum("InventorySupply"))) },
+                            com.commercetools.history.models.common.ChannelRole.findEnum("InventorySupply"))) },
                 new Object[] { AddChannelRolesChange.builder()
                         .nextValue(Collections.singletonList(
-                            com.commercetools.history.models.common.ChannelRoleEnum.findEnum("InventorySupply"))) } };
+                            com.commercetools.history.models.common.ChannelRole.findEnum("InventorySupply"))) } };
     }
 
     @Test
@@ -45,20 +45,20 @@ public class AddChannelRolesChangeTest {
     @Test
     public void previousValue() {
         AddChannelRolesChange value = AddChannelRolesChange.of();
-        value.setPreviousValue(Collections
-                .singletonList(com.commercetools.history.models.common.ChannelRoleEnum.findEnum("InventorySupply")));
+        value.setPreviousValue(
+            Collections.singletonList(com.commercetools.history.models.common.ChannelRole.findEnum("InventorySupply")));
         Assertions.assertThat(value.getPreviousValue())
                 .isEqualTo(Collections.singletonList(
-                    com.commercetools.history.models.common.ChannelRoleEnum.findEnum("InventorySupply")));
+                    com.commercetools.history.models.common.ChannelRole.findEnum("InventorySupply")));
     }
 
     @Test
     public void nextValue() {
         AddChannelRolesChange value = AddChannelRolesChange.of();
-        value.setNextValue(Collections
-                .singletonList(com.commercetools.history.models.common.ChannelRoleEnum.findEnum("InventorySupply")));
+        value.setNextValue(
+            Collections.singletonList(com.commercetools.history.models.common.ChannelRole.findEnum("InventorySupply")));
         Assertions.assertThat(value.getNextValue())
                 .isEqualTo(Collections.singletonList(
-                    com.commercetools.history.models.common.ChannelRoleEnum.findEnum("InventorySupply")));
+                    com.commercetools.history.models.common.ChannelRole.findEnum("InventorySupply")));
     }
 }

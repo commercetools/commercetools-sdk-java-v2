@@ -26,6 +26,8 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     private final Level responseLogEvent;
     private final Level defaultExceptionLogEvent;
     private final Map<Class<? extends Throwable>, Level> exceptionLogEvents;
+    private final ResponseLogFormatter responseLogFormatter;
+    private final ErrorLogFormatter errorLogFormatter;
 
     public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory) {
         this(factory, Level.INFO, Level.INFO);
@@ -34,17 +36,28 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory, final Level responseLogEvent,
             Level deprecationLogEvent) {
         this(factory, responseLogEvent, deprecationLogEvent, Level.ERROR,
-            Collections.singletonMap(ConcurrentModificationException.class, Level.INFO));
+            Collections.singletonMap(ConcurrentModificationException.class, Level.INFO), LogFormatter::formatResponse,
+            LogFormatter::formatError);
     }
 
     public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory, final Level responseLogEvent,
             final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
             final Map<Class<? extends Throwable>, Level> exceptionLogEvents) {
+        this(factory, responseLogEvent, deprecationLogEvent, defaultExceptionLogEvent, exceptionLogEvents,
+            LogFormatter::formatResponse, LogFormatter::formatError);
+    }
+
+    public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory, final Level responseLogEvent,
+            final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
+            final Map<Class<? extends Throwable>, Level> exceptionLogEvents,
+            final ResponseLogFormatter responseLogFormatter, final ErrorLogFormatter errorLogFormatter) {
         this.factory = factory;
         this.responseLogEvent = responseLogEvent;
         this.deprecationLogEvent = deprecationLogEvent;
         this.defaultExceptionLogEvent = defaultExceptionLogEvent;
         this.exceptionLogEvents = exceptionLogEvents;
+        this.responseLogFormatter = responseLogFormatter;
+        this.errorLogFormatter = errorLogFormatter;
     }
 
     @Override
@@ -105,14 +118,7 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                             .findFirst()
                             .map(Map.Entry::getValue)
                             .orElse(defaultExceptionLogEvent);
-                    responseLogger.log(level, () -> String
-                            .format("%s %s %s %s %s %s", request.getMethod().name(), request.getUrl(),
-                                errorResponse.getStatusCode(), executionTime,
-                                Optional.ofNullable(errorResponse.getHeaders().getFirst(ApiHttpHeaders.SERVER_TIMING))
-                                        .orElse("-"),
-                                Optional.ofNullable(
-                                    errorResponse.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID)).orElse("-"))
-                            .trim());
+                    responseLogger.log(level, () -> responseLogFormatter.format(request, errorResponse, executionTime));
                     final List<Map.Entry<String, String>> notices = errorResponse.getHeaders()
                             .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                     if (notices != null) {
@@ -133,7 +139,7 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                             .findFirst()
                             .map(Map.Entry::getValue)
                             .orElse(defaultExceptionLogEvent);
-                    responseLogger.log(level, throwable::getCause, throwable);
+                    responseLogger.log(level, () -> errorLogFormatter.format(request, cause, executionTime), cause);
                 }
                 requestContext.ifPresent(c -> MDC.clear());
             }
@@ -141,11 +147,8 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                 final Optional<MDCContext> responseContext = Optional.ofNullable(response.getContext(MDCContext.class));
                 responseContext.ifPresent(c -> MDC.setContextMap(c.getValue()));
 
-                responseLogger.log(responseLogEvent, () -> String.format("%s %s %s %s %s %s",
-                    request.getMethod().name(), request.getUrl(), response.getStatusCode(), executionTime,
-                    Optional.ofNullable(response.getHeaders().getFirst(ApiHttpHeaders.SERVER_TIMING)).orElse("-"),
-                    Optional.ofNullable(response.getHeaders().getFirst(ApiHttpHeaders.X_CORRELATION_ID)).orElse("-"))
-                        .trim());
+                responseLogger.log(responseLogEvent,
+                    () -> responseLogFormatter.format(request, response, executionTime));
                 final List<Map.Entry<String, String>> notices = response.getHeaders()
                         .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                 if (notices != null) {

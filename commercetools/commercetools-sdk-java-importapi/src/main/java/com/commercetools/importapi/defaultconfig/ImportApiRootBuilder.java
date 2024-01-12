@@ -389,6 +389,15 @@ public class ImportApiRootBuilder {
         return this;
     }
 
+    public ImportApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
+            final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
+            final Map<Class<? extends Throwable>, Level> exceptionLogEvents,
+            final ResponseLogFormatter responseLogFormatter, final ErrorLogFormatter errorLogFormatter) {
+        return with(clientBuilder -> clientBuilder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent,
+            deprecationLogEvent, defaultExceptionLogEvent, exceptionLogEvents, responseLogFormatter,
+            errorLogFormatter));
+    }
+
     public ImportApiRootBuilder withApiBaseUrl(String apiBaseUrl) {
         builder.withApiBaseUrl(apiBaseUrl);
 

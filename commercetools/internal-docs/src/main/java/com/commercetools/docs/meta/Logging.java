@@ -3,7 +3,9 @@ package com.commercetools.docs.meta;
 
 import java.util.Map;
 
+import io.vrap.rmf.base.client.http.ErrorLogFormatter;
 import io.vrap.rmf.base.client.http.InternalLoggerFactory;
+import io.vrap.rmf.base.client.http.ResponseLogFormatter;
 
 import org.slf4j.event.Level;
 
@@ -17,7 +19,7 @@ import org.slf4j.event.Level;
  *
  * <p>The {@link io.vrap.rmf.base.client.ClientBuilder} allows the customization of the log levels used for different events. By default responses
  * will be logged with {@link org.slf4j.event.Level#INFO} and errors with {@link org.slf4j.event.Level#ERROR}. The
- * {@link io.vrap.rmf.base.client.ClientBuilder#withInternalLoggerFactory(InternalLoggerFactory, Level, Level, Level, Map)} method can be used
+ * {@link io.vrap.rmf.base.client.ClientBuilder#withInternalLoggerFactory(InternalLoggerFactory, Level, Level, Level, Map, ResponseLogFormatter, ErrorLogFormatter)} method can be used
  * to change these defaults. Please see also {@link io.vrap.rmf.base.client.http.InternalLoggerMiddleware} for further details</p>
  *
  * {@include.example example.ExamplesTest#loggingConfiguration}

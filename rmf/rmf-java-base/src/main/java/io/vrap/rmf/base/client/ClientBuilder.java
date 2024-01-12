@@ -1382,6 +1382,24 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
     }
 
     /**
+     * @param internalLoggerFactory {@link InternalLoggerFactory} creates the logger for request & responses
+     * @param responseLogEvent {@link Level} for logging responses.
+     * @param deprecationLogEvent {@link Level} for logging {@link ApiHttpHeaders#X_DEPRECATION_NOTICE}
+     * @param defaultExceptionLogEvent {@link Level} for logging errors
+     * @param exceptionLogEvents {@link Level} for logging by exception class
+     * @param responseLogFormatter {@link ResponseLogFormatter} response log formatter
+     * @return ClientBuilder instance
+     */
+    public ClientBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
+            final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
+            final Map<Class<? extends Throwable>, Level> exceptionLogEvents,
+            final ResponseLogFormatter responseLogFormatter, final ErrorLogFormatter errorLogFormatter) {
+        return withInternalLoggerMiddleware(
+            InternalLoggerMiddleware.of(internalLoggerFactory, responseLogEvent, deprecationLogEvent,
+                defaultExceptionLogEvent, exceptionLogEvents, responseLogFormatter, errorLogFormatter));
+    }
+
+    /**
      * @param apiBaseUrl base URI for calling the API
      * @return ClientBuilder instance
      */

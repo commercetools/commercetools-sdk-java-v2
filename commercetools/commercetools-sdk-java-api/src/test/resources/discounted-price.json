@@ -15,7 +15,10 @@
         {
             "discount": {
                 "typeId": "cart-discount",
-                "id": "cart"
+                "id": "cart",
+                "obj": {
+                    "id": "cart"
+                }
             },
             "discountedAmount": {
                 "type": "centPrecision",

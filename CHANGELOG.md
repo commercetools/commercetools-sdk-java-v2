@@ -1,4 +1,37 @@
 
+# 17.5.0 (2024-01-22)
+
+## What's Changed
+* add option to customise log formats by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/548
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/547
+* fix RetryHandler class cast exception by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/556
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartDiscountCreatedMessage`
+- added type `CartDiscountDeletedMessage`
+- added type `CartDiscountStoreAddedMessage`
+- added type `CartDiscountStoreRemovedMessage`
+- added type `CartDiscountStoresSetMessage`
+- added type `CartDiscountCreatedMessagePayload`
+- added type `CartDiscountDeletedMessagePayload`
+- added type `CartDiscountStoreAddedMessagePayload`
+- added type `CartDiscountStoreRemovedMessagePayload`
+- added type `CartDiscountStoresSetMessagePayload`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.4.0...17.5.0
+
+# 17.5.0-alpha.1 (2024-01-12)
+
+## What's Changed
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.4.0...17.5.0-alpha.1
+
 # 17.4.0 (2024-01-11)
 
 ## What's Changed

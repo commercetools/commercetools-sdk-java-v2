@@ -10,6 +10,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 import com.commercetools.api.client.error.ConcurrentModificationException;
+import com.spotify.futures.CompletableFutures;
 
 import io.vrap.rmf.base.client.*;
 
@@ -41,9 +42,7 @@ final class ConcurrentModificationDeleteRetryHandler<T extends ApiDeleteMethod<T
             return f;
         };
 
-        return request.execute()
-                .handle((r, ex) -> (ex == null) ? this : fn.apply(ex))
-                .thenCompose(x -> (CompletableFuture<ApiHttpResponse<TResult>>) x);
+        return CompletableFutures.exceptionallyCompose(request.execute(), fn).toCompletableFuture();
     }
 
     @Override

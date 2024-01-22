@@ -30,7 +30,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryReferenceImpl.class)
-public interface InventoryEntryReference extends Reference, com.commercetools.api.models.Identifiable<InventoryEntry> {
+public interface InventoryEntryReference extends Reference, com.commercetools.api.models.Identifiable<InventoryEntry>,
+        com.commercetools.api.models.IdentifiableObjHolder<InventoryEntry> {
 
     /**
      * discriminator value for InventoryEntryReference

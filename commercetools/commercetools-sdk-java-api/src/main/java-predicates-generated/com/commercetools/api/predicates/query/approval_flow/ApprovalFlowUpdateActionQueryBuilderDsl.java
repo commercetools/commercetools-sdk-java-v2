@@ -33,4 +33,18 @@ public class ApprovalFlowUpdateActionQueryBuilderDsl {
             fn.apply(com.commercetools.api.predicates.query.approval_flow.ApprovalFlowRejectActionQueryBuilderDsl.of()),
             ApprovalFlowUpdateActionQueryBuilderDsl::of);
     }
+
+    public CombinationQueryPredicate<ApprovalFlowUpdateActionQueryBuilderDsl> asSetCustomField(
+            Function<com.commercetools.api.predicates.query.approval_flow.ApprovalFlowSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.approval_flow.ApprovalFlowSetCustomFieldActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.approval_flow.ApprovalFlowSetCustomFieldActionQueryBuilderDsl.of()),
+            ApprovalFlowUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ApprovalFlowUpdateActionQueryBuilderDsl> asSetCustomType(
+            Function<com.commercetools.api.predicates.query.approval_flow.ApprovalFlowSetCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.approval_flow.ApprovalFlowSetCustomTypeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.approval_flow.ApprovalFlowSetCustomTypeActionQueryBuilderDsl.of()),
+            ApprovalFlowUpdateActionQueryBuilderDsl::of);
+    }
 }

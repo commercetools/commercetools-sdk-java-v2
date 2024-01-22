@@ -30,7 +30,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodReferenceImpl.class)
-public interface ShippingMethodReference extends Reference, com.commercetools.api.models.Identifiable<ShippingMethod> {
+public interface ShippingMethodReference extends Reference, com.commercetools.api.models.Identifiable<ShippingMethod>,
+        com.commercetools.api.models.IdentifiableObjHolder<ShippingMethod> {
 
     /**
      * discriminator value for ShippingMethodReference

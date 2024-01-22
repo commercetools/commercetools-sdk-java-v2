@@ -655,6 +655,15 @@ public class ApiRootBuilder {
             deprecationLogEvent, defaultExceptionLogEvent, exceptionLogEvents));
     }
 
+    public ApiRootBuilder withInternalLoggerFactory(final InternalLoggerFactory internalLoggerFactory,
+            final Level responseLogEvent, final Level deprecationLogEvent, final Level defaultExceptionLogEvent,
+            final Map<Class<? extends Throwable>, Level> exceptionLogEvents,
+            final ResponseLogFormatter responseLogFormatter, final ErrorLogFormatter errorLogFormatter) {
+        return with(clientBuilder -> clientBuilder.withInternalLoggerFactory(internalLoggerFactory, responseLogEvent,
+            deprecationLogEvent, defaultExceptionLogEvent, exceptionLogEvents, responseLogFormatter,
+            errorLogFormatter));
+    }
+
     public ApiRootBuilder withApiBaseUrl(String apiBaseUrl) {
         return with(clientBuilder -> clientBuilder.withApiBaseUrl(apiBaseUrl));
     }

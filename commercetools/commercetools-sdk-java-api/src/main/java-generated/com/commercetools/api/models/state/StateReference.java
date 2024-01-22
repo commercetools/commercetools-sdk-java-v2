@@ -30,7 +30,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateReferenceImpl.class)
-public interface StateReference extends Reference, com.commercetools.api.models.Identifiable<State> {
+public interface StateReference extends Reference, com.commercetools.api.models.Identifiable<State>,
+        com.commercetools.api.models.IdentifiableObjHolder<State> {
 
     /**
      * discriminator value for StateReference

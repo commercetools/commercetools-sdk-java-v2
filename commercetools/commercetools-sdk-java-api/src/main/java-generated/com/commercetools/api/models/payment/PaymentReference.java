@@ -30,7 +30,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentReferenceImpl.class)
-public interface PaymentReference extends Reference, com.commercetools.api.models.Identifiable<Payment> {
+public interface PaymentReference extends Reference, com.commercetools.api.models.Identifiable<Payment>,
+        com.commercetools.api.models.IdentifiableObjHolder<Payment> {
 
     /**
      * discriminator value for PaymentReference

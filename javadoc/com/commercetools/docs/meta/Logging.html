@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 
  <p>The <a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html" title="class in io.vrap.rmf.base.client"><code>ClientBuilder</code></a> allows the customization of the log levels used for different events. By default responses
  will be logged with <code>Level.INFO</code> and errors with <code>Level.ERROR</code>. The
- <a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html#withInternalLoggerFactory(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level,org.slf4j.event.Level,java.util.Map)"><code>ClientBuilder.withInternalLoggerFactory(InternalLoggerFactory, Level, Level, Level, Map)</code></a> method can be used
+ <a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html#withInternalLoggerFactory(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level,org.slf4j.event.Level,java.util.Map,io.vrap.rmf.base.client.http.ResponseLogFormatter,io.vrap.rmf.base.client.http.ErrorLogFormatter)"><code>ClientBuilder.withInternalLoggerFactory(InternalLoggerFactory, Level, Level, Level, Map, ResponseLogFormatter, ErrorLogFormatter)</code></a> method can be used
  to change these defaults. Please see also <a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http"><code>InternalLoggerMiddleware</code></a> for further details</p>
 
  <div id="example-ExamplesTest-loggingConfiguration%s" class=code-example><pre><code class='java'>ApiRootBuilder.of()

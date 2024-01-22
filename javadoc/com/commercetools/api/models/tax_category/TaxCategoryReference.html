@@ -73,11 +73,11 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&gt;</code>, <code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code>, <code><a href="../common/ReferenceMixin.html" title="interface in com.commercetools.api.models.common">ReferenceMixin</a></code></dd>
+<dd><code><a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&gt;</code>, <code><a href="../IdentifiableObjHolder.html" title="interface in com.commercetools.api.models">IdentifiableObjHolder</a>&lt;<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&gt;</code>, <code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code>, <code><a href="../common/ReferenceMixin.html" title="interface in com.commercetools.api.models.common">ReferenceMixin</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">TaxCategoryReference</span><span class="extends-implements">
-extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>, <a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&gt;</span></div>
+extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>, <a href="../Identifiable.html" title="interface in com.commercetools.api.models">Identifiable</a>&lt;<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&gt;, <a href="../IdentifiableObjHolder.html" title="interface in com.commercetools.api.models">IdentifiableObjHolder</a>&lt;<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&gt;</span></div>
 <div class="block"><p>Reference to a TaxCategory.</p>
 
  <hr>
@@ -225,6 +225,8 @@ extends <a href="../common/Reference.html" title="interface in com.commercetools
 </span><span class="return-type">@Valid <a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a></span>&nbsp;<span class="element-name">getObj</span>()</div>
 <div class="block"><p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="../IdentifiableObjHolder.html#getObj()">getObj</a></code>&nbsp;in interface&nbsp;<code><a href="../IdentifiableObjHolder.html" title="interface in com.commercetools.api.models">IdentifiableObjHolder</a>&lt;<a href="TaxCategory.html" title="interface in com.commercetools.api.models.tax_category">TaxCategory</a>&gt;</code></dd>
 <dt>Returns:</dt>
 <dd>obj</dd>
 </dl>

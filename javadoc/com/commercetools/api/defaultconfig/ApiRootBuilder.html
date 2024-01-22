@@ -363,56 +363,56 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;,<wbr>org.slf4j.event.Level&gt;&nbsp;exceptionLogEvents)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withInternalLoggerMiddleware(io.vrap.rmf.base.client.http.InternalLoggerMiddleware)" class="member-name-link">withInternalLoggerMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a>&nbsp;internalLoggerMiddleware)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withInternalLoggerFactory(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level,org.slf4j.event.Level,java.util.Map,io.vrap.rmf.base.client.http.ResponseLogFormatter,io.vrap.rmf.base.client.http.ErrorLogFormatter)" class="member-name-link">withInternalLoggerFactory</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
+ org.slf4j.event.Level&nbsp;responseLogEvent,
+ org.slf4j.event.Level&nbsp;deprecationLogEvent,
+ org.slf4j.event.Level&nbsp;defaultExceptionLogEvent,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;,<wbr>org.slf4j.event.Level&gt;&nbsp;exceptionLogEvents,
+ <a href="../../../../io/vrap/rmf/base/client/http/ResponseLogFormatter.html" title="interface in io.vrap.rmf.base.client.http">ResponseLogFormatter</a>&nbsp;responseLogFormatter,
+ <a href="../../../../io/vrap/rmf/base/client/http/ErrorLogFormatter.html" title="interface in io.vrap.rmf.base.client.http">ErrorLogFormatter</a>&nbsp;errorLogFormatter)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMiddleware(io.vrap.rmf.base.client.http.Middleware,io.vrap.rmf.base.client.http.Middleware...)" class="member-name-link">withMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withInternalLoggerMiddleware(io.vrap.rmf.base.client.http.InternalLoggerMiddleware)" class="member-name-link">withInternalLoggerMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerMiddleware.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerMiddleware</a>&nbsp;internalLoggerMiddleware)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMiddleware(io.vrap.rmf.base.client.http.Middleware,io.vrap.rmf.base.client.http.Middleware...)" class="member-name-link">withMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&nbsp;middleware,
  <a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>...&nbsp;middlewares)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMiddlewares(java.util.List)" class="member-name-link">withMiddlewares</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withOAuthExecutorService(java.util.concurrent.ExecutorService)" class="member-name-link">withOAuthExecutorService</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMiddlewares(java.util.List)" class="member-name-link">withMiddlewares</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withOAuthExecutorService(java.util.function.Supplier)" class="member-name-link">withOAuthExecutorService</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&gt;&nbsp;executorService)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withOAuthExecutorService(java.util.concurrent.ExecutorService)" class="member-name-link">withOAuthExecutorService</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withOAuthMiddleware(io.vrap.rmf.base.client.http.OAuthMiddleware)" class="member-name-link">withOAuthMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&nbsp;oAuthMiddleware)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withOAuthExecutorService(java.util.function.Supplier)" class="member-name-link">withOAuthExecutorService</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&gt;&nbsp;executorService)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withOAuthMiddleware(java.util.function.Supplier)" class="member-name-link">withOAuthMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&gt;&nbsp;oAuthMiddleware)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withOAuthMiddleware(io.vrap.rmf.base.client.http.OAuthMiddleware)" class="member-name-link">withOAuthMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&nbsp;oAuthMiddleware)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withoutAuthCircuitBreaker()" class="member-name-link">withoutAuthCircuitBreaker</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withOAuthMiddleware(java.util.function.Supplier)" class="member-name-link">withOAuthMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/OAuthMiddleware.html" title="interface in io.vrap.rmf.base.client.http">OAuthMiddleware</a>&gt;&nbsp;oAuthMiddleware)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPolicies(io.vrap.rmf.base.client.http.PolicyBuilder)" class="member-name-link">withPolicies</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/PolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">PolicyBuilder</a>&nbsp;policyBuilder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withoutAuthCircuitBreaker()" class="member-name-link">withoutAuthCircuitBreaker</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPolicies(java.util.function.Function)" class="member-name-link">withPolicies</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/PolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">PolicyBuilder</a>,<wbr><a href="../../../../io/vrap/rmf/base/client/http/PolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">PolicyBuilder</a>&gt;&nbsp;fn)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPolicies(io.vrap.rmf.base.client.http.PolicyBuilder)" class="member-name-link">withPolicies</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/PolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">PolicyBuilder</a>&nbsp;policyBuilder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPolicyMiddleware(io.vrap.rmf.base.client.http.PolicyMiddleware)" class="member-name-link">withPolicyMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http">PolicyMiddleware</a>&nbsp;policyMiddleware)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPolicies(java.util.function.Function)" class="member-name-link">withPolicies</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/PolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">PolicyBuilder</a>,<wbr><a href="../../../../io/vrap/rmf/base/client/http/PolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">PolicyBuilder</a>&gt;&nbsp;fn)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPolicyMiddleware(java.util.function.Supplier)" class="member-name-link">withPolicyMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http">PolicyMiddleware</a>&gt;&nbsp;policyMiddleware)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPolicyMiddleware(io.vrap.rmf.base.client.http.PolicyMiddleware)" class="member-name-link">withPolicyMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http">PolicyMiddleware</a>&nbsp;policyMiddleware)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withProjectKey(java.lang.String)" class="member-name-link">withProjectKey</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPolicyMiddleware(java.util.function.Supplier)" class="member-name-link">withPolicyMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/PolicyMiddleware.html" title="interface in io.vrap.rmf.base.client.http">PolicyMiddleware</a>&gt;&nbsp;policyMiddleware)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(int,java.time.Duration)" class="member-name-link">withQueueMiddleware</a><wbr>(int&nbsp;maxRequests,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
-</div>
-</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withProjectKey(java.lang.String)" class="member-name-link">withProjectKey</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(dev.failsafe.spi.Scheduler,int,java.time.Duration)" class="member-name-link">withQueueMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
- int&nbsp;maxRequests,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(int,java.time.Duration)" class="member-name-link">withQueueMiddleware</a><wbr>(int&nbsp;maxRequests,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
@@ -420,23 +420,7 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(io.vrap.rmf.base.client.http.QueueRequestMiddleware)" class="member-name-link">withQueueMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/QueueRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">QueueRequestMiddleware</a>&nbsp;queueMiddleware)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
-</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(java.util.concurrent.ExecutorService,int,java.time.Duration)" class="member-name-link">withQueueMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
- int&nbsp;maxRequests,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
-</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.time.Duration)" class="member-name-link">withQueueMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(dev.failsafe.spi.Scheduler,int,java.time.Duration)" class="member-name-link">withQueueMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRequests,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
@@ -445,69 +429,46 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(java.util.function.Supplier)" class="member-name-link">withQueueMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/QueueRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">QueueRequestMiddleware</a>&gt;&nbsp;queueMiddleware)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(io.vrap.rmf.base.client.http.QueueRequestMiddleware)" class="member-name-link">withQueueMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/QueueRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">QueueRequestMiddleware</a>&nbsp;queueMiddleware)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
 </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(int)" class="member-name-link">withRetryMiddleware</a><wbr>(int&nbsp;maxRetries)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(java.util.concurrent.ExecutorService,int,java.time.Duration)" class="member-name-link">withQueueMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRequests,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
 </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(int&nbsp;maxRetries,
- long&nbsp;delay,
- long&nbsp;maxDelay,
- <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.time.Duration)" class="member-name-link">withQueueMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRequests,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" title="class or interface in java.time" class="external-link">Duration</a>&nbsp;maxWaitTime)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
 </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(int&nbsp;maxRetries,
- long&nbsp;delay,
- long&nbsp;maxDelay,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures,
- <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withQueueMiddleware(java.util.function.Supplier)" class="member-name-link">withQueueMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/QueueRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">QueueRequestMiddleware</a>&gt;&nbsp;queueMiddleware)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
 </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(int,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(int&nbsp;maxRetries,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(int)" class="member-name-link">withRetryMiddleware</a><wbr>(int&nbsp;maxRetries)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
 </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(int,java.util.List,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(int&nbsp;maxRetries,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
-</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(dev.failsafe.spi.Scheduler,int)" class="member-name-link">withRetryMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
- int&nbsp;maxRetries)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
-</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
- int&nbsp;maxRetries,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
@@ -517,8 +478,7 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
- int&nbsp;maxRetries,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
@@ -530,8 +490,7 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
- int&nbsp;maxRetries,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(int,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
@@ -539,8 +498,7 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,java.util.List,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
- int&nbsp;maxRetries,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(int,java.util.List,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
@@ -549,65 +507,7 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(io.vrap.rmf.base.client.http.RetryRequestMiddleware)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&nbsp;retryMiddleware)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
-</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ExecutorService,int)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
- int&nbsp;maxRetries)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
-</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
- int&nbsp;maxRetries,
- long&nbsp;delay,
- long&nbsp;maxDelay,
- <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
-</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ExecutorService,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
- int&nbsp;maxRetries,
- long&nbsp;delay,
- long&nbsp;maxDelay,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures,
- <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
-</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ExecutorService,int,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
- int&nbsp;maxRetries,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
-</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ExecutorService,int,java.util.List,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
- int&nbsp;maxRetries,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
-<div class="block"><span class="deprecated-label">Deprecated.</span>
-<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
-</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(dev.failsafe.spi.Scheduler,int)" class="member-name-link">withRetryMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
@@ -615,7 +515,7 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
@@ -626,7 +526,7 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  long&nbsp;delay,
  long&nbsp;maxDelay,
@@ -639,7 +539,7 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
@@ -648,7 +548,7 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.util.List,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(dev.failsafe.spi.Scheduler,int,java.util.List,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(dev.failsafe.spi.Scheduler&nbsp;scheduler,
  int&nbsp;maxRetries,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
@@ -658,36 +558,145 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.function.Supplier)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&gt;&nbsp;retryMiddleware)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(io.vrap.rmf.base.client.http.RetryRequestMiddleware)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&nbsp;retryMiddleware)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
 <div class="block"><span class="deprecated-label">Deprecated.</span>
 <div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
 </div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSerializer(io.vrap.rmf.base.client.ResponseSerializer)" class="member-name-link">withSerializer</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ExecutorService,int)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRetries)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRetries,
+ long&nbsp;delay,
+ long&nbsp;maxDelay,
+ <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ExecutorService,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRetries,
+ long&nbsp;delay,
+ long&nbsp;maxDelay,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures,
+ <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ExecutorService,int,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRetries,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ExecutorService,int,java.util.List,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRetries,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRetries)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,long,long,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRetries,
+ long&nbsp;delay,
+ long&nbsp;maxDelay,
+ <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,long,long,java.util.List,java.util.List,io.vrap.rmf.base.client.http.FailsafeRetryPolicyBuilderOptions)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRetries,
+ long&nbsp;delay,
+ long&nbsp;maxDelay,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures,
+ <a href="../../../../io/vrap/rmf/base/client/http/FailsafeRetryPolicyBuilderOptions.html" title="interface in io.vrap.rmf.base.client.http">FailsafeRetryPolicyBuilderOptions</a>&nbsp;fn)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRetries,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
+</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.concurrent.ScheduledExecutorService,int,java.util.List,java.util.List)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ScheduledExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ScheduledExecutorService</a>&nbsp;executorService,
+ int&nbsp;maxRetries,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;statusCodes,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;&gt;&nbsp;failures)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
+</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#withRetryMiddleware(java.util.function.Supplier)" class="member-name-link">withRetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/RetryRequestMiddleware.html" title="interface in io.vrap.rmf.base.client.http">RetryRequestMiddleware</a>&gt;&nbsp;retryMiddleware)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span>
+<div class="deprecation-comment">use <a href="#withPolicies(java.util.function.Function)"><code>withPolicies(Function)</code></a> instead</div>
+</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSerializer(java.util.function.Supplier)" class="member-name-link">withSerializer</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&gt;&nbsp;serializer)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSerializer(io.vrap.rmf.base.client.ResponseSerializer)" class="member-name-link">withSerializer</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withStaticTokenFlow(io.vrap.rmf.base.client.AuthenticationToken)" class="member-name-link">withStaticTokenFlow</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSerializer(java.util.function.Supplier)" class="member-name-link">withSerializer</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&gt;&nbsp;serializer)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTelemetryMiddleware(io.vrap.rmf.base.client.http.TelemetryMiddleware)" class="member-name-link">withTelemetryMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/TelemetryMiddleware.html" title="interface in io.vrap.rmf.base.client.http">TelemetryMiddleware</a>&nbsp;telemetryMiddleware)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withStaticTokenFlow(io.vrap.rmf.base.client.AuthenticationToken)" class="member-name-link">withStaticTokenFlow</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/AuthenticationToken.html" title="class in io.vrap.rmf.base.client">AuthenticationToken</a>&nbsp;token)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTelemetryMiddleware(java.util.function.Supplier)" class="member-name-link">withTelemetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/TelemetryMiddleware.html" title="interface in io.vrap.rmf.base.client.http">TelemetryMiddleware</a>&gt;&nbsp;telemetryMiddleware)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTelemetryMiddleware(io.vrap.rmf.base.client.http.TelemetryMiddleware)" class="member-name-link">withTelemetryMiddleware</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/http/TelemetryMiddleware.html" title="interface in io.vrap.rmf.base.client.http">TelemetryMiddleware</a>&nbsp;telemetryMiddleware)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTokenSupplier(io.vrap.rmf.base.client.oauth2.TokenSupplier)" class="member-name-link">withTokenSupplier</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTelemetryMiddleware(java.util.function.Supplier)" class="member-name-link">withTelemetryMiddleware</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/http/TelemetryMiddleware.html" title="interface in io.vrap.rmf.base.client.http">TelemetryMiddleware</a>&gt;&nbsp;telemetryMiddleware)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTokenSupplier(java.util.function.Supplier)" class="member-name-link">withTokenSupplier</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&gt;&nbsp;tokenSupplier)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTokenSupplier(io.vrap.rmf.base.client.oauth2.TokenSupplier)" class="member-name-link">withTokenSupplier</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&nbsp;tokenSupplier)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withUserAgentSupplier(java.util.function.Supplier)" class="member-name-link">withUserAgentSupplier</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;userAgentSupplier)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTokenSupplier(java.util.function.Supplier)" class="member-name-link">withTokenSupplier</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="../../../../io/vrap/rmf/base/client/oauth2/TokenSupplier.html" title="interface in io.vrap.rmf.base.client.oauth2">TokenSupplier</a>&gt;&nbsp;tokenSupplier)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withUserAgentSupplier(java.util.function.Supplier)" class="member-name-link">withUserAgentSupplier</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;userAgentSupplier)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -1537,6 +1546,18 @@ loadScripts(document, 'script');</script>
  org.slf4j.event.Level&nbsp;deprecationLogEvent,
  org.slf4j.event.Level&nbsp;defaultExceptionLogEvent,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;,<wbr>org.slf4j.event.Level&gt;&nbsp;exceptionLogEvents)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="withInternalLoggerFactory(io.vrap.rmf.base.client.http.InternalLoggerFactory,org.slf4j.event.Level,org.slf4j.event.Level,org.slf4j.event.Level,java.util.Map,io.vrap.rmf.base.client.http.ResponseLogFormatter,io.vrap.rmf.base.client.http.ErrorLogFormatter)">
+<h3>withInternalLoggerFactory</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ApiRootBuilder.html" title="class in com.commercetools.api.defaultconfig">ApiRootBuilder</a></span>&nbsp;<span class="element-name">withInternalLoggerFactory</span><wbr><span class="parameters">(<a href="../../../../io/vrap/rmf/base/client/http/InternalLoggerFactory.html" title="interface in io.vrap.rmf.base.client.http">InternalLoggerFactory</a>&nbsp;internalLoggerFactory,
+ org.slf4j.event.Level&nbsp;responseLogEvent,
+ org.slf4j.event.Level&nbsp;deprecationLogEvent,
+ org.slf4j.event.Level&nbsp;defaultExceptionLogEvent,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" title="class or interface in java.util" class="external-link">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html" title="class or interface in java.lang" class="external-link">Throwable</a>&gt;,<wbr>org.slf4j.event.Level&gt;&nbsp;exceptionLogEvents,
+ <a href="../../../../io/vrap/rmf/base/client/http/ResponseLogFormatter.html" title="interface in io.vrap.rmf.base.client.http">ResponseLogFormatter</a>&nbsp;responseLogFormatter,
+ <a href="../../../../io/vrap/rmf/base/client/http/ErrorLogFormatter.html" title="interface in io.vrap.rmf.base.client.http">ErrorLogFormatter</a>&nbsp;errorLogFormatter)</span></div>
 </section>
 </li>
 <li>

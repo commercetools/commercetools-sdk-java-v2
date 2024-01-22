@@ -31,7 +31,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionReferenceImpl.class)
 public interface ProductSelectionReference
-        extends Reference, com.commercetools.api.models.Identifiable<ProductSelection> {
+        extends Reference, com.commercetools.api.models.Identifiable<ProductSelection>,
+        com.commercetools.api.models.IdentifiableObjHolder<ProductSelection> {
 
     /**
      * discriminator value for ProductSelectionReference

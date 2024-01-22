@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * CustomerSetFirstNameAction
+ *  <p>Setting the first name of the Customer produces the CustomeFirstNameSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

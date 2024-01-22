@@ -22,12 +22,12 @@ public interface CartState extends JsonEnum {
     */
     CartState ACTIVE = CartStateEnum.ACTIVE;
     /**
-    	<p>An anonymous Cart was merged into a Customer's Cart on <a href="/../api/projects/customers#authenticate-sign-in-customer">sign-in</a>, and no further operations are allowed on the Cart.</p>
+    	<p>An anonymous Cart was merged into a Customer's Cart on <a href="ctp:api:endpoint:/{projectKey}/login:POST">sign-in</a>, and no further operations are allowed on the Cart.</p>
 
     */
     CartState MERGED = CartStateEnum.MERGED;
     /**
-    	<p>A Cart was <a href="/../api/projects/orders#create-order-from-cart">ordered</a>, and no further operations are allowed on the Cart.</p>
+    	<p>A Cart was <a href="ctp:api:endpoint:/{projectKey}/orders:POST">ordered</a>, and no further operations are allowed on the Cart.</p>
 
     */
     CartState ORDERED = CartStateEnum.ORDERED;

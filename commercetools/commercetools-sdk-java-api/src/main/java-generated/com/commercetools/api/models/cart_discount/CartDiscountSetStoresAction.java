@@ -17,6 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>If a referenced Store does not exist, a ReferencedResourceNotFound error is returned.</p>
+ *  <p>This action generates a CartDiscountStoresSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

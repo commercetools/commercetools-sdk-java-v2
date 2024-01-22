@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderSearchStatus extends JsonEnum {
 
     /**
-    	<p>indicates that the <a href="/../api/projects/order-search#search-orders">Search Orders</a> endpoint is fully operational.</p>
+    	<p>indicates that the <a href="ctp:api:endpoint:/{projectKey}/orders/search:POST">Search Orders</a> endpoint is fully operational.</p>
 
     */
     OrderSearchStatus ACTIVATED = OrderSearchStatusEnum.ACTIVATED;

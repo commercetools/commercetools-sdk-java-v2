@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Setting the title of the Customer produces the CustomerTitleSetMessage.</p>
+ *  <p>Setting the title of the Customer produces the CustomerTitleSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetTitleActionImpl implements CustomerSetTitleAction, ModelBase {

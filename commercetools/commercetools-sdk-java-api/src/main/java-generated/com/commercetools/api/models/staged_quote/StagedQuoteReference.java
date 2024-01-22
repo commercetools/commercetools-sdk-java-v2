@@ -29,7 +29,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedQuoteReferenceImpl.class)
-public interface StagedQuoteReference extends Reference, com.commercetools.api.models.Identifiable<StagedQuote> {
+public interface StagedQuoteReference extends Reference, com.commercetools.api.models.Identifiable<StagedQuote>,
+        com.commercetools.api.models.IdentifiableObjHolder<StagedQuote> {
 
     /**
      * discriminator value for StagedQuoteReference

@@ -107,7 +107,7 @@ types:
   CustomObjectPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<CustomObject>'
   CustomObjectReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<CustomObject>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<CustomObject>, com.commercetools.api.models.IdentifiableObjHolder<CustomObject>'
   Customer:
     (java-extends): 'CustomerMixin, com.commercetools.api.models.DomainResource<Customer>, com.commercetools.api.models.Referencable<Customer>, com.commercetools.api.models.ResourceIdentifiable<Customer>, com.commercetools.api.models.Customizable<Customer>, com.commercetools.api.models.WithKey'
     (java-mixin): |
@@ -123,7 +123,7 @@ types:
   CustomerPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Customer>'
   CustomerReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Customer>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Customer>, com.commercetools.api.models.IdentifiableObjHolder<Customer>'
   CustomerResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Customer>'
   CustomerUpdate:
@@ -157,7 +157,7 @@ types:
   CustomerGroupPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<CustomerGroup>'
   CustomerGroupReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<CustomerGroup>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<CustomerGroup>, com.commercetools.api.models.IdentifiableObjHolder<CustomerGroup>'
   CustomerGroupResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<CustomerGroup>'
   CustomerGroupUpdate:
@@ -190,7 +190,7 @@ types:
   DiscountCodePagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<DiscountCode>'
   DiscountCodeReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<DiscountCode>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<DiscountCode>, com.commercetools.api.models.IdentifiableObjHolder<DiscountCode>'
   DiscountCodeResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<DiscountCode>'
   DiscountCodeUpdate:
@@ -230,7 +230,7 @@ types:
   InventoryPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<InventoryEntry>'
   InventoryEntryReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<InventoryEntry>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<InventoryEntry>, com.commercetools.api.models.IdentifiableObjHolder<InventoryEntry>'
   InventoryEntryResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<InventoryEntry>'
   InventoryEntryUpdate:
@@ -259,7 +259,7 @@ types:
   OrderPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Order>'
   OrderReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Order>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Order>, com.commercetools.api.models.IdentifiableObjHolder<Order>'
   OrderUpdate:
     (java-extends): 'com.commercetools.api.models.ResourceUpdate<OrderUpdate, OrderUpdateAction, OrderUpdateBuilder>'
   OrderUpdateAction:
@@ -330,7 +330,7 @@ types:
   OrderEditPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<OrderEdit>'
   OrderEditReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<OrderEdit>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<OrderEdit>, com.commercetools.api.models.IdentifiableObjHolder<OrderEdit>'
   OrderEditResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<OrderEdit>'
   OrderEditUpdate:
@@ -428,7 +428,7 @@ types:
   PaymentPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Payment>'
   PaymentReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Payment>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Payment>, com.commercetools.api.models.IdentifiableObjHolder<Payment>'
   PaymentResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Payment>'
   PaymentUpdate:
@@ -486,7 +486,7 @@ types:
   ProductProjectionPagedSearchResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection>'
   ProductReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Product>, ProductReferenceMixin'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Product>, ProductReferenceMixin, com.commercetools.api.models.IdentifiableObjHolder<Product>'
   ProductResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Product>'
   ProductUpdate:
@@ -577,7 +577,7 @@ types:
   ProductDiscountPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductDiscount>'
   ProductDiscountReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<ProductDiscount>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<ProductDiscount>, com.commercetools.api.models.IdentifiableObjHolder<ProductDiscount>'
   ProductDiscountResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<ProductDiscount>'
   ProductDiscountUpdate:
@@ -601,7 +601,7 @@ types:
   ProductTypePagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ProductType>'
   ProductTypeReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<ProductType>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<ProductType>, com.commercetools.api.models.IdentifiableObjHolder<ProductType>'
   ProductTypeResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<ProductType>'
   ProductTypeUpdate:
@@ -642,7 +642,7 @@ types:
   ProductSelectionProductPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<AssignedProductReference>'
   ProductSelectionReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<ProductSelection>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<ProductSelection>, com.commercetools.api.models.IdentifiableObjHolder<ProductSelection>'
   ProductSelectionResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<ProductSelection>'
   ProductSelectionUpdate:
@@ -669,7 +669,7 @@ types:
   QuotePagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Quote>'
   QuoteReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Quote>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Quote>, com.commercetools.api.models.IdentifiableObjHolder<Quote>'
   QuoteResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Quote>'
   QuoteUpdate:
@@ -685,7 +685,7 @@ types:
   QuoteRequestPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<QuoteRequest>'
   QuoteRequestReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<QuoteRequest>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<QuoteRequest>, com.commercetools.api.models.IdentifiableObjHolder<QuoteRequest>'
   QuoteRequestResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<QuoteRequest>'
   QuoteRequestUpdate:
@@ -736,7 +736,7 @@ types:
   ReviewPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Review>'
   ReviewReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Review>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Review>, com.commercetools.api.models.IdentifiableObjHolder<Review>'
   ReviewResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Review>'
   ReviewUpdate:
@@ -770,7 +770,7 @@ types:
   ShippingMethodPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ShippingMethod>'
   ShippingMethodReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<ShippingMethod>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<ShippingMethod>, com.commercetools.api.models.IdentifiableObjHolder<ShippingMethod>'
   ShippingMethodResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<ShippingMethod>'
   ShippingMethodUpdate:
@@ -799,7 +799,7 @@ types:
   ShoppingListPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<ShoppingList>'
   ShoppingListReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<ShoppingList>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<ShoppingList>, com.commercetools.api.models.IdentifiableObjHolder<ShoppingList>'
   ShoppingListResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<ShoppingList>'
   ShoppingListUpdate:
@@ -858,7 +858,7 @@ types:
   StagedQuotePagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<StagedQuote>'
   StagedQuoteReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<StagedQuote>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<StagedQuote>, com.commercetools.api.models.IdentifiableObjHolder<StagedQuote>'
   StagedQuoteResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<StagedQuote>'
   StagedQuoteUpdate:
@@ -902,7 +902,7 @@ types:
   StatePagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<State>'
   StateReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<State>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<State>, com.commercetools.api.models.IdentifiableObjHolder<State>'
   StateResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<State>'
   StateUpdate:
@@ -922,7 +922,7 @@ types:
   StorePagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Store>'
   StoreReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Store>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Store>, com.commercetools.api.models.IdentifiableObjHolder<Store>'
   StoreResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Store>'
   StoreUpdate:
@@ -967,7 +967,7 @@ types:
   TaxCategoryPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<TaxCategory>'
   TaxCategoryReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<TaxCategory>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<TaxCategory>, com.commercetools.api.models.IdentifiableObjHolder<TaxCategory>'
   TaxCategoryResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<TaxCategory>'
   TaxCategoryUpdate:
@@ -1005,7 +1005,7 @@ types:
   ZonePagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Zone>'
   ZoneReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Zone>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Zone>, com.commercetools.api.models.IdentifiableObjHolder<Zone>'
   ZoneResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Zone>'
   ZoneUpdate:
@@ -1091,7 +1091,7 @@ types:
     (java-extends): 'com.commercetools.api.models.WithKey'
     (java-builder-implements): 'ResourceIdentifierBuilderMixin'
   TypeReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Type>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Type>, com.commercetools.api.models.IdentifiableObjHolder<Type>'
     (java-mixin): |
       @Override
       public default TypeResourceIdentifier toResourceIdentifier() {
@@ -1129,7 +1129,7 @@ types:
   AttributeReference:
     (java-extends): 'com.commercetools.api.models.WithKey'
   AttributeGroupReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<AttributeGroup>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<AttributeGroup>, com.commercetools.api.models.IdentifiableObjHolder<AttributeGroup>'
   AttributeGroupResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<AttributeGroup>'
   AttributeGroupPagedQueryResponse:
@@ -1151,7 +1151,7 @@ types:
   BusinessUnitPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<BusinessUnit>'
   BusinessUnitReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<BusinessUnit>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<BusinessUnit>, com.commercetools.api.models.IdentifiableObjHolder<BusinessUnit>'
   BusinessUnitResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<BusinessUnit>'
   BusinessUnitUpdate:
@@ -1174,7 +1174,7 @@ types:
   CartPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Cart>'
   CartReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Cart>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Cart>, com.commercetools.api.models.IdentifiableObjHolder<Cart>'
   CartResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Cart>'
   CartUpdate:
@@ -1231,7 +1231,7 @@ types:
   CategoryPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Category>'
   CategoryReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Category>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Category>, com.commercetools.api.models.IdentifiableObjHolder<Category>'
   CategoryResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Category>'
 
@@ -1255,7 +1255,7 @@ types:
   CartDiscountPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<CartDiscount>'
   CartDiscountReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<CartDiscount>'
+    (java-extends): 'com.commercetools.api.models.Identifiable<CartDiscount>, com.commercetools.api.models.IdentifiableObjHolder<CartDiscount>'
   CartDiscountResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<CartDiscount>'
   CartDiscountUpdate:
@@ -1282,7 +1282,7 @@ types:
   ChannelPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Channel>'
   ChannelReference:
-    (java-extends): 'com.commercetools.api.models.Identifiable<Channel>, ChannelReferenceMixin'
+    (java-extends): 'com.commercetools.api.models.Identifiable<Channel>, ChannelReferenceMixin, com.commercetools.api.models.IdentifiableObjHolder<Channel>'
   ChannelResourceIdentifier:
     (java-extends): 'com.commercetools.api.models.Identifiable<Channel>'
   ChannelUpdate:

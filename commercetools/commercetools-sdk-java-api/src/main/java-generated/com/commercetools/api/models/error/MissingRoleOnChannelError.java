@@ -25,7 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
  *   <li>Add Distribution Channel, Set Distribution Channel, Add Supply Channel, and Set Supply Channel update actions.</li>
- *   <li>Create a Standalone Price request.</li>
+ *   <li>Create StandalonePrice request.</li>
  *  </ul>
  *
  * <hr>

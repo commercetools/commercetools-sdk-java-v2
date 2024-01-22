@@ -30,7 +30,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditReferenceImpl.class)
-public interface OrderEditReference extends Reference, com.commercetools.api.models.Identifiable<OrderEdit> {
+public interface OrderEditReference extends Reference, com.commercetools.api.models.Identifiable<OrderEdit>,
+        com.commercetools.api.models.IdentifiableObjHolder<OrderEdit> {
 
     /**
      * discriminator value for OrderEditReference

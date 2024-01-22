@@ -164,17 +164,38 @@ public class ConcurrentModificationTest {
 
         ProductTypeFixtures.withUpdateableProductType(productType -> {
 
-            //            final ApiHttpResponse<ProductType> response = projectApiRoot.productTypes()
-            //                    .update(productType,
-            //                            builder -> builder.plus(
-            //                                    actionBuilder -> actionBuilder.changeDescriptionBuilder().description("new description")))
-            //                    .executeBlocking();
-
             final ProductType deletedProductType = RetryHandler
                     .concurrentModification(projectApiRoot.productTypes().delete(productType))
                     .executeBlocking()
                     .getBody();
             return deletedProductType;
+        });
+    }
+
+    @Test
+    public void concurrentModMiddlewareSuccess() {
+        String projectKey = CommercetoolsTestUtils.getProjectKey();
+
+        ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .addConcurrentModificationMiddleware(3)
+                .build(projectKey);
+
+        CartsFixtures.withUpdateableCart(cart -> {
+
+            final Cart modCart = projectApiRoot.carts()
+                    .withId(cart.getId())
+                    .post(CartUpdateBuilder.of()
+                            .version(cart.getVersion())
+                            .actions(CartSetCountryActionBuilder.of().country("DE").build())
+                            .build())
+                    .executeBlocking()
+                    .getBody();
+            return modCart;
         });
     }
 

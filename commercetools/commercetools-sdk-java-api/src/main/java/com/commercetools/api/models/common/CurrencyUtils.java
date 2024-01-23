@@ -8,7 +8,7 @@ import javax.money.UnknownCurrencyException;
 
 import org.javamoney.moneta.spi.JDKCurrencyProvider;
 
-final class CurrencyUtils {
+public final class CurrencyUtils {
     static final JDKCurrencyProvider CURRENCY_PROVIDER = new JDKCurrencyProvider();
 
     public static CurrencyUnit ofCode(final String currencyCode) {

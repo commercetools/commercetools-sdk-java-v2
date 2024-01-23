@@ -6,6 +6,9 @@ import java.time.LocalTime;
 import java.time.ZonedDateTime;
 import java.util.Locale;
 
+import com.commercetools.api.client.ByProjectKeyProductProjectionsSearchGet;
+import com.commercetools.api.client.ByProjectKeyProductProjectionsSearchPost;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.Identifiable;
 import com.commercetools.api.models.common.DefaultCurrencyUnits;
 import com.commercetools.api.search.products.*;
@@ -15,12 +18,45 @@ import com.tngtech.junit.dataprovider.UseDataProvider;
 import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(UseDataProviderExtension.class)
 @ExtendWith(DataProviderExtension.class)
 public class SearchTests {
+
+    @Test
+    public void getRequest() {
+        ByProjectKeyProductProjectionsSearchGet searchResponse = ProjectApiRoot.of("test")
+                .productProjections()
+                .search()
+                .get()
+                .filter(f -> f.categories().id().is("abc"))
+                .filterFacets(f -> f.categories().id().is("def"))
+                .filterQuery(f -> f.categories().id().is("ghi"))
+                .facet(f -> f.categories().id());
+
+        Assertions.assertThat(searchResponse.createHttpRequest().getUri().getRawQuery())
+                .isEqualTo(
+                    "filter=categories.id%3A+%22abc%22&filter.facets=categories.id%3A+%22def%22&filter.query=categories.id%3A+%22ghi%22&facet=categories.id");
+    }
+
+    @Test
+    public void postRequest() {
+        ByProjectKeyProductProjectionsSearchPost searchResponse = ProjectApiRoot.of("test")
+                .productProjections()
+                .search()
+                .post()
+                .filter(f -> f.categories().id().is("abc"))
+                .filterFacets(f -> f.categories().id().is("def"))
+                .filterQuery(f -> f.categories().id().is("ghi"))
+                .facet(f -> f.categories().id());
+
+        Assertions.assertThat(searchResponse.createHttpRequest().getSecuredBody())
+                .isEqualTo(
+                    "filter=categories.id%3A+%22abc%22&filter.facets=categories.id%3A+%22def%22&filter.query=categories.id%3A+%22ghi%22&facet=categories.id");
+    }
 
     @TestTemplate
     @UseDataProvider("filterExpressions")
@@ -255,6 +291,13 @@ public class SearchTests {
         return new Object[][] {
                 new Object[] { ProductFacetExpressionBuilder.of().categories().id().alias("cat"),
                         "categories.id as cat" },
+                new Object[] { ProductFacetExpressionBuilder.of().categories().id().alias("cat").countingProducts(),
+                        "categories.id as cat counting products" },
+                new Object[] { ProductFacetExpressionBuilder.of().categories().id().countingProducts().alias("cat"),
+                        "categories.id as cat counting products" },
+                new Object[] {
+                        ProductFacetExpressionBuilder.of().categories().id().countingProducts().alias("cat").is("foo"),
+                        "categories.id: \"foo\" as cat counting products" },
                 new Object[] { ProductFacetExpressionBuilder.of().categories().id(), "categories.id" },
                 new Object[] { ProductFacetExpressionBuilder.of().categories().id().is("foo"),
                         "categories.id: \"foo\"" },
@@ -307,6 +350,52 @@ public class SearchTests {
                                 .attribute()
                                 .ofDatetime("test")
                                 .is(ZonedDateTime.parse("2024-01-03T10:00Z")),
-                        "variants.attributes.test: \"2024-01-03T10:00:00.000Z\"" }, };
+                        "variants.attributes.test: \"2024-01-03T10:00:00.000Z\"" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofEnum("test").key(),
+                        "variants.attributes.test.key" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofEnum("test").label(),
+                        "variants.attributes.test.label" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofEnum("test").label("en"),
+                        "variants.attributes.test.label.en" },
+                new Object[] {
+                        ProductFacetExpressionBuilder.of().variants().attribute().ofEnum("test").label(Locale.US),
+                        "variants.attributes.test.label.en-US" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofMoney("test").centAmount(),
+                        "variants.attributes.test.centAmount" },
+                new Object[] {
+                        ProductFacetExpressionBuilder.of().variants().attribute().ofMoney("test").centAmount().is(100L),
+                        "variants.attributes.test.centAmount: 100" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofMoney("test").currencyCode(),
+                        "variants.attributes.test.currencyCode" },
+                new Object[] { ProductFacetExpressionBuilder.of()
+                        .variants()
+                        .attribute()
+                        .ofMoney("test")
+                        .currencyCode()
+                        .is("EUR"), "variants.attributes.test.currencyCode: \"EUR\"" },
+                new Object[] { ProductFacetExpressionBuilder.of()
+                        .variants()
+                        .attribute()
+                        .ofMoney("test")
+                        .currency()
+                        .is(DefaultCurrencyUnits.EUR), "variants.attributes.test.currencyCode: \"EUR\"" },
+                new Object[] { ProductFacetExpressionBuilder.of()
+                        .variants()
+                        .attribute()
+                        .ofLong("test")
+                        .ranges()
+                        .range(0L, 100L)
+                        .rangeFrom(100L), "variants.attributes.test: range (0 to 100), (100 to *)" },
+                new Object[] {
+                        ProductFacetExpressionBuilder.of()
+                                .variants()
+                                .attribute()
+                                .ofLong("test")
+                                .ranges()
+                                .range(0L, 100L)
+                                .rangeFrom(100L)
+                                .alias("range_test")
+                                .countingProducts(),
+                        "variants.attributes.test: range (0 to 100), (100 to *) as range_test counting products" }, };
     }
 }

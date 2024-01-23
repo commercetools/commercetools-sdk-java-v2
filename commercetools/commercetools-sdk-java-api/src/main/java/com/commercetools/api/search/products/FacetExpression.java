@@ -1,11 +1,9 @@
 
 package com.commercetools.api.search.products;
 
-public interface FacetExpression {
+public interface FacetExpression<T> extends FilterExpression {
 
-    FilterExpression expression();
+    FacetExpression<T> countingProducts();
 
-    Boolean countingProducts();
-
-    String alias();
+    FacetExpression<T> alias(String alias);
 }

@@ -4,6 +4,12 @@ package com.commercetools.api.search.products;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
+import java.util.Locale;
+
+import javax.money.CurrencyUnit;
+
+import com.commercetools.api.models.Identifiable;
+import com.commercetools.api.models.channel.Channel;
 
 public class ProductFacetExpressionBuilder {
     public CategoriesFacetExpressionBuilder categories() {
@@ -70,6 +76,62 @@ public class ProductFacetExpressionBuilder {
         public AttributesFacetExpressionBuilder attribute() {
             return new AttributesFacetExpressionBuilder(expression);
         }
+
+        public AvailabilityFacetExpressionBuilder availability() {
+            return new AvailabilityFacetExpressionBuilder(expression.add("availability"));
+        }
+
+        public PriceFacetExpressionBuilder price() {
+            return new PriceFacetExpressionBuilder(expression.add("price"));
+        }
+
+        public PriceFacetExpressionBuilder scopedPrice() {
+            return new PriceFacetExpressionBuilder(expression.add("price"));
+        }
+    }
+
+    public static class ScopedPriceFacetExpressionBuilder {
+        PathExpression expression;
+
+        public ScopedPriceFacetExpressionBuilder(PathExpression expression) {
+            this.expression = expression;
+        }
+
+        public PriceFacetExpressionBuilder currentValue() {
+            return new PriceFacetExpressionBuilder(expression.add("currentValue"));
+        }
+    }
+
+    public static class PriceFacetExpressionBuilder {
+        PathExpression expression;
+
+        public PriceFacetExpressionBuilder(PathExpression expression) {
+            this.expression = expression;
+        }
+
+        public RangeFilterExpressionBuilder<Long> centAmount() {
+            return RangeFilterExpressionBuilder.of(expression.add("centAmount"), TermFormatter::format);
+        }
+    }
+
+    public static class AvailabilityFacetExpressionBuilder {
+        PathExpression expression;
+
+        public AvailabilityFacetExpressionBuilder(PathExpression expression) {
+            this.expression = expression;
+        }
+
+        public RangeFilterExpressionBuilder<Long> availableQuantity() {
+            return RangeFilterExpressionBuilder.of(expression.add("availableQuantity"), TermFormatter::format);
+        }
+
+        public AvailabilityFacetExpressionBuilder channel(Identifiable<Channel> channel) {
+            return channel(channel.getId());
+        }
+
+        public AvailabilityFacetExpressionBuilder channel(String channel) {
+            return new AvailabilityFacetExpressionBuilder(expression.add("channels").add(channel));
+        }
     }
 
     public static class AttributesFacetExpressionBuilder {
@@ -112,7 +174,11 @@ public class ProductFacetExpressionBuilder {
         }
 
         public AttributesEnumFacetExpressionBuilder ofEnum(final String name) {
-            return new AttributesEnumFacetExpressionBuilder(expression);
+            return new AttributesEnumFacetExpressionBuilder(expression.add(name));
+        }
+
+        public AttributesMoneyFacetExpressionBuilder ofMoney(final String name) {
+            return new AttributesMoneyFacetExpressionBuilder(expression.add(name));
         }
     }
 
@@ -134,6 +200,10 @@ public class ProductFacetExpressionBuilder {
         public TermFacetExpression<String> label(final String language) {
             return TermFacetExpression.of(expression.add("label").add(language), TermFormatter::format);
         }
+
+        public TermFacetExpression<String> label(final Locale locale) {
+            return TermFacetExpression.of(expression.add("label").add(locale.toLanguageTag()), TermFormatter::format);
+        }
     }
 
     public static class AttributesMoneyFacetExpressionBuilder {
@@ -143,11 +213,15 @@ public class ProductFacetExpressionBuilder {
             this.expression = expression;
         }
 
-        public TermFacetExpression<String> centAmount() {
+        public TermFacetExpression<Long> centAmount() {
             return TermFacetExpression.of(expression.add("centAmount"), TermFormatter::format);
         }
 
         public TermFacetExpression<String> currencyCode() {
+            return TermFacetExpression.of(expression.add("currencyCode"), TermFormatter::format);
+        }
+
+        public TermFacetExpression<CurrencyUnit> currency() {
             return TermFacetExpression.of(expression.add("currencyCode"), TermFormatter::format);
         }
     }

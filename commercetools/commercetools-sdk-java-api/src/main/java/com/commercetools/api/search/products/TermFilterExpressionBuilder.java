@@ -33,6 +33,10 @@ public class TermFilterExpressionBuilder<T> {
         return new ExistsTermFilterExpression(expression).missing();
     }
 
+    public RangeFilterExpression<T> ranges() {
+        return new RangeFilterExpression<>(expression, null, formatter);
+    }
+
     public static <T> TermFilterExpressionBuilder<T> of(PathExpression expression,
             Function<T, FilterExpression> formatter) {
         return new TermFilterExpressionBuilder<>(expression, formatter);

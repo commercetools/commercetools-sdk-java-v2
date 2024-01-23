@@ -159,20 +159,20 @@ public class ProductFilterExpressionBuilder {
             this.expression = PathExpression.of("reviewRatingStatistics");
         }
 
-        public TermFilterExpressionBuilder<Long> averageRating() {
-            return TermFilterExpressionBuilder.of(expression.add("averageRating"), TermFormatter::format);
+        public RangeFilterExpressionBuilder<Long> averageRating() {
+            return RangeFilterExpressionBuilder.of(expression.add("averageRating"), TermFormatter::format);
         }
 
-        public TermFilterExpressionBuilder<Long> highestRating() {
-            return TermFilterExpressionBuilder.of(expression.add("highestRating"), TermFormatter::format);
+        public RangeFilterExpressionBuilder<Long> highestRating() {
+            return RangeFilterExpressionBuilder.of(expression.add("highestRating"), TermFormatter::format);
         }
 
-        public TermFilterExpressionBuilder<Long> lowestRating() {
-            return TermFilterExpressionBuilder.of(expression.add("lowestRating"), TermFormatter::format);
+        public RangeFilterExpressionBuilder<Long> lowestRating() {
+            return RangeFilterExpressionBuilder.of(expression.add("lowestRating"), TermFormatter::format);
         }
 
-        public TermFilterExpressionBuilder<Long> count() {
-            return TermFilterExpressionBuilder.of(expression.add("count"), TermFormatter::format);
+        public RangeFilterExpressionBuilder<Long> count() {
+            return RangeFilterExpressionBuilder.of(expression.add("count"), TermFormatter::format);
         }
     }
 
@@ -347,28 +347,28 @@ public class ProductFilterExpressionBuilder {
             return new TermFilterExpressionBuilder<>(expression, TermFormatter::format);
         }
 
-        public TermFilterExpressionBuilder<Long> asLong() {
-            return new TermFilterExpressionBuilder<>(expression, TermFormatter::format);
+        public RangeFilterExpressionBuilder<Long> asLong() {
+            return new RangeFilterExpressionBuilder<>(expression, TermFormatter::format);
         }
 
-        public TermFilterExpressionBuilder<Double> asDouble() {
-            return new TermFilterExpressionBuilder<>(expression, TermFormatter::format);
+        public RangeFilterExpressionBuilder<Double> asDouble() {
+            return new RangeFilterExpressionBuilder<>(expression, TermFormatter::format);
         }
 
         public TermFilterExpressionBuilder<String> asString() {
             return new TermFilterExpressionBuilder<>(expression, TermFormatter::format);
         }
 
-        public TermFilterExpressionBuilder<ZonedDateTime> asDateTime() {
-            return new TermFilterExpressionBuilder<>(expression, TermFormatter::format);
+        public RangeFilterExpressionBuilder<ZonedDateTime> asDateTime() {
+            return new RangeFilterExpressionBuilder<>(expression, TermFormatter::format);
         }
 
-        public TermFilterExpressionBuilder<LocalDate> asDate() {
-            return new TermFilterExpressionBuilder<>(expression, TermFormatter::format);
+        public RangeFilterExpressionBuilder<LocalDate> asDate() {
+            return new RangeFilterExpressionBuilder<>(expression, TermFormatter::format);
         }
 
-        public TermFilterExpressionBuilder<LocalTime> asTime() {
-            return new TermFilterExpressionBuilder<>(expression, TermFormatter::format);
+        public RangeFilterExpressionBuilder<LocalTime> asTime() {
+            return new RangeFilterExpressionBuilder<>(expression, TermFormatter::format);
         }
 
         public PriceFilterExpressionBuilder asMoney() {

@@ -156,6 +156,9 @@ public class SearchTests {
                 new Object[] { ProductFilterExpressionBuilder.of().state().missing(), "state: missing" },
                 new Object[] { ProductFilterExpressionBuilder.of().reviewRatingStatistics().averageRating().is(100L),
                         "reviewRatingStatistics.averageRating: 100" },
+                new Object[] {
+                        ProductFilterExpressionBuilder.of().reviewRatingStatistics().averageRating().range(0L, 100L),
+                        "reviewRatingStatistics.averageRating: range (0 to 100)" },
                 new Object[] { ProductFilterExpressionBuilder.of().reviewRatingStatistics().lowestRating().is(100L),
                         "reviewRatingStatistics.lowestRating: 100" },
                 new Object[] { ProductFilterExpressionBuilder.of().reviewRatingStatistics().highestRating().is(100L),
@@ -233,6 +236,8 @@ public class SearchTests {
                         "variants.attributes.foo: true" },
                 new Object[] { ProductFilterExpressionBuilder.of().variants().attribute("foo").asLong().is(100L),
                         "variants.attributes.foo: 100" },
+                new Object[] { ProductFilterExpressionBuilder.of().variants().attribute("foo").asLong().range(0L, 100L),
+                        "variants.attributes.foo: range (0 to 100)" },
                 new Object[] { ProductFilterExpressionBuilder.of().variants().attribute("foo").asDouble().is(100.0),
                         "variants.attributes.foo: 100.0" },
                 new Object[] { ProductFilterExpressionBuilder.of().variants().attribute("foo").asDouble().is(100.0),
@@ -309,15 +314,16 @@ public class SearchTests {
                         "categories.id: \"foo\", subTree(\"bar\")" },
                 new Object[] { ProductFacetExpressionBuilder.of().categories().id().is("foo").subTree("bar").is("baz"),
                         "categories.id: \"foo\", subTree(\"bar\"), \"baz\"" },
-                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofText("test"),
-                        "variants.attributes.test" },
-                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofText("test").is("foo"),
-                        "variants.attributes.test: \"foo\"" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofText("test-text"),
+                        "variants.attributes.test-text" },
+                new Object[] {
+                        ProductFacetExpressionBuilder.of().variants().attribute().ofText("test-text-foo").is("foo"),
+                        "variants.attributes.test-text-foo: \"foo\"" },
                 new Object[] {
                         ProductFacetExpressionBuilder.of().variants().attribute().ofText("test").is("foo").is("bar"),
                         "variants.attributes.test: \"foo\", \"bar\"" },
-                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofDate("test"),
-                        "variants.attributes.test" },
+                new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofDate("test-date"),
+                        "variants.attributes.test-date" },
                 new Object[] { ProductFacetExpressionBuilder.of()
                         .variants()
                         .attribute()
@@ -365,6 +371,15 @@ public class SearchTests {
                 new Object[] {
                         ProductFacetExpressionBuilder.of().variants().attribute().ofMoney("test").centAmount().is(100L),
                         "variants.attributes.test.centAmount: 100" },
+                new Object[] {
+                        ProductFacetExpressionBuilder.of()
+                                .variants()
+                                .attribute()
+                                .ofMoney("test")
+                                .centAmount()
+                                .range(0L, 100L)
+                                .range(101L, 200L),
+                        "variants.attributes.test.centAmount: range (0 to 100), (101 to 200)" },
                 new Object[] { ProductFacetExpressionBuilder.of().variants().attribute().ofMoney("test").currencyCode(),
                         "variants.attributes.test.currencyCode" },
                 new Object[] { ProductFacetExpressionBuilder.of()
@@ -383,7 +398,6 @@ public class SearchTests {
                         .variants()
                         .attribute()
                         .ofLong("test")
-                        .ranges()
                         .range(0L, 100L)
                         .rangeFrom(100L), "variants.attributes.test: range (0 to 100), (100 to *)" },
                 new Object[] {
@@ -391,7 +405,6 @@ public class SearchTests {
                                 .variants()
                                 .attribute()
                                 .ofLong("test")
-                                .ranges()
                                 .range(0L, 100L)
                                 .rangeFrom(100L)
                                 .alias("range_test")

@@ -145,28 +145,28 @@ public class ProductFacetExpressionBuilder {
             return TermFacetExpression.of(expression.add(name), TermFormatter::format);
         }
 
-        public TermFacetExpression<LocalDate> ofDate(final String name) {
-            return TermFacetExpression.of(expression.add(name), TermFormatter::format);
+        public RangeFacetExpressionBuilder<LocalDate> ofDate(final String name) {
+            return RangeFacetExpressionBuilder.of(expression.add(name), TermFormatter::format);
         }
 
-        public TermFacetExpression<LocalTime> ofTime(final String name) {
-            return TermFacetExpression.of(expression.add(name), TermFormatter::format);
+        public RangeFacetExpressionBuilder<LocalTime> ofTime(final String name) {
+            return RangeFacetExpressionBuilder.of(expression.add(name), TermFormatter::format);
         }
 
-        public TermFacetExpression<ZonedDateTime> ofDatetime(final String name) {
-            return TermFacetExpression.of(expression.add(name), TermFormatter::format);
+        public RangeFacetExpressionBuilder<ZonedDateTime> ofDatetime(final String name) {
+            return RangeFacetExpressionBuilder.of(expression.add(name), TermFormatter::format);
         }
 
         public TermFacetExpression<Boolean> ofBool(final String name) {
             return TermFacetExpression.of(expression.add(name), TermFormatter::format);
         }
 
-        public TermFacetExpression<Double> ofNumber(final String name) {
-            return TermFacetExpression.of(expression.add(name), TermFormatter::format);
+        public RangeFacetExpressionBuilder<Double> ofNumber(final String name) {
+            return RangeFacetExpressionBuilder.of(expression.add(name), TermFormatter::format);
         }
 
-        public TermFacetExpression<Long> ofLong(final String name) {
-            return TermFacetExpression.of(expression.add(name), TermFormatter::format);
+        public RangeFacetExpressionBuilder<Long> ofLong(final String name) {
+            return RangeFacetExpressionBuilder.of(expression.add(name), TermFormatter::format);
         }
 
         public TermFacetExpression<String> ofLocalizedString(final String name, final String language) {
@@ -213,8 +213,8 @@ public class ProductFacetExpressionBuilder {
             this.expression = expression;
         }
 
-        public TermFacetExpression<Long> centAmount() {
-            return TermFacetExpression.of(expression.add("centAmount"), TermFormatter::format);
+        public RangeFacetExpressionBuilder<Long> centAmount() {
+            return RangeFacetExpressionBuilder.of(expression.add("centAmount"), TermFormatter::format);
         }
 
         public TermFacetExpression<String> currencyCode() {

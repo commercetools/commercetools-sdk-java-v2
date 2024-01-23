@@ -36,7 +36,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     private com.commercetools.importapi.models.orders.LineItemPrice price;
 
-    private Double quantity;
+    private Long quantity;
 
     @Nullable
     private java.util.List<com.commercetools.importapi.models.orders.ItemState> state;
@@ -207,7 +207,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
      * @return Builder
      */
 
-    public LineItemImportDraftBuilder quantity(final Double quantity) {
+    public LineItemImportDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -530,7 +530,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
      * @return quantity
      */
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

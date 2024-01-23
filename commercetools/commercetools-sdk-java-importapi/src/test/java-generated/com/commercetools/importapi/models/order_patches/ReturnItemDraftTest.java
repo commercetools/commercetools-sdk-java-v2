@@ -24,7 +24,7 @@ public class ReturnItemDraftTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ReturnItemDraft.builder().quantity(0.52277106) },
+        return new Object[][] { new Object[] { ReturnItemDraft.builder().quantity(8L) },
                 new Object[] { ReturnItemDraft.builder().lineItemId("lineItemId") },
                 new Object[] { ReturnItemDraft.builder().customLineItemId("customLineItemId") },
                 new Object[] { ReturnItemDraft.builder().comment("comment") },
@@ -36,8 +36,8 @@ public class ReturnItemDraftTest {
     @Test
     public void quantity() {
         ReturnItemDraft value = ReturnItemDraft.of();
-        value.setQuantity(0.52277106);
-        Assertions.assertThat(value.getQuantity()).isEqualTo(0.52277106);
+        value.setQuantity(8L);
+        Assertions.assertThat(value.getQuantity()).isEqualTo(8L);
     }
 
     @Test

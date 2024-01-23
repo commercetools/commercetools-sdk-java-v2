@@ -155,7 +155,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withLimit(
-            final Supplier<Double> supplier) {
+            final Supplier<Long> supplier) {
         return copy().withQueryParam("limit", supplier.get());
     }
 
@@ -164,8 +164,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * @param supplier supplier for the value to be added
      * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
-    public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addLimit(
-            final Supplier<Double> supplier) {
+    public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addLimit(final Supplier<Long> supplier) {
         return copy().addQueryParam("limit", supplier.get());
     }
 
@@ -241,7 +240,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet withOffset(
-            final Supplier<Double> supplier) {
+            final Supplier<Long> supplier) {
         return copy().withQueryParam("offset", supplier.get());
     }
 
@@ -251,7 +250,7 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      * @return ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet
      */
     public ByProjectKeyImportContainersByImportContainerKeyImportOperationsGet addOffset(
-            final Supplier<Double> supplier) {
+            final Supplier<Long> supplier) {
         return copy().addQueryParam("offset", supplier.get());
     }
 

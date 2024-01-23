@@ -24,13 +24,13 @@ public class ScoreShippingRateInputImpl implements ScoreShippingRateInput, Model
 
     private com.commercetools.importapi.models.orders.ShippingRateInputType type;
 
-    private Double score;
+    private Long score;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ScoreShippingRateInputImpl(@JsonProperty("score") final Double score) {
+    ScoreShippingRateInputImpl(@JsonProperty("score") final Long score) {
         this.score = score;
         this.type = ShippingRateInputType.findEnum("Score");
     }
@@ -54,11 +54,11 @@ public class ScoreShippingRateInputImpl implements ScoreShippingRateInput, Model
      *
      */
 
-    public Double getScore() {
+    public Long getScore() {
         return this.score;
     }
 
-    public void setScore(final Double score) {
+    public void setScore(final Long score) {
         this.score = score;
     }
 

@@ -32,7 +32,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     private String slug;
 
-    private Double quantity;
+    private Long quantity;
 
     private java.util.List<com.commercetools.importapi.models.orders.ItemState> state;
 
@@ -54,7 +54,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
             @JsonProperty("money") final com.commercetools.importapi.models.common.TypedMoney money,
             @JsonProperty("taxedPrice") final com.commercetools.importapi.models.orders.CustomLineItemTaxedPrice taxedPrice,
             @JsonProperty("totalPrice") final com.commercetools.importapi.models.common.TypedMoney totalPrice,
-            @JsonProperty("slug") final String slug, @JsonProperty("quantity") final Double quantity,
+            @JsonProperty("slug") final String slug, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("state") final java.util.List<com.commercetools.importapi.models.orders.ItemState> state,
             @JsonProperty("taxCategory") final com.commercetools.importapi.models.common.TaxCategoryKeyReference taxCategory,
             @JsonProperty("taxRate") final com.commercetools.importapi.models.prices.TaxRate taxRate,
@@ -130,7 +130,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
      *
      */
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -202,7 +202,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         this.slug = slug;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

@@ -24,7 +24,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
 
     private String id;
 
-    private Double quantity;
+    private Long quantity;
 
     /**
      * set the value to the id
@@ -43,7 +43,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
      * @return Builder
      */
 
-    public DeliveryItemBuilder quantity(final Double quantity) {
+    public DeliveryItemBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -62,7 +62,7 @@ public class DeliveryItemBuilder implements Builder<DeliveryItem> {
      * @return quantity
      */
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

@@ -39,7 +39,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     private String slug;
 
-    private Double quantity;
+    private Long quantity;
 
     @Nullable
     private java.util.List<com.commercetools.importapi.models.orders.ItemState> state;
@@ -210,7 +210,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      * @return Builder
      */
 
-    public CustomLineItemDraftBuilder quantity(final Double quantity) {
+    public CustomLineItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -603,7 +603,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      * @return quantity
      */
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

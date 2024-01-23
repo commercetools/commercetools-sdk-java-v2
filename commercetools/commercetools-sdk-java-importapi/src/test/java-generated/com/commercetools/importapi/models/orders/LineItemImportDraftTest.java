@@ -36,7 +36,7 @@ public class LineItemImportDraftTest {
                             new com.commercetools.importapi.models.orders.LineItemProductVariantImportDraftImpl()) },
                 new Object[] { LineItemImportDraft.builder()
                         .price(new com.commercetools.importapi.models.orders.LineItemPriceImpl()) },
-                new Object[] { LineItemImportDraft.builder().quantity(0.52277106) },
+                new Object[] { LineItemImportDraft.builder().quantity(8L) },
                 new Object[] {
                         LineItemImportDraft.builder()
                                 .state(Collections.singletonList(
@@ -89,8 +89,8 @@ public class LineItemImportDraftTest {
     @Test
     public void quantity() {
         LineItemImportDraft value = LineItemImportDraft.of();
-        value.setQuantity(0.52277106);
-        Assertions.assertThat(value.getQuantity()).isEqualTo(0.52277106);
+        value.setQuantity(8L);
+        Assertions.assertThat(value.getQuantity()).isEqualTo(8L);
     }
 
     @Test

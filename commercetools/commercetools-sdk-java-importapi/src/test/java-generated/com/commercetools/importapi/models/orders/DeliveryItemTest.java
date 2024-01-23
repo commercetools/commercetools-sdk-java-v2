@@ -25,7 +25,7 @@ public class DeliveryItemTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { DeliveryItem.builder().id("id") },
-                new Object[] { DeliveryItem.builder().quantity(0.52277106) } };
+                new Object[] { DeliveryItem.builder().quantity(8L) } };
     }
 
     @Test
@@ -38,7 +38,7 @@ public class DeliveryItemTest {
     @Test
     public void quantity() {
         DeliveryItem value = DeliveryItem.of();
-        value.setQuantity(0.52277106);
-        Assertions.assertThat(value.getQuantity()).isEqualTo(0.52277106);
+        value.setQuantity(8L);
+        Assertions.assertThat(value.getQuantity()).isEqualTo(8L);
     }
 }

@@ -24,13 +24,13 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
 
     private String id;
 
-    private Double quantity;
+    private Long quantity;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    DeliveryItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Double quantity) {
+    DeliveryItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Long quantity) {
         this.id = id;
         this.quantity = quantity;
     }
@@ -53,7 +53,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
      *
      */
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -61,7 +61,7 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
         this.id = id;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * OperationStates
+ *  <p>The number of resources in each Processing State.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -36,7 +36,7 @@ public class CustomLineItemDraftTest {
                 new Object[] { CustomLineItemDraft.builder()
                         .totalPrice(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
                 new Object[] { CustomLineItemDraft.builder().slug("slug") },
-                new Object[] { CustomLineItemDraft.builder().quantity(0.52277106) },
+                new Object[] { CustomLineItemDraft.builder().quantity(8L) },
                 new Object[] {
                         CustomLineItemDraft.builder()
                                 .state(Collections.singletonList(
@@ -97,8 +97,8 @@ public class CustomLineItemDraftTest {
     @Test
     public void quantity() {
         CustomLineItemDraft value = CustomLineItemDraft.of();
-        value.setQuantity(0.52277106);
-        Assertions.assertThat(value.getQuantity()).isEqualTo(0.52277106);
+        value.setQuantity(8L);
+        Assertions.assertThat(value.getQuantity()).isEqualTo(8L);
     }
 
     @Test

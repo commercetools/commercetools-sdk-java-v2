@@ -45,7 +45,7 @@ public interface DeliveryItem {
      */
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     /**
      * set id
@@ -59,7 +59,7 @@ public interface DeliveryItem {
      * @param quantity value to be set
      */
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     /**
      * factory method

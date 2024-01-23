@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Setting the first name of the Customer produces the CustomerFirstNameSetMessage.</p>
+ *  <p>Setting the first name of the Customer produces the CustomerFirstNameSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

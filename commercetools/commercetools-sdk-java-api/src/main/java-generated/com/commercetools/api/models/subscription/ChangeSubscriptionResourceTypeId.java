@@ -97,7 +97,7 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
     */
     ChangeSubscriptionResourceTypeId KEY_VALUE_DOCUMENT = ChangeSubscriptionResourceTypeIdEnum.KEY_VALUE_DOCUMENT;
     /**
-    	<p>Changes to <a href="ctp:api:type:Order">Orders</a>. Changes to Orders via <a href="/../api/projects/order-edits">Order Edits</a> do not trigger a Message. To achieve this, a <a href="ctp:api:type:MessageSubscription">MessageSubscription</a> to <a href="ctp:api:type:OrderEditAppliedMessage">Order Edit Applied Message</a> is necessary.</p>
+    	<p>Changes to <a href="ctp:api:type:Order">Orders</a>. Changes to Orders via <a href="/../api/projects/order-edits">Order Edits</a> do not trigger a Message. To achieve this, a <a href="ctp:api:type:MessageSubscription">MessageSubscription</a> to <a href="ctp:api:type:OrderEditAppliedMessage">OrderEditApplied</a> Message is necessary.</p>
 
     */
     ChangeSubscriptionResourceTypeId ORDER = ChangeSubscriptionResourceTypeIdEnum.ORDER;

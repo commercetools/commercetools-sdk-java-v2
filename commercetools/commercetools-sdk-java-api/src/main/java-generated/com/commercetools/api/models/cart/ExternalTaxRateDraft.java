@@ -82,7 +82,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public String getState();
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @return subRates
      */
     @Valid
@@ -132,7 +132,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public void setState(final String state);
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param subRates values to be set
      */
 
@@ -140,7 +140,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public void setSubRates(final SubRate... subRates);
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param subRates values to be set
      */
 

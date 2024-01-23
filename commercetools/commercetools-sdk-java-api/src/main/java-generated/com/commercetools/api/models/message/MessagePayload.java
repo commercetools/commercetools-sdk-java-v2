@@ -81,6 +81,11 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessagePayloadImpl.class, name = BusinessUnitStoreModeChangedMessagePayload.BUSINESS_UNIT_STORE_MODE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoreRemovedMessagePayloadImpl.class, name = BusinessUnitStoreRemovedMessagePayload.BUSINESS_UNIT_STORE_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayloadImpl.class, name = BusinessUnitStoresSetMessagePayload.BUSINESS_UNIT_STORES_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountCreatedMessagePayloadImpl.class, name = CartDiscountCreatedMessagePayload.CART_DISCOUNT_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountDeletedMessagePayloadImpl.class, name = CartDiscountDeletedMessagePayload.CART_DISCOUNT_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountStoreAddedMessagePayloadImpl.class, name = CartDiscountStoreAddedMessagePayload.CART_DISCOUNT_STORE_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountStoreRemovedMessagePayloadImpl.class, name = CartDiscountStoreRemovedMessagePayload.CART_DISCOUNT_STORE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountStoresSetMessagePayloadImpl.class, name = CartDiscountStoresSetMessagePayload.CART_DISCOUNT_STORES_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CategoryCreatedMessagePayloadImpl.class, name = CategoryCreatedMessagePayload.CATEGORY_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CategorySlugChangedMessagePayloadImpl.class, name = CategorySlugChangedMessagePayload.CATEGORY_SLUG_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayloadImpl.class, name = CustomLineItemStateTransitionMessagePayload.CUSTOM_LINE_ITEM_STATE_TRANSITION),
@@ -476,6 +481,26 @@ public interface MessagePayload extends MessagePayloadMixin {
         if (template instanceof com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayload) {
             return com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayload
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CartDiscountCreatedMessagePayload) {
+            return com.commercetools.api.models.message.CartDiscountCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CartDiscountCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CartDiscountDeletedMessagePayload) {
+            return com.commercetools.api.models.message.CartDiscountDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CartDiscountDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CartDiscountStoreAddedMessagePayload) {
+            return com.commercetools.api.models.message.CartDiscountStoreAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CartDiscountStoreAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CartDiscountStoreRemovedMessagePayload) {
+            return com.commercetools.api.models.message.CartDiscountStoreRemovedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CartDiscountStoreRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CartDiscountStoresSetMessagePayload) {
+            return com.commercetools.api.models.message.CartDiscountStoresSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CartDiscountStoresSetMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.CategoryCreatedMessagePayload) {
             return com.commercetools.api.models.message.CategoryCreatedMessagePayload
@@ -1363,6 +1388,46 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayloadBuilder businessUnitStoresSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for cartDiscountCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartDiscountCreatedMessagePayloadBuilder cartDiscountCreatedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountCreatedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for cartDiscountDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartDiscountDeletedMessagePayloadBuilder cartDiscountDeletedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountDeletedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for cartDiscountStoreAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartDiscountStoreAddedMessagePayloadBuilder cartDiscountStoreAddedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountStoreAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for cartDiscountStoreRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartDiscountStoreRemovedMessagePayloadBuilder cartDiscountStoreRemovedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountStoreRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for cartDiscountStoresSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CartDiscountStoresSetMessagePayloadBuilder cartDiscountStoresSetBuilder() {
+        return com.commercetools.api.models.message.CartDiscountStoresSetMessagePayloadBuilder.of();
     }
 
     /**

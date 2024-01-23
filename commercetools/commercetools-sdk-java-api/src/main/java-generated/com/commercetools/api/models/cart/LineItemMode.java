@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItemMode extends JsonEnum {
 
     /**
-    	<p>The Line Item is added during <a href="/../api/projects/carts#create-cart">Cart creation</a> or using the <a href="ctp:api:type:CartAddLineItemAction">Add LineItem</a> update action.
+    	<p>The Line Item is added during <a href="ctp:api:endpoint:/{projectKey}/carts:POST">Cart creation</a> or using the <a href="ctp:api:type:CartAddLineItemAction">Add LineItem</a> update action.
     	The Line Item quantity can be changed without restriction.</p>
 
     */

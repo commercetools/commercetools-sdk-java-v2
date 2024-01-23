@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Indicates the shipment status of the Parcel.</p>
+ *  <p>Indicates the shipment status of the Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ShipmentState extends JsonEnum {

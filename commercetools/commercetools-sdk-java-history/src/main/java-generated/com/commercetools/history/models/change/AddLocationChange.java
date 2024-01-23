@@ -24,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     AddLocationChange addLocationChange = AddLocationChange.builder()
  *             .change("{change}")
- *             .previousValue(previousValueBuilder -> previousValueBuilder)
  *             .nextValue(nextValueBuilder -> nextValueBuilder)
  *             .build()
  * </code></pre>
@@ -56,15 +55,6 @@ public interface AddLocationChange extends Change {
     public String getChange();
 
     /**
-     *  <p>Value before the change.</p>
-     * @return previousValue
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("previousValue")
-    public Location getPreviousValue();
-
-    /**
      *  <p>Value after the change.</p>
      * @return nextValue
      */
@@ -79,13 +69,6 @@ public interface AddLocationChange extends Change {
      */
 
     public void setChange(final String change);
-
-    /**
-     *  <p>Value before the change.</p>
-     * @param previousValue value to be set
-     */
-
-    public void setPreviousValue(final Location previousValue);
 
     /**
      *  <p>Value after the change.</p>
@@ -110,7 +93,6 @@ public interface AddLocationChange extends Change {
     public static AddLocationChange of(final AddLocationChange template) {
         AddLocationChangeImpl instance = new AddLocationChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         return instance;
     }
@@ -127,8 +109,6 @@ public interface AddLocationChange extends Change {
         }
         AddLocationChangeImpl instance = new AddLocationChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(
-            com.commercetools.history.models.common.Location.deepCopy(template.getPreviousValue()));
         instance.setNextValue(com.commercetools.history.models.common.Location.deepCopy(template.getNextValue()));
         return instance;
     }

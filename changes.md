@@ -1,14 +1,6 @@
 **Api changes**
 
 <details>
-<summary>Added Type(s)</summary>
-
-- added type `ApprovalFlowSetCustomFieldAction`
-- added type `ApprovalFlowSetCustomTypeAction`
-</details>
-
-
-<details>
 <summary>Removed Type(s)</summary>
 
 - :warning: removed type `NotEnabledError`
@@ -17,9 +9,20 @@
 
 
 <details>
-<summary>Added Property(s)</summary>
+<summary>Added Type(s)</summary>
 
-- added property `custom` to type `ApprovalFlow`
+- added type `ApprovalFlowSetCustomFieldAction`
+- added type `ApprovalFlowSetCustomTypeAction`
+- added type `CartDiscountCreatedMessage`
+- added type `CartDiscountDeletedMessage`
+- added type `CartDiscountStoreAddedMessage`
+- added type `CartDiscountStoreRemovedMessage`
+- added type `CartDiscountStoresSetMessage`
+- added type `CartDiscountCreatedMessagePayload`
+- added type `CartDiscountDeletedMessagePayload`
+- added type `CartDiscountStoreAddedMessagePayload`
+- added type `CartDiscountStoreRemovedMessagePayload`
+- added type `CartDiscountStoresSetMessagePayload`
 </details>
 
 
@@ -33,7 +36,23 @@
 - added enum `approval-flow` to type `ResourceTypeId`
 </details>
 
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `custom` to type `ApprovalFlow`
+</details>
+
 **History changes**
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `ChannelRole`
+- :warning: removed type `StateRole`
+- :warning: removed type `StateType`
+</details>
+
 
 <details>
 <summary>Added Type(s)</summary>
@@ -43,15 +62,6 @@
 - added type `ChannelRoleEnum`
 - added type `StateRoleEnum`
 - added type `StateTypeEnum`
-</details>
-
-
-<details>
-<summary>Removed Type(s)</summary>
-
-- :warning: removed type `ChannelRole`
-- :warning: removed type `StateRole`
-- :warning: removed type `StateType`
 </details>
 
 

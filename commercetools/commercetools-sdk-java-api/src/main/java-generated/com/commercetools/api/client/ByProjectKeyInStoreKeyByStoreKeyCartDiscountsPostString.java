@@ -22,6 +22,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>When using the endpoint, the Store specified in the path and the Stores specified in the payload's <code>stores</code> field are added to the CartDiscount.</p>
+ *  <p>Creating a Cart Discount produces the CartDiscountCreated Message.</p>
  *
  * <hr>
  * <div class=code-example>

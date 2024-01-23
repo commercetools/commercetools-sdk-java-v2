@@ -104,7 +104,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param subRates value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param subRates value to be set
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param subRates value to be set
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -158,7 +158,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -171,7 +171,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -182,7 +182,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @param builder function to build the subRates value
      * @return Builder
      */
@@ -248,7 +248,7 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
      * @return subRates
      */
 

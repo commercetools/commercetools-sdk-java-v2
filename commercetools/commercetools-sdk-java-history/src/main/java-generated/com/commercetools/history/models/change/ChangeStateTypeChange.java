@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.history.models.common.StateType;
+import com.commercetools.history.models.common.StateTypeEnum;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -23,8 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     ChangeStateTypeChange changeStateTypeChange = ChangeStateTypeChange.builder()
  *             .change("{change}")
- *             .previousValue(StateType.ORDER_STATE)
- *             .nextValue(StateType.ORDER_STATE)
+ *             .previousValue(StateTypeEnum.ORDER_STATE)
+ *             .nextValue(StateTypeEnum.ORDER_STATE)
  *             .build()
  * </code></pre>
  * </div>
@@ -60,7 +60,7 @@ public interface ChangeStateTypeChange extends Change {
      */
     @NotNull
     @JsonProperty("previousValue")
-    public StateType getPreviousValue();
+    public StateTypeEnum getPreviousValue();
 
     /**
      *  <p>Value after the change.</p>
@@ -68,7 +68,7 @@ public interface ChangeStateTypeChange extends Change {
      */
     @NotNull
     @JsonProperty("nextValue")
-    public StateType getNextValue();
+    public StateTypeEnum getNextValue();
 
     /**
      * set change
@@ -82,14 +82,14 @@ public interface ChangeStateTypeChange extends Change {
      * @param previousValue value to be set
      */
 
-    public void setPreviousValue(final StateType previousValue);
+    public void setPreviousValue(final StateTypeEnum previousValue);
 
     /**
      *  <p>Value after the change.</p>
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final StateType nextValue);
+    public void setNextValue(final StateTypeEnum nextValue);
 
     /**
      * factory method

@@ -165,4 +165,13 @@ public class ApprovalFlowQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ApprovalFlowQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ApprovalFlowQueryBuilderDsl> custom(
+            Function<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("custom"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.type.CustomFieldsQueryBuilderDsl.of())),
+            ApprovalFlowQueryBuilderDsl::of);
+    }
+
 }

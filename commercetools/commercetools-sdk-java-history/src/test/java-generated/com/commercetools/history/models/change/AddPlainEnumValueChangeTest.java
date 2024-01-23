@@ -26,7 +26,7 @@ public class AddPlainEnumValueChangeTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { AddPlainEnumValueChange.builder().change("change") },
                 new Object[] { AddPlainEnumValueChange.builder()
-                        .nextValue(new com.commercetools.history.models.change_value.EnumValueImpl()) },
+                        .nextValue(new com.commercetools.history.models.common.AttributePlainEnumValueImpl()) },
                 new Object[] { AddPlainEnumValueChange.builder().attributeName("attributeName") } };
     }
 
@@ -40,9 +40,9 @@ public class AddPlainEnumValueChangeTest {
     @Test
     public void nextValue() {
         AddPlainEnumValueChange value = AddPlainEnumValueChange.of();
-        value.setNextValue(new com.commercetools.history.models.change_value.EnumValueImpl());
+        value.setNextValue(new com.commercetools.history.models.common.AttributePlainEnumValueImpl());
         Assertions.assertThat(value.getNextValue())
-                .isEqualTo(new com.commercetools.history.models.change_value.EnumValueImpl());
+                .isEqualTo(new com.commercetools.history.models.common.AttributePlainEnumValueImpl());
     }
 
     @Test

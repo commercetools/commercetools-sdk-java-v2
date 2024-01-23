@@ -24,13 +24,13 @@ public interface InventoryMode extends JsonEnum {
     InventoryMode NONE = InventoryModeEnum.NONE;
     /**
     	<p>Orders are tracked on the Inventory, and ordering a <a href="ctp:api:type:LineItem">LineItem</a> deducts the available quantity on the respective <a href="ctp:api:type:InventoryEntry">InventoryEntry</a>.</p>
-    	<p>An <a href="/../api/projects/orders#create-order">Order can be created</a> even if the Line Item quantity is zero or negative, but if no matching Inventory Entry exists for the Line Item, an <a href="ctp:api:type:OutOfStockError">OutOfStock</a> error is returned.</p>
+    	<p>An <a href="ctp:api:endpoint:/{projectKey}/orders:POST">Order can be created</a> even if the Line Item quantity is zero or negative, but if no matching Inventory Entry exists for the Line Item, an <a href="ctp:api:type:OutOfStockError">OutOfStock</a> error is returned.</p>
 
     */
     InventoryMode TRACK_ONLY = InventoryModeEnum.TRACK_ONLY;
     /**
     	<p>Line Items in a Cart are only reserved for the duration of the ordering transaction.
-    	If a Line Item is not available when <a href="/../api/projects/orders#create-order">creating an Order</a>, an <a href="ctp:api:type:OutOfStockError">OutOfStock</a> error is returned.
+    	If a Line Item is not available when <a href="ctp:api:endpoint:/{projectKey}/orders:POST">creating an Order</a>, an <a href="ctp:api:type:OutOfStockError">OutOfStock</a> error is returned.
     	This is because the <a href="ctp:api:type:InventoryEntry">InventoryEntry</a> <code>availableQuantity</code> is insufficient (but is still updated) for the ordered Line Item quantity.</p>
     	<p>However, an Order can be created if the <a href="ctp:api:type:InventoryEntry">InventoryEntry</a> <code>restockableInDays</code> is set (including <code>0</code>).</p>
 

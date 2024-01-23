@@ -19,6 +19,14 @@ public class ApprovalFlowUpdateActionBuilder {
         return com.commercetools.api.models.approval_flow.ApprovalFlowRejectActionBuilder.of();
     }
 
+    public com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeActionBuilder.of();
+    }
+
     /**
      * factory method for an instance of ApprovalFlowUpdateActionBuilder
      * @return builder

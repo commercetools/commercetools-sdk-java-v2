@@ -223,6 +223,26 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.BusinessUnitStoresSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CartDiscountCreatedMessageBuilder cartDiscountCreatedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartDiscountDeletedMessageBuilder cartDiscountDeletedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartDiscountStoreAddedMessageBuilder cartDiscountStoreAddedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountStoreAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartDiscountStoreRemovedMessageBuilder cartDiscountStoreRemovedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountStoreRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartDiscountStoresSetMessageBuilder cartDiscountStoresSetBuilder() {
+        return com.commercetools.api.models.message.CartDiscountStoresSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CategoryCreatedMessageBuilder categoryCreatedBuilder() {
         return com.commercetools.api.models.message.CategoryCreatedMessageBuilder.of();
     }

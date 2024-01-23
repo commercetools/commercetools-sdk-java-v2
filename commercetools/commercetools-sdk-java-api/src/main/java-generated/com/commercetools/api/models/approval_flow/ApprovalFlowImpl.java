@@ -52,6 +52,8 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
 
     private java.util.List<com.commercetools.api.models.approval_rule.RuleApprover> currentTierPendingApprovers;
 
+    private com.commercetools.api.models.type.CustomFields custom;
+
     /**
      * create instance with all properties
      */
@@ -69,7 +71,8 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
             @JsonProperty("approvals") final java.util.List<com.commercetools.api.models.approval_flow.ApprovalFlowApproval> approvals,
             @JsonProperty("eligibleApprovers") final java.util.List<com.commercetools.api.models.approval_rule.RuleApprover> eligibleApprovers,
             @JsonProperty("pendingApprovers") final java.util.List<com.commercetools.api.models.approval_rule.RuleApprover> pendingApprovers,
-            @JsonProperty("currentTierPendingApprovers") final java.util.List<com.commercetools.api.models.approval_rule.RuleApprover> currentTierPendingApprovers) {
+            @JsonProperty("currentTierPendingApprovers") final java.util.List<com.commercetools.api.models.approval_rule.RuleApprover> currentTierPendingApprovers,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -85,6 +88,7 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
         this.eligibleApprovers = eligibleApprovers;
         this.pendingApprovers = pendingApprovers;
         this.currentTierPendingApprovers = currentTierPendingApprovers;
+        this.custom = custom;
     }
 
     /**
@@ -213,6 +217,14 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
         return this.currentTierPendingApprovers;
     }
 
+    /**
+     *  <p>Custom Fields on the Approval Flow.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -300,6 +312,10 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
         this.currentTierPendingApprovers = currentTierPendingApprovers;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -325,6 +341,7 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
                 .append(eligibleApprovers, that.eligibleApprovers)
                 .append(pendingApprovers, that.pendingApprovers)
                 .append(currentTierPendingApprovers, that.currentTierPendingApprovers)
+                .append(custom, that.custom)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -340,6 +357,7 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
                 .append(eligibleApprovers, that.eligibleApprovers)
                 .append(pendingApprovers, that.pendingApprovers)
                 .append(currentTierPendingApprovers, that.currentTierPendingApprovers)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -360,6 +378,7 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
                 .append(eligibleApprovers)
                 .append(pendingApprovers)
                 .append(currentTierPendingApprovers)
+                .append(custom)
                 .toHashCode();
     }
 
@@ -380,6 +399,7 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
                 .append("eligibleApprovers", eligibleApprovers)
                 .append("pendingApprovers", pendingApprovers)
                 .append("currentTierPendingApprovers", currentTierPendingApprovers)
+                .append("custom", custom)
                 .build();
     }
 

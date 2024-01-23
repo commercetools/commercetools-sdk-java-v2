@@ -19,17 +19,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
- *   <li>Change Name on Cart Discounts.</li>
- *   <li>Change Name on Categories.</li>
- *   <li>Change Name on Channels.</li>
  *   <li>Change Name on Customer Groups.</li>
- *   <li>Change Name on Products.</li>
- *   <li>Change Name on Product Discounts.</li>
- *   <li>Change Name on Product Selections.</li>
  *   <li>Change Name on Product Types.</li>
- *   <li>Change Name on Shopping Lists.</li>
  *   <li>Change Name on Tax Categories.</li>
- *   <li>Change Name on Types.</li>
  *   <li>Change Name on Zones.</li>
  *  </ul>
  */

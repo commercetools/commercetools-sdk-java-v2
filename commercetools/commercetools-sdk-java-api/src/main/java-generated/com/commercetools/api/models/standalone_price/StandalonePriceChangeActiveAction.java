@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Updating the value of a StandalonePrice produces the StandalonePriceActiveChangedMessage.</p>
+ *  <p>Updating the value of a StandalonePrice produces the StandalonePriceActiveChanged Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

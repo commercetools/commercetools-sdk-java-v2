@@ -27,6 +27,11 @@ public interface ResourceTypeId extends JsonEnum {
     */
     ResourceTypeId ASSET = ResourceTypeIdEnum.ASSET;
     /**
+    	<p><a href="ctp:api:type:ApprovalFlow">ApprovalFlow</a></p>
+
+    */
+    ResourceTypeId APPROVAL_FLOW = ResourceTypeIdEnum.APPROVAL_FLOW;
+    /**
     	<p><a href="ctp:api:type:AssociateRole">AssociateRole</a></p>
 
     */
@@ -189,6 +194,11 @@ public interface ResourceTypeId extends JsonEnum {
          * asset
          */
         ASSET("asset"),
+
+        /**
+         * approval-flow
+         */
+        APPROVAL_FLOW("approval-flow"),
 
         /**
          * associate-role

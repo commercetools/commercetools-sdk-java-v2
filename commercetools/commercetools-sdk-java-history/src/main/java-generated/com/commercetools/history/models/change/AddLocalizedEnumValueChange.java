@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.history.models.change_value.LocalizedEnumValue;
+import com.commercetools.history.models.common.AttributeLocalizedEnumValue;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -67,7 +67,7 @@ public interface AddLocalizedEnumValueChange extends Change {
     @NotNull
     @Valid
     @JsonProperty("nextValue")
-    public LocalizedEnumValue getNextValue();
+    public AttributeLocalizedEnumValue getNextValue();
 
     /**
      *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
@@ -97,7 +97,7 @@ public interface AddLocalizedEnumValueChange extends Change {
      * @param nextValue value to be set
      */
 
-    public void setNextValue(final LocalizedEnumValue nextValue);
+    public void setNextValue(final AttributeLocalizedEnumValue nextValue);
 
     /**
      *  <p>Name of the updated FieldDefinition; only present on changes to Types.</p>
@@ -148,7 +148,7 @@ public interface AddLocalizedEnumValueChange extends Change {
         AddLocalizedEnumValueChangeImpl instance = new AddLocalizedEnumValueChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(
-            com.commercetools.history.models.change_value.LocalizedEnumValue.deepCopy(template.getNextValue()));
+            com.commercetools.history.models.common.AttributeLocalizedEnumValue.deepCopy(template.getNextValue()));
         instance.setFieldName(template.getFieldName());
         instance.setAttributeName(template.getAttributeName());
         return instance;

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Creating a Cart Discount produces the CartDiscountCreated Message.</p>
  *
  * <hr>
  * <div class=code-example>

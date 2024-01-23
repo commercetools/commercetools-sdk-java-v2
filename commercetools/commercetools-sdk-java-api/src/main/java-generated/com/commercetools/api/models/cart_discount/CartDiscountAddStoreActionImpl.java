@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>If a referenced Store does not exist, a ReferencedResourceNotFound error is returned.</p>
+ *  <p>This action generates a CartDiscountStoreAdded Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountAddStoreActionImpl implements CartDiscountAddStoreAction, ModelBase {

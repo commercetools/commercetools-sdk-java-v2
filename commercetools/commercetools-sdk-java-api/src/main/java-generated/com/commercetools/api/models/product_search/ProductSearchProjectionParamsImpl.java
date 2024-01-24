@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSearchProjectionParamsImpl implements ProductSearchProjectionParams, ModelBase {
 
-    private String expand;
+    private java.util.List<String> expand;
 
     private Boolean staged;
 
@@ -42,7 +42,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
      * create instance with all properties
      */
     @JsonCreator
-    ProductSearchProjectionParamsImpl(@JsonProperty("expand") final String expand,
+    ProductSearchProjectionParamsImpl(@JsonProperty("expand") final java.util.List<String> expand,
             @JsonProperty("staged") final Boolean staged, @JsonProperty("priceCurrency") final String priceCurrency,
             @JsonProperty("priceCountry") final String priceCountry,
             @JsonProperty("priceCustomerGroup") final String priceCustomerGroup,
@@ -69,7 +69,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
      *  <p>Expands a <code>value</code> of type Reference. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
      */
 
-    public String getExpand() {
+    public java.util.List<String> getExpand() {
         return this.expand;
     }
 
@@ -129,7 +129,11 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
         return this.storeProjection;
     }
 
-    public void setExpand(final String expand) {
+    public void setExpand(final String... expand) {
+        this.expand = new ArrayList<>(Arrays.asList(expand));
+    }
+
+    public void setExpand(final java.util.List<String> expand) {
         this.expand = expand;
     }
 

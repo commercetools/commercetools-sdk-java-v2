@@ -26,7 +26,8 @@ public class ProductSearchProjectionParamsTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSearchProjectionParams.builder().expand("expand") },
+        return new Object[][] {
+                new Object[] { ProductSearchProjectionParams.builder().expand(Collections.singletonList("expand")) },
                 new Object[] { ProductSearchProjectionParams.builder().staged(true) },
                 new Object[] { ProductSearchProjectionParams.builder().priceCurrency("priceCurrency") },
                 new Object[] { ProductSearchProjectionParams.builder().priceCountry("priceCountry") },
@@ -40,8 +41,8 @@ public class ProductSearchProjectionParamsTest {
     @Test
     public void expand() {
         ProductSearchProjectionParams value = ProductSearchProjectionParams.of();
-        value.setExpand("expand");
-        Assertions.assertThat(value.getExpand()).isEqualTo("expand");
+        value.setExpand(Collections.singletonList("expand"));
+        Assertions.assertThat(value.getExpand()).isEqualTo(Collections.singletonList("expand"));
     }
 
     @Test

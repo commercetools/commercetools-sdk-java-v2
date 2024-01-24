@@ -81,14 +81,6 @@ public interface ProductSearchSorting {
     public ProductSearchQueryExpression getFilter();
 
     /**
-     *
-     * @return internal
-     */
-
-    @JsonProperty("internal")
-    public Boolean getInternal();
-
-    /**
      * set field
      * @param field value to be set
      */
@@ -131,13 +123,6 @@ public interface ProductSearchSorting {
     public void setFilter(final ProductSearchQueryExpression filter);
 
     /**
-     * set internal
-     * @param internal value to be set
-     */
-
-    public void setInternal(final Boolean internal);
-
-    /**
      * factory method
      * @return instance of ProductSearchSorting
      */
@@ -158,7 +143,6 @@ public interface ProductSearchSorting {
         instance.setMode(template.getMode());
         instance.setAttributeType(template.getAttributeType());
         instance.setFilter(template.getFilter());
-        instance.setInternal(template.getInternal());
         return instance;
     }
 
@@ -180,7 +164,6 @@ public interface ProductSearchSorting {
         instance.setAttributeType(template.getAttributeType());
         instance.setFilter(
             com.commercetools.api.models.product_search.ProductSearchQueryExpression.deepCopy(template.getFilter()));
-        instance.setInternal(template.getInternal());
         return instance;
     }
 

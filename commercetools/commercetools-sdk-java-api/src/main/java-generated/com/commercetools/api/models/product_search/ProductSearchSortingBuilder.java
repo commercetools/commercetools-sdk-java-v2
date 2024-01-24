@@ -41,9 +41,6 @@ public class ProductSearchSortingBuilder implements Builder<ProductSearchSorting
     @Nullable
     private com.commercetools.api.models.product_search.ProductSearchQueryExpression filter;
 
-    @Nullable
-    private Boolean internal;
-
     /**
      * set the value to the field
      * @param field value to be set
@@ -142,17 +139,6 @@ public class ProductSearchSortingBuilder implements Builder<ProductSearchSorting
     }
 
     /**
-     * set the value to the internal
-     * @param internal value to be set
-     * @return Builder
-     */
-
-    public ProductSearchSortingBuilder internal(@Nullable final Boolean internal) {
-        this.internal = internal;
-        return this;
-    }
-
-    /**
      * value of field}
      * @return field
      */
@@ -211,23 +197,13 @@ public class ProductSearchSortingBuilder implements Builder<ProductSearchSorting
     }
 
     /**
-     * value of internal}
-     * @return internal
-     */
-
-    @Nullable
-    public Boolean getInternal() {
-        return this.internal;
-    }
-
-    /**
      * builds ProductSearchSorting with checking for non-null required values
      * @return ProductSearchSorting
      */
     public ProductSearchSorting build() {
         Objects.requireNonNull(field, ProductSearchSorting.class + ": field is missing");
         Objects.requireNonNull(order, ProductSearchSorting.class + ": order is missing");
-        return new ProductSearchSortingImpl(field, language, order, mode, attributeType, filter, internal);
+        return new ProductSearchSortingImpl(field, language, order, mode, attributeType, filter);
     }
 
     /**
@@ -235,7 +211,7 @@ public class ProductSearchSortingBuilder implements Builder<ProductSearchSorting
      * @return ProductSearchSorting
      */
     public ProductSearchSorting buildUnchecked() {
-        return new ProductSearchSortingImpl(field, language, order, mode, attributeType, filter, internal);
+        return new ProductSearchSortingImpl(field, language, order, mode, attributeType, filter);
     }
 
     /**
@@ -259,7 +235,6 @@ public class ProductSearchSortingBuilder implements Builder<ProductSearchSorting
         builder.mode = template.getMode();
         builder.attributeType = template.getAttributeType();
         builder.filter = template.getFilter();
-        builder.internal = template.getInternal();
         return builder;
     }
 

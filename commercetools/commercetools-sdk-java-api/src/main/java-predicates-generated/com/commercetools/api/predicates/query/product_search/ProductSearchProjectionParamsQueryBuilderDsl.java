@@ -11,8 +11,8 @@ public class ProductSearchProjectionParamsQueryBuilderDsl {
         return new ProductSearchProjectionParamsQueryBuilderDsl();
     }
 
-    public StringComparisonPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl> expand() {
-        return new StringComparisonPredicateBuilder<>(
+    public StringCollectionPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl> expand() {
+        return new StringCollectionPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("expand")),
             p -> new CombinationQueryPredicate<>(p, ProductSearchProjectionParamsQueryBuilderDsl::of));
     }

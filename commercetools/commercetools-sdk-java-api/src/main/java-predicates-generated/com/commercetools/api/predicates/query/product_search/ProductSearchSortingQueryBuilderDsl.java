@@ -53,10 +53,4 @@ public class ProductSearchSortingQueryBuilderDsl {
             ProductSearchSortingQueryBuilderDsl::of);
     }
 
-    public BooleanComparisonPredicateBuilder<ProductSearchSortingQueryBuilderDsl> internal() {
-        return new BooleanComparisonPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("internal")),
-            p -> new CombinationQueryPredicate<>(p, ProductSearchSortingQueryBuilderDsl::of));
-    }
-
 }

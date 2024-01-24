@@ -34,7 +34,7 @@ public interface ProductSearchProjectionParams {
      */
 
     @JsonProperty("expand")
-    public String getExpand();
+    public List<String> getExpand();
 
     /**
      *  <p>Set to <code>true</code> to retrieve the staged Product Projection</p>
@@ -94,10 +94,18 @@ public interface ProductSearchProjectionParams {
 
     /**
      *  <p>Expands a <code>value</code> of type Reference. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
-     * @param expand value to be set
+     * @param expand values to be set
      */
 
-    public void setExpand(final String expand);
+    @JsonIgnore
+    public void setExpand(final String... expand);
+
+    /**
+     *  <p>Expands a <code>value</code> of type Reference. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
+     * @param expand values to be set
+     */
+
+    public void setExpand(final List<String> expand);
 
     /**
      *  <p>Set to <code>true</code> to retrieve the staged Product Projection</p>
@@ -193,7 +201,7 @@ public interface ProductSearchProjectionParams {
             return null;
         }
         ProductSearchProjectionParamsImpl instance = new ProductSearchProjectionParamsImpl();
-        instance.setExpand(template.getExpand());
+        instance.setExpand(Optional.ofNullable(template.getExpand()).map(ArrayList::new).orElse(null));
         instance.setStaged(template.getStaged());
         instance.setPriceCurrency(template.getPriceCurrency());
         instance.setPriceCountry(template.getPriceCountry());

@@ -34,8 +34,6 @@ public class ProductSearchSortingImpl implements ProductSearchSorting, ModelBase
 
     private com.commercetools.api.models.product_search.ProductSearchQueryExpression filter;
 
-    private Boolean internal;
-
     /**
      * create instance with all properties
      */
@@ -44,15 +42,13 @@ public class ProductSearchSortingImpl implements ProductSearchSorting, ModelBase
             @JsonProperty("order") final com.commercetools.api.models.product_search.ProductSearchSortOrder order,
             @JsonProperty("mode") final com.commercetools.api.models.product_search.ProductSearchSortMode mode,
             @JsonProperty("attributeType") final com.commercetools.api.models.product_search.ProductSearchAttributeType attributeType,
-            @JsonProperty("filter") final com.commercetools.api.models.product_search.ProductSearchQueryExpression filter,
-            @JsonProperty("internal") final Boolean internal) {
+            @JsonProperty("filter") final com.commercetools.api.models.product_search.ProductSearchQueryExpression filter) {
         this.field = field;
         this.language = language;
         this.order = order;
         this.mode = mode;
         this.attributeType = attributeType;
         this.filter = filter;
-        this.internal = internal;
     }
 
     /**
@@ -109,14 +105,6 @@ public class ProductSearchSortingImpl implements ProductSearchSorting, ModelBase
         return this.filter;
     }
 
-    /**
-     *
-     */
-
-    public Boolean getInternal() {
-        return this.internal;
-    }
-
     public void setField(final String field) {
         this.field = field;
     }
@@ -142,10 +130,6 @@ public class ProductSearchSortingImpl implements ProductSearchSorting, ModelBase
         this.filter = filter;
     }
 
-    public void setInternal(final Boolean internal) {
-        this.internal = internal;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -162,14 +146,12 @@ public class ProductSearchSortingImpl implements ProductSearchSorting, ModelBase
                 .append(mode, that.mode)
                 .append(attributeType, that.attributeType)
                 .append(filter, that.filter)
-                .append(internal, that.internal)
                 .append(field, that.field)
                 .append(language, that.language)
                 .append(order, that.order)
                 .append(mode, that.mode)
                 .append(attributeType, that.attributeType)
                 .append(filter, that.filter)
-                .append(internal, that.internal)
                 .isEquals();
     }
 
@@ -181,7 +163,6 @@ public class ProductSearchSortingImpl implements ProductSearchSorting, ModelBase
                 .append(mode)
                 .append(attributeType)
                 .append(filter)
-                .append(internal)
                 .toHashCode();
     }
 
@@ -193,7 +174,6 @@ public class ProductSearchSortingImpl implements ProductSearchSorting, ModelBase
                 .append("mode", mode)
                 .append("attributeType", attributeType)
                 .append("filter", filter)
-                .append("internal", internal)
                 .build();
     }
 

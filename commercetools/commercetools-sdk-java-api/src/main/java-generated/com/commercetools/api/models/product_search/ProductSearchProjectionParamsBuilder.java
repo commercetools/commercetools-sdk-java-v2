@@ -23,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ProductSearchProjectionParamsBuilder implements Builder<ProductSearchProjectionParams> {
 
     @Nullable
-    private String expand;
+    private java.util.List<String> expand;
 
     @Nullable
     private Boolean staged;
@@ -52,8 +52,33 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
      * @return Builder
      */
 
-    public ProductSearchProjectionParamsBuilder expand(@Nullable final String expand) {
+    public ProductSearchProjectionParamsBuilder expand(@Nullable final String... expand) {
+        this.expand = new ArrayList<>(Arrays.asList(expand));
+        return this;
+    }
+
+    /**
+     *  <p>Expands a <code>value</code> of type Reference. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
+     * @param expand value to be set
+     * @return Builder
+     */
+
+    public ProductSearchProjectionParamsBuilder expand(@Nullable final java.util.List<String> expand) {
         this.expand = expand;
+        return this;
+    }
+
+    /**
+     *  <p>Expands a <code>value</code> of type Reference. In case the referenced object does not exist, the API returns the non-expanded reference.</p>
+     * @param expand value to be set
+     * @return Builder
+     */
+
+    public ProductSearchProjectionParamsBuilder plusExpand(@Nullable final String... expand) {
+        if (this.expand == null) {
+            this.expand = new ArrayList<>();
+        }
+        this.expand.addAll(Arrays.asList(expand));
         return this;
     }
 
@@ -166,7 +191,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
      */
 
     @Nullable
-    public String getExpand() {
+    public java.util.List<String> getExpand() {
         return this.expand;
     }
 

@@ -34,8 +34,7 @@ public class ProductSearchSortingTest {
                         .attributeType(com.commercetools.api.models.product_search.ProductSearchAttributeType
                                 .findEnum("boolean")) },
                 new Object[] { ProductSearchSorting.builder()
-                        .filter(new com.commercetools.api.models.product_search.ProductSearchQueryExpressionImpl()) },
-                new Object[] { ProductSearchSorting.builder().internal(true) } };
+                        .filter(new com.commercetools.api.models.product_search.ProductSearchQueryExpressionImpl()) } };
     }
 
     @Test
@@ -83,12 +82,5 @@ public class ProductSearchSortingTest {
         value.setFilter(new com.commercetools.api.models.product_search.ProductSearchQueryExpressionImpl());
         Assertions.assertThat(value.getFilter())
                 .isEqualTo(new com.commercetools.api.models.product_search.ProductSearchQueryExpressionImpl());
-    }
-
-    @Test
-    public void internal() {
-        ProductSearchSorting value = ProductSearchSorting.of();
-        value.setInternal(true);
-        Assertions.assertThat(value.getInternal()).isEqualTo(true);
     }
 }

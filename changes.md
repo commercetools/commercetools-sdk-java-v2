@@ -27,13 +27,16 @@
 
 
 <details>
-<summary>Added Enum(s)</summary>
+<summary>Removed Property(s)</summary>
 
-- added enum `associate-role` to type `AttributeReferenceTypeId`
-- added enum `business-unit` to type `AttributeReferenceTypeId`
-- added enum `cart-discount` to type `AttributeReferenceTypeId`
-- added enum `approval-flow` to type `CustomFieldReferenceValue`
-- added enum `approval-flow` to type `ResourceTypeId`
+- :warning: removed property `internal` from type `ProductSearchSorting`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `expand` of type `ProductSearchProjectionParams` from type `Expansion` to `Expansion[]`
 </details>
 
 
@@ -41,6 +44,17 @@
 <summary>Added Property(s)</summary>
 
 - added property `custom` to type `ApprovalFlow`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `associate-role` to type `AttributeReferenceTypeId`
+- added enum `business-unit` to type `AttributeReferenceTypeId`
+- added enum `cart-discount` to type `AttributeReferenceTypeId`
+- added enum `approval-flow` to type `CustomFieldReferenceValue`
+- added enum `approval-flow` to type `ResourceTypeId`
 </details>
 
 **History changes**

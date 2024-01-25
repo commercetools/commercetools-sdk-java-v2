@@ -87,7 +87,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public TaxedItemPrice getTaxedPrice();
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @return taxedPricePortions
      */
     @NotNull
@@ -140,7 +140,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions values to be set
      */
 
@@ -148,7 +148,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions values to be set
      */
 

@@ -40,7 +40,7 @@ public interface MethodTaxedPrice {
     public String getShippingMethodKey();
 
     /**
-     *  <p>Taxed price for the Shipping Method.</p>
+     *  <p>Total taxed price based on the quantity of the Line Item or Custom Line Item assigned to the Shipping Method identified by <code>shippingMethodKey</code>.</p>
      * @return taxedPrice
      */
     @Valid
@@ -55,7 +55,7 @@ public interface MethodTaxedPrice {
     public void setShippingMethodKey(final String shippingMethodKey);
 
     /**
-     *  <p>Taxed price for the Shipping Method.</p>
+     *  <p>Total taxed price based on the quantity of the Line Item or Custom Line Item assigned to the Shipping Method identified by <code>shippingMethodKey</code>.</p>
      * @param taxedPrice value to be set
      */
 

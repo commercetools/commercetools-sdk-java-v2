@@ -59,7 +59,7 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
     }
 
     /**
-     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getFreeAbove() {

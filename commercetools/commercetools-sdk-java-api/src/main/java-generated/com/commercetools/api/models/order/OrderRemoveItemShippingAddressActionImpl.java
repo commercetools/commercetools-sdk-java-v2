@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>An address can only be removed if it is not referenced in any ItemShippingTarget of the Cart.</p>
+ *  <p>An address can only be removed if it is not referenced in any ItemShippingTarget of the Cart. In such case, change the Line Item shipping address to a different <code>addressKey</code> first using the Set LineItemShippingDetails update action, before you remove the obsolete address.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderRemoveItemShippingAddressActionImpl implements OrderRemoveItemShippingAddressAction, ModelBase {

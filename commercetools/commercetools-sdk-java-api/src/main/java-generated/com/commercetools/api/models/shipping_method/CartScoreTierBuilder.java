@@ -36,7 +36,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     private Boolean isMatching;
 
     /**
-     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Using Tiered Shipping Rates for details and examples.</p>
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Tiered shipping rates for details and examples.</p>
      * @param score value to be set
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
     }
 
     /**
-     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Using Tiered Shipping Rates for details and examples.</p>
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Tiered shipping rates for details and examples.</p>
      * @return score
      */
 

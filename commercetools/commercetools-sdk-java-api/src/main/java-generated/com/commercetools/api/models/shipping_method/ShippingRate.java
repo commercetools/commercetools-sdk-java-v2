@@ -44,7 +44,7 @@ public interface ShippingRate {
     public TypedMoney getPrice();
 
     /**
-     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @return freeAbove
      */
     @Valid
@@ -76,7 +76,7 @@ public interface ShippingRate {
     public void setPrice(final TypedMoney price);
 
     /**
-     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param freeAbove value to be set
      */
 

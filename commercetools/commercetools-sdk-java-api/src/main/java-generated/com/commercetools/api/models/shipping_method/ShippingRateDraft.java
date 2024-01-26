@@ -43,7 +43,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public Money getPrice();
 
     /**
-     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @return freeAbove
      */
     @Valid
@@ -66,7 +66,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public void setPrice(final Money price);
 
     /**
-     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param freeAbove value to be set
      */
 

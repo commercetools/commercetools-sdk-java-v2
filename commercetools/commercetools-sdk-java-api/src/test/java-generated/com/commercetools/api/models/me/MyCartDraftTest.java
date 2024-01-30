@@ -52,6 +52,8 @@ public class MyCartDraftTest {
                         MyCartDraft.builder()
                                 .itemShippingAddresses(Collections
                                         .singletonList(new com.commercetools.api.models.common.BaseAddressImpl())) },
+                new Object[] { MyCartDraft.builder()
+                        .shippingMode(com.commercetools.api.models.cart.ShippingMode.findEnum("Single")) },
                 new Object[] { MyCartDraft.builder().discountCodes(Collections.singletonList("discountCodes")) },
                 new Object[] { MyCartDraft.builder().country("country") },
                 new Object[] { MyCartDraft.builder().locale("locale") },
@@ -145,6 +147,14 @@ public class MyCartDraftTest {
             Collections.singletonList(new com.commercetools.api.models.common.BaseAddressImpl()));
         Assertions.assertThat(value.getItemShippingAddresses())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.common.BaseAddressImpl()));
+    }
+
+    @Test
+    public void shippingMode() {
+        MyCartDraft value = MyCartDraft.of();
+        value.setShippingMode(com.commercetools.api.models.cart.ShippingMode.findEnum("Single"));
+        Assertions.assertThat(value.getShippingMode())
+                .isEqualTo(com.commercetools.api.models.cart.ShippingMode.findEnum("Single"));
     }
 
     @Test

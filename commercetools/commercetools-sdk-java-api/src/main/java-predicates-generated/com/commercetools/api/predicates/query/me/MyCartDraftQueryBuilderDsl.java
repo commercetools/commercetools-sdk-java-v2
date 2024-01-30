@@ -114,6 +114,12 @@ public class MyCartDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, MyCartDraftQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<MyCartDraftQueryBuilderDsl> shippingMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("shippingMode")),
+            p -> new CombinationQueryPredicate<>(p, MyCartDraftQueryBuilderDsl::of));
+    }
+
     public StringCollectionPredicateBuilder<MyCartDraftQueryBuilderDsl> discountCodes() {
         return new StringCollectionPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("discountCodes")),

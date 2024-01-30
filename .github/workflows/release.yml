@@ -78,6 +78,13 @@ jobs:
 
       - run: ./gradlew -Pversion=${{ github.ref_name }} writeVersionToExamples writeVersionToReadme setVersion nextMinorVersion snapshotVersion
 
+      - name: "Switch SDK to after release branch"
+        run: |
+            git fetch --depth=1 origin after-release || true
+            git checkout -B after-release origin/after-release || true
+            git checkout -B after-release
+            git log -1
+
       - name: "update changelog"
         run: |
             gh api /repos/commercetools/commercetools-sdk-java-v2/releases --paginate > releases.json

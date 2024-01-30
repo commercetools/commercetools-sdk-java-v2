@@ -84,7 +84,6 @@ The ApiRootBuilder can be used to configure it.
 ApiRootBuilder.of().withErrorMiddleware();
 ```
 
-barbara79 marked this conversation as resolved.
 If the `defaultClient` builder method is used it will be configured. The builder also ensures that the ErrorMiddleware is always the last middleware in the call stack. The following examples shows custom configuration of the equivalent of the above method:
 
 ```java
@@ -168,7 +167,7 @@ ApiRootBuilder.of().addNotFoundExceptionMiddleware(request -> request.getUri().g
 
 ### How to reuse the Client
 The client can be created once, it can be used by creating the **ApiRoot** object instance and reusing the object instance throughout the whole application.
-barbara79 marked this conversation as resolved.
+
 ```java
 ProjectApiRoot apiRoot = ApiRootBuilder.of()
         .defaultClient(ClientCredentials.of()

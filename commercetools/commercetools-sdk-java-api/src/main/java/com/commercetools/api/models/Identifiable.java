@@ -11,4 +11,8 @@ public interface Identifiable<T> {
      * @return ID
      */
     String getId();
+
+    static <T> Identifiable<T> of(final String id) {
+        return new SimpleIdentifiable<>(id);
+    }
 }

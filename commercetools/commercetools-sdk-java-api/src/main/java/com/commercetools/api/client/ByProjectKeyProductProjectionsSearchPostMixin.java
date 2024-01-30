@@ -7,6 +7,11 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import com.commercetools.api.search.products.FacetExpression;
+import com.commercetools.api.search.products.FilterExpression;
+import com.commercetools.api.search.products.ProductFacetExpressionBuilder;
+import com.commercetools.api.search.products.ProductFilterExpressionBuilder;
+
 import io.vrap.rmf.base.client.ApiMethod;
 
 public interface ByProjectKeyProductProjectionsSearchPostMixin {
@@ -1653,5 +1658,33 @@ public interface ByProjectKeyProductProjectionsSearchPostMixin {
         return addFormParams(text.stream()
                 .map(s -> new ApiMethod.ParamEntry<>(placeholderName, s.toString()))
                 .collect(Collectors.toList()));
+    }
+
+    default ProductFilterExpressionBuilder filterDsl() {
+        return new ProductFilterExpressionBuilder();
+    }
+
+    default ProductFacetExpressionBuilder facetDsl() {
+        return new ProductFacetExpressionBuilder();
+    }
+
+    default ByProjectKeyProductProjectionsSearchPost filter(
+            Function<ProductFilterExpressionBuilder, FilterExpression> fn) {
+        return addFilter(fn.apply(filterDsl()).render());
+    }
+
+    default ByProjectKeyProductProjectionsSearchPost filterFacets(
+            Function<ProductFilterExpressionBuilder, FilterExpression> fn) {
+        return addFilterFacets(fn.apply(filterDsl()).render());
+    }
+
+    default ByProjectKeyProductProjectionsSearchPost filterQuery(
+            Function<ProductFilterExpressionBuilder, FilterExpression> fn) {
+        return addFilterQuery(fn.apply(filterDsl()).render());
+    }
+
+    default ByProjectKeyProductProjectionsSearchPost facet(
+            Function<ProductFacetExpressionBuilder, FacetExpression<?>> fn) {
+        return addFacet(fn.apply(facetDsl()).render());
     }
 }

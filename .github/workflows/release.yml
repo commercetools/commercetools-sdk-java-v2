@@ -143,7 +143,7 @@ jobs:
           java-version: '17'
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
+        uses: ts-graphviz/setup-graphviz@0135b05c0c4c17c48b948c13e1dd530cb2b2a1af
 
       - run: ./gradlew -Pversion=${{ github.ref_name }} alljavadoc
         working-directory: sdk

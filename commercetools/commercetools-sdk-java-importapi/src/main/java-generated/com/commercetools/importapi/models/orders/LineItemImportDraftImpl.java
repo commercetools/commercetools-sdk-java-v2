@@ -31,7 +31,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
 
     private com.commercetools.importapi.models.orders.LineItemPrice price;
 
-    private Double quantity;
+    private Long quantity;
 
     private java.util.List<com.commercetools.importapi.models.orders.ItemState> state;
 
@@ -54,7 +54,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
             @JsonProperty("name") final com.commercetools.importapi.models.common.LocalizedString name,
             @JsonProperty("variant") final com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft variant,
             @JsonProperty("price") final com.commercetools.importapi.models.orders.LineItemPrice price,
-            @JsonProperty("quantity") final Double quantity,
+            @JsonProperty("quantity") final Long quantity,
             @JsonProperty("state") final java.util.List<com.commercetools.importapi.models.orders.ItemState> state,
             @JsonProperty("supplyChannel") final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel,
             @JsonProperty("distributionChannel") final com.commercetools.importapi.models.common.ChannelKeyReference distributionChannel,
@@ -116,7 +116,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
      *  <p>Maps to <code>LineItem.quantity</code>.</p>
      */
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -184,7 +184,7 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
         this.price = price;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

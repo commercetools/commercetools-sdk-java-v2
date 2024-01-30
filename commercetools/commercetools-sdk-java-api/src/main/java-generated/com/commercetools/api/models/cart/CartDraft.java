@@ -169,7 +169,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public BaseAddress getBillingAddress();
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
      * @return shippingAddress
      */
     @Valid
@@ -412,7 +412,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setBillingAddress(final BaseAddress billingAddress);
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
      * @param shippingAddress value to be set
      */
 

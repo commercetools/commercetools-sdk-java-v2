@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
 
-    private Double quantity;
+    private Long quantity;
 
     private String lineItemId;
 
@@ -36,7 +36,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    ReturnItemDraftImpl(@JsonProperty("quantity") final Double quantity,
+    ReturnItemDraftImpl(@JsonProperty("quantity") final Long quantity,
             @JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("comment") final String comment,
@@ -58,7 +58,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
      *
      */
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -94,7 +94,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
         return this.shipmentState;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

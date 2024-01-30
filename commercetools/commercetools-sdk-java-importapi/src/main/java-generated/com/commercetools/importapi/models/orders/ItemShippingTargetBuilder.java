@@ -24,7 +24,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
 
     private String addressKey;
 
-    private Double quantity;
+    private Long quantity;
 
     /**
      *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
@@ -43,7 +43,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
      * @return Builder
      */
 
-    public ItemShippingTargetBuilder quantity(final Double quantity) {
+    public ItemShippingTargetBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -62,7 +62,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
      * @return quantity
      */
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

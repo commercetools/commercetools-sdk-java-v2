@@ -94,7 +94,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
      */
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     /**
      *
@@ -189,7 +189,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
      * @param quantity value to be set
      */
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     /**
      * set state

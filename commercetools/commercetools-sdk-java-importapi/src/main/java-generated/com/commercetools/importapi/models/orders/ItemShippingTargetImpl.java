@@ -24,14 +24,14 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
 
     private String addressKey;
 
-    private Double quantity;
+    private Long quantity;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ItemShippingTargetImpl(@JsonProperty("addressKey") final String addressKey,
-            @JsonProperty("quantity") final Double quantity) {
+            @JsonProperty("quantity") final Long quantity) {
         this.addressKey = addressKey;
         this.quantity = quantity;
     }
@@ -54,7 +54,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
      *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
      */
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -62,7 +62,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
         this.addressKey = addressKey;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

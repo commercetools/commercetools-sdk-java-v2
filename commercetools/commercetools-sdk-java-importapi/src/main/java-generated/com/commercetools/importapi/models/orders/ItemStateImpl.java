@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemStateImpl implements ItemState, ModelBase {
 
-    private Double quantity;
+    private Long quantity;
 
     private com.commercetools.importapi.models.common.StateKeyReference state;
 
@@ -30,7 +30,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    ItemStateImpl(@JsonProperty("quantity") final Double quantity,
+    ItemStateImpl(@JsonProperty("quantity") final Long quantity,
             @JsonProperty("state") final com.commercetools.importapi.models.common.StateKeyReference state) {
         this.quantity = quantity;
         this.state = state;
@@ -46,7 +46,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
      *
      */
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -58,7 +58,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
         return this.state;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

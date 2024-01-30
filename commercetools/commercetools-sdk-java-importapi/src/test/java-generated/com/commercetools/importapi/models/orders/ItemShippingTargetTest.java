@@ -25,7 +25,7 @@ public class ItemShippingTargetTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { ItemShippingTarget.builder().addressKey("addressKey") },
-                new Object[] { ItemShippingTarget.builder().quantity(0.52277106) } };
+                new Object[] { ItemShippingTarget.builder().quantity(8L) } };
     }
 
     @Test
@@ -38,7 +38,7 @@ public class ItemShippingTargetTest {
     @Test
     public void quantity() {
         ItemShippingTarget value = ItemShippingTarget.of();
-        value.setQuantity(0.52277106);
-        Assertions.assertThat(value.getQuantity()).isEqualTo(0.52277106);
+        value.setQuantity(8L);
+        Assertions.assertThat(value.getQuantity()).isEqualTo(8L);
     }
 }

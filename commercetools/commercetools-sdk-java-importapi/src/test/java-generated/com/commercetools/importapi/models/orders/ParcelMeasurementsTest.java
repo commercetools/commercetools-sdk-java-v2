@@ -24,37 +24,37 @@ public class ParcelMeasurementsTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ParcelMeasurements.builder().heightInMillimeter(0.917797) },
-                new Object[] { ParcelMeasurements.builder().lengthInMillimeter(0.6846919) },
-                new Object[] { ParcelMeasurements.builder().widthInMillimeter(0.89507943) },
-                new Object[] { ParcelMeasurements.builder().weightInGram(0.583528) } };
+        return new Object[][] { new Object[] { ParcelMeasurements.builder().heightInMillimeter(5) },
+                new Object[] { ParcelMeasurements.builder().lengthInMillimeter(4) },
+                new Object[] { ParcelMeasurements.builder().widthInMillimeter(2) },
+                new Object[] { ParcelMeasurements.builder().weightInGram(9) } };
     }
 
     @Test
     public void heightInMillimeter() {
         ParcelMeasurements value = ParcelMeasurements.of();
-        value.setHeightInMillimeter(0.917797);
-        Assertions.assertThat(value.getHeightInMillimeter()).isEqualTo(0.917797);
+        value.setHeightInMillimeter(5);
+        Assertions.assertThat(value.getHeightInMillimeter()).isEqualTo(5);
     }
 
     @Test
     public void lengthInMillimeter() {
         ParcelMeasurements value = ParcelMeasurements.of();
-        value.setLengthInMillimeter(0.6846919);
-        Assertions.assertThat(value.getLengthInMillimeter()).isEqualTo(0.6846919);
+        value.setLengthInMillimeter(4);
+        Assertions.assertThat(value.getLengthInMillimeter()).isEqualTo(4);
     }
 
     @Test
     public void widthInMillimeter() {
         ParcelMeasurements value = ParcelMeasurements.of();
-        value.setWidthInMillimeter(0.89507943);
-        Assertions.assertThat(value.getWidthInMillimeter()).isEqualTo(0.89507943);
+        value.setWidthInMillimeter(2);
+        Assertions.assertThat(value.getWidthInMillimeter()).isEqualTo(2);
     }
 
     @Test
     public void weightInGram() {
         ParcelMeasurements value = ParcelMeasurements.of();
-        value.setWeightInGram(0.583528);
-        Assertions.assertThat(value.getWeightInGram()).isEqualTo(0.583528);
+        value.setWeightInGram(9);
+        Assertions.assertThat(value.getWeightInGram()).isEqualTo(9);
     }
 }

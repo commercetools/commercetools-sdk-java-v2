@@ -66,7 +66,7 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
 
     /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
-     *  <p>It connects Line Item quantities with individual shipping addresses.</p>
+     *  <p>It connects Line Item or Custom Line Item quantities with individual Shipping Methods.</p>
      */
 
     public String getShippingMethodKey() {

@@ -84,8 +84,24 @@ jobs:
             commit_user_name: ct-sdks[bot]
             commit_user_email: ${{ steps.get_app_user.outputs.email }}
 
+      - name: Check licenses
+        if: github.event_name == 'push'
+        run: ./gradlew checkLicense
+
+      - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
+        id: commit_license_change
+        if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        with:
+            push_options: --dry-run
+            file_pattern: 'licenses/index.json licenses/**/index.json'
+            commit_message: "TASK: Updating license information"
+            commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
+            commit_user_name: ct-sdks[bot]
+            commit_user_email: ${{ steps.get_app_user.outputs.email }}
+            disable_globbing: true
+
       - name: Push if changes
-        if: steps.commit_style_fix.outputs.changes_detected || steps.commit_rev_ignore.outputs.changes_detected
+        if: steps.commit_style_fix.outputs.changes_detected || steps.commit_rev_ignore.outputs.changes_detected || steps.commit_license_change.outputs.changes_detected
         run: git push origin
 
       - name: Run integration tests for PR
@@ -152,17 +168,4 @@ jobs:
 
       - name: build javadoc
         if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: ./gradlew alljavadoc checkLicense
-
-      - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
-        id: commit_license_change
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        with:
-            file_pattern: 'licenses/index.json licenses/**/index.json'
-            commit_message: "TASK: Updating license information"
-            commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
-            commit_user_name: ct-sdks[bot]
-            commit_user_email: ${{ steps.get_app_user.outputs.email }}
-            disable_globbing: true
-        env:
-            GITHUB_TOKEN: ${{ steps.generate_github_token.outputs.token }}
+        run: ./gradlew alljavadoc

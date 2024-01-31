@@ -141,7 +141,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public CategoryReference getParent();
 
     /**
-     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
+     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
      * @return orderHint
      */
     @NotNull
@@ -290,7 +290,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public void setParent(final CategoryReference parent);
 
     /**
-     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
+     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
      * @param orderHint value to be set
      */
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.time.ZonedDateTime;
+import java.util.Collections;
 
 import com.tngtech.junit.dataprovider.DataProvider;
 import com.tngtech.junit.dataprovider.DataProviderExtension;
@@ -43,6 +44,9 @@ public class CartAddLineItemActionTest {
                         .externalTotalPrice(new com.commercetools.api.models.cart.ExternalLineItemTotalPriceImpl()) },
                 new Object[] { CartAddLineItemAction.builder()
                         .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { CartAddLineItemAction.builder()
+                        .perMethodExternalTaxRate(Collections.singletonList(
+                            new com.commercetools.api.models.cart.MethodExternalTaxRateDraftImpl())) },
                 new Object[] { CartAddLineItemAction.builder()
                         .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
                 new Object[] { CartAddLineItemAction.builder()
@@ -130,6 +134,16 @@ public class CartAddLineItemActionTest {
         value.setExternalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl());
         Assertions.assertThat(value.getExternalTaxRate())
                 .isEqualTo(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl());
+    }
+
+    @Test
+    public void perMethodExternalTaxRate() {
+        CartAddLineItemAction value = CartAddLineItemAction.of();
+        value.setPerMethodExternalTaxRate(
+            Collections.singletonList(new com.commercetools.api.models.cart.MethodExternalTaxRateDraftImpl()));
+        Assertions.assertThat(value.getPerMethodExternalTaxRate())
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.api.models.cart.MethodExternalTaxRateDraftImpl()));
     }
 
     @Test

@@ -48,6 +48,8 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    private java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> perMethodExternalTaxRate;
+
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
@@ -67,6 +69,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
+            @JsonProperty("perMethodExternalTaxRate") final java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> perMethodExternalTaxRate,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -81,6 +84,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
         this.externalTaxRate = externalTaxRate;
+        this.perMethodExternalTaxRate = perMethodExternalTaxRate;
         this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
         this.custom = custom;
@@ -195,6 +199,14 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> getPerMethodExternalTaxRate() {
+        return this.perMethodExternalTaxRate;
+    }
+
+    /**
      *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
      */
 
@@ -264,6 +276,16 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
         this.externalTaxRate = externalTaxRate;
     }
 
+    public void setPerMethodExternalTaxRate(
+            final com.commercetools.api.models.cart.MethodExternalTaxRateDraft... perMethodExternalTaxRate) {
+        this.perMethodExternalTaxRate = new ArrayList<>(Arrays.asList(perMethodExternalTaxRate));
+    }
+
+    public void setPerMethodExternalTaxRate(
+            final java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> perMethodExternalTaxRate) {
+        this.perMethodExternalTaxRate = perMethodExternalTaxRate;
+    }
+
     public void setInventoryMode(final com.commercetools.api.models.cart.InventoryMode inventoryMode) {
         this.inventoryMode = inventoryMode;
     }
@@ -298,6 +320,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(perMethodExternalTaxRate, that.perMethodExternalTaxRate)
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
@@ -313,6 +336,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append(externalPrice, that.externalPrice)
                 .append(externalTotalPrice, that.externalTotalPrice)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(perMethodExternalTaxRate, that.perMethodExternalTaxRate)
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
@@ -333,6 +357,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append(externalPrice)
                 .append(externalTotalPrice)
                 .append(externalTaxRate)
+                .append(perMethodExternalTaxRate)
                 .append(inventoryMode)
                 .append(shippingDetails)
                 .append(custom)
@@ -353,6 +378,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append("externalPrice", externalPrice)
                 .append("externalTotalPrice", externalTotalPrice)
                 .append("externalTaxRate", externalTaxRate)
+                .append("perMethodExternalTaxRate", perMethodExternalTaxRate)
                 .append("inventoryMode", inventoryMode)
                 .append("shippingDetails", shippingDetails)
                 .append("custom", custom)

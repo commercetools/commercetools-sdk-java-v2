@@ -44,7 +44,7 @@ jobs:
           # https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token
           # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/8
           token: ${{ steps.generate_github_token.outputs.token }}
-      - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
+      - uses: gradle/wrapper-validation-action@v2.0.0
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -53,13 +53,13 @@ jobs:
           java-version: '17'
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
+        uses: ts-graphviz/setup-graphviz@v1.2.0
 
       - name: Fix code style
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         run: ./gradlew spotlessApply
 
-      - uses: stefanzweifel/git-auto-commit-action@12f68633e45c72459cd040c868605f2471c7f63b
+      - uses: stefanzweifel/git-auto-commit-action@v5.0.0
         id: commit_style_fix
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
@@ -73,7 +73,7 @@ jobs:
         if: steps.commit_style_fix.outputs.changes_detected == 'true'
         run: echo "${{steps.auto-commit-action.outputs.commit_hash}}" >> .git-blame-ignore-revs
 
-      - uses: stefanzweifel/git-auto-commit-action@12f68633e45c72459cd040c868605f2471c7f63b
+      - uses: stefanzweifel/git-auto-commit-action@v5.0.0
         id: commit_rev_ignore
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
@@ -88,7 +88,7 @@ jobs:
         if: github.event_name == 'push'
         run: ./gradlew checkLicense
 
-      - uses: stefanzweifel/git-auto-commit-action@12f68633e45c72459cd040c868605f2471c7f63b
+      - uses: stefanzweifel/git-auto-commit-action@v5.0.0
         id: commit_license_change
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         with:
@@ -155,7 +155,7 @@ jobs:
         with:
           token: ${{ steps.generate_github_token.outputs.token }}
 
-      - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
+      - uses: gradle/wrapper-validation-action@v2.0.0
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -164,7 +164,7 @@ jobs:
           java-version: '17'
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
+        uses: ts-graphviz/setup-graphviz@v1.2.0
 
       - name: build javadoc
         if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'

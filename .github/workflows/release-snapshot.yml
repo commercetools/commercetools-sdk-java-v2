@@ -26,7 +26,7 @@ jobs:
         with:
             token: ${{ steps.generate_github_token.outputs.token }}
 
-      - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
+      - uses: gradle/wrapper-validation-action@v2.0.0
 
       - name: Setup Java
         uses: actions/setup-java@v4

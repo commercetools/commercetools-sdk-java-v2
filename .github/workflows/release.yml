@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
+      - uses: gradle/wrapper-validation-action@v2.0.0
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -74,7 +74,7 @@ jobs:
             ref: main
             token: ${{ steps.generate_github_token.outputs.token }}
 
-      - uses: gradle/wrapper-validation-action@342dbebe7272035434f9baccc29a816ec6dd2c7b
+      - uses: gradle/wrapper-validation-action@v2.0.0
 
       - run: ./gradlew -Pversion=${{ github.ref_name }} writeVersionToExamples writeVersionToReadme setVersion nextMinorVersion snapshotVersion
 
@@ -97,7 +97,7 @@ jobs:
         run: rm -rf reference.txt
         continue-on-error: true
 
-      - uses: stefanzweifel/git-auto-commit-action@12f68633e45c72459cd040c868605f2471c7f63b
+      - uses: stefanzweifel/git-auto-commit-action@v5.0.0
         with:
           commit_message: "TASK: Updating version in README"
           commit_author: ct-sdks[bot] <${{ steps.get_app_user.outputs.email }}>
@@ -150,14 +150,14 @@ jobs:
           java-version: '17'
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
+        uses: ts-graphviz/setup-graphviz@v1.2.0
 
       - run: ./gradlew -Pversion=${{ github.ref_name }} alljavadoc
         working-directory: sdk
 
       - run: rsync -r sdk/build/docs/javadoc/ doc/javadoc
 
-      - uses: stefanzweifel/git-auto-commit-action@12f68633e45c72459cd040c868605f2471c7f63b
+      - uses: stefanzweifel/git-auto-commit-action@v5.0.0
         with:
           repository: doc
           commit_message: "Update javadoc"

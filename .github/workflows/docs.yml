@@ -65,7 +65,7 @@ jobs:
 
       - run: rsync -r sdk/build/docs/javadoc/ doc/javadoc
 
-      - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
+      - uses: stefanzweifel/git-auto-commit-action@12f68633e45c72459cd040c868605f2471c7f63b
         with:
           repository: doc
           commit_message: "Update javadoc"

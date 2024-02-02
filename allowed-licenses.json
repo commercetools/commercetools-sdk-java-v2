@@ -40,6 +40,10 @@
         {
             "moduleLicense": "Creative Commons Legal Code",
             "moduleName": "org.reactivestreams:reactive-streams"
+        },
+        {
+            "moduleLicense": null,
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common"
         }
     ]
 }

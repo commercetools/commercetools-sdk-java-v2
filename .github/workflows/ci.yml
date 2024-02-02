@@ -88,6 +88,10 @@ jobs:
         if: github.event_name == 'push'
         run: ./gradlew checkLicense
 
+      - name: Show failing licenses
+        if: failure()
+        run: cat licenses/dependencies-without-allowed-license.json
+
       - uses: stefanzweifel/git-auto-commit-action@v5.0.0
         id: commit_license_change
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'

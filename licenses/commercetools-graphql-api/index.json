@@ -93,7 +93,7 @@
         },
         {
             "moduleName": "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core",
-            "moduleVersion": "5.12.4",
+            "moduleVersion": "6.1.4",
             "moduleUrls": [
                 "https://github.com/Netflix/dgs-codegen"
             ],
@@ -126,6 +126,36 @@
             ]
         },
         {
+            "moduleName": "com.squareup.okhttp3:okhttp",
+            "moduleVersion": "4.12.0",
+            "moduleUrls": [
+                "https://square.github.io/okhttp/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.squareup.okio:okio",
+            "moduleVersion": "3.6.0"
+        },
+        {
+            "moduleName": "com.squareup.okio:okio-jvm",
+            "moduleVersion": "3.6.0",
+            "moduleUrls": [
+                "https://github.com/square/okio/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "dev.failsafe:failsafe",
             "moduleVersion": "3.3.2",
             "moduleLicenses": [
@@ -140,20 +170,20 @@
             ]
         },
         {
-            "moduleName": "javax.annotation:javax.annotation-api",
-            "moduleVersion": "1.3.2",
+            "moduleName": "jakarta.annotation:jakarta.annotation-api",
+            "moduleVersion": "2.0.0",
             "moduleUrls": [
-                "http://jcp.org/en/jsr/detail?id=250",
-                "https://javaee.github.io/glassfish"
+                "https://projects.eclipse.org/projects/ee4j.ca",
+                "https://www.eclipse.org"
             ],
             "moduleLicenses": [
                 {
-                    "moduleLicense": "CDDL + GPLv2 with classpath exception",
-                    "moduleLicenseUrl": "https://github.com/javaee/javax.annotation/blob/master/LICENSE"
+                    "moduleLicense": "Eclipse Public License - v 2.0",
+                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
                 },
                 {
-                    "moduleLicense": "COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0",
-                    "moduleLicenseUrl": "https://oss.oracle.com/licenses/CDDL"
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
+                    "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
                 }
             ]
         },
@@ -203,7 +233,7 @@
         },
         {
             "moduleName": "org.javamoney.moneta:moneta-core",
-            "moduleVersion": "1.4.2",
+            "moduleVersion": "1.4.4",
             "moduleUrls": [
                 "http://javamoney.org",
                 "http://www.javamoney.org"
@@ -217,7 +247,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-reflect",
-            "moduleVersion": "1.7.0",
+            "moduleVersion": "1.9.22",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -230,7 +260,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
-            "moduleVersion": "1.7.0",
+            "moduleVersion": "1.9.22",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -243,20 +273,11 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common",
-            "moduleVersion": "1.7.0",
-            "moduleUrls": [
-                "https://kotlinlang.org/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
+            "moduleVersion": "1.9.22"
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
-            "moduleVersion": "1.7.0",
+            "moduleVersion": "1.9.22",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -269,7 +290,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
-            "moduleVersion": "1.7.0",
+            "moduleVersion": "1.9.22",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],

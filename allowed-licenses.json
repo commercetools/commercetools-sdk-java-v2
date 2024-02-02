@@ -30,6 +30,10 @@
             "moduleName": "javax.annotation:javax.annotation-api"
         },
         {
+            "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
+            "moduleName": "jakarta.annotation:jakarta.annotation-api"
+        },
+        {
             "moduleLicense": "Eclipse Distribution License - v 1.0",
             "moduleName": "com.sun.activation:jakarta.activation"
         },
@@ -40,6 +44,10 @@
         {
             "moduleLicense": "Creative Commons Legal Code",
             "moduleName": "org.reactivestreams:reactive-streams"
+        },
+        {
+            "moduleLicense": null,
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common"
         }
     ]
 }

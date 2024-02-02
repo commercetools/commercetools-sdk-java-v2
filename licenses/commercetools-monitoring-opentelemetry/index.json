@@ -94,7 +94,7 @@
         },
         {
             "moduleName": "io.opentelemetry:opentelemetry-api",
-            "moduleVersion": "1.34.0",
+            "moduleVersion": "1.34.1",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],
@@ -107,7 +107,7 @@
         },
         {
             "moduleName": "io.opentelemetry:opentelemetry-context",
-            "moduleVersion": "1.34.0",
+            "moduleVersion": "1.34.1",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],

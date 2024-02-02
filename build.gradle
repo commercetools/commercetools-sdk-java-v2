@@ -108,6 +108,11 @@ subprojects { project ->
             languageVersion = JavaLanguageVersion.of(17)
         }
     }
+    compileTestJava {
+        javaCompiler = javaToolchains.compilerFor {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
     tasks.withType(Test).configureEach {
         javaLauncher = javaToolchains.launcherFor {
             languageVersion = JavaLanguageVersion.of(17)

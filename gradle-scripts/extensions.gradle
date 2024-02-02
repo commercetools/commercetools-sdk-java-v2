@@ -58,7 +58,7 @@ ext {
     ]
 
     mockito = [
-            inline: 'org.mockito:mockito-inline:5.10.0',
+            inline: 'org.mockito:mockito-inline:5.2.0',
             junit: 'org.mockito:mockito-junit-jupiter:5.10.0',
     ]
 

@@ -51,10 +51,10 @@ ext {
     ]
 
     junit = [
-            junit: 'org.junit.jupiter:junit-jupiter:5.10.1',
+            junit: 'org.junit.jupiter:junit-jupiter:5.10.2',
             dataprovider: 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.10',
             jsonassert: 'org.skyscreamer:jsonassert:1.5.1',
-            assertj: 'org.assertj:assertj-core:3.25.2'
+            assertj: 'org.assertj:assertj-core:3.25.3'
     ]
 
     mockito = [

@@ -48,6 +48,10 @@
         {
             "moduleLicense": null,
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common"
+        },
+        {
+            "moduleLicense": "GPL-2.0-with-classpath-exception",
+            "moduleName": "jakarta.ws.rs:jakarta.ws.rs-api"
         }
     ]
 }

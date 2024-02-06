@@ -1,3 +1,4 @@
+
 package example;
 
 import com.commercetools.api.defaultconfig.ApiRootBuilder;

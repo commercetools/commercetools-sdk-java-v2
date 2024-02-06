@@ -21,7 +21,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
 
     private final MetricsApi apiInstance;
 
-    public DatadogResponseSerializer(final ResponseSerializer serializer, ApiClient ddApiClient) {
+    public DatadogResponseSerializer(final ResponseSerializer serializer, final ApiClient ddApiClient) {
         this.serializer = serializer;
         this.apiInstance = new MetricsApi(ddApiClient);
     }

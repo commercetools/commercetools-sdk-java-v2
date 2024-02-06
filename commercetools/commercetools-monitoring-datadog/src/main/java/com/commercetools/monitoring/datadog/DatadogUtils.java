@@ -19,7 +19,12 @@ import com.datadog.api.client.v2.model.MetricSeries;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class DatadogUtils {
+
+    private static final Logger logger = LoggerFactory.getLogger(DatadogMiddleware.class);
 
     protected static void submitClientDurationMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
             final double durationInMillis, final ApiHttpResponse<byte[]> response) throws ApiException {
@@ -47,8 +52,7 @@ public class DatadogUtils {
             throws ApiException {
         final List<String> tags = Arrays.asList(format("%s:%s", HTTP_RESPONSE_STATUS_CODE, response.getStatusCode()),
             format("%s:%s", HTTP_REQUEST_METHOD, request.getMethod().name()),
-            format("%s:%s", SERVER_ADDRESS, request.getUri().getHost()),
-            format("%s:%s", SERVER_PORT, request.getUri().getPort()));
+            format("%s:%s", SERVER_ADDRESS, request.getUri().getHost()));
         if (request.getUri().getPort() > 0) {
             tags.add(format("%s:%s", SERVER_PORT, request.getUri().getPort()));
         }
@@ -61,8 +65,8 @@ public class DatadogUtils {
             submitMetric(apiInstance, PREFIX + "." + JSON_SERIALIZATION, durationInMillis, MetricIntakeType.UNSPECIFIED,
                 Arrays.asList(format("%s:%s", RESPONSE_BODY_TYPE, responseBodyType)));
         }
-        catch (ApiException ignored) {
-            // ignore
+        catch (ApiException exception) {
+            logger.warn("Failed to submit commercetools json serialization metric", exception);
         }
     }
 
@@ -72,8 +76,8 @@ public class DatadogUtils {
             submitMetric(apiInstance, PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
                 MetricIntakeType.UNSPECIFIED, Arrays.asList(format("%s:%s", REQUEST_BODY_TYPE, requestBodyType)));
         }
-        catch (ApiException ignored) {
-            // ignore
+        catch (ApiException exception) {
+            logger.warn("Failed to submit commercetools json deserialization metric", exception);
         }
     }
 

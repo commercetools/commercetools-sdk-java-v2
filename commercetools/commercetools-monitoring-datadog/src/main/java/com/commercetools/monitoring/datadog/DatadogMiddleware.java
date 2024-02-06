@@ -18,12 +18,15 @@ import io.vrap.rmf.base.client.http.TelemetryMiddleware;
 
 public class DatadogMiddleware implements TelemetryMiddleware {
 
+    private final MetricsApi apiInstance;
+
+    public DatadogMiddleware(final ApiClient ddApiClient) {
+        this.apiInstance = new MetricsApi(ddApiClient);
+    }
+
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
-        final ApiClient defaultClient = ApiClient.getDefaultApiClient();
-        final MetricsApi apiInstance = new MetricsApi(defaultClient);
-
         final Instant start = Instant.now();
         return next.apply(request).thenApply(response -> {
             try {

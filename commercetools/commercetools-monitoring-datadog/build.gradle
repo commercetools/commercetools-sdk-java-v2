@@ -1,6 +1,8 @@
 dependencies {
     api project(":rmf:rmf-java-base")
     implementation "com.datadoghq:datadog-api-client:2.20.0"
+
+    testImplementation project(":commercetools:commercetools-sdk-java-api")
 }
 
 sourceSets {

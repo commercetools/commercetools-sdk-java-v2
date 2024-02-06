@@ -71,7 +71,7 @@ jobs:
 
       - name: "Run if style changes have been detected"
         if: steps.commit_style_fix.outputs.changes_detected == 'true'
-        run: echo "${{steps.auto-commit-action.outputs.commit_hash}}" >> .git-blame-ignore-revs
+        run: echo "${{steps.commit_style_fix.outputs.commit_hash}}" >> .git-blame-ignore-revs
 
       - uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d # v5.0.0
         id: commit_rev_ignore

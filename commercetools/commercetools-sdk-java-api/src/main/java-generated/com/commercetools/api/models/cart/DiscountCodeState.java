@@ -18,37 +18,22 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountCodeState extends JsonEnum {
 
     /**
-    	<p>The Discount Code is not active or does not contain any active Cart Discounts.</p>
-
-    */
+    <p>The Discount Code is not active or does not contain any active Cart Discounts.</p> */
     DiscountCodeState NOT_ACTIVE = DiscountCodeStateEnum.NOT_ACTIVE;
     /**
-    	<p>The Discount Code is not valid or does not contain any valid Cart Discounts.
-    	Validity is determined by the <a href="ctp:api:type:CartDiscount">CartDiscount</a> <code>validFrom</code> and <code>validUntil</code> dates.</p>
-
-    */
+    <p>The Discount Code is not valid or does not contain any valid Cart Discounts. Validity is determined by the CartDiscount <code>validFrom</code> and <code>validUntil</code> dates.</p> */
     DiscountCodeState NOT_VALID = DiscountCodeStateEnum.NOT_VALID;
     /**
-    	<p>The Discount Code is active and contains at least one active and valid Cart Discount.
-    	The <a href="ctp:api:type:DiscountCode">DiscountCode</a> <code>cartPredicate</code> does not match the Cart or the contained active discount's cart predicates do no match the Cart.</p>
-
-    */
+    <p>The Discount Code is active and contains at least one active and valid Cart Discount. The DiscountCode <code>cartPredicate</code> does not match the Cart or the contained active discount's cart predicates do no match the Cart.</p> */
     DiscountCodeState DOES_NOT_MATCH_CART = DiscountCodeStateEnum.DOES_NOT_MATCH_CART;
     /**
-    	<p>The Discount Code is active and contains at least one active and valid Cart Discount.
-    	The <a href="ctp:api:type:DiscountCode">DiscountCode</a> <code>cartPredicate</code> matches the Cart and at least one of the contained active discount's cart predicates matches the Cart.</p>
-
-    */
+    <p>The Discount Code is active and contains at least one active and valid Cart Discount. The DiscountCode <code>cartPredicate</code> matches the Cart and at least one of the contained active discount's cart predicates matches the Cart.</p> */
     DiscountCodeState MATCHES_CART = DiscountCodeStateEnum.MATCHES_CART;
     /**
-    	<p>The <code>maxApplications</code> or <code>maxApplicationsPerCustomer</code> for a <a href="ctp:api:type:DiscountCode">DiscountCode</a> has been reached.</p>
-
-    */
+    <p>The <code>maxApplications</code> or <code>maxApplicationsPerCustomer</code> for a DiscountCode has been reached.</p> */
     DiscountCodeState MAX_APPLICATION_REACHED = DiscountCodeStateEnum.MAX_APPLICATION_REACHED;
     /**
-    	<p>The Discount Code is active and no discounts are applied after a discount with <code>StopAfterThisDiscount</code> <a href="ctp:api:type:StackingMode">StackingMode</a> is defined.</p>
-
-    */
+    <p>The Discount Code is active and no discounts are applied after a discount with <code>StopAfterThisDiscount</code> StackingMode is defined.</p> */
     DiscountCodeState APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT = DiscountCodeStateEnum.APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT;
 
     /**

@@ -17,20 +17,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface RoundingMode extends JsonEnum {
 
     /**
-    	<p><a href="https://en.wikipedia.org/wiki/Rounding#Round_half_to_even">Round half to even</a></p>
-    	<p>Default mode for a new Cart.</p>
-
-    */
+    <p>Round half to even</p>
+    <p>Default mode for a new Cart.</p> */
     RoundingMode HALF_EVEN = RoundingModeEnum.HALF_EVEN;
     /**
-    	<p><a href="https://en.wikipedia.org/wiki/Rounding#Round_half_up">Round half up</a></p>
-
-    */
+    <p>Round half up</p> */
     RoundingMode HALF_UP = RoundingModeEnum.HALF_UP;
     /**
-    	<p><a href="https://en.wikipedia.org/wiki/Rounding#Round_half_down">Round half down</a></p>
-
-    */
+    <p>Round half down</p> */
     RoundingMode HALF_DOWN = RoundingModeEnum.HALF_DOWN;
 
     /**

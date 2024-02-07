@@ -17,24 +17,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SubscriptionHealthStatus extends JsonEnum {
 
     /**
-    	<p>Delivers messages as expected.</p>
-
-    */
+    <p>Delivers messages as expected.</p> */
     SubscriptionHealthStatus HEALTHY = SubscriptionHealthStatusEnum.HEALTHY;
     /**
-    	<p>Messages cannot be delivered with the current configuration. Common causes are deleting the Destination queue, deleting access credentials, or removing the necessary permissions. The configuration can be fixed by re-creating the configuration on the Destination side, or by setting a new configuration with the <a href="/../api/projects/subscriptions#change-destination">Change Destination</a> update action. If the configuration is fixed, undelivered messages will be delivered and the <code>status</code> will change to <a href="ctp:api:type:SubscriptionHealthStatus">Healthy</a>. <code>ConfigurationError</code> is automatically turned into <code>ConfigurationErrorDeliveryStopped</code> after some time. For more information, see <a href="#delivery-guarantees">Delivery Guarantees</a>.</p>
-
-    */
+    <p>Messages cannot be delivered with the current configuration. Common causes are deleting the Destination queue, deleting access credentials, or removing the necessary permissions. The configuration can be fixed by re-creating the configuration on the Destination side, or by setting a new configuration with the Change Destination update action. If the configuration is fixed, undelivered messages will be delivered and the <code>status</code> will change to Healthy. <code>ConfigurationError</code> is automatically turned into <code>ConfigurationErrorDeliveryStopped</code> after some time. For more information, see Delivery Guarantees.</p> */
     SubscriptionHealthStatus CONFIGURATION_ERROR = SubscriptionHealthStatusEnum.CONFIGURATION_ERROR;
     /**
-    	<p>Does not deliver messages with the current configuration and the delivery of the messages is no longer attempted. If the configuration is fixed, undelivered messages are not retained and will not be delivered. The <code>status</code> will change to <a href="ctp:api:type:SubscriptionHealthStatus">Healthy</a> as soon as new messages can be delivered.</p>
-
-    */
+    <p>Does not deliver messages with the current configuration and the delivery of the messages is no longer attempted. If the configuration is fixed, undelivered messages are not retained and will not be delivered. The <code>status</code> will change to Healthy as soon as new messages can be delivered.</p> */
     SubscriptionHealthStatus CONFIGURATION_ERROR_DELIVERY_STOPPED = SubscriptionHealthStatusEnum.CONFIGURATION_ERROR_DELIVERY_STOPPED;
     /**
-    	<p>Does not deliver messages temporarily due to reasons other than a configuration error. For example, the Destination has a temporary outage.</p>
-
-    */
+    <p>Does not deliver messages temporarily due to reasons other than a configuration error. For example, the Destination has a temporary outage.</p> */
     SubscriptionHealthStatus TEMPORARY_ERROR = SubscriptionHealthStatusEnum.TEMPORARY_ERROR;
 
     /**

@@ -17,15 +17,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomLineItemPriceMode extends JsonEnum {
 
     /**
-    	<p>Allows application of <a href="/../api/projects/cartDiscounts">Cart Discounts</a> for the Custom Line Item.</p>
-    	<p>This is the default mode for backwards compatibility.</p>
-
-    */
+    <p>Allows application of Cart Discounts for the Custom Line Item.</p>
+    <p>This is the default mode for backwards compatibility.</p> */
     CustomLineItemPriceMode STANDARD = CustomLineItemPriceModeEnum.STANDARD;
     /**
-    	<p>Deactivates application of Cart Discounts for the Custom Line Item despite a matching <a href="ctp:api:type:CartDiscountCustomLineItemsTarget">CartDiscountCustomLineItemsTarget</a>.</p>
-
-    */
+    <p>Deactivates application of Cart Discounts for the Custom Line Item despite a matching CartDiscountCustomLineItemsTarget.</p> */
     CustomLineItemPriceMode EXTERNAL = CustomLineItemPriceModeEnum.EXTERNAL;
 
     /**

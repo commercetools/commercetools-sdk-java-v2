@@ -17,24 +17,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface OrderState extends JsonEnum {
 
     /**
-    	<p>The default state of a new Order.</p>
-
-    */
+    <p>The default state of a new Order.</p> */
     OrderState OPEN = OrderStateEnum.OPEN;
     /**
-    	<p>Indicates that the Order is accepted and being processed.</p>
-
-    */
+    <p>Indicates that the Order is accepted and being processed.</p> */
     OrderState CONFIRMED = OrderStateEnum.CONFIRMED;
     /**
-    	<p>Indicates that the Order is fulfilled.</p>
-
-    */
+    <p>Indicates that the Order is fulfilled.</p> */
     OrderState COMPLETE = OrderStateEnum.COMPLETE;
     /**
-    	<p>Indicates that the Order is canceled.</p>
-
-    */
+    <p>Indicates that the Order is canceled.</p> */
     OrderState CANCELLED = OrderStateEnum.CANCELLED;
 
     /**

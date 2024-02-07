@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface BusinessUnitStoreMode extends JsonEnum {
 
     /**
-    	<p>Stores are defined on the Business Unit.</p>
-
-    */
+    <p>Stores are defined on the Business Unit.</p> */
     BusinessUnitStoreMode EXPLICIT = BusinessUnitStoreModeEnum.EXPLICIT;
     /**
-    	<p>Stores are inherited from the closest parent in the hierarchy that has Stores defined.</p>
-
-    */
+    <p>Stores are inherited from the closest parent in the hierarchy that has Stores defined.</p> */
     BusinessUnitStoreMode FROM_PARENT = BusinessUnitStoreModeEnum.FROM_PARENT;
 
     /**

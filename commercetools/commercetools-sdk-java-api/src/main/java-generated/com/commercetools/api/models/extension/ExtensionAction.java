@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExtensionAction extends JsonEnum {
 
     /**
-    	<p>An Extension gets called during a Create request.</p>
-
-    */
+    <p>An Extension gets called during a Create request.</p> */
     ExtensionAction CREATE = ExtensionActionEnum.CREATE;
     /**
-    	<p>An Extension gets called during an Update request.</p>
-
-    */
+    <p>An Extension gets called during an Update request.</p> */
     ExtensionAction UPDATE = ExtensionActionEnum.UPDATE;
 
     /**

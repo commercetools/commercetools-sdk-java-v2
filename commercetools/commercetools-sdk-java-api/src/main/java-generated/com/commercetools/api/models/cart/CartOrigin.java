@@ -17,20 +17,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CartOrigin extends JsonEnum {
 
     /**
-    	<p>Cart was created by a Customer.</p>
-    	<p>This is the default value.</p>
-
-    */
+    <p>Cart was created by a Customer.</p>
+    <p>This is the default value.</p> */
     CartOrigin CUSTOMER = CartOriginEnum.CUSTOMER;
     /**
-    	<p>Cart was created by a merchant on behalf of a Customer.</p>
-
-    */
+    <p>Cart was created by a merchant on behalf of a Customer.</p> */
     CartOrigin MERCHANT = CartOriginEnum.MERCHANT;
     /**
-    	<p>Cart was created as part of a Quote.</p>
-
-    */
+    <p>Cart was created as part of a Quote.</p> */
     CartOrigin QUOTE = CartOriginEnum.QUOTE;
 
     /**

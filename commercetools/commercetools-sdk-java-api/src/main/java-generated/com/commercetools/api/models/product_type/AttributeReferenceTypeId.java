@@ -17,79 +17,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeReferenceTypeId extends JsonEnum {
 
     /**
-    	<p>References a <a href="ctp:api:type:AssociateRole">AssociateRole</a>.</p>
-
-    */
+    <p>References a AssociateRole.</p> */
     AttributeReferenceTypeId ASSOCIATE_ROLE = AttributeReferenceTypeIdEnum.ASSOCIATE_ROLE;
     /**
-    	<p>References a <a href="ctp:api:type:BusinessUnit">BusinessUnit</a>.</p>
-
-    */
+    <p>References a BusinessUnit.</p> */
     AttributeReferenceTypeId BUSINESS_UNIT = AttributeReferenceTypeIdEnum.BUSINESS_UNIT;
     /**
-    	<p>References a <a href="ctp:api:type:Cart">Cart</a>.</p>
-
-    */
+    <p>References a Cart.</p> */
     AttributeReferenceTypeId CART = AttributeReferenceTypeIdEnum.CART;
     /**
-    	<p>References a <a href="ctp:api:type:CartDiscount">CartDiscount</a>.</p>
-
-    */
+    <p>References a CartDiscount.</p> */
     AttributeReferenceTypeId CART_DISCOUNT = AttributeReferenceTypeIdEnum.CART_DISCOUNT;
     /**
-    	<p>References a <a href="ctp:api:type:Category">Category</a>.</p>
-
-    */
+    <p>References a Category.</p> */
     AttributeReferenceTypeId CATEGORY = AttributeReferenceTypeIdEnum.CATEGORY;
     /**
-    	<p>References a <a href="ctp:api:type:Channel">Channel</a>.</p>
-
-    */
+    <p>References a Channel.</p> */
     AttributeReferenceTypeId CHANNEL = AttributeReferenceTypeIdEnum.CHANNEL;
     /**
-    	<p>References a <a href="ctp:api:type:Customer">Customer</a>.</p>
-
-    */
+    <p>References a Customer.</p> */
     AttributeReferenceTypeId CUSTOMER = AttributeReferenceTypeIdEnum.CUSTOMER;
     /**
-    	<p>References a <a href="ctp:api:type:CustomObject">CustomObject</a>.</p>
-
-    */
+    <p>References a CustomObject.</p> */
     AttributeReferenceTypeId KEY_VALUE_DOCUMENT = AttributeReferenceTypeIdEnum.KEY_VALUE_DOCUMENT;
     /**
-    	<p>References an <a href="ctp:api:type:Order">Order</a>.</p>
-
-    */
+    <p>References an Order.</p> */
     AttributeReferenceTypeId ORDER = AttributeReferenceTypeIdEnum.ORDER;
     /**
-    	<p>References a <a href="ctp:api:type:Product">Product</a>.</p>
-
-    */
+    <p>References a Product.</p> */
     AttributeReferenceTypeId PRODUCT = AttributeReferenceTypeIdEnum.PRODUCT;
     /**
-    	<p>References a <a href="ctp:api:type:ProductType">ProductType</a>.</p>
-
-    */
+    <p>References a ProductType.</p> */
     AttributeReferenceTypeId PRODUCT_TYPE = AttributeReferenceTypeIdEnum.PRODUCT_TYPE;
     /**
-    	<p>References a <a href="ctp:api:type:Review">Review</a>.</p>
-
-    */
+    <p>References a Review.</p> */
     AttributeReferenceTypeId REVIEW = AttributeReferenceTypeIdEnum.REVIEW;
     /**
-    	<p>References a <a href="ctp:api:type:ShippingMethod">ShippingMethod</a>.</p>
-
-    */
+    <p>References a ShippingMethod.</p> */
     AttributeReferenceTypeId SHIPPING_METHOD = AttributeReferenceTypeIdEnum.SHIPPING_METHOD;
     /**
-    	<p>References a <a href="ctp:api:type:State">State</a>.</p>
-
-    */
+    <p>References a State.</p> */
     AttributeReferenceTypeId STATE = AttributeReferenceTypeIdEnum.STATE;
     /**
-    	<p>References a <a href="ctp:api:type:Zone">Zone</a>.</p>
-
-    */
+    <p>References a Zone.</p> */
     AttributeReferenceTypeId ZONE = AttributeReferenceTypeIdEnum.ZONE;
 
     /**

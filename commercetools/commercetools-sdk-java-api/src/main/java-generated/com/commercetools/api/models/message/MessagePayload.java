@@ -124,6 +124,9 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadImpl.class, name = DeliveryAddressSetMessagePayload.DELIVERY_ADDRESS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayloadImpl.class, name = DeliveryItemsUpdatedMessagePayload.DELIVERY_ITEMS_UPDATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryRemovedMessagePayloadImpl.class, name = DeliveryRemovedMessagePayload.DELIVERY_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DiscountCodeCreatedMessagePayloadImpl.class, name = DiscountCodeCreatedMessagePayload.DISCOUNT_CODE_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DiscountCodeDeletedMessagePayloadImpl.class, name = DiscountCodeDeletedMessagePayload.DISCOUNT_CODE_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DiscountCodeKeySetMessagePayloadImpl.class, name = DiscountCodeKeySetMessagePayload.DISCOUNT_CODE_KEY_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.InventoryEntryCreatedMessagePayloadImpl.class, name = InventoryEntryCreatedMessagePayload.INVENTORY_ENTRY_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.InventoryEntryDeletedMessagePayloadImpl.class, name = InventoryEntryDeletedMessagePayload.INVENTORY_ENTRY_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayloadImpl.class, name = InventoryEntryQuantitySetMessagePayload.INVENTORY_ENTRY_QUANTITY_SET),
@@ -633,6 +636,18 @@ public interface MessagePayload extends MessagePayloadMixin {
         if (template instanceof com.commercetools.api.models.message.CustomerTitleSetMessagePayload) {
             return com.commercetools.api.models.message.CustomerTitleSetMessagePayload
                     .deepCopy((com.commercetools.api.models.message.CustomerTitleSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.DiscountCodeCreatedMessagePayload) {
+            return com.commercetools.api.models.message.DiscountCodeCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.DiscountCodeCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.DiscountCodeDeletedMessagePayload) {
+            return com.commercetools.api.models.message.DiscountCodeDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.DiscountCodeDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.DiscountCodeKeySetMessagePayload) {
+            return com.commercetools.api.models.message.DiscountCodeKeySetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.DiscountCodeKeySetMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.InventoryEntryCreatedMessagePayload) {
             return com.commercetools.api.models.message.InventoryEntryCreatedMessagePayload
@@ -1732,6 +1747,30 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.DeliveryRemovedMessagePayloadBuilder deliveryRemovedBuilder() {
         return com.commercetools.api.models.message.DeliveryRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for discountCodeCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountCodeCreatedMessagePayloadBuilder discountCodeCreatedBuilder() {
+        return com.commercetools.api.models.message.DiscountCodeCreatedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for discountCodeDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountCodeDeletedMessagePayloadBuilder discountCodeDeletedBuilder() {
+        return com.commercetools.api.models.message.DiscountCodeDeletedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for discountCodeKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountCodeKeySetMessagePayloadBuilder discountCodeKeySetBuilder() {
+        return com.commercetools.api.models.message.DiscountCodeKeySetMessagePayloadBuilder.of();
     }
 
     /**

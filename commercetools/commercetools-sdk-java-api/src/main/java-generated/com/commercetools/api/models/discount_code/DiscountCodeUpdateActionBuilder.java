@@ -39,6 +39,10 @@ public class DiscountCodeUpdateActionBuilder {
         return com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionBuilder.of();
     }
 
+    public com.commercetools.api.models.discount_code.DiscountCodeSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetKeyActionBuilder.of();
+    }
+
     public com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionBuilder setMaxApplicationsBuilder() {
         return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionBuilder.of();
     }

@@ -30,6 +30,8 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    private String key;
+
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
     private com.commercetools.api.models.common.CreatedBy createdBy;
@@ -69,6 +71,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
     DiscountCodeImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
+            @JsonProperty("key") final String key,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
@@ -88,6 +91,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
         this.version = version;
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
+        this.key = key;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
         this.name = name;
@@ -142,6 +146,14 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the DiscountCode.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -288,6 +300,10 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
         this.lastModifiedAt = lastModifiedAt;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
     }
@@ -380,6 +396,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
                 .append(name, that.name)
@@ -400,6 +417,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
                 .append(name, that.name)
@@ -425,6 +443,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .append(version)
                 .append(createdAt)
                 .append(lastModifiedAt)
+                .append(key)
                 .append(lastModifiedBy)
                 .append(createdBy)
                 .append(name)
@@ -450,6 +469,7 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .append("version", version)
                 .append("createdAt", createdAt)
                 .append("lastModifiedAt", lastModifiedAt)
+                .append("key", key)
                 .append("lastModifiedBy", lastModifiedBy)
                 .append("createdBy", createdBy)
                 .append("name", name)

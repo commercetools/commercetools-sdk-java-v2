@@ -13,6 +13,11 @@ public class DiscountCodeDraftQueryBuilderDsl {
         return new DiscountCodeDraftQueryBuilderDsl();
     }
 
+    public StringComparisonPredicateBuilder<DiscountCodeDraftQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, DiscountCodeDraftQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<DiscountCodeDraftQueryBuilderDsl> name(
             Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

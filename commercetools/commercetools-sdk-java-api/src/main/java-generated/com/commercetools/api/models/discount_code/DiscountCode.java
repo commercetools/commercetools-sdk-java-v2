@@ -61,6 +61,14 @@ public interface DiscountCode
     public String getId();
 
     /**
+     *  <p>User-defined unique identifier of the DiscountCode.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Current version of the DiscountCode.</p>
      * @return version
      */
@@ -220,6 +228,13 @@ public interface DiscountCode
      */
 
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the DiscountCode.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Current version of the DiscountCode.</p>
@@ -397,6 +412,7 @@ public interface DiscountCode
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setKey(template.getKey());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
         instance.setName(template.getName());
@@ -431,6 +447,7 @@ public interface DiscountCode
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setKey(template.getKey());
         instance.setLastModifiedBy(
             com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));

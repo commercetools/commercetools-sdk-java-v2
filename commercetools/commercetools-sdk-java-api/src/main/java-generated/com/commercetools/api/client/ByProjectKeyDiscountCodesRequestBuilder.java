@@ -43,4 +43,8 @@ public class ByProjectKeyDiscountCodesRequestBuilder implements ByProjectKeyDisc
         return new ByProjectKeyDiscountCodesByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyDiscountCodesKeyByKeyRequestBuilder withKey(String key) {
+        return new ByProjectKeyDiscountCodesKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
+    }
+
 }

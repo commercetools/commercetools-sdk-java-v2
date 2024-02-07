@@ -125,7 +125,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="col-first even-row-color"><code>static final <a href="LineItemPriceMode.html" title="interface in com.commercetools.api.models.cart">LineItemPriceMode</a></code></div>
 <div class="col-second even-row-color"><code><a href="#PLATFORM" class="member-name-link">PLATFORM</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The <a href="ctp:api:type:LineItemPriceSelection">price is selected</a> from the Product Variant.</div>
+<div class="block">The price is selected from the Product Variant.</div>
 </div>
 </div>
 </section>
@@ -190,28 +190,21 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="PLATFORM">
 <h3>PLATFORM</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="LineItemPriceMode.html" title="interface in com.commercetools.api.models.cart">LineItemPriceMode</a></span>&nbsp;<span class="element-name">PLATFORM</span></div>
-<div class="block"><p>The <a href="ctp:api:type:LineItemPriceSelection">price is selected</a> from the Product Variant.
-        This is the default mode.</p></div>
+<div class="block"><p>The price is selected from the Product Variant. This is the default mode.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="EXTERNAL_PRICE">
 <h3>EXTERNAL_PRICE</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="LineItemPriceMode.html" title="interface in com.commercetools.api.models.cart">LineItemPriceMode</a></span>&nbsp;<span class="element-name">EXTERNAL_PRICE</span></div>
-<div class="block"><p>The Line Item price is set externally.
-        Cart Discounts can apply to Line Items with this price mode.
-        All update actions that change the quantity of a Line Item with this price mode require the <code>externalPrice</code> field to be given.</p></div>
+<div class="block"><p>The Line Item price is set externally. Cart Discounts can apply to Line Items with this price mode. All update actions that change the quantity of a Line Item with this price mode require the <code>externalPrice</code> field to be given.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="EXTERNAL_TOTAL">
 <h3>EXTERNAL_TOTAL</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="LineItemPriceMode.html" title="interface in com.commercetools.api.models.cart">LineItemPriceMode</a></span>&nbsp;<span class="element-name">EXTERNAL_TOTAL</span></div>
-<div class="block"><p>The Line Item price with the total is set externally.
-        Cart Discounts are deactivated for Line Items with this price mode.
-        Although a Line Item with this price mode has both <code>price</code> and <code>totalPrice</code> set externally, only <code>totalPrice</code> is used to calculate the total price of a Cart.
-        All update actions that change the quantity of a Line Item with this price mode can set the new price with the <code>externalTotal</code> field.
-        If the <code>externalTotal</code> field is not given in the update actions, the external price is unset and the price mode is set to <code>Platform</code>.</p></div>
+<div class="block"><p>The Line Item price with the total is set externally. Cart Discounts are deactivated for Line Items with this price mode. Although a Line Item with this price mode has both <code>price</code> and <code>totalPrice</code> set externally, only <code>totalPrice</code> is used to calculate the total price of a Cart. All update actions that change the quantity of a Line Item with this price mode can set the new price with the <code>externalTotal</code> field. If the <code>externalTotal</code> field is not given in the update actions, the external price is unset and the price mode is set to <code>Platform</code>.</p></div>
 </section>
 </li>
 </ul>

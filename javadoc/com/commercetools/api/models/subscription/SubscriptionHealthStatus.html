@@ -202,14 +202,14 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="CONFIGURATION_ERROR">
 <h3>CONFIGURATION_ERROR</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="SubscriptionHealthStatus.html" title="interface in com.commercetools.api.models.subscription">SubscriptionHealthStatus</a></span>&nbsp;<span class="element-name">CONFIGURATION_ERROR</span></div>
-<div class="block"><p>Messages cannot be delivered with the current configuration. Common causes are deleting the Destination queue, deleting access credentials, or removing the necessary permissions. The configuration can be fixed by re-creating the configuration on the Destination side, or by setting a new configuration with the <a href="/../api/projects/subscriptions#change-destination">Change Destination</a> update action. If the configuration is fixed, undelivered messages will be delivered and the <code>status</code> will change to <a href="ctp:api:type:SubscriptionHealthStatus">Healthy</a>. <code>ConfigurationError</code> is automatically turned into <code>ConfigurationErrorDeliveryStopped</code> after some time. For more information, see <a href="#delivery-guarantees">Delivery Guarantees</a>.</p></div>
+<div class="block"><p>Messages cannot be delivered with the current configuration. Common causes are deleting the Destination queue, deleting access credentials, or removing the necessary permissions. The configuration can be fixed by re-creating the configuration on the Destination side, or by setting a new configuration with the Change Destination update action. If the configuration is fixed, undelivered messages will be delivered and the <code>status</code> will change to Healthy. <code>ConfigurationError</code> is automatically turned into <code>ConfigurationErrorDeliveryStopped</code> after some time. For more information, see Delivery Guarantees.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="CONFIGURATION_ERROR_DELIVERY_STOPPED">
 <h3>CONFIGURATION_ERROR_DELIVERY_STOPPED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="SubscriptionHealthStatus.html" title="interface in com.commercetools.api.models.subscription">SubscriptionHealthStatus</a></span>&nbsp;<span class="element-name">CONFIGURATION_ERROR_DELIVERY_STOPPED</span></div>
-<div class="block"><p>Does not deliver messages with the current configuration and the delivery of the messages is no longer attempted. If the configuration is fixed, undelivered messages are not retained and will not be delivered. The <code>status</code> will change to <a href="ctp:api:type:SubscriptionHealthStatus">Healthy</a> as soon as new messages can be delivered.</p></div>
+<div class="block"><p>Does not deliver messages with the current configuration and the delivery of the messages is no longer attempted. If the configuration is fixed, undelivered messages are not retained and will not be delivered. The <code>status</code> will change to Healthy as soon as new messages can be delivered.</p></div>
 </section>
 </li>
 <li>

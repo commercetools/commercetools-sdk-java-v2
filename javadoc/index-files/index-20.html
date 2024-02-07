@@ -262,11 +262,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/common/ReferenceTypeId.html#TAX_CATEGORY" class="member-name-link">TAX_CATEGORY</a> - Static variable in interface com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></dt>
 <dd>
-<div class="block">References a <a href="../com/commercetools/api/models/common/ctp:api:type:TaxCategory">TaxCategory</a>.</div>
+<div class="block">References a TaxCategory.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/subscription/ChangeSubscriptionResourceTypeId.html#TAX_CATEGORY" class="member-name-link">TAX_CATEGORY</a> - Static variable in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/ChangeSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscriptionResourceTypeId</a></dt>
 <dd>
-<div class="block">Changes to <a href="../com/commercetools/api/models/subscription/ctp:api:type:TaxCategory">TaxCategories</a>.</div>
+<div class="block">Changes to TaxCategories.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/tax_category/TaxCategoryReference.html#TAX_CATEGORY" class="member-name-link">TAX_CATEGORY</a> - Static variable in interface com.commercetools.api.models.tax_category.<a href="../com/commercetools/api/models/tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a></dt>
 <dd>
@@ -369,6 +369,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/compat/QueryBuilder.html#taxCategories(java.util.function.Supplier)" class="member-name-link">taxCategories(Supplier&lt;TaxCategoryQuery&gt;)</a> - Method in class com.commercetools.compat.<a href="../com/commercetools/compat/QueryBuilder.html" title="class in com.commercetools.compat">QueryBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#taxCategories(java.util.function.UnaryOperator)" class="member-name-link">taxCategories(UnaryOperator&lt;TaxCategoriesGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/search/products/ProductFilterExpressionBuilder.html#taxCategory()" class="member-name-link">taxCategory()</a> - Method in class com.commercetools.api.search.products.<a href="../com/commercetools/api/search/products/ProductFilterExpressionBuilder.html" title="class in com.commercetools.api.search.products">ProductFilterExpressionBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/compat/GetByIdBuilder.html#taxCategory(com.commercetools.api.models.Identifiable,java.util.function.Function)" class="member-name-link">taxCategory(Identifiable&lt;TaxCategory&gt;, Function&lt;TaxCategoryByIdGet, TaxCategoryByIdGet&gt;)</a> - Method in class com.commercetools.compat.<a href="../com/commercetools/compat/GetByIdBuilder.html" title="class in com.commercetools.compat">GetByIdBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -882,7 +884,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/MethodTaxedPriceBuilder.html#taxedPrice(com.commercetools.api.models.cart.TaxedItemPrice)" class="member-name-link">taxedPrice(TaxedItemPrice)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a></dt>
 <dd>
-<div class="block">Taxed price for the Shipping Method.</div>
+<div class="block">Total taxed price based on the quantity of the Line Item or Custom Line Item assigned to the Shipping Method identified by <code>shippingMethodKey</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/ShippingInfoBuilder.html#taxedPrice(com.commercetools.api.models.cart.TaxedItemPrice)" class="member-name-link">taxedPrice(TaxedItemPrice)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></dt>
 <dd>
@@ -967,7 +969,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/MethodTaxedPriceBuilder.html#taxedPrice(java.util.function.Function)" class="member-name-link">taxedPrice(Function&lt;TaxedItemPriceBuilder, TaxedItemPriceBuilder&gt;)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a></dt>
 <dd>
-<div class="block">Taxed price for the Shipping Method.</div>
+<div class="block">Total taxed price based on the quantity of the Line Item or Custom Line Item assigned to the Shipping Method identified by <code>shippingMethodKey</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/ShippingInfoBuilder.html#taxedPrice(java.util.function.Function)" class="member-name-link">taxedPrice(Function&lt;TaxedItemPriceBuilder, TaxedItemPriceBuilder&gt;)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a></dt>
 <dd>
@@ -1112,35 +1114,35 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/cart/CustomLineItemBuilder.html#taxedPricePortions(com.commercetools.api.models.cart.MethodTaxedPrice...)" class="member-name-link">taxedPricePortions(MethodTaxedPrice...)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CustomLineItemBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemBuilder</a></dt>
 <dd>
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of the Custom Line Item assigned to each Shipping Method.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/LineItemBuilder.html#taxedPricePortions(com.commercetools.api.models.cart.MethodTaxedPrice...)" class="member-name-link">taxedPricePortions(MethodTaxedPrice...)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></dt>
 <dd>
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageBuilder.html#taxedPricePortions(com.commercetools.api.models.cart.MethodTaxedPrice...)" class="member-name-link">taxedPricePortions(MethodTaxedPrice...)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageBuilder</a></dt>
 <dd>
-<div class="block">Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/OrderLineItemDiscountSetMessagePayloadBuilder.html#taxedPricePortions(com.commercetools.api.models.cart.MethodTaxedPrice...)" class="member-name-link">taxedPricePortions(MethodTaxedPrice...)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderLineItemDiscountSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessagePayloadBuilder</a></dt>
 <dd>
-<div class="block">Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/CustomLineItemBuilder.html#taxedPricePortions(java.util.List)" class="member-name-link">taxedPricePortions(List&lt;MethodTaxedPrice&gt;)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CustomLineItemBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemBuilder</a></dt>
 <dd>
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of the Custom Line Item assigned to each Shipping Method.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/LineItemBuilder.html#taxedPricePortions(java.util.List)" class="member-name-link">taxedPricePortions(List&lt;MethodTaxedPrice&gt;)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></dt>
 <dd>
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageBuilder.html#taxedPricePortions(java.util.List)" class="member-name-link">taxedPricePortions(List&lt;MethodTaxedPrice&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageBuilder</a></dt>
 <dd>
-<div class="block">Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/OrderLineItemDiscountSetMessagePayloadBuilder.html#taxedPricePortions(java.util.List)" class="member-name-link">taxedPricePortions(List&lt;MethodTaxedPrice&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/OrderLineItemDiscountSetMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessagePayloadBuilder</a></dt>
 <dd>
-<div class="block">Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/CartBuilder.html#taxedShippingPrice(com.commercetools.api.models.cart.TaxedPrice)" class="member-name-link">taxedShippingPrice(TaxedPrice)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></dt>
 <dd>
@@ -1587,6 +1589,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">set the value to the term</div>
 </dd>
+<dt><a href="../com/commercetools/api/search/products/TermFacetExpression.html" class="type-name-link" title="class in com.commercetools.api.search.products">TermFacetExpression</a>&lt;<a href="../com/commercetools/api/search/products/TermFacetExpression.html" title="type parameter in TermFacetExpression">T</a>&gt; - Class in <a href="../com/commercetools/api/search/products/package-summary.html">com.commercetools.api.search.products</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResult.html" class="type-name-link" title="interface in com.commercetools.api.models.product">TermFacetResult</a> - Interface in <a href="../com/commercetools/api/models/product/package-summary.html">com.commercetools.api.models.product</a></dt>
 <dd>
 <div class="block">TermFacetResult
@@ -1612,6 +1616,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">possible values of TermFacetResultType</div>
 </dd>
+<dt><a href="../com/commercetools/api/search/products/TermFilterExpression.html" class="type-name-link" title="class in com.commercetools.api.search.products">TermFilterExpression</a>&lt;<a href="../com/commercetools/api/search/products/TermFilterExpression.html" title="type parameter in TermFilterExpression">T</a>&gt; - Class in <a href="../com/commercetools/api/search/products/package-summary.html">com.commercetools.api.search.products</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/search/products/TermFilterExpression.html#%3Cinit%3E(com.commercetools.api.search.products.PathExpression,java.util.function.Function)" class="member-name-link">TermFilterExpression(PathExpression, Function&lt;T, FilterExpression&gt;)</a> - Constructor for class com.commercetools.api.search.products.<a href="../com/commercetools/api/search/products/TermFilterExpression.html" title="class in com.commercetools.api.search.products">TermFilterExpression</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/search/products/TermFilterExpression.html#%3Cinit%3E(com.commercetools.api.search.products.PathExpression,java.util.List,java.util.function.Function)" class="member-name-link">TermFilterExpression(PathExpression, List&lt;FilterExpression&gt;, Function&lt;T, FilterExpression&gt;)</a> - Constructor for class com.commercetools.api.search.products.<a href="../com/commercetools/api/search/products/TermFilterExpression.html" title="class in com.commercetools.api.search.products">TermFilterExpression</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/search/products/TermFilterExpressionBuilder.html" class="type-name-link" title="class in com.commercetools.api.search.products">TermFilterExpressionBuilder</a>&lt;<a href="../com/commercetools/api/search/products/TermFilterExpressionBuilder.html" title="type parameter in TermFilterExpressionBuilder">T</a>&gt; - Class in <a href="../com/commercetools/api/search/products/package-summary.html">com.commercetools.api.search.products</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/search/products/TermFilterExpressionBuilder.html#%3Cinit%3E()" class="member-name-link">TermFilterExpressionBuilder()</a> - Constructor for class com.commercetools.api.search.products.<a href="../com/commercetools/api/search/products/TermFilterExpressionBuilder.html" title="class in com.commercetools.api.search.products">TermFilterExpressionBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/search/products/TermFilterExpressionBuilder.html#%3Cinit%3E(com.commercetools.api.search.products.PathExpression,java.util.function.Function)" class="member-name-link">TermFilterExpressionBuilder(PathExpression, Function&lt;T, FilterExpression&gt;)</a> - Constructor for class com.commercetools.api.search.products.<a href="../com/commercetools/api/search/products/TermFilterExpressionBuilder.html" title="class in com.commercetools.api.search.products">TermFilterExpressionBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/search/products/TermFormatter.html" class="type-name-link" title="class in com.commercetools.api.search.products">TermFormatter</a> - Class in <a href="../com/commercetools/api/search/products/package-summary.html">com.commercetools.api.search.products</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/search/products/TermFormatter.html#%3Cinit%3E()" class="member-name-link">TermFormatter()</a> - Constructor for class com.commercetools.api.search.products.<a href="../com/commercetools/api/search/products/TermFormatter.html" title="class in com.commercetools.api.search.products">TermFormatter</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html#terms(com.commercetools.api.models.product.FacetTerm...)" class="member-name-link">terms(FacetTerm...)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></dt>
 <dd>
 <div class="block">set values to the terms</div>
@@ -2450,6 +2470,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Maps to <code>Customer.title</code>.</div>
 </dd>
+<dt><a href="../com/commercetools/api/search/products/RangeExpression.html#to()" class="member-name-link">to()</a> - Method in class com.commercetools.api.search.products.<a href="../com/commercetools/api/search/products/RangeExpression.html" title="class in com.commercetools.api.search.products">RangeExpression</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/ProductPriceModeSetMessageBuilder.html#to(com.commercetools.api.models.product.ProductPriceModeEnum)" class="member-name-link">to(ProductPriceModeEnum)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductPriceModeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductPriceModeSetMessageBuilder</a></dt>
 <dd>
 <div class="block">The PriceMode that was set.</div>
@@ -2458,6 +2480,8 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">The PriceMode that was set.</div>
 </dd>
+<dt><a href="../com/commercetools/api/search/products/RangeExpression.html#to(com.commercetools.api.search.products.FilterExpression)" class="member-name-link">to(FilterExpression)</a> - Static method in class com.commercetools.api.search.products.<a href="../com/commercetools/api/search/products/RangeExpression.html" title="class in com.commercetools.api.search.products">RangeExpression</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/FacetRangeBuilder.html#to(java.lang.Double)" class="member-name-link">to(Double)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetRangeBuilder.html" title="class in com.commercetools.api.models.product">FacetRangeBuilder</a></dt>
 <dd>
 <div class="block">set the value to the to</div>
@@ -4218,7 +4242,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/InventoryMode.html#TRACK_ONLY" class="member-name-link">TRACK_ONLY</a> - Static variable in interface com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a></dt>
 <dd>
-<div class="block">Orders are tracked on the Inventory, and ordering a <a href="../com/commercetools/api/models/cart/ctp:api:type:LineItem">LineItem</a> deducts the available quantity on the respective <a href="../com/commercetools/api/models/cart/ctp:api:type:InventoryEntry">InventoryEntry</a>.</div>
+<div class="block">Orders are tracked on the Inventory, and ordering a LineItem deducts the available quantity on the respective InventoryEntry.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/orders/InventoryMode.html#TRACK_ONLY" class="member-name-link">TRACK_ONLY</a> - Static variable in interface com.commercetools.importapi.models.orders.<a href="../com/commercetools/importapi/models/orders/InventoryMode.html" title="interface in com.commercetools.importapi.models.orders">InventoryMode</a></dt>
 <dd>&nbsp;</dd>
@@ -4471,11 +4495,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/type/ResourceTypeId.html#TRANSACTION" class="member-name-link">TRANSACTION</a> - Static variable in interface com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/ResourceTypeId.html" title="interface in com.commercetools.api.models.type">ResourceTypeId</a></dt>
 <dd>
-<div class="block"><a href="../com/commercetools/api/models/type/ctp:api:type:Transaction">Transaction</a> on <a href="../com/commercetools/api/models/type/ctp:api:type:Payment">Payment</a></div>
+<div class="block">Transaction on Payment</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/types/ResourceTypeId.html#TRANSACTION" class="member-name-link">TRANSACTION</a> - Static variable in interface com.commercetools.importapi.models.types.<a href="../com/commercetools/importapi/models/types/ResourceTypeId.html" title="interface in com.commercetools.importapi.models.types">ResourceTypeId</a></dt>
 <dd>
-<div class="block"><a href="../com/commercetools/importapi/models/types//../api/projects/payments#transaction">Transaction</a> on <a href="../com/commercetools/importapi/models/types//../api/projects/payments#payment">Payment</a></div>
+<div class="block">Transaction on Payment</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/payment/TransactionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.payment">TransactionBuilder</a> - Class in <a href="../com/commercetools/api/models/payment/package-summary.html">com.commercetools.api.models.payment</a></dt>
 <dd>
@@ -5652,11 +5676,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/common/ReferenceTypeId.html#TYPE" class="member-name-link">TYPE</a> - Static variable in interface com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a></dt>
 <dd>
-<div class="block">References a <a href="../com/commercetools/api/models/common/ctp:api:type:Type">Type</a>.</div>
+<div class="block">References a Type.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/subscription/ChangeSubscriptionResourceTypeId.html#TYPE" class="member-name-link">TYPE</a> - Static variable in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/ChangeSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscriptionResourceTypeId</a></dt>
 <dd>
-<div class="block">Changes to <a href="../com/commercetools/api/models/subscription/ctp:api:type:Type">Types</a>.</div>
+<div class="block">Changes to Types.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/type/TypeReference.html#TYPE" class="member-name-link">TYPE</a> - Static variable in interface com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeReference.html" title="interface in com.commercetools.api.models.type">TypeReference</a></dt>
 <dd>
@@ -5672,7 +5696,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/importapi/models/common/ImportResourceType.html#TYPE" class="member-name-link">TYPE</a> - Static variable in interface com.commercetools.importapi.models.common.<a href="../com/commercetools/importapi/models/common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></dt>
 <dd>
-<div class="block">The <a href="../com/commercetools/importapi/models/common/ctp:import:type:TypeImport">Type import</a> resource type.</div>
+<div class="block">The Type import resource type.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/common/ReferenceType.html#TYPE" class="member-name-link">TYPE</a> - Static variable in interface com.commercetools.importapi.models.common.<a href="../com/commercetools/importapi/models/common/ReferenceType.html" title="interface in com.commercetools.importapi.models.common">ReferenceType</a></dt>
 <dd>
@@ -5961,6 +5985,8 @@ loadScripts(document, 'script');</script>
  </div>
 </dd>
 <dt><a href="../com/commercetools/api/models/type/TypeDraftBuilder.html#%3Cinit%3E()" class="member-name-link">TypeDraftBuilder()</a> - Constructor for class com.commercetools.api.models.type.<a href="../com/commercetools/api/models/type/TypeDraftBuilder.html" title="class in com.commercetools.api.models.type">TypeDraftBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/search/products/ProductFilterExpressionBuilder.AttributeReferenceTermFilterExpressionBuilder.html#typeId()" class="member-name-link">typeId()</a> - Method in class com.commercetools.api.search.products.<a href="../com/commercetools/api/search/products/ProductFilterExpressionBuilder.AttributeReferenceTermFilterExpressionBuilder.html" title="class in com.commercetools.api.search.products">ProductFilterExpressionBuilder.AttributeReferenceTermFilterExpressionBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/error/GraphQLReferencedResourceNotFoundErrorBuilder.html#typeId(com.commercetools.api.models.common.ReferenceTypeId)" class="member-name-link">typeId(ReferenceTypeId)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/GraphQLReferencedResourceNotFoundErrorBuilder.html" title="class in com.commercetools.api.models.error">GraphQLReferencedResourceNotFoundErrorBuilder</a></dt>
 <dd>
@@ -7751,6 +7777,10 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/discount_code/DiscountCodeSetDescriptionAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.discount_code.<a href="../com/commercetools/api/models/discount_code/DiscountCodeSetDescriptionAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeSetDescriptionAction</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/discount_code/DiscountCodeSetKeyAction.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.discount_code.<a href="../com/commercetools/api/models/discount_code/DiscountCodeSetKeyAction.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeSetKeyAction</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
@@ -9839,6 +9869,30 @@ loadScripts(document, 'script');</script>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/DeliveryRemovedMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/DeliveryRemovedMessagePayload.html" title="interface in com.commercetools.api.models.message">DeliveryRemovedMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/DiscountCodeCreatedMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/DiscountCodeCreatedMessage.html" title="interface in com.commercetools.api.models.message">DiscountCodeCreatedMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/DiscountCodeCreatedMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/DiscountCodeCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">DiscountCodeCreatedMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/DiscountCodeDeletedMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/DiscountCodeDeletedMessage.html" title="interface in com.commercetools.api.models.message">DiscountCodeDeletedMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/DiscountCodeDeletedMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/DiscountCodeDeletedMessagePayload.html" title="interface in com.commercetools.api.models.message">DiscountCodeDeletedMessagePayload</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/DiscountCodeKeySetMessage.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/DiscountCodeKeySetMessage.html" title="interface in com.commercetools.api.models.message">DiscountCodeKeySetMessage</a></dt>
+<dd>
+<div class="block">gives a TypeReference for usage with Jackson DataBind</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/DiscountCodeKeySetMessagePayload.html#typeReference()" class="member-name-link">typeReference()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/DiscountCodeKeySetMessagePayload.html" title="interface in com.commercetools.api.models.message">DiscountCodeKeySetMessagePayload</a></dt>
 <dd>
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </dd>

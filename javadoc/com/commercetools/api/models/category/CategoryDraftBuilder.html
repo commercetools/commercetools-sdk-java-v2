@@ -218,7 +218,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrderHint()" class="member-name-link">getOrderHint</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</div>
+<div class="block">Decimal value between 0 and 1.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getParent()" class="member-name-link">getParent</a>()</code></div>
@@ -288,7 +288,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CategoryDraftBuilder.html" title="class in com.commercetools.api.models.category">CategoryDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#orderHint(java.lang.String)" class="member-name-link">orderHint</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderHint)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</div>
+<div class="block">Decimal value between 0 and 1.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CategoryDraftBuilder.html" title="class in com.commercetools.api.models.category">CategoryDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parent(com.commercetools.api.models.category.CategoryResourceIdentifier)" class="member-name-link">parent</a><wbr>(<a href="CategoryResourceIdentifier.html" title="interface in com.commercetools.api.models.category">CategoryResourceIdentifier</a>&nbsp;parent)</code></div>
@@ -564,7 +564,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>orderHint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CategoryDraftBuilder.html" title="class in com.commercetools.api.models.category">CategoryDraftBuilder</a></span>&nbsp;<span class="element-name">orderHint</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;orderHint)</span></div>
-<div class="block"><p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree. If not set, a random value will be assigned.</p></div>
+<div class="block"><p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree. If not set, a random value will be assigned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>orderHint</code> - value to be set</dd>
@@ -906,7 +906,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getOrderHint</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getOrderHint</span>()</div>
-<div class="block"><p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree. If not set, a random value will be assigned.</p></div>
+<div class="block"><p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree. If not set, a random value will be assigned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>orderHint</dd>

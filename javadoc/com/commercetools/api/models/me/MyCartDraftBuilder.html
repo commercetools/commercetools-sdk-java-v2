@@ -269,110 +269,126 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Shipping Method for the Cart.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStore()" class="member-name-link">getStore</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../cart/ShippingMode.html" title="interface in com.commercetools.api.models.cart">ShippingMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShippingMode()" class="member-name-link">getShippingMode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+   If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.
+   If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.
+  </div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStore()" class="member-name-link">getStore</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">ResourceIdentifier to the Store the Cart should belong to.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../cart/TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTaxMode()" class="member-name-link">getTaxMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../cart/TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTaxMode()" class="member-name-link">getTaxMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determines how Tax Rates are set.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inventoryMode(com.commercetools.api.models.cart.InventoryMode)" class="member-name-link">inventoryMode</a><wbr>(<a href="../cart/InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a>&nbsp;inventoryMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inventoryMode(com.commercetools.api.models.cart.InventoryMode)" class="member-name-link">inventoryMode</a><wbr>(<a href="../cart/InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a>&nbsp;inventoryMode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determines how stock quantities are tracked for Line Items in the Cart.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemShippingAddresses(com.commercetools.api.models.common.BaseAddress...)" class="member-name-link">itemShippingAddresses</a><wbr>(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>...&nbsp;itemShippingAddresses)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Multiple shipping addresses of the Cart.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemShippingAddresses(java.util.List)" class="member-name-link">itemShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;itemShippingAddresses)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemShippingAddresses(com.commercetools.api.models.common.BaseAddress...)" class="member-name-link">itemShippingAddresses</a><wbr>(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>...&nbsp;itemShippingAddresses)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Multiple shipping addresses of the Cart.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lineItems(com.commercetools.api.models.me.MyLineItemDraft...)" class="member-name-link">lineItems</a><wbr>(<a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>...&nbsp;lineItems)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#itemShippingAddresses(java.util.List)" class="member-name-link">itemShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;itemShippingAddresses)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Line Items to add to the Cart.</div>
+<div class="block">Multiple shipping addresses of the Cart.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lineItems(java.util.List)" class="member-name-link">lineItems</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&gt;&nbsp;lineItems)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lineItems(com.commercetools.api.models.me.MyLineItemDraft...)" class="member-name-link">lineItems</a><wbr>(<a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>...&nbsp;lineItems)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Line Items to add to the Cart.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#locale(java.lang.String)" class="member-name-link">locale</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;locale)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lineItems(java.util.List)" class="member-name-link">lineItems</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&gt;&nbsp;lineItems)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Line Items to add to the Cart.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#locale(java.lang.String)" class="member-name-link">locale</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;locale)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Languages of the Cart.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">factory method for an instance of MyCartDraftBuilder</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.api.models.me.MyCartDraft)" class="member-name-link">of</a><wbr>(<a href="MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a>&nbsp;template)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.api.models.me.MyCartDraft)" class="member-name-link">of</a><wbr>(<a href="MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create builder for MyCartDraft instance</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusDiscountCodes(java.lang.String...)" class="member-name-link">plusDiscountCodes</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;discountCodes)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusDiscountCodes(java.lang.String...)" class="member-name-link">plusDiscountCodes</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;discountCodes)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>code</code> of the existing DiscountCodes to add to the Cart.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusItemShippingAddresses(com.commercetools.api.models.common.BaseAddress...)" class="member-name-link">plusItemShippingAddresses</a><wbr>(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>...&nbsp;itemShippingAddresses)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Multiple shipping addresses of the Cart.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusItemShippingAddresses(java.util.function.Function)" class="member-name-link">plusItemShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,<wbr><a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusItemShippingAddresses(com.commercetools.api.models.common.BaseAddress...)" class="member-name-link">plusItemShippingAddresses</a><wbr>(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>...&nbsp;itemShippingAddresses)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Multiple shipping addresses of the Cart.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusLineItems(com.commercetools.api.models.me.MyLineItemDraft...)" class="member-name-link">plusLineItems</a><wbr>(<a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>...&nbsp;lineItems)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Line Items to add to the Cart.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusLineItems(java.util.function.Function)" class="member-name-link">plusLineItems</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a>,<wbr><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Line Items to add to the Cart.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItemShippingAddresses(java.util.function.Function)" class="member-name-link">setItemShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,<wbr><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusItemShippingAddresses(java.util.function.Function)" class="member-name-link">plusItemShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,<wbr><a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Multiple shipping addresses of the Cart.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLineItems(java.util.function.Function)" class="member-name-link">setLineItems</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a>,<wbr><a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusLineItems(com.commercetools.api.models.me.MyLineItemDraft...)" class="member-name-link">plusLineItems</a><wbr>(<a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>...&nbsp;lineItems)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Line Items to add to the Cart.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(com.commercetools.api.models.common.BaseAddress)" class="member-name-link">shippingAddress</a><wbr>(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;shippingAddress)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusLineItems(java.util.function.Function)" class="member-name-link">plusLineItems</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a>,<wbr><a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Shipping address associated with the Cart.</div>
+<div class="block">Line Items to add to the Cart.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(java.util.function.Function)" class="member-name-link">shippingAddress</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,<wbr><a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItemShippingAddresses(java.util.function.Function)" class="member-name-link">setItemShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,<wbr><a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Multiple shipping addresses of the Cart.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLineItems(java.util.function.Function)" class="member-name-link">setLineItems</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MyLineItemDraftBuilder.html" title="class in com.commercetools.api.models.me">MyLineItemDraftBuilder</a>,<wbr><a href="MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Line Items to add to the Cart.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(com.commercetools.api.models.common.BaseAddress)" class="member-name-link">shippingAddress</a><wbr>(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;shippingAddress)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Shipping address associated with the Cart.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier)" class="member-name-link">shippingMethod</a><wbr>(<a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&nbsp;shippingMethod)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(java.util.function.Function)" class="member-name-link">shippingAddress</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>,<wbr><a href="../common/BaseAddressBuilder.html" title="class in com.commercetools.api.models.common">BaseAddressBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Shipping address associated with the Cart.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier)" class="member-name-link">shippingMethod</a><wbr>(<a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&nbsp;shippingMethod)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Shipping Method for the Cart.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingMethod(java.util.function.Function)" class="member-name-link">shippingMethod</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a>,<wbr><a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Shipping Method for the Cart.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingMethod(java.util.function.Function)" class="member-name-link">shippingMethod</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a>,<wbr><a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingMode(com.commercetools.api.models.cart.ShippingMode)" class="member-name-link">shippingMode</a><wbr>(<a href="../cart/ShippingMode.html" title="interface in com.commercetools.api.models.cart">ShippingMode</a>&nbsp;shippingMode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Shipping Method for the Cart.</div>
+<div class="block">
+   If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.
+   If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.
+  </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#store(com.commercetools.api.models.store.StoreResourceIdentifier)" class="member-name-link">store</a><wbr>(<a href="../store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&nbsp;store)</code></div>
@@ -911,6 +927,23 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="shippingMode(com.commercetools.api.models.cart.ShippingMode)">
+<h3>shippingMode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></span>&nbsp;<span class="element-name">shippingMode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="../cart/ShippingMode.html" title="interface in com.commercetools.api.models.cart">ShippingMode</a>&nbsp;shippingMode)</span></div>
+<div class="block"><ul>
+   <li>If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
+   <li>If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
+  </ul></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>shippingMode</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="discountCodes(java.lang.String...)">
 <h3>discountCodes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></span>&nbsp;<span class="element-name">discountCodes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
@@ -1164,6 +1197,21 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>itemShippingAddresses</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getShippingMode()">
+<h3>getShippingMode</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/ShippingMode.html" title="interface in com.commercetools.api.models.cart">ShippingMode</a></span>&nbsp;<span class="element-name">getShippingMode</span>()</div>
+<div class="block"><ul>
+   <li>If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
+   <li>If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
+  </ul></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>shippingMode</dd>
 </dl>
 </section>
 </li>

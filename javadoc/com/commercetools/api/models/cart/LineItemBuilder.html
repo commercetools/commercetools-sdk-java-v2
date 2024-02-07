@@ -155,7 +155,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTaxedPricePortions(java.util.function.Function)" class="member-name-link">addTaxedPricePortions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>,<wbr><a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItem.html" title="interface in com.commercetools.api.models.cart">LineItem</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
@@ -310,7 +310,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTaxedPricePortions()" class="member-name-link">getTaxedPricePortions</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTaxRate()" class="member-name-link">getTaxRate</a>()</code></div>
@@ -416,12 +416,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTaxedPricePortions(com.commercetools.api.models.cart.MethodTaxedPrice...)" class="member-name-link">plusTaxedPricePortions</a><wbr>(<a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>...&nbsp;taxedPricePortions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTaxedPricePortions(java.util.function.Function)" class="member-name-link">plusTaxedPricePortions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>,<wbr><a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#price(com.commercetools.api.models.common.Price)" class="member-name-link">price</a><wbr>(<a href="../common/Price.html" title="interface in com.commercetools.api.models.common">Price</a>&nbsp;price)</code></div>
@@ -491,7 +491,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTaxedPricePortions(java.util.function.Function)" class="member-name-link">setTaxedPricePortions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>,<wbr><a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingDetails(com.commercetools.api.models.cart.ItemShippingDetails)" class="member-name-link">shippingDetails</a><wbr>(<a href="ItemShippingDetails.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetails</a>&nbsp;shippingDetails)</code></div>
@@ -536,12 +536,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedPricePortions(com.commercetools.api.models.cart.MethodTaxedPrice...)" class="member-name-link">taxedPricePortions</a><wbr>(<a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>...&nbsp;taxedPricePortions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedPricePortions(java.util.List)" class="member-name-link">taxedPricePortions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;&nbsp;taxedPricePortions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxRate(com.commercetools.api.models.tax_category.TaxRate)" class="member-name-link">taxRate</a><wbr>(<a href="../tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>&nbsp;taxRate)</code></div>
@@ -638,7 +638,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTaxedPricePortions(java.util.function.Function)" class="member-name-link">withTaxedPricePortions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>,<wbr><a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTaxRate(java.util.function.Function)" class="member-name-link">withTaxRate</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../tax_category/TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a>,<wbr><a href="../tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>&gt;&nbsp;builder)</code></div>
@@ -1133,7 +1133,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="taxedPricePortions(com.commercetools.api.models.cart.MethodTaxedPrice...)">
 <h3>taxedPricePortions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></span>&nbsp;<span class="element-name">taxedPricePortions</span><wbr><span class="parameters">(<a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>...&nbsp;taxedPricePortions)</span></div>
-<div class="block"><p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p></div>
+<div class="block"><p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>taxedPricePortions</code> - value to be set</dd>
@@ -1146,7 +1146,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="taxedPricePortions(java.util.List)">
 <h3>taxedPricePortions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></span>&nbsp;<span class="element-name">taxedPricePortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;&nbsp;taxedPricePortions)</span></div>
-<div class="block"><p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p></div>
+<div class="block"><p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>taxedPricePortions</code> - value to be set</dd>
@@ -1159,7 +1159,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusTaxedPricePortions(com.commercetools.api.models.cart.MethodTaxedPrice...)">
 <h3>plusTaxedPricePortions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></span>&nbsp;<span class="element-name">plusTaxedPricePortions</span><wbr><span class="parameters">(<a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>...&nbsp;taxedPricePortions)</span></div>
-<div class="block"><p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p></div>
+<div class="block"><p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>taxedPricePortions</code> - value to be set</dd>
@@ -1172,7 +1172,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusTaxedPricePortions(java.util.function.Function)">
 <h3>plusTaxedPricePortions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></span>&nbsp;<span class="element-name">plusTaxedPricePortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>,<wbr><a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p></div>
+<div class="block"><p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the taxedPricePortions value</dd>
@@ -1185,7 +1185,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withTaxedPricePortions(java.util.function.Function)">
 <h3>withTaxedPricePortions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></span>&nbsp;<span class="element-name">withTaxedPricePortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>,<wbr><a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p></div>
+<div class="block"><p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the taxedPricePortions value</dd>
@@ -1198,7 +1198,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addTaxedPricePortions(java.util.function.Function)">
 <h3>addTaxedPricePortions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></span>&nbsp;<span class="element-name">addTaxedPricePortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>,<wbr><a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p></div>
+<div class="block"><p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the taxedPricePortions value</dd>
@@ -1211,7 +1211,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setTaxedPricePortions(java.util.function.Function)">
 <h3>setTaxedPricePortions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></span>&nbsp;<span class="element-name">setTaxedPricePortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MethodTaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">MethodTaxedPriceBuilder</a>,<wbr><a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p></div>
+<div class="block"><p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the taxedPricePortions value</dd>
@@ -1837,7 +1837,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getTaxedPricePortions()">
 <h3>getTaxedPricePortions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;</span>&nbsp;<span class="element-name">getTaxedPricePortions</span>()</div>
-<div class="block"><p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p></div>
+<div class="block"><p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>taxedPricePortions</dd>

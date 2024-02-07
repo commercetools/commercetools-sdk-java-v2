@@ -673,7 +673,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <h3>getShippingAddress</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a></span>&nbsp;<span class="element-name">getShippingAddress</span>()</div>
-<div class="block"><p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p></div>
+<div class="block"><p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingAddress</dd>
@@ -1033,7 +1033,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="setShippingAddress(com.commercetools.api.models.common.BaseAddress)">
 <h3>setShippingAddress</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingAddress</span><wbr><span class="parameters">(<a href="../common/BaseAddress.html" title="interface in com.commercetools.api.models.common">BaseAddress</a>&nbsp;shippingAddress)</span></div>
-<div class="block"><p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p></div>
+<div class="block"><p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingAddress</code> - value to be set</dd>

@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">OrderRemoveItemShippingAddressAction</span><span class="extends-implements">
 extends <a href="OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a></span></div>
-<div class="block"><p>An address can only be removed if it is not referenced in any ItemShippingTarget of the Cart.</p>
+<div class="block"><p>An address can only be removed if it is not referenced in any ItemShippingTarget of the Cart. In such case, change the Line Item shipping address to a different <code>addressKey</code> first using the Set LineItemShippingDetails update action, before you remove the obsolete address.</p>
 
  <hr>
  Example to create an instance using the builder pattern

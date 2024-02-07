@@ -120,17 +120,17 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="col-first odd-row-color"><code>static final <a href="TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#EXTERNAL" class="member-name-link">EXTERNAL</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Tax Rates are set externally per <a href="ctp:api:type:ExternalTaxRateDraft">ExternalTaxRateDraft</a>.</div>
+<div class="block">Tax Rates are set externally per ExternalTaxRateDraft.</div>
 </div>
 <div class="col-first even-row-color"><code>static final <a href="TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></code></div>
 <div class="col-second even-row-color"><code><a href="#EXTERNAL_AMOUNT" class="member-name-link">EXTERNAL_AMOUNT</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">Tax amounts, Tax Rates, and tax portions are set externally per <a href="ctp:api:type:ExternalTaxAmountDraft">ExternalTaxAmountDraft</a>.</div>
+<div class="block">Tax amounts, Tax Rates, and tax portions are set externally per ExternalTaxAmountDraft.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#PLATFORM" class="member-name-link">PLATFORM</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Tax Rates are selected automatically from the <a href="ctp:api:type:TaxCategory">TaxCategories</a> based on the <a href="ctp:api:type:Cart">Cart</a> <code>shippingAddress</code>.</div>
+<div class="block">Tax Rates are selected automatically from the TaxCategories based on the Cart <code>shippingAddress</code>.</div>
 </div>
 </div>
 </section>
@@ -195,28 +195,24 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="PLATFORM">
 <h3>PLATFORM</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></span>&nbsp;<span class="element-name">PLATFORM</span></div>
-<div class="block"><p>Tax Rates are selected automatically from the <a href="ctp:api:type:TaxCategory">TaxCategories</a> based on the <a href="ctp:api:type:Cart">Cart</a> <code>shippingAddress</code>.
-        This is the default tax mode for a new Cart.</p>
-        <p><code>totalNet</code>, <code>totalGross</code>, and <code>taxPortions</code> fields are calculated based on the <code>taxRoundingMode</code>.</p></div>
+<div class="block"><p>Tax Rates are selected automatically from the TaxCategories based on the Cart <code>shippingAddress</code>. This is the default tax mode for a new Cart.</p>
+    <p><code>totalNet</code>, <code>totalGross</code>, and <code>taxPortions</code> fields are calculated based on the <code>taxRoundingMode</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="EXTERNAL">
 <h3>EXTERNAL</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></span>&nbsp;<span class="element-name">EXTERNAL</span></div>
-<div class="block"><p>Tax Rates are set externally per <a href="ctp:api:type:ExternalTaxRateDraft">ExternalTaxRateDraft</a>.
-        A Cart can be ordered only if all Line Items, Custom Line Items, and the Shipping Method have an external Tax Rate set.</p>
-        <p><code>totalNet</code>, <code>totalGross</code>, and <code>taxPortions</code> fields are calculated based on the <code>taxRoundingMode</code>.</p></div>
+<div class="block"><p>Tax Rates are set externally per ExternalTaxRateDraft. A Cart can be ordered only if all Line Items, Custom Line Items, and the Shipping Method have an external Tax Rate set.</p>
+    <p><code>totalNet</code>, <code>totalGross</code>, and <code>taxPortions</code> fields are calculated based on the <code>taxRoundingMode</code>.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="EXTERNAL_AMOUNT">
 <h3>EXTERNAL_AMOUNT</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></span>&nbsp;<span class="element-name">EXTERNAL_AMOUNT</span></div>
-<div class="block"><p>Tax amounts, Tax Rates, and tax portions are set externally per <a href="ctp:api:type:ExternalTaxAmountDraft">ExternalTaxAmountDraft</a>.
-        A Cart can be ordered only if the Cart and all Line Items, Custom Line Items, and the Shipping Method have an external tax amount and rate set.</p>
-        <p>Price-specific update actions on Carts require external recalculation of the total gross price.
-        Hence, the <code>externalTaxAmount</code> is removed in these cases and must be reset with <a href="ctp:api:type:CartSetLineItemTaxAmountAction">Set LineItem TaxAmount</a>, <a href="ctp:api:type:CartSetCustomLineItemTaxAmountAction">Set CustomLineItem TaxAmount</a>, or <a href="ctp:api:type:CartSetShippingMethodTaxAmountAction">Set ShippingMethod TaxAmount</a> update actions.</p></div>
+<div class="block"><p>Tax amounts, Tax Rates, and tax portions are set externally per ExternalTaxAmountDraft. A Cart can be ordered only if the Cart and all Line Items, Custom Line Items, and the Shipping Method have an external tax amount and rate set.</p>
+    <p>Price-specific update actions on Carts require external recalculation of the total gross price. Hence, the <code>externalTaxAmount</code> is removed in these cases and must be reset with Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount update actions.</p></div>
 </section>
 </li>
 <li>
@@ -224,7 +220,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <h3>DISABLED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></span>&nbsp;<span class="element-name">DISABLED</span></div>
 <div class="block"><p>No taxes are added to the Cart.</p>
-        <p>Note that this tax mode cannot be set on the <a href="/../api/projects/me-carts">My Carts</a> API.</p></div>
+    <p>Note that this tax mode cannot be set on the My Carts API.</p></div>
 </section>
 </li>
 </ul>

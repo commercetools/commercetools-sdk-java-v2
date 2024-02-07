@@ -120,17 +120,17 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="col-first odd-row-color"><code>static final <a href="CartState.html" title="interface in com.commercetools.api.models.cart">CartState</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#FROZEN" class="member-name-link">FROZEN</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">A Cart is <a href="ctp:api:type:FrozenCarts">frozen</a>.</div>
+<div class="block">A Cart is frozen.</div>
 </div>
 <div class="col-first even-row-color"><code>static final <a href="CartState.html" title="interface in com.commercetools.api.models.cart">CartState</a></code></div>
 <div class="col-second even-row-color"><code><a href="#MERGED" class="member-name-link">MERGED</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">An anonymous Cart was merged into a Customer's Cart on <a href="ctp:api:endpoint:/{projectKey}/login:POST">sign-in</a>, and no further operations are allowed on the Cart.</div>
+<div class="block">An anonymous Cart was merged into a Customer's Cart on sign-in, and no further operations are allowed on the Cart.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="CartState.html" title="interface in com.commercetools.api.models.cart">CartState</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#ORDERED" class="member-name-link">ORDERED</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">A Cart was <a href="ctp:api:endpoint:/{projectKey}/orders:POST">ordered</a>, and no further operations are allowed on the Cart.</div>
+<div class="block">A Cart was ordered, and no further operations are allowed on the Cart.</div>
 </div>
 </div>
 </section>
@@ -202,34 +202,34 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="MERGED">
 <h3>MERGED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="CartState.html" title="interface in com.commercetools.api.models.cart">CartState</a></span>&nbsp;<span class="element-name">MERGED</span></div>
-<div class="block"><p>An anonymous Cart was merged into a Customer's Cart on <a href="ctp:api:endpoint:/{projectKey}/login:POST">sign-in</a>, and no further operations are allowed on the Cart.</p></div>
+<div class="block"><p>An anonymous Cart was merged into a Customer's Cart on sign-in, and no further operations are allowed on the Cart.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="ORDERED">
 <h3>ORDERED</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="CartState.html" title="interface in com.commercetools.api.models.cart">CartState</a></span>&nbsp;<span class="element-name">ORDERED</span></div>
-<div class="block"><p>A Cart was <a href="ctp:api:endpoint:/{projectKey}/orders:POST">ordered</a>, and no further operations are allowed on the Cart.</p></div>
+<div class="block"><p>A Cart was ordered, and no further operations are allowed on the Cart.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="FROZEN">
 <h3>FROZEN</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="CartState.html" title="interface in com.commercetools.api.models.cart">CartState</a></span>&nbsp;<span class="element-name">FROZEN</span></div>
-<div class="block"><p>A Cart is <a href="ctp:api:type:FrozenCarts">frozen</a>. Update actions that can change the price of (Custom) Line Items are not allowed.</p>
-        <ul>
-        <li><a href="ctp:api:type:CartAddLineItemAction">Add LineItem</a></li>
-        <li><a href="ctp:api:type:CartChangeLineItemQuantityAction">Change LineItem Quantity</a></li>
-        <li><a href="ctp:api:type:CartRemoveLineItemAction">Remove LineItem</a></li>
-        <li><a href="ctp:api:type:CartSetLineItemDistributionChannelAction">Set LineItem DistributionChannel</a></li>
-        <li><a href="ctp:api:type:CartSetLineItemSupplyChannelAction">Set LineItem SupplyChannel</a></li>
-        <li><a href="ctp:api:type:CartAddCustomLineItemAction">Add CustomLineItem</a></li>
-        <li><a href="ctp:api:type:CartChangeCustomLineItemQuantityAction">Change CustomLineItem Quantity</a></li>
-        <li><a href="ctp:api:type:CartRemoveCustomLineItemAction">Remove CustomLineItem</a></li>
-        <li><a href="ctp:api:type:CartChangeTaxModeAction">Change TaxMode</a></li>
-        <li><a href="ctp:api:type:CartSetLineItemPriceAction">Set LineItem Price</a></li>
-        <li><a href="ctp:api:type:CartSetLineItemTotalPriceAction">Set LineItem TotalPrice</a></li>
-        </ul></div>
+<div class="block"><p>A Cart is frozen. Update actions that can change the price of (Custom) Line Items are not allowed.</p>
+    <ul>
+     <li>Add LineItem</li>
+     <li>Change LineItem Quantity</li>
+     <li>Remove LineItem</li>
+     <li>Set LineItem DistributionChannel</li>
+     <li>Set LineItem SupplyChannel</li>
+     <li>Add CustomLineItem</li>
+     <li>Change CustomLineItem Quantity</li>
+     <li>Remove CustomLineItem</li>
+     <li>Change TaxMode</li>
+     <li>Set LineItem Price</li>
+     <li>Set LineItem TotalPrice</li>
+    </ul></div>
 </section>
 </li>
 </ul>

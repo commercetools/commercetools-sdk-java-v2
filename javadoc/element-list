@@ -52,6 +52,7 @@ com.commercetools.api.predicates.query
 com.commercetools.api.predicates.query.product
 com.commercetools.api.predicates.query.type
 com.commercetools.api.product
+com.commercetools.api.search.products
 com.commercetools.compat
 com.commercetools.docs.meta
 com.commercetools.graphql.api

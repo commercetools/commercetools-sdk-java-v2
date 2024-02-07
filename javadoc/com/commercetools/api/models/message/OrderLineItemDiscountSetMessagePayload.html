@@ -161,7 +161,7 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTaxedPricePortions()" class="member-name-link">getTaxedPricePortions</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTotalPrice()" class="member-name-link">getTotalPrice</a>()</code></div>
@@ -206,12 +206,12 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTaxedPricePortions(com.commercetools.api.models.cart.MethodTaxedPrice...)" class="member-name-link">setTaxedPricePortions</a><wbr>(<a href="../cart/MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>...&nbsp;taxedPricePortions)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTaxedPricePortions(java.util.List)" class="member-name-link">setTaxedPricePortions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;&nbsp;taxedPricePortions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</div>
+<div class="block">Total taxed prices based on the quantity of Line Item assigned to each Shipping Method.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTotalPrice(com.commercetools.api.models.common.Money)" class="member-name-link">setTotalPrice</a><wbr>(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalPrice)</code></div>
@@ -341,7 +341,7 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;</span>&nbsp;<span class="element-name">getTaxedPricePortions</span>()</div>
-<div class="block"><p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p></div>
+<div class="block"><p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>taxedPricePortions</dd>
@@ -418,7 +418,7 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <section class="detail" id="setTaxedPricePortions(com.commercetools.api.models.cart.MethodTaxedPrice...)">
 <h3>setTaxedPricePortions</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTaxedPricePortions</span><wbr><span class="parameters">(<a href="../cart/MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>...&nbsp;taxedPricePortions)</span></div>
-<div class="block"><p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p></div>
+<div class="block"><p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>taxedPricePortions</code> - values to be set</dd>
@@ -429,7 +429,7 @@ extends <a href="OrderMessagePayload.html" title="interface in com.commercetools
 <section class="detail" id="setTaxedPricePortions(java.util.List)">
 <h3>setTaxedPricePortions</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTaxedPricePortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/MethodTaxedPrice.html" title="interface in com.commercetools.api.models.cart">MethodTaxedPrice</a>&gt;&nbsp;taxedPricePortions)</span></div>
-<div class="block"><p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p></div>
+<div class="block"><p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>taxedPricePortions</code> - values to be set</dd>

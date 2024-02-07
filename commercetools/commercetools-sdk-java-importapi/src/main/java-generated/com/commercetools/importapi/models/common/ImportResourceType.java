@@ -17,69 +17,43 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportResourceType extends JsonEnum {
 
     /**
-    	<p>The <a href="ctp:import:type:CategoryImport">Category import</a> resource type.</p>
-
-    */
+    <p>The Category import resource type.</p> */
     ImportResourceType CATEGORY = ImportResourceTypeEnum.CATEGORY;
     /**
-    	<p>The <a href="ctp:import:type:CustomerImport">Customer import</a> resource type.</p>
-
-    */
+    <p>The Customer import resource type.</p> */
     ImportResourceType CUSTOMER = ImportResourceTypeEnum.CUSTOMER;
     /**
-    	<p>The <a href="ctp:import:type:InventoryImport">Inventory import</a> resource type.</p>
-
-    */
+    <p>The Inventory import resource type.</p> */
     ImportResourceType INVENTORY = ImportResourceTypeEnum.INVENTORY;
     /**
-    	<p>The <a href="ctp:import:type:OrderImport">Order import</a> resource type.</p>
-
-    */
+    <p>The Order import resource type.</p> */
     ImportResourceType ORDER = ImportResourceTypeEnum.ORDER;
     /**
-    	<p>The <a href="ctp:import:type:OrderPatchImport">Order patch import</a> resource type.</p>
-
-    */
+    <p>The Order patch import resource type.</p> */
     ImportResourceType ORDER_PATCH = ImportResourceTypeEnum.ORDER_PATCH;
     /**
-    	<p>The <a href="ctp:import:type:PriceImport">Embedded Price import</a> resource type.</p>
-
-    */
+    <p>The Embedded Price import resource type.</p> */
     ImportResourceType PRICE = ImportResourceTypeEnum.PRICE;
     /**
-    	<p>The <a href="ctp:import:type:ProductImport">Product import</a> resource type.</p>
-
-    */
+    <p>The Product import resource type.</p> */
     ImportResourceType PRODUCT = ImportResourceTypeEnum.PRODUCT;
     /**
-    	<p>The <a href="ctp:import:type:ProductDraftImport">Product draft import</a> resource type.</p>
-
-    */
+    <p>The Product draft import resource type.</p> */
     ImportResourceType PRODUCT_DRAFT = ImportResourceTypeEnum.PRODUCT_DRAFT;
     /**
-    	<p>The <a href="ctp:import:type:ProductTypeImport">Product Type import</a> resource type.</p>
-
-    */
+    <p>The Product Type import resource type.</p> */
     ImportResourceType PRODUCT_TYPE = ImportResourceTypeEnum.PRODUCT_TYPE;
     /**
-    	<p>The <a href="ctp:import:type:ProductVariantImport">Product Variant import</a> resource type.</p>
-
-    */
+    <p>The Product Variant import resource type.</p> */
     ImportResourceType PRODUCT_VARIANT = ImportResourceTypeEnum.PRODUCT_VARIANT;
     /**
-    	<p>The <a href="ctp:import:type:ProductVariantPatch">Product Variant patch</a> resource type.</p>
-
-    */
+    <p>The Product Variant patch resource type.</p> */
     ImportResourceType PRODUCT_VARIANT_PATCH = ImportResourceTypeEnum.PRODUCT_VARIANT_PATCH;
     /**
-    	<p>The <a href="ctp:import:type:StandalonePriceImport">Standalone Price import</a> resource type.</p>
-
-    */
+    <p>The Standalone Price import resource type.</p> */
     ImportResourceType STANDALONE_PRICE = ImportResourceTypeEnum.STANDALONE_PRICE;
     /**
-    	<p>The <a href="ctp:import:type:TypeImport">Type import</a> resource type.</p>
-
-    */
+    <p>The Type import resource type.</p> */
     ImportResourceType TYPE = ImportResourceTypeEnum.TYPE;
 
     /**

@@ -17,15 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSelectionMode extends JsonEnum {
 
     /**
-    	<p>For this mode of Product Selection, the Products are to be assigned individually by using the <a href="/projects/product-selections#add-product">Add Product</a> update action.</p>
-
-    */
+    <p>For this mode of Product Selection, the Products are to be assigned individually by using the Add Product update action.</p> */
     ProductSelectionMode INDIVIDUAL = ProductSelectionModeEnum.INDIVIDUAL;
     /**
-    	<p>Defines the Product Selection to contain Products that are excluded from the catalog.
-    	For this mode of Product Selection, the Products are to be excluded individually by using the <a href="/projects/product-selections#exclude-product">Exclude Product</a> update action.</p>
-
-    */
+    <p>Defines the Product Selection to contain Products that are excluded from the catalog. For this mode of Product Selection, the Products are to be excluded individually by using the Exclude Product update action.</p> */
     ProductSelectionMode INDIVIDUAL_EXCLUSION = ProductSelectionModeEnum.INDIVIDUAL_EXCLUSION;
 
     /**

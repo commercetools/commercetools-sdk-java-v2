@@ -17,44 +17,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ExtensionResourceTypeId extends JsonEnum {
 
     /**
-    	<p>Extension triggered for operations on <a href="/../api/projects/carts">Carts</a>.</p>
-
-    */
+    <p>Extension triggered for operations on Carts.</p> */
     ExtensionResourceTypeId CART = ExtensionResourceTypeIdEnum.CART;
     /**
-    	<p>Extension triggered for operations on <a href="/../api/projects/orders">Orders</a>.</p>
-
-    */
+    <p>Extension triggered for operations on Orders.</p> */
     ExtensionResourceTypeId ORDER = ExtensionResourceTypeIdEnum.ORDER;
     /**
-    	<p>Extension triggered for operations on <a href="/../api/projects/payments">Payments</a>.</p>
-
-    */
+    <p>Extension triggered for operations on Payments.</p> */
     ExtensionResourceTypeId PAYMENT = ExtensionResourceTypeIdEnum.PAYMENT;
     /**
-    	<p>Extension triggered for operations on <a href="/../api/projects/customers">Customers</a>.</p>
-
-    */
+    <p>Extension triggered for operations on Customers.</p> */
     ExtensionResourceTypeId CUSTOMER = ExtensionResourceTypeIdEnum.CUSTOMER;
     /**
-    	<p>Extension triggered for operations on <a href="/../api/projects/quote-requests">QuoteRequests</a>.</p>
-
-    */
+    <p>Extension triggered for operations on QuoteRequests.</p> */
     ExtensionResourceTypeId QUOTE_REQUEST = ExtensionResourceTypeIdEnum.QUOTE_REQUEST;
     /**
-    	<p>Extension triggered for operations on <a href="/../api/projects/staged-quotes">StagedQuotes</a>.</p>
-
-    */
+    <p>Extension triggered for operations on StagedQuotes.</p> */
     ExtensionResourceTypeId STAGED_QUOTE = ExtensionResourceTypeIdEnum.STAGED_QUOTE;
     /**
-    	<p>Extension triggered for operations on <a href="/../api/projects/quotes">Quotes</a>.</p>
-
-    */
+    <p>Extension triggered for operations on Quotes.</p> */
     ExtensionResourceTypeId QUOTE = ExtensionResourceTypeIdEnum.QUOTE;
     /**
-    	<p>Extension triggered for operations on <a href="/../api/projects/business-units">BusinessUnits</a>.</p>
-
-    */
+    <p>Extension triggered for operations on BusinessUnits.</p> */
     ExtensionResourceTypeId BUSINESS_UNIT = ExtensionResourceTypeIdEnum.BUSINESS_UNIT;
 
     /**

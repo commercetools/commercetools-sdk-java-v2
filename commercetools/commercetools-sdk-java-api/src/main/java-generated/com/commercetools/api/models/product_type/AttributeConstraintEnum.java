@@ -17,24 +17,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeConstraintEnum extends JsonEnum {
 
     /**
-    	<p>No constraints are applied to the Attribute.</p>
-
-    */
+    <p>No constraints are applied to the Attribute.</p> */
     AttributeConstraintEnum NONE = AttributeConstraintEnumEnum.NONE;
     /**
-    	<p>Attribute values must be different for each variant.</p>
-
-    */
+    <p>Attribute values must be different for each variant.</p> */
     AttributeConstraintEnum UNIQUE = AttributeConstraintEnumEnum.UNIQUE;
     /**
-    	<p>Set of Attributes that have this constraint, should have different combinations in each variant.</p>
-
-    */
+    <p>Set of Attributes that have this constraint, should have different combinations in each variant.</p> */
     AttributeConstraintEnum COMBINATION_UNIQUE = AttributeConstraintEnumEnum.COMBINATION_UNIQUE;
     /**
-    	<p>Attribute value should be the same in all variants.</p>
-
-    */
+    <p>Attribute value should be the same in all variants.</p> */
     AttributeConstraintEnum SAME_FOR_ALL = AttributeConstraintEnumEnum.SAME_FOR_ALL;
 
     /**

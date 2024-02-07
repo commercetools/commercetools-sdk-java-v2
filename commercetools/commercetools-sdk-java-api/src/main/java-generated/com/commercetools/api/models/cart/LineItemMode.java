@@ -17,19 +17,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface LineItemMode extends JsonEnum {
 
     /**
-    	<p>The Line Item is added during <a href="ctp:api:endpoint:/{projectKey}/carts:POST">Cart creation</a> or using the <a href="ctp:api:type:CartAddLineItemAction">Add LineItem</a> update action.
-    	The Line Item quantity can be changed without restriction.</p>
-
-    */
+    <p>The Line Item is added during Cart creation or using the Add LineItem update action. The Line Item quantity can be changed without restriction.</p> */
     LineItemMode STANDARD = LineItemModeEnum.STANDARD;
     /**
-    	<p>The Line Item is added automatically by a Cart Discount with <a href="ctp:api:type:CartDiscountValueGiftLineItem">CartDiscountValueGiftLineItem</a>.</p>
-    	<p>The quantity cannot be <a href="ctp:api:type:CartChangeLineItemQuantityAction">increased</a>, and it won't be merged when the same Line Item is <a href="ctp:api:type:CartAddLineItemAction">added</a> to the Cart.
-    	If the gift is <a href="ctp:api:type:CartRemoveLineItemAction">removed</a>, an entry is added to the <code>refusedGifts</code> array and the discount won't be applied to the Cart.
-    	The price cannot be changed <a href="ctp:api:type:CartSetLineItemTotalPriceAction">externally</a>.</p>
-    	<p>All other updates, such as the ones related to Custom Fields, can be used.</p>
-
-    */
+    <p>The Line Item is added automatically by a Cart Discount with CartDiscountValueGiftLineItem.</p>
+    <p>The quantity cannot be increased, and it won't be merged when the same Line Item is added to the Cart. If the gift is removed, an entry is added to the <code>refusedGifts</code> array and the discount won't be applied to the Cart. The price cannot be changed externally.</p>
+    <p>All other updates, such as the ones related to Custom Fields, can be used.</p> */
     LineItemMode GIFT_LINE_ITEM = LineItemModeEnum.GIFT_LINE_ITEM;
 
     /**

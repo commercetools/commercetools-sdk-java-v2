@@ -17,19 +17,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ApprovalFlowStatus extends JsonEnum {
 
     /**
-    	<p>Default status of Approval Flows, indicating that the Approval Flow has not been fully approved or rejected.</p>
-
-    */
+    <p>Default status of Approval Flows, indicating that the Approval Flow has not been fully approved or rejected.</p> */
     ApprovalFlowStatus PENDING = ApprovalFlowStatusEnum.PENDING;
     /**
-    	<p>Automatically set when all approvers from matching Approval Rules have approved. It indicates that the Approval Flow has been fully approved and is completed.</p>
-
-    */
+    <p>Automatically set when all approvers from matching Approval Rules have approved. It indicates that the Approval Flow has been fully approved and is completed.</p> */
     ApprovalFlowStatus APPROVED = ApprovalFlowStatusEnum.APPROVED;
     /**
-    	<p>Automatically set when a rejection occurs in the Approval Flow. A single rejection is sufficient to reject the entire Approval Flow.</p>
-
-    */
+    <p>Automatically set when a rejection occurs in the Approval Flow. A single rejection is sufficient to reject the entire Approval Flow.</p> */
     ApprovalFlowStatus REJECTED = ApprovalFlowStatusEnum.REJECTED;
 
     /**

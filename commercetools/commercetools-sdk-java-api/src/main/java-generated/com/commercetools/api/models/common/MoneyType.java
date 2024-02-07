@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MoneyType extends JsonEnum {
 
     /**
-    	<p>Use to set currency in cent precision.</p>
-
-    */
+    <p>Use to set currency in cent precision.</p> */
     MoneyType CENT_PRECISION = MoneyTypeEnum.CENT_PRECISION;
     /**
-    	<p>Use to set currency in high precision.</p>
-
-    */
+    <p>Use to set currency in high precision.</p> */
     MoneyType HIGH_PRECISION = MoneyTypeEnum.HIGH_PRECISION;
 
     /**

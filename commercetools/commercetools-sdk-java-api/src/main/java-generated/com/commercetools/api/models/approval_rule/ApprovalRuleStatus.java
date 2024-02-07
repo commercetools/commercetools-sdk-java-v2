@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ApprovalRuleStatus extends JsonEnum {
 
     /**
-    	<p>The Approval Rule is in effect and will be used in evaluating approval requests for <a href="ctp:api:type:Order">Orders</a>.</p>
-
-    */
+    <p>The Approval Rule is in effect and will be used in evaluating approval requests for Orders.</p> */
     ApprovalRuleStatus ACTIVE = ApprovalRuleStatusEnum.ACTIVE;
     /**
-    	<p>The Approval Rule is not in effect and will not be used in evaluating approval requests for Orders.</p>
-
-    */
+    <p>The Approval Rule is not in effect and will not be used in evaluating approval requests for Orders.</p> */
     ApprovalRuleStatus INACTIVE = ApprovalRuleStatusEnum.INACTIVE;
 
     /**

@@ -17,44 +17,28 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StateTypeEnum extends JsonEnum {
 
     /**
-    	<p>Used by <a href="ctp:api:type:Order">Orders</a>.</p>
-
-    */
+    <p>Used by Orders.</p> */
     StateTypeEnum ORDER_STATE = StateTypeEnumEnum.ORDER_STATE;
     /**
-    	<p>Used by <a href="ctp:api:type:LineItem">LineItems</a> and <a href="ctp:api:type:CustomLineItem">CustomLineItems</a> in <a href="ctp:api:type:Cart">Carts</a> and <a href="ctp:api:type:Order">Orders</a>.</p>
-
-    */
+    <p>Used by LineItems and CustomLineItems in Carts and Orders.</p> */
     StateTypeEnum LINE_ITEM_STATE = StateTypeEnumEnum.LINE_ITEM_STATE;
     /**
-    	<p>Used by <a href="ctp:api:type:Product">Products</a>.</p>
-
-    */
+    <p>Used by Products.</p> */
     StateTypeEnum PRODUCT_STATE = StateTypeEnumEnum.PRODUCT_STATE;
     /**
-    	<p>Used by <a href="ctp:api:type:Review">Reviews</a>.</p>
-
-    */
+    <p>Used by Reviews.</p> */
     StateTypeEnum REVIEW_STATE = StateTypeEnumEnum.REVIEW_STATE;
     /**
-    	<p>Used by <a href="ctp:api:type:PaymentStatus">PaymentStatus</a> in <a href="ctp:api:type:Payment">Payments</a>.</p>
-
-    */
+    <p>Used by PaymentStatus in Payments.</p> */
     StateTypeEnum PAYMENT_STATE = StateTypeEnumEnum.PAYMENT_STATE;
     /**
-    	<p>Used by <a href="ctp:api:type:QuoteRequest">QuoteRequest</a>.</p>
-
-    */
+    <p>Used by QuoteRequest.</p> */
     StateTypeEnum QUOTE_REQUEST_STATE = StateTypeEnumEnum.QUOTE_REQUEST_STATE;
     /**
-    	<p>Used by <a href="ctp:api:type:StagedQuote">StagedQuote</a>.</p>
-
-    */
+    <p>Used by StagedQuote.</p> */
     StateTypeEnum STAGED_QUOTE_STATE = StateTypeEnumEnum.STAGED_QUOTE_STATE;
     /**
-    	<p>Used by <a href="ctp:api:type:Quote">Quote</a>.</p>
-
-    */
+    <p>Used by Quote.</p> */
     StateTypeEnum QUOTE_STATE = StateTypeEnumEnum.QUOTE_STATE;
 
     /**

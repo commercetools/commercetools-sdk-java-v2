@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MyQuoteState extends JsonEnum {
 
     /**
-    	<p>A state indicating that the <a href="/../api/quotes-overview#buyer">Buyer</a> has declined the <a href="ctp:api:type:Quote">Quote</a>.</p>
-
-    */
+    <p>A state indicating that the Buyer has declined the Quote.</p> */
     MyQuoteState DECLINED = MyQuoteStateEnum.DECLINED;
     /**
-    	<p>A state indicating that the <a href="/../api/quotes-overview#buyer">Buyer</a> has accepted the <a href="ctp:api:type:Quote">Quote</a>.</p>
-
-    */
+    <p>A state indicating that the Buyer has accepted the Quote.</p> */
     MyQuoteState ACCEPTED = MyQuoteStateEnum.ACCEPTED;
 
     /**

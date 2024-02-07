@@ -17,24 +17,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TransactionState extends JsonEnum {
 
     /**
-    	<p>Initial State. The payment service has not accepted the Transaction yet.</p>
-
-    */
+    <p>Initial State. The payment service has not accepted the Transaction yet.</p> */
     TransactionState INITIAL = TransactionStateEnum.INITIAL;
     /**
-    	<p>The payment service has accepted the Transaction, but it is not completed yet.</p>
-
-    */
+    <p>The payment service has accepted the Transaction, but it is not completed yet.</p> */
     TransactionState PENDING = TransactionStateEnum.PENDING;
     /**
-    	<p>The payment service has confirmed the successful completion of the Transation.</p>
-
-    */
+    <p>The payment service has confirmed the successful completion of the Transation.</p> */
     TransactionState SUCCESS = TransactionStateEnum.SUCCESS;
     /**
-    	<p>Transaction has unrecoverably failed.</p>
-
-    */
+    <p>Transaction has unrecoverably failed.</p> */
     TransactionState FAILURE = TransactionStateEnum.FAILURE;
 
     /**

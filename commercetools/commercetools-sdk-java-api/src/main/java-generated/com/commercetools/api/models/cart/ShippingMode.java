@@ -17,15 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingMode extends JsonEnum {
 
     /**
-    	<p>Cart can contain only a single Shipping Method.
-    	This is the default mode for backwards compatibilty.</p>
-
-    */
+    <p>Cart can contain only a single Shipping Method. This is the default mode for backwards compatibilty.</p> */
     ShippingMode SINGLE = ShippingModeEnum.SINGLE;
     /**
-    	<p>Cart can contain multiple Shipping Methods.</p>
-
-    */
+    <p>Cart can contain multiple Shipping Methods.</p> */
     ShippingMode MULTIPLE = ShippingModeEnum.MULTIPLE;
 
     /**

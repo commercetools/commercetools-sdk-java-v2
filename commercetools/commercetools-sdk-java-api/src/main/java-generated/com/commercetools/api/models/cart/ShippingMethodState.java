@@ -17,15 +17,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShippingMethodState extends JsonEnum {
 
     /**
-    	<p>The <a href="ctp:api:type:ShippingMethod">ShippingMethod</a> <code>predicate</code> does not match the Cart.</p>
-    	<p>Ordering this Cart returns an <a href="ctp:api:type:ShippingMethodDoesNotMatchCartError">ShippingMethodDoesNotMatchCart</a> error.</p>
-
-    */
+    <p>The ShippingMethod <code>predicate</code> does not match the Cart.</p>
+    <p>Ordering this Cart returns an ShippingMethodDoesNotMatchCart error.</p> */
     ShippingMethodState DOES_NOT_MATCH_CART = ShippingMethodStateEnum.DOES_NOT_MATCH_CART;
     /**
-    	<p>Either the <a href="ctp:api:type:ShippingMethod">ShippingMethod</a> <code>predicate</code> matches the Cart or there is no <code>predicate</code> defined.</p>
-
-    */
+    <p>Either the ShippingMethod <code>predicate</code> matches the Cart or there is no <code>predicate</code> defined.</p> */
     ShippingMethodState MATCHES_CART = ShippingMethodStateEnum.MATCHES_CART;
 
     /**

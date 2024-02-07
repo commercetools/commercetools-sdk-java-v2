@@ -17,26 +17,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReturnPaymentState extends JsonEnum {
 
     /**
-    	<p>Initial state for Return Items for which payment cannot be refunded.</p>
-    	<p>Return Items have the <code>Advised</code> <a href="ctp:api:type:ReturnShipmentState">ReturnShipmentState</a>.</p>
-
-    */
+    <p>Initial state for Return Items for which payment cannot be refunded.</p>
+    <p>Return Items have the <code>Advised</code> ReturnShipmentState.</p> */
     ReturnPaymentState NON_REFUNDABLE = ReturnPaymentStateEnum.NON_REFUNDABLE;
     /**
-    	<p>Initial state for Return Items for which payment can be refunded.</p>
-    	<p>Return Items have the <code>Returned</code> <a href="ctp:api:type:ReturnShipmentState">ReturnShipmentState</a>.</p>
-
-    */
+    <p>Initial state for Return Items for which payment can be refunded.</p>
+    <p>Return Items have the <code>Returned</code> ReturnShipmentState.</p> */
     ReturnPaymentState INITIAL = ReturnPaymentStateEnum.INITIAL;
     /**
-    	<p>The payment for the Return Items is refunded.</p>
-
-    */
+    <p>The payment for the Return Items is refunded.</p> */
     ReturnPaymentState REFUNDED = ReturnPaymentStateEnum.REFUNDED;
     /**
-    	<p>The payment for the Return Items is not refunded.</p>
-
-    */
+    <p>The payment for the Return Items is not refunded.</p> */
     ReturnPaymentState NOT_REFUNDED = ReturnPaymentStateEnum.NOT_REFUNDED;
 
     /**

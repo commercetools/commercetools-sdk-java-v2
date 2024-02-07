@@ -17,158 +17,94 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ResourceTypeId extends JsonEnum {
 
     /**
-    	<p><a href="/../api/types#address">Address</a> on <a href="/../api/projects/business-units#businessunit">BusinessUnit</a>, <a href="/../api/projects/carts#cart">Cart</a>, <a href="/../api/projects/orders#order">Order</a>, <a href="/../api/projects/order-edits#orderedit">OrderEdit</a>, <a href="/../api/projects/customers#customer">Customer</a>, and <a href="/../api/projects/channels#channel">Channel</a></p>
-
-    */
+    <p>Address on BusinessUnit, Cart, Order, OrderEdit, Customer, and Channel</p> */
     ResourceTypeId ADDRESS = ResourceTypeIdEnum.ADDRESS;
     /**
-    	<p><a href="/../api/types#asset">Asset</a> on <a href="/../api/projects/categories#category">Category</a> and <a href="/../api/projects/products#productvariant">ProductVariant</a></p>
-
-    */
+    <p>Asset on Category and ProductVariant</p> */
     ResourceTypeId ASSET = ResourceTypeIdEnum.ASSET;
     /**
-    	<p><a href="/../api/projects/business-units#businessunit">BusinessUnit</a></p>
-
-    */
+    <p>BusinessUnit</p> */
     ResourceTypeId BUSINESS_UNIT = ResourceTypeIdEnum.BUSINESS_UNIT;
     /**
-    	<p><a href="/../api/projects/cartDiscounts#cartdiscount">CartDiscount</a></p>
-
-    */
+    <p>CartDiscount</p> */
     ResourceTypeId CART_DISCOUNT = ResourceTypeIdEnum.CART_DISCOUNT;
     /**
-    	<p><a href="/../api/projects/categories#category">Category</a></p>
-
-    */
+    <p>Category</p> */
     ResourceTypeId CATEGORY = ResourceTypeIdEnum.CATEGORY;
     /**
-    	<p><a href="/../api/projects/channels#channel">Channel</a></p>
-
-    */
+    <p>Channel</p> */
     ResourceTypeId CHANNEL = ResourceTypeIdEnum.CHANNEL;
     /**
-    	<p><a href="/../api/projects/customers#customer">Customer</a></p>
-
-    */
+    <p>Customer</p> */
     ResourceTypeId CUSTOMER = ResourceTypeIdEnum.CUSTOMER;
     /**
-    	<p><a href="/../api/projects/customerGroups#customergroup">CustomerGroup</a></p>
-
-    */
+    <p>CustomerGroup</p> */
     ResourceTypeId CUSTOMER_GROUP = ResourceTypeIdEnum.CUSTOMER_GROUP;
     /**
-    	<p><a href="/../api/projects/carts#customlineitem">CustomLineItem</a> on <a href="/../api/projects/carts#cart">Cart</a> and <a href="/../api/projects/orders#order">Order</a></p>
-
-    */
+    <p>CustomLineItem on Cart and Order</p> */
     ResourceTypeId CUSTOM_LINE_ITEM = ResourceTypeIdEnum.CUSTOM_LINE_ITEM;
     /**
-    	<p><a href="/../api/projects/discountCodes#discountcode">DiscountCode</a></p>
-
-    */
+    <p>DiscountCode</p> */
     ResourceTypeId DISCOUNT_CODE = ResourceTypeIdEnum.DISCOUNT_CODE;
     /**
-    	<p><a href="/../api/projects/inventory#inventoryentry">InventoryEntry</a></p>
-
-    */
+    <p>InventoryEntry</p> */
     ResourceTypeId INVENTORY_ENTRY = ResourceTypeIdEnum.INVENTORY_ENTRY;
     /**
-    	<p><a href="/../api/projects/carts#lineitem">LineItem</a> on <a href="/../api/projects/carts#cart">Cart</a> and <a href="/../api/projects/orders#order">Order</a>, and <a href="/../api/projects/carts#lineitem">LineItem</a> on <a href="/../api/projects/shoppingLists#shoppinglist">ShoppingList</a></p>
-
-    */
+    <p>LineItem on Cart and Order, and LineItem on ShoppingList</p> */
     ResourceTypeId LINE_ITEM = ResourceTypeIdEnum.LINE_ITEM;
     /**
-    	<p><a href="/../api/projects/carts#cart">Cart</a> and <a href="/../api/projects/orders#order">Order</a>.
-    	When a <a href="/../api/projects/carts#cart">Cart</a> is ordered, the <a href="/../api/projects/custom-fields#customfields">CustomFields</a> need to be copied to the <a href="/../api/projects/orders#order">Order</a>.
-    	For this reason, the Types for Carts are also valid for Orders, and hence both have the same identifier: <code>order</code>.</p>
-
-    */
+    <p>Cart and Order. When a Cart is ordered, the CustomFields need to be copied to the Order. For this reason, the Types for Carts are also valid for Orders, and hence both have the same identifier: <code>order</code>.</p> */
     ResourceTypeId ORDER = ResourceTypeIdEnum.ORDER;
     /**
-    	<p><a href="/../api/projects/order-edits#orderedit">OrderEdit</a></p>
-
-    */
+    <p>OrderEdit</p> */
     ResourceTypeId ORDER_EDIT = ResourceTypeIdEnum.ORDER_EDIT;
     /**
-    	<p><a href="/../api/projects/orders#delivery">Delivery</a></p>
-
-    */
+    <p>Delivery</p> */
     ResourceTypeId ORDER_DELIVERY = ResourceTypeIdEnum.ORDER_DELIVERY;
     /**
-    	<p><a href="/../api/projects/orders#parcel">Parcel</a></p>
-
-    */
+    <p>Parcel</p> */
     ResourceTypeId ORDER_PARCEL = ResourceTypeIdEnum.ORDER_PARCEL;
     /**
-    	<p><a href="/../api/projects/orders#returnitem">ReturnItem</a></p>
-
-    */
+    <p>ReturnItem</p> */
     ResourceTypeId ORDER_RETURN_ITEM = ResourceTypeIdEnum.ORDER_RETURN_ITEM;
     /**
-    	<p><a href="/../api/projects/payments#payment">Payment</a></p>
-
-    */
+    <p>Payment</p> */
     ResourceTypeId PAYMENT = ResourceTypeIdEnum.PAYMENT;
     /**
-    	<p><a href="/../api/projects/payments#add-interfaceinteraction">InterfaceInteraction</a> on <a href="/../api/projects/payments#payment">Payment</a></p>
-
-    */
+    <p>InterfaceInteraction on Payment</p> */
     ResourceTypeId PAYMENT_INTERFACE_INTERACTION = ResourceTypeIdEnum.PAYMENT_INTERFACE_INTERACTION;
     /**
-    	<p><a href="/../api/projects/products#embedded-price">Embedded Price</a> on <a href="/../api/projects/products#productvariant">ProductVariant</a></p>
-
-    */
+    <p>Embedded Price on ProductVariant</p> */
     ResourceTypeId PRODUCT_PRICE = ResourceTypeIdEnum.PRODUCT_PRICE;
     /**
-    	<p><a href="/../api/projects/product-selections#productselection">ProductSelection</a></p>
-
-    */
+    <p>ProductSelection</p> */
     ResourceTypeId PRODUCT_SELECTION = ResourceTypeIdEnum.PRODUCT_SELECTION;
     /**
-    	<p><a href="/../api/projects/quotes#quote">Quote</a>, <a href="/../api/projects/quote-requests#quoterequest">QuoteRequest</a> and <a href="/../api/projects/staged-quotes#stagedquote">StagedQuote</a>.
-    	When a <a href="/../api/projects/staged-quotes#stagedquote">StagedQuote</a> is created, the <a href="/../api/projects/custom-fields#customfields">CustomFields</a> will be copied from the <a href="/../api/projects/quote-requests#quoterequest">QuoteRequest</a> and when a <a href="/../api/projects/quotes#quote">Quote</a> is created, the <a href="/../api/projects/custom-fields#customfields">CustomFields</a> will be copied from the <a href="/../api/projects/staged-quotes#stagedquote">StagedQuote</a>.
-    	For this reason, the Types for Quotes are also valid for QuoteRequests and StagedQuotes, and hence all have the same identifier: <code>quote</code>.</p>
-
-    */
+    <p>Quote, QuoteRequest and StagedQuote. When a StagedQuote is created, the CustomFields will be copied from the QuoteRequest and when a Quote is created, the CustomFields will be copied from the StagedQuote. For this reason, the Types for Quotes are also valid for QuoteRequests and StagedQuotes, and hence all have the same identifier: <code>quote</code>.</p> */
     ResourceTypeId QUOTE = ResourceTypeIdEnum.QUOTE;
     /**
-    	<p><a href="/../api/projects/reviews#review">Review</a></p>
-
-    */
+    <p>Review</p> */
     ResourceTypeId REVIEW = ResourceTypeIdEnum.REVIEW;
     /**
-    	<p><a href="/../api/projects/carts#shipping">Shipping</a></p>
-
-    */
+    <p>Shipping</p> */
     ResourceTypeId SHIPPING = ResourceTypeIdEnum.SHIPPING;
     /**
-    	<p><a href="/../api/projects/shippingMethods#shippingmethod">ShippingMethod</a></p>
-
-    */
+    <p>ShippingMethod</p> */
     ResourceTypeId SHIPPING_METHOD = ResourceTypeIdEnum.SHIPPING_METHOD;
     /**
-    	<p><a href="/../api/projects/shoppingLists#shoppinglist">ShoppingList</a></p>
-
-    */
+    <p>ShoppingList</p> */
     ResourceTypeId SHOPPING_LIST = ResourceTypeIdEnum.SHOPPING_LIST;
     /**
-    	<p><a href="/../api/projects/shoppingLists#textlineitem">TextLineItem</a> on <a href="/../api/projects/shoppingLists#shoppinglist">ShoppingList</a></p>
-
-    */
+    <p>TextLineItem on ShoppingList</p> */
     ResourceTypeId SHOPPING_LIST_TEXT_LINE_ITEM = ResourceTypeIdEnum.SHOPPING_LIST_TEXT_LINE_ITEM;
     /**
-    	<p><a href="/../api/projects/standalone-prices#standaloneprice">StandalonePrice</a></p>
-
-    */
+    <p>StandalonePrice</p> */
     ResourceTypeId STANDALONE_PRICE = ResourceTypeIdEnum.STANDALONE_PRICE;
     /**
-    	<p><a href="/../api/projects/stores#store">Store</a></p>
-
-    */
+    <p>Store</p> */
     ResourceTypeId STORE = ResourceTypeIdEnum.STORE;
     /**
-    	<p><a href="/../api/projects/payments#transaction">Transaction</a> on <a href="/../api/projects/payments#payment">Payment</a></p>
-
-    */
+    <p>Transaction on Payment</p> */
     ResourceTypeId TRANSACTION = ResourceTypeIdEnum.TRANSACTION;
 
     /**

@@ -17,19 +17,13 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SearchIndexingConfigurationStatus extends JsonEnum {
 
     /**
-    	<p>Indicates that search and suggest endpoints for the specified resource type are active.</p>
-
-    */
+    <p>Indicates that search and suggest endpoints for the specified resource type are active.</p> */
     SearchIndexingConfigurationStatus ACTIVATED = SearchIndexingConfigurationStatusEnum.ACTIVATED;
     /**
-    	<p>Indicates that search and suggest endpoints for the specified resource type cannot be used.</p>
-
-    */
+    <p>Indicates that search and suggest endpoints for the specified resource type cannot be used.</p> */
     SearchIndexingConfigurationStatus DEACTIVATED = SearchIndexingConfigurationStatusEnum.DEACTIVATED;
     /**
-    	<p>Indicates that search and suggest endpoints can <em>temporarily</em> not be used because the search index is being re-built.</p>
-
-    */
+    <p>Indicates that search and suggest endpoints can <em>temporarily</em> not be used because the search index is being re-built.</p> */
     SearchIndexingConfigurationStatus INDEXING = SearchIndexingConfigurationStatusEnum.INDEXING;
 
     /**

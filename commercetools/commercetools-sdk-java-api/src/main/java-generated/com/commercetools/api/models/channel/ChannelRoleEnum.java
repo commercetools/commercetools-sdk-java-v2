@@ -17,30 +17,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ChannelRoleEnum extends JsonEnum {
 
     /**
-    	<p>Channel can be used to track inventory entries (for example, Channels with this role can be treated as warehouses).</p>
-
-    */
+    <p>Channel can be used to track inventory entries (for example, Channels with this role can be treated as warehouses).</p> */
     ChannelRoleEnum INVENTORY_SUPPLY = ChannelRoleEnumEnum.INVENTORY_SUPPLY;
     /**
-    	<p>Channel can be used to expose Products to a specific distribution Channel.
-    	The Channel can be used by a Cart to <a href="ctp:api:type:LineItemPriceSelection">select</a> a Product Price.</p>
-
-    */
+    <p>Channel can be used to expose Products to a specific distribution Channel. The Channel can be used by a Cart to select a Product Price.</p> */
     ChannelRoleEnum PRODUCT_DISTRIBUTION = ChannelRoleEnumEnum.PRODUCT_DISTRIBUTION;
     /**
-    	<p>Channel can be used to track order export activities.</p>
-
-    */
+    <p>Channel can be used to track order export activities.</p> */
     ChannelRoleEnum ORDER_EXPORT = ChannelRoleEnumEnum.ORDER_EXPORT;
     /**
-    	<p>Channel can be used to track order import activities.</p>
-
-    */
+    <p>Channel can be used to track order import activities.</p> */
     ChannelRoleEnum ORDER_IMPORT = ChannelRoleEnumEnum.ORDER_IMPORT;
     /**
-    	<p>This role can be combined with the other roles (for example, with <code>InventorySupply</code>). If used, the Channel is considered as the primary or main channel among Channels of the same type.</p>
-
-    */
+    <p>This role can be combined with the other roles (for example, with <code>InventorySupply</code>). If used, the Channel is considered as the primary or main channel among Channels of the same type.</p> */
     ChannelRoleEnum PRIMARY = ChannelRoleEnumEnum.PRIMARY;
 
     /**

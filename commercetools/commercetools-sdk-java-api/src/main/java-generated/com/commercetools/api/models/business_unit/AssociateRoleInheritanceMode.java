@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AssociateRoleInheritanceMode extends JsonEnum {
 
     /**
-    	<p>The assignment can be inherited by child Business Units.</p>
-
-    */
+    <p>The assignment can be inherited by child Business Units.</p> */
     AssociateRoleInheritanceMode ENABLED = AssociateRoleInheritanceModeEnum.ENABLED;
     /**
-    	<p>The assignment cannot be inherited by child Business Units.</p>
-
-    */
+    <p>The assignment cannot be inherited by child Business Units.</p> */
     AssociateRoleInheritanceMode DISABLED = AssociateRoleInheritanceModeEnum.DISABLED;
 
     /**

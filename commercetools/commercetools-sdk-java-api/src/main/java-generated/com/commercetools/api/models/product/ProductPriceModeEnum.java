@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductPriceModeEnum extends JsonEnum {
 
     /**
-    	<p>Composable Commerce uses the <a href="ctp:api:type:Price">Embedded Prices</a> located inside the <code>prices</code> field in <a href="ctp:api:type:ProductVariant">ProductVariant</a>.</p>
-
-    */
+    <p>Composable Commerce uses the Embedded Prices located inside the <code>prices</code> field in ProductVariant.</p> */
     ProductPriceModeEnum EMBEDDED = ProductPriceModeEnumEnum.EMBEDDED;
     /**
-    	<p>Composable Commerce uses <a href="ctp:api:type:StandalonePrice">StandalonePrices</a>, which are associated with the <a href="ctp:api:type:ProductVariant">ProductVariant</a> through the <code>sku</code> field.</p>
-
-    */
+    <p>Composable Commerce uses StandalonePrices, which are associated with the ProductVariant through the <code>sku</code> field.</p> */
     ProductPriceModeEnum STANDALONE = ProductPriceModeEnumEnum.STANDALONE;
 
     /**

@@ -17,39 +17,25 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ShipmentState extends JsonEnum {
 
     /**
-    	<p>Indicates that the Order is shipped.</p>
-
-    */
+    <p>Indicates that the Order is shipped.</p> */
     ShipmentState SHIPPED = ShipmentStateEnum.SHIPPED;
     /**
-    	<p>Indicates that the Order is delivered.</p>
-
-    */
+    <p>Indicates that the Order is delivered.</p> */
     ShipmentState DELIVERED = ShipmentStateEnum.DELIVERED;
     /**
-    	<p>Indicates that the Order is ready to be shipped.</p>
-
-    */
+    <p>Indicates that the Order is ready to be shipped.</p> */
     ShipmentState READY = ShipmentStateEnum.READY;
     /**
-    	<p>Indicates that the shipment of the Order is pending.</p>
-
-    */
+    <p>Indicates that the shipment of the Order is pending.</p> */
     ShipmentState PENDING = ShipmentStateEnum.PENDING;
     /**
-    	<p>Indicates that the shipment of the Order is delayed.</p>
-
-    */
+    <p>Indicates that the shipment of the Order is delayed.</p> */
     ShipmentState DELAYED = ShipmentStateEnum.DELAYED;
     /**
-    	<p>Indicates that items in the Order are shipped in more than one shipment.</p>
-
-    */
+    <p>Indicates that items in the Order are shipped in more than one shipment.</p> */
     ShipmentState PARTIAL = ShipmentStateEnum.PARTIAL;
     /**
-    	<p>Indicates that items in the Order are not in stock and will be delivered once the items are restocked.</p>
-
-    */
+    <p>Indicates that items in the Order are not in stock and will be delivered once the items are restocked.</p> */
     ShipmentState BACKORDER = ShipmentStateEnum.BACKORDER;
 
     /**

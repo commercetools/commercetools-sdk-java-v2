@@ -17,79 +17,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomFieldReferenceValue extends JsonEnum {
 
     /**
-    	<p><a href="ctp:api:type:ApprovalFlow">ApprovalFlow</a></p>
-
-    */
+    <p>ApprovalFlow</p> */
     CustomFieldReferenceValue APPROVAL_FLOW = CustomFieldReferenceValueEnum.APPROVAL_FLOW;
     /**
-    	<p><a href="ctp:api:type:AssociateRole">AssociateRole</a></p>
-
-    */
+    <p>AssociateRole</p> */
     CustomFieldReferenceValue ASSOCIATE_ROLE = CustomFieldReferenceValueEnum.ASSOCIATE_ROLE;
     /**
-    	<p><a href="ctp:api:type:BusinessUnit">BusinessUnit</a></p>
-
-    */
+    <p>BusinessUnit</p> */
     CustomFieldReferenceValue BUSINESS_UNIT = CustomFieldReferenceValueEnum.BUSINESS_UNIT;
     /**
-    	<p><a href="ctp:api:type:Cart">Cart</a></p>
-
-    */
+    <p>Cart</p> */
     CustomFieldReferenceValue CART = CustomFieldReferenceValueEnum.CART;
     /**
-    	<p><a href="ctp:api:type:Category">Category</a></p>
-
-    */
+    <p>Category</p> */
     CustomFieldReferenceValue CATEGORY = CustomFieldReferenceValueEnum.CATEGORY;
     /**
-    	<p><a href="ctp:api:type:Channel">Channel</a></p>
-
-    */
+    <p>Channel</p> */
     CustomFieldReferenceValue CHANNEL = CustomFieldReferenceValueEnum.CHANNEL;
     /**
-    	<p><a href="ctp:api:type:Customer">Customer</a></p>
-
-    */
+    <p>Customer</p> */
     CustomFieldReferenceValue CUSTOMER = CustomFieldReferenceValueEnum.CUSTOMER;
     /**
-    	<p><a href="ctp:api:type:CustomObject">CustomObject</a></p>
-
-    */
+    <p>CustomObject</p> */
     CustomFieldReferenceValue KEY_VALUE_DOCUMENT = CustomFieldReferenceValueEnum.KEY_VALUE_DOCUMENT;
     /**
-    	<p><a href="ctp:api:type:Order">Order</a></p>
-
-    */
+    <p>Order</p> */
     CustomFieldReferenceValue ORDER = CustomFieldReferenceValueEnum.ORDER;
     /**
-    	<p><a href="ctp:api:type:Product">Product</a></p>
-
-    */
+    <p>Product</p> */
     CustomFieldReferenceValue PRODUCT = CustomFieldReferenceValueEnum.PRODUCT;
     /**
-    	<p><a href="ctp:api:type:ProductType">ProductType</a></p>
-
-    */
+    <p>ProductType</p> */
     CustomFieldReferenceValue PRODUCT_TYPE = CustomFieldReferenceValueEnum.PRODUCT_TYPE;
     /**
-    	<p><a href="ctp:api:type:Review">Review</a></p>
-
-    */
+    <p>Review</p> */
     CustomFieldReferenceValue REVIEW = CustomFieldReferenceValueEnum.REVIEW;
     /**
-    	<p><a href="ctp:api:type:State">State</a></p>
-
-    */
+    <p>State</p> */
     CustomFieldReferenceValue STATE = CustomFieldReferenceValueEnum.STATE;
     /**
-    	<p><a href="ctp:api:type:ShippingMethod">ShippingMethod</a></p>
-
-    */
+    <p>ShippingMethod</p> */
     CustomFieldReferenceValue SHIPPING_METHOD = CustomFieldReferenceValueEnum.SHIPPING_METHOD;
     /**
-    	<p><a href="ctp:api:type:Zone">Zone</a></p>
-
-    */
+    <p>Zone</p> */
     CustomFieldReferenceValue ZONE = CustomFieldReferenceValueEnum.ZONE;
 
     /**

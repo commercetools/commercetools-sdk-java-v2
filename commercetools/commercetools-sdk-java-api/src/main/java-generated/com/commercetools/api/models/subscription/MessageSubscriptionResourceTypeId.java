@@ -17,104 +17,64 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MessageSubscriptionResourceTypeId extends JsonEnum {
 
     /**
-    	<p>Messages related to <a href="ctp:api:type:ApprovalFlow">ApprovalFlows</a>.</p>
-
-    */
+    <p>Messages related to ApprovalFlows.</p> */
     MessageSubscriptionResourceTypeId APPROVAL_FLOW = MessageSubscriptionResourceTypeIdEnum.APPROVAL_FLOW;
     /**
-    	<p>Messages related to <a href="ctp:api:type:ApprovalRule">ApprovalRules</a>.</p>
-
-    */
+    <p>Messages related to ApprovalRules.</p> */
     MessageSubscriptionResourceTypeId APPROVAL_RULE = MessageSubscriptionResourceTypeIdEnum.APPROVAL_RULE;
     /**
-    	<p>Messages related to <a href="ctp:api:type:AssociateRole">AssociateRoles</a>.</p>
-
-    */
+    <p>Messages related to AssociateRoles.</p> */
     MessageSubscriptionResourceTypeId ASSOCIATE_ROLE = MessageSubscriptionResourceTypeIdEnum.ASSOCIATE_ROLE;
     /**
-    	<p>Messages related to <a href="ctp:api:type:BusinessUnit">BusinessUnits</a>.</p>
-
-    */
+    <p>Messages related to BusinessUnits.</p> */
     MessageSubscriptionResourceTypeId BUSINESS_UNIT = MessageSubscriptionResourceTypeIdEnum.BUSINESS_UNIT;
     /**
-    	<p>Messages related to <a href="ctp:api:type:Category">Categories</a>.</p>
-
-    */
+    <p>Messages related to Categories.</p> */
     MessageSubscriptionResourceTypeId CATEGORY = MessageSubscriptionResourceTypeIdEnum.CATEGORY;
     /**
-    	<p>Messages related to <a href="ctp:api:type:Customer">Customers</a>.</p>
-
-    */
+    <p>Messages related to Customers.</p> */
     MessageSubscriptionResourceTypeId CUSTOMER = MessageSubscriptionResourceTypeIdEnum.CUSTOMER;
     /**
-    	<p>Messages related to <a href="ctp:api:type:CustomerToken">CustomerTokens</a> for email verification.</p>
-
-    */
+    <p>Messages related to CustomerTokens for email verification.</p> */
     MessageSubscriptionResourceTypeId CUSTOMER_EMAIL_TOKEN = MessageSubscriptionResourceTypeIdEnum.CUSTOMER_EMAIL_TOKEN;
     /**
-    	<p>Messages related to <a href="ctp:api:type:CustomerGroup">CustomerGroups</a>.</p>
-
-    */
+    <p>Messages related to CustomerGroups.</p> */
     MessageSubscriptionResourceTypeId CUSTOMER_GROUP = MessageSubscriptionResourceTypeIdEnum.CUSTOMER_GROUP;
     /**
-    	<p>Messages related to <a href="ctp:api:type:CustomerToken">CustomerTokens</a> for password reset.</p>
-
-    */
+    <p>Messages related to CustomerTokens for password reset.</p> */
     MessageSubscriptionResourceTypeId CUSTOMER_PASSWORD_TOKEN = MessageSubscriptionResourceTypeIdEnum.CUSTOMER_PASSWORD_TOKEN;
     /**
-    	<p>Messages related to <a href="ctp:api:type:InventoryEntry">InventoryEntries</a>.</p>
-
-    */
+    <p>Messages related to InventoryEntries.</p> */
     MessageSubscriptionResourceTypeId INVENTORY_ENTRY = MessageSubscriptionResourceTypeIdEnum.INVENTORY_ENTRY;
     /**
-    	<p>Messages related to <a href="ctp:api:type:Order">Orders</a>.</p>
-
-    */
+    <p>Messages related to Orders.</p> */
     MessageSubscriptionResourceTypeId ORDER = MessageSubscriptionResourceTypeIdEnum.ORDER;
     /**
-    	<p>Messages related to <a href="ctp:api:type:Payment">Payments</a>.</p>
-
-    */
+    <p>Messages related to Payments.</p> */
     MessageSubscriptionResourceTypeId PAYMENT = MessageSubscriptionResourceTypeIdEnum.PAYMENT;
     /**
-    	<p>Messages related to <a href="ctp:api:type:Product">Products</a>.</p>
-
-    */
+    <p>Messages related to Products.</p> */
     MessageSubscriptionResourceTypeId PRODUCT = MessageSubscriptionResourceTypeIdEnum.PRODUCT;
     /**
-    	<p>Messages related to <a href="ctp:api:type:ProductSelection">ProductSelections</a>.</p>
-
-    */
+    <p>Messages related to ProductSelections.</p> */
     MessageSubscriptionResourceTypeId PRODUCT_SELECTION = MessageSubscriptionResourceTypeIdEnum.PRODUCT_SELECTION;
     /**
-    	<p>Messages related to <a href="ctp:api:type:Quote">Quotes</a>.</p>
-
-    */
+    <p>Messages related to Quotes.</p> */
     MessageSubscriptionResourceTypeId QUOTE = MessageSubscriptionResourceTypeIdEnum.QUOTE;
     /**
-    	<p>Messages related to <a href="ctp:api:type:QuoteRequest">Quote Requests</a>.</p>
-
-    */
+    <p>Messages related to Quote Requests.</p> */
     MessageSubscriptionResourceTypeId QUOTE_REQUEST = MessageSubscriptionResourceTypeIdEnum.QUOTE_REQUEST;
     /**
-    	<p>Messages related to <a href="ctp:api:type:Review">Reviews</a>.</p>
-
-    */
+    <p>Messages related to Reviews.</p> */
     MessageSubscriptionResourceTypeId REVIEW = MessageSubscriptionResourceTypeIdEnum.REVIEW;
     /**
-    	<p>Messages related to <a href="ctp:api:type:StagedQuote">Staged Quotes</a>.</p>
-
-    */
+    <p>Messages related to Staged Quotes.</p> */
     MessageSubscriptionResourceTypeId STAGED_QUOTE = MessageSubscriptionResourceTypeIdEnum.STAGED_QUOTE;
     /**
-    	<p>Messages related to <a href="ctp:api:type:StandalonePrice">StandalonePrices</a>.</p>
-
-    */
+    <p>Messages related to StandalonePrices.</p> */
     MessageSubscriptionResourceTypeId STANDALONE_PRICE = MessageSubscriptionResourceTypeIdEnum.STANDALONE_PRICE;
     /**
-    	<p>Messages related to <a href="ctp:api:type:Store">Stores</a>.</p>
-
-    */
+    <p>Messages related to Stores.</p> */
     MessageSubscriptionResourceTypeId STORE = MessageSubscriptionResourceTypeIdEnum.STORE;
 
     /**

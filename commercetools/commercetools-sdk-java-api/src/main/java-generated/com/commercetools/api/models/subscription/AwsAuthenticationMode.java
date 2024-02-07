@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AwsAuthenticationMode extends JsonEnum {
 
     /**
-    	<p>Subscriptions with <code>Credentials</code> authentication mode are authenticated using an <code>accessKey</code> and <code>accessSecret</code> pair. This is the default authentication mode for backwards compatibility.</p>
-
-    */
+    <p>Subscriptions with <code>Credentials</code> authentication mode are authenticated using an <code>accessKey</code> and <code>accessSecret</code> pair. This is the default authentication mode for backwards compatibility.</p> */
     AwsAuthenticationMode CREDENTIALS = AwsAuthenticationModeEnum.CREDENTIALS;
     /**
-    	<p>Subscriptions with <code>IAM</code> authentication mode are authenticated using Identity and Access Management (IAM). For this authentication mode, the following user requires permissions to send messages to the queue or publish to the topic: <code>arn:aws-cn:iam::417094354346:user/subscriptions</code> if the Project is hosted in the China (AWS, Ningxia) Region; <code>arn:aws:iam::362576667341:user/subscriptions</code> for all other <a href="/../api/general-concepts#regions">Regions</a>. This is the recommended authentication mode, as it doesn't require additional key management.</p>
-
-    */
+    <p>Subscriptions with <code>IAM</code> authentication mode are authenticated using Identity and Access Management (IAM). For this authentication mode, the following user requires permissions to send messages to the queue or publish to the topic: <code>arn:aws-cn:iam::417094354346:user/subscriptions</code> if the Project is hosted in the China (AWS, Ningxia) Region; <code>arn:aws:iam::362576667341:user/subscriptions</code> for all other Regions. This is the recommended authentication mode, as it doesn't require additional key management.</p> */
     AwsAuthenticationMode IAM = AwsAuthenticationModeEnum.IAM;
 
     /**

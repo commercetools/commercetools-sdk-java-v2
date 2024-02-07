@@ -28,7 +28,7 @@ public class DiscountCodeTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { DiscountCode.builder().id("id") },
-                new Object[] { DiscountCode.builder().version(2L) },
+                new Object[] { DiscountCode.builder().key("key") }, new Object[] { DiscountCode.builder().version(2L) },
                 new Object[] { DiscountCode.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { DiscountCode.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { DiscountCode.builder()
@@ -64,6 +64,13 @@ public class DiscountCodeTest {
         DiscountCode value = DiscountCode.of();
         value.setId("id");
         Assertions.assertThat(value.getId()).isEqualTo("id");
+    }
+
+    @Test
+    public void key() {
+        DiscountCode value = DiscountCode.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
     }
 
     @Test

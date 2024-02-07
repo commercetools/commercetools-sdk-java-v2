@@ -27,7 +27,7 @@ public class DiscountCodeDraftTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] {
+        return new Object[][] { new Object[] { DiscountCodeDraft.builder().key("key") },
                 new Object[] { DiscountCodeDraft.builder()
                         .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
                 new Object[] { DiscountCodeDraft.builder()
@@ -45,6 +45,13 @@ public class DiscountCodeDraftTest {
                 new Object[] { DiscountCodeDraft.builder().groups(Collections.singletonList("groups")) },
                 new Object[] { DiscountCodeDraft.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { DiscountCodeDraft.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+    }
+
+    @Test
+    public void key() {
+        DiscountCodeDraft value = DiscountCodeDraft.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
     }
 
     @Test

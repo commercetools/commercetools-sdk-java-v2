@@ -39,6 +39,14 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
         io.vrap.rmf.base.client.Draft<DiscountCodeDraft> {
 
     /**
+     *  <p>User-defined unique identifier for the DiscountCode.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Name of the DiscountCode.</p>
      * @return name
      */
@@ -134,6 +142,13 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
+
+    /**
+     *  <p>User-defined unique identifier for the DiscountCode.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Name of the DiscountCode.</p>
@@ -250,6 +265,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
      */
     public static DiscountCodeDraft of(final DiscountCodeDraft template) {
         DiscountCodeDraftImpl instance = new DiscountCodeDraftImpl();
+        instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setCode(template.getCode());
@@ -276,6 +292,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
             return null;
         }
         DiscountCodeDraftImpl instance = new DiscountCodeDraftImpl();
+        instance.setKey(template.getKey());
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setDescription(
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));

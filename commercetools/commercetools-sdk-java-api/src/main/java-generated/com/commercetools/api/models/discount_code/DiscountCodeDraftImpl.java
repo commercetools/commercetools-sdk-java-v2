@@ -22,6 +22,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
 
+    private String key;
+
     private com.commercetools.api.models.common.LocalizedString name;
 
     private com.commercetools.api.models.common.LocalizedString description;
@@ -50,7 +52,8 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    DiscountCodeDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
+    DiscountCodeDraftImpl(@JsonProperty("key") final String key,
+            @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
             @JsonProperty("code") final String code,
             @JsonProperty("cartDiscounts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts,
@@ -61,6 +64,7 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
             @JsonProperty("groups") final java.util.List<String> groups,
             @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
+        this.key = key;
         this.name = name;
         this.description = description;
         this.code = code;
@@ -79,6 +83,14 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
      * create empty instance
      */
     public DiscountCodeDraftImpl() {
+    }
+
+    /**
+     *  <p>User-defined unique identifier for the DiscountCode.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -177,6 +189,10 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
         return this.validUntil;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -245,7 +261,8 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
 
         DiscountCodeDraftImpl that = (DiscountCodeDraftImpl) o;
 
-        return new EqualsBuilder().append(name, that.name)
+        return new EqualsBuilder().append(key, that.key)
+                .append(name, that.name)
                 .append(description, that.description)
                 .append(code, that.code)
                 .append(cartDiscounts, that.cartDiscounts)
@@ -257,6 +274,7 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
                 .append(groups, that.groups)
                 .append(validFrom, that.validFrom)
                 .append(validUntil, that.validUntil)
+                .append(key, that.key)
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(code, that.code)
@@ -274,7 +292,8 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name)
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(name)
                 .append(description)
                 .append(code)
                 .append(cartDiscounts)
@@ -291,7 +310,8 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name)
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
+                .append("name", name)
                 .append("description", description)
                 .append("code", code)
                 .append("cartDiscounts", cartDiscounts)

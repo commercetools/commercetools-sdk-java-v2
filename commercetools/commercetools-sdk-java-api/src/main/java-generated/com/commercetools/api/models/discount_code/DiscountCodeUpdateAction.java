@@ -34,6 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldActionImpl.class, name = DiscountCodeSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeActionImpl.class, name = DiscountCodeSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionImpl.class, name = DiscountCodeSetDescriptionAction.SET_DESCRIPTION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetKeyActionImpl.class, name = DiscountCodeSetKeyAction.SET_KEY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionImpl.class, name = DiscountCodeSetMaxApplicationsAction.SET_MAX_APPLICATIONS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerActionImpl.class, name = DiscountCodeSetMaxApplicationsPerCustomerAction.SET_MAX_APPLICATIONS_PER_CUSTOMER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetNameActionImpl.class, name = DiscountCodeSetNameAction.SET_NAME),
@@ -91,6 +92,10 @@ public interface DiscountCodeUpdateAction
         if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionAction) {
             return com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionAction
                     .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetKeyAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeSetKeyAction
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetKeyAction) template);
         }
         if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsAction) {
             return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsAction.deepCopy(
@@ -174,6 +179,14 @@ public interface DiscountCodeUpdateAction
      */
     public static com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionBuilder.of();
+    }
+
+    /**
+     * builder for setKey subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.discount_code.DiscountCodeSetKeyActionBuilder setKeyBuilder() {
+        return com.commercetools.api.models.discount_code.DiscountCodeSetKeyActionBuilder.of();
     }
 
     /**

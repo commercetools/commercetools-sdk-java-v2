@@ -20,6 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
+ *  <p>Creating a Discount Code produces the DiscountCodeCreated Message.</p>
  *  <p>Deprecated scope: <code>manage_orders:{projectKey}</code></p>
  *
  * <hr>

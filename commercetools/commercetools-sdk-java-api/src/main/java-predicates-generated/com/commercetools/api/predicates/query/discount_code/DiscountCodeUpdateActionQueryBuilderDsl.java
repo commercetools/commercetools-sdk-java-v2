@@ -70,6 +70,13 @@ public class DiscountCodeUpdateActionQueryBuilderDsl {
             DiscountCodeUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<DiscountCodeUpdateActionQueryBuilderDsl> asSetKey(
+            Function<com.commercetools.api.predicates.query.discount_code.DiscountCodeSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.discount_code.DiscountCodeSetKeyActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.discount_code.DiscountCodeSetKeyActionQueryBuilderDsl.of()),
+            DiscountCodeUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<DiscountCodeUpdateActionQueryBuilderDsl> asSetMaxApplications(
             Function<com.commercetools.api.predicates.query.discount_code.DiscountCodeSetMaxApplicationsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.discount_code.DiscountCodeSetMaxApplicationsActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

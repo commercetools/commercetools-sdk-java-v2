@@ -41,6 +41,9 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     private java.time.ZonedDateTime lastModifiedAt;
 
     @Nullable
+    private String key;
+
+    @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
     @Nullable
@@ -124,6 +127,17 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     public DiscountCodeBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the DiscountCode.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -623,6 +637,16 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the DiscountCode.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @return lastModifiedBy
      */
@@ -791,7 +815,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
         Objects.requireNonNull(isActive, DiscountCode.class + ": isActive is missing");
         Objects.requireNonNull(references, DiscountCode.class + ": references is missing");
         Objects.requireNonNull(groups, DiscountCode.class + ": groups is missing");
-        return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name,
+        return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, name,
             description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
             maxApplicationsPerCustomer, custom, groups, validFrom, validUntil, applicationVersion);
     }
@@ -801,7 +825,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
      * @return DiscountCode
      */
     public DiscountCode buildUnchecked() {
-        return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name,
+        return new DiscountCodeImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, name,
             description, code, cartDiscounts, cartPredicate, isActive, references, maxApplications,
             maxApplicationsPerCustomer, custom, groups, validFrom, validUntil, applicationVersion);
     }
@@ -825,6 +849,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
         builder.version = template.getVersion();
         builder.createdAt = template.getCreatedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();
+        builder.key = template.getKey();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();
         builder.name = template.getName();

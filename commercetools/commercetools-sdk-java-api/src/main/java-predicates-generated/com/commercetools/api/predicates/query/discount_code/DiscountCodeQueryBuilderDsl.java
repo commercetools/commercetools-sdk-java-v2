@@ -36,6 +36,11 @@ public class DiscountCodeQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, DiscountCodeQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<DiscountCodeQueryBuilderDsl> key() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("key")),
+            p -> new CombinationQueryPredicate<>(p, DiscountCodeQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<DiscountCodeQueryBuilderDsl> lastModifiedBy(
             Function<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LastModifiedByQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

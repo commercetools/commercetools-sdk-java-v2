@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     @Nullable
+    private String key;
+
+    @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
 
     @Nullable
@@ -58,6 +61,17 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     @Nullable
     private java.time.ZonedDateTime validUntil;
+
+    /**
+     *  <p>User-defined unique identifier for the DiscountCode.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public DiscountCodeDraftBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
 
     /**
      *  <p>Name of the DiscountCode.</p>
@@ -374,6 +388,16 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
+     *  <p>User-defined unique identifier for the DiscountCode.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Name of the DiscountCode.</p>
      * @return name
      */
@@ -498,7 +522,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     public DiscountCodeDraft build() {
         Objects.requireNonNull(code, DiscountCodeDraft.class + ": code is missing");
         Objects.requireNonNull(cartDiscounts, DiscountCodeDraft.class + ": cartDiscounts is missing");
-        return new DiscountCodeDraftImpl(name, description, code, cartDiscounts, cartPredicate, isActive,
+        return new DiscountCodeDraftImpl(key, name, description, code, cartDiscounts, cartPredicate, isActive,
             maxApplications, maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);
     }
 
@@ -507,7 +531,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
      * @return DiscountCodeDraft
      */
     public DiscountCodeDraft buildUnchecked() {
-        return new DiscountCodeDraftImpl(name, description, code, cartDiscounts, cartPredicate, isActive,
+        return new DiscountCodeDraftImpl(key, name, description, code, cartDiscounts, cartPredicate, isActive,
             maxApplications, maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);
     }
 
@@ -526,6 +550,7 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
      */
     public static DiscountCodeDraftBuilder of(final DiscountCodeDraft template) {
         DiscountCodeDraftBuilder builder = new DiscountCodeDraftBuilder();
+        builder.key = template.getKey();
         builder.name = template.getName();
         builder.description = template.getDescription();
         builder.code = template.getCode();

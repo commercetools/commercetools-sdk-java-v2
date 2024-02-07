@@ -395,6 +395,18 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.DeliveryRemovedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.DiscountCodeCreatedMessagePayloadBuilder discountCodeCreatedBuilder() {
+        return com.commercetools.api.models.message.DiscountCodeCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DiscountCodeDeletedMessagePayloadBuilder discountCodeDeletedBuilder() {
+        return com.commercetools.api.models.message.DiscountCodeDeletedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DiscountCodeKeySetMessagePayloadBuilder discountCodeKeySetBuilder() {
+        return com.commercetools.api.models.message.DiscountCodeKeySetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.InventoryEntryCreatedMessagePayloadBuilder inventoryEntryCreatedBuilder() {
         return com.commercetools.api.models.message.InventoryEntryCreatedMessagePayloadBuilder.of();
     }

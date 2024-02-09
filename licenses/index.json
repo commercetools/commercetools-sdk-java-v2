@@ -255,7 +255,7 @@
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "1.17.2",
+            "moduleVersion": "1.17.6",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",

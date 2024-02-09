@@ -12,7 +12,6 @@ dependencies {
     testImplementation project(':commercetools:commercetools-http-client')
     implementation google.findbugs
     implementation javax.validation
-    api logback.classic
     api graphql.java
     api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:6.1.4'
 

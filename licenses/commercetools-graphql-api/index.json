@@ -67,7 +67,7 @@
         },
         {
             "moduleName": "com.graphql-java:graphql-java",
-            "moduleVersion": "19.2",
+            "moduleVersion": "19.4",
             "moduleUrls": [
                 "https://github.com/graphql-java/graphql-java"
             ],

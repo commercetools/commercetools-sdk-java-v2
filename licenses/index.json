@@ -133,7 +133,7 @@
         },
         {
             "moduleName": "com.graphql-java:graphql-java",
-            "moduleVersion": "19.2",
+            "moduleVersion": "19.4",
             "moduleUrls": [
                 "https://github.com/graphql-java/graphql-java"
             ],
@@ -386,7 +386,7 @@
         },
         {
             "moduleName": "io.netty:netty-buffer",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.106.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -412,7 +412,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.106.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -451,7 +451,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.106.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -490,7 +490,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-socks",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.106.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -516,7 +516,7 @@
         },
         {
             "moduleName": "io.netty:netty-common",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.106.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -542,7 +542,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.106.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -568,7 +568,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler-proxy",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.106.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -594,7 +594,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.106.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -659,7 +659,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.106.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -737,7 +737,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-unix-common",
-            "moduleVersion": "4.1.60.Final",
+            "moduleVersion": "4.1.106.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -895,7 +895,7 @@
         },
         {
             "moduleName": "org.apache.commons:commons-text",
-            "moduleVersion": "1.9",
+            "moduleVersion": "1.10.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-text"
             ],

@@ -78,6 +78,7 @@ dependencies {
 * `commercetools-sdk-compat-v1`: Compatibility layer for Java v1 SDK
 * `commercetools-money`: Provider for JSR-354 money instances
 * `commercetools-monitoring-newrelic`: Middleware to integrate NewRelic monitoring
+* `commercetools-monitoring-datadog`: Middleware to integrate Datadog monitoring
 * `commercetools-monitoring-opentelemetry`: Middleware to collect metrics using OpenTelemetry
 * `commercetools-graphql-api`: type safe support for the commercetools GraphQL API
 

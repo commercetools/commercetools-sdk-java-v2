@@ -7,6 +7,9 @@
             "moduleLicense": "MIT License"
         },
         {
+            "moduleLicense": "PUBLIC DOMAIN"
+        },
+        {
             "moduleLicense": "MIT-0"
         },
         {
@@ -26,16 +29,14 @@
             "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform-dependencies"
         },
         {
-            "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
-            "moduleName": "javax.annotation:javax.annotation-api"
-        },
-        {
-            "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
-            "moduleName": "jakarta.annotation:jakarta.annotation-api"
+            "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception"
         },
         {
             "moduleLicense": "Eclipse Distribution License - v 1.0",
             "moduleName": "com.sun.activation:jakarta.activation"
+        },
+        {
+            "moduleLicense": "Eclipse Distribution License - v 1.0"
         },
         {
             "moduleLicense": "Eclipse Public License - v 2.0",

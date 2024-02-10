@@ -200,6 +200,7 @@ def documentationProjects= [
         ":commercetools:commercetools-money",
         ":commercetools:commercetools-monitoring-newrelic",
         ":commercetools:commercetools-monitoring-opentelemetry",
+        ":commercetools:commercetools-monitoring-datadog",
         ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
         ":commercetools:commercetools-reactornetty-client",
@@ -355,6 +356,7 @@ tasks.register("writeVersionToExamples") {
                 include(name: 'examples/spring/build.gradle')
                 include(name: 'examples/spring-newrelic/build.gradle')
                 include(name: 'examples/spring-otel/build.gradle')
+                include(name: 'examples/spring-datadog/build.gradle')
             }
         }
         ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {

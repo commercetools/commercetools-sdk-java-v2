@@ -1,4 +1,29 @@
 
+# 17.6.0 (2024-02-12)
+
+## What's Changed
+* Search builder by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/542
+* Remove the incorrect lines by @johthor in https://github.com/commercetools/commercetools-sdk-java-v2/pull/558
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/557
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/561
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/562
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/563
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/564
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/549
+* chore(deps): update stefanzweifel/git-auto-commit-action digest to 12f6863 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/532
+* update mockito by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/565
+* chore(deps): pin dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/566
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/567
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/570
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/571
+* update dependencies by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/572
+* Add datadog monitoring module by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/568
+
+## New Contributors
+* @johthor made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/558
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.5.0...17.6.0
+
 # 17.5.0 (2024-01-22)
 
 ## What's Changed

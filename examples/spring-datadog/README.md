@@ -14,7 +14,8 @@ Example to show how Java SDK can be used in a Spring Boot application with Datad
 1. Clone/Download the example folder.
 2. Navigate to the path `spring-datadog/`.
 3. Register the client credentials in environment variables:
-   `CTP_CLIENT_ID`, `CTP_CLIENT_SECRET`, `CTP_PROJECT_KEY`, `DD_SITE` and `DD_API_KEY`.
+   `CTP_CLIENT_ID`, `CTP_CLIENT_SECRET`, `CTP_PROJECT_KEY`
+4. Add Datadog API key to environment variable as `DD_API_KEY`. If necessary, add `DD_SITE` to environmental variable as well.
 
 ## Using the Spring MVC Example app
 

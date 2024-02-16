@@ -17,22 +17,22 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * DiscountedLineItemPortion
+ * DiscountedLineItemPortionDraft
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion, ModelBase {
+public class DiscountedLineItemPortionDraftImpl implements DiscountedLineItemPortionDraft, ModelBase {
 
     private com.commercetools.api.models.common.Reference discount;
 
-    private com.commercetools.api.models.common.TypedMoney discountedAmount;
+    private com.commercetools.api.models.common.TypedMoneyDraft discountedAmount;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    DiscountedLineItemPortionImpl(
+    DiscountedLineItemPortionDraftImpl(
             @JsonProperty("discount") final com.commercetools.api.models.common.Reference discount,
-            @JsonProperty("discountedAmount") final com.commercetools.api.models.common.TypedMoney discountedAmount) {
+            @JsonProperty("discountedAmount") final com.commercetools.api.models.common.TypedMoneyDraft discountedAmount) {
         this.discount = discount;
         this.discountedAmount = discountedAmount;
     }
@@ -40,11 +40,11 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     /**
      * create empty instance
      */
-    public DiscountedLineItemPortionImpl() {
+    public DiscountedLineItemPortionDraftImpl() {
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference for the discount applicable on the Line Item.</p>
      */
 
     public com.commercetools.api.models.common.Reference getDiscount() {
@@ -52,10 +52,10 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     *  <p>Money value of the applicable discount.</p>
+     *  <p>Money value for the discount applicable.</p>
      */
 
-    public com.commercetools.api.models.common.TypedMoney getDiscountedAmount() {
+    public com.commercetools.api.models.common.TypedMoneyDraft getDiscountedAmount() {
         return this.discountedAmount;
     }
 
@@ -63,7 +63,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
         this.discount = discount;
     }
 
-    public void setDiscountedAmount(final com.commercetools.api.models.common.TypedMoney discountedAmount) {
+    public void setDiscountedAmount(final com.commercetools.api.models.common.TypedMoneyDraft discountedAmount) {
         this.discountedAmount = discountedAmount;
     }
 
@@ -75,7 +75,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
         if (o == null || getClass() != o.getClass())
             return false;
 
-        DiscountedLineItemPortionImpl that = (DiscountedLineItemPortionImpl) o;
+        DiscountedLineItemPortionDraftImpl that = (DiscountedLineItemPortionDraftImpl) o;
 
         return new EqualsBuilder().append(discount, that.discount)
                 .append(discountedAmount, that.discountedAmount)

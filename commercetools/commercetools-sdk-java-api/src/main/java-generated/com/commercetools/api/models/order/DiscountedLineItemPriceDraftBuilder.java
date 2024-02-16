@@ -25,7 +25,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
 
     private com.commercetools.api.models.common.Money value;
 
-    private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts;
+    private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortionDraft> includedDiscounts;
 
     /**
      *  <p>Discounted money value.</p>
@@ -69,7 +69,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
      */
 
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
-            final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {
+            final com.commercetools.api.models.cart.DiscountedLineItemPortionDraft... includedDiscounts) {
         this.includedDiscounts = new ArrayList<>(Arrays.asList(includedDiscounts));
         return this;
     }
@@ -81,7 +81,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
      */
 
     public DiscountedLineItemPriceDraftBuilder includedDiscounts(
-            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
+            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortionDraft> includedDiscounts) {
         this.includedDiscounts = includedDiscounts;
         return this;
     }
@@ -93,7 +93,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
      */
 
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
-            final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {
+            final com.commercetools.api.models.cart.DiscountedLineItemPortionDraft... includedDiscounts) {
         if (this.includedDiscounts == null) {
             this.includedDiscounts = new ArrayList<>();
         }
@@ -108,12 +108,12 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
      */
 
     public DiscountedLineItemPriceDraftBuilder plusIncludedDiscounts(
-            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder> builder) {
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionDraftBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionDraftBuilder> builder) {
         if (this.includedDiscounts == null) {
             this.includedDiscounts = new ArrayList<>();
         }
-        this.includedDiscounts
-                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());
+        this.includedDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionDraftBuilder.of()).build());
         return this;
     }
 
@@ -124,10 +124,10 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
      */
 
     public DiscountedLineItemPriceDraftBuilder withIncludedDiscounts(
-            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder> builder) {
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionDraftBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionDraftBuilder> builder) {
         this.includedDiscounts = new ArrayList<>();
-        this.includedDiscounts
-                .add(builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()).build());
+        this.includedDiscounts.add(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionDraftBuilder.of()).build());
         return this;
     }
 
@@ -138,9 +138,9 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
      */
 
     public DiscountedLineItemPriceDraftBuilder addIncludedDiscounts(
-            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortion> builder) {
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionDraftBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionDraft> builder) {
         return plusIncludedDiscounts(
-            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()));
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionDraftBuilder.of()));
     }
 
     /**
@@ -150,9 +150,9 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
      */
 
     public DiscountedLineItemPriceDraftBuilder setIncludedDiscounts(
-            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortion> builder) {
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionDraftBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortionDraft> builder) {
         return includedDiscounts(
-            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()));
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionDraftBuilder.of()));
     }
 
     /**
@@ -169,7 +169,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
      * @return includedDiscounts
      */
 
-    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> getIncludedDiscounts() {
+    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortionDraft> getIncludedDiscounts() {
         return this.includedDiscounts;
     }
 

@@ -23,12 +23,11 @@ public class DiscountedLineItemPriceDraftQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<DiscountedLineItemPriceDraftQueryBuilderDsl> includedDiscounts(
-            Function<com.commercetools.api.predicates.query.cart.DiscountedLineItemPortionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountedLineItemPortionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("includedDiscounts"))
-                    .inner(fn.apply(
-                        com.commercetools.api.predicates.query.cart.DiscountedLineItemPortionQueryBuilderDsl.of())),
+            Function<com.commercetools.api.predicates.query.cart.DiscountedLineItemPortionDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountedLineItemPortionDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("includedDiscounts"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.cart.DiscountedLineItemPortionDraftQueryBuilderDsl.of())),
             DiscountedLineItemPriceDraftQueryBuilderDsl::of);
     }
 

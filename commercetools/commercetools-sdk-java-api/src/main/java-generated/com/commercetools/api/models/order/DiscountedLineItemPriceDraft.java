@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.cart.DiscountedLineItemPortion;
+import com.commercetools.api.models.cart.DiscountedLineItemPortionDraft;
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -51,7 +51,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     @NotNull
     @Valid
     @JsonProperty("includedDiscounts")
-    public List<DiscountedLineItemPortion> getIncludedDiscounts();
+    public List<DiscountedLineItemPortionDraft> getIncludedDiscounts();
 
     /**
      *  <p>Discounted money value.</p>
@@ -66,14 +66,14 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
      */
 
     @JsonIgnore
-    public void setIncludedDiscounts(final DiscountedLineItemPortion... includedDiscounts);
+    public void setIncludedDiscounts(final DiscountedLineItemPortionDraft... includedDiscounts);
 
     /**
      *  <p>Discounts to be applied.</p>
      * @param includedDiscounts values to be set
      */
 
-    public void setIncludedDiscounts(final List<DiscountedLineItemPortion> includedDiscounts);
+    public void setIncludedDiscounts(final List<DiscountedLineItemPortionDraft> includedDiscounts);
 
     /**
      * factory method
@@ -109,7 +109,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
         instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
         instance.setIncludedDiscounts(Optional.ofNullable(template.getIncludedDiscounts())
                 .map(t -> t.stream()
-                        .map(com.commercetools.api.models.cart.DiscountedLineItemPortion::deepCopy)
+                        .map(com.commercetools.api.models.cart.DiscountedLineItemPortionDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         return instance;

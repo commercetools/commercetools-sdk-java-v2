@@ -24,14 +24,14 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
 
     private com.commercetools.api.models.common.Money value;
 
-    private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts;
+    private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortionDraft> includedDiscounts;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     DiscountedLineItemPriceDraftImpl(@JsonProperty("value") final com.commercetools.api.models.common.Money value,
-            @JsonProperty("includedDiscounts") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
+            @JsonProperty("includedDiscounts") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortionDraft> includedDiscounts) {
         this.value = value;
         this.includedDiscounts = includedDiscounts;
     }
@@ -54,7 +54,7 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
      *  <p>Discounts to be applied.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> getIncludedDiscounts() {
+    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortionDraft> getIncludedDiscounts() {
         return this.includedDiscounts;
     }
 
@@ -63,12 +63,12 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
     }
 
     public void setIncludedDiscounts(
-            final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {
+            final com.commercetools.api.models.cart.DiscountedLineItemPortionDraft... includedDiscounts) {
         this.includedDiscounts = new ArrayList<>(Arrays.asList(includedDiscounts));
     }
 
     public void setIncludedDiscounts(
-            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
+            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortionDraft> includedDiscounts) {
         this.includedDiscounts = includedDiscounts;
     }
 

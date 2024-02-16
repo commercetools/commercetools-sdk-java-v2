@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface DiscountedLineItemPortion {
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the applicable discount on the Line Item.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
      * @return discount
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface DiscountedLineItemPortion {
     public Reference getDiscount();
 
     /**
-     *  <p>Money value of the discount applicable.</p>
+     *  <p>Money value of the applicable discount.</p>
      * @return discountedAmount
      */
     @NotNull
@@ -53,14 +53,14 @@ public interface DiscountedLineItemPortion {
     public TypedMoney getDiscountedAmount();
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the applicable discount on the Line Item.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
      * @param discount value to be set
      */
 
     public void setDiscount(final Reference discount);
 
     /**
-     *  <p>Money value of the discount applicable.</p>
+     *  <p>Money value of the applicable discount.</p>
      * @param discountedAmount value to be set
      */
 

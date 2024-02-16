@@ -31,7 +31,7 @@ public class DiscountedLineItemPriceDraftTest {
                         .value(new com.commercetools.api.models.common.MoneyImpl()) },
                 new Object[] { DiscountedLineItemPriceDraft.builder()
                         .includedDiscounts(Collections.singletonList(
-                            new com.commercetools.api.models.cart.DiscountedLineItemPortionImpl())) } };
+                            new com.commercetools.api.models.cart.DiscountedLineItemPortionDraftImpl())) } };
     }
 
     @Test
@@ -45,9 +45,9 @@ public class DiscountedLineItemPriceDraftTest {
     public void includedDiscounts() {
         DiscountedLineItemPriceDraft value = DiscountedLineItemPriceDraft.of();
         value.setIncludedDiscounts(
-            Collections.singletonList(new com.commercetools.api.models.cart.DiscountedLineItemPortionImpl()));
+            Collections.singletonList(new com.commercetools.api.models.cart.DiscountedLineItemPortionDraftImpl()));
         Assertions.assertThat(value.getIncludedDiscounts())
-                .isEqualTo(
-                    Collections.singletonList(new com.commercetools.api.models.cart.DiscountedLineItemPortionImpl()));
+                .isEqualTo(Collections
+                        .singletonList(new com.commercetools.api.models.cart.DiscountedLineItemPortionDraftImpl()));
     }
 }

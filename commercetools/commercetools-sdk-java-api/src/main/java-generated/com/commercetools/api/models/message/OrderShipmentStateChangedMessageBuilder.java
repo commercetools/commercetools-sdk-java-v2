@@ -24,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .shipmentState(ShipmentState.SHIPPED)
- *             .oldShipmentState(ShipmentState.SHIPPED)
  *             .build()
  * </code></pre>
  * </div>
@@ -57,6 +56,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
 
     private com.commercetools.api.models.order.ShipmentState shipmentState;
 
+    @Nullable
     private com.commercetools.api.models.order.ShipmentState oldShipmentState;
 
     /**
@@ -279,7 +279,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
      */
 
     public OrderShipmentStateChangedMessageBuilder oldShipmentState(
-            final com.commercetools.api.models.order.ShipmentState oldShipmentState) {
+            @Nullable final com.commercetools.api.models.order.ShipmentState oldShipmentState) {
         this.oldShipmentState = oldShipmentState;
         return this;
     }
@@ -391,6 +391,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
      * @return oldShipmentState
      */
 
+    @Nullable
     public com.commercetools.api.models.order.ShipmentState getOldShipmentState() {
         return this.oldShipmentState;
     }
@@ -409,8 +410,6 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
         Objects.requireNonNull(resourceVersion,
             OrderShipmentStateChangedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(shipmentState, OrderShipmentStateChangedMessage.class + ": shipmentState is missing");
-        Objects.requireNonNull(oldShipmentState,
-            OrderShipmentStateChangedMessage.class + ": oldShipmentState is missing");
         return new OrderShipmentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shipmentState,
             oldShipmentState);

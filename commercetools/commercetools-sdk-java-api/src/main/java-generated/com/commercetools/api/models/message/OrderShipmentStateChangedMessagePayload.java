@@ -23,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     OrderShipmentStateChangedMessagePayload orderShipmentStateChangedMessagePayload = OrderShipmentStateChangedMessagePayload.builder()
  *             .shipmentState(ShipmentState.SHIPPED)
- *             .oldShipmentState(ShipmentState.SHIPPED)
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +48,7 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
      *  <p>ShipmentState before the Change Shipment State update action.</p>
      * @return oldShipmentState
      */
-    @NotNull
+
     @JsonProperty("oldShipmentState")
     public ShipmentState getOldShipmentState();
 

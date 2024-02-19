@@ -23,7 +23,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     OrderStateChangedMessagePayload orderStateChangedMessagePayload = OrderStateChangedMessagePayload.builder()
  *             .orderState(OrderState.OPEN)
- *             .oldOrderState(OrderState.OPEN)
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +48,7 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
      *  <p>OrderState before the Change Order State update action.</p>
      * @return oldOrderState
      */
-    @NotNull
+
     @JsonProperty("oldOrderState")
     public OrderState getOldOrderState();
 

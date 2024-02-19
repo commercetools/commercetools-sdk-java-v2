@@ -3,6 +3,8 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     OrderShipmentStateChangedMessagePayload orderShipmentStateChangedMessagePayload = OrderShipmentStateChangedMessagePayload.builder()
  *             .shipmentState(ShipmentState.SHIPPED)
- *             .oldShipmentState(ShipmentState.SHIPPED)
  *             .build()
  * </code></pre>
  * </div>
@@ -25,6 +26,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
 
     private com.commercetools.api.models.order.ShipmentState shipmentState;
 
+    @Nullable
     private com.commercetools.api.models.order.ShipmentState oldShipmentState;
 
     /**
@@ -46,7 +48,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
      */
 
     public OrderShipmentStateChangedMessagePayloadBuilder oldShipmentState(
-            final com.commercetools.api.models.order.ShipmentState oldShipmentState) {
+            @Nullable final com.commercetools.api.models.order.ShipmentState oldShipmentState) {
         this.oldShipmentState = oldShipmentState;
         return this;
     }
@@ -65,6 +67,7 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
      * @return oldShipmentState
      */
 
+    @Nullable
     public com.commercetools.api.models.order.ShipmentState getOldShipmentState() {
         return this.oldShipmentState;
     }
@@ -76,8 +79,6 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
     public OrderShipmentStateChangedMessagePayload build() {
         Objects.requireNonNull(shipmentState,
             OrderShipmentStateChangedMessagePayload.class + ": shipmentState is missing");
-        Objects.requireNonNull(oldShipmentState,
-            OrderShipmentStateChangedMessagePayload.class + ": oldShipmentState is missing");
         return new OrderShipmentStateChangedMessagePayloadImpl(shipmentState, oldShipmentState);
     }
 

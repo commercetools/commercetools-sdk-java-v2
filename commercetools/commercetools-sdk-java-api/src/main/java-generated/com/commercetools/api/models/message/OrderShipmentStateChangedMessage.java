@@ -30,7 +30,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .shipmentState(ShipmentState.SHIPPED)
- *             .oldShipmentState(ShipmentState.SHIPPED)
  *             .build()
  * </code></pre>
  * </div>
@@ -56,7 +55,7 @@ public interface OrderShipmentStateChangedMessage extends OrderMessage {
      *  <p>ShipmentState before the Change Shipment State update action.</p>
      * @return oldShipmentState
      */
-    @NotNull
+
     @JsonProperty("oldShipmentState")
     public ShipmentState getOldShipmentState();
 

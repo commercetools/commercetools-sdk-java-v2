@@ -148,6 +148,7 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {

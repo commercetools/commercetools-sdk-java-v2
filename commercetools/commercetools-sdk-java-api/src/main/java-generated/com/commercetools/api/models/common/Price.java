@@ -112,6 +112,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
     @Valid
@@ -191,6 +192,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
 
@@ -199,6 +201,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
 

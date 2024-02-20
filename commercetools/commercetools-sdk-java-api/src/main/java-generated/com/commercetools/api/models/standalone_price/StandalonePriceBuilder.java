@@ -350,6 +350,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -361,6 +362,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -373,6 +375,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -387,6 +390,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -402,6 +406,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -415,6 +420,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -426,6 +432,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -690,6 +697,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
 

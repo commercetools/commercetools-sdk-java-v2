@@ -222,6 +222,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {

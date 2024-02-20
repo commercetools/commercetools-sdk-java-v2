@@ -245,6 +245,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -256,6 +257,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -267,6 +269,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -281,6 +284,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -296,6 +300,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -309,6 +314,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -320,6 +326,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -454,6 +461,7 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
 

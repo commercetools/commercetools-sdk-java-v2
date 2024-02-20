@@ -152,6 +152,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {

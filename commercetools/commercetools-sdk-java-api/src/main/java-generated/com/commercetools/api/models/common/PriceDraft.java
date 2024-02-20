@@ -110,6 +110,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
     @Valid
@@ -188,6 +189,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
 
@@ -196,6 +198,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
 

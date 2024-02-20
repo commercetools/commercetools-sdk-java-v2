@@ -264,6 +264,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -275,6 +276,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -287,6 +289,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -301,6 +304,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -316,6 +320,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -329,6 +334,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -340,6 +346,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -471,6 +478,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
 

@@ -151,6 +151,7 @@ public class PriceImpl implements Price, ModelBase {
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {

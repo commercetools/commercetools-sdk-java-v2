@@ -279,6 +279,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -290,6 +291,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -302,6 +304,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -316,6 +319,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -331,6 +335,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -344,6 +349,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -355,6 +361,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -455,6 +462,7 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
 

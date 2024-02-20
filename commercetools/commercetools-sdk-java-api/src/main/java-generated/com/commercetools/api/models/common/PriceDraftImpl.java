@@ -146,6 +146,7 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
 
     /**
      *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {

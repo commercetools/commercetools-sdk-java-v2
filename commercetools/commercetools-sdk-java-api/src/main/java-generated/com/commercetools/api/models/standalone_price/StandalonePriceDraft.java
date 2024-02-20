@@ -109,6 +109,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
     @Valid
@@ -205,6 +206,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
 
@@ -213,6 +215,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
 

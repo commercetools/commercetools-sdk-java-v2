@@ -17,6 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Authenticates a Customer associated with a Store. For more information, see Global versus Store-specific Customers.</p>
+ *  <p>Triggers Cart merge during sign-in.</p>
  *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns an InvalidCredentials error.</p>
  *
  * <hr>

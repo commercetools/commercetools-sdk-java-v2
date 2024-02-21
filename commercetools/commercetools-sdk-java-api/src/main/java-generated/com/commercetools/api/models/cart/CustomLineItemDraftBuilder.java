@@ -19,7 +19,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .money(moneyBuilder -> moneyBuilder)
  *             .slug("{slug}")
- *             .priceMode(CustomLineItemPriceMode.STANDARD)
  *             .build()
  * </code></pre>
  * </div>
@@ -51,6 +50,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    @Nullable
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
     /**
@@ -315,7 +315,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      */
 
     public CustomLineItemDraftBuilder priceMode(
-            final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+            @Nullable final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
         this.priceMode = priceMode;
         return this;
     }
@@ -415,6 +415,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      * @return priceMode
      */
 
+    @Nullable
     public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
         return this.priceMode;
     }
@@ -427,7 +428,6 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         Objects.requireNonNull(name, CustomLineItemDraft.class + ": name is missing");
         Objects.requireNonNull(money, CustomLineItemDraft.class + ": money is missing");
         Objects.requireNonNull(slug, CustomLineItemDraft.class + ": slug is missing");
-        Objects.requireNonNull(priceMode, CustomLineItemDraft.class + ": priceMode is missing");
         return new CustomLineItemDraftImpl(name, key, quantity, money, slug, taxCategory, externalTaxRate, custom,
             shippingDetails, priceMode);
     }

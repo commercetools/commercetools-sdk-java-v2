@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Authenticates a global Customer not associated with a Store. For more information, see Global versus Store-specific Customers. If the Customer is registered in a Store, use the Authenticate (sign in) Customer in Store method.</p>
+ *  <p>Triggers Cart merge during sign-in.</p>
  *  <p>If an account with the given credentials is not found, an InvalidCredentials error is returned.</p>
  *
  * <hr>

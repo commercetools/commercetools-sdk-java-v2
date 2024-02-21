@@ -29,7 +29,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .money(moneyBuilder -> moneyBuilder)
  *             .slug("{slug}")
- *             .priceMode(CustomLineItemPriceMode.STANDARD)
  *             .build()
  * </code></pre>
  * </div>
@@ -120,7 +119,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
      *  </ul>
      * @return priceMode
      */
-    @NotNull
+
     @JsonProperty("priceMode")
     public CustomLineItemPriceMode getPriceMode();
 

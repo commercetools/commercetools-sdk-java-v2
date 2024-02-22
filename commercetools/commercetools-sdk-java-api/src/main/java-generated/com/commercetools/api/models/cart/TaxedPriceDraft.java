@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.TypedMoneyDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -64,6 +65,14 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     public List<TaxPortionDraft> getTaxPortions();
 
     /**
+     *  <p>Total tax applicable for the Cart or Order.</p>
+     * @return totalTax
+     */
+    @Valid
+    @JsonProperty("totalTax")
+    public TypedMoneyDraft getTotalTax();
+
+    /**
      *  <p>Total net price of the Cart or Order.</p>
      * @param totalNet value to be set
      */
@@ -95,6 +104,13 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     public void setTaxPortions(final List<TaxPortionDraft> taxPortions);
 
     /**
+     *  <p>Total tax applicable for the Cart or Order.</p>
+     * @param totalTax value to be set
+     */
+
+    public void setTotalTax(final TypedMoneyDraft totalTax);
+
+    /**
      * factory method
      * @return instance of TaxedPriceDraft
      */
@@ -112,6 +128,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
         instance.setTaxPortions(template.getTaxPortions());
+        instance.setTotalTax(template.getTotalTax());
         return instance;
     }
 
@@ -133,6 +150,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
                         .map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setTotalTax(com.commercetools.api.models.common.TypedMoneyDraft.deepCopy(template.getTotalTax()));
         return instance;
     }
 

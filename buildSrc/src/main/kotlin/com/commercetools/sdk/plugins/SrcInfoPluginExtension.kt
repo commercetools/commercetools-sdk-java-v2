@@ -6,5 +6,6 @@ import org.gradle.api.provider.Property
 interface SrcInfoPluginExtension {
     val outputFolder: Property<String>
     val includePackages: ListProperty<String>
+    val docsUrnOnly: Property<Boolean>
     val baseFolder: Property<String>
 }

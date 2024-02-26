@@ -65,6 +65,7 @@ srcInfo {
             "example",
             "commercetools"
     ]
+    docsUrnOnly = true
 }
 
 tasks.register('integrationTest', Test) {

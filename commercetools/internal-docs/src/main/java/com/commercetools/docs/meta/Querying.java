@@ -47,7 +47,7 @@ package com.commercetools.docs.meta;
  *
  * {@include.example example.ExamplesTest#limitOffsetPagination()}
  *
- * <h3 id="tests">Test cases</h3>
+ * <h2 id="tests">Test cases</h2>
  *
  * <p>The repository has test cases for each endpoint and query parameter. Please see in the following folder:
  * <a href="https://github.com/commercetools/commercetools-sdk-java-v2/tree/main/commercetools/commercetools-sdk-java-api/src/test/java-generated/com/commercetools/api/client/resource">Resource test cases</a></p>

@@ -91,7 +91,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .name(nameBuilder -> nameBuilder)
              .money(moneyBuilder -> moneyBuilder)
              .slug("{slug}")
-             .priceMode(CustomLineItemPriceMode.STANDARD)
              .build()
  </code></pre>
  </div></div>
@@ -621,7 +620,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="priceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode)">
 <h3>priceMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemDraftBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemDraftBuilder</a></span>&nbsp;<span class="element-name">priceMode</span><wbr><span class="parameters">(<a href="CustomLineItemPriceMode.html" title="interface in com.commercetools.api.models.cart">CustomLineItemPriceMode</a>&nbsp;priceMode)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemDraftBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemDraftBuilder</a></span>&nbsp;<span class="element-name">priceMode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="CustomLineItemPriceMode.html" title="interface in com.commercetools.api.models.cart">CustomLineItemPriceMode</a>&nbsp;priceMode)</span></div>
 <div class="block"><ul>
    <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
    <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
@@ -742,7 +742,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getPriceMode()">
 <h3>getPriceMode</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemPriceMode.html" title="interface in com.commercetools.api.models.cart">CustomLineItemPriceMode</a></span>&nbsp;<span class="element-name">getPriceMode</span>()</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomLineItemPriceMode.html" title="interface in com.commercetools.api.models.cart">CustomLineItemPriceMode</a></span>&nbsp;<span class="element-name">getPriceMode</span>()</div>
 <div class="block"><ul>
    <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
    <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>

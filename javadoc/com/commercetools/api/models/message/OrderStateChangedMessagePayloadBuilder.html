@@ -89,7 +89,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <pre><code class='java'>
      OrderStateChangedMessagePayload orderStateChangedMessagePayload = OrderStateChangedMessagePayload.builder()
              .orderState(OrderState.OPEN)
-             .oldOrderState(OrderState.OPEN)
              .build()
  </code></pre>
  </div></div>
@@ -207,7 +206,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="oldOrderState(com.commercetools.api.models.order.OrderState)">
 <h3>oldOrderState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderStateChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">oldOrderState</span><wbr><span class="parameters">(<a href="../order/OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a>&nbsp;oldOrderState)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderStateChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">OrderStateChangedMessagePayloadBuilder</a></span>&nbsp;<span class="element-name">oldOrderState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="../order/OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a>&nbsp;oldOrderState)</span></div>
 <div class="block"><p>OrderState before the Change Order State update action.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -231,7 +231,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getOldOrderState()">
 <h3>getOldOrderState</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../order/OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a></span>&nbsp;<span class="element-name">getOldOrderState</span>()</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../order/OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a></span>&nbsp;<span class="element-name">getOldOrderState</span>()</div>
 <div class="block"><p>OrderState before the Change Order State update action.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>

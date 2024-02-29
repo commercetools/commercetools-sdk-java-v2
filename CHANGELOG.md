@@ -1,4 +1,61 @@
 
+# 17.7.0 (2024-02-29)
+
+## What's Changed
+* Update CODEOWNERS by @evansinho in https://github.com/commercetools/commercetools-sdk-java-v2/pull/577
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/579
+* chore(deps): pin dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/573
+* Add how to use datadog module example by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/578
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/580
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/584
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/585
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/586
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/587
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/588
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/591
+* Highlight tests in the docs by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/583
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountedLineItemPortionDraft`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `isOnStock` of type `ProductVariantAvailability` to be required
+- changed property `priceMode` of type `CustomLineItemDraft` to be optional
+- changed property `oldShipmentState` of type `OrderShipmentStateChangedMessage` to be optional
+- changed property `oldOrderState` of type `OrderStateChangedMessage` to be optional
+- changed property `oldShipmentState` of type `OrderShipmentStateChangedMessagePayload` to be optional
+- changed property `oldOrderState` of type `OrderStateChangedMessagePayload` to be optional
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `includedDiscounts` of type `DiscountedLineItemPriceDraft` from type `DiscountedLineItemPortion[]` to `DiscountedLineItemPortionDraft[]`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `totalTax` to type `TaxedPriceDraft`
+- added property `id` to type `ProductVariantAvailability`
+- added property `version` to type `ProductVariantAvailability`
+</details>
+
+## New Contributors
+* @evansinho made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/577
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.6.0...17.7.0
+
 # 17.6.0 (2024-02-12)
 
 ## What's Changed

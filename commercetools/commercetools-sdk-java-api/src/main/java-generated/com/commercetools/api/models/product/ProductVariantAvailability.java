@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -21,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantAvailability productVariantAvailability = ProductVariantAvailability.builder()
+ *             .isOnStock(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -41,7 +43,7 @@ public interface ProductVariantAvailability {
      *  <p>Indicates whether a Product Variant is in stock.</p>
      * @return isOnStock
      */
-
+    @NotNull
     @JsonProperty("isOnStock")
     public Boolean getIsOnStock();
 
@@ -60,6 +62,22 @@ public interface ProductVariantAvailability {
 
     @JsonProperty("availableQuantity")
     public Long getAvailableQuantity();
+
+    /**
+     *  <p>Unique identifier of the InventoryEntry.</p>
+     * @return id
+     */
+
+    @JsonProperty("id")
+    public String getId();
+
+    /**
+     *  <p>Current version of the InventoryEntry.</p>
+     * @return version
+     */
+
+    @JsonProperty("version")
+    public Long getVersion();
 
     /**
      *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
@@ -90,6 +108,20 @@ public interface ProductVariantAvailability {
     public void setAvailableQuantity(final Long availableQuantity);
 
     /**
+     *  <p>Unique identifier of the InventoryEntry.</p>
+     * @param id value to be set
+     */
+
+    public void setId(final String id);
+
+    /**
+     *  <p>Current version of the InventoryEntry.</p>
+     * @param version value to be set
+     */
+
+    public void setVersion(final Long version);
+
+    /**
      * factory method
      * @return instance of ProductVariantAvailability
      */
@@ -108,6 +140,8 @@ public interface ProductVariantAvailability {
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
         return instance;
     }
 
@@ -127,6 +161,8 @@ public interface ProductVariantAvailability {
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
         return instance;
     }
 

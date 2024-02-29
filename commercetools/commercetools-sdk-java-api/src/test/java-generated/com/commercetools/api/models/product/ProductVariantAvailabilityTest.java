@@ -28,7 +28,9 @@ public class ProductVariantAvailabilityTest {
                 .channels(new com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapImpl()) },
                 new Object[] { ProductVariantAvailability.builder().isOnStock(true) },
                 new Object[] { ProductVariantAvailability.builder().restockableInDays(4L) },
-                new Object[] { ProductVariantAvailability.builder().availableQuantity(3L) } };
+                new Object[] { ProductVariantAvailability.builder().availableQuantity(3L) },
+                new Object[] { ProductVariantAvailability.builder().id("id") },
+                new Object[] { ProductVariantAvailability.builder().version(2L) } };
     }
 
     @Test
@@ -58,5 +60,19 @@ public class ProductVariantAvailabilityTest {
         ProductVariantAvailability value = ProductVariantAvailability.of();
         value.setAvailableQuantity(3L);
         Assertions.assertThat(value.getAvailableQuantity()).isEqualTo(3L);
+    }
+
+    @Test
+    public void id() {
+        ProductVariantAvailability value = ProductVariantAvailability.of();
+        value.setId("id");
+        Assertions.assertThat(value.getId()).isEqualTo("id");
+    }
+
+    @Test
+    public void version() {
+        ProductVariantAvailability value = ProductVariantAvailability.of();
+        value.setVersion(2L);
+        Assertions.assertThat(value.getVersion()).isEqualTo(2L);
     }
 }

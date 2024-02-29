@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantAvailability productVariantAvailability = ProductVariantAvailability.builder()
+ *             .isOnStock(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -26,7 +27,6 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     @Nullable
     private com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels;
 
-    @Nullable
     private Boolean isOnStock;
 
     @Nullable
@@ -34,6 +34,12 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     @Nullable
     private Long availableQuantity;
+
+    @Nullable
+    private String id;
+
+    @Nullable
+    private Long version;
 
     /**
      *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
@@ -80,7 +86,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
      * @return Builder
      */
 
-    public ProductVariantAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
+    public ProductVariantAvailabilityBuilder isOnStock(final Boolean isOnStock) {
         this.isOnStock = isOnStock;
         return this;
     }
@@ -108,6 +114,28 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
+     *  <p>Unique identifier of the InventoryEntry.</p>
+     * @param id value to be set
+     * @return Builder
+     */
+
+    public ProductVariantAvailabilityBuilder id(@Nullable final String id) {
+        this.id = id;
+        return this;
+    }
+
+    /**
+     *  <p>Current version of the InventoryEntry.</p>
+     * @param version value to be set
+     * @return Builder
+     */
+
+    public ProductVariantAvailabilityBuilder version(@Nullable final Long version) {
+        this.version = version;
+        return this;
+    }
+
+    /**
      *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
      * @return channels
      */
@@ -122,7 +150,6 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
      * @return isOnStock
      */
 
-    @Nullable
     public Boolean getIsOnStock() {
         return this.isOnStock;
     }
@@ -148,11 +175,33 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
+     *  <p>Unique identifier of the InventoryEntry.</p>
+     * @return id
+     */
+
+    @Nullable
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     *  <p>Current version of the InventoryEntry.</p>
+     * @return version
+     */
+
+    @Nullable
+    public Long getVersion() {
+        return this.version;
+    }
+
+    /**
      * builds ProductVariantAvailability with checking for non-null required values
      * @return ProductVariantAvailability
      */
     public ProductVariantAvailability build() {
-        return new ProductVariantAvailabilityImpl(channels, isOnStock, restockableInDays, availableQuantity);
+        Objects.requireNonNull(isOnStock, ProductVariantAvailability.class + ": isOnStock is missing");
+        return new ProductVariantAvailabilityImpl(channels, isOnStock, restockableInDays, availableQuantity, id,
+            version);
     }
 
     /**
@@ -160,7 +209,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
      * @return ProductVariantAvailability
      */
     public ProductVariantAvailability buildUnchecked() {
-        return new ProductVariantAvailabilityImpl(channels, isOnStock, restockableInDays, availableQuantity);
+        return new ProductVariantAvailabilityImpl(channels, isOnStock, restockableInDays, availableQuantity, id,
+            version);
     }
 
     /**
@@ -182,6 +232,8 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
         builder.isOnStock = template.getIsOnStock();
         builder.restockableInDays = template.getRestockableInDays();
         builder.availableQuantity = template.getAvailableQuantity();
+        builder.id = template.getId();
+        builder.version = template.getVersion();
         return builder;
     }
 

@@ -75,6 +75,10 @@ public class ResourceIdentifierBuilder implements ResourceIdentifierBuilderMixin
         return com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of();
     }
 
+    public com.commercetools.api.models.product_tailoring.ProductTailoringResourceIdentifierBuilder productTailoringBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringResourceIdentifierBuilder.of();
+    }
+
     public com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder productTypeBuilder() {
         return com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder.of();
     }

@@ -175,6 +175,14 @@ public class ReferenceQueryBuilderDsl {
             ReferenceQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asProductTailoring(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.product_tailoring.ProductTailoringReferenceQueryBuilderDsl.of()),
+            ReferenceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asProductType(
             Function<com.commercetools.api.predicates.query.product_type.ProductTypeReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_type.ProductTypeReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

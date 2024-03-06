@@ -703,6 +703,34 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.ProductStateTransitionMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductTailoringCreatedMessageBuilder productTailoringCreatedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringDeletedMessageBuilder productTailoringDeletedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringDescriptionSetMessageBuilder productTailoringDescriptionSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringDescriptionSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringNameSetMessageBuilder productTailoringNameSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringNameSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringPublishedMessageBuilder productTailoringPublishedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringPublishedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringSlugSetMessageBuilder productTailoringSlugSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringSlugSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringUnpublishedMessageBuilder productTailoringUnpublishedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringUnpublishedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductUnpublishedMessageBuilder productUnpublishedBuilder() {
         return com.commercetools.api.models.message.ProductUnpublishedMessageBuilder.of();
     }

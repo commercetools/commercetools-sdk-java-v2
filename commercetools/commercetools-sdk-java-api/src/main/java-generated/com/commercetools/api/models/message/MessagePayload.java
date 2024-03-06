@@ -201,6 +201,13 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayloadImpl.class, name = ProductSelectionVariantSelectionChangedMessagePayload.PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSlugChangedMessagePayloadImpl.class, name = ProductSlugChangedMessagePayload.PRODUCT_SLUG_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductStateTransitionMessagePayloadImpl.class, name = ProductStateTransitionMessagePayload.PRODUCT_STATE_TRANSITION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringCreatedMessagePayloadImpl.class, name = ProductTailoringCreatedMessagePayload.PRODUCT_TAILORING_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringDeletedMessagePayloadImpl.class, name = ProductTailoringDeletedMessagePayload.PRODUCT_TAILORING_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringDescriptionSetMessagePayloadImpl.class, name = ProductTailoringDescriptionSetMessagePayload.PRODUCT_TAILORING_DESCRIPTION_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringNameSetMessagePayloadImpl.class, name = ProductTailoringNameSetMessagePayload.PRODUCT_TAILORING_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringPublishedMessagePayloadImpl.class, name = ProductTailoringPublishedMessagePayload.PRODUCT_TAILORING_PUBLISHED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringSlugSetMessagePayloadImpl.class, name = ProductTailoringSlugSetMessagePayload.PRODUCT_TAILORING_SLUG_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringUnpublishedMessagePayloadImpl.class, name = ProductTailoringUnpublishedMessagePayload.PRODUCT_TAILORING_UNPUBLISHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductUnpublishedMessagePayloadImpl.class, name = ProductUnpublishedMessagePayload.PRODUCT_UNPUBLISHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductVariantAddedMessagePayloadImpl.class, name = ProductVariantAddedMessagePayload.PRODUCT_VARIANT_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductVariantDeletedMessagePayloadImpl.class, name = ProductVariantDeletedMessagePayload.PRODUCT_VARIANT_DELETED),
@@ -788,6 +795,34 @@ public interface MessagePayload extends MessagePayloadMixin {
         if (template instanceof com.commercetools.api.models.message.ProductStateTransitionMessagePayload) {
             return com.commercetools.api.models.message.ProductStateTransitionMessagePayload
                     .deepCopy((com.commercetools.api.models.message.ProductStateTransitionMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringCreatedMessagePayload) {
+            return com.commercetools.api.models.message.ProductTailoringCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringDeletedMessagePayload) {
+            return com.commercetools.api.models.message.ProductTailoringDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringDescriptionSetMessagePayload) {
+            return com.commercetools.api.models.message.ProductTailoringDescriptionSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductTailoringDescriptionSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringNameSetMessagePayload) {
+            return com.commercetools.api.models.message.ProductTailoringNameSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringNameSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringPublishedMessagePayload) {
+            return com.commercetools.api.models.message.ProductTailoringPublishedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringPublishedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringSlugSetMessagePayload) {
+            return com.commercetools.api.models.message.ProductTailoringSlugSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringSlugSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringUnpublishedMessagePayload) {
+            return com.commercetools.api.models.message.ProductTailoringUnpublishedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductTailoringUnpublishedMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.ProductUnpublishedMessagePayload) {
             return com.commercetools.api.models.message.ProductUnpublishedMessagePayload
@@ -2363,6 +2398,62 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.ProductStateTransitionMessagePayloadBuilder productStateTransitionBuilder() {
         return com.commercetools.api.models.message.ProductStateTransitionMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringCreatedMessagePayloadBuilder productTailoringCreatedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringCreatedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringDeletedMessagePayloadBuilder productTailoringDeletedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringDeletedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringDescriptionSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringDescriptionSetMessagePayloadBuilder productTailoringDescriptionSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringDescriptionSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringNameSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringNameSetMessagePayloadBuilder productTailoringNameSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringNameSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringPublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringPublishedMessagePayloadBuilder productTailoringPublishedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringPublishedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringSlugSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringSlugSetMessagePayloadBuilder productTailoringSlugSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringSlugSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringUnpublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringUnpublishedMessagePayloadBuilder productTailoringUnpublishedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringUnpublishedMessagePayloadBuilder.of();
     }
 
     /**

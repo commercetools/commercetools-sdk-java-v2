@@ -703,6 +703,34 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.ProductStateTransitionMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductTailoringCreatedMessagePayloadBuilder productTailoringCreatedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringDeletedMessagePayloadBuilder productTailoringDeletedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringDeletedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringDescriptionSetMessagePayloadBuilder productTailoringDescriptionSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringDescriptionSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringNameSetMessagePayloadBuilder productTailoringNameSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringNameSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringPublishedMessagePayloadBuilder productTailoringPublishedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringPublishedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringSlugSetMessagePayloadBuilder productTailoringSlugSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringSlugSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringUnpublishedMessagePayloadBuilder productTailoringUnpublishedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringUnpublishedMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductUnpublishedMessagePayloadBuilder productUnpublishedBuilder() {
         return com.commercetools.api.models.message.ProductUnpublishedMessagePayloadBuilder.of();
     }

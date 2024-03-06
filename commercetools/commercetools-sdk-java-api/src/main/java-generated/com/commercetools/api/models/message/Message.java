@@ -214,6 +214,13 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessageImpl.class, name = ProductSelectionVariantSelectionChangedMessage.PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductSlugChangedMessageImpl.class, name = ProductSlugChangedMessage.PRODUCT_SLUG_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductStateTransitionMessageImpl.class, name = ProductStateTransitionMessage.PRODUCT_STATE_TRANSITION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringCreatedMessageImpl.class, name = ProductTailoringCreatedMessage.PRODUCT_TAILORING_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringDeletedMessageImpl.class, name = ProductTailoringDeletedMessage.PRODUCT_TAILORING_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringDescriptionSetMessageImpl.class, name = ProductTailoringDescriptionSetMessage.PRODUCT_TAILORING_DESCRIPTION_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringNameSetMessageImpl.class, name = ProductTailoringNameSetMessage.PRODUCT_TAILORING_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringPublishedMessageImpl.class, name = ProductTailoringPublishedMessage.PRODUCT_TAILORING_PUBLISHED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringSlugSetMessageImpl.class, name = ProductTailoringSlugSetMessage.PRODUCT_TAILORING_SLUG_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductTailoringUnpublishedMessageImpl.class, name = ProductTailoringUnpublishedMessage.PRODUCT_TAILORING_UNPUBLISHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductUnpublishedMessageImpl.class, name = ProductUnpublishedMessage.PRODUCT_UNPUBLISHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductVariantAddedMessageImpl.class, name = ProductVariantAddedMessage.PRODUCT_VARIANT_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductVariantDeletedMessageImpl.class, name = ProductVariantDeletedMessage.PRODUCT_VARIANT_DELETED),
@@ -951,6 +958,34 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.ProductStateTransitionMessage) {
             return com.commercetools.api.models.message.ProductStateTransitionMessage
                     .deepCopy((com.commercetools.api.models.message.ProductStateTransitionMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringCreatedMessage) {
+            return com.commercetools.api.models.message.ProductTailoringCreatedMessage
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringCreatedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringDeletedMessage) {
+            return com.commercetools.api.models.message.ProductTailoringDeletedMessage
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringDeletedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringDescriptionSetMessage) {
+            return com.commercetools.api.models.message.ProductTailoringDescriptionSetMessage
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringDescriptionSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringNameSetMessage) {
+            return com.commercetools.api.models.message.ProductTailoringNameSetMessage
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringNameSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringPublishedMessage) {
+            return com.commercetools.api.models.message.ProductTailoringPublishedMessage
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringPublishedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringSlugSetMessage) {
+            return com.commercetools.api.models.message.ProductTailoringSlugSetMessage
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringSlugSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductTailoringUnpublishedMessage) {
+            return com.commercetools.api.models.message.ProductTailoringUnpublishedMessage
+                    .deepCopy((com.commercetools.api.models.message.ProductTailoringUnpublishedMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.ProductUnpublishedMessage) {
             return com.commercetools.api.models.message.ProductUnpublishedMessage
@@ -2534,6 +2569,62 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.ProductStateTransitionMessageBuilder productStateTransitionBuilder() {
         return com.commercetools.api.models.message.ProductStateTransitionMessageBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringCreatedMessageBuilder productTailoringCreatedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringDeletedMessageBuilder productTailoringDeletedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringDeletedMessageBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringDescriptionSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringDescriptionSetMessageBuilder productTailoringDescriptionSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringDescriptionSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringNameSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringNameSetMessageBuilder productTailoringNameSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringNameSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringPublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringPublishedMessageBuilder productTailoringPublishedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringPublishedMessageBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringSlugSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringSlugSetMessageBuilder productTailoringSlugSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringSlugSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for productTailoringUnpublished subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductTailoringUnpublishedMessageBuilder productTailoringUnpublishedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringUnpublishedMessageBuilder.of();
     }
 
     /**

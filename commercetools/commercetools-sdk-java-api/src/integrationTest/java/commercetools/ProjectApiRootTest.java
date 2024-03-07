@@ -40,6 +40,8 @@ public class ProjectApiRootTest {
                 .filter(methodName -> !projectApiRootMethods.contains(methodName))
                 .collect(Collectors.toList());
 
-        Assertions.assertThat(resourceMethods).isEmpty();
+        Assertions.assertThat(resourceMethods)
+                .withFailMessage("missing endpoints in ProjectApiRoot: %s", resourceMethods)
+                .isEmpty();
     }
 }

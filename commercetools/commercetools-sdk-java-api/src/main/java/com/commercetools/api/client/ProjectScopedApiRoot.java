@@ -96,5 +96,7 @@ public interface ProjectScopedApiRoot {
 
     ByProjectKeyAssociateRolesRequestBuilder associateRoles();
 
+    ByProjectKeyProductTailoringRequestBuilder productTailoring();
+
     <R> R with(Function<ProjectApiRoot, R> op);
 }

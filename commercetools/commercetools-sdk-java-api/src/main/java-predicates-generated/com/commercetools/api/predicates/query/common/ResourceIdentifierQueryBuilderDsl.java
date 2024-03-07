@@ -145,6 +145,14 @@ public class ResourceIdentifierQueryBuilderDsl {
             ResourceIdentifierQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asProductTailoring(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.product_tailoring.ProductTailoringResourceIdentifierQueryBuilderDsl
+                    .of()),
+            ResourceIdentifierQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asProductType(
             Function<com.commercetools.api.predicates.query.product_type.ProductTypeResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_type.ProductTypeResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

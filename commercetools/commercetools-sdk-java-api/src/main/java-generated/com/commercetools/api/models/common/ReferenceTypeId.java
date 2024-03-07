@@ -92,6 +92,9 @@ public interface ReferenceTypeId extends JsonEnum {
     <p>References a ProductSelection.</p> */
     ReferenceTypeId PRODUCT_SELECTION = ReferenceTypeIdEnum.PRODUCT_SELECTION;
     /**
+    <p>References a ProductTailoring.</p> */
+    ReferenceTypeId PRODUCT_TAILORING = ReferenceTypeIdEnum.PRODUCT_TAILORING;
+    /**
     <p>References a ProductType.</p> */
     ReferenceTypeId PRODUCT_TYPE = ReferenceTypeIdEnum.PRODUCT_TYPE;
     /**
@@ -262,6 +265,11 @@ public interface ReferenceTypeId extends JsonEnum {
          * product-selection
          */
         PRODUCT_SELECTION("product-selection"),
+
+        /**
+         * product-tailoring
+         */
+        PRODUCT_TAILORING("product-tailoring"),
 
         /**
          * product-type

@@ -197,6 +197,13 @@ public class BaseResourceQueryBuilderDsl {
             BaseResourceQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asProductTailoring(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.product_tailoring.ProductTailoringQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asProductType(
             Function<com.commercetools.api.predicates.query.product_type.ProductTypeQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_type.ProductTypeQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

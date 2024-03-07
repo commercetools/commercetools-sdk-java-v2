@@ -95,6 +95,10 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of();
     }
 
+    public com.commercetools.api.models.product_tailoring.ProductTailoringReferenceBuilder productTailoringBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.product_type.ProductTypeReferenceBuilder productTypeBuilder() {
         return com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of();
     }

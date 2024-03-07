@@ -98,12 +98,14 @@ class SrcInfoPlugin : Plugin<Project> {
 
     fun classInfo(file: File, info: ClassOrInterfaceDeclaration, hash: String, docsUrnOnly: Boolean): List<Pair<String, Map<String, String>>> {
         return info.methods.filter { if(docsUrnOnly) it.getAnnotationByName("DocsUrn").isPresent else true } .map { methodInfo ->
-            "${info.fullyQualifiedName.get()}#${methodInfo.signature}" to mapOf(
+            val docsUrn = methodInfo.getAnnotationByName("DocsUrn").map {
+                (it as NormalAnnotationExpr).pairs.first().value.asLiteralStringValueExpr().value
+            }.orElse("")
+            val key = if (docsUrnOnly) docsUrn else "${info.fullyQualifiedName.get()}#${methodInfo.signature}"
+            key to mapOf(
                     "type" to "method",
                     "gitHash" to hash,
-                    "docsUrn" to methodInfo.getAnnotationByName("DocsUrn").map {
-                        (it as NormalAnnotationExpr).pairs.first().value.asLiteralStringValueExpr().value
-                    }.orElse(""),
+                    "docsUrn" to docsUrn,
                     "methodName" to methodInfo.name.toString(),
                     "simpleName" to "${info.name}#${methodInfo.name}",
                     "name" to "${info.fullyQualifiedName.get()}#${methodInfo.name}",

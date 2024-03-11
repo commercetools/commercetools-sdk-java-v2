@@ -10,9 +10,23 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static commercetools.utils.CommercetoolsTestUtils.getClientId;
+import static commercetools.utils.CommercetoolsTestUtils.getClientSecret;
+
 public class ClientCredentialsTokenSupplierIntegrationTests {
 
     private static final VrapHttpClient vrapHttpClient = HttpClientSupplier.of().get();
+
+    @Test
+    public void whenCorrectCredentialsAreProvided_shouldGetToken() throws Exception {
+        ClientCredentialsTokenSupplier clientCredentialsTokenSupplier = new ClientCredentialsTokenSupplier(
+            getClientId(), getClientSecret(), "",
+            "https://auth.europe-west1.gcp.commercetools.com/oauth/token", vrapHttpClient);
+
+        String token = clientCredentialsTokenSupplier.getToken().get().getAccessToken();
+        Assertions.assertNotNull(token);
+        Assertions.assertFalse(token.isEmpty());
+    }
 
     @Test
     public void throwExceptionWrongCredentials() throws Exception {

@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     TaxedItemPrice taxedItemPrice = TaxedItemPrice.builder()
  *             .totalNet(totalNetBuilder -> totalNetBuilder)
  *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,6 +29,8 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     private com.commercetools.api.models.common.CentPrecisionMoney totalNet;
 
     private com.commercetools.api.models.common.CentPrecisionMoney totalGross;
+
+    private java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions;
 
     @Nullable
     private com.commercetools.api.models.common.CentPrecisionMoney totalTax;
@@ -103,6 +106,100 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     }
 
     /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions value to be set
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder taxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
+        this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions value to be set
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder taxPortions(
+            final java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions) {
+        this.taxPortions = taxPortions;
+        return this;
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions value to be set
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder plusTaxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
+        if (this.taxPortions == null) {
+            this.taxPortions = new ArrayList<>();
+        }
+        this.taxPortions.addAll(Arrays.asList(taxPortions));
+        return this;
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder plusTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionBuilder, com.commercetools.api.models.cart.TaxPortionBuilder> builder) {
+        if (this.taxPortions == null) {
+            this.taxPortions = new ArrayList<>();
+        }
+        this.taxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder withTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionBuilder, com.commercetools.api.models.cart.TaxPortionBuilder> builder) {
+        this.taxPortions = new ArrayList<>();
+        this.taxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder addTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionBuilder, com.commercetools.api.models.cart.TaxPortion> builder) {
+        return plusTaxPortions(builder.apply(com.commercetools.api.models.cart.TaxPortionBuilder.of()));
+    }
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder setTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionBuilder, com.commercetools.api.models.cart.TaxPortion> builder) {
+        return taxPortions(builder.apply(com.commercetools.api.models.cart.TaxPortionBuilder.of()));
+    }
+
+    /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
      * @param builder function to build the totalTax value
      * @return Builder
@@ -157,6 +254,16 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     }
 
     /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @return taxPortions
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.TaxPortion> getTaxPortions() {
+        return this.taxPortions;
+    }
+
+    /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
      * @return totalTax
      */
@@ -173,7 +280,8 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     public TaxedItemPrice build() {
         Objects.requireNonNull(totalNet, TaxedItemPrice.class + ": totalNet is missing");
         Objects.requireNonNull(totalGross, TaxedItemPrice.class + ": totalGross is missing");
-        return new TaxedItemPriceImpl(totalNet, totalGross, totalTax);
+        Objects.requireNonNull(taxPortions, TaxedItemPrice.class + ": taxPortions is missing");
+        return new TaxedItemPriceImpl(totalNet, totalGross, taxPortions, totalTax);
     }
 
     /**
@@ -181,7 +289,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
      * @return TaxedItemPrice
      */
     public TaxedItemPrice buildUnchecked() {
-        return new TaxedItemPriceImpl(totalNet, totalGross, totalTax);
+        return new TaxedItemPriceImpl(totalNet, totalGross, taxPortions, totalTax);
     }
 
     /**
@@ -201,6 +309,7 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
         TaxedItemPriceBuilder builder = new TaxedItemPriceBuilder();
         builder.totalNet = template.getTotalNet();
         builder.totalGross = template.getTotalGross();
+        builder.taxPortions = template.getTaxPortions();
         builder.totalTax = template.getTotalTax();
         return builder;
     }

@@ -80,7 +80,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public String getOrderHint();
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @return externalId
      */
 
@@ -171,7 +171,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public void setOrderHint(final String orderHint);
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @param externalId value to be set
      */
 

@@ -214,7 +214,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @param externalId value to be set
      * @return Builder
      */
@@ -514,7 +514,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     }
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @return externalId
      */
 

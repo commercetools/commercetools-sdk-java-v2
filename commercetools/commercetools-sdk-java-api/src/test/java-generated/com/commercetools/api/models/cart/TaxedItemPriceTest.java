@@ -1,6 +1,8 @@
 
 package com.commercetools.api.models.cart;
 
+import java.util.Collections;
+
 import com.tngtech.junit.dataprovider.DataProvider;
 import com.tngtech.junit.dataprovider.DataProviderExtension;
 import com.tngtech.junit.dataprovider.UseDataProvider;
@@ -29,6 +31,10 @@ public class TaxedItemPriceTest {
                         .totalNet(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
                 new Object[] { TaxedItemPrice.builder()
                         .totalGross(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] {
+                        TaxedItemPrice.builder()
+                                .taxPortions(Collections
+                                        .singletonList(new com.commercetools.api.models.cart.TaxPortionImpl())) },
                 new Object[] { TaxedItemPrice.builder()
                         .totalTax(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) } };
     }
@@ -47,6 +53,14 @@ public class TaxedItemPriceTest {
         value.setTotalGross(new com.commercetools.api.models.common.CentPrecisionMoneyImpl());
         Assertions.assertThat(value.getTotalGross())
                 .isEqualTo(new com.commercetools.api.models.common.CentPrecisionMoneyImpl());
+    }
+
+    @Test
+    public void taxPortions() {
+        TaxedItemPrice value = TaxedItemPrice.of();
+        value.setTaxPortions(Collections.singletonList(new com.commercetools.api.models.cart.TaxPortionImpl()));
+        Assertions.assertThat(value.getTaxPortions())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.cart.TaxPortionImpl()));
     }
 
     @Test

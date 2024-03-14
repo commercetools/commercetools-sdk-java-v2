@@ -81,3 +81,10 @@
 - added resource `/{projectKey}/in-store/key={storeKey}/products/key={productKey}/product-tailoring`
 </details>
 
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `taxPortions` to type `TaxedItemPrice`
+</details>
+

@@ -26,7 +26,7 @@ public interface TaxMode extends JsonEnum {
     TaxMode EXTERNAL = TaxModeEnum.EXTERNAL;
     /**
     <p>Tax amounts, Tax Rates, and tax portions are set externally per ExternalTaxAmountDraft. A Cart can be ordered only if the Cart and all Line Items, Custom Line Items, and the Shipping Method have an external tax amount and rate set.</p>
-    <p>Price-specific update actions on Carts require external recalculation of the total gross price. Hence, the <code>externalTaxAmount</code> is removed in these cases and must be reset with Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount update actions.</p> */
+    <p>Price-specific update actions on Carts require external recalculation of the total gross price. Hence, the <code>externalTaxAmount</code> is removed in these cases and must be reset with Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount update actions. Also the Cart <code>taxedPrice</code> field must be explicitly set via Set Cart Total Tax. Since the API currently does not offer an update action for setting the <code>taxedShippingPrice</code> field of a Cart with <code>ExternalAmount</code> tax mode, it will always be empty.</p> */
     TaxMode EXTERNAL_AMOUNT = TaxModeEnum.EXTERNAL_AMOUNT;
     /**
     <p>No taxes are added to the Cart.</p>

@@ -1,33 +1,31 @@
 
-package com.commercetools.monitoring.datadog;
+package com.commercetools.monitoring.datadog.statsd;
 
-import static com.commercetools.monitoring.datadog.DatadogUtils.submitJsonDeserializationMetric;
-import static com.commercetools.monitoring.datadog.DatadogUtils.submitJsonSerializationMetric;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
+import com.timgroup.statsd.StatsDClient;
+import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.ResponseSerializer;
 
 import java.time.Duration;
 import java.time.Instant;
 
-import com.datadog.api.client.ApiClient;
-import com.datadog.api.client.v2.api.MetricsApi;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
-
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.ResponseSerializer;
+import static com.commercetools.monitoring.datadog.DatadogInfo.*;
+import static java.lang.String.format;
 
 /**
- * This serializer uses API to submit metrics to datadog.
- * If you are using dogstatsd, use {@link com.commercetools.monitoring.datadog.statsd.DatadogResponseSerializer} to submit metrics to datadog with statsd.
+ * This serializer uses dogstatsd library to submit metrics to datadog.
+ * If you are not using statsd, use {@link com.commercetools.monitoring.datadog.DatadogResponseSerializer} to submit metrics to datadog with API.
  */
 public class DatadogResponseSerializer implements ResponseSerializer {
     private final ResponseSerializer serializer;
 
-    private final MetricsApi apiInstance;
+    private final StatsDClient statsDClient;
 
-    public DatadogResponseSerializer(final ResponseSerializer serializer, final ApiClient ddApiClient) {
+    public DatadogResponseSerializer(final ResponseSerializer serializer, final StatsDClient datadogStatsDClient) {
         this.serializer = serializer;
-        this.apiInstance = new MetricsApi(ddApiClient);
+        this.statsDClient = datadogStatsDClient;
     }
 
     @Override
@@ -35,7 +33,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        submitJsonSerializationMetric(apiInstance, (double) durationInMillis, outputType.getCanonicalName());
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis, format("%s:%s", RESPONSE_BODY_TYPE, outputType.getCanonicalName()));
         return result;
     }
 
@@ -44,7 +42,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        submitJsonSerializationMetric(apiInstance, (double) durationInMillis, outputType.toString());
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis, format("%s:%s", RESPONSE_BODY_TYPE, outputType.toString()));
         return result;
     }
 
@@ -53,7 +51,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        submitJsonSerializationMetric(apiInstance, (double) durationInMillis, outputType.getType().getTypeName());
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis, format("%s:%s", RESPONSE_BODY_TYPE, outputType.getType().getTypeName()));
         return result;
     }
 
@@ -62,7 +60,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         byte[] result = serializer.toJsonByteArray(value);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        submitJsonDeserializationMetric(apiInstance, (double) durationInMillis, value.getClass().getCanonicalName());
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis, format("%s:%s", REQUEST_BODY_TYPE, value.getClass().getCanonicalName()));
         return result;
     }
 

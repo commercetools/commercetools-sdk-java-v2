@@ -16,6 +16,10 @@ import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.http.TelemetryMiddleware;
 
+/**
+ * This middleware uses API to submit metrics to datadog.
+ * If you are using dogstatsd, use {@link com.commercetools.monitoring.datadog.statsd.DatadogMiddleware} to submit metrics to datadog with statsd.
+ */
 public class DatadogMiddleware implements TelemetryMiddleware {
 
     private final MetricsApi apiInstance;

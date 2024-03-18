@@ -49,6 +49,18 @@
         {
             "moduleLicense": null,
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common"
+        },
+        {
+            "moduleLicense": "Eclipse Public License - v 2.0",
+            "moduleName": "com.github.jnr:jnr-posix"
+        },
+        {
+            "moduleLicense": "GNU General Public License Version 2",
+            "moduleName": "com.github.jnr:jnr-posix"
+        },
+        {
+            "moduleLicense": "GNU LESSER GENERAL PUBLIC LICENSE, Version 3",
+            "moduleName": "com.github.jnr:jnr-posix"
         }
     ]
 }

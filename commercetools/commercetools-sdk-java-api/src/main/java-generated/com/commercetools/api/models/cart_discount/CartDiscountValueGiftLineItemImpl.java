@@ -65,6 +65,7 @@ public class CartDiscountValueGiftLineItemImpl implements CartDiscountValueGiftL
 
     /**
      *  <p>Reference to a Product.</p>
+     *  <p>A Gift Line Item can be present on a Cart even if the referenced Product is unpublished.</p>
      */
 
     public com.commercetools.api.models.product.ProductReference getProduct() {

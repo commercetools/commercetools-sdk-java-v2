@@ -1,10 +1,8 @@
 
 package com.commercetools.monitoring.datadog.statsd;
 
-import com.timgroup.statsd.StatsDClient;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.http.TelemetryMiddleware;
+import static com.commercetools.monitoring.datadog.DatadogInfo.*;
+import static java.lang.String.format;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -13,8 +11,11 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
-import static com.commercetools.monitoring.datadog.DatadogInfo.*;
-import static java.lang.String.format;
+import com.timgroup.statsd.StatsDClient;
+
+import io.vrap.rmf.base.client.ApiHttpRequest;
+import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.http.TelemetryMiddleware;
 
 /**
  * This middleware uses API to submit metrics to datadog.
@@ -43,7 +44,7 @@ public class DatadogMiddleware implements TelemetryMiddleware {
             }
 
             this.statsDClient.recordHistogramValue(PREFIX + "." + CLIENT_DURATION,
-                    Duration.between(start, Instant.now()).toMillis(), tags.toArray(new String[0]));
+                Duration.between(start, Instant.now()).toMillis(), tags.toArray(new String[0]));
 
             this.statsDClient.incrementCounter(PREFIX + "." + CLIENT_REQUEST_TOTAL, tags.toArray(new String[0]));
             if (response.getStatusCode() >= 400) {

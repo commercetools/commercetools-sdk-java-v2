@@ -1,18 +1,19 @@
 
 package com.commercetools.monitoring.datadog.statsd;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
-import com.timgroup.statsd.StatsDClient;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.ResponseSerializer;
+import static com.commercetools.monitoring.datadog.DatadogInfo.*;
+import static java.lang.String.format;
 
 import java.time.Duration;
 import java.time.Instant;
 
-import static com.commercetools.monitoring.datadog.DatadogInfo.*;
-import static java.lang.String.format;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
+import com.timgroup.statsd.StatsDClient;
+
+import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.ResponseSerializer;
 
 /**
  * This serializer uses dogstatsd library to submit metrics to datadog.
@@ -33,7 +34,8 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis, format("%s:%s", RESPONSE_BODY_TYPE, outputType.getCanonicalName()));
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis,
+            format("%s:%s", RESPONSE_BODY_TYPE, outputType.getCanonicalName()));
         return result;
     }
 
@@ -42,7 +44,8 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis, format("%s:%s", RESPONSE_BODY_TYPE, outputType.toString()));
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis,
+            format("%s:%s", RESPONSE_BODY_TYPE, outputType.toString()));
         return result;
     }
 
@@ -51,7 +54,8 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis, format("%s:%s", RESPONSE_BODY_TYPE, outputType.getType().getTypeName()));
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis,
+            format("%s:%s", RESPONSE_BODY_TYPE, outputType.getType().getTypeName()));
         return result;
     }
 
@@ -60,7 +64,8 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         byte[] result = serializer.toJsonByteArray(value);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis, format("%s:%s", REQUEST_BODY_TYPE, value.getClass().getCanonicalName()));
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
+            format("%s:%s", REQUEST_BODY_TYPE, value.getClass().getCanonicalName()));
         return result;
     }
 

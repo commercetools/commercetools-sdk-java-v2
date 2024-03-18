@@ -11,17 +11,17 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Indicates how a Line Item is added to a Cart.</p>
+ *  <p>Indicates how a Line Item was added to a Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface LineItemMode extends JsonEnum {
 
     /**
-    <p>The Line Item is added during Cart creation or using the Add LineItem update action. The Line Item quantity can be changed without restriction.</p> */
+    <p>The Line Item was added during Cart creation or the Add LineItem update action. The Line Item quantity can be changed without restriction.</p> */
     LineItemMode STANDARD = LineItemModeEnum.STANDARD;
     /**
-    <p>The Line Item is added automatically by a Cart Discount with CartDiscountValueGiftLineItem.</p>
-    <p>The quantity cannot be increased, and it won't be merged when the same Line Item is added to the Cart. If the gift is removed, an entry is added to the <code>refusedGifts</code> array and the discount won't be applied to the Cart. The price cannot be changed externally.</p>
+    <p>One Line Item was added automatically to a Cart by a Cart Discount with CartDiscountValueGiftLineItemDraft.</p>
+    <p>The quantity cannot be increased, and it won't be merged when adding the same Line Item to the Cart. If the gift is removed, an entry is added to the <code>refusedGifts</code> array and the discount won't be applied to the Cart. The price cannot be changed externally.</p>
     <p>All other updates, such as the ones related to Custom Fields, can be used.</p> */
     LineItemMode GIFT_LINE_ITEM = LineItemModeEnum.GIFT_LINE_ITEM;
 

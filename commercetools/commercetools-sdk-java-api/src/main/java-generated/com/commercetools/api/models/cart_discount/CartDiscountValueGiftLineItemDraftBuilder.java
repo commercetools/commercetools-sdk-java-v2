@@ -37,6 +37,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>ResourceIdentifier of a Product.</p>
+     *  <p>A Gift Line Item is added to a Cart even if the referenced Product is unpublished.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -50,6 +51,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>ResourceIdentifier of a Product.</p>
+     *  <p>A Gift Line Item is added to a Cart even if the referenced Product is unpublished.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -62,6 +64,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>ResourceIdentifier of a Product.</p>
+     *  <p>A Gift Line Item is added to a Cart even if the referenced Product is unpublished.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -161,6 +164,7 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>ResourceIdentifier of a Product.</p>
+     *  <p>A Gift Line Item is added to a Cart even if the referenced Product is unpublished.</p>
      * @return product
      */
 

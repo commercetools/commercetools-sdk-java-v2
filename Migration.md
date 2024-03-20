@@ -104,7 +104,9 @@ After that, we will have our request <strong>CategoryPagedQueryResponse</strong>
                 .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
                                 ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                                 ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl())
-                .withRetryMiddleware(5, Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))
+                .withPolicies(
+                    policyBuilder -> policyBuilder.withRetry(retry -> retry.maxRetries(5)
+                                                  .statusCodes(Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))))
                 .buildForProject("projectKey");
 
         final CategoryPagedQueryResponse body = projectClient.categories().get().executeBlocking().getBody();

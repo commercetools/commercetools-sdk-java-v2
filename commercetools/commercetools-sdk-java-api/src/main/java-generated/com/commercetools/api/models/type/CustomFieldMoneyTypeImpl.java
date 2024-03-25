@@ -27,7 +27,7 @@ public class CustomFieldMoneyTypeImpl implements CustomFieldMoneyType, ModelBase
      * create instance with all properties
      */
     @JsonCreator
-    CustomFieldMoneyTypeImpl() {
+    public CustomFieldMoneyTypeImpl() {
         this.name = MONEY;
     }
 

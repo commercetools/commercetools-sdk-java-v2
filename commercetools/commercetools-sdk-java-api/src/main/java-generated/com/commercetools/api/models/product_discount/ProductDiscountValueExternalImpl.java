@@ -27,7 +27,7 @@ public class ProductDiscountValueExternalImpl implements ProductDiscountValueExt
      * create instance with all properties
      */
     @JsonCreator
-    ProductDiscountValueExternalImpl() {
+    public ProductDiscountValueExternalImpl() {
         this.type = EXTERNAL;
     }
 

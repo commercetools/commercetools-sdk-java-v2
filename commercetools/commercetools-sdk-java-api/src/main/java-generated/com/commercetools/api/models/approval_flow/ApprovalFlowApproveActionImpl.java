@@ -28,7 +28,7 @@ public class ApprovalFlowApproveActionImpl implements ApprovalFlowApproveAction,
      * create instance with all properties
      */
     @JsonCreator
-    ApprovalFlowApproveActionImpl() {
+    public ApprovalFlowApproveActionImpl() {
         this.action = APPROVE;
     }
 

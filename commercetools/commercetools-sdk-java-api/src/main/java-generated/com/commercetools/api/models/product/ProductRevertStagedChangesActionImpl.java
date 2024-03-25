@@ -27,7 +27,7 @@ public class ProductRevertStagedChangesActionImpl implements ProductRevertStaged
      * create instance with all properties
      */
     @JsonCreator
-    ProductRevertStagedChangesActionImpl() {
+    public ProductRevertStagedChangesActionImpl() {
         this.action = REVERT_STAGED_CHANGES;
     }
 

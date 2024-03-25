@@ -183,6 +183,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.LanguageUsedInStoresErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.LockedFieldErrorBuilder lockedFieldBuilder() {
+        return com.commercetools.api.models.error.LockedFieldErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.MatchingPriceNotFoundErrorBuilder matchingPriceNotFoundBuilder() {
         return com.commercetools.api.models.error.MatchingPriceNotFoundErrorBuilder.of();
     }

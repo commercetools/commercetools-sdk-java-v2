@@ -27,7 +27,7 @@ public class ProductSelectionDeletedMessagePayloadImpl implements ProductSelecti
      * create instance with all properties
      */
     @JsonCreator
-    ProductSelectionDeletedMessagePayloadImpl() {
+    public ProductSelectionDeletedMessagePayloadImpl() {
         this.type = PRODUCT_SELECTION_DELETED;
     }
 

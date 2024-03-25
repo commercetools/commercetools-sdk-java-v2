@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Simultaneously updating two Customers with the same email address can return a LockedField error.</p>
  *
  * <hr>
  * <div class=code-example>

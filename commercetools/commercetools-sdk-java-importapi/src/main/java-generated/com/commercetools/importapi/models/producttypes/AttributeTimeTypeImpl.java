@@ -27,7 +27,7 @@ public class AttributeTimeTypeImpl implements AttributeTimeType, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    AttributeTimeTypeImpl() {
+    public AttributeTimeTypeImpl() {
         this.name = TIME;
     }
 

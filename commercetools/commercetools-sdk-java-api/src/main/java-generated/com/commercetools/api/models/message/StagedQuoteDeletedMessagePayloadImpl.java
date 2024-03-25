@@ -27,7 +27,7 @@ public class StagedQuoteDeletedMessagePayloadImpl implements StagedQuoteDeletedM
      * create instance with all properties
      */
     @JsonCreator
-    StagedQuoteDeletedMessagePayloadImpl() {
+    public StagedQuoteDeletedMessagePayloadImpl() {
         this.type = STAGED_QUOTE_DELETED;
     }
 

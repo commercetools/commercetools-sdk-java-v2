@@ -27,7 +27,7 @@ public class ProductTailoringPublishActionImpl implements ProductTailoringPublis
      * create instance with all properties
      */
     @JsonCreator
-    ProductTailoringPublishActionImpl() {
+    public ProductTailoringPublishActionImpl() {
         this.action = PUBLISH;
     }
 

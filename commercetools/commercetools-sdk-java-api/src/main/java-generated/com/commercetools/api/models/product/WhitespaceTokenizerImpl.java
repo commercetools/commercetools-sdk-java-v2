@@ -27,7 +27,7 @@ public class WhitespaceTokenizerImpl implements WhitespaceTokenizer, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    WhitespaceTokenizerImpl() {
+    public WhitespaceTokenizerImpl() {
         this.type = WHITESPACE;
     }
 

@@ -27,7 +27,7 @@ public class DiscountCodeDeletedMessagePayloadImpl implements DiscountCodeDelete
      * create instance with all properties
      */
     @JsonCreator
-    DiscountCodeDeletedMessagePayloadImpl() {
+    public DiscountCodeDeletedMessagePayloadImpl() {
         this.type = DISCOUNT_CODE_DELETED;
     }
 

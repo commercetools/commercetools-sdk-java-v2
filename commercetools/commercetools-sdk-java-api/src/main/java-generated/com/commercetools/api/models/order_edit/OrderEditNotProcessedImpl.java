@@ -27,7 +27,7 @@ public class OrderEditNotProcessedImpl implements OrderEditNotProcessed, ModelBa
      * create instance with all properties
      */
     @JsonCreator
-    OrderEditNotProcessedImpl() {
+    public OrderEditNotProcessedImpl() {
         this.type = NOT_PROCESSED;
     }
 

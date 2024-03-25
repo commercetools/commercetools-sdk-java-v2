@@ -28,7 +28,7 @@ public class CartValueTypeImpl implements CartValueType, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    CartValueTypeImpl() {
+    public CartValueTypeImpl() {
         this.type = ShippingRateTierType.findEnum("CartValue");
     }
 

@@ -27,7 +27,7 @@ public class ChangeValueExternalChangeValueImpl implements ChangeValueExternalCh
      * create instance with all properties
      */
     @JsonCreator
-    ChangeValueExternalChangeValueImpl() {
+    public ChangeValueExternalChangeValueImpl() {
         this.type = EXTERNAL;
     }
 

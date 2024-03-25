@@ -27,7 +27,7 @@ public class CartDiscountDeletedMessagePayloadImpl implements CartDiscountDelete
      * create instance with all properties
      */
     @JsonCreator
-    CartDiscountDeletedMessagePayloadImpl() {
+    public CartDiscountDeletedMessagePayloadImpl() {
         this.type = CART_DISCOUNT_DELETED;
     }
 

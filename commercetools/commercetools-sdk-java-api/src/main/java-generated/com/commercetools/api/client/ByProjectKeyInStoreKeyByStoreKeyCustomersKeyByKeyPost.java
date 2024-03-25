@@ -21,6 +21,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>Simultaneously updating two Customers with the same email address can return a LockedField error.</p>
  *
  * <hr>
  * <div class=code-example>

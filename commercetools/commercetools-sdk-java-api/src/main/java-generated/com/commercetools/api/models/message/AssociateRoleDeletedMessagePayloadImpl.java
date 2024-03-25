@@ -27,7 +27,7 @@ public class AssociateRoleDeletedMessagePayloadImpl implements AssociateRoleDele
      * create instance with all properties
      */
     @JsonCreator
-    AssociateRoleDeletedMessagePayloadImpl() {
+    public AssociateRoleDeletedMessagePayloadImpl() {
         this.type = ASSOCIATE_ROLE_DELETED;
     }
 

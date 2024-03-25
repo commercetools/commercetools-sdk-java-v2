@@ -27,7 +27,7 @@ public class CartDiscountTotalPriceTargetImpl implements CartDiscountTotalPriceT
      * create instance with all properties
      */
     @JsonCreator
-    CartDiscountTotalPriceTargetImpl() {
+    public CartDiscountTotalPriceTargetImpl() {
         this.type = TOTAL_PRICE;
     }
 

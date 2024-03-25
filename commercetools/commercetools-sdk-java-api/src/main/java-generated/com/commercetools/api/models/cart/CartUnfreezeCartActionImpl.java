@@ -27,7 +27,7 @@ public class CartUnfreezeCartActionImpl implements CartUnfreezeCartAction, Model
      * create instance with all properties
      */
     @JsonCreator
-    CartUnfreezeCartActionImpl() {
+    public CartUnfreezeCartActionImpl() {
         this.action = UNFREEZE_CART;
     }
 

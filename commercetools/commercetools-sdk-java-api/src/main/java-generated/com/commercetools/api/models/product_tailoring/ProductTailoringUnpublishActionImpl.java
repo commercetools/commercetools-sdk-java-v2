@@ -27,7 +27,7 @@ public class ProductTailoringUnpublishActionImpl implements ProductTailoringUnpu
      * create instance with all properties
      */
     @JsonCreator
-    ProductTailoringUnpublishActionImpl() {
+    public ProductTailoringUnpublishActionImpl() {
         this.action = UNPUBLISH;
     }
 

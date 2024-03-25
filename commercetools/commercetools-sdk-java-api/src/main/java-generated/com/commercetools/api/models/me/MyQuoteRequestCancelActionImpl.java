@@ -27,7 +27,7 @@ public class MyQuoteRequestCancelActionImpl implements MyQuoteRequestCancelActio
      * create instance with all properties
      */
     @JsonCreator
-    MyQuoteRequestCancelActionImpl() {
+    public MyQuoteRequestCancelActionImpl() {
         this.action = CANCEL_QUOTE_REQUEST;
     }
 

@@ -331,6 +331,13 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asLockedField(
+            Function<com.commercetools.api.predicates.query.error.LockedFieldErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.LockedFieldErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.LockedFieldErrorQueryBuilderDsl.of()),
+            ErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asMatchingPriceNotFound(
             Function<com.commercetools.api.predicates.query.error.MatchingPriceNotFoundErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.MatchingPriceNotFoundErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

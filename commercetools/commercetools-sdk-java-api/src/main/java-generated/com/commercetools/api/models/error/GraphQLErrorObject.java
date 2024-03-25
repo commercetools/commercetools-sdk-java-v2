@@ -69,6 +69,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLInvalidSubjectErrorImpl.class, name = GraphQLInvalidSubjectError.INVALID_SUBJECT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLInvalidTokenErrorImpl.class, name = GraphQLInvalidTokenError.INVALID_TOKEN),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLLanguageUsedInStoresErrorImpl.class, name = GraphQLLanguageUsedInStoresError.LANGUAGE_USED_IN_STORES),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLLockedFieldErrorImpl.class, name = GraphQLLockedFieldError.LOCKED_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMatchingPriceNotFoundErrorImpl.class, name = GraphQLMatchingPriceNotFoundError.MATCHING_PRICE_NOT_FOUND),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMaxCartDiscountsReachedErrorImpl.class, name = GraphQLMaxCartDiscountsReachedError.MAX_CART_DISCOUNTS_REACHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLMaxResourceLimitExceededErrorImpl.class, name = GraphQLMaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED),
@@ -312,6 +313,10 @@ public interface GraphQLErrorObject {
         if (template instanceof com.commercetools.api.models.error.GraphQLLanguageUsedInStoresError) {
             return com.commercetools.api.models.error.GraphQLLanguageUsedInStoresError
                     .deepCopy((com.commercetools.api.models.error.GraphQLLanguageUsedInStoresError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLLockedFieldError) {
+            return com.commercetools.api.models.error.GraphQLLockedFieldError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLLockedFieldError) template);
         }
         if (template instanceof com.commercetools.api.models.error.GraphQLMatchingPriceNotFoundError) {
             return com.commercetools.api.models.error.GraphQLMatchingPriceNotFoundError
@@ -788,6 +793,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLLanguageUsedInStoresErrorBuilder languageUsedInStoresBuilder() {
         return com.commercetools.api.models.error.GraphQLLanguageUsedInStoresErrorBuilder.of();
+    }
+
+    /**
+     * builder for lockedField subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLLockedFieldErrorBuilder lockedFieldBuilder() {
+        return com.commercetools.api.models.error.GraphQLLockedFieldErrorBuilder.of();
     }
 
     /**

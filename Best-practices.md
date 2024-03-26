@@ -116,19 +116,17 @@ ApiRootBuilder.of().withClientCredentialsFlow(
 );
 ```
 
-#### RetryMiddleware
-The RetryMiddleware can be used to retry failed requests based on the given options. It will use an incremental backoff strategy for retries. By default it will retry on HTTP status code 500 and 503
-```java
-ApiRootBuilder.of().withRetryMiddleware(3);
-```
+#### PolicyMiddleware
+The PolicyBuilder allows the combination of different policies for failing requests. You can specify the error codes to retry, different retry strategy, timeout etc.
 
 The middleware can retry on specific HTTP status codes or exception types
-
 ```java
-ApiRootBuilder.of().withRetryMiddleware(3, Arrays.asList(500, 503));
-ApiRootBuilder.of().withRetryMiddleware(3, Arrays.asList(500, 503),
-    Collections.singletonList(InterruptedException.class));
+ApiRootBuilder.of().withPolicies(policyBuilder -> policyBuilder.withRetry(retry -> retry.maxRetries(3)
+        .statusCodes(Arrays.asList(HttpStatusCode.SERVICE_UNAVAILABLE_503,
+        HttpStatusCode.INTERNAL_SERVER_ERROR_500))))
 ```
+
+For more examples see [the PolicyMiddleware test](https://github.com/commercetools/commercetools-sdk-java-v2/blob/0251e8aa150af60c6ff6253e41180bfe0a10036b/rmf/rmf-java-base/src/test/java/io/vrap/rmf/base/client/http/PolicyMiddlewareTest.java).
 
 #### UserAgentMiddleware
 The UserAgentMiddleware adds a User-Agent header to every request. It will be added by using the `defaultClient` builder method. But can also be customized

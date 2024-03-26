@@ -45,4 +45,8 @@ public class ByProjectKeyProductsRequestBuilder implements ByProjectKeyProductsR
         return new ByProjectKeyProductsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyProductsSearchRequestBuilder search() {
+        return new ByProjectKeyProductsSearchRequestBuilder(apiHttpClient, projectKey);
+    }
+
 }

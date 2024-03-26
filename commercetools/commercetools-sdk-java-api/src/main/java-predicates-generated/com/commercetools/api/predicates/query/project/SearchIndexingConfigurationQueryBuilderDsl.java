@@ -23,6 +23,16 @@ public class SearchIndexingConfigurationQueryBuilderDsl {
             SearchIndexingConfigurationQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<SearchIndexingConfigurationQueryBuilderDsl> productsSearch(
+            Function<com.commercetools.api.predicates.query.project.SearchIndexingConfigurationValuesQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.SearchIndexingConfigurationValuesQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("productsSearch"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.project.SearchIndexingConfigurationValuesQueryBuilderDsl
+                            .of())),
+            SearchIndexingConfigurationQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<SearchIndexingConfigurationQueryBuilderDsl> orders(
             Function<com.commercetools.api.predicates.query.project.SearchIndexingConfigurationValuesQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.SearchIndexingConfigurationValuesQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()

@@ -4,6 +4,7 @@
 <summary>Added Enum(s)</summary>
 
 - added enum `product-tailoring` to type `ReferenceTypeId`
+- added enum `ManuallySuspended` to type `SubscriptionHealthStatus`
 </details>
 
 

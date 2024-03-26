@@ -15,13 +15,12 @@ import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.HttpClientSupplier;
-import io.vrap.rmf.base.client.ServiceRegionConfig;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.GlobalCustomerPasswordTokenSupplier;
-
 import io.vrap.rmf.base.client.oauth2.InMemoryTokenStorage;
 import io.vrap.rmf.base.client.oauth2.RefreshFlowTokenSupplier;
 import io.vrap.rmf.base.client.utils.ClientUtils;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -67,23 +66,26 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
     }
 
     @Test
-    public void refreshTokenFlow ()  {
+    public void refreshTokenFlow() {
         CustomerFixtures.withCustomer(customer -> {
             GlobalCustomerPasswordTokenSupplier globalCustomerPasswordTokenSupplier = new GlobalCustomerPasswordTokenSupplier(
-                    getClientId(), getClientSecret(), customer.getEmail(), CustomerFixtures.TEST_CUSTOMER_PASSWORD, null,
-                    ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(CommercetoolsTestUtils.getProjectKey()), vrapHttpClient);
+                getClientId(), getClientSecret(), customer.getEmail(), CustomerFixtures.TEST_CUSTOMER_PASSWORD, null,
+                ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(CommercetoolsTestUtils.getProjectKey()),
+                vrapHttpClient);
 
-            final AuthenticationToken authenticationToken = ClientUtils.blockingWait(globalCustomerPasswordTokenSupplier.getToken(), Duration.ofSeconds(10));
+            final AuthenticationToken authenticationToken = ClientUtils
+                    .blockingWait(globalCustomerPasswordTokenSupplier.getToken(), Duration.ofSeconds(10));
 
             InMemoryTokenStorage tokenStorage = new InMemoryTokenStorage(authenticationToken);
 
-            RefreshFlowTokenSupplier refreshFlowTokenSupplier = new RefreshFlowTokenSupplier(
-                    getClientId(), getClientSecret(), ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-                    tokenStorage, vrapHttpClient);
-            AuthenticationToken newAuthenticationToken = ClientUtils.blockingWait(refreshFlowTokenSupplier.refreshToken(), Duration.ofSeconds(10));
+            RefreshFlowTokenSupplier refreshFlowTokenSupplier = new RefreshFlowTokenSupplier(getClientId(),
+                getClientSecret(), ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), tokenStorage, vrapHttpClient);
+            AuthenticationToken newAuthenticationToken = ClientUtils
+                    .blockingWait(refreshFlowTokenSupplier.refreshToken(), Duration.ofSeconds(10));
 
             Assertions.assertNotEquals(authenticationToken.getAccessToken(), newAuthenticationToken.getAccessToken());
-            Assertions.assertTrue(authenticationToken.getExpiresInZonedDateTime().isBefore(newAuthenticationToken.getExpiresInZonedDateTime()));
+            Assertions.assertTrue(authenticationToken.getExpiresInZonedDateTime()
+                    .isBefore(newAuthenticationToken.getExpiresInZonedDateTime()));
         });
     }
 

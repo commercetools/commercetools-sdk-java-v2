@@ -124,6 +124,10 @@ public interface ErrorResponse {
             return com.commercetools.api.models.error.AuthErrorResponse
                     .deepCopy((com.commercetools.api.models.error.AuthErrorResponse) template);
         }
+        if (template instanceof com.commercetools.api.models.product_search.ProductSearchErrorResponse) {
+            return com.commercetools.api.models.product_search.ProductSearchErrorResponse
+                    .deepCopy((com.commercetools.api.models.product_search.ProductSearchErrorResponse) template);
+        }
         ErrorResponseImpl instance = new ErrorResponseImpl();
         instance.setStatusCode(template.getStatusCode());
         instance.setMessage(template.getMessage());

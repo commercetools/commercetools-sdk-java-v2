@@ -92,7 +92,8 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
             AuthenticationToken newAuthenticationToken = ClientUtils
                     .blockingWait(refreshFlowTokenSupplier.refreshToken(), Duration.ofSeconds(10));
 
-            Assertions.assertNotEquals(calculateSha256(authenticationToken.getAccessToken()), calculateSha256(newAuthenticationToken.getAccessToken()));
+            Assertions.assertNotEquals(calculateSha256(authenticationToken.getAccessToken()),
+                calculateSha256(newAuthenticationToken.getAccessToken()));
             Assertions.assertTrue(authenticationToken.getExpiresInZonedDateTime()
                     .isBefore(newAuthenticationToken.getExpiresInZonedDateTime()));
         });
@@ -102,9 +103,9 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
     public void getNewAccessTokenFromApiRoot() {
         CustomerFixtures.withCustomer(customer -> {
             GlobalCustomerPasswordTokenSupplier globalCustomerPasswordTokenSupplier = new GlobalCustomerPasswordTokenSupplier(
-                    getClientId(), getClientSecret(), customer.getEmail(), CustomerFixtures.TEST_CUSTOMER_PASSWORD, null,
-                    ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(CommercetoolsTestUtils.getProjectKey()),
-                    vrapHttpClient);
+                getClientId(), getClientSecret(), customer.getEmail(), CustomerFixtures.TEST_CUSTOMER_PASSWORD, null,
+                ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(CommercetoolsTestUtils.getProjectKey()),
+                vrapHttpClient);
 
             AuthenticationToken authenticationToken = ClientUtils
                     .blockingWait(globalCustomerPasswordTokenSupplier.getToken(), Duration.ofSeconds(10));
@@ -114,7 +115,7 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
             InMemoryTokenStorage tokenStorage = new InMemoryTokenStorage(authenticationToken);
 
             RefreshFlowTokenSupplier refreshFlowTokenSupplier = new RefreshFlowTokenSupplier(getClientId(),
-                    getClientSecret(), ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), tokenStorage, vrapHttpClient);
+                getClientSecret(), ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), tokenStorage, vrapHttpClient);
 
             OAuthHandler oAuthHandler = new OAuthHandler(refreshFlowTokenSupplier, Duration.ofSeconds(60));
 
@@ -122,10 +123,8 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
                     .withOAuthMiddleware(OAuthMiddleware.of(oAuthHandler))
                     .withPolicies(policyBuilder -> policyBuilder.withRetry(builder -> builder.maxRetries(5)
                             .statusCodes(Arrays.asList(HttpStatusCode.BAD_GATEWAY_502,
-                                    HttpStatusCode.SERVICE_UNAVAILABLE_503, HttpStatusCode.GATEWAY_TIMEOUT_504))
-                    ))
+                                HttpStatusCode.SERVICE_UNAVAILABLE_503, HttpStatusCode.GATEWAY_TIMEOUT_504))))
                     .build();
-
 
             apiRoot.withProjectKey(getProjectKey())
                     .get()
@@ -134,7 +133,8 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
                     .thenApply(Project::getName)
                     .join();
 
-            Assertions.assertNotEquals(calculateSha256(oldAccessToken), calculateSha256(tokenStorage.getToken().getAccessToken()));
+            Assertions.assertNotEquals(calculateSha256(oldAccessToken),
+                calculateSha256(tokenStorage.getToken().getAccessToken()));
         });
     }
 
@@ -151,18 +151,19 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
     }
 
     public static String calculateSha256(final String base) {
-        try{
+        try {
             final MessageDigest digest = MessageDigest.getInstance("SHA-256");
             final byte[] hash = digest.digest(base.getBytes("UTF-8"));
             final StringBuilder hexString = new StringBuilder();
             for (int i = 0; i < hash.length; i++) {
                 final String hex = Integer.toHexString(0xff & hash[i]);
-                if(hex.length() == 1)
+                if (hex.length() == 1)
                     hexString.append('0');
                 hexString.append(hex);
             }
             return hexString.toString();
-        } catch(Exception ex){
+        }
+        catch (Exception ex) {
             throw new RuntimeException(ex);
         }
     }

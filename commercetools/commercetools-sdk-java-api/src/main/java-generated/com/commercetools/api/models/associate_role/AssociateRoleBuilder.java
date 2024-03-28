@@ -101,7 +101,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the AssociateRole.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the AssociateRole.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the AssociateRole.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the AssociateRole.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the AssociateRole.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the AssociateRole.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -315,7 +315,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the AssociateRole.</p>
      * @return lastModifiedBy
      */
 
@@ -325,7 +325,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the AssociateRole.</p>
      * @return createdBy
      */
 

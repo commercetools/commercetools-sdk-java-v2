@@ -142,7 +142,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the DiscountCode.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -154,7 +154,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the DiscountCode.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the DiscountCode.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -178,7 +178,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the DiscountCode.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the DiscountCode.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -202,7 +202,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the DiscountCode.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -647,7 +647,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the DiscountCode.</p>
      * @return lastModifiedBy
      */
 
@@ -657,7 +657,7 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the DiscountCode.</p>
      * @return createdBy
      */
 

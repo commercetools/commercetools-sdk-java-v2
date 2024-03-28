@@ -125,7 +125,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Category.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Category.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Category.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Category.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Category.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Category.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -721,7 +721,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Category.</p>
      * @return lastModifiedBy
      */
 
@@ -731,7 +731,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Category.</p>
      * @return createdBy
      */
 

@@ -142,7 +142,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StagedQuote.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -150,7 +150,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StagedQuote.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {

@@ -130,7 +130,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StagedQuote.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -142,7 +142,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StagedQuote.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -154,7 +154,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StagedQuote.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StagedQuote.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -178,7 +178,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StagedQuote.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StagedQuote.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -509,7 +509,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StagedQuote.</p>
      * @return lastModifiedBy
      */
 
@@ -519,7 +519,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StagedQuote.</p>
      * @return createdBy
      */
 

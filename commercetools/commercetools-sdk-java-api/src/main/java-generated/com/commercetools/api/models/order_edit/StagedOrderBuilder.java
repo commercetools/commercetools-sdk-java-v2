@@ -1843,7 +1843,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Order.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -1855,7 +1855,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Order.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -1867,7 +1867,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Order.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -1879,7 +1879,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Order.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -1891,7 +1891,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Order.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -1903,7 +1903,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Order.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -2402,7 +2402,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Order.</p>
      * @return lastModifiedBy
      */
 
@@ -2412,7 +2412,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Order.</p>
      * @return createdBy
      */
 

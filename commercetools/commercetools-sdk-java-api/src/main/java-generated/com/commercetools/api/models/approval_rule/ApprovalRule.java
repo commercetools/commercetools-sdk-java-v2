@@ -71,7 +71,7 @@ public interface ApprovalRule extends BaseResource {
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ApprovalRule.</p>
      * @return createdBy
      */
     @Valid
@@ -87,7 +87,7 @@ public interface ApprovalRule extends BaseResource {
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ApprovalRule.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -183,7 +183,7 @@ public interface ApprovalRule extends BaseResource {
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ApprovalRule.</p>
      * @param createdBy value to be set
      */
 
@@ -197,7 +197,7 @@ public interface ApprovalRule extends BaseResource {
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ApprovalRule.</p>
      * @param lastModifiedBy value to be set
      */
 

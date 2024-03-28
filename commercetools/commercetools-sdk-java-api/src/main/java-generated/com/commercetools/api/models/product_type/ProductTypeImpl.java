@@ -105,7 +105,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ProductType.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -113,7 +113,7 @@ public class ProductTypeImpl implements ProductType, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ProductType.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {

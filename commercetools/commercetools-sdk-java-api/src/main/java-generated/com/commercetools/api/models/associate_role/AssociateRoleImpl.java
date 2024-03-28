@@ -109,7 +109,7 @@ public class AssociateRoleImpl implements AssociateRole, ModelBase {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the AssociateRole.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -117,7 +117,7 @@ public class AssociateRoleImpl implements AssociateRole, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the AssociateRole.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {

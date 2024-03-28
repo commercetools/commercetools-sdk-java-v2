@@ -79,7 +79,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the State.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -87,7 +87,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the State.</p>
      * @return createdBy
      */
     @Valid
@@ -191,14 +191,14 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the State.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the State.</p>
      * @param createdBy value to be set
      */
 

@@ -307,7 +307,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -315,7 +315,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @return createdBy
      */
     @Valid
@@ -392,14 +392,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param createdBy value to be set
      */
 

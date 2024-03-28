@@ -109,7 +109,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Customer.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -117,7 +117,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Customer.</p>
      * @return createdBy
      */
     @Valid
@@ -348,14 +348,14 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Customer.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Customer.</p>
      * @param createdBy value to be set
      */
 

@@ -76,7 +76,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Zone.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -84,7 +84,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Zone.</p>
      * @return createdBy
      */
     @Valid
@@ -153,14 +153,14 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Zone.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Zone.</p>
      * @param createdBy value to be set
      */
 

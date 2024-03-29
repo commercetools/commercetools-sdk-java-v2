@@ -175,7 +175,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {

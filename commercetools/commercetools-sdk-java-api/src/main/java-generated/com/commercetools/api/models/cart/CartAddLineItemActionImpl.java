@@ -191,7 +191,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      */
 
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {

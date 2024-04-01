@@ -30,12 +30,15 @@ com.commercetools.api.models.order_edit
 com.commercetools.api.models.payment
 com.commercetools.api.models.product
 com.commercetools.api.models.product_discount
+com.commercetools.api.models.product_search
 com.commercetools.api.models.product_selection
+com.commercetools.api.models.product_tailoring
 com.commercetools.api.models.product_type
 com.commercetools.api.models.project
 com.commercetools.api.models.quote
 com.commercetools.api.models.quote_request
 com.commercetools.api.models.review
+com.commercetools.api.models.search
 com.commercetools.api.models.shipping_method
 com.commercetools.api.models.shopping_list
 com.commercetools.api.models.staged_quote

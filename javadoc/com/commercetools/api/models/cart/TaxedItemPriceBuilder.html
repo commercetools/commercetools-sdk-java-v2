@@ -90,6 +90,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
      TaxedItemPrice taxedItemPrice = TaxedItemPrice.builder()
              .totalNet(totalNetBuilder -> totalNetBuilder)
              .totalGross(totalGrossBuilder -> totalGrossBuilder)
+             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -120,15 +121,25 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTaxPortions(java.util.function.Function)" class="member-name-link">addTaxPortions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>,<wbr><a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">builds TaxedItemPrice with checking for non-null required values</div>
+<div class="block">Taxable portions added to the total net price.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">builds TaxedItemPrice with checking for non-null required values</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">builds TaxedItemPrice without checking for non-null required values</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTaxPortions()" class="member-name-link">getTaxPortions</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Taxable portions added to the total net price.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTotalGross()" class="member-name-link">getTotalGross</a>()</code></div>
@@ -156,34 +167,64 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">create builder for TaxedItemPrice instance</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalGross(com.commercetools.api.models.common.CentPrecisionMoney)" class="member-name-link">totalGross</a><wbr>(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&nbsp;totalGross)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTaxPortions(com.commercetools.api.models.cart.TaxPortion...)" class="member-name-link">plusTaxPortions</a><wbr>(<a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>...&nbsp;taxPortions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Total gross amount of the Line Item or Custom Line Item.</div>
+<div class="block">Taxable portions added to the total net price.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalGross(java.util.function.Function)" class="member-name-link">totalGross</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTaxPortions(java.util.function.Function)" class="member-name-link">plusTaxPortions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>,<wbr><a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Taxable portions added to the total net price.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTaxPortions(java.util.function.Function)" class="member-name-link">setTaxPortions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>,<wbr><a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Taxable portions added to the total net price.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxPortions(com.commercetools.api.models.cart.TaxPortion...)" class="member-name-link">taxPortions</a><wbr>(<a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>...&nbsp;taxPortions)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Taxable portions added to the total net price.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxPortions(java.util.List)" class="member-name-link">taxPortions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>&gt;&nbsp;taxPortions)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Taxable portions added to the total net price.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalGross(com.commercetools.api.models.common.CentPrecisionMoney)" class="member-name-link">totalGross</a><wbr>(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&nbsp;totalGross)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Total gross amount of the Line Item or Custom Line Item.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalNet(com.commercetools.api.models.common.CentPrecisionMoney)" class="member-name-link">totalNet</a><wbr>(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&nbsp;totalNet)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalGross(java.util.function.Function)" class="member-name-link">totalGross</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Total net amount of the Line Item or Custom Line Item.</div>
+<div class="block">Total gross amount of the Line Item or Custom Line Item.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalNet(java.util.function.Function)" class="member-name-link">totalNet</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalNet(com.commercetools.api.models.common.CentPrecisionMoney)" class="member-name-link">totalNet</a><wbr>(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&nbsp;totalNet)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Total net amount of the Line Item or Custom Line Item.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalTax(com.commercetools.api.models.common.CentPrecisionMoney)" class="member-name-link">totalTax</a><wbr>(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&nbsp;totalTax)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalNet(java.util.function.Function)" class="member-name-link">totalNet</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Total net amount of the Line Item or Custom Line Item.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalTax(com.commercetools.api.models.common.CentPrecisionMoney)" class="member-name-link">totalTax</a><wbr>(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&nbsp;totalTax)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Total tax applicable for the Line Item or Custom Line Item.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalTax(java.util.function.Function)" class="member-name-link">totalTax</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Total tax applicable for the Line Item or Custom Line Item.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalTax(java.util.function.Function)" class="member-name-link">totalTax</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTaxPortions(java.util.function.Function)" class="member-name-link">withTaxPortions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>,<wbr><a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Total tax applicable for the Line Item or Custom Line Item.</div>
+<div class="block">Taxable portions added to the total net price.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTotalGross(java.util.function.Function)" class="member-name-link">withTotalGross</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&gt;&nbsp;builder)</code></div>
@@ -310,6 +351,104 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="taxPortions(com.commercetools.api.models.cart.TaxPortion...)">
+<h3>taxPortions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></span>&nbsp;<span class="element-name">taxPortions</span><wbr><span class="parameters">(<a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>...&nbsp;taxPortions)</span></div>
+<div class="block"><p>Taxable portions added to the total net price.</p>
+  <p>Calculated from the TaxRates.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>taxPortions</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="taxPortions(java.util.List)">
+<h3>taxPortions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></span>&nbsp;<span class="element-name">taxPortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>&gt;&nbsp;taxPortions)</span></div>
+<div class="block"><p>Taxable portions added to the total net price.</p>
+  <p>Calculated from the TaxRates.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>taxPortions</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusTaxPortions(com.commercetools.api.models.cart.TaxPortion...)">
+<h3>plusTaxPortions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></span>&nbsp;<span class="element-name">plusTaxPortions</span><wbr><span class="parameters">(<a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>...&nbsp;taxPortions)</span></div>
+<div class="block"><p>Taxable portions added to the total net price.</p>
+  <p>Calculated from the TaxRates.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>taxPortions</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusTaxPortions(java.util.function.Function)">
+<h3>plusTaxPortions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></span>&nbsp;<span class="element-name">plusTaxPortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>,<wbr><a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Taxable portions added to the total net price.</p>
+  <p>Calculated from the TaxRates.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the taxPortions value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withTaxPortions(java.util.function.Function)">
+<h3>withTaxPortions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></span>&nbsp;<span class="element-name">withTaxPortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>,<wbr><a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Taxable portions added to the total net price.</p>
+  <p>Calculated from the TaxRates.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the taxPortions value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addTaxPortions(java.util.function.Function)">
+<h3>addTaxPortions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></span>&nbsp;<span class="element-name">addTaxPortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>,<wbr><a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Taxable portions added to the total net price.</p>
+  <p>Calculated from the TaxRates.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the taxPortions value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTaxPortions(java.util.function.Function)">
+<h3>setTaxPortions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></span>&nbsp;<span class="element-name">setTaxPortions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxPortionBuilder.html" title="class in com.commercetools.api.models.cart">TaxPortionBuilder</a>,<wbr><a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Taxable portions added to the total net price.</p>
+  <p>Calculated from the TaxRates.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the taxPortions value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="totalTax(java.util.function.Function)">
 <h3>totalTax</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedItemPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedItemPriceBuilder</a></span>&nbsp;<span class="element-name">totalTax</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</span></div>
@@ -368,6 +507,18 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>totalGross</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTaxPortions()">
+<h3>getTaxPortions</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortion.html" title="interface in com.commercetools.api.models.cart">TaxPortion</a>&gt;</span>&nbsp;<span class="element-name">getTaxPortions</span>()</div>
+<div class="block"><p>Taxable portions added to the total net price.</p>
+  <p>Calculated from the TaxRates.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>taxPortions</dd>
 </dl>
 </section>
 </li>

@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">LineItemMode</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="interface in io.vrap.rmf.base.client">JsonEnum</a></span></div>
-<div class="block"><p>Indicates how a Line Item is added to a Cart.</p></div>
+<div class="block"><p>Indicates how a Line Item was added to a Cart.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -115,12 +115,12 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="col-first even-row-color"><code>static final <a href="LineItemMode.html" title="interface in com.commercetools.api.models.cart">LineItemMode</a></code></div>
 <div class="col-second even-row-color"><code><a href="#GIFT_LINE_ITEM" class="member-name-link">GIFT_LINE_ITEM</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The Line Item is added automatically by a Cart Discount with CartDiscountValueGiftLineItem.</div>
+<div class="block">One Line Item was added automatically to a Cart by a Cart Discount with CartDiscountValueGiftLineItemDraft.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="LineItemMode.html" title="interface in com.commercetools.api.models.cart">LineItemMode</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#STANDARD" class="member-name-link">STANDARD</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">The Line Item is added during Cart creation or using the Add LineItem update action.</div>
+<div class="block">The Line Item was added during Cart creation or the Add LineItem update action.</div>
 </div>
 </div>
 </section>
@@ -185,15 +185,15 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="STANDARD">
 <h3>STANDARD</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="LineItemMode.html" title="interface in com.commercetools.api.models.cart">LineItemMode</a></span>&nbsp;<span class="element-name">STANDARD</span></div>
-<div class="block"><p>The Line Item is added during Cart creation or using the Add LineItem update action. The Line Item quantity can be changed without restriction.</p></div>
+<div class="block"><p>The Line Item was added during Cart creation or the Add LineItem update action. The Line Item quantity can be changed without restriction.</p></div>
 </section>
 </li>
 <li>
 <section class="detail" id="GIFT_LINE_ITEM">
 <h3>GIFT_LINE_ITEM</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="LineItemMode.html" title="interface in com.commercetools.api.models.cart">LineItemMode</a></span>&nbsp;<span class="element-name">GIFT_LINE_ITEM</span></div>
-<div class="block"><p>The Line Item is added automatically by a Cart Discount with CartDiscountValueGiftLineItem.</p>
-    <p>The quantity cannot be increased, and it won't be merged when the same Line Item is added to the Cart. If the gift is removed, an entry is added to the <code>refusedGifts</code> array and the discount won't be applied to the Cart. The price cannot be changed externally.</p>
+<div class="block"><p>One Line Item was added automatically to a Cart by a Cart Discount with CartDiscountValueGiftLineItemDraft.</p>
+    <p>The quantity cannot be increased, and it won't be merged when adding the same Line Item to the Cart. If the gift is removed, an entry is added to the <code>refusedGifts</code> array and the discount won't be applied to the Cart. The price cannot be changed externally.</p>
     <p>All other updates, such as the ones related to Custom Fields, can be used.</p></div>
 </section>
 </li>

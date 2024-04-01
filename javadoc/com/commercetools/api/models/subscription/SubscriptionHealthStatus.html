@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">SubscriptionHealthStatus</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="interface in io.vrap.rmf.base.client">JsonEnum</a></span></div>
-<div class="block"><p>The health status of the Subscription that indicates whether messages are being delivered to the Destination.</p></div>
+<div class="block"><p>The health status of the Subscription that indicates whether messages are being delivered.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -128,8 +128,13 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="block">Delivers messages as expected.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="SubscriptionHealthStatus.html" title="interface in com.commercetools.api.models.subscription">SubscriptionHealthStatus</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#TEMPORARY_ERROR" class="member-name-link">TEMPORARY_ERROR</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MANUALLY_SUSPENDED" class="member-name-link">MANUALLY_SUSPENDED</a></code></div>
 <div class="col-last odd-row-color">
+<div class="block">Does not deliver messages with the current configuration and the delivery of the messages is no longer attempted.</div>
+</div>
+<div class="col-first even-row-color"><code>static final <a href="SubscriptionHealthStatus.html" title="interface in com.commercetools.api.models.subscription">SubscriptionHealthStatus</a></code></div>
+<div class="col-second even-row-color"><code><a href="#TEMPORARY_ERROR" class="member-name-link">TEMPORARY_ERROR</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">Does not deliver messages temporarily due to reasons other than a configuration error.</div>
 </div>
 </div>
@@ -217,6 +222,13 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <h3>TEMPORARY_ERROR</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="SubscriptionHealthStatus.html" title="interface in com.commercetools.api.models.subscription">SubscriptionHealthStatus</a></span>&nbsp;<span class="element-name">TEMPORARY_ERROR</span></div>
 <div class="block"><p>Does not deliver messages temporarily due to reasons other than a configuration error. For example, the Destination has a temporary outage.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="MANUALLY_SUSPENDED">
+<h3>MANUALLY_SUSPENDED</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="SubscriptionHealthStatus.html" title="interface in com.commercetools.api.models.subscription">SubscriptionHealthStatus</a></span>&nbsp;<span class="element-name">MANUALLY_SUSPENDED</span></div>
+<div class="block"><p>Does not deliver messages with the current configuration and the delivery of the messages is no longer attempted. Undelivered messages are not retained and will not be delivered. The <code>status</code> will not automatically change to Healthy. To return your subscriptions to a Healthy status, please contact our support team.</p></div>
 </section>
 </li>
 </ul>

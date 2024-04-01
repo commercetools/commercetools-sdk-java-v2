@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.16.1",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -15,7 +15,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.16.1",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -28,7 +28,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.16.1",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -41,7 +41,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.16.1",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -67,11 +67,15 @@
         },
         {
             "moduleName": "com.graphql-java:graphql-java",
-            "moduleVersion": "19.4",
+            "moduleVersion": "19.11",
             "moduleUrls": [
                 "https://github.com/graphql-java/graphql-java"
             ],
             "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                },
                 {
                     "moduleLicense": "MIT License",
                     "moduleLicenseUrl": "https://opensource.org/licenses/MIT"
@@ -93,7 +97,7 @@
         },
         {
             "moduleName": "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core",
-            "moduleVersion": "6.1.4",
+            "moduleVersion": "6.1.5",
             "moduleUrls": [
                 "https://github.com/Netflix/dgs-codegen"
             ],
@@ -211,6 +215,16 @@
             "moduleUrls": [
                 "http://beanvalidation.org"
             ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "net.bytebuddy:byte-buddy",
+            "moduleVersion": "1.14.9",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",

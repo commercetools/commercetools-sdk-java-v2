@@ -55,6 +55,9 @@ public interface ImportResourceType extends JsonEnum {
     /**
     <p>The Type import resource type.</p> */
     ImportResourceType TYPE = ImportResourceTypeEnum.TYPE;
+    /**
+    <p>The Discount Code import resource type.</p> */
+    ImportResourceType DISCOUNT_CODE = ImportResourceTypeEnum.DISCOUNT_CODE;
 
     /**
      * possible values of ImportResourceType
@@ -123,7 +126,12 @@ public interface ImportResourceType extends JsonEnum {
         /**
          * type
          */
-        TYPE("type");
+        TYPE("type"),
+
+        /**
+         * discount-code
+         */
+        DISCOUNT_CODE("discount-code");
         private final String jsonName;
 
         private ImportResourceTypeEnum(final String jsonName) {

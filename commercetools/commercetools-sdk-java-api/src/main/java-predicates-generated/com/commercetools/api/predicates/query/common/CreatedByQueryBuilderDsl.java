@@ -51,4 +51,13 @@ public class CreatedByQueryBuilderDsl {
             CreatedByQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CreatedByQueryBuilderDsl> attributedTo(
+            Function<com.commercetools.api.predicates.query.common.AttributionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.AttributionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("attributedTo"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.AttributionQueryBuilderDsl.of())),
+            CreatedByQueryBuilderDsl::of);
+    }
+
 }

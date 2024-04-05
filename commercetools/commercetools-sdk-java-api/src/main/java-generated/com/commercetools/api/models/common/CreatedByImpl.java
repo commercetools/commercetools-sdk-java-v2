@@ -32,6 +32,8 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
 
     private com.commercetools.api.models.customer.CustomerReference associate;
 
+    private com.commercetools.api.models.common.Attribution attributedTo;
+
     /**
      * create instance with all properties
      */
@@ -40,12 +42,14 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
             @JsonProperty("externalUserId") final String externalUserId,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer,
             @JsonProperty("anonymousId") final String anonymousId,
-            @JsonProperty("associate") final com.commercetools.api.models.customer.CustomerReference associate) {
+            @JsonProperty("associate") final com.commercetools.api.models.customer.CustomerReference associate,
+            @JsonProperty("attributedTo") final com.commercetools.api.models.common.Attribution attributedTo) {
         this.clientId = clientId;
         this.externalUserId = externalUserId;
         this.customer = customer;
         this.anonymousId = anonymousId;
         this.associate = associate;
+        this.attributedTo = attributedTo;
     }
 
     /**
@@ -94,6 +98,14 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
         return this.associate;
     }
 
+    /**
+     *  <p>Indicates if the resource was created indirectly.</p>
+     */
+
+    public com.commercetools.api.models.common.Attribution getAttributedTo() {
+        return this.attributedTo;
+    }
+
     public void setClientId(final String clientId) {
         this.clientId = clientId;
     }
@@ -114,6 +126,10 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
         this.associate = associate;
     }
 
+    public void setAttributedTo(final com.commercetools.api.models.common.Attribution attributedTo) {
+        this.attributedTo = attributedTo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -129,11 +145,13 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
                 .append(customer, that.customer)
                 .append(anonymousId, that.anonymousId)
                 .append(associate, that.associate)
+                .append(attributedTo, that.attributedTo)
                 .append(clientId, that.clientId)
                 .append(externalUserId, that.externalUserId)
                 .append(customer, that.customer)
                 .append(anonymousId, that.anonymousId)
                 .append(associate, that.associate)
+                .append(attributedTo, that.attributedTo)
                 .isEquals();
     }
 
@@ -144,6 +162,7 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
                 .append(customer)
                 .append(anonymousId)
                 .append(associate)
+                .append(attributedTo)
                 .toHashCode();
     }
 
@@ -154,6 +173,7 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
                 .append("customer", customer)
                 .append("anonymousId", anonymousId)
                 .append("associate", associate)
+                .append("attributedTo", attributedTo)
                 .build();
     }
 

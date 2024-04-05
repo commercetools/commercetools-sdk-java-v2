@@ -38,6 +38,9 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     @Nullable
     private com.commercetools.api.models.customer.CustomerReference associate;
 
+    @Nullable
+    private com.commercetools.api.models.common.Attribution attributedTo;
+
     /**
      *  <p><code>id</code> of the API Client which created the resource.</p>
      * @param clientId value to be set
@@ -143,6 +146,41 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
+     *  <p>Indicates if the resource was created indirectly.</p>
+     * @param builder function to build the attributedTo value
+     * @return Builder
+     */
+
+    public CreatedByBuilder attributedTo(
+            Function<com.commercetools.api.models.common.AttributionBuilder, com.commercetools.api.models.common.AttributionBuilder> builder) {
+        this.attributedTo = builder.apply(com.commercetools.api.models.common.AttributionBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the resource was created indirectly.</p>
+     * @param builder function to build the attributedTo value
+     * @return Builder
+     */
+
+    public CreatedByBuilder withAttributedTo(
+            Function<com.commercetools.api.models.common.AttributionBuilder, com.commercetools.api.models.common.Attribution> builder) {
+        this.attributedTo = builder.apply(com.commercetools.api.models.common.AttributionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the resource was created indirectly.</p>
+     * @param attributedTo value to be set
+     * @return Builder
+     */
+
+    public CreatedByBuilder attributedTo(@Nullable final com.commercetools.api.models.common.Attribution attributedTo) {
+        this.attributedTo = attributedTo;
+        return this;
+    }
+
+    /**
      *  <p><code>id</code> of the API Client which created the resource.</p>
      * @return clientId
      */
@@ -193,11 +231,21 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
+     *  <p>Indicates if the resource was created indirectly.</p>
+     * @return attributedTo
+     */
+
+    @Nullable
+    public com.commercetools.api.models.common.Attribution getAttributedTo() {
+        return this.attributedTo;
+    }
+
+    /**
      * builds CreatedBy with checking for non-null required values
      * @return CreatedBy
      */
     public CreatedBy build() {
-        return new CreatedByImpl(clientId, externalUserId, customer, anonymousId, associate);
+        return new CreatedByImpl(clientId, externalUserId, customer, anonymousId, associate, attributedTo);
     }
 
     /**
@@ -205,7 +253,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
      * @return CreatedBy
      */
     public CreatedBy buildUnchecked() {
-        return new CreatedByImpl(clientId, externalUserId, customer, anonymousId, associate);
+        return new CreatedByImpl(clientId, externalUserId, customer, anonymousId, associate, attributedTo);
     }
 
     /**
@@ -228,6 +276,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
         builder.customer = template.getCustomer();
         builder.anonymousId = template.getAnonymousId();
         builder.associate = template.getAssociate();
+        builder.attributedTo = template.getAttributedTo();
         return builder;
     }
 

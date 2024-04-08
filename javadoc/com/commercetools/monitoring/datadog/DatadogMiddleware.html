@@ -82,6 +82,27 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">DatadogMiddleware</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../io/vrap/rmf/base/client/http/TelemetryMiddleware.html" title="interface in io.vrap.rmf.base.client.http">TelemetryMiddleware</a></span></div>
+<div class="block"><p>The DatadogTelemetry middleware can be used to report outgoing request to commercetools to Datadog.
+ This middleware uses Datadog API to submit telemetry data.
+ It can be registered as TelemetryMiddleware to the <a href="../../../../io/vrap/rmf/base/client/ClientBuilder.html#withTelemetryMiddleware(io.vrap.rmf.base.client.http.TelemetryMiddleware)"><code>ClientBuilder</code></a>
+ or the ApiRootBuilder.</p>
+
+ <div id="example-DatadogApiRootBuilderTest-addDatadogTelemetry--%s" class=code-example><pre><code class='java'>ApiHttpClient client = ApiRootBuilder.of()
+        .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+        .withTelemetryMiddleware(new DatadogMiddleware(new NonBlockingStatsDClientBuilder().build()))
+        .buildClient();
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-monitoring-datadog/src/test/java/example/DatadogApiRootBuilderTest.java" target="_blank">test code</a>.</pre></div>
+
+ The middleware adds the following metrics to Datadog:
+ <ul>
+     <li>commercetools.client.duration: The duration of the request in milliseconds</li>
+     <li>commercetools.client.total_requests: The total number of requests</li>
+     <li>commercetools.client.error_requests: The total number of requests with a status code greater or equal to 400</li>
+ </ul>
+
+ <p>The metrics are enriched with the response status code, server address, port and request method.</p>
+
+ <p>See also the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/tree/main/examples/spring-datadog">Spring MVC example application</a> in the examples folder for further details.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">

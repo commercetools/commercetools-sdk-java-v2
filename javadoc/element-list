@@ -96,6 +96,7 @@ com.commercetools.importapi.models.standalone_prices
 com.commercetools.importapi.models.types
 com.commercetools.money
 com.commercetools.monitoring.datadog
+com.commercetools.monitoring.datadog.statsd
 com.commercetools.monitoring.newrelic
 com.commercetools.monitoring.opentelemetry
 io.sphere.sdk.client

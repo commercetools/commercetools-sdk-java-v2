@@ -141,7 +141,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StandalonePrice.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -149,7 +149,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StandalonePrice.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {

@@ -77,7 +77,7 @@ public interface TaxCategory
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the TaxCategory.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -85,7 +85,7 @@ public interface TaxCategory
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the TaxCategory.</p>
      * @return createdBy
      */
     @Valid
@@ -154,14 +154,14 @@ public interface TaxCategory
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the TaxCategory.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the TaxCategory.</p>
      * @param createdBy value to be set
      */
 

@@ -48,7 +48,7 @@ public interface SearchIndexingConfigurationValues {
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the SearchIndexingConfigurationValues.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -70,7 +70,7 @@ public interface SearchIndexingConfigurationValues {
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the SearchIndexingConfigurationValues.</p>
      * @param lastModifiedBy value to be set
      */
 

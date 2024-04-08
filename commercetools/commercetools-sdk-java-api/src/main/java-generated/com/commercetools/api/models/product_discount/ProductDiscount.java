@@ -83,7 +83,7 @@ public interface ProductDiscount
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ProductDiscount.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -91,7 +91,7 @@ public interface ProductDiscount
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ProductDiscount.</p>
      * @return createdBy
      */
     @Valid
@@ -210,14 +210,14 @@ public interface ProductDiscount
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ProductDiscount.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ProductDiscount.</p>
      * @param createdBy value to be set
      */
 

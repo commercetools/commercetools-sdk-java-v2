@@ -122,7 +122,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Review.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Review.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Review.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -158,7 +158,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Review.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -170,7 +170,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Review.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -182,7 +182,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Review.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -445,7 +445,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Review.</p>
      * @return lastModifiedBy
      */
 
@@ -455,7 +455,7 @@ public class ReviewBuilder implements Builder<Review> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Review.</p>
      * @return createdBy
      */
 

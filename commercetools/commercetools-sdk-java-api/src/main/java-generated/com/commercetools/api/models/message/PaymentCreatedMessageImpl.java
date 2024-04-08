@@ -114,7 +114,7 @@ public class PaymentCreatedMessageImpl implements PaymentCreatedMessage, ModelBa
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -122,7 +122,7 @@ public class PaymentCreatedMessageImpl implements PaymentCreatedMessage, ModelBa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {

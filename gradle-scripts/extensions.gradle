@@ -1,8 +1,8 @@
 ext {
     ctsdkv1 = [
-            client: 'com.commercetools.sdk.jvm.core:commercetools-java-client-core:2.14.0',
-            models: 'com.commercetools.sdk.jvm.core:commercetools-models:2.14.0',
-            convenience: 'com.commercetools.sdk.jvm.core:commercetools-convenience:2.14.0',
+            client: 'com.commercetools.sdk.jvm.core:commercetools-java-client-core:2.16.0',
+            models: 'com.commercetools.sdk.jvm.core:commercetools-models:2.16.0',
+            convenience: 'com.commercetools.sdk.jvm.core:commercetools-convenience:2.16.0',
             version: {
                 strictly '[1.62.0,)'
                 prefer '2.14.0'
@@ -13,9 +13,9 @@ ext {
             version: '4.1.106.Final'
     ]
     commons = [
-            text: 'org.apache.commons:commons-text:1.10.0',
+            text: 'org.apache.commons:commons-text:1.11.0',
             lang3: 'org.apache.commons:commons-lang3:3.14.0',
-            io: 'commons-io:commons-io:2.15.1',
+            io: 'commons-io:commons-io:2.16.0',
             io_version: {
                     strictly '[2.8.0,)'
                     prefer '2.11.0'
@@ -31,10 +31,10 @@ ext {
     ]
 
     jackson_core = [
-            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.16.1',
-            databind: 'com.fasterxml.jackson.core:jackson-databind:2.16.1',
-            core: 'com.fasterxml.jackson.core:jackson-core:2.16.1',
-            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.16.1',
+            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.17.0',
+            databind: 'com.fasterxml.jackson.core:jackson-databind:2.17.0',
+            core: 'com.fasterxml.jackson.core:jackson-core:2.17.0',
+            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.17.0',
     ]
 
     google = [
@@ -43,10 +43,10 @@ ext {
     ]
 
     graphql = [
-            java: 'com.graphql-java:graphql-java:19.4'
+            java: 'com.graphql-java:graphql-java:19.11'
     ]
     awaitility = [
-            awaitility: 'org.awaitility:awaitility:4.2.0',
+            awaitility: 'org.awaitility:awaitility:4.2.1',
     ]
 
     javax = [
@@ -62,7 +62,7 @@ ext {
 
     mockito = [
             inline: 'org.mockito:mockito-inline:5.2.0',
-            junit: 'org.mockito:mockito-junit-jupiter:5.10.0',
+            junit: 'org.mockito:mockito-junit-jupiter:5.11.0',
     ]
 
     failsafe = [

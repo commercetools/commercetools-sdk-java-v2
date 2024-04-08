@@ -290,7 +290,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -303,7 +303,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -315,7 +315,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -609,7 +609,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @return externalTaxRate
      */
 

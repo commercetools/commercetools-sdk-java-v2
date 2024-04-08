@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
-      - uses: gradle/wrapper-validation-action@27152f6fa06a6b8062ef7195c795692e51fc2c81 # v2.0.0
+      - uses: gradle/wrapper-validation-action@b231772637bb498f11fdbc86052b6e8a8dc9fc92 # v2.1.2
 
       - name: Setup Java
         uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 # v4
@@ -55,7 +55,7 @@ jobs:
       # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@86576b355dd19da0519e0bdb63d8edb5bcf76a25 # v1
+        uses: actions/create-github-app-token@78e5f2ddc08efcb88fbbee6cfa3fed770ba550c3 # v1
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
@@ -74,7 +74,7 @@ jobs:
             ref: main
             token: ${{ steps.generate_github_token.outputs.token }}
 
-      - uses: gradle/wrapper-validation-action@27152f6fa06a6b8062ef7195c795692e51fc2c81 # v2.0.0
+      - uses: gradle/wrapper-validation-action@b231772637bb498f11fdbc86052b6e8a8dc9fc92 # v2.1.2
 
       - run: ./gradlew -Pversion=${{ github.ref_name }} writeVersionToExamples writeVersionToReadme setVersion nextMinorVersion snapshotVersion
 
@@ -118,7 +118,7 @@ jobs:
       # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@86576b355dd19da0519e0bdb63d8edb5bcf76a25 # v1
+        uses: actions/create-github-app-token@78e5f2ddc08efcb88fbbee6cfa3fed770ba550c3 # v1
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
@@ -151,7 +151,7 @@ jobs:
           java-version: '17'
 
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9 # v1.2.0
+        uses: ts-graphviz/setup-graphviz@d5b2b6b67007094b256f3fd2fa6cf0ac41ceef25 # v2.0.0
 
       - run: ./gradlew -Pversion=${{ github.ref_name }} alljavadoc
         working-directory: sdk

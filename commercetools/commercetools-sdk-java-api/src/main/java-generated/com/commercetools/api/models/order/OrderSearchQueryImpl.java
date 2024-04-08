@@ -25,7 +25,7 @@ public class OrderSearchQueryImpl implements OrderSearchQuery, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    OrderSearchQueryImpl() {
+    public OrderSearchQueryImpl() {
     }
 
     @Override

@@ -17,8 +17,22 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.http.TelemetryMiddleware;
 
 /**
- * This middleware uses API to submit metrics to datadog.
- * If you are using dogstatsd, use {@link com.commercetools.monitoring.datadog.statsd.DatadogMiddleware} to submit metrics to datadog with statsd.
+ * <p>The DatadogTelemetry middleware can be used to report outgoing request to commercetools to Datadog.
+ * It can be registered as TelemetryMiddleware to the {@link io.vrap.rmf.base.client.ClientBuilder#withTelemetryMiddleware(TelemetryMiddleware) ClientBuilder}
+ * or the ApiRootBuilder.</p>
+ *
+ * {@include.example example.DatadogApiRootBuilderTest#addDatadogTelemetry()}
+ *
+ * The middleware adds the following metrics to Datadog:
+ * <ul>
+ *     <li>commercetools.client.duration: The duration of the request in milliseconds</li>
+ *     <li>commercetools.client.total_requests: The total number of requests</li>
+ *     <li>commercetools.client.error_requests: The total number of requests with a status code greater or equal to 400</li>
+ * </ul>
+ *
+ * <p>The metrics are enriched with the response status code, server address, port and request method.</p>
+ *
+ * <p>See also the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/tree/main/examples/spring-datadog">Spring MVC example application</a> in the examples folder for further details.</p>
  */
 public class DatadogMiddleware implements TelemetryMiddleware {
 

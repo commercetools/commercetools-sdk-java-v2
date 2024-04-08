@@ -1,4 +1,32 @@
 
+# 17.8.0 (2024-04-01)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/592
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/593
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/594
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/597
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/598
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/600
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/602
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/603
+* Replace deprecated retry middleware with policy middleware in docs by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/601
+* Add integration test to get a valid oauth token by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/596
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/605
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/607
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/608
+* chore(deps): update gradle/actions digest to 417ae3c by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/582
+* chore(deps): update yarn to v4 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/510
+* fix(deps): update dependency org.jdrupes.taglets:plantuml-taglet to v3 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/497
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/575
+* chore(deps): update actions/create-github-app-token digest to 78e5f2d by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/574
+* chore(deps): update github/codeql-action digest to 1b1aada by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/581
+* chore(deps): update ts-graphviz/setup-graphviz action to v2 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/576
+* fix(deps): update dependency com.squareup.okio:okio to v3 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/590
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.7.0...17.8.0
+
 # 17.7.0 (2024-02-29)
 
 ## What's Changed

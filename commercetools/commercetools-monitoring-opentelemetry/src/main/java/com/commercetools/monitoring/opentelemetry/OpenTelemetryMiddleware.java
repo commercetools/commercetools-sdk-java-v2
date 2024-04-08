@@ -24,8 +24,16 @@ import io.vrap.rmf.base.client.http.TelemetryMiddleware;
  *
  * {@include.example example.OpenTelemetryApiRootBuilderTest#addOpenTelemetry()}
  *
- * <p>The middleware records a histogram about the request timing in milliseconds. The total number of responses and errors is counted.
+ * The middleware adds the following metrics:
+ *  * <ul>
+ *      <li>commercetools.client.duration: The duration of the request in milliseconds</li>
+ *      <li>commercetools.client.total_requests: The total number of requests</li>
+ *      <li>commercetools.client.error_requests: The total number of requests with a status code greater or equal to 400</li>
+ * *  </ul>
+ *
  * The metrics are enriched with the response status code, server address, port and request method.</p>
+ *
+ * <p>See also the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/tree/main/examples/spring-otel">Spring MVC example application</a> in the examples folder for further details.</p>
  */
 public class OpenTelemetryMiddleware implements TelemetryMiddleware {
     private final LongHistogram histogram;

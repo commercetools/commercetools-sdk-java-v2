@@ -27,7 +27,7 @@ public class QuoteRequestDeletedMessagePayloadImpl implements QuoteRequestDelete
      * create instance with all properties
      */
     @JsonCreator
-    QuoteRequestDeletedMessagePayloadImpl() {
+    public QuoteRequestDeletedMessagePayloadImpl() {
         this.type = QUOTE_REQUEST_DELETED;
     }
 

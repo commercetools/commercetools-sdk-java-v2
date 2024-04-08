@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+ *  <p>IDs and references that created the resource. This is present on resources created after 1 February 2019 except for events not tracked.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -129,7 +129,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -137,7 +137,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ShippingMethod.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {

@@ -25,4 +25,10 @@ public class ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl {
                 ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl> mode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("mode")), p -> new CombinationQueryPredicate<>(p,
+                ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl::of));
+    }
+
 }

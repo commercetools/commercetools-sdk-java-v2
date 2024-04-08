@@ -27,7 +27,7 @@ public class AttributeNumberTypeImpl implements AttributeNumberType, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    AttributeNumberTypeImpl() {
+    public AttributeNumberTypeImpl() {
         this.name = NUMBER;
     }
 

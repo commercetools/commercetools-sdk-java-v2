@@ -27,7 +27,7 @@ public class BusinessUnitDeletedMessagePayloadImpl implements BusinessUnitDelete
      * create instance with all properties
      */
     @JsonCreator
-    BusinessUnitDeletedMessagePayloadImpl() {
+    public BusinessUnitDeletedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_DELETED;
     }
 

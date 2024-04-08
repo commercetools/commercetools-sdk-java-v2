@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+ *  <p>IDs and references that created the resource. This is present on resources created after 1 February 2019 except for events not tracked.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CreatedByImpl implements CreatedBy, ModelBase {

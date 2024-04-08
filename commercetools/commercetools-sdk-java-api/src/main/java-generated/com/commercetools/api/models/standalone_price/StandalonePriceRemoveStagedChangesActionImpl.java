@@ -28,7 +28,7 @@ public class StandalonePriceRemoveStagedChangesActionImpl
      * create instance with all properties
      */
     @JsonCreator
-    StandalonePriceRemoveStagedChangesActionImpl() {
+    public StandalonePriceRemoveStagedChangesActionImpl() {
         this.action = REMOVE_STAGED_CHANGES;
     }
 

@@ -1,4 +1,14 @@
 
+# 17.9.0 (2024-04-08)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/609
+* Make javadoc consistent across monitoring middlewares by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/615
+* Add dogstatsd support by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/599
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.8.0...17.9.0
+
 # 17.8.0 (2024-04-01)
 
 ## What's Changed

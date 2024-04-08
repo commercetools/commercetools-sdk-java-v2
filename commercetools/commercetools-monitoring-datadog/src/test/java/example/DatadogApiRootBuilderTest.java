@@ -12,7 +12,7 @@ import io.vrap.rmf.base.client.ResponseSerializer;
 
 public class DatadogApiRootBuilderTest {
 
-    public void addOpenTelemetry() {
+    public void addDatadogTelemetry() {
         ApiHttpClient client = ApiRootBuilder.of()
                 .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
                 .withTelemetryMiddleware(new DatadogMiddleware(ApiClient.getDefaultApiClient()))

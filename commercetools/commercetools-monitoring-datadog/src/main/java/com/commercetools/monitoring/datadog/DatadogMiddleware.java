@@ -18,6 +18,7 @@ import io.vrap.rmf.base.client.http.TelemetryMiddleware;
 
 /**
  * <p>The DatadogTelemetry middleware can be used to report outgoing request to commercetools to Datadog.
+ * This middleware uses Datadog API to submit telemetry data.
  * It can be registered as TelemetryMiddleware to the {@link io.vrap.rmf.base.client.ClientBuilder#withTelemetryMiddleware(TelemetryMiddleware) ClientBuilder}
  * or the ApiRootBuilder.</p>
  *

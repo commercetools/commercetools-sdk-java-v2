@@ -134,7 +134,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
+     *  <p>Date and time (UTC) the CartDiscount was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -142,7 +142,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
+     *  <p>Date and time (UTC) the CartDiscount was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {

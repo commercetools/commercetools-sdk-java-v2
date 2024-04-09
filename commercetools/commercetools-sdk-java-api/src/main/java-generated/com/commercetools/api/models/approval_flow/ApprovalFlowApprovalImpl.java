@@ -52,7 +52,7 @@ public class ApprovalFlowApprovalImpl implements ApprovalFlowApproval, ModelBase
     }
 
     /**
-     *  <p>Date and time (UTC) when the Approval Flow was approved at.</p>
+     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
      */
 
     public java.time.ZonedDateTime getApprovedAt() {

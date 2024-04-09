@@ -207,7 +207,7 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
     }
 
     /**
-     *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the Custom Line Item State was performed.</p>
      */
 
     public java.time.ZonedDateTime getTransitionDate() {

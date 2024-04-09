@@ -295,7 +295,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the Line Item State was performed.</p>
      * @param transitionDate value to be set
      * @return Builder
      */
@@ -501,7 +501,7 @@ public class LineItemStateTransitionMessageBuilder implements Builder<LineItemSt
     }
 
     /**
-     *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the Line Item State was performed.</p>
      * @return transitionDate
      */
 

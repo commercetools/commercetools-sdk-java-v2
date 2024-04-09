@@ -117,7 +117,7 @@ public class ApiClientImpl implements ApiClient, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) the APIClient was initially created at.</p>
+     *  <p>Date and time (UTC) the APIClient was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {

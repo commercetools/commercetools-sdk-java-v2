@@ -109,7 +109,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
+     *  <p>Date and time (UTC) the CartDiscount was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
+     *  <p>Date and time (UTC) the CartDiscount was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
@@ -637,7 +637,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
+     *  <p>Date and time (UTC) the CartDiscount was initially created.</p>
      * @return createdAt
      */
 
@@ -646,7 +646,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
+     *  <p>Date and time (UTC) the CartDiscount was last updated.</p>
      * @return lastModifiedAt
      */
 

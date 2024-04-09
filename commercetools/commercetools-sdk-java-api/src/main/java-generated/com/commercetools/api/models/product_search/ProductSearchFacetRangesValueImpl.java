@@ -67,7 +67,7 @@ public class ProductSearchFacetRangesValueImpl implements ProductSearchFacetRang
     }
 
     /**
-     *  <p>Name to assign the ranges facet.</p>
+     *  <p>Name of the ranges facet to appear in the ProductSearchFacetResultBucket.</p>
      */
 
     public String getName() {
@@ -99,7 +99,7 @@ public class ProductSearchFacetRangesValueImpl implements ProductSearchFacetRang
     }
 
     /**
-     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     *  <p>The searchable Product field to facet on.</p>
      */
 
     public String getField() {

@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSearchFacetCountValue {
 
     /**
-     *
+     *  <p>Name of the count facet to appear in the ProductSearchFacetResultCount.</p>
      * @return name
      */
     @NotNull
@@ -65,7 +65,7 @@ public interface ProductSearchFacetCountValue {
     public ProductSearchFacetCountLevelEnum getLevel();
 
     /**
-     * set name
+     *  <p>Name of the count facet to appear in the ProductSearchFacetResultCount.</p>
      * @param name value to be set
      */
 

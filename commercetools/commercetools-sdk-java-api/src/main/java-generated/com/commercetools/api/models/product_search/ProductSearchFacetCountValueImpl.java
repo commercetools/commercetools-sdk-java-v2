@@ -51,7 +51,7 @@ public class ProductSearchFacetCountValueImpl implements ProductSearchFacetCount
     }
 
     /**
-     *
+     *  <p>Name of the count facet to appear in the ProductSearchFacetResultCount.</p>
      */
 
     public String getName() {

@@ -20,7 +20,7 @@ public interface ProductSearchFacetScopeEnum extends JsonEnum {
     <p>Count all Products (or Product Variants) without considering the search query.</p> */
     ProductSearchFacetScopeEnum ALL = ProductSearchFacetScopeEnumEnum.ALL;
     /**
-    <p>Only count the Products (or Product Variants) that matches the search query.</p> */
+    <p>Only count the Products (or Product Variants) that match the search query.</p> */
     ProductSearchFacetScopeEnum QUERY = ProductSearchFacetScopeEnumEnum.QUERY;
 
     /**

@@ -122,7 +122,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p><code>key</code> of an existing Store. If the Store has defined some languages, countries, distribution or supply Channels, they are used for projections based on locale, price and inventory. If the Store has defined Product Selections, they have no effect on the results of this query.</p>
+     *  <p><code>key</code> of an existing Store. If the Store has defined some languages, countries, distribution or supply Channels, they are used for projections based on locale, price, and inventory. If the Store has defined Product Selections, they have no effect on the results of this query.</p>
      */
 
     public String getStoreProjection() {

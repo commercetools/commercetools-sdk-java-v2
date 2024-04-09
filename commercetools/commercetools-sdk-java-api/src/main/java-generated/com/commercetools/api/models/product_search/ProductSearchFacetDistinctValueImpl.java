@@ -77,7 +77,7 @@ public class ProductSearchFacetDistinctValueImpl implements ProductSearchFacetDi
     }
 
     /**
-     *  <p>Name of the distinct facet.</p>
+     *  <p>Name of the distinct facet to appear in the ProductSearchFacetResultBucket.</p>
      */
 
     public String getName() {
@@ -109,7 +109,7 @@ public class ProductSearchFacetDistinctValueImpl implements ProductSearchFacetDi
     }
 
     /**
-     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     *  <p>The searchable Product field to facet on.</p>
      */
 
     public String getField() {

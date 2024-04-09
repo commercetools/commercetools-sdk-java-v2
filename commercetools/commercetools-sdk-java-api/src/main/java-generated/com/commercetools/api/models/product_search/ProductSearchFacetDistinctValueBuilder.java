@@ -57,7 +57,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     private String missing;
 
     /**
-     *  <p>Name of the distinct facet.</p>
+     *  <p>Name of the distinct facet to appear in the ProductSearchFacetResultBucket.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     *  <p>The searchable Product field to facet on.</p>
      * @param field value to be set
      * @return Builder
      */
@@ -260,7 +260,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Name of the distinct facet.</p>
+     *  <p>Name of the distinct facet to appear in the ProductSearchFacetResultBucket.</p>
      * @return name
      */
 
@@ -299,7 +299,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     *  <p>The searchable Product field to facet on.</p>
      * @return field
      */
 

@@ -1,3 +1,4 @@
+
 package com.commercetools.monitoring.dynatrace;
 
 import static com.commercetools.monitoring.dynatrace.DynatraceInfo.*;

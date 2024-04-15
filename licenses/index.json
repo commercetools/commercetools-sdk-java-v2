@@ -71,6 +71,19 @@
             ]
         },
         {
+            "moduleName": "com.dynatrace.metric.util:dynatrace-metric-utils-java",
+            "moduleVersion": "2.2.0",
+            "moduleUrls": [
+                "https://github.com/dynatrace-oss/dynatrace-metric-utils-java"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
             "moduleVersion": "2.17.0",
             "moduleUrls": [

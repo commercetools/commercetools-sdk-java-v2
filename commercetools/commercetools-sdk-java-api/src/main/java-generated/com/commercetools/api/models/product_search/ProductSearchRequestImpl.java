@@ -36,6 +36,8 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
 
     private java.util.List<com.commercetools.api.models.product_search.ProductSearchFacetExpression> facets;
 
+    private com.commercetools.api.models.search.SearchQuery postFilter;
+
     /**
      * create instance with all properties
      */
@@ -45,7 +47,8 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
             @JsonProperty("limit") final Integer limit, @JsonProperty("offset") final Integer offset,
             @JsonProperty("markMatchingVariants") final Boolean markMatchingVariants,
             @JsonProperty("productProjectionParameters") final com.commercetools.api.models.product_search.ProductSearchProjectionParams productProjectionParameters,
-            @JsonProperty("facets") final java.util.List<com.commercetools.api.models.product_search.ProductSearchFacetExpression> facets) {
+            @JsonProperty("facets") final java.util.List<com.commercetools.api.models.product_search.ProductSearchFacetExpression> facets,
+            @JsonProperty("postFilter") final com.commercetools.api.models.search.SearchQuery postFilter) {
         this.query = query;
         this.sort = sort;
         this.limit = limit;
@@ -53,6 +56,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
         this.markMatchingVariants = markMatchingVariants;
         this.productProjectionParameters = productProjectionParameters;
         this.facets = facets;
+        this.postFilter = postFilter;
     }
 
     /**
@@ -117,6 +121,14 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
         return this.facets;
     }
 
+    /**
+     *  <p>Specify an additional filter on the result of the <code>query</code> after the API calculated <code>facets</code>. This feature assists you in implementing faceted search.</p>
+     */
+
+    public com.commercetools.api.models.search.SearchQuery getPostFilter() {
+        return this.postFilter;
+    }
+
     public void setQuery(final com.commercetools.api.models.search.SearchQuery query) {
         this.query = query;
     }
@@ -155,6 +167,10 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
         this.facets = facets;
     }
 
+    public void setPostFilter(final com.commercetools.api.models.search.SearchQuery postFilter) {
+        this.postFilter = postFilter;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -172,6 +188,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
                 .append(markMatchingVariants, that.markMatchingVariants)
                 .append(productProjectionParameters, that.productProjectionParameters)
                 .append(facets, that.facets)
+                .append(postFilter, that.postFilter)
                 .append(query, that.query)
                 .append(sort, that.sort)
                 .append(limit, that.limit)
@@ -179,6 +196,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
                 .append(markMatchingVariants, that.markMatchingVariants)
                 .append(productProjectionParameters, that.productProjectionParameters)
                 .append(facets, that.facets)
+                .append(postFilter, that.postFilter)
                 .isEquals();
     }
 
@@ -191,6 +209,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
                 .append(markMatchingVariants)
                 .append(productProjectionParameters)
                 .append(facets)
+                .append(postFilter)
                 .toHashCode();
     }
 
@@ -203,6 +222,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
                 .append("markMatchingVariants", markMatchingVariants)
                 .append("productProjectionParameters", productProjectionParameters)
                 .append("facets", facets)
+                .append("postFilter", postFilter)
                 .build();
     }
 

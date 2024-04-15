@@ -5,6 +5,7 @@
 
 - added property `attributedTo` to type `CreatedBy`
 - added property `attributedTo` to type `LastModifiedBy`
+- added property `postFilter` to type `ProductSearchRequest`
 </details>
 
 

@@ -198,6 +198,7 @@ def documentationProjects= [
         ":commercetools:commercetools-http-client",
         ":commercetools:commercetools-javanet-client",
         ":commercetools:commercetools-money",
+        ":commercetools:commercetools-monitoring-dynatrace",
         ":commercetools:commercetools-monitoring-newrelic",
         ":commercetools:commercetools-monitoring-opentelemetry",
         ":commercetools:commercetools-monitoring-datadog",

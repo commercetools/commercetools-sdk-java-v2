@@ -4,8 +4,6 @@ package com.commercetools.api.models.cart_discount;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartDiscountSetStoresAction cartDiscountSetStoresAction = CartDiscountSetStoresAction.builder()
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -23,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountSetStoresAction> {
 
-    @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
     /**
@@ -38,7 +36,7 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
      */
 
     public CartDiscountSetStoresActionBuilder stores(
-            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+            final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
         return this;
     }
@@ -55,7 +53,7 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
      */
 
     public CartDiscountSetStoresActionBuilder stores(
-            @Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+            final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.stores = stores;
         return this;
     }
@@ -72,7 +70,7 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
      */
 
     public CartDiscountSetStoresActionBuilder plusStores(
-            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+            final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
@@ -160,7 +158,6 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
      * @return stores
      */
 
-    @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
         return this.stores;
     }
@@ -170,6 +167,7 @@ public class CartDiscountSetStoresActionBuilder implements Builder<CartDiscountS
      * @return CartDiscountSetStoresAction
      */
     public CartDiscountSetStoresAction build() {
+        Objects.requireNonNull(stores, CartDiscountSetStoresAction.class + ": stores is missing");
         return new CartDiscountSetStoresActionImpl(stores);
     }
 

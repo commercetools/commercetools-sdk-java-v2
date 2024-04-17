@@ -1,0 +1,28 @@
+{
+    "facets": [
+        {
+            "name": "variants.attributes.result"
+        },
+        {
+            "name": "variants.attributes.bucket",
+            "buckets": [
+                {
+                    "key": "red",
+                    "count": 33
+                },
+                {
+                    "key": "blue",
+                    "count": 165
+                },
+                {
+                    "key": "green",
+                    "count": 82
+                }
+            ]
+        },
+        {
+            "name": "variants.attributes.count",
+            "value": 123
+        }
+    ]
+}

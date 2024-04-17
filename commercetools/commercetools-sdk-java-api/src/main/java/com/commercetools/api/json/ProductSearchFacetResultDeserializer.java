@@ -4,7 +4,10 @@ package com.commercetools.api.json;
 import java.io.IOException;
 import java.util.List;
 
-import com.commercetools.api.models.product_search.*;
+import com.commercetools.api.models.product_search.ProductSearchFacetResult;
+import com.commercetools.api.models.product_search.ProductSearchFacetResultBucket;
+import com.commercetools.api.models.product_search.ProductSearchFacetResultBucketEntry;
+import com.commercetools.api.models.product_search.ProductSearchFacetResultCount;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationContext;

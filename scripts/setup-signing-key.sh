@@ -14,16 +14,16 @@ echo "Decrypt signing secrets"
 gcloud kms decrypt \
   --project=commercetools-platform \
   --location=global \
-  --keyring=teamcity \
-  --key=jvm-sdk \
+  --keyring=devtooling \
+  --key=java-sdk-v2 \
   --ciphertext-file=signing_key.enc \
   --plaintext-file=signing_key.asc
 
 gcloud kms decrypt \
   --project=commercetools-platform \
   --location=global \
-  --keyring=teamcity \
-  --key=jvm-sdk \
+  --keyring=devtooling \
+  --key=java-sdk-v2 \
   --ciphertext-file=signing_passphrase.enc \
   --plaintext-file=signing_passphrase.txt
 
@@ -31,12 +31,13 @@ gcloud kms decrypt \
 set +e
 echo "Importing the signing key"
 gpg --import --no-tty --batch --yes signing_key.asc
+echo " - done"
 set -e
 
 # List available GPG keys
 gpg -K
 
-KEYNAME=`gpg --with-colons --keyid-format long --list-keys automation@commercetools.de | grep fpr | cut -d ':' -f 10`
+KEYNAME=`gpg --with-colons --keyid-format long --list-keys devtooling@commercetools.com | grep fpr | cut -d ':' -f 10`
 
 mkdir -p ~/.gradle
 touch ~/.gradle/gradle.properties

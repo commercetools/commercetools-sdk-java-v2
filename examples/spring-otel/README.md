@@ -23,6 +23,7 @@ NewRelic and Dynatrace as exporter target.
 2. Navigate to the path `spring-otel/`.
 3. Register the client credentials in environment variables:
    `CTP_CLIENT_ID`, `CTP_CLIENT_SECRET` and `CTP_PROJECT_KEY`
+4. If you are collecting data for Dynatrace, set the environment variable `OTEL_PROVIDER=DYNATRACE`. This will ensure that no histogram data are exported as histogram is not supported in Dynatrace using opentelemetry.
 
 ## Using the Spring MVC Example app
 

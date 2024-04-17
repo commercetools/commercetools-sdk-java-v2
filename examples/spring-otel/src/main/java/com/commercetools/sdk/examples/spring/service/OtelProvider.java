@@ -1,4 +1,4 @@
-package com.commercetools.sdk.examples.springmvc.service;
+package com.commercetools.sdk.examples.spring.service;
 
 public enum OtelProvider {
     LOCAL(true, true),

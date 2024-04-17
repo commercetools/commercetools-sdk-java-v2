@@ -10,7 +10,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.JsonNodeType;
 
 public class ProductSearchFacetResultDeserializer extends JsonDeserializer<ProductSearchFacetResult> {
 
@@ -35,21 +34,5 @@ public class ProductSearchFacetResultDeserializer extends JsonDeserializer<Produ
                     .build();
         }
         return ProductSearchFacetResult.builder().name(node.get("name").asText()).build();
-    }
-
-    private TypeReference<? extends ProductSearchFacetResult> typeRef(JsonNode valueNode) {
-        JsonNodeType valueNodeType = valueNode.getNodeType();
-        if (valueNodeType == JsonNodeType.OBJECT) {
-            if (valueNode.has("buckets")) {
-                return new TypeReference<ProductSearchFacetResultBucket>() {
-                };
-            }
-            if (valueNode.has("value")) {
-                return new TypeReference<ProductSearchFacetResultCount>() {
-                };
-            }
-        }
-        return new TypeReference<ProductSearchFacetResult>() {
-        };
     }
 }

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * ProductSearchFacetResultBucket
+ *  <p>Result of a distinct facet or a ranges facet.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSearchFacetResultBucketImpl implements ProductSearchFacetResultBucket, ModelBase {

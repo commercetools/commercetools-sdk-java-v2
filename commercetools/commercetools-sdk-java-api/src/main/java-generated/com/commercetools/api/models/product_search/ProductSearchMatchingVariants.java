@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSearchMatchingVariants {
 
     /**
-     *  <p>Whether the search criteria definitely matches for all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
+     *  <p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
      * @return allMatched
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface ProductSearchMatchingVariants {
     public List<ProductSearchMatchingVariantEntry> getMatchedVariants();
 
     /**
-     *  <p>Whether the search criteria definitely matches for all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
+     *  <p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
      * @param allMatched value to be set
      */
 

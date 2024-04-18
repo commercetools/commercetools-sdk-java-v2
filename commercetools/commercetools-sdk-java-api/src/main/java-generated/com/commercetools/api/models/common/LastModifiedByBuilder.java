@@ -38,6 +38,9 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     @Nullable
     private com.commercetools.api.models.customer.CustomerReference associate;
 
+    @Nullable
+    private com.commercetools.api.models.common.Attribution attributedTo;
+
     /**
      *  <p><code>id</code> of the API Client which modified the resource.</p>
      * @param clientId value to be set
@@ -144,6 +147,42 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
+     *  <p>Indicates if the resource was modified indirectly.</p>
+     * @param builder function to build the attributedTo value
+     * @return Builder
+     */
+
+    public LastModifiedByBuilder attributedTo(
+            Function<com.commercetools.api.models.common.AttributionBuilder, com.commercetools.api.models.common.AttributionBuilder> builder) {
+        this.attributedTo = builder.apply(com.commercetools.api.models.common.AttributionBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the resource was modified indirectly.</p>
+     * @param builder function to build the attributedTo value
+     * @return Builder
+     */
+
+    public LastModifiedByBuilder withAttributedTo(
+            Function<com.commercetools.api.models.common.AttributionBuilder, com.commercetools.api.models.common.Attribution> builder) {
+        this.attributedTo = builder.apply(com.commercetools.api.models.common.AttributionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if the resource was modified indirectly.</p>
+     * @param attributedTo value to be set
+     * @return Builder
+     */
+
+    public LastModifiedByBuilder attributedTo(
+            @Nullable final com.commercetools.api.models.common.Attribution attributedTo) {
+        this.attributedTo = attributedTo;
+        return this;
+    }
+
+    /**
      *  <p><code>id</code> of the API Client which modified the resource.</p>
      * @return clientId
      */
@@ -194,11 +233,21 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
     }
 
     /**
+     *  <p>Indicates if the resource was modified indirectly.</p>
+     * @return attributedTo
+     */
+
+    @Nullable
+    public com.commercetools.api.models.common.Attribution getAttributedTo() {
+        return this.attributedTo;
+    }
+
+    /**
      * builds LastModifiedBy with checking for non-null required values
      * @return LastModifiedBy
      */
     public LastModifiedBy build() {
-        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId, associate);
+        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId, associate, attributedTo);
     }
 
     /**
@@ -206,7 +255,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
      * @return LastModifiedBy
      */
     public LastModifiedBy buildUnchecked() {
-        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId, associate);
+        return new LastModifiedByImpl(clientId, externalUserId, customer, anonymousId, associate, attributedTo);
     }
 
     /**
@@ -229,6 +278,7 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
         builder.customer = template.getCustomer();
         builder.anonymousId = template.getAnonymousId();
         builder.associate = template.getAssociate();
+        builder.attributedTo = template.getAttributedTo();
         return builder;
     }
 

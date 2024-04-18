@@ -89,6 +89,14 @@ public interface ProductSearchRequest {
     public List<ProductSearchFacetExpression> getFacets();
 
     /**
+     *  <p>Specify an additional filter on the result of the <code>query</code> after the API calculated <code>facets</code>. This feature assists you in implementing faceted search.</p>
+     * @return postFilter
+     */
+    @Valid
+    @JsonProperty("postFilter")
+    public SearchQuery getPostFilter();
+
+    /**
      *  <p>The search query against searchable Product fields.</p>
      * @param query value to be set
      */
@@ -154,6 +162,13 @@ public interface ProductSearchRequest {
     public void setFacets(final List<ProductSearchFacetExpression> facets);
 
     /**
+     *  <p>Specify an additional filter on the result of the <code>query</code> after the API calculated <code>facets</code>. This feature assists you in implementing faceted search.</p>
+     * @param postFilter value to be set
+     */
+
+    public void setPostFilter(final SearchQuery postFilter);
+
+    /**
      * factory method
      * @return instance of ProductSearchRequest
      */
@@ -175,6 +190,7 @@ public interface ProductSearchRequest {
         instance.setMarkMatchingVariants(template.getMarkMatchingVariants());
         instance.setProductProjectionParameters(template.getProductProjectionParameters());
         instance.setFacets(template.getFacets());
+        instance.setPostFilter(template.getPostFilter());
         return instance;
     }
 
@@ -206,6 +222,7 @@ public interface ProductSearchRequest {
                         .map(com.commercetools.api.models.product_search.ProductSearchFacetExpression::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setPostFilter(com.commercetools.api.models.search.SearchQuery.deepCopy(template.getPostFilter()));
         return instance;
     }
 

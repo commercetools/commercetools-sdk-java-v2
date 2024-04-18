@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Gets the current or staged representation of a Product by its ID in the specified Store. If the Store has defined some languages, countries, distribution, supply Channels, and/or Product Selection, they are used for projections based on locale, price and inventory.</p>
+ *  <p>Gets the current or staged representation of a Product by its ID in the specified Store. If the Store has defined some languages, countries, distribution, supply Channels, and/or Product Selection, they are used for projections based on locale, price, and inventory.</p>
  *  <p>If ProductSelection is used, it affects the availability of the Product in the specified Store.</p>
  *  <p>When used with an API Client that has the <code>view_published_products:{projectKey}</code> scope, this endpoint only returns published (current) Product Projections.</p>
  *

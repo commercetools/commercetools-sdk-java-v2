@@ -375,7 +375,7 @@ public class CustomerImpl implements Customer, ModelBase {
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      */

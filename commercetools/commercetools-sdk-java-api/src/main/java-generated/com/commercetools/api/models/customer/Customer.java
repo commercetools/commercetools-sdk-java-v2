@@ -39,6 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .email("{email}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
  *             .isEmailVerified(true)
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .authenticationMode(AuthenticationMode.PASSWORD)
  *             .build()
  * </code></pre>
@@ -280,11 +281,12 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @return stores
      */
+    @NotNull
     @Valid
     @JsonProperty("stores")
     public List<StoreKeyReference> getStores();
@@ -521,7 +523,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @param stores values to be set
@@ -533,7 +535,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @param stores values to be set

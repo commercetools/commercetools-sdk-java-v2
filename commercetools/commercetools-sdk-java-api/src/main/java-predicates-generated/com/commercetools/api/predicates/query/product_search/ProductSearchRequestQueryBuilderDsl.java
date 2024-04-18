@@ -78,4 +78,13 @@ public class ProductSearchRequestQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductSearchRequestQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ProductSearchRequestQueryBuilderDsl> postFilter(
+            Function<com.commercetools.api.predicates.query.search.SearchQueryQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchQueryQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("postFilter"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.search.SearchQueryQueryBuilderDsl.of())),
+            ProductSearchRequestQueryBuilderDsl::of);
+    }
+
 }

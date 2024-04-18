@@ -37,7 +37,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSearchFacetRangesValue {
 
     /**
-     *  <p>Name to assign the ranges facet.</p>
+     *  <p>Name of the ranges facet to appear in the ProductSearchFacetResultBucket.</p>
      * @return name
      */
     @NotNull
@@ -69,7 +69,7 @@ public interface ProductSearchFacetRangesValue {
     public ProductSearchFacetCountLevelEnum getLevel();
 
     /**
-     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     *  <p>The searchable Product field to facet on.</p>
      * @return field
      */
     @NotNull
@@ -102,7 +102,7 @@ public interface ProductSearchFacetRangesValue {
     public SearchFieldType getFieldType();
 
     /**
-     *  <p>Name to assign the ranges facet.</p>
+     *  <p>Name of the ranges facet to appear in the ProductSearchFacetResultBucket.</p>
      * @param name value to be set
      */
 
@@ -130,7 +130,7 @@ public interface ProductSearchFacetRangesValue {
     public void setLevel(final ProductSearchFacetCountLevelEnum level);
 
     /**
-     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     *  <p>The searchable Product field to facet on.</p>
      * @param field value to be set
      */
 

@@ -33,7 +33,7 @@ public class ProductSearchErrorResponseBuilder implements Builder<ProductSearchE
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
     /**
-     *  <p>The http status code of the response.</p>
+     *  <p>The HTTP status code of the response.</p>
      * @param statusCode value to be set
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class ProductSearchErrorResponseBuilder implements Builder<ProductSearchE
     }
 
     /**
-     *  <p>The http status code of the response.</p>
+     *  <p>The HTTP status code of the response.</p>
      * @return statusCode
      */
 

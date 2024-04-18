@@ -63,23 +63,18 @@ public class ByProjectKeyProductsSearchTest {
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .products()
-                        .search()
-                        .post(com.commercetools.api.models.product_search.ProductSearchRequest.of())
-                        .createHttpRequest(), "post", "test_projectKey/products/search", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").products().search().head().createHttpRequest(),
-                        "head", "test_projectKey/products/search", } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .products()
+                .search()
+                .post(com.commercetools.api.models.product_search.ProductSearchRequest.of())
+                .createHttpRequest(), "post", "test_projectKey/products/search", } };
     }
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .products()
-                        .search()
-                        .post(com.commercetools.api.models.product_search.ProductSearchRequest.of()), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").products().search().head(), } };
+        return new Object[][] { new Object[] { apiRoot.withProjectKey("test_projectKey")
+                .products()
+                .search()
+                .post(com.commercetools.api.models.product_search.ProductSearchRequest.of()), } };
     }
 }

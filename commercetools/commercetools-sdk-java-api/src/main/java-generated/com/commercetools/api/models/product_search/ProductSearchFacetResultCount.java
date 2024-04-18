@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSearchFacetResultCount
+ *  <p>Result of a count facet.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

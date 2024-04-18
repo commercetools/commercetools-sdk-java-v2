@@ -31,8 +31,4 @@ public class ByProjectKeyProductsSearchRequestBuilder {
         return post(op.apply(com.commercetools.api.models.product_search.ProductSearchRequestBuilder.of()).build());
     }
 
-    public ByProjectKeyProductsSearchHead head() {
-        return new ByProjectKeyProductsSearchHead(apiHttpClient, projectKey);
-    }
-
 }

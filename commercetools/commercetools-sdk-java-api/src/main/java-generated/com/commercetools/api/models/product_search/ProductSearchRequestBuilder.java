@@ -44,6 +44,9 @@ public class ProductSearchRequestBuilder implements Builder<ProductSearchRequest
     @Nullable
     private java.util.List<com.commercetools.api.models.product_search.ProductSearchFacetExpression> facets;
 
+    @Nullable
+    private com.commercetools.api.models.search.SearchQuery postFilter;
+
     /**
      *  <p>The search query against searchable Product fields.</p>
      * @param builder function to build the query value
@@ -335,6 +338,42 @@ public class ProductSearchRequestBuilder implements Builder<ProductSearchRequest
     }
 
     /**
+     *  <p>Specify an additional filter on the result of the <code>query</code> after the API calculated <code>facets</code>. This feature assists you in implementing faceted search.</p>
+     * @param builder function to build the postFilter value
+     * @return Builder
+     */
+
+    public ProductSearchRequestBuilder postFilter(
+            Function<com.commercetools.api.models.search.SearchQueryBuilder, com.commercetools.api.models.search.SearchQueryBuilder> builder) {
+        this.postFilter = builder.apply(com.commercetools.api.models.search.SearchQueryBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Specify an additional filter on the result of the <code>query</code> after the API calculated <code>facets</code>. This feature assists you in implementing faceted search.</p>
+     * @param builder function to build the postFilter value
+     * @return Builder
+     */
+
+    public ProductSearchRequestBuilder withPostFilter(
+            Function<com.commercetools.api.models.search.SearchQueryBuilder, com.commercetools.api.models.search.SearchQuery> builder) {
+        this.postFilter = builder.apply(com.commercetools.api.models.search.SearchQueryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Specify an additional filter on the result of the <code>query</code> after the API calculated <code>facets</code>. This feature assists you in implementing faceted search.</p>
+     * @param postFilter value to be set
+     * @return Builder
+     */
+
+    public ProductSearchRequestBuilder postFilter(
+            @Nullable final com.commercetools.api.models.search.SearchQuery postFilter) {
+        this.postFilter = postFilter;
+        return this;
+    }
+
+    /**
      *  <p>The search query against searchable Product fields.</p>
      * @return query
      */
@@ -405,12 +444,22 @@ public class ProductSearchRequestBuilder implements Builder<ProductSearchRequest
     }
 
     /**
+     *  <p>Specify an additional filter on the result of the <code>query</code> after the API calculated <code>facets</code>. This feature assists you in implementing faceted search.</p>
+     * @return postFilter
+     */
+
+    @Nullable
+    public com.commercetools.api.models.search.SearchQuery getPostFilter() {
+        return this.postFilter;
+    }
+
+    /**
      * builds ProductSearchRequest with checking for non-null required values
      * @return ProductSearchRequest
      */
     public ProductSearchRequest build() {
         return new ProductSearchRequestImpl(query, sort, limit, offset, markMatchingVariants,
-            productProjectionParameters, facets);
+            productProjectionParameters, facets, postFilter);
     }
 
     /**
@@ -419,7 +468,7 @@ public class ProductSearchRequestBuilder implements Builder<ProductSearchRequest
      */
     public ProductSearchRequest buildUnchecked() {
         return new ProductSearchRequestImpl(query, sort, limit, offset, markMatchingVariants,
-            productProjectionParameters, facets);
+            productProjectionParameters, facets, postFilter);
     }
 
     /**
@@ -444,6 +493,7 @@ public class ProductSearchRequestBuilder implements Builder<ProductSearchRequest
         builder.markMatchingVariants = template.getMarkMatchingVariants();
         builder.productProjectionParameters = template.getProductProjectionParameters();
         builder.facets = template.getFacets();
+        builder.postFilter = template.getPostFilter();
         return builder;
     }
 

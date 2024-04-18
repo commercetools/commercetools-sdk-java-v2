@@ -108,6 +108,11 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyDiscountCodesRequestBuilder discountCodes() {
+        return with().discountCodes();
+    }
+
+    @Override
     public void close() {
         if (apiHttpClient == null) {
             return;

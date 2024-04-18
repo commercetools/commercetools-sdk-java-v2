@@ -129,6 +129,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the Product.</p>
+     *  <p>To update a Product using the Import API, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      */
 
     public String getKey() {

@@ -39,7 +39,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
     /**
-     *  <p>The http status code of the response.</p>
+     *  <p>The HTTP status code of the response.</p>
      * @param statusCode value to be set
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
-     *  <p>The http status code of the response.</p>
+     *  <p>The HTTP status code of the response.</p>
      * @return statusCode
      */
 

@@ -28,7 +28,7 @@ public class ProductSearchMatchingVariantsBuilder implements Builder<ProductSear
     private java.util.List<com.commercetools.api.models.product_search.ProductSearchMatchingVariantEntry> matchedVariants;
 
     /**
-     *  <p>Whether the search criteria definitely matches for all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
+     *  <p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
      * @param allMatched value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class ProductSearchMatchingVariantsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Whether the search criteria definitely matches for all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
+     *  <p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
      * @return allMatched
      */
 

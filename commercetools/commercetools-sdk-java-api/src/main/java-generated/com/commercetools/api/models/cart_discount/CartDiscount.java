@@ -73,7 +73,7 @@ public interface CartDiscount
     public Long getVersion();
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
+     *  <p>Date and time (UTC) the CartDiscount was initially created.</p>
      * @return createdAt
      */
     @NotNull
@@ -81,7 +81,7 @@ public interface CartDiscount
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
+     *  <p>Date and time (UTC) the CartDiscount was last updated.</p>
      * @return lastModifiedAt
      */
     @NotNull
@@ -247,14 +247,14 @@ public interface CartDiscount
     public void setVersion(final Long version);
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
+     *  <p>Date and time (UTC) the CartDiscount was initially created.</p>
      * @param createdAt value to be set
      */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
+     *  <p>Date and time (UTC) the CartDiscount was last updated.</p>
      * @param lastModifiedAt value to be set
      */
 

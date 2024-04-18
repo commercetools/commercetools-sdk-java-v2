@@ -35,7 +35,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductSearchFacetDistinctValue {
 
     /**
-     *  <p>Name of the distinct facet.</p>
+     *  <p>Name of the distinct facet to appear in the ProductSearchFacetResultBucket.</p>
      * @return name
      */
     @NotNull
@@ -67,7 +67,7 @@ public interface ProductSearchFacetDistinctValue {
     public ProductSearchFacetCountLevelEnum getLevel();
 
     /**
-     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     *  <p>The searchable Product field to facet on.</p>
      * @return field
      */
     @NotNull
@@ -123,7 +123,7 @@ public interface ProductSearchFacetDistinctValue {
     public String getMissing();
 
     /**
-     *  <p>Name of the distinct facet.</p>
+     *  <p>Name of the distinct facet to appear in the ProductSearchFacetResultBucket.</p>
      * @param name value to be set
      */
 
@@ -151,7 +151,7 @@ public interface ProductSearchFacetDistinctValue {
     public void setLevel(final ProductSearchFacetCountLevelEnum level);
 
     /**
-     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     *  <p>The searchable Product field to facet on.</p>
      * @param field value to be set
      */
 

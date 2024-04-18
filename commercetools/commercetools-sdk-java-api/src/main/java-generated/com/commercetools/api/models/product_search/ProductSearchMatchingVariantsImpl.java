@@ -43,7 +43,7 @@ public class ProductSearchMatchingVariantsImpl implements ProductSearchMatchingV
     }
 
     /**
-     *  <p>Whether the search criteria definitely matches for all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
+     *  <p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
      */
 
     public Boolean getAllMatched() {

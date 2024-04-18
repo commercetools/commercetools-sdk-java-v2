@@ -39,7 +39,9 @@ public class ProductSearchRequestTest {
                             new com.commercetools.api.models.product_search.ProductSearchProjectionParamsImpl()) },
                 new Object[] { ProductSearchRequest.builder()
                         .facets(Collections.singletonList(
-                            new com.commercetools.api.models.product_search.ProductSearchFacetExpressionImpl())) } };
+                            new com.commercetools.api.models.product_search.ProductSearchFacetExpressionImpl())) },
+                new Object[] { ProductSearchRequest.builder()
+                        .postFilter(new com.commercetools.api.models.search.SearchQueryImpl()) } };
     }
 
     @Test
@@ -95,5 +97,13 @@ public class ProductSearchRequestTest {
         Assertions.assertThat(value.getFacets())
                 .isEqualTo(Collections.singletonList(
                     new com.commercetools.api.models.product_search.ProductSearchFacetExpressionImpl()));
+    }
+
+    @Test
+    public void postFilter() {
+        ProductSearchRequest value = ProductSearchRequest.of();
+        value.setPostFilter(new com.commercetools.api.models.search.SearchQueryImpl());
+        Assertions.assertThat(value.getPostFilter())
+                .isEqualTo(new com.commercetools.api.models.search.SearchQueryImpl());
     }
 }

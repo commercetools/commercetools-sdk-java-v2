@@ -48,7 +48,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     private com.commercetools.api.models.search.SearchFieldType fieldType;
 
     /**
-     *  <p>Name to assign the ranges facet.</p>
+     *  <p>Name of the ranges facet to appear in the ProductSearchFacetResultBucket.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     *  <p>The searchable Product field to facet on.</p>
      * @param field value to be set
      * @return Builder
      */
@@ -248,7 +248,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>Name to assign the ranges facet.</p>
+     *  <p>Name of the ranges facet to appear in the ProductSearchFacetResultBucket.</p>
      * @return name
      */
 
@@ -287,7 +287,7 @@ public class ProductSearchFacetRangesValueBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The field to facet on. Can be any searchable field on the Product.</p>
+     *  <p>The searchable Product field to facet on.</p>
      * @return field
      */
 

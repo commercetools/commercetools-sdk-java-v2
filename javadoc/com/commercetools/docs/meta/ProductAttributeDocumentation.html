@@ -542,7 +542,7 @@ assertThatThrownBy(() -&gt; CommercetoolsTestUtils.getProjectApiRoot()
                 .name(LAUNDRY_SYMBOLS_ATTR_NAME)
                 .value("cold")))
         .executeBlocking()).isInstanceOf(ErrorResponseException.class)
-                .matches(e -&gt; ((ErrorResponseException) e).hasErrorCode(InvalidFieldError.INVALID_FIELD));
+        .matches(e -&gt; ((ErrorResponseException) e).hasErrorCode(InvalidFieldError.INVALID_FIELD));
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-sdk-java-api/src/integrationTest/java/commercetools/product_type/ProductTypeCreationDemoIntegrationTest.java" target="_blank">test code</a>.</pre></div>
 
  <h3 id="attributes-in-order-import">Create attributes for importing orders</h3>

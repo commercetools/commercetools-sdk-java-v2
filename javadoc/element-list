@@ -79,6 +79,7 @@ com.commercetools.importapi.models.categories
 com.commercetools.importapi.models.common
 com.commercetools.importapi.models.customers
 com.commercetools.importapi.models.customfields
+com.commercetools.importapi.models.discount_codes
 com.commercetools.importapi.models.errors
 com.commercetools.importapi.models.importcontainers
 com.commercetools.importapi.models.importoperations

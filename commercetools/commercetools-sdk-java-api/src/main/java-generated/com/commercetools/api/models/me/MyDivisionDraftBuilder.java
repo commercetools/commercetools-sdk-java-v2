@@ -34,7 +34,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
     private String contactEmail;
 
     @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @Nullable
     private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
@@ -93,8 +93,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
      */
 
     public MyDivisionDraftBuilder custom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
         return this;
     }
 
@@ -105,8 +105,8 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
      */
 
     public MyDivisionDraftBuilder withCustom(
-            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
-        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 
@@ -116,7 +116,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
      * @return Builder
      */
 
-    public MyDivisionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+    public MyDivisionDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
@@ -377,7 +377,7 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
      */
 
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 

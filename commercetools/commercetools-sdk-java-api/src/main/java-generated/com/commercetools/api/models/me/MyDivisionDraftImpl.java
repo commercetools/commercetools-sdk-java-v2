@@ -31,7 +31,7 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
 
     private String contactEmail;
 
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
 
@@ -51,7 +51,7 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
     @JsonCreator
     MyDivisionDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name,
             @JsonProperty("contactEmail") final String contactEmail,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
             @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses,
             @JsonProperty("defaultShippingAddress") final Integer defaultShippingAddress,
@@ -114,7 +114,7 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
      *  <p>Custom Fields for the Business Unit.</p>
      */
 
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
@@ -178,7 +178,7 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
         this.contactEmail = contactEmail;
     }
 
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
 

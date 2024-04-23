@@ -15,6 +15,8 @@ public enum ServiceRegion implements ServiceRegionConfig {
         "https://auth.eu-central-1.aws.commercetools.com")),
     GCP_AUSTRALIA_SOUTHEAST1(new RegionHosts("https://api.australia-southeast1.gcp.commercetools.com/",
         "https://auth.australia-southeast1.gcp.commercetools.com")),
+    AWS_CN_NORTHWEST_1(new RegionHosts("https://api.cn-northwest-1.aws.commercetools.cn/",
+        "https://auth.cn-northwest-1.aws.commercetools.cn/")),
 
     ;
 

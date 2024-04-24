@@ -42,8 +42,12 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     @Nullable
     private java.util.List<com.commercetools.importapi.models.common.Asset> assets;
 
+    @Deprecated
     @Nullable
     private Boolean publish;
+
+    @Nullable
+    private Boolean staged;
 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
@@ -332,9 +336,23 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
      * @param publish value to be set
      * @return Builder
      */
-
+    @Deprecated
     public ProductVariantImportBuilder publish(@Nullable final Boolean publish) {
         this.publish = publish;
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
+     *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
+     *  </ul>
+     * @param staged value to be set
+     * @return Builder
+     */
+
+    public ProductVariantImportBuilder staged(@Nullable final Boolean staged) {
+        this.staged = staged;
         return this;
     }
 
@@ -436,10 +454,23 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
      * @return publish
      */
-
+    @Deprecated
     @Nullable
     public Boolean getPublish() {
         return this.publish;
+    }
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
+     *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
+     *  </ul>
+     * @return staged
+     */
+
+    @Nullable
+    public Boolean getStaged() {
+        return this.staged;
     }
 
     /**
@@ -459,7 +490,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
         Objects.requireNonNull(key, ProductVariantImport.class + ": key is missing");
         Objects.requireNonNull(isMasterVariant, ProductVariantImport.class + ": isMasterVariant is missing");
         Objects.requireNonNull(product, ProductVariantImport.class + ": product is missing");
-        return new ProductVariantImportImpl(key, sku, isMasterVariant, attributes, images, assets, publish, product);
+        return new ProductVariantImportImpl(key, sku, isMasterVariant, attributes, images, assets, publish, staged,
+            product);
     }
 
     /**
@@ -467,7 +499,8 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
      * @return ProductVariantImport
      */
     public ProductVariantImport buildUnchecked() {
-        return new ProductVariantImportImpl(key, sku, isMasterVariant, attributes, images, assets, publish, product);
+        return new ProductVariantImportImpl(key, sku, isMasterVariant, attributes, images, assets, publish, staged,
+            product);
     }
 
     /**
@@ -492,6 +525,7 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
         builder.images = template.getImages();
         builder.assets = template.getAssets();
         builder.publish = template.getPublish();
+        builder.staged = template.getStaged();
         builder.product = template.getProduct();
         return builder;
     }

@@ -90,9 +90,20 @@ public interface ProductVariantImport extends ImportResource {
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
      * @return publish
      */
-
+    @Deprecated
     @JsonProperty("publish")
     public Boolean getPublish();
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
+     *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
+     *  </ul>
+     * @return staged
+     */
+
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
     /**
      *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
@@ -173,8 +184,18 @@ public interface ProductVariantImport extends ImportResource {
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
      * @param publish value to be set
      */
-
+    @Deprecated
     public void setPublish(final Boolean publish);
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
+     *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
+     *  </ul>
+     * @param staged value to be set
+     */
+
+    public void setStaged(final Boolean staged);
 
     /**
      *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
@@ -205,6 +226,7 @@ public interface ProductVariantImport extends ImportResource {
         instance.setImages(template.getImages());
         instance.setAssets(template.getAssets());
         instance.setPublish(template.getPublish());
+        instance.setStaged(template.getStaged());
         instance.setProduct(template.getProduct());
         return instance;
     }
@@ -239,6 +261,7 @@ public interface ProductVariantImport extends ImportResource {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setPublish(template.getPublish());
+        instance.setStaged(template.getStaged());
         instance.setProduct(
             com.commercetools.importapi.models.common.ProductKeyReference.deepCopy(template.getProduct()));
         return instance;

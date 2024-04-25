@@ -1,6 +1,8 @@
 
 package com.commercetools.monitoring.newrelic;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -12,12 +14,26 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ContextApiHttpClientImpl;
 import io.vrap.rmf.base.client.http.TelemetryMiddleware;
 
+import static com.commercetools.monitoring.newrelic.NewrelicInfo.*;
+
 /**
  * <p>The NewRelicTelemetry middleware can be used to report outgoing request to commercetools to NewRelic.
  * It can be registered as TelemetryMiddleware to the {@link io.vrap.rmf.base.client.ClientBuilder#withTelemetryMiddleware(TelemetryMiddleware) ClientBuilder}
  * or the ApiRootBuilder.</p>
  *
  * {@include.example example.NewRelicApiRootBuilderTest#addNewRelic()}
+ *
+ * The middleware adds the following metrics to Newrelic:
+ * <ul>
+ *     <li>commercetools.client.duration: The duration of the request in milliseconds</li>
+ *     <li>commercetools.client.total_requests: The total number of requests</li>
+ *     <li>commercetools.client.error_requests: The total number of requests with a status code greater or equal to 400</li>
+ * </ul>
+ *
+ * <p>The metrics are added as metric timeslice data, therefore an APM is expected in the application.</p>
+ *
+ * <br/>
+ * <h2>Implementation details</h2>
  *
  * <p>The middleware reads the {@link NewRelicContext} from the Request and restores the transaction using a {@link Token}
  * The details of the request and response are then reported as {@link Segment} with {@link HttpParameters}</p>
@@ -39,7 +55,7 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
-
+        final Instant start = Instant.now();
         Optional<NewRelicContext> context = Optional.ofNullable(request.getContext(NewRelicContext.class));
         context.map(NewRelicContext::getToken).ifPresent(Token::link);
         Optional<Token> token = context.map(NewRelicContext::getTransaction).map(Transaction::getToken);
@@ -54,6 +70,13 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
                     .status(response.getStatusCode(), response.getMessage())
                     .build()));
             segment.ifPresent(Segment::end);
+
+            NewRelic.incrementCounter(PREFIX + CLIENT_REQUEST_TOTAL);
+            NewRelic.recordResponseTimeMetric(PREFIX + CLIENT_DURATION, Duration.between(start, Instant.now()).toMillis());
+
+            if (response.getStatusCode() >= 400) {
+                NewRelic.incrementCounter(PREFIX + CLIENT_REQUEST_ERROR);
+            }
             return response;
         });
     }

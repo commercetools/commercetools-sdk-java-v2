@@ -116,7 +116,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
@@ -222,85 +222,101 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The ProductVariant in which this Embedded Price is contained.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublish()" class="member-name-link">getPublish</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#getPublish()" class="member-name-link">getPublish</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTiers()" class="member-name-link">getTiers</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStaged()" class="member-name-link">getStaged</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The tiered prices for this price.</div>
+<div class="block">
+   Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.
+   Leave empty or set to <code>true</code> to only update the staged projection.
+  </div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValidFrom()" class="member-name-link">getValidFrom</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTiers()" class="member-name-link">getTiers</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Maps to <code>Price.validFrom</code>.</div>
+<div class="block">The tiered prices for this price.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValidUntil()" class="member-name-link">getValidUntil</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValidFrom()" class="member-name-link">getValidFrom</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Maps to <code>Price.validFrom</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValidUntil()" class="member-name-link">getValidUntil</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Maps to <code>Price.validUntil</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Maps to <code>Price.value</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined unique identifier for the Embedded Price.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">factory method for an instance of PriceImportBuilder</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.importapi.models.prices.PriceImport)" class="member-name-link">of</a><wbr>(<a href="PriceImport.html" title="interface in com.commercetools.importapi.models.prices">PriceImport</a>&nbsp;template)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.importapi.models.prices.PriceImport)" class="member-name-link">of</a><wbr>(<a href="PriceImport.html" title="interface in com.commercetools.importapi.models.prices">PriceImport</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create builder for PriceImport instance</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTiers(com.commercetools.importapi.models.common.PriceTier...)" class="member-name-link">plusTiers</a><wbr>(<a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>...&nbsp;tiers)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The tiered prices for this price.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTiers(java.util.function.Function)" class="member-name-link">plusTiers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.importapi.models.common">PriceTierBuilder</a>,<wbr><a href="../common/PriceTierBuilder.html" title="class in com.commercetools.importapi.models.common">PriceTierBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTiers(com.commercetools.importapi.models.common.PriceTier...)" class="member-name-link">plusTiers</a><wbr>(<a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>...&nbsp;tiers)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The tiered prices for this price.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#product(com.commercetools.importapi.models.common.ProductKeyReference)" class="member-name-link">product</a><wbr>(<a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTiers(java.util.function.Function)" class="member-name-link">plusTiers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.importapi.models.common">PriceTierBuilder</a>,<wbr><a href="../common/PriceTierBuilder.html" title="class in com.commercetools.importapi.models.common">PriceTierBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Product in which the Product Variant containing this Embedded Price is contained.</div>
+<div class="block">The tiered prices for this price.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#product(java.util.function.Function)" class="member-name-link">product</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductKeyReferenceBuilder</a>,<wbr><a href="../common/ProductKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#product(com.commercetools.importapi.models.common.ProductKeyReference)" class="member-name-link">product</a><wbr>(<a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The Product in which the Product Variant containing this Embedded Price is contained.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#productVariant(com.commercetools.importapi.models.common.ProductVariantKeyReference)" class="member-name-link">productVariant</a><wbr>(<a href="../common/ProductVariantKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductVariantKeyReference</a>&nbsp;productVariant)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#product(java.util.function.Function)" class="member-name-link">product</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductKeyReferenceBuilder</a>,<wbr><a href="../common/ProductKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The ProductVariant in which this Embedded Price is contained.</div>
+<div class="block">The Product in which the Product Variant containing this Embedded Price is contained.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#productVariant(java.util.function.Function)" class="member-name-link">productVariant</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductVariantKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductVariantKeyReferenceBuilder</a>,<wbr><a href="../common/ProductVariantKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductVariantKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#productVariant(com.commercetools.importapi.models.common.ProductVariantKeyReference)" class="member-name-link">productVariant</a><wbr>(<a href="../common/ProductVariantKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductVariantKeyReference</a>&nbsp;productVariant)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The ProductVariant in which this Embedded Price is contained.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#publish(java.lang.Boolean)" class="member-name-link">publish</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#productVariant(java.util.function.Function)" class="member-name-link">productVariant</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductVariantKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductVariantKeyReferenceBuilder</a>,<wbr><a href="../common/ProductVariantKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductVariantKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</div>
+<div class="block">The ProductVariant in which this Embedded Price is contained.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#publish(java.lang.Boolean)" class="member-name-link">publish</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTiers(java.util.function.Function)" class="member-name-link">setTiers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.importapi.models.common">PriceTierBuilder</a>,<wbr><a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The tiered prices for this price.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTiers(java.util.function.Function)" class="member-name-link">setTiers</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/PriceTierBuilder.html" title="class in com.commercetools.importapi.models.common">PriceTierBuilder</a>,<wbr><a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#staged(java.lang.Boolean)" class="member-name-link">staged</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The tiered prices for this price.</div>
+<div class="block">
+   Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.
+   Leave empty or set to <code>true</code> to only update the staged projection.
+  </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#tiers(com.commercetools.importapi.models.common.PriceTier...)" class="member-name-link">tiers</a><wbr>(<a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>...&nbsp;tiers)</code></div>
@@ -602,12 +618,31 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="publish(java.lang.Boolean)">
 <h3>publish</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></span>&nbsp;<span class="element-name">publish</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></span>&nbsp;<span class="element-name">publish</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>publish</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="staged(java.lang.Boolean)">
+<h3>staged</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PriceImportBuilder.html" title="class in com.commercetools.importapi.models.prices">PriceImportBuilder</a></span>&nbsp;<span class="element-name">staged</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
+<div class="block"><ul>
+   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
+  </ul></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>staged</code> - value to be set</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
@@ -922,12 +957,29 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getPublish()">
 <h3>getPublish</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>
+<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getPublish</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated.</span></div>
 <div class="block"><p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>publish</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getStaged()">
+<h3>getStaged</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getStaged</span>()</div>
+<div class="block"><ul>
+   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
+  </ul></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>staged</dd>
 </dl>
 </section>
 </li>

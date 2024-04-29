@@ -1,17 +1,18 @@
 
 package com.commercetools.monitoring.newrelic;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JavaType;
-import com.newrelic.api.agent.NewRelic;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.ResponseSerializer;
+import static com.commercetools.monitoring.newrelic.NewrelicInfo.*;
 
 import java.time.Duration;
 import java.time.Instant;
 
-import static com.commercetools.monitoring.newrelic.NewrelicInfo.*;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
+import com.newrelic.api.agent.NewRelic;
+
+import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.ResponseSerializer;
 
 /**
  * This serializer uses API to submit metrics to newrelic.

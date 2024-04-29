@@ -42,6 +42,83 @@ public class AttributesTest {
     }
 
     @Test
+    public void attributesTypedByName() throws IOException {
+        ProductVariant variant = JsonUtils.fromJsonString(stringFromResource("attributes.json"), ProductVariant.class);
+
+        assertThat(variant.getAttributes()).isNotEmpty();
+
+        Map<String, Attribute> attributes = variant.withProductVariant(AttributeAccessor::asMap);
+        assertThat(variant.getAttributeByName("text").asString()).isInstanceOfSatisfying(String.class,
+            s -> assertThat(s).isEqualTo("foo"));
+        assertThat(variant.getAttributeByName("ltext").asLocalizedString()).isInstanceOfSatisfying(
+            LocalizedString.class, localizedString -> assertThat(localizedString.values().get("en")).isEqualTo("foo"));
+        assertThat(variant.getAttributeByName("enum").asEnum()).isInstanceOfSatisfying(AttributePlainEnumValue.class,
+            enumValue -> assertThat(enumValue.getLabel()).isEqualTo("foo"));
+        assertThat(variant.getAttributeByName("lenum").asLocalizedEnum()).isInstanceOfSatisfying(
+            AttributeLocalizedEnumValue.class,
+            enumValue -> assertThat(enumValue.getLabel().values().get("en")).isEqualTo("foo"));
+        assertThat(variant.getAttributeByName("date").asDate()).isInstanceOfSatisfying(LocalDate.class,
+            localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
+        assertThat(variant.getAttributeByName("time").asTime()).isInstanceOfSatisfying(LocalTime.class,
+            localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
+        assertThat(variant.getAttributeByName("datetime").asDateTime()).isInstanceOfSatisfying(ZonedDateTime.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+        assertThat(variant.getAttributeByName("boolean").asBoolean()).isInstanceOfSatisfying(Boolean.class,
+            aBoolean -> assertThat(aBoolean).isTrue());
+        assertThat(variant.getAttributeByName("integer").asLong()).isInstanceOfSatisfying(Long.class,
+            number -> assertThat(number).isEqualTo(10L));
+        assertThat(variant.getAttributeByName("double").asDouble()).isInstanceOfSatisfying(Double.class,
+            number -> assertThat(number).isEqualTo(11.0));
+        assertThat(variant.getAttributeByName("reference").asReference()).isInstanceOfSatisfying(ProductReference.class,
+            reference -> assertThat(reference.getId()).isEqualTo("12345"));
+        assertThat(variant.getAttributeByName("money").asMoney()).isInstanceOfSatisfying(TypedMoney.class,
+            money -> assertThat(money.getCentAmount()).isEqualTo(100));
+        assertThat(variant.getAttributeByName("nested").asNested()).asList()
+                .first()
+                .isInstanceOfSatisfying(Attribute.class,
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(String.class));
+        assertThat(variant.getAttributeByName("set-text").asSetString()).asList().first().isInstanceOf(String.class);
+        assertThat(variant.getAttributeByName("set-ltext").asSetLocalizedString()).asList()
+                .first()
+                .isInstanceOf(LocalizedString.class);
+        assertThat(variant.getAttributeByName("set-enum").asSetEnum()).asList()
+                .first()
+                .isInstanceOf(AttributePlainEnumValue.class);
+        assertThat(variant.getAttributeByName("set-lenum").asSetLocalizedEnum()).asList()
+                .first()
+                .isInstanceOf(AttributeLocalizedEnumValue.class);
+        assertThat(variant.getAttributeByName("set-date").asSetDate()).asList().first().isInstanceOf(LocalDate.class);
+        assertThat(variant.getAttributeByName("set-time").asSetTime()).asList().first().isInstanceOf(LocalTime.class);
+        assertThat(variant.getAttributeByName("set-datetime").asSetDateTime()).asList()
+                .first()
+                .isInstanceOf(ZonedDateTime.class);
+        assertThat(variant.getAttributeByName("set-boolean").asSetBoolean()).asList()
+                .first()
+                .isInstanceOf(Boolean.class);
+        assertThat(variant.getAttributeByName("set-integer").asSetLong()).asList()
+                .first()
+                .isInstanceOfSatisfying(Long.class, number -> assertThat(number).isEqualTo(10L));
+        assertThat(variant.getAttributeByName("set-double").asSetDouble()).asList()
+                .first()
+                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));
+        assertThat(variant.getAttributeByName("set-reference").asSetReference()).asList()
+                .first()
+                .isInstanceOf(ProductReference.class);
+        assertThat(variant.getAttributeByName("set-money").asSetMoney()).asList()
+                .first()
+                .isInstanceOf(TypedMoney.class);
+        assertThat(variant.getAttributeByName("set-nested").asSetNested()).asList()
+                .first()
+                .asList()
+                .first()
+                .isInstanceOfSatisfying(Attribute.class,
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(String.class));
+        assertThat(variant.getAttributeByName("localizedNotes").asSetLocalizedString()).asList()
+                .first()
+                .isInstanceOf(LocalizedString.class);
+    }
+
+    @Test
     public void attributes() throws IOException {
         ProductVariant variant = JsonUtils.fromJsonString(stringFromResource("attributes.json"), ProductVariant.class);
 

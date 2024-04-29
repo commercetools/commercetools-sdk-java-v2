@@ -364,6 +364,10 @@ public class ProductTypeCreationDemoIntegrationTest {
         final Optional<AttributePlainEnumValue> attributeOption = masterVariant.findAttribute(SIZE_ATTR_NAME,
             AttributeAccessor::asEnum);
         assertThat(attributeOption).contains(AttributePlainEnumValue.builder().key("S").label("S").build());
+
+        final AttributePlainEnumValue attributePlainEnumValue = masterVariant.getAttributeByName(SIZE_ATTR_NAME)
+                .asEnum();
+        assertThat(attributePlainEnumValue).isEqualTo(AttributePlainEnumValue.builder().key("S").label("S").build());
     }
 
     @Test
@@ -373,6 +377,10 @@ public class ProductTypeCreationDemoIntegrationTest {
         final Optional<AttributePlainEnumValue> attributeOption = masterVariant.findAttribute(SIZE_ATTR_NAME,
             AttributeAccessor::asEnum);
         assertThat(attributeOption).contains(AttributePlainEnumValue.builder().key("S").label("S").build());
+
+        final AttributePlainEnumValue attributePlainEnumValue = masterVariant.getAttributeByName(SIZE_ATTR_NAME)
+                .asEnum();
+        assertThat(attributePlainEnumValue).isEqualTo(AttributePlainEnumValue.builder().key("S").label("S").build());
     }
 
     @Test
@@ -383,6 +391,9 @@ public class ProductTypeCreationDemoIntegrationTest {
                 .map(AttributePlainEnumValue::getLabel)
                 .orElse("not found");
         assertThat(attributeValue).isEqualTo("S");
+
+        final String attributeValue2 = masterVariant.getAttributeByName(SIZE_ATTR_NAME).asEnum().getLabel();
+        assertThat(attributeValue2).isEqualTo("S");
     }
 
     @Test

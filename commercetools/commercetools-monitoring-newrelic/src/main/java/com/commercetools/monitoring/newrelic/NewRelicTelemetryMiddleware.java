@@ -1,6 +1,8 @@
 
 package com.commercetools.monitoring.newrelic;
 
+import static com.commercetools.monitoring.newrelic.NewrelicInfo.*;
+
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Optional;
@@ -13,8 +15,6 @@ import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ContextApiHttpClientImpl;
 import io.vrap.rmf.base.client.http.TelemetryMiddleware;
-
-import static com.commercetools.monitoring.newrelic.NewrelicInfo.*;
 
 /**
  * <p>The NewRelicTelemetry middleware can be used to report outgoing request to commercetools to NewRelic.
@@ -72,7 +72,8 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
             segment.ifPresent(Segment::end);
 
             NewRelic.incrementCounter(PREFIX + CLIENT_REQUEST_TOTAL);
-            NewRelic.recordResponseTimeMetric(PREFIX + CLIENT_DURATION, Duration.between(start, Instant.now()).toMillis());
+            NewRelic.recordResponseTimeMetric(PREFIX + CLIENT_DURATION,
+                Duration.between(start, Instant.now()).toMillis());
 
             if (response.getStatusCode() >= 400) {
                 NewRelic.incrementCounter(PREFIX + CLIENT_REQUEST_ERROR);

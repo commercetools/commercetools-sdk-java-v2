@@ -1,3 +1,4 @@
+
 package com.commercetools.monitoring.newrelic;
 
 public class NewrelicInfo {

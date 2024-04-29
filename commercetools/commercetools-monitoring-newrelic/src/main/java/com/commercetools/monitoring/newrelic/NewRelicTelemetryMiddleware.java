@@ -25,9 +25,9 @@ import static com.commercetools.monitoring.newrelic.NewrelicInfo.*;
  *
  * The middleware adds the following metrics to Newrelic:
  * <ul>
- *     <li>commercetools.client.duration: The duration of the request in milliseconds</li>
- *     <li>commercetools.client.total_requests: The total number of requests</li>
- *     <li>commercetools.client.error_requests: The total number of requests with a status code greater or equal to 400</li>
+ *     <li>Custom/Commercetools/Client/Duration: The duration of the request in milliseconds</li>
+ *     <li>Custom/Commercetools/Client/Request/Total: The total number of requests</li>
+ *     <li>Custom/Commercetools/Client/Request/Error: The total number of requests with a status code greater or equal to 400</li>
  * </ul>
  *
  * <p>The metrics are added as metric timeslice data, therefore an APM is expected in the application.</p>

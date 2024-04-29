@@ -79,10 +79,66 @@
             ]
         },
         {
+            "moduleName": "com.newrelic.telemetry:telemetry-core",
+            "moduleVersion": "0.16.0",
+            "moduleUrls": [
+                "https://github.com/newrelic/newrelic-telemetry-sdk-java"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.newrelic.telemetry:telemetry-http-okhttp",
+            "moduleVersion": "0.16.0",
+            "moduleUrls": [
+                "https://github.com/newrelic/newrelic-telemetry-sdk-java"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "com.spotify:completable-futures",
             "moduleVersion": "0.3.6",
             "moduleUrls": [
                 "https://spotify.github.io/completable-futures"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.squareup.okhttp3:okhttp",
+            "moduleVersion": "4.12.0",
+            "moduleUrls": [
+                "https://square.github.io/okhttp/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.squareup.okio:okio",
+            "moduleVersion": "3.6.0"
+        },
+        {
+            "moduleName": "com.squareup.okio:okio-jvm",
+            "moduleVersion": "3.6.0",
+            "moduleUrls": [
+                "https://github.com/square/okio/"
             ],
             "moduleLicenses": [
                 {
@@ -120,6 +176,71 @@
             "moduleVersion": "3.14.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-lang/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
+            "moduleVersion": "1.9.10",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common",
+            "moduleVersion": "1.9.10",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
+            "moduleVersion": "1.9.10",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+            "moduleVersion": "1.9.10",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains:annotations",
+            "moduleVersion": "13.0",
+            "moduleUrls": [
+                "http://www.jetbrains.org"
             ],
             "moduleLicenses": [
                 {

@@ -10,7 +10,7 @@ ext {
     ]
 
     netty = [
-            version: '4.1.106.Final'
+            version: '4.1.109.Final'
     ]
     commons = [
             text: 'org.apache.commons:commons-text:1.12.0',

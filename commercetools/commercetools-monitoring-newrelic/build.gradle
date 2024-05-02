@@ -2,8 +2,6 @@
 dependencies {
     api project(":rmf:rmf-java-base")
     implementation 'com.newrelic.agent.java:newrelic-api:8.10.0'
-    implementation("com.newrelic.telemetry:telemetry-core:0.16.0")
-    implementation("com.newrelic.telemetry:telemetry-http-okhttp:0.16.0")
 
     testImplementation project(":commercetools:commercetools-sdk-java-api")
 }

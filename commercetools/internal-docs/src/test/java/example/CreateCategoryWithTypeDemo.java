@@ -8,7 +8,7 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.*;
 
-public class CustomFieldsDemo {
+public class CreateCategoryWithTypeDemo {
     public Type create(ProjectApiRoot apiRoot) {
         final LocalizedString name = LocalizedString.ofEnglish("type for standard categories");
         final String key = "category-customtype-key";

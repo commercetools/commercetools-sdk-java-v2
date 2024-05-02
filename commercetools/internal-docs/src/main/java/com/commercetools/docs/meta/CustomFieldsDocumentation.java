@@ -21,12 +21,18 @@ import com.commercetools.api.models.type.TypeDraft;
  </ul>
  <p>If you work with types it is a good idea to import io.sphere.sdk.types.*; so you don't get confused with classes from product attributes which have sometimes the same class name but are in another package.</p>
 
- <h3 id="product-type-creation">Create a type</h3>
+ <h3 id="create-type">Create a type</h3>
 
  <p>A type can be assigned to different kinds of objects, e.g., a type can be used for categories, orders and carts. In
  the type creation the property {@link TypeDraft#getResourceTypeIds()} contains a set of resourceTypeIds.</p>
 
  {@include.example example.CustomFieldsDemo}
+
+ <h3 id="create-object-with-type">Assign a type to an object at the creation of the object</h3>
+
+ {@include.example example.CreateCategoryWithTypeDemo}
+
+
  */
 public class CustomFieldsDocumentation {
 }

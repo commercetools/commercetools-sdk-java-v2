@@ -386,32 +386,6 @@
             ]
         },
         {
-            "moduleName": "com.newrelic.telemetry:telemetry-core",
-            "moduleVersion": "0.16.0",
-            "moduleUrls": [
-                "https://github.com/newrelic/newrelic-telemetry-sdk-java"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
-            "moduleName": "com.newrelic.telemetry:telemetry-http-okhttp",
-            "moduleVersion": "0.16.0",
-            "moduleUrls": [
-                "https://github.com/newrelic/newrelic-telemetry-sdk-java"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "com.spotify:completable-futures",
             "moduleVersion": "0.3.6",
             "moduleUrls": [

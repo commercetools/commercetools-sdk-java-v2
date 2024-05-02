@@ -63,7 +63,7 @@ allprojects {
 
     configurations {
         taglet {
-            resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2024.3")
+            resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2024.4")
         }
     }
 

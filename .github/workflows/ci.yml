@@ -173,12 +173,12 @@ jobs:
       - name: build javadoc
         if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: ./gradlew alljavadoc
-  dependency-submission:
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout sources
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
-      - name: Generate and submit dependency graph
-        uses: gradle/actions/dependency-submission@417ae3ccd767c252f5661f1ace9f835f9654f2b5 # v3
+#  dependency-submission:
+#    permissions:
+#      contents: write
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout sources
+#        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+#      - name: Generate and submit dependency graph
+#        uses: gradle/actions/dependency-submission@417ae3ccd767c252f5661f1ace9f835f9654f2b5 # v3

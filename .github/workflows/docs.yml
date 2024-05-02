@@ -17,9 +17,6 @@ jobs:
   docs:
     name: Build and release docs
 
-    permissions:
-        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
-
     runs-on: ubuntu-latest
     steps:
         # Get GitHub token via the CT SDKs App

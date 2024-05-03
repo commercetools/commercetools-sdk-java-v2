@@ -1,4 +1,24 @@
 
+# 17.11.0 (2024-05-03)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/626
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/627
+* [DEVX-344] add missing service regions by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/628
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/629
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/631
+* update bootstrap, jquery, jquery-validation by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/632
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/618
+* use codecov GH action by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/633
+* chore(deps): update actions/create-github-app-token digest to a0de6af by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/611
+* chore(deps): update gradle/wrapper-validation-action action to v3 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/619
+* chore(deps): update github/codeql-action digest to d39d31e by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/613
+* Newrelic add metrics by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/630
+* fix(deps): update dependency husky to v9 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/621
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.10.0...17.11.0
+
 # 17.10.0 (2024-04-18)
 
 ## What's Changed

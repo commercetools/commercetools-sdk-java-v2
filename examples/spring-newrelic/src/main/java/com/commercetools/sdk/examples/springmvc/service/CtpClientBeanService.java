@@ -7,6 +7,7 @@ import com.commercetools.api.defaultconfig.ApiRootBuilder;
 
 import com.commercetools.monitoring.newrelic.NewRelicContext;
 import com.commercetools.monitoring.newrelic.NewRelicTelemetryMiddleware;
+import com.commercetools.monitoring.newrelic.NewrelicResponseSerializer;
 import com.newrelic.api.agent.NewRelic;
 import com.newrelic.api.agent.Trace;
 import io.vrap.rmf.base.client.*;
@@ -40,6 +41,7 @@ public class CtpClientBeanService {
         return ApiRootBuilder.of()
                 .defaultClient(credentials())
                 .withTelemetryMiddleware(new NewRelicTelemetryMiddleware())
+                .withSerializer(new NewrelicResponseSerializer(ResponseSerializer.of()))
                 .buildClient();
     }
 

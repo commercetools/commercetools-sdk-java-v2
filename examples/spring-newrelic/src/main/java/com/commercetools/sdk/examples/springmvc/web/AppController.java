@@ -20,7 +20,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 @Controller
-public class AppContoller {
+public class AppController {
     @GetMapping("/")
     public String home() {
         return "home/index";

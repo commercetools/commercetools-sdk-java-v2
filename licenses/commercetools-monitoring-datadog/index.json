@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.datadoghq:datadog-api-client",
-            "moduleVersion": "2.23.0",
+            "moduleVersion": "2.24.0",
             "moduleUrls": [
                 "https://github.com/DataDog/datadog-api-client-java"
             ],

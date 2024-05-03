@@ -97,7 +97,7 @@
         },
         {
             "moduleName": "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core",
-            "moduleVersion": "6.1.5",
+            "moduleVersion": "6.1.10",
             "moduleUrls": [
                 "https://github.com/Netflix/dgs-codegen"
             ],

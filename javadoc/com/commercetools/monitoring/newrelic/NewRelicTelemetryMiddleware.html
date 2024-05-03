@@ -92,6 +92,18 @@ implements <a href="../../../../io/vrap/rmf/base/client/http/TelemetryMiddleware
         .buildClient();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-monitoring-newrelic/src/test/java/example/NewRelicApiRootBuilderTest.java" target="_blank">test code</a>.</pre></div>
 
+ The middleware adds the following metrics to Newrelic:
+ <ul>
+     <li>Custom/Commercetools/Client/Duration: The duration of the request in milliseconds</li>
+     <li>Custom/Commercetools/Client/Request/Total: The total number of requests</li>
+     <li>Custom/Commercetools/Client/Request/Error: The total number of requests with a status code greater or equal to 400</li>
+ </ul>
+
+ <p>The metrics are added as metric timeslice data, therefore an APM is expected in the application.</p>
+
+ <br/>
+ <h2>Implementation details</h2>
+
  <p>The middleware reads the <a href="NewRelicContext.html" title="interface in com.commercetools.monitoring.newrelic"><code>NewRelicContext</code></a> from the Request and restores the transaction using a <a href="https://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/Token.html" title="class or interface in com.newrelic.api.agent" class="external-link"><code>Token</code></a>
  The details of the request and response are then reported as <a href="https://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/Segment.html" title="class or interface in com.newrelic.api.agent" class="external-link"><code>Segment</code></a> with <a href="https://newrelic.github.io/java-agent-api/javadoc/com/newrelic/api/agent/HttpParameters.html" title="class or interface in com.newrelic.api.agent" class="external-link"><code>HttpParameters</code></a></p>
 

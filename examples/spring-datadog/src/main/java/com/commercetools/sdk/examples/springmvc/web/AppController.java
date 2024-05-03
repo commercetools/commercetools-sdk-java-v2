@@ -1,72 +1,89 @@
 package com.commercetools.sdk.examples.springmvc.web;
 
-import com.commercetools.api.client.ProjectScopedApiRoot;
+import java.util.List;
+
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.cart.Cart;
+import com.commercetools.api.models.customer.Customer;
 import com.commercetools.api.models.product.ProductProjection;
-import com.commercetools.sdk.examples.springmvc.service.CartRepository;
+
+import com.commercetools.sdk.examples.springmvc.service.MeRepository;
 import com.commercetools.sdk.examples.springmvc.service.ProductsRepository;
-import jakarta.annotation.Resource;
-import jakarta.servlet.http.HttpSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.view.RedirectView;
-
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestAttribute;
+import org.springframework.web.reactive.result.view.RedirectView;
+import org.springframework.web.server.ServerWebExchange;
+import org.springframework.web.server.WebSession;
+import reactor.core.publisher.Mono;
 
 @Controller
 public class AppController {
+
+    @GetMapping("/login")
+    public String viewLoginPage(ServerWebExchange exchange, Model model) {
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public Mono<String> login(ServerWebExchange exchange, Authentication authentication) {
+        return Mono.just("redirect:/me");
+    }
+
     @GetMapping("/")
-    public String home() {
+    public String home(Model model) {
+        model.addAttribute("project", "World");
         return "home/index";
     }
 
-    @Value(value = "${ctp.project.key}")
-    private String projectKey;
-
-    @Autowired
-    @Resource(name = "apiRoot")
-    ProjectScopedApiRoot apiRoot;
-
     @GetMapping("/p")
-    public String pop(Model model, HttpSession session) throws ExecutionException, InterruptedException {
-        CompletableFuture<List<ProductProjection>> products =  new ProductsRepository(apiRoot).products();
-        CompletableFuture<Cart> cart = new CartRepository(apiRoot, session).meCart();
-        model.addAttribute("products", products.get());
-        model.addAttribute("cart", cart.get());
+    public String pop(@RequestAttribute("contextRoot") ProjectApiRoot contextRoot, @RequestAttribute("meClient") ProjectApiRoot meClient, Model model, WebSession session) {
+
+        Mono<List<ProductProjection>> products =  new ProductsRepository(contextRoot).products();
+        final Mono<Cart> cart = new MeRepository(meClient, session).meCart();
+
+        model.addAttribute("products", products);
+        model.addAttribute("cart", cart);
         return "home/pop";
     }
 
     @GetMapping("/cart")
-    public String cart(Model model, HttpSession session) {
-        final CompletableFuture<Cart> cart = new CartRepository(apiRoot, session).meCart();
+    public String myCart(@RequestAttribute("meClient") ProjectApiRoot client, Model model, WebSession session) {
+        final Mono<Cart> cart = new MeRepository(client, session).meCart();
+
         model.addAttribute("cart", cart);
         return "mycart/index";
     }
 
     @GetMapping("/cart/add")
-    public RedirectView addToCart(String sku, Model model, HttpSession session)
-            throws ExecutionException, InterruptedException {
-        CartRepository repository = new CartRepository(apiRoot, session);
+    public RedirectView addToCart(@RequestAttribute("meClient") ProjectApiRoot client, String sku, Model model,
+            WebSession session) {
+        MeRepository repository = new MeRepository(client, session);
 
-        final CompletableFuture<Cart> cart = repository.addToCart(sku);
-        model.addAttribute("cart", cart.get());
+        final Mono<Cart> cart = repository.addToCart(sku);
+        model.addAttribute("cart", cart);
 
         return new RedirectView("/cart");
     }
 
     @GetMapping("/cart/del")
-    public RedirectView removeFromCart(String lineItemId, Model model, HttpSession session)
-            throws ExecutionException, InterruptedException {
-        CartRepository repository = new CartRepository(apiRoot, session);
+    public RedirectView removeFromCart(@RequestAttribute("meClient") ProjectApiRoot client, String lineItemId,
+            Model model, WebSession session) {
+        MeRepository repository = new MeRepository(client, session);
 
-        final CompletableFuture<Cart> cart = repository.removeFromCart(lineItemId);
-        model.addAttribute("cart", cart.get());
+        final Mono<Cart> cart = repository.removeFromCart(lineItemId);
+        model.addAttribute("cart", cart);
 
         return new RedirectView("/cart");
+    }
+
+    @GetMapping("/me")
+    public String me(@RequestAttribute("meClient") ProjectApiRoot client, Model model, WebSession session) {
+        final Mono<Customer> customer = new MeRepository(client, session).me();
+        model.addAttribute("customer", customer);
+        return "me/index";
     }
 }

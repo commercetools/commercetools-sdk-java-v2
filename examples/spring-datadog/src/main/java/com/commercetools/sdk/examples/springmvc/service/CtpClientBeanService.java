@@ -1,14 +1,15 @@
-
 package com.commercetools.sdk.examples.springmvc.service;
 
-import com.commercetools.api.client.ProjectScopedApiRoot;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.monitoring.datadog.DatadogMiddleware;
 import com.commercetools.monitoring.datadog.DatadogResponseSerializer;
 import com.datadog.api.client.ApiClient;
+import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ResponseSerializer;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -32,11 +33,20 @@ public class CtpClientBeanService {
     }
 
     @Bean
-    public ProjectScopedApiRoot apiRoot() {
+    public ApiHttpClient client() {
         ApiRootBuilder builder = ApiRootBuilder.of()
                 .defaultClient(credentials())
                 .withTelemetryMiddleware(new DatadogMiddleware(ApiClient.getDefaultApiClient()))
                 .withSerializer(new DatadogResponseSerializer(ResponseSerializer.of(), ApiClient.getDefaultApiClient()));
-        return builder.build(projectKey);
+        return builder.buildClient();
+    }
+
+    @Bean
+    @Autowired
+    public ProjectApiRoot apiRoot(ApiHttpClient client) {
+
+        final ProjectApiRoot build = ProjectApiRoot.fromClient(projectKey, client);
+
+        return build;
     }
 }

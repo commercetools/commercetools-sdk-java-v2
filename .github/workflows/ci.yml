@@ -137,9 +137,9 @@ jobs:
         run: ./gradlew codeCoverageReport
 
       - name: Send code coverage report to Codecov.io
-        run: bash <(curl -s https://codecov.io/bash) || true
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        uses: codecov/codecov-action@v4
+        with:
+            token: ${{ secrets.CODECOV_TOKEN }}
   docs:
     name: Docs test build
 

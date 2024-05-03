@@ -293,7 +293,7 @@
         },
         {
             "moduleName": "org.apache.commons:commons-text",
-            "moduleVersion": "1.11.0",
+            "moduleVersion": "1.12.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-text"
             ],

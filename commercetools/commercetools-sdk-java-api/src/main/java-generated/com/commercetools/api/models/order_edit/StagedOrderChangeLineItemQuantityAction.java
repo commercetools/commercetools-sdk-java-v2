@@ -66,7 +66,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     public Long getQuantity();
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Required when the Line Item uses <code>ExternalPrice</code> LineItemPriceMode. Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item.</p>
      *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      * @return externalPrice
      */
@@ -75,7 +75,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     public Money getExternalPrice();
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @return externalTotalPrice
      */
     @Valid
@@ -104,7 +104,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>Required when the Line Item uses <code>ExternalPrice</code> LineItemPriceMode. Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item.</p>
      *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
      * @param externalPrice value to be set
      */
@@ -112,7 +112,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     public void setExternalPrice(final Money externalPrice);
 
     /**
-     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when changing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param externalTotalPrice value to be set
      */
 

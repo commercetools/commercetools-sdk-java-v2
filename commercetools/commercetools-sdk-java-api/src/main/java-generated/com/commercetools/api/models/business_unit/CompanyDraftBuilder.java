@@ -66,7 +66,7 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined unique identifier for the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier for the Business Unit.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -546,7 +546,7 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier for the Business Unit.</p>
      * @return key
      */
 

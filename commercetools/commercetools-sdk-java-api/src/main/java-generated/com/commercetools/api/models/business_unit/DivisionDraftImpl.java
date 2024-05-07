@@ -98,7 +98,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier for the Business Unit.</p>
      */
 
     public String getKey() {

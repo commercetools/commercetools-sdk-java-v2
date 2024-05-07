@@ -104,7 +104,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier of the Business Unit.</p>
      * @return key
      */
     @NotNull
@@ -296,7 +296,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setCreatedBy(final CreatedBy createdBy);
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier of the Business Unit.</p>
      * @param key value to be set
      */
 

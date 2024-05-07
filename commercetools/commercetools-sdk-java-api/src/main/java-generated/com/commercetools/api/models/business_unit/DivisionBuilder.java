@@ -208,7 +208,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier of the Business Unit.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -903,7 +903,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier of the Business Unit.</p>
      * @return key
      */
 

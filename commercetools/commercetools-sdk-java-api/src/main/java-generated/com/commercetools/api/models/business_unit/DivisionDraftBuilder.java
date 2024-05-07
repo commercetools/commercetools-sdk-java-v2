@@ -69,7 +69,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
 
     /**
-     *  <p>User-defined unique identifier for the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier for the Business Unit.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -589,7 +589,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier for the Business Unit.</p>
      * @return key
      */
 

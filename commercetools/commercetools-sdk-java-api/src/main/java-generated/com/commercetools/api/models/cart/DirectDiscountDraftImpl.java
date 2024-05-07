@@ -24,7 +24,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
 
-    private com.commercetools.api.models.cart_discount.CartDiscountValue value;
+    private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
 
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
@@ -33,7 +33,7 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
      */
     @JsonCreator
     DirectDiscountDraftImpl(
-            @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValue value,
+            @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value,
             @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
         this.value = value;
         this.target = target;
@@ -49,7 +49,7 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
      *  <p>Defines the effect the Discount will have.</p>
      */
 
-    public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
+    public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {
         return this.value;
     }
 
@@ -62,7 +62,7 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
         return this.target;
     }
 
-    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValue value) {
+    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value) {
         this.value = value;
     }
 

@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart_discount.CartDiscountTarget;
-import com.commercetools.api.models.cart_discount.CartDiscountValue;
+import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -42,7 +42,7 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
     @NotNull
     @Valid
     @JsonProperty("value")
-    public CartDiscountValue getValue();
+    public CartDiscountValueDraft getValue();
 
     /**
      *  <p>Defines what segment of the Cart will be discounted.</p>
@@ -58,7 +58,7 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
      * @param value value to be set
      */
 
-    public void setValue(final CartDiscountValue value);
+    public void setValue(final CartDiscountValueDraft value);
 
     /**
      *  <p>Defines what segment of the Cart will be discounted.</p>
@@ -99,7 +99,8 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
             return null;
         }
         DirectDiscountDraftImpl instance = new DirectDiscountDraftImpl();
-        instance.setValue(com.commercetools.api.models.cart_discount.CartDiscountValue.deepCopy(template.getValue()));
+        instance.setValue(
+            com.commercetools.api.models.cart_discount.CartDiscountValueDraft.deepCopy(template.getValue()));
         instance.setTarget(
             com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
         return instance;

@@ -172,7 +172,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier of the AssociateRole.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -335,7 +335,7 @@ public class AssociateRoleBuilder implements Builder<AssociateRole> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier of the AssociateRole.</p>
      * @return key
      */
 

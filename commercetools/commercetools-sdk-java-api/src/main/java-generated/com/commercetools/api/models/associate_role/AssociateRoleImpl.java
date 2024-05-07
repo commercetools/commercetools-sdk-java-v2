@@ -125,7 +125,7 @@ public class AssociateRoleImpl implements AssociateRole, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier of the AssociateRole.</p>
      */
 
     public String getKey() {

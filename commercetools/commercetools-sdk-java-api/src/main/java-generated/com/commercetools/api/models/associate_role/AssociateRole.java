@@ -91,7 +91,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>User-defined unique identifier of the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier of the AssociateRole.</p>
      * @return key
      */
     @NotNull
@@ -173,7 +173,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public void setCreatedBy(final CreatedBy createdBy);
 
     /**
-     *  <p>User-defined unique identifier of the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier of the AssociateRole.</p>
      * @param key value to be set
      */
 

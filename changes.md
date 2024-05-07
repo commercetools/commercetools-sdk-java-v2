@@ -1,17 +1,8 @@
-**Import changes**
+**Api changes**
 
 <details>
-<summary>MarkDeprecated Property(s)</summary>
+<summary>Changed Property(s)</summary>
 
-- marked property `PriceImport::publish` as deprecated
-- marked property `ProductVariantImport::publish` as deprecated
-</details>
-
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `staged` to type `PriceImport`
-- added property `staged` to type `ProductVariantImport`
+- :warning: changed property `value` of type `DirectDiscountDraft` from type `CartDiscountValue` to `CartDiscountValueDraft`
 </details>
 

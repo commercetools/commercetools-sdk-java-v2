@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>If the edit is applied, <code>stagedActions</code> cannot be updated.</p>
+ *  <p>The <code>stagedActions</code> field cannot be updated if the Order Edit <code>result</code> is OrderEdit Applied.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

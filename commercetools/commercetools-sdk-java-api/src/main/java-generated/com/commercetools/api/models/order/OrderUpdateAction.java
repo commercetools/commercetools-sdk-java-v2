@@ -77,6 +77,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetShippingAddressActionImpl.class, name = OrderSetShippingAddressAction.SET_SHIPPING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetShippingAddressCustomFieldActionImpl.class, name = OrderSetShippingAddressCustomFieldAction.SET_SHIPPING_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeActionImpl.class, name = OrderSetShippingAddressCustomTypeAction.SET_SHIPPING_ADDRESS_CUSTOM_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetShippingCustomFieldActionImpl.class, name = OrderSetShippingCustomFieldAction.SET_SHIPPING_CUSTOM_FIELD),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetShippingCustomTypeActionImpl.class, name = OrderSetShippingCustomTypeAction.SET_SHIPPING_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetStoreActionImpl.class, name = OrderSetStoreAction.SET_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderTransitionCustomLineItemStateActionImpl.class, name = OrderTransitionCustomLineItemStateAction.TRANSITION_CUSTOM_LINE_ITEM_STATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderTransitionLineItemStateActionImpl.class, name = OrderTransitionLineItemStateAction.TRANSITION_LINE_ITEM_STATE),
@@ -309,6 +311,14 @@ public interface OrderUpdateAction extends com.commercetools.api.models.Resource
         if (template instanceof com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeAction) {
             return com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeAction
                     .deepCopy((com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetShippingCustomFieldAction) {
+            return com.commercetools.api.models.order.OrderSetShippingCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetShippingCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetShippingCustomTypeAction) {
+            return com.commercetools.api.models.order.OrderSetShippingCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetShippingCustomTypeAction) template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSetStoreAction) {
             return com.commercetools.api.models.order.OrderSetStoreAction
@@ -744,6 +754,22 @@ public interface OrderUpdateAction extends com.commercetools.api.models.Resource
      */
     public static com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeActionBuilder setShippingAddressCustomTypeBuilder() {
         return com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeActionBuilder.of();
+    }
+
+    /**
+     * builder for setShippingCustomField subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.order.OrderSetShippingCustomFieldActionBuilder setShippingCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetShippingCustomFieldActionBuilder.of();
+    }
+
+    /**
+     * builder for setShippingCustomType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.order.OrderSetShippingCustomTypeActionBuilder setShippingCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetShippingCustomTypeActionBuilder.of();
     }
 
     /**

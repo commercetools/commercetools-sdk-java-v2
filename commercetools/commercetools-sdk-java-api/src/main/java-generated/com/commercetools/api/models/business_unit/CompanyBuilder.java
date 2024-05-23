@@ -22,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .key("{key}")
  *             .status(BusinessUnitStatus.ACTIVE)
- *             .plusStores(storesBuilder -> storesBuilder)
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
@@ -54,6 +53,7 @@ public class CompanyBuilder implements Builder<Company> {
 
     private com.commercetools.api.models.business_unit.BusinessUnitStatus status;
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode;
@@ -237,7 +237,7 @@ public class CompanyBuilder implements Builder<Company> {
      * @return Builder
      */
 
-    public CompanyBuilder stores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+    public CompanyBuilder stores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
         return this;
     }
@@ -250,7 +250,8 @@ public class CompanyBuilder implements Builder<Company> {
      * @return Builder
      */
 
-    public CompanyBuilder stores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+    public CompanyBuilder stores(
+            @Nullable final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
         this.stores = stores;
         return this;
     }
@@ -263,7 +264,7 @@ public class CompanyBuilder implements Builder<Company> {
      * @return Builder
      */
 
-    public CompanyBuilder plusStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+    public CompanyBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
@@ -927,6 +928,7 @@ public class CompanyBuilder implements Builder<Company> {
      * @return stores
      */
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
     }
@@ -1076,7 +1078,6 @@ public class CompanyBuilder implements Builder<Company> {
         Objects.requireNonNull(lastModifiedAt, Company.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(key, Company.class + ": key is missing");
         Objects.requireNonNull(status, Company.class + ": status is missing");
-        Objects.requireNonNull(stores, Company.class + ": stores is missing");
         Objects.requireNonNull(storeMode, Company.class + ": storeMode is missing");
         Objects.requireNonNull(name, Company.class + ": name is missing");
         Objects.requireNonNull(addresses, Company.class + ": addresses is missing");

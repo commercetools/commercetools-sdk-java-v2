@@ -22,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .key("{key}")
  *             .status(BusinessUnitStatus.ACTIVE)
- *             .plusStores(storesBuilder -> storesBuilder)
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
@@ -55,6 +54,7 @@ public class DivisionBuilder implements Builder<Division> {
 
     private com.commercetools.api.models.business_unit.BusinessUnitStatus status;
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode;
@@ -237,7 +237,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder stores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+    public DivisionBuilder stores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
         return this;
     }
@@ -250,7 +250,8 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder stores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+    public DivisionBuilder stores(
+            @Nullable final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
         this.stores = stores;
         return this;
     }
@@ -263,7 +264,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return Builder
      */
 
-    public DivisionBuilder plusStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
+    public DivisionBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
@@ -927,6 +928,7 @@ public class DivisionBuilder implements Builder<Division> {
      * @return stores
      */
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
     }
@@ -1075,7 +1077,6 @@ public class DivisionBuilder implements Builder<Division> {
         Objects.requireNonNull(lastModifiedAt, Division.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(key, Division.class + ": key is missing");
         Objects.requireNonNull(status, Division.class + ": status is missing");
-        Objects.requireNonNull(stores, Division.class + ": stores is missing");
         Objects.requireNonNull(storeMode, Division.class + ": storeMode is missing");
         Objects.requireNonNull(name, Division.class + ": name is missing");
         Objects.requireNonNull(addresses, Division.class + ": addresses is missing");

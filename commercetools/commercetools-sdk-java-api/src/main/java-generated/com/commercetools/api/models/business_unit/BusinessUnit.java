@@ -36,7 +36,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             key("{key}")
  *             status(BusinessUnitStatus.ACTIVE)
- *             plusStores(storesBuilder -> storesBuilder)
  *             storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             name("{name}")
  *             plusAddresses(addressesBuilder -> addressesBuilder)
@@ -125,7 +124,6 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
      *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
      * @return stores
      */
-    @NotNull
     @Valid
     @JsonProperty("stores")
     public List<StoreKeyReference> getStores();

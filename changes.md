@@ -1,12 +1,11 @@
 **Api changes**
 
 <details>
-<summary>Added Type(s)</summary>
+<summary>Required Property(s)</summary>
 
-- added type `StagedOrderSetShippingCustomFieldAction`
-- added type `StagedOrderSetShippingCustomTypeAction`
-- added type `OrderSetShippingCustomFieldAction`
-- added type `OrderSetShippingCustomTypeAction`
+- changed property `stores` of type `BusinessUnit` to be optional
+- changed property `stores` of type `Company` to be optional
+- changed property `stores` of type `Division` to be optional
 </details>
 
 
@@ -14,5 +13,15 @@
 <summary>Changed Property(s)</summary>
 
 - :warning: changed property `value` of type `DirectDiscountDraft` from type `CartDiscountValue` to `CartDiscountValueDraft`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `StagedOrderSetShippingCustomFieldAction`
+- added type `StagedOrderSetShippingCustomTypeAction`
+- added type `OrderSetShippingCustomFieldAction`
+- added type `OrderSetShippingCustomTypeAction`
 </details>
 

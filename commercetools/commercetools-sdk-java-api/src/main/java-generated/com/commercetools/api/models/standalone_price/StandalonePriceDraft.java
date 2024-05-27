@@ -23,8 +23,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection.</p>
- *  <p>Creating a Standalone Price for an SKU which has a Standalone Price with exactly the same price scope, or with overlapping validity periods within the same price scope returns the DuplicateStandalonePriceScope and OverlappingStandalonePriceValidity errors, respectively. A Price without validity period does not conflict with a Price defined for a time period.</p>
+ * StandalonePriceDraft
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -141,7 +140,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public StagedPriceDraft getStaged();
 
     /**
-     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</p>
      * @return active
      */
 
@@ -243,7 +242,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public void setStaged(final StagedPriceDraft staged);
 
     /**
-     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</p>
      * @param active value to be set
      */
 

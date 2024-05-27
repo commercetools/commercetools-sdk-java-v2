@@ -303,7 +303,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -529,7 +529,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      */
 
     public String getCountry() {

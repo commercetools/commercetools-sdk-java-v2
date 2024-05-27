@@ -106,7 +106,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public String getCustomerEmail();
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      * @return customerGroup
      */
     @Valid
@@ -357,7 +357,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public PaymentInfo getPaymentInfo();
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      * @return country
      */
 
@@ -464,7 +464,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setCustomerEmail(final String customerEmail);
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      * @param customerGroup value to be set
      */
 
@@ -735,7 +735,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setPaymentInfo(final PaymentInfo paymentInfo);
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      * @param country value to be set
      */
 

@@ -94,7 +94,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The currency used for Price selection.</p>
+     *  <p>The currency used for Product price selection.</p>
      * @param priceCurrency value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The country used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @param priceCountry value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @param priceCustomerGroup value to be set
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @param priceChannel value to be set
      * @return Builder
      */
@@ -206,7 +206,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The currency used for Price selection.</p>
+     *  <p>The currency used for Product price selection.</p>
      * @return priceCurrency
      */
 
@@ -216,7 +216,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The country used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @return priceCountry
      */
 
@@ -226,7 +226,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @return priceCustomerGroup
      */
 
@@ -236,7 +236,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @return priceChannel
      */
 

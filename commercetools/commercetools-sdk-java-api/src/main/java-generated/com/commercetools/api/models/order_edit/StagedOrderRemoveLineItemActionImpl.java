@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+ *  <p>The LineItem price is updated as described in Line Item price selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLineItemAction, ModelBase {

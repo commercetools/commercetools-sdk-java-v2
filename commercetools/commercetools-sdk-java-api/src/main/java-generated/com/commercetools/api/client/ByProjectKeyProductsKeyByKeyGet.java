@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If Price selection query parameters are provided, the selected Prices are added to the response.</p>
+ *  <p>If [Product price selection query parameters]](/../api/pricing-and-discounts-overview#product-price-selection) are provided, the selected Prices are added to the response.</p>
  *
  * <hr>
  * <div class=code-example>

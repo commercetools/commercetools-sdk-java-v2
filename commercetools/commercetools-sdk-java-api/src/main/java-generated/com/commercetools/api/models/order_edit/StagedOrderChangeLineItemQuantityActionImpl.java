@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  *  <p>When multiple shipping addresses are set for a Line Item, use the Remove LineItem and Add LineItem update action to change the shipping details. Since it is not possible for the API to infer how the overall change in the Line Item quantity should be distributed over the sub-quantities, the <code>shippingDetails</code> field is kept in its current state to avoid data loss.</p>
  *  <p>To change the Line Item quantity and shipping details together, use this update action in combination with the Set LineItem ShippingDetails update action in a single Order update command.</p>
- *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+ *  <p>The LineItem price is updated as described in Line Item price selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderChangeLineItemQuantityAction, ModelBase {
@@ -93,7 +93,7 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
 
     /**
      *  <p>Required when the Line Item uses <code>ExternalPrice</code> LineItemPriceMode. Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item.</p>
-     *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+     *  <p>The LineItem price is updated as described in Line Item price selection.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {

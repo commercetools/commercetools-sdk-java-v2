@@ -230,7 +230,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -244,7 +244,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -257,7 +257,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -1433,7 +1433,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -1649,7 +1649,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      * @return customerGroup
      */
 
@@ -1936,7 +1936,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      * @return country
      */
 

@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>This mode determines the type of Prices used for Product Price Selection and for LineItem Price selection.</p>
+ *  <p>This mode determines the type of Prices used for price selection by Line Items and Products. For more information about the difference between the Prices, see Pricing.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ProductPriceModeEnum extends JsonEnum {

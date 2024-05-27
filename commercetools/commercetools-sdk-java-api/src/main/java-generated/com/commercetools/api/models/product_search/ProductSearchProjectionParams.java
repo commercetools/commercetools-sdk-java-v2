@@ -45,7 +45,7 @@ public interface ProductSearchProjectionParams {
     public Boolean getStaged();
 
     /**
-     *  <p>The currency used for Price selection.</p>
+     *  <p>The currency used for Product price selection.</p>
      * @return priceCurrency
      */
 
@@ -53,7 +53,7 @@ public interface ProductSearchProjectionParams {
     public String getPriceCurrency();
 
     /**
-     *  <p>The country used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @return priceCountry
      */
 
@@ -61,7 +61,7 @@ public interface ProductSearchProjectionParams {
     public String getPriceCountry();
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @return priceCustomerGroup
      */
 
@@ -69,7 +69,7 @@ public interface ProductSearchProjectionParams {
     public String getPriceCustomerGroup();
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @return priceChannel
      */
 
@@ -115,28 +115,28 @@ public interface ProductSearchProjectionParams {
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>The currency used for Price selection.</p>
+     *  <p>The currency used for Product price selection.</p>
      * @param priceCurrency value to be set
      */
 
     public void setPriceCurrency(final String priceCurrency);
 
     /**
-     *  <p>The country used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @param priceCountry value to be set
      */
 
     public void setPriceCountry(final String priceCountry);
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @param priceCustomerGroup value to be set
      */
 
     public void setPriceCustomerGroup(final String priceCustomerGroup);
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      * @param priceChannel value to be set
      */
 

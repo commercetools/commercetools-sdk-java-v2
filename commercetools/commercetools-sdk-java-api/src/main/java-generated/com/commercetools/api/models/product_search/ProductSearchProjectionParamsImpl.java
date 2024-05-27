@@ -82,7 +82,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p>The currency used for Price selection.</p>
+     *  <p>The currency used for Product price selection.</p>
      */
 
     public String getPriceCurrency() {
@@ -90,7 +90,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p>The country used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      */
 
     public String getPriceCountry() {
@@ -98,7 +98,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      */
 
     public String getPriceCustomerGroup() {
@@ -106,7 +106,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
      */
 
     public String getPriceChannel() {

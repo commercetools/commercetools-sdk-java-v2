@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Details about a Embedded Price that was updated due to a Discount. Specific to Product Price Discounts Set Message.</p>
+ *  <p>Details about an Embedded Price that was updated due to a Discount. Specific to Product Price Discounts Set Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -21,7 +21,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Produces the StandalonePriceCreated Message.</p>
+ *  <p>Creating a Standalone Price produces the StandalonePriceCreated Message.</p>
+ *  <ul>
+ *   <li>If the Standalone Price has the same price scope as an existing Standalone Price, a DuplicateStandalonePriceScope error is returned.</li>
+ *   <li>If the Standalone Price has overlapping validity periods within the same price scope, a OverlappingStandalonePriceValidity error is returned. A Price without validity period does not conflict with a Price defined for a time period.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

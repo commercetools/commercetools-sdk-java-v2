@@ -125,7 +125,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public String getCustomerEmail();
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
      * @return customerGroup
      */
     @Valid
@@ -356,7 +356,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public PaymentInfo getPaymentInfo();
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      * @return country
      */
 
@@ -544,7 +544,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setCustomerEmail(final String customerEmail);
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
      * @param customerGroup value to be set
      */
 
@@ -799,7 +799,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setPaymentInfo(final PaymentInfo paymentInfo);
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      * @param country value to be set
      */
 

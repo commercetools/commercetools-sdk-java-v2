@@ -123,7 +123,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
      */
 
     public com.commercetools.api.models.common.Price getPrice() {
@@ -163,7 +163,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
      */
 
     public com.commercetools.api.models.common.ScopedPrice getScopedPrice() {
@@ -171,7 +171,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection.</p>
      */
 
     public Boolean getScopedPriceDiscounted() {

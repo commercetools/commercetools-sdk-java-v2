@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode. This update action sets the <code>taxedPrice</code> and <code>taxRate</code> on a Line Item and must be used after any price-affecting change occurs.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSetLineItemTaxAmountAction, ModelBase {

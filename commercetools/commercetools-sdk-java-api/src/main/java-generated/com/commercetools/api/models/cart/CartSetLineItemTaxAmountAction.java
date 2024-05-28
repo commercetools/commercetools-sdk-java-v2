@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode.</p>
+ *  <p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode. This update action sets the <code>taxedPrice</code> and <code>taxRate</code> on a Line Item and must be used after any price-affecting change occurs.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

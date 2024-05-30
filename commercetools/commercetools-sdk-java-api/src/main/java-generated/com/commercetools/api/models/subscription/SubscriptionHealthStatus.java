@@ -29,7 +29,7 @@ public interface SubscriptionHealthStatus extends JsonEnum {
     <p>Does not deliver messages temporarily due to reasons other than a configuration error. For example, the Destination has a temporary outage.</p> */
     SubscriptionHealthStatus TEMPORARY_ERROR = SubscriptionHealthStatusEnum.TEMPORARY_ERROR;
     /**
-    <p>Does not deliver messages with the current configuration and the delivery of the messages is no longer attempted. Undelivered messages are not retained and will not be delivered. The <code>status</code> will not automatically change to Healthy. To return your subscriptions to a Healthy status, please contact our support team.</p> */
+    <p>Does not deliver messages with the current configuration and the delivery of the messages is no longer attempted. Undelivered messages are not retained and will not be delivered. The <code>status</code> will not automatically change to Healthy. To return your subscriptions to a Healthy status, contact the Composable Commerce support team.</p> */
     SubscriptionHealthStatus MANUALLY_SUSPENDED = SubscriptionHealthStatusEnum.MANUALLY_SUSPENDED;
 
     /**

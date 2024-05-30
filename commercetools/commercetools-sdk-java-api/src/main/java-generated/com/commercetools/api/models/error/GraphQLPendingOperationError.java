@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Returned when a previous conflicting operation is still pending and needs to finish before the request can succeed.</p>
- *  <p>The client application should retry the request with exponential backoff up to a point where further delay is unacceptable. If the error persists, report it using the Support Portal.</p>
+ *  <p>The client application should retry the request with exponential backoff up to a point where further delay is unacceptable. If the error persists, report it to the Composable Commerce support team.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

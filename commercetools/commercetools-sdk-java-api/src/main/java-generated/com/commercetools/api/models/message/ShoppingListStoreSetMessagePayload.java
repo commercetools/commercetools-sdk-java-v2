@@ -38,7 +38,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     String SHOPPING_LIST_STORE_SET = "ShoppingListStoreSet";
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>KeyReference to a Store.</p>
      * @return store
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     public StoreKeyReference getStore();
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>KeyReference to a Store.</p>
      * @param store value to be set
      */
 

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Reference to an AssociateRole by its key.</p>
+ *  <p>KeyReference to an AssociateRole.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

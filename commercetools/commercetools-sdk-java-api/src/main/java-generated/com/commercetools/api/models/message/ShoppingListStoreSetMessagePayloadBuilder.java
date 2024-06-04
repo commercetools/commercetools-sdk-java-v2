@@ -25,7 +25,7 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>KeyReference to a Store.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
     }
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>KeyReference to a Store.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
     }
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>KeyReference to a Store.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
     }
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>KeyReference to a Store.</p>
      * @return store
      */
 

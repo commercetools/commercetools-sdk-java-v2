@@ -36,7 +36,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCustomersGet extends
         TypeApiMethod<ByProjectKeyCustomersGet, com.commercetools.api.models.customer.CustomerPagedQueryResponse>
-        implements ByProjectKeyCustomersGetMixin,
+        implements ByProjectKeyCustomersGetMixin, CustomerExpansionMixin<ByProjectKeyCustomersGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomersGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyCustomersGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyCustomersGet>,

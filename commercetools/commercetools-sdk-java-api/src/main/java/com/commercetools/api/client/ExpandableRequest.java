@@ -6,10 +6,11 @@ import java.util.function.Function;
 import com.commercetools.api.predicates.expansion.ExpansionDsl;
 
 public interface ExpandableRequest<T extends ExpandableRequest<T, TExpand>, TExpand extends ExpansionDsl> {
-    <TValue> T withExpand(final TValue where);
+    <TValue> ExpandableRequest<T, TExpand> withExpand(final TValue where);
 
+    @SuppressWarnings("unchecked")
     default T plusExpand(Function<TExpand, ExpansionDsl> fn) {
-        return withExpand(fn.apply(expandDsl()).build());
+        return (T) withExpand(fn.apply(expandDsl()).build());
     }
 
     TExpand expandDsl();

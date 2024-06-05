@@ -38,6 +38,22 @@ import com.commercetools.api.predicates.expansion.zone.ZoneExpansionBuilderDsl;
 
 public final class ExpandPredicateDsl {
 
+    public static AssociateRoleExpansionBuilderDsl associateRole() {
+        return AssociateRoleExpansionBuilderDsl.of();
+    }
+
+    public static AttributeGroupExpansionBuilderDsl attributeGroup() {
+        return AttributeGroupExpansionBuilderDsl.of();
+    }
+
+    public static BusinessUnitExpansionBuilderDsl businessUnit() {
+        return BusinessUnitExpansionBuilderDsl.of();
+    }
+
+    public static CartDiscountExpansionBuilderDsl cartDiscount() {
+        return CartDiscountExpansionBuilderDsl.of();
+    }
+
     public static CartExpansionBuilderDsl cart() {
         return CartExpansionBuilderDsl.of();
     }
@@ -46,100 +62,92 @@ public final class ExpandPredicateDsl {
         return CategoryExpansionBuilderDsl.of();
     }
 
-    public static CartDiscountExpansionBuilderDsl cartDiscount() {
-        return CartDiscountExpansionBuilderDsl.of();
+    public static ChannelExpansionBuilderDsl channel() {
+        return ChannelExpansionBuilderDsl.of();
     }
 
     public static CustomerExpansionBuilderDsl customer() {
         return CustomerExpansionBuilderDsl.of();
     }
 
+    public static CustomerGroupExpansionBuilderDsl customerGroup() {
+        return CustomerGroupExpansionBuilderDsl.of();
+    }
+
+    public static CustomObjectExpansionBuilderDsl customObject() {
+        return CustomObjectExpansionBuilderDsl.of();
+    }
+
     public static DiscountCodeExpansionBuilderDsl discountCode() {
         return DiscountCodeExpansionBuilderDsl.of();
     }
 
-    public static OrderExpansionBuilderDsl order() {
-        return OrderExpansionBuilderDsl.of();
-    }
-
-    public static ProductExpansionBuilderDsl product() {
-        return ProductExpansionBuilderDsl.of();
-    }
-
-    public static ProductSelectionExpansionBuilderDsl productSelection() {
-        return ProductSelectionExpansionBuilderDsl.of();
-    }
-
-    public static ProductProjectionExpansionBuilderDsl productProjection() {
-        return ProductProjectionExpansionBuilderDsl.of();
+    public static ExtensionExpansionBuilderDsl extension() {
+        return ExtensionExpansionBuilderDsl.of();
     }
 
     public static InventoryEntryExpansionBuilderDsl inventory() {
         return InventoryEntryExpansionBuilderDsl.of();
     }
 
-    public static ReviewExpansionBuilderDsl review() {
-        return ReviewExpansionBuilderDsl.of();
-    }
-
-    public static AttributeGroupExpansionBuilderDsl attributeGroup() {
-        return AttributeGroupExpansionBuilderDsl.of();
-    }
-
-    public static TaxCategoryExpansionBuilderDsl taxCategory() {
-        return TaxCategoryExpansionBuilderDsl.of();
-    }
-
-    public static ProductDiscountExpansionBuilderDsl productDiscount() {
-        return ProductDiscountExpansionBuilderDsl.of();
-    }
-
-    public static StandalonePriceExpansionBuilderDsl standalonePrice() {
-        return StandalonePriceExpansionBuilderDsl.of();
-    }
-
-    public static ShoppingListExpansionBuilderDsl shoppingList() {
-        return ShoppingListExpansionBuilderDsl.of();
-    }
-
-    public static ShippingMethodExpansionBuilderDsl shippingMethod() {
-        return ShippingMethodExpansionBuilderDsl.of();
-    }
-
-    public static ZoneExpansionBuilderDsl zone() {
-        return ZoneExpansionBuilderDsl.of();
-    }
-
-    public static PaymentExpansionBuilderDsl payment() {
-        return PaymentExpansionBuilderDsl.of();
+    public static MessageExpansionBuilderDsl message() {
+        return MessageExpansionBuilderDsl.of();
     }
 
     public static OrderEditExpansionBuilderDsl orderEdit() {
         return OrderEditExpansionBuilderDsl.of();
     }
 
+    public static OrderExpansionBuilderDsl order() {
+        return OrderExpansionBuilderDsl.of();
+    }
+
+    public static PaymentExpansionBuilderDsl payment() {
+        return PaymentExpansionBuilderDsl.of();
+    }
+
+    public static ProductDiscountExpansionBuilderDsl productDiscount() {
+        return ProductDiscountExpansionBuilderDsl.of();
+    }
+
+    public static ProductExpansionBuilderDsl product() {
+        return ProductExpansionBuilderDsl.of();
+    }
+
+    public static ProductProjectionExpansionBuilderDsl productProjection() {
+        return ProductProjectionExpansionBuilderDsl.of();
+    }
+
+    public static ProductSelectionExpansionBuilderDsl productSelection() {
+        return ProductSelectionExpansionBuilderDsl.of();
+    }
+
+    public static ProductTypeExpansionBuilderDsl productType() {
+        return ProductTypeExpansionBuilderDsl.of();
+    }
+
     public static QuoteExpansionBuilderDsl quote() {
         return QuoteExpansionBuilderDsl.of();
+    }
+
+    public static ReviewExpansionBuilderDsl review() {
+        return ReviewExpansionBuilderDsl.of();
+    }
+
+    public static ShippingMethodExpansionBuilderDsl shippingMethod() {
+        return ShippingMethodExpansionBuilderDsl.of();
+    }
+
+    public static ShoppingListExpansionBuilderDsl shoppingList() {
+        return ShoppingListExpansionBuilderDsl.of();
     }
 
     public static StagedQuoteExpansionBuilderDsl stagedQuote() {
         return StagedQuoteExpansionBuilderDsl.of();
     }
 
-    public static CustomerGroupExpansionBuilderDsl customerGroup() {
-        return CustomerGroupExpansionBuilderDsl.of();
-    }
-
-    public static BusinessUnitExpansionBuilderDsl businessUnit() {
-        return BusinessUnitExpansionBuilderDsl.of();
-    }
-
-    public static AssociateRoleExpansionBuilderDsl associateRole() {
-        return AssociateRoleExpansionBuilderDsl.of();
-    }
-
-    public static ChannelExpansionBuilderDsl channel() {
-        return ChannelExpansionBuilderDsl.of();
+    public static StandalonePriceExpansionBuilderDsl standalonePrice() {
+        return StandalonePriceExpansionBuilderDsl.of();
     }
 
     public static StateExpansionBuilderDsl state() {
@@ -150,27 +158,19 @@ public final class ExpandPredicateDsl {
         return StoreExpansionBuilderDsl.of();
     }
 
-    public static ProductTypeExpansionBuilderDsl productType() {
-        return ProductTypeExpansionBuilderDsl.of();
+    public static SubscriptionExpansionBuilderDsl subscription() {
+        return SubscriptionExpansionBuilderDsl.of();
+    }
+
+    public static TaxCategoryExpansionBuilderDsl taxCategory() {
+        return TaxCategoryExpansionBuilderDsl.of();
     }
 
     public static TypeExpansionBuilderDsl type() {
         return TypeExpansionBuilderDsl.of();
     }
 
-    public static CustomObjectExpansionBuilderDsl customObject() {
-        return CustomObjectExpansionBuilderDsl.of();
-    }
-
-    public static ExtensionExpansionBuilderDsl extension() {
-        return ExtensionExpansionBuilderDsl.of();
-    }
-
-    public static SubscriptionExpansionBuilderDsl subscription() {
-        return SubscriptionExpansionBuilderDsl.of();
-    }
-
-    public static MessageExpansionBuilderDsl message() {
-        return MessageExpansionBuilderDsl.of();
+    public static ZoneExpansionBuilderDsl zone() {
+        return ZoneExpansionBuilderDsl.of();
     }
 }

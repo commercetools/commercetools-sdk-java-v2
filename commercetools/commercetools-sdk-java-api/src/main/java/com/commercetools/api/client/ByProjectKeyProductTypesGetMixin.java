@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.product_type.ProductTypeQueryBuild
 
 public interface ByProjectKeyProductTypesGetMixin extends
         PagedQueryResourceRequest<ByProjectKeyProductTypesGet, ProductTypePagedQueryResponse, ProductTypeQueryBuilderDsl> {
+
     @Override
     default ProductTypeQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.productType();

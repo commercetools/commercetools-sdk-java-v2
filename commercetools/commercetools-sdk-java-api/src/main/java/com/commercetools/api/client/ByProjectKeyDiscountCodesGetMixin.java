@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.discount_code.DiscountCodeQueryBui
 
 public interface ByProjectKeyDiscountCodesGetMixin extends
         PagedQueryResourceRequest<ByProjectKeyDiscountCodesGet, DiscountCodePagedQueryResponse, DiscountCodeQueryBuilderDsl> {
+
     @Override
     default DiscountCodeQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.discountCode();

@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.category.CategoryQueryBuilderDsl;
 
 public interface ByProjectKeyCategoriesGetMixin extends
         PagedQueryResourceRequest<ByProjectKeyCategoriesGet, CategoryPagedQueryResponse, CategoryQueryBuilderDsl> {
+
     @Override
     default CategoryQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.category();

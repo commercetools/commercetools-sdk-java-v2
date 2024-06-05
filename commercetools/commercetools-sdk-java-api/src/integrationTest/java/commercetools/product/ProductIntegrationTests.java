@@ -17,6 +17,8 @@ import java.util.List;
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.product.*;
+import com.commercetools.api.models.product_type.ProductType;
+import com.commercetools.api.predicates.expansion.product.ProductProjectionExpansionBuilderDsl;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.apache.commons.io.IOUtils;
@@ -48,6 +50,29 @@ public class ProductIntegrationTests {
                     .getBody();
             Assertions.assertNotNull(queriedProduct);
             Assertions.assertEquals(product.getId(), queriedProduct.getId());
+        });
+    }
+
+    @Test
+    public void expandBuilder() {
+        withProduct(product -> {
+            ProductProjection queriedProduct = CommercetoolsTestUtils.getProjectApiRoot()
+                    .productProjections()
+                    .withId(product.getId())
+                    .get()
+                    .withStaged(true)
+                    .withExpand(ProductProjectionExpansionBuilderDsl.of()
+                            .variants()
+                            .price()
+                            .custom()
+                            .fields()
+                            .withName("test")
+                            .build())
+                    .addExpand(ProductProjectionExpansionBuilderDsl.of().productType().build())
+                    .executeBlocking()
+                    .getBody();
+            Assertions.assertNotNull(queriedProduct);
+            Assertions.assertInstanceOf(ProductType.class, queriedProduct.getProductType().getObj());
         });
     }
 

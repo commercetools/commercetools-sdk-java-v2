@@ -11,4 +11,5 @@ public interface ByProjectKeyBusinessUnitsGetMixin extends
     default BusinessUnitQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.businessUnit();
     }
+
 }

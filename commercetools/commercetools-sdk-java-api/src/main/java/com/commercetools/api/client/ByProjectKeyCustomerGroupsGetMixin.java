@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.customer_group.CustomerGroupQueryB
 
 public interface ByProjectKeyCustomerGroupsGetMixin extends
         PagedQueryResourceRequest<ByProjectKeyCustomerGroupsGet, CustomerGroupPagedQueryResponse, CustomerGroupQueryBuilderDsl> {
+
     @Override
     default CustomerGroupQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.customerGroup();

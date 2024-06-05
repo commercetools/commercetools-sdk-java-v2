@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.type.TypeQueryBuilderDsl;
 
 public interface ByProjectKeyTypesGetMixin
         extends PagedQueryResourceRequest<ByProjectKeyTypesGet, TypePagedQueryResponse, TypeQueryBuilderDsl> {
+
     @Override
     default TypeQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.type();

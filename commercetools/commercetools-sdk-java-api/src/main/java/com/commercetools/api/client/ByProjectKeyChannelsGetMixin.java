@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.channel.ChannelQueryBuilderDsl;
 
 public interface ByProjectKeyChannelsGetMixin
         extends PagedQueryResourceRequest<ByProjectKeyChannelsGet, ChannelPagedQueryResponse, ChannelQueryBuilderDsl> {
+
     @Override
     default ChannelQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.channel();

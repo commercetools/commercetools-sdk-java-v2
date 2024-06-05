@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.attribute_group.AttributeGroupQuer
 
 public interface ByProjectKeyAttributeGroupsGetMixin extends
         PagedQueryResourceRequest<ByProjectKeyAttributeGroupsGet, AttributeGroupPagedQueryResponse, AttributeGroupQueryBuilderDsl> {
+
     @Override
     default AttributeGroupQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.attributeGroup();

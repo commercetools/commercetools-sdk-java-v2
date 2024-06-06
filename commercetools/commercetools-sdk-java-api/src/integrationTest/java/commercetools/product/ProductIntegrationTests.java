@@ -18,7 +18,6 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.product.*;
 import com.commercetools.api.models.product_type.ProductType;
-import com.commercetools.api.predicates.expansion.product.ProductProjectionExpansionBuilderDsl;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.apache.commons.io.IOUtils;
@@ -61,14 +60,8 @@ public class ProductIntegrationTests {
                     .withId(product.getId())
                     .get()
                     .withStaged(true)
-                    .withExpand(ProductProjectionExpansionBuilderDsl.of()
-                            .variants()
-                            .price()
-                            .custom()
-                            .fields()
-                            .withName("test")
-                            .build())
-                    .addExpand(ProductProjectionExpansionBuilderDsl.of().productType().build())
+                    .withExpansion(e -> e.variants().price().custom().fields().withName("test"))
+                    .addExpansion(e -> e.productType())
                     .executeBlocking()
                     .getBody();
             Assertions.assertNotNull(queriedProduct);

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Money draft object to store an amount of a fraction of the smallest indivisible unit of the specified currency.</p>
+ *  <p>Draft object to store money as a fraction of the smallest indivisible unit for a specific currency.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -43,7 +43,7 @@ public class TaxedItemPriceDraftImpl implements TaxedItemPriceDraft, ModelBase {
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      */
 
     public com.commercetools.api.models.common.Money getTotalNet() {
@@ -51,7 +51,7 @@ public class TaxedItemPriceDraftImpl implements TaxedItemPriceDraft, ModelBase {
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      */
 
     public com.commercetools.api.models.common.Money getTotalGross() {

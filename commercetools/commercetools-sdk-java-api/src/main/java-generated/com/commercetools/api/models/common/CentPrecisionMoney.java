@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Object that stores cent amounts in a specific currency.</p>
+ *  <p>Object that stores money in cent amounts of a specific currency.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

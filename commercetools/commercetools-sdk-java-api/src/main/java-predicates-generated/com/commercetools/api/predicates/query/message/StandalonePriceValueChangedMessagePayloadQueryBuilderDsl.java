@@ -20,11 +20,11 @@ public class StandalonePriceValueChangedMessagePayloadQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<StandalonePriceValueChangedMessagePayloadQueryBuilderDsl> value(
-            Function<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl>> fn) {
+            Function<com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
                     .parent(ConstantQueryPredicate.of().constant("value"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl.of())),
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl.of())),
             StandalonePriceValueChangedMessagePayloadQueryBuilderDsl::of);
     }
 
@@ -35,11 +35,11 @@ public class StandalonePriceValueChangedMessagePayloadQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<StandalonePriceValueChangedMessagePayloadQueryBuilderDsl> oldValue(
-            Function<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl>> fn) {
+            Function<com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
                     .parent(ConstantQueryPredicate.of().constant("oldValue"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.common.MoneyQueryBuilderDsl.of())),
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.TypedMoneyQueryBuilderDsl.of())),
             StandalonePriceValueChangedMessagePayloadQueryBuilderDsl::of);
     }
 

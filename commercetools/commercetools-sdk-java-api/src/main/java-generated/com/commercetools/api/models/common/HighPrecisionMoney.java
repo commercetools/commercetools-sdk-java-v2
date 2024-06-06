@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Money object that stores an amount of a fraction of the smallest indivisible unit of the specified currency.</p>
+ *  <p>Object that stores money as a fraction of the smallest indivisible unit of a specific currency.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

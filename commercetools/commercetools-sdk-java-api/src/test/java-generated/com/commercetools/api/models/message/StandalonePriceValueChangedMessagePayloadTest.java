@@ -27,17 +27,17 @@ public class StandalonePriceValueChangedMessagePayloadTest {
     public static Object[][] objectBuilder() {
         return new Object[][] {
                 new Object[] { StandalonePriceValueChangedMessagePayload.builder()
-                        .value(new com.commercetools.api.models.common.MoneyImpl()) },
+                        .value(new com.commercetools.api.models.common.TypedMoneyImpl()) },
                 new Object[] { StandalonePriceValueChangedMessagePayload.builder().staged(true) },
                 new Object[] { StandalonePriceValueChangedMessagePayload.builder()
-                        .oldValue(new com.commercetools.api.models.common.MoneyImpl()) } };
+                        .oldValue(new com.commercetools.api.models.common.TypedMoneyImpl()) } };
     }
 
     @Test
     public void value() {
         StandalonePriceValueChangedMessagePayload value = StandalonePriceValueChangedMessagePayload.of();
-        value.setValue(new com.commercetools.api.models.common.MoneyImpl());
-        Assertions.assertThat(value.getValue()).isEqualTo(new com.commercetools.api.models.common.MoneyImpl());
+        value.setValue(new com.commercetools.api.models.common.TypedMoneyImpl());
+        Assertions.assertThat(value.getValue()).isEqualTo(new com.commercetools.api.models.common.TypedMoneyImpl());
     }
 
     @Test
@@ -50,7 +50,7 @@ public class StandalonePriceValueChangedMessagePayloadTest {
     @Test
     public void oldValue() {
         StandalonePriceValueChangedMessagePayload value = StandalonePriceValueChangedMessagePayload.of();
-        value.setOldValue(new com.commercetools.api.models.common.MoneyImpl());
-        Assertions.assertThat(value.getOldValue()).isEqualTo(new com.commercetools.api.models.common.MoneyImpl());
+        value.setOldValue(new com.commercetools.api.models.common.TypedMoneyImpl());
+        Assertions.assertThat(value.getOldValue()).isEqualTo(new com.commercetools.api.models.common.TypedMoneyImpl());
     }
 }

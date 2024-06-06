@@ -32,7 +32,7 @@ public class OrderLineItemDiscountSetMessageTest {
                         .discountedPricePerQuantity(Collections.singletonList(
                             new com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityImpl())) },
                 new Object[] { OrderLineItemDiscountSetMessage.builder()
-                        .totalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
+                        .totalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
                 new Object[] { OrderLineItemDiscountSetMessage.builder()
                         .taxedPrice(new com.commercetools.api.models.cart.TaxedItemPriceImpl()) },
                 new Object[] { OrderLineItemDiscountSetMessage.builder()
@@ -67,8 +67,9 @@ public class OrderLineItemDiscountSetMessageTest {
     @Test
     public void totalPrice() {
         OrderLineItemDiscountSetMessage value = OrderLineItemDiscountSetMessage.of();
-        value.setTotalPrice(new com.commercetools.api.models.common.MoneyImpl());
-        Assertions.assertThat(value.getTotalPrice()).isEqualTo(new com.commercetools.api.models.common.MoneyImpl());
+        value.setTotalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl());
+        Assertions.assertThat(value.getTotalPrice())
+                .isEqualTo(new com.commercetools.api.models.common.CentPrecisionMoneyImpl());
     }
 
     @Test

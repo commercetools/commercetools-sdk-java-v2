@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Money object that stores an amount of a fraction of the smallest indivisible unit of the specified currency.</p>
+ *  <p>Object that stores money as a fraction of the smallest indivisible unit of a specific currency.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {

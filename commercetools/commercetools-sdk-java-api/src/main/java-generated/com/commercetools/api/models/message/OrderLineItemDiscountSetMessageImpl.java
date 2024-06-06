@@ -50,7 +50,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
 
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
-    private com.commercetools.api.models.common.Money totalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
@@ -72,7 +72,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
-            @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice,
+            @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
             @JsonProperty("taxedPricePortions") final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
         this.id = id;
@@ -217,7 +217,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
-    public com.commercetools.api.models.common.Money getTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
 
@@ -296,7 +296,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
         this.discountedPricePerQuantity = discountedPricePerQuantity;
     }
 
-    public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice) {
+    public void setTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
         this.totalPrice = totalPrice;
     }
 

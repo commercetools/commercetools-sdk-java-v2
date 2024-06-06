@@ -28,7 +28,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     private com.commercetools.api.models.common.Money totalGross;
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @param builder function to build the totalNet value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @param builder function to build the totalNet value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @param totalNet value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @param builder function to build the totalGross value
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @param totalGross value to be set
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @return totalNet
      */
 
@@ -107,7 +107,7 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     }
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @return totalGross
      */
 

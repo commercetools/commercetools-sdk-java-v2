@@ -93,7 +93,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="OrderEditAddStagedActionAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditAddStagedActionAction</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">If the edit was applied, this cannot be updated.</div>
+<div class="block">The <code>stagedActions</code> field cannot be updated if the Order Edit <code>result</code> is OrderEdit Applied.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="OrderEditAddStagedActionActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditAddStagedActionActionBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -288,7 +288,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="OrderEditSetStagedActionsAction.html" title="interface in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsAction</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">If the edit is applied, <code>stagedActions</code> cannot be updated.</div>
+<div class="block">The <code>stagedActions</code> field cannot be updated if the Order Edit <code>result</code> is OrderEdit Applied.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="OrderEditSetStagedActionsActionBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditSetStagedActionsActionBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -635,7 +635,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="StagedOrderRemoveLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderRemoveLineItemAction</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">The LineItem price is updated as described in LineItem Price selection.</div>
+<div class="block">The LineItem price is updated as described in Line Item price selection.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="StagedOrderRemoveLineItemActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderRemoveLineItemActionBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -1018,7 +1018,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="StagedOrderSetLineItemDistributionChannelAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetLineItemDistributionChannelAction</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">
-<div class="block">Setting a distribution channel for a LineItem can lead to an updated <code>price</code> as described in LineItem Price selection.</div>
+<div class="block">Setting a distribution channel for a LineItem can lead to an updated <code>price</code> as described in Line Item price selection.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="StagedOrderSetLineItemDistributionChannelActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetLineItemDistributionChannelActionBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -1323,6 +1323,32 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="StagedOrderSetShippingAddressCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetShippingAddressCustomTypeActionBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">StagedOrderSetShippingAddressCustomTypeActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="StagedOrderSetShippingCustomFieldAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetShippingCustomFieldAction</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">StagedOrderSetShippingCustomFieldAction
+
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="StagedOrderSetShippingCustomFieldActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetShippingCustomFieldActionBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">StagedOrderSetShippingCustomFieldActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="StagedOrderSetShippingCustomTypeAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderSetShippingCustomTypeAction</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">
+<div class="block">This action sets, overwrites, or removes any existing Custom Type and Custom Fields for the Order's <code>shippingMethod</code> or <code>shipping</code>.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="StagedOrderSetShippingCustomTypeActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderSetShippingCustomTypeActionBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">StagedOrderSetShippingCustomTypeActionBuilder
  
  Example to create an instance using the builder pattern
  </div>

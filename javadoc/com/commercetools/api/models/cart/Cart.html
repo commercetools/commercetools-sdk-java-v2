@@ -159,7 +159,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCountry()" class="member-name-link">getCountry</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Used for LineItem Price selection.</div>
+<div class="block">Used for Line Item price selection.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCreatedAt()" class="member-name-link">getCreatedAt</a>()</code></div>
@@ -320,9 +320,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTaxedPrice()" class="member-name-link">getTaxedPrice</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
-   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.
-   For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.
-  </div>
+   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTaxedShippingPrice()" class="member-name-link">getTaxedShippingPrice</a>()</code></div>
@@ -387,7 +385,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCountry(java.lang.String)" class="member-name-link">setCountry</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Used for LineItem Price selection.</div>
+<div class="block">Used for Line Item price selection.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.time.ZonedDateTime)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
@@ -583,9 +581,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTaxedPrice(com.commercetools.api.models.cart.TaxedPrice)" class="member-name-link">setTaxedPrice</a><wbr>(<a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&nbsp;taxedPrice)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
-   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.
-   For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.
-  </div>
+   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTaxedShippingPrice(com.commercetools.api.models.cart.TaxedPrice)" class="member-name-link">setTaxedShippingPrice</a><wbr>(<a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&nbsp;taxedShippingPrice)</code></div>
@@ -742,7 +738,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></span>&nbsp;<span class="element-name">getCustomerGroup</span>()</div>
-<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p></div>
+<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../order/OrderLike.html#getCustomerGroup()">getCustomerGroup</a></code>&nbsp;in interface&nbsp;<code><a href="../order/OrderLike.html" title="interface in com.commercetools.api.models.order">OrderLike</a>&lt;<a href="Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&gt;</code></dd>
@@ -853,8 +849,8 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a></span>&nbsp;<span class="element-name">getTaxedPrice</span>()</div>
 <div class="block"><ul>
-   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
   </ul>
   <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p></div>
 <dl class="notes">
@@ -1145,7 +1141,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCountry</span>()</div>
-<div class="block"><p>Used for LineItem Price selection.</p></div>
+<div class="block"><p>Used for Line Item price selection.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../order/OrderLike.html#getCountry()">getCountry</a></code>&nbsp;in interface&nbsp;<code><a href="../order/OrderLike.html" title="interface in com.commercetools.api.models.order">OrderLike</a>&lt;<a href="Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>&gt;</code></dd>
@@ -1331,7 +1327,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference)">
 <h3>setCustomerGroup</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroup</span><wbr><span class="parameters">(<a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;customerGroup)</span></div>
-<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p></div>
+<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroup</code> - value to be set</dd>
@@ -1443,8 +1439,8 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h3>setTaxedPrice</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTaxedPrice</span><wbr><span class="parameters">(<a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&nbsp;taxedPrice)</span></div>
 <div class="block"><ul>
-   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
   </ul>
   <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p></div>
 <dl class="notes">
@@ -1739,7 +1735,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setCountry(java.lang.String)">
 <h3>setCountry</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCountry</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
-<div class="block"><p>Used for LineItem Price selection.</p></div>
+<div class="block"><p>Used for Line Item price selection.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>country</code> - value to be set</dd>

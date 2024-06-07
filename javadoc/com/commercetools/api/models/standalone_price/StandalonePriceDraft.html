@@ -78,8 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">StandalonePriceDraft</span><span class="extends-implements">
 extends <a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a>&gt;, <a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a>, <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="StandalonePriceDraft.html" title="interface in com.commercetools.api.models.standalone_price">StandalonePriceDraft</a>&gt;</span></div>
-<div class="block"><p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection.</p>
-  <p>Creating a Standalone Price for an SKU which has a Standalone Price with exactly the same price scope, or with overlapping validity periods within the same price scope returns the DuplicateStandalonePriceScope and OverlappingStandalonePriceValidity errors, respectively. A Price without validity period does not conflict with a Price defined for a time period.</p>
+<div class="block">StandalonePriceDraft
 
  <hr>
  Example to create an instance using the builder pattern
@@ -123,7 +122,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getActive()" class="member-name-link">getActive</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</div>
+<div class="block">Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getChannel()" class="member-name-link">getChannel</a>()</code></div>
@@ -198,7 +197,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setActive(java.lang.Boolean)" class="member-name-link">setActive</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;active)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</div>
+<div class="block">Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChannel(com.commercetools.api.models.channel.ChannelResourceIdentifier)" class="member-name-link">setChannel</a><wbr>(<a href="../channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;channel)</code></div>
@@ -442,7 +441,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getActive()">
 <h3>getActive</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getActive</span>()</div>
-<div class="block"><p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p></div>
+<div class="block"><p>Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>active</dd>
@@ -600,7 +599,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="setActive(java.lang.Boolean)">
 <h3>setActive</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setActive</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;active)</span></div>
-<div class="block"><p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p></div>
+<div class="block"><p>Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>active</code> - value to be set</dd>

@@ -79,7 +79,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">MyCartSetShippingAddressAction</span><span class="extends-implements">
 extends <a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a></span></div>
 <div class="block"><p>Setting the shipping address also sets the TaxRate of Line Items and calculates the TaxedPrice.</p>
-  <p>If a matching price cannot be found for the given shipping address during Line Item Price selection, a MissingTaxRateForCountry error is returned.</p>
+  <p>If a matching price cannot be found for the given shipping address during Line Item price selection, a MissingTaxRateForCountry error is returned.</p>
   <p>If you want to allow shipping to states inside a country that are not explicitly covered by a TaxRate, set the <code>countryTaxRateFallbackEnabled</code> field to <code>true</code> in the CartsConfiguration by using the Change CountryTaxRateFallbackEnabled update action.</p>
 
  <hr>

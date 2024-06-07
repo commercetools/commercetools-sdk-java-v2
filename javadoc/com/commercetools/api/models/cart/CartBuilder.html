@@ -215,7 +215,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#country(java.lang.String)" class="member-name-link">country</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used for LineItem Price selection.</div>
+<div class="block">Used for Line Item price selection.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
@@ -330,7 +330,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCountry()" class="member-name-link">getCountry</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used for LineItem Price selection.</div>
+<div class="block">Used for Line Item price selection.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreatedAt()" class="member-name-link">getCreatedAt</a>()</code></div>
@@ -491,9 +491,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTaxedPrice()" class="member-name-link">getTaxedPrice</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
-   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.
-   For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.
-  </div>
+   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTaxedShippingPrice()" class="member-name-link">getTaxedShippingPrice</a>()</code></div>
@@ -799,17 +797,13 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedPrice(com.commercetools.api.models.cart.TaxedPrice)" class="member-name-link">taxedPrice</a><wbr>(<a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&nbsp;taxedPrice)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
-   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.
-   For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.
-  </div>
+   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedPrice(java.util.function.Function)" class="member-name-link">taxedPrice</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
-   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.
-   For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.
-  </div>
+   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedShippingPrice(com.commercetools.api.models.cart.TaxedPrice)" class="member-name-link">taxedShippingPrice</a><wbr>(<a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&nbsp;taxedShippingPrice)</code></div>
@@ -950,9 +944,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTaxedPrice(java.util.function.Function)" class="member-name-link">withTaxedPrice</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
-   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.
-   For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.
-  </div>
+   For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTaxedShippingPrice(java.util.function.Function)" class="member-name-link">withTaxedShippingPrice</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&gt;&nbsp;builder)</code></div>
@@ -1093,7 +1085,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="customerGroup(java.util.function.Function)">
 <h3>customerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></span>&nbsp;<span class="element-name">customerGroup</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,<wbr><a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p></div>
+<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customerGroup value</dd>
@@ -1106,7 +1098,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withCustomerGroup(java.util.function.Function)">
 <h3>withCustomerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></span>&nbsp;<span class="element-name">withCustomerGroup</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,<wbr><a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p></div>
+<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customerGroup value</dd>
@@ -1120,7 +1112,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>customerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></span>&nbsp;<span class="element-name">customerGroup</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&nbsp;customerGroup)</span></div>
-<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p></div>
+<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroup</code> - value to be set</dd>
@@ -1466,8 +1458,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>taxedPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></span>&nbsp;<span class="element-name">taxedPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><ul>
-   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
   </ul>
   <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p></div>
 <dl class="notes">
@@ -1483,8 +1475,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>withTaxedPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></span>&nbsp;<span class="element-name">withTaxedPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><ul>
-   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
   </ul>
   <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p></div>
 <dl class="notes">
@@ -1501,8 +1493,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></span>&nbsp;<span class="element-name">taxedPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&nbsp;taxedPrice)</span></div>
 <div class="block"><ul>
-   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
   </ul>
   <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p></div>
 <dl class="notes">
@@ -2389,7 +2381,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>country</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></span>&nbsp;<span class="element-name">country</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
-<div class="block"><p>Used for LineItem Price selection.</p></div>
+<div class="block"><p>Used for Line Item price selection.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>country</code> - value to be set</dd>
@@ -2644,7 +2636,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a></span>&nbsp;<span class="element-name">getCustomerGroup</span>()</div>
-<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p></div>
+<div class="block"><p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroup</dd>
@@ -2739,8 +2731,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a></span>&nbsp;<span class="element-name">getTaxedPrice</span>()</div>
 <div class="block"><ul>
-   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
   </ul>
   <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p></div>
 <dl class="notes">
@@ -2989,7 +2981,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getCountry</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCountry</span>()</div>
-<div class="block"><p>Used for LineItem Price selection.</p></div>
+<div class="block"><p>Used for Line Item price selection.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>country</dd>

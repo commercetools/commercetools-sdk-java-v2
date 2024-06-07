@@ -1,4 +1,44 @@
 
+# 17.12.0 (2024-06-07)
+
+## Important information
+
+This release will be the last compatible with JDK version 8. The next release will be a major release and will have JDK version 11 as minimum requirement. The references to Java EE like bean validation will be updated to Jakarta EE.
+
+## What's Changed
+* Update datadog example app to include traces and add to cart by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/617
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/634
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/635
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/638
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/639
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/640
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/643
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/644
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/645
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/646
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/647
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/648
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/650
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/651
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/652
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/653
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/654
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/655
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/656
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/657
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/658
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/660
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/661
+* update SLF4J to 2.0 by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/662
+* chore(deps): update github/codeql-action digest to 2e230e8 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/641
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/637
+* chore(deps): update actions/checkout digest to a5ac7e5 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/636
+* chore(deps): update actions/setup-java digest to 99b8673 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/612
+* chore(deps): lock file maintenance by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/642
+* chore(deps): update plugin org.jetbrains.kotlin.jvm to v2 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/649
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.11.0...17.12.0
+
 # 17.11.0 (2024-05-03)
 
 ## What's Changed
